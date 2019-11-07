@@ -1,0 +1,31 @@
+{
+	"name": "Krastorio 2",
+	"version": "0.0.1",
+	"title": "Krastorio2",
+	"description": "WIP",
+	"author": "Linver, Krastor",
+	"contact": "https://discord.gg/sUmpTHN",
+	"factorio_version": "0.17",
+	"dependencies":
+	[
+		"base >= 0.17.76",		
+		"? aai-industry >= 0.3.17",		
+		"? deadlock-beltboxes-loaders >= 2.1.13",
+		"? IndustrialRevolution >= 1.0.6",
+		"? space-exploration >= 0.1.147",			
+		"(?) Aircraft >= 1.6.6",
+		"(?) bobenemies >= 0.17.6",
+		"(?) bullet-trails >= 0.4.1",
+		"(?) Hovercrafts >= 0.17.15",	
+		"(?) Squeak Through >= 1.3.0",
+		"! Annotorio >= 0.3.0",
+		"! aswil >= 0.4.4",
+		"! bobequipment >= 0.17.0",
+		"! bobvehicleequipment >= 0.17.0",
+		"! custom_power_armor_fix >= 0.10.0",
+		"! Power Armor MK3 >= 0.0.1",		
+		"! Krastorio >= 0.2.1",
+		"! Krastorio Graphics >= 0.0.1",
+		"! SimpleSilicon >= 1.0.0"
+	]
+}
