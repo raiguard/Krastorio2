@@ -18,13 +18,13 @@
 	@ recipe, all recipe defined as standard of data.raw of Factorio
 --]]
 
-if not science_pack_recipes then
-	science_pack_recipes = {}
+if not krastorio.science_pack_recipes then
+	krastorio.science_pack_recipes = {}
 	
 	-- -- Base vanilla recipes
-	science_pack_recipes["Factorio"] = {}
+	krastorio.science_pack_recipes["Factorio"] = {}
 	-- Automation science pack
-	science_pack_recipes["Factorio"]["automation-science-pack"] = 
+	krastorio.science_pack_recipes["Factorio"]["automation-science-pack"] = 
 	{
 		type = "recipe",
 		name = "automation-science-pack",
@@ -37,7 +37,7 @@ if not science_pack_recipes then
 		result = "automation-science-pack"
 	}
 	-- Logistic science pack
-	science_pack_recipes["Factorio"]["logistic-science-pack"] = 
+	krastorio.science_pack_recipes["Factorio"]["logistic-science-pack"] = 
 	{
 		type = "recipe",
 		name = "logistic-science-pack",
@@ -51,7 +51,7 @@ if not science_pack_recipes then
 		result = "logistic-science-pack"
 	}
 	-- Military science pack
-	science_pack_recipes["Factorio"]["military-science-pack"] = 
+	krastorio.science_pack_recipes["Factorio"]["military-science-pack"] = 
 	{
 		type = "recipe",
 		name = "military-science-pack",
@@ -67,7 +67,7 @@ if not science_pack_recipes then
 		result = "military-science-pack"		
     }
 	-- Chemical science pack
-	science_pack_recipes["Factorio"]["chemical-science-pack"] = 
+	krastorio.science_pack_recipes["Factorio"]["chemical-science-pack"] = 
 	{
 		type = "recipe",
 		name = "chemical-science-pack",
@@ -83,7 +83,7 @@ if not science_pack_recipes then
 		result = "chemical-science-pack"
 	}
 	-- Production science pack
-	science_pack_recipes["Factorio"]["production-science-pack"] = 
+	krastorio.science_pack_recipes["Factorio"]["production-science-pack"] = 
 	{
 		type = "recipe",
 		name = "production-science-pack",
@@ -99,7 +99,7 @@ if not science_pack_recipes then
 		result = "production-science-pack"
 	}
 	-- Utility science pack
-	science_pack_recipes["Factorio"]["utility-science-pack"] = 
+	krastorio.science_pack_recipes["Factorio"]["utility-science-pack"] = 
 	{
 		type = "recipe",
 		name = "utility-science-pack",
@@ -116,9 +116,9 @@ if not science_pack_recipes then
     }
 	
 	-- -- Krastorio recipes
-	science_pack_recipes["Krastorio"] = {}
+	krastorio.science_pack_recipes["Krastorio"] = {}
 	-- Automation science pack
-	science_pack_recipes["Krastorio"]["automation-science-pack"] = 
+	krastorio.science_pack_recipes["Krastorio"]["automation-science-pack"] = 
 	{
 		type = "recipe",
 		name = "automation-science-pack",
@@ -132,7 +132,7 @@ if not science_pack_recipes then
 		result = "automation-science-pack"
 	}
 	-- Logistic science pack
-	science_pack_recipes["Krastorio"]["logistic-science-pack"] = 
+	krastorio.science_pack_recipes["Krastorio"]["logistic-science-pack"] = 
 	{
 		type = "recipe",		
 		name = "logistic-science-pack",
@@ -147,7 +147,7 @@ if not science_pack_recipes then
 		result = "logistic-science-pack"
 	}
 	-- Military science pack
-	science_pack_recipes["Krastorio"]["military-science-pack"] = 
+	krastorio.science_pack_recipes["Krastorio"]["military-science-pack"] = 
 	{
 		type = "recipe",
 		name = "military-science-pack",		
@@ -163,7 +163,7 @@ if not science_pack_recipes then
 		result = "military-science-pack"		
 	}
 	-- Chemical science pack
-	science_pack_recipes["Krastorio"]["chemical-science-pack"] = 
+	krastorio.science_pack_recipes["Krastorio"]["chemical-science-pack"] = 
 	{
 		type = "recipe",
 		name = "chemical-science-pack",
@@ -179,7 +179,7 @@ if not science_pack_recipes then
 		result = "chemical-science-pack"
 	}
 	-- Production science pack
-	science_pack_recipes["Krastorio"]["production-science-pack"] = 
+	krastorio.science_pack_recipes["Krastorio"]["production-science-pack"] = 
 	{
 		type = "recipe",
 		name = "production-science-pack",
@@ -196,7 +196,7 @@ if not science_pack_recipes then
 		result = "production-science-pack"
 	}
 	-- Utility science pack
-	science_pack_recipes["Krastorio"]["utility-science-pack"] = 
+	krastorio.science_pack_recipes["Krastorio"]["utility-science-pack"] = 
 	{
 		type = "recipe",
 		name = "utility-science-pack",
@@ -220,15 +220,15 @@ end
 -- @ mod_name, name of mod that use this recipe for this science pack
 -- @ science_pack_name, name of science pack es: "automation-science-pack"
 -- @ recipe, all recipe defined as standard of data.raw of Factorio
-function science_pack_recipes.addRecipeVariation(mod_name, science_pack_name, recipe)
-	if not science_pack_recipes[mod_name] then
-		science_pack_recipes[mod_name] = {}
+function krastorio.science_pack_recipes.addRecipeVariation(mod_name, science_pack_name, recipe)
+	if not krastorio.science_pack_recipes[mod_name] then
+		krastorio.science_pack_recipes[mod_name] = {}
 	end
 	if data.raw["string-setting"] and data.raw["string-setting"]["k-" .. science_pack_name .. "-recipe"] then
 		table.insert(data.raw["string-setting"]["k-" .. science_pack_name .. "-recipe"].allowed_values, mod_name)
 	else
-		science_pack_recipes[mod_name][science_pack_name] = recipe
+		krastorio.science_pack_recipes[mod_name][science_pack_name] = recipe
 	end	
 end
 
-return science_pack_recipes
+return krastorio.science_pack_recipes

@@ -1,4 +1,4 @@
-matter_func = {}
+krastorio.matter_func = {}
 
 -- -- -- PUBLIC
 
@@ -30,9 +30,9 @@ matter_func = {}
 	}
 ]]--
 -- @args, all defined arguments of function
-function matter_func.createMatterRecipe(args)
+function krastorio.matter_func.createMatterRecipe(args)
 
-	local _item = aswil.items.getItem(args.item_name)
+	local _item = krastorio.items.getItem(args.item_name)
 	local true_item_type = _item.type
 	if true_item_type == "tool" then
 		true_item_type = "item"
@@ -40,7 +40,7 @@ function matter_func.createMatterRecipe(args)
 
 	if _item then
 	
-		local _return_item = aswil.items.getItem(args.return_item)				
+		local _return_item = krastorio.items.getItem(args.return_item)				
 		if not _return_item then
 			_return_item = _item
 		end
@@ -85,7 +85,7 @@ function matter_func.createMatterRecipe(args)
 				order = "z[".. _item.name .."-to-matter]"
 			}
 			data:extend({item_to_matter})
-			aswil.technologies.addUnlockRecipe(_technology, item_to_matter.name)
+			krastorio.technologies.addUnlockRecipe(_technology, item_to_matter.name)
 		end
 		
 		if args.only_conversion == nil or args.only_conversion ~= true then
@@ -131,9 +131,9 @@ function matter_func.createMatterRecipe(args)
 			end
 			
 			data:extend({matter_to_item})
-			aswil.technologies.addUnlockRecipe(_technology, matter_to_item.name)
+			krastorio.technologies.addUnlockRecipe(_technology, matter_to_item.name)
 			if args.allow_productivity then
-				aswil.modules.addProductivityLimitation(matter_to_item.name)
+				krastorio.modules.addProductivityLimitation(matter_to_item.name)
 			end
 		end
 		
@@ -149,74 +149,74 @@ end
 --]]
 -- @item_name
 -- @return_item
-function matter_func.removeMatterRecipe(item_name, return_item)
+function krastorio.matter_func.removeMatterRecipe(item_name, return_item)
 
-	local _item = aswil.items.getItem(item_name)
-	local _return_item = aswil.items.getItem(return_item)
+	local _item = krastorio.items.getItem(item_name)
+	local _return_item = krastorio.items.getItem(return_item)
 	if not _return_item then
 		_return_item = _item
 	end
 	local matter_recipe_name = _item.name .. "-to-matter"
 	local de_matter_recipe_name = "matter-to-".. _return_item.name
 	
-	if aswil.recipes.exist(matter_recipe_name) then
-		aswil.modules.removeProductivityLimitation(matter_recipe_name)
+	if krastorio.recipes.exist(matter_recipe_name) then
+		krastorio.modules.removeProductivityLimitation(matter_recipe_name)
 		data.raw.recipe[matter_recipe_name] = nil 
-		aswil.technologies.removeUnlockRecipeFromAllTechnologies(matter_recipe_name)
+		krastorio.technologies.removeUnlockRecipeFromAllTechnologies(matter_recipe_name)
 	end	
 		
-	if aswil.recipes.exist(de_matter_recipe_name) then
-		aswil.modules.removeProductivityLimitation(de_matter_recipe_name)
+	if krastorio.recipes.exist(de_matter_recipe_name) then
+		krastorio.modules.removeProductivityLimitation(de_matter_recipe_name)
 		data.raw.recipe[de_matter_recipe_name] = nil 
-		aswil.technologies.removeUnlockRecipeFromAllTechnologies(de_matter_recipe_name)
+		krastorio.technologies.removeUnlockRecipeFromAllTechnologies(de_matter_recipe_name)
 	end	
 	
 end
 
 
-function matter_func.removeAllKrastorioMatterRecipes()
-	matter_func.removeMatterRecipe("wood")
-	matter_func.removeMatterRecipe("iron-ore")
-	matter_func.removeMatterRecipe("copper-ore")
-	matter_func.removeMatterRecipe("sand")
-	matter_func.removeMatterRecipe("stone")
-	matter_func.removeMatterRecipe("coal")
-	matter_func.removeMatterRecipe("water")
-	matter_func.removeMatterRecipe("k-pure-water")
-	matter_func.removeMatterRecipe("crude-oil")
-	matter_func.removeMatterRecipe("gold-ore")
-	matter_func.removeMatterRecipe("uranium-ore")
-	matter_func.removeMatterRecipe("uranium-238")
-	matter_func.removeMatterRecipe("k-titanium")
-	matter_func.removeMatterRecipe("k-tantalum")
-	matter_func.removeMatterRecipe("menarite-powder")
-	matter_func.removeMatterRecipe("imersite-powder")
-	matter_func.removeMatterRecipe("k-quartz")
-	matter_func.removeMatterRecipe("raw-menarite")
-	matter_func.removeMatterRecipe("raw-imersite")
-	matter_func.removeMatterRecipe("automation-science-pack")
-	matter_func.removeMatterRecipe("logistic-science-pack")
-	matter_func.removeMatterRecipe("military-science-pack")
-	matter_func.removeMatterRecipe("chemical-science-pack")
-	matter_func.removeMatterRecipe("production-science-pack")
-	matter_func.removeMatterRecipe("utility-science-pack")
-	-- matter_func.removeMatterRecipe("k-experimental-data") (NOT USED)
-	matter_func.removeMatterRecipe("glass")
-	matter_func.removeMatterRecipe("sulfur")
-	matter_func.removeMatterRecipe("k-silicon")
-	matter_func.removeMatterRecipe("copper-plate")
-	matter_func.removeMatterRecipe("iron-plate")
-	matter_func.removeMatterRecipe("steel-plate")
-	matter_func.removeMatterRecipe("k-steel")
-	matter_func.removeMatterRecipe("plastic-bar")
-	matter_func.removeMatterRecipe("gold-plate")
-	matter_func.removeMatterRecipe("k-titanium-plate")
-	matter_func.removeMatterRecipe("k-tantalum-plate")
+function krastorio.matter_func.removeAllKrastorioMatterRecipes()
+	krastorio.matter_func.removeMatterRecipe("wood")
+	krastorio.matter_func.removeMatterRecipe("iron-ore")
+	krastorio.matter_func.removeMatterRecipe("copper-ore")
+	krastorio.matter_func.removeMatterRecipe("sand")
+	krastorio.matter_func.removeMatterRecipe("stone")
+	krastorio.matter_func.removeMatterRecipe("coal")
+	krastorio.matter_func.removeMatterRecipe("water")
+	krastorio.matter_func.removeMatterRecipe("k-pure-water")
+	krastorio.matter_func.removeMatterRecipe("crude-oil")
+	krastorio.matter_func.removeMatterRecipe("gold-ore")
+	krastorio.matter_func.removeMatterRecipe("uranium-ore")
+	krastorio.matter_func.removeMatterRecipe("uranium-238")
+	krastorio.matter_func.removeMatterRecipe("k-titanium")
+	krastorio.matter_func.removeMatterRecipe("k-tantalum")
+	krastorio.matter_func.removeMatterRecipe("menarite-powder")
+	krastorio.matter_func.removeMatterRecipe("imersite-powder")
+	krastorio.matter_func.removeMatterRecipe("k-quartz")
+	krastorio.matter_func.removeMatterRecipe("raw-menarite")
+	krastorio.matter_func.removeMatterRecipe("raw-imersite")
+	krastorio.matter_func.removeMatterRecipe("automation-science-pack")
+	krastorio.matter_func.removeMatterRecipe("logistic-science-pack")
+	krastorio.matter_func.removeMatterRecipe("military-science-pack")
+	krastorio.matter_func.removeMatterRecipe("chemical-science-pack")
+	krastorio.matter_func.removeMatterRecipe("production-science-pack")
+	krastorio.matter_func.removeMatterRecipe("utility-science-pack")
+	-- krastorio.matter_func.removeMatterRecipe("k-experimental-data") (NOT USED)
+	krastorio.matter_func.removeMatterRecipe("glass")
+	krastorio.matter_func.removeMatterRecipe("sulfur")
+	krastorio.matter_func.removeMatterRecipe("k-silicon")
+	krastorio.matter_func.removeMatterRecipe("copper-plate")
+	krastorio.matter_func.removeMatterRecipe("iron-plate")
+	krastorio.matter_func.removeMatterRecipe("steel-plate")
+	krastorio.matter_func.removeMatterRecipe("k-steel")
+	krastorio.matter_func.removeMatterRecipe("plastic-bar")
+	krastorio.matter_func.removeMatterRecipe("gold-plate")
+	krastorio.matter_func.removeMatterRecipe("k-titanium-plate")
+	krastorio.matter_func.removeMatterRecipe("k-tantalum-plate")
 end
 
--- -- -- KRASTORIO ONLY
+-- -- -- KRASTORIO ONLY (Use it if you know what you are doing)
 
-function matter_func.createStandardKrastorioMatterRecipes()
+function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 
 	-- -- Bidirectional
 
@@ -230,7 +230,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		matter_value = 2,
 		energy_required = 1
 	}
-	matter_func.createMatterRecipe(wood)
+	krastorio.matter_func.createMatterRecipe(wood)
 	
 	-- iron_ore
 	local iron_ore =
@@ -240,7 +240,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		matter_value = 5,
 		energy_required = 1
 	}
-	matter_func.createMatterRecipe(iron_ore)
+	krastorio.matter_func.createMatterRecipe(iron_ore)
 	
 	-- copper_ore
 	local copper_ore =
@@ -250,7 +250,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		matter_value = 5,
 		energy_required = 1
 	}
-	matter_func.createMatterRecipe(copper_ore)
+	krastorio.matter_func.createMatterRecipe(copper_ore)
 	----
 	
 	-- sand
@@ -262,7 +262,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		unlocked_by_technology = "matter+sand-processing", 
 		energy_required = 1
 	}
-	matter_func.createMatterRecipe(sand)
+	krastorio.matter_func.createMatterRecipe(sand)
 	
 	-- stone
 	local stone =
@@ -273,7 +273,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		unlocked_by_technology = "matter+stone-processing", 
 		energy_required = 1
 	}
-	matter_func.createMatterRecipe(stone)
+	krastorio.matter_func.createMatterRecipe(stone)
 	
 	-- coal
 	local coal =
@@ -284,7 +284,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		unlocked_by_technology = "matter+coal-processing", 
 		energy_required = 1
 	}
-	matter_func.createMatterRecipe(coal)
+	krastorio.matter_func.createMatterRecipe(coal)
 		
 	-- water
 	local water =
@@ -296,7 +296,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		only_deconversion = true,
 		energy_required = 1,
 	}
-	matter_func.createMatterRecipe(water)
+	krastorio.matter_func.createMatterRecipe(water)
 	
 	-- pure water
 	local pure_water =
@@ -307,7 +307,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		unlocked_by_technology = "matter+water-processing", 
 		energy_required = 1,
 	}
-	matter_func.createMatterRecipe(pure_water)
+	krastorio.matter_func.createMatterRecipe(pure_water)
 		
 	-- crude oil
 	local crude_oil =
@@ -318,7 +318,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		unlocked_by_technology = "matter+oil-processing", 
 		energy_required = 1
 	}
-	matter_func.createMatterRecipe(crude_oil)
+	krastorio.matter_func.createMatterRecipe(crude_oil)
 	
 	-- gold-ore
 	local gold_ore =
@@ -329,7 +329,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		unlocked_by_technology = "matter+gold-processing", 
 		energy_required = 1
 	}
-	matter_func.createMatterRecipe(gold_ore)
+	krastorio.matter_func.createMatterRecipe(gold_ore)
 	
 	-- uranium-ore
 	local uranium_ore =
@@ -340,7 +340,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		unlocked_by_technology = "matter+uranium-processing", 
 		energy_required = 1
 	}
-	matter_func.createMatterRecipe(uranium_ore)
+	krastorio.matter_func.createMatterRecipe(uranium_ore)
 	
 	-- uranium 238
 	local uranium_238 =
@@ -351,7 +351,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		unlocked_by_technology = "matter+uranium-processing", 
 		energy_required = 1
 	}
-	matter_func.createMatterRecipe(uranium_238)
+	krastorio.matter_func.createMatterRecipe(uranium_238)
 		
 	-- titanium
 	local titanium =
@@ -362,7 +362,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		unlocked_by_technology = "matter+minerals-processing", 
 		energy_required = 1
 	}
-	matter_func.createMatterRecipe(titanium)
+	krastorio.matter_func.createMatterRecipe(titanium)
 	
 	-- tantalum
 	local tantalum =
@@ -373,7 +373,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		unlocked_by_technology = "matter+minerals-processing", 
 		energy_required = 1
 	}
-	matter_func.createMatterRecipe(tantalum)
+	krastorio.matter_func.createMatterRecipe(tantalum)
 
 	-- menarite powder
 	local menarite_powder =
@@ -384,7 +384,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		unlocked_by_technology = "matter+minerals-processing", 
 		energy_required = 1
 	}
-	matter_func.createMatterRecipe(menarite_powder)	
+	krastorio.matter_func.createMatterRecipe(menarite_powder)	
 	
 	-- menarite powder
 	local imersite_powder =
@@ -395,7 +395,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		unlocked_by_technology = "matter+minerals-processing", 
 		energy_required = 1
 	}
-	matter_func.createMatterRecipe(imersite_powder)	
+	krastorio.matter_func.createMatterRecipe(imersite_powder)	
 	
 	-- -- Only to matter (item -> matter)
 	
@@ -409,7 +409,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		energy_required = 1,
 		only_conversion = true
 	}
-	matter_func.createMatterRecipe(quartz)
+	krastorio.matter_func.createMatterRecipe(quartz)
 	
 	-- raw-menarite
 	local raw_menarite =
@@ -421,7 +421,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		energy_required = 1,
 		only_conversion = true
 	}
-	matter_func.createMatterRecipe(raw_menarite)
+	krastorio.matter_func.createMatterRecipe(raw_menarite)
 	
 	-- raw-imersite
 	local raw_imersite =
@@ -433,7 +433,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		energy_required = 1,
 		only_conversion = true
 	}
-	matter_func.createMatterRecipe(raw_imersite)
+	krastorio.matter_func.createMatterRecipe(raw_imersite)
 
 	-- sulfur
 	local sulfur =
@@ -446,7 +446,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		need_stabilizer = true,
 		allow_productivity = true
 	}
-	matter_func.createMatterRecipe(sulfur)
+	krastorio.matter_func.createMatterRecipe(sulfur)
 	
 	-- -- Only from matter (matter -> item)
 	-- nothing...
@@ -468,7 +468,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		need_stabilizer = true,
 		allow_productivity = true
 	}
-	matter_func.createMatterRecipe(automation_science_pack)
+	krastorio.matter_func.createMatterRecipe(automation_science_pack)
 	
 	-- logistic-science-pack
 	local logistic_science_pack =
@@ -482,7 +482,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		need_stabilizer = true,
 		allow_productivity = true
 	}
-	matter_func.createMatterRecipe(logistic_science_pack)
+	krastorio.matter_func.createMatterRecipe(logistic_science_pack)
 	
 	-- military-science-pack
 	local military_science_pack =
@@ -496,7 +496,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		need_stabilizer = true,
 		allow_productivity = true
 	}
-	matter_func.createMatterRecipe(military_science_pack)
+	krastorio.matter_func.createMatterRecipe(military_science_pack)
 	
 	-- chemical-science-pack
 	local chemical_science_pack =
@@ -510,7 +510,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		need_stabilizer = true,
 		allow_productivity = true
 	}
-	matter_func.createMatterRecipe(chemical_science_pack)
+	krastorio.matter_func.createMatterRecipe(chemical_science_pack)
 	
 	-- production-science-pack
 	local production_science_pack =
@@ -524,7 +524,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		need_stabilizer = true,
 		allow_productivity = true
 	}
-	matter_func.createMatterRecipe(production_science_pack)
+	krastorio.matter_func.createMatterRecipe(production_science_pack)
 
 	-- utility-science-pack
 	local utility_science_pack =
@@ -538,7 +538,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		need_stabilizer = true,
 		allow_productivity = true
 	}
-	matter_func.createMatterRecipe(utility_science_pack)
+	krastorio.matter_func.createMatterRecipe(utility_science_pack)
 	
 	--[[
 	k_experimental_data
@@ -552,7 +552,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		need_stabilizer = true,
 		allow_productivity = true
 	}
-	matter_func.createMatterRecipe(k_experimental_data)
+	krastorio.matter_func.createMatterRecipe(k_experimental_data)
 	--]]
 	
 	-- other
@@ -569,7 +569,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		need_stabilizer = true,
 		allow_productivity = true
 	}
-	matter_func.createMatterRecipe(glass)
+	krastorio.matter_func.createMatterRecipe(glass)
 		
 	-- k-silicon
 	local k_silicon =
@@ -583,7 +583,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		need_stabilizer = true,
 		allow_productivity = true
 	}
-	matter_func.createMatterRecipe(k_silicon)
+	krastorio.matter_func.createMatterRecipe(k_silicon)
 	
 	-- copper_plate
 	local copper_plate =
@@ -597,7 +597,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		need_stabilizer = true,
 		allow_productivity = true
 	}
-	matter_func.createMatterRecipe(copper_plate)
+	krastorio.matter_func.createMatterRecipe(copper_plate)
 	
 	-- iron_plate
 	local iron_plate =
@@ -611,7 +611,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		need_stabilizer = true,
 		allow_productivity = true
 	}
-	matter_func.createMatterRecipe(iron_plate)
+	krastorio.matter_func.createMatterRecipe(iron_plate)
 	
 	-- steel plate (vanilla)
 	local steel_plate =
@@ -625,7 +625,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		need_stabilizer = true,
 		allow_productivity = true
 	}
-	matter_func.createMatterRecipe(steel_plate)
+	krastorio.matter_func.createMatterRecipe(steel_plate)
 	
 	-- k steel 
 	local k_steel =
@@ -639,7 +639,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		need_stabilizer = true,
 		allow_productivity = true
 	}
-	matter_func.createMatterRecipe(k_steel)
+	krastorio.matter_func.createMatterRecipe(k_steel)
 
 	-- plastic bar
 	local plastic_bar =
@@ -653,7 +653,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		need_stabilizer = true,
 		allow_productivity = true
 	}
-	matter_func.createMatterRecipe(plastic_bar)
+	krastorio.matter_func.createMatterRecipe(plastic_bar)
 	
 	-- gold plate
 	local gold_plate =
@@ -667,7 +667,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		need_stabilizer = true,
 		allow_productivity = true
 	}
-	matter_func.createMatterRecipe(gold_plate)
+	krastorio.matter_func.createMatterRecipe(gold_plate)
 	
 	-- titanium plate
 	local titanium_plate =
@@ -681,7 +681,7 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		need_stabilizer = true,
 		allow_productivity = true
 	}
-	matter_func.createMatterRecipe(titanium_plate)
+	krastorio.matter_func.createMatterRecipe(titanium_plate)
 	
 	-- tantalum plate
 	local tantalum_plate =
@@ -695,18 +695,18 @@ function matter_func.createStandardKrastorioMatterRecipes()
 		need_stabilizer = true,
 		allow_productivity = true
 	}
-	matter_func.createMatterRecipe(tantalum_plate)	
+	krastorio.matter_func.createMatterRecipe(tantalum_plate)	
 	
 end
 
 -- Remove all matter recipe, and recreate the Krastorio matter recipes
 -- will keep all matter recipes of other mods
-function matter_func.recreateStandardKrastorioMatterRecipes()
+function krastorio.matter_func.recreateStandardKrastorioMatterRecipes()
 
-	matter_func.removeAllKrastorioMatterRecipes()
-	matter_func.createStandardKrastorioMatterRecipes()
+	krastorio.matter_func.removeAllKrastorioMatterRecipes()
+	krastorio.matter_func.createStandardKrastorioMatterRecipes()
 	
 end
 
 
-return matter_func
+return krastorio.matter_func

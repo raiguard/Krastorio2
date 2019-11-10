@@ -1,16 +1,16 @@
-local matrix = require ("lib.matrix")
+local matrix = require ("__Krastorio2__/lib/private/data-stages/matrix")
 
 -- -- -- FLARE STACK AND LIQUID EVAPORATOR UTIL
--- -- -- PRIVATE KRASTORIO ONLY
+-- -- PRIVATE KRASTORIO USE ONLY
 -- Notes: in flare stack liquid is blacklisted, in liquid evaporator is whitelisted 
 
-if not dlr_func then
-	dlr_func = {}
+if not krastorio.dlr_func then
+	krastorio.dlr_func = {}
 	-- CONSTANTS
-	dlr_func.CORNER_PATH      = kr_recipes_icon_path .. "burn-recipe-corner.png"
-	dlr_func.CORNER_PATH_MASK = kr_recipes_icon_path .. "burn-recipe-corner-mask.png"
-	dlr_func.ICON_SIZE        = 64
-	dlr_func.SCALE            = 0.34
+	krastorio.dlr_func.CORNER_PATH      = kr_recipes_icon_path .. "burn-recipe-corner.png"
+	krastorio.dlr_func.CORNER_PATH_MASK = kr_recipes_icon_path .. "burn-recipe-corner-mask.png"
+	krastorio.dlr_func.ICON_SIZE        = 64
+	krastorio.dlr_func.SCALE            = 0.34
 end
 
 -- @ fluid_name, name of fluid
@@ -20,11 +20,11 @@ end
 -- @ list, pointer to whitelist or blacklist
 -- @ list_mode blacklist false whitelist true
 -- @ color_fixer a color for smooth the main liquid color
-function dlr_func.generateDestroyFluidsRecipe(fluid_name, recipe_type, building, residue, list, list_mode, color)
+function krastorio.dlr_func.generateDestroyFluidsRecipe(fluid_name, recipe_type, building, residue, list, list_mode, color)
 
 	if data.raw.fluid[fluid_name] then
 	
-		local tech_name = aswil.technologies.getTechnologyThatUnlockRecipe(building)
+		local tech_name = krastorio.technologies.getTechnologyThatUnlockRecipe(building)
 		local accepted = false
 		if list_mode then
 			if list[fluid_name] then accepted = true end -- whitelist
@@ -44,21 +44,21 @@ function dlr_func.generateDestroyFluidsRecipe(fluid_name, recipe_type, building,
 				icons=
 				{
 					{
-						icon = dlr_func.CORNER_PATH,
-						icon_size = dlr_func.ICON_SIZE
+						icon = krastorio.dlr_func.CORNER_PATH,
+						icon_size = krastorio.dlr_func.ICON_SIZE
 					},
 					{
-						icon = dlr_func.CORNER_PATH_MASK,
-						icon_size = dlr_func.ICON_SIZE,
-						tint = dlr_func.setTransparency(fluid.base_color, 0.9)
+						icon = krastorio.dlr_func.CORNER_PATH_MASK,
+						icon_size = krastorio.dlr_func.ICON_SIZE,
+						tint = krastorio.dlr_func.setTransparency(fluid.base_color, 0.9)
 					}						
 				},
 				crafting_machine_tint =
 				{
 					primary = fluid.base_color, 
-                    secondary = dlr_func.setTransparency(fluid.base_color, 0.35), 
-                    tertiary = dlr_func.setTransparency(fluid.flow_color, 0.5), 
-                    quaternary = dlr_func.setTransparency(fluid.flow_color, 0.75)					
+                    secondary = krastorio.dlr_func.setTransparency(fluid.base_color, 0.35), 
+                    tertiary = krastorio.dlr_func.setTransparency(fluid.flow_color, 0.5), 
+                    quaternary = krastorio.dlr_func.setTransparency(fluid.flow_color, 0.75)					
 				},
 				energy_required = 2,
 				enabled = false,
@@ -79,24 +79,26 @@ function dlr_func.generateDestroyFluidsRecipe(fluid_name, recipe_type, building,
 			}
 			
 			-- complete icon overlay
-			if fluid.icon then
+			if fluid.icon then -- fluid with one icon
 				table.insert
 				(
 					recipe.icons,
 					{
 						icon = fluid.icon,
 						icon_size = fluid.icon_size,
-						scale = dlr_func.SCALE * (dlr_func.ICON_SIZE/fluid.icon_size)
+						scale = krastorio.dlr_func.SCALE * (krastorio.dlr_func.ICON_SIZE/fluid.icon_size)
 					}
 				)
-			else
+			else -- fluid with icons defined
 				local overlay_icon = nil
 				for _, fluid_icon in pairs(fluid.icons) do
-					overlay_icon = aswil_utils.tables.fullCopy(fluid_icon)		
+					overlay_icon = krastorio_utils.tables.fullCopy(fluid_icon)	
+					-- fix for mods not well defined
 					if not overlay_icon.icon_size then
 						overlay_icon.icon_size = 32
 					end
-					overlay_icon.scale = dlr_func.SCALE * (dlr_func.ICON_SIZE/overlay_icon.icon_size) * (overlay_icon.scale or 1)
+					
+					overlay_icon.scale = krastorio.dlr_func.SCALE * (krastorio.dlr_func.ICON_SIZE/overlay_icon.icon_size) * (overlay_icon.scale or 1)
 					
 					table.insert
 					(
@@ -113,12 +115,12 @@ function dlr_func.generateDestroyFluidsRecipe(fluid_name, recipe_type, building,
 				{
 					"recipe-description." .. recipe_type .. "-with-residue", 
 					{"fluid-name." .. fluid.name}, 
-					{"item-name." .. aswil.items.getItemName(residue[fluid.name])}
+					{"item-name." .. krastorio.items.getItemName(residue[fluid.name])}
 				}
 			end
 	
 			data:extend({recipe})
-			aswil.technologies.addUnlockRecipe(tech_name, recipe.name)		
+			krastorio.technologies.addUnlockRecipe(tech_name, recipe.name)		
 			
 		end		
 		
@@ -126,14 +128,14 @@ function dlr_func.generateDestroyFluidsRecipe(fluid_name, recipe_type, building,
 	
 end
 
--- For fade the fluid corner colors, used in flare_stack_func.generateBurnFluidsRecipe(fluid_name)
-function dlr_func.setTransparency(colour, alpha)
+-- For fade the fluid corner colors, used in flame quaternary colors definition 
+function krastorio.dlr_func.setTransparency(colour, alpha)
 	colour.a = alpha
 	return colour
 end	
 
 -- See https://en.wikipedia.org/wiki/Color_balance#Scaling_monitor_R,_G,_and_B
-function dlr_func.scalingColorMonitor(fixer, colour)
+function krastorio.dlr_func.scalingColorMonitor(fixer, colour)
 	
 	local fixer_matrix  = matrix{{fixer.r,0,0},{0,fixer.g,0},{0,0,fixer.b}}
 	local colour_matrix = matrix{{colour.r},{colour.g},{colour.b}}
@@ -143,4 +145,4 @@ function dlr_func.scalingColorMonitor(fixer, colour)
 	return {r = result_matrix[1][1], g = result_matrix[2][1], b = result_matrix[3][1]}
 end
 
-return dlr_func
+return krastorio.dlr_func

@@ -1,15 +1,15 @@
-local color = require ("lib.colorRGB")
+local color = require ("__Krastorio2__/lib/private/data-stages/colorRGB")
 
 -- -- -- LIQUID EVAPORATOR UTIL
 -- Notes: in flare stack liquid is blacklisted, in liquid evaporator is whitelisted 
 
-if not liquid_evaporator_func then
-	liquid_evaporator_func = {}
-	liquid_evaporator_func.dlr_func = require("lib.destroy-liquid-recipe-util")
+if not krastorio.liquid_evaporator_func then
+	krastorio.liquid_evaporator_func = {}
+	krastorio.liquid_evaporator_func.dlr_func = require("__Krastorio2__/lib/private/data-stages/destroy-liquid-recipe-util")
 end
 -- whitelisted evaporate recipes (singleton table)
-if not liquid_evaporator_func.whitelist then
-	liquid_evaporator_func.whitelist =
+if not krastorio.liquid_evaporator_func.whitelist then
+	krastorio.liquid_evaporator_func.whitelist =
 	{
 		["water"] = true,
 		["steam"] = true,
@@ -19,18 +19,22 @@ if not liquid_evaporator_func.whitelist then
 		["pure-water"] = true,
 		["k-salt-water"] = true,
 		["salt-water"] = true,
+		["k-mineral-water"] = true,
+		["mineral-water"] = true,
 		["high-pressure-water"] = true,
 		["high-pressure-k-dirty-water"] = true,
 		["high-pressure-dirty-water"] = true,
 		["high-pressure-k-pure-water"] = true,
 		["high-pressure-pure-water"] = true,
 		["high-pressure-k-salt-water"] = true,
-		["high-pressure-salt-water"] = true
+		["high-pressure-salt-water"] = true,
+		["high-pressure-k-mineral-water"] = true,
+		["high-pressure-mineral-water"] = true
 	}
 end
 -- products of evaporate recipes (singleton table)
-if not liquid_evaporator_func.fluid_products then
-	liquid_evaporator_func.fluid_products =
+if not krastorio.liquid_evaporator_func.fluid_products then
+	krastorio.liquid_evaporator_func.fluid_products =
 	{
 		["k-dirty-water"] = {type="item", name="stone", amount=1, probability=0.30},
 		["dirty-water"]   = {type="item", name="stone", amount=1, probability=0.30}
@@ -52,8 +56,8 @@ end
 	evaporate it in Krastorio flare stack.
 ]]--
 -- @fluid_name, name of fluid to whitelist
-function liquid_evaporator_func.whitelistFluid(fluid_name)
-	liquid_evaporator_func.whitelist[fluid_name] = true
+function krastorio.liquid_evaporator_func.whitelistFluid(fluid_name)
+	krastorio.liquid_evaporator_func.whitelist[fluid_name] = true
 end
 
 --[[
@@ -67,8 +71,8 @@ end
 ]]--
 -- @fluid_name, name of fluid that create the product
 -- @product, the product created
-function liquid_evaporator_func.addEvaporateFluidProduct(fluid_name, product)
-	liquid_evaporator_func.fluid_products[fluid_name] = product
+function krastorio.liquid_evaporator_func.addEvaporateFluidProduct(fluid_name, product)
+	krastorio.liquid_evaporator_func.fluid_products[fluid_name] = product
 end
 
 --[[
@@ -79,14 +83,14 @@ end
 	  added in liquid_evaporator_func.addEvaporateFluidProduct(fluid_name, product)
 	- if the evaporate recipe already exist, will be overwritten
 ]]--
-function liquid_evaporator_func.generateEvaporateFluidsRecipe(fluid_name)
-	liquid_evaporator_func.dlr_func.generateDestroyFluidsRecipe
+function krastorio.liquid_evaporator_func.generateEvaporateFluidsRecipe(fluid_name)
+	krastorio.liquid_evaporator_func.dlr_func.generateDestroyFluidsRecipe
 	(
 		fluid_name, 
 		"evaporate", 
 		"k-liquid-evaporator", 
-		liquid_evaporator_func.fluid_products,
-		liquid_evaporator_func.whitelist,
+		krastorio.liquid_evaporator_func.fluid_products,
+		krastorio.liquid_evaporator_func.whitelist,
 		true
 	)
 end
@@ -94,21 +98,21 @@ end
 --[[
 	Disable a specific evaporate recipe, need the name of fluid
 --]]
-function liquid_evaporator_func.removeEvaporateFluidsRecipe(fluid_name)	
-	local recipe = aswil.recipes.getRecipeFromName("k-evaporate-" .. fluid_name)
+function krastorio.liquid_evaporator_func.removeEvaporateFluidsRecipe(fluid_name)	
+	local recipe = krastorio.recipes.getRecipeFromName("k-evaporate-" .. fluid_name)
 	if recipe then
 		recipe.enabled = false
-		aswil.technologies.removeUnlockRecipe(aswil.technologies.getTechnologyThatUnlockRecipe("k-liquid-evaporator"), recipe.name)	
+		krastorio.technologies.removeUnlockRecipe(krastorio.technologies.getTechnologyThatUnlockRecipe("k-liquid-evaporator"), recipe.name)	
 	end
 end
 
--- -- -- KRASTORIO ONLY
+-- -- -- KRASTORIO ONLY (Use it if you know what you are doing)
 
 -- Generate all recipes
-function liquid_evaporator_func.generateEvaporateFluidsRecipes()	
+function krastorio.liquid_evaporator_func.generateEvaporateFluidsRecipes()	
 	for _, fluid in pairs(data.raw.fluid) do
-		liquid_evaporator_func.generateEvaporateFluidsRecipe(fluid.name)
+		krastorio.liquid_evaporator_func.generateEvaporateFluidsRecipe(fluid.name)
 	end
 end
 
-return liquid_evaporator_func
+return krastorio.liquid_evaporator_func

@@ -1,16 +1,15 @@
-local color = require ("lib.colorRGB")
+local color = require ("__Krastorio2__/lib/private/data-stages/colorRGB")
 
 -- -- -- FLARE STACK UTIL
 -- Notes: in flare stack liquid is blacklisted, in liquid evaporator is whitelisted 
 
-
-if not flare_stack_func then
-	flare_stack_func = {}
-	flare_stack_func.dlr_func = require("lib.destroy-liquid-recipe-util")
+if not krastorio.flare_stack_func then
+	krastorio.flare_stack_func = {}
+	krastorio.flare_stack_func.dlr_func = require("__Krastorio2__/lib/private/data-stages/destroy-liquid-recipe-util")
 end
 -- blacklisted burn recipes (singleton table)
-if not flare_stack_func.blacklist then
-	flare_stack_func.blacklist =
+if not krastorio.flare_stack_func.blacklist then
+	krastorio.flare_stack_func.blacklist =
 	{
 		["water"] = true,
 		["steam"] = true,
@@ -20,6 +19,8 @@ if not flare_stack_func.blacklist then
 		["pure-water"] = true,
 		["k-salt-water"] = true,
 		["salt-water"] = true,
+		["k-mineral-water"] = true,
+		["mineral-water"] = true,
 		["k-matter"] = true,
 		["matter"] = true,
 		["kr-void"] = true,
@@ -30,14 +31,16 @@ if not flare_stack_func.blacklist then
 		["high-pressure-pure-water"] = true,
 		["high-pressure-k-salt-water"] = true,
 		["high-pressure-salt-water"] = true,
+		["high-pressure-k-mineral-water"] = true,
+		["high-pressure-mineral-water"] = true,
 		["high-pressure-k-matter"] = true,
 		["high-pressure-matter"] = true,
 		["high-pressure-kr-void"] = true
 	}
 end
 -- products of burn recipes (singleton table)
-if not flare_stack_func.fluid_products then
-	flare_stack_func.fluid_products = {}
+if not krastorio.flare_stack_func.fluid_products then
+	krastorio.flare_stack_func.fluid_products = {}
 end
 
 -- -- -- PUBLIC
@@ -55,8 +58,8 @@ end
 	burn it in Krastorio flare stack.
 ]]--
 -- @fluid_name, name of fluid to blacklist
-function flare_stack_func.blacklistFluid(fluid_name)
-	flare_stack_func.blacklist[fluid_name] = true
+function krastorio.flare_stack_func.blacklistFluid(fluid_name)
+	krastorio.flare_stack_func.blacklist[fluid_name] = true
 end
 
 --[[
@@ -70,8 +73,8 @@ end
 ]]--
 -- @fluid_name, name of fluid that create the product
 -- @product, the product created
-function flare_stack_func.addBurnFluidProduct(fluid_name, product)
-	flare_stack_func.fluid_products[fluid_name] = product
+function krastorio.flare_stack_func.addBurnFluidProduct(fluid_name, product)
+	krastorio.flare_stack_func.fluid_products[fluid_name] = product
 end
 
 --[[
@@ -82,14 +85,14 @@ end
 	  added in flare_stack_func.addBurnFluidProduct(fluid_name, product)
 	- if the burn recipe already exist, will be overwritten
 ]]--
-function flare_stack_func.generateBurnFluidsRecipe(fluid_name)
-	flare_stack_func.dlr_func.generateDestroyFluidsRecipe
+function krastorio.flare_stack_func.generateBurnFluidsRecipe(fluid_name)
+	krastorio.flare_stack_func.dlr_func.generateDestroyFluidsRecipe
 	(
 		fluid_name, 
 		"burn", 
 		"k-flare-stack", 
-		flare_stack_func.fluid_products,
-		flare_stack_func.blacklist,
+		krastorio.flare_stack_func.fluid_products,
+		krastorio.flare_stack_func.blacklist,
 		false
 	)
 end
@@ -97,21 +100,21 @@ end
 --[[
 	Disable a specific burn recipe, need the name of fluid
 --]]
-function flare_stack_func.removeBurnFluidsRecipe(fluid_name)	
-	local recipe = aswil.recipes.getRecipeFromName("k-burn-" .. fluid_name)
+function krastorio.flare_stack_func.removeBurnFluidsRecipe(fluid_name)	
+	local recipe = krastorio.recipes.getRecipeFromName("k-burn-" .. fluid_name)
 	if recipe then
 		recipe.enabled = false
-		aswil.technologies.removeUnlockRecipe(aswil.technologies.getTechnologyThatUnlockRecipe("k-flare-stack"), recipe.name)	
+		krastorio.technologies.removeUnlockRecipe(krastorio.technologies.getTechnologyThatUnlockRecipe("k-flare-stack"), recipe.name)	
 	end
 end
 
--- -- -- KRASTORIO ONLY
+-- -- -- KRASTORIO ONLY (Use it if you know what you are doing)
 
 -- Generate all recipes
-function flare_stack_func.generateBurnFluidsRecipes()	
+function krastorio.flare_stack_func.generateBurnFluidsRecipes()	
 	for _, fluid in pairs(data.raw.fluid) do
-		flare_stack_func.generateBurnFluidsRecipe(fluid.name)
+		krastorio.flare_stack_func.generateBurnFluidsRecipe(fluid.name)
 	end
 end
 
-return flare_stack_func
+return krastorio.flare_stack_func
