@@ -1,0 +1,27 @@
+The data stage will be executed in 3 step:
+- Pre initialization
+In this step will be loaded all scripts with functions
+that will be used later in the mods, so libraries.
+Will be also executed a mod assertion script,
+if you don't know what assertion are:
+https://en.wikipedia.org/wiki/Assertion_(software_development)
+
+- Contents initialization
+In this step will be loaded entities, items, recipes...
+only what will be loaded in first data stage.
+All modification to vanilla game or other related things
+will be executed later in the data updates stage
+
+All parts must be loaded with the appropriate loader file
+that is sort of "...prototypes/entities-initialization"
+this is for keep main data scripts slim,
+see in that files for more info.
+
+The optional sontents initialization is the step where
+is loaded all mod optional part (chosen in mod option)
+
+- Compatibility initialization (data stage)
+In this step will be executed some scripts
+for make compatibility operations with other mods,
+in particular the compatibility operations that
+can or must be executed in data stage.

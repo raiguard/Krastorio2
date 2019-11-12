@@ -13,3 +13,5 @@ and
 kr_graphic_mod = "__Krastorio2-graphics__/graphics/"
 so the final result is:
 "__Krastorio2-graphics__/graphics/icons/entities/"
+
+In all Krastorio 2 things the general prefix is kr

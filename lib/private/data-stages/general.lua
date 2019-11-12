@@ -1,4 +1,4 @@
-require("__aswil__/aswil_lib/utils/split")
+require(kr_path .. "lib/private/data-stages/utils/split")
 
 krastorio.general = {}
 
