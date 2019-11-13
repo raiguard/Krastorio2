@@ -6,6 +6,7 @@ krastorio               = {}
 krastorio.internal_name = "Krastorio2"
 krastorio.title_name    = "Krastorio 2"
 krastorio.version       = mods[krastorio_name]
+krastorio.stage         = "data"
 -- -- Global Krastorio 2 Paths
 require("__Krastorio2__/lib/public/data-stages/paths")
 -- -- Global Krastorio 2 library initialization, utilities library (support for main library)
@@ -39,7 +40,7 @@ require(kr_recipes_prototypes_path .. "recipes-initialization")
 require(kr_technologies_prototypes_path .. "technologies-initialization")
 -- -- Adding new tiles
 require(kr_tiles_prototypes_path .. "tiles-initialization")
--- -- Adding new signals
+-- -- Adding new signals (virtual signals)
 require(kr_others_prototypes_path .. "signals-initialization")
 ---------------------------------------------------------------------------
 -- -- -- OPTIONAL CONTENTS INITIALIZATION (data stage)
