@@ -1,0 +1,6 @@
+
+krastorio.entities.exist(category_name, entity_name)
+krastorio.entities.getEntity(category_name, entity_name)
+
+krastorio.entities.removeCollisionMaskOnEntity(category_name, entity_name, to_remove_mask_name)
+krastorio.entities.addCollisionMaskOnEntity(category_name, entity_name, mask_name)

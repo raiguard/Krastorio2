@@ -1,0 +1,26 @@
+---------------------------------------------------------------------------------------------
+krastorio.entities.exist(category_name, entity_name)
+
+Given the name of an entity and his category name, will return the entity prototype if exist
+false(boolean) otherwise.
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+krastorio.entities.getEntity(category_name, entity_name)
+
+Wrapper function of krastorio.entities.exist(category_name, entity_name).
+---------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------
+krastorio.entities.removeCollisionMaskOnEntity(category_name, entity_name, to_remove_mask_name)
+
+Given entity name and his category name, will remove the mask indicated with the name
+from the collosion layer of entity.
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+krastorio.entities.addCollisionMaskOnEntity(category_name, entity_name, mask_name)
+
+Given entity name and his category name, will add the mask indicated by the name
+into collosion layer of entity.
+If the entity don't have a collision_mask table well setted, will apply this mask =
+{"item-layer", "object-layer", "player-layer", "water-tile", to_add_mask_name}
+---------------------------------------------------------------------------------------------

@@ -1,0 +1,18 @@
+krastorio.modules.hasLimitationRecipe(limitations, recipe_name)
+
+krastorio.modules.hasPositiveProductivity(module)
+krastorio.modules.hasPositiveSpeed(module)
+krastorio.modules.hasPositiveEfficiency(module)
+krastorio.modules.hasPositiveLessPollution(module)
+
+krastorio.modules.addProductivityLimitation(recipe_name)
+krastorio.modules.removeProductivityLimitation(recipe_name)
+
+krastorio.modules.addSpeedLimitation(recipe_name)
+krastorio.modules.removeSpeedLimitation(recipe_name)
+
+krastorio.modules.addEfficiencyLimitation(recipe_name)
+krastorio.modules.removeEfficiencyLimitation(recipe_name)
+
+krastorio.modules.addLessPollutionLimitation(recipe_name)
+krastorio.modules.removeLessPollutionLimitation(recipe_name)

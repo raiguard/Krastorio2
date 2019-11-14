@@ -41,7 +41,9 @@ require(kr_technologies_prototypes_path .. "technologies-initialization")
 -- -- Adding new tiles
 require(kr_tiles_prototypes_path .. "tiles-initialization")
 -- -- Adding new signals (virtual signals)
-require(kr_others_prototypes_path .. "signals-initialization")
+require(kr_others_prototypes_path .. "virtual-signals-initialization")
+-- -- Adding new key binds
+require(kr_others_prototypes_path .. "key-bind-initialization")
 ---------------------------------------------------------------------------
 -- -- -- OPTIONAL CONTENTS INITIALIZATION (data stage)
 ---------------------------------------------------------------------------
