@@ -9,3 +9,6 @@ require("mandatory/rebalance-nuclear-power")
 
 -- -- Rebalance power poles range
 require("mandatory/rebalance-power-poles-range")
+
+-- -- Rebalance technologies
+require("mandatory/rebalance-technologies")
