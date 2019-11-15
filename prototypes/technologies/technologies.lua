@@ -6,7 +6,7 @@ data:extend(
 	{
 		type = "technology",
 		name = "greenhouse",
-		icon = "__Krastorio2__/graphics/technology/greenhouse.png",
+		icon = kr_technologies_icons_path .. "greenhouse.png",
 		icon_size = 128,
 		effects =
 		{
@@ -16,16 +16,16 @@ data:extend(
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "kr-wood"
+				recipe = "kr-grow-wood"
 			}
 		},
-		--prerequisites = {"effect-transmission"},
+		prerequisites = {},
 		unit =
 		{
-			count = 1,
+			count = 30,
 			ingredients = 
 			{
-				{"automation-science-pack", 1}
+				{"basic-tech-card", 1}
 			},
 			time = 30
 		}

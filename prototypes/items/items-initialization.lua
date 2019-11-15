@@ -5,4 +5,4 @@ require("techcards")
 require("entities-items")
 
 -- -- All other Items
--- require("uncategorized-items")
+require("uncategorized-items")

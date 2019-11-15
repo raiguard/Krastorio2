@@ -5,18 +5,29 @@ return
 -----------------------------------------------------------------------------------------------------------------
 	{
 		type = "recipe",
-		name = "kr-wood",
+		name = "kr-grow-wood",
 		category = "greenhouse",
 		energy_required = 180,
 		enabled = false,
 		ingredients =
 		{
-			{type="fluid", name="water", amount=100}
+			{type="fluid", name="water", amount=60}
 		},
-		results =
+		result = "wood",
+		result_count = 30
+	},
+	{
+		type = "recipe",
+		name = "coke",
+		energy_required = 10,
+		enabled = false,
+		ingredients =
 		{
-			{type="item", name="wood", amount=50}
-		}
+			{"coal", 3},
+			{"wood", 3}
+		},
+		result = "coke",
+		result_count = 2
 	},
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

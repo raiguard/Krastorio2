@@ -40,6 +40,11 @@ data.raw.tool["space-science-pack"].order = "09[space-tech-card]"
 -- -- Chaning steel icon
 
 data.raw.item["steel-plate"].icon = kr_icons_path .. "steel-plate.png"
+data.raw.item["steel-plate"].icon_mipmaps = 1
+data.raw.item["steel-plate"].pictures =
+{
+	{ size = 64, filename = kr_mip_icons_path .. "steel-plate.png", scale = 0.25, mipmap_count = 4 }
+}
 
 -----------------------------------------------------------------
 
