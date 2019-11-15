@@ -12,7 +12,7 @@ data:extend(
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "greenhouse"
+				recipe = "kr-greenhouse"
 			},
 			{
 				type = "unlock-recipe",

@@ -5,11 +5,11 @@ data:extend(
 -----------------------------------------------------------------------------------------------------------------
 	{
 		type = "assembling-machine",
-		name = "greenhouse",
+		name = "kr-greenhouse",
 		icon_size = 32,
-		icon =  "__Krastorio2__/graphics/icons/entities/greenhouse.png",
+		icon =  kr_entities_icons_path .. "greenhouse.png",
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
-		minable = {hardness = 1, mining_time = 1, result = "greenhouse"},
+		minable = {hardness = 1, mining_time = 1, result = "kr-greenhouse"},
 		max_health = 500,
 		corpse = "big-remnants",
 		dying_explosion = "big-explosion",
@@ -52,13 +52,13 @@ data:extend(
 		},
 		collision_box = {{-3.25, -3.25}, {3.25, 3.25}},
 		selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-		fast_replaceable_group = "greenhouse",
+		fast_replaceable_group = "kr-greenhouse",
 		animation =
 		{
 			layers =
 			{
 				{
-					filename = "__Krastorio2__/graphics/entities/greenhouse/greenhouse.png",
+					filename = kr_entities_path .. "greenhouse/greenhouse.png",
 					priority = "high",
 					scale = scale,
 					width = 256,
@@ -66,7 +66,7 @@ data:extend(
 					frame_count = 1,
 					hr_version =
 					{
-						filename = "__Krastorio2__/graphics/entities/greenhouse/hr-greenhouse.png",
+						filename = kr_entities_path .. "greenhouse/hr-greenhouse.png",
 						priority = "high",
 						scale = scale,
 						width = 512,
@@ -76,7 +76,7 @@ data:extend(
 					}
 				},
 				{
-					filename = "__Krastorio2__/graphics/entities/greenhouse/greenhouse-shadow.png",
+					filename = kr_entities_path .. "greenhouse/greenhouse-shadow.png",
 					priority = "high",
 					scale = scale,
 					width = 256,
@@ -85,7 +85,7 @@ data:extend(
 					draw_as_shadow = true,
 					hr_version =
 					{
-						filename = "__Krastorio2__/graphics/entities/greenhouse/hr-greenhouse-shadow.png",
+						filename = kr_entities_path .. "greenhouse/hr-greenhouse-shadow.png",
 						priority = "high",
 						scale = scale,
 						width = 512,
@@ -102,7 +102,7 @@ data:extend(
 			{
 				animation =
 				{
-					filename = "__Krastorio2__/graphics/entities/greenhouse/greenhouse-working.png",
+					filename = kr_entities_path .. "greenhouse/greenhouse-working.png",
 					scale = scale,
 					width = 256,
 					height = 256,
@@ -111,7 +111,7 @@ data:extend(
 					--animation_speed=0.6,
 					hr_version =
 					{
-						filename = "__Krastorio2__/graphics/entities/greenhouse/hr-greenhouse-working.png",
+						filename = kr_entities_path .. "greenhouse/hr-greenhouse-working.png",
 						scale = scale,
 						width = 512,
 						height = 512,

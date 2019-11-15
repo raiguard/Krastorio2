@@ -5,19 +5,18 @@ data:extend(
 -----------------------------------------------------------------------------------------------------------------   
    
     {
-    type = "item",
-    name = "greenhouse",
-	icon =  "__Krastorio2__/graphics/icons/entities/greenhouse.png",
-    icon_size = 64,
-	subgroup = "production-machine",
-    order = "aaa",
-    place_result = "greenhouse",
-    stack_size = 10
+		type = "item",
+		name = "kr-greenhouse",
+		icon =  "__Krastorio2__/graphics/icons/entities/greenhouse.png",
+		icon_size = 64,
+		subgroup = "production-machine",
+		order = "aaa",
+		place_result = "kr-greenhouse",
+		stack_size = 10
     },
 
 	
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
-}
-)
+})

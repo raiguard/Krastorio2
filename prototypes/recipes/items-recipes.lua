@@ -11,7 +11,7 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{type="fluid", name="water", amount=25}
+			{type="fluid", name="water", amount=100}
 		},
 		results =
 		{
