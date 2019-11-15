@@ -1,40 +1,36 @@
 data:extend(
 {
-
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
-
 	{
-    type = "technology",
-    name = "greenhouse",
-    icon = "__Krastorio2__/graphics/technology/greenhouse.png",
-	icon_size = 128,
-    effects =
-    {
+		type = "technology",
+		name = "greenhouse",
+		icon = "__Krastorio2__/graphics/technology/greenhouse.png",
+		icon_size = 128,
+		effects =
 		{
-        type = "unlock-recipe",
-        recipe = "greenhouse"
+			{
+				type = "unlock-recipe",
+				recipe = "greenhouse"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-wood"
+			}
 		},
+		--prerequisites = {"effect-transmission"},
+		unit =
 		{
-        type = "unlock-recipe",
-        recipe = "kr-wood"
-		},
+			count = 1,
+			ingredients = 
+			{
+				{"automation-science-pack", 1}
+			},
+			time = 30
+		}
     },
-	--prerequisites = {"effect-transmission"},
-    unit =
-    {
-      count = 1,
-      ingredients = {
-	  {"automation-science-pack", 1},
-	  },
-      time = 30
-    },
-    },
-	
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
-
-}
-)
+})

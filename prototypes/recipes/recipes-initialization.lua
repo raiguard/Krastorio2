@@ -1,4 +1,4 @@
-krastorio_new_recipes =
+local krastorio_new_recipes =
 {
 	-- -- Recipes for buildings and other entities
 	require("entities-recipes"),
