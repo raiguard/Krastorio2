@@ -1,4 +1,8 @@
--- -- New science graphic and new stuff
----require("items")
+-- -- New science packs graphic
 require("techcards")
-require("items-for-entities")
+
+-- -- Items for buildings and other entities
+require("entities-items")
+
+-- -- All other Items
+-- require("uncategorized-items")

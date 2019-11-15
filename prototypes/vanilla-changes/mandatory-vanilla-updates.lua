@@ -10,5 +10,8 @@ require("mandatory/rebalance-nuclear-power")
 -- -- Rebalance power poles range
 require("mandatory/rebalance-power-poles-range")
 
--- -- Rebalance technologies
-require("mandatory/rebalance-technologies")
+-- -- Modify stat and accepted science packs of vanilla lab
+require("mandatory/vanilla-lab-changes")
+
+-- -- All modification to vanilla recipes
+require("mandatory/recipes-changes")

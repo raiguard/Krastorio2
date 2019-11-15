@@ -1,11 +1,8 @@
 data:extend(
-{
-
-   
+{   
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
-   
 	{
 		type = "assembling-machine",
 		name = "greenhouse",
@@ -18,8 +15,8 @@ data:extend(
 		dying_explosion = "big-explosion",
 		resistances = 
 		{
-		{type = "physical",percent = 50},
-		{type = "fire",percent = 70}
+			{type = "physical",percent = 50},
+			{type = "fire",percent = 70}
 		},
 		fluid_boxes =
 		{
@@ -37,7 +34,7 @@ data:extend(
 				base_level = 1,
 				pipe_connections = {{ type="input", position = {-4, 0} }}
 			},
-						{
+			{
 				production_type = "input",
 				pipe_covers = pipecoverspictures(),
 				base_area = 100,
@@ -58,83 +55,83 @@ data:extend(
 		fast_replaceable_group = "greenhouse",
 		animation =
 		{
-		layers =
-		{
-		{
-			filename = "__Krastorio2__/graphics/entities/greenhouse/greenhouse.png",
-			priority = "high",
-			scale = scale,
-			width = 256,
-			height = 256,
-			frame_count = 1,
-			hr_version =
+			layers =
+			{
 				{
-				filename = "__Krastorio2__/graphics/entities/greenhouse/hr-greenhouse.png",
-				priority = "high",
-				scale = scale,
-				width = 512,
-				height = 512,
-				frame_count = 1,
-				scale = 0.5,
-				}
-		},
-		{
-			filename = "__Krastorio2__/graphics/entities/greenhouse/greenhouse-shadow.png",
-			priority = "high",
-			scale = scale,
-			width = 256,
-			height = 256,
-			frame_count = 1,
-			draw_as_shadow = true,
-			hr_version =
+					filename = "__Krastorio2__/graphics/entities/greenhouse/greenhouse.png",
+					priority = "high",
+					scale = scale,
+					width = 256,
+					height = 256,
+					frame_count = 1,
+					hr_version =
+					{
+						filename = "__Krastorio2__/graphics/entities/greenhouse/hr-greenhouse.png",
+						priority = "high",
+						scale = scale,
+						width = 512,
+						height = 512,
+						frame_count = 1,
+						scale = 0.5
+					}
+				},
 				{
-				filename = "__Krastorio2__/graphics/entities/greenhouse/hr-greenhouse-shadow.png",
-				priority = "high",
-				scale = scale,
-				width = 512,
-				height = 512,
-				frame_count = 1,
-				draw_as_shadow = true,
-				scale = 0.5,
+					filename = "__Krastorio2__/graphics/entities/greenhouse/greenhouse-shadow.png",
+					priority = "high",
+					scale = scale,
+					width = 256,
+					height = 256,
+					frame_count = 1,
+					draw_as_shadow = true,
+					hr_version =
+					{
+						filename = "__Krastorio2__/graphics/entities/greenhouse/hr-greenhouse-shadow.png",
+						priority = "high",
+						scale = scale,
+						width = 512,
+						height = 512,
+						frame_count = 1,
+						draw_as_shadow = true,
+						scale = 0.5
+					}
 				}
-		}
-		}
+			}
 		},
 		working_visualisations =
 		{
-		{
-		animation =
-		{
-		  filename = "__Krastorio2__/graphics/entities/greenhouse/greenhouse-working.png",
-		  scale = scale,
-		  width = 256,
-		  height = 256,
-		  frame_count = 1,
-		  --line_length = 4,
-		  --animation_speed=0.6,
-		  hr_version =
-			  {
-			  filename = "__Krastorio2__/graphics/entities/greenhouse/hr-greenhouse-working.png",
-			  scale = scale,
-			  width = 512,
-			  height = 512,
-			  frame_count = 1,
-			  --line_length = 4,
-			  scale = 0.5,
-			  --animation_speed=0.6,
-			  }
-		},
-		light =
-		{
-		intensity = 0.5,
-		size = 15,
-		shift = {0.0, 0.0},
-		color = {r=0.7, g=1, b=0.7}
-		}
-		},
+			{
+				animation =
+				{
+					filename = "__Krastorio2__/graphics/entities/greenhouse/greenhouse-working.png",
+					scale = scale,
+					width = 256,
+					height = 256,
+					frame_count = 1,
+					--line_length = 4,
+					--animation_speed=0.6,
+					hr_version =
+					{
+						filename = "__Krastorio2__/graphics/entities/greenhouse/hr-greenhouse-working.png",
+						scale = scale,
+						width = 512,
+						height = 512,
+						frame_count = 1,
+						--line_length = 4,
+						scale = 0.5,
+						--animation_speed=0.6,
+					}
+				},
+				light =
+				{
+					intensity = 0.5,
+					size = 15,
+					shift = {0.0, 0.0},
+					color = {r=0.7, g=1, b=0.7}
+				}
+			}
 		},
 		crafting_categories = {"greenhouse"},
-		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
         --working_sound =
         --{
         --sound =
@@ -161,13 +158,10 @@ data:extend(
 		--	module_slots = 4
 		--},
 		allowed_effects = nil, --{"consumption", "speed", "productivity", "pollution"},
-	--open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
-    --close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-	},
-	
+		--open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
+		--close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 }
+	},	
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
-
-}
-)
+})
