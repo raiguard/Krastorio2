@@ -26,6 +26,8 @@ require(kr_data_compatibility_path .. "mod-assertions")
 ---------------------------------------------------------------------------
 -- -- -- CONTENTS INITIALIZATION (data stage)
 ---------------------------------------------------------------------------
+-- -- Adding new categories
+require("prototypes/categories/categories-initialization")
 -- -- Adding new entities
 require(kr_entities_prototypes_path .. "entities-initialization")
 -- -- Adding new equipments

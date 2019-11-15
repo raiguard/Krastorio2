@@ -45,11 +45,11 @@ data:extend(
 				pipe_connections = {{ type="input", position = {4, 0} }}
 			},
 			{
-				production_type = "output",
+				production_type = "input",
 				pipe_covers = pipecoverspictures(),
 				base_area = 100,
 				base_level = 1,
-				pipe_connections = {{ type="output", position = {0, 4} }}
+				pipe_connections = {{ type="input", position = {0, 4} }}
 			},
 			off_when_no_fluid_recipe = false
 		},
@@ -133,7 +133,7 @@ data:extend(
 		}
 		},
 		},
-		crafting_categories = {"basic-crafting"},
+		crafting_categories = {"greenhouse"},
 		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
         --working_sound =
         --{
@@ -166,47 +166,8 @@ data:extend(
 	},
 	
 -----------------------------------------------------------------------------------------------------------------
-------------------------------------------------RECIPE-----------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
-	
-	{
-    type = "recipe",
-    name = "greenhouse",
-    energy_required = 60,
-	enabled = false,
-    ingredients =
-		{
-		{"plastic-bar", 10}
-		},
-    result = "greenhouse"
-    },
-	
 -----------------------------------------------------------------------------------------------------------------
-------------------------------------------------TECHNOLOGY-------------------------------------------------------
------------------------------------------------------------------------------------------------------------------
-	
-	{
-    type = "technology",
-    name = "greenhouse",
-    icon = "__Krastorio2__/graphics/technology/greenhouse.png",
-	icon_size = 128,
-    effects =
-    {
-	        {
-        type = "unlock-recipe",
-        recipe = "greenhouse"
-      } 
-    },
-	--prerequisites = {"effect-transmission"},
-    unit =
-    {
-      count = 1,
-      ingredients = {
-	  {"automation-science-pack", 1},
-	  },
-      time = 30
-    },
-    },
-	
+
 }
 )

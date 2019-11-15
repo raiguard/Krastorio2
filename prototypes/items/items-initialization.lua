@@ -1,3 +1,4 @@
 -- -- New science graphic and new stuff
+---require("items")
 require("techcards")
-require("entities")
+require("items-for-entities")
