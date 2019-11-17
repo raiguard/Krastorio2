@@ -81,6 +81,7 @@ data:extend(
 					scale = scale,
 					width = 256,
 					height = 256,
+					shift = {0.36, 0},
 					frame_count = 1,
 					draw_as_shadow = true,
 					hr_version =
@@ -90,6 +91,7 @@ data:extend(
 						scale = scale,
 						width = 512,
 						height = 512,
+						shift = {0.36, 0},
 						frame_count = 1,
 						draw_as_shadow = true,
 						scale = 0.5
@@ -106,19 +108,19 @@ data:extend(
 					scale = scale,
 					width = 256,
 					height = 256,
-					frame_count = 1,
-					--line_length = 4,
-					--animation_speed=0.6,
+					frame_count = 10,
+					line_length = 5,
+					animation_speed=0.35,
 					hr_version =
 					{
 						filename = kr_entities_path .. "greenhouse/hr-greenhouse-working.png",
 						scale = scale,
 						width = 512,
 						height = 512,
-						frame_count = 1,
-						--line_length = 4,
+						frame_count = 10,
+						line_length = 5,
 						scale = 0.5,
-						--animation_speed=0.6,
+						animation_speed=0.35,
 					}
 				},
 				light =
