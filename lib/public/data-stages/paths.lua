@@ -20,14 +20,15 @@ kr_graphic_mod_path                    = "__Krastorio2__/graphics/"
 -----------------------------------------------------------------------------------------------------------------
 -- Icons paths
 kr_icons_path                          = kr_graphic_mod_path .. "icons/"
+kr_cards_icons_path                    = kr_icons_path       .. "cards/"
 kr_arrows_icons_path                   = kr_icons_path       .. "arrows/"
 kr_entities_icons_path                 = kr_icons_path       .. "entities/"
 kr_recipes_icons_path                  = kr_icons_path       .. "recipes/"
 kr_resources_icons_path                = kr_icons_path       .. "resources/"
 kr_mip_icons_path                      = kr_icons_path       .. "mip/"
 kr_retextured_science_packs_icons_path = kr_icons_path       .. "retextured-science-packs/"
-kr_technologies_icons_path             = kr_icons_path       .. "technologies/"
 kr_signals_icons_path                  = kr_icons_path       .. "signals/"
+kr_technologies_icons_path             = kr_graphic_mod_path .. "technologies/"
 kr_stacked_icons_path                  = kr_graphic_mod_path .. "compatibility/deadlock-beltboxes-loaders/"
 -- Equipments paths
 kr_equipments_icon_path                = kr_icons_path           .. "equipments/"

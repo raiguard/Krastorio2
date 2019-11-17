@@ -6,7 +6,7 @@ data:extend(
 	{
 		type = "tool",
 		name = "basic-tech-card",
-		icon =  kr_technologies_icons_path .. "basic-tech-card.png",
+		icon =  kr_cards_icons_path  .. "basic-tech-card.png",
 		stack_size = 200,
 		icon_size = 64,
 		subgroup = "science-pack",
@@ -18,7 +18,7 @@ data:extend(
 	{
 		type = "tool",
 		name = "matter-tech-card",
-		icon =  kr_technologies_icons_path .. "matter-tech-card.png",
+		icon =  kr_cards_icons_path  .. "matter-tech-card.png",
 		stack_size = 200,
 		icon_size = 64,
 		subgroup = "science-pack",
@@ -30,7 +30,7 @@ data:extend(
 	{
 		type = "tool",
 		name = "matter-tech-card",
-		icon =  kr_technologies_icons_path .. "matter-tech-card.png",
+		icon =  kr_cards_icons_path  .. "matter-tech-card.png",
 		stack_size = 200,
 		icon_size = 64,
 		subgroup = "science-pack",
@@ -42,7 +42,7 @@ data:extend(
 	{
 		type = "tool",
 		name = "optimization-tech-card",
-		icon =  kr_technologies_icons_path .. "optimization-tech-card.png",
+		icon =  kr_cards_icons_path  .. "optimization-tech-card.png",
 		stack_size = 200,
 		icon_size = 64,
 		subgroup = "science-pack",
@@ -54,7 +54,7 @@ data:extend(
 	{
 		type = "tool",
 		name = "advanced-tech-card",
-		icon =  kr_technologies_icons_path .. "advanced-tech-card.png",
+		icon =  kr_cards_icons_path  .. "advanced-tech-card.png",
 		stack_size = 200,
 		icon_size = 64,
 		subgroup = "science-pack",
@@ -66,7 +66,7 @@ data:extend(
 	{
 		type = "tool",
 		name = "singularity-tech-card",
-		icon =  kr_technologies_icons_path .. "singularity-tech-card.png",
+		icon =  kr_cards_icons_path  .. "singularity-tech-card.png",
 		stack_size = 200,
 		icon_size = 64,
 		subgroup = "science-pack",
