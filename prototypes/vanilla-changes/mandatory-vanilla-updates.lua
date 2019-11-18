@@ -4,6 +4,7 @@
 local modifications =
 {	
 	"icons-changes",               -- Modify aspect of vanilla items (like science pack icons..)
+	"items-changes",               -- Modify vanilla items
 	"improve-inserters",           -- Improve inserters, new functions	
 	"rebalance-nuclear-power",     -- Rebalance nuclear power	
 	"rebalance-power-poles-range", -- Rebalance power poles range	

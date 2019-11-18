@@ -19,4 +19,4 @@ data.raw.tool["production-science-pack"].localised_name={"item-name.production-t
 data.raw.tool["utility-science-pack"].localised_name={"item-name.utility-tech-card"}
 
 -- Space science pack
-data.raw.tool["space-science-pack"].localised_name={"item-name.space-tech-card"}
+data.raw.tool["space-science-pack"].localised_name={"item-name.optimization-tech-card"}
