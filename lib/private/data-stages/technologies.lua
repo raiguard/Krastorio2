@@ -21,6 +21,12 @@ krastorio.technologies.science_pack_collections =
 
 -- -- -- GETTING(READ) FUNCTIONS
 
+-- RESEARCH UNIT INGREDIENTS
+
+function krastorio.technologies.getIngredientName(ingredient)
+	return ingredient.name or ingredient[1]
+end
+
 -- -- PREREQUISITES
 
 function krastorio.technologies.getPrerequisites(technology_name)
@@ -563,18 +569,15 @@ function krastorio.technologies.sanitizeUnitsOfAllTechnologiesInPacks(science_pa
 				
 				local is_in = false
 				local ingredients = technology.unit.ingredients				
-				if next(ingredients) ~= nil then				
+				if ingredients and next(ingredients) ~= nil then				
 					for i = 1, #ingredients do
-						for _, value in pairs(ingredients[i]) do
-							if type(value) ~= "number" then
-								for _, science_pack_name in pairs(main_science_pack_collection) do
-									if science_pack_name == value then
-										is_in = true
-										break
-									end	
-								end
-							end
-						end		
+						local ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])
+						for _, science_pack_name in pairs(main_science_pack_collection) do
+							if science_pack_name == ingredient_name then
+								is_in = true
+								break
+							end	
+						end						
 					end					
 					if is_in then
 						local is_sanitized = false
@@ -584,24 +587,21 @@ function krastorio.technologies.sanitizeUnitsOfAllTechnologiesInPacks(science_pa
 							wrong_one = -1
 							for i = 1, #ingredients do
 								is_wrong = true
-								for _, value in pairs(ingredients[i]) do
-									if type(value) ~= "number" then
-										for _, science_pack_name in pairs(main_science_pack_collection) do
-											if science_pack_name == value then
-												is_wrong = false
-												break
-											end	
-										end									
-										if with_vanilla == true and is_wrong == true then
-											for _, science_pack_name in pairs(vanilla_science_pack_collections) do
-												if science_pack_name == value then
-													is_wrong = false
-													break
-												end	
-											end
-										end
+								local ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])								
+								for _, science_pack_name in pairs(main_science_pack_collection) do
+									if science_pack_name == ingredient_name then
+										is_wrong = false
+										break
+									end	
+								end									
+								if with_vanilla == true and is_wrong == true then
+									for _, science_pack_name in pairs(vanilla_science_pack_collections) do
+										if science_pack_name == ingredient_name then
+											is_wrong = false
+											break
+										end	
 									end
-								end		
+								end
 								if is_wrong then
 									wrong_one = i
 									break
