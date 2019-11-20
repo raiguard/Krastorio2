@@ -25,28 +25,28 @@ data:extend(
 				pipe_covers = pipecoverspictures(),
 				base_area = 100,
 				base_level = -1,
-				pipe_connections = {{ type="input", position = {0, -4} }}
+				pipe_connections = {{ type="input-output", position = {0, -4} }}
 			},						
 			{
 				production_type = "input",
 				pipe_covers = pipecoverspictures(),
 				base_area = 100,
 				base_level = 1,
-				pipe_connections = {{ type="input", position = {-4, 0} }}
+				pipe_connections = {{ type="input-output", position = {-4, 0} }}
 			},
 			{
 				production_type = "input",
 				pipe_covers = pipecoverspictures(),
 				base_area = 100,
 				base_level = 1,
-				pipe_connections = {{ type="input", position = {4, 0} }}
+				pipe_connections = {{ type="input-output", position = {4, 0} }}
 			},
 			{
 				production_type = "input",
 				pipe_covers = pipecoverspictures(),
 				base_area = 100,
 				base_level = 1,
-				pipe_connections = {{ type="input", position = {0, 4} }}
+				pipe_connections = {{ type="input-output", position = {0, 4} }}
 			},
 			off_when_no_fluid_recipe = false
 		},
