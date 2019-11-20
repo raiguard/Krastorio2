@@ -15,3 +15,14 @@ krastorio.recipes.disable("electric-mining-drill")
 krastorio.recipes.disable("offshore-pump")
 krastorio.recipes.disable("radar")
 krastorio.recipes.disable("light-armor")
+
+-- Chaning steel recipes
+krastorio.recipes.overrideIngredients
+(
+	"steel-plate", 
+	{
+		{"iron-plate", 1},
+		{"coke", 1}
+	}
+)
+

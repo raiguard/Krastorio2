@@ -29,6 +29,42 @@ return
 		result = "coke",
 		result_count = 2
 	},
+	{
+		type = "recipe",
+		name = "sand",
+		energy_required = 3,
+		enabled = false,
+		ingredients =
+		{
+			{"stone", 1}
+		},
+		result = "sand",
+		result_count = 3
+	},
+	{
+		type = "recipe",
+		name = "glass",
+		energy_required = 3,
+		enabled = false,
+		ingredients =
+		{
+			{"sand", 3}
+		},
+		result = "glass",
+		result_count = 1
+	},
+	{
+		type = "recipe",
+		name = "iron-beam",
+		energy_required = 3,
+		enabled = false,
+		ingredients =
+		{
+			{"iron-plate", 3}
+		},
+		result = "iron-beam",
+		result_count = 1
+	},
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

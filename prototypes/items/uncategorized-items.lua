@@ -5,6 +5,22 @@ data:extend(
 -----------------------------------------------------------------------------------------------------------------   
 	{
 		type = "item",
+		name = "sand",
+		icon = kr_mip_icons_path .. "sand.png",
+		icon_size = 64,
+		icon_mipmaps = 3,
+		pictures =
+		{
+			{ size = 64, filename = kr_mip_icons_path .. "sand.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "sand-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "sand-2.png", scale = 0.25, mipmap_count = 4 }
+		},
+		subgroup = "raw-resource",
+		order = "a[sand]",
+		stack_size = 200
+	},
+	{
+		type = "item",
 		name = "glass",
 		icon = kr_mip_icons_path .. "glass.png",
 		icon_size = 64,
@@ -54,6 +70,15 @@ data:extend(
 		order = "a1[coke]",
 		stack_size = 200
     },
+	{
+		type = "item",
+		name = "iron-beam",
+		icon = "__base__/graphics/icons/steel-plate.png",
+		icon_size = 32,
+		subgroup = "raw-material",
+		order = "d[iron-beam]",
+		stack_size = 200
+	},
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
