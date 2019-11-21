@@ -5,6 +5,15 @@ data:extend(
 -----------------------------------------------------------------------------------------------------------------   
 	{
 		type = "item",
+		name = "automation-core",
+		icon = kr_icons_path .. "automation-core.png",
+		icon_size = 32,
+		subgroup = "raw-material",
+		order = "a[automation-core]",
+		stack_size = 200
+	},
+	{
+		type = "item",
 		name = "sand",
 		icon = kr_mip_icons_path .. "sand.png",
 		icon_size = 64,

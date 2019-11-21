@@ -18,6 +18,20 @@ return
 	},
 	{
 		type = "recipe",
+		name = "automation-core",
+		energy_required = 3,
+		enabled = false,
+		ingredients =
+		{
+			{"iron-gear-wheel", 5},
+			{"iron-stick", 5},
+			{"copper-plate", 5}
+		},
+		result = "automation-core",
+		result_count = 1
+	},
+	{
+		type = "recipe",
 		name = "coke",
 		energy_required = 10,
 		enabled = false,

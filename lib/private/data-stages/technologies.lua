@@ -27,6 +27,10 @@ function krastorio.technologies.getIngredientName(ingredient)
 	return ingredient.name or ingredient[1]
 end
 
+function krastorio.technologies.getIngredientCount(ingredient)
+	return ingredient.amount or ingredient[2]
+end
+
 -- -- PREREQUISITES
 
 function krastorio.technologies.getPrerequisites(technology_name)
@@ -425,10 +429,11 @@ end
 -- -- RESEARCH UNIT INGREDIENTS(research_unit_ingredients)
 
 function krastorio.technologies.removeResearchUnitIngredient(technology_name, science_pack_name)	
-	local prerequisites = krastorio.technologies.getPrerequisites(technology_name)
-	local ingredients   = krastorio.technologies.getResearchUnitIngredients(technology_name)
+	local technology  = krastorio.technologies.getTechnologyFromName(technology_name)
+	local prerequisites = technology.prerequisites
+	local ingredients   = technology.unit.ingredients
 	
-	if next(ingredients) ~= nil then	
+	if ingredients and next(ingredients) ~= nil then	
 		-- prerequisites
 		for i, prerequisite_name in pairs(prerequisites) do
 			if prerequisite_name == science_pack_name then
@@ -488,6 +493,53 @@ function krastorio.technologies.addResearchUnitIngredient(technology_name, scien
 		return true
 	end
 	return false
+end
+
+function krastorio.technologies.convertResearchUnitIngredient(technology_name, old_science_pack_name, new_science_pack_name)
+	local technology  = krastorio.technologies.getTechnologyFromName(technology_name)
+	local prerequisites = technology.prerequisites
+	local ingredients = technology.unit.ingredients
+	local converted   = false
+	
+	if technology and next(technology) ~= nil and ingredients and next(ingredients) ~= nil then				
+		-- convert ingredient	
+		for i = 1, #ingredients do
+			local ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])
+			if ingredient_name == old_science_pack_name then
+				ingredients[i] = {new_science_pack_name, krastorio.technologies.getIngredientCount(ingredients[i])}
+				converted = true
+				break
+			end
+		end	
+		-- remove old, add new prerequisite
+		if converted then
+			if prerequisites and next(prerequisites) ~= nil then
+				local index_old, index_new = -1, -1
+				for i, prerequisite in pairs(prerequisites) do
+					if      prerequisite == old_science_pack_name then
+						index_old = i
+					elseif prerequisite == new_science_pack_name then
+						index_new = i
+					end		
+					if index_old ~= -1 and index_new ~= -1 then
+						break
+					end
+				end		
+				
+				if      index_old == -1 and index_new == -1 then
+					table.insert(prerequisites, new_science_pack_name)
+				elseif index_old ~= -1 and index_new ~= -1 then
+					table.remove(prerequisites, index_old)
+				elseif index_old ~= -1 and index_new == -1 then
+					prerequisites[index_old] = new_science_pack_name
+				end			
+			else
+				prerequisites = {new_science_pack_name}
+			end		
+		end
+	end
+		
+	return converted
 end
 
 -- -- RESEARCH UNIT

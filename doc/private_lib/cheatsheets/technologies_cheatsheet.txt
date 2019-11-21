@@ -31,11 +31,13 @@ krastorio.technologies.removeUnlockRecipeFromAllTechnologies(recipe_name)
 
 krastorio.technologies.removeResearchUnitIngredient(technology_name, science_pack_name)	
 krastorio.technologies.addResearchUnitIngredient(technology_name, science_pack_name, count)
+krastorio.technologies.convertResearchUnitIngredient(technology_name, old_science_pack_name, new_science_pack_name)
 
 krastorio.technologies.setResearchUnitCount(technology_name, count)
 
 krastorio.technologies.addSciencePackCollection(science_pack_collection_name, science_pack_collection)
 krastorio.technologies.sanitizeUnitsOfAllTechnologiesInPacks(science_pack_collection_name, with_vanilla)
+krastorio.technologies.removeSciencePackIncompatibleWith(science_pack_name, science_pack_incompatibilities)
 
 krastorio.recipes.findNotUnlockableTechnologies()
 
