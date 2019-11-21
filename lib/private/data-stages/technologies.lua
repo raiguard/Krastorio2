@@ -629,6 +629,62 @@ function krastorio.technologies.sanitizeUnitsOfAllTechnologiesInPacks(science_pa
 	end
 end
 
+-- Given one science pack, and another set will remove,
+-- if one technology have that science will remove from that technology all science pack
+-- in the set science_pack_incompatibilities.
+function krastorio.technologies.removeSciencePackIncompatibleWith(science_pack_name, science_pack_incompatibilities)
+	if type(science_pack_name) == "string" and science_pack_incompatibilities and next(science_pack_incompatibilities) then
+			
+		for technology_name, technology in pairs(data.raw.technology) do
+			
+			local is_in = false
+			local ingredients = technology.unit.ingredients				
+			if ingredients and next(ingredients) ~= nil then				
+				for i = 1, #ingredients do
+					local ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])					
+					if science_pack_name == ingredient_name then
+						is_in = true
+						break
+					end	
+				end					
+				if is_in then
+					local is_sanitized = false
+					local wrong_one = nil
+					while not is_sanitized do
+						wrong_one = -1
+						for i = 1, #ingredients do
+							local ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])								
+							for _, science_pack_incompatible in pairs(science_pack_incompatibilities) do
+								if science_pack_incompatible == ingredient_name then
+									wrong_one = i
+									break
+								end	
+							end
+							if wrong_one then
+								break
+							end									
+						end
+						
+						if wrong_one == -1 then
+							is_sanitized = true
+						else
+							for j, prerequisite_name in pairs(technology.prerequisites) do
+								for _, value in pairs(ingredients[wrong_one]) do
+									if prerequisite_name == value then
+										table.remove(technology.prerequisites, j)
+										break
+									end
+								end								
+							end
+							table.remove(ingredients, wrong_one)								
+						end							
+					end
+				end					
+			end			
+		end
+	end	
+end
+
 -- Return the name of all technologies that isn't unlockable.
 -- Because technologies is a graph composed by nodes dependent on others,
 -- this function with recursively test if a technology is enabled and its prerequisites
