@@ -21,16 +21,6 @@ krastorio.technologies.science_pack_collections =
 
 -- -- -- GETTING(READ) FUNCTIONS
 
--- RESEARCH UNIT INGREDIENTS
-
-function krastorio.technologies.getIngredientName(ingredient)
-	return ingredient.name or ingredient[1]
-end
-
-function krastorio.technologies.getIngredientCount(ingredient)
-	return ingredient.amount or ingredient[2]
-end
-
 -- -- PREREQUISITES
 
 function krastorio.technologies.getPrerequisites(technology_name)
@@ -84,6 +74,17 @@ end
 
 -- -- RESEARCH UNIT INGREDIENTS(research_unit_ingredients)
 
+-- @ ingredient
+function krastorio.technologies.getIngredientName(ingredient)
+	return ingredient.name or ingredient[1]
+end
+
+-- @ ingredient
+function krastorio.technologies.getIngredientCount(ingredient)
+	return ingredient.amount or ingredient[2]
+end
+
+-- @ technology_name
 function krastorio.technologies.getResearchUnitIngredients(technology_name)
 	local technology = krastorio.technologies.getTechnologyFromName(technology_name)
 	if technology and next(technology) ~= nil then
@@ -94,6 +95,28 @@ function krastorio.technologies.getResearchUnitIngredients(technology_name)
 		end	
 	end
 	return {}
+end
+
+-- wrapper of getResearchUnitIngredients(technology_name)
+-- @ technology_name
+function krastorio.technologies.getIngredients(technology_name)
+	return krastorio.technologies.getResearchUnitIngredients(technology_name)
+end
+
+-- @ technology_name
+-- @ science_pack_name
+-- return a boolean
+function krastorio.technologies.hasIngredient(technology_name, science_pack_name)
+	local ingredients = krastorio.technologies.getResearchUnitIngredients(technology_name)
+	if next(ingredients) ~= nil then
+		for i = 1, #ingredients do
+			local ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])
+			if value == ingredient_name then
+				return true
+			end	
+		end
+	end	
+	return false
 end
 
 -- -- RESEARCH UNITS
