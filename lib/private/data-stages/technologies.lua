@@ -108,10 +108,10 @@ end
 -- return a boolean
 function krastorio.technologies.hasIngredient(technology_name, science_pack_name)
 	local ingredients = krastorio.technologies.getResearchUnitIngredients(technology_name)
-	if next(ingredients) ~= nil then
+	if ingredients and next(ingredients) ~= nil then
 		for i = 1, #ingredients do
 			local ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])
-			if value == ingredient_name then
+			if ingredient_name == science_pack_name then
 				return true
 			end	
 		end
@@ -466,14 +466,11 @@ function krastorio.technologies.removeResearchUnitIngredient(technology_name, sc
 		end			
 		-- ingredients
 		for i = 1, #ingredients do
-			for _, value in pairs(ingredients[i]) do
-				if type(value) ~= "number" then
-					if science_pack_name == value then
-						table.remove(ingredients, i)
-						return true
-					end
-				end
-			end		
+			local ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])
+			if ingredient_name == science_pack_name then
+				table.remove(ingredients, i)
+				return true
+			end	
 		end			
 	end
 	
@@ -486,18 +483,20 @@ function krastorio.technologies.addResearchUnitIngredient(technology_name, scien
 	if technology and next(technology) ~= nil then	
 		correct_count = count or 1
 		-- add prerequisite
-		if next(technology.prerequisites) ~= nil then
-			local found = false
-			for _, prerequisite in pairs(technology.prerequisites) do
-				if prerequisite == science_pack_name then
-					found = true
+		if krastorio.technologies.getTechnologyFromName(science_pack_name) then
+			if technology.prerequisites and next(technology.prerequisites) ~= nil then
+				local found = false
+				for _, prerequisite in pairs(technology.prerequisites) do
+					if prerequisite == science_pack_name then
+						found = true
+					end		
 				end		
-			end		
-			if not found then
-				table.insert(technology.prerequisites, science_pack_name)
+				if not found then
+					table.insert(technology.prerequisites, science_pack_name)
+				end
+			else
+				technology.prerequisites = {science_pack_name}
 			end
-		else
-			technology.prerequisites = {science_pack_name}
 		end
 		-- add ingredient
 		for _, ingredient in pairs(technology.unit.ingredients) do
@@ -535,7 +534,7 @@ function krastorio.technologies.convertResearchUnitIngredient(technology_name, o
 			end
 		end	
 		-- remove old, add new prerequisite
-		if converted then
+		if converted and krastorio.technologies.getTechnologyFromName(new_science_pack_name) then			
 			if prerequisites and next(prerequisites) ~= nil then
 				local index_old, index_new = -1, -1
 				for i, prerequisite in pairs(prerequisites) do
@@ -558,7 +557,7 @@ function krastorio.technologies.convertResearchUnitIngredient(technology_name, o
 				end			
 			else
 				prerequisites = {new_science_pack_name}
-			end		
+			end
 		end
 	end
 		
