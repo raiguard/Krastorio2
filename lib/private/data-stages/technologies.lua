@@ -706,6 +706,8 @@ end
 -- Given one science pack, and another set will remove,
 -- if one technology have that science will remove from that technology all science pack
 -- in the set science_pack_incompatibilities.
+-- @ science_pack_name
+-- @ science_pack_incompatibilities - a set
 function krastorio.technologies.removeSciencePackIncompatibleWith(science_pack_name, science_pack_incompatibilities)
 	if type(science_pack_name) == "string" and science_pack_incompatibilities and next(science_pack_incompatibilities) then
 			
@@ -757,6 +759,46 @@ function krastorio.technologies.removeSciencePackIncompatibleWith(science_pack_n
 			end			
 		end
 	end	
+end
+
+function krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
+	-- calculate existance of science pack technologies
+	local science_techs = {}
+	for _, science_pack in pairs(krastorio.items.getAllItemsOfType("tool")) do
+		if krastorio.technologies.getTechnologyFromName(science_pack.name) then
+			science_techs[science_pack.name] = true
+		end
+	end
+	
+	-- enforce science packs in prerequisites (or in their prerequisites) for each technology
+	for technology_name, technology in pairs(data.raw.technology) do
+		local prerequisites = technology.prerequisites
+		local ingredients   = technology.unit.ingredients				
+		if ingredients and next(ingredients) ~= nil then				
+			for i = 1, #ingredients do
+				local science_pack_name = krastorio.technologies.getIngredientName(ingredients[i])					
+				if science_techs[science_pack_name] then
+					local hold = false
+					if prerequisites and next(prerequisites) then
+						for _, prerequisite in pairs(prerequisites) do
+							if prerequisite == science_pack_name then
+								hold = true
+								break
+							elseif krastorio.technologies.hasIngredient(prerequisite, science_pack_name) or 
+							       krastorio.technologies.hasPrerequisite(prerequisite, science_pack_name) 
+							then
+								hold = true
+								break			
+							end										
+						end
+					end
+					if not hold then
+						krastorio.technologies.addPrerequisite(technology_name, science_pack_name, true)
+					end					
+				end	
+			end	
+		end		
+	end
 end
 
 -- Return the name of all technologies that isn't unlockable.

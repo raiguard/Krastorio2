@@ -53,6 +53,9 @@ krastorio.technologies.removeSciencePackIncompatibleWith("production-science-pac
 krastorio.technologies.removeSciencePackIncompatibleWith("utility-science-pack", science_pack_incompatibilities)
 -- Sanitize matter tech card from T0 packs
 krastorio.technologies.removeSciencePackIncompatibleWith("matter-tech-card", science_pack_incompatibilities)
+
+-- -- -- ENFORCE SCIENCE PACK PREREQUISITE COHERENCE 
+krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
 ---------------------------------------------------------------------------
 -- -- -- COMPATIBILITY INITIALIZATION (data final fixes stage)
 ---------------------------------------------------------------------------
