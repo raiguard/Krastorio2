@@ -71,12 +71,24 @@ return
 		type = "recipe",
 		name = "iron-beam",
 		energy_required = 3,
-		enabled = false,
+		enabled = true,
 		ingredients =
 		{
-			{"iron-plate", 3}
+			{"iron-plate", 1}
 		},
 		result = "iron-beam",
+		result_count = 1
+	},
+	{
+		type = "recipe",
+		name = "steel-gear-wheel",
+		energy_required = 0.5,
+		enabled = true,
+		ingredients =
+		{
+			{"steel-plate", 2}
+		},
+		result = "steel-gear-wheel",
 		result_count = 1
 	},
 -----------------------------------------------------------------------------------------------------------------

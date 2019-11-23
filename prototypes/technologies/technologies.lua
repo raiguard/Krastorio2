@@ -5,7 +5,7 @@ data:extend(
 -----------------------------------------------------------------------------------------------------------------
 	{
 		type = "technology",
-		name = "greenhouse",
+		name = "kr-greenhouse",
 		icon = kr_technologies_icons_path .. "greenhouse.png",
 		icon_size = 128,
 		effects =
@@ -50,12 +50,12 @@ data:extend(
 			{
 				{"basic-tech-card", 1}
 			},
-			time = 30
+			time = 15
 		}
     },
 	{
 		type = "technology",
-		name = "automation-science-pack",
+		name = "automation-science-pack", -- DON'T CHANGE THIS NAME (is needed for the enforce algorithm)
 		icon = kr_technologies_icons_path .. "automation-tech-card.png",
 		icon_size = 128,
 		effects =

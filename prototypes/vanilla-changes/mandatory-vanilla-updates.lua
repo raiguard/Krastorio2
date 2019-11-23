@@ -3,15 +3,14 @@
 
 local modifications =
 {	
-	"icons-changes",               -- Modify aspect of vanilla items (like science pack icons..)
-	"items-changes",               -- Modify vanilla items
-	"improve-inserters",           -- Improve inserters, new functions	
-	"rebalance-nuclear-power",     -- Rebalance nuclear power	
-	"rebalance-power-poles-range", -- Rebalance power poles range	
-	"recipes-changes",             -- All modification to vanilla recipes	
-	"renaming-vanillas",           -- Localization changes to vanilla objects
-	"technologies-changes",        -- Modifications to vanilla technologies
-	"vanilla-lab-changes"          -- Modify stat and accepted science packs of vanilla lab
+	"icons-changes",           -- Modify aspect of vanilla items (like science pack icons..)
+	"items-changes",           -- Modify vanilla items
+	"improve-inserters",       -- Improve inserters, new functions	
+	"rebalance-nuclear-power", -- Rebalance nuclear power	
+	"recipes-changes",         -- All modification to vanilla recipes	
+	"renaming-vanillas",       -- Localization changes to vanilla objects
+	"technologies-changes",    -- Modifications to vanilla technologies
+	"vanilla-lab-changes"      -- Modify stat and accepted science packs of vanilla lab
 }
 
 -- Application of the modifications

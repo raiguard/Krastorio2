@@ -7,7 +7,7 @@ data:extend(
 		type = "item",
 		name = "automation-core",
 		icon = kr_icons_path .. "automation-core.png",
-		icon_size = 32,
+		icon_size = 64,
 		subgroup = "raw-material",
 		order = "a[automation-core]",
 		stack_size = 200
@@ -84,8 +84,17 @@ data:extend(
 		name = "iron-beam",
 		icon = "__base__/graphics/icons/steel-plate.png",
 		icon_size = 32,
-		subgroup = "raw-material",
-		order = "d[iron-beam]",
+		subgroup = "intermediate-product",
+		order = "b-a2[iron-beam]",
+		stack_size = 200
+	},
+	{
+		type = "item",
+		name = "steel-gear-wheel",
+		icon = kr_icons_path .. "steel-gear-wheel.png",
+		icon_size = 64,
+		subgroup = "intermediate-product",
+		order = "c-a2[steel-gear-wheel]",
 		stack_size = 200
 	},
 -----------------------------------------------------------------------------------------------------------------

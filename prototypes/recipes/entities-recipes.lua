@@ -11,8 +11,8 @@ return
 		ingredients =
 		{
 			{"wood" , 100},
-			{"iron-plate", 20},
-			{"copper-plate", 10}
+			{"iron-beam", 10},
+			{"glass", 10}
 		},
 		result = "kr-greenhouse"
     },

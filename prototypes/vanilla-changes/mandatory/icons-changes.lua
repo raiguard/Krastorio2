@@ -43,15 +43,28 @@ data.raw.tool["space-science-pack"].order = "b09[optimization-tech-card]"
 data.raw.technology["space-science-pack"].icon = kr_technologies_icons_path .. "optimization-tech-card.png"
 
 -----------------------------------------------------------------
--- -- Chaning steel icon
+-- -- Chaning intermediate products icons
 
+-- Chaning iron plate
+data.raw.item["iron-plate"].icon = kr_icons_path .. "iron-plate.png"
+data.raw.item["iron-plate"].icon_size = 64
+
+-- Changing copper plate
+data.raw.item["copper-plate"].icon = kr_icons_path .. "copper-plate.png"
+data.raw.item["copper-plate"].icon_size = 64
+
+-- Chaning steel icon
 data.raw.item["steel-plate"].icon = kr_icons_path .. "steel-plate.png"
+data.raw.item["steel-plate"].icon_size = 64
 data.raw.item["steel-plate"].icon_mipmaps = 1
 data.raw.item["steel-plate"].pictures =
 {
 	{ size = 64, filename = kr_mip_icons_path .. "steel-plate.png", scale = 0.25, mipmap_count = 4 }
 }
 
+-- Changing iron gear wheel
+data.raw.item["iron-gear-wheel"].icon = kr_icons_path .. "iron-gear-wheel.png"
+data.raw.item["iron-gear-wheel"].icon_size = 64
 -----------------------------------------------------------------
 
 

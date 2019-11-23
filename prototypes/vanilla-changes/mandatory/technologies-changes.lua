@@ -1,13 +1,15 @@
 -- -- -- Modifications to vanilla technologies
 
--- -- Start game prerequisites
+-- -- Prerequisites
 
 -- Addings
+krastorio.technologies.addPrerequisite("automation", "automation-core")
+krastorio.technologies.addPrerequisite("automation", "automation-science-pack")
 krastorio.technologies.addPrerequisite("logistic-science-pack", "automation-science-pack")
 krastorio.technologies.addPrerequisite("logistics", "automation-science-pack")
+krastorio.technologies.addPrerequisite("stone-walls", "military")
 krastorio.technologies.addPrerequisite("turrets", "automation-science-pack")
-krastorio.technologies.addPrerequisite("automation", "automation-science-pack")
-krastorio.technologies.addPrerequisite("automation", "automation-core")
+krastorio.technologies.addPrerequisite("fast-inserter", "electronics")
 
 -- -- Research unit ingredients
 
@@ -21,10 +23,29 @@ krastorio.technologies.addResearchUnitIngredient("automation", "basic-tech-card"
 -- Removing
 krastorio.technologies.removeResearchUnitIngredient("automation", "automation-science-pack")
 
--- Others
+-- Recipes Unlocking
 
--- Adding coke unlocking to steel production technology
+-- Addings
+
+-- Adding coke unlocking to steel production technology and steel things
 krastorio.technologies.addUnlockRecipe("steel-processing", "coke")
+krastorio.technologies.addUnlockRecipe("steel-processing", "steel-gear-wheel")
+
+-- Moving inserters unlocking in early game
+krastorio.technologies.addUnlockRecipe("automation", "burner-inserter")
+krastorio.technologies.addUnlockRecipe("logistics", "inserter")
+krastorio.technologies.addUnlockRecipe("logistics", "long-handed-inserter")
+
+-- First belt
+krastorio.technologies.addUnlockRecipe("logistics", "transport-belt")
+
+-- Electronics I
+krastorio.technologies.addUnlockRecipe("electronics", "electronic-circuit")
+
+-- Removings
+
+-- Moving inserters unlocking in early game
+krastorio.technologies.removeUnlockRecipe("automation", "long-handed-inserter")
 
 -- END CHANGING (this lines must remain at the end of file)
 
