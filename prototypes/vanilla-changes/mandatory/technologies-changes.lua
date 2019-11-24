@@ -11,6 +11,7 @@ krastorio.technologies.addPrerequisite("stone-walls", "military")
 krastorio.technologies.addPrerequisite("turrets", "automation-science-pack")
 krastorio.technologies.addPrerequisite("fast-inserter", "electronics")
 krastorio.technologies.addPrerequisite("heavy-armor", "light-armor")
+krastorio.technologies.addPrerequisite("optics", "stone-processing")
 
 --Removing
 krastorio.technologies.removePrerequisite("heavy-armor", "military")
