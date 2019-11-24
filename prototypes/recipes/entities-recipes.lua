@@ -12,7 +12,8 @@ return
 		{
 			{"wood" , 100},
 			{"iron-beam", 10},
-			{"glass", 10}
+			{"glass", 10},
+			{"automation-core", 1}
 		},
 		result = "kr-greenhouse"
     },

@@ -23,8 +23,8 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"iron-gear-wheel", 5},
-			{"iron-stick", 5},
+			{"iron-gear-wheel", 2},
+			{"iron-stick", 2},
 			{"copper-plate", 5}
 		},
 		result = "automation-core",

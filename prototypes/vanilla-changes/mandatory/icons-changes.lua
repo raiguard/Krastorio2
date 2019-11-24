@@ -1,4 +1,5 @@
 -----------------------------------------------------------------
+-- -- -- ITEMS
 -- -- Adapting the vanilla science packs with the new icons style
 
 -- Automation science pack
@@ -66,5 +67,7 @@ data.raw.item["steel-plate"].pictures =
 data.raw.item["iron-gear-wheel"].icon = kr_icons_path .. "iron-gear-wheel.png"
 data.raw.item["iron-gear-wheel"].icon_size = 64
 -----------------------------------------------------------------
+-- -- -- TECHNOLOGIES
 
+data.raw.technology["heavy-armor"].icon = kr_technologies_icons_path .. "heavy-armor.png"
 

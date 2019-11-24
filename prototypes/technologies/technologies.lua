@@ -1,7 +1,7 @@
 data:extend(
 {
 -----------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------
+---------------------------------------------ONLY BUILDINGS UNLOCKING--------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 	{
 		type = "technology",
@@ -19,10 +19,10 @@ data:extend(
 				recipe = "kr-grow-wood"
 			}
 		},
-		prerequisites = {},
+		prerequisites = {"automation-core", "stone-processing"},
 		unit =
 		{
-			count = 30,
+			count = 60,
 			ingredients = 
 			{
 				{"basic-tech-card", 1}
@@ -30,6 +30,29 @@ data:extend(
 			time = 30
 		}
     },
+	{
+		type = "technology",
+		name = "kr-crusher",
+		icon = kr_technologies_icons_path .. "crusher.png",
+		icon_size = 128,
+		effects =
+		{
+			
+		},
+		prerequisites = {"automation-core"},
+		unit =
+		{
+			count = 40,
+			ingredients = 
+			{
+				{"basic-tech-card", 1}
+			},
+			time = 15
+		}
+    },
+-----------------------------------------------------------------------------------------------------------------
+-------------------------------------------------ONLY ITEMS UNLOCKING--------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 	{
 		type = "technology",
 		name = "automation-core",
@@ -46,6 +69,29 @@ data:extend(
 		unit =
 		{
 			count = 30,
+			ingredients = 
+			{
+				{"basic-tech-card", 1}
+			},
+			time = 15
+		}
+    },
+	{
+		type = "technology",
+		name = "light-armor",
+		icon = kr_technologies_icons_path .. "light-armor.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "light-armor"
+			}
+		},
+		prerequisites = {"military"},
+		unit =
+		{
+			count = 50,
 			ingredients = 
 			{
 				{"basic-tech-card", 1}
@@ -76,6 +122,37 @@ data:extend(
 			time = 30
 		}
     },
+	{
+		type = "technology",
+		name = "stone-processing",
+		icon = kr_technologies_icons_path .. "crusher.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "sand"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "glass"
+			}
+		},
+		prerequisites = {"kr-crusher"},
+		unit =
+		{
+			count = 50,
+			ingredients = 
+			{
+				{"basic-tech-card", 1}
+			},
+			time = 15
+		}
+    },
+-----------------------------------------------------------------------------------------------------------------
+---------------------------------------------------MIXED UNLOCKING-----------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+-- nothing...
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

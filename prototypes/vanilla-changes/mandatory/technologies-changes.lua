@@ -10,6 +10,10 @@ krastorio.technologies.addPrerequisite("logistics", "automation-science-pack")
 krastorio.technologies.addPrerequisite("stone-walls", "military")
 krastorio.technologies.addPrerequisite("turrets", "automation-science-pack")
 krastorio.technologies.addPrerequisite("fast-inserter", "electronics")
+krastorio.technologies.addPrerequisite("heavy-armor", "light-armor")
+
+--Removing
+krastorio.technologies.removePrerequisite("heavy-armor", "military")
 
 -- -- Research unit ingredients
 
