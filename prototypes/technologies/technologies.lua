@@ -37,7 +37,10 @@ data:extend(
 		icon_size = 128,
 		effects =
 		{
-			
+			{
+				type = "unlock-recipe",
+				recipe = "kr-crusher"
+			},
 		},
 		prerequisites = {"automation-core"},
 		unit =
