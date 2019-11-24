@@ -47,6 +47,11 @@ krastorio.recipes.overrideIngredients
 -- Lamp
 krastorio.recipes.convertIngredient("small-lamp", "electronic-circuit", "glass")
 
+-- Bricks
+if krastorio.recipes.exist("stone-brick") then
+	data.raw.recipe["stone-brick"].subgroup = "raw-material"
+end
+
 -- -- -- BUILDINGS
 
 krastorio.recipes.convertIngredient("assembling-machine-1", "electronic-circuit", "automation-core")
