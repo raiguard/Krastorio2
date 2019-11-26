@@ -21,7 +21,7 @@ function krastorio.recipes.getIngredientAmount(ingredient)
 end
 
 -- @ ingredient
-function krastorio.recipes.getIngredientAatalystAmount(ingredient)
+function krastorio.recipes.getIngredientCatalystAmount(ingredient)
 	return ingredient.catalyst_amount or 0
 end
 

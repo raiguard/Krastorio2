@@ -37,7 +37,7 @@ function krastorio.dlr_func.generateDestroyFluidsRecipe(fluid_name, recipe_type,
 			local recipe = 
 			{
 				type = "recipe",
-				name = "k-" .. recipe_type .. "-" .. fluid.name,
+				name = "kr-" .. recipe_type .. "-" .. fluid.name,
 				localised_name={"recipe-name." .. recipe_type, (fluid.localised_name or ({"fluid-name." .. fluid.name}))},
 				localised_description={"recipe-description." .. recipe_type, (fluid.localised_name or ({"fluid-name." .. fluid.name}))},
 				category = building,

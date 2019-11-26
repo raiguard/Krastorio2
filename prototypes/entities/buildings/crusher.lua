@@ -4,7 +4,7 @@ data:extend(
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 	{
-		type = "assembling-machine",
+		type = "furnace",
 		name = "kr-crusher",
 		icon_size = 32,
 		icon =  kr_entities_icons_path .. "crusher.png",
@@ -115,6 +115,8 @@ data:extend(
         --apparent_volume = 1.5
         --},
 		crafting_speed = 1,
+		source_inventory_size = 1,
+		result_inventory_size = 1,
 		energy_source =
 		{
 			type = "electric",
