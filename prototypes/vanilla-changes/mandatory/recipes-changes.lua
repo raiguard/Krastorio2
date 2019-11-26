@@ -43,6 +43,7 @@ krastorio.recipes.overrideIngredients
 		{"coke", 1}
 	}
 )
+krastorio.recipes.setEnergyCost("steel-plate", 3.2)
 
 -- Lamp
 krastorio.recipes.convertIngredient("small-lamp", "electronic-circuit", "glass")

@@ -100,7 +100,7 @@ data:extend(
 --				}
 --			}
 		},
-		crafting_categories = {"crusher"},
+		crafting_categories = {"crushing"},
 		vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
         --working_sound =
         --{
@@ -121,7 +121,7 @@ data:extend(
 			usage_priority = "secondary-input",
 			emissions_per_minute = 20
 		},
-		energy_usage = "250KW",
+		energy_usage = "225KW",
 		ingredient_count = 6,
 		--module_specification =
 		--{

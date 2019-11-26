@@ -5,6 +5,26 @@ krastorio.recipes.recipes_groups = {}
 
 -- -- INGREDIENTS
 
+-- @ ingredient
+function krastorio.recipes.getIngredientType(ingredient)
+	return ingredient.type or "item"
+end
+
+-- @ ingredient
+function krastorio.recipes.getIngredientName(ingredient)
+	return ingredient.name or ingredient[1]
+end
+
+-- @ ingredient
+function krastorio.recipes.getIngredientAmount(ingredient)
+	return ingredient.amount or ingredient[2]
+end
+
+-- @ ingredient
+function krastorio.recipes.getIngredientAatalystAmount(ingredient)
+	return ingredient.catalyst_amount or 0
+end
+
 -- -- normal
 
 -- @ recipe_name
@@ -30,12 +50,12 @@ end
 function krastorio.recipes.hasIngredient(recipe_name, ingredient_name)
 	local ingredients = krastorio.recipes.getIngredients(recipe_name)
 	if next(ingredients) ~= nil then
+		local inner_ingredient_name = nil
 		for i = 1, #ingredients do
-			for _, value in pairs(ingredients[i]) do
-				if value == ingredient_name then
-					return true
-				end
-			end		
+			inner_ingredient_name = krastorio.recipes.getIngredientName(ingredients[i])
+			if inner_ingredient_name == ingredient_name then
+				return true
+			end
 		end
 	end	
 	return false
@@ -84,12 +104,12 @@ end
 function krastorio.recipes.hasExpensiveIngredient(recipe_name, ingredient_name)
 	local expensive_ingredients = krastorio.recipes.getExpensiveIngredients(recipe_name)
 	if next(expensive_ingredients) ~= nil then
+		local inner_ingredient_name = nil
 		for i = 1, #expensive_ingredients do
-			for _, value in pairs(expensive_ingredients[i]) do
-				if value == ingredient_name then
-					return true
-				end
-			end		
+			inner_ingredient_name = krastorio.recipes.getIngredientName(expensive_ingredients[i])
+			if inner_ingredient_name == ingredient_name then
+				return true
+			end
 		end
 	end	
 	return false
@@ -196,12 +216,12 @@ end
 function krastorio.recipes.hasProduct(recipe_name, product_name)
 	local products = krastorio.recipes.getProducts(recipe_name)
 	if next(products) ~= nil then
-		for i = 1, #products do
-			for _, value in pairs(products[i]) do
-				if value == product_name then
-					return true
-				end
-			end		
+		local inner_product_name = nil
+		for i = 1, #products do			
+			inner_product_name = krastorio.recipes.getIngredientName(products[i])
+			if inner_product_name == product_name then
+				return true
+			end	
 		end
 	end	
 	return false
@@ -354,9 +374,10 @@ end
 
 function krastorio.recipes.remove(items, item_name)	
 	local removed = false
+	local inner_item_name = nil
 	for i, item in pairs(items) do
-		local name = item.name or item[1]
-		if name == item_name then
+		inner_item_name = krastorio.recipes.getIngredientName(item)
+		if inner_item_name == item_name then
 			table.remove(items, i)
 			removed = true			
 		end
@@ -380,13 +401,14 @@ function krastorio.recipes.add(items, item)
 end
 
 function krastorio.recipes.multiply(items, item_name, multiplier)	
-	for i, ingredient in pairs(items) do
-		local name = ingredient.name or ingredient[1]		
-		if name == item_name then
-			if ingredient.amount then
-				items[i].amount = ingredient.amount * multiplier
+	local inner_item_name = nil
+	for i, item in pairs(items) do
+		inner_item_name = krastorio.recipes.getIngredientName(item)		
+		if inner_item_name == item_name then
+			if item.amount then
+				items[i].amount = item.amount * multiplier
 			else
-				items[i][2] = ingredient[2] * multiplier
+				items[i][2] = item[2] * multiplier
 			end
 			return true
 		end
@@ -395,9 +417,10 @@ function krastorio.recipes.multiply(items, item_name, multiplier)
 end
 
 function krastorio.recipes.replace(items, old_item_name, new_item)	
-	for i, ingredient in pairs(items) do
-		local name = ingredient.name or ingredient[1]
-		if name == old_item_name then
+	local inner_item_name = nil
+	for i, item in pairs(items) do
+		inner_item_name = krastorio.recipes.getIngredientName(item)	
+		if inner_item_name == old_item_name then
 			items[i] = new_item
 			krastorio.recipes.uniteDuplicateItems(items)
 			return true
@@ -1567,7 +1590,7 @@ end
 
 -- @ recipe_name
 -- @ energy_cost
-function krastorio.recipes.setRecipeEnergyCost(recipe_name, energy_cost, expensive_cost)
+function krastorio.recipes.setEnergyCost(recipe_name, energy_cost, expensive_cost)
 	local recipe = krastorio.recipes.getRecipeFromName(recipe_name)
 		
 	if recipe ~= nil then

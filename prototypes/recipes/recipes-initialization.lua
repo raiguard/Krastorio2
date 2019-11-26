@@ -15,3 +15,8 @@ for _, recipe_section in pairs(krastorio_new_recipes) do
 		krastorio.recipes.addWithOverrideSafeNewRecipe(recipe)
 	end
 end
+
+-- Generate for each item that can't be processed from the crusher like machines
+-- a void recipe for destroy it
+-- (This must be done after adding other recipes)
+require("generate-void-crushing-recipes")

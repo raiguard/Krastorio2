@@ -6,7 +6,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-grow-wood",
-		category = "greenhouse",
+		category = "growing",
 		energy_required = 180,
 		enabled = false,
 		ingredients =
@@ -46,6 +46,7 @@ return
 	{
 		type = "recipe",
 		name = "sand",
+		category = "crushing",
 		energy_required = 3,
 		enabled = false,
 		ingredients =
@@ -58,6 +59,7 @@ return
 	{
 		type = "recipe",
 		name = "glass",
+		category = "smelting",
 		energy_required = 3,
 		enabled = false,
 		ingredients =
@@ -74,7 +76,7 @@ return
 		enabled = true,
 		ingredients =
 		{
-			{"iron-plate", 1}
+			{"iron-plate", 2}
 		},
 		result = "iron-beam",
 		result_count = 1
