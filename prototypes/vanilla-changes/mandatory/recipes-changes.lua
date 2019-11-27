@@ -55,8 +55,22 @@ end
 
 -- -- -- BUILDINGS
 
+-- Assembling machine tier 1
 krastorio.recipes.convertIngredient("assembling-machine-1", "electronic-circuit", "automation-core")
-krastorio.recipes.convertIngredient("assembling-machine-1", "iron-plate", "iron-beam")
+krastorio.recipes.replaceIngredient("assembling-machine-1", "iron-plate", {"iron-beam", 5})
+
+-- Gun turret
+krastorio.recipes.replaceIngredient("gun-turret", "iron-plate", {"iron-beam", 10})
+
+-- Underground belt (Yellow tier 1)
+krastorio.recipes.replaceIngredient("underground-belt", "iron-plate", {"iron-beam", 5})
+
+-- Splitter (Yellow tier 1)
+krastorio.recipes.replaceIngredient("splitter", "iron-plate", {"iron-gear-wheel", 5})
+krastorio.recipes.replaceIngredient("splitter", "electronic-circuit", {"automation-core", 1})
+
+-- Storage tank
+krastorio.recipes.replaceIngredient("storage-tank", "iron-plate", {"iron-beam", 10})
 
 -- -- -- SPECIAL
 

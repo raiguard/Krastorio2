@@ -14,7 +14,7 @@ krastorio.icons.setTechnologyIcon("logistic-science-pack", kr_technologies_icons
 -- Military science pack
 krastorio.icons.setItemIcon("military-science-pack", kr_cards_icons_path .. "military-tech-card.png")
 data.raw.tool["military-science-pack"].order = "b04[military-tech-card]"
-krastorio.icons.setTechnologyIcon("logistic-science-pack", kr_technologies_icons_path .. "military-tech-card.png")
+krastorio.icons.setTechnologyIcon("military-science-pack", kr_technologies_icons_path .. "military-tech-card.png")
 
 -- Chemical science pack
 krastorio.icons.setItemIcon("chemical-science-pack", kr_cards_icons_path .. "chemical-tech-card.png")
