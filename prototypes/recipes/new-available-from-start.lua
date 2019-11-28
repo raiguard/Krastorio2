@@ -5,48 +5,29 @@ return
 -----------------------------------------------------------------------------------------------------------------
 	{
 		type = "recipe",
-		name = "kr-greenhouse",
-		energy_required = 60,
-		enabled = false,
+		name = "basic-tech-card",
+		energy_required = 5.5,
+		enabled = true,
 		ingredients =
 		{
-			{"wood" , 100},
-			{"iron-beam", 10},
-			{"glass", 10},
-			{"automation-core", 1}
+			{"wood", 1},
+			{"copper-cable", 1}
 		},
-		result = "kr-greenhouse"
-    },
-	
+		result = "basic-tech-card",
+		result_count = 1
+	},
 	{
 		type = "recipe",
-		name = "kr-crusher",
-		energy_required = 60,
-		enabled = false,
+		name = "iron-beam",
+		energy_required = 3,
+		enabled = true,
 		ingredients =
 		{
-			{"iron-beam", 10},
-			{"iron-plate", 20},
-			{"copper-plate", 10},
-			{"automation-core", 1}
+			{"iron-plate", 2}
 		},
-		result = "kr-crusher"
-    },
-	{
-		type = "recipe",
-		name = "kr-medium-container",
-		energy_required = 10,
-		enabled = false,
-		ingredients =
-		{
-			{"steel-chest", 5},
-			{"steel-plate", 10}
-		},
-		result = "kr-medium-container",
-		subgroup = "storage",
-		order = "a[items]-d[medium-container]"
-    },
-	
+		result = "iron-beam",
+		result_count = 1
+	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

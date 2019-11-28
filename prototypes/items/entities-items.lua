@@ -34,6 +34,19 @@ data:extend(
 		place_result = "biusart_lab",
 		stack_size = 50
     },
+	-- MEDIUM CONTEINERS
+	-- -- --
+	{
+		type = "item",
+		name = "kr-medium-container",
+		icon = kr_entities_icons_path .. "containers/medium-containers/" .. "medium-container.png",
+		stack_size = 50,
+		icon_size = 32,
+		subgroup = "storage",
+		order = "a[items]-d[medium-container]",
+		place_result = "kr-medium-container"
+    },
+	-- -- --
 	
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

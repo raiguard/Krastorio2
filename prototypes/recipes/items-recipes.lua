@@ -76,18 +76,6 @@ return
 	},
 	{
 		type = "recipe",
-		name = "iron-beam",
-		energy_required = 3,
-		enabled = true,
-		ingredients =
-		{
-			{"iron-plate", 2}
-		},
-		result = "iron-beam",
-		result_count = 1
-	},
-	{
-		type = "recipe",
 		name = "steel-gear-wheel",
 		energy_required = 0.5,
 		enabled = false,
@@ -96,19 +84,6 @@ return
 			{"steel-plate", 2}
 		},
 		result = "steel-gear-wheel",
-		result_count = 1
-	},
-	{
-		type = "recipe",
-		name = "basic-tech-card",
-		energy_required = 5.5,
-		enabled = true,
-		ingredients =
-		{
-			{"wood", 1},
-			{"copper-cable", 1}
-		},
-		result = "basic-tech-card",
 		result_count = 1
 	},
 -----------------------------------------------------------------------------------------------------------------

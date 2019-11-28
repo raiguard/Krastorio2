@@ -1,5 +1,8 @@
 local krastorio_new_recipes =
 {
+	-- -- New recipes new available from start
+	require("new-available-from-start"),
+
 	-- -- Recipes for buildings and other entities
 	require("entities-recipes"),
 

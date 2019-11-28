@@ -57,3 +57,21 @@ function krastorio.entities.addCollisionMaskOnEntity(category_name, entity_name,
 	end
 	return false
 end
+
+-- This should be used in control,
+-- check if the entities is valid for be used.
+-- @entity, entity
+function krastorio.entities.isValid(entity)
+	return entity and entity.valid ~= nil
+end
+
+-- This should be used in control,
+-- check if entity has fluidbox,
+-- check that if entity is not null too
+-- @entity, entity to check fluidbox
+function krastorio.entities.entityHasFluidbox(entity)
+	if entity and type(entity) == "table" then
+		local fluidbox = entity.fluidbox
+		return fluidbox and #fluidbox > 0
+	end
+end
