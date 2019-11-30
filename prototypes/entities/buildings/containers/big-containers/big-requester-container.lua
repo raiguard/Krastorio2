@@ -14,7 +14,7 @@ data:extend(
 		minable = {mining_time = 1, result = "kr-big-requester-container"},
 		logistic_slots_count = 30,
 		max_health = 1500,
-		corpse = "medium-remnants",
+		corpse = "kr-big-random-pipes-remnant",
 		collision_box = {{-2.75, -2.75}, {2.75, 2.75}},
 		selection_box = {{-3, -3}, {3, 3}},
 		resistances = 
@@ -24,7 +24,7 @@ data:extend(
 			{type = "impact",percent = 75}
 		},
 		fast_replaceable_group = "container",
-		inventory_size = 750,
+		inventory_size = 400,
 		logistic_mode = "requester",
 		open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume=0.65 },
 		close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },

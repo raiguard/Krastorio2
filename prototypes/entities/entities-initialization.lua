@@ -20,4 +20,5 @@ require("buildings/containers/big-containers/big-requester-container")
 require("buildings/containers/big-containers/big-storage-container")
 
 -- -- -- REMNANTS
--- require("remains/remains")
+require("remnants/kr-medium-random-pipes-remnant")
+require("remnants/kr-big-random-pipes-remnant")

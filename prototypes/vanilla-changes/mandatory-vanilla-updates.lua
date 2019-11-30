@@ -7,6 +7,7 @@ local modifications =
 	"icons-changes",           -- Modify aspect of vanilla items (like science pack icons..)
 	"improve-inserters",       -- Improve inserters, new functions	
 	"items-changes",           -- Modify vanilla items
+	"item-sorting",            -- Change some items sorting for match new items
 	"rebalance-nuclear-power", -- Rebalance nuclear power	
 	"recipes-changes",         -- All modification to vanilla recipes	
 	"renaming-vanillas",       -- Localization changes to vanilla objects

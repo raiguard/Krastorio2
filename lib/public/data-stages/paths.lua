@@ -42,6 +42,7 @@ kr_equipments_path                     = kr_graphic_mod_path .. "equipments/"
 -- Entities
 kr_entities_sprites_path               = kr_graphic_mod_path .. "entities/"
 kr_entities_path                       = kr_entities_sprites_path
+kr_remnants_path                       = kr_entities_path .. "remnants/"
 -----------------------------------------------------------------------------------------------------------------
 -- Others
 kr_others_path                         = kr_graphic_mod_path .. "others/"

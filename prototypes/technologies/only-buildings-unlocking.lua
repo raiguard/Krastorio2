@@ -63,7 +63,70 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = "kr-medium-container"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-big-container"
 			}			
+		},
+		prerequisites = {},
+		unit =
+		{
+			count = 40,
+			ingredients = 
+			{
+				{"basic-tech-card", 1}
+			},
+			time = 15
+		}
+    },
+	{
+		type = "technology",
+		name = "kr-logistic-containers",
+		icon = kr_technologies_icons_path .. "logistic-containers.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-medium-active-provider-container"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-medium-buffer-container"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-medium-passive-provider-container"	
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-medium-requester-container"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-medium-storage-container"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-big-active-provider-container"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-big-buffer-container"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-big-passive-provider-container"
+			},				
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-big-requester-container"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-big-storage-container"
+			}
 		},
 		prerequisites = {},
 		unit =

@@ -13,7 +13,7 @@ data:extend(
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "kr-medium-container"},
 		max_health = 500,
-		corpse = "medium-remnants",
+		corpse = "kr-medium-random-pipes-remnant",
 		collision_box = {{-0.8, -0.8}, {0.8, 0.8}},
 		selection_box = {{-1, -1}, {1, 1}},
 		resistances = 
