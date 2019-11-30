@@ -26,7 +26,7 @@ return
 		{
 			{"iron-beam", 10},
 			{"iron-plate", 20},
-			{"copper-plate", 10},
+			{"copper-cable", 6},
 			{"automation-core", 1}
 		},
 		result = "kr-crusher"
