@@ -5,7 +5,6 @@ krastorio.recipes.disable("automation-science-pack") -- ReAdded
 krastorio.recipes.disable("transport-belt") -- ReAdded
 krastorio.recipes.disable("inserter") -- ReAdded
 krastorio.recipes.disable("burner-inserter") -- ReAdded
-krastorio.recipes.disable("small-electric-pole")
 krastorio.recipes.disable("steam-engine")
 krastorio.recipes.disable("pipe")
 krastorio.recipes.disable("pipe-to-ground")
@@ -15,7 +14,9 @@ krastorio.recipes.disable("offshore-pump")
 krastorio.recipes.disable("radar")
 krastorio.recipes.disable("light-armor")
 
+--------------------------------------------------------------------
 -- -- -- ITEMS
+--------------------------------------------------------------------
 
 -- Apply automation core to the early game items
 krastorio.recipes.addIngredient("burner-inserter", {"automation-core", 1})
@@ -53,7 +54,9 @@ if krastorio.recipes.exist("stone-brick") then
 	data.raw.recipe["stone-brick"].subgroup = "raw-material"
 end
 
+--------------------------------------------------------------------
 -- -- -- BUILDINGS
+--------------------------------------------------------------------
 
 -- Assembling machine tier 1
 krastorio.recipes.convertIngredient("assembling-machine-1", "electronic-circuit", "automation-core")
@@ -69,11 +72,42 @@ krastorio.recipes.replaceIngredient("underground-belt", "iron-plate", {"iron-bea
 krastorio.recipes.replaceIngredient("splitter", "iron-plate", {"iron-gear-wheel", 5})
 krastorio.recipes.replaceIngredient("splitter", "electronic-circuit", {"automation-core", 1})
 
--- Storage tank
-krastorio.recipes.replaceIngredient("storage-tank", "iron-plate", {"iron-beam", 10})
+-- Fast belt (Red tier 2)
+krastorio.recipes.convertIngredient("fast-transport-belt", "iron-gear-wheel", "steel-gear-wheel")
 
+-- Fast underground belt (Red tier 2)
+krastorio.recipes.convertIngredient("fast-underground-belt", "iron-gear-wheel", "steel-gear-wheel")
+
+-- Fast splitter (Red tier 2)
+krastorio.recipes.convertIngredient("fast-splitter", "iron-gear-wheel", "steel-gear-wheel")
+
+-- Storage tank
+krastorio.recipes.replaceIngredient("storage-tank", "iron-plate", {"iron-plate", 10})
+krastorio.recipes.convertIngredient("storage-tank", "steel-plate", "steel-beam")
+
+-- Poles
+krastorio.recipes.replaceIngredient("medium-electric-pole", "copper-plate", {"copper-cable", 4})
+krastorio.recipes.replaceIngredient("medium-electric-pole", "steel-plate", {"iron-beam", 2})
+
+krastorio.recipes.replaceIngredient("big-electric-pole", "copper-plate", {"copper-cable", 8})
+krastorio.recipes.replaceIngredient("big-electric-pole", "steel-plate", {"steel-beam", 4})
+
+krastorio.recipes.replaceIngredient("substation", "copper-plate", {"copper-cable", 16})
+krastorio.recipes.replaceIngredient("substation", "steel-plate", {"steel-beam", 8})
+
+krastorio.recipes.replaceIngredient("roboport", "steel-plate", {"steel-beam", 20})
+
+--------------------------------------------------------------------
+-- -- -- VEHICLES
+--------------------------------------------------------------------
+krastorio.recipes.replaceIngredient("cargo-wagon", "steel-plate", {"steel-beam", 10})
+
+--------------------------------------------------------------------
 -- -- -- SPECIAL
+--------------------------------------------------------------------
 
 -- Cable of circuit network
 krastorio.recipes.removeIngredient("red-wire", "electronic-circuit")
 krastorio.recipes.removeIngredient("green-wire", "electronic-circuit")
+
+--------------------------------------------------------------------

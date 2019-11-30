@@ -69,8 +69,8 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"steel-chest", 5},
-			{"steel-plate", 10}
+			{"steel-chest", 2},
+			{"steel-beam", 10}
 		},
 		subgroup = "storage",
 		order = "a[items]-d[medium-container]",
@@ -156,8 +156,8 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"steel-chest", 10},
-			{"steel-plate", 30}
+			{"kr-medium-container", 4},
+			{"steel-beam", 20}
 		},
 		subgroup = "storage",
 		order = "a[items]-dz[big-container]",

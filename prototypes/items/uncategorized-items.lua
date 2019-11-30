@@ -99,6 +99,15 @@ data:extend(
 	},
 	{
 		type = "item",
+		name = "steel-beam",
+		icon = kr_icons_path .. "steel-beam.png",
+		icon_size = 64,
+		subgroup = "intermediate-product",
+		order = "c-a2[steel-beam]",
+		stack_size = 200
+	},
+	{
+		type = "item",
 		name = "kr-void",
 		icon = kr_icons_path .. "void.png",
 		flags = {"hidden"},		
