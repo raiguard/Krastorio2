@@ -57,4 +57,11 @@ krastorio.icons.setItemIcon("iron-gear-wheel", kr_icons_path .. "iron-gear-wheel
 -----------------------------------------------------------------
 -- -- -- TECHNOLOGIES
 
+-- Logistics
+krastorio.icons.setTechnologyIcon("logistics", kr_technologies_icons_path .. "logistics-1.png")
+krastorio.icons.setTechnologyIcon("logistics-2", kr_technologies_icons_path .. "logistics-2.png")
+krastorio.icons.setTechnologyIcon("logistics-3", kr_technologies_icons_path .. "logistics-3.png")
+
 krastorio.icons.setTechnologyIcon("heavy-armor", kr_technologies_icons_path .. "heavy-armor.png")
+
+
