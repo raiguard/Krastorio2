@@ -31,7 +31,10 @@ data:extend(
 					scale = scale,
 					width = 256,
 					height = 256,
-					frame_count = 1,
+					frame_count = 30,
+					frame_count = 30,
+					line_length = 6,
+					animation_speed=0.75,
 					hr_version =
 					{
 						filename = kr_entities_path .. "crusher/hr-crusher.png",
@@ -39,66 +42,37 @@ data:extend(
 						scale = scale,
 						width = 512,
 						height = 512,
-						frame_count = 1,
+						frame_count = 30,
+						line_length = 6,
+						animation_speed=0.75,
 						scale = 0.5
 					}
 				},
---				{
---					filename = kr_entities_path .. "crusher/crusher-shadow.png",
---					priority = "high",
---					scale = scale,
---					width = 256,
---					height = 256,
---					shift = {0.36, 0},
---					frame_count = 1,
---					draw_as_shadow = true,
---					hr_version =
---					{
---						filename = kr_entities_path .. "crusher/hr-crusher-shadow.png",
---						priority = "high",
---						scale = scale,
---						width = 512,
---						height = 512,
---						shift = {0.36, 0},
---						frame_count = 1,
---						draw_as_shadow = true,
---						scale = 0.5
---					}
---				}
---			}
-		},
---		working_visualisations =
---		{
---			{
---				animation =
---				{
---					filename = kr_entities_path .. "crusher/crusher-working.png",
---					scale = scale,
---					width = 256,
---					height = 256,
---					frame_count = 10,
---					line_length = 5,
---					animation_speed=0.35,
---					hr_version =
---					{
---						filename = kr_entities_path .. "crusher/hr-crusher-working.png",
---						scale = scale,
---						width = 512,
---						height = 512,
---						frame_count = 10,
---						line_length = 5,
---						scale = 0.5,
---						animation_speed=0.35,
---					}
---				},
---				light =
---				{
---					intensity = 0.5,
---					size = 15,
---					shift = {0.0, 0.0},
---					color = {r=0.7, g=1, b=0.7}
---				}
---			}
+				{
+					filename = kr_entities_path .. "crusher/crusher-shadow.png",
+					priority = "high",
+					scale = scale,
+					width = 256,
+					height = 256,
+					--shift = {0.36, 0},
+					frame_count = 30,
+					line_length = 6,
+					draw_as_shadow = true,
+					hr_version =
+					{
+						filename = kr_entities_path .. "crusher/hr-crusher-shadow.png",
+						priority = "high",
+						scale = scale,
+						width = 512,
+						height = 512,
+						--shift = {0.36, 0},
+						frame_count = 30,
+						line_length = 6,
+						draw_as_shadow = true,
+						scale = 0.5
+					}
+				},
+			}
 		},
 		crafting_categories = {"crushing"},
 		vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
