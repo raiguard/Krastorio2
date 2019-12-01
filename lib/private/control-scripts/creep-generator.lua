@@ -1,34 +1,54 @@
 local CREEP_NAME = "concrete"
-local MIN_CREEP_SIZE, MAX_CREEP_SIZE = 10, 15
-local A1, A2 = 727595, 798405  
-local D20, D40 = 1048576, 1099511627776
-local x1, x2 = 0, 1
+local CREEP_SIZES =
+{
+	[1] = {max_x = 8, max_y = 9, half_max_x = 4, half_max_y = 5},
+	[2] = {max_x = 5, max_y = 6, half_max_x = 3, half_max_y = 3},
+	[3] = {max_x = 12, max_y = 8, half_max_x = 6, half_max_y = 4},
+	[4] = {max_x = 10, max_y = 6, half_max_x = 5, half_max_y = 3},
+	[5] = {max_x = 13, max_y = 7, half_max_x = 6, half_max_y = 3},
+	[6] = {max_x = 5, max_y = 11, half_max_x = 2, half_max_y = 6},
+	[7] = {max_x = 7, max_y = 5, half_max_x = 3, half_max_y = 3},
+	[8] = {max_x = 6, max_y = 8, half_max_x = 3, half_max_y = 4},
+	[9] = {max_x = 5, max_y = 7, half_max_x = 5, half_max_y = 7}
+}
+local TOTAL_CREEP_SIZES = #CREEP_SIZES
+local last_creep_size = 0
+
+local MIN_CREEP_DISTANCE = 3
+local last_nest_position = {x = 0, y = 0}
+
+function isFarEnough(position)
+	local delta_nest_pos = {x = last_nest_position.x - position.x, y = last_nest_position.y - position.y}
+	local vector_length = math.sqrt(delta_nest_pos.x*delta_nest_pos.x + delta_nest_pos.y*delta_nest_pos.y)	
+	return vector_length > 3
+end
 
 -- Return a random number between _min and _max, interval includes.
-function getRandom(_min, _max)
-    local u = x2*A2
-    local v = (x1*A2 + x2*A1) % D20
-    v = (v*D20 + u) % D40
-    x1 = math.floor(v/D20)
-    x2 = v - x1*D20
-    local randomseed = v/D40
-	math.randomseed(randomseed)
-	return math.random(_min, _max)
+function getNextCreepSize()
+	last_creep_size = last_creep_size + 1
+	if last_creep_size > TOTAL_CREEP_SIZES then
+		last_creep_size = 1
+	end
+	return CREEP_SIZES[last_creep_size]
 end
 
 -- Generate creep in the specified position
 function spawnCreep(nest_surface, nest_position)
-	local max_x, max_y = getRandom(MIN_CREEP_SIZE, MAX_CREEP_SIZE), getRandom(MIN_CREEP_SIZE, MAX_CREEP_SIZE)
-	local half_max_x, half_max_y = math.floor(max_x/2), math.ceil(max_y/2)
+	last_nest_position = nest_position -- set new last nest used
+	local creep_size = getNextCreepSize()
     local tiles = {}
-    for x = 1, max_x do
-        for y = 1, max_y do
+    for x = 1, creep_size.max_x do
+        for y = 1, creep_size.max_y do
             table.insert
 			(
 				tiles,
 				{
 					name = CREEP_NAME,
-					position = { (nest_position.x - half_max_x) + x, (nest_position.y + half_max_y) - y }
+					position = 
+					{ 
+						(nest_position.x - creep_size.half_max_x) + x, 
+						(nest_position.y + creep_size.half_max_y) - y 
+					}
 				}
             )
         end
@@ -41,7 +61,9 @@ function placeCreep(event)
 	local nest = event.entity or false
 
 	if nest then
-		spawnCreep(nest.surface, nest.position)
+		if isFarEnough(nest.position) then
+			spawnCreep(nest.surface, nest.position)
+		end
 	else
 		local nests = event.surface.find_entities_filtered
 		{ 
@@ -50,7 +72,9 @@ function placeCreep(event)
 		}
 		
 		for _, _nest in pairs(nests) do
-			spawnCreep(_nest.surface, _nest.position)
+			if isFarEnough(_nest.position) then
+				spawnCreep(_nest.surface, _nest.position)
+			end
 		end
 	end
 	
