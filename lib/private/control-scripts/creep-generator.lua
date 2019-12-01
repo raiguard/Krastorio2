@@ -63,7 +63,7 @@ function placeCreep(event)
 
 	if nest then
 		if isFarEnough(nest.position) then
-			last_nest_position = nest_position -- set new last nest used
+			last_nest_position = nest.position -- set new last nest used
 			spawnCreep(nest.surface, nest.position)
 		end
 	else
