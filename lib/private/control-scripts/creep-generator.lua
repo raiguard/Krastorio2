@@ -3,9 +3,9 @@ local CREEP_SIZES =
 {
 	[1] = {max_x = 8, max_y = 9, half_max_x = 4, half_max_y = 5},
 	[2] = {max_x = 5, max_y = 6, half_max_x = 3, half_max_y = 3},
-	[3] = {max_x = 12, max_y = 8, half_max_x = 6, half_max_y = 4},
+	[3] = {max_x = 11, max_y = 8, half_max_x = 5, half_max_y = 4},
 	[4] = {max_x = 10, max_y = 6, half_max_x = 5, half_max_y = 3},
-	[5] = {max_x = 13, max_y = 7, half_max_x = 6, half_max_y = 3},
+	[5] = {max_x = 12, max_y = 7, half_max_x = 6, half_max_y = 3},
 	[6] = {max_x = 5, max_y = 11, half_max_x = 2, half_max_y = 6},
 	[7] = {max_x = 7, max_y = 5, half_max_x = 3, half_max_y = 3},
 	[8] = {max_x = 6, max_y = 8, half_max_x = 3, half_max_y = 4},
@@ -33,9 +33,10 @@ function getNextCreepSize()
 end
 
 -- Generate creep in the specified position
-function spawnCreep(nest_surface, nest_position)
-	last_nest_position = nest_position -- set new last nest used
+function spawnCreep(nest_surface, nest_position)	
 	local creep_size = getNextCreepSize()
+	local start_x = nest_position.x - creep_size.half_max_x
+	local start_y = nest_position.y + creep_size.half_max_y
     local tiles = {}
     for x = 1, creep_size.max_x do
         for y = 1, creep_size.max_y do
@@ -46,8 +47,8 @@ function spawnCreep(nest_surface, nest_position)
 					name = CREEP_NAME,
 					position = 
 					{ 
-						(nest_position.x - creep_size.half_max_x) + x, 
-						(nest_position.y + creep_size.half_max_y) - y 
+						start_x + x, 
+						start_y - y 
 					}
 				}
             )
@@ -62,22 +63,20 @@ function placeCreep(event)
 
 	if nest then
 		if isFarEnough(nest.position) then
+			last_nest_position = nest_position -- set new last nest used
 			spawnCreep(nest.surface, nest.position)
 		end
 	else
 		local nests = event.surface.find_entities_filtered
 		{ 
 			event.area, 
-			name = { "spitter-spawner", "biter-spawner" } 
+			type = "unit-spawner"
 		}
 		
 		for _, _nest in pairs(nests) do
-			if isFarEnough(_nest.position) then
-				spawnCreep(_nest.surface, _nest.position)
-			end
+			spawnCreep(_nest.surface, _nest.position)			
 		end
-	end
-	
+	end	
 end
 
 -- Adding create creep callback
