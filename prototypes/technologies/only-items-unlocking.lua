@@ -75,7 +75,7 @@ data:extend(
 	{
 		type = "technology",
 		name = "stone-processing",
-		icon = kr_technologies_icons_path .. "crusher.png",
+		icon = kr_technologies_icons_path .. "stone-processing.png",
 		icon_size = 128,
 		effects =
 		{

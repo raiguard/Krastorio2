@@ -90,7 +90,7 @@ return
 		type = "recipe",
 		name = "steel-beam",
 		energy_required = 3,
-		enabled = true,
+		enabled = false,
 		ingredients =
 		{
 			{"steel-plate", 2}

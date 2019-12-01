@@ -5,14 +5,14 @@ krastorio.recipes.disable("automation-science-pack") -- ReAdded
 krastorio.recipes.disable("transport-belt") -- ReAdded
 krastorio.recipes.disable("inserter") -- ReAdded
 krastorio.recipes.disable("burner-inserter") -- ReAdded
-krastorio.recipes.disable("steam-engine")
-krastorio.recipes.disable("pipe")
-krastorio.recipes.disable("pipe-to-ground")
-krastorio.recipes.disable("boiler")
+krastorio.recipes.disable("steam-engine") -- ReAdded
+krastorio.recipes.disable("pipe") -- ReAdded
+krastorio.recipes.disable("pipe-to-ground") -- ReAdded
+krastorio.recipes.disable("boiler") -- ReAdded
 krastorio.recipes.disable("electric-mining-drill")
-krastorio.recipes.disable("offshore-pump")
+krastorio.recipes.disable("offshore-pump") -- ReAdded
 krastorio.recipes.disable("radar")
-krastorio.recipes.disable("light-armor")
+krastorio.recipes.disable("light-armor") -- ReAdded
 
 --------------------------------------------------------------------
 -- -- -- ITEMS

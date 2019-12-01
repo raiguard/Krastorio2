@@ -5,6 +5,64 @@ data:extend(
 -----------------------------------------------------------------------------------------------------------------
 	{
 		type = "technology",
+		name = "kr-basic-fluid-handling",
+		icon = kr_technologies_icons_path .. "basic-fluid-handling.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "pipe"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "pipe-to-ground"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "offshore-pump"
+			}
+		},
+		prerequisites = {},
+		unit =
+		{
+			count = 30,
+			ingredients = 
+			{
+				{"basic-tech-card", 1}
+			},
+			time = 30
+		}
+    },
+	{
+		type = "technology",
+		name = "kr-steam-engine",
+		icon = kr_technologies_icons_path .. "steam-engine.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "boiler"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "steam-engine"
+			}
+		},
+		prerequisites = {"kr-basic-fluid-handling"},
+		unit =
+		{
+			count = 30,
+			ingredients = 
+			{
+				{"basic-tech-card", 1}
+			},
+			time = 30
+		}
+    },
+	{
+		type = "technology",
 		name = "kr-greenhouse",
 		icon = kr_technologies_icons_path .. "greenhouse.png",
 		icon_size = 128,

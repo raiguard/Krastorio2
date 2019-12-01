@@ -15,6 +15,7 @@ krastorio.technologies.addPrerequisite("fast-inserter", "electronics")
 krastorio.technologies.addPrerequisite("heavy-armor", "light-armor")
 krastorio.technologies.addPrerequisite("optics", "stone-processing")
 krastorio.technologies.addPrerequisite("logistics-2", "steel-processing")
+krastorio.technologies.addPrerequisite("nuclear-power", "kr-steam-engine")
 
 --Removing
 krastorio.technologies.removePrerequisite("heavy-armor", "military")
@@ -47,7 +48,7 @@ krastorio.technologies.addUnlockRecipe("steel-processing", "steel-beam")
 -- Moving inserters unlocking in early game
 krastorio.technologies.addUnlockRecipe("automation", "burner-inserter")
 krastorio.technologies.addUnlockRecipe("logistics", "inserter")
-krastorio.technologies.addUnlockRecipe("logistics", "long-handed-inserter")
+krastorio.technologies.addUnlockRecipe("logistics-2", "long-handed-inserter")
 
 -- First belt
 krastorio.technologies.addUnlockRecipe("logistics", "transport-belt")
