@@ -20,6 +20,7 @@
 		"(?) Hovercrafts >= 0.17.15",	
 		"(?) Squeak Through >= 1.3.0",
 		"! Annotorio >= 0.3.0",
+		"! HdProcessedMetal >= 0.0.1",
 		"! Krastorio >= 0.2.1",
 		"! Krastorio-graphics >= 0.0.1",
 		"! Power Armor MK3 >= 0.0.1",		
@@ -27,6 +28,6 @@
 		"! bobequipment >= 0.17.0",
 		"! bobvehicleequipment >= 0.17.0",
 		"! custom_power_armor_fix >= 0.10.0",
-		"! laborat >= 0.1.0"		
+		"! laborat >= 0.1.0"	
 	]
 }

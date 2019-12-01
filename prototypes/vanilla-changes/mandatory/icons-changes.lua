@@ -44,6 +44,7 @@ krastorio.icons.setItemIcon("iron-plate", kr_icons_path .. "iron-plate.png")
 
 -- Changing copper plate
 krastorio.icons.setItemIcon("copper-plate", kr_icons_path .. "copper-plate.png")
+krastorio.icons.setItemIcon("copper-cable", kr_icons_path .. "copper-cable.png")
 
 -- Chaning steel icon
 krastorio.icons.setItemIcon("steel-plate", kr_icons_path .. "steel-plate.png")

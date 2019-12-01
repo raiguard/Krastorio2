@@ -11,6 +11,7 @@ kr_fluids_prototypes_path              = kr_prototypes_path .. "fluids/"
 kr_items_prototypes_path               = kr_prototypes_path .. "items/"
 kr_others_prototypes_path              = kr_prototypes_path .. "others/"
 kr_recipes_prototypes_path             = kr_prototypes_path .. "recipes/"
+kr_resources_path                      = kr_prototypes_path .. "resources/"
 kr_technologies_prototypes_path        = kr_prototypes_path .. "technologies/"
 kr_tiles_prototypes_path               = kr_prototypes_path .. "tiles/"
 -----------------------------------------------------------------------------------------------------------------
@@ -43,6 +44,9 @@ kr_equipments_path                     = kr_graphic_mod_path .. "equipments/"
 kr_entities_sprites_path               = kr_graphic_mod_path .. "entities/"
 kr_entities_path                       = kr_entities_sprites_path
 kr_remnants_path                       = kr_entities_path .. "remnants/"
+-----------------------------------------------------------------------------------------------------------------
+-- Resources
+kr_resources_sprites_path               = kr_graphic_mod_path .. "resources/"
 -----------------------------------------------------------------------------------------------------------------
 -- Others
 kr_others_path                         = kr_graphic_mod_path .. "others/"

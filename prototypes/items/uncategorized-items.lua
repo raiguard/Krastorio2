@@ -82,8 +82,8 @@ data:extend(
 	{
 		type = "item",
 		name = "iron-beam",
-		icon = "__base__/graphics/icons/steel-plate.png",
-		icon_size = 32,
+		icon = kr_icons_path .. "iron-beam.png",
+		icon_size = 64,
 		subgroup = "intermediate-product",
 		order = "b-a2[iron-beam]",
 		stack_size = 200
@@ -114,7 +114,25 @@ data:extend(
 		icon_size = 32,
 		order = "zzz[kr-void]",
 		stack_size = 999
-    }
+    },
+	{
+		type = "item",
+		name = "raw-rare-metals",
+		icon = kr_resources_icons_path .. "raw-rare-metals.png",
+		icon_size = 32,
+		subgroup = "raw-material",
+		order = "x[raw-rare-metals]",
+		stack_size = 200
+	},
+	{
+		type = "item",
+		name = "rare-metals",
+		icon = kr_icons_path .. "rare-metals.png",
+		icon_size = 64,
+		subgroup = "intermediate-product",
+		order = "x[rare-metals]",
+		stack_size = 200
+	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
