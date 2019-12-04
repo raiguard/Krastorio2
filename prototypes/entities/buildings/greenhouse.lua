@@ -6,7 +6,7 @@ data:extend(
 	{
 		type = "assembling-machine",
 		name = "kr-greenhouse",
-		icon_size = 32,
+		icon_size = 64,
 		icon =  kr_entities_icons_path .. "greenhouse.png",
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {hardness = 1, mining_time = 1, result = "kr-greenhouse"},

@@ -1,5 +1,6 @@
 
 -- -- -- BUILDINGS
+require("buildings/wind-turbine")
 require("buildings/greenhouse")
 require("buildings/crusher")
 require("buildings/biusart_lab")

@@ -13,7 +13,8 @@ local modifications =
 	"renaming-vanillas",       -- Localization changes to vanilla objects
 	"smelting-overmodule-fix", -- Multiply smelting recipes stat for fix overmodule bug
 	"technologies-changes",    -- Modifications to vanilla technologies
-	"vanilla-lab-changes"      -- Modify stat and accepted science packs of vanilla lab
+	"vanilla-lab-changes",     -- Modify stat and accepted science packs of vanilla lab
+	"spawner-changes"          -- Modify spawners sprite
 }
 
 -- Application of the modifications

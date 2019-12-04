@@ -2,7 +2,7 @@
 -- must be called on on_init
 function creepVariablesInitializing()
 	-- CONSTANTS
-	global.CREEP_NAME = "concrete"
+	global.CREEP_NAME = "kr-creep"
 	global.CREEP_SIZES =
 	{
 		[1]  = {max_x = 10, max_y = 11, half_max_x = 5, half_max_y = 5},
