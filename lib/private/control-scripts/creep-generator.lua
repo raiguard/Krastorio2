@@ -14,56 +14,49 @@ function creepVariablesInitializing()
 		[7]  = {max_x = 9 , max_y = 7 , half_max_x = 4, half_max_y = 4},
 		[8]  = {max_x = 8 , max_y = 10, half_max_x = 4, half_max_y = 5},
 		[9]  = {max_x = 7 , max_y = 9 , half_max_x = 6, half_max_y = 8},
-		[10] = {max_x = 9 , max_y = 14, half_max_x = 4, half_max_y = 7}
+		[10] = {max_x = 9 , max_y = 14, half_max_x = 4, half_max_y = 7},
+		[11] = {max_x = 13, max_y = 7 , half_max_x = 6, half_max_y = 3},
+		[12] = {max_x = 17, max_y = 14, half_max_x = 8, half_max_y = 7}
 	}
 	global.TOTAL_CREEP_SIZES = #global.CREEP_SIZES
+	global.MIN_CREEP_DISTANCE = 2
 
 	-- STATE VARIABLES
 	global.last_creep_size = 0
+	global.last_nest_position = {x = 0, y = 0}
 	global.creeps_to_generate = {}
-	global.creeps_generated = {}
 	global.creep_index = 1
 end
 
--- For avoid redundant calls
--- @surface, of nest
--- @position, of nest
-function alreadySubmitted(surface, position)
-	for _, creep in pairs(global.creeps_generated) do
-		if  creep.surface == surface and
-			creep.position.x == position.x and creep.position.y == position.y then
-			return true
-		end
-	end
-	for _, creep in pairs(global.creeps_to_generate) do
-		if  creep.surface == surface and
-			creep.position.x == position.x and creep.position.y == position.y then
-			return true
-		end
-	end
-	return false
+-- Used only for biter migration, for avoid this problem written in the documentation:
+-- on_biter_base_built, called when a biter migration builds a base.
+-- Note: This will be called multiple times as each biter in a given migration is sacrificed and builds part of the base.
+-- Factorio 0.17.79
+function isFarEnough(position)
+	local delta_nest_pos = {x = global.last_nest_position.x - position.x, y = global.last_nest_position.y - position.y}
+	local vector_length = math.sqrt(delta_nest_pos.x*delta_nest_pos.x + delta_nest_pos.y*delta_nest_pos.y)	
+	return vector_length > global.MIN_CREEP_DISTANCE
 end
 
--- Push for creep generation a surface and position under a biter nests
+-- Push in the creep stack for creep generation a surface and position under a biter nests
 -- @event, on_biter_base_built or on_chunk_generated
 function pushCreepToGenerate(event)
 	local nest = event.entity or false
 
-	if nest then		
-		if not alreadySubmitted(nest.surface, nest.position) then
-			table.insert(global.creeps_to_generate, {surface = nest.surface, position = nest.position})	
+	if nest then
+		if isFarEnough(nest.position) then
+			global.last_nest_position = nest.position -- set new last nest finded
+			table.insert(global.creeps_to_generate, {surface = nest.surface, position = nest.position})
 		end
 	else		
 		local nests = event.surface.find_entities_filtered
 		{ 
-			event.area, 
+			area = event.area, 
 			type = "unit-spawner"
 		}
 		
 		for _, nest in pairs(nests) do	
-			if not alreadySubmitted(nest.surface, nest.position) then
-				table.insert(global.creeps_to_generate, {surface = event.surface, position = nest.position})	
-			end
+			table.insert(global.creeps_to_generate, {surface = event.surface, position = nest.position})	
 		end		
 	end	
 end
@@ -83,7 +76,6 @@ function continueCreepGeneration(event)
 		local creep = global.creeps_to_generate[i] or false
 		if creep then
 			table.remove(global.creeps_to_generate, i) -- remove from to-do
-			table.insert(global.creeps_generated, creep) -- add in done
 			spawnCreep(creep.surface, creep.position)			
 		end
 	end	
@@ -116,24 +108,52 @@ function spawnCreep(nest_surface, nest_position)
 		min  = start_x                     -- left most x
 	}
 	x.rad    = math.floor(x.max - x.min)/2 -- radius
-	x.center = nest_position.x -- circle x-axis center
 	local y  = 
 	{
-		max = start_y + creep_size.max_y, -- bottom y
-		min = start_y                     -- top y
+		max  = start_y + creep_size.max_y, -- bottom y
+		min  = start_y                     -- top y
 	}
 	y.rad = (y.max - y.min)/2
-	y.center = nest_position.y -- circle y-axis center
 	local thetha = 0
-	local thetha_points = {}
+	local thetha_points = {} -- ellipse draw points 	
+	local xP, yP = nil
 	while thetha <= 360 do
-		local xP = math.floor(x.center + x.rad * math.cos(thetha)) -- calculate x point
-		local yP = math.floor(y.center + y.rad * math.sin(thetha)) -- calculate y point
-		thetha_points[xP] = thetha_points[xP] or {} -- countine existing x-axis or create new one
-		thetha_points[xP][yP] = true          -- mark point on y axis along x axis
+		xP = math.floor(nest_position.x + x.rad * math.cos(thetha)) -- calculate x point
+		yP = math.floor(nest_position.y + y.rad * math.sin(thetha)) -- calculate y point
+
+		-- bottom left ellipse points
+		for xIP = xP, nest_position.x do 
+			thetha_points[xIP] = thetha_points[xIP] or {} -- countine existing x-axis or create new one
+			for yIP = yP, nest_position.y do 				
+				thetha_points[xIP][yIP] = true -- mark point on y axis along x axis
+			end
+		end	
+		-- bottom right ellipse points
+		for xIP = xP, nest_position.x do  	
+			thetha_points[xIP] = thetha_points[xIP] or {}
+			for yIP = nest_position.y, yP do 	
+				thetha_points[xIP][yIP] = true
+			end
+		end	
+
+		-- upper right ellipse points
+		for xIP = nest_position.x, xP do 
+			thetha_points[xIP] = thetha_points[xIP] or {}
+			for yIP = nest_position.y, yP do 				
+				thetha_points[xIP][yIP] = true
+			end
+		end
+		-- upper right ellipse points
+		for xIP = nest_position.x, xP do 
+			thetha_points[xIP] = thetha_points[xIP] or {}
+			for yIP = yP, nest_position.y do 	
+				thetha_points[xIP][yIP] = true
+			end
+		end
+
 		thetha = thetha + 1
 	end
-	-- circle/edges
+	-- set of tile points
 	for x, yT in pairs(thetha_points) do
 		for y in pairs(yT) do
 			table.insert
@@ -146,19 +166,6 @@ function spawnCreep(nest_surface, nest_position)
 			)			
 		end
 	end
-	-- inside 
-	for x = 1, creep_size.half_max_x do
-        for y = 1, creep_size.half_max_y do
-            table.insert
-			(
-				creeps,
-				{
-					name = global.CREEP_NAME,
-					position = { start_x + x, start_y + y }
-				}
-            )
-        end
-    end
 	
 	nest_surface.set_tiles(creeps)
 end
