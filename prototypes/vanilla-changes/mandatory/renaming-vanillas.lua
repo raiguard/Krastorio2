@@ -1,4 +1,4 @@
--- Renaming vanilla science packs
+-- RENAMING VANILLA SCIENCE PACKS
 
 -- Automation science pack
 data.raw.tool["automation-science-pack"].localised_name={"item-name.automation-tech-card"}
@@ -21,3 +21,9 @@ data.raw.tool["utility-science-pack"].localised_name={"item-name.utility-tech-ca
 -- Space science pack
 data.raw.tool["space-science-pack"].localised_name={"item-name.optimization-tech-card"}
 data.raw.technology["space-science-pack"].localised_name={"technology-name.satellite"}
+
+-- RENAMING VANILLA BUILDINGS
+
+-- Pumpjack
+data.raw["mining-drill"]["pumpjack"].localised_name={"entity-name.kr-oil-pumpjack"}
+data.raw.item["pumpjack"].localised_name={"item-name.kr-oil-pumpjack"}

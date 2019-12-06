@@ -42,3 +42,109 @@ if #data.raw.furnace == 0 then
 	}})
 	data:extend({furnace})	
 end
+
+data.raw["mining-drill"]["pumpjack"].icon = kr_entities_icons_path .. "oil-pumpjack.png"
+data.raw["mining-drill"]["pumpjack"].icon_size = 64
+data.raw["mining-drill"]["pumpjack"].energy_usage = "100kW"
+data.raw["mining-drill"]["pumpjack"].radius_visualisation_picture.filename = kr_entities_path .. "oil-pumpjack/oil-pumpjack-radius-visualization.png"
+data.raw["mining-drill"]["pumpjack"].base_picture.sheets =
+	{
+		{
+		  filename = kr_entities_path .. "oil-pumpjack/oil-pumpjack-base.png",
+		  priority = "extra-high",
+		  width = 131,
+		  height = 137,
+		  shift = util.by_pixel(-2.5, -4.5),
+		  hr_version =
+		  {
+			filename = kr_entities_path .. "oil-pumpjack/hr-oil-pumpjack-base.png",
+			priority = "extra-high",
+			width = 261,
+			height = 273,
+			shift = util.by_pixel(-2.25, -4.75),
+			scale = 0.5
+		  }
+		},
+		{
+		  filename = kr_entities_path .. "oil-pumpjack/oil-pumpjack-base-shadow.png",
+		  priority = "extra-high",
+		  width = 110,
+		  height = 111,
+		  draw_as_shadow = true,
+		  shift = util.by_pixel(6, 0.5),
+		  hr_version =
+		  {
+			filename = kr_entities_path .. "oil-pumpjack/hr-oil-pumpjack-base-shadow.png",
+			width = 220,
+			height = 220,
+			scale = 0.5,
+			draw_as_shadow = true,
+			shift = util.by_pixel(6, 0.5)
+		  }
+		}
+	}
+	  
+data.raw["mining-drill"]["pumpjack"].animations =
+    {
+      north =
+      {
+        layers =
+        {
+          {
+            priority = "high",
+            filename = kr_entities_path .. "oil-pumpjack/oil-pumpjack-horsehead.png",
+            line_length = 8,
+            width = 104,
+            height = 102,
+            frame_count = 40,
+            shift = util.by_pixel(-4, -24),
+            animation_speed = 0.5,
+            hr_version =
+            {
+              priority = "high",
+              filename = kr_entities_path .. "oil-pumpjack/hr-oil-pumpjack-horsehead.png",
+              animation_speed = 0.5,
+              scale = 0.5,
+              line_length = 8,
+              width = 206,
+              height = 202,
+              frame_count = 40,
+              shift = util.by_pixel(-4, -24)
+            }
+          },
+          {
+            priority = "high",
+            filename = kr_entities_path .. "oil-pumpjack/oil-pumpjack-horsehead-shadow.png",
+            animation_speed = 0.5,
+            draw_as_shadow = true,
+            line_length = 8,
+            width = 155,
+            height = 41,
+            frame_count = 40,
+            shift = util.by_pixel(17.5, 14.5),
+            hr_version =
+            {
+              priority = "high",
+              filename = kr_entities_path .. "oil-pumpjack/hr-oil-pumpjack-horsehead-shadow.png",
+              animation_speed = 0.5,
+              draw_as_shadow = true,
+              line_length = 8,
+              width = 309,
+              height = 82,
+              frame_count = 40,
+              scale = 0.5,
+              shift = util.by_pixel(17.75, 14.5)
+            }
+          }
+        }
+      }
+    } 
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  

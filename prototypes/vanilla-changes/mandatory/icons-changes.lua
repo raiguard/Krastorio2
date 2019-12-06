@@ -61,4 +61,9 @@ krastorio.icons.setTechnologyIcon("logistics-3", kr_technologies_icons_path .. "
 
 krastorio.icons.setTechnologyIcon("heavy-armor", kr_technologies_icons_path .. "heavy-armor.png")
 
+krastorio.icons.setTechnologyIcon("oil-processing", kr_technologies_icons_path .. "oil-gathering.png")
+
+-----------------------------------------------------------------
+-- -- -- BUILDINGS
+krastorio.icons.setItemIcon("pumpjack", kr_entities_icons_path .. "oil-pumpjack.png")
 
