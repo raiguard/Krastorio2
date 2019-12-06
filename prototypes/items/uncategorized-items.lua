@@ -31,13 +31,8 @@ data:extend(
 	{
 		type = "item",
 		name = "glass",
-		icon = kr_mip_icons_path .. "glass.png",
+		icon = kr_icons_path .."glass.png",
 		icon_size = 64,
-		icon_mipmaps = 1,
-		pictures =
-		{
-			{ size = 64, filename = kr_mip_icons_path .. "glass.png",   scale = 0.25, mipmap_count = 4 }
-		},
 		subgroup = "raw-material",
 		order = "a1[glass]",
 		stack_size = 200

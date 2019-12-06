@@ -48,10 +48,6 @@ krastorio.icons.setItemIcon("copper-cable", kr_icons_path .. "copper-cable.png")
 
 -- Chaning steel icon
 krastorio.icons.setItemIcon("steel-plate", kr_icons_path .. "steel-plate.png")
-krastorio.icons.setItemMipmaps("steel-plate", 
-{
-	{ size = 64, filename = kr_mip_icons_path .. "steel-plate.png", scale = 0.25, mipmap_count = 4 }
-})
 
 -- Changing iron gear wheel
 krastorio.icons.setItemIcon("iron-gear-wheel", kr_icons_path .. "iron-gear-wheel.png")

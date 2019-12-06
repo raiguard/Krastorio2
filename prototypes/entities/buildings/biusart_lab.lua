@@ -22,58 +22,112 @@ data:extend(
 		layers = 
 		{
 			{
-				filename = kr_entities_path .. "biusart_lab/biusart_lab_anim.png",
-				width = 150,
-				height = 150,
+				filename = kr_entities_path .. "biusart-lab/biusart-lab-anim.png",
+				width = 75,
+				height = 75,
 				frame_count = 29,
 				line_length = 10,
 				animation_speed = 1 / 3,
 				shift = {0,-0.05},
-				scale = 0.64
+				scale = 2*0.64,
+				hr_version =
+				{
+					filename = kr_entities_path .. "biusart-lab/hr-biusart-lab-anim.png",
+					width = 150,
+					height = 150,
+					frame_count = 29,
+					line_length = 10,
+					animation_speed = 1 / 3,
+					shift = {0,-0.05},
+					scale = 0.64
+				},
 			},
 			{
-				filename = kr_entities_path .. "biusart_lab/biusart_lab_light_anim.png",
-				width = 150,
-				height = 150,
+				filename = kr_entities_path .. "biusart-lab/biusart-lab-anim.png",
+				width = 75,
+				height = 75,
 				frame_count = 29,
 				line_length = 10,
 				animation_speed = 1 / 3,
 				shift = {0,-0.05},
-				scale = 0.64,
-				blend_mode = "additive-soft"
+				scale = 2*0.64,
+				hr_version =
+				{
+					filename = kr_entities_path .. "biusart-lab/hr-biusart-lab-anim.png",
+					width = 150,
+					height = 150,
+					frame_count = 29,
+					line_length = 10,
+					animation_speed = 1 / 3,
+					shift = {0,-0.05},
+					scale = 0.64
+				},
 			},
 			{
-				filename = kr_entities_path .. "biusart_lab/biusart_lab_light_anim.png",
-				width = 150,
-				height = 150,
+				filename = kr_entities_path .. "biusart-lab/biusart-lab-anim.png",
+				width = 75,
+				height = 75,
 				frame_count = 29,
 				line_length = 10,
 				animation_speed = 1 / 3,
 				shift = {0,-0.05},
-				scale = 0.64,
-				blend_mode = "additive-soft"
+				scale = 2*0.64,
+				hr_version =
+				{
+					filename = kr_entities_path .. "biusart-lab/hr-biusart-lab-anim.png",
+					width = 150,
+					height = 150,
+					frame_count = 29,
+					line_length = 10,
+					animation_speed = 1 / 3,
+					shift = {0,-0.05},
+					scale = 0.64
+				},
 			},
 			{
-				filename = kr_entities_path .. "biusart_lab/biusart_lab_shadow.png",
-				width = 240,
-				height = 240,
+				filename = kr_entities_path .. "biusart-lab/biusart-lab-shadow.png",
+				width = 120,
+				height = 120,
 				frame_count = 1,
 				line_length = 1,
 				repeat_count = 29,
 				animation_speed = 1,
 				shift = {0,-0.20},
-				scale = 0.75,
-				draw_as_shadow = true
+				scale = 2*0.75,
+				draw_as_shadow = true,
+				hr_version =
+				{
+					filename = kr_entities_path .. "biusart-lab/hr-biusart-lab-shadow.png",
+					width = 240,
+					height = 240,
+					frame_count = 1,
+					line_length = 1,
+					repeat_count = 29,
+					animation_speed = 1,
+					shift = {0,-0.20},
+					scale = 0.75,
+				},
 			},
 			{
-				filename = kr_entities_path .. "biusart_lab/biusart_lab_ao.png",
-				width = 220,
-				height = 220,
+				filename = kr_entities_path .. "biusart-lab/biusart-lab-ao.png",
+				width = 110,
+				height = 110,
 				frame_count = 1,
 				repeat_count = 29,
 				animation_speed = 1 / 3,
 				shift = {0,-0.05},
-				scale = 0.50,
+				scale = 2*0.50,
+				hr_version =
+				{
+					filename = kr_entities_path .. "biusart-lab/hr-biusart-lab-ao.png",
+					width = 220,
+					height = 220,
+					frame_count = 1,
+					repeat_count = 29,
+					animation_speed = 1 / 3,
+					shift = {0,-0.05},
+					scale = 0.50,
+				},
 			}
 		 }
 	},
@@ -82,32 +136,63 @@ data:extend(
 		layers = 
 		{
 			{
-				filename = kr_entities_path .. "biusart_lab/biusart_lab.png",
-				width = 150,
-				height = 150,
+				filename = kr_entities_path .. "biusart-lab/biusart-lab.png",
+				width = 75,
+				height = 75,
 				frame_count = 1,
 				shift = {0,-0.05},
-				scale = 0.64
+				scale = 2*0.64,
+				hr_version =
+				{
+					filename = kr_entities_path .. "biusart-lab/hr-biusart-lab.png",
+					width = 150,
+					height = 150,
+					frame_count = 1,
+					shift = {0,-0.05},
+					scale = 0.64,
+				},
 			},
 			{
-				filename = kr_entities_path .. "biusart_lab/biusart_lab_shadow.png",
-				width = 240,
-				height = 240,
+				filename = kr_entities_path .. "biusart-lab/biusart-lab-shadow.png",
+				width = 120,
+				height = 120,
 				frame_count = 1, 
 				repeat_count = 1,
 				shift = {0,-0.20},
-				scale = 0.75,
-				draw_as_shadow = true
+				scale = 2*0.75,
+				draw_as_shadow = true,
+				hr_version =
+				{
+					filename = kr_entities_path .. "biusart-lab/hr-biusart-lab-shadow.png",
+					width = 240,
+					height = 240,
+					frame_count = 1, 
+					repeat_count = 1,
+					shift = {0,-0.20},
+					scale = 0.75,
+					draw_as_shadow = true,
+				},
 			},
 			{
-				filename = kr_entities_path .. "biusart_lab/biusart_lab_ao.png",
-				width = 220,
-				height = 220,
+				filename = kr_entities_path .. "biusart-lab/biusart-lab-ao.png",
+				width = 110,
+				height = 110,
 				frame_count = 1,
 				repeat_count = 1,
 				animation_speed = 1 / 3,
 				shift = {0,-0.05},
-				scale = 0.5,
+				scale = 2*0.5,
+				hr_version =
+				{
+					filename = kr_entities_path .. "biusart-lab/hr-biusart-lab-ao.png",
+					width = 220,
+					height = 220,
+					frame_count = 1,
+					repeat_count = 1,
+					animation_speed = 1 / 3,
+					shift = {0,-0.05},
+					scale = 0.5,
+				},
 			}
 		}
 	},

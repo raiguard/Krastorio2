@@ -4,11 +4,11 @@ data:extend(
 		type = "tile",
 		name = "kr-creep",
 		needs_correction = false,
-		minable = {mining_time = 0.05, result = "kr-creep"},
+		minable = {mining_time = 0.25, result = "kr-creep"},
 		mined_sound = { filename = kr_buildings_sounds_path .. "creep-deconstruction.ogg" },
 		collision_mask = {"ground-tile"},
 		walking_speed_modifier = 0.5,
-		layer = 90,
+		layer = 99,
 		transition_overlay_layer_offset = 9,
 		decorative_removal_probability = 0,
 		variants =
@@ -107,16 +107,21 @@ data:extend(
 		walking_sound =
 		{
 			{
-				filename = kr_buildings_sounds_path .. "creep-walk.ogg",
-				volume = 0.8
+				filename = kr_buildings_sounds_path .. "creep-walk-01.ogg",
+				volume = 0.75
 			},
 			{
-				filename = kr_buildings_sounds_path .. "creep-walk.ogg",
-				volume = 0.4
-			}
+				filename = kr_buildings_sounds_path .. "creep-walk-02.ogg",
+				volume = 0.75
+			},
+			{
+				filename = kr_buildings_sounds_path .. "creep-walk-03.ogg",
+				volume = 0.75
+			},
 		},
-		map_color={r=180, g=0, b=0},
-		pollution_absorption_per_second = 0,
-		vehicle_friction_modifier = concrete_vehicle_speed_modifier
+		map_color={r=75, g=60, b=70},
+		pollution_absorption_per_second = 0.1,
+		vehicle_friction_modifier = 200,
+		
 	}
 })
