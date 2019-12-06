@@ -5,7 +5,7 @@ data:extend(
 		name = "kr-creep",
 		needs_correction = false,
 		minable = {mining_time = 0.25, result = "kr-creep"},
-		mined_sound = { filename = kr_buildings_sounds_path .. "creep-deconstruction.ogg" },
+		mined_sound = { filename = kr_tiles_sounds_path .. "creep-deconstruction.ogg" },
 		collision_mask = {"ground-tile"},
 		walking_speed_modifier = 0.5,
 		layer = 99,
@@ -107,15 +107,15 @@ data:extend(
 		walking_sound =
 		{
 			{
-				filename = kr_buildings_sounds_path .. "creep-walk-01.ogg",
+				filename = kr_tiles_sounds_path .. "creep-walk-01.ogg",
 				volume = 0.75
 			},
 			{
-				filename = kr_buildings_sounds_path .. "creep-walk-02.ogg",
+				filename = kr_tiles_sounds_path .. "creep-walk-02.ogg",
 				volume = 0.75
 			},
 			{
-				filename = kr_buildings_sounds_path .. "creep-walk-03.ogg",
+				filename = kr_tiles_sounds_path .. "creep-walk-03.ogg",
 				volume = 0.75
 			},
 		},
