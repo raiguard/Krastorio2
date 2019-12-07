@@ -27,6 +27,20 @@ return
 		},
 		result = "iron-beam",
 		result_count = 1
+	},
+    {
+		type = "recipe",
+		name = "kr-wind-turbine",
+		energy_required = 5,
+		enabled = true,
+		ingredients =
+		{
+			{"iron-plate", 3},
+			{"iron-beam", 1},
+			{"copper-cable", 2}
+		},	
+		result = "kr-wind-turbine",
+		result_count = 1		
 	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
