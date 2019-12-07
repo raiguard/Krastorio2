@@ -37,7 +37,8 @@ return
 		{
 			{"iron-plate", 3},
 			{"iron-beam", 1},
-			{"copper-cable", 2}
+			{"iron-gear-wheel", 6},
+			{"copper-cable", 4}
 		},	
 		result = "kr-wind-turbine",
 		result_count = 1		

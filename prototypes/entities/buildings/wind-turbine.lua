@@ -34,10 +34,10 @@ data:extend(
 			buffer_capacity = "0kJ",
 			usage_priority = "solar",
 			input_flow_limit = "0kW",
-			output_flow_limit = "30kW",
+			output_flow_limit = "20kW",
 			render_no_power_icon = false
 		},
-		energy_production = "30kW",
+		energy_production = "20kW",
 		energy_usage = "0kW",
 		animation =
 		{
