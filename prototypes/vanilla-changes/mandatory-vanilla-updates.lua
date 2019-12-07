@@ -11,6 +11,7 @@ local modifications =
 	"rebalance-nuclear-power", -- Rebalance nuclear power	
 	"recipes-changes",         -- All modification to vanilla recipes	
 	"renaming-vanillas",       -- Localization changes to vanilla objects
+	"resources-changes",       -- Resources changes
 	"smelting-overmodule-fix", -- Multiply smelting recipes stat for fix overmodule bug
 	"technologies-changes",    -- Modifications to vanilla technologies
 	"vanilla-lab-changes",     -- Modify stat and accepted science packs of vanilla lab
