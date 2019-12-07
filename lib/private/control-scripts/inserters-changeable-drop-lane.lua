@@ -25,5 +25,8 @@ function changeInserterDropLane(event)
 end
 
 -- Adding inserters changeable drop lane callback
-script.on_event("kr-inserter-change-lane", changeInserterDropLane)
+
+-- Normal way
+-- script.on_event("kr-inserter-change-lane", changeInserterDropLane)
+return { callback = changeInserterDropLane, event_name = "kr-inserter-change-lane" }
 -----------------------------------------------------------------------------
