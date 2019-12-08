@@ -1,8 +1,11 @@
 
 -- -- -- BUILDINGS
+-- -- Generals
 require("buildings/wind-turbine")
 require("buildings/greenhouse")
 require("buildings/crusher")
+require("buildings/loaders")
+-- -- Laboratory
 require("buildings/biusart_lab")
 -- -- Conteiners
 -- Mediums

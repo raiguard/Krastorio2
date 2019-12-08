@@ -23,3 +23,7 @@ end
 -- a void recipe for destroy it
 -- (This must be done after adding other recipes)
 require("generate-void-crushing-recipes")
+
+-- Optional recipes
+require("loaders-recipes")
+

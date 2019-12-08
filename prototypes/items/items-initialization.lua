@@ -7,5 +7,8 @@ require("entities-items")
 -- -- Items for terrain
 require("terrain-items")
 
--- -- All other Items
+-- -- All other items
 require("uncategorized-items")
+
+-- Optional items
+require("loaders-items")

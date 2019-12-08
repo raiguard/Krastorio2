@@ -5,7 +5,7 @@ return
 -----------------------------------------------------------------------------------------------------------------
 	{
 		type = "recipe",
-		name = "kr-grow-wood",
+		name = "kr-grow-wood-with-water",
 		category = "growing",
 		energy_required = 180,
 		enabled = false,
@@ -15,6 +15,19 @@ return
 		},
 		result = "wood",
 		result_count = 30
+	},
+	{
+		type = "recipe",
+		name = "kr-grow-wood-creep-water",
+		category = "growing",
+		energy_required = 180,
+		enabled = false,
+		ingredients =
+		{
+			{name="kr-creep", amount=2}
+		},
+		result = "wood",
+		result_count = 60
 	},
 	{
 		type = "recipe",

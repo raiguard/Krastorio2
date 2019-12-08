@@ -28,5 +28,6 @@ end
 
 -- Normal way
 -- script.on_event("kr-inserter-change-lane", changeInserterDropLane)
+-- With control-callbacks-merger
 return { callback = changeInserterDropLane, event_name = "kr-inserter-change-lane" }
 -----------------------------------------------------------------------------

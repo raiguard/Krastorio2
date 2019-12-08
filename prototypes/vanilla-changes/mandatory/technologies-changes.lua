@@ -62,6 +62,13 @@ krastorio.technologies.addUnlockRecipe("electronics", "electronic-circuit")
 krastorio.technologies.removeUnlockRecipe("automation", "long-handed-inserter")
 
 --------------------------------------------------------------------
+-- Loaders
+if settings.startup["loaders"] and settings.startup["loaders"].value then
+	krastorio.technologies.addUnlockRecipe("logistics", "kr-loader")
+	krastorio.technologies.addUnlockRecipe("logistics-2", "kr-fast-loader")
+	krastorio.technologies.addUnlockRecipe("logistics-3", "kr-express-loader")
+end
+--------------------------------------------------------------------
 
 -- -- END CHANGING (this lines must remain at the end of file)
 

@@ -1,3 +1,4 @@
+-----------------------------------------------------------------------------
 -- This script is used for merge multiple callback on the same event,
 -- because factorio support only one callback per event per mod.
 -- All callbacks must be added from the method addCallBack() and must be defined
@@ -70,3 +71,4 @@ function _control_callback_merger.activeCallbacks()
 end
 
 return _control_callback_merger
+-----------------------------------------------------------------------------

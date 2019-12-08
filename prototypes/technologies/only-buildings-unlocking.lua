@@ -74,7 +74,11 @@ data:extend(
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "kr-grow-wood"
+				recipe = "kr-grow-wood-with-water"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-grow-wood-creep-water"
 			}
 		},
 		prerequisites = {"automation-core", "stone-processing"},
