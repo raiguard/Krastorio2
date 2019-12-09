@@ -1,3 +1,5 @@
+-- -- -- PIPE PATCH
+require("buildings/pipe-patch")
 
 -- -- -- BUILDINGS
 -- -- Generals
@@ -6,7 +8,7 @@ require("buildings/greenhouse")
 require("buildings/crusher")
 require("buildings/loaders")
 -- -- Laboratory
-require("buildings/biusart_lab")
+require("buildings/biusart-lab")
 -- -- Conteiners
 -- Mediums
 require("buildings/containers/medium-containers/medium-active-provider-container")

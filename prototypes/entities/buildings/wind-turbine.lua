@@ -97,16 +97,16 @@ data:extend(
 			sound =
 			{
 				filename = kr_buildings_sounds_path .. "wind-turbine-rotating.ogg",
-				volume = 0.5
+				volume = 0.75
 			},
 			idle_sound =
 			{
 				filename = kr_buildings_sounds_path .. "wind-turbine-rotating.ogg",
-				volume = 0.5
+				volume = 0.75
 			},
-			max_sounds_per_type = 3,
-			apparent_volume = 1.0,
-			audible_distance_modifier = 0.8,
+			max_sounds_per_type = 5,
+			apparent_volume = 1,
+			audible_distance_modifier = 1,
 			persistent = true
 		}
 	}
