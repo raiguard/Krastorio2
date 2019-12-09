@@ -1,11 +1,13 @@
 -- Adding inserters changeable drop lane 
 -----------------------------------------------------------------------------
-drop_positions_frac = 
+-- Constant
+DROP_POSITIONS_FRAC = 
 {
     [true]  = { [0] = {0.0, -0.2}, [2] = {0.2, 0.0},  [4] = {0.0, 0.2},  [6] = {-0.2, 0.0} }, -- near lane
     [false] = { [0] = {0.0, 0.2},  [2] = {-0.2, 0.0}, [4] = {0.0, -0.2}, [6] = {0.2, 0.0}  }  -- far lane
 }
 
+-- Util function for calculate the round of number
 function round(num)
     return (num + 0.5 - (num + 0.5) % 1.0)
 end
@@ -15,7 +17,7 @@ function changeInserterDropLane(event)
 	if inserter and inserter.type == "inserter" then
 		local delta_drop_pos = {x = inserter.drop_position.x - inserter.position.x, y = inserter.drop_position.y - inserter.position.y}
 		local vector_length = math.sqrt(delta_drop_pos.x*delta_drop_pos.x + delta_drop_pos.y*delta_drop_pos.y)	
-		local dpf = drop_positions_frac[math.fmod(vector_length, 1.0) < 0.5][inserter.direction]
+		local dpf = DROP_POSITIONS_FRAC[math.fmod(vector_length, 1.0) < 0.5][inserter.direction]
 		inserter.drop_position = 
 		{
 			inserter.position.x + round(delta_drop_pos.x) + dpf[1],
