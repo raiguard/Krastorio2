@@ -75,13 +75,72 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = "kr-grow-wood-with-water"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "kr-grow-wood-creep-water"
 			}
 		},
 		prerequisites = {"automation-core", "stone-processing"},
+		unit =
+		{
+			count = 60,
+			ingredients = 
+			{
+				{"basic-tech-card", 1}
+			},
+			time = 30
+		}
+    },
+	{
+		type = "technology",
+		name = "kr-decorations",
+		icon = kr_technologies_icons_path .. "decorations.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "tree-01"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "tree-02"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "tree-03"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "tree-04"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "tree-05"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "tree-06"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "tree-07"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "tree-08"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "tree-09"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "rock-big"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "rock-huge"
+			}
+		},
+		prerequisites = {"kr-greenhouse"},
 		unit =
 		{
 			count = 60,

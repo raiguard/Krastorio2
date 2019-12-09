@@ -51,6 +51,9 @@ krastorio.icons.setItemIcon("steel-plate", kr_icons_path .. "steel-plate.png")
 
 -- Changing iron gear wheel
 krastorio.icons.setItemIcon("iron-gear-wheel", kr_icons_path .. "iron-gear-wheel.png")
+
+-- Changing wood
+krastorio.icons.setItemIcon("wood", kr_icons_path .. "wood.png")
 -----------------------------------------------------------------
 -- -- -- TECHNOLOGIES
 

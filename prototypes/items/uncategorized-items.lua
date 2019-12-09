@@ -3,6 +3,25 @@ data:extend(
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------   
+	
+	{
+		type = "item",
+		name = "biomass",
+		icon = kr_icons_path .. "biomass.png",
+		icon_size = 64,
+		subgroup = "raw-resource",
+		order = "a[biomass]",
+		stack_size = 200
+	},
+	{
+		type = "item",
+		name = "fertilizer",
+		icon = kr_icons_path .. "fertilizer.png",
+		icon_size = 64,
+		subgroup = "raw-material",
+		order = "a[fertilizer]",
+		stack_size = 200
+	},
 	{
 		type = "item",
 		name = "automation-core",

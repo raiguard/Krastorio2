@@ -4,7 +4,7 @@ data:extend(
 {	
 	{
 		type = "resource",
-		name = "raw-rare-metals",
+		name = "rare-metals",
 		icon = kr_resources_icons_path .. "raw-rare-metals.png",
 		icon_size = 32,
 		flags = {"placeable-neutral"},
@@ -24,7 +24,7 @@ data:extend(
 		selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
 		autoplace = resource_autoplace.resource_autoplace_settings
 		{
-			name = "raw-rare-metals",
+			name = "rare-metals",
 			order = "d",
 			base_density = 0.8,
 			base_spots_per_km2 = 0.75,
@@ -40,7 +40,7 @@ data:extend(
 		{
 			sheet =
 			{
-				filename = kr_resources_sprites_path .. "raw-rare-metals.png",
+				filename = kr_resources_sprites_path .. "rare-metals.png",
 				priority = "extra-high",
 				width = 64,
 				height = 64,
@@ -48,7 +48,7 @@ data:extend(
 				variation_count = 8,
 				hr_version =
 				{
-					filename = kr_resources_sprites_path .. "hr-raw-rare-metals.png",
+					filename = kr_resources_sprites_path .. "hr-rare-metals.png",
 					priority = "extra-high",
 					width = 128,
 					height = 128,
@@ -62,7 +62,7 @@ data:extend(
 		{
 			sheet =
 			{
-				filename = kr_resources_sprites_path .. "raw-rare-metals-glow.png",
+				filename = kr_resources_sprites_path .. "rare-metals-glow.png",
 				priority = "extra-high",
 				width = 64,
 				height = 64,
@@ -72,7 +72,7 @@ data:extend(
 				flags = {"light"},
 				hr_version =
 				{
-					filename = kr_resources_sprites_path .. "hr-raw-rare-metals-glow.png",
+					filename = kr_resources_sprites_path .. "hr-rare-metals-glow.png",
 					priority = "extra-high",
 					width = 128,
 					height = 128,
@@ -93,12 +93,12 @@ data:extend(
 	},
 	{
 		type = "autoplace-control",
-		name = "raw-rare-metals",
+		name = "rare-metals",
 		order = "b-h",
 		category = "resource"
 	},
 	{
 		type = "noise-layer",
-		name = "raw-rare-metals"
+		name = "rare-metals"
 	},
 })

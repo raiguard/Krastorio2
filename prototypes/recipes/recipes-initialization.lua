@@ -7,7 +7,10 @@ local krastorio_new_recipes =
 	require("entities-recipes"),
 
 	-- -- Recipes for items (not associated to buildings)
-	require("items-recipes")
+	require("items-recipes"),
+	
+	-- -- Recipes for decorations
+	require("decorations-recipes")
 }
 
 -- -- Anti recipes override check

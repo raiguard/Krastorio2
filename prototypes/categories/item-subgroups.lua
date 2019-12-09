@@ -23,6 +23,23 @@ data:extend(
 		type = "item-subgroup",
 		name = "kr-logistics-4", -- for compatibility
 		group = "logistics",
-		order = "a4"
-	}
+		order = "a4",
+	},
+	
+	-- Decorations
+	
+	{
+    type = "item-subgroup",
+    name = "kr-decorations-1",
+    group = "intermediate-products",
+    order = "zzd1"
+	},
+	
+	{
+    type = "item-subgroup",
+    name = "kr-decorations-2",
+    group = "intermediate-products",
+    order = "zzd2"
+	},
+	
 })
