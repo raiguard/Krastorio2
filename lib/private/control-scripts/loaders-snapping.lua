@@ -63,9 +63,23 @@ local BACK_POSITION_DIFFERENCE =
 
 -- Return the real type of entity if is a ghost, or the type otherwise
 -- @entity, entity to look for type
+local function getEffectiveName(entity)
+	if entity then
+		if entity.name == "entity-ghost" then
+			return entity.ghost_name
+		else
+			return entity.name
+		end			
+	else
+		return nil
+	end
+end
+
+-- Return the real type of entity if is a ghost, or the type otherwise
+-- @entity, entity to look for type
 local function getEffectiveType(entity)
 	if entity then
-		if entity.type == "entity-ghost" then
+		if entity.name == "entity-ghost" then
 			return entity.ghost_type
 		else
 			return entity.type
@@ -84,6 +98,15 @@ end
 -- Return if the entity have an inventory
 -- @entity, to check if has an inventory
 local function hasInventory(entity)
+	local entity_type = getEffectiveType(entity)
+	if 
+		entity_type == "container" or 
+		entity_type == "assembling-machine" or 
+		entity_type == "furnace" or
+		entity_type == "rocket-silo"
+	then
+		return true
+	end
 	for _, inventory_type in pairs(defines.inventory) do
 		if entity.get_inventory(inventory_type) then
 			return true
@@ -140,6 +163,8 @@ local function snapLoader(loader)
 			end
 		end
 	elseif front_entity and not back_entity then -- only front
+		game.print("front_entity_type: "..front_entity_type) -- DEBUG
+		game.print("front_entity_type: "..front_entity.direction) -- DEBUG
 		if SNAP_TYPES[front_entity_type] then
 			if OPPOSITE_DIRECTIONS[loader.direction] == front_entity.direction then
 				loader.loader_type = "input"
@@ -150,6 +175,8 @@ local function snapLoader(loader)
 			reverseEntity(loader)
 		end
 	elseif not front_entity and back_entity then -- only back
+		game.print("back_entity_type: "..back_entity_type) -- DEBUG
+		game.print("back_entity_type: "..back_entity.direction) -- DEBUG
 		if SNAP_TYPES[back_entity_type] then
 			reverseEntity(loader)
 			if OPPOSITE_DIRECTIONS[loader.direction] == back_entity.direction then
@@ -165,12 +192,14 @@ end
 -- @event, on_built_entity or on_robot_built_entity
 local function onBuiltAnEntity(event)
 	local loader = event.created_entity
-	local type = returnEffectiveType(loader)
+	local name   = getEffectiveName(loader)
+	local type   = getEffectiveType(loader)
+	game.print(name)
 	-- Check requisites for work on loader
 	if 
-		loader.type == type and 
+		type == "loader" and 
 		loader.valid and
-		KRASTORIO_LOADERS[loader.name] and
+		KRASTORIO_LOADERS[name] and
 		not event.revived
 	then
 		snapLoader(loader)
