@@ -22,6 +22,7 @@ kr_graphic_mod_path                    = "__Krastorio2__/graphics/"
 -- Icons paths
 kr_icons_path                          = kr_graphic_mod_path .. "icons/"
 kr_cards_icons_path                    = kr_icons_path       .. "cards/"
+kr_fluids_icons_path                   = kr_icons_path       .. "fluids/"
 kr_arrows_icons_path                   = kr_icons_path       .. "arrows/"
 kr_entities_icons_path                 = kr_icons_path       .. "entities/"
 kr_recipes_icons_path                  = kr_icons_path       .. "recipes/"

@@ -6,7 +6,7 @@ data:extend(
 		type = "resource",
 		name = "rare-metals",
 		icon = kr_resources_icons_path .. "raw-rare-metals.png",
-		icon_size = 32,
+		icon_size = 64,
 		flags = {"placeable-neutral"},
 		order="a-b-a",
 		tree_removal_probability = 0,
@@ -35,7 +35,7 @@ data:extend(
 			regular_rq_factor_multiplier = 0.9,
 			candidate_spot_count = 22
 		},
-		stage_counts = {25600, 12800, 6400, 3200, 1600, 800, 400, 200},
+		stage_counts = {15000, 9500, 5500, 2900, 1300, 400, 150, 80},
 		stages =
 		{
 			sheet =
