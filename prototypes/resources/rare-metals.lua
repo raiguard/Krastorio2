@@ -5,7 +5,7 @@ data:extend(
 	{
 		type = "resource",
 		name = "rare-metals",
-		icon = kr_resources_icons_path .. "raw-rare-metals.png",
+		icon = kr_resources_icons_path .. "rare-metals.png",
 		icon_size = 64,
 		flags = {"placeable-neutral"},
 		order="a-b-a",
