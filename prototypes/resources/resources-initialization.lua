@@ -1,6 +1,6 @@
 -- -- Adding new resources
 
 -- Adding rare metals
-require("rare-metals")
--- Adding mineral-water
-require("mineral-water")
+require(kr_resources_path .. "rare-metals")
+-- Adding mineral water
+require(kr_resources_path .. "mineral-water")

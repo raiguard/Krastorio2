@@ -1,5 +1,5 @@
 -- Adding rare metals
-
+log("rare metals")
 data:extend(
 {	
 	{
@@ -94,11 +94,12 @@ data:extend(
 	{
 		type = "autoplace-control",
 		name = "rare-metals",
-		order = "b-h",
+		order = "k-a",
+		richness = true,
 		category = "resource"
 	},
 	{
 		type = "noise-layer",
 		name = "rare-metals"
-	},
+	}
 })
