@@ -33,6 +33,16 @@ data:extend(
 		place_result = "kr-crusher",
 		stack_size = 50
     },	
+    {
+		type = "item",
+		name = "water-pumpjack",
+		icon =  kr_entities_icons_path .. "water-pumpjack.png",
+		icon_size = 64,
+		subgroup = "production-machine",
+		order = "aaa",
+		place_result = "water-pumpjack",
+		stack_size = 50
+    },	
 	-- NEW LABORATORIES
 	-- -- --
     {

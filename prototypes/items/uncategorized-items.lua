@@ -149,8 +149,19 @@ data:extend(
 	{
 		type = "item",
 		name = "rare-metals",
-		icon = kr_icons_path .. "rare-metals.png",
+		icon = kr_mip_icons_path .. "rare-metals.png",
 		icon_size = 64,
+		icon_mipmaps = 7,
+		pictures =
+		{
+			{ size = 64, filename = kr_mip_icons_path .. "rare-metals.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "rare-metals-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "rare-metals-2.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "rare-metals-3.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "rare-metals-4.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "rare-metals-5.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "rare-metals-6.png", scale = 0.25, mipmap_count = 4 }
+		},
 		subgroup = "intermediate-product",
 		order = "x[rare-metals]",
 		stack_size = 200

@@ -7,6 +7,7 @@ require("buildings/wind-turbine")
 require("buildings/greenhouse")
 require("buildings/crusher")
 require("buildings/loaders")
+require("buildings/water-pumpjack")
 -- -- Laboratory
 require("buildings/biusart-lab")
 -- -- Conteiners
@@ -28,3 +29,4 @@ require("buildings/containers/big-containers/big-storage-container")
 -- -- -- REMNANTS
 require("remnants/kr-medium-random-pipes-remnant")
 require("remnants/kr-big-random-pipes-remnant")
+require("remnants/kr-water-pumpjack-remnant")

@@ -2,6 +2,7 @@
 
 -- Oil
 
+data.raw.resource["crude-oil"].category = "oil"
 data.raw.resource["crude-oil"].infinite = false
 data.raw.resource["crude-oil"].minimum = 25000
 data.raw.resource["crude-oil"].normal = 100000
@@ -44,5 +45,11 @@ data.raw.resource["crude-oil"].stages.sheet.frame_count = 4
 data.raw.resource["crude-oil"].stages.sheet.scale = 0.75
 
 data.raw.resource["crude-oil"].map_color = {0.1, 0.05, 0.1}
+
+-----------------------------------------------------------------
+
+-- Pumpjack
+
+data.raw["mining-drill"]["pumpjack"].resource_categories = {"oil"}
 
 -----------------------------------------------------------------

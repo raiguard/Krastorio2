@@ -138,13 +138,68 @@ data.raw["mining-drill"]["pumpjack"].animations =
           }
         }
       }
-    } 
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
+    }
+	
+data.raw.corpse["pumpjack-remnants"].animation = make_rotated_animation_variations_from_sheet(2,
+    {
+      filename = kr_entities_path .. "oil-pumpjack/remnants/oil-pumpjack-remnants.png",
+      line_length = 1,
+      width = 138,
+      height = 142,
+      frame_count = 1,
+      direction_count = 1,
+      shift = util.by_pixel(0, 3),
+      hr_version =
+      {
+        filename = kr_entities_path .. "oil-pumpjack/remnants/hr-oil-pumpjack-remnants.png",
+        line_length = 1,
+        width = 274,
+        height = 284,
+        frame_count = 1,
+        direction_count = 1,
+        shift = util.by_pixel(0, 3.5),
+        scale = 0.5,
+      }
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
