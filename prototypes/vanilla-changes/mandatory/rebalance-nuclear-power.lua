@@ -1,39 +1,52 @@
--- Heat exchanger
-data.raw["boiler"]["heat-exchanger"].max_health = 250
-data.raw["boiler"]["heat-exchanger"].target_temperature = 500
-data.raw["boiler"]["heat-exchanger"].energy_consumption = "15MW"
-data.raw["boiler"]["heat-exchanger"].energy_source.specific_heat = "1MJ"
-data.raw["boiler"]["heat-exchanger"].energy_source.max_transfer = "2GW"
+-- Vanilla steam stat changes
+
+--data.raw.fluid["steam"].max_temperature = 1000
+data.raw.fluid["steam"].heat_capacity = "0.5KJ"
+data.raw["generator"]["steam-engine"].effectivity = 0.75
+data.raw["generator"]["steam-engine"].fluid_usage_per_tick = 1/3
+data.raw["generator"]["steam-engine"].max_power_output = "1MW"
+data.raw["boiler"]["boiler"].energy_consumption = "1.5MW"
+
+-- Nuclear reactor
+
+-- stats
+data.raw["reactor"]["nuclear-reactor"].minable = {hardness = 1, mining_time = 1, result = "nuclear-reactor"}
+data.raw["reactor"]["nuclear-reactor"].max_health = 1000
+data.raw["reactor"]["nuclear-reactor"].consumption = "100MW"
+data.raw["reactor"]["nuclear-reactor"].energy_source.effectivity = 1
+data.raw["reactor"]["nuclear-reactor"].heat_buffer.specific_heat = "50MJ"
+data.raw["reactor"]["nuclear-reactor"].heat_buffer.max_transfer = "50GW"
+data.raw["reactor"]["nuclear-reactor"].neighbour_bonus = 0.25
+data.raw.item["nuclear-reactor"].stack_size = 1 
+
 
 -- Heat pipe
 data.raw["heat-pipe"]["heat-pipe"].max_health = 100
 data.raw["heat-pipe"]["heat-pipe"].heat_buffer.specific_heat = "3MJ"
 data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_transfer = "3GW"
- 
--- Atomic bomb
-krastorio.technologies.setResearchUnitCount("atomic-bomb", 7500)
--- krastorio.technologies.addPrerequisite("atomic-bomb", "menarite-processor")
 
--- Nuclear fuel
-data.raw.item["uranium-fuel-cell"].fuel_value = "12GJ"
+-- Heat exchanger
+data.raw["boiler"]["heat-exchanger"].max_health = 250
+data.raw["boiler"]["heat-exchanger"].target_temperature = 415
+data.raw["boiler"]["heat-exchanger"].energy_consumption = "20MW"
+data.raw["boiler"]["heat-exchanger"].energy_source.specific_heat = "1MJ"
+data.raw["boiler"]["heat-exchanger"].energy_source.max_transfer = "2GW"
+data.raw["boiler"]["heat-exchanger"].energy_source.min_working_temperature = 415
 
 -- Steam turbine
-data.raw["generator"]["steam-turbine"].max_health = 350
-data.raw["generator"]["steam-turbine"].maximum_temperature = 500
-data.raw["generator"]["steam-turbine"].effectivity = 2
-data.raw["generator"]["steam-turbine"].fluid_usage_per_tick = 1
-data.raw["generator"]["steam-turbine"].fluid_box.minimum_temperature = 250.0
+data.raw["generator"]["steam-turbine"].max_health = 300
+data.raw["generator"]["steam-turbine"].maximum_temperature = 415
+data.raw["generator"]["steam-turbine"].effectivity = 1
+data.raw["generator"]["steam-turbine"].fluid_usage_per_tick = 5/6
+data.raw["generator"]["steam-turbine"].fluid_box.minimum_temperature = 100
 
--- Nuclear reactor
--- stats
-data.raw["reactor"]["nuclear-reactor"].minable = {hardness = 1, mining_time = 1, result = "nuclear-reactor"}
-data.raw["reactor"]["nuclear-reactor"].max_health = 1000
-data.raw["reactor"]["nuclear-reactor"].consumption = "60MW"
-data.raw["reactor"]["nuclear-reactor"].energy_source.effectivity = 1
-data.raw["reactor"]["nuclear-reactor"].heat_buffer.specific_heat = "30MJ"
-data.raw["reactor"]["nuclear-reactor"].heat_buffer.max_transfer = "30GW"
-data.raw["reactor"]["nuclear-reactor"].neighbour_bonus = 0.5
-data.raw.item["nuclear-reactor"].stack_size = 1 
+-- Nuclear fuel
+data.raw.item["uranium-fuel-cell"].fuel_value = "20GJ" --  = 200s in reactor
+
+-- Atomic bomb
+--krastorio.technologies.setResearchUnitCount("atomic-bomb", 7500)
+--krastorio.technologies.addPrerequisite("atomic-bomb", "menarite-processor")
+
 -- meltdown addition
 data.raw["reactor"]["nuclear-reactor"].meltdown_action.action_delivery.target_effects =
 {
