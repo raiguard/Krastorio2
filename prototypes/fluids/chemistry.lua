@@ -1,7 +1,6 @@
 data:extend(
 {
-
-	-- heavy-water
+	-- Heavy water
 	{
 		type = "fluid",
 		name = "heavy-water",
@@ -14,8 +13,7 @@ data:extend(
 		icon_size = 64,
 		order = "yb00[heavy-water]"
     },
-
-	-- ammonia
+	-- Ammonia
 	{
 		type = "fluid",
 		name = "ammonia",
@@ -28,7 +26,7 @@ data:extend(
 		icon_size = 64,
 		order = "yc00[ammonia]"
     },
-	-- chlorine
+	-- Chlorine
 	{
 		type = "fluid",
 		name = "chlorine",
@@ -42,7 +40,7 @@ data:extend(
 		icon_size = 64,
 		order = "yc00[chlorine]"
     },
-	-- hydrogen
+	-- Hydrogen
 	{
 		type = "fluid",
 		name = "hydrogen",
@@ -56,7 +54,7 @@ data:extend(
 		icon_size = 64,
 		order = "yc00[hydrogen]"
     },
-	-- nitrogen
+	-- Nitrogen
 	{
 		type = "fluid",
 		name = "nitrogen",
@@ -70,7 +68,7 @@ data:extend(
 		icon_size = 64,
 		order = "yc00[nitrogen]"
     },
-	-- oxygen
+	-- Oxygen
 	{
 		type = "fluid",
 		name = "k-oxygen",
@@ -84,7 +82,7 @@ data:extend(
 		icon_size = 64,
 		order = "yc00[oxygen]"
     },
-	-- nitric-acid
+	-- Nitric acid
 	{
 		type = "fluid",
 		name = "nitric-acid",
@@ -98,7 +96,7 @@ data:extend(
 		icon_size = 64,
 		order = "yc00[nitric-acid]"
     },
-	-- hydrogen-chloride
+	-- Hydrogen chloride
 	{
 		type = "fluid",
 		name = "hydrogen-chloride",

@@ -1,6 +1,4 @@
--- -- 
-require("recipe-category")
-
 require("item-subgroups")
-
-require("resource-category")
+require("recipe-categories")
+require("resource-categories")
+require("equipment-categories")

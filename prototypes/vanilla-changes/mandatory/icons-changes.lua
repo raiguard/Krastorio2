@@ -53,41 +53,25 @@ krastorio.icons.setItemIcon("iron-gear-wheel", kr_icons_path .. "iron-gear-wheel
 
 -- Neural Networks icons
 krastorio.icons.setItemIcon("arithmetic-combinator", kr_icons_path .. "nn-icons/arithmetic-combinator.png")
-krastorio.icons.setItemIcon("artillery-turret", kr_icons_path .. "nn-icons/artillery-turret.png")
-krastorio.icons.setItemIcon("artillery-wagon", kr_icons_path .. "nn-icons/artillery-wagon.png")
-krastorio.icons.setItemIcon("assembling-machine-0", kr_icons_path .. "nn-icons/assembling-machine-0.png")
-krastorio.icons.setItemIcon("assembling-machine-1", kr_icons_path .. "nn-icons/assembling-machine-1.png")
-krastorio.icons.setItemIcon("assembling-machine-2", kr_icons_path .. "nn-icons/assembling-machine-2.png")
-krastorio.icons.setItemIcon("assembling-machine-3", kr_icons_path .. "nn-icons/assembling-machine-3.png")
-
+krastorio.icons.setItemIcon("artillery-turret",      kr_icons_path .. "nn-icons/artillery-turret.png")
+krastorio.icons.setItemIcon("artillery-wagon",       kr_icons_path .. "nn-icons/artillery-wagon.png")
+krastorio.icons.setItemIcon("assembling-machine-0",  kr_icons_path .. "nn-icons/assembling-machine-0.png")
+krastorio.icons.setItemIcon("assembling-machine-1",  kr_icons_path .. "nn-icons/assembling-machine-1.png")
+krastorio.icons.setItemIcon("assembling-machine-2",  kr_icons_path .. "nn-icons/assembling-machine-2.png")
+krastorio.icons.setItemIcon("assembling-machine-3",  kr_icons_path .. "nn-icons/assembling-machine-3.png")
 
 krastorio.icons.setItemIcon("copper-cable", kr_icons_path .. "nn-icons/copper-cable.png")
 krastorio.icons.setItemIcon("wood", kr_icons_path .. "nn-icons/wood.png")
-
--- fluids
-data.raw.fluid["water"].icon = kr_fluids_icons_path  .. "water.png"
-data.raw.fluid["water"].icon_size = 64
-
-data.raw.fluid["steam"].icon = kr_fluids_icons_path  .. "steam.png"
-data.raw.fluid["steam"].icon_size = 64
-
-data.raw.fluid["sulfuric-acid"].icon = kr_fluids_icons_path  .. "sulfuric-acid.png"
-data.raw.fluid["sulfuric-acid"].icon_size = 64
-
-data.raw.fluid["crude-oil"].icon = kr_fluids_icons_path  .. "oil.png"
-data.raw.fluid["crude-oil"].icon_size = 64
-
-data.raw.fluid["light-oil"].icon = kr_fluids_icons_path  .. "light-oil.png"
-data.raw.fluid["light-oil"].icon_size = 64
-
-data.raw.fluid["heavy-oil"].icon = kr_fluids_icons_path  .. "heavy-oil.png"
-data.raw.fluid["heavy-oil"].icon_size = 64
-
-data.raw.fluid["lubricant"].icon = kr_fluids_icons_path  .. "lubricant.png"
-data.raw.fluid["lubricant"].icon_size = 64
-
-data.raw.fluid["petroleum-gas"].icon = kr_fluids_icons_path  .. "petroleum-gas.png"
-data.raw.fluid["petroleum-gas"].icon_size = 64
+-----------------------------------------------------------------
+-- -- Fluids
+krastorio.icons.setItemIcon("water",         kr_fluids_icons_path  .. "water.png")
+krastorio.icons.setItemIcon("steam",         kr_fluids_icons_path  .. "steam.png")
+krastorio.icons.setItemIcon("sulfuric-acid", kr_fluids_icons_path  .. "sulfuric-acid.png")
+krastorio.icons.setItemIcon("crude-oil",     kr_fluids_icons_path  .. "oil.png")
+krastorio.icons.setItemIcon("light-oil",     kr_fluids_icons_path  .. "light-oil.png")
+krastorio.icons.setItemIcon("heavy-oil",     kr_fluids_icons_path  .. "heavy-oil.png")
+krastorio.icons.setItemIcon("lubricant",     kr_fluids_icons_path  .. "lubricant.png")
+krastorio.icons.setItemIcon("petroleum-gas", kr_fluids_icons_path  .. "petroleum-gas.png")
 -----------------------------------------------------------------
 -- -- -- TECHNOLOGIES
 
@@ -103,4 +87,4 @@ krastorio.icons.setTechnologyIcon("oil-processing", kr_technologies_icons_path .
 -----------------------------------------------------------------
 -- -- -- BUILDINGS
 krastorio.icons.setItemIcon("pumpjack", kr_entities_icons_path .. "oil-pumpjack.png")
-
+-----------------------------------------------------------------

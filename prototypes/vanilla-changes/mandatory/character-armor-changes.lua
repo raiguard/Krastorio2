@@ -1657,124 +1657,128 @@ character_animations =
   }
 }
 
+table.insert
+(
+	data.raw["character"]["character"].animations,
+	{
+		armors = data.is_demo and {} or {"power-armor-mk3"},
+		idle =
+		{
+			layers =
+			{
+				character_animations.level1.idle,
+				character_animations.level1.idle_mask,
+				character_animations.level4addon.idle,
+				character_animations.level3addon.idle_mask,
+				character_animations.level1.idle_shadow
+			}
+		},
+		idle_with_gun =
+		{
+			layers =
+			{
+				character_animations.level1.idle_gun,
+				character_animations.level1.idle_gun_mask,
+				character_animations.level4addon.idle_gun,
+				character_animations.level3addon.idle_gun_mask,
+				character_animations.level1.idle_gun_shadow
+			}
+		},
+		mining_with_tool =
+		{
+			layers =
+			{
+				character_animations.level1.mining_tool,
+				character_animations.level1.mining_tool_mask,
+				character_animations.level4addon.mining_tool,
+				character_animations.level3addon.mining_tool_mask,
+				character_animations.level1.mining_tool_shadow
+			}
+		},
+		running_with_gun =
+		{
+			layers =
+			{
+				character_animations.level1.running_gun,
+				character_animations.level1.running_gun_mask,
+				character_animations.level4addon.running_gun,
+				character_animations.level3addon.running_gun_mask,
+				character_animations.level1.running_gun_shadow
+			}
+		},
+		running =
+		{
+			layers =
+			{
+				character_animations.level1.running,
+				character_animations.level1.running_mask,
+				character_animations.level4addon.running,
+				character_animations.level3addon.running_mask,
+				character_animations.level1.running_shadow
+			}
+		}
+	}
+)
 
-
-table.insert(data.raw["character"]["character"].animations,
-    {
-        armors = data.is_demo and {} or {"power-armor-mk3"},
-        idle =
-        {
-          layers =
-          {
-            character_animations.level1.idle,
-            character_animations.level1.idle_mask,
-            character_animations.level4addon.idle,
-            character_animations.level3addon.idle_mask,
-            character_animations.level1.idle_shadow
-          }
-        },
-        idle_with_gun =
-        {
-          layers =
-          {
-            character_animations.level1.idle_gun,
-            character_animations.level1.idle_gun_mask,
-            character_animations.level4addon.idle_gun,
-            character_animations.level3addon.idle_gun_mask,
-            character_animations.level1.idle_gun_shadow
-          }
-        },
-        mining_with_tool =
-        {
-          layers =
-          {
-            character_animations.level1.mining_tool,
-            character_animations.level1.mining_tool_mask,
-            character_animations.level4addon.mining_tool,
-            character_animations.level3addon.mining_tool_mask,
-            character_animations.level1.mining_tool_shadow
-          }
-        },
-        running_with_gun =
-        {
-          layers =
-          {
-            character_animations.level1.running_gun,
-            character_animations.level1.running_gun_mask,
-            character_animations.level4addon.running_gun,
-            character_animations.level3addon.running_gun_mask,
-            character_animations.level1.running_gun_shadow
-          }
-        },
-        running =
-        {
-          layers =
-          {
-            character_animations.level1.running,
-            character_animations.level1.running_mask,
-            character_animations.level4addon.running,
-            character_animations.level3addon.running_mask,
-            character_animations.level1.running_shadow
-          }
-        }
-    })
-	  
-table.insert(data.raw["character"]["character"].animations,
-    {
-        armors = data.is_demo and {} or {"power-armor-mk4"},
-        idle =
-        {
-          layers =
-          {
-            character_animations.level1.idle,
-            character_animations.level1.idle_mask,
-            character_animations.level5addon.idle,
-            character_animations.level3addon.idle_mask,
-            character_animations.level1.idle_shadow
-          }
-        },
-        idle_with_gun =
-        {
-          layers =
-          {
-            character_animations.level1.idle_gun,
-            character_animations.level1.idle_gun_mask,
-            character_animations.level5addon.idle_gun,
-            character_animations.level3addon.idle_gun_mask,
-            character_animations.level1.idle_gun_shadow
-          }
-        },
-        mining_with_tool =
-        {
-          layers =
-          {
-            character_animations.level1.mining_tool,
-            character_animations.level1.mining_tool_mask,
-            character_animations.level5addon.mining_tool,
-            character_animations.level3addon.mining_tool_mask,
-            character_animations.level1.mining_tool_shadow
-          }
-        },
-        running_with_gun =
-        {
-          layers =
-          {
-            character_animations.level1.running_gun,
-            character_animations.level1.running_gun_mask,
-            character_animations.level5addon.running_gun,
-            character_animations.level3addon.running_gun_mask,
-            character_animations.level1.running_gun_shadow
-          }
-        },
-        running =
-        {
-          layers =
-          {
-            character_animations.level1.running,
-            character_animations.level1.running_mask,
-            character_animations.level5addon.running,
-            character_animations.level3addon.running_mask,
-            character_animations.level1.running_shadow
-          }
-        }
-    })	
+table.insert
+(
+	data.raw["character"]["character"].animations,
+	{
+		armors = data.is_demo and {} or {"power-armor-mk4"},
+		idle =
+		{
+			layers =
+			{
+				character_animations.level1.idle,
+				character_animations.level1.idle_mask,
+				character_animations.level5addon.idle,
+				character_animations.level3addon.idle_mask,
+				character_animations.level1.idle_shadow
+			}
+		},
+		idle_with_gun =
+		{
+			layers =
+			{
+				character_animations.level1.idle_gun,
+				character_animations.level1.idle_gun_mask,
+				character_animations.level5addon.idle_gun,
+				character_animations.level3addon.idle_gun_mask,
+				character_animations.level1.idle_gun_shadow
+			}
+		},
+		mining_with_tool =
+		{
+			layers =
+			{
+				character_animations.level1.mining_tool,
+				character_animations.level1.mining_tool_mask,
+				character_animations.level5addon.mining_tool,
+				character_animations.level3addon.mining_tool_mask,
+				character_animations.level1.mining_tool_shadow
+			}
+		},
+		running_with_gun =
+		{
+			layers =
+			{
+				character_animations.level1.running_gun,
+				character_animations.level1.running_gun_mask,
+				character_animations.level5addon.running_gun,
+				character_animations.level3addon.running_gun_mask,
+				character_animations.level1.running_gun_shadow
+			}
+		},
+		running =
+		{
+			layers =
+			{
+				character_animations.level1.running,
+				character_animations.level1.running_mask,
+				character_animations.level5addon.running,
+				character_animations.level3addon.running_mask,
+				character_animations.level1.running_shadow
+			}
+		}
+	}
+)	

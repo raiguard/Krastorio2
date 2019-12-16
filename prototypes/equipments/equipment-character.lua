@@ -1,28 +1,35 @@
--- -- POWER ARMORS
+-- -- -- CHARACTER EQUIPMENTS
 
---in order:
-	-- grid
-	-- item
-	-- equip
-	-- recipe
-	
+-- -- NEW ARMORS GRID
+
+data:extend(
+{
+	-- Used in MK3 armor
+	{
+		type = "equipment-grid",
+		name = "mk3-armor-grid",
+		width = 10,
+		height = 10,
+		equipment_categories = {"armor", "universal-equipment"}
+	},
+	{
+		type = "equipment-grid",
+		name = "mk4-armor-grid",
+		width = 12,
+		height = 12,
+		equipment_categories = {"armor", "universal-equipment"}
+	}
+})
+
+-- -- NEW POWER ARMORS (Tier MK3 and MK4)
+
 data:extend(
 {
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------- 
 	-- -- Armors
-	-- MK3
-	-- grid
-	{
-		type = "equipment-grid",
-		name = "mk3-armor-grid",
-		width = 10,
-		height = 10,
-		--equipment_categories = {"armor", "universal-equipment"}
-		equipment_categories = {"armor"}
-	},
-	-- item
+	-- MK3 (item/equipment)
 	{
 		type = "armor",
 		name = "power-armor-mk3",
@@ -58,34 +65,8 @@ data:extend(
 		equipment_grid = "large-equipment-grid",
 		inventory_size_bonus = 40	
 	},	
-	-- recipe
---	{
---		type = "recipe",
---		name = "power-armor-mk3",
---		enabled = false,
---		energy_required = 40,
---		ingredients = 
---		{
---			{"power-armor-mk2", 1},
---			{"effectivity-module-3", 15},
---			{"speed-module-3", 15},
---			{"k-tantalum-plate", 20}
---		},
---		result = "power-armor-mk3",
---		requester_paste_multiplier = 1
---	},
 ----------------------------------------------------------------------------------------------------------------- 
-	-- MK4
-	-- grid
-	{
-		type = "equipment-grid",
-		name = "mk4-armor-grid",
-		width = 12,
-		height = 12,
-		--equipment_categories = {"armor", "universal-equipment"}
-		equipment_categories = {"armor"}
-	},
-	-- item
+	-- MK4 (item/equipment)
 	{
 		type = "armor",
 		name = "power-armor-mk4",
@@ -120,23 +101,7 @@ data:extend(
 		infinite = true,
 		equipment_grid = "large-equipment-grid",
 		inventory_size_bonus = 50	
-	},
-	-- recipe
---	{
---		type = "recipe",
---		name = "power-armor-mk4",
---		enabled = false,
---		energy_required = 40,
---		ingredients = 
---		{
---			{"power-armor-mk3", 1},
---			{"effectivity-module-3", 20},
---			{"speed-module-3", 20},
---			{"k-tantalum-plate", 50}
---		},
---		result = "power-armor-mk4",
---		requester_paste_multiplier = 1
---	}
+	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------- 

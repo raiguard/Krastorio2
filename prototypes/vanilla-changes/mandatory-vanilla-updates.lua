@@ -3,7 +3,7 @@
 
 local modifications =
 {	
-	"character-armor-changes",  -- Adding new armor tiers
+	"character-armor-changes", -- Adding new armor tiers sprites
 	"entities-changes",        -- Entities/prototypes definition modifications
 	"icons-changes",           -- Modify aspect of vanilla items (like science pack icons..)
 	"improve-inserters",       -- Improve inserters, new functions	

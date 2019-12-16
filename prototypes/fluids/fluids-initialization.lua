@@ -6,15 +6,15 @@ require("void")
 -- Adding matter
 require("matter")
 
--- Adding Ьineral water
+-- Adding mineral water
 require("mineral-water")
 
 -- Adding salt water
 require("salt-water")
 
--- Adding salt water
+-- Adding dirty water
 require("dirty-water")
 
--- Adding Сhemical elements
+-- Adding chemical elements
 require("chemistry")
 
