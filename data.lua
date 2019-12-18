@@ -55,5 +55,6 @@ require(kr_others_prototypes_path .. "key-bind-initialization")
 ---------------------------------------------------------------------------
 -- -- -- COMPATIBILITY INITIALIZATION (data stage)
 ---------------------------------------------------------------------------
-local scripts_path = "compatibility-scripts.data."
+local scripts_path = "compatibility-scripts/data/"
+require(scripts_path .. "Squeak_Through")
 ---------------------------------------------------------------------------
