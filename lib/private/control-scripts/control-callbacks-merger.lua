@@ -1,20 +1,32 @@
 -----------------------------------------------------------------------------
--- This script is used for merge multiple callback on the same event,
--- because factorio support only one callback per event per mod.
--- All callbacks must be added from the method addCallBack() and must be defined
--- how is written in the function description.
+-- This script is used for merge multiple callbacks on the same event,
+-- because Factorio support only one callback per event per mod.
+-- All callbacks must be added from the method addCallBack()/addCallBacks()
+-- and must be defined how is written in the function description.
 -- After must be call activeCallbacks() to active the callbacks,
 -- each time the function is called will overwrite the previuos calls listen.
-
+-----------------------------------------------------------------------------
+-- -- LIBRARY
+local util = require("__core__/lualib/util")
 -- -- VARIABLES
 -- function and variable container
-local _control_callback_merger = {}
-
--- list of callbacks
-_control_callback_merger.callbacks = {}
-_control_callback_merger.filtered_callbacks = {}
-_control_callback_merger.on_nth_tick_callbacks = {}
-
+ControlCallbackMerger = 
+{
+	-- lists of callbacks
+	simple_callbacks      = {},
+	filtered_callbacks    = {},
+	on_nth_tick_callbacks = {}
+}
+ControlCallbackMerger.__index = ControlCallbackMerger
+-----------------------------------------------------------------------------
+-- -- CONSTRUCTORS
+-- @ccm, another ControlCallbackMerger object or nil
+function ControlCallbackMerger:new(ccm)
+	object = ccm or {}
+	setmetatable(object, ControlCallbackMerger)
+	return object
+end
+-----------------------------------------------------------------------------
 -- -- FUNCTIONS
 
 -- @input could be a defined in this two way:
@@ -32,7 +44,7 @@ _control_callback_merger.on_nth_tick_callbacks = {}
 -- script.on_init(F) -> {F, "on_init"}
 -- script.on_event(defines.events.E, F) ->
 -- {F, E}
-function _control_callback_merger.addCallBack(input)
+function ControlCallbackMerger:addCallBack(input)
 	local callback   = input.callback or input[1] or false
 	local event_name = input.event_name or input[2] or false
 	local filter     = input.filter or input[3] or false
@@ -41,43 +53,71 @@ function _control_callback_merger.addCallBack(input)
 	end
 	if filter then
 		if event_name == "on_nth_tick" and type(filter) == "number" then
-			table.insert(_control_callback_merger.on_nth_tick_callbacks, {filter or 1, callback})
+			table.insert(self.on_nth_tick_callbacks, {filter or 1, callback})
 		else
-			if not _control_callback_merger.filtered_callbacks[event_name] then
-				_control_callback_merger.filtered_callbacks[event_name] = {}
+			if not self.filtered_callbacks[event_name] then
+				self.filtered_callbacks[event_name] = {}
 			end
-			table.insert(_control_callback_merger.filtered_callbacks[event_name], {callback, filter})
+			table.insert(self.filtered_callbacks[event_name], {callback, filter})
 		end		
 	else
-		if not _control_callback_merger.callbacks[event_name] then
-			_control_callback_merger.callbacks[event_name] = {}
+		if not self.simple_callbacks[event_name] then
+			self.simple_callbacks[event_name] = {}
 		end
-		table.insert(_control_callback_merger.callbacks[event_name], callback)	
+		table.insert(self.simple_callbacks[event_name], callback)	
 	end
 	return true
 end
 
 -- A table of callbacks(tables) defined as in the function
-function _control_callback_merger.addCallBacks(_table)
-	for _, callback_def in pairs(_table) do
-		_control_callback_merger.addCallBack(callback_def)
+function ControlCallbackMerger:addCallBacks(callbacks)
+	for _, callback in pairs(callbacks) do
+		self:addCallBack(callback)
 	end
 end
 
-local function createCollectiveCallback(_callbacks)
+-- Return a function that call all functions in the given table,
+-- with the same argument(s) given to the collective function
+-- @callbacks, table of functions
+local function createCollectiveCallback(callbacks)
 	return 
 	function(...)
-		local callbacks = _callbacks
 		for _, callback in pairs(callbacks) do
 			callback(...)
 		end
 	end
 end
 
+local function mergeFilters(filters_group_a, filters_group_b)
+	local finded = false
+	local new_filters_group = util.table.deepcopy(filters_group_a)
+	for _, filter_b in pairs(filters_group_b) do
+		finded = false
+		for _, filter_a in pairs(filters_group_a) do
+			if util.table.compare(filter_a, filter_b) then
+				finded = true
+				break
+			end
+		end
+		if not finded then
+			table.insert(new_filters_group, filter_b)
+		end
+	end
+end
+
 -- Each time this function is called will overwrite the previuos calls listen.
-function _control_callback_merger.activeCallbacks()
-	-- Normal
-	for event_name, callbacks in pairs(_control_callback_merger.callbacks) do
+function ControlCallbackMerger:activeCallbacks()
+	-- Merge simple and filtered callbacks if necessary
+	for event_name, _ in pairs(self.simple_callbacks) do
+		if self.filtered_callbacks[event_name] then			
+			for _, callback in pairs(self.filtered_callbacks[event_name]) do
+				table.insert(self.simple_callbacks[event_name], callback[1])
+			end
+			self.filtered_callbacks[event_name] = nil
+		end
+	end
+	-- Simple
+	for event_name, callbacks in pairs(self.simple_callbacks) do
 		local cc = createCollectiveCallback(callbacks)
 		if     event_name == "on_init" then			
 			script.on_init(cc)
@@ -92,16 +132,21 @@ function _control_callback_merger.activeCallbacks()
 		end
 	end	
 	-- Filtered
-	for event_name, callbacks in pairs(_control_callback_merger.filtered_callbacks) do
+	for event_name, callbacks in pairs(self.filtered_callbacks) do
+		local cc_list = {}
+		local collective_filter = {}
 		for _, callback in pairs(callbacks) do
-			script.on_event(defines.events[event_name], callback[1], callback[2])
+			table.insert(cc_list, callback[1])
+			collective_filter = mergeFilters(collective_filter, callback[2])
 		end
+		local cc = createCollectiveCallback(cc_list)
+		script.on_event(defines.events[event_name], cc, collective_filter)
 	end
 	-- On nth ticks
-	for _, callback in pairs(_control_callback_merger.on_nth_tick_callbacks) do
+	for _, callback in pairs(self.on_nth_tick_callbacks) do
 		script.on_nth_tick(callback[1], callback[2])
 	end
 end
-
-return _control_callback_merger
+-----------------------------------------------------------------------------
+return ControlCallbackMerger
 -----------------------------------------------------------------------------

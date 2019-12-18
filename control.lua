@@ -2,8 +2,8 @@
 local control_scripts_path = "lib/private/control-scripts/"
 
 -- Lib
-local ccm = require(control_scripts_path .. "control-callbacks-merger")
-
+ControlCallbackMerger = require(control_scripts_path .. "control-callbacks-merger")
+local ccm = ControlCallbackMerger:new()
 -- Scrips
 local scripts =
 {
@@ -20,11 +20,11 @@ local scripts =
 -- Load all callbacks
 for _, script in pairs(scripts) do
 	if script.callback then
-		ccm.addCallBack(script)
+		ccm:addCallBack(script)
 	else -- is multiple callbacks
-		ccm.addCallBacks(script)
+		ccm:addCallBacks(script)
 	end
 end
 
 -- Active merged callbacks
-ccm.activeCallbacks()
+ccm:activeCallbacks()
