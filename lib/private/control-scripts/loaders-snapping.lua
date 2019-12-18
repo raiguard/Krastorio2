@@ -84,6 +84,7 @@ local SNAP_TYPES =
 	Northwest - 7 - defines.direction.northwest
 --]]
 
+-- Pre computed values
 local OPPOSITE_DIRECTIONS =
 {
 	[0] = 4,
@@ -143,15 +144,24 @@ end
 -- can return nil values
 -- @entity
 local function getEntityFromEntity(entity, offset_x, offset_y)
-	local position = 
-	{
-		x = entity.position.x + offset_x,
-		y = entity.position.y + offset_y
-	}
-	local entity      = entity.surface.find_entities({position, position})[1] or nil
-	local entity_name = getEffectiveName(entity)
-	local entity_type = getEffectiveType(entity)
-	return entity, entity_name, entity_type
+	if entity.valid then
+		local position = 
+		{
+			x = entity.position.x + offset_x,
+			y = entity.position.y + offset_y
+		}
+		local entities    = entity.surface.find_entities({position, position})	
+		local entity      = entities[1] or nil
+		-- if is a character walking in the wrong place
+		if entity and entity.get_main_inventory() then
+			entity        = entities[2] or nil
+		end
+		local entity_name = getEffectiveName(entity)
+		local entity_type = getEffectiveType(entity)
+		return entity, entity_name, entity_type
+	else
+		return nil, nil, nil
+	end
 end
 
 -- Return the entity, the name, and the type,
@@ -183,7 +193,9 @@ end
 -- Change entity direction to the oppose side
 -- @entity, to reverse the direction
 local function reverseEntity(entity)
-	entity.direction = OPPOSITE_DIRECTIONS[entity.direction]
+	if entity.valid then
+		entity.direction = OPPOSITE_DIRECTIONS[entity.direction]
+	end
 end
 
 -- Return if the entity have an inventory
@@ -195,7 +207,9 @@ local function hasInventory(entity, entity_type)
 		e_entity_type == "container" or 
 		e_entity_type == "assembling-machine" or 
 		e_entity_type == "furnace" or
-		e_entity_type == "rocket-silo"
+		e_entity_type == "rocket-silo" or
+		e_entity_type == "lab" or
+		e_entity_type == "mining-drill"
 	then
 		return true
 	end
@@ -209,7 +223,8 @@ end
 
 -- Snap the given loader with the front and/or back entities
 -- @loader, loader to swap
-local function snapLoader(loader)	
+local function snapLoader(loader)
+	loader.loader_type = "output" -- Fix for have an universal loader direction
 	-- get entity in front of loader (should be the side when the belt go out of the loader)	
 	local front_entity, _, front_entity_type = getFrontEntity(loader)
 	-- get entity in behind loader (should be the side when the loader is attached to something)
@@ -230,11 +245,11 @@ local function snapLoader(loader)
 		back_has_inventory = true
 	end
 	
-	-- snapping
-	if front_entity and back_entity then -- both
-		if (front_snap and back_snap) or (front_has_inventory and back_has_inventory) then
-			return nil
-		end
+	-- snapping	
+	if front_entity and back_entity and
+	   (front_snap ~= back_snap) and -- xor
+	   (front_has_inventory ~= back_has_inventory) -- xor
+	then -- both
 		if back_snap then
 			reverseEntity(loader)
 			front_entity, back_entity = back_entity, front_entity
@@ -248,13 +263,17 @@ local function snapLoader(loader)
 				loader.loader_type = "output"
 			end
 		elseif front_has_inventory then
-			if OPPOSITE_DIRECTIONS[loader.direction] == back_entity.direction then
+			reverseEntity(loader)
+			front_entity, back_entity = back_entity, front_entity
+			front_snap, back_snap = back_snap, front_snap
+			front_has_inventory, back_has_inventory = back_has_inventory, front_has_inventory
+			if OPPOSITE_DIRECTIONS[loader.direction] == front_entity.direction then
 				loader.loader_type = "input"
 			else
 				loader.loader_type = "output"
 			end
 		end
-	elseif front_entity and not back_entity then -- only front
+	elseif front_entity and not back_entity and (front_snap ~= front_has_inventory) then -- only front
 		if front_snap then
 			if OPPOSITE_DIRECTIONS[loader.direction] == front_entity.direction then
 				loader.loader_type = "input"
@@ -264,7 +283,7 @@ local function snapLoader(loader)
 		elseif front_has_inventory then
 			reverseEntity(loader)
 		end
-	elseif not front_entity and back_entity then -- only back
+	elseif not front_entity and back_entity and (back_snap ~= back_has_inventory) then -- only back
 		if back_snap then
 			reverseEntity(loader)
 			if OPPOSITE_DIRECTIONS[loader.direction] == back_entity.direction then
@@ -280,6 +299,7 @@ end
 -- of the given loader with the front entity
 -- @loader, loader to swap
 local function snapLoaderDropDirection(loader)
+	loader.loader_type = "output" -- Fix for have an universal loader direction
 	-- get entity in front of loader (should be the side when the belt go out of the loader)
 	local front_entity, _, front_entity_type = getFrontEntity(loader)
 		
@@ -303,7 +323,6 @@ local function onBuiltAnEntity(event)
 		-- Check if is a krastorio loader
 		if KRASTORIO_LOADERS[name] then
 			snapLoader(entity)
-			game.print("snap")
 		elseif SNAP_TYPES[type] then
 			-- get entity in front of the belt		
 			local front_entity, front_entity_name, front_entity_type = getFrontEntity(entity)
