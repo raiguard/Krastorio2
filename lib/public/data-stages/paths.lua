@@ -5,6 +5,9 @@
 -----------------------------------------------------------------------------------------------------------------
 kr_path                                = "__Krastorio2__/"
 kr_prototypes_path                     = kr_path            .. "prototypes/"
+-- Prototypes:
+kr_categories_path                     = kr_prototypes_path .. "categories/"
+kr_damages_path                        = kr_prototypes_path .. "damages/"
 kr_entities_prototypes_path            = kr_prototypes_path .. "entities/"
 kr_equipments_prototypes_path          = kr_prototypes_path .. "equipments/"
 kr_fluids_prototypes_path              = kr_prototypes_path .. "fluids/"

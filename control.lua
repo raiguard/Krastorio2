@@ -14,7 +14,9 @@ local scripts =
 	-- Enable a auto snapping for loaders
 	require(control_scripts_path .. "loaders-snapping"),
 	-- Reset technologies unlocking when the game effect could be modified
-	require(control_scripts_path .. "technologies-unlocking-coherence")
+	require(control_scripts_path .. "technologies-unlocking-coherence"),
+	-- Radioactive damages
+	-- require(control_scripts_path .. "radioactivity")
 }
 
 -- Load all callbacks
