@@ -3,7 +3,7 @@
 for name, recipe in pairs(data.raw.recipe) do	
 	if 
 		recipe.category and recipe.category == "smelting" and 
-		(not recipe.energy_required or recipe.energy_required < 6.4)
+		krastorio.recipes.normalEnergyRequired(name) < 6.4
 	then 
 		if not recipe.energy_required then
 			krastorio.recipes.setEnergyCost(name, 3.2)

@@ -25,7 +25,7 @@ return
 		ingredients =
 		{
 			{"iron-beam", 10},
-			{"iron-plate", 20},
+			{"iron-gear-wheel", 20},
 			{"copper-cable", 6},
 			{"automation-core", 1}
 		},

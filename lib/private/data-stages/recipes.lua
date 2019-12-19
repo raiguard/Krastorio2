@@ -163,7 +163,8 @@ function krastorio.recipes.resultToResults(recipe_name)
 			end
 			recipe.result = nil
 			results = recipe.results
-		elseif recipe.normal and recipe.normal.result then
+		end
+		if not results and recipe.normal and recipe.normal.result then
 			result_count = recipe.normal.result_count or 1
 			if type(recipe.normal.result) == "string" then
 				recipe.normal.results = {{type = "item", name = recipe.normal.result, amount = result_count}}
@@ -173,10 +174,10 @@ function krastorio.recipes.resultToResults(recipe_name)
 				result_count = recipe.normal.result[2] or result_count
 				recipe.normal.results = {{type = "item", name = recipe.normal.result[1], amount = result_count}}
 			end
-			recipe.normal.result = nil
-			results = recipe.normal.results	
-			recipe.expensive.results = recipe.normal.results		
-		elseif recipe.expensive and recipe.expensive.result then
+			recipe.normal.result = nil			
+			results = recipe.normal.results		
+		end
+		if recipe.expensive and recipe.expensive.result then
 			result_count = recipe.expensive.result_count or 1
 			if type(recipe.expensive.result) == "string" then
 				recipe.expensive.results = {{type = "item", name = recipe.expensive.result, amount = result_count}}
@@ -187,12 +188,15 @@ function krastorio.recipes.resultToResults(recipe_name)
 				recipe.expensive.results = {{type = "item", name = recipe.expensive.result[1], amount = result_count}}
 			end
 			recipe.expensive.result = nil
-			results = recipe.expensive.results
-			recipe.normal.results = recipe.expensive.results					
+			if not results then				
+				results = recipe.expensive.results
+			end
 		end
 	end
 	return results
 end
+
+--
 
 -- @ recipe_name
 -- return a table, with one ore more product
@@ -278,6 +282,22 @@ function krastorio.recipes.getCategory(recipe_name)
 		return recipe.category
 	end
 	return false
+end
+
+function krastorio.recipes.normalEnergyRequired(recipe_name)
+	local recipe  = krastorio.recipes.getRecipeFromName(recipe_name)
+	local seconds = 0
+	if recipe then
+		seconds = 0.5	
+		if recipe.energy_required then
+			seconds = recipe.energy_required	
+		elseif recipe.normal.energy_required then
+			seconds = recipe.normal.energy_required	
+		elseif seconds == 0.5 and recipe.expensive.energy_required then
+			seconds = recipe.expensive.energy_required
+		end
+	end
+	return seconds
 end
 
 -- -- -- SETTING(WRITE) FUNCTIONS
@@ -1438,7 +1458,7 @@ function krastorio.recipes.multiplyRecipeStat(recipe_name, multiplier, only_ingr
 
 	local recipe = krastorio.recipes.getRecipeFromName(recipe_name)
 		
-	if recipe ~= nil and recipe ~= false then
+	if recipe then
 	
 		-- ingredients
 		local ingredients = krastorio.recipes.getIngredients(recipe_name)
@@ -1474,30 +1494,31 @@ function krastorio.recipes.multiplyRecipeStat(recipe_name, multiplier, only_ingr
 						products[i][2] = product[2] * multiplier
 					end			
 				end
+				if recipe.expensive and recipe.expensive.results then
+					recipe.expensive.results = products
+				end
 			end	
 		end
 
 		-- energy required/time to craft
-		if not recipe.energy_required and not (recipe.normal and recipe.normal.energy_required) and not (recipe.expensive and recipe.expensive.energy_required) then
-			if recipe and recipe.ingredients then
-				recipe.energy_required = recipe.energy_required * multiplier
-			end
-			if recipe.normal ~= nil and recipe.normal.ingredients then
+		if recipe.energy_required then
+			recipe.energy_required = recipe.energy_required * multiplier
+		elseif recipe.ingredients then
+			recipe.energy_required = 0.5 * multiplier
+		end		
+		if recipe.normal then
+			if recipe.normal.energy_required then
 				recipe.normal.energy_required = recipe.normal.energy_required * multiplier
+			else
+				recipe.normal.energy_required = 0.5 * multiplier
 			end
-			if recipe.expensive ~= nil and recipe.expensive.ingredients then
+		end
+		if recipe.expensive then
+			if recipe.expensive.energy_required then
 				recipe.expensive.energy_required = recipe.expensive.energy_required * multiplier
-			end			
-		else	
-			if recipe.energy_required ~= nil and recipe.ingredients then
-				recipe.energy_required = recipe.energy_required * multiplier
+			else
+				recipe.expensive.energy_required = 0.5 * multiplier
 			end
-			if recipe.normal ~= nil and recipe.normal.ingredients and recipe.normal.energy_required ~= nil then
-				recipe.normal.energy_required = recipe.normal.energy_required * multiplier
-			end
-			if recipe.expensive ~= nil and recipe.expensive.ingredients and recipe.expensive.energy_required ~= nil then
-				recipe.expensive.energy_required = recipe.expensive.energy_required * multiplier
-			end	
 		end
 		
 	end	
@@ -1590,32 +1611,32 @@ end
 
 -- @ recipe_name
 -- @ energy_cost
+-- @ expensive_cost(?)
 function krastorio.recipes.setEnergyCost(recipe_name, energy_cost, expensive_cost)
 	local recipe = krastorio.recipes.getRecipeFromName(recipe_name)
 		
 	if recipe ~= nil then
 		local effective_expensive_cost = expensive_cost or energy_cost
-		if not recipe.energy_required and not (recipe.normal and recipe.normal.energy_required) and not (recipe.expensive and recipe.expensive.energy_required) then
-			if recipe and recipe.ingredients then
-				recipe.energy_required = energy_cost
-			end
-			if recipe.normal ~= nil and recipe.normal.ingredients then
+		
+		if recipe.energy_required then
+			recipe.energy_required = energy_cost
+		elseif recipe.ingredients then
+			recipe.energy_required = energy_cost
+		end		
+		if recipe.normal then
+			if recipe.normal.energy_required then
+				recipe.normal.energy_required = energy_cost
+			else
 				recipe.normal.energy_required = energy_cost
 			end
-			if recipe.expensive ~= nil and recipe.expensive.ingredients then
-				recipe.expensive.energy_required = effective_expensive_cost
-			end			
-		else	
-			if recipe.energy_required ~= nil and recipe.ingredients then
-				recipe.energy_required = energy_cost
-			end
-			if recipe.normal ~= nil and recipe.normal.ingredients and recipe.normal.energy_required ~= nil then
-				recipe.normal.energy_required = energy_cost
-			end
-			if recipe.expensive ~= nil and recipe.expensive.ingredients and recipe.expensive.energy_required ~= nil then
-				recipe.expensive.energy_required = effective_expensive_cost
-			end	
 		end
+		if recipe.expensive then
+			if recipe.expensive.energy_required then
+				recipe.expensive.energy_required = effective_expensive_cost
+			else
+				recipe.expensive.energy_required = effective_expensive_cost
+			end
+		end		
 	end
 end
 
