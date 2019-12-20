@@ -33,7 +33,7 @@ data:extend(
 			}
 		},
 		collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-		selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+		selection_box = {{-1, -1}, {1, 1}},
 		autoplace = resource_autoplace.resource_autoplace_settings
 		{
 			name = "mineral-water",
