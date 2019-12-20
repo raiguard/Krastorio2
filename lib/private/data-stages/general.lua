@@ -46,6 +46,38 @@ function krastorio.general.isVersionLesserEqualThan(_mod_version, _version)
 end
 
 --------------------
+-- SETTINGS FUNCTIONS
+--------------------
+
+function krastorio.general.getSafeSettingValue(option_name)	
+	-- looking in setting stages
+	if data.raw["bool-setting"] and data.raw["bool-setting"][option_name] and data.raw["bool-setting"][option_name].value then
+		return data.raw["bool-setting"][option_name].value
+	end	
+	if data.raw["int-setting"] and data.raw["int-setting"][option_name] and data.raw["int-setting"][option_name].value then
+		return data.raw["int-setting"][option_name].value
+	end	
+	if data.raw["double-setting"] and data.raw["double-setting"][option_name] and data.raw["double-setting"][option_name].value then
+		return data.raw["double-setting"][option_name].value
+	end	
+	if data.raw["string-setting"] and data.raw["string-setting"][option_name] and data.raw["string-setting"][option_name].value then
+		return data.raw["string-setting"][option_name].value
+	end	
+	-- looking in data stages
+	if settings["startup"] and settings["startup"][option_name] and settings["startup"][option_name].value then
+		return settings["startup"][option_name].value
+	end	
+	if settings["runtime-global"] and settings["runtime-global"][option_name] and settings["runtime-global"][option_name].value then
+		return settings["runtime-global"][option_name].value
+	end	
+	if settings["runtime-per-user"] and settings["runtime-per-user"][option_name] and settings["runtime-per-user"][option_name].value then
+		return settings["runtime-per-user"][option_name].value
+	end
+	-- not found
+	return false
+end
+
+--------------------
 
 -- Will remove one prototypes from each category types:
 --	data.raw --> each entities

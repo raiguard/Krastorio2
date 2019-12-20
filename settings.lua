@@ -5,7 +5,7 @@ data:extend(
 {
 	{
 		type = "bool-setting",
-		name = "loaders",
+		name = "kr-loaders",
 		setting_type = "startup",
 		default_value = true,
 		order = "a1"

@@ -1,4 +1,4 @@
-if settings.startup["loaders"] and settings.startup["loaders"].value then
+if krastorio.general.getSafeSettingValue("kr-loaders") then
 
 	-- Variable utils
 	local loader_names = 

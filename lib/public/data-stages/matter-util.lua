@@ -61,11 +61,9 @@ function krastorio.matter_func.createMatterRecipe(args)
 				localised_name={"recipe-name.to-matter", {true_item_type .. "-name." .. _item.name}},
 				category = "matter-extraction",
 				subgroup = "raw-to-matter",
-				icons = 
+				icons =
 				{
-					{ icon = krstr_icon_path .. "arrows/arrow-m.png", icon_size = 64 },
-					{ icon = _item.icon,                              icon_size = _item.icon_size, scale = 0.28 * (64/_item.icon_size), shift = {-8, -6} },
-					{ icon = krstr_icon_path .. "matter.png",         icon_size = 64,              scale = 0.28,                        shift = {4, 8} }
+					{ icon = krstr_icon_path .. "arrows/arrow-m.png", icon_size = 64 }
 				},
 				energy_required = _energy_required,
 				enabled = false,
@@ -84,6 +82,16 @@ function krastorio.matter_func.createMatterRecipe(args)
 				},
 				order = "z[".. _item.name .."-to-matter]"
 			}
+			
+			-- complete the icons overlay
+			krastorio.icons.addOverlayIcons(item_to_matter, krastorio.icons.getIconsForOverlay(_item), 64, 0.28, {-8, -6})
+
+			table.insert
+			(
+				item_to_matter.icons,
+				{ icon = krstr_icon_path .. "matter.png",         icon_size = 64,              scale = 0.28,                        shift = {4, 8} }
+			)
+			
 			data:extend({item_to_matter})
 			krastorio.technologies.addUnlockRecipe(_technology, item_to_matter.name)
 		end
@@ -101,11 +109,10 @@ function krastorio.matter_func.createMatterRecipe(args)
 				localised_name={"recipe-name.matter-to", {true_return_item_type .. "-name." .. _item.name}},
 				category = "matter-usage",
 				subgroup = "matter-to-" .. _return_item.type .. stab_string,
-				icons = 
+				icons =
 				{
 					{ icon = krstr_icon_path .. "arrows/arrow-i.png", icon_size = 64 },
-					{ icon = krstr_icon_path .. "matter.png",         icon_size = 64,                     scale = 0.28,                               shift = {8, -6} },
-					{ icon = _return_item.icon,                       icon_size = _return_item.icon_size, scale = 0.28 * (64/_return_item.icon_size), shift = {-4, 8} }
+					{ icon = krstr_icon_path .. "matter.png",         icon_size = 64,                     scale = 0.28,                               shift = {8, -6} }
 				},
 				energy_required = _energy_required,
 				enabled = false,
@@ -122,7 +129,10 @@ function krastorio.matter_func.createMatterRecipe(args)
 					{ type = true_return_item_type, name = _return_item.name, amount = args.minimum_conversion_quantity}
 				},
 				order = "z[matter-to-".. _return_item.name .."]"
-			}		
+			}
+
+			-- complete the icons overlay
+			krastorio.icons.addOverlayIcons(matter_to_item, krastorio.icons.getIconsForOverlay(_return_item), 64, 0.28, {-4, 8})			
 			
 			if args.need_stabilizer ~= nil and args.need_stabilizer == true then
 				matter_to_item.localised_description = {"recipe-description.matter-recipe-with-stabilizer"}

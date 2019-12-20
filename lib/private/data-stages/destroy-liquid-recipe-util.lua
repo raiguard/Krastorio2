@@ -79,34 +79,7 @@ function krastorio.dlr_func.generateDestroyFluidsRecipe(fluid_name, recipe_type,
 			}
 			
 			-- complete icon overlay
-			if fluid.icon then -- fluid with one icon
-				table.insert
-				(
-					recipe.icons,
-					{
-						icon = fluid.icon,
-						icon_size = fluid.icon_size,
-						scale = krastorio.dlr_func.SCALE * (krastorio.dlr_func.ICON_SIZE/fluid.icon_size)
-					}
-				)
-			else -- fluid with icons defined
-				local overlay_icon = nil
-				for _, fluid_icon in pairs(fluid.icons) do
-					overlay_icon = krastorio_utils.tables.fullCopy(fluid_icon)	
-					-- fix for mods not well defined
-					if not overlay_icon.icon_size then
-						overlay_icon.icon_size = 32
-					end
-					
-					overlay_icon.scale = krastorio.dlr_func.SCALE * (krastorio.dlr_func.ICON_SIZE/overlay_icon.icon_size) * (overlay_icon.scale or 1)
-					
-					table.insert
-					(
-						recipe.icons,
-						overlay_icon
-					)
-				end
-			end
+			krastorio.icons.addOverlayIcons(recipe, krastorio.icons.getIconsForOverlay(fluid), dlr_func.ICON_SIZE, dlr_func.SCALE)
 			
 			-- if have a residue, insert in product and changed description
 			if residue[fluid.name] then

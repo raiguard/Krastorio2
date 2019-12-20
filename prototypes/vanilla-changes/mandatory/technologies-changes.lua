@@ -63,7 +63,7 @@ krastorio.technologies.removeUnlockRecipe("automation", "long-handed-inserter")
 
 --------------------------------------------------------------------
 -- Loaders
-if settings.startup["loaders"] and settings.startup["loaders"].value then
+if krastorio.general.getSafeSettingValue("kr-loaders") then
 	krastorio.technologies.addUnlockRecipe("logistics", "kr-loader")
 	krastorio.technologies.addUnlockRecipe("logistics-2", "kr-fast-loader")
 	krastorio.technologies.addUnlockRecipe("logistics-3", "kr-express-loader")
