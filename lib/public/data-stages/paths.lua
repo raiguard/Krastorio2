@@ -1,5 +1,5 @@
 -- -- -- PATHS
-
+-- This paths is meant for be used only in data stages
 -----------------------------------------------------------------------------------------------------------------
 -- -- GENERIC PATHS
 -----------------------------------------------------------------------------------------------------------------
@@ -17,6 +17,9 @@ kr_recipes_prototypes_path             = kr_prototypes_path .. "recipes/"
 kr_resources_path                      = kr_prototypes_path .. "resources/"
 kr_technologies_prototypes_path        = kr_prototypes_path .. "technologies/"
 kr_tiles_prototypes_path               = kr_prototypes_path .. "tiles/"
+-- Libraries
+kr_private_lib                         = kr_path .. "lib/private/data-stages/"
+kr_public_lib                          = kr_path .. "lib/public/data-stages/"
 -----------------------------------------------------------------------------------------------------------------
 -- -- GRAPHICS PATHS
 -----------------------------------------------------------------------------------------------------------------

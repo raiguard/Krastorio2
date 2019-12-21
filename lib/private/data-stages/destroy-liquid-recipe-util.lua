@@ -79,7 +79,7 @@ function krastorio.dlr_func.generateDestroyFluidsRecipe(fluid_name, recipe_type,
 			}
 			
 			-- complete icon overlay
-			krastorio.icons.addOverlayIcons(recipe, krastorio.icons.getIconsForOverlay(fluid), dlr_func.ICON_SIZE, dlr_func.SCALE)
+			krastorio.icons.addOverlayIcons(recipe, krastorio.icons.getIconsForOverlay(fluid), krastorio.dlr_func.ICON_SIZE, krastorio.dlr_func.SCALE)
 			
 			-- if have a residue, insert in product and changed description
 			if residue[fluid.name] then

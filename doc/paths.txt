@@ -15,3 +15,5 @@ so the final result is:
 "__Krastorio2-graphics__/graphics/icons/entities/"
 
 In all Krastorio 2 things the general prefix is kr
+
+All paths is meant for be used only in data stages

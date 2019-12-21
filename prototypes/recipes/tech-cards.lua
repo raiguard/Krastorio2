@@ -5,30 +5,16 @@ return
 -----------------------------------------------------------------------------------------------------------------
 	{
 		type = "recipe",
-		name = "iron-beam",
-		energy_required = 3,
+		name = "basic-tech-card",
+		energy_required = 20,
 		enabled = true,
 		ingredients =
 		{
-			{"iron-plate", 2}
+			{"wood", 5},
+			{"copper-cable", 5}
 		},
-		result = "iron-beam",
-		result_count = 1
-	},
-    {
-		type = "recipe",
-		name = "kr-wind-turbine",
-		energy_required = 5,
-		enabled = true,
-		ingredients =
-		{
-			{"iron-plate", 3},
-			{"iron-beam", 1},
-			{"iron-gear-wheel", 6},
-			{"copper-cable", 4}
-		},	
-		result = "kr-wind-turbine",
-		result_count = 1		
+		result = "basic-tech-card",
+		result_count = 5
 	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

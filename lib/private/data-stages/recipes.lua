@@ -1757,7 +1757,7 @@ function krastorio.recipes.findNotUnlockableRecipes()
 	if next(not_unlockable_recipe_names) == nil then
 		krastorio_utils.log.write(1, string.format("All recipes are unlockable."))
 	else
-		local inspect = require("__aswil__/aswil_lib/utils/inspect")
+		local inspect = require(kr_private_lib .. "/utils/inspect")
 		krastorio_utils.log.write(3, string.format("This recipes is not unlockable, maybe is an error: %s [from findNotUnlockableRecipes()]", inspect(not_unlockable_recipe_names)))
 	end
 	return not_unlockable_recipe_names

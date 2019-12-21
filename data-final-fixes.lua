@@ -3,6 +3,10 @@
 ---------------------------------------------------------------------------
 krastorio.stage = "data-final-fixes"
 ---------------------------------------------------------------------------
+-- -- -- RECIPES
+-- Apply the choosen science pack recipes
+require(kr_prototypes_path .. "vanilla-changes/optional/modify-science-packs-recipes")
+---------------------------------------------------------------------------
 -- -- -- SCIENCE PACK SANITIZING
 
 -- -- Krastorio 2 science pack collection

@@ -116,9 +116,9 @@ if not krastorio.science_pack_recipes then
     }
 	
 	-- -- Krastorio recipes
-	krastorio.science_pack_recipes["Krastorio"] = {}
+	krastorio.science_pack_recipes["Krastorio 2"] = {}
 	-- Automation science pack
-	krastorio.science_pack_recipes["Krastorio"]["automation-science-pack"] = 
+	krastorio.science_pack_recipes["Krastorio 2"]["automation-science-pack"] = 
 	{
 		type = "recipe",
 		name = "automation-science-pack",
@@ -126,13 +126,13 @@ if not krastorio.science_pack_recipes then
 		result_count = 5,
 		ingredients = 
 		{
-			{"electronic-circuit", 5},
-			{"iron-gear-wheel", 5}
+			{"automation-core", 1},
+			{"copper-cable", 2}
 		},
 		result = "automation-science-pack"
 	}
 	-- Logistic science pack
-	krastorio.science_pack_recipes["Krastorio"]["logistic-science-pack"] = 
+	krastorio.science_pack_recipes["Krastorio 2"]["logistic-science-pack"] = 
 	{
 		type = "recipe",		
 		name = "logistic-science-pack",
@@ -141,13 +141,12 @@ if not krastorio.science_pack_recipes then
 		result_count = 5,
 		ingredients =
 		{
-			{"inserter", 5},
-			{"transport-belt", 5}
+			{"wood", 1}
 		},
 		result = "logistic-science-pack"
 	}
 	-- Military science pack
-	krastorio.science_pack_recipes["Krastorio"]["military-science-pack"] = 
+	krastorio.science_pack_recipes["Krastorio 2"]["military-science-pack"] = 
 	{
 		type = "recipe",
 		name = "military-science-pack",		
@@ -156,14 +155,12 @@ if not krastorio.science_pack_recipes then
 		result_count = 5,
 		ingredients =
 		{
-			{"piercing-rounds-magazine", 5},
-			{"submachine-gun", 4},
-			{"stone-wall", 3}
+			{"wood", 1}
 		},
 		result = "military-science-pack"		
 	}
 	-- Chemical science pack
-	krastorio.science_pack_recipes["Krastorio"]["chemical-science-pack"] = 
+	krastorio.science_pack_recipes["Krastorio 2"]["chemical-science-pack"] = 
 	{
 		type = "recipe",
 		name = "chemical-science-pack",
@@ -172,14 +169,12 @@ if not krastorio.science_pack_recipes then
 		result_count = 5,
 		ingredients = 
 		{
-			{"k-quartz", 20},
-			{"advanced-circuit", 5},
-			{"solid-fuel", 5}
+			{"wood", 1}
 		},
 		result = "chemical-science-pack"
 	}
 	-- Production science pack
-	krastorio.science_pack_recipes["Krastorio"]["production-science-pack"] = 
+	krastorio.science_pack_recipes["Krastorio 2"]["production-science-pack"] = 
 	{
 		type = "recipe",
 		name = "production-science-pack",
@@ -188,15 +183,12 @@ if not krastorio.science_pack_recipes then
 		result_count = 5,
 		ingredients = 
 		{
-			{"electric-furnace", 2},
-			{"productivity-module", 5},
-			{"gold-plate", 10},
-			{"plastic-bar", 10}
+			{"wood", 1}
 		},
 		result = "production-science-pack"
 	}
 	-- Utility science pack
-	krastorio.science_pack_recipes["Krastorio"]["utility-science-pack"] = 
+	krastorio.science_pack_recipes["Krastorio 2"]["utility-science-pack"] = 
 	{
 		type = "recipe",
 		name = "utility-science-pack",
@@ -205,10 +197,7 @@ if not krastorio.science_pack_recipes then
 		result_count = 5,
 		ingredients = 
 		{
-			{"speed-module", 5},
-			{"processing-unit", 5},
-			{"repair-pack", 10},
-			{"flying-robot-frame", 5}
+			{"wood", 1}
 		},
 		result = "utility-science-pack"
     }
@@ -224,8 +213,8 @@ function krastorio.science_pack_recipes.addRecipeVariation(mod_name, science_pac
 	if not krastorio.science_pack_recipes[mod_name] then
 		krastorio.science_pack_recipes[mod_name] = {}
 	end
-	if data.raw["string-setting"] and data.raw["string-setting"]["k-" .. science_pack_name .. "-recipe"] then
-		table.insert(data.raw["string-setting"]["k-" .. science_pack_name .. "-recipe"].allowed_values, mod_name)
+	if data.raw["string-setting"] and data.raw["string-setting"]["kr-" .. science_pack_name .. "-recipe"] then
+		table.insert(data.raw["string-setting"]["kr-" .. science_pack_name .. "-recipe"].allowed_values, mod_name)
 	else
 		krastorio.science_pack_recipes[mod_name][science_pack_name] = recipe
 	end	

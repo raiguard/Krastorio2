@@ -10,7 +10,10 @@ local krastorio_new_recipes =
 	require("items-recipes"),
 	
 	-- -- Recipes for decorations
-	require("decorations-recipes")
+	require("decorations-recipes"),
+	
+	-- -- New science packs recipes (tech card)
+	require("tech-cards")
 }
 
 -- -- Anti recipes override check
