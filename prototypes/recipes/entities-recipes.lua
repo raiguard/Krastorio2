@@ -206,6 +206,33 @@ return
 		result = "kr-big-storage-container"
     },	
 	-- -- --
+	-- FLUID STORAGES
+	-- -- --
+	{
+		type = "recipe",
+		name = "kr-fluid-storage-1",
+		energy_required = 10,
+		enabled = false,
+		ingredients =
+		{
+			{"steel-beam", 20},
+			{"steel-pipe", 4}
+		},
+		result = "kr-fluid-storage-1"
+    },	
+	{
+		type = "recipe",
+		name = "kr-fluid-storage-2",
+		energy_required = 30,
+		enabled = false,
+		ingredients =
+		{
+			{"steel-beam", 20},
+			{"steel-pipe", 12}
+		},
+		result = "kr-fluid-storage-2"
+    },	
+	-- -- --
 	
 
 

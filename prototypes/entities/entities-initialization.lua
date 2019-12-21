@@ -25,6 +25,9 @@ require("buildings/containers/big-containers/big-container")
 require("buildings/containers/big-containers/big-passive-provider-container")
 require("buildings/containers/big-containers/big-requester-container")
 require("buildings/containers/big-containers/big-storage-container")
+-- -- Fluid storages
+require("buildings/fluid-storages/fluid-storage-1")
+require("buildings/fluid-storages/fluid-storage-2")
 
 -- -- -- REMNANTS
 require("remnants/kr-medium-random-pipes-remnant")

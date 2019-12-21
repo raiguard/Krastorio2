@@ -182,6 +182,59 @@ data:extend(
 		place_result = "kr-big-storage-container"
     },	
 	-- -- --
+	-- FLUID STORAGES
+	-- -- --
+	{
+		type = "item",
+		name = "kr-fluid-storage-1",
+		icon = kr_entities_icons_path .. "fluid-storages/fluid-storage-1.png",
+		stack_size = 50,
+		icon_size = 32,    
+		subgroup = "storage",
+		order = "b[fluid]-b[fs-50]",
+		place_result = "kr-fluid-storage-1"
+    },
+	{
+		type = "item",
+		name = "kr-fluid-storage-2",
+		icon = kr_entities_icons_path .. "fluid-storages/fluid-storage-2.png",
+		stack_size = 50,
+		icon_size = 32,    
+		subgroup = "storage",
+		order = "b[fluid]-c[fs-200]",
+		place_result = "kr-fluid-storage-2"
+    },
+	-- -- --
+	{
+		type = "item",
+		name = "kr-steel-pipe",
+		icon = kr_entities_icons_path .. "steel-pipe.png",
+		icon_size = 32,
+		subgroup = "energy-pipe-distribution",
+		order = "a[pipes]-a2[steel-pipe]",
+		place_result = "kr-steel-pipe",
+		stack_size = 100
+	},  
+	{
+		type = "item",
+		name = "kr-steel-pipe-to-ground",
+		icon = kr_entities_icons_path .. "steel-pipe-to-ground.png",
+		icon_size = 32,
+		subgroup = "energy-pipe-distribution",
+		order = "a[pipes]-b2[steel-pipe-to-ground]",
+		place_result = "kr-steel-pipe-to-ground",
+		stack_size = 50
+	},  
+	{
+		type = "item",
+		name = "kr-steel-pump",
+		icon = kr_entities_icons_path .. "steel-pump.png",
+		icon_size = 32,
+		subgroup = "energy-pipe-distribution",
+		order = "a[pipes]-c2[steel-pump]",
+		place_result = "kr-steel-pump",
+		stack_size = 50
+	},
 	
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
