@@ -1,5 +1,6 @@
 -- -- -- PIPE PATCH
 require("buildings/pipe-patch")
+require("buildings/steel-pipecovers")
 
 -- -- -- BUILDINGS
 -- -- Generals
@@ -8,6 +9,9 @@ require("buildings/greenhouse")
 require("buildings/crusher")
 require("buildings/loaders")
 require("buildings/water-pumpjack")
+require("buildings/steel-pipe")
+require("buildings/steel-pipe-to-ground")
+require("buildings/steel-pumpe")
 -- -- Laboratory
 require("buildings/biusart-lab")
 -- -- Conteiners
