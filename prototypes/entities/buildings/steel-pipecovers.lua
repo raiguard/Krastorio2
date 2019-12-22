@@ -5,13 +5,13 @@ steel_pipecoverspictures =
 		layers =
 		{
 			{
-				filename = "__Krastorio-graphics__/graphics/entity/steel-pipe-covers/steel-pipe-cover-north.png",
+				filename = kr_entities_path .. "steel-pipe-covers/steel-pipe-cover-north.png",
 				priority = "extra-high",
 				width = 64,
 				height = 64,
 				hr_version =
 				{
-					filename = "__Krastorio-graphics__/graphics/entity/steel-pipe-covers/hr-steel-pipe-cover-north.png",
+					filename = kr_entities_path .. "steel-pipe-covers/hr-steel-pipe-cover-north.png",
 					priority = "extra-high",
 					width = 128,
 					height = 128,
@@ -41,13 +41,13 @@ steel_pipecoverspictures =
 		layers =
 		{
 			{
-				filename = "__Krastorio-graphics__/graphics/entity/steel-pipe-covers/steel-pipe-cover-east.png",
+				filename = kr_entities_path .. "steel-pipe-covers/steel-pipe-cover-east.png",
 				priority = "extra-high",
 				width = 64,
 				height = 64,
 				hr_version =
 				{
-					filename = "__Krastorio-graphics__/graphics/entity/steel-pipe-covers/hr-steel-pipe-cover-east.png",
+					filename = kr_entities_path .. "steel-pipe-covers/hr-steel-pipe-cover-east.png",
 					priority = "extra-high",
 					width = 128,
 					height = 128,
@@ -77,13 +77,13 @@ steel_pipecoverspictures =
 		layers =
 		{
 			{
-				filename = "__Krastorio-graphics__/graphics/entity/steel-pipe-covers/steel-pipe-cover-south.png",
+				filename = kr_entities_path .. "steel-pipe-covers/steel-pipe-cover-south.png",
 				priority = "extra-high",
 				width = 64,
 				height = 64,
 				hr_version =
 				{
-					filename = "__Krastorio-graphics__/graphics/entity/steel-pipe-covers/hr-steel-pipe-cover-south.png",
+					filename = kr_entities_path .. "steel-pipe-covers/hr-steel-pipe-cover-south.png",
 					priority = "extra-high",
 					width = 128,
 					height = 128,
@@ -113,13 +113,13 @@ steel_pipecoverspictures =
 		layers =
 		{
 			{
-				filename = "__Krastorio-graphics__/graphics/entity/steel-pipe-covers/steel-pipe-cover-west.png",
+				filename = kr_entities_path .. "steel-pipe-covers/steel-pipe-cover-west.png",
 				priority = "extra-high",
 				width = 64,
 				height = 64,
 				hr_version =
 				{
-					filename = "__Krastorio-graphics__/graphics/entity/steel-pipe-covers/hr-steel-pipe-cover-west.png",
+					filename = kr_entities_path .. "steel-pipe-covers/hr-steel-pipe-cover-west.png",
 					priority = "extra-high",
 					width = 128,
 					height = 128,

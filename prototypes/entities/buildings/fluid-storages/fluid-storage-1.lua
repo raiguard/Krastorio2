@@ -10,7 +10,7 @@ data:extend(
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "kr-fluid-storage-1"},
 		max_health = 750,
-		corpse = "big-remnants",
+		corpse = "kr-medium-random-pipes-remnant",
 		resistances = 
 		{
 			{type = "physical", percent = 35},
@@ -38,14 +38,14 @@ data:extend(
 			{
 				sheet =
 				{
-					filename = _fluid_storages_path .. "fluid-storage-1.png",
+					filename = _fluid_storages_path .. "fluid-storage-1/fluid-storage-1.png",
 					priority = "extra-high",
 					frames = 1,
 					width = 128,
 					height = 128,
 					hr_version =
 					{
-						filename = _fluid_storages_path .. "hr-fluid-storage-2.png",
+						filename = _fluid_storages_path .. "fluid-storage-1/hr-fluid-storage-1.png",
 						priority = "extra-high",
 						frames = 1,
 						scale = 0.5,

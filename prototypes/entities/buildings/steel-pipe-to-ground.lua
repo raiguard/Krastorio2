@@ -3,7 +3,7 @@ data:extend(
 	{
 		type = "pipe-to-ground",
 		name = "kr-steel-pipe-to-ground",
-		icon = "__Krastorio-graphics__/graphics/icons/entities/steel-pipe-to-ground.png",
+		icon = kr_entities_icons_path .. "steel-pipe-to-ground.png",
 		icon_size = 32,
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 0.1, result = "kr-steel-pipe-to-ground"},
@@ -42,13 +42,13 @@ data:extend(
 		{
 			up =
 			{
-				filename = "__Krastorio-graphics__/graphics/entity/steel-pipe/steel-pipe-to-ground-up.png",
+				filename = kr_entities_path .. "steel-pipe-to-ground/steel-pipe-to-ground-up.png",
 				priority = "high",
 				width = 64,
 				height = 64, --, shift = {0.10, -0.04}
 				hr_version =
 				{
-					filename = "__Krastorio-graphics__/graphics/entity/steel-pipe/hr-steel-pipe-to-ground-up.png",
+					filename = kr_entities_path .. "steel-pipe-to-ground/hr-steel-pipe-to-ground-up.png",
 					priority = "extra-high",
 					width = 128,
 					height = 128,
@@ -57,13 +57,13 @@ data:extend(
 			},
 			down =
 			{
-				filename = "__Krastorio-graphics__/graphics/entity/steel-pipe/steel-pipe-to-ground-down.png",
+				filename = kr_entities_path .. "steel-pipe-to-ground/steel-pipe-to-ground-down.png",
 				priority = "high",
 				width = 64,
 				height = 64, --, shift = {0.05, 0}
 				hr_version =
 				{
-					filename = "__Krastorio-graphics__/graphics/entity/steel-pipe/hr-steel-pipe-to-ground-down.png",
+					filename = kr_entities_path .. "steel-pipe-to-ground/hr-steel-pipe-to-ground-down.png",
 					priority = "extra-high",
 					width = 128,
 					height = 128,
@@ -72,13 +72,13 @@ data:extend(
 			},
 			left =
 			{
-				filename = "__Krastorio-graphics__/graphics/entity/steel-pipe/steel-pipe-to-ground-left.png",
+				filename = kr_entities_path .. "steel-pipe-to-ground/steel-pipe-to-ground-left.png",
 				priority = "high",
 				width = 64,
 				height = 64, --, shift = {-0.12, 0.1}
 				hr_version =
 				{
-					filename = "__Krastorio-graphics__/graphics/entity/steel-pipe/hr-steel-pipe-to-ground-left.png",
+					filename = kr_entities_path .. "steel-pipe-to-ground/hr-steel-pipe-to-ground-left.png",
 					priority = "extra-high",
 					width = 128,
 					height = 128,
@@ -87,13 +87,13 @@ data:extend(
 			},
 			right =
 			{
-				filename = "__Krastorio-graphics__/graphics/entity/steel-pipe/steel-pipe-to-ground-right.png",
+				filename = kr_entities_path .. "steel-pipe-to-ground/steel-pipe-to-ground-right.png",
 				priority = "high",
 				width = 64,
 				height = 64, --, shift = {0.1, 0.1}
 				hr_version =
 				{
-					filename = "__Krastorio-graphics__/graphics/entity/steel-pipe/hr-steel-pipe-to-ground-right.png",
+					filename = kr_entities_path .. "steel-pipe-to-ground/hr-steel-pipe-to-ground-right.png",
 					priority = "extra-high",
 					width = 128,
 					height = 128,

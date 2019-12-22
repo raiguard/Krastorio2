@@ -1,7 +1,6 @@
 -- -- -- PIPE PATCH
 require("buildings/pipe-patch")
 require("buildings/steel-pipecovers")
-
 -- -- -- BUILDINGS
 -- -- Generals
 require("buildings/wind-turbine")
@@ -11,7 +10,7 @@ require("buildings/loaders")
 require("buildings/water-pumpjack")
 require("buildings/steel-pipe")
 require("buildings/steel-pipe-to-ground")
-require("buildings/steel-pumpe")
+require("buildings/steel-pump")
 -- -- Laboratory
 require("buildings/biusart-lab")
 -- -- Conteiners
@@ -32,7 +31,6 @@ require("buildings/containers/big-containers/big-storage-container")
 -- -- Fluid storages
 require("buildings/fluid-storages/fluid-storage-1")
 require("buildings/fluid-storages/fluid-storage-2")
-
 -- -- -- REMNANTS
 require("remnants/kr-medium-random-pipes-remnant")
 require("remnants/kr-big-random-pipes-remnant")
