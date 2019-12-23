@@ -1,16 +1,18 @@
--- -- -- PIPE PATCH
-require("buildings/pipe-patch")
-require("buildings/steel-pipecovers")
+-- -- -- PIPE PATCH AND COVERS
+require("buildings/pipe-covers/pipe-patch")
+require("buildings/pipe-covers/steel-pipecovers")
 -- -- -- BUILDINGS
 -- -- Generals
-require("buildings/wind-turbine")
-require("buildings/greenhouse")
 require("buildings/crusher")
+require("buildings/electrolysis-plant")
+require("buildings/filtration-plant")
+require("buildings/greenhouse")
 require("buildings/loaders")
-require("buildings/water-pumpjack")
 require("buildings/steel-pipe")
 require("buildings/steel-pipe-to-ground")
 require("buildings/steel-pump")
+require("buildings/water-pumpjack")
+require("buildings/wind-turbine")
 -- -- Laboratory
 require("buildings/biusart-lab")
 -- -- Conteiners

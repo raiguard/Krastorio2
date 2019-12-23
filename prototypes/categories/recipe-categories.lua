@@ -6,20 +6,31 @@ data:extend(
 	
 	-- -- PROCESSING BUILDING CATEGORY
 	
-	-- greenhouse
+	-- Growing, used by greenhouse
 	{
 	   type = "recipe-category",
 	   name = "growing"
 	},	
-	-- crusher
+	-- Crushing, used by crusher
 	{
 	   type = "recipe-category",
 	   name = "crushing"
 	},
-	
+	-- Electrolysis, used by filtration plant
+	{
+	   type = "recipe-category",
+	   name = "electrolysis"
+	},
+	-- Fluid filtration, used by electrolysis plant
+	{
+	   type = "recipe-category",
+	   name = "fluid-filtration"
+	}	
 -----------------------------------------------------------------------------------------------------------------
 	
-	-- CRAFTING
+	-- -- CRAFTING
+	
+	-- no crafting categories added.
 
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

@@ -233,7 +233,82 @@ return
 		result = "kr-fluid-storage-2"
     },	
 	-- -- --
-	
+	{
+		type = "recipe",
+		name = "kr-steel-pipe",
+		normal =
+		{
+			enabled = false,
+			ingredients = 
+			{
+				{"steel-plate", 1}
+			},
+			result = "kr-steel-pipe"
+		},
+		expensive =
+		{
+			enabled = false,
+			ingredients = 
+			{
+				{"steel-plate", 2}
+			},
+			result = "kr-steel-pipe"
+		}		
+	},  
+	{
+		type = "recipe",
+		name = "kr-steel-pipe-to-ground",
+		enabled = false,
+		ingredients =
+		{
+			{"kr-steel-pipe", 15},
+			{"steel-plate", 5}
+		},		
+		result = "kr-steel-pipe-to-ground",
+		result_count = 2
+	},
+	{
+		type = "recipe",
+		name = "kr-steel-pump",
+		energy_required = 2,
+		enabled = false,
+		ingredients =
+		{
+			{"steel-gear-wheel", 4},
+			{"engine-unit", 1},
+			{"steel-beam", 1},
+			{"kr-steel-pipe", 1}
+		},
+		result = "kr-steel-pump"
+	},
+	{
+		type = "recipe",
+		name = "kr-electrolysis-plant",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"steel-beam", 10},
+			{"automation-core", 3},
+			{"copper-plate", 10},
+			{"engine-unit", 2}
+		},
+		result = "kr-electrolysis-plant"
+    },	
+	{
+		type = "recipe",
+		name = "kr-filtration-plant",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"steel-beam", 10},
+			{"automation-core", 3},
+			{"glass", 10},
+			{"engine-unit", 2}
+		},
+		result = "kr-filtration-plant"
+    },
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

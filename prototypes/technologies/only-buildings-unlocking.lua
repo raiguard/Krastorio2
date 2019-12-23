@@ -77,7 +77,7 @@ data:extend(
 				recipe = "kr-grow-wood-with-water"
 			}
 		},
-		prerequisites = {"automation-core", "stone-processing"},
+		prerequisites = {"kr-automation-core", "kr-stone-processing"},
 		unit =
 		{
 			count = 60,
@@ -163,7 +163,7 @@ data:extend(
 				recipe = "kr-crusher"
 			},
 		},
-		prerequisites = {"automation-core"},
+		prerequisites = {"kr-automation-core"},
 		unit =
 		{
 			count = 40,

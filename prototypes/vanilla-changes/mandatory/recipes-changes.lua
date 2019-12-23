@@ -31,7 +31,7 @@ krastorio.recipes.overrideIngredients
 )
 krastorio.recipes.replaceIngredient("long-handed-inserter", "iron-plate", {"iron-stick", 2})
 
--- other inserter
+-- other inserters
 krastorio.recipes.replaceIngredient("fast-inserter", "iron-plate", {"steel-plate", 1})
 krastorio.recipes.convertIngredient("stack-inserter", "iron-gear-wheel", "steel-gear-wheel")
 
@@ -46,17 +46,19 @@ krastorio.recipes.overrideIngredients
 )
 krastorio.recipes.setEnergyCost("steel-plate", 3.2)
 
--- Lamp
-krastorio.recipes.convertIngredient("small-lamp", "electronic-circuit", "glass")
-
 -- Bricks
 if krastorio.recipes.exist("stone-brick") then
 	data.raw.recipe["stone-brick"].subgroup = "raw-material"
 end
 
+krastorio.recipes.convertIngredient("electronic-circuit", "iron-plate", "plastic-bar")
+
 --------------------------------------------------------------------
 -- -- -- BUILDINGS
 --------------------------------------------------------------------
+
+-- Lamp
+krastorio.recipes.convertIngredient("small-lamp", "electronic-circuit", "glass")
 
 -- Assembling machine tier 1
 krastorio.recipes.convertIngredient("assembling-machine-1", "electronic-circuit", "automation-core")

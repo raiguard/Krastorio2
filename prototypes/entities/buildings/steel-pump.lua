@@ -135,758 +135,758 @@ data:extend(
 		{
 			load_animations =
 			{
-			west =
-			{
-			[1] =
-			{
-			standup_base =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/V-R-135-load-standup-base.png",
-			width = 55,
-			height = 63,
-			line_length =1,
-			frame_count =20,
-			shift = util.by_pixel(-23.5, -13.5),
-			hr_version =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/hr-V-R-135-load-standup-base.png",
-			width = 110,
-			height = 126,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(-23.5, -13.5)
-			}
-			},
-			standup_shadow =
-			{
-			filename = "__base__/graphics/entity/pump/connector/V-R-1-load-standup-base-shadow.png",
-			width = 79,
-			height = 69,
-			line_length =1,
-			frame_count =20,
-			shift = util.by_pixel(-8.5, 8.5),
-			hr_version =
-			{
-			filename = "__base__/graphics/entity/pump/connector/hr-V-R-1-load-standup-base-shadow.png",
-			width = 157,
-			height = 136,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(-8.75, 8.5)
-			}
-			}
-			},
-			[2] =
-			{
-			standup_base =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/V-R-246-load-standup-base.png",
-			width = 55,
-			height = 74,
-			line_length =1,
-			frame_count =20,
-			shift = util.by_pixel(-23.5, -22),
-			hr_version =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/hr-V-R-246-load-standup-base.png",
-			width = 110,
-			height = 148,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(-23.5, -21.5)
-			}
-			},
-			standup_shadow =
-			{
-			filename = "__base__/graphics/entity/pump/connector/V-R-2-load-standup-shadow.png",
-			width = 78,
-			height = 81,
-			line_length =1,
-			frame_count =16,
-			shift = util.by_pixel(-7, -13.5),
-			hr_version =
-			{
-			filename = "__base__/graphics/entity/pump/connector/hr-V-R-2-load-standup-shadow.png",
-			width = 155,
-			height = 162,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 16,
-			shift = util.by_pixel(-6.75, -13.5)
-			}
-			},
-			connector_shadow =
-			{
-			filename = "__base__/graphics/entity/pump/connector/V-R-2-load-connect-shadow.png",
-			width = 85,
-			height = 80,
-			line_length =1,
-			frame_count =16,
-			shift = util.by_pixel(-27.5, -10),
-			hr_version =
-			{
-			filename = "__base__/graphics/entity/pump/connector/hr-V-R-2-load-connect-shadow.png",
-			width = 169,
-			height = 160,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 16,
-			shift = util.by_pixel(-27.75, -10)
-			}
-			}
-			},
-			[3] =
-			{
-			standup_base =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/V-R-135-load-standup-base.png",
-			width = 55,
-			height = 63,
-			line_length =1,
-			frame_count =20,
-			shift = util.by_pixel(-23.5, -13.5),
-			hr_version =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/hr-V-R-135-load-standup-base.png",
-			width = 110,
-			height = 126,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(-23.5, -13.5)
-			}
-			},
-			connector_shadow =
-			{
-			filename = "__base__/graphics/entity/pump/connector/V-R-3-load-connect-shadow.png",
-			width = 86,
-			height = 88,
-			line_length =1,
-			frame_count =17,
-			shift = util.by_pixel(-28, 13),
-			hr_version =
-			{
-			filename = "__base__/graphics/entity/pump/connector/hr-V-R-3-load-connect-shadow.png",
-			width = 171,
-			height = 175,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 17,
-			shift = util.by_pixel(-27.75, 12.75)
-			}
-			}
-			},
-			[4] =
-			{
-			standup_base =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/V-R-246-load-standup-base.png",
-			width = 55,
-			height = 74,
-			line_length =1,
-			frame_count =20,
-			shift = util.by_pixel(-23.5, -22),
-			hr_version =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/hr-V-R-246-load-standup-base.png",
-			width = 110,
-			height = 148,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(-23.5, -21.5)
-			}
-			},
-			standup_shadow =
-			{
-			filename = "__base__/graphics/entity/pump/connector/V-R-4-load-standup-shadow.png",
-			width = 85,
-			height = 81,
-			line_length =1,
-			frame_count =20,
-			shift = util.by_pixel(-6.5, -13.5),
-			hr_version =
-			{
-			filename = "__base__/graphics/entity/pump/connector/hr-V-R-4-load-standup-shadow.png",
-			width = 168,
-			height = 162,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(-6.5, -13.5)
-			}
-			},
-			connector_shadow =
-			{
-			filename = "__base__/graphics/entity/pump/connector/V-R-4-load-connect-shadow.png",
-			width = 85,
-			height = 72,
-			line_length =1,
-			frame_count =16,
-			shift = util.by_pixel(-27.5, -14),
-			hr_version =
-			{
-			filename = "__base__/graphics/entity/pump/connector/hr-V-R-4-load-connect-shadow.png",
-			width = 168,
-			height = 144,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 16,
-			shift = util.by_pixel(-27.5, -14)
-			}
-			}
-			},
-			[5] =
-			{
-			standup_base =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/V-R-135-load-standup-base.png",
-			width = 55,
-			height = 63,
-			line_length =1,
-			frame_count =20,
-			shift = util.by_pixel(-23.5, -13.5),
-			hr_version =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/hr-V-R-135-load-standup-base.png",
-			width = 110,
-			height = 126,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(-23.5, -13.5)
-			}
-			},
-			standup_shadow =
-			{
-			filename = "__base__/graphics/entity/pump/connector/V-R-5-load-standup-shadow.png",
-			width = 85,
-			height = 79,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(-6.5, 3.5),
-			hr_version =
-			{
-			filename = "__base__/graphics/entity/pump/connector/hr-V-R-5-load-standup-shadow.png",
-			width = 168,
-			height = 157,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(-6.5, 3.75)
-			}
-			},
-			connector_shadow =
-			{
-			filename = "__base__/graphics/entity/pump/connector/V-R-5-load-connect-shadow.png",
-			width = 86,
-			height = 80,
-			line_length = 1,
-			frame_count = 16,
-			shift = util.by_pixel(-27, 9),
-			hr_version =
-			{
-			filename = "__base__/graphics/entity/pump/connector/hr-V-R-5-load-connect-shadow.png",
-			width = 172,
-			height = 158,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 16,
-			shift = util.by_pixel(-27.5, 9)
-			}
-			}
-			},
-			[6] =
-			{
-			standup_base =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/V-R-246-load-standup-base.png",
-			width = 55,
-			height = 74,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(-23.5, -22),
-			hr_version =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/hr-V-R-246-load-standup-base.png",
-			width = 110,
-			height = 148,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(-23.5, -21.5)
-			}
-			},
-			standup_shadow =
-			{
-			filename = "__base__/graphics/entity/pump/connector/V-R-6-load-standup-shadow.png",
-			width = 85,
-			height = 81,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(-6.5, -13.5),
-			hr_version =
-			{
-			filename = "__base__/graphics/entity/pump/connector/hr-V-R-6-load-standup-shadow.png",
-			width = 170,
-			height = 162,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(-7, -13.5)
-			}
-			},
-			connector_shadow =
-			{
-			filename = "__base__/graphics/entity/pump/connector/V-R-6-load-connect-shadow.png",
-			width = 88,
-			height = 66,
-			line_length =1,
-			frame_count =16,
-			shift = util.by_pixel(-27, -17),
-			hr_version =
-			{
-			filename = "__base__/graphics/entity/pump/connector/hr-V-R-6-load-connect-shadow.png",
-			width = 174,
-			height = 131,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 16,
-			shift = util.by_pixel(-27, -16.75)
-			}
-			}
-			}
-			},
-			north =
-			{
-			[1] =
-			{
-			standup_base =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/H-B-123456-load-standup-base.png",
-			width = 46,
-			height = 80,
-			line_length =1,
-			frame_count =20,
-			shift = util.by_pixel(0, -62),
-			hr_version =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-load-standup-base.png",
-			width = 91,
-			height = 160,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(-0.25, -62)
-			}
-			},
-			standup_shadow =
-			{
-			filename = "__base__/graphics/entity/pump/connector/H-B-1-load-standup-shadow.png",
-			width = 64,
-			height = 80,
-			line_length = 1,
-			frame_count = 16,
-			shift = util.by_pixel(18, -52),
-			hr_version =
-			{
-			filename = "__base__/graphics/entity/pump/connector/hr-H-B-1-load-standup-shadow.png",
-			width = 126,
-			height = 158,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 16,
-			shift = util.by_pixel(18, -52)
-			}
-			},
-			connector_shadow =
-			{
-			filename = "__base__/graphics/entity/pump/connector/H-B-1-load-connect-shadow.png",
-			width = 65,
-			height = 90,
-			line_length = 1,
-			frame_count = 16,
-			shift = util.by_pixel(26.5, -66),
-			hr_version =
-			{
-			filename = "__base__/graphics/entity/pump/connector/hr-H-B-1-load-connect-shadow.png",
-			width = 129,
-			height = 181,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 16,
-			shift = util.by_pixel(26.75, -66.25)
-			}
-			}
-			},
-			[2] =
-			{
-			standup_base =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/H-B-123456-load-standup-base.png",
-			width = 46,
-			height = 80,
-			line_length = 1,
-			frame_count =20,
-			shift = util.by_pixel(0, -62),
-			hr_version =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-load-standup-base.png",
-			width = 91,
-			height = 160,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(-0.25, -62)
-			}
-			},
-			standup_shadow =
-			{
-			filename = "__base__/graphics/entity/pump/connector/H-B-2-load-standup-shadow.png",
-			width = 67,
-			height = 90,
-			line_length =1,
-			frame_count =20,
-			shift = util.by_pixel(16.5, -48),
-			hr_version =
-			{
-			filename = "__base__/graphics/entity/pump/connector/hr-H-B-2-load-standup-shadow.png",
-			width = 133,
-			height = 180,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(16.75, -47.5)
-			}
-			},
-			connector_shadow =
-			{
-			filename = "__base__/graphics/entity/pump/connector/H-B-2-load-connect-shadow.png",
-			width = 72,
-			height = 90,
-			line_length =1,
-			frame_count =16,
-			shift = util.by_pixel(16, -65),
-			hr_version =
-			{
-			filename = "__base__/graphics/entity/pump/connector/hr-H-B-2-load-connect-shadow.png",
-			width = 143,
-			height = 178,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 16,
-			shift = util.by_pixel(16.25, -65)
-			}
-			}
-			},
-			[3] =
-			{
-			standup_base =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/H-B-123456-load-standup-base.png",
-			width = 46,
-			height = 80,
-			line_length =1,
-			frame_count =20,
-			shift = util.by_pixel(0, -62),
-			hr_version =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-load-standup-base.png",
-			width = 91,
-			height = 160,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(-0.25, -62)
-			}
-			},
-			standup_shadow =
-			{
-			filename = "__base__/graphics/entity/pump/connector/H-B-3-load-standup-shadow.png",
-			width = 67,
-			height = 90,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(16.5, -48),
-			hr_version =
-			{
-			filename = "__base__/graphics/entity/pump/connector/hr-H-B-3-load-standup-shadow.png",
-			width = 133,
-			height = 180,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(16.75, -47.5)
-			}
-			},
-			connector_shadow =
-			{
-			filename = "__base__/graphics/entity/pump/connector/H-B-3-load-connect-shadow.png",
-			width = 52,
-			height = 91,
-			line_length = 1,
-			frame_count = 16,
-			shift = util.by_pixel(20, -66.5),
-			hr_version =
-			{
-			filename = "__base__/graphics/entity/pump/connector/hr-H-B-3-load-connect-shadow.png",
-			width = 103,
-			height = 181,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 16,
-			shift = util.by_pixel(20.25, -66.25)
-			}
-			}
-			},
-			[4] =
-			{
-			standup_base =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/H-B-123456-load-standup-base.png",
-			width = 46,
-			height = 80,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(0, -62),
-			hr_version =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-load-standup-base.png",
-			width = 91,
-			height = 160,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(-0.25, -62)
-			}
-			}
-			},
-			[5] =
-			{
-			standup_base =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/H-B-123456-load-standup-base.png",
-			width = 46,
-			height = 80,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(0, -62),
-			hr_version =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-load-standup-base.png",
-			width = 91,
-			height = 160,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(-0.25, -62)
-			}
-			},
-			standup_shadow =
-			{
-			filename = "__base__/graphics/entity/pump/connector/H-B-5-load-standup-shadow.png",
-			width = 67,
-			height = 90,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(16.5, -48),
-			hr_version =
-			{
-			filename = "__base__/graphics/entity/pump/connector/hr-H-B-5-load-standup-shadow.png",
-			width = 133,
-			height = 181,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(16.75, -47.75)
-			}
-			},
-			connector_shadow =
-			{
-			filename = "__base__/graphics/entity/pump/connector/H-B-5-load-connect-shadow.png",
-			width = 52,
-			height = 89,
-			line_length = 1,
-			frame_count = 16,
-			shift = util.by_pixel(20, -67.5),
-			hr_version =
-			{
-			filename = "__base__/graphics/entity/pump/connector/hr-H-B-5-load-connect-shadow.png",
-			width = 103,
-			height = 177,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 16,
-			shift = util.by_pixel(20.25, -67.25)
-			}
-			}
-			},
-			[6] =
-			{
-			standup_base =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/H-B-123456-load-standup-base.png",
-			width = 46,
-			height = 80,
-			line_length =1,
-			frame_count =20,
-			shift = util.by_pixel(0, -62),
-			hr_version =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-load-standup-base.png",
-			width = 91,
-			height = 160,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(-0.25, -62)
-			}
-			},
-			standup_shadow =
-			{
-			filename = "__base__/graphics/entity/pump/connector/H-B-6-load-standup-shadow.png",
-			width = 67,
-			height = 91,
-			line_length =1,
-			frame_count =20,
-			shift = util.by_pixel(16.5, -48.5),
-			hr_version =
-			{
-			filename = "__base__/graphics/entity/pump/connector/hr-H-B-6-load-standup-shadow.png",
-			width = 133,
-			height = 182,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(16.75, -48)
-			}
-			},
-			connector_shadow =
-			{
-			filename = "__base__/graphics/entity/pump/connector/H-B-6-load-connect-shadow.png",
-			width = 72,
-			height = 90,
-			line_length =1,
-			frame_count =16,
-			shift = util.by_pixel(16, -65),
-			hr_version =
-			{
-			filename = "__base__/graphics/entity/pump/connector/hr-H-B-6-load-connect-shadow.png",
-			width = 143,
-			height = 178,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 16,
-			shift = util.by_pixel(16.25, -65)
-			}
-			}
-			}
-			},
-			east =
-			{
-			[1] =
-			{
-			standup_base =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/V-L-135-load-standup-base.png",
-			width = 55,
-			height = 63,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(23.5, -16.5),
-			hr_version =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/hr-V-L-135-load-standup-base.png",
-			width = 110,
-			height = 127,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(23.5, -16.25)
-			}
-			}
-			},
-			[2] =
-			{
-			standup_base =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/V-L-2-load-standup-base.png",
-			width = 55,
-			height = 73,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(23.5, -24.5),
-			hr_version =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/hr-V-L-2-load-standup-base.png",
-			width = 110,
-			height = 148,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(23.5, -24.5)
-			}
-			}
-			},
-			[3] =
-			{
-			standup_base =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/V-L-135-load-standup-base.png",
-			width = 55,
-			height = 63,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(23.5, -16.5),
-			hr_version =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/hr-V-L-135-load-standup-base.png",
-			width = 110,
-			height = 127,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(23.5, -16.25)
-			}
-			}
-			},
-			[4] = {},
-			[5] =
-			{
-			standup_base =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/V-L-135-load-standup-base.png",
-			width = 55,
-			height = 63,
-			line_length =1,
-			frame_count =20,
-			shift = util.by_pixel(23.5, -16.5),
-			hr_version =
-			{
-			filename = kr_entities_path .. "steel-pump/connector/hr-V-L-135-load-standup-base.png",
-			width = 110,
-			height = 127,
-			scale = 0.5,
-			line_length = 1,
-			frame_count = 20,
-			shift = util.by_pixel(23.5, -16.25)
-			}
-			}
-			},
-			[6] = {}
-			},
-			south =
-			{
-			[1] = {},
-			[2] = {},
-			[3] = {},
-			[4] = {},
-			[5] = {},
-			[6] = {}
-			}, 
+				west =
+				{
+					[1] =
+					{
+						standup_base =
+						{
+							filename = kr_entities_path .. "steel-pump/connector/V-R-135-load-standup-base.png",
+							width = 55,
+							height = 63,
+							line_length =1,
+							frame_count =20,
+							shift = util.by_pixel(-23.5, -13.5),
+							hr_version =
+							{
+								filename = kr_entities_path .. "steel-pump/connector/hr-V-R-135-load-standup-base.png",
+								width = 110,
+								height = 126,
+								scale = 0.5,
+								line_length = 1,
+								frame_count = 20,
+								shift = util.by_pixel(-23.5, -13.5)
+							}
+						},
+						standup_shadow =
+						{
+							filename = "__base__/graphics/entity/pump/connector/V-R-1-load-standup-base-shadow.png",
+							width = 79,
+							height = 69,
+							line_length =1,
+							frame_count =20,
+							shift = util.by_pixel(-8.5, 8.5),
+							hr_version =
+							{
+								filename = "__base__/graphics/entity/pump/connector/hr-V-R-1-load-standup-base-shadow.png",
+								width = 157,
+								height = 136,
+								scale = 0.5,
+								line_length = 1,
+								frame_count = 20,
+								shift = util.by_pixel(-8.75, 8.5)
+							}
+						}
+					},
+					[2] =
+					{
+						standup_base =
+						{
+							filename = kr_entities_path .. "steel-pump/connector/V-R-246-load-standup-base.png",
+							width = 55,
+							height = 74,
+							line_length =1,
+							frame_count =20,
+							shift = util.by_pixel(-23.5, -22),
+							hr_version =
+							{
+								filename = kr_entities_path .. "steel-pump/connector/hr-V-R-246-load-standup-base.png",
+								width = 110,
+								height = 148,
+								scale = 0.5,
+								line_length = 1,
+								frame_count = 20,
+								shift = util.by_pixel(-23.5, -21.5)
+							}
+						},
+						standup_shadow =
+						{
+							filename = "__base__/graphics/entity/pump/connector/V-R-2-load-standup-shadow.png",
+							width = 78,
+							height = 81,
+							line_length =1,
+							frame_count =16,
+							shift = util.by_pixel(-7, -13.5),
+							hr_version =
+							{
+								filename = "__base__/graphics/entity/pump/connector/hr-V-R-2-load-standup-shadow.png",
+								width = 155,
+								height = 162,
+								scale = 0.5,
+								line_length = 1,
+								frame_count = 16,
+								shift = util.by_pixel(-6.75, -13.5)
+							}
+						},
+						connector_shadow =
+						{
+							filename = "__base__/graphics/entity/pump/connector/V-R-2-load-connect-shadow.png",
+							width = 85,
+							height = 80,
+							line_length =1,
+							frame_count =16,
+							shift = util.by_pixel(-27.5, -10),
+							hr_version =
+							{
+								filename = "__base__/graphics/entity/pump/connector/hr-V-R-2-load-connect-shadow.png",
+								width = 169,
+								height = 160,
+								scale = 0.5,
+								line_length = 1,
+								frame_count = 16,
+								shift = util.by_pixel(-27.75, -10)
+							}
+						}
+					},
+					[3] =
+					{
+						standup_base =
+						{
+							filename = kr_entities_path .. "steel-pump/connector/V-R-135-load-standup-base.png",
+							width = 55,
+							height = 63,
+							line_length =1,
+							frame_count =20,
+							shift = util.by_pixel(-23.5, -13.5),
+							hr_version =
+							{
+								filename = kr_entities_path .. "steel-pump/connector/hr-V-R-135-load-standup-base.png",
+								width = 110,
+								height = 126,
+								scale = 0.5,
+								line_length = 1,
+								frame_count = 20,
+								shift = util.by_pixel(-23.5, -13.5)
+							}
+						},
+						connector_shadow =
+						{
+							filename = "__base__/graphics/entity/pump/connector/V-R-3-load-connect-shadow.png",
+							width = 86,
+							height = 88,
+							line_length =1,
+							frame_count =17,
+							shift = util.by_pixel(-28, 13),
+							hr_version =
+							{
+								filename = "__base__/graphics/entity/pump/connector/hr-V-R-3-load-connect-shadow.png",
+								width = 171,
+								height = 175,
+								scale = 0.5,
+								line_length = 1,
+								frame_count = 17,
+								shift = util.by_pixel(-27.75, 12.75)
+							}
+						}
+					},
+					[4] =
+					{
+						standup_base =
+						{
+							filename = kr_entities_path .. "steel-pump/connector/V-R-246-load-standup-base.png",
+							width = 55,
+							height = 74,
+							line_length =1,
+							frame_count =20,
+							shift = util.by_pixel(-23.5, -22),
+							hr_version =
+							{
+								filename = kr_entities_path .. "steel-pump/connector/hr-V-R-246-load-standup-base.png",
+								width = 110,
+								height = 148,
+								scale = 0.5,
+								line_length = 1,
+								frame_count = 20,
+								shift = util.by_pixel(-23.5, -21.5)
+							}
+						},
+						standup_shadow =
+						{
+							filename = "__base__/graphics/entity/pump/connector/V-R-4-load-standup-shadow.png",
+							width = 85,
+							height = 81,
+							line_length =1,
+							frame_count =20,
+							shift = util.by_pixel(-6.5, -13.5),
+							hr_version =
+							{
+								filename = "__base__/graphics/entity/pump/connector/hr-V-R-4-load-standup-shadow.png",
+								width = 168,
+								height = 162,
+								scale = 0.5,
+								line_length = 1,
+								frame_count = 20,
+								shift = util.by_pixel(-6.5, -13.5)
+							}
+						},
+						connector_shadow =
+						{
+							filename = "__base__/graphics/entity/pump/connector/V-R-4-load-connect-shadow.png",
+							width = 85,
+							height = 72,
+							line_length =1,
+							frame_count =16,
+							shift = util.by_pixel(-27.5, -14),
+							hr_version =
+							{
+								filename = "__base__/graphics/entity/pump/connector/hr-V-R-4-load-connect-shadow.png",
+								width = 168,
+								height = 144,
+								scale = 0.5,
+								line_length = 1,
+								frame_count = 16,
+								shift = util.by_pixel(-27.5, -14)
+							}
+						}
+					},
+					[5] =
+					{
+						standup_base =
+						{
+							filename = kr_entities_path .. "steel-pump/connector/V-R-135-load-standup-base.png",
+							width = 55,
+							height = 63,
+							line_length =1,
+							frame_count =20,
+							shift = util.by_pixel(-23.5, -13.5),
+							hr_version =
+							{
+								filename = kr_entities_path .. "steel-pump/connector/hr-V-R-135-load-standup-base.png",
+								width = 110,
+								height = 126,
+								scale = 0.5,
+								line_length = 1,
+								frame_count = 20,
+								shift = util.by_pixel(-23.5, -13.5)
+							}
+						},
+						standup_shadow =
+						{
+							filename = "__base__/graphics/entity/pump/connector/V-R-5-load-standup-shadow.png",
+							width = 85,
+							height = 79,
+							line_length = 1,
+							frame_count = 20,
+							shift = util.by_pixel(-6.5, 3.5),
+							hr_version =
+							{
+								filename = "__base__/graphics/entity/pump/connector/hr-V-R-5-load-standup-shadow.png",
+								width = 168,
+								height = 157,
+								scale = 0.5,
+								line_length = 1,
+								frame_count = 20,
+								shift = util.by_pixel(-6.5, 3.75)
+							}
+						},
+						connector_shadow =
+						{
+							filename = "__base__/graphics/entity/pump/connector/V-R-5-load-connect-shadow.png",
+							width = 86,
+							height = 80,
+							line_length = 1,
+							frame_count = 16,
+							shift = util.by_pixel(-27, 9),
+							hr_version =
+							{
+								filename = "__base__/graphics/entity/pump/connector/hr-V-R-5-load-connect-shadow.png",
+								width = 172,
+								height = 158,
+								scale = 0.5,
+								line_length = 1,
+								frame_count = 16,
+								shift = util.by_pixel(-27.5, 9)
+							}
+						}
+					},
+					[6] =
+					{
+						standup_base =
+						{
+							filename = kr_entities_path .. "steel-pump/connector/V-R-246-load-standup-base.png",
+							width = 55,
+							height = 74,
+							line_length = 1,
+							frame_count = 20,
+							shift = util.by_pixel(-23.5, -22),
+							hr_version =
+							{
+								filename = kr_entities_path .. "steel-pump/connector/hr-V-R-246-load-standup-base.png",
+								width = 110,
+								height = 148,
+								scale = 0.5,
+								line_length = 1,
+								frame_count = 20,
+								shift = util.by_pixel(-23.5, -21.5)
+							}
+						},
+						standup_shadow =
+						{
+							filename = "__base__/graphics/entity/pump/connector/V-R-6-load-standup-shadow.png",
+							width = 85,
+							height = 81,
+							line_length = 1,
+							frame_count = 20,
+							shift = util.by_pixel(-6.5, -13.5),
+							hr_version =
+							{
+								filename = "__base__/graphics/entity/pump/connector/hr-V-R-6-load-standup-shadow.png",
+								width = 170,
+								height = 162,
+								scale = 0.5,
+								line_length = 1,
+								frame_count = 20,
+								shift = util.by_pixel(-7, -13.5)
+							}
+						},
+						connector_shadow =
+						{
+							filename = "__base__/graphics/entity/pump/connector/V-R-6-load-connect-shadow.png",
+							width = 88,
+							height = 66,
+							line_length =1,
+							frame_count =16,
+							shift = util.by_pixel(-27, -17),
+							hr_version =
+							{
+								filename = "__base__/graphics/entity/pump/connector/hr-V-R-6-load-connect-shadow.png",
+								width = 174,
+								height = 131,
+								scale = 0.5,
+								line_length = 1,
+								frame_count = 16,
+								shift = util.by_pixel(-27, -16.75)
+							}
+						}
+					}
+				},
+				north =
+				{
+				[1] =
+				{
+				standup_base =
+				{
+				filename = kr_entities_path .. "steel-pump/connector/H-B-123456-load-standup-base.png",
+				width = 46,
+				height = 80,
+				line_length =1,
+				frame_count =20,
+				shift = util.by_pixel(0, -62),
+				hr_version =
+				{
+				filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-load-standup-base.png",
+				width = 91,
+				height = 160,
+				scale = 0.5,
+				line_length = 1,
+				frame_count = 20,
+				shift = util.by_pixel(-0.25, -62)
+				}
+				},
+				standup_shadow =
+				{
+				filename = "__base__/graphics/entity/pump/connector/H-B-1-load-standup-shadow.png",
+				width = 64,
+				height = 80,
+				line_length = 1,
+				frame_count = 16,
+				shift = util.by_pixel(18, -52),
+				hr_version =
+				{
+				filename = "__base__/graphics/entity/pump/connector/hr-H-B-1-load-standup-shadow.png",
+				width = 126,
+				height = 158,
+				scale = 0.5,
+				line_length = 1,
+				frame_count = 16,
+				shift = util.by_pixel(18, -52)
+				}
+				},
+				connector_shadow =
+				{
+				filename = "__base__/graphics/entity/pump/connector/H-B-1-load-connect-shadow.png",
+				width = 65,
+				height = 90,
+				line_length = 1,
+				frame_count = 16,
+				shift = util.by_pixel(26.5, -66),
+				hr_version =
+				{
+				filename = "__base__/graphics/entity/pump/connector/hr-H-B-1-load-connect-shadow.png",
+				width = 129,
+				height = 181,
+				scale = 0.5,
+				line_length = 1,
+				frame_count = 16,
+				shift = util.by_pixel(26.75, -66.25)
+				}
+				}
+				},
+				[2] =
+				{
+				standup_base =
+				{
+				filename = kr_entities_path .. "steel-pump/connector/H-B-123456-load-standup-base.png",
+				width = 46,
+				height = 80,
+				line_length = 1,
+				frame_count =20,
+				shift = util.by_pixel(0, -62),
+				hr_version =
+				{
+				filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-load-standup-base.png",
+				width = 91,
+				height = 160,
+				scale = 0.5,
+				line_length = 1,
+				frame_count = 20,
+				shift = util.by_pixel(-0.25, -62)
+				}
+				},
+				standup_shadow =
+				{
+				filename = "__base__/graphics/entity/pump/connector/H-B-2-load-standup-shadow.png",
+				width = 67,
+				height = 90,
+				line_length =1,
+				frame_count =20,
+				shift = util.by_pixel(16.5, -48),
+				hr_version =
+				{
+				filename = "__base__/graphics/entity/pump/connector/hr-H-B-2-load-standup-shadow.png",
+				width = 133,
+				height = 180,
+				scale = 0.5,
+				line_length = 1,
+				frame_count = 20,
+				shift = util.by_pixel(16.75, -47.5)
+				}
+				},
+				connector_shadow =
+				{
+				filename = "__base__/graphics/entity/pump/connector/H-B-2-load-connect-shadow.png",
+				width = 72,
+				height = 90,
+				line_length =1,
+				frame_count =16,
+				shift = util.by_pixel(16, -65),
+				hr_version =
+				{
+				filename = "__base__/graphics/entity/pump/connector/hr-H-B-2-load-connect-shadow.png",
+				width = 143,
+				height = 178,
+				scale = 0.5,
+				line_length = 1,
+				frame_count = 16,
+				shift = util.by_pixel(16.25, -65)
+				}
+				}
+				},
+				[3] =
+				{
+				standup_base =
+				{
+				filename = kr_entities_path .. "steel-pump/connector/H-B-123456-load-standup-base.png",
+				width = 46,
+				height = 80,
+				line_length =1,
+				frame_count =20,
+				shift = util.by_pixel(0, -62),
+				hr_version =
+				{
+				filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-load-standup-base.png",
+				width = 91,
+				height = 160,
+				scale = 0.5,
+				line_length = 1,
+				frame_count = 20,
+				shift = util.by_pixel(-0.25, -62)
+				}
+				},
+				standup_shadow =
+				{
+				filename = "__base__/graphics/entity/pump/connector/H-B-3-load-standup-shadow.png",
+				width = 67,
+				height = 90,
+				line_length = 1,
+				frame_count = 20,
+				shift = util.by_pixel(16.5, -48),
+				hr_version =
+				{
+				filename = "__base__/graphics/entity/pump/connector/hr-H-B-3-load-standup-shadow.png",
+				width = 133,
+				height = 180,
+				scale = 0.5,
+				line_length = 1,
+				frame_count = 20,
+				shift = util.by_pixel(16.75, -47.5)
+				}
+				},
+				connector_shadow =
+				{
+				filename = "__base__/graphics/entity/pump/connector/H-B-3-load-connect-shadow.png",
+				width = 52,
+				height = 91,
+				line_length = 1,
+				frame_count = 16,
+				shift = util.by_pixel(20, -66.5),
+				hr_version =
+				{
+				filename = "__base__/graphics/entity/pump/connector/hr-H-B-3-load-connect-shadow.png",
+				width = 103,
+				height = 181,
+				scale = 0.5,
+				line_length = 1,
+				frame_count = 16,
+				shift = util.by_pixel(20.25, -66.25)
+				}
+				}
+				},
+				[4] =
+				{
+				standup_base =
+				{
+				filename = kr_entities_path .. "steel-pump/connector/H-B-123456-load-standup-base.png",
+				width = 46,
+				height = 80,
+				line_length = 1,
+				frame_count = 20,
+				shift = util.by_pixel(0, -62),
+				hr_version =
+				{
+				filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-load-standup-base.png",
+				width = 91,
+				height = 160,
+				scale = 0.5,
+				line_length = 1,
+				frame_count = 20,
+				shift = util.by_pixel(-0.25, -62)
+				}
+				}
+				},
+				[5] =
+				{
+				standup_base =
+				{
+				filename = kr_entities_path .. "steel-pump/connector/H-B-123456-load-standup-base.png",
+				width = 46,
+				height = 80,
+				line_length = 1,
+				frame_count = 20,
+				shift = util.by_pixel(0, -62),
+				hr_version =
+				{
+				filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-load-standup-base.png",
+				width = 91,
+				height = 160,
+				scale = 0.5,
+				line_length = 1,
+				frame_count = 20,
+				shift = util.by_pixel(-0.25, -62)
+				}
+				},
+				standup_shadow =
+				{
+				filename = "__base__/graphics/entity/pump/connector/H-B-5-load-standup-shadow.png",
+				width = 67,
+				height = 90,
+				line_length = 1,
+				frame_count = 20,
+				shift = util.by_pixel(16.5, -48),
+				hr_version =
+				{
+				filename = "__base__/graphics/entity/pump/connector/hr-H-B-5-load-standup-shadow.png",
+				width = 133,
+				height = 181,
+				scale = 0.5,
+				line_length = 1,
+				frame_count = 20,
+				shift = util.by_pixel(16.75, -47.75)
+				}
+				},
+				connector_shadow =
+				{
+				filename = "__base__/graphics/entity/pump/connector/H-B-5-load-connect-shadow.png",
+				width = 52,
+				height = 89,
+				line_length = 1,
+				frame_count = 16,
+				shift = util.by_pixel(20, -67.5),
+				hr_version =
+				{
+				filename = "__base__/graphics/entity/pump/connector/hr-H-B-5-load-connect-shadow.png",
+				width = 103,
+				height = 177,
+				scale = 0.5,
+				line_length = 1,
+				frame_count = 16,
+				shift = util.by_pixel(20.25, -67.25)
+				}
+				}
+				},
+				[6] =
+				{
+				standup_base =
+				{
+				filename = kr_entities_path .. "steel-pump/connector/H-B-123456-load-standup-base.png",
+				width = 46,
+				height = 80,
+				line_length =1,
+				frame_count =20,
+				shift = util.by_pixel(0, -62),
+				hr_version =
+				{
+				filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-load-standup-base.png",
+				width = 91,
+				height = 160,
+				scale = 0.5,
+				line_length = 1,
+				frame_count = 20,
+				shift = util.by_pixel(-0.25, -62)
+				}
+				},
+				standup_shadow =
+				{
+				filename = "__base__/graphics/entity/pump/connector/H-B-6-load-standup-shadow.png",
+				width = 67,
+				height = 91,
+				line_length =1,
+				frame_count =20,
+				shift = util.by_pixel(16.5, -48.5),
+				hr_version =
+				{
+				filename = "__base__/graphics/entity/pump/connector/hr-H-B-6-load-standup-shadow.png",
+				width = 133,
+				height = 182,
+				scale = 0.5,
+				line_length = 1,
+				frame_count = 20,
+				shift = util.by_pixel(16.75, -48)
+				}
+				},
+				connector_shadow =
+				{
+				filename = "__base__/graphics/entity/pump/connector/H-B-6-load-connect-shadow.png",
+				width = 72,
+				height = 90,
+				line_length =1,
+				frame_count =16,
+				shift = util.by_pixel(16, -65),
+				hr_version =
+				{
+				filename = "__base__/graphics/entity/pump/connector/hr-H-B-6-load-connect-shadow.png",
+				width = 143,
+				height = 178,
+				scale = 0.5,
+				line_length = 1,
+				frame_count = 16,
+				shift = util.by_pixel(16.25, -65)
+				}
+				}
+				}
+				},
+				east =
+				{
+				[1] =
+				{
+				standup_base =
+				{
+				filename = kr_entities_path .. "steel-pump/connector/V-L-135-load-standup-base.png",
+				width = 55,
+				height = 63,
+				line_length = 1,
+				frame_count = 20,
+				shift = util.by_pixel(23.5, -16.5),
+				hr_version =
+				{
+				filename = kr_entities_path .. "steel-pump/connector/hr-V-L-135-load-standup-base.png",
+				width = 110,
+				height = 127,
+				scale = 0.5,
+				line_length = 1,
+				frame_count = 20,
+				shift = util.by_pixel(23.5, -16.25)
+				}
+				}
+				},
+				[2] =
+				{
+				standup_base =
+				{
+				filename = kr_entities_path .. "steel-pump/connector/V-L-2-load-standup-base.png",
+				width = 55,
+				height = 73,
+				line_length = 1,
+				frame_count = 20,
+				shift = util.by_pixel(23.5, -24.5),
+				hr_version =
+				{
+				filename = kr_entities_path .. "steel-pump/connector/hr-V-L-2-load-standup-base.png",
+				width = 110,
+				height = 148,
+				scale = 0.5,
+				line_length = 1,
+				frame_count = 20,
+				shift = util.by_pixel(23.5, -24.5)
+				}
+				}
+				},
+				[3] =
+				{
+				standup_base =
+				{
+				filename = kr_entities_path .. "steel-pump/connector/V-L-135-load-standup-base.png",
+				width = 55,
+				height = 63,
+				line_length = 1,
+				frame_count = 20,
+				shift = util.by_pixel(23.5, -16.5),
+				hr_version =
+				{
+				filename = kr_entities_path .. "steel-pump/connector/hr-V-L-135-load-standup-base.png",
+				width = 110,
+				height = 127,
+				scale = 0.5,
+				line_length = 1,
+				frame_count = 20,
+				shift = util.by_pixel(23.5, -16.25)
+				}
+				}
+				},
+				[4] = {},
+				[5] =
+				{
+				standup_base =
+				{
+				filename = kr_entities_path .. "steel-pump/connector/V-L-135-load-standup-base.png",
+				width = 55,
+				height = 63,
+				line_length =1,
+				frame_count =20,
+				shift = util.by_pixel(23.5, -16.5),
+				hr_version =
+				{
+				filename = kr_entities_path .. "steel-pump/connector/hr-V-L-135-load-standup-base.png",
+				width = 110,
+				height = 127,
+				scale = 0.5,
+				line_length = 1,
+				frame_count = 20,
+				shift = util.by_pixel(23.5, -16.25)
+				}
+				}
+				},
+				[6] = {}
+				},
+				south =
+				{
+				[1] = {},
+				[2] = {},
+				[3] = {},
+				[4] = {},
+				[5] = {},
+				[6] = {}
+				}
 			},
 			unload_animations =
 			{

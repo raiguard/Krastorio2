@@ -200,7 +200,7 @@ data:extend(
 	{
       sound =
       {
-        filename = kr_buildings_sounds_path .. "/biusart_lab.ogg",
+        filename = kr_buildings_sounds_path .. "biusart_lab.ogg",
         volume = 0.7
       },
       apparent_volume = 1

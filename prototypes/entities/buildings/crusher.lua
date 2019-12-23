@@ -78,7 +78,7 @@ data:extend(
         sound =
         {
         {
-            filename = kr_buildings_sounds_path .. "/crusher.ogg",
+            filename = kr_buildings_sounds_path .. "crusher.ogg",
             volume = 1
         }
         },

@@ -235,6 +235,26 @@ data:extend(
 		place_result = "kr-steel-pump",
 		stack_size = 50
 	},
+	{
+		type = "item",
+		name = "kr-electrolysis-plant",
+		icon = kr_entities_icons_path .. "electrolysis-plant.png",
+		icon_size = 32,
+		subgroup = "production-machine",
+		order = "d-a1[electrolysis-plant]",
+		place_result = "kr-electrolysis-plant",
+		stack_size = 50
+    },	
+    {
+		type = "item",
+		name = "kr-filtration-plant",
+		icon = kr_entities_icons_path .. "filtration-plant.png",
+		icon_size = 32,
+		subgroup = "production-machine",
+		order = "d-b1[filtration-plant]",
+		place_result = "kr-filtration-plant",
+		stack_size = 50
+    },
 	
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

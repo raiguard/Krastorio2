@@ -5,7 +5,7 @@ data:extend(
 -----------------------------------------------------------------------------------------------------------------
 	{
 		type = "technology",
-		name = "automation-core",
+		name = "kr-automation-core",
 		icon = kr_technologies_icons_path .. "automation-core.png",
 		icon_size = 128,
 		effects =
@@ -61,7 +61,7 @@ data:extend(
 				recipe = "automation-science-pack"
 			}
 		},
-		prerequisites = {"automation-core"},
+		prerequisites = {"kr-automation-core"},
 		unit =
 		{
 			count = 100,
@@ -74,7 +74,7 @@ data:extend(
     },
 	{
 		type = "technology",
-		name = "stone-processing",
+		name = "kr-stone-processing",
 		icon = kr_technologies_icons_path .. "stone-processing.png",
 		icon_size = 128,
 		effects =

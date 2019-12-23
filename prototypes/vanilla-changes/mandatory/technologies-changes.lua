@@ -5,7 +5,7 @@
 --------------------------------------------------------------------
 
 -- Addings
-krastorio.technologies.addPrerequisite("automation", "automation-core")
+krastorio.technologies.addPrerequisite("automation", "kr-automation-core")
 krastorio.technologies.addPrerequisite("automation", "automation-science-pack")
 krastorio.technologies.addPrerequisite("logistic-science-pack", "automation-science-pack")
 krastorio.technologies.addPrerequisite("logistics", "automation-science-pack")
@@ -16,6 +16,7 @@ krastorio.technologies.addPrerequisite("heavy-armor", "light-armor")
 krastorio.technologies.addPrerequisite("optics", "stone-processing")
 krastorio.technologies.addPrerequisite("logistics-2", "steel-processing")
 krastorio.technologies.addPrerequisite("nuclear-power", "kr-steam-engine")
+krastorio.technologies.addPrerequisite("oil-processing", "kr-fluids-chemistry")
 
 --Removing
 krastorio.technologies.removePrerequisite("heavy-armor", "military")

@@ -582,35 +582,41 @@ end
 -- and do recusively this check for his prerequistes, until reach technologies that haven't prerequisites
 function isaCircularDependency(tech, to_add_prerequisite, already_checked)
 	-- if has dependecy to be checked
-	local to_add_prerequisites = data.raw.technology[to_add_prerequisite].prerequisites
-	if to_add_prerequisites and next(to_add_prerequisites) ~= nil then	
-		if already_checked == nil then
-			-- inizialize memoization table
-			already_checked = {}
-			for name, technology in pairs(data.raw.technology) do				 
-				already_checked[name] = false				
-			end
-		elseif already_checked[to_add_prerequisite] == true then -- skip already done recurrence
-			return false
-		end
-		
-		already_checked[to_add_prerequisite] = true	
-		for _, prerequisite in pairs(to_add_prerequisites) do
-			-- check each prerequisite
-			local prerequisites = data.raw.technology[prerequisite].prerequisites
-			if prerequisites and next(data.raw.technology[prerequisite].prerequisites) ~= nil then	
-				for _, child_prerequisite in pairs(data.raw.technology[prerequisite].prerequisites) do
-					if child_prerequisite == tech then
-						return true
-					end
+	if data.raw.technology[to_add_prerequisite] then
+		local to_add_prerequisites = data.raw.technology[to_add_prerequisite].prerequisites
+		if to_add_prerequisites and next(to_add_prerequisites) ~= nil then	
+			if already_checked == nil then
+				-- inizialize memoization table
+				already_checked = {}
+				for name, technology in pairs(data.raw.technology) do				 
+					already_checked[name] = false				
 				end
+			elseif already_checked[to_add_prerequisite] == true then -- skip already done recurrence
+				return false
 			end
 			
-			-- if not found check his prerequisite paths
-			if isaCircularDependency(tech, prerequisite, already_checked) then
-				return true
-			end
-		end		
+			already_checked[to_add_prerequisite] = true	
+			for _, prerequisite in pairs(to_add_prerequisites) do
+				-- check each prerequisite
+				if data.raw.technology[prerequisite] then
+					local prerequisites = data.raw.technology[prerequisite].prerequisites
+					if prerequisites and next(data.raw.technology[prerequisite].prerequisites) ~= nil then	
+						for _, child_prerequisite in pairs(data.raw.technology[prerequisite].prerequisites) do
+							if child_prerequisite == tech then
+								return true
+							end
+						end
+					end
+					
+					-- if not found check his prerequisite paths
+					if isaCircularDependency(tech, prerequisite, already_checked) then
+						return true
+					end
+				else
+					krastorio_utils.log.write(3, string.format("The technology %s, have a prerequisite called %s, that doesn't exist!", to_add_prerequisite, prerequisite))
+				end
+			end		
+		end
 	end
 	return false
 end
