@@ -17,9 +17,15 @@ krastorio.technologies.addPrerequisite("optics", "stone-processing")
 krastorio.technologies.addPrerequisite("logistics-2", "steel-processing")
 krastorio.technologies.addPrerequisite("nuclear-power", "kr-steam-engine")
 krastorio.technologies.addPrerequisite("oil-processing", "kr-fluids-chemistry")
+krastorio.technologies.addPrerequisite("fluid-handling", "kr-basic-fluid-handling")
+krastorio.technologies.addPrerequisite("electronics", "plastics")
+krastorio.technologies.addPrerequisite("advanced-electronics", "electronics")
 
 --Removing
 krastorio.technologies.removePrerequisite("heavy-armor", "military")
+krastorio.technologies.removePrerequisite("fluid-handling", "automation-2")
+krastorio.technologies.removePrerequisite("engine", "steel-processing")
+krastorio.technologies.removePrerequisite("advanced-electronics", "plastics")
 
 --------------------------------------------------------------------
 -- -- Research unit ingredients
@@ -34,6 +40,10 @@ krastorio.technologies.addResearchUnitIngredient("automation", "basic-tech-card"
 
 -- Removing
 krastorio.technologies.removeResearchUnitIngredient("automation", "automation-science-pack")
+krastorio.technologies.removeResearchUnitIngredient("fluid-handling", "logistic-science-pack")
+krastorio.technologies.removeResearchUnitIngredient("oil-processing", "logistic-science-pack")
+krastorio.technologies.removeResearchUnitIngredient("engine", "logistic-science-pack")
+krastorio.technologies.removeResearchUnitIngredient("plastics", "logistic-science-pack")
 
 --------------------------------------------------------------------
 -- -- Recipes Unlocking
@@ -61,6 +71,7 @@ krastorio.technologies.addUnlockRecipe("electronics", "electronic-circuit")
 
 -- Moving inserters unlocking in early game
 krastorio.technologies.removeUnlockRecipe("automation", "long-handed-inserter")
+krastorio.technologies.removeUnlockRecipe("oil-processing", "chemical-plant")
 
 --------------------------------------------------------------------
 -- Loaders

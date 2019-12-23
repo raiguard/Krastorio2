@@ -28,6 +28,7 @@ if not krastorio.science_pack_recipes then
 	{
 		type = "recipe",
 		name = "automation-science-pack",
+		enabled = false,
 		energy_required = 5,
 		ingredients = 
 		{
@@ -122,6 +123,7 @@ if not krastorio.science_pack_recipes then
 	{
 		type = "recipe",
 		name = "automation-science-pack",
+		enabled = false,
 		energy_required = 20,
 		result_count = 5,
 		ingredients = 

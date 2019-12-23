@@ -1,7 +1,6 @@
 
 -- Disabling all vanilla recipes at the game start 
 krastorio.recipes.disable("electronic-circuit") -- ReAdded
-krastorio.recipes.disable("automation-science-pack") -- ReAdded
 krastorio.recipes.disable("transport-belt") -- ReAdded
 krastorio.recipes.disable("inserter") -- ReAdded
 krastorio.recipes.disable("burner-inserter") -- ReAdded
@@ -31,7 +30,7 @@ krastorio.recipes.overrideIngredients
 )
 krastorio.recipes.replaceIngredient("long-handed-inserter", "iron-plate", {"iron-stick", 2})
 
--- other inserters
+-- Other inserters
 krastorio.recipes.replaceIngredient("fast-inserter", "iron-plate", {"steel-plate", 1})
 krastorio.recipes.convertIngredient("stack-inserter", "iron-gear-wheel", "steel-gear-wheel")
 
@@ -46,12 +45,16 @@ krastorio.recipes.overrideIngredients
 )
 krastorio.recipes.setEnergyCost("steel-plate", 3.2)
 
+-- Engine
+krastorio.recipes.convertIngredient("engine-unit", "steel-plate", "iron-plate")
+
 -- Bricks
 if krastorio.recipes.exist("stone-brick") then
 	data.raw.recipe["stone-brick"].subgroup = "raw-material"
 end
 
 krastorio.recipes.convertIngredient("electronic-circuit", "iron-plate", "plastic-bar")
+krastorio.recipes.replaceIngredient("electronic-circuit", "copper-cable", {"copper-cable", 2})
 
 --------------------------------------------------------------------
 -- -- -- BUILDINGS

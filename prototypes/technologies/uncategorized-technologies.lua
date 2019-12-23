@@ -17,7 +17,11 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = "kr-electrolysis-plant"
-			}
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "chemical-plant"
+			}			
 		},
 		prerequisites = { "kr-basic-fluid-handling", "steel-processing" },
 		unit =

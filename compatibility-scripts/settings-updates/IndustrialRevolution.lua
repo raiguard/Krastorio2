@@ -11,6 +11,7 @@ if mods["IndustrialRevolution"] then
 			type = "recipe",
 			name = "automation-science-pack",
 			category = "crafting",
+			enabled = false,
 			energy_required = 4,
 			ingredients = 
 			{

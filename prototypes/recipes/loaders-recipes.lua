@@ -12,17 +12,20 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 	-- RECIPES
 
 	function kr_loader_recipe(data)
-		local name = data.name
-		local category = data.category or "logistics"
-		local ingredients = data.ingredients
+		local name            = data.name or "loader-test"
+		local category        = data.category or nil
+		local ingredients     = data.ingredients or { {"wood", 1} }
+		local enabled         = data.enabled or false
+		local energy_required = data.energy_required or 10
 		return
 		{
-			type = "recipe",
-			name = name,
-			ingredients = ingredients,
-			enabled = false,
-			energy_required = 10,
-			result = name
+			["type"]            = "recipe",
+			["name"]            = name,
+			["category"]        = category,
+			["ingredients"]     = ingredients,
+			["enabled"]         = enabled,
+			["energy_required"] = energy_required,
+			["result"]          = name
 		}
 	end
 
@@ -33,8 +36,8 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 			name = loader_names[1],
 			ingredients = 
 			{
-				{"transport-belt", 10},
-				{"inserter", 3}
+				{"transport-belt", 1},
+				{"inserter", 4}
 			}
 		},
 		kr_loader_recipe
@@ -42,15 +45,19 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 			name = loader_names[2],
 			ingredients = 
 			{
-				{"wood", 1}
+				{"fast-transport-belt", 1},
+				{"kr-loader", 2}				
 			}
 		},
 		kr_loader_recipe
 		{
 			name = loader_names[3],
+			category = "crafting-with-fluid",
 			ingredients = 
 			{
-				{"wood", 1}
+				{"express-transport-belt", 1},
+				{"kr-fast-loader", 2},
+				{type = "fluid", name = "lubricant", amount = 40}
 			}
 		},
 		--[[
@@ -59,7 +66,8 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 			name = loader_names[4],
 			ingredients = 
 			{
-				{"wood", 1}
+				{"superior-transport-belt", 1},
+				{"kr-express-loader", 2}
 			}
 		}
 		--]]
