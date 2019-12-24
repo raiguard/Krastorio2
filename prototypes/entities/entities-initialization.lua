@@ -4,6 +4,7 @@ require("buildings/pipe-covers/steel-pipecovers")
 -- -- -- BUILDINGS
 -- -- Generals
 require("buildings/crusher")
+require("buildings/shelter")
 require("buildings/electrolysis-plant")
 require("buildings/filtration-plant")
 require("buildings/greenhouse")

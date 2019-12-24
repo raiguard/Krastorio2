@@ -16,7 +16,9 @@ local scripts =
 	-- Reset technologies unlocking when the game effect could be modified
 	require(control_scripts_path .. "technologies-unlocking-coherence"),
 	-- Radioactive damages
-	-- require(control_scripts_path .. "radioactivity")
+	-- require(control_scripts_path .. "radioactivity"),
+	-- Shelter
+	require(control_scripts_path .. "shelter"),
 }
 
 -- Load all callbacks

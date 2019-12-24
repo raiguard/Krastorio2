@@ -1,6 +1,5 @@
-
 -- -- KRASTORIO SETTINGS
--- Setting order "aNUMBER"
+-- Setting order "[as]NUMBER"
 data:extend(
 {
 	-- A - Config
@@ -64,5 +63,14 @@ data:extend(
 
 -- -- VANILLA CHANGES SETTINGS
 -- Setting order "bNUMBER"
--- nothing now...
-
+data:extend(
+{
+	-- B - Config
+	{
+		type = "bool-setting",
+		name = "kr-rebalance-vehicles&fuels",
+		setting_type = "startup",
+		default_value = true,
+		order = "b1"
+	}
+})

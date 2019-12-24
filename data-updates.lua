@@ -7,6 +7,7 @@ krastorio.stage = "data-updates"
 ---------------------------------------------------------------------------
 -- -- Modifing vanilla game objects
 require(kr_prototypes_path .. "vanilla-changes/mandatory-vanilla-updates")
+require(kr_prototypes_path .. "vanilla-changes/optional-vanilla-updates")
 ---------------------------------------------------------------------------
 -- -- -- COMPATIBILITY INITIALIZATION (data update stage)
 ---------------------------------------------------------------------------

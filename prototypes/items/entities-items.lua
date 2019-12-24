@@ -33,6 +33,16 @@ data:extend(
 		place_result = "kr-crusher",
 		stack_size = 50
     },	
+	{
+		type = "item",
+		name = "kr-shelter",
+		icon =  kr_entities_icons_path .. "shelter.png",
+		icon_size = 64,
+		subgroup = "storage",
+		order = "aaa",
+		place_result = "kr-shelter",
+		stack_size = 1
+    },	
     {
 		type = "item",
 		name = "water-pumpjack",

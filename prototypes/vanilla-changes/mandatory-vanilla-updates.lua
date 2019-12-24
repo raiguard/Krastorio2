@@ -14,11 +14,9 @@ local modifications =
 	"renaming-vanillas",       -- Localization changes to vanilla objects
 	"resources-changes",       -- Resources changes
 	"smelting-overmodule-fix", -- Multiply smelting recipes stat for fix overmodule bug
-	"technologies-changes",    -- Modifications to vanilla technologies
-	"vanilla-lab-changes",     -- Modify stat and accepted science packs of vanilla lab
 	"spawner-changes",         -- Modify spawners sprite
-	"train-changes",           -- Modify trains
-	"vehicles-changes"        -- Modify vehicles
+	"technologies-changes",    -- Modifications to vanilla technologies
+	"vanilla-lab-changes"      -- Modify stat and accepted science packs of vanilla lab
 }
 
 -- Application of the modifications

@@ -5,6 +5,30 @@ data:extend(
 -----------------------------------------------------------------------------------------------------------------
 	{
 		type = "technology",
+		name = "kr-shelter",
+		icon = kr_technologies_icons_path .. "shelter.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-shelter"
+			}
+		},
+		prerequisites = {"automation-science-pack"},
+		unit =
+		{
+			count = 50,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1}
+			},
+			time = 20
+		}
+    },
+	{
+		type = "technology",
 		name = "kr-basic-fluid-handling",
 		icon = kr_technologies_icons_path .. "basic-fluid-handling.png",
 		icon_size = 128,
@@ -161,7 +185,7 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = "kr-crusher"
-			},
+			}
 		},
 		prerequisites = {"kr-automation-core"},
 		unit =

@@ -31,6 +31,18 @@ return
 		},
 		result = "kr-crusher"
     },
+	{
+		type = "recipe",
+		name = "kr-shelter",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"iron-beam", 50},
+			{"iron-plate", 50}
+		},
+		result = "kr-shelter"
+    },
 	-- -- --
 	-- MEDIUM CONTEINERS
 	-- -- --
