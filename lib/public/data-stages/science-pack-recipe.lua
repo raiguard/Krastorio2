@@ -23,7 +23,7 @@ if not krastorio.science_pack_recipes then
 	
 	-- -- Base vanilla recipes
 	krastorio.science_pack_recipes["Factorio"] = {}
-	-- Automation science pack
+	-- Automation science pack (Vanilla)
 	krastorio.science_pack_recipes["Factorio"]["automation-science-pack"] = 
 	{
 		type = "recipe",
@@ -37,7 +37,7 @@ if not krastorio.science_pack_recipes then
 		},
 		result = "automation-science-pack"
 	}
-	-- Logistic science pack
+	-- Logistic science pack (Vanilla)
 	krastorio.science_pack_recipes["Factorio"]["logistic-science-pack"] = 
 	{
 		type = "recipe",
@@ -51,7 +51,7 @@ if not krastorio.science_pack_recipes then
 		},
 		result = "logistic-science-pack"
 	}
-	-- Military science pack
+	-- Military science pack (Vanilla)
 	krastorio.science_pack_recipes["Factorio"]["military-science-pack"] = 
 	{
 		type = "recipe",
@@ -67,7 +67,7 @@ if not krastorio.science_pack_recipes then
 		},		
 		result = "military-science-pack"		
     }
-	-- Chemical science pack
+	-- Chemical science pack (Vanilla)
 	krastorio.science_pack_recipes["Factorio"]["chemical-science-pack"] = 
 	{
 		type = "recipe",
@@ -83,7 +83,7 @@ if not krastorio.science_pack_recipes then
 		},
 		result = "chemical-science-pack"
 	}
-	-- Production science pack
+	-- Production science pack (Vanilla)
 	krastorio.science_pack_recipes["Factorio"]["production-science-pack"] = 
 	{
 		type = "recipe",
@@ -99,7 +99,7 @@ if not krastorio.science_pack_recipes then
 		},
 		result = "production-science-pack"
 	}
-	-- Utility science pack
+	-- Utility science pack (Vanilla)
 	krastorio.science_pack_recipes["Factorio"]["utility-science-pack"] = 
 	{
 		type = "recipe",
@@ -118,7 +118,7 @@ if not krastorio.science_pack_recipes then
 	
 	-- -- Krastorio recipes
 	krastorio.science_pack_recipes["Krastorio 2"] = {}
-	-- Automation science pack
+	-- Automation science pack (Krastorio)
 	krastorio.science_pack_recipes["Krastorio 2"]["automation-science-pack"] = 
 	{
 		type = "recipe",
@@ -133,7 +133,7 @@ if not krastorio.science_pack_recipes then
 		},
 		result = "automation-science-pack"
 	}
-	-- Logistic science pack
+	-- Logistic science pack (Krastorio)
 	krastorio.science_pack_recipes["Krastorio 2"]["logistic-science-pack"] = 
 	{
 		type = "recipe",		
@@ -143,11 +143,12 @@ if not krastorio.science_pack_recipes then
 		result_count = 5,
 		ingredients =
 		{
-			{"wood", 1}
+			{"electronic-circuit", 5},
+			{"iron-gear-wheel", 10}
 		},
 		result = "logistic-science-pack"
 	}
-	-- Military science pack
+	-- Military science pack (Krastorio)
 	krastorio.science_pack_recipes["Krastorio 2"]["military-science-pack"] = 
 	{
 		type = "recipe",
@@ -161,7 +162,7 @@ if not krastorio.science_pack_recipes then
 		},
 		result = "military-science-pack"		
 	}
-	-- Chemical science pack
+	-- Chemical science pack (Krastorio)
 	krastorio.science_pack_recipes["Krastorio 2"]["chemical-science-pack"] = 
 	{
 		type = "recipe",
@@ -171,11 +172,11 @@ if not krastorio.science_pack_recipes then
 		result_count = 5,
 		ingredients = 
 		{
-			{"wood", 1}
+			{"glass", 10},
 		},
 		result = "chemical-science-pack"
 	}
-	-- Production science pack
+	-- Production science pack (Krastorio)
 	krastorio.science_pack_recipes["Krastorio 2"]["production-science-pack"] = 
 	{
 		type = "recipe",
@@ -185,11 +186,11 @@ if not krastorio.science_pack_recipes then
 		result_count = 5,
 		ingredients = 
 		{
-			{"wood", 1}
+			{"uranium-238", 10},
 		},
 		result = "production-science-pack"
 	}
-	-- Utility science pack
+	-- Utility science pack (Krastorio)
 	krastorio.science_pack_recipes["Krastorio 2"]["utility-science-pack"] = 
 	{
 		type = "recipe",

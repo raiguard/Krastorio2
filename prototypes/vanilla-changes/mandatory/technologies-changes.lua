@@ -8,6 +8,7 @@
 krastorio.technologies.addPrerequisite("automation", "kr-automation-core")
 krastorio.technologies.addPrerequisite("automation", "automation-science-pack")
 krastorio.technologies.addPrerequisite("logistic-science-pack", "automation-science-pack")
+krastorio.technologies.addPrerequisite("logistic-science-pack", "electronics")
 krastorio.technologies.addPrerequisite("logistics", "automation-science-pack")
 krastorio.technologies.addPrerequisite("stone-walls", "military")
 krastorio.technologies.addPrerequisite("turrets", "automation-science-pack")

@@ -775,19 +775,19 @@ function krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
 			science_techs[science_pack.name] = true
 		end
 	end
-	
+		
 	-- enforce science packs in prerequisites (or in their prerequisites) for each technology
 	for technology_name, technology in pairs(data.raw.technology) do
 		local prerequisites     = technology.prerequisites
 		local ingredients       = technology.unit.ingredients
 		local science_pack_name = nil
 		local hold = false
-		if ingredients and next(ingredients) ~= nil then				
+		if ingredients and #ingredients > 0 then				
 			for i = 1, #ingredients do
 				science_pack_name = krastorio.technologies.getIngredientName(ingredients[i])					
 				if science_techs[science_pack_name] then
 					hold = false
-					if prerequisites and next(prerequisites) then
+					if prerequisites and #prerequisites > 0 then
 						for _, prerequisite in pairs(prerequisites) do
 							if prerequisite == science_pack_name or
 							   krastorio.technologies.hasIngredient(prerequisite, science_pack_name) or 
