@@ -7,10 +7,16 @@ data:extend(
 	{
 		type = "item",
 		name = "biomass",
-		icon = kr_icons_path .. "biomass.png",
+		icon = kr_mip_icons_path .. "biomass.png",
 		icon_size = 64,
-		subgroup = "raw-resource",
-		order = "a[biomass]",
+		icon_mipmaps = 4,
+		pictures =
+		{
+			{ size = 64, filename = kr_mip_icons_path .. "biomass.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "biomass-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "biomass-2.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "biomass-3.png", scale = 0.25, mipmap_count = 4 }
+		},
 		stack_size = 200
 	},
 	{
@@ -92,6 +98,48 @@ data:extend(
 		subgroup = "raw-material",
 		order = "a1[coke]",
 		stack_size = 200
+    },
+	{
+		type = "item",
+		name = "bio-fuel",
+		icon = kr_icons_path .. "bio-fuel.png",
+		icon_size = 64,
+		fuel_category = "vehicle-fuel",
+		fuel_value = "10MJ",
+		fuel_emissions_multiplier = 0.5,
+		fuel_acceleration_multiplier = 0.8,
+		fuel_top_speed_multiplier = 0.8,
+		subgroup = "raw-material",
+		order = "zzz[bio-fuel]",
+		stack_size = 1000
+    },
+	{
+		type = "item",
+		name = "kr-fuel",
+		icon = kr_icons_path .. "fuel.png",
+		icon_size = 64,
+		fuel_category = "vehicle-fuel",
+		fuel_value = "10MJ",
+		fuel_emissions_multiplier = 1,
+		fuel_acceleration_multiplier = 1,
+		fuel_top_speed_multiplier = 1,
+		subgroup = "raw-material",
+		order = "zzz[fuel]",
+		stack_size = 1000
+    },
+	{
+		type = "item",
+		name = "advanced-fuel",
+		icon = kr_icons_path .. "advanced-fuel.png",
+		icon_size = 64,
+		fuel_category = "vehicle-fuel",
+		fuel_value = "10MJ",
+		fuel_emissions_multiplier = 1.75,
+		fuel_acceleration_multiplier = 1.25,
+		fuel_top_speed_multiplier = 1.25,
+		subgroup = "raw-material",
+		order = "zzz[advanced-fuel]",
+		stack_size = 1000
     },
 	{
 		type = "item",

@@ -1,4 +1,5 @@
 require("item-subgroups")
+require("fuel-categories")
 require("recipe-categories")
 require("resource-categories")
 require("equipment-categories")

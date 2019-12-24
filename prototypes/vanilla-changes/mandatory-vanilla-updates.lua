@@ -16,7 +16,9 @@ local modifications =
 	"smelting-overmodule-fix", -- Multiply smelting recipes stat for fix overmodule bug
 	"technologies-changes",    -- Modifications to vanilla technologies
 	"vanilla-lab-changes",     -- Modify stat and accepted science packs of vanilla lab
-	"spawner-changes"          -- Modify spawners sprite
+	"spawner-changes",         -- Modify spawners sprite
+	"train-changes",           -- Modify trains
+	"vehicles-changes"        -- Modify vehicles
 }
 
 -- Application of the modifications
