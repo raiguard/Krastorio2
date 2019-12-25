@@ -5,7 +5,7 @@ data:extend(
 		name = "kr-wind-turbine",
 		icon =  kr_entities_icons_path .. "wind-turbine.png",
 		icon_size = 64,
-		flags = {"placeable-neutral","player-creation"},
+		flags = {"placeable-neutral", "player-creation", "not-rotatable"},
 		minable = {mining_time = 0.25, result = "kr-wind-turbine"},
 		max_health = 200,
 		corpse = "small-remnants",
@@ -35,7 +35,8 @@ data:extend(
 			usage_priority = "primary-output",
 			input_flow_limit = "20kW",
 			output_flow_limit = "20kW",
-			render_no_power_icon = false
+			render_no_power_icon = false,
+			render_no_network_icon = false
 		},
 		energy_production = "20kW",
 		energy_usage = "0kW",

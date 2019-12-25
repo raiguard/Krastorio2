@@ -37,7 +37,7 @@ end
 
 -- The dictionary is structured like:
 -- default_spawn_points[surface][force] -> position
--- spawn_points[surface][force] -> light entity of shelter 
+-- spawn_points[surface][force] -> {animation, light}entity of shelter 
 
 -- Called when the game is created
 local function shelterVariablesInitializing()
@@ -78,13 +78,25 @@ local function onBuiltAnEntity(event)
 			if not global.spawn_points[surface][force] then -- the first on the surface
 				entity.force.set_spawn_position({entity.position.x, entity.position.y + 3}, surface)
 				-- create shelter light
+				local container = entity.surface.create_entity
+				{
+					type     = "container",
+					name     = "kr-shelter-container",
+					force    = entity.force,
+					player   = entity.last_user,
+					position = entity.position,
+					create_build_effect_smoke = false
+				}
 				local light = entity.surface.create_entity
 				{
 					type     = "lamp",
 					name     = "kr-shelter-light",
-					position = entity.position
+					force    = entity.force,
+					player   = entity.last_user,
+					position = entity.position,
+					create_build_effect_smoke = false
 				}
-				global.spawn_points[surface][force] = light
+				global.spawn_points[surface][force] = {entity, container, light}
 			else -- exist another shelter 
 				for _, product in pairs(entity.prototype.mineable_properties.products) do
 					entity.last_user.insert{name=product.name or product[1], count=product.amount or product[2]}
@@ -105,20 +117,24 @@ end
 local function onRemovingAnEntity(event)
 	local entity = event.entity
 	
-	if entity.valid and entity.name == shelter_name then
+	if entity.valid and entity.name == shelter_name or entity.name == "kr-shelter-container" or entity.name == "kr-shelter-light" then
 		local surface = entity.surface.index
 		local force   = entity.force.index
 	
 		if global.spawn_points[surface] then
 			if global.spawn_points[surface][force] then
-				if global.spawn_points[surface][force].valid then
-					global.spawn_points[surface][force].destroy() -- destroy shelter light
-				end
+				-- reset spawn point
 				global.spawn_points[surface][force] = nil
 				if global.default_spawn_points[surface][force] then
 					entity.force.set_spawn_position(global.default_spawn_points[surface][force], surface)
 				else
 					entity.force.set_spawn_position({0, 0}, surface)
+				end
+				-- Remove entities
+				for _, entity in pairs(global.spawn_points[surface][force]) do 
+					if entity.valid then
+						entity.destroy()
+					end
 				end
 			end
 		end

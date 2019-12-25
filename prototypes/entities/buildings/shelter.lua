@@ -11,31 +11,17 @@ local empty_sprite =
 -- Shelter
 data:extend(
 {
-	-- Shelter
 	{
-		type = "container",
+		type = "electric-energy-interface",
 		name = "kr-shelter",
 		icon = kr_entities_icons_path .. "shelter.png",
 		icon_size = 64,
 		allow_copy_paste = false,
-		flags = {"placeable-player", "player-creation"},
-		minable = {mining_time = 1, result = "kr-shelter"},
-		max_health = 1500,
-		corpse = "kr-big-random-pipes-remnant",
-		collision_box = {{-2.75, -2.75}, {2.75, 2.75}},
-		selection_box = {{-3, -3}, {3, 3.5}},
-		resistances = 
-		{
-			{type = "physical", percent = 50},
-			{type = "fire", percent = 75},
-			{type = "impact", percent = 75}
-		},
+		flags = {"placeable-player", "player-creation", "not-deconstructable", "not-blueprintable", "not-repairable", "not-on-map"},
 		fast_replaceable_group = "kr-shelter",
-		inventory_size = 200,
-		open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume = 0.5 },
-		close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.6 },
-		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-		picture =
+		collision_box = {{0, 0}, {0, 0}},
+		selection_box = {{0, 0}, {0, 0}},
+		animation =
 		{
 			layers =
 			{
@@ -84,19 +70,64 @@ data:extend(
 						frame_count = 6,
 						line_length = 3,
 						animation_speed = 0.5,
-						draw_as_shadow = true,
+						draw_as_shadow = true
 					}
 				}
-			},
-		}
+			}
+		},
+		continuous_animation = true,
+		energy_source =
+		{
+			type = "electric",
+			buffer_capacity = "0kJ",
+			usage_priority = "solar",
+			input_flow_limit = "0kW",
+			output_flow_limit = "100kW",
+			render_no_power_icon = false,
+			render_no_network_icon = false
+		},
+		energy_production = "100kW",
+		energy_usage = "0kW"
+	},
+	-- Shelter
+	{
+		type = "container",
+		name = "kr-shelter-container",
+		localised_name        = {"item-name.kr-shelter"},
+		localised_description = {"item-description.kr-shelter"},
+		icon = kr_entities_icons_path .. "shelter.png",
+		icon_size = 64,
+		allow_copy_paste = false,
+		flags = {"hidden", "player-creation", "not-rotatable", "not-blueprintable"},
+		minable = {mining_time = 2, result = "kr-shelter"},
+		max_health = 1500,
+		corpse = "kr-big-random-pipes-remnant",
+		collision_box = {{-2.75, -2.75}, {2.75, 2.75}},
+		selection_box = {{-3, -3}, {3, 3.5}},
+		resistances = 
+		{
+			{type = "physical", percent = 50},
+			{type = "fire", percent = 75},
+			{type = "impact", percent = 75}
+		},
+		
+		inventory_size = 200,
+		open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume = 0.5 },
+		close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.6 },
+		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		picture = empty_sprite
+		
 	},
 	-- Shelter light
 	{
 		type = "lamp",
 		name = "kr-shelter-light",
+		localised_name        = {"item-name.kr-shelter"},
+		localised_description = {"item-description.kr-shelter"},
 		icon = kr_entities_path .. "empty.png",
 		icon_size = 1,
-		flags = {"hidden"},
+		allow_copy_paste = false,
+		flags = {"hidden", "player-creation", "not-rotatable", "not-deconstructable", "not-blueprintable", "not-repairable", "not-on-map"},
 		collision_box = {{0, 0}, {0, 0}},
 		selection_box = {{0, 0}, {0, 0}},
 		energy_source = {type = "void"},
