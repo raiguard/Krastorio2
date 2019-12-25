@@ -79,9 +79,9 @@ data:extend(
 		energy_source =
 		{
 			type = "electric",
-			buffer_capacity = "0kJ",
-			usage_priority = "solar",
-			input_flow_limit = "0kW",
+			buffer_capacity = "100kJ",
+			usage_priority = "secondary-output",
+			input_flow_limit = "100kW",
 			output_flow_limit = "100kW",
 			render_no_power_icon = false,
 			render_no_network_icon = false

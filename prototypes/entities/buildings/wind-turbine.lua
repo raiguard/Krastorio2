@@ -32,11 +32,10 @@ data:extend(
 		{
 			type = "electric",
 			buffer_capacity = "20kJ",
-			usage_priority = "primary-output",
+			usage_priority = "secondary-output",
 			input_flow_limit = "20kW",
 			output_flow_limit = "20kW",
-			render_no_power_icon = false,
-			render_no_network_icon = false
+			render_no_power_icon = false
 		},
 		energy_production = "20kW",
 		energy_usage = "0kW",
