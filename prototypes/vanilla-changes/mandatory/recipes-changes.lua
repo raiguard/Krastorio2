@@ -56,6 +56,10 @@ end
 krastorio.recipes.convertIngredient("electronic-circuit", "iron-plate", "plastic-bar")
 krastorio.recipes.replaceIngredient("electronic-circuit", "copper-cable", {"copper-cable", 2})
 
+krastorio.recipes.replaceIngredient("repair-pack", "iron-gear-wheel", {"iron-plate", 2})
+krastorio.recipes.replaceIngredient("repair-pack", "electronic-circuit", {"copper-plate", 2})
+krastorio.recipes.addIngredient("repair-pack", {"stone", 2})
+
 --------------------------------------------------------------------
 -- -- -- BUILDINGS
 --------------------------------------------------------------------
@@ -65,7 +69,7 @@ krastorio.recipes.convertIngredient("small-lamp", "electronic-circuit", "glass")
 
 -- Assembling machine tier 1
 krastorio.recipes.convertIngredient("assembling-machine-1", "electronic-circuit", "automation-core")
-krastorio.recipes.replaceIngredient("assembling-machine-1", "iron-plate", {"iron-beam", 5})
+krastorio.recipes.replaceIngredient("assembling-machine-1", "iron-plate", {"iron-beam", 4})
 
 -- Gun turret
 krastorio.recipes.replaceIngredient("gun-turret", "iron-plate", {"iron-beam", 10})
@@ -101,6 +105,11 @@ krastorio.recipes.replaceIngredient("substation", "copper-plate", {"copper-cable
 krastorio.recipes.replaceIngredient("substation", "steel-plate", {"steel-beam", 8})
 
 krastorio.recipes.replaceIngredient("roboport", "steel-plate", {"steel-beam", 20})
+
+-- Vanilla Lab
+krastorio.recipes.replaceIngredient("lab", "electronic-circuit", {"iron-beam", 10})
+krastorio.recipes.replaceIngredient("lab", "iron-gear-wheel", {"copper-plate", 10})
+krastorio.recipes.replaceIngredient("lab", "transport-belt", {"copper-cable", 10})
 
 --------------------------------------------------------------------
 -- -- -- VEHICLES

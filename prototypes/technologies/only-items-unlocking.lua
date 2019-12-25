@@ -18,12 +18,12 @@ data:extend(
 		prerequisites = {},
 		unit =
 		{
-			count = 30,
+			count = 20,
 			ingredients = 
 			{
 				{"basic-tech-card", 1}
 			},
-			time = 15
+			time = 10
 		}
     },
 	{
@@ -64,12 +64,12 @@ data:extend(
 		prerequisites = {"kr-automation-core"},
 		unit =
 		{
-			count = 100,
+			count = 50,
 			ingredients = 
 			{
 				{"basic-tech-card", 1}
 			},
-			time = 30
+			time = 10
 		}
     },
 	{

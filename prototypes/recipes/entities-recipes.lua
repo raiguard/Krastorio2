@@ -39,7 +39,8 @@ return
 		ingredients =
 		{
 			{"iron-beam", 50},
-			{"iron-plate", 50}
+			{"iron-plate", 50},
+			{"copper-cable", 10}
 		},
 		result = "kr-shelter"
     },

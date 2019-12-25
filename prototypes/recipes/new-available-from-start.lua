@@ -6,7 +6,7 @@ return
 	{
 		type = "recipe",
 		name = "iron-beam",
-		energy_required = 3,
+		energy_required = 2,
 		enabled = true,
 		ingredients =
 		{
