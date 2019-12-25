@@ -45,7 +45,7 @@ data:extend(
 			{
 				{
 					filename = kr_entities_path .. "wind-turbine/wind-turbine.png",
-					priority = "medium",
+					priority = "high",
 					width = 75,
 					height = 110,
 					frame_count = 30,
@@ -67,7 +67,7 @@ data:extend(
 				},
 				{
 					filename = kr_entities_path .. "wind-turbine/wind-turbine-shadow.png",
-					priority = "medium",
+					priority = "high",
 					width = 121,
 					height = 50,
 					frame_count = 30,

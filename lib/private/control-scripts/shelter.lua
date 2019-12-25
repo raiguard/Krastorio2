@@ -24,18 +24,19 @@ local function showOnSurfaceText(tag)
 		
 	tag.entity.surface.create_entity
 	{
-		type = "flying-text",
-		name = "flying-text",
-		position = tag.position,
-		text = tag.text or tag.entity.localised_name,
-		color = tag.color or {},
+		type         = "flying-text",
+		name         = "flying-text",
+		position     = tag.position,
+		text         = tag.text or tag.entity.localised_name,
+		color        = tag.color or {},
 		time_to_live = 200,
-		speed = 0.05
+		speed        = 0.05
 	}
 end
 
 -- The dictionary is structured like:
--- spawn_points[surface][force] -> position
+-- default_spawn_points[surface][force] -> position
+-- spawn_points[surface][force] -> light entity of shelter 
 
 -- Called when the game is created
 local function shelterVariablesInitializing()
@@ -76,7 +77,14 @@ local function onBuiltAnEntity(event)
 		if global.spawn_points[surface] then
 			if not global.spawn_points[surface][force] then -- the first on the surface
 				entity.force.set_spawn_position(entity.position, surface)
-				global.spawn_points[surface][force] = true
+				-- create shelter light
+				local light = entity.surface.create_entity
+				{
+					type     = "lamp",
+					name     = "kr-shelter-light",
+					position = entity.position
+				}
+				global.spawn_points[surface][force] = light
 			else -- exist another shelter 
 				for _, product in pairs(entity.prototype.mineable_properties.products) do
 					entity.last_user.insert{name=product.name or product[1], count=product.amount or product[2]}
@@ -103,6 +111,9 @@ local function onRemovingAnEntity(event)
 	
 		if global.spawn_points[surface] then
 			if global.spawn_points[surface][force] then
+				if global.spawn_points[surface][force].valid then
+					global.spawn_points[surface][force].destroy() -- destroy shelter light
+				end
 				global.spawn_points[surface][force] = nil
 				if global.default_spawn_points[surface][force] then
 					entity.force.set_spawn_position(global.default_spawn_points[surface][force], surface)
