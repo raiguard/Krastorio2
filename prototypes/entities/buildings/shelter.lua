@@ -26,9 +26,9 @@ data:extend(
 		selection_box = {{-3, -3}, {3, 3.5}},
 		resistances = 
 		{
-			{type = "physical",percent = 50},
-			{type = "fire",percent = 75},
-			{type = "impact",percent = 75}
+			{type = "physical", percent = 50},
+			{type = "fire", percent = 75},
+			{type = "impact", percent = 75}
 		},
 		fast_replaceable_group = "kr-shelter",
 		inventory_size = 200,
@@ -88,10 +88,7 @@ data:extend(
 					}
 				}
 			},
-		},
-		circuit_wire_connection_point = nil, --circuit_connector_definitions["chest"].points,
-		circuit_connector_sprites = nil, --circuit_connector_definitions["chest"].sprites,
-		circuit_wire_max_distance = 0
+		}
 	},
 	-- Shelter light
 	{

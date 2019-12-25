@@ -76,7 +76,7 @@ local function onBuiltAnEntity(event)
 	
 		if global.spawn_points[surface] then
 			if not global.spawn_points[surface][force] then -- the first on the surface
-				entity.force.set_spawn_position(entity.position, surface)
+				entity.force.set_spawn_position({entity.position.x, entity.position.y + 3}, surface)
 				-- create shelter light
 				local light = entity.surface.create_entity
 				{
