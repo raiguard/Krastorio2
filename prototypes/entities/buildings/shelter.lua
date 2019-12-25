@@ -19,6 +19,7 @@ data:extend(
 		allow_copy_paste = false,
 		flags = {"placeable-player", "player-creation", "not-deconstructable", "not-blueprintable", "not-repairable", "not-on-map"},
 		fast_replaceable_group = "kr-shelter",
+		minable = {mining_time = 2, result = "kr-shelter"},
 		collision_box = {{0, 0}, {0, 0}},
 		selection_box = {{0, 0}, {0, 0}},
 		animation =

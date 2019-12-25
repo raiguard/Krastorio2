@@ -1,11 +1,18 @@
 
-local shelter_name = "kr-shelter"
 local KRASTORIO_SHELTER_EVENT_FILTER =
 {
 	-- shelter entity name
 	{
 		filter = "name", 
-        name   = shelter_name
+        name   = "kr-shelter"
+    },
+	{
+		filter = "name", 
+        name   = "kr-shelter-container"
+    },
+	{
+		filter = "name", 
+        name   = "kr-shelter-light"
     }
 }
 
@@ -70,7 +77,7 @@ end
 -- @event, on_built_entity or on_robot_built_entity
 local function onBuiltAnEntity(event)
 	local entity = event.created_entity
-	if entity.valid and entity.name == shelter_name then
+	if entity.valid and entity.name == "kr-shelter" then
 		local surface = entity.surface.index
 		local force   = entity.force.index
 	
@@ -78,7 +85,7 @@ local function onBuiltAnEntity(event)
 			if not global.spawn_points[surface][force] then -- the first on the surface
 				entity.force.set_spawn_position({entity.position.x, entity.position.y + 3}, surface)
 				-- create shelter light
-				local container = entity.surface.create_entity
+				entity.surface.create_entity
 				{
 					type     = "container",
 					name     = "kr-shelter-container",
@@ -96,7 +103,7 @@ local function onBuiltAnEntity(event)
 					position = entity.position,
 					create_build_effect_smoke = false
 				}
-				global.spawn_points[surface][force] = {entity, container, light}
+				global.spawn_points[surface][force] = {entity, light}
 			else -- exist another shelter 
 				for _, product in pairs(entity.prototype.mineable_properties.products) do
 					entity.last_user.insert{name=product.name or product[1], count=product.amount or product[2]}
@@ -117,14 +124,13 @@ end
 local function onRemovingAnEntity(event)
 	local entity = event.entity
 	
-	if entity.valid and entity.name == shelter_name or entity.name == "kr-shelter-container" or entity.name == "kr-shelter-light" then
+	if entity.valid and (entity.name == "kr-shelter" or entity.name == "kr-shelter-container" or entity.name == "kr-shelter-light") then
 		local surface = entity.surface.index
 		local force   = entity.force.index
 	
 		if global.spawn_points[surface] then
 			if global.spawn_points[surface][force] then
-				-- reset spawn point
-				global.spawn_points[surface][force] = nil
+				-- reset spawn point				
 				if global.default_spawn_points[surface][force] then
 					entity.force.set_spawn_position(global.default_spawn_points[surface][force], surface)
 				else
@@ -136,6 +142,8 @@ local function onRemovingAnEntity(event)
 						entity.destroy()
 					end
 				end
+				-- Remove entities record
+				global.spawn_points[surface][force] = nil
 			end
 		end
 	end	
