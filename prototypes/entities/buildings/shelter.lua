@@ -45,6 +45,7 @@ data:extend(
 					width = 213,
 					height = 213,
 					scale = 0.9,
+					shift = {-0.05, 0},
 					frame_count = 6,
 					line_length = 3,
 					animation_speed = 0.5,
@@ -55,6 +56,7 @@ data:extend(
 						width = 512,
 						height = 512,
 						scale = 0.45,
+						shift = {-0.05, 0},
 						frame_count = 6,
 						line_length = 3,
 						animation_speed = 0.5
@@ -66,7 +68,7 @@ data:extend(
 					width = 213,
 					height = 213,
 					scale = 0.9,
-					shift = {0.47, 0},
+					shift = {0.42, 0},
 					frame_count = 6,
 					line_length = 3,
 					animation_speed = 0.5,
@@ -78,7 +80,7 @@ data:extend(
 						width = 512,
 						height = 512,
 						scale = 0.45,
-						shift = {0.47, 0},
+						shift = {0.42, 0},
 						frame_count = 6,
 						line_length = 3,
 						animation_speed = 0.5,
@@ -102,14 +104,14 @@ data:extend(
 		selection_box = {{0, 0}, {0, 0}},
 		energy_source = {type = "void"},
 		energy_usage_per_tick = "1W",
-		darkness_for_all_lamps_on = 0.5,
-		darkness_for_all_lamps_off = 0.3,
+		darkness_for_all_lamps_on = 0.2,
+		darkness_for_all_lamps_off = 0.1,
 		light = 
 		{
 			intensity = 0.8, 
 			size = 12, 
-			shift = {0.0, 0.0}, 
-			color = {r=0.1, g=0.5, b=1}
+			shift = {0.0, 1.75}, 
+			color = {r=1, g=0.75, b=0.75}
 		},
 		light_when_colored = 
 		{
@@ -118,7 +120,7 @@ data:extend(
 			color = {r=1.0, g=1.0, b=1.0}
 		},
 		glow_size = 6,
-		glow_color_intensity = 0.135,
+		glow_color_intensity = 0.25,
 		picture_off = empty_sprite,
 		picture_on  = empty_sprite
 	}

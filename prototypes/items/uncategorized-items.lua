@@ -42,7 +42,7 @@ data:extend(
 		name = "sand",
 		icon = kr_mip_icons_path .. "sand.png",
 		icon_size = 64,
-		icon_mipmaps = 3,
+		icon_mipmaps = 4,
 		pictures =
 		{
 			{ size = 64, filename = kr_mip_icons_path .. "sand.png",   scale = 0.25, mipmap_count = 4 },
@@ -67,7 +67,7 @@ data:extend(
 		name = "silicon",
 		icon = kr_mip_icons_path .. "silicon.png",
 		icon_size = 64,
-		icon_mipmaps = 3,
+		icon_mipmaps = 4,
 		pictures =
 		{
 			{ size = 64, filename = kr_mip_icons_path .. "silicon.png",   scale = 0.25, mipmap_count = 4 },
@@ -83,7 +83,7 @@ data:extend(
 		name = "coke",
 		icon = kr_mip_icons_path .. "coke.png",
 		icon_size = 64,
-		icon_mipmaps = 3,
+		icon_mipmaps = 4,
 		pictures =
 		{
 			{ size = 64, filename = kr_mip_icons_path .. "coke.png",   scale = 0.25, mipmap_count = 4 },
@@ -199,7 +199,7 @@ data:extend(
 		name = "rare-metals",
 		icon = kr_mip_icons_path .. "rare-metals.png",
 		icon_size = 64,
-		icon_mipmaps = 7,
+		icon_mipmaps = 4,
 		pictures =
 		{
 			{ size = 64, filename = kr_mip_icons_path .. "rare-metals.png",   scale = 0.25, mipmap_count = 4 },

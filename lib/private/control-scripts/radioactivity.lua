@@ -16,7 +16,7 @@ local radioactive_area_offset = 6
 
 function doRadioactiveDamage(player)
 	if player.character.valid then
-		player.character.damage(8, "enemy", "radioactive")
+		player.character.damage(6, "enemy", "radioactive")
 		player.play_sound
 		{
 			path            = "radioactive",
@@ -61,5 +61,5 @@ end
 
 return
 {
-	{ radioactivity, "on_nth_tick", 20 }   
+	{ radioactivity, "on_nth_tick", 20 }
 }
