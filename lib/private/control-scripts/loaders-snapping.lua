@@ -16,10 +16,10 @@ local KRASTORIO_LOADERS =
 local KRASTORIO_LOADER_BUILT_EVENT_FILTER =
 {
 	-- Not a ghost
-	{
-		filter = "ghost", 
-        invert = true
-    },	
+	-- {
+	-- 	filter = "ghost", 
+    -- 	invert = true
+    -- },	
 	-- Snappable
 	{
 		filter = "type", 
@@ -351,7 +351,7 @@ local function onBuiltAnEntity(event)
 end
 -----------------------------------------------------------------------------
 -- -- -- ADDING CALLBACKS
-if settings.startup["loaders"] and settings.startup["loaders"].value then
+if settings.startup["kr-loaders"] and settings.startup["kr-loaders"].value then
 	return
 	{ 
 		-- -- Actions

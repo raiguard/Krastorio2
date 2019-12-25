@@ -60,7 +60,7 @@ function ControlCallbackMerger:addCallBack(input)
 			end
 			table.insert(self.filtered_callbacks[event_name], {callback, filter})
 		end		
-	else
+	else -- without filter callback
 		if not self.simple_callbacks[event_name] then
 			self.simple_callbacks[event_name] = {}
 		end
@@ -103,6 +103,7 @@ local function mergeFilters(filters_group_a, filters_group_b)
 			table.insert(new_filters_group, filter_b)
 		end
 	end
+	return new_filters_group
 end
 
 -- Each time this function is called will overwrite the previuos calls listen.
@@ -133,13 +134,19 @@ function ControlCallbackMerger:activeCallbacks()
 	end	
 	-- Filtered
 	for event_name, callbacks in pairs(self.filtered_callbacks) do
-		local cc_list = {}
+		local cc = nil
 		local collective_filter = {}
-		for _, callback in pairs(callbacks) do
-			table.insert(cc_list, callback[1])
-			collective_filter = mergeFilters(collective_filter, callback[2])
+		if #callbacks > 1 then
+			local cc_list = {}			
+			for _, callback in pairs(callbacks) do
+				table.insert(cc_list, callback[1])
+				collective_filter = mergeFilters(collective_filter, callback[2])
+			end
+			cc = createCollectiveCallback(cc_list)
+		else
+			cc = callbacks[1][1]
+			collective_filter = callbacks[1][2]
 		end
-		local cc = createCollectiveCallback(cc_list)
 		script.on_event(defines.events[event_name], cc, collective_filter)
 	end
 	-- On nth ticks

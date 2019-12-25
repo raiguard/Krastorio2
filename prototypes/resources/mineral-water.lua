@@ -1,5 +1,4 @@
 -- Adding mineral water
-log("mineral water")
 data:extend(
 {	
 	{

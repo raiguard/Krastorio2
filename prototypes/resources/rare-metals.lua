@@ -1,5 +1,4 @@
 -- Adding rare metals
-log("rare metals")
 data:extend(
 {	
 	{

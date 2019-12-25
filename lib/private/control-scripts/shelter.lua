@@ -1,10 +1,11 @@
 
+local shelter_name = "kr-shelter"
 local KRASTORIO_SHELTER_EVENT_FILTER =
 {
 	-- shelter entity name
 	{
 		filter = "name", 
-        name   = "kr-loader"
+        name   = shelter_name
     }
 }
 
@@ -69,8 +70,7 @@ end
 -- @event, on_built_entity or on_robot_built_entity
 local function onBuiltAnEntity(event)
 	local entity = event.created_entity
-	
-	if entity.valid and entity.name == "kr-shelter" then
+	if entity.valid and entity.name == shelter_name then
 		local surface = entity.surface.index
 		local force   = entity.force.index
 	
@@ -105,7 +105,7 @@ end
 local function onRemovingAnEntity(event)
 	local entity = event.entity
 	
-	if entity.valid and entity.name == "kr-shelter" then
+	if entity.valid and entity.name == shelter_name then
 		local surface = entity.surface.index
 		local force   = entity.force.index
 	
