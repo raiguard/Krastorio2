@@ -89,9 +89,9 @@ data:extend(
 				}
 			},
 		},
-		circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-		circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
-		circuit_wire_max_distance = 20
+		circuit_wire_connection_point = nil, --circuit_connector_definitions["chest"].points,
+		circuit_connector_sprites = nil, --circuit_connector_definitions["chest"].sprites,
+		circuit_wire_max_distance = 0
 	},
 	-- Shelter light
 	{
@@ -111,7 +111,7 @@ data:extend(
 			intensity = 0.8, 
 			size = 12, 
 			shift = {0.0, 1.75}, 
-			color = {r=1, g=0.75, b=0.75}
+			color = {r=0.95, g=0.88, b=0.85}
 		},
 		light_when_colored = 
 		{

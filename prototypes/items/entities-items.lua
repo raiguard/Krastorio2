@@ -22,7 +22,17 @@ data:extend(
 		order = "aaa",
 		place_result = "kr-greenhouse",
 		stack_size = 50
-    },	
+    },
+    {
+		type = "item",
+		name = "research-server",
+		icon =  kr_entities_icons_path .. "research-server.png",
+		icon_size = 64,
+		subgroup = "production-machine",
+		order = "aaa",
+		place_result = "research-server",
+		stack_size = 50
+    },
     {
 		type = "item",
 		name = "kr-crusher",

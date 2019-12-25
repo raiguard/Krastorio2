@@ -25,7 +25,14 @@ data:extend(
 	{
 	   type = "recipe-category",
 	   name = "fluid-filtration"
-	}	
+	},
+	-- Research, used by research servers ans quantum computer
+	{
+	   type = "recipe-category",
+	   name = "research-data"
+	},
+	
+	
 -----------------------------------------------------------------------------------------------------------------
 	
 	-- -- CRAFTING

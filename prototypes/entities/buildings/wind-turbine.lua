@@ -6,7 +6,7 @@ data:extend(
 		icon =  kr_entities_icons_path .. "wind-turbine.png",
 		icon_size = 64,
 		flags = {"placeable-neutral","player-creation"},
-		minable = {mining_time = 1, result = "kr-wind-turbine"},
+		minable = {mining_time = 0.25, result = "kr-wind-turbine"},
 		max_health = 200,
 		corpse = "small-remnants",
 		resistances =
@@ -31,9 +31,9 @@ data:extend(
 		energy_source =
 		{
 			type = "electric",
-			buffer_capacity = "0kJ",
-			usage_priority = "solar",
-			input_flow_limit = "0kW",
+			buffer_capacity = "20kJ",
+			usage_priority = "primary-output",
+			input_flow_limit = "20kW",
 			output_flow_limit = "20kW",
 			render_no_power_icon = false
 		},
@@ -97,12 +97,12 @@ data:extend(
 			sound =
 			{
 				filename = kr_buildings_sounds_path .. "wind-turbine-rotating.ogg",
-				volume = 0.75
+				volume = 0.5
 			},
 			idle_sound =
 			{
 				filename = kr_buildings_sounds_path .. "wind-turbine-rotating.ogg",
-				volume = 0.75
+				volume = 0.5
 			},
 			max_sounds_per_type = 5,
 			apparent_volume = 1,
