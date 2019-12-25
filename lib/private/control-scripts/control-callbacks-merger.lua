@@ -52,8 +52,12 @@ function ControlCallbackMerger:addCallBack(input)
 		return false
 	end
 	if filter then
-		if event_name == "on_nth_tick" and type(filter) == "number" then
-			table.insert(self.on_nth_tick_callbacks, {filter or 1, callback})
+		if event_name == "on_nth_tick" or type(filter) == "number" then
+			local ticks = filter or 1
+			if not self.on_nth_tick_callbacks[ticks] then
+				self.on_nth_tick_callbacks[ticks] = {}
+			end
+			table.insert(self.on_nth_tick_callbacks[ticks], callback)
 		else
 			if not self.filtered_callbacks[event_name] then
 				self.filtered_callbacks[event_name] = {}
@@ -150,8 +154,14 @@ function ControlCallbackMerger:activeCallbacks()
 		script.on_event(defines.events[event_name], cc, collective_filter)
 	end
 	-- On nth ticks
-	for _, callback in pairs(self.on_nth_tick_callbacks) do
-		script.on_nth_tick(callback[1], callback[2])
+	for ticks, callbacks in pairs(self.on_nth_tick_callbacks) do
+		local cc = nil
+		if #callbacks > 1 then
+			cc = createCollectiveCallback(callbacks)
+		else
+			cc = callbacks[1]
+		end	
+		script.on_nth_tick(ticks, cc)
 	end
 end
 -----------------------------------------------------------------------------

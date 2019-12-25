@@ -9,25 +9,28 @@ local radioactive_items =
 	"uranium-235",
 	"uranium-238",
 	"uranium-fuel-cell",
+	"nuclear-fuel",
 	"used-up-uranium-fuel-cell"
 }
-local radioactive_area_offset = 5
+local radioactive_area_offset = 6
 
-function doRadioactiveDamage(player, position)
-	player.surface.create_entity
-	{
-		["name"]            = "radioactive-damage", 
-		["target"]          = player.character, 
-		["source_position"] = position, 
-		["position"]        = position, 
-		["duration"]        = 5
-	}
+function doRadioactiveDamage(player)
+	if player.character.valid then
+		player.character.damage(8, "enemy", "radioactive")
+		player.play_sound
+		{
+			path            = "radioactive",
+			position        = player.character.position,
+			volume_modifier = 0.5
+		}
+	end
 end
 
 local function radioactivity()
 	for i, player in pairs(game.connected_players) do
-		if player.character then 
-			local position = player.character.position
+		local character = player.character
+		if character and character.valid then			
+			local position = character.position
 			-- Entities damages
 			if player.surface.count_entities_filtered
 			{
@@ -39,14 +42,16 @@ local function radioactivity()
 				}
 			} > 0 
 			then
-				doRadioactiveDamage(player, position)
+				doRadioactiveDamage(player)				
 			end
 			-- Items damages
-			local inventory = player.get_main_inventory()
-			if not inventory.is_empty() then
-				for _, item_name in pairs(radioactive_items) do
-					if inventory.get_item_count(item_name) > 0 then
-						doRadioactiveDamage(player, position)
+			if character.valid then
+				local inventory = player.get_main_inventory()
+				if character.valid and not inventory.is_empty() then
+					for _, item_name in pairs(radioactive_items) do
+						if character.valid and inventory.get_item_count(item_name) > 0 then
+							doRadioactiveDamage(player)
+						end
 					end
 				end
 			end
@@ -56,5 +61,5 @@ end
 
 return
 {
-	{ radioactivity, "on_nth_tick", 10 }   
+	{ radioactivity, "on_nth_tick", 20 }   
 }

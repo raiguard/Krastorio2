@@ -5,6 +5,7 @@ local modifications =
 {	
 	"character-armor-changes", -- Adding new armor tiers sprites
 	"entities-changes",        -- Entities/prototypes definition modifications
+	"equipments-changes",      -- Add properties or modify stat of equipments and armors
 	"icons-changes",           -- Modify aspect of vanilla items (like science pack icons..)
 	"improve-inserters",       -- Improve inserters, new functions	
 	"items-changes",           -- Modify vanilla items
