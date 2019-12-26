@@ -38,9 +38,10 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"iron-beam", 50},
-			{"iron-plate", 50},
-			{"copper-cable", 10}
+			{"iron-beam", 25},
+			{"iron-plate", 25},
+			{"copper-cable", 10},
+			{"coal", 50}
 		},
 		result = "kr-shelter"
     },

@@ -227,6 +227,55 @@ data:extend(
     },
 	{
 		type = "technology",
+		name = "kr-electric-mining-drill",	
+		icon = kr_technologies_icons_path .. "electric-mining-drill.png",
+		icon_size = 128,		
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "electric-mining-drill"
+			}
+		},
+		prerequisites = {"automation-science-pack"},
+		unit =
+		{
+			count = 40,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1}
+			},
+			time = 15
+		}
+	},
+	{
+		type = "technology",
+		name = "kr-radar&watchtower",	
+		icon = kr_technologies_icons_path .. "kr-radar&watchtower.png",
+		icon_size = 128,
+		prerequisites = {"electronics", "steel-processing"},
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "radar"
+			}
+		},
+		unit =
+		{
+			count = 100,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1}
+			},
+			time = 20
+		}
+	},
+	{
+		type = "technology",
 		name = "kr-logistic-containers-1",
 		localised_name = {"technology-name.kr-logistic-containers-1"},
 		localised_description = {"technology-description.kr-logistic-containers-1"},

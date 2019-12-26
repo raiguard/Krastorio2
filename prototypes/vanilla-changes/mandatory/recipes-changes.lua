@@ -68,8 +68,12 @@ krastorio.recipes.addIngredient("repair-pack", {"stone", 2})
 krastorio.recipes.convertIngredient("small-lamp", "electronic-circuit", "glass")
 
 -- Assembling machine tier 1
-krastorio.recipes.convertIngredient("assembling-machine-1", "electronic-circuit", "automation-core")
+krastorio.recipes.replaceIngredient("assembling-machine-1", "electronic-circuit", {"automation-core", 2})
 krastorio.recipes.replaceIngredient("assembling-machine-1", "iron-plate", {"iron-beam", 4})
+
+-- Electric mining drill 1
+krastorio.recipes.replaceIngredient("electric-mining-drill", "electronic-circuit", {"automation-core", 2})
+krastorio.recipes.replaceIngredient("electric-mining-drill", "iron-plate", {"iron-beam", 2})
 
 -- Gun turret
 krastorio.recipes.replaceIngredient("gun-turret", "iron-plate", {"iron-beam", 10})
