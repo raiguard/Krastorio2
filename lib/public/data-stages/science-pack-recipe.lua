@@ -18,6 +18,10 @@
 	@ recipe, all recipe defined as standard of data.raw of Factorio
 --]]
 
+if not krastorio then
+	krastorio = {}
+end
+
 if not krastorio.science_pack_recipes then
 	krastorio.science_pack_recipes = {}
 	

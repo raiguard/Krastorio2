@@ -1,6 +1,6 @@
 if mods["aai-industry"] then
 
-	local science_pack_recipe = require(kr_public_lib .. "science-pack-recipe")
+	local science_pack_recipe = require("__Krastorio2__/lib/public/data-stages/science-pack-recipe")
 	
 	-- Automation science pack
 	-- not exist

@@ -452,18 +452,20 @@ end
 -- -- RESEARCH UNIT INGREDIENTS(research_unit_ingredients)
 
 function krastorio.technologies.removeResearchUnitIngredient(technology_name, science_pack_name)	
-	local technology  = krastorio.technologies.getTechnologyFromName(technology_name)
+	local technology    = krastorio.technologies.getTechnologyFromName(technology_name)
 	local prerequisites = technology.prerequisites
 	local ingredients   = technology.unit.ingredients
 	
-	if ingredients and next(ingredients) ~= nil then	
+	if ingredients and #ingredients > 0 then	
 		-- prerequisites
-		for i, prerequisite_name in pairs(prerequisites) do
-			if prerequisite_name == science_pack_name then
-				table.remove(prerequisites, i)
-				break
-			end			
-		end			
+		if prerequisites and #prerequisites > 0 then	
+			for i, prerequisite_name in pairs(prerequisites) do
+				if prerequisite_name == science_pack_name then
+					table.remove(prerequisites, i)
+					break
+				end			
+			end		
+		end
 		-- ingredients
 		for i = 1, #ingredients do
 			local ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])
