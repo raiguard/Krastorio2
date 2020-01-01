@@ -30,7 +30,9 @@ if mods["IndustrialRevolution"] then
 	
 	-- Addings
 	krastorio.technologies.addPrerequisite("kr-basic-fluid-handling", "deadlock-iron-age")
+	krastorio.technologies.addPrerequisite("kr-shelter", "deadlock-iron-age")
 	krastorio.technologies.addPrerequisite("deadlock-steam-power", "kr-basic-fluid-handling")
+	krastorio.technologies.addPrerequisite("deadlock-grinding-1", "kr-stone-processing")	
 	---------------------------------------------------------
 	-- -- -- Research unit ingredients
 	---------------------------------------------------------
@@ -48,6 +50,43 @@ if mods["IndustrialRevolution"] then
 	krastorio.technologies.addUnlockRecipe("deadlock-steel-age", "steel-gear-wheel")
 	krastorio.technologies.addUnlockRecipe("deadlock-steel-age", "steel-beam")
 	
+	-- Automation core
+	data:extend({
+		{
+			type = "recipe",
+			name = "automation-core-tin",
+			icons = krastorio.icons.createOverlappedIcon
+			(
+				2, 
+				kr_icons_path .. "automation-core.png", 
+				64, 
+				"__IndustrialRevolution__/graphics/icons/64/tin-ingot-2.png", 
+				64
+			),
+			energy_required = 3,
+			enabled = false,
+			ingredients =
+			{
+				{"tin-gear-wheel", 2},
+				{"tin-rod", 2},
+				{"copper-plate", 5}
+			},
+			result = "automation-core",
+			result_count = 1
+		}
+	})
+	krastorio.technologies.addUnlockRecipe("kr-automation-core", "automation-core-tin")	
+	krastorio.technologies.addUnlockRecipe("deadlock-iron-age", "automation-core")
+	data.raw.recipe["automation-core"].icons = 
+	krastorio.icons.createOverlappedIcon
+	(
+		2, 
+		kr_icons_path .. "automation-core.png", 
+		64, 
+		"__IndustrialRevolution__/graphics/icons/64/iron-ingot.png", 
+		64
+	)
+	
 	-- Logistics
 	krastorio.technologies.addUnlockRecipe("deadlock-inserters-1", "kr-loader")
 	
@@ -55,6 +94,9 @@ if mods["IndustrialRevolution"] then
 	krastorio.technologies.removeUnlockRecipe("deadlock-steam-power", "pipe")
 	krastorio.technologies.removeUnlockRecipe("deadlock-steam-power", "pipe-to-ground")
 	krastorio.technologies.removeUnlockRecipe("deadlock-steam-power", "offshore-pump")	
+	krastorio.technologies.removeUnlockRecipe("deadlock-steam-power", "copper-cable"); krastorio.recipes.enable("copper-cable")
+	
+	krastorio.technologies.removeUnlockRecipe("kr-automation-core", "automation-core")	
 	---------------------------------------------------------
 	-- -- Disabled technology
 	data.raw.technology["kr-steam-engine"] = nil
