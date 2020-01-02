@@ -63,6 +63,7 @@ data:extend(
 		place_result = "water-pumpjack",
 		stack_size = 50
     },	
+	-- -- --
 	-- NEW LABORATORIES
 	-- -- --
     {
@@ -225,6 +226,8 @@ data:extend(
 		place_result = "kr-fluid-storage-2"
     },
 	-- -- --
+	-- STEEL PIPES
+	-- -- --
 	{
 		type = "item",
 		name = "kr-steel-pipe",
@@ -251,10 +254,11 @@ data:extend(
 		icon = kr_entities_icons_path .. "steel-pump.png",
 		icon_size = 32,
 		subgroup = "energy-pipe-distribution",
-		order = "a[pipes]-c2[steel-pump]",
+		order = "b[pipes]-c2[steel-pump]",
 		place_result = "kr-steel-pump",
 		stack_size = 50
 	},
+	-- -- --
 	{
 		type = "item",
 		name = "kr-electrolysis-plant",

@@ -16,4 +16,6 @@ require(scripts_path .. "Flow_Control")
 require(scripts_path .. "Load-Furn")
 -- Deadlocks
 require(scripts_path .. "IndustrialRevolution")
+-- Pyanodons
+require(scripts_path .. "Pyanodon")
 ---------------------------------------------------------------------------

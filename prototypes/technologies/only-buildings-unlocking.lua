@@ -60,6 +60,64 @@ data:extend(
     },
 	{
 		type = "technology",
+		name = "kr-steel-fluid-handling",
+		icon = kr_technologies_icons_path .. "basic-fluid-handling.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-steel-pipe"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-steel-pipe-to-ground"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-steel-pump"
+			}
+		},
+		prerequisites = {"steel-processing", "fluid-handling"},
+		unit =
+		{
+			count = 30,
+			ingredients = 
+			{
+				{"basic-tech-card", 1}
+			},
+			time = 30
+		}
+    },	
+	{
+		type = "technology",
+		name = "kr-steel-fluid-tanks",
+		icon = kr_technologies_icons_path .. "steel-fluid-tanks.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-fluid-storage-1"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-fluid-storage-2"
+			}
+		},
+		prerequisites = {"kr-steel-fluid-handling"},
+		unit =
+		{
+			count = 30,
+			ingredients = 
+			{
+				{"basic-tech-card", 1}
+			},
+			time = 30
+		}
+    },
+	{
+		type = "technology",
 		name = "kr-steam-engine",
 		icon = kr_technologies_icons_path .. "steam-engine.png",
 		icon_size = 128,
@@ -252,7 +310,7 @@ data:extend(
 	{
 		type = "technology",
 		name = "kr-radar&watchtower",	
-		icon = kr_technologies_icons_path .. "kr-radar&watchtower.png",
+		icon = kr_technologies_icons_path .. "radar&watchtower.png",
 		icon_size = 128,
 		prerequisites = {"electronics", "steel-processing"},
 		effects =

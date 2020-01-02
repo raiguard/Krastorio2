@@ -98,7 +98,9 @@ if mods["IndustrialRevolution"] then
 	
 	krastorio.technologies.removeUnlockRecipe("kr-automation-core", "automation-core")	
 	---------------------------------------------------------
-	-- -- Disabled technology
-	data.raw.technology["kr-steam-engine"] = nil
+	-- -- REMOVED technology
+	data.raw.technology["kr-steam-engine"] = nil -- REDUNDANT
+	data.raw.technology["kr-electric-mining-drill"] = nil -- REDUNDANT
+	data.raw.technology["kr-radar&watchtower"] = nil -- REDUNDANT
 
 end

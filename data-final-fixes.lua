@@ -63,5 +63,7 @@ krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
 ---------------------------------------------------------------------------
 -- -- -- COMPATIBILITY INITIALIZATION (data final fixes stage)
 ---------------------------------------------------------------------------
-
+local scripts_path = "compatibility-scripts/data-final-fixes/"
+-- Pyanodons
+require(scripts_path .. "Pyanodon")
 ---------------------------------------------------------------------------

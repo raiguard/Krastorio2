@@ -42,6 +42,8 @@ require(kr_items_prototypes_path .. "items-initialization")
 require(kr_recipes_prototypes_path .. "recipes-initialization")
 -- -- Adding new resources
 require(kr_resources_path .. "resources-initialization")
+-- -- Adding new sounds (prototypes)
+require(kr_prototypes_path .. "sounds/sounds")
 -- -- Adding new technologies
 require(kr_technologies_prototypes_path .. "technologies-initialization")
 -- -- Adding new tiles
