@@ -67,9 +67,9 @@ if mods["IndustrialRevolution"] then
 			enabled = false,
 			ingredients =
 			{
-				{"tin-gear-wheel", 2},
-				{"tin-rod", 2},
-				{"copper-plate", 5}
+				{"tin-gear-wheel", 4},
+				{"tin-rod", 4},
+				{"copper-plate", 4}
 			},
 			result = "automation-core",
 			result_count = 1
@@ -90,6 +90,7 @@ if mods["IndustrialRevolution"] then
 	-- Logistics
 	krastorio.technologies.addUnlockRecipe("deadlock-inserters-1", "kr-loader")
 	
+	krastorio.technologies.addUnlockRecipe("deadlock-steam-power", "kr-wind-turbine"); krastorio.recipes.disable("kr-wind-turbine")
 	-- Removing
 	krastorio.technologies.removeUnlockRecipe("deadlock-steam-power", "pipe")
 	krastorio.technologies.removeUnlockRecipe("deadlock-steam-power", "pipe-to-ground")

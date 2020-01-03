@@ -60,7 +60,7 @@ krastorio.technologies.addUnlockRecipe("steel-processing", "steel-beam")
 -- Moving inserters unlocking in early game
 krastorio.technologies.addUnlockRecipe("automation", "burner-inserter")
 krastorio.technologies.addUnlockRecipe("logistics", "inserter")
-krastorio.technologies.addUnlockRecipe("logistics-2", "long-handed-inserter")
+krastorio.technologies.addUnlockRecipe("logistics", "long-handed-inserter")
 
 -- First belt
 krastorio.technologies.addUnlockRecipe("logistics", "transport-belt")

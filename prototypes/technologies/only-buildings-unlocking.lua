@@ -81,10 +81,12 @@ data:extend(
 		prerequisites = {"steel-processing", "fluid-handling"},
 		unit =
 		{
-			count = 30,
+			count = 100,
 			ingredients = 
 			{
-				{"basic-tech-card", 1}
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1}
 			},
 			time = 30
 		}
@@ -108,10 +110,12 @@ data:extend(
 		prerequisites = {"kr-steel-fluid-handling"},
 		unit =
 		{
-			count = 30,
+			count = 120,
 			ingredients = 
 			{
-				{"basic-tech-card", 1}
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1}
 			},
 			time = 30
 		}

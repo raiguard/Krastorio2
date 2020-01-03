@@ -10,10 +10,10 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"wood" , 100},
+			{"wood" , 20},
 			{"iron-beam", 10},
-			{"glass", 10},
-			{"automation-core", 1}
+			{"glass", 20},
+			{"automation-core", 2}
 		},
 		result = "kr-greenhouse"
     },	
@@ -27,7 +27,7 @@ return
 			{"iron-beam", 10},
 			{"iron-gear-wheel", 20},
 			{"copper-cable", 6},
-			{"automation-core", 1}
+			{"automation-core", 2}
 		},
 		result = "kr-crusher"
     },

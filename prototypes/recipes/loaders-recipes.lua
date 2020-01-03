@@ -37,7 +37,7 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 			ingredients = 
 			{
 				{"transport-belt", 1},
-				{"inserter", 4}
+				{"iron-gear-wheel", 5}
 			}
 		},
 		kr_loader_recipe

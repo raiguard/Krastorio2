@@ -76,6 +76,8 @@ krastorio.recipes.replaceIngredientToGroup(group_name, old_ingredient_name, new_
 krastorio.recipes.addOrReplaceIngredientToGroup(group_name, old_ingredient_name, new_ingredient)
 krastorio.recipes.convertIngredientToGroup(group_name, old_ingredient_name, new_ingredient_name)
 
+krastorio.recipes.overrideProducts(recipe_name, new_products, new_expensive_products)
+
 krastorio.recipes.removeProduct(recipe_name, product_name)
 krastorio.recipes.removeProducts(recipe_name, product_names)
 krastorio.recipes.removeProductFromAllRecipes(product_name)

@@ -132,8 +132,8 @@ if not krastorio.science_pack_recipes then
 		result_count = 5,
 		ingredients = 
 		{
-			{"automation-core", 1},
-			{"copper-cable", 2}
+			{"automation-core", 2},
+			{"copper-cable", 6}
 		},
 		result = "automation-science-pack"
 	}

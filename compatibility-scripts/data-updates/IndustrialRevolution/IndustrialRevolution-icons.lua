@@ -12,6 +12,7 @@ if mods["IndustrialRevolution"] then
 	krastorio.icons.setItemIcon("iron-plate", ir_icon_path .. "64/iron-plate.png")
 	data.raw.item["iron-plate"].pictures = nil
 	krastorio.icons.setItemIcon("iron-beam", ir_icon_path .. "64/iron-beam.png")
+	krastorio.icons.setItemIcon("iron-stick", ir_icon_path .. "64/iron-stick.png")
 	krastorio.icons.setItemIcon("iron-gear-wheel", ir_icon_path .. "64/iron-gear-wheel.png")
 
 	-- Coppers
@@ -26,5 +27,9 @@ if mods["IndustrialRevolution"] then
 
 	-- ENTITIES/BUILDINGS
 	krastorio.icons.setItemIcon("electric-mining-drill", ir_icon_path .. "64/electric-mining-drill.png")
+	krastorio.icons.setItemIcon("burner-mining-drill", ir_icon_path .. "64/burner-mining-drill.png")
+	krastorio.icons.setItemIcon("assembling-machine-1", ir_icon_path .. "64/assembler1.png")
+	krastorio.icons.setItemIcon("assembling-machine-2", ir_icon_path .. "64/assembler2.png")
+	krastorio.icons.setItemIcon("assembling-machine-3", ir_icon_path .. "64/assembler3.png")
 	
 end

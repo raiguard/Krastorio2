@@ -212,7 +212,7 @@ data:extend(
 		stack_size = 50,
 		icon_size = 32,    
 		subgroup = "storage",
-		order = "b[fluid]-b[fs-50]",
+		order = "b[fluid]-bb2[storage-tank-2]",
 		place_result = "kr-fluid-storage-1"
     },
 	{
@@ -222,7 +222,7 @@ data:extend(
 		stack_size = 50,
 		icon_size = 32,    
 		subgroup = "storage",
-		order = "b[fluid]-c[fs-200]",
+		order = "b[fluid]-c[storage-tank-3]",
 		place_result = "kr-fluid-storage-2"
     },
 	-- -- --

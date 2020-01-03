@@ -41,7 +41,7 @@ return
 		{
 			{"iron-gear-wheel", 2},
 			{"iron-stick", 2},
-			{"copper-plate", 5}
+			{"copper-plate", 3}
 		},
 		result = "automation-core",
 		result_count = 1

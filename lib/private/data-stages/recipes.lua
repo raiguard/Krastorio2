@@ -163,6 +163,7 @@ function krastorio.recipes.resultToResults(recipe_name)
 			end
 			recipe.result = nil
 			results = recipe.results
+			recipe.result_count = nil
 		end
 		if not results and recipe.normal and recipe.normal.result then
 			result_count = recipe.normal.result_count or 1
@@ -176,6 +177,7 @@ function krastorio.recipes.resultToResults(recipe_name)
 			end
 			recipe.normal.result = nil			
 			results = recipe.normal.results		
+			recipe.normal.result_count = nil
 		end
 		if recipe.expensive and recipe.expensive.result then
 			result_count = recipe.expensive.result_count or 1
@@ -188,6 +190,7 @@ function krastorio.recipes.resultToResults(recipe_name)
 				recipe.expensive.results = {{type = "item", name = recipe.expensive.result[1], amount = result_count}}
 			end
 			recipe.expensive.result = nil
+			recipe.expensive.result_count = nil
 			if not results then				
 				results = recipe.expensive.results
 			end
@@ -999,6 +1002,30 @@ function krastorio.recipes.convertIngredientToGroup(group_name, old_ingredient_n
 end
 
 -- -- PRODUCTS
+
+function krastorio.recipes.overrideProducts(recipe_name, new_products, new_expensive_products)
+	local recipe = krastorio.recipes.getRecipeFromName(recipe_name)
+	if recipe and next(recipe) then
+		-- normal ingredients
+		if recipe.normal then
+			recipe.normal.result          = nil
+			recipe.normal.results         = new_products
+			recipe.normal.result_count    = nil
+		else
+			recipe.result                 = nil
+			recipe.results                = new_products
+			recipe.result_count           = nil		
+		end
+		-- expensive ingredients			
+		if recipe.expensive then		
+			recipe.expensive.result       = nil
+			recipe.expensive.results      = new_expensive_products or new_products
+			recipe.expensive.result_count = nil
+		end
+		return true
+	end
+	return false
+end
 
 -- -- remove
 

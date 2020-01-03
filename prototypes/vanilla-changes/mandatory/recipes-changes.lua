@@ -45,6 +45,8 @@ krastorio.recipes.overrideIngredients
 )
 krastorio.recipes.setEnergyCost("steel-plate", 3.2)
 
+krastorio.recipes.replaceIngredient("iron-gear-wheel", "iron-plate", {"iron-plate", 1})
+
 -- Engine
 krastorio.recipes.convertIngredient("engine-unit", "steel-plate", "iron-plate")
 

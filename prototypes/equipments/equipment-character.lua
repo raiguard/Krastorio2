@@ -38,24 +38,29 @@ data:extend(
 		resistances =
 		{
 			{
-				type = "physical",
+				type     = "physical",
 				decrease = 20,
-				percent = 50
+				percent  = 50
 			},
 			{
-				type = "acid",
+				type     = "acid",
 				decrease = 30,
-				percent = 70
+				percent  = 70
 			},
 			{
-				type = "explosion",
+				type     = "explosion",
 				decrease = 40,
-				percent = 70
+				percent  = 70
 			},
 			{
-				type = "fire",
+				type     = "fire",
 				decrease = 20,
-				percent = 80
+				percent  = 80
+			},
+			{
+				type     = "radioactive",
+				decrease = 5,
+				percent  = 60
 			}
 		},
 		subgroup = "armor",
@@ -75,24 +80,29 @@ data:extend(
 		resistances =
 		{
 			{
-				type = "physical",
+				type     = "physical",
 				decrease = 30,
-				percent = 60
+				percent  = 60
 			},
 			{
-				type = "acid",
+				type     = "acid",
 				decrease = 30,
-				percent = 80
+				percent  = 80
 			},
 			{
-				type = "explosion",
+				type     = "explosion",
 				decrease = 50,
-				percent = 80
+				percent  = 80
 			},
 			{
-				type = "fire",
+				type     = "fire",
 				decrease = 30,
-				percent = 90
+				percent  = 90
+			},
+			{
+				type     = "radioactive",
+				decrease = 6,
+				percent  = 80
 			}
 		},
 		subgroup = "armor",

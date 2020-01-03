@@ -6,6 +6,7 @@ if mods["IndustrialRevolution"] then
 	for _, category in pairs({"grinding","grinding-1","grinding-2"}) do
 		table.insert(data.raw["furnace"]["kr-crusher"].crafting_categories, category)
 	end
+	data.raw["furnace"]["kr-crusher"].crafting_speed = 2
 	
 	-- -- Storage big chest warehouse and DIR Storage (STATS)
 	--------------------------------------------------------------------------------------
