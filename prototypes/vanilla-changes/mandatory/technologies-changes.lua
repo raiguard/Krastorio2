@@ -5,6 +5,7 @@
 --------------------------------------------------------------------
 
 -- Addings
+krastorio.technologies.addPrerequisite("steel-axe", "kr-iron-pickaxe")
 krastorio.technologies.addPrerequisite("automation", "kr-automation-core")
 krastorio.technologies.addPrerequisite("automation", "automation-science-pack")
 krastorio.technologies.addPrerequisite("logistic-science-pack", "automation-science-pack")
@@ -21,6 +22,7 @@ krastorio.technologies.addPrerequisite("oil-processing", "kr-fluids-chemistry")
 krastorio.technologies.addPrerequisite("fluid-handling", "kr-basic-fluid-handling")
 krastorio.technologies.addPrerequisite("electronics", "plastics")
 krastorio.technologies.addPrerequisite("advanced-electronics", "electronics")
+krastorio.technologies.addPrerequisite("advanced-electronics", "kr-silicon-processing")
 
 --Removing
 krastorio.technologies.removePrerequisite("heavy-armor", "military")

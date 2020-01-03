@@ -221,6 +221,8 @@ krastorio.icons.setTechnologyIcon("mining-productivity-2",      kr_technologies_
 krastorio.icons.setTechnologyIcon("mining-productivity-3",      kr_technologies_icons_path .. "mining-productivity-3.png")
 krastorio.icons.setTechnologyIcon("mining-productivity-4",      kr_technologies_icons_path .. "mining-productivity-4.png")
 
+krastorio.icons.setTechnologyIcon("steel-axe",                  kr_technologies_icons_path .. "steel-pickaxe.png")
+
 -----------------------------------------------------------------
 -- -- -- BUILDINGS
 krastorio.icons.setItemIcon("pumpjack",                         kr_entities_icons_path .. "oil-pumpjack.png")

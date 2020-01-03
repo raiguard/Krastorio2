@@ -1,17 +1,17 @@
 
 -- Disabling all vanilla recipes at the game start 
-krastorio.recipes.disable("electronic-circuit") -- ReAdded
-krastorio.recipes.disable("transport-belt") -- ReAdded
-krastorio.recipes.disable("inserter") -- ReAdded
-krastorio.recipes.disable("burner-inserter") -- ReAdded
-krastorio.recipes.disable("steam-engine") -- ReAdded
-krastorio.recipes.disable("pipe") -- ReAdded
-krastorio.recipes.disable("pipe-to-ground") -- ReAdded
-krastorio.recipes.disable("boiler") -- ReAdded
+krastorio.recipes.disable("electronic-circuit")
+krastorio.recipes.disable("transport-belt")
+krastorio.recipes.disable("inserter")
+krastorio.recipes.disable("burner-inserter")
+krastorio.recipes.disable("steam-engine")
+krastorio.recipes.disable("pipe")
+krastorio.recipes.disable("pipe-to-ground")
+krastorio.recipes.disable("boiler")
 krastorio.recipes.disable("electric-mining-drill")
-krastorio.recipes.disable("offshore-pump") -- ReAdded
+krastorio.recipes.disable("offshore-pump")
 krastorio.recipes.disable("radar")
-krastorio.recipes.disable("light-armor") -- ReAdded
+krastorio.recipes.disable("light-armor")
 
 --------------------------------------------------------------------
 -- -- -- ITEMS
@@ -55,8 +55,15 @@ if krastorio.recipes.exist("stone-brick") then
 	data.raw.recipe["stone-brick"].subgroup = "raw-material"
 end
 
+-- Circuits
 krastorio.recipes.convertIngredient("electronic-circuit", "iron-plate", "plastic-bar")
 krastorio.recipes.replaceIngredient("electronic-circuit", "copper-cable", {"copper-cable", 2})
+
+krastorio.recipes.convertIngredient("advanced-circuit", "plastic-bar", "silicon")
+
+krastorio.recipes.removeIngredient("processing-unit", "electronic-circuit")
+krastorio.recipes.replaceIngredient("processing-unit", "advanced-circuit", {"advanced-circuit", 4})
+krastorio.recipes.addIngredient("processing-unit", {"rare-metals", 2})
 
 krastorio.recipes.replaceIngredient("repair-pack", "iron-gear-wheel", {"iron-plate", 2})
 krastorio.recipes.replaceIngredient("repair-pack", "electronic-circuit", {"copper-plate", 2})

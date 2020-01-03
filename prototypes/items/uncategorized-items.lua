@@ -64,6 +64,23 @@ data:extend(
     },
 	{
 		type = "item",
+		name = "quartz",
+		icon = kr_mip_icons_path .. "quartz.png",
+		icon_size = 64,
+		icon_mipmaps = 4,
+		pictures =
+		{
+			{ size = 64, filename = kr_mip_icons_path .. "quartz.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "quartz-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "quartz-2.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "quartz-3.png", scale = 0.25, mipmap_count = 4 }
+		},
+		subgroup = "raw-material",
+		order = "b3[quartz]",
+		stack_size = 200
+    },
+	{
+		type = "item",
 		name = "silicon",
 		icon = kr_mip_icons_path .. "silicon.png",
 		icon_size = 64,
@@ -75,7 +92,7 @@ data:extend(
 			{ size = 64, filename = kr_mip_icons_path .. "silicon-2.png", scale = 0.25, mipmap_count = 4 }
 		},  
 		subgroup = "raw-material",
-		order = "a1[silicon]",
+		order = "b4[silicon]",
 		stack_size = 200
     },
 	{

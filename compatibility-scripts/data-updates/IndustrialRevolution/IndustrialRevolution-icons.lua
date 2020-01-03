@@ -26,10 +26,16 @@ if mods["IndustrialRevolution"] then
 	krastorio.icons.setItemIcon("steel-gear-wheel", ir_icon_path .. "128/steel-gear-wheel.png", 128)
 
 	-- ENTITIES/BUILDINGS
+	-- Drills
 	krastorio.icons.setItemIcon("electric-mining-drill", ir_icon_path .. "64/electric-mining-drill.png")
 	krastorio.icons.setItemIcon("burner-mining-drill", ir_icon_path .. "64/burner-mining-drill.png")
+	-- Assemblers
 	krastorio.icons.setItemIcon("assembling-machine-1", ir_icon_path .. "64/assembler1.png")
 	krastorio.icons.setItemIcon("assembling-machine-2", ir_icon_path .. "64/assembler2.png")
 	krastorio.icons.setItemIcon("assembling-machine-3", ir_icon_path .. "64/assembler3.png")
+	-- Chests
+	krastorio.icons.setItemIcon("iron-chest", ir_icon_path .. "64/iron-chest.png")
+	krastorio.icons.setItemIcon("gold-chest", ir_icon_path .. "64/gold-chest.png")
+	krastorio.icons.setItemIcon("steel-chest", ir_icon_path .. "64/steel-chest.png")
 	
 end

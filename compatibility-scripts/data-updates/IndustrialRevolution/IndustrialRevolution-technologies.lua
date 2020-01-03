@@ -103,5 +103,15 @@ if mods["IndustrialRevolution"] then
 	data.raw.technology["kr-steam-engine"] = nil -- REDUNDANT
 	data.raw.technology["kr-electric-mining-drill"] = nil -- REDUNDANT
 	data.raw.technology["kr-radar&watchtower"] = nil -- REDUNDANT
+	
+	-- -- Pickaxes
+
+	data.raw.technology["kr-iron-pickaxe"].prerequisites = {"deadlock-iron-age"}
+	krastorio.technologies.addResearchUnitIngredient("kr-iron-pickaxe", "automation-science-pack")
+
+	data.raw.technology["steel-axe"].enabled = true
+	data.raw.technology["steel-axe"].hidden = false
+	data.raw.technology["steel-axe"].prerequisites = {"deadlock-steel-age", "kr-iron-pickaxe"}
+	krastorio.technologies.addResearchUnitIngredient("kr-iron-pickaxe", "logistic-science-pack")
 
 end

@@ -113,7 +113,40 @@ return
 		},
 		result = "steel-beam",
 		result_count = 1
-	}
+	},
+	{
+		type = "recipe",
+		name = "quartz",
+		icon = kr_mip_icons_path .. "quartz.png",
+		icon_size = 64,
+		category = "electrolysis",
+		subgroup = "raw-material",
+		energy_required = 3,
+		enabled = false,
+		ingredients = 
+		{
+			{ "sand", 6 },
+			{ type = "fluid", name = "water", amount = 10 }
+		},
+		results = 
+		{
+			{ type = "item", name = "quartz", amount = 3 },
+			{ type = "item", name = "stone", probability = 0.3, amount = 1 },
+		}
+    },
+	{
+		type = "recipe",
+		name = "silicon",
+		category = "smelting",
+		energy_required = 6.4,
+		enabled = false,
+		ingredients = 
+		{
+			{"quartz", 6}
+		},
+		result = "silicon",
+		result_count = 3
+    },
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
