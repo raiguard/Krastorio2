@@ -27,15 +27,21 @@ if mods["IndustrialRevolution"] then
 	krastorio.technologies.convertPrerequisiteFromAllTechnologies("speed-module-3", "deadlock-modules-3")
 	krastorio.technologies.convertPrerequisiteFromAllTechnologies("productivity-module-3", "deadlock-modules-3")	
 	krastorio.technologies.convertPrerequisiteFromAllTechnologies("kr-steam-engine", "deadlock-steam-power")	
+	krastorio.technologies.convertPrerequisiteFromAllTechnologies("flammables", "oil-processing")
 	
 	-- Addings
 	krastorio.technologies.addPrerequisite("kr-basic-fluid-handling", "deadlock-iron-age")
 	krastorio.technologies.addPrerequisite("kr-shelter", "deadlock-iron-age")
 	krastorio.technologies.addPrerequisite("deadlock-steam-power", "kr-basic-fluid-handling")
 	krastorio.technologies.addPrerequisite("deadlock-grinding-1", "kr-stone-processing")	
+	krastorio.technologies.addPrerequisite("kr-greenhouse", "deadlock-steam-power")
 	---------------------------------------------------------
 	-- -- -- Research unit ingredients
 	---------------------------------------------------------
+	-- Addings
+	krastorio.technologies.addResearchUnitIngredient("kr-basic-fluid-handling", "automation-science-pack")
+	
+	-- Removing
 	krastorio.technologies.removeResearchUnitIngredient("deadlock-steam-power", "logistic-science-pack")
 	krastorio.technologies.removeResearchUnitIngredient("deadlock-electronics-1", "logistic-science-pack")
 	krastorio.technologies.removeResearchUnitIngredient("deadlock-iron-age", "logistic-science-pack")	

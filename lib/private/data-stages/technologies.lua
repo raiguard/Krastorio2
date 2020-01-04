@@ -59,17 +59,15 @@ end
 
 function krastorio.technologies.getTechnologyThatUnlockRecipe(recipe_name)
 	for name, technology in pairs(data.raw.technology) do
-		if technology.enabled ~= false and technology.effects then
+		if (technology.enabled == true or technology.enabled == nil) and technology.effects then
 			for _, effect in pairs(technology.effects) do
-				for _, value in pairs(effect) do
-					if value == recipe_name then
-						return name
-					end
+				if effect.type == "unlock-recipe" and effect.recipe == recipe_name then
+					return name
 				end
 			end
 		end
 	end		
-	return {}
+	return nil
 end
 
 -- -- RESEARCH UNIT INGREDIENTS(research_unit_ingredients)
@@ -184,7 +182,7 @@ end
 
 function krastorio.technologies.convertPrerequisite(technology_name, old_prerequisite_name, new_prerequisite_name)
 	local prerequisites = krastorio.technologies.getPrerequisites(technology_name)
-	if next(prerequisites) ~= nil and krastorio.technologies.exist(new_prerequisite_name) then		
+	if prerequisites and #prerequisites > 0 and krastorio.technologies.exist(new_prerequisite_name) then		
 		for i, prerequisite_name in pairs(prerequisites) do
 			if prerequisite_name == old_prerequisite_name then
 				table.remove(prerequisites, i)

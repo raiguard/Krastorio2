@@ -66,7 +66,7 @@ data:extend(
 	{
 		type = "item",
 		name = "kr-quarry-drill",
-		icon =  kr_entities_icons_path .. "water-pumpjack.png",
+		icon =  kr_entities_icons_path .. "quarry-drill.png",
 		icon_size = 64,
 		subgroup = "production-machine",
 		order = "aaa",

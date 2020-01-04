@@ -1,4 +1,34 @@
 if mods["IndustrialRevolution"] then
+
+	local steel_to_iron =
+	{
+		["steel-plate"] = "iron-plate",
+		["steel-beam"] = "iron-beam",
+		["steel-gear-wheel"] = "iron-gear-wheel",
+		["steel-rivet"] = "iron-rivet",
+		["steel-tube"] = "iron-tube",
+		["steel-rod"] = "iron-stick",
+		["steel-ball"] = "iron-ball",
+		["steel-chassis-large"] = "iron-chassis-large",
+		["steel-chassis-small"] = "iron-chassis-small",
+		["steel-piston"] = "iron-piston",
+		["steel-plate-heavy"] = "iron-plate-heavy",
+		["kr-steel-pipe"] = "pipe"
+	}	
+	local function changeTierFromSteeltoIron(recipe_name)
+		for name, downgrade in pairs(steel_to_iron) do
+			krastorio.recipes.convertIngredient(recipe_name, name, downgrade)
+		end
+		krastorio.technologies.convertPrerequisite(krastorio.technologies.getTechnologyThatUnlockRecipe(recipe_name), "deadlock-steel-age", "deadlock-iron-age")
+		krastorio.technologies.convertPrerequisite(krastorio.technologies.getTechnologyThatUnlockRecipe(recipe_name), "steel-processing", "deadlock-iron-age")
+	end
+	local function changeTierFromIrontoSteel(recipe_name)
+		for name, downgrade in pairs(steel_to_iron) do
+			krastorio.recipes.convertIngredient(recipe_name, downgrade, name)
+		end
+		krastorio.technologies.convertPrerequisite(krastorio.technologies.getTechnologyThatUnlockRecipe(recipe_name), "deadlock-iron-age", "deadlock-steel-age")
+	end
+
 	-- -- RAW PROCESSING
 	-- increase cost for make sense of crusher
 	local categories = {"grinding","grinding-1","grinding-2"}
@@ -60,15 +90,20 @@ if mods["IndustrialRevolution"] then
 	krastorio.recipes.convertIngredient("kr-steel-pump", "engine-unit", "electric-engine-unit")
 
 	krastorio.recipes.overrideIngredients("kr-fluid-storage-1", krastorio.recipes.getIngredients("storage-tank"))
-	krastorio.recipes.convertIngredient("kr-fluid-storage-1", "pipe", "kr-steel-pipe")
-	krastorio.recipes.convertIngredient("kr-fluid-storage-1", "iron-plate-heavy", "steel-plate-heavy")
-	krastorio.recipes.convertIngredient("kr-fluid-storage-1", "iron-stick", "steel-rod")
-	krastorio.recipes.convertIngredient("kr-fluid-storage-1", "iron-rivet", "steel-rivet")
+	changeTierFromIrontoSteel("kr-fluid-storage-1")
 	krastorio.recipes.overrideProducts("kr-fluid-storage-1", {{"kr-fluid-storage-1", 1}})
 	-- 
 	krastorio.recipes.overrideIngredients("kr-fluid-storage-2", krastorio.recipes.getIngredients("kr-fluid-storage-1"))
 	krastorio.recipes.multiplyRecipeStat("kr-fluid-storage-2", 2)
 	krastorio.recipes.overrideProducts("kr-fluid-storage-2", {{"kr-fluid-storage-2", 1}})
+	-- Chemical buildings
+	krastorio.recipes.removeIngredient("chemical-plant", "steel-plate")
+	krastorio.recipes.removeIngredient("chemical-plant", "electronic-circuit")
+	krastorio.recipes.replaceIngredient("chemical-plant", "pipe", {"pipe", 5})
+	
+	changeTierFromSteeltoIron("kr-filtration-plant")
+	changeTierFromSteeltoIron("kr-electrolysis-plant")
+	
 	---------------------------------------------------------------
 	-- Migrate to deadlock glass
 	krastorio.recipes.convertIngredientFromAllRecipes("glass", "glass-plate")	

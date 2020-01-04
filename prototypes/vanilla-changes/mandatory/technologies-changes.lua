@@ -38,6 +38,8 @@ krastorio.technologies.convertResearchUnitIngredient("military", "automation-sci
 
 -- Addings
 krastorio.technologies.addResearchUnitIngredient("automation", "basic-tech-card")
+krastorio.technologies.addResearchUnitIngredient("character-logistic-trash-slots-1", "basic-tech-card")
+krastorio.technologies.addResearchUnitIngredient("auto-character-logistic-trash-slots", "basic-tech-card")
 
 -- Removing
 krastorio.technologies.removeResearchUnitIngredient("automation", "automation-science-pack")

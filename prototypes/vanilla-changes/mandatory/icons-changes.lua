@@ -207,6 +207,8 @@ krastorio.icons.setItemIcon("petroleum-gas",                    kr_fluids_icons_
 -----------------------------------------------------------------
 -- -- -- TECHNOLOGIES
 
+krastorio.icons.setTechnologyIcon("steel-processing",           kr_technologies_icons_path .. "steel-processing.png")
+
 -- Logistics
 krastorio.icons.setTechnologyIcon("logistics",                  kr_technologies_icons_path .. "logistics-1.png")
 krastorio.icons.setTechnologyIcon("logistics-2",                kr_technologies_icons_path .. "logistics-2.png")

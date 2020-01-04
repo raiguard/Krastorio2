@@ -4,7 +4,7 @@ data:extend(
 		type = "mining-drill",
 		name = "kr-quarry-drill",
 		icon = kr_entities_icons_path .. "quarry-drill.png",
-		icon_size = 32,
+		icon_size = 64,
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 1, result = "kr-quarry-drill"},
 		fast_replaceable_group = "kr-quarry-drills",
