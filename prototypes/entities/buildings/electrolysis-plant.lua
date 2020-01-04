@@ -183,15 +183,13 @@ data:extend(
 		{
 			sound =
 			{
-				{
-					filename = kr_buildings_sounds_path .. "electrolysis-plant.ogg",
-					volume = 0.8
-				}
+				filename = kr_buildings_sounds_path .. "electrolysis-plant.ogg",
+				volume = 1.5	
 			},
 			idle_sound = 
 			{ 
 				filename = "__base__/sound/idle1.ogg", 
-				volume = 1 
+				volume = 0.5 
 			},
 			apparent_volume = 1.5
 		},

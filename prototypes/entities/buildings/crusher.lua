@@ -75,15 +75,13 @@ data:extend(
 		vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
         working_sound =
         {
-        sound =
-        {
-        {
-            filename = kr_buildings_sounds_path .. "crusher.ogg",
-            volume = 1
-        }
-        },
-        idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 1 },
-        apparent_volume = 1.5
+			sound =	
+			{ 
+				filename = kr_buildings_sounds_path .. "crusher.ogg",
+				volume = 2.0
+			},
+			idle_sound = { filename = "__base__/sound/idle1.ogg" },
+			apparent_volume = 1.5
         },
 		crafting_speed = 1,
 		source_inventory_size = 1,

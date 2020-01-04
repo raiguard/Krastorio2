@@ -164,10 +164,10 @@ end
 
 -- @ _recipe_name
 -- @ _icons
-function krastorio.icons.setItemMipmaps(_item_name, _mipmaps)
+function krastorio.icons.setItemMipmaps(_item_name, _mipmaps, _icon_mipmaps)
 	if krastorio.items.exist(_item_name) then
 		local item_type = krastorio.items.getItemType(_item_name)		
-		data.raw[item_type][_item_name].icon_mipmaps = #_mipmaps
+		data.raw[item_type][_item_name].icon_mipmaps = _icon_mipmaps or #_mipmaps
 		data.raw[item_type][_item_name].pictures = _mipmaps
 	end
 end

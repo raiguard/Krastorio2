@@ -2,11 +2,11 @@ data:extend(
 {
 	{
 		type = "mining-drill",
-		name = "water-pumpjack",
+		name = "kr-water-pumpjack",
 		icon = "__base__/graphics/icons/pumpjack.png",
 		icon_size = 32,
 		flags = {"placeable-neutral", "player-creation"},
-		minable = {mining_time = 0.5, result = "water-pumpjack"},
+		minable = {mining_time = 0.5, result = "kr-water-pumpjack"},
 		resource_categories = {"basic-fluid"},
 		max_health = 200,
 		dying_explosion = "medium-explosion",

@@ -20,7 +20,6 @@ krastorio.technologies.addPrerequisite("logistics-2", "steel-processing")
 krastorio.technologies.addPrerequisite("nuclear-power", "kr-steam-engine")
 krastorio.technologies.addPrerequisite("oil-processing", "kr-fluids-chemistry")
 krastorio.technologies.addPrerequisite("fluid-handling", "kr-basic-fluid-handling")
-krastorio.technologies.addPrerequisite("electronics", "plastics")
 krastorio.technologies.addPrerequisite("advanced-electronics", "electronics")
 krastorio.technologies.addPrerequisite("advanced-electronics", "kr-silicon-processing")
 
@@ -28,7 +27,6 @@ krastorio.technologies.addPrerequisite("advanced-electronics", "kr-silicon-proce
 krastorio.technologies.removePrerequisite("heavy-armor", "military")
 krastorio.technologies.removePrerequisite("fluid-handling", "automation-2")
 krastorio.technologies.removePrerequisite("engine", "steel-processing")
-krastorio.technologies.removePrerequisite("advanced-electronics", "plastics")
 
 --------------------------------------------------------------------
 -- -- Research unit ingredients
@@ -69,6 +67,8 @@ krastorio.technologies.addUnlockRecipe("logistics", "transport-belt")
 
 -- Electronics I
 krastorio.technologies.addUnlockRecipe("electronics", "electronic-circuit")
+-- Electronics 2
+krastorio.technologies.addUnlockRecipe("advanced-electronics", "electronic-components")
 
 -- Removings
 

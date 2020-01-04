@@ -56,14 +56,19 @@ if krastorio.recipes.exist("stone-brick") then
 end
 
 -- Circuits
-krastorio.recipes.convertIngredient("electronic-circuit", "iron-plate", "plastic-bar")
-krastorio.recipes.replaceIngredient("electronic-circuit", "copper-cable", {"copper-cable", 2})
+krastorio.recipes.addIngredient("electronic-circuit", {"wood", 2})
+krastorio.recipes.replaceIngredient("electronic-circuit", "iron-plate", {"iron-plate", 2})
+krastorio.recipes.replaceIngredient("electronic-circuit", "copper-cable", {"copper-cable", 4})
+krastorio.recipes.setEnergyCost("electronic-circuit", 2)
+krastorio.recipes.replaceProduct("electronic-circuit", "electronic-circuit", {"electronic-circuit", 2})
 
-krastorio.recipes.convertIngredient("advanced-circuit", "plastic-bar", "silicon")
+krastorio.recipes.replaceIngredient("advanced-circuit", "plastic-bar", {"electronic-components", 1})
+krastorio.recipes.setEnergyCost("advanced-circuit", 4)
 
 krastorio.recipes.removeIngredient("processing-unit", "electronic-circuit")
 krastorio.recipes.replaceIngredient("processing-unit", "advanced-circuit", {"advanced-circuit", 4})
 krastorio.recipes.addIngredient("processing-unit", {"rare-metals", 2})
+krastorio.recipes.replaceIngredient("processing-unit", "sulfuric-acid", {type="fluid", name="sulfuric-acid", amount=4})
 
 krastorio.recipes.replaceIngredient("repair-pack", "iron-gear-wheel", {"iron-plate", 2})
 krastorio.recipes.replaceIngredient("repair-pack", "electronic-circuit", {"copper-plate", 2})

@@ -71,7 +71,7 @@ data:extend(
 	-- Oxygen
 	{
 		type = "fluid",
-		name = "k-oxygen",
+		name = "oxygen",
 		default_temperature = 15,
 		max_temperature = 100,
 		auto_barrel = true,

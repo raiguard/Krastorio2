@@ -25,6 +25,16 @@ if mods["IndustrialRevolution"] then
 	-- -- ITEMS
 	data.raw.recipe["iron-beam-2"] = nil	
 	
+	-- Circuits
+	krastorio.recipes.removeIngredient("electronic-circuit", "wood")
+	krastorio.recipes.setEnergyCost("electronic-circuit", 0.5)
+	krastorio.recipes.replaceProduct("electronic-circuit", "electronic-circuit", {"electronic-circuit", 1})
+
+	krastorio.recipes.removeIngredient("advanced-circuit", "electronic-components")
+	krastorio.recipes.setEnergyCost("advanced-circuit", 2)
+
+	krastorio.recipes.removeIngredient("processing-unit", "rare-metals")
+	
 	-- -- ENTITIES BUILDINGS	
 	-- Inserters
 	krastorio.recipes.removeIngredient("burner-inserter", "copper-motor")

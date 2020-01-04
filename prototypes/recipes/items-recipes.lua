@@ -48,6 +48,20 @@ return
 	},
 	{
 		type = "recipe",
+		name = "electronic-components",
+		energy_required = 4,
+		enabled = false,
+		ingredients =
+		{
+			{"silicon", 1},
+			{"plastic-bar", 1},
+			{"glass", 1}
+		},
+		result = "electronic-components",
+		result_count = 2
+	},
+	{
+		type = "recipe",
 		name = "coke",
 		energy_required = 10,
 		enabled = false,
@@ -117,7 +131,7 @@ return
 	{
 		type = "recipe",
 		name = "quartz",
-		icon = kr_mip_icons_path .. "quartz.png",
+		icon = kr_mip_icons_path .. "quartz/quartz.png",
 		icon_size = 64,
 		category = "electrolysis",
 		subgroup = "raw-material",

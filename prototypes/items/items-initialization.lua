@@ -1,18 +1,21 @@
+-- -- Raw materials
+require(kr_items_prototypes_path .. "resources-items")
+
 -- -- New science packs graphic
-require("techcards")
+require(kr_items_prototypes_path .. "techcards")
 
 -- -- Items for buildings and other entities
-require("entities-items")
+require(kr_items_prototypes_path .. "entities-items")
 
 -- -- Items for terrain
-require("terrain-items")
+require(kr_items_prototypes_path .. "terrain-items")
 
 -- -- Decorations
-require("decorations")
+require(kr_items_prototypes_path .. "decorations")
 
 -- -- All other items
-require("uncategorized-items")
+require(kr_items_prototypes_path .. "uncategorized-items")
 
 -- Optional items
-require("loaders-items")
+require(kr_items_prototypes_path .. "loaders-items")
 

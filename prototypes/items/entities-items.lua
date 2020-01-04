@@ -25,12 +25,12 @@ data:extend(
     },
     {
 		type = "item",
-		name = "research-server",
+		name = "kr-research-server",
 		icon =  kr_entities_icons_path .. "research-server.png",
 		icon_size = 64,
 		subgroup = "production-machine",
 		order = "aaa",
-		place_result = "research-server",
+		place_result = "kr-research-server",
 		stack_size = 50
     },
     {
@@ -55,14 +55,24 @@ data:extend(
     },	
     {
 		type = "item",
-		name = "water-pumpjack",
+		name = "kr-water-pumpjack",
 		icon =  kr_entities_icons_path .. "water-pumpjack.png",
 		icon_size = 64,
 		subgroup = "production-machine",
 		order = "aaa",
-		place_result = "water-pumpjack",
+		place_result = "kr-water-pumpjack",
 		stack_size = 50
     },	
+	{
+		type = "item",
+		name = "kr-quarry-drill",
+		icon =  kr_entities_icons_path .. "water-pumpjack.png",
+		icon_size = 64,
+		subgroup = "production-machine",
+		order = "aaa",
+		place_result = "kr-quarry-drill",
+		stack_size = 50
+    },
 	-- -- --
 	-- NEW LABORATORIES
 	-- -- --

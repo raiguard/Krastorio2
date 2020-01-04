@@ -4,3 +4,7 @@
 require(kr_resources_path .. "rare-metals")
 -- Adding mineral water
 require(kr_resources_path .. "mineral-water")
+-- Adding menarite
+require(kr_resources_path .. "menarite")
+-- Adding imersite
+require(kr_resources_path .. "imersite")

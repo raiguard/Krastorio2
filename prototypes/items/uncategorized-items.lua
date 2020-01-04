@@ -1,21 +1,17 @@
 data:extend(
-{
------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------   
-	
+{	
 	{
 		type = "item",
 		name = "biomass",
-		icon = kr_mip_icons_path .. "biomass.png",
+		icon = kr_mip_icons_path .. "biomass/biomass.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_mip_icons_path .. "biomass.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "biomass-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "biomass-2.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "biomass-3.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_mip_icons_path .. "biomass/biomass.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "biomass/biomass-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "biomass/biomass-2.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "biomass/biomass-3.png", scale = 0.25, mipmap_count = 4 }
 		},
 		stack_size = 200
 	},
@@ -40,14 +36,14 @@ data:extend(
 	{
 		type = "item",
 		name = "sand",
-		icon = kr_mip_icons_path .. "sand.png",
+		icon = kr_mip_icons_path .. "sand/sand.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_mip_icons_path .. "sand.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "sand-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "sand-2.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_mip_icons_path .. "sand/sand.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "sand/sand-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "sand/sand-2.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-resource",
 		order = "a[sand]",
@@ -65,15 +61,15 @@ data:extend(
 	{
 		type = "item",
 		name = "quartz",
-		icon = kr_mip_icons_path .. "quartz.png",
+		icon = kr_mip_icons_path .. "quartz/quartz.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_mip_icons_path .. "quartz.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "quartz-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "quartz-2.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "quartz-3.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_mip_icons_path .. "quartz/quartz.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "quartz/quartz-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "quartz/quartz-2.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "quartz/quartz-3.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-material",
 		order = "b3[quartz]",
@@ -82,14 +78,14 @@ data:extend(
 	{
 		type = "item",
 		name = "silicon",
-		icon = kr_mip_icons_path .. "silicon.png",
+		icon = kr_mip_icons_path .. "silicon/silicon.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_mip_icons_path .. "silicon.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "silicon-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "silicon-2.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_mip_icons_path .. "silicon/silicon.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "silicon/silicon-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "silicon/silicon-2.png", scale = 0.25, mipmap_count = 4 }
 		},  
 		subgroup = "raw-material",
 		order = "b4[silicon]",
@@ -97,15 +93,24 @@ data:extend(
     },
 	{
 		type = "item",
+		name = "electronic-components",
+		icon = kr_icons_path .. "electronic-components.png",
+		icon_size = 64,
+		subgroup = "intermediate-product",
+		order = "e[ei-electronic-components]",
+		stack_size = 200
+	},
+	{
+		type = "item",
 		name = "coke",
-		icon = kr_mip_icons_path .. "coke.png",
+		icon = kr_mip_icons_path .. "coke/coke.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_mip_icons_path .. "coke.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "coke-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "coke-2.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_mip_icons_path .. "coke/coke.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "coke/coke-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "coke/coke-2.png", scale = 0.25, mipmap_count = 4 }
 		},
 		fuel_category = "chemical",
 		fuel_value = "10MJ",
@@ -132,7 +137,7 @@ data:extend(
     },
 	{
 		type = "item",
-		name = "kr-fuel",
+		name = "fuel",
 		icon = kr_icons_path .. "fuel.png",
 		icon_size = 64,
 		fuel_category = "vehicle-fuel",
@@ -196,42 +201,22 @@ data:extend(
     },
 	{
 		type = "item",
-		name = "raw-rare-metals",
-		icon = kr_mip_icons_path .. "raw-rare-metals.png",
-		icon_size = 64,
-		icon_mipmaps = 4,
-		pictures =
-		{
-			{ size = 64, filename = kr_mip_icons_path .. "raw-rare-metals.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "raw-rare-metals-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "raw-rare-metals-2.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "raw-rare-metals-3.png", scale = 0.25, mipmap_count = 4 }
-		},
-		subgroup = "raw-material",
-		order = "x[raw-rare-metals]",
-		stack_size = 200
-	},
-	{
-		type = "item",
 		name = "rare-metals",
-		icon = kr_mip_icons_path .. "rare-metals.png",
+		icon = kr_mip_icons_path .. "rare-metals/rare-metals.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_mip_icons_path .. "rare-metals.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "rare-metals-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "rare-metals-2.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "rare-metals-3.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "rare-metals-4.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "rare-metals-5.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "rare-metals-6.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_mip_icons_path .. "rare-metals/rare-metals.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "rare-metals/rare-metals-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "rare-metals/rare-metals-2.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "rare-metals/rare-metals-3.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "rare-metals/rare-metals-4.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "rare-metals/rare-metals-5.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "rare-metals/rare-metals-6.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "intermediate-product",
 		order = "x[rare-metals]",
 		stack_size = 200
 	}
------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------
 })

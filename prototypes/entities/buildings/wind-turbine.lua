@@ -1,3 +1,24 @@
+local wind_turbine_persistent_sound =
+{
+	variations =
+	{
+		{
+			filename = kr_buildings_sounds_path .. "wind-turbine-rotating.ogg",
+			volume = 0.6
+		},
+		{
+			filename = kr_buildings_sounds_path .. "wind-turbine-rotating-2.ogg",
+			volume = 0.4
+		}
+	},
+	aggregation =
+	{
+		max_count = 3,
+		remove = false,
+		count_already_playing = true
+	}
+}
+
 data:extend(
 {   
 	{
@@ -94,19 +115,8 @@ data:extend(
 		continuous_animation = true,
 		working_sound =
 		{
-			sound =
-			{
-				filename = kr_buildings_sounds_path .. "wind-turbine-rotating.ogg",
-				volume = 0.5
-			},
-			idle_sound =
-			{
-				filename = kr_buildings_sounds_path .. "wind-turbine-rotating.ogg",
-				volume = 0.5
-			},
-			max_sounds_per_type = 5,
-			apparent_volume = 1,
-			audible_distance_modifier = 1,
+			sound = wind_turbine_persistent_sound,
+			idle_sound = wind_turbine_persistent_sound,
 			persistent = true
 		}
 	}

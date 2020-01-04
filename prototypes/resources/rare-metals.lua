@@ -39,7 +39,7 @@ data:extend(
 		{
 			sheet =
 			{
-				filename = kr_resources_sprites_path .. "rare-metals.png",
+				filename = kr_resources_sprites_path .. "rare-metals/rare-metals.png",
 				priority = "extra-high",
 				width = 64,
 				height = 64,
@@ -47,7 +47,7 @@ data:extend(
 				variation_count = 8,
 				hr_version =
 				{
-					filename = kr_resources_sprites_path .. "hr-rare-metals.png",
+					filename = kr_resources_sprites_path .. "rare-metals/hr-rare-metals.png",
 					priority = "extra-high",
 					width = 128,
 					height = 128,
@@ -61,7 +61,7 @@ data:extend(
 		{
 			sheet =
 			{
-				filename = kr_resources_sprites_path .. "rare-metals-glow.png",
+				filename = kr_resources_sprites_path .. "rare-metals/rare-metals-glow.png",
 				priority = "extra-high",
 				width = 64,
 				height = 64,
@@ -71,7 +71,7 @@ data:extend(
 				flags = {"light"},
 				hr_version =
 				{
-					filename = kr_resources_sprites_path .. "hr-rare-metals-glow.png",
+					filename = kr_resources_sprites_path .. "rare-metals/hr-rare-metals-glow.png",
 					priority = "extra-high",
 					width = 128,
 					height = 128,
