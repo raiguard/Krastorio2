@@ -1,19 +1,37 @@
 local krastorio_new_recipes =
 {
 	-- -- New recipes new available from start
-	require("new-available-from-start"),
+	require(kr_recipes_prototypes_path .. "new-available-from-start"),
 
-	-- -- Recipes for buildings and other entities
-	require("entities-recipes"),
+	-- -- Recipes for buildings and other entities (not associated non-buildings-items)
+	require(kr_recipes_prototypes_path .. "buildings"),
 
-	-- -- Recipes for items (not associated to buildings)
-	require("items-recipes"),
-	
 	-- -- Recipes for decorations
-	require("decorations-recipes"),
+	require(kr_recipes_prototypes_path .. "decorations"),
 	
-	-- -- New science packs recipes (tech card)
-	require("tech-cards")
+	-- -- New science packs recipes (tech card) (tools)
+	require(kr_recipes_prototypes_path .. "tech-cards"),
+	
+	-- -- New generic recipes for items (not associated to buildings)
+	require(kr_recipes_prototypes_path .. "items"),
+	
+	-- -- New recipes for plants(wood) growing 
+	require(kr_recipes_prototypes_path .. "growing"),
+	
+	-- -- New recipes for crushing items
+	require(kr_recipes_prototypes_path .. "crushing"),
+	
+	-- -- New recipes for smelting items
+	require(kr_recipes_prototypes_path .. "smelting"),
+	
+	-- -- New recipes for electrolysis items
+	require(kr_recipes_prototypes_path .. "electrolysis"),
+	
+	-- -- New recipes for fluid-filtration items
+	require(kr_recipes_prototypes_path .. "fluid-filtration"),
+	
+	-- -- New recipes for chemistry products(can produce fluids)
+	require(kr_recipes_prototypes_path .. "chemistry")
 }
 
 -- -- Anti recipes override check
@@ -28,8 +46,8 @@ end
 -- Generate for each item that can't be processed from the crusher like machines
 -- a void recipe for destroy it
 -- (This must be done after adding other recipes)
-require("generate-void-crushing-recipes")
+require(kr_recipes_prototypes_path .. "generate-void-crushing-recipes")
 
 -- Optional recipes
-require("loaders-recipes")
+require(kr_recipes_prototypes_path .. "loaders")
 

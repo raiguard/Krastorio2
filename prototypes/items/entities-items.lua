@@ -19,7 +19,7 @@ data:extend(
 		icon =  kr_entities_icons_path .. "greenhouse.png",
 		icon_size = 64,
 		subgroup = "production-machine",
-		order = "c2-a1[greenhouse]",
+		order = "d-g1[greenhouse]",
 		place_result = "kr-greenhouse",
 		stack_size = 50
     },
@@ -39,7 +39,7 @@ data:extend(
 		icon =  kr_entities_icons_path .. "crusher.png",
 		icon_size = 64,
 		subgroup = "production-machine",
-		order = "c2-b1[crusher]",
+		order = "d-h1[crusher]",
 		place_result = "kr-crusher",
 		stack_size = 50
     },	
@@ -68,8 +68,8 @@ data:extend(
 		name = "kr-quarry-drill",
 		icon =  kr_entities_icons_path .. "quarry-drill.png",
 		icon_size = 64,
-		subgroup = "production-machine",
-		order = "aaa",
+		subgroup = "extraction-machine",
+		order = "a[items]-c[quarry-drill]",
 		place_result = "kr-quarry-drill",
 		stack_size = 50
     },
@@ -275,7 +275,7 @@ data:extend(
 		icon = kr_entities_icons_path .. "electrolysis-plant.png",
 		icon_size = 32,
 		subgroup = "production-machine",
-		order = "d-a1[electrolysis-plant]",
+		order = "e-a1[electrolysis-plant]",
 		place_result = "kr-electrolysis-plant",
 		stack_size = 50
     },	
@@ -285,7 +285,7 @@ data:extend(
 		icon = kr_entities_icons_path .. "filtration-plant.png",
 		icon_size = 32,
 		subgroup = "production-machine",
-		order = "d-b1[filtration-plant]",
+		order = "e-b1[filtration-plant]",
 		place_result = "kr-filtration-plant",
 		stack_size = 50
     },
