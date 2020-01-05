@@ -1,8 +1,12 @@
 -- -- -- Mandatory vanilla updates
 -- This script update the base game objects with some adjustment
 
+-- Modifications must be executed in the priority order
 local modifications =
 {	
+	-- High priority
+	"technologies-changes",    -- Modifications to vanilla technologies
+	-- Low priority
 	"character-armor-changes", -- Adding new armor tiers sprites
 	"entities-changes",        -- Entities/prototypes definition modifications
 	"equipments-changes",      -- Add properties or modify stat of equipments and armors
@@ -15,8 +19,7 @@ local modifications =
 	"renaming-vanillas",       -- Localization changes to vanilla objects
 	"resources-changes",       -- Resources changes
 	"smelting-overmodule-fix", -- Multiply smelting recipes stat for fix overmodule bug
-	"spawner-changes",         -- Modify spawners sprite
-	"technologies-changes",    -- Modifications to vanilla technologies
+	"spawner-changes",         -- Modify spawners sprite	
 	"vanilla-lab-changes"      -- Modify stat and accepted science packs of vanilla lab
 }
 

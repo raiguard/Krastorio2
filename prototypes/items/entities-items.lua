@@ -19,7 +19,7 @@ data:extend(
 		icon =  kr_entities_icons_path .. "greenhouse.png",
 		icon_size = 64,
 		subgroup = "production-machine",
-		order = "aaa",
+		order = "c2-a1[greenhouse]",
 		place_result = "kr-greenhouse",
 		stack_size = 50
     },
@@ -39,7 +39,7 @@ data:extend(
 		icon =  kr_entities_icons_path .. "crusher.png",
 		icon_size = 64,
 		subgroup = "production-machine",
-		order = "aaa",
+		order = "c2-b1[crusher]",
 		place_result = "kr-crusher",
 		stack_size = 50
     },	
@@ -58,8 +58,8 @@ data:extend(
 		name = "kr-water-pumpjack",
 		icon =  kr_entities_icons_path .. "water-pumpjack.png",
 		icon_size = 64,
-		subgroup = "production-machine",
-		order = "aaa",
+		subgroup = "extraction-machine",
+		order = "b[fluids]-b[water-pumpjack]",
 		place_result = "kr-water-pumpjack",
 		stack_size = 50
     },	

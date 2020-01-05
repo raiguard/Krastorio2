@@ -180,13 +180,13 @@ function krastorio.technologies.removePrerequisites(technology_name, prerequisit
 	return removed_all
 end
 
-function krastorio.technologies.convertPrerequisite(technology_name, old_prerequisite_name, new_prerequisite_name)
+function krastorio.technologies.convertPrerequisite(technology_name, old_prerequisite_name, new_prerequisite_name, check_circular_dependency)
 	local prerequisites = krastorio.technologies.getPrerequisites(technology_name)
 	if prerequisites and #prerequisites > 0 and krastorio.technologies.exist(new_prerequisite_name) then		
 		for i, prerequisite_name in pairs(prerequisites) do
 			if prerequisite_name == old_prerequisite_name then
 				table.remove(prerequisites, i)
-				krastorio.technologies.addPrerequisite(technology_name, new_prerequisite_name)
+				krastorio.technologies.addPrerequisite(technology_name, new_prerequisite_name, check_circular_dependency or nil)
 				return true
 			end				
 		end		
@@ -194,10 +194,10 @@ function krastorio.technologies.convertPrerequisite(technology_name, old_prerequ
 	return false
 end
 
-function krastorio.technologies.convertPrerequisiteFromAllTechnologies(old_prerequisite_name, new_prerequisite_name)
+function krastorio.technologies.convertPrerequisiteFromAllTechnologies(old_prerequisite_name, new_prerequisite_name, check_circular_dependency)
 	local count = 0	
 	for technology_name, _ in pairs(data.raw.technology) do
-		if krastorio.technologies.convertPrerequisite(technology_name, old_prerequisite_name, new_prerequisite_name) then
+		if krastorio.technologies.convertPrerequisite(technology_name, old_prerequisite_name, new_prerequisite_name, check_circular_dependency or nil) then
 			count = count + 1
 		end
 	end	
@@ -217,7 +217,7 @@ function krastorio.technologies.addPrerequisite(technology_name, prerequisite_na
 					table.insert(prerequisites, prerequisite_name)
 					return true
 				else
-					krastorio_utils.log.write(3, string.format("Finded a circular dependency on %s if depends on %s, will be not added.", technology_name, prerequisite_name))
+					krastorio_utils.log.write(3, string.format("Finded a circular dependency on %s if depends on %s, the prerequisite will be not added.", technology_name, prerequisite_name))
 				end
 			end
 		else
@@ -525,8 +525,9 @@ function krastorio.technologies.convertResearchUnitIngredient(technology_name, o
 	
 	if technology and next(technology) ~= nil and ingredients and next(ingredients) ~= nil then				
 		-- convert ingredient	
+		local ingredient_name = nil
 		for i = 1, #ingredients do
-			local ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])
+			ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])
 			if ingredient_name == old_science_pack_name then
 				ingredients[i] = {new_science_pack_name, krastorio.technologies.getIngredientCount(ingredients[i])}
 				converted = true

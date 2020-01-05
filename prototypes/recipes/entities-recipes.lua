@@ -45,6 +45,20 @@ return
 		},
 		result = "kr-shelter"
     },
+	{
+		type = "recipe",
+		name = "kr-water-pumpjack",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"automation-core", 2},
+			{"steel-gear-wheel", 5},
+			{"steel-beam", 5},
+			{"pipe", 5}			
+		},
+		result = "kr-water-pumpjack"
+    },
 	-- -- --
 	-- MEDIUM CONTEINERS
 	-- -- --
@@ -323,6 +337,20 @@ return
 		},
 		result = "kr-filtration-plant"
     },
+	{
+		type = "recipe",
+		name = "kr-quarry-drill",
+		energy_required = 120,
+		enabled = false,
+		ingredients = 
+		{
+			{"steel-beam", 50},
+			{"steel-plate", 50},			
+			{"electric-engine-unit", 100},
+			{"processing-unit", 20}
+		},
+		result = "kr-quarry-drill"
+	},	
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

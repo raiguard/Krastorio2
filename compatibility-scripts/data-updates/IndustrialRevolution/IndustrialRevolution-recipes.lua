@@ -54,6 +54,8 @@ if mods["IndustrialRevolution"] then
 	
 	-- -- ITEMS
 	data.raw.recipe["iron-beam-2"] = nil	
+	data.raw.recipe["steel-beam-2"] = nil
+	data.raw.recipe["steel-gear-wheel-2"] = nil
 	
 	-- Circuits
 	krastorio.recipes.removeIngredient("electronic-circuit", "wood")
@@ -97,12 +99,14 @@ if mods["IndustrialRevolution"] then
 	krastorio.recipes.multiplyRecipeStat("kr-fluid-storage-2", 2)
 	krastorio.recipes.overrideProducts("kr-fluid-storage-2", {{"kr-fluid-storage-2", 1}})
 	-- Chemical buildings
-	krastorio.recipes.removeIngredient("chemical-plant", "steel-plate")
 	krastorio.recipes.removeIngredient("chemical-plant", "electronic-circuit")
 	krastorio.recipes.replaceIngredient("chemical-plant", "pipe", {"pipe", 5})
 	
 	changeTierFromSteeltoIron("kr-filtration-plant")
 	changeTierFromSteeltoIron("kr-electrolysis-plant")
+	changeTierFromSteeltoIron("chemical-plant")
+	changeTierFromSteeltoIron("pumpjack")
+	changeTierFromSteeltoIron("kr-water-pumpjack")
 	
 	---------------------------------------------------------------
 	-- Migrate to deadlock glass

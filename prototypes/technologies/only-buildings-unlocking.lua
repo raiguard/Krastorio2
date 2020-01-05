@@ -5,30 +5,6 @@ data:extend(
 -----------------------------------------------------------------------------------------------------------------
 	{
 		type = "technology",
-		name = "kr-shelter",
-		icon = kr_technologies_icons_path .. "shelter.png",
-		icon_size = 128,
-		effects =
-		{
-			{
-				type = "unlock-recipe",
-				recipe = "kr-shelter"
-			}
-		},
-		prerequisites = {"automation-science-pack"},
-		unit =
-		{
-			count = 50,
-			ingredients = 
-			{
-				{"basic-tech-card", 1},
-				{"automation-science-pack", 1}
-			},
-			time = 20
-		}
-    },
-	{
-		type = "technology",
 		name = "kr-basic-fluid-handling",
 		icon = kr_technologies_icons_path .. "basic-fluid-handling.png",
 		icon_size = 128,
@@ -54,68 +30,6 @@ data:extend(
 			ingredients = 
 			{
 				{"basic-tech-card", 1}
-			},
-			time = 30
-		}
-    },
-	{
-		type = "technology",
-		name = "kr-steel-fluid-handling",
-		icon = kr_technologies_icons_path .. "basic-fluid-handling.png",
-		icon_size = 128,
-		effects =
-		{
-			{
-				type = "unlock-recipe",
-				recipe = "kr-steel-pipe"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "kr-steel-pipe-to-ground"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "kr-steel-pump"
-			}
-		},
-		prerequisites = {"steel-processing", "fluid-handling"},
-		unit =
-		{
-			count = 100,
-			ingredients = 
-			{
-				{"basic-tech-card", 1},
-				{"automation-science-pack", 1},
-				{"logistic-science-pack", 1}
-			},
-			time = 30
-		}
-    },	
-	{
-		type = "technology",
-		name = "kr-steel-fluid-tanks",
-		icon = kr_technologies_icons_path .. "steel-fluid-tanks.png",
-		icon_size = 128,
-		effects =
-		{
-			{
-				type = "unlock-recipe",
-				recipe = "kr-fluid-storage-1"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "kr-fluid-storage-2"
-			}
-		},
-		prerequisites = {"kr-steel-fluid-handling"},
-		unit =
-		{
-			count = 120,
-			ingredients = 
-			{
-				{"basic-tech-card", 1},
-				{"automation-science-pack", 1},
-				{"logistic-science-pack", 1}
 			},
 			time = 30
 		}
@@ -252,7 +166,7 @@ data:extend(
 		prerequisites = {"kr-automation-core"},
 		unit =
 		{
-			count = 40,
+			count = 50,
 			ingredients = 
 			{
 				{"basic-tech-card", 1}
@@ -279,12 +193,39 @@ data:extend(
 		prerequisites = {"steel-processing"},
 		unit =
 		{
-			count = 40,
+			count = 100,
 			ingredients = 
 			{
 				{"basic-tech-card", 1}
 			},
-			time = 15
+			time = 20
+		}
+    },
+	-----------------------------------------------------------------------
+	-- AUTOMATION TIER AND UPPER
+	-----------------------------------------------------------------------
+	{
+		type = "technology",
+		name = "kr-shelter",
+		icon = kr_technologies_icons_path .. "shelter.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-shelter"
+			}
+		},
+		prerequisites = {"automation-science-pack"},
+		unit =
+		{
+			count = 50,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1}
+			},
+			time = 20
 		}
     },
 	{
@@ -313,6 +254,33 @@ data:extend(
 	},
 	{
 		type = "technology",
+		name = "kr-mineral-water-gathering",
+		icon = kr_technologies_icons_path .. "mineral-water-gathering.png",
+		icon_size = 128,
+		prerequisites = {"fluid-handling", "kr-fluids-chemistry"},
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-water-pumpjack"
+			}
+		},
+		unit =
+		{
+			count = 100,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1}
+			},
+			time = 30
+		}
+	},
+	-----------------------------------------------------------------------
+	-- LOGISTIC TIER AND UPPER
+	-----------------------------------------------------------------------
+	{
+		type = "technology",
 		name = "kr-radar&watchtower",	
 		icon = kr_technologies_icons_path .. "radar&watchtower.png",
 		icon_size = 128,
@@ -326,7 +294,7 @@ data:extend(
 		},
 		unit =
 		{
-			count = 100,
+			count = 200,
 			ingredients = 
 			{
 				{"basic-tech-card", 1},
@@ -336,6 +304,71 @@ data:extend(
 			time = 20
 		}
 	},
+	{
+		type = "technology",
+		name = "kr-steel-fluid-handling",
+		icon = kr_technologies_icons_path .. "basic-fluid-handling.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-steel-pipe"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-steel-pipe-to-ground"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-steel-pump"
+			}
+		},
+		prerequisites = {"steel-processing", "fluid-handling"},
+		unit =
+		{
+			count = 100,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1}
+			},
+			time = 30
+		}
+    },	
+	{
+		type = "technology",
+		name = "kr-steel-fluid-tanks",
+		icon = kr_technologies_icons_path .. "steel-fluid-tanks.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-fluid-storage-1"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-fluid-storage-2"
+			}
+		},
+		prerequisites = {"kr-steel-fluid-handling"},
+		unit =
+		{
+			count = 120,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1}
+			},
+			time = 30
+		}
+    },
+	-----------------------------------------------------------------------
+	-- CHEMICAL TIER AND UPPER
+	-----------------------------------------------------------------------
 	{
 		type = "technology",
 		name = "kr-logistic-containers-1",
@@ -376,6 +409,40 @@ data:extend(
 			time = 30
 		}
     },
+	-----------------------------------------------------------------------
+	-- PRODUCTION TIER AND UPPER
+	-----------------------------------------------------------------------
+	{
+		type = "technology",
+		name = "kr-quarry-minerals-extraction",
+		icon = kr_technologies_icons_path .. "quarry-drill.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-quarry-drill"
+			}
+		},
+		prerequisites = {"advanced-electronics-2", "electric-engine"},
+		order = "g-e-d",
+		unit =
+		{
+			count = 1000,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"production-science-pack", 1}
+			},
+			time = 60
+		}
+    },
+	-----------------------------------------------------------------------
+	-- UTILITY TIER AND UPPER
+	-----------------------------------------------------------------------
 	{
 		type = "technology",
 		name = "kr-logistic-containers-2",
@@ -423,7 +490,7 @@ data:extend(
 			},
 			time = 30
 		}
-    },
+    }
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

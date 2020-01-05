@@ -78,15 +78,56 @@ krastorio.recipes.addIngredient("repair-pack", {"stone", 2})
 -- -- -- BUILDINGS
 --------------------------------------------------------------------
 
+-- Convert all electronic-circuit of early game in automation-core
+local function hasEarlyGameIngredients(ingredients)
+	local basic, automation = false, false
+	local ingredient_name = nil
+	for i = 1, #ingredients do
+		ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])
+		if ingredient_name == "basic-tech-card" then
+			if #ingredients == 1 then
+				return true
+			else
+				basic = true
+			end
+		end
+		if ingredient_name == "automation-science-pack" then
+			if #ingredients == 1 then
+				return true
+			else
+				automation = true
+			end
+		end
+	end
+	if #ingredients == 2 and basic and automation then
+		return true
+	else
+		return false
+	end
+end
+for name, technology in pairs(data.raw.technology) do
+	local count = nil
+	if (technology.enabled == true or technology.enabled == nil) and technology.effects then
+		if technology.unit and technology.unit.ingredients and hasEarlyGameIngredients(technology.unit.ingredients) then
+			for _, effect in pairs(technology.effects) do
+				if effect.type == "unlock-recipe" then
+					count = krastorio.recipes.countIngredient(effect.recipe, "electronic-circuit")
+					if count > 0 then
+						krastorio.recipes.replaceIngredient(effect.recipe, "electronic-circuit", {"automation-core", math.ceil(count/2)})
+					end
+				end
+			end
+		end
+	end
+end	
+
 -- Lamp
 krastorio.recipes.convertIngredient("small-lamp", "electronic-circuit", "glass")
 
 -- Assembling machine tier 1
-krastorio.recipes.replaceIngredient("assembling-machine-1", "electronic-circuit", {"automation-core", 2})
 krastorio.recipes.replaceIngredient("assembling-machine-1", "iron-plate", {"iron-beam", 4})
 
 -- Electric mining drill 1
-krastorio.recipes.replaceIngredient("electric-mining-drill", "electronic-circuit", {"automation-core", 2})
 krastorio.recipes.replaceIngredient("electric-mining-drill", "iron-plate", {"iron-beam", 2})
 
 -- Gun turret
@@ -110,7 +151,23 @@ krastorio.recipes.convertIngredient("fast-splitter", "iron-gear-wheel", "steel-g
 
 -- Storage tank
 krastorio.recipes.replaceIngredient("storage-tank", "iron-plate", {"iron-plate", 10})
-krastorio.recipes.convertIngredient("storage-tank", "steel-plate", "steel-beam")
+krastorio.recipes.convertIngredient("storage-tank", "steel-plate", "iron-beam")
+
+-- Pump
+krastorio.recipes.convertIngredient("storage-tank", "steel-plate", "iron-beam")
+
+-- Pumpjack
+krastorio.recipes.convertIngredient("pumpjack", "iron-gear-wheel", "steel-gear-wheel")
+krastorio.recipes.replaceIngredient("pumpjack", "steel-plate", {"steel-beam", 4})
+krastorio.recipes.replaceIngredient("pumpjack", "iron-plate", {"steel-beam", 4})
+
+-- Oil refinery
+krastorio.recipes.replaceIngredient("oil-refinery", "steel-plate", {"steel-beam", 4})
+krastorio.recipes.convertIngredient("oil-refinery", "iron-gear-wheel", "steel-gear-wheel")
+
+-- Chemical plant
+krastorio.recipes.replaceIngredient("chemical-plant", "steel-plate", {"steel-beam", 4})
+krastorio.recipes.convertIngredient("chemical-plant", "iron-gear-wheel", "steel-gear-wheel")
 
 -- Poles
 krastorio.recipes.replaceIngredient("medium-electric-pole", "copper-plate", {"copper-cable", 4})

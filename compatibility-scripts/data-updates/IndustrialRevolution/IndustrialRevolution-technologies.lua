@@ -27,7 +27,7 @@ if mods["IndustrialRevolution"] then
 	krastorio.technologies.convertPrerequisiteFromAllTechnologies("speed-module-3", "deadlock-modules-3")
 	krastorio.technologies.convertPrerequisiteFromAllTechnologies("productivity-module-3", "deadlock-modules-3")	
 	krastorio.technologies.convertPrerequisiteFromAllTechnologies("kr-steam-engine", "deadlock-steam-power")	
-	krastorio.technologies.convertPrerequisiteFromAllTechnologies("flammables", "oil-processing")
+	krastorio.technologies.convertPrerequisiteFromAllTechnologies("flammables", "oil-processing", true)
 	
 	-- Addings
 	krastorio.technologies.addPrerequisite("kr-basic-fluid-handling", "deadlock-iron-age")

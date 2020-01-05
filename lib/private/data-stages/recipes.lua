@@ -49,7 +49,7 @@ end
 -- return a boolean
 function krastorio.recipes.hasIngredient(recipe_name, ingredient_name)
 	local ingredients = krastorio.recipes.getIngredients(recipe_name)
-	if next(ingredients) ~= nil then
+	if ingredients and #ingredients > 0 then
 		local inner_ingredient_name = nil
 		for i = 1, #ingredients do
 			inner_ingredient_name = krastorio.recipes.getIngredientName(ingredients[i])
@@ -59,6 +59,23 @@ function krastorio.recipes.hasIngredient(recipe_name, ingredient_name)
 		end
 	end	
 	return false
+end
+
+-- @ recipe_name
+-- @ ingredient_name
+-- return a integer, ingredient amount
+function krastorio.recipes.countIngredient(recipe_name, ingredient_name)
+	local ingredients = krastorio.recipes.getIngredients(recipe_name)
+	if ingredients and #ingredients > 0 then
+		local inner_ingredient_name = nil
+		for i = 1, #ingredients do
+			inner_ingredient_name = krastorio.recipes.getIngredientName(ingredients[i])
+			if inner_ingredient_name == ingredient_name then
+				return krastorio.recipes.getIngredientAmount(ingredients[i])
+			end
+		end
+	end	
+	return 0
 end
 
 --
