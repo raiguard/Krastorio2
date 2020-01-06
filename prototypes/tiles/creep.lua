@@ -10,7 +10,7 @@ data:extend(
 		walking_speed_modifier = 0.5,
 		layer = 99,
 		transition_overlay_layer_offset = 9,
-		decorative_removal_probability = 0,
+		decorative_removal_probability = 1,
 		variants =
 		{
 			main =
@@ -120,7 +120,7 @@ data:extend(
 			},
 		},
 		map_color={r=75, g=60, b=70},
-		pollution_absorption_per_second = 0.1,
+		pollution_absorption_per_second = 0.01,
 		vehicle_friction_modifier = 200,
 		
 	}
