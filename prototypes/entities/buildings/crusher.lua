@@ -78,7 +78,7 @@ data:extend(
 			sound =	
 			{ 
 				filename = kr_buildings_sounds_path .. "crusher.ogg",
-				volume = 2.0
+				volume = 1.5
 			},
 			idle_sound = { filename = "__base__/sound/idle1.ogg" },
 			apparent_volume = 1.5

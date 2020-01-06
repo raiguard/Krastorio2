@@ -16,8 +16,8 @@ data:extend(
 			mining_particle = "stone-particle",
 			mining_time = 3,
 			result = "raw-rare-metals",
-			fluid_amount = 50,
-			required_fluid = "water"
+			fluid_amount = 25,
+			required_fluid = "chlorine"
 		},
 		collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
 		selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},

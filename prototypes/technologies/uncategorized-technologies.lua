@@ -95,6 +95,36 @@ data:extend(
             },
             time = 30
         }
+    },
+-----------------------------------------------------------------------------------------------------------------
+--------------------------------------------------PURE RECIPES---------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+	{
+        type = "technology",
+        name = "kr-advanced-chemistry",
+        icon = kr_technologies_icons_path .. "advanced-chemistry.png",
+        icon_size = 128,
+        effects =
+        {
+            {
+                type = "unlock-recipe",
+                recipe = "kr-water-separation"
+            }
+        },
+        prerequisites = {"sulfur-processing", "kr-mineral-water-gathering"},
+		order = "d-a",
+        unit =
+        {
+            count = 200,
+            ingredients =
+            {
+				{"basic-tech-card", 1},
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+				{"chemical-science-pack", 1}
+            },
+            time = 30
+        }
     }
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
