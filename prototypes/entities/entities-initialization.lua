@@ -3,6 +3,7 @@ require("buildings/pipe-covers/pipe-patch")
 require("buildings/pipe-covers/steel-pipecovers")
 -- -- -- BUILDINGS
 -- -- Generals
+require("buildings/atmospheric-condenser")
 require("buildings/crusher")
 require("buildings/electrolysis-plant")
 require("buildings/filtration-plant")

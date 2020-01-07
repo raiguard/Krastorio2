@@ -2,19 +2,19 @@ data:extend(
 {  
 	{
 		type = "assembling-machine",
-		name = "kr-electrolysis-plant",		
-		icon = kr_entities_icons_path .. "electrolysis-plant.png",
+		name = "kr-atmospheric-condenser",		
+		icon = kr_entities_icons_path .. "atmospheric-condenser.png",
 		icon_size = 64,
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
-		minable = {mining_time = 1, result = "kr-electrolysis-plant"},
+		minable = {mining_time = 1, result = "kr-atmospheric-condenser"},
 		max_health = 500,
 		corpse = "kr-big-random-pipes-remnant",
 		dying_explosion = "big-explosion",
 		resistances = 
 		{
-			{type = "physical",percent = 50},
-			{type = "fire",percent = 50},
-			{type = "impact",percent = 50}
+			{type = "physical", percent = 50},
+			{type = "fire", percent = 50},
+			{type = "impact", percent = 50}
 		},
 		fluid_boxes =
 		{
@@ -61,32 +61,31 @@ data:extend(
 		{
 			north =
 			{
-				filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant-h.png",
+				filename = kr_entities_path .. "atmospheric-condenser/atmospheric-condenser-h.png",
 				width = 190,
 				height = 190,
 				frame_count = 1,
 				shift = {0, 0},
 				hr_version =
 				{
-					filename = kr_entities_path .. "electrolysis-plant/hr-electrolysis-plant-h.png",
+					filename = kr_entities_path .. "atmospheric-condenser/hr-atmospheric-condenser-h.png",
 					width = 380,
 					height = 380,
 					scale = 0.5,
 					frame_count = 1,
-					--line_length = 6,
 					shift = {0, 0}
 				}
 			},
 			east =
 			{
-				filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant-v.png",
+				filename = kr_entities_path .. "atmospheric-condenser/atmospheric-condenser-v.png",
 				width = 190,
 				height = 190,
 				frame_count = 1,
 				shift = {0, 0},
 				hr_version =
 				{
-					filename = kr_entities_path .. "electrolysis-plant/hr-electrolysis-plant-v.png",
+					filename = kr_entities_path .. "atmospheric-condenser/hr-atmospheric-condenser-v.png",
 					width = 380,
 					height = 380,
 					scale = 0.5,
@@ -96,14 +95,14 @@ data:extend(
 			},
 			south =
 			{
-				filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant-h.png",
+				filename = kr_entities_path .. "atmospheric-condenser/atmospheric-condenser-h.png",
 				width = 190,
 				height = 190,
 				frame_count = 1,
 				shift = {0, 0},
 				hr_version =
 				{
-					filename = kr_entities_path .. "electrolysis-plant/hr-electrolysis-plant-h.png",
+					filename = kr_entities_path .. "atmospheric-condenser/hr-atmospheric-condenser-h.png",
 					width = 380,
 					height = 380,
 					scale = 0.5,
@@ -113,14 +112,14 @@ data:extend(
 			},
 			west =
 			{
-				filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant-v.png",
+				filename = kr_entities_path .. "atmospheric-condenser/atmospheric-condenser-v.png",
 				width = 190,
 				height = 190,
 				frame_count = 1,
 				shift = {0, 0},
 				hr_version =
 				{
-					filename = kr_entities_path .. "electrolysis-plant/hr-electrolysis-plant-v.png",
+					filename = kr_entities_path .. "atmospheric-condenser/hr-atmospheric-condenser-v.png",
 					width = 380,
 					height = 380,
 					scale = 0.5,
@@ -143,44 +142,36 @@ data:extend(
 			{
 				animation =
 				{
-					filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant-anim.png",
+					filename = kr_entities_path .. "atmospheric-condenser/atmospheric-condenser-animation.png",
 					width = 190,
 					height = 190,
-					frame_count = 8,
-					line_length = 2,
+					frame_count = 12,
+					line_length = 4,
 					shift = {0, 0},
-					animation_speed = 0.3,
+					animation_speed = 1,
 					hr_version =
 					{
-						filename = kr_entities_path .. "electrolysis-plant/hr-electrolysis-plant-anim.png",
+						filename = kr_entities_path .. "atmospheric-condenser/hr-atmospheric-condenser-animation.png",
 						width = 380,
 						height = 380,
 						scale = 0.5,
-						frame_count = 8,
-						line_length = 2,
+						frame_count = 12,
+						line_length = 4,
 						shift = {0, 0},
-						animation_speed = 0.3
+						animation_speed = 1
 					}
 				}
 			}
 		},
-		crafting_categories = { "electrolysis" },
-		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		crafting_categories = {"atmosphere-condensation"},
+		vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
 		working_sound =
 		{
-			sound =
-			{
-				filename = kr_buildings_sounds_path .. "electrolysis-plant.ogg",
-				volume = 1.2	
-			},
-			idle_sound = 
-			{ 
-				filename = "__base__/sound/idle1.ogg", 
-				volume = 0.5 
-			},
+			sound = { filename = kr_buildings_sounds_path .. "atmospheric-condenser.ogg" },
+			idle_sound = { filename = "__base__/sound/idle1.ogg" },
 			apparent_volume = 1.5
 		},
-		crafting_speed = 1,
+		crafting_speed = 1.5,
 		energy_source =
 		{
 			type = "electric",
@@ -188,7 +179,7 @@ data:extend(
 			emissions_per_second_per_watt = 2 / 10000000
 		},
 		energy_usage = "0.5MW",
-		ingredient_count = 6,
+		ingredient_count = 1,
 		module_specification = { module_slots = 2 },
 		allowed_effects = {"consumption", "speed", "productivity", "pollution"},
 		open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },

@@ -34,7 +34,8 @@ function krastorio.icons.createOverlappedIcon(_position, _icon_path, _icon_size,
 	{
 		{
 			icon = _icon_path,
-			icon_size = _icon_size
+			icon_size = _icon_size,
+			scale = 1.0
 		},
 		{ 
 			icon = _over_icon_path,

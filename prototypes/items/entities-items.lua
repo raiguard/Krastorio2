@@ -273,7 +273,7 @@ data:extend(
 		type = "item",
 		name = "kr-electrolysis-plant",
 		icon = kr_entities_icons_path .. "electrolysis-plant.png",
-		icon_size = 32,
+		icon_size = 64,
 		subgroup = "production-machine",
 		order = "e-a1[electrolysis-plant]",
 		place_result = "kr-electrolysis-plant",
@@ -283,12 +283,23 @@ data:extend(
 		type = "item",
 		name = "kr-filtration-plant",
 		icon = kr_entities_icons_path .. "filtration-plant.png",
-		icon_size = 32,
+		icon_size = 64,
 		subgroup = "production-machine",
 		order = "e-b1[filtration-plant]",
 		place_result = "kr-filtration-plant",
 		stack_size = 50
     },
+	{
+		type = "item",
+		name = "kr-atmospheric-condenser",
+		icon = kr_entities_icons_path .. "atmospheric-condenser.png",
+		icon_size = 64,
+		subgroup = "production-machine",
+		order = "e-c1[atmospheric-condenser]",
+		place_result = "kr-atmospheric-condenser",
+		stack_size = 50
+    },
+	
 	
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

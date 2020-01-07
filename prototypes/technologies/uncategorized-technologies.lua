@@ -67,6 +67,43 @@ data:extend(
 		}
     },
 	{
+		type = "technology",
+		name = "kr-atmosphere-condensation",
+		icon = kr_technologies_icons_path .. "atmospheric-condenser.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-atmospheric-condenser"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "hydrogen"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "oxygen"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "nitrogen"
+			}			
+		},
+		prerequisites = { "kr-fluids-chemistry", "electronics" },
+		unit =
+		{
+			count = 150,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1}
+			},
+			time = 30
+		}
+    },
+	{
         type = "technology",
         name = "kr-silicon-processing",
         icon = kr_technologies_icons_path .. "silicon-processing.png",
@@ -111,7 +148,7 @@ data:extend(
                 recipe = "kr-water-separation"
             }
         },
-        prerequisites = {"sulfur-processing", "kr-mineral-water-gathering"},
+        prerequisites = {"sulfur-processing", "kr-mineral-water-gathering", "kr-atmosphere-condensation"},
 		order = "d-a",
         unit =
         {

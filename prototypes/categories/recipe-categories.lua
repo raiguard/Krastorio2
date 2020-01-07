@@ -26,12 +26,16 @@ data:extend(
 	   type = "recipe-category",
 	   name = "fluid-filtration"
 	},
+	-- Atmosphere condensation, used by atmospheric condenser to extract gases from the atmosphere
+	{
+		type = "recipe-category",
+		name = "atmosphere-condensation"
+	},
 	-- Research, used by research servers ans quantum computer
 	{
 	   type = "recipe-category",
 	   name = "research-data"
-	},
-	
+	}	
 	
 -----------------------------------------------------------------------------------------------------------------
 	

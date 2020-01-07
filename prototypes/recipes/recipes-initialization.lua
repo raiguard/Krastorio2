@@ -30,6 +30,9 @@ local krastorio_new_recipes =
 	-- -- New recipes for fluid-filtration items
 	require(kr_recipes_prototypes_path .. "fluid-filtration"),
 	
+	-- -- New recipes for atmosphere condensation products(should produce only gases)
+	require(kr_recipes_prototypes_path .. "atmosphere-condensation"),
+	
 	-- -- New recipes for chemistry products(can produce fluids)
 	require(kr_recipes_prototypes_path .. "chemistry")
 }

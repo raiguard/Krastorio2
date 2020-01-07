@@ -339,6 +339,20 @@ return
     },
 	{
 		type = "recipe",
+		name = "kr-atmospheric-condenser",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"steel-beam", 10},
+			{"steel-gear-wheel", 10},
+			{"electronic-circuit", 3},			
+			{"engine-unit", 2}
+		},
+		result = "kr-atmospheric-condenser"
+    },	
+	{
+		type = "recipe",
 		name = "kr-quarry-drill",
 		energy_required = 120,
 		enabled = false,
