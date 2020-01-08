@@ -17,9 +17,22 @@ data:extend(
 		order = "e-e3"		
     },
 	-- -- Group
-	-- New universal equipment category
+	-- New universal equipment category (all grids can use this)
 	{
 		type = "equipment-category",
 		name = "universal-equipment"
-	}	
+	},	
+	-- New vehicle equipment category (only vehicles grids can use these)
+	{
+		type = "equipment-category",
+		name = "vehicle-equipment"
+	},
+	{
+		type = "equipment-category",
+		name = "vehicle-motor"
+	},
+	{
+		type = "equipment-category",
+		name = "aircraft-equipment"
+	}
 })

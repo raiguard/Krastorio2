@@ -46,7 +46,7 @@ for _, recipe_section in pairs(krastorio_new_recipes) do
 	end
 end
 
--- Generate for each item that can't be processed from the crusher like machines
+-- Generate for each item that can't be processed from the crusher
 -- a void recipe for destroy it
 -- (This must be done after adding other recipes)
 require(kr_recipes_prototypes_path .. "generate-void-crushing-recipes")

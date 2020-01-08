@@ -13,6 +13,9 @@ require(kr_items_prototypes_path .. "terrain-items")
 -- -- Decorations
 require(kr_items_prototypes_path .. "decorations")
 
+-- -- Equipments
+require(kr_items_prototypes_path .. "equipments-items")
+
 -- -- All other items
 require(kr_items_prototypes_path .. "uncategorized-items")
 

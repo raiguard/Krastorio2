@@ -40,12 +40,15 @@ kr_technologies_icons_path             = kr_graphic_mod_path .. "technologies/"
 kr_stacked_icons_path                  = kr_graphic_mod_path .. "compatibility/deadlock-beltboxes-loaders/"
 -- Equipments paths
 kr_equipments_icon_path                = kr_icons_path           .. "equipments/"
-kr_vehicle_equipments_icons_path       = kr_equipments_icon_path .. "vehicle/"
-kr_universal_equipments_icons_path     = kr_equipments_icon_path .. "universal/"
 kr_character_equipments_icons_path     = kr_equipments_icon_path .. "character/"
+kr_universal_equipments_icons_path     = kr_equipments_icon_path .. "universal/"
+kr_vehicle_equipments_icons_path       = kr_equipments_icon_path .. "vehicle/"
 -----------------------------------------------------------------------------------------------------------------
 -- Equipments 
 kr_equipments_path                     = kr_graphic_mod_path .. "equipments/"
+kr_character_equipments_path           = kr_equipments_path  .. "character/"
+kr_universal_equipments_path           = kr_equipments_path  .. "universal/"
+kr_vehicle_equipments_path             = kr_equipments_path  .. "vehicle/"
 -----------------------------------------------------------------------------------------------------------------
 -- Entities
 kr_entities_sprites_path               = kr_graphic_mod_path .. "entities/"

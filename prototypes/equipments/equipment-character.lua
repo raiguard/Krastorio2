@@ -26,7 +26,7 @@ data:extend(
 data:extend(
 {
 -----------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------ARMORS----------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------- 
 	-- -- Armors
 	-- MK3 (item/equipment)
@@ -111,6 +111,105 @@ data:extend(
 		infinite = true,
 		equipment_grid = "large-equipment-grid",
 		inventory_size_bonus = 50	
+	},
+-----------------------------------------------------------------------------------------------------------------
+--------------------------------------------------CHARACTER EQUIPMENTS-------------------------------------------
+----------------------------------------------------------------------------------------------------------------- 
+	-- -- Exoskeletons
+	{		
+		type = "movement-bonus-equipment",
+		name = "advanced-exoskeleton-equipment",
+		categories = {"armor"},
+		energy_consumption = "300kW",
+		energy_source =
+		{
+			type = "electric",
+			usage_priority = "secondary-input"
+		},
+		movement_bonus = 0.6,      
+		shape = 
+		{
+			width = 2,
+			height = 4,
+			type = "full"        
+		},
+		sprite = 
+		{
+			filename = kr_character_equipments_path .. "advanced-exoskeleton-equipment.png",		
+			width = 64,
+			height = 128,
+			priority = "medium"
+		}
+    },
+-----------------------------------------------------------------------------------------------------------------
+	{		
+		type = "movement-bonus-equipment",
+		name = "superior-exoskeleton-equipment",
+		categories = {"armor"},
+		energy_consumption = "400kW",
+		energy_source =
+		{
+			type = "electric",
+			usage_priority = "secondary-input"
+		},
+		movement_bonus = 0.90,      
+		shape = 
+		{
+			width = 2,
+			height = 4,
+			type = "full"        
+		},
+		sprite = 
+		{
+			filename = kr_character_equipments_path .. "superior-exoskeleton-equipment.png",		
+			width = 64,
+			height = 128,
+			priority = "medium"
+		}
+    },
+-----------------------------------------------------------------------------------------------------------------
+	-- -- Night visor
+	{
+		type = "night-vision-equipment",
+		name = "imersite-night-vision-equipment",		
+		energy_source =
+		{
+			type = "electric",
+			buffer_capacity = "180kJ",
+			input_flow_limit = "360kW",
+			usage_priority = "primary-input"
+		},
+		energy_input = "15kW",
+		tint = {r = 0.2, g = 0, b = 0.1, a = 0},
+		desaturation_params = 
+		{ 
+			smoothstep_min = 0.1,
+			smoothstep_max = 0.8,
+			minimum = 0.7,
+			maximum = 1
+		},
+		light_params = 
+		{ 
+			smoothstep_min = 0.1,
+			smoothstep_max = 0.8,
+			minimum = 0.7,
+			maximum = 1
+		},
+		categories = {"armor"},
+		darkness_to_turn_on = 0.7,
+		shape =
+		{
+			width = 1,
+			height = 1,
+			type = "full"
+		},
+		sprite =
+		{
+			filename = kr_character_equipments_path .. "imersite-night-vision-equipment.png",
+			width = 64,
+			height = 64,
+			priority = "medium"
+		}
 	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
