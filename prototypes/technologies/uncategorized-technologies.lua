@@ -162,7 +162,54 @@ data:extend(
             },
             time = 30
         }
-    }
+    },
+	-- Enriched ores, copper and iron
+	{
+		type = "technology",
+		name = "kr-enriched-ores",
+		icon = kr_technologies_icons_path .. "enriched-ores.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "enriched-iron"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "enriched-copper"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "enriched-iron-plate"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "enriched-copper-plate"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "dirty-water-filtration-1"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "dirty-water-filtration-2"
+			}			
+		},
+		prerequisites = {"kr-advanced-chemistry"},
+		unit =
+		{
+			count = 250,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+				{"chemical-science-pack", 1}
+			},
+			time = 60
+		}
+    },
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
