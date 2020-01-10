@@ -26,7 +26,6 @@ data:extend(
 		{
 			type = "burner",
 			fuel_category = "kr-quarry-drill-fuel",
-			effectivity = 0.75,
 			fuel_inventory_size = 1,
 			emissions_per_second_per_watt = 1 / 100000,
 			smoke =

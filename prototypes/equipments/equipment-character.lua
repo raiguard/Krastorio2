@@ -64,7 +64,7 @@ data:extend(
 			}
 		},
 		subgroup = "armor",
-		--order = "f[power-armor-mk3]",
+		order = "f[power-armor-mk3]",
 		stack_size = 1,
 		infinite = true,
 		equipment_grid = "large-equipment-grid",
@@ -106,7 +106,7 @@ data:extend(
 			}
 		},
 		subgroup = "armor",
-		--order = "g[power-armor-mk4]",
+		order = "g[power-armor-mk4]",
 		stack_size = 1,
 		infinite = true,
 		equipment_grid = "large-equipment-grid",

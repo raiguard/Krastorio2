@@ -22,6 +22,11 @@ data:extend(
 		type = "equipment-category",
 		name = "universal-equipment"
 	},	
+	-- New robot interaction equipment for roboport and similar only for entity with inventory
+	{
+		type = "equipment-category",
+		name = "robot-interaction-equipment"
+	},	
 	-- New vehicle equipment category (only vehicles grids can use these)
 	{
 		type = "equipment-category",
