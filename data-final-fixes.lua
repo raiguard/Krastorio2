@@ -6,6 +6,21 @@ krastorio.stage = "data-final-fixes"
 -- -- -- RECIPES
 -- Apply the choosen science pack recipes
 require(kr_prototypes_path .. "vanilla-changes/optional/modify-science-packs-recipes")
+
+-- Apply module limitations
+for recipe_name, recipe in pairs(data.raw.recipe) do
+	if recipe.mod == "Krastorio2" then 
+		if recipe.allow_efficiency == true then
+			krastorio.modules.addEfficiencyLimitation(recipe_name, true)
+		elseif recipe.allow_speed == true then
+			krastorio.modules.addSpeedLimitation(recipe_name, true)
+		elseif recipe.allow_productivity == true then
+			krastorio.modules.addProductivityLimitation(recipe_name, true)
+		elseif recipe.allow_pollution_reduction == true then
+			krastorio.modules.addLessPollutionLimitation(recipe_name, true)
+		end
+	end
+end
 ---------------------------------------------------------------------------
 -- -- -- SCIENCE PACK SANITIZING
 

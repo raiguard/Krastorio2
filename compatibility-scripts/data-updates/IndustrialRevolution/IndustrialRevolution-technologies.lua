@@ -71,6 +71,8 @@ if mods["IndustrialRevolution"] then
 			),
 			energy_required = 3,
 			enabled = false,
+			allow_productivity = true,
+			mod = "Krastorio2",
 			ingredients =
 			{
 				{"tin-gear-wheel", 4},

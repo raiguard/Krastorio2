@@ -6,6 +6,7 @@ return
 		name = "automation-core",
 		energy_required = 3,
 		enabled = false,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"iron-gear-wheel", 2},
@@ -20,6 +21,7 @@ return
 		name = "electronic-components",
 		energy_required = 4,
 		enabled = false,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"silicon", 1},
@@ -34,6 +36,7 @@ return
 		name = "coke",
 		energy_required = 10,
 		enabled = false,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"coal", 3},
@@ -47,6 +50,7 @@ return
 		name = "steel-gear-wheel",
 		energy_required = 0.5,
 		enabled = false,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"steel-plate", 2}
@@ -59,6 +63,7 @@ return
 		name = "steel-beam",
 		energy_required = 3,
 		enabled = false,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"steel-plate", 2}

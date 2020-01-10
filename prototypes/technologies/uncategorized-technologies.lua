@@ -79,15 +79,15 @@ data:extend(
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "hydrogen"
+				recipe = krastorio.recipes.changed_names["hydrogen"] or "hydrogen"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "oxygen"
+				recipe = krastorio.recipes.changed_names["oxygen"] or "oxygen"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "nitrogen"
+				recipe = krastorio.recipes.changed_names["nitrogen"] or "nitrogen"
 			}			
 		},
 		prerequisites = { "kr-fluids-chemistry", "electronics" },
@@ -112,11 +112,11 @@ data:extend(
         {
             {
                 type = "unlock-recipe",
-                recipe = "silicon"
+                recipe = krastorio.recipes.changed_names["silicon"] or "silicon"
             },
             {
                 type = "unlock-recipe",
-                recipe = "quartz"
+                recipe = krastorio.recipes.changed_names["quartz"] or "quartz"
             }
         },
         prerequisites = {"kr-fluids-chemistry", "automation-2"},

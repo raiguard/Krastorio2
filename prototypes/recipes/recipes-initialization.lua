@@ -42,6 +42,7 @@ local krastorio_new_recipes =
 -- If one vanilla recipes will be changes or disabled this will be done in the vanilla-changes mod folder
 for _, recipe_section in pairs(krastorio_new_recipes) do
 	for _, recipe in pairs(recipe_section) do
+		recipe.mod = "Krastorio2"
 		krastorio.recipes.addWithOverrideSafeNewRecipe(recipe)
 	end
 end

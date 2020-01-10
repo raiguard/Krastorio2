@@ -7,11 +7,24 @@ krastorio.modules = {}
 -- .speed
 -- ..bonus
 
+-- @ module
+function krastorio.modules.isLimited(module)
+	if type(module) == "string" then
+		module = data.raw.module[module] or false
+	end
+	
+	if module and module.limitation and #module.limitation > 0 then
+		return true
+	end
+	
+	return false	
+end
+
 -- @ limitations
 -- @ recipe_name
 function krastorio.modules.hasLimitationRecipe(limitations, recipe_name)
 	local has_it = false
-	if next(limitations) ~= nil then
+	if limitations and #limitations > 0 then
 		for i, name in pairs(limitations) do
 			if name == recipe_name then
 				has_it = true
@@ -79,9 +92,13 @@ function krastorio.modules.hasPositiveLessPollution(module)
 end
 
 -- @ recipe_name
-function krastorio.modules.addProductivityLimitation(recipe_name)
+function krastorio.modules.addProductivityLimitation(recipe_name, only_if_limited)
+	only_if_limited = only_if_limited or false
+	local has_positive_productivity, is_limited = false, false
 	for i, module in pairs(data.raw.module) do
-		if krastorio.modules.hasPositiveProductivity(module) then
+		has_positive_productivity = krastorio.modules.hasPositiveProductivity(module)
+		is_limited = krastorio.modules.isLimited(module)
+		if has_positive_productivity and (is_limited or not only_if_limited) then
 			
 			local has_it = false
 			if module.limitation then
@@ -128,9 +145,13 @@ function krastorio.modules.removeProductivityLimitation(recipe_name)
 end
 
 -- @ recipe_name
-function krastorio.modules.addSpeedLimitation(recipe_name)
+function krastorio.modules.addSpeedLimitation(recipe_name, only_if_limited)
+	only_if_limited = only_if_limited or false
+	local has_positive_productivity, is_limited = false, false
 	for i, module in pairs(data.raw.module) do
-		if krastorio.modules.hasPositiveSpeed(module) then
+		has_positive_speed = krastorio.modules.hasPositiveSpeed(module)
+		is_limited = krastorio.modules.isLimited(module)
+		if has_positive_speed and (is_limited or not only_if_limited) then
 			
 			local has_it = false
 			if module.limitation then
@@ -177,9 +198,13 @@ function krastorio.modules.removeSpeedLimitation(recipe_name)
 end
 
 -- @ recipe_name
-function krastorio.modules.addEfficiencyLimitation(recipe_name)
-	for i, module in pairs(data.raw.module) do		
-		if krastorio.modules.hasPositiveEfficiency(module) then
+function krastorio.modules.addEfficiencyLimitation(recipe_name, only_if_limited)
+	only_if_limited = only_if_limited or false
+	local has_positive_productivity, is_limited = false, false
+	for i, module in pairs(data.raw.module) do	
+		has_positive_efficiency = krastorio.modules.hasPositiveEfficiency(module)
+		is_limited = krastorio.modules.isLimited(module)	
+		if has_positive_efficiency and (is_limited or not only_if_limited) then
 			
 			local has_it = false
 			if module.limitation then
@@ -226,9 +251,13 @@ function krastorio.modules.removeEfficiencyLimitation(recipe_name)
 end
 
 -- @ recipe_name
-function krastorio.modules.addLessPollutionLimitation(recipe_name)
+function krastorio.modules.addLessPollutionLimitation(recipe_name, only_if_limited)
+	only_if_limited = only_if_limited or false
+	local has_positive_productivity, is_limited = false, false
 	for i, module in pairs(data.raw.module) do
-		if krastorio.modules.hasPositiveLessPollution(module) then
+		has_positive_less_pollution = krastorio.modules.hasPositiveLessPollution(module)
+		is_limited = krastorio.modules.isLimited(module)	
+		if has_positive_less_pollution and (is_limited or not only_if_limited) then
 		
 			local has_it = false
 			if module.limitation then

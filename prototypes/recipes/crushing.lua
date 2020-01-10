@@ -12,6 +12,7 @@ return
 		always_show_products = true,
 		energy_required = 3,
 		enabled = false,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"stone", 1}

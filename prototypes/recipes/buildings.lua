@@ -15,7 +15,7 @@ return
 			{"glass", 20},
 			{"automation-core", 2}
 		},
-		result = "kr-greenhouse"
+		result = "kr-greenhouse"		
     },	
 	{
 		type = "recipe",

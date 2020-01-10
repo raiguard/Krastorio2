@@ -12,7 +12,7 @@ data:extend(
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "automation-core"
+				recipe = krastorio.recipes.changed_names["automation-core"] or "automation-core"
 			}
 		},
 		prerequisites = {},
@@ -35,7 +35,7 @@ data:extend(
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "light-armor"
+				recipe = krastorio.recipes.changed_names["light-armor"] or "light-armor"
 			}
 		},
 		prerequisites = {"military"},
@@ -58,7 +58,7 @@ data:extend(
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "automation-science-pack"
+				recipe = krastorio.recipes.changed_names["automation-science-pack"] or "automation-science-pack"
 			}
 		},
 		prerequisites = {"kr-automation-core"},
@@ -81,11 +81,11 @@ data:extend(
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "sand"
+				recipe = krastorio.recipes.changed_names["sand"] or "sand"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "glass"
+				recipe = krastorio.recipes.changed_names["glass"] or "glass"
 			}
 		},
 		prerequisites = {"kr-crusher"},

@@ -7,6 +7,9 @@ return
 		category = "smelting",
 		energy_required = 3,
 		enabled = false,
+		always_show_made_in = true,
+		always_show_products = true,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"sand", 3}
@@ -20,6 +23,9 @@ return
 		category = "smelting",
 		energy_required = 6.4,
 		enabled = false,
+		always_show_made_in = true,
+		always_show_products = true,
+		allow_productivity = true,
 		ingredients = 
 		{
 			{"quartz", 6}

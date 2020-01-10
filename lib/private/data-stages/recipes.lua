@@ -1,5 +1,6 @@
 krastorio.recipes = {}
 krastorio.recipes.recipes_groups = {}
+krastorio.recipes.changed_names = {}
 
 -- -- -- GETTING(READ) FUNCTIONS
 
@@ -1479,9 +1480,9 @@ function krastorio.recipes.addWithOverrideSafeNewRecipe(recipe)
 		if data.raw.recipe[recipe.name] then		
 			if not recipe.localised_name then
 				if recipe.result then
-					recipe.localised_name = {"item-name."..recipe.result}
+					recipe.localised_name = {"other.krastorio-recipe", {"item-name."..recipe.result}}
 				else
-					recipe.localised_name = {"recipe-name."..recipe.name}
+					recipe.localised_name = {"other.krastorio-recipe", {"recipe-name."..recipe.name}}
 				end
 			end
 			local suffix = 2
@@ -1489,7 +1490,9 @@ function krastorio.recipes.addWithOverrideSafeNewRecipe(recipe)
 				suffix = suffix + 1
 			end
 			-- log activity
-			krastorio_utils.log.write(3, string.format("Avoided recipe override chaning recipe name from %s to %s", recipe.name, recipe.name.."-"..suffix))			
+			krastorio_utils.log.write(3, string.format("Avoided recipe override chaning recipe name from %s to %s", recipe.name, recipe.name.."-"..suffix))	
+			-- apply
+			krastorio.recipes.changed_names[recipe.name] = recipe.name.."-"..suffix	
 			recipe.name = recipe.name.."-"..suffix
 		end
 		data:extend({recipe})
