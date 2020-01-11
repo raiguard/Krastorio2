@@ -410,6 +410,32 @@ data:extend(
 			time = 30
 		}
     },
+	{
+		type = "technology",
+		name = "kr-advanced-lab",
+		icon = kr_technologies_icons_path .. "biusart-lab.png",
+		icon_size = 128,
+		prerequisites = {"advanced-electronics"},
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "biusart-lab"	
+			}
+		},
+		unit =
+		{
+			count = 300,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1}
+			},
+			time = 30
+		}
+	},
 	-----------------------------------------------------------------------
 	-- PRODUCTION TIER AND UPPER
 	-----------------------------------------------------------------------

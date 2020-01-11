@@ -22,6 +22,7 @@ krastorio.technologies.addPrerequisite("oil-processing", "kr-fluids-chemistry")
 krastorio.technologies.addPrerequisite("fluid-handling", "kr-basic-fluid-handling")
 krastorio.technologies.addPrerequisite("advanced-electronics", "electronics")
 krastorio.technologies.addPrerequisite("advanced-electronics", "kr-silicon-processing")
+krastorio.technologies.addPrerequisite("production-science-pack", "kr-advanced-lab")
 
 --Removing
 krastorio.technologies.removePrerequisite("heavy-armor", "military")

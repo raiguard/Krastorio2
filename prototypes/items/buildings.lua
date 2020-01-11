@@ -78,13 +78,13 @@ data:extend(
 	-- -- --
     {
 		type = "item",
-		name = "biusart_lab",
-		icon =  kr_entities_icons_path .. "biusart_lab.png",
+		name = "biusart-lab",
+		icon =  kr_entities_icons_path .. "biusart-lab.png",
 		icon_size = 64,
 		subgroup = "production-machine",
-		order = "g[lab]",
-		place_result = "biusart_lab",
-		stack_size = 50
+		order = "g[advanced-lab]",
+		place_result = "biusart-lab",
+		stack_size = 10
     },
 	-- -- --
 	-- MEDIUM CONTEINERS

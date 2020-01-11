@@ -60,6 +60,22 @@ return
 		result = "kr-water-pumpjack"
     },
 	-- -- --
+	-- NEW LABORATORIES
+	-- -- --
+    {
+		type = "recipe",
+		name = "biusart-lab",
+		energy_required = 4,
+		enabled = false,
+		ingredients =
+		{
+			{"advanced-circuit", 5},
+			{"steel-beam", 10},
+			{"copper-cable", 10}
+		},
+		result = "biusart-lab"
+    },
+	-- -- --
 	-- MEDIUM CONTEINERS
 	-- -- --
 	{
