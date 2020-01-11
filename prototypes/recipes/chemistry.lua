@@ -165,7 +165,7 @@ return
 			tertiary = {r = 0.10, g = 0.25, b = 0.50, a = 0.100}, 
 			quaternary = {r = 0.25, g = 0.50, b = 0.65, a = 0.850}
 		},
-		subgroup = "raw-material",
+		subgroup = "intermediate-product",
 		order = "e01[enriched-iron]"
 	},
 	{
@@ -197,7 +197,7 @@ return
 			tertiary = {r = 0.430, g = 0.305, b = 0.2, a = 0.000}, 
 			quaternary = {r = 0.970, g = 0.501, b = 0.000, a = 0.900}
 		},
-		subgroup = "raw-material",
+		subgroup = "intermediate-product",
 		order = "e02[enriched-copper]"
 	},
 	{
@@ -221,7 +221,7 @@ return
 			{type="item", name="lithium-chloride", amount=5}
 		},
 		subgroup = "raw-material",
-		order = "f01[lithium-chloride]",
+		order = "y07[lithium-chloride]",
 		crafting_machine_tint =
 		{
 			primary = {r = 0.662, g = 0.807, b = 0.839, a = 0.000}, 
@@ -229,5 +229,99 @@ return
 			tertiary = {r = 0.454, g = 0.517, b = 0.529, a = 0.500}, 
 			quaternary = {r = 0.662, g = 0.807, b = 0.839, a = 0.900} 
 		}
-	}	
+	},
+	{
+		type = "recipe",
+		name = "biomethanol",
+		category = "chemistry",
+		icon = kr_fluids_icons_path  .. "biomethanol.png",
+		icon_size = 64,
+		energy_required = 20,
+		enabled = false,
+		always_show_made_in = true,
+		always_show_products = true,
+		allow_productivity = true,
+		ingredients =
+		{
+			{type="item", name="wood", amount=30},
+			{type="fluid", name="oxygen", amount=120, catalyst_amount = 120}
+		},
+		results =
+		{ 
+			{type="fluid", name="biomethanol", amount=30}
+		},
+		subgroup = "raw-material",
+		order = "y08[biomethanol]",
+		crafting_machine_tint =
+		{
+			primary = {r = 0.25, g = 0.53, b = 0.15, a = 0.000}, 
+			secondary = {r = 0.27, g =0.53, b = 0.12, a = 0.250}, 
+			primary = {r = 0.25, g = 0.53, b = 0.15, a = 0.750}, 
+			secondary = {r = 0.27, g =0.53, b = 0.12, a = 0.900}, 
+		}
+	},
+	---
+	-- Fuels
+	---
+	{
+		type = "recipe",
+		name = "fuel",
+		category = "chemistry",
+		icon = kr_icons_path .. "fuel.png",
+		icon_size = 64,
+		energy_required = 10,
+		enabled = false,
+		always_show_made_in = true,
+		always_show_products = true,
+		allow_productivity = true,
+		ingredients =
+		{
+			{type="item", name="solid-fuel", amount=5},
+			{type="fluid", name="hydrogen", amount=50, catalyst_amount = 50}
+		},
+		results =
+		{ 
+			{type="item", name="fuel", amount=5}
+		},
+		subgroup = "intermediate-product",
+		order = "f01[fuel]",
+		crafting_machine_tint =
+		{
+			primary = {r = 0.662, g = 0.807, b = 0.839, a = 0.000}, 
+			secondary = {r = 0.541, g = 0.647, b = 0.670, a = 0.250}, 
+			tertiary = {r = 0.454, g = 0.517, b = 0.529, a = 0.500}, 
+			quaternary = {r = 0.662, g = 0.807, b = 0.839, a = 0.900} 
+		}
+	},
+	{
+		type = "recipe",
+		name = "bio-fuel",
+		category = "chemistry",
+		icon = kr_icons_path .. "bio-fuel.png",
+		icon_size = 64,
+		energy_required = 10,
+		enabled = false,
+		always_show_made_in = true,
+		always_show_products = true,
+		allow_productivity = true,
+		ingredients =
+		{
+			{type="item", name="fuel", amount=5},
+			{type="fluid", name="biomethanol", amount=50, catalyst_amount = 50}
+		},
+		results =
+		{ 
+			{type="item", name="bio-fuel", amount=10}
+		},
+		subgroup = "intermediate-product",
+		order = "f02[bio-fuel]",
+		crafting_machine_tint =
+		{
+			primary = {r = 0.30, g = 0.53, b = 0.20, a = 0.000}, 
+			secondary = {r = 0.30, g =0.53, b = 0.20, a = 0.250}, 
+			tertiary = {r = 0.454, g = 0.517, b = 0.529, a = 0.500}, 
+			quaternary = {r = 0.662, g = 0.807, b = 0.839, a = 0.900} 
+		}
+	},
+	---
 }

@@ -123,31 +123,31 @@ data:extend(
     },
 	{
 		type = "item",
-		name = "bio-fuel",
-		icon = kr_icons_path .. "bio-fuel.png",
-		icon_size = 64,
-		fuel_category = "vehicle-fuel",
-		fuel_value = "10MJ",
-		fuel_emissions_multiplier = 0.5,
-		fuel_acceleration_multiplier = 0.8,
-		fuel_top_speed_multiplier = 0.8,
-		subgroup = "raw-material",
-		order = "zzz[bio-fuel]",
-		stack_size = 1000
-    },
-	{
-		type = "item",
 		name = "fuel",
 		icon = kr_icons_path .. "fuel.png",
 		icon_size = 64,
 		fuel_category = "vehicle-fuel",
-		fuel_value = "10MJ",
+		fuel_value = "15MJ",
 		fuel_emissions_multiplier = 1,
-		fuel_acceleration_multiplier = 1,
-		fuel_top_speed_multiplier = 1,
+		fuel_acceleration_multiplier = 1.3,
+		fuel_top_speed_multiplier = 1.1,
 		subgroup = "raw-material",
 		order = "zzz[fuel]",
-		stack_size = 1000
+		stack_size = 200
+    },
+	{
+		type = "item",
+		name = "bio-fuel",
+		icon = kr_icons_path .. "bio-fuel.png",
+		icon_size = 64,
+		fuel_category = "vehicle-fuel",
+		fuel_value = "15MJ",
+		fuel_emissions_multiplier = 1,
+		fuel_acceleration_multiplier = 1.3,
+		fuel_top_speed_multiplier = 1.1,
+		subgroup = "raw-material",
+		order = "zzz[bio-fuel]",
+		stack_size = 200
     },
 	{
 		type = "item",
@@ -156,12 +156,12 @@ data:extend(
 		icon_size = 64,
 		fuel_category = "vehicle-fuel",
 		fuel_value = "10MJ",
-		fuel_emissions_multiplier = 1.75,
-		fuel_acceleration_multiplier = 1.25,
-		fuel_top_speed_multiplier = 1.25,
+		fuel_emissions_multiplier = 1.5,
+		fuel_acceleration_multiplier = 1.4,
+		fuel_top_speed_multiplier = 1.2,
 		subgroup = "raw-material",
 		order = "zzz[advanced-fuel]",
-		stack_size = 1000
+		stack_size = 200
     },
 	{
 		type = "item",

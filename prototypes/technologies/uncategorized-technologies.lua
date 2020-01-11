@@ -166,6 +166,10 @@ data:extend(
 			},
 			{
 				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["biomethanol"] or "biomethanol"
+			},			
+			{
+				type = "unlock-recipe",
 				recipe = krastorio.recipes.changed_names["heavy-water"] or "heavy-water"
 			}			
         },

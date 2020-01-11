@@ -1,30 +1,18 @@
 data:extend(
 {
-	-- Heavy water
+	-- Hydrogen
 	{
 		type = "fluid",
-		name = "heavy-water",
-		default_temperature = 25,
+		name = "hydrogen",
+		default_temperature = 15,
 		max_temperature = 100,
 		auto_barrel = true,
-		base_color = {r=0.2, g=0.3, b=0.32},
-		flow_color = {r=0.5, g=0.9, b=0.6},
-		icon = kr_fluids_icons_path  .. "heavy-water.png",
+		base_color = {r=0.50, g=0.50, b=0.50},
+		flow_color = {r=0.50, g=0.50, b=0.50},
+		gas_temperature = 15,
+		icon = kr_fluids_icons_path  .. "hydrogen.png",
 		icon_size = 64,
-		order = "yb00[heavy-water]"
-    },
-	-- Ammonia
-	{
-		type = "fluid",
-		name = "ammonia",
-		default_temperature = 25,
-		max_temperature = 100,
-		auto_barrel = true,
-		base_color = {r=0.25, g=0.25, b=0.45},
-		flow_color = {r=0.25, g=0.25, b=0.45},
-		icon = kr_fluids_icons_path  .. "ammonia.png",
-		icon_size = 64,
-		order = "yc00[ammonia]"
+		order = "ya01[hydrogen]"
     },
 	-- Chlorine
 	{
@@ -38,35 +26,7 @@ data:extend(
 		gas_temperature = 15,
 		icon = kr_fluids_icons_path  .. "chlorine.png",
 		icon_size = 64,
-		order = "yc00[chlorine]"
-    },
-	-- Hydrogen
-	{
-		type = "fluid",
-		name = "hydrogen",
-		default_temperature = 15,
-		max_temperature = 100,
-		auto_barrel = true,
-		base_color = {r=0.50, g=0.50, b=0.50},
-		flow_color = {r=0.50, g=0.50, b=0.50},
-		gas_temperature = 15,
-		icon = kr_fluids_icons_path  .. "hydrogen.png",
-		icon_size = 64,
-		order = "yc00[hydrogen]"
-    },
-	-- Nitrogen
-	{
-		type = "fluid",
-		name = "nitrogen",
-		default_temperature = 15,
-		max_temperature = 100,
-		auto_barrel = true,
-		base_color = {r=0.05, g=0.10, b=0.50},
-		flow_color = {r=0.05, g=0.10, b=0.50},
-		gas_temperature = 15,
-		icon = kr_fluids_icons_path  .. "nitrogen.png",
-		icon_size = 64,
-		order = "yc00[nitrogen]"
+		order = "ya02[chlorine]"
     },
 	-- Oxygen
 	{
@@ -80,7 +40,35 @@ data:extend(
 		gas_temperature = 15,
 		icon = kr_fluids_icons_path  .. "oxygen.png",
 		icon_size = 64,
-		order = "yc00[oxygen]"
+		order = "ya03[oxygen]"
+    },
+	-- Nitrogen
+	{
+		type = "fluid",
+		name = "nitrogen",
+		default_temperature = 15,
+		max_temperature = 100,
+		auto_barrel = true,
+		base_color = {r=0.05, g=0.10, b=0.50},
+		flow_color = {r=0.05, g=0.10, b=0.50},
+		gas_temperature = 15,
+		icon = kr_fluids_icons_path  .. "nitrogen.png",
+		icon_size = 64,
+		order = "ya04[nitrogen]"
+    },
+	-- Ammonia
+	{
+		type = "fluid",
+		name = "ammonia",
+		default_temperature = 25,
+		max_temperature = 100,
+		auto_barrel = true,
+		base_color = {r=0.25, g=0.25, b=0.45},
+		flow_color = {r=0.25, g=0.25, b=0.45},
+		gas_temperature = 15,
+		icon = kr_fluids_icons_path  .. "ammonia.png",
+		icon_size = 64,
+		order = "ya05[ammonia]"
     },
 	-- Nitric acid
 	{
@@ -94,7 +82,7 @@ data:extend(
 		gas_temperature = 15,
 		icon = kr_fluids_icons_path  .. "nitric-acid.png",
 		icon_size = 64,
-		order = "yc00[nitric-acid]"
+		order = "ya06[nitric-acid]"
     },
 	-- Hydrogen chloride
 	{
@@ -108,6 +96,33 @@ data:extend(
 		gas_temperature = 15,
 		icon = kr_fluids_icons_path  .. "hydrogen-chloride.png",
 		icon_size = 64,
-		order = "yc00[hydrogen-chloride]"
-    }	
+		order = "ya07[hydrogen-chloride]"
+    },		
+	-- Biomethanol
+	{
+		type = "fluid",
+		name = "biomethanol",
+		default_temperature = 15,
+		max_temperature = 100,
+		auto_barrel = true,
+		base_color = {r=0.25, g=0.53, b=0.15},
+		flow_color = {r=0.27, g=0.53, b=0.12},
+		gas_temperature = 30,
+		icon = kr_fluids_icons_path  .. "biomethanol.png",
+		icon_size = 64,
+		order = "ya08[biomethanol]"
+    },
+	-- Heavy water
+	{
+		type = "fluid",
+		name = "heavy-water",
+		default_temperature = 25,
+		max_temperature = 100,
+		auto_barrel = true,
+		base_color = {r=0.2, g=0.3, b=0.32},
+		flow_color = {r=0.5, g=0.9, b=0.6},
+		icon = kr_fluids_icons_path  .. "heavy-water.png",
+		icon_size = 64,
+		order = "ya09[heavy-water]"
+    }
 })

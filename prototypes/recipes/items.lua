@@ -70,5 +70,5 @@ return
 		},
 		result = "steel-beam",
 		result_count = 1
-	}
+	}	
 }
