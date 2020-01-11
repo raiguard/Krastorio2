@@ -88,7 +88,7 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = krastorio.recipes.changed_names["nitrogen"] or "nitrogen"
-			}			
+			}						
 		},
 		prerequisites = { "kr-fluids-chemistry", "electronics" },
 		unit =
@@ -98,7 +98,8 @@ data:extend(
 			{
 				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
-				{"logistic-science-pack", 1}
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1}
 			},
 			time = 30
 		}
@@ -143,16 +144,36 @@ data:extend(
         icon_size = 128,
         effects =
         {
+			{
+                type = "unlock-recipe",
+                recipe = "kr-water"
+            },
             {
                 type = "unlock-recipe",
                 recipe = "kr-water-separation"
-            }
+            },
+			{
+                type = "unlock-recipe",
+                recipe = krastorio.recipes.changed_names["ammonia"] or "ammonia"
+            },
+			{
+                type = "unlock-recipe",
+                recipe = krastorio.recipes.changed_names["nitric-acid"] or "nitric-acid"
+            },
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["hydrogen-chloride"] or "hydrogen-chloride"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["heavy-water"] or "heavy-water"
+			}			
         },
         prerequisites = {"sulfur-processing", "kr-mineral-water-gathering", "kr-atmosphere-condensation"},
 		order = "d-a",
         unit =
         {
-            count = 200,
+            count = 300,
             ingredients =
             {
 				{"basic-tech-card", 1},
@@ -160,7 +181,7 @@ data:extend(
                 {"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
             },
-            time = 30
+            time = 60
         }
     },
 	-- Enriched ores, copper and iron
@@ -210,6 +231,36 @@ data:extend(
 			time = 60
 		}
     },
+	{
+		type = "technology",
+		name = "kr-lithium-processing",
+		icon = kr_technologies_icons_path .. "lithium-processing.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["lithium"] or "lithium"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["lithium-chloride"] or "lithium-chloride"
+			}			
+		},
+		prerequisites = {"kr-advanced-chemistry"},
+		unit =
+		{
+			count = 250,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+				{"chemical-science-pack", 1}
+			},
+			time = 60
+		}
+    }	
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

@@ -251,4 +251,35 @@ data:extend(
 		order = "e02[enriched-copper]",
 		stack_size = 200
     },
+	{
+		type = "item",
+		name = "lithium",
+		icon = kr_mip_icons_path .. "lithium/lithium.png",
+		icon_size = 64,
+		icon_mipmaps = 3,
+		pictures =
+		{
+			{ size = 64, filename = kr_mip_icons_path .. "lithium/lithium.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "lithium/lithium-1.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "lithium/lithium-2.png",   scale = 0.25, mipmap_count = 4 }
+		},
+		subgroup = "raw-material",
+		order = "e04[lithium]",
+		stack_size = 200
+    },
+	{
+		type = "item",
+		name = "lithium-chloride",
+		icon = kr_mip_icons_path .. "lithium-chloride/lithium-chloride.png",
+		icon_size = 64,
+		icon_mipmaps = 3,
+		pictures =
+		{
+			{ size = 64, filename = kr_mip_icons_path .. "lithium-chloride/lithium-chloride.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "lithium-chloride/lithium-chloride-1.png",   scale = 0.25, mipmap_count = 4 }
+		},
+		subgroup = "raw-material",
+		order = "e05[lithium-chloride]",
+		stack_size = 200
+    },
 })

@@ -271,7 +271,8 @@ data:extend(
 			ingredients = 
 			{
 				{"basic-tech-card", 1},
-				{"automation-science-pack", 1}
+				{"automation-science-pack", 1},
+                {"logistic-science-pack", 1}
 			},
 			time = 30
 		}
