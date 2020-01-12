@@ -264,7 +264,51 @@ data:extend(
 			},
 			time = 60
 		}
-    }	
+    },	
+	{
+		type = "technology",
+		name = "kr-quarry-minerals-extraction",
+		icon = kr_technologies_icons_path .. "quarry-drill.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-quarry-drill"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["menarite-powder"] or "menarite-powder"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["imersite-powder"] or "imersite-powder"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["menarite-crystal"] or "menarite-crystal"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["imersite-crystal"] or "imersite-crystal"
+			}			
+		},
+		prerequisites = {"kr-advanced-chemistry", "advanced-electronics-2", "electric-engine"},
+		order = "g-e-d",
+		unit =
+		{
+			count = 1000,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"production-science-pack", 1}
+			},
+			time = 60
+		}
+    }
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

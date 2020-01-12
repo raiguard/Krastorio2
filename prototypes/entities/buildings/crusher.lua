@@ -51,7 +51,6 @@ data:extend(
 					scale = scale,
 					width = 256,
 					height = 256,
-					--shift = {0.36, 0},
 					frame_count = 30,
 					line_length = 6,
 					draw_as_shadow = true,
@@ -62,7 +61,6 @@ data:extend(
 						scale = scale,
 						width = 512,
 						height = 512,
-						--shift = {0.36, 0},
 						frame_count = 30,
 						line_length = 6,
 						draw_as_shadow = true,
@@ -85,7 +83,7 @@ data:extend(
         },
 		crafting_speed = 1,
 		source_inventory_size = 1,
-		result_inventory_size = 1,
+		result_inventory_size = 2,
 		energy_source =
 		{
 			type = "electric",
@@ -93,7 +91,6 @@ data:extend(
 			emissions_per_minute = 20
 		},
 		energy_usage = "225KW",
-		ingredient_count = 6,
 		--module_specification =
 		--{
 		--	module_slots = 4

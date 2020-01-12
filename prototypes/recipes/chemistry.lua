@@ -324,4 +324,58 @@ return
 		}
 	},
 	---
+	{
+		type = "recipe",
+		name = "menarite-crystal",
+		category = "chemistry",
+		icon = kr_mip_icons_path .. "menarite-crystal/menarite-crystal.png",
+		icon_size = 64,	
+		energy_required = 20,
+		enabled = false,
+		always_show_made_in = true,
+		always_show_products = true,
+		allow_productivity = true,
+		ingredients =
+		{
+			{type="item", name="menarite-powder", amount=5},
+			{type="fluid", name="nitric-acid", amount=10, catalyst_amount = 50}
+		},
+		result = "menarite-crystal",
+		subgroup = "intermediate-product",
+		order = "q3[menarite-crystal]",
+		crafting_machine_tint = 
+		{
+			primary = {r = 0.25, g = 0.50, b = 0.65, a = 0.150},
+			secondary = {r = 0.50, g = 0.70, b = 0.90, a = 0.357},
+			tertiary = {r = 0.10, g = 0.25, b = 0.50, a = 0.100}, 
+			quaternary = {r = 0.25, g = 0.50, b = 0.65, a = 0.900}
+		}
+	},
+	{
+		type = "recipe",
+		name = "imersite-crystal",
+		category = "chemistry",
+		icon = kr_mip_icons_path .. "imersite-crystal/imersite-crystal.png",
+		icon_size = 64,	
+		energy_required = 30,
+		enabled = false,
+		always_show_made_in = true,
+		always_show_products = true,
+		allow_productivity = true,
+		ingredients =
+		{
+			{type="item", name="imersite-powder", amount=5},
+			{type="fluid", name="nitric-acid", amount=10, catalyst_amount = 50}
+		},
+		result = "imersite-crystal",
+		subgroup = "intermediate-product",
+		order = "q4[imersite-crystal]",
+		crafting_machine_tint = 
+		{
+			primary = {r = 0.882, g = 0.337, b = 0.890, a = 0.200},
+			secondary = {r = 0.90, g = 0.30, b = 0.25, a = 0.357},
+			tertiary = {r = 0.623, g = 0.270, b = 0.631, a = 0.100}, 
+			quaternary = {r = 0.882, g = 0.337, b = 0.890, a = 0.900}
+		}
+	}
 }

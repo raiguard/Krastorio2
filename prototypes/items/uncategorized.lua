@@ -228,8 +228,8 @@ data:extend(
 		pictures =
 		{
 			{ size = 64, filename = kr_mip_icons_path .. "enriched-iron/enriched-iron.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "enriched-iron/enriched-iron-1.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "enriched-iron/enriched-iron-2.png",   scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_mip_icons_path .. "enriched-iron/enriched-iron-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "enriched-iron/enriched-iron-2.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-material",
 		order = "e01[enriched-iron]",
@@ -244,8 +244,8 @@ data:extend(
 		pictures =
 		{
 			{ size = 64, filename = kr_mip_icons_path .. "enriched-copper/enriched-copper.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "enriched-copper/enriched-copper-1.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "enriched-copper/enriched-copper-2.png",   scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_mip_icons_path .. "enriched-copper/enriched-copper-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "enriched-copper/enriched-copper-2.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-material",
 		order = "e02[enriched-copper]",
@@ -260,8 +260,8 @@ data:extend(
 		pictures =
 		{
 			{ size = 64, filename = kr_mip_icons_path .. "lithium/lithium.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "lithium/lithium-1.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "lithium/lithium-2.png",   scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_mip_icons_path .. "lithium/lithium-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "lithium/lithium-2.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-material",
 		order = "e04[lithium]",
@@ -276,10 +276,76 @@ data:extend(
 		pictures =
 		{
 			{ size = 64, filename = kr_mip_icons_path .. "lithium-chloride/lithium-chloride.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "lithium-chloride/lithium-chloride-1.png",   scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_mip_icons_path .. "lithium-chloride/lithium-chloride-1.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-material",
 		order = "e05[lithium-chloride]",
 		stack_size = 200
     },
+	{
+		type = "item",
+		name = "menarite-powder",
+		icon = kr_mip_icons_path .. "menarite-powder/menarite-powder.png",
+		icon_size = 64,
+		icon_mipmaps = 3,
+		pictures =
+		{
+			{ size = 64, filename = kr_mip_icons_path .. "menarite-powder/menarite-powder.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "menarite-powder/menarite-powder-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "menarite-powder/menarite-powder-2.png", scale = 0.25, mipmap_count = 4 }
+		},
+		subgroup = "raw-material",
+		order = "q02[menarite-powder]",
+		stack_size = 200
+    },
+	{
+		type = "item",
+		name = "menarite-crystal",
+		icon = kr_mip_icons_path .. "menarite-crystal/menarite-crystal.png",
+		icon_size = 64,
+		icon_mipmaps = 3,
+		pictures =
+		{
+			{ size = 64, filename = kr_mip_icons_path .. "menarite-crystal/menarite-crystal.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "menarite-crystal/menarite-crystal-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "menarite-crystal/menarite-crystal-2.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "menarite-crystal/menarite-crystal-3.png", scale = 0.25, mipmap_count = 4 }
+		},
+		subgroup = "intermediate-product",
+		order = "q04[menarite-crystal]",
+		stack_size = 50
+    },
+	{
+		type = "item",
+		name = "imersite-powder",
+		icon = kr_mip_icons_path .. "imersite-powder/imersite-powder.png",
+		icon_size = 64,
+		icon_mipmaps = 3,
+		pictures =
+		{
+			{ size = 64, filename = kr_mip_icons_path .. "imersite-powder/imersite-powder.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "imersite-powder/imersite-powder-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "imersite-powder/imersite-powder-2.png", scale = 0.25, mipmap_count = 4 }
+		},
+		subgroup = "raw-material",
+		order = "q01[imersite-powder]",
+		stack_size = 200
+    },
+	{
+		type = "item",
+		name = "imersite-crystal",
+		icon = kr_mip_icons_path .. "imersite-crystal/imersite-crystal.png",
+		icon_size = 64,
+		icon_mipmaps = 3,
+		pictures =
+		{
+			{ size = 64, filename = kr_mip_icons_path .. "imersite-crystal/imersite-crystal.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "imersite-crystal/imersite-crystal-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "imersite-crystal/imersite-crystal-2.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "imersite-crystal/imersite-crystal-3.png", scale = 0.25, mipmap_count = 4 }
+		},
+		subgroup = "intermediate-product",
+		order = "q03[imersite-crystal]",
+		stack_size = 50
+    }
 })
