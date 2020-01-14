@@ -305,8 +305,18 @@ data:extend(
 		icon = kr_entities_icons_path .. "fusion-reactor.png",
 		icon_size = 64,
 		subgroup = "energy",
-		order = "f[nuclear-energy]-b[fusion-reactor]",
+		order = "f[nuclear-energy]-b2[fusion-reactor]",
 		place_result = "kr-fusion-reactor",
+		stack_size = 10
+    },
+	{
+		type = "item",
+		name = "kr-advanced-steam-turbine",
+		icon = kr_entities_icons_path .. "advanced-steam-turbine.png",
+		icon_size = 64,
+		subgroup = "energy",
+		order = "f[nuclear-energy]-d2[advanced-steam-turbine]",
+		place_result = "kr-advanced-steam-turbine",
 		stack_size = 10
     },
 	

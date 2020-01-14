@@ -22,6 +22,7 @@ require("buildings/steel-pump")
 require("buildings/water-pumpjack")
 require("buildings/wind-turbine")
 require("buildings/fusion-reactor")
+require("buildings/advanced-steam-turbine")
 -- -- Laboratory
 require("buildings/biusart-lab")
 -- -- Conteiners
