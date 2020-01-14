@@ -6,6 +6,7 @@
 kr_path                                = "__Krastorio2__/"
 kr_prototypes_path                     = kr_path            .. "prototypes/"
 -- Prototypes:
+kr_achievements_path                   = kr_prototypes_path .. "achievements/"
 kr_categories_path                     = kr_prototypes_path .. "categories/"
 kr_damages_path                        = kr_prototypes_path .. "damages/"
 kr_entities_prototypes_path            = kr_prototypes_path .. "entities/"
@@ -26,6 +27,7 @@ kr_public_lib                          = kr_path .. "lib/public/data-stages/"
 kr_graphic_mod_path                    = "__Krastorio2__/graphics/"
 -----------------------------------------------------------------------------------------------------------------
 -- Icons paths
+kr_achievements_icons_path             = kr_graphic_mod_path .. "achievements/"
 kr_icons_path                          = kr_graphic_mod_path .. "icons/"
 kr_cards_icons_path                    = kr_icons_path       .. "cards/"
 kr_fluids_icons_path                   = kr_icons_path       .. "fluids/"

@@ -29,8 +29,8 @@ data:extend(
 		name = "automation-core",
 		icon = kr_icons_path .. "automation-core.png",
 		icon_size = 64,
-		subgroup = "raw-material",
-		order = "a[automation-core]",
+		subgroup = "intermediate-product",
+		order = "d1[automation-core]",
 		stack_size = 200
 	},
 	{
@@ -347,5 +347,14 @@ data:extend(
 		subgroup = "intermediate-product",
 		order = "q03[imersite-crystal]",
 		stack_size = 50
-    }
+    },
+	{
+		type = "item",
+		name = "ai-core",
+		icon = kr_icons_path .. "ai-core.png",
+		icon_size = 64,
+		subgroup = "intermediate-product",
+		order = "h1[ai-core]",
+		stack_size = 200
+	},
 })

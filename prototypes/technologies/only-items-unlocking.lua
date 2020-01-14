@@ -154,6 +154,34 @@ data:extend(
 		}
     },
 	---
+	{
+		type = "technology",
+		name = "kr-ai-core",
+		icon = kr_technologies_icons_path .. "ai-core.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["ai-core"] or "ai-core"
+			}
+		},
+		prerequisites = {"kr-quarry-minerals-extraction"},
+		unit =
+		{
+			count = 500,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1}
+			},
+			time = 60
+		}
+    }
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

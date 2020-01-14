@@ -5,7 +5,7 @@ return
 		type = "recipe",
 		name = "kr-water",
 		localized_name = {"fluid-name.water"},
-		category = "chemistry",
+		category = "chemistry",		
 		icon = kr_recipes_icons_path .. "water.png",
 		icon_size = 256,
 		energy_required = 5,
@@ -21,7 +21,7 @@ return
 		{
 			{ type = "fluid", name = "water", amount = 50 }
 		},
-		subgroup = "raw-material",
+		subgroup = "fluid-recipes",
 		order = "y03[water]"
 	},
 	{
@@ -51,7 +51,7 @@ return
 			tertiary = {r = 0.210, g = 0.000, b = 0.75, a = 0.350}, 
 			quaternary = {r = 0.106, g = 0.000, b = 0.50, a = 0.900}
 		},
-		subgroup = "raw-material",
+		subgroup = "fluid-recipes",
 		order = "y03[ammonia]"
 	},
 	{
@@ -81,7 +81,7 @@ return
 			tertiary = {r = 0.430, g = 0.000, b = 0.450, a = 0.200}, 
 			quaternary = {r = 0.800, g = 0.000, b = 0.100, a = 0.900}
 		},
-		subgroup = "raw-material",
+		subgroup = "fluid-recipes",
 		order = "y04[nitric-acid]"
 	},
 	{
@@ -111,7 +111,7 @@ return
 			tertiary = {r = 0.321, g = 0.890, b = 0.443, a = 0.250}, -- #52e371
 			quaternary = {r = 0.835, g = 0.901, b = 0.862, a = 0.900}
 		},
-		subgroup = "raw-material",
+		subgroup = "fluid-recipes",
 		order = "y05[hydrogen-chloride]"
 	},
 	{
@@ -133,7 +133,7 @@ return
 		{
 			{ type = "fluid", name = "heavy-water", amount = 1 }
 		},
-		subgroup = "raw-material",
+		subgroup = "fluid-recipes",
 		order = "y06[heavy-water]"
 	},
 	{
@@ -165,7 +165,7 @@ return
 			tertiary = {r = 0.10, g = 0.25, b = 0.50, a = 0.100}, 
 			quaternary = {r = 0.25, g = 0.50, b = 0.65, a = 0.850}
 		},
-		subgroup = "intermediate-product",
+		subgroup = "raw-material",
 		order = "e01[enriched-iron]"
 	},
 	{
@@ -197,7 +197,7 @@ return
 			tertiary = {r = 0.430, g = 0.305, b = 0.2, a = 0.000}, 
 			quaternary = {r = 0.970, g = 0.501, b = 0.000, a = 0.900}
 		},
-		subgroup = "intermediate-product",
+		subgroup = "raw-material",
 		order = "e02[enriched-copper]"
 	},
 	{
@@ -250,15 +250,15 @@ return
 		{ 
 			{type="fluid", name="biomethanol", amount=30}
 		},
-		subgroup = "raw-material",
-		order = "y08[biomethanol]",
 		crafting_machine_tint =
 		{
 			primary = {r = 0.25, g = 0.53, b = 0.15, a = 0.000}, 
 			secondary = {r = 0.27, g =0.53, b = 0.12, a = 0.250}, 
 			primary = {r = 0.25, g = 0.53, b = 0.15, a = 0.750}, 
 			secondary = {r = 0.27, g =0.53, b = 0.12, a = 0.900}, 
-		}
+		},
+		subgroup = "fluid-recipes",
+		order = "y08[biomethanol]",
 	},
 	---
 	-- Fuels
@@ -284,7 +284,7 @@ return
 			{type="item", name="fuel", amount=5}
 		},
 		subgroup = "intermediate-product",
-		order = "f01[fuel]",
+		order = "o1[fuel]",
 		crafting_machine_tint =
 		{
 			primary = {r = 0.662, g = 0.807, b = 0.839, a = 0.000}, 
@@ -314,7 +314,7 @@ return
 			{type="item", name="bio-fuel", amount=10}
 		},
 		subgroup = "intermediate-product",
-		order = "f02[bio-fuel]",
+		order = "o2[bio-fuel]",
 		crafting_machine_tint =
 		{
 			primary = {r = 0.30, g = 0.53, b = 0.20, a = 0.000}, 
@@ -342,7 +342,7 @@ return
 		},
 		result = "menarite-crystal",
 		subgroup = "intermediate-product",
-		order = "q3[menarite-crystal]",
+		order = "o5[menarite-crystal]",
 		crafting_machine_tint = 
 		{
 			primary = {r = 0.25, g = 0.50, b = 0.65, a = 0.150},
@@ -369,7 +369,7 @@ return
 		},
 		result = "imersite-crystal",
 		subgroup = "intermediate-product",
-		order = "q4[imersite-crystal]",
+		order = "o6[imersite-crystal]",
 		crafting_machine_tint = 
 		{
 			primary = {r = 0.882, g = 0.337, b = 0.890, a = 0.200},

@@ -26,6 +26,8 @@ require(kr_data_compatibility_path .. "mod-assertions")
 ---------------------------------------------------------------------------
 -- -- -- CONTENTS INITIALIZATION (data stage)
 ---------------------------------------------------------------------------
+-- -- Adding new achievements
+require(kr_achievements_path .. "achievements-initialization")
 -- -- Adding new categories
 require(kr_categories_path .. "categories-initialization")
 -- -- Adding new damages

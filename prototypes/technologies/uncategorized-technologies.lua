@@ -300,7 +300,6 @@ data:extend(
 			count = 1000,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1},

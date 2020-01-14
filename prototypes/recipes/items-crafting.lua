@@ -70,5 +70,21 @@ return
 		},
 		result = "steel-beam",
 		result_count = 1
-	}	
+	},
+	{
+		type = "recipe",
+		name = "ai-core",
+		category = "crafting-with-fluid",
+		energy_required = 8,
+		enabled = false,
+		allow_productivity = true,
+		ingredients =
+		{
+			{ type = "item",  name = "processing-unit", amount = 2 },
+			{ type = "item",  name = "menarite-crystal", amount = 1 },
+			{ type = "fluid", name = "nitric-acid", amount = 4 }
+		},
+		result = "ai-core",
+		result_count = 1
+	}
 }

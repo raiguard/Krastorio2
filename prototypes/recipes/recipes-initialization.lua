@@ -13,7 +13,7 @@ local krastorio_new_recipes =
 	require(kr_recipes_prototypes_path .. "tech-cards"),
 	
 	-- -- New generic recipes for items (not associated to buildings)
-	require(kr_recipes_prototypes_path .. "items"),
+	require(kr_recipes_prototypes_path .. "items-crafting"),
 	
 	-- -- New recipes for plants(wood) growing 
 	require(kr_recipes_prototypes_path .. "growing"),

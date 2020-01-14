@@ -21,7 +21,7 @@ return
 			{ type = "fluid", name = "chlorine", amount = 20, catalyst_amount = 20 },
 			{ type = "fluid", name = "hydrogen", amount = 30, catalyst_amount = 30 }
 		},
-		subgroup = "raw-material",
+		subgroup = "fluid-recipes",
 		order = "y01[water-electrolysis]"
 	},
 	{
@@ -43,7 +43,7 @@ return
 			{ type = "fluid", name = "oxygen", amount = 20, catalyst_amount = 20 },
 			{ type = "fluid", name = "hydrogen", amount = 30, catalyst_amount = 30 }
 		},
-		subgroup = "raw-material",
+		subgroup = "fluid-recipes",
 		order = "y02[water-separation]"
 	},
 	{
