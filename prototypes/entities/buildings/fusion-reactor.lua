@@ -158,6 +158,8 @@ data:extend(
 			apparent_volume = 1
 		},
 		crafting_speed = 1,
+		energy_source = { type = "void" },
+		--[[
 		energy_source =
 		{
 			type = "burner",
@@ -203,7 +205,8 @@ data:extend(
 					starting_frame_deviation = 60
 				}
 			}
-		},
+		},		
+		--]]
 		energy_usage = "500MW",
 		source_inventory_size = 1,
 		result_inventory_size = 1,

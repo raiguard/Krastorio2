@@ -394,6 +394,22 @@ return
 		},
 		result = "kr-fusion-reactor"
 	},	
+	{
+		type = "recipe",
+		name = "kr-advanced-steam-turbine",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"steam-turbine", 2},
+			{"steel-gear-wheel", 10},
+			{"steel-beam", 50},
+			{"copper-plate", 50},
+			{"kr-steel-pipe", 10},				
+			{"electric-engine-unit", 50}					
+		},
+		result = "kr-advanced-steam-turbine"
+    },
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

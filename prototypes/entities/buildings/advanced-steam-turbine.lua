@@ -152,7 +152,7 @@ data:extend(
 		{
 			sound =
 			{
-				filename = "__base__/sound/steam-engine-90bpm.ogg",
+				filename = kr_buildings_sounds_path .. "advanced-steam-turbine.ogg",
 				volume = 0.6
 			},
 			match_speed_to_activity = true

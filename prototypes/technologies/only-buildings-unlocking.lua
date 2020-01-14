@@ -449,6 +449,10 @@ data:extend(
 			{
 				type = "unlock-recipe",			
 				recipe = "kr-fusion-reactor"
+			},
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-advanced-steam-turbine"
 			}
 		},
 		prerequisites = {"advanced-electronics-2", "nuclear-power"},
