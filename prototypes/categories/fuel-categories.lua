@@ -9,5 +9,10 @@ data:extend(
 	{
 		type = "fuel-category",
 		name = "kr-quarry-drill-fuel"
+	},
+	-- Used by fusion reactors
+	{
+		type = "fuel-category",
+		name = "fusion-fuel"
 	}
 })

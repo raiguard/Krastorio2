@@ -6,11 +6,26 @@ data:extend(
 	
 	-- -- PROCESSING BUILDING CATEGORY
 	
+	-- Research, used by research servers and quantum computer
+	{
+	   type = "recipe-category",
+	   name = "research-data"
+	},
+	-- Nuclear fusion, used by fusion reactors for make steam
+	{
+	   type = "recipe-category",
+	   name = "nuclear-fusion"
+	},		
+	
+-----------------------------------------------------------------------------------------------------------------
+	
+	-- -- CRAFTING
+	
 	-- Growing, used by greenhouse
 	{
 	   type = "recipe-category",
 	   name = "growing"
-	},	
+	},
 	-- Crushing, used by crusher
 	{
 	   type = "recipe-category",
@@ -30,18 +45,7 @@ data:extend(
 	{
 		type = "recipe-category",
 		name = "atmosphere-condensation"
-	},
-	-- Research, used by research servers ans quantum computer
-	{
-	   type = "recipe-category",
-	   name = "research-data"
-	}	
-	
------------------------------------------------------------------------------------------------------------------
-	
-	-- -- CRAFTING
-	
-	-- no crafting categories added.
+	}
 
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

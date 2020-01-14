@@ -299,6 +299,16 @@ data:extend(
 		place_result = "kr-atmospheric-condenser",
 		stack_size = 50
     },
+	{
+		type = "item",
+		name = "kr-fusion-reactor",
+		icon = kr_entities_icons_path .. "fusion-reactor.png",
+		icon_size = 64,
+		subgroup = "energy",
+		order = "f[nuclear-energy]-b[fusion-reactor]",
+		place_result = "kr-fusion-reactor",
+		stack_size = 10
+    },
 	
 	
 -----------------------------------------------------------------------------------------------------------------
