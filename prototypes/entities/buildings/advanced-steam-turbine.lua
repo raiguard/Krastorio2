@@ -7,13 +7,13 @@ data:extend(
 		icon_size = 64,
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 1, result = "kr-advanced-steam-turbine"},
-		max_health = 2000,
+		max_health = 1500,
 		corpse = "kr-medium-random-pipes-remnant",
 		dying_explosion = "medium-explosion",
 		alert_icon_shift = util.by_pixel(0, -12),
-		effectivity = 5,
-		fluid_usage_per_tick = 1,
-		maximum_temperature = 1500,
+		effectivity = 2.1,
+		fluid_usage_per_tick = 5/3,
+		maximum_temperature = 975,
 		burns_fluid = false,
 		resistances = 
 		{
@@ -153,12 +153,12 @@ data:extend(
 			sound =
 			{
 				filename = kr_buildings_sounds_path .. "advanced-steam-turbine.ogg",
-				volume = 0.6
+				volume = 1.5
 			},
 			match_speed_to_activity = true
 		},
-		min_perceived_performance = 0.25,
-		performance_to_sound_speedup = 0.5,
-		max_power_output = "100.01MW"
+		min_perceived_performance = 0.5,
+		performance_to_sound_speedup = 0.75,
+		max_power_output = "100MW"
 	}
 })

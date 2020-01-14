@@ -86,6 +86,16 @@ data:extend(
 		place_result = "biusart-lab",
 		stack_size = 10
     },
+    {
+		type = "item",
+		name = "singularity-lab",
+		icon =  kr_entities_icons_path .. "singularity-lab.png",
+		icon_size = 64,
+		subgroup = "production-machine",
+		order = "g[singularity-lab]",
+		place_result = "singularity-lab",
+		stack_size = 50,
+	},
 	-- -- --
 	-- MEDIUM CONTEINERS
 	-- -- --

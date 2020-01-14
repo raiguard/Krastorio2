@@ -151,12 +151,13 @@ data:extend(
 			sound =
 			{
 				filename = kr_buildings_sounds_path .. "fusion-reactor.ogg",
-				volume = 1.2,	
+				volume = 1.5,	
 				audible_distance_modifier = 10
 			},
 			idle_sound = { filename = "__base__/sound/idle1.ogg" },
-			apparent_volume = 1
+			apparent_volume = 1.5
 		},
+		audible_distance_modifier = 25,
 		crafting_speed = 1,
 		energy_source = { type = "void" },
 		--[[
@@ -210,7 +211,7 @@ data:extend(
 		energy_usage = "500MW",
 		source_inventory_size = 1,
 		result_inventory_size = 1,
-		open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
-		close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 }
+		open_sound = { filename = kr_buildings_sounds_path .. "open.ogg", volume = 1 },
+		close_sound = { filename = kr_buildings_sounds_path .. "close.ogg", volume = 0.85 }
 	}
 })
