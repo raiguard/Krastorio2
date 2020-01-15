@@ -24,6 +24,7 @@ require("buildings/wind-turbine")
 require("buildings/fusion-reactor")
 require("buildings/advanced-steam-turbine")
 require("buildings/singularity-lab")
+require("buildings/crash-site")
 -- -- Laboratory
 require("buildings/biusart-lab")
 -- -- Conteiners

@@ -20,7 +20,9 @@ local scripts =
 	-- Shelter
 	require(control_scripts_path .. "shelter"),
 	-- Disable vanilla victory
-	require(control_scripts_path .. "disable-vanilla-victory")
+	require(control_scripts_path .. "disable-vanilla-victory"),
+	-- Create a crash site like in the Factorio campaign
+	require(control_scripts_path .. "crash-site")
 }
 
 -- Load all callbacks
