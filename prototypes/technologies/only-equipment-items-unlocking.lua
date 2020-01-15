@@ -21,7 +21,7 @@ data:extend(
 		icons = 
 		{
 			{ icon = kr_technologies_icons_path .. "portable-generator.png", icon_size = 128 },
-			{ icon = kr_technologies_icons_path .. "equipment-overlay.png", icon_size = 128 }
+			{ icon = kr_technologies_icons_path .. "overlays/equipment-overlay.png", icon_size = 128 }
 		},
 		icon_size = 128,
 		upgrade = false,

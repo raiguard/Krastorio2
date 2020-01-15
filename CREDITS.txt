@@ -17,3 +17,9 @@ Thanks also to:
 - Topaz Gigapixel and VetraNyx
   for 2 HD icon of items taken from mod (0.0.1 - MIT):
   https://mods.factorio.com/mod/HdProcessedMetal
+
+- Bilka and Gangsir
+  for background (gears) icons of achievement images
+  with explicit consent of external use,
+  taken from mod More Achievements (0.5.1 - GNU GPLv3)
+  https://mods.factorio.com/mod/MoreAchievements
