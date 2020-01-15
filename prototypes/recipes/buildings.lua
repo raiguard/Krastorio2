@@ -75,6 +75,19 @@ return
 		},
 		result = "biusart-lab"
     },
+	{
+		type = "recipe",
+		name = "kr-singularity-lab",
+		energy_required = 8,
+		enabled = false,
+		ingredients =
+		{
+			{"ai-core", 20},
+			{"steel-beam", 20},
+			{"rare-metals", 20}
+		},
+		result = "kr-singularity-lab"
+    },
 	-- -- --
 	-- MEDIUM CONTEINERS
 	-- -- --
@@ -404,7 +417,6 @@ return
 			{"steam-turbine", 2},
 			{"steel-gear-wheel", 10},
 			{"steel-beam", 50},
-			{"copper-plate", 50},
 			{"kr-steel-pipe", 10},				
 			{"electric-engine-unit", 50}					
 		},

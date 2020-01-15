@@ -19,6 +19,8 @@ local scripts =
 	require(control_scripts_path .. "radioactivity"),
 	-- Shelter
 	require(control_scripts_path .. "shelter"),
+	-- Disable vanilla victory
+	require(control_scripts_path .. "disable-vanilla-victory")
 }
 
 -- Load all callbacks

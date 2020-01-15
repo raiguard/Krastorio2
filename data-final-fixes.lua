@@ -53,6 +53,8 @@ local science_pack_incompatibilities =
 	"chemical-science-pack"
 }
 
+-- Sanitize matter tech card from T1 packs
+krastorio.technologies.removeSciencePackIncompatibleWith("matter-tech-card", science_pack_incompatibilities)
 -- Sanitize space science pack from T1 packs
 krastorio.technologies.removeSciencePackIncompatibleWith("space-science-pack", science_pack_incompatibilities)
 -- Sanitize advanced tech card from T1 packs
@@ -70,8 +72,6 @@ science_pack_incompatibilities =
 krastorio.technologies.removeSciencePackIncompatibleWith("production-science-pack",	science_pack_incompatibilities)
 -- Sanitize utility science pack from T0 packs
 krastorio.technologies.removeSciencePackIncompatibleWith("utility-science-pack", science_pack_incompatibilities)
--- Sanitize matter tech card from T0 packs
-krastorio.technologies.removeSciencePackIncompatibleWith("matter-tech-card", science_pack_incompatibilities)
 
 -- -- -- ENFORCE SCIENCE PACK PREREQUISITE COHERENCE 
 krastorio.technologies.enforceUsedSciencePacksInPrerequisites()

@@ -196,9 +196,23 @@ krastorio.recipes.replaceIngredient("lab", "electronic-circuit", {"iron-beam", 1
 krastorio.recipes.replaceIngredient("lab", "iron-gear-wheel", {"copper-plate", 10})
 krastorio.recipes.replaceIngredient("lab", "transport-belt", {"copper-cable", 10})
 
+-- -- Turbines
+----------------------------
+
+-- Steam engine
+krastorio.recipes.setEnergyCost("steam-engine", 5)
+
+-- Steam turbine
+krastorio.recipes.setEnergyCost("steam-turbine", 10)
+krastorio.recipes.addIngredient("steam-turbine", {"steam-engine", 2})
+krastorio.recipes.replaceIngredient("steam-turbine", "iron-gear-wheel", {"iron-gear-wheel", 14})
+krastorio.recipes.replaceIngredient("steam-turbine", "pipe", {"pipe", 10})
+----------------------------
+
 --------------------------------------------------------------------
 -- -- -- VEHICLES
 --------------------------------------------------------------------
+
 krastorio.recipes.replaceIngredient("cargo-wagon", "steel-plate", {"steel-beam", 10})
 
 --------------------------------------------------------------------

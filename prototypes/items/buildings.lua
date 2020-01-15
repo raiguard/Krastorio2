@@ -82,19 +82,19 @@ data:extend(
 		icon =  kr_entities_icons_path .. "biusart-lab.png",
 		icon_size = 64,
 		subgroup = "production-machine",
-		order = "g[advanced-lab]",
+		order = "z-g2[advanced-lab]",
 		place_result = "biusart-lab",
 		stack_size = 10
     },
     {
 		type = "item",
-		name = "singularity-lab",
+		name = "kr-singularity-lab",
 		icon =  kr_entities_icons_path .. "singularity-lab.png",
 		icon_size = 64,
 		subgroup = "production-machine",
-		order = "g[singularity-lab]",
-		place_result = "singularity-lab",
-		stack_size = 50,
+		order = "z-g3[kr-singularity-lab]",
+		place_result = "kr-singularity-lab",
+		stack_size = 10,
 	},
 	-- -- --
 	-- MEDIUM CONTEINERS

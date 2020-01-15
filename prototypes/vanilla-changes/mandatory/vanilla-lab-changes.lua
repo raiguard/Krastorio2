@@ -34,7 +34,25 @@ if data.raw.lab["lab"] then
 		removeFromLab("basic-tech-card", biusart_lab_inputs)
 		table.insert(biusart_lab_inputs, "production-science-pack")
 		table.insert(biusart_lab_inputs, "utility-science-pack")
-		table.insert(biusart_lab_inputs, "matter-tech-card")
+	
+		-- -- Adapt Krastorio 2 tier 3 laboratory
+		if data.raw.lab["biusart-lab"] then
+			local singularity_lab_inputs = data.raw.lab["kr-singularity-lab"].inputs
+
+			-- -- Copy progressively packs in Tier 3 lab
+			for i = 1, #biusart_lab_inputs do
+				singularity_lab_inputs[i] = biusart_lab_inputs[i]
+			end
+			removeFromLab("automation-science-pack", singularity_lab_inputs)
+			removeFromLab("logistic-science-pack", singularity_lab_inputs)
+			removeFromLab("military-science-pack", singularity_lab_inputs)
+			removeFromLab("chemical-science-pack", singularity_lab_inputs)
+			table.insert(singularity_lab_inputs, "matter-tech-card")
+			table.insert(singularity_lab_inputs, "space-science-pack")
+			table.insert(singularity_lab_inputs, "advanced-tech-card")
+			table.insert(singularity_lab_inputs, "singularity-tech-card")
+		
+		end
 
 	end
 
