@@ -214,6 +214,51 @@ updateVanillaEquipmentGraphics(objects_to_modify, kr_universal_equipments_icons_
 table.insert(data.raw["battery-equipment"]["battery-equipment"].categories, "universal-equipment")
 table.insert(data.raw["battery-equipment"]["battery-mk2-equipment"].categories, "universal-equipment")
 
+-- -- Statistic Modification
+-- Energies
+data.raw["battery-equipment"]["battery-equipment"].energy_source =
+{
+	type = "electric",
+	buffer_capacity = "10MJ",
+	input_flow_limit = "0.25MW",
+	output_flow_limit = "0.5MW",
+	usage_priority = "tertiary"
+}
+data.raw["battery-equipment"]["battery-mk2-equipment"].energy_source =
+{
+	type = "electric",
+	buffer_capacity = "25MJ",
+	input_flow_limit = "0.5MW",
+	output_flow_limit = "1MW",
+	usage_priority = "tertiary"
+}   
+
+-- Recipe
+krastorio.recipes.overrideIngredients
+(
+	"battery-equipment",
+	{
+		{"battery", 2},
+		{"iron-plate", 2},
+		{"electronic-circuit", 1}
+	}
+)
+krastorio.recipes.overrideIngredients
+(
+	"battery-mk2-equipment",
+	{
+		{"battery-equipment", 2},
+		{"steel-plate", 2},
+		{"advanced-circuit", 1}
+	}
+)
+
+-- subgroup 
+data.raw.item["battery-equipment"].order = "b1[battery]-b1[battery-equipment]"
+data.raw.item["battery-equipment"].subgroup = "equipment"
+data.raw.item["battery-mk2-equipment"].order = "b2[battery]-b3[battery-equipment]"
+data.raw.item["battery-mk2-equipment"].subgroup = "equipment"
+
 -----------------------------------------------------------------------------------------------------------------
 -- -- Discharge defense
 -----------------------------------------------------------------------------------------------------------------
