@@ -181,6 +181,7 @@ data:extend(
 			apparent_volume = 1.5
 		},
 		crafting_speed = 1,
+		return_ingredients_on_change = true,
 		energy_source =
 		{
 			type = "electric",

@@ -105,7 +105,7 @@ return
 		name = "restore-used-pollution-filter",
 		category = "crafting-with-fluid",
 		icon = kr_recipes_icons_path .. "restore-used-pollution-filter.png",
-		icon_size = 32,
+		icon_size = 128,
 		energy_required = 10,
 		enabled = false,
 		ingredients =

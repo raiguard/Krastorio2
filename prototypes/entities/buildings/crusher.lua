@@ -84,6 +84,7 @@ data:extend(
 		crafting_speed = 1,
 		source_inventory_size = 1,
 		result_inventory_size = 2,
+		return_ingredients_on_change = true,
 		energy_source =
 		{
 			type = "electric",
