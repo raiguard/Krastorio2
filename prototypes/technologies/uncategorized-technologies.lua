@@ -105,6 +105,78 @@ data:extend(
 		}
     },
 	{
+		type = "technology",
+		name = "kr-air-purification",
+		icon = kr_technologies_icons_path .. "air-purifier.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-air-purifier"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "pollution-filter"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-air-cleaning"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "restore-used-pollution-filter"
+			}
+		},
+		prerequisites = {"kr-advanced-chemistry", "engine"},
+		order = "a-e-d",
+		unit =
+		{
+			count = 250,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1}
+			},
+			time = 30
+		}
+    },	
+	{
+		type = "technology",
+		name = "kr-fusion-energy",
+		icon = kr_technologies_icons_path .. "fusion-energy.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-fusion-reactor"
+			},
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-advanced-steam-turbine"
+			}
+		},
+		prerequisites = {"advanced-electronics-2", "nuclear-power"},
+		unit =
+		{
+			count = 1000,
+			ingredients = 
+			{
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"production-science-pack", 1}
+			},
+			time = 45
+		}
+    },
+-----------------------------------------------------------------------------------------------------------------
+--------------------------------------------------PURE RECIPES---------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+	{
         type = "technology",
         name = "kr-silicon-processing",
         icon = kr_technologies_icons_path .. "silicon-processing.png",
@@ -134,9 +206,6 @@ data:extend(
             time = 30
         }
     },
------------------------------------------------------------------------------------------------------------------
---------------------------------------------------PURE RECIPES---------------------------------------------------
------------------------------------------------------------------------------------------------------------------
 	{
         type = "technology",
         name = "kr-advanced-chemistry",

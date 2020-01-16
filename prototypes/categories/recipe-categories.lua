@@ -15,8 +15,13 @@ data:extend(
 	{
 	   type = "recipe-category",
 	   name = "nuclear-fusion"
-	},		
-	
+	},	
+	-- Used by machines that purify air from pollution
+	{
+	   type = "recipe-category",
+	   name = "air-purification"
+	},
+
 -----------------------------------------------------------------------------------------------------------------
 	
 	-- -- CRAFTING

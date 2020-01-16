@@ -357,4 +357,22 @@ data:extend(
 		order = "h1[ai-core]",
 		stack_size = 200
 	},
+	{
+		type = "item",
+		name = "pollution-filter",
+		icon =  kr_icons_path .. "pollution-filter.png",
+		icon_size = 32,
+		stack_size = 50,		
+		subgroup = "intermediate-product",
+		order = "06[pollution-filter]",
+	},
+	{
+		type = "item",
+		name = "used-pollution-filter",
+		icon =  kr_icons_path .. "used-pollution-filter.png",
+		icon_size = 32,
+		stack_size = 50,		
+		subgroup = "intermediate-product",
+		order = "07[used-pollution-filter]",
+	}	
 })

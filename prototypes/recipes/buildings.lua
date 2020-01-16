@@ -59,6 +59,20 @@ return
 		},
 		result = "kr-water-pumpjack"
     },
+	{
+		type = "recipe",
+		name = "kr-air-purifier",
+		energy_required = 20,
+		enabled = false,
+		ingredients =
+		{
+			{"steel-beam", 4},
+			{"advanced-circuit", 4},
+			{"plastic-bar", 20},
+			{"engine-unit", 1}
+		},
+		result = "kr-air-purifier"
+    },
 	-- -- --
 	-- NEW LABORATORIES
 	-- -- --

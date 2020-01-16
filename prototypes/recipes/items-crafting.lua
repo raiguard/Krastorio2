@@ -86,5 +86,39 @@ return
 		},
 		result = "ai-core",
 		result_count = 1
-	}
+	},
+	{
+		type = "recipe",
+		name = "pollution-filter",
+		energy_required = 10,
+		enabled = false,
+		ingredients =
+		{
+			{"coal", 2},
+			{"steel-plate", 2},
+			{"plastic-bar", 2}
+		},
+		result = "pollution-filter"
+    },
+	{
+		type = "recipe",
+		name = "restore-used-pollution-filter",
+		category = "crafting-with-fluid",
+		icon = kr_recipes_icons_path .. "restore-used-pollution-filter.png",
+		icon_size = 32,
+		energy_required = 10,
+		enabled = false,
+		ingredients =
+		{
+			 {type = "item",  name = "used-pollution-filter", amount = 1},
+			{ type = "fluid", name = "water", amount = 50}
+		},
+		results =
+		{
+			{ type = "item",  name = "pollution-filter", amount = 1},
+			{ type = "fluid", name = "dirty-water", amount = 50}
+		},
+		subgroup = "intermediate-product",
+		order = "06[restore-used-pollution-filter]"
+    }
 }

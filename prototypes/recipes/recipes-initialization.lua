@@ -39,8 +39,11 @@ local krastorio_new_recipes =
 	-- -- New recipes for chemistry products(can produce fluids)
 	require(kr_recipes_prototypes_path .. "chemistry"),
 	
-	-- -- Recipe used by fusion reactor to create steam
-	require(kr_recipes_prototypes_path .. "nuclear-fusion")	
+	-- -- Recipes used by fusion reactor to create steam
+	require(kr_recipes_prototypes_path .. "nuclear-fusion"),
+	
+	-- -- Recipes used for purify air from pollution
+	require(kr_recipes_prototypes_path .. "air-purification")
 }
 
 -- -- Anti recipes override check

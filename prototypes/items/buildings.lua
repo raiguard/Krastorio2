@@ -73,6 +73,16 @@ data:extend(
 		place_result = "kr-quarry-drill",
 		stack_size = 50
     },
+	{
+		type = "item",
+		name = "kr-air-purifier",
+		icon = kr_entities_icons_path .. "air-purifier.png",
+		icon_size = 64,
+		subgroup = "production-machine",
+		order = "z[air-purifier]",
+		place_result = "kr-air-purifier",
+		stack_size = 50
+    },
 	-- -- --
 	-- NEW LABORATORIES
 	-- -- --
