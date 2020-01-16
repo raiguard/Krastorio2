@@ -79,6 +79,8 @@ krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
 -- -- -- COMPATIBILITY INITIALIZATION (data final fixes stage)
 ---------------------------------------------------------------------------
 local scripts_path = "compatibility-scripts/data-final-fixes/"
+require(scripts_path .. "aai-industry")
+require(scripts_path .. "aircraft")
 -- Pyanodons
 require(scripts_path .. "Pyanodon")
 ---------------------------------------------------------------------------

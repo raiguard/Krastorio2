@@ -87,9 +87,6 @@ krastorio.technologies.addUnlockRecipe("battery-mk2-equipment", "big-battery-mk2
 krastorio.technologies.removeUnlockRecipe("automation", "long-handed-inserter")
 krastorio.technologies.removeUnlockRecipe("oil-processing", "chemical-plant")
 
-
-
-
 --------------------------------------------------------------------
 -- Loaders
 if krastorio.general.getSafeSettingValue("kr-loaders") then

@@ -23,29 +23,30 @@ local function createCrashSite()
 	local entities_to_place =
 	{
 		"kr-crash-site-lab-repaired",
-		"mineable-wreckage",
+		"kr-mineable-wreckage",
 		"kr-crash-site-assembling-machine-1-repaired",
-		"mineable-wreckage",
+		"kr-mineable-wreckage",
 		"kr-crash-site-assembling-machine-2-repaired",
-		"mineable-wreckage",
+		"kr-mineable-wreckage",
 		"kr-crash-site-generator",
-		"mineable-wreckage",
-		"crash-site-chest-1",
-		"mineable-wreckage",
-		"crash-site-chest-2",
-		"mineable-wreckage",
-		"big-ship-wreck-1",
-		"mineable-wreckage",
-		"big-ship-wreck-2",
-		"mineable-wreckage",
-		"big-ship-wreck-3",
-		"mineable-wreckage"
+		"kr-mineable-wreckage",
+		"kr-crash-site-chest-1",
+		"kr-mineable-wreckage",
+		"kr-crash-site-chest-2",
+		"kr-mineable-wreckage",
+		"kr-big-ship-wreck-1",
+		"kr-mineable-wreckage",
+		"kr-big-ship-wreck-2",
+		"kr-mineable-wreckage",
+		"kr-big-ship-wreck-3",
+		"kr-mineable-wreckage"
 	}
 	local surface = game.surfaces[1]
 	local player_force = game.forces[1]
 	local start_position = player_force.get_spawn_position(1)
 	local to_place_position = nil
 	local created_entity = nil
+	local insert_one_shelter = false
 	local item_name, item_count = nil, nil
 	local try_count = 0
 	
@@ -71,6 +72,11 @@ local function createCrashSite()
 					item_count = math.random(5, 10)
 					
 					created_entity.get_inventory(defines.inventory.chest).insert({name = item_name, count = item_count})
+					
+					if not insert_one_shelter then
+						created_entity.get_inventory(defines.inventory.chest).insert({name = "kr-shelter", count = 1})
+						insert_one_shelter = true
+					end
 				end
 				break
 			else 

@@ -1,3 +1,4 @@
+-- Minable random drops
 local small_minable_ship_residues = 
 {
 	mining_time = 2,
@@ -84,29 +85,61 @@ crash_site_generator_entity.minable = big_minable_ship_residues
 data:extend({crash_site_generator_item, crash_site_generator_entity})
 
 -- Chests
-data.raw["container"]["crash-site-chest-1"].minable = small_minable_ship_residues
-data.raw["container"]["crash-site-chest-1"].inventory_size = 3
-data.raw["container"]["crash-site-chest-2"].minable = small_minable_ship_residues
-data.raw["container"]["crash-site-chest-2"].inventory_size = 3
+local crash_site_chest_1_item = util.table.deepcopy(data.raw["item"]["crash-site-chest-1"])
+crash_site_chest_1_item.name = "kr-crash-site-chest-1"
+crash_site_chest_1_item.localised_name = {"entity-name.crash-site-chest-1"}
+crash_site_chest_1_item.localised_description = {"entity-description.crash-site-chest-1"}
+crash_site_chest_1_item.place_result = "kr-crash-site-chest-1"
+local crash_site_chest_1_entity = util.table.deepcopy(data.raw["container"]["crash-site-chest-1"])
+crash_site_chest_1_entity.name = "kr-crash-site-chest-1"
+crash_site_chest_1_entity.localised_name = {"entity-name.crash-site-chest-1"}
+crash_site_chest_1_entity.localised_description = {"entity-description.crash-site-chest-1"}
+crash_site_chest_1_entity.minable = small_minable_ship_residues
+crash_site_chest_1_entity.inventory_size = 3
+data:extend({crash_site_chest_1_item, crash_site_chest_1_entity})
+
+local crash_site_chest_2_item = util.table.deepcopy(data.raw["item"]["crash-site-chest-2"])
+crash_site_chest_2_item.name = "kr-crash-site-chest-2"
+crash_site_chest_2_item.localised_name = {"entity-name.crash-site-chest-2"}
+crash_site_chest_2_item.localised_description = {"entity-description.crash-site-chest-2"}
+crash_site_chest_2_item.place_result = "kr-crash-site-chest-2"
+local crash_site_chest_2_entity = util.table.deepcopy(data.raw["container"]["crash-site-chest-2"])
+crash_site_chest_2_entity.name = "kr-crash-site-chest-2"
+crash_site_chest_2_entity.localised_name = {"entity-name.crash-site-chest-2"}
+crash_site_chest_2_entity.localised_description = {"entity-description.crash-site-chest-2"}
+crash_site_chest_2_entity.minable = small_minable_ship_residues
+crash_site_chest_2_entity.inventory_size = 3
+data:extend({crash_site_chest_2_item, crash_site_chest_2_entity})
 
 -- Ship wreck
-local big_ship_wreck_1 = util.table.deepcopy(data.raw["container"]["big-ship-wreck-1"])
-big_ship_wreck_1.type = "simple-entity"
-big_ship_wreck_1.minable = big_minable_ship_residues
-data.raw["container"]["big-ship-wreck-1"] = nil
-data:extend({big_ship_wreck_1})
+local big_ship_wreck_1_entity = util.table.deepcopy(data.raw["container"]["big-ship-wreck-1"])
+big_ship_wreck_1_entity.name = "kr-big-ship-wreck-1"
+big_ship_wreck_1_entity.localised_name = {"entity-name.big-ship-wreck-1"}
+big_ship_wreck_1_entity.localised_description = {"entity-description.big-ship-wreck-1"}
+big_ship_wreck_1_entity.type = "simple-entity"
+big_ship_wreck_1_entity.minable = big_minable_ship_residues
+data:extend({big_ship_wreck_1_entity})
 
-local big_ship_wreck_2 = util.table.deepcopy(data.raw["container"]["big-ship-wreck-2"])
-big_ship_wreck_2.type = "simple-entity"
-big_ship_wreck_2.minable = big_minable_ship_residues
-data.raw["container"]["big-ship-wreck-2"] = nil 
-data:extend({big_ship_wreck_2})
+local big_ship_wreck_2_entity = util.table.deepcopy(data.raw["container"]["big-ship-wreck-2"])
+big_ship_wreck_2_entity.name = "kr-big-ship-wreck-2"
+big_ship_wreck_2_entity.localised_name = {"entity-name.big-ship-wreck-2"}
+big_ship_wreck_2_entity.localised_description = {"entity-description.big-ship-wreck-2"}
+big_ship_wreck_2_entity.type = "simple-entity"
+big_ship_wreck_2_entity.minable = big_minable_ship_residues
+data:extend({big_ship_wreck_2_entity})
 
-local big_ship_wreck_3 = util.table.deepcopy(data.raw["container"]["big-ship-wreck-3"])
-big_ship_wreck_3.type = "simple-entity"
-big_ship_wreck_3.minable = big_minable_ship_residues
-data.raw["container"]["big-ship-wreck-3"] = nil 
-data:extend({big_ship_wreck_3})
+local big_ship_wreck_3_entity = util.table.deepcopy(data.raw["container"]["big-ship-wreck-3"])
+big_ship_wreck_3_entity.name = "kr-big-ship-wreck-3"
+big_ship_wreck_3_entity.localised_name = {"entity-name.big-ship-wreck-3"}
+big_ship_wreck_3_entity.localised_description = {"entity-description.big-ship-wreck-3"}
+big_ship_wreck_3_entity.type = "simple-entity"
+big_ship_wreck_3_entity.minable = big_minable_ship_residues
+data:extend({big_ship_wreck_3_entity})
+
 
 -- Mineable wreckage
-data.raw["simple-entity"]["mineable-wreckage"].minable = small_minable_ship_residues
+local mineable_wreckage_entity = util.table.deepcopy(data.raw["simple-entity"]["mineable-wreckage"])
+mineable_wreckage_entity.name = "kr-mineable-wreckage"
+mineable_wreckage_entity.localised_description = {"entity-description.mineable-wreckage"}
+mineable_wreckage_entity.minable = small_minable_ship_residues
+data:extend({mineable_wreckage_entity})

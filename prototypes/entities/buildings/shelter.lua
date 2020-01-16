@@ -17,10 +17,10 @@ data:extend(
 		icon = kr_entities_icons_path .. "shelter.png",
 		icon_size = 64,
 		allow_copy_paste = false,
-		flags = {"placeable-player", "player-creation", "not-deconstructable", "not-blueprintable", "not-repairable", "not-on-map"},
+		flags = {"placeable-player", "player-creation", "not-deconstructable", "not-rotatable", "not-blueprintable", "not-repairable", "not-on-map"},
 		fast_replaceable_group = "kr-shelter",
 		minable = {mining_time = 2, result = "kr-shelter"},
-		collision_box = {{0, 0}, {0, 0}},
+		collision_box = {{-2, -2}, {2, 2}},
 		selection_box = {{0, 0}, {0, 0}},
 		animation =
 		{
@@ -80,15 +80,14 @@ data:extend(
 		energy_source =
 		{
 			type = "electric",
-			buffer_capacity = "100kJ",
+			buffer_capacity = "120kJ",
 			usage_priority = "secondary-output",
-			input_flow_limit = "100kW",
-			output_flow_limit = "100kW",
+			input_flow_limit = "0kW",
+			output_flow_limit = "120kW",
 			render_no_power_icon = false,
 			render_no_network_icon = false
 		},
-		energy_production = "100kW",
-		energy_usage = "0kW"
+		energy_production = "120kW"
 	},
 	-- Shelter
 	{
