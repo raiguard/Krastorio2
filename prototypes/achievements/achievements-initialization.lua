@@ -10,7 +10,7 @@ data:extend(
 		},
 		icon_size = 128,
         order = "kr-p-m1",
-		limited_to_one_game = false,
+		limited_to_one_game = true,
 		fluid_product = "matter",
 		amount = 10000
     },
@@ -24,7 +24,7 @@ data:extend(
 		},
 		icon_size = 128,
         order = "kr-p-m2",
-		limited_to_one_game = false,
+		limited_to_one_game = true,
 		fluid_product = "matter",
 		amount = 100000
     },
@@ -38,7 +38,7 @@ data:extend(
 		},
 		icon_size = 128,
         order = "kr-p-m3",
-		limited_to_one_game = false,
+		limited_to_one_game = true,
 		fluid_product = "matter",
 		amount = 1000000
     },
@@ -52,7 +52,7 @@ data:extend(
 		},
 		icon_size = 128,
         order = "kr-b-1",
-		limited_to_one_game = false,
+		limited_to_one_game = true,
 		to_build = "kr-quarry-drill",
 		amount = 1
     }
