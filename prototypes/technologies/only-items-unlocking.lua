@@ -156,6 +156,32 @@ data:extend(
 	---
 	{
 		type = "technology",
+		name = "kr-lithium-sulfur-battery",
+		icon = kr_technologies_icons_path .. "lithium-sulfur-battery.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["lithium-sulfur-battery"] or "lithium-sulfur-battery"
+			}
+		},
+		prerequisites = {"kr-lithium-processing"},
+		unit =
+		{
+			count = 250,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1}
+			},
+			time = 30
+		}
+    },
+	{
+		type = "technology",
 		name = "kr-ai-core",
 		icon = kr_technologies_icons_path .. "ai-core.png",
 		icon_size = 128,

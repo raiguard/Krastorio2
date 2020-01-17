@@ -157,9 +157,21 @@ data:extend(
 			{
 				type = "unlock-recipe",			
 				recipe = "kr-advanced-steam-turbine"
-			}
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["deuterium-oxide"] or "deuterium-oxide"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["tritium"] or "tritium"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["dt-fuel"] or "dt-fuel"
+			},
 		},
-		prerequisites = {"advanced-electronics-2", "nuclear-power"},
+		prerequisites = {"advanced-electronics-2", "kr-lithium-processing", "nuclear-power"},
 		unit =
 		{
 			count = 1000,

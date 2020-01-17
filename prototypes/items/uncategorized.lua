@@ -350,6 +350,15 @@ data:extend(
     },
 	{
 		type = "item",
+		name = "lithium-sulfur-battery",
+		icon = kr_icons_path .. "lithium-sulfur-battery.png",
+		icon_size = 64,
+		subgroup = "intermediate-product",
+		order = "h2[lithium-sulfur-battery]",
+		stack_size = 200
+	},
+	{
+		type = "item",
 		name = "ai-core",
 		icon = kr_icons_path .. "ai-core.png",
 		icon_size = 64,
@@ -360,7 +369,7 @@ data:extend(
 	{
 		type = "item",
 		name = "pollution-filter",
-		icon =  kr_icons_path .. "pollution-filter.png",
+		icon = kr_icons_path .. "pollution-filter.png",
 		icon_size = 64,
 		stack_size = 50,		
 		subgroup = "intermediate-product",
@@ -369,10 +378,39 @@ data:extend(
 	{
 		type = "item",
 		name = "used-pollution-filter",
-		icon =  kr_icons_path .. "used-pollution-filter.png",
+		icon = kr_icons_path .. "used-pollution-filter.png",
 		icon_size = 64,
 		stack_size = 50,		
 		subgroup = "intermediate-product",
 		order = "07[used-pollution-filter]",
-	}	
+	},
+	{
+		type = "item",
+		name = "deuterium-oxide",
+		icon = kr_icons_path .. "deuterium-oxide.png",
+		icon_size = 64,
+		subgroup = "intermediate-product",
+		order = "10[deuterium-oxide]",
+		stack_size = 200
+    },
+	{
+		type = "item",
+		name = "tritium",
+		icon = kr_icons_path .. "tritium.png",
+		icon_size = 64,
+		subgroup = "raw-material",
+		order = "004[tritium]",
+		stack_size = 200
+    },
+	{
+		type = "item",
+		name = "dt-fuel",
+		icon = kr_icons_path .. "dt-fuel.png",
+		icon_size = 32,
+		fuel_category = "fusion-fuel",
+		fuel_value = "50GJ",
+		subgroup = "intermediate-product",
+		order = "r[uranium-processing]-b[dt-fuel]",
+		stack_size = 50
+    }
 })

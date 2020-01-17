@@ -42,6 +42,9 @@ local krastorio_new_recipes =
 	-- -- Recipes used by fusion reactor to create steam
 	require(kr_recipes_prototypes_path .. "nuclear-fusion"),
 	
+	-- -- Recipes for centrifuging processing
+	require(kr_recipes_prototypes_path .. "centrifuging"),
+	
 	-- -- Recipes used for purify air from pollution
 	require(kr_recipes_prototypes_path .. "air-purification")
 }

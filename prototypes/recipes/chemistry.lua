@@ -22,7 +22,14 @@ return
 			{ type = "fluid", name = "water", amount = 50 }
 		},
 		subgroup = "fluid-recipes",
-		order = "y03[water]"
+		order = "y03[water]",
+		crafting_machine_tint =
+		{
+			primary = {r = 0.39, g = 0.822, b = 0.968, a = 1.000}, 
+			secondary = {r = 0.391, g = 0.720, b = 1.000, a = 0.900}, 
+			tertiary = {r = 1.000, g = 1.000, b = 1.000, a = 0.500}, 
+			quaternary = {r = 1.000, g = 1.000, b = 1.000, a = 0.300}
+		}
 	},
 	{
 		type = "recipe",
@@ -134,7 +141,14 @@ return
 			{ type = "fluid", name = "heavy-water", amount = 1 }
 		},
 		subgroup = "fluid-recipes",
-		order = "y06[heavy-water]"
+		order = "y06[heavy-water]",
+		crafting_machine_tint =
+		{
+			primary = {r = 0.405, g = 0.402, b = 1.000, a = 1.000}, 
+			secondary = {r = 0.391, g = 0.720, b = 1.000, a = 0.900}, 
+			tertiary = {r = 1.000, g = 1.000, b = 1.000, a = 0.500}, 
+			quaternary = {r = 1.000, g = 1.000, b = 1.000, a = 0.300} 
+		}
 	},
 	{
 		type = "recipe",
@@ -326,6 +340,44 @@ return
 	---
 	{
 		type = "recipe",
+		name = "lithium-sulfur-battery",
+		category = "chemistry",
+		always_show_products = true,		
+		allow_productivity = true,
+		normal =
+		{
+			energy_required = 4,
+			enabled = false,
+			ingredients =
+			{
+				{ type = "fluid", name = "sulfuric-acid", amount = 10},
+				{ type = "item",  name = "lithium", amount = 1},
+				{ type = "item",  name = "copper-plate", amount = 1}
+			},
+			result = "lithium-sulfur-battery"
+		},
+		expensive =
+		{
+			energy_required = 5,
+			enabled = false,	
+			ingredients =
+			{
+				{ type = "fluid", name = "sulfuric-acid", amount = 20},
+				{ type = "item",  name = "lithium", amount = 2},
+				{ type = "item",  name = "copper-plate", amount = 2}
+			},
+			result = "lithium-sulfur-battery"
+		},
+		crafting_machine_tint =
+		{
+			primary = {r = 0.35, g = 0.392, b = 0.328, a = 0.900}, 
+			secondary = {r = 0.831, g = 0.760, b = 0.422, a = 0.800}, 
+			tertiary = {r = 0.408, g = 0.568, b = 0.533, a = 0.700}, 
+			quaternary = {r = 0.939, g = 0.863, b = 1.191, a = 0.600}
+		}
+	},
+	{
+		type = "recipe",
 		name = "menarite-crystal",
 		category = "chemistry",
 		icon = kr_mip_icons_path .. "menarite-crystal/menarite-crystal.png",
@@ -377,5 +429,27 @@ return
 			tertiary = {r = 0.623, g = 0.270, b = 0.631, a = 0.100}, 
 			quaternary = {r = 0.882, g = 0.337, b = 0.890, a = 0.900}
 		}
-	}
+	},
+	{
+		type = "recipe",
+		name = "dt-fuel",
+		energy_required = 60,
+		category = "chemistry",
+		enabled = false,
+		always_show_made_in = true,
+		allow_productivity = true,
+		ingredients =
+		{
+			{ type = "item", name = "deuterium-oxide", amount = 4},
+			{ type = "item", name = "tritium", amount = 2}
+		},
+		result = "dt-fuel",
+		crafting_machine_tint = 
+		{
+			primary = {r = 0.800, g = 0.776, b = 0.313, a = 0.000},
+			secondary = {r = 0.200, g = 0.680, b = 0.300, a = 0.350},
+			tertiary = {r = 0.430, g = 0.305, b = 0.2, a = 0.750}, 
+			quaternary = {r = 0.800, g = 0.776, b = 0.313, a = 0.900}
+		}
+    },
 }

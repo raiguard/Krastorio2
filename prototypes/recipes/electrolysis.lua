@@ -68,5 +68,19 @@ return
 		},
 		subgroup = "raw-material",
 		order = "f02[lithium]"
+    },
+	{
+		type = "recipe",
+		name = "deuterium-oxide",
+		category = "electrolysis",
+		energy_required = 60,
+		enabled = false,
+		always_show_made_in = true,
+		allow_productivity = true,
+		ingredients = 
+		{
+			{type="fluid", name="heavy-water", amount=200}
+		},
+		result = "deuterium-oxide"
     }
 }
