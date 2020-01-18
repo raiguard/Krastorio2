@@ -106,7 +106,6 @@ krastorio.icons.setItemIcon("flamethrower",                     kr_icons_path ..
 krastorio.icons.setItemIcon("flamethrower-turret",              kr_icons_path .. "nn-icons/flamethrower-turret.png")
 krastorio.icons.setItemIcon("fluid-wagon",                      kr_icons_path .. "nn-icons/fluid-wagon.png")
 krastorio.icons.setItemIcon("flying-robot-frame",               kr_icons_path .. "nn-icons/flying-robot-frame.png")
-krastorio.icons.setItemIcon("fusion-reactor-equipment",         kr_icons_path .. "nn-icons/fusion-reactor-equipment.png")
 krastorio.icons.setItemIcon("gate",                             kr_icons_path .. "nn-icons/gate.png")
 krastorio.icons.setItemIcon("green-wire",                       kr_icons_path .. "nn-icons/green-wire.png")
 krastorio.icons.setItemIcon("grenade",                          kr_icons_path .. "nn-icons/grenade.png")

@@ -14,5 +14,10 @@ data:extend(
 	{
 		type = "fuel-category",
 		name = "fusion-fuel"
-	}
+	},
+	-- Used by antimatter reactors
+	{
+		type = "fuel-category",
+		name = "antimatter-fuel"
+	}	
 })

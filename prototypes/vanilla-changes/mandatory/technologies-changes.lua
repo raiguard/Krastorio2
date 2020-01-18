@@ -24,6 +24,7 @@ krastorio.technologies.addPrerequisite("advanced-electronics", "electronics")
 krastorio.technologies.addPrerequisite("advanced-electronics", "kr-silicon-processing")
 krastorio.technologies.addPrerequisite("production-science-pack", "kr-advanced-lab")
 krastorio.technologies.addPrerequisite("battery-equipment", "modular-armor")
+krastorio.technologies.addPrerequisite("fusion-reactor-equipment", "kr-fusion-energy")
 
 --Removing
 krastorio.technologies.removePrerequisite("heavy-armor", "military")
@@ -76,10 +77,14 @@ krastorio.technologies.addUnlockRecipe("electronics", "electronic-circuit")
 krastorio.technologies.addUnlockRecipe("advanced-electronics", "electronic-components")
 
 -- -- EQUIPMENTS
+krastorio.technologies.addUnlockRecipe("solar-panel-equipment", "big-solar-panel-equipment")
+
 krastorio.technologies.addUnlockRecipe("battery-equipment", "big-battery-equipment")
 krastorio.technologies.addUnlockRecipe("battery-equipment", "small-portable-generator")
 
 krastorio.technologies.addUnlockRecipe("battery-mk2-equipment", "big-battery-mk2-equipment")
+
+krastorio.technologies.addUnlockRecipe(krastorio.technologies.getTechnologyThatUnlockRecipe("personal-roboport-equipment"), "vehicle-roboport")
 
 -- Removings
 
