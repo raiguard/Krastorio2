@@ -31,24 +31,7 @@ data:extend(
 			{ size = 64, filename = kr_mip_icons_path .. "raw-imersite/raw-imersite-3.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-resource",
-		order = "a[raw-imersite]",
+		order = "z[raw-imersite]",
 		stack_size = 200
-	},	
-	{
-		type = "item",
-		name = "raw-menarite",
-		icon = kr_mip_icons_path .. "raw-menarite/raw-menarite.png",
-		icon_size = 64,
-		icon_mipmaps = 4,
-		pictures =
-		{
-			{ size = 64, filename = kr_mip_icons_path .. "raw-menarite/raw-menarite.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "raw-menarite/raw-menarite-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "raw-menarite/raw-menarite-2.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "raw-menarite/raw-menarite-3.png", scale = 0.25, mipmap_count = 4 }
-		},
-		subgroup = "raw-resource",
-		order = "a[raw-menarite]",
-		stack_size = 200
-	},
+	}
 })

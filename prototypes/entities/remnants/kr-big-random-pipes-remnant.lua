@@ -20,7 +20,7 @@ data:extend(
 		(
 			1,
 			{
-				filename = kr_remnants_path .. "kr-big-random-pipes-remnant.png",
+				filename = kr_remnants_path .. "big-random-pipes-remnant/big-random-pipes-remnant.png",
 				line_length = 1,
 				width = 175,
 				height = 175,
@@ -28,7 +28,7 @@ data:extend(
 				direction_count = 1,
 				hr_version =
 				{
-					filename = kr_remnants_path .. "hr-kr-big-random-pipes-remnant.png",
+					filename = kr_remnants_path .. "big-random-pipes-remnant/hr-big-random-pipes-remnant.png",
 					line_length = 1,
 					width = 350,
 					height = 350,

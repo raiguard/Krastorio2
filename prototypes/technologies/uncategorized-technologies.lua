@@ -359,15 +359,7 @@ data:extend(
 			},
 			{
 				type = "unlock-recipe",
-				recipe = krastorio.recipes.changed_names["menarite-powder"] or "menarite-powder"
-			},
-			{
-				type = "unlock-recipe",
 				recipe = krastorio.recipes.changed_names["imersite-powder"] or "imersite-powder"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = krastorio.recipes.changed_names["menarite-crystal"] or "menarite-crystal"
 			},
 			{
 				type = "unlock-recipe",

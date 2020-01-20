@@ -81,7 +81,7 @@ return
 		ingredients =
 		{
 			{ type = "item",  name = "processing-unit", amount = 2 },
-			{ type = "item",  name = "menarite-crystal", amount = 1 },
+			{ type = "item",  name = "imersite-crystal", amount = 1 },
 			{ type = "fluid", name = "nitric-acid", amount = 4 }
 		},
 		result = "ai-core",

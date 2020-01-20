@@ -22,32 +22,6 @@ return
 	},
 	{
 		type = "recipe",
-		name = "menarite-powder",
-		category = "crushing",
-		icon = kr_mip_icons_path .. "menarite-powder/menarite-powder.png",
-		icon_size = 64,
-		hide_from_player_crafting = true,
-		always_show_made_in = true,
-		allow_as_intermediate = false,
-		allow_intermediates = false,
-		always_show_products = true,
-		energy_required = 3,
-		enabled = false,
-		allow_productivity = true,
-		ingredients =
-		{
-			{"raw-menarite", 3}
-		},
-		results =
-		{
-			{"menarite-powder", 3},
-			{"sand", 6}
-		},
-		main_product = "menarite-powder"
-		
-	},
-	{
-		type = "recipe",
 		name = "imersite-powder",
 		category = "crushing",
 		icon = kr_mip_icons_path .. "imersite-powder/imersite-powder.png",

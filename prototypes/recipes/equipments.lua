@@ -37,7 +37,7 @@ return
 		ingredients =
 		{
 			{"battery-mk2-equipment", 2},
-			--{"imersite-battery", 2},
+			{"lithium-sulfur-battery", 2},
 			{"processing-unit", 1}
 		},
 		result = "battery-mk3-equipment"

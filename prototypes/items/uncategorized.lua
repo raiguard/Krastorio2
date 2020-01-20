@@ -284,39 +284,6 @@ data:extend(
     },
 	{
 		type = "item",
-		name = "menarite-powder",
-		icon = kr_mip_icons_path .. "menarite-powder/menarite-powder.png",
-		icon_size = 64,
-		icon_mipmaps = 3,
-		pictures =
-		{
-			{ size = 64, filename = kr_mip_icons_path .. "menarite-powder/menarite-powder.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "menarite-powder/menarite-powder-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "menarite-powder/menarite-powder-2.png", scale = 0.25, mipmap_count = 4 }
-		},
-		subgroup = "raw-material",
-		order = "q02[menarite-powder]",
-		stack_size = 200
-    },
-	{
-		type = "item",
-		name = "menarite-crystal",
-		icon = kr_mip_icons_path .. "menarite-crystal/menarite-crystal.png",
-		icon_size = 64,
-		icon_mipmaps = 3,
-		pictures =
-		{
-			{ size = 64, filename = kr_mip_icons_path .. "menarite-crystal/menarite-crystal.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "menarite-crystal/menarite-crystal-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "menarite-crystal/menarite-crystal-2.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "menarite-crystal/menarite-crystal-3.png", scale = 0.25, mipmap_count = 4 }
-		},
-		subgroup = "intermediate-product",
-		order = "q04[menarite-crystal]",
-		stack_size = 50
-    },
-	{
-		type = "item",
 		name = "imersite-powder",
 		icon = kr_mip_icons_path .. "imersite-powder/imersite-powder.png",
 		icon_size = 64,

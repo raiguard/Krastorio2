@@ -19,7 +19,7 @@ data:extend(
 		(
 			1,
 			{
-				filename = kr_remnants_path .. "fusion-reactor-remnant.png",
+				filename = kr_remnants_path .. "fusion-reactor/fusion-reactor-remnant.png",
 				line_length = 1,
 				width = 550,
 				height = 550,
@@ -28,7 +28,7 @@ data:extend(
 				shift = {1.01, 0},
 				hr_version =
 				{
-					filename = kr_remnants_path .. "hr-fusion-reactor-remnant.png",
+					filename = kr_remnants_path .. "fusion-reactor/hr-fusion-reactor-remnant.png",
 					line_length = 1,
 					width = 1100,
 					height = 1100,
