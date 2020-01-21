@@ -21,5 +21,8 @@ require(kr_items_prototypes_path .. "techcards")
 -- -- Items for terrain
 require(kr_items_prototypes_path .. "terrain")
 
+-- -- Items for vehicles
+require(kr_items_prototypes_path .. "vehicles")
+
 -- -- All other items
 require(kr_items_prototypes_path .. "uncategorized")

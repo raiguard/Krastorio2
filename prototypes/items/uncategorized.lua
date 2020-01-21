@@ -113,10 +113,10 @@ data:extend(
 			{ size = 64, filename = kr_mip_icons_path .. "coke/coke-2.png", scale = 0.25, mipmap_count = 4 }
 		},
 		fuel_category = "chemical",
-		fuel_value = "10MJ",
+		fuel_value = "8MJ",
 		fuel_emissions_multiplier = 1.25,
-		fuel_acceleration_multiplier = 1.1,
-		fuel_top_speed_multiplier = 1.1,
+		fuel_acceleration_multiplier = 1,
+		fuel_top_speed_multiplier = 1,
 		subgroup = "raw-material",
 		order = "a1[coke]",
 		stack_size = 200
@@ -127,12 +127,12 @@ data:extend(
 		icon = kr_icons_path .. "fuel.png",
 		icon_size = 64,
 		fuel_category = "vehicle-fuel",
-		fuel_value = "15MJ",
+		fuel_value = "10MJ",
 		fuel_emissions_multiplier = 1,
-		fuel_acceleration_multiplier = 1.3,
-		fuel_top_speed_multiplier = 1.1,
+		fuel_acceleration_multiplier = 1,
+		fuel_top_speed_multiplier = 1,
 		subgroup = "raw-material",
-		order = "zzz[fuel]",
+		order = "w01[fuel]",
 		stack_size = 200
     },
 	{
@@ -141,12 +141,12 @@ data:extend(
 		icon = kr_icons_path .. "bio-fuel.png",
 		icon_size = 64,
 		fuel_category = "vehicle-fuel",
-		fuel_value = "15MJ",
-		fuel_emissions_multiplier = 1,
-		fuel_acceleration_multiplier = 1.3,
-		fuel_top_speed_multiplier = 1.1,
+		fuel_value = "10MJ",
+		fuel_emissions_multiplier = 0.5,
+		fuel_acceleration_multiplier = 0.8,
+		fuel_top_speed_multiplier = 0.8,
 		subgroup = "raw-material",
-		order = "zzz[bio-fuel]",
+		order = "w02[bio-fuel]",
 		stack_size = 200
     },
 	{
@@ -156,11 +156,11 @@ data:extend(
 		icon_size = 64,
 		fuel_category = "vehicle-fuel",
 		fuel_value = "10MJ",
-		fuel_emissions_multiplier = 1.5,
-		fuel_acceleration_multiplier = 1.4,
-		fuel_top_speed_multiplier = 1.2,
+		fuel_emissions_multiplier = 1.75,
+		fuel_acceleration_multiplier = 1.25,
+		fuel_top_speed_multiplier = 1.25,
 		subgroup = "raw-material",
-		order = "zzz[advanced-fuel]",
+		order = "w03[advanced-fuel]",
 		stack_size = 200
     },
 	{
@@ -224,7 +224,7 @@ data:extend(
 		name = "enriched-iron",
 		icon = kr_mip_icons_path .. "enriched-iron/enriched-iron.png",
 		icon_size = 64,
-		icon_mipmaps = 3,
+		icon_mipmaps = 4,
 		pictures =
 		{
 			{ size = 64, filename = kr_mip_icons_path .. "enriched-iron/enriched-iron.png",   scale = 0.25, mipmap_count = 4 },
@@ -240,7 +240,7 @@ data:extend(
 		name = "enriched-copper",
 		icon = kr_mip_icons_path .. "enriched-copper/enriched-copper.png",
 		icon_size = 64,
-		icon_mipmaps = 3,
+		icon_mipmaps = 4,
 		pictures =
 		{
 			{ size = 64, filename = kr_mip_icons_path .. "enriched-copper/enriched-copper.png",   scale = 0.25, mipmap_count = 4 },
@@ -256,7 +256,7 @@ data:extend(
 		name = "lithium",
 		icon = kr_mip_icons_path .. "lithium/lithium.png",
 		icon_size = 64,
-		icon_mipmaps = 3,
+		icon_mipmaps = 4,
 		pictures =
 		{
 			{ size = 64, filename = kr_mip_icons_path .. "lithium/lithium.png",   scale = 0.25, mipmap_count = 4 },
@@ -287,7 +287,7 @@ data:extend(
 		name = "imersite-powder",
 		icon = kr_mip_icons_path .. "imersite-powder/imersite-powder.png",
 		icon_size = 64,
-		icon_mipmaps = 3,
+		icon_mipmaps = 4,
 		pictures =
 		{
 			{ size = 64, filename = kr_mip_icons_path .. "imersite-powder/imersite-powder.png",   scale = 0.25, mipmap_count = 4 },
@@ -303,13 +303,14 @@ data:extend(
 		name = "imersite-crystal",
 		icon = kr_mip_icons_path .. "imersite-crystal/imersite-crystal.png",
 		icon_size = 64,
-		icon_mipmaps = 3,
+		icon_mipmaps = 4,
 		pictures =
 		{
 			{ size = 64, filename = kr_mip_icons_path .. "imersite-crystal/imersite-crystal.png",   scale = 0.25, mipmap_count = 4 },
 			{ size = 64, filename = kr_mip_icons_path .. "imersite-crystal/imersite-crystal-1.png", scale = 0.25, mipmap_count = 4 },
 			{ size = 64, filename = kr_mip_icons_path .. "imersite-crystal/imersite-crystal-2.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "imersite-crystal/imersite-crystal-3.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_mip_icons_path .. "imersite-crystal/imersite-crystal-3.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "imersite-crystal/imersite-crystal-4.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "intermediate-product",
 		order = "q03[imersite-crystal]",

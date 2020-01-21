@@ -73,18 +73,47 @@ return
 		},
 		result = "kr-air-purifier"
     },
+	{
+		type = "recipe",
+		name = "sentinel",
+		energy_required = 10,
+		enabled = false,
+		ingredients =
+		{
+			{"steel-beam", 1},
+			{"iron-plate", 2},
+			{"copper-cable", 1},
+			{"automation-core", 1}
+		},
+		result = "sentinel"
+    },
+	{
+		type = "recipe",
+		name = "kr-fuel-refinery",
+		energy_required = 10,
+		enabled = false,
+		ingredients =
+		{
+			{"steel-plate", 5},
+			{"iron-gear-wheel", 5},
+			{"electronic-circuit", 5},
+			{"pipe", 5}
+		},
+		result = "kr-fuel-refinery"
+    },
 	-- -- --
 	-- NEW LABORATORIES
 	-- -- --
     {
 		type = "recipe",
 		name = "biusart-lab",
-		energy_required = 4,
+		energy_required = 10,
 		enabled = false,
 		ingredients =
 		{
-			{"advanced-circuit", 5},
-			{"steel-beam", 10},
+			{"advanced-circuit", 10},
+			{"steel-beam", 5},
+			{"iron-plate", 10},
 			{"copper-cable", 10}
 		},
 		result = "biusart-lab"
@@ -92,12 +121,14 @@ return
 	{
 		type = "recipe",
 		name = "kr-singularity-lab",
-		energy_required = 8,
+		energy_required = 60,
 		enabled = false,
 		ingredients =
 		{
 			{"ai-core", 20},
-			{"steel-beam", 20},
+			{"steel-beam", 30},
+			{"steel-plate", 60},
+			{"electric-engine-unit", 30},
 			{"rare-metals", 20}
 		},
 		result = "kr-singularity-lab"

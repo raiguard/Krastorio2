@@ -3,6 +3,35 @@ return
 {
 	{
 		type = "recipe",
+		name = "kr-coal",
+		category = "smelting",
+		energy_required = 5,
+		enabled = true,
+		allow_productivity = true,
+		ingredients =
+		{
+			{"wood", 5},
+		},
+		result = "coal",
+		result_count = 3
+	},
+	{
+		type = "recipe",
+		name = "coke",
+		category = "smelting",
+		energy_required = 10,
+		enabled = false,
+		allow_productivity = true,
+		ingredients =
+		{
+			{"coal", 3},
+			{"wood", 3}
+		},
+		result = "coke",
+		result_count = 2
+	},
+	{
+		type = "recipe",
 		name = "glass",
 		category = "smelting",
 		energy_required = 3,

@@ -88,7 +88,11 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = krastorio.recipes.changed_names["nitrogen"] or "nitrogen"
-			}						
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "water-from-air"
+			},
 		},
 		prerequisites = { "kr-fluids-chemistry", "electronics" },
 		unit =
@@ -183,6 +187,42 @@ data:extend(
 				{"production-science-pack", 1}
 			},
 			time = 45
+		}
+    },
+	---
+	-- Fuels
+	---
+	{
+		type = "technology",
+		name = "kr-fuel",
+		icon = kr_technologies_icons_path .. "fuel-refinery.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-fuel-refinery"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["fuel-1"] or "fuel-1"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["fuel-2"] or "fuel-2"
+			},
+		},
+		prerequisites = {"oil-processing"},
+		unit =
+		{
+			count = 150,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1}
+			},
+			time = 30
 		}
     },
 -----------------------------------------------------------------------------------------------------------------

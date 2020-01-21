@@ -60,5 +60,25 @@ return
 		},
 		subgroup = "raw-material",
 		order = "a[atmosphere-condensation]-a3[nitrogen]"
-    }
+    },
+	{
+		type = "recipe",
+		name = "water-from-air",
+		category = "atmosphere-condensation",
+		subgroup = "fluid-recipes",
+		icon = kr_fluids_icons_path  .. "water.png",
+		icon_size = 64,
+		energy_required = 30,
+		enabled = false,
+		always_show_made_in = true,
+		always_show_products = true,
+		hide_from_player_crafting = true,
+		ingredients = {},
+		results =
+		{
+			{ type = "fluid", name = "water", amount = 10 }
+		},
+		--subgroup = "raw-material",
+		--order = "a[atmosphere-condensation]-a3[nitrogen]"
+    },
 }

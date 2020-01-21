@@ -171,7 +171,7 @@ data:extend(
 			{
 				{"basic-tech-card", 1}
 			},
-			time = 15
+			time = 30
 		}
     },
 	{
@@ -198,7 +198,7 @@ data:extend(
 			{
 				{"basic-tech-card", 1}
 			},
-			time = 20
+			time = 30
 		}
     },
 	-----------------------------------------------------------------------
@@ -219,13 +219,13 @@ data:extend(
 		prerequisites = {"automation-science-pack"},
 		unit =
 		{
-			count = 50,
+			count = 100,
 			ingredients = 
 			{
 				{"basic-tech-card", 1},
 				{"automation-science-pack", 1}
 			},
-			time = 20
+			time = 30
 		}
     },
 	{
@@ -249,7 +249,7 @@ data:extend(
 				{"basic-tech-card", 1},
 				{"automation-science-pack", 1}
 			},
-			time = 15
+			time = 30
 		}
 	},
 	{
@@ -280,10 +280,35 @@ data:extend(
 	-----------------------------------------------------------------------
 	-- LOGISTIC TIER AND UPPER
 	-----------------------------------------------------------------------
+
 	{
 		type = "technology",
-		name = "kr-radar&watchtower",	
-		icon = kr_technologies_icons_path .. "radar&watchtower.png",
+		name = "sentinel",	
+		icon = kr_technologies_icons_path .. "sentinel.png",
+		icon_size = 128,
+		prerequisites = {"optics", "kr-stone-processing"},
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "sentinel"
+			}
+		},
+		unit =
+		{
+			count = 100,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1}
+			},
+			time = 30
+		}
+	},
+	{
+		type = "technology",
+		name = "kr-radar",	
+		icon = kr_technologies_icons_path .. "radar.png",
 		icon_size = 128,
 		prerequisites = {"electronics", "steel-processing"},
 		effects =
@@ -302,7 +327,7 @@ data:extend(
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1}
 			},
-			time = 20
+			time = 30
 		}
 	},
 	{

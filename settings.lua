@@ -72,5 +72,19 @@ data:extend(
 		setting_type = "startup",
 		default_value = true,
 		order = "b1"
-	}
+	},
+	{
+		type = "bool-setting",
+		name = "kr-rebalance-radar",
+		setting_type = "startup",
+		default_value = true,
+		order = "b2"
+	},
+	{
+		type = "bool-setting",
+		name = "kr-rebalance-fuels",
+		setting_type = "startup",
+		default_value = true,
+		order = "b3"
+	},
 })

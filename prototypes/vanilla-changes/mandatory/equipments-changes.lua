@@ -156,6 +156,7 @@ data:extend(
 applyAndIntegrateEquipmentCategories("car", "car", "kr-car-grid")
 applyAndIntegrateEquipmentCategories("car", "tank", "kr-tank-grid")
 applyAndIntegrateEquipmentCategories("locomotive", "locomotive", "kr-locomotive-grid")
+applyAndIntegrateEquipmentCategories("locomotive", "nuclear-locomotive", "kr-locomotive-grid") ---TEMPORARY
 applyAndIntegrateEquipmentCategories("cargo-wagon", "cargo-wagon", "kr-wagons-grid")
 applyAndIntegrateEquipmentCategories("fluid-wagon", "fluid-wagon", "kr-wagons-grid")
 applyAndIntegrateEquipmentCategories("artillery-wagon", "artillery-wagon", "kr-wagons-grid")

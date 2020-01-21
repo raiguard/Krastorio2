@@ -49,17 +49,18 @@ data:extend(
 			priority = "extra-high",
 			width = 250,
 			height = 250,
-			frame_count = 3,
+			frame_count = 6,
 			variation_count = 1,
+			scale = 0.8,
 			hr_version =
 				{
 				filename = kr_resources_sprites_path .. "imersite/hr-imersite-rift.png",
 				priority = "extra-high",
 				width = 500,
 				height = 500,
-				frame_count = 3,
+				frame_count = 6,
 				variation_count = 1,
-				scale = 0.5,
+				scale = 0.4,
 				}
 		  }
 		},
@@ -71,19 +72,20 @@ data:extend(
 			priority = "extra-high",
 			width = 250,
 			height = 250,
-			frame_count = 3,
+			frame_count = 6,
 			variation_count = 1,
 			blend_mode = "additive",
 			flags = {"light"},
+			scale = 0.8,
 			hr_version =
 			{
 				filename = kr_resources_sprites_path .. "imersite/hr-imersite-rift-glow.png",
 				priority = "extra-high",
 				width = 500,
 				height = 500,
-				frame_count = 3,
+				frame_count = 6,
 				variation_count = 1,
-				scale = 0.5,
+				scale = 0.4,
 			  blend_mode = "additive",
 			  flags = {"light"}
 			}

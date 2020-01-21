@@ -26,6 +26,8 @@ require("buildings/fusion-reactor")
 require("buildings/advanced-steam-turbine")
 require("buildings/singularity-lab")
 require("buildings/crash-site")
+require("buildings/sentinel")
+require("buildings/fuel-refinery")
 -- -- Laboratory
 require("buildings/biusart-lab")
 -- -- Conteiners
@@ -53,4 +55,8 @@ require("remnants/kr-medium-random-pipes-remnant")
 require("remnants/kr-big-random-pipes-remnant")
 require("remnants/kr-water-pumpjack-remnant")
 require("remnants/kr-fusion-reactor-remnant")
+---------------------------------------------------------------------------------------
+-- -- -- VEHICLES
+---------------------------------------------------------------------------------------
+require("vehicles/nuclear-locomotive")
 ---------------------------------------------------------------------------------------

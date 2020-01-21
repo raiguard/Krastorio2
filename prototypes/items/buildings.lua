@@ -83,6 +83,26 @@ data:extend(
 		place_result = "kr-air-purifier",
 		stack_size = 50
     },
+    {
+		type = "item",
+		name = "sentinel",
+		icon = kr_entities_icons_path .. "sentinel.png",
+		icon_size = 64,
+		subgroup = "radars-and-rockets",
+		order = "01[sentinel]",
+		place_result = "sentinel",
+		stack_size = 50,
+	},
+    {
+		type = "item",
+		name = "kr-fuel-refinery",
+		icon = kr_entities_icons_path .. "fuel-refinery.png",
+		icon_size = 64,
+		subgroup = "production-machine",
+		order = "e[fuel-refinery]",
+		place_result = "kr-fuel-refinery",
+		stack_size = 10,
+	},
 	-- -- --
 	-- NEW LABORATORIES
 	-- -- --

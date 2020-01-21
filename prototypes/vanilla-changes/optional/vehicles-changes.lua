@@ -33,6 +33,8 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 	krastorio.recipes.replaceIngredient("tank", "iron-gear-wheel", {"steel-gear-wheel", 30})
 	---------------------
 
+	
+	
 end
 
 	

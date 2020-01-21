@@ -1,5 +1,39 @@
 data:extend(
 {
+
+	-- Radars and rocket
+	{
+		type = "item-subgroup",
+		name = "radars-and-rockets",
+		group = "combat",
+		order = "g1"
+	},
+	{
+		type = "item-subgroup",
+		name = "vanilla-turrets",
+		group = "combat",
+		order = "g2"
+	},
+	{
+		type = "item-subgroup",
+		name = "railgun-turret",
+		group = "combat",
+		order = "g3"
+	},
+	{
+		type = "item-subgroup",
+		name = "rocket-turret",
+		group = "combat",
+		order = "g4"
+	},
+	{
+		type = "item-subgroup",
+		name = "Radars-and-rockets",
+		group = "combat",
+		order = "g5"
+	},
+	
+
 	-- Containers and logistics containers
 	{
 		type = "item-subgroup",

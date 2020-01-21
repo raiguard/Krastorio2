@@ -279,9 +279,9 @@ return
 	---
 	{
 		type = "recipe",
-		name = "fuel",
-		category = "chemistry",
-		icon = kr_icons_path .. "fuel.png",
+		name = "fuel-1",
+		category = "fuel-refinery",
+		icon = kr_icons_path .. "fuel-1.png",
 		icon_size = 64,
 		energy_required = 10,
 		enabled = false,
@@ -290,15 +290,44 @@ return
 		allow_productivity = true,
 		ingredients =
 		{
-			{type="item", name="solid-fuel", amount=5},
+			{type="fluid", name="light-oil", amount=50}
+		},
+		results =
+		{ 
+			{type="item", name="fuel", amount=10}
+		},
+		subgroup = "intermediate-product",
+		order = "o1[fuel1]",
+		crafting_machine_tint =
+		{
+			primary = {r = 0.662, g = 0.807, b = 0.839, a = 0.000}, 
+			secondary = {r = 0.541, g = 0.647, b = 0.670, a = 0.250}, 
+			tertiary = {r = 0.454, g = 0.517, b = 0.529, a = 0.500}, 
+			quaternary = {r = 0.662, g = 0.807, b = 0.839, a = 0.900} 
+		}
+	},
+	{
+		type = "recipe",
+		name = "fuel-2",
+		category = "fuel-refinery",
+		icon = kr_icons_path .. "fuel-2.png",
+		icon_size = 64,
+		energy_required = 10,
+		enabled = false,
+		always_show_made_in = true,
+		always_show_products = true,
+		allow_productivity = true,
+		ingredients =
+		{
+			{type="item", name="solid-fuel", amount=4},
 			{type="fluid", name="hydrogen", amount=50, catalyst_amount = 50}
 		},
 		results =
 		{ 
-			{type="item", name="fuel", amount=5}
+			{type="item", name="fuel", amount=10}
 		},
 		subgroup = "intermediate-product",
-		order = "o1[fuel]",
+		order = "o2[fuel2]",
 		crafting_machine_tint =
 		{
 			primary = {r = 0.662, g = 0.807, b = 0.839, a = 0.000}, 
@@ -310,7 +339,7 @@ return
 	{
 		type = "recipe",
 		name = "bio-fuel",
-		category = "chemistry",
+		category = "fuel-refinery",
 		icon = kr_icons_path .. "bio-fuel.png",
 		icon_size = 64,
 		energy_required = 10,
@@ -328,7 +357,37 @@ return
 			{type="item", name="bio-fuel", amount=10}
 		},
 		subgroup = "intermediate-product",
-		order = "o2[bio-fuel]",
+		order = "o3[bio-fuel]",
+		crafting_machine_tint =
+		{
+			primary = {r = 0.30, g = 0.53, b = 0.20, a = 0.000}, 
+			secondary = {r = 0.30, g =0.53, b = 0.20, a = 0.250}, 
+			tertiary = {r = 0.454, g = 0.517, b = 0.529, a = 0.500}, 
+			quaternary = {r = 0.662, g = 0.807, b = 0.839, a = 0.900} 
+		}
+	},
+	{
+		type = "recipe",
+		name = "advanced-fuel",
+		category = "fuel-refinery",
+		icon = kr_icons_path .. "advanced-fuel.png",
+		icon_size = 64,
+		energy_required = 10,
+		enabled = false,
+		always_show_made_in = true,
+		always_show_products = true,
+		allow_productivity = true,
+		ingredients =
+		{
+			{type="item", name="fuel", amount=10},
+			{type="item", name="imersite-powder", amount=5}
+		},
+		results =
+		{ 
+			{type="item", name="advanced-fuel", amount=10}
+		},
+		subgroup = "intermediate-product",
+		order = "o4[bio-fuel]",
 		crafting_machine_tint =
 		{
 			primary = {r = 0.30, g = 0.53, b = 0.20, a = 0.000}, 

@@ -33,20 +33,6 @@ return
 	},
 	{
 		type = "recipe",
-		name = "coke",
-		energy_required = 10,
-		enabled = false,
-		allow_productivity = true,
-		ingredients =
-		{
-			{"coal", 3},
-			{"wood", 3}
-		},
-		result = "coke",
-		result_count = 2
-	},
-	{
-		type = "recipe",
 		name = "steel-gear-wheel",
 		energy_required = 0.5,
 		enabled = false,
