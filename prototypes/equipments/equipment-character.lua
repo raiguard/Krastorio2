@@ -172,6 +172,19 @@ data:extend(
 	{
 		type = "night-vision-equipment",
 		name = "imersite-night-vision-equipment",		
+		sprite =
+		{
+			filename = kr_character_equipments_path .. "imersite-night-vision-equipment.png",
+			width = 64,
+			height = 64,
+			priority = "medium"
+		},
+		shape =
+		{
+			width = 1,
+			height = 1,
+			type = "full"
+		},
 		energy_source =
 		{
 			type = "electric",
@@ -197,19 +210,7 @@ data:extend(
 		},
 		categories = {"armor"},
 		darkness_to_turn_on = 0.7,
-		shape =
-		{
-			width = 1,
-			height = 1,
-			type = "full"
-		},
-		sprite =
-		{
-			filename = kr_character_equipments_path .. "imersite-night-vision-equipment.png",
-			width = 64,
-			height = 64,
-			priority = "medium"
-		}
+		color_lookup = {{0.5, "__core__/graphics/color_luts/nightvision.png"}}
 	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

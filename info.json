@@ -5,10 +5,10 @@
 	"description": "WIP",
 	"author": "Linver, Krastor",
 	"contact": "https://discord.gg/sUmpTHN",
-	"factorio_version": "0.17",
+	"factorio_version": "0.18",
 	"dependencies":
 	[
-		"base >= 0.17.76",		
+		"base >= 0.18.00",		
 		"? aai-industry >= 0.3.17",		
 		"? deadlock-beltboxes-loaders >= 2.1.13",
 		"? IndustrialRevolution >= 1.0.6",
