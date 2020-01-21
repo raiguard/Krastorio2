@@ -1,5 +1,7 @@
 -- -- -- Adding new armor tiers
 
+--[[
+
 character_animations =
 {
   level1 =
@@ -1782,3 +1784,4 @@ table.insert
 		}
 	}
 )	
+]]--
