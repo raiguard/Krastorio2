@@ -8,7 +8,7 @@ local small_minable_ship_residues =
 		{ type = "item", name = "copper-cable", amount_min = 0, amount_max = 2, probability = 0.50 },
 		{ type = "item", name = "iron-gear-wheel", amount_min = 0, amount_max = 2, probability = 0.50},
 		{ type = "item", name = "electronic-circuit", amount_min = 0, amount_max = 2, probability = 0.25},
-		{ type = "item", name = "sentinel", amount_min = 0, amount_max = 2, probability = 0.10}
+		{ type = "item", name = "kr-sentinel", amount_min = 0, amount_max = 2, probability = 0.10}
 	}
 }
 
@@ -21,7 +21,7 @@ local big_minable_ship_residues =
 		{ type = "item", name = "copper-cable", amount_min = 4, amount_max = 8, probability = 1 },
 		{ type = "item", name = "iron-gear-wheel", amount_min = 3, amount_max = 5, probability = 0.75},
 		{ type = "item", name = "electronic-circuit", amount_min = 2, amount_max = 3, probability = 0.75},
-		{ type = "item", name = "sentinel", amount_min = 1, amount_max = 2, probability = 0.50}
+		{ type = "item", name = "kr-sentinel", amount_min = 1, amount_max = 2, probability = 0.50}
 	}
 }
 

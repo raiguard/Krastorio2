@@ -8,6 +8,13 @@ krastorio.stage = "data-updates"
 -- -- Modifing vanilla game objects
 require(kr_prototypes_path .. "vanilla-changes/mandatory-vanilla-updates")
 require(kr_prototypes_path .. "vanilla-changes/optional-vanilla-updates")
+-- Generating buring recipes for fluids
+local fluid_burner_util = require(kr_public_lib .. "fluid-burner-util")
+fluid_burner_util.generateBurnFluidsRecipes()
+-- Generate for each item that can't be processed from the crusher
+-- a void recipe for destroy it
+-- (This must be done after adding other recipes)
+require(kr_recipes_prototypes_path .. "generate-void-crushing-recipes")
 ---------------------------------------------------------------------------
 -- -- -- COMPATIBILITY INITIALIZATION (data update stage)
 ---------------------------------------------------------------------------

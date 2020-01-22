@@ -1,3 +1,46 @@
+local coke_value, coke_acceleration_multiplier, coke_top_speed_multiplier = nil, nil, nil
+local fuel_value, fuel_acceleration_multiplier, fuel_top_speed_multiplier = nil, nil, nil
+local bio_fuel_value, bio_fuel_acceleration_multiplier, bio_fuel_top_speed_multiplier = nil, nil, nil
+local advanced_fuel_value = nil
+
+if krastorio.general.getSafeSettingValue("kr-rebalance-fuels") then
+	-- Coke
+	coke_value                   = "8MJ"
+	coke_acceleration_multiplier = 1.0
+	coke_top_speed_multiplier    = 1.0
+	
+	-- Fuel
+	fuel_value                   = "10MJ"
+	fuel_acceleration_multiplier = 1
+	fuel_top_speed_multiplier    = 1
+	
+	-- Bio fuel
+	bio_fuel_value                   = "10MJ"
+	bio_fuel_acceleration_multiplier = 0.8
+	bio_fuel_top_speed_multiplier    = 0.8
+	
+	-- Advanced fuel
+	advanced_fuel_value = "10MJ"
+else
+	-- Coke
+	coke_value                   = "10MJ"
+	coke_acceleration_multiplier = 1.1
+	coke_top_speed_multiplier    = 1.1
+	
+	-- Fuel
+	fuel_value                   = "15MJ"
+	fuel_acceleration_multiplier = 1.3
+	fuel_top_speed_multiplier    = 1.1
+	
+	-- Bio fuel
+	bio_fuel_value                   = "15MJ"
+	bio_fuel_acceleration_multiplier = 1.2
+	bio_fuel_top_speed_multiplier    = 1.1
+	
+	-- Advanced fuel
+	advanced_fuel_value = "15MJ"
+end
+
 data:extend(
 {	
 	{
@@ -100,6 +143,9 @@ data:extend(
 		order = "e[ei-electronic-components]",
 		stack_size = 200
 	},
+	---
+	-- Fuels
+	---
 	{
 		type = "item",
 		name = "coke",
@@ -113,10 +159,10 @@ data:extend(
 			{ size = 64, filename = kr_mip_icons_path .. "coke/coke-2.png", scale = 0.25, mipmap_count = 4 }
 		},
 		fuel_category = "chemical",
-		fuel_value = "8MJ",
+		fuel_value = coke_value,
 		fuel_emissions_multiplier = 1.25,
-		fuel_acceleration_multiplier = 1,
-		fuel_top_speed_multiplier = 1,
+		fuel_acceleration_multiplier = coke_acceleration_multiplier,
+		fuel_top_speed_multiplier = coke_top_speed_multiplier,
 		subgroup = "raw-material",
 		order = "a1[coke]",
 		stack_size = 200
@@ -127,10 +173,10 @@ data:extend(
 		icon = kr_icons_path .. "fuel.png",
 		icon_size = 64,
 		fuel_category = "vehicle-fuel",
-		fuel_value = "10MJ",
+		fuel_value = fuel_value,
 		fuel_emissions_multiplier = 1,
-		fuel_acceleration_multiplier = 1,
-		fuel_top_speed_multiplier = 1,
+		fuel_acceleration_multiplier = fuel_acceleration_multiplier,
+		fuel_top_speed_multiplier = fuel_top_speed_multiplier,
 		subgroup = "raw-material",
 		order = "w01[fuel]",
 		stack_size = 200
@@ -141,10 +187,10 @@ data:extend(
 		icon = kr_icons_path .. "bio-fuel.png",
 		icon_size = 64,
 		fuel_category = "vehicle-fuel",
-		fuel_value = "10MJ",
+		fuel_value = bio_fuel_value,
 		fuel_emissions_multiplier = 0.5,
-		fuel_acceleration_multiplier = 0.8,
-		fuel_top_speed_multiplier = 0.8,
+		fuel_acceleration_multiplier = bio_fuel_acceleration_multiplier,
+		fuel_top_speed_multiplier = bio_fuel_top_speed_multiplier,
 		subgroup = "raw-material",
 		order = "w02[bio-fuel]",
 		stack_size = 200
@@ -155,7 +201,7 @@ data:extend(
 		icon = kr_icons_path .. "advanced-fuel.png",
 		icon_size = 64,
 		fuel_category = "vehicle-fuel",
-		fuel_value = "10MJ",
+		fuel_value = advanced_fuel_value,
 		fuel_emissions_multiplier = 1.75,
 		fuel_acceleration_multiplier = 1.25,
 		fuel_top_speed_multiplier = 1.25,
@@ -163,6 +209,7 @@ data:extend(
 		order = "w03[advanced-fuel]",
 		stack_size = 200
     },
+	---
 	{
 		type = "item",
 		name = "iron-beam",

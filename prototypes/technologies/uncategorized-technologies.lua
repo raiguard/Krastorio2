@@ -68,6 +68,31 @@ data:extend(
     },
 	{
 		type = "technology",
+		name = "kr-fluid-excess-handling",
+		icon = kr_technologies_icons_path .. "fluid-burner.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-fluid-burner"
+			}
+		},
+		prerequisites = { "kr-fluids-chemistry", "electronics" },
+		unit =
+		{
+			count = 150,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1}
+			},
+			time = 30
+		}
+	},	
+	{
+		type = "technology",
 		name = "kr-atmosphere-condensation",
 		icon = kr_technologies_icons_path .. "atmospheric-condenser.png",
 		icon_size = 128,
@@ -91,8 +116,8 @@ data:extend(
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "water-from-air"
-			},
+				recipe = krastorio.recipes.changed_names["water-from-atmosphere"] or "water-from-atmosphere"
+			}
 		},
 		prerequisites = { "kr-fluids-chemistry", "electronics" },
 		unit =

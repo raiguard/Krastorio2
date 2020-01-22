@@ -85,12 +85,12 @@ data:extend(
     },
     {
 		type = "item",
-		name = "sentinel",
+		name = "kr-sentinel",
 		icon = kr_entities_icons_path .. "sentinel.png",
 		icon_size = 64,
 		subgroup = "radars-and-rockets",
 		order = "01[sentinel]",
-		place_result = "sentinel",
+		place_result = "kr-sentinel",
 		stack_size = 50,
 	},
     {
@@ -337,6 +337,16 @@ data:extend(
 		subgroup = "production-machine",
 		order = "e-c1[atmospheric-condenser]",
 		place_result = "kr-atmospheric-condenser",
+		stack_size = 50
+    },
+	{
+		type = "item",
+		name = "kr-fluid-burner",
+		icon = kr_entities_icons_path .. "fluid-burner.png",
+		icon_size = 64,
+		subgroup = "production-machine",
+		order = "e-d1[fluid-burner]",
+		place_result = "kr-fluid-burner",
 		stack_size = 50
     },
 	{

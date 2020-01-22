@@ -450,9 +450,9 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 	{
 		item_name = "sulfur",
 		minimum_conversion_quantity = 10, 
-		matter_value = 18,
+		matter_value = 9,
 		unlocked_by_technology = "matter-assembler-plus", 
-		energy_required = 2,
+		energy_required = 4,
 		need_stabilizer = true,
 		allow_productivity = true
 	}

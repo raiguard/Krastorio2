@@ -283,7 +283,7 @@ data:extend(
 
 	{
 		type = "technology",
-		name = "sentinel",	
+		name = "kr-sentinel",	
 		icon = kr_technologies_icons_path .. "sentinel.png",
 		icon_size = 128,
 		prerequisites = {"optics", "kr-stone-processing"},
@@ -291,7 +291,7 @@ data:extend(
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "sentinel"
+				recipe = "kr-sentinel"
 			}
 		},
 		unit =
@@ -310,7 +310,7 @@ data:extend(
 		name = "kr-radar",	
 		icon = kr_technologies_icons_path .. "radar.png",
 		icon_size = 128,
-		prerequisites = {"electronics", "steel-processing"},
+		prerequisites = {"kr-sentinel", "electronics", "steel-processing"},
 		effects =
 		{
 			{

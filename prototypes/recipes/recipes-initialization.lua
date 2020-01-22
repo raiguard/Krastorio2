@@ -39,6 +39,9 @@ local krastorio_new_recipes =
 	-- -- New recipes for chemistry products(can produce fluids)
 	require(kr_recipes_prototypes_path .. "chemistry"),
 	
+	-- -- New recipes for fuel refinery products(produce only fuels)
+	require(kr_recipes_prototypes_path .. "fuel-refinery"),
+	
 	-- -- Recipes used by fusion reactor to create steam
 	require(kr_recipes_prototypes_path .. "nuclear-fusion"),
 	
@@ -58,11 +61,6 @@ for _, recipe_section in pairs(krastorio_new_recipes) do
 		krastorio.recipes.addWithOverrideSafeNewRecipe(recipe)
 	end
 end
-
--- Generate for each item that can't be processed from the crusher
--- a void recipe for destroy it
--- (This must be done after adding other recipes)
-require(kr_recipes_prototypes_path .. "generate-void-crushing-recipes")
 
 -- Optional recipes
 require(kr_recipes_prototypes_path .. "loaders")

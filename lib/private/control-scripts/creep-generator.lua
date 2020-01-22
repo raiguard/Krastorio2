@@ -52,8 +52,9 @@ function pushCreepToGenerate(event)
 	else		
 		local nests = event.surface.find_entities_filtered
 		{ 
+			type = "unit-spawner",
 			area = event.area, 
-			type = "unit-spawner"
+			force = "enemy"
 		}
 		
 		for _, nest in pairs(nests) do	

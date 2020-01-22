@@ -4,16 +4,11 @@ data:extend(
 	{
 		type = "fuel-category",
 		name = "vehicle-fuel"
-	},
+	},	
 	-- Fuel for heavy vehicles like nuclear locomotive
 	{
 		type = "fuel-category",
 		name = "nuclear-fuel"
-	},
-	-- Used by quarry drills
-	{
-		type = "fuel-category",
-		name = "kr-quarry-drill-fuel"
 	},
 	-- Used by fusion reactors
 	{
@@ -24,5 +19,10 @@ data:extend(
 	{
 		type = "fuel-category",
 		name = "antimatter-fuel"
-	}	
+	},
+	-- Used by quarry drills
+	{
+		type = "fuel-category",
+		name = "kr-quarry-drill-fuel"
+	}
 })

@@ -3,7 +3,7 @@ return
 {
 	{
 		type = "recipe",
-		name = "kr-coal",
+		name = "coal",
 		category = "smelting",
 		energy_required = 5,
 		enabled = true,

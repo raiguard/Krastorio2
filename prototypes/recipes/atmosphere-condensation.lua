@@ -63,7 +63,7 @@ return
     },
 	{
 		type = "recipe",
-		name = "water-from-air",
+		name = "water-from-atmosphere",
 		category = "atmosphere-condensation",
 		subgroup = "fluid-recipes",
 		icon = kr_fluids_icons_path  .. "water.png",
@@ -78,7 +78,7 @@ return
 		{
 			{ type = "fluid", name = "water", amount = 10 }
 		},
-		--subgroup = "raw-material",
-		--order = "a[atmosphere-condensation]-a3[nitrogen]"
+		subgroup = "raw-material",
+		order = "a[atmosphere-condensation]-a0[water]"
     },
 }

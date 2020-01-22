@@ -140,7 +140,7 @@ data:extend(
 				recipe = krastorio.recipes.changed_names["advanced-fuel"] or "advanced-fuel"
 			}
 		},
-		prerequisites = {"kr-fuel", "kr-advanced-chemistry", },
+		prerequisites = {"kr-quarry-minerals-extraction", "kr-fuel", "kr-advanced-chemistry"},
 		unit =
 		{
 			count = 200,

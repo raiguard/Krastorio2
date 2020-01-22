@@ -36,6 +36,11 @@ data:extend(
 	   type = "recipe-category",
 	   name = "crushing"
 	},
+	-- Crushing, used by crusher
+	{
+	   type = "recipe-category",
+	   name = "fuel-burning"
+	},
 	-- Electrolysis, used by filtration plant
 	{
 	   type = "recipe-category",

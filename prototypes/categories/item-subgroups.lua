@@ -25,14 +25,7 @@ data:extend(
 		name = "rocket-turret",
 		group = "combat",
 		order = "g4"
-	},
-	{
-		type = "item-subgroup",
-		name = "Radars-and-rockets",
-		group = "combat",
-		order = "g5"
-	},
-	
+	},	
 
 	-- Containers and logistics containers
 	{
@@ -63,17 +56,23 @@ data:extend(
 	-- Decorations
 	
 	{
-    type = "item-subgroup",
-    name = "kr-decorations-1",
-    group = "intermediate-products",
-    order = "zzd1"
-	},
-	
+		type = "item-subgroup",
+		name = "kr-decorations-1",
+		group = "intermediate-products",
+		order = "zzd1"
+	},	
 	{
-    type = "item-subgroup",
-    name = "kr-decorations-2",
-    group = "intermediate-products",
-    order = "zzd2"
+		type = "item-subgroup",
+		name = "kr-decorations-2",
+		group = "intermediate-products",
+		order = "zzd2"
 	},
 	
+	-- Nothing
+	{
+		type = "item-subgroup",
+		name = "kr-void",
+		group = "other",
+		order = "zzz"
+	}
 })

@@ -22,7 +22,7 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 
 		return 
 		{
-			type = "loader",
+			type = "loader-1x1",
 			name = name,
 			icon = icon,
 			icon_size = 32,
@@ -43,10 +43,10 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 			drawing_box = {{-0.4, -0.4}, {0.4, 0.4}},
 			animation_speed_coefficient = 32,
 			container_distance = 0.75, --Default: 1.5
-			belt_distance = 0.00, --Default: 0.5 
+			-- belt_distance = 0.0, --Default1x1: 0.0  --Default2x1: 0.5 
 			belt_length = 0.20, -- Default: 0.5
 			structure_render_layer = "object",
-			--structure_render_layer = "transport-belt-circuit-connector", --Default:"lower-object" 
+			-- structure_render_layer = "transport-belt-circuit-connector", --Default:"lower-object" 
 			belt_animation_set = belt_animation_set,
 			fast_replaceable_group = "loader",
 			next_upgrade = upgrade,

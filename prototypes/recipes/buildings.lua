@@ -75,7 +75,7 @@ return
     },
 	{
 		type = "recipe",
-		name = "sentinel",
+		name = "kr-sentinel",
 		energy_required = 10,
 		enabled = false,
 		ingredients =
@@ -85,7 +85,7 @@ return
 			{"copper-cable", 1},
 			{"automation-core", 1}
 		},
-		result = "sentinel"
+		result = "kr-sentinel"
     },
 	{
 		type = "recipe",
@@ -425,6 +425,19 @@ return
 		},
 		result = "kr-atmospheric-condenser"
     },	
+	{
+		type = "recipe",
+		name = "kr-fluid-burner",
+		energy_required = 30,
+		enabled = false,
+		ingredients =
+		{
+			{"steel-beam", 10},
+			{"steel-plate", 20},
+			{"electronic-circuit", 3}
+		},
+		result = "kr-fluid-burner"
+    },		
 	{
 		type = "recipe",
 		name = "kr-quarry-drill",
