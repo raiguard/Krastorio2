@@ -244,7 +244,7 @@ data:extend(
 			sound =
 			{
 				filename = kr_buildings_sounds_path .. "fluid-burner.ogg",
-				volume = 0.5
+				volume = 2.0
 			},
 			idle_sound = 
 			{ 

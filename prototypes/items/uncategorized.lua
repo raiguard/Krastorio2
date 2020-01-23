@@ -73,7 +73,7 @@ data:extend(
 		icon = kr_icons_path .. "automation-core.png",
 		icon_size = 64,
 		subgroup = "intermediate-product",
-		order = "d1[automation-core]",
+		order = "e1[automation-core]",
 		stack_size = 200
 	},
 	{
@@ -216,7 +216,7 @@ data:extend(
 		icon = kr_icons_path .. "iron-beam.png",
 		icon_size = 64,
 		subgroup = "intermediate-product",
-		order = "b-a2[iron-beam]",
+		order = "c-a2[iron-beam]",
 		stack_size = 200
 	},
 	{
@@ -225,7 +225,7 @@ data:extend(
 		icon = kr_icons_path .. "steel-gear-wheel.png",
 		icon_size = 64,
 		subgroup = "intermediate-product",
-		order = "c-a2[steel-gear-wheel]",
+		order = "d-a2[steel-gear-wheel]",
 		stack_size = 200
 	},
 	{
@@ -311,7 +311,7 @@ data:extend(
 			{ size = 64, filename = kr_mip_icons_path .. "lithium/lithium-2.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-material",
-		order = "e04[lithium]",
+		order = "h2[lithium]",
 		stack_size = 200
     },
 	{
@@ -326,7 +326,7 @@ data:extend(
 			{ size = 64, filename = kr_mip_icons_path .. "lithium-chloride/lithium-chloride-1.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-material",
-		order = "e05[lithium-chloride]",
+		order = "h1[lithium-chloride]",
 		stack_size = 200
     },
 	{
@@ -368,8 +368,8 @@ data:extend(
 		name = "lithium-sulfur-battery",
 		icon = kr_icons_path .. "lithium-sulfur-battery.png",
 		icon_size = 64,
-		subgroup = "intermediate-product",
-		order = "h2[lithium-sulfur-battery]",
+		subgroup = "raw-material",
+		order = "i2[lithium-sulfur-battery]",
 		stack_size = 200
 	},
 	{
@@ -405,7 +405,7 @@ data:extend(
 		icon = kr_icons_path .. "deuterium-oxide.png",
 		icon_size = 64,
 		subgroup = "intermediate-product",
-		order = "10[deuterium-oxide]",
+		order = "p[deuterium-oxide]",
 		stack_size = 200
     },
 	{
@@ -414,7 +414,7 @@ data:extend(
 		icon = kr_icons_path .. "tritium.png",
 		icon_size = 64,
 		subgroup = "raw-material",
-		order = "004[tritium]",
+		order = "s[tritium]",
 		stack_size = 200
     },
 	{

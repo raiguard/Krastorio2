@@ -235,7 +235,7 @@ return
 			{type="item", name="lithium-chloride", amount=5}
 		},
 		subgroup = "raw-material",
-		order = "y07[lithium-chloride]",
+		order = "h1[lithium-chloride]",
 		crafting_machine_tint =
 		{
 			primary = {r = 0.662, g = 0.807, b = 0.839, a = 0.000}, 
@@ -278,6 +278,7 @@ return
 		type = "recipe",
 		name = "lithium-sulfur-battery",
 		category = "chemistry",
+		always_show_made_in = true,
 		always_show_products = true,		
 		allow_productivity = true,
 		normal =

@@ -67,7 +67,7 @@ return
 			{ type = "item",  name = "lithium", amount = 5}
 		},
 		subgroup = "raw-material",
-		order = "f02[lithium]"
+		order = "h2[lithium]"
     },
 	{
 		type = "recipe",
