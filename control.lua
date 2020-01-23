@@ -22,7 +22,9 @@ local scripts =
 	-- Disable vanilla victory
 	require(control_scripts_path .. "disable-vanilla-victory"),
 	-- Create a crash site like in the Factorio campaign
-	require(control_scripts_path .. "crash-site")
+	require(control_scripts_path .. "crash-site"),
+	-- Supporter thanks
+	require(control_scripts_path .. "supporters-thanks")
 }
 
 -- Load all callbacks
