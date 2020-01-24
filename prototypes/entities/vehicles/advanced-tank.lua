@@ -4,7 +4,7 @@ data:extend(
 		type = "car",
 		name = "kr-advanced-tank",
 		icon = kr_vehicles_icons_path .. "advanced-tank.png",
-		icon_size = 32,
+		icon_size = 64,
 		flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-flammable"},
 		minable = {mining_time = 10, result = "kr-advanced-tank"},
 		mined_sound = {filename = "__core__/sound/deconstruct-medium.ogg"},
@@ -371,7 +371,7 @@ data:extend(
 		sound_no_fuel =
 		{
 			{
-				filename = "__base__/sound/fight/advanced-tank-no-fuel-1.ogg",
+				filename = "__base__/sound/fight/tank-no-fuel-1.ogg",
 				volume = 0.8
 			}
 		},

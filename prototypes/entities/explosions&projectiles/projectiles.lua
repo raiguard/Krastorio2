@@ -439,7 +439,7 @@ data:extend(
     },
     animation =
     {
-      filename = "__Krastorio-graphics__/graphics/entity/turrets/railbullet.png",
+      filename = kr_entities_path .. "missiles/railbullet.png",
       frame_count = 1,
       width = 5,
       height = 90,
@@ -524,7 +524,7 @@ data:extend(
     },
     animation =
     {
-      filename = "__Krastorio-graphics__/graphics/entity/turrets/missile-e.png",
+      filename = kr_entities_path .. "missiles/missile-e.png",
       frame_count = 1,
       width = 5,
       height = 90,
@@ -632,7 +632,7 @@ data:extend(
     },
     animation =
     {
-      filename = "__Krastorio-graphics__/graphics/entity/turrets/missile-m.png",
+      filename = kr_entities_path .. "missiles/missile-m.png",
       frame_count = 1,
       width = 10,
       height = 167,
@@ -698,7 +698,7 @@ data:extend(
     },
     animation =
     {
-      filename = "__Krastorio-graphics__/graphics/entity/turrets/rocket.png",
+      filename = kr_entities_path .. "missiles/rocket.png",
       frame_count = 5,
       line_length = 5,
       width = 13,
@@ -708,7 +708,7 @@ data:extend(
     },
     shadow =
     {
-      filename = "__Krastorio-graphics__/graphics/entity/turrets/rocket-shadow.png",
+      filename = kr_entities_path .. "missiles/rocket-shadow.png",
       frame_count = 1,
       width = 12,
       height = 40,
@@ -796,7 +796,7 @@ data:extend(
     },
     animation =
     {
-      filename = "__Krastorio-graphics__/graphics/entity/turrets/rocket-n.png",
+      filename = kr_entities_path .. "missiles/rocket-n.png",
       frame_count = 5,
       line_length = 5,
       width = 13,
@@ -806,7 +806,7 @@ data:extend(
     },
     shadow =
     {
-      filename = "__Krastorio-graphics__/graphics/entity/turrets/rocket-shadow.png",
+      filename = kr_entities_path .. "missiles/rocket-shadow.png",
       frame_count = 1,
       width = 12,
       height = 40,
@@ -892,7 +892,7 @@ data:extend(
     },
     animation =
     {
-      filename = "__Krastorio-graphics__/graphics/entity/turrets/rocket-m.png",
+      filename = kr_entities_path .. "missiles/rocket-m.png",
       frame_count = 5,
       line_length = 5,
       width = 13,
@@ -902,7 +902,7 @@ data:extend(
     },
     shadow =
     {
-      filename = "__Krastorio-graphics__/graphics/entity/turrets/rocket-shadow.png",
+      filename = kr_entities_path .. "missiles/rocket-shadow.png",
       frame_count = 1,
       width = 12,
       height = 40,

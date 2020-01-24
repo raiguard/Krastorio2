@@ -14,7 +14,7 @@ data:extend(
 		type = "item-with-entity-data",
 		name = "kr-advanced-tank",
 		icon = kr_vehicles_icons_path .. "advanced-tank.png",
-		icon_size = 32,
+		icon_size = 64,
 		subgroup = "transport",
 		order = "b[personal-transport]-b[z-advanced-tank]",
 		place_result = "kr-advanced-tank",
