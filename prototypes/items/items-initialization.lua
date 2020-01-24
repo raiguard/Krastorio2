@@ -26,3 +26,9 @@ require(kr_items_prototypes_path .. "vehicles")
 
 -- -- All other items
 require(kr_items_prototypes_path .. "uncategorized")
+
+-- -- Guns
+-- Character guns
+require(kr_items_prototypes_path .. "guns")
+-- Adavanced tank guns
+require(kr_items_prototypes_path .. "adavanced-tank-guns")

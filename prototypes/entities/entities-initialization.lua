@@ -52,12 +52,19 @@ require("buildings/fluid-storages/fluid-storage-2")
 ---------------------------------------------------------------------------------------
 -- -- -- REMNANTS
 ---------------------------------------------------------------------------------------
-require("remnants/kr-medium-random-pipes-remnant")
+require("remnants/advanced-tank")
+require("remnants/fusion-reactor-remnant")
 require("remnants/kr-big-random-pipes-remnant")
+require("remnants/kr-medium-random-pipes-remnant")
 require("remnants/kr-water-pumpjack-remnant")
-require("remnants/kr-fusion-reactor-remnant")
 ---------------------------------------------------------------------------------------
 -- -- -- VEHICLES
 ---------------------------------------------------------------------------------------
+require("vehicles/advanced-tank")
 require("vehicles/nuclear-locomotive")
+---------------------------------------------------------------------------------------
+-- -- -- Explosions&projectiles
+---------------------------------------------------------------------------------------
+require("explosions&projectiles/explosions")
+require("explosions&projectiles/projectiles")
 ---------------------------------------------------------------------------------------

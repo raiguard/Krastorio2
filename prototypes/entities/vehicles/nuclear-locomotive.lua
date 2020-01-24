@@ -32,11 +32,11 @@ data:extend(
 	-- Entity
 	{
 		type = "locomotive",
-		name = "nuclear-locomotive",
-		icon = kr_icons_path .. "nuclear-locomotive.png",
+		name = "kr-nuclear-locomotive",
+		icon = kr_vehicles_icons_path .. "nuclear-locomotive.png",
 		icon_size = 64,
 		flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
-		minable = {mining_time = 1, result = "nuclear-locomotive"},
+		minable = {mining_time = 1, result = "kr-nuclear-locomotive"},
 		mined_sound = {filename = "__core__/sound/deconstruct-medium.ogg"},
 		max_health = 2000,
 		corpse = "locomotive-remnants",
