@@ -1,6 +1,7 @@
 local supporters =
 {
-	{"AedifexDocens", 6}
+	{"AedifexDocens", 6},
+	{"Jonas R****n", 10}
 }
 
 local function createThanksList()
