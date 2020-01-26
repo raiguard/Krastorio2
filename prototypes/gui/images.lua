@@ -1,5 +1,6 @@
 data:extend(
 {
+	-- Images
 	{
 		type     = "sprite",
 		name     = "kr-fusion-reactor-preview",

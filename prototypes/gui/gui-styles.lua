@@ -98,6 +98,58 @@ styles["kr-wiki-back-button-flow"] =
 	margin = 2
 }
 
+-- Open button
+local base_icon_button_grahphical_set =
+{
+	filename = "__core__/graphics/gui-new.png",
+	position = {0, 0},
+	corner_size = 1,
+	opacity = 0.2,
+	draw_type = "outer",
+	background_blur = true
+}
+styles["kr-wiki-icon-button"] =
+{
+	type = "button_style",
+	horizontal_align = "center",
+	vertical_align = "center",
+	icon_horizontal_align = "center",
+	width  = 48,
+	height = 48,
+	top_margin = 8,
+	left_margin = 2,
+	right_margin = 2,
+	default_graphical_set = base_icon_button_grahphical_set,
+	hovered_graphical_set =
+    {
+		base = {position = {34, 17}, corner_size = 2, draw_type = "outer", opacity = 0.5},
+        shadow = default_dirt,
+        glow = default_glow(default_glow_color, 0.5)
+	},
+	clicked_graphical_set =
+	{
+		base   = {position = {51, 17}, corner_size = 2, draw_type = "outer", opacity = 0.5},
+        shadow = default_dirt
+	},
+	selected_graphical_set =
+	{
+		base   = {position = {225, 17}, corner_size = 2, draw_type = "outer", opacity = 0.5},
+		shadow = default_dirt
+	},
+	selected_hovered_graphical_set =
+	{
+		base   = {position = {369, 17}, corner_size = 2, draw_type = "outer", opacity = 0.5},
+		shadow = default_dirt
+	},
+	strikethrough_color = {0.5, 0.5, 0.5},
+	pie_progress_color = {1, 1, 1},
+	left_click_sound =
+	{
+		{ filename = "__core__/sound/gui-click.ogg" }
+	},
+	draw_shadow_under_picture = true
+}
+
 -- Back button
 styles["kr-wiki-back-button"] =
 {

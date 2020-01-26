@@ -112,7 +112,7 @@ function createWiki(event)
 	krastorio.gui.addBackButton(back_button_flow, 
 	{
 		name    = w_prefix.."close", 
-		caption = "Close Wiki",
+		caption = {"gui.close-wiki"},
 		style   = "kr-wiki-back-button"
 	})
 	
@@ -140,7 +140,6 @@ function createWiki(event)
 	local wiki_thread_list = krastorio.gui.addList(left_flow, 
 	{
 		name    = w_prefix.."topics-list", 
-		caption = {"gui.topic-list-caption"},
 		items   = topics
 	})
 	
@@ -177,7 +176,13 @@ end
 function initializeWiki(event)
 	-- main open button
 	local player_gui_top = game.players[event.player_index].gui.top
-	krastorio.gui.addTextButton(player_gui_top, w_prefix.."toggle-wiki", "Click me!")
+	krastorio.gui.addSpriteButton(player_gui_top, 
+	{
+		name    = w_prefix.."toggle-wiki",
+		tooltip = {"gui.open-wiki-tooltip"},
+		sprite  = "kr-open-gui",
+		style   = "kr-wiki-icon-button"
+	})
 	
 	-- Callbacks
 	krastorio.gui.addClickElementEvent(w_prefix.."toggle-wiki", toggleWiki)	

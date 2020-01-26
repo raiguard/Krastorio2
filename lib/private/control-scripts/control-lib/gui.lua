@@ -329,9 +329,10 @@ function krastorio.gui.addBackButton(parent, name, caption, tooltip, others)
 	return krastorio.gui.addElement(parent, "button", name, caption, tooltip, others)
 end
 
-function krastorio.gui.addSpriteButton(parent, name, tooltip, others)
+function krastorio.gui.addSpriteButton(parent, name, sprite, tooltip, others)
 	others = getOthersTable(name, nil, tooltip, others)
-	others.style = others.style or "button"
+	others.sprite = others.sprite or sprite
+	others.style  = others.style or "button"
 	return krastorio.gui.addElement(parent, "sprite-button", name, nil, tooltip, others)
 end
 
