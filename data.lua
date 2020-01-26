@@ -38,6 +38,8 @@ require(kr_entities_prototypes_path .. "entities-initialization")
 require(kr_equipments_prototypes_path .. "equipments-initialization")
 -- -- Adding new fluids
 require(kr_fluids_prototypes_path .. "fluids-initialization")
+-- -- GUI specifications
+require(kr_gui_path .. "gui-initialization")
 -- -- Adding new items
 require(kr_items_prototypes_path .. "items-initialization")
 -- -- Adding new recipes
