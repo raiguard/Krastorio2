@@ -369,8 +369,16 @@ data:extend(
 		place_result = "kr-advanced-steam-turbine",
 		stack_size = 10
     },
-	
-	
+	{
+		type = "item",
+		name = "kr-antimatter-reactor",		
+		icon = kr_entities_icons_path .. "antimatter-reactor.png",		
+		icon_size = 128,
+		subgroup = "energy",
+		order = "z-h[antimatter-reactor]-c[antimatter-reactor]",
+		place_result = "kr-antimatter-reactor",
+		stack_size = 1
+	}	
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

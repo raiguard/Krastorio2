@@ -29,6 +29,7 @@ require("buildings/steel-pipe-to-ground")
 require("buildings/steel-pump")
 require("buildings/water-pumpjack")
 require("buildings/wind-turbine")
+require("buildings/antimatter-reactor")
 -- -- Laboratory
 require("buildings/biusart-lab")
 -- -- Conteiners
@@ -52,8 +53,9 @@ require("buildings/fluid-storages/fluid-storage-2")
 ---------------------------------------------------------------------------------------
 -- -- -- REMNANTS
 ---------------------------------------------------------------------------------------
-require("remnants/advanced-tank")
+require("remnants/advanced-tank-remnant")
 require("remnants/fusion-reactor-remnant")
+require("remnants/antimatter-reactor-remnant")
 require("remnants/kr-big-random-pipes-remnant")
 require("remnants/kr-medium-random-pipes-remnant")
 require("remnants/kr-water-pumpjack-remnant")
