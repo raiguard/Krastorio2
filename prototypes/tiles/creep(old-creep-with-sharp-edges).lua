@@ -184,17 +184,99 @@ data:extend(
 		layer = 99,
 		transition_overlay_layer_offset = 9,
 		decorative_removal_probability = 1,
-		variants = tile_variations_template
-			(
-				kr_tiles_path .. "creep/creep.png", "__base__/graphics/terrain/masks/transition-1.png",
-				kr_tiles_path .. "creep/hr-creep.png", "__base__/graphics/terrain/masks/hr-transition-1.png",
+		variants =
+		{
+			main =
+			{
 				{
-					max_size = 8,
-					[2] = { probability = 0.39, weights = {0.025, 0.010, 0.013, 0.025, 0.025, 0.100, 0.100, 0.005, 0.010, 0.010, 0.005, 0.005, 0.001, 0.015, 0.020, 0.020} },
-					[4] = { probability = 0.20, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} },
-					[8] = { probability = 0.10, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} }
+					picture = kr_tiles_path .. "creep/creep.png",
+					count = 16,
+					size = 4,
+					hr_version =
+					{
+						picture = kr_tiles_path .. "creep/hr-creep.png",
+						count = 16,
+						scale = 0.5,
+						size = 4
+					}
+				},
+				{
+					picture = kr_tiles_path .. "creep/creep.png",
+					count = 16,
+					size = 1,
+					hr_version =
+					{
+						picture = kr_tiles_path .. "creep/hr-creep.png",
+						count = 16,
+						scale = 0.5,
+						size = 1
+					}
+				},
+			},
+			inner_corner =
+			{
+				picture = kr_tiles_path .. "creep/creep-inner-corner.png",
+				count = 4,
+				tall = true,
+				hr_version =
+				{
+					picture = kr_tiles_path .. "creep/hr-creep-inner-corner.png",
+					count = 4,
+					tall = true,
+					scale = 0.5
 				}
-			),
+			},
+			outer_corner =
+			{
+				picture = kr_tiles_path .. "creep/creep-outer-corner.png",
+				count = 4,
+				tall = true,
+				hr_version =
+				{
+					picture = kr_tiles_path .. "creep/hr-creep-outer-corner.png",
+					count = 4,
+					tall = true,
+					scale = 0.5
+				}
+			},
+			side =
+			{
+				picture = kr_tiles_path .. "creep/creep-side.png",
+				count = 16,
+				tall = true,
+				hr_version =
+				{
+					picture = kr_tiles_path .. "creep/hr-creep-side.png",
+					count = 16,
+					tall = true,
+					scale = 0.5
+				}
+			},
+			u_transition =
+			{
+				picture = kr_tiles_path .. "creep/creep-u.png",
+				count = 2,
+				tall = true,
+				hr_version =
+				{
+					picture = kr_tiles_path .. "creep/hr-creep-u.png",
+					count = 2,
+					tall = true,
+					scale = 0.5
+				}
+			},
+			o_transition =
+			{
+				picture = kr_tiles_path .. "creep/creep-o.png",
+				count = 2,
+				hr_version =
+				{
+					picture = kr_tiles_path .. "creep/hr-creep-o.png",
+					count = 2,
+					scale = 0.5
+				}
+			}
+		},
 		walking_sound =
 		{
 			{

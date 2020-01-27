@@ -6,21 +6,21 @@ function creepVariablesInitializing()
 	global.CREEP_NAME = "kr-creep"
 	global.CREEP_SIZES =
 	{
-		[1]  = {max_x = 10, max_y = 11, half_max_x = 5, half_max_y = 5},
-		[2]  = {max_x = 7 , max_y = 8 , half_max_x = 4, half_max_y = 4},
-		[3]  = {max_x = 13, max_y = 10, half_max_x = 6, half_max_y = 5},
-		[4]  = {max_x = 12, max_y = 8 , half_max_x = 6, half_max_y = 4},
-		[5]  = {max_x = 14, max_y = 9 , half_max_x = 7, half_max_y = 4},
-		[6]  = {max_x = 7 , max_y = 13, half_max_x = 3, half_max_y = 6},
-		[7]  = {max_x = 9 , max_y = 7 , half_max_x = 4, half_max_y = 4},
-		[8]  = {max_x = 8 , max_y = 10, half_max_x = 4, half_max_y = 5},
-		[9]  = {max_x = 7 , max_y = 9 , half_max_x = 6, half_max_y = 8},
-		[10] = {max_x = 9 , max_y = 14, half_max_x = 4, half_max_y = 7},
-		[11] = {max_x = 13, max_y = 7 , half_max_x = 6, half_max_y = 3},
-		[12] = {max_x = 17, max_y = 14, half_max_x = 8, half_max_y = 7}
+		[1]  = {max_x = 12, max_y = 14, half_max_x = 6, half_max_y = 7},
+		[2]  = {max_x = 9 , max_y = 11 , half_max_x = 7, half_max_y = 5},
+		[3]  = {max_x = 13, max_y = 12, half_max_x = 9, half_max_y = 6},
+		[4]  = {max_x = 10, max_y = 13 , half_max_x = 7, half_max_y = 8},
+		[5]  = {max_x = 14, max_y = 11 , half_max_x = 8, half_max_y = 7},
+		[6]  = {max_x = 10 , max_y = 14, half_max_x = 6, half_max_y = 7},
+		[7]  = {max_x = 11 , max_y = 10 , half_max_x = 7, half_max_y = 6},
+		[8]  = {max_x = 9 , max_y = 14, half_max_x = 5, half_max_y = 7},
+		[9]  = {max_x = 8 , max_y = 11 , half_max_x = 7, half_max_y = 8},
+		[10] = {max_x = 16 , max_y = 11, half_max_x = 11, half_max_y = 9},
+		[11] = {max_x = 15, max_y = 8 , half_max_x = 8, half_max_y = 6},
+		[12] = {max_x = 17, max_y = 14, half_max_x = 12, half_max_y = 10}
 	}
 	global.TOTAL_CREEP_SIZES = #global.CREEP_SIZES
-	global.MIN_CREEP_DISTANCE = 2
+	global.MIN_CREEP_DISTANCE = 4
 
 	-- STATE VARIABLES
 	global.last_creep_size = 0
