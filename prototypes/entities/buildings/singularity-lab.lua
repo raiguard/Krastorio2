@@ -110,6 +110,28 @@ data:extend(
 						animation_speed=0.85,
 						blend_mode = "additive-soft"
 					}
+				},
+				{
+					filename = kr_entities_path .. "singularity-lab/singularity-lab-sh.png",
+					priority = "high",
+					scale = scale,
+					width = 300,
+					height = 300,
+					frame_count = 1,
+					repeat_count = 60,
+					draw_as_shadow = true,
+					hr_version =
+					{
+						filename = kr_entities_path .. "singularity-lab/hr-singularity-lab-sh.png",
+						priority = "high",
+						scale = scale,
+						width = 600,
+						height = 600,
+						frame_count = 1,
+						repeat_count = 60,
+						draw_as_shadow = true,
+						scale = 0.5
+					}
 				}
 			}
 		},
