@@ -7,8 +7,10 @@ require("buildings/pipe-covers/steel-pipecovers")
 -- -- -- BUILDINGS
 ---------------------------------------------------------------------------------------
 -- -- Generals
+require("buildings/advanced-furnace")
 require("buildings/advanced-steam-turbine")
 require("buildings/air-purifier")
+require("buildings/antimatter-reactor")
 require("buildings/atmospheric-condenser")
 require("buildings/crash-site")
 require("buildings/crusher")
@@ -29,7 +31,6 @@ require("buildings/steel-pipe-to-ground")
 require("buildings/steel-pump")
 require("buildings/water-pumpjack")
 require("buildings/wind-turbine")
-require("buildings/antimatter-reactor")
 -- -- Laboratory
 require("buildings/biusart-lab")
 -- -- Conteiners

@@ -378,7 +378,17 @@ data:extend(
 		order = "z-h[antimatter-reactor]-c[antimatter-reactor]",
 		place_result = "kr-antimatter-reactor",
 		stack_size = 1
-	}	
+	},
+	{
+		type = "item",
+		name = "kr-advanced-furnace",
+		icon = kr_entities_icons_path .. "advanced-furnace.png",
+		icon_size = 128,
+		subgroup = "smelting-machine",
+		order = "c[electric-furnace]-f[advanced-furnace]",
+		place_result = "kr-advanced-furnace",
+		stack_size = 50
+	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
