@@ -78,12 +78,12 @@ function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others
 		element.style = others.style
 		
 		-- Button
-		if e_type == "button" then
+		if element.type == "button" then
 			element.mouse_button_filter = others.mouse_button_filter 
 		end
 		
 		-- Sprite button
-		if e_type == "sprite-button" then
+		if element.type == "sprite-button" then
 			element.sprite = others.sprite
 			element.hovered_sprite = others.hovered_sprite
 			element.clicked_sprite = others.clicked_sprite
@@ -93,17 +93,17 @@ function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others
 		end
 		
 		-- Flow
-		if e_type == "flow" then
+		if element.type == "flow" then
 			element.direction  = others.direction 
 		end
 		
 		-- Frame
-		if e_type == "frame" then
+		if element.type == "frame" then
 			element.direction = others.direction 
 		end
 		
 		-- Table
-		if e_type == "table" then
+		if element.type == "table" then
 			element.column_count = others.column_count 
 			element.draw_vertical_lines = others.draw_vertical_lines
 			element.draw_horizontal_lines = others.draw_horizontal_lines
@@ -112,7 +112,7 @@ function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others
 		end
 		
 		-- Textfield
-		if e_type == "textfield" then
+		if element.type == "textfield" then
 			element.text = others.text 
 			element.numeric = others.numeric 
 			element.allow_decimal = others.allow_decimal 
@@ -123,57 +123,57 @@ function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others
 		end
 		
 		-- Progressbar
-		if e_type == "progressbar" then
+		if element.type == "progressbar" then
 			element.value = others.value or 0
 		end
 		
 		-- Checkbox
-		if e_type == "checkbox" then
+		if element.type == "checkbox" then
 			element.state = others.state or false
 		end
 		
 		-- Radiobutton
-		if e_type == "radiobutton" then
+		if element.type == "radiobutton" then
 			element.value = others.value
 		end
 		
 		-- Sprite
-		if e_type == "sprite" then
+		if element.type == "sprite" then
 			element.sprite = others.sprite
 		end
 		
 		-- Scroll pane
-		if e_type == "scroll-pane" then
+		if element.type == "scroll-pane" then
 			element.horizontal_scroll_policy = others.horizontal_scroll_policy
 			element.vertical_scroll_policy = others.vertical_scroll_policy
 		end
 		
 		-- Drop down
-		if e_type == "drop-down" then
+		if element.type == "drop-down" then
 			element.items = others.items
 			element.selected_index = others.selected_index
 		end
 		
 		-- Line
-		if e_type == "line" then
+		if element.type == "line" then
 			element.direction = others.direction
 		end
 		
 		-- List box
-		if e_type == "list-box" then
+		if element.type == "list-box" then
 			element.items = others.items
 			element.selected_index = others.selected_index
 		end
 		
 		-- Camera
-		if e_type == "camera" then
+		if element.type == "camera" then
 			element.position = others.position
 			element.surface_index = others.surface_index
 			element.zoom = others.zoom
 		end
 		
 		-- Choose elem button
-		if e_type == "choose-elem-button" then
+		if element.type == "choose-elem-button" then
 			element.elem_type = others.elem_type
 			element.item = others.item
 			element.tile = others.tile
@@ -189,13 +189,13 @@ function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others
 		end
 		
 		-- Text box
-		if e_type == "text-box" then
+		if element.type == "text-box" then
 			element.text = others.text
 			element.clear_and_focus_on_right_click = others.clear_and_focus_on_right_click
 		end
 		
 		-- Slider
-		if e_type == "slider" then
+		if element.type == "slider" then
 			element.minimum_value = others.minimum_value
 			element.maximum_value = others.maximum_value
 			element.value = others.value
@@ -205,7 +205,7 @@ function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others
 		end
 		
 		-- Minimap
-		if e_type == "minimap" then
+		if element.type == "minimap" then
 			element.position = others.position
 			element.surface_index = others.surface_index
 			element.chart_player_index = others.chart_player_index
@@ -214,12 +214,12 @@ function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others
 		end
 		
 		-- Tab
-		if e_type == "tab" then
+		if element.type == "tab" then
 			element.badge_text = others.badge_text
 		end
 		
 		-- Switch
-		if e_type == "switch" then
+		if element.type == "switch" then
 			element.switch_state = others.switch_state
 			element.allow_none_state = others.allow_none_state
 			element.left_label_caption = others.left_label_caption

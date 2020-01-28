@@ -196,13 +196,29 @@ function createWiki(event)
 		direction = "horizontal",
 		style     = "kr-wiki-back-button-flow"
 	})
+	local inner_back_button_flow = krastorio.gui.addFlow(back_button_flow, 
+	{
+		name      = w_prefix.."inner-back-button-flow",
+		direction = "horizontal",
+		style     = "horizontal_flow"
+	})	
 	-- Back button
-	krastorio.gui.addBackButton(back_button_flow, 
+	krastorio.gui.addBackButton(inner_back_button_flow, 
 	{
 		name    = w_prefix.."close", 
 		caption = {"gui.close-wiki"},
 		style   = "kr-wiki-back-button"
 	})
+	--Filler
+	krastorio.gui.addElement
+	(
+		back_button_flow,
+		"empty-widget",
+		w_prefix.."bottom-filler",
+		nil,
+		nil,
+		{ style = "draggable_space_with_no_right_margin" }
+	)	
 	
 	-- -- LEFT
 	----------------------------------
@@ -288,7 +304,7 @@ function addremoveWikiButton(event)
 		local button = krastorio.gui.getElementByName(event.player_index, w_prefix.."toggle-wiki")		
 		if game.players[event.player_index].mod_settings["kr-disable-wiki"].value then		
 			if button then
-				button.destroy()
+				button.parent.destroy()
 			end
 			local wiki = krastorio.gui.getElementByName(event.player_index, w_prefix.."main-frame")
 			if wiki then

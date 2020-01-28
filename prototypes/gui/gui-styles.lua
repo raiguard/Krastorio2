@@ -30,7 +30,8 @@ styles["kr-wiki-window-flow"] =
 {
 	type = "horizontal_flow_style",
     padding = 2,
-	maximal_width = 590,
+	maximal_width = 760,
+	natural_width = 740,
 	graphical_set =
 	{
 		base = 
@@ -80,7 +81,7 @@ styles["kr-wiki-description-flow"] =
 	vertically_stretchable   = "on",
 	horizontally_stretchable = "off",
 	vertical_scrollbar_style = { type = "vertical_scrollbar_style" },
-	width   = 530,
+	width   = 525,
 	padding = 4,
 	graphical_set = 
 	{
@@ -100,6 +101,8 @@ styles["kr-wiki-back-button-flow"] =
 {
 	type = "horizontal_flow_style",
     horizontal_align = "left",
+	natural_width = 740,
+	vertically_stretchable = "off",
     padding = 2,
 	margin = 2
 }
