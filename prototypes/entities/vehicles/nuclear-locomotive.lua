@@ -1,5 +1,7 @@
 local default_locomotive_color = {r = 0.50, g = 0.54, b = 0.53, a = 0.5}
 local nuclear_smoke_color = {r = 0.2,  g = 0.51, b = 0.2, a = 0.4}
+local hit_effects = require ("__base__.prototypes.entity.demo-hit-effects")
+local sounds = require("__base__.prototypes.entity.demo-sounds")
 
 data:extend(
 {  
@@ -40,11 +42,12 @@ data:extend(
 		mined_sound = {filename = "__core__/sound/deconstruct-medium.ogg"},
 		max_health = 2000,
 		corpse = "locomotive-remnants",
-		dying_explosion = "medium-explosion",
+		dying_explosion = "locomotive-explosion",
 		collision_box = {{-0.6, -2.6}, {0.6, 2.6}},
 		selection_box = {{-1, -3}, {1, 3}},
 		drawing_box = {{-1, -4}, {1, 3}},
 		alert_icon_shift = util.by_pixel(0, -24),
+		damaged_trigger_effect = hit_effects.entity(),
 		weight = 12000,
 		max_speed = 0.926,
 		max_power = "3MW",
@@ -341,7 +344,7 @@ data:extend(
 		},
 		drive_over_tie_trigger = drive_over_tie(),
 		tie_distance = 50,
-		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{
 			sound =
@@ -349,10 +352,12 @@ data:extend(
 				filename = "__base__/sound/train-engine.ogg",
 				volume = 0.4
 			},
-			match_speed_to_activity = true
+			match_speed_to_activity = true,
+			max_sounds_per_type = 2,
 		},
-		open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
-		close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
-		sound_minimum_speed = 0.5
+		open_sound = { filename = "__base__/sound/train-door-open.ogg", volume=0.5 },
+		close_sound = { filename = "__base__/sound/train-door-close.ogg", volume = 0.4 },
+		sound_minimum_speed = 0.1,
+		water_reflection = locomotive_reflection()
 	}
 })
