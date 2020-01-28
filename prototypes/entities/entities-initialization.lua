@@ -25,14 +25,17 @@ require("buildings/quarry-drill")
 require("buildings/research-server")
 require("buildings/sentinel")
 require("buildings/shelter")
-require("buildings/singularity-lab")
 require("buildings/steel-pipe")
 require("buildings/steel-pipe-to-ground")
 require("buildings/steel-pump")
 require("buildings/water-pumpjack")
 require("buildings/wind-turbine")
--- -- Laboratory
+-- -- Turrets
+require("buildings/turrets/railgun-turret")
+require("buildings/turrets/rocket-turret")
+-- -- Laboratories
 require("buildings/biusart-lab")
+require("buildings/singularity-lab")
 -- -- Conteiners
 -- Mediums
 require("buildings/containers/medium-containers/medium-active-provider-container")

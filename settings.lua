@@ -10,6 +10,13 @@ data:extend(
 		default_value = true,
 		order = "a1"
 	},
+	{
+		type = "bool-setting",
+		name = "kr-disable-wiki",
+		setting_type = "runtime-per-user",
+		default_value = false,
+		order = "a2"
+	},
 	-- S - Science
 	{
         type = "string-setting",

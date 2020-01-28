@@ -103,10 +103,13 @@ local base_icon_button_grahphical_set =
 {
 	filename = "__core__/graphics/gui-new.png",
 	position = {0, 0},
-	corner_size = 1,
+	corner_size = 2,
 	opacity = 0.2,
 	draw_type = "outer",
-	background_blur = true
+	background_blur = true,
+	size = {48, 48},
+	scale = 1,
+	border = 1
 }
 styles["kr-wiki-icon-button"] =
 {
@@ -116,9 +119,6 @@ styles["kr-wiki-icon-button"] =
 	icon_horizontal_align = "center",
 	width  = 48,
 	height = 48,
-	top_margin = 8,
-	left_margin = 2,
-	right_margin = 2,
 	default_graphical_set = base_icon_button_grahphical_set,
 	hovered_graphical_set =
     {

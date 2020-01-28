@@ -1,4 +1,5 @@
 require("__Krastorio2__/lib/private/control-scripts/control-lib/control-lib-initialization")
+require("__core__/lualib/mod-gui")
 
 local w_prefix = "kr-wiki-"
 local topics =
@@ -175,8 +176,8 @@ end
 
 function initializeWiki(event)
 	-- main open button
-	local player_gui_top = game.players[event.player_index].gui.top
-	krastorio.gui.addSpriteButton(player_gui_top, 
+	local button_flow = mod_gui.get_button_flow(game.players[event.player_index])
+	krastorio.gui.addSpriteButton(button_flow, 
 	{
 		name    = w_prefix.."toggle-wiki",
 		tooltip = {"gui.open-wiki-tooltip"},
@@ -190,8 +191,28 @@ function initializeWiki(event)
 	krastorio.gui.addSelectElementEvent(w_prefix.."topics-list", changeWikiDescription)
 end
 
+function addremoveWikiButton(event)
+	if event.setting_type == "runtime-per-user" and event.setting == "kr-disable-wiki" then
+		local button = krastorio.gui.getElementByName(event.player_index, w_prefix.."toggle-wiki")		
+		if game.players[event.player_index].mod_settings["kr-disable-wiki"].value then		
+			if button then
+				button.destroy()
+			end
+			local wiki = krastorio.gui.getElementByName(event.player_index, w_prefix.."main-frame")
+			if wiki then
+				wiki.destroy()
+			end
+		else
+			if not button then
+				initializeWiki(event)
+			end
+		end
+	end
+end
+
 return
 { 
 	-- -- Bootstrap
-	{ initializeWiki, "on_player_created" }
+	{ initializeWiki, "on_player_created" },
+	{ addremoveWikiButton, "on_runtime_mod_setting_changed"}
 }

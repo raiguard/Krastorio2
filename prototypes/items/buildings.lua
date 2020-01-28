@@ -388,7 +388,31 @@ data:extend(
 		order = "c[electric-furnace]-f[advanced-furnace]",
 		place_result = "kr-advanced-furnace",
 		stack_size = 50
-	}
+	},
+	-- -- --
+	-- Turrets
+	-- -- --	
+	{
+		type = "item",
+		name = "kr-railgun-turret",
+		icon = kr_entities_icons_path .. "railgun-turret.png",
+		icon_size = 64,
+		subgroup = "railgun-turret",
+		order = "a1[railgun-turret]",
+		place_result = "kr-railgun-turret",
+		stack_size = 50
+    },   
+    {
+		type = "item",
+		name = "kr-rocket-turret",
+		icon = kr_entities_icons_path .. "rocket-turret.png",
+		icon_size = 64,
+		subgroup = "rocket-turret",
+		order = "a2[rocket-turret]",
+		place_result = "kr-rocket-turret",
+		stack_size = 50
+    }
+	-- -- --	
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
