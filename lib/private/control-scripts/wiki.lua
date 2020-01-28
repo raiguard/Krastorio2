@@ -175,6 +175,11 @@ function closeWiki(event)
 end
 
 function initializeWiki(event)
+	local settings = game.players[event.player_index].mod_settings
+	if settings["kr-disable-wiki"] and settings["kr-disable-wiki"].value then
+		return nil
+	end
+	
 	-- main open button
 	local button_flow = mod_gui.get_button_flow(game.players[event.player_index])
 	krastorio.gui.addSpriteButton(button_flow, 
