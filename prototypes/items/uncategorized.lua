@@ -427,5 +427,42 @@ data:extend(
 		subgroup = "intermediate-product",
 		order = "r[uranium-processing]-b[dt-fuel]",
 		stack_size = 50
+    },
+	---
+	-- Drill heads
+	---
+	{
+		type = "item",
+		name = "steel-drill-head",
+		icon = kr_icons_path .. "drill-heads/steel-drill-head.png",
+		icon_size = 32,
+		fuel_category = "kr-quarry-drill-fuel",
+		fuel_value = "50MJ",
+		subgroup = "intermediate-product",
+		order = "w08[drill-heads]-a1[steel-drill-head]",
+		stack_size = 200
+    },	
+	{
+		type = "item",
+		name = "alloy-drill-head",
+		icon = kr_icons_path .. "drill-heads/alloy-drill-head.png",
+		icon_size = 32,
+		fuel_category = "kr-quarry-drill-fuel",
+		fuel_value = "75MJ",
+		subgroup = "intermediate-product",
+		order = "w08[drill-heads]-a2[alloy-drill-head]",
+		stack_size = 200
+    },	
+	{
+		type = "item",
+		name = "imersite-drill-head",
+		icon = kr_icons_path .. "drill-heads/imersite-drill-head.png",
+		icon_size = 32,
+		fuel_category = "kr-quarry-drill-fuel",
+		fuel_value = "100MJ",
+		subgroup = "intermediate-product",
+		order = "w08[drill-heads]-a3[imersite-drill-head]",
+		stack_size = 200
     }
+	---
 })

@@ -4,75 +4,162 @@ require("__core__/lualib/mod-gui")
 local w_prefix = "kr-wiki-"
 local topics =
 {
-	--{"gui.fuel"},
-	"Spoiler",
+	{"gui.creep"},
+	{"gui.fuels"},
 	{"gui.fusion-reactor"},
-	"Spoiler",
-	"Spoiler",
-	"Spoiler",
-	"Spoiler",
-	"Spoiler"	
+	{"gui.shelter"}
 }
 
-function showFusionReactorDescription(event)
+function getDescrptionGUIPane(event)
 	local wiki = krastorio.gui.getElementByName(event.player_index, w_prefix.."main-frame")
 	if wiki and wiki.valid then
 		local wiki_info_pane = krastorio.gui.getElementByName(event.player_index, w_prefix.."info-pane")
 		if wiki_info_pane and wiki_info_pane.valid then
 			wiki_info_pane.clear()
+			return wiki_info_pane
+		end
+	end
+	return nil
+end
+
+function showCreepDescription(event)
+	local wiki_info_pane = getDescrptionGUIPane(event)
+	if wiki_info_pane then
 		
-			local description_flow = krastorio.gui.addFlow(wiki_info_pane, 
-			{
-				name = w_prefix.."description-flow", 
-				direction = "vertical",
-				style = "kr-wiki-right-window-flow"
-			})
-			
-			-- Title
-			local title_label = krastorio.gui.addLabel(description_flow, 
-			{
-				name    = w_prefix.."description-title", 
-				caption = {"gui.fusion-reactor"},
-				style   = "bold_label"
-			})
-			krastorio.gui.addLine(description_flow, 
-			{
-				name    = w_prefix.."title-line",
-				style   = "dark_line"
-			})
-			
-			-- Fusion reactor image
-			krastorio.gui.addSprite(description_flow,
-			{
-				name   = w_prefix.."preview-1", 
-				sprite = "kr-fusion-reactor-preview"
-			})			
-			-- Description 1
-			krastorio.gui.addDescription(description_flow,
-			{
-				name    = w_prefix.."description-1", 
-				caption = {"gui.fusion-reactor-description-1"}
-			})
-			-- Advanced Turbine image
-			krastorio.gui.addSprite(description_flow,
-			{
-				name   = w_prefix.."preview-2", 
-				sprite = "kr-advanced-steam-turbine-preview"
-			})
-			-- Description 2
-			krastorio.gui.addDescription(description_flow,
-			{
-				name    = w_prefix.."description-2", 
-				caption = {"gui.fusion-reactor-description-2"}
-			})
-		end		
+		-- Title
+		local title_label = krastorio.gui.addLabel(wiki_info_pane, 
+		{
+			name    = w_prefix.."description-title", 
+			caption = {"gui.creep"},
+			style   = "bold_label"
+		})
+		krastorio.gui.addLine(wiki_info_pane, 
+		{
+			name    = w_prefix.."title-line",
+			style   = "dark_line"
+		})
+		
+		-- Creep image
+		krastorio.gui.addSprite(wiki_info_pane,
+		{
+			name   = w_prefix.."preview-1", 
+			sprite = "kr-creep-preview"
+		})	
+		
+	end
+end
+
+function showFuelsDescription(event)
+	local wiki_info_pane = getDescrptionGUIPane(event)
+	if wiki_info_pane then
+		
+		-- Title
+		local title_label = krastorio.gui.addLabel(wiki_info_pane, 
+		{
+			name    = w_prefix.."description-title", 
+			caption = {"gui.fuels"},
+			style   = "bold_label"
+		})
+		krastorio.gui.addLine(wiki_info_pane, 
+		{
+			name    = w_prefix.."title-line",
+			style   = "dark_line"
+		})
+		
+		-- Fuels image
+		krastorio.gui.addSprite(wiki_info_pane,
+		{
+			name   = w_prefix.."preview-1", 
+			sprite = "kr-fuels-preview"
+		})
+		
+	end
+end
+
+function showFusionReactorDescription(event)
+	local wiki_info_pane = getDescrptionGUIPane(event)
+	if wiki_info_pane then
+		
+		-- Title
+		local title_label = krastorio.gui.addLabel(wiki_info_pane, 
+		{
+			name    = w_prefix.."description-title", 
+			caption = {"gui.fusion-reactor"},
+			style   = "bold_label"
+		})
+		krastorio.gui.addLine(wiki_info_pane, 
+		{
+			name    = w_prefix.."title-line",
+			style   = "dark_line"
+		})
+		
+		-- Fusion reactor image
+		krastorio.gui.addSprite(wiki_info_pane,
+		{
+			name   = w_prefix.."preview-1", 
+			sprite = "kr-fusion-reactor-preview"
+		})			
+		-- Description 1
+		krastorio.gui.addDescription(wiki_info_pane,
+		{
+			name    = w_prefix.."description-1", 
+			caption = {"gui.fusion-reactor-description-1"}
+		})
+		-- Advanced Turbine image
+		krastorio.gui.addSprite(wiki_info_pane,
+		{
+			name   = w_prefix.."preview-2", 
+			sprite = "kr-advanced-steam-turbine-preview"
+		})
+		-- Description 2
+		krastorio.gui.addDescription(wiki_info_pane,
+		{
+			name    = w_prefix.."description-2", 
+			caption = {"gui.fusion-reactor-description-2"}
+		})
+		
+	end
+end
+
+function showShelterDescription(event)
+	local wiki_info_pane = getDescrptionGUIPane(event)
+	if wiki_info_pane then
+		
+		-- Title
+		local title_label = krastorio.gui.addLabel(wiki_info_pane, 
+		{
+			name    = w_prefix.."description-title", 
+			caption = {"gui.shelter"},
+			style   = "bold_label"
+		})
+		krastorio.gui.addLine(wiki_info_pane, 
+		{
+			name    = w_prefix.."title-line",
+			style   = "dark_line"
+		})
+		
+		-- Shelter image
+		krastorio.gui.addSprite(wiki_info_pane,
+		{
+			name   = w_prefix.."preview-1", 
+			sprite = "kr-shelter-preview"
+		})			
+		-- Description 1
+		krastorio.gui.addDescription(wiki_info_pane,
+		{
+			name    = w_prefix.."description-1", 
+			caption = {"gui.shelter-description-1"}
+		})
+		
 	end
 end
 
 local topics_gui =
 {
-	[1] = nil,
-	[2] = showFusionReactorDescription
+	[1] = showCreepDescription,
+	[2] = showFuelsDescription,
+	[3] = showFusionReactorDescription,
+	[4] = showShelterDescription
 }
 
 function changeWikiDescription(event)

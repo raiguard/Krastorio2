@@ -64,6 +64,12 @@ styles["kr-wiki-left-window-flow"] =
 styles["kr-wiki-right-window-flow"] =
 {
 	type = "vertical_flow_style",
+	vertical_align = "top",
+	horizontal_align = "left",
+	natural_width  = 600,
+	natural_height = 350,
+	vertically_stretchable   = "on",
+	horizontally_stretchable = "on",
     padding = 1
 }
 
@@ -74,9 +80,9 @@ styles["kr-wiki-description-flow"] =
 	vertically_stretchable   = "on",
 	horizontally_stretchable = "off",
 	vertical_scrollbar_style = { type = "vertical_scrollbar_style" },
-	width          = 530,
-	padding        = 4,
-	graphical_set  = 
+	width   = 530,
+	padding = 4,
+	graphical_set = 
 	{
 		base = 
 		{
