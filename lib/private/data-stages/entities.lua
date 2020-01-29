@@ -6,18 +6,19 @@ krastorio.entities = {}
 
 --@ category_name
 --@ entity_name
-function krastorio.entities.exist(category_name, entity_name)
+function krastorio.entities.getEntity(category_name, entity_name)
 	local no_err, entity = pcall(function() return data.raw[category_name][entity_name] end)
 	if no_err and entity ~= nil and next(entity) ~= nil then
 		return entity
 	end
-	return false 
+	return nil 
 end
 
 --@ category_name
 --@ entity_name
-function krastorio.entities.getEntity(category_name, entity_name)
-	return krastorio.entities.exist(category_name, entity_name)
+function krastorio.entities.exist(category_name, entity_name)
+	local entity = krastorio.entities.getEntity(category_name, entity_name)
+	return entity and type(entity) == "table"
 end
 
 -- -- -- SETTING(WRITE) FUNCTIONS
@@ -28,7 +29,7 @@ end
 function krastorio.entities.removeCollisionMaskOnEntity(category_name, entity_name, to_remove_mask_name)
 	local entity = krastorio.entities.getEntity(category_name, entity_name)
 	if entity then
-		local no_err, collision_mask = pcall(function() return data.raw[category_name][entity_name].collision_mask end)
+		local no_err, collision_mask = pcall(function() return entity.collision_mask end)
 		if no_err and collision_mask ~= nil then
 			for i, mask_name in pairs(collision_mask) do
 				if mask_name == to_remove_mask_name then
@@ -47,7 +48,7 @@ end
 function krastorio.entities.addCollisionMaskOnEntity(category_name, entity_name, to_add_mask_name)
 	local entity = krastorio.entities.getEntity(category_name, entity_name)
 	if entity then
-		local no_err, collision_mask = pcall(function() return data.raw[category_name][entity_name].collision_mask end)
+		local no_err, collision_mask = pcall(function() return entity.collision_mask end)
 		if no_err and collision_mask ~= nil then
 			table.insert(collision_mask, to_add_mask_name)
 		else

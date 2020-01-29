@@ -83,4 +83,5 @@ require(scripts_path .. "aai-industry")
 require(scripts_path .. "aircraft")
 -- Pyanodons
 require(scripts_path .. "Pyanodon")
+require(scripts_path .. "space-exploration")
 ---------------------------------------------------------------------------
