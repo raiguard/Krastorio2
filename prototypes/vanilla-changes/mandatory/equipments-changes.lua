@@ -10,7 +10,7 @@
 -- @armor_name, armor name
 -- @decrease, decrease value
 -- @percent, percent value
-local function addRadioactiveResistance(armor_name, decrease, percent)
+function addRadioactiveResistance(armor_name, decrease, percent)
 	local armor = data.raw["armor"][armor_name]
 	if armor then
 		if not armor.resistances then
@@ -30,7 +30,7 @@ end
 -- @_objects_to_modify, list of graphics to modify with the format over described
 -- @icons_path, path where is the new icons of this objects
 -- @sprites_path, path where is the new sprites of this objects
-local function updateVanillaEquipmentGraphics(_objects_to_modify, icons_path, sprites_path)
+function updateVanillaEquipmentGraphics(_objects_to_modify, icons_path, sprites_path)
 	for category_name, items in pairs(_objects_to_modify) do
 		for item_name, item in pairs(items) do
 			if data.raw.item[item_name] then

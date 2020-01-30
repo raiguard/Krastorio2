@@ -59,6 +59,38 @@ function krastorio.entities.addCollisionMaskOnEntity(category_name, entity_name,
 	return false
 end
 
+--@ category_name
+--@ entity_name
+--@ to_add_crafting_category
+function krastorio.entities.addCraftingCategory(category_name, entity_name, to_add_crafting_category)
+	local entity = krastorio.entities.getEntity(category_name, entity_name)
+	if entity and (entity.type == "assembling-machine" or entity.type == "furnace" or entity.type == "rocket-silo") then
+		if entity.crafting_categories then
+			table.insert(entity.crafting_categories, to_add_crafting_category)
+		else
+			entity.crafting_categories = { to_add_crafting_category }
+		end
+		return true
+	end
+	return false
+end
+
+--@ category_name
+--@ entity_name
+--@ to_remove_crafting_category
+function krastorio.entities.removeCraftingCategory(category_name, entity_name, to_remove_crafting_category)
+	local entity = krastorio.entities.getEntity(category_name, entity_name)
+	if entity and (entity.type == "assembling-machine" or entity.type == "furnace" or entity.type == "rocket-silo") and entity.crafting_categories then
+		for i, crafting_category in pairs(entity.crafting_categories) do
+			if crafting_category == to_remove_crafting_category then
+				table.remove(entity.crafting_categories, i)
+				return true
+			end
+		end
+	end
+	return false
+end
+
 -- This should be used in control,
 -- check if the entities is valid for be used.
 -- @entity, entity
