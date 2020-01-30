@@ -206,7 +206,13 @@ end
 
 function krastorio.technologies.addPrerequisite(technology_name, prerequisite_name, check_circular_dependency)
 	if krastorio.technologies.exist(prerequisite_name) then
-		local prerequisites = krastorio.technologies.getPrerequisites(technology_name)
+		local prerequisites = nil
+		if type(technology_name) == "table" then
+			prerequisites = technology_name[2]
+			technology_name = technology_name[1]
+		else
+			prerequisites = krastorio.technologies.getPrerequisites(technology_name)
+		end
 		if prerequisites and next(prerequisites) ~= nil then
 			if not krastorio.technologies.hasPrerequisite(technology_name, prerequisite_name) then
 				local circular_dependency = false 
@@ -477,27 +483,13 @@ function krastorio.technologies.removeResearchUnitIngredient(technology_name, sc
 	return false
 end
 
-function krastorio.technologies.addResearchUnitIngredient(technology_name, science_pack_name, count)
+function krastorio.technologies.addResearchUnitIngredient(technology_name, science_pack_name, count, check_circular_dependency)
 	local technology = krastorio.technologies.getTechnologyFromName(technology_name)
 	
 	if technology and next(technology) ~= nil then	
 		correct_count = count or 1
 		-- add prerequisite
-		if krastorio.technologies.getTechnologyFromName(science_pack_name) then
-			if technology.prerequisites and next(technology.prerequisites) ~= nil then
-				local found = false
-				for _, prerequisite in pairs(technology.prerequisites) do
-					if prerequisite == science_pack_name then
-						found = true
-					end		
-				end		
-				if not found then
-					table.insert(technology.prerequisites, science_pack_name)
-				end
-			else
-				technology.prerequisites = {science_pack_name}
-			end
-		end
+		krastorio.technologies.addPrerequisite({technology_name, technology.prerequisites}, science_pack_name, check_circular_dependency or false)
 		-- add ingredient
 		for _, ingredient in pairs(technology.unit.ingredients) do
 			for _, value  in pairs(ingredient) do

@@ -1,3 +1,5 @@
+local data_util = require("__space-exploration__/data_util")
+
 if mods["space-exploration"] then
 
 -- -- Entities
@@ -213,64 +215,9 @@ if mods["space-exploration"] then
 	data.raw.item["se-rtg-equipment-2"].order     = "a2[energy-source]-a42[portable-nuclear-core]"	
 	data.raw["generator-equipment"]["se-rtg-equipment-2"].power = "1200kW"
 
--- -- Items
----------------------------------------------------------------------------------------------
-
-	if data.raw.item["se-antimatter-canister"] then
-		data.raw.item["se-antimatter-canister"].fuel_category = "antimatter-fuel"
-	end
-	
-	if data.raw.recipe["sand-from-stone"] then
-		data.raw.recipe["sand-from-stone"] = nil
-		krastorio.technologies.removeUnlockRecipeFromAllTechnologies("sand-from-stone")
-		krastorio.modules.removeProductivityLimitation("sand-from-stone")
-	end
-
-	if data.raw.recipe["glass-from-sand"] then
-		data.raw.recipe["glass-from-sand"] = nil
-		krastorio.technologies.removeUnlockRecipeFromAllTechnologies("glass-from-sand")
-		krastorio.modules.removeProductivityLimitation("glass-from-sand")
-	end
-
 -- -- Technologies
 ---------------------------------------------------------------------------------------------
-	-- Changing icons to Krastorio 2
-	-- -- Science packs
-	-- Automation science pack
-	krastorio.icons.setItemIcon("automation-science-pack",          kr_cards_icons_path .. "automation-tech-card.png")	
-	data.raw.tool["automation-science-pack"].order = "b02[automation-tech-card]"
-	krastorio.icons.setTechnologyIcon("automation-science-pack", kr_technologies_icons_path .. "automation-tech-card.png")
 
-	-- Logistic science pack
-	krastorio.icons.setItemIcon("logistic-science-pack",            kr_cards_icons_path .. "logistic-tech-card.png")
-	data.raw.tool["logistic-science-pack"].order = "b03[logistic-tech-card]"
-	krastorio.icons.setTechnologyIcon("logistic-science-pack",      kr_technologies_icons_path .. "logistic-tech-card.png")
-
-	-- Military science pack
-	krastorio.icons.setItemIcon("military-science-pack",            kr_cards_icons_path .. "military-tech-card.png")
-	data.raw.tool["military-science-pack"].order = "b04[military-tech-card]"
-	krastorio.icons.setTechnologyIcon("military-science-pack",      kr_technologies_icons_path .. "military-tech-card.png")
-
-	-- Chemical science pack
-	krastorio.icons.setItemIcon("chemical-science-pack",            kr_cards_icons_path .. "chemical-tech-card.png")
-	data.raw.tool["chemical-science-pack"].order = "b05[chemical-tech-card]"
-	krastorio.icons.setTechnologyIcon("chemical-science-pack",      kr_technologies_icons_path .. "chemical-tech-card.png")
-
-	-- Production science pack
-	krastorio.icons.setItemIcon("production-science-pack",          kr_cards_icons_path .. "production-tech-card.png")
-	data.raw.tool["production-science-pack"].order = "b06[production-tech-card]"
-	krastorio.icons.setTechnologyIcon("production-science-pack",    kr_technologies_icons_path .. "production-tech-card.png")
-
-	-- Utility science pack
-	krastorio.icons.setItemIcon("utility-science-pack",             kr_cards_icons_path .. "utility-tech-card.png")
-	data.raw.tool["utility-science-pack"].order = "b07[utility-tech-card]"
-	krastorio.icons.setTechnologyIcon("utility-science-pack",       kr_technologies_icons_path .. "utility-tech-card.png")
-
-	-- Space science pack
-	krastorio.icons.setItemIcon("space-science-pack",               kr_cards_icons_path .. "optimization-tech-card.png")
-	data.raw.tool["space-science-pack"].order = "b09[optimization-tech-card]"
-	krastorio.icons.setTechnologyIcon("space-science-pack",         kr_technologies_icons_path .. "optimization-tech-card.png")
-		
 	-- --  Modules
 	-- Return to Krastorio 2/Vanilla modules on the first 3 tiers
 	
@@ -302,12 +249,83 @@ if mods["space-exploration"] then
 	krastorio.technologies.addUnlockRecipe("kr-fuel", "solid-fuel-from-light-oil")
 	krastorio.technologies.addUnlockRecipe("kr-fuel", "solid-fuel-from-heavy-oil")
 
+	-- Final fix for all SE techs
+	require("__Krastorio2__/compatibility-scripts/data-final-fixes/space-exploration/technology")
+	
+	--[[
+	local function startsWith(str, start)
+	   return str:sub(1, #start) == start
+	end
+	
+	local se_tech_recovery_blacklist =
+	{
+		["se-electric-boiler"] = true,
+		["se-adaptive-armour-1"] = true,
+		["se-adaptive-armour-2"] = true,
+		["se-core-miner"] = true,
+		["se-meteor-point-defence"] = true,
+		["se-meteor-defence"] = true,
+		["se-medpack"] = true,
+		["se-medpack-2"] = true,
+		["se-rocket-fuel-from-water"] = true,
+		["se-rocket-landing-pad"] = true,
+		["se-rocket-launch-pad"] = true,
+		["se-rocket-cargo-safety-1"] = true,
+		["se-rocket-reusability-1"] = true,
+		["se-rocket-survivability-1"] = true,
+		["se-rtg-equipment"] = true,
+		["se-space-lifesupport-facility"] = true,
+		["se-space-platform-scaffold"] = true,
+		["se-space-science-lab"] = true,
+		["se-thruster-suit"] = true,
+		["se-heat-shielding"] = true
+	}
+	
+	for technology_name, _ in pairs(data.raw.technology) do
+		if startsWith(technology_name, "se-") and not se_tech_recovery_blacklist[technology_name] then
+			-- Addings
+			krastorio.technologies.addResearchUnitIngredient(technology_name, "production-science-pack", 1, true)
+			krastorio.technologies.addResearchUnitIngredient(technology_name, "utility-science-pack", 1, true)
+			krastorio.technologies.addResearchUnitIngredient(technology_name, "matter-tech-card", 1, true)
+			krastorio.technologies.addResearchUnitIngredient(technology_name, "space-science-pack", 1, true)		
+			-- Removing
+			krastorio.technologies.removeResearchUnitIngredient(technology_name, "basic-tech-card")
+		end
+	end	
+	--]]
+-- -- Items
+---------------------------------------------------------------------------------------------
+
+	if data.raw.item["se-antimatter-canister"] then
+		data.raw.item["se-antimatter-canister"].fuel_category = "antimatter-fuel"
+	end
+	
+	if data.raw.recipe["sand-from-stone"] then
+		data.raw.recipe["sand-from-stone"] = nil
+		data.raw.technology["sand-processing"] = nil
+		krastorio.technologies.convertPrerequisiteFromAllTechnologies("sand-processing", "kr-stone-processing")		
+		krastorio.technologies.removeUnlockRecipeFromAllTechnologies("sand-from-stone")
+		krastorio.modules.removeProductivityLimitation("sand-from-stone")
+	end
+
+	if data.raw.recipe["glass-from-sand"] then
+		data.raw.recipe["glass-from-sand"] = nil
+		data.raw.technology["glass-processing"] = nil
+		krastorio.technologies.convertPrerequisiteFromAllTechnologies("glass-processing", "kr-stone-processing")
+		krastorio.technologies.removeUnlockRecipeFromAllTechnologies("glass-from-sand")
+		krastorio.modules.removeProductivityLimitation("glass-from-sand")
+	end
+	
 -- -- Icons
 ---------------------------------------------------------------------------------------------	
 	if data.raw.recipe["se-rocket-fuel-from-water-copper"] then
-		data.raw.recipe["se-rocket-fuel-from-water-copper"].icons = nil
-		data.raw.recipe["se-rocket-fuel-from-water-copper"].icon  = kr_icons_path .. "nn-icons/rocket-fuel.png"
-		data.raw.recipe["se-rocket-fuel-from-water-copper"].icon_size = 64
+		data.raw.recipe["se-rocket-fuel-from-water-copper"].icons = data_util.transition_icons(
+			"__base__/graphics/icons/fluid/water.png",
+			"__base__/graphics/icons/rocket-fuel.png"
+		)
+		-- Brutal fix
+		-- data.raw.recipe["se-rocket-fuel-from-water-copper"].icon  = kr_icons_path .. "nn-icons/rocket-fuel.png"
+		-- data.raw.recipe["se-rocket-fuel-from-water-copper"].icon_size = 64
 	end
 ---------------------------------------------------------------------------------------------
 
