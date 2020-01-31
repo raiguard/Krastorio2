@@ -397,6 +397,33 @@ data:extend(
 	-----------------------------------------------------------------------
 	{
 		type = "technology",
+		name = "kr-gas-power-station",
+		icon = kr_technologies_icons_path .. "gas-power-station.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-gas-power-station"
+			}
+		},
+		prerequisites = {"kr-fuel"},
+		unit =
+		{
+			count = 300,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1}
+			},
+			time = 30
+		}
+		
+	},
+	{
+		type = "technology",
 		name = "kr-logistic-containers-1",
 		localised_name = {"technology-name.kr-logistic-containers-1"},
 		localised_description = {"technology-description.kr-logistic-containers-1"},

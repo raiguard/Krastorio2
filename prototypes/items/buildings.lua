@@ -15,13 +15,13 @@ data:extend(
 	},
 	{
 		type = "item",
-		name = "kr-gas-turbine-power-station",
-		icon = kr_entities_icons_path .. "gas-turbine-power-station.png",
+		name = "kr-gas-power-station",
+		icon = kr_entities_icons_path .. "gas-power-station.png",
 		icon_size = 64,
 		stack_size = 10,		
 		subgroup = "energy",
-		order = "c[solar-panel]-b[gas-turbine-power-station]",
-		place_result = "kr-gas-turbine-power-station"
+		order = "c[solar-panel]-b[gas-power-station]",
+		place_result = "kr-gas-power-station"
 	},
     {
 		type = "item",

@@ -24,5 +24,10 @@ data:extend(
 	{
 		type = "fuel-category",
 		name = "kr-quarry-drill-fuel"
+	},
+	-- Burnable fluid fuel for gas power station
+	{
+		type = "fuel-category",
+		name = "burnable-fluid-fuel"
 	}
 })

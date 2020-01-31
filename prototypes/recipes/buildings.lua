@@ -101,6 +101,20 @@ return
 		},
 		result = "kr-fuel-refinery"
     },
+	{
+		type = "recipe",
+		name = "kr-gas-power-station",
+		energy_required = 30,
+		enabled = false,
+		ingredients =
+		{
+			{"steel-beam", 10},
+			{"engine-unit", 20},
+			{"electronic-circuit", 4},
+			{"pipe", 4}
+		},
+		result = "kr-gas-power-station"
+    },
 	-- -- --
 	-- NEW LABORATORIES
 	-- -- --

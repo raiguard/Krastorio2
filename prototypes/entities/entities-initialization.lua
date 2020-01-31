@@ -32,7 +32,7 @@ require("buildings/water-pumpjack")
 require("buildings/wind-turbine")
 require("buildings/matter-plant")
 require("buildings/matter-assembler")
-require("buildings/gas-turbine-power-station")
+require("buildings/gas-power-station")
 -- -- Turrets
 require("buildings/turrets/railgun-turret")
 require("buildings/turrets/rocket-turret")
