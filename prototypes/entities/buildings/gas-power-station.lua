@@ -24,6 +24,25 @@ local animation =
 			}
 		},
 		{
+			filename = kr_entities_path .. "pipe-patch/pipe-patch.png",
+			width = 23,
+			height = 20,
+			frame_count = 1,
+			repeat_count = 32,
+			shift = {0, 2.5},
+			hr_version =
+			{
+				filename = kr_entities_path .. "pipe-patch/hr-pipe-patch.png",
+				width = 45,
+				height = 40,
+				frame_count = 1,
+				repeat_count = 32,
+				scale = 0.5,
+				shift = {0, 2.5}
+			}
+		},
+		
+		{
 			filename = kr_entities_path .. "gas-power-station/gas-power-station-sh.png",
 			width = 190,
 			height = 190,
@@ -57,8 +76,8 @@ data:extend(
 		fade_in_duration = 0,
 		fade_away_duration = 150,
 		spread_duration = 400,
-		start_scale = 0.4,
-		end_scale = 1.5,
+		start_scale = 0.17,
+		end_scale = 1.15,
 		color = {r = 0.25, g = 0.25, b = 0.25, a = 0.75},
 		cyclic = true,
 		affected_by_wind = true,
@@ -85,7 +104,7 @@ data:extend(
 		max_health = 750,
 		corpse = "kr-medium-random-pipes-remnant",
 		dying_explosion = "medium-explosion",
-		fluid_usage_per_tick = 1,
+		fluid_usage_per_tick = 0.1,
 		maximum_temperature = 25,
 		burns_fluid = true,
 		scale_fluid_usage = true,
@@ -103,6 +122,7 @@ data:extend(
 		{
 				pipe_covers = pipecoverspictures(),
 				pipe_picture = kr_pipe_path,
+				off_when_no_fluid_recipe = false,
 				base_area = 1,
 				height = 2,
 				base_level = -1,
@@ -119,7 +139,8 @@ data:extend(
 		energy_source =
 		{
 			type = "electric",
-			usage_priority = "primary-output"
+			usage_priority = "primary-output",
+			emissions_per_minute = 30
 		},
 		horizontal_animation = animation,
 		vertical_animation = animation,

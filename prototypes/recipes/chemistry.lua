@@ -246,36 +246,6 @@ return
 	},
 	{
 		type = "recipe",
-		name = "biomethanol",
-		category = "chemistry",
-		icon = kr_fluids_icons_path  .. "biomethanol.png",
-		icon_size = 64,
-		energy_required = 20,
-		enabled = false,
-		always_show_made_in = true,
-		always_show_products = true,
-		allow_productivity = true,
-		ingredients =
-		{
-			{type="item", name="wood", amount=30},
-			{type="fluid", name="oxygen", amount=120, catalyst_amount = 120}
-		},
-		results =
-		{ 
-			{type="fluid", name="biomethanol", amount=30}
-		},
-		crafting_machine_tint =
-		{
-			primary = {r = 0.25, g = 0.53, b = 0.15, a = 0.000}, 
-			secondary = {r = 0.27, g =0.53, b = 0.12, a = 0.250}, 
-			primary = {r = 0.25, g = 0.53, b = 0.15, a = 0.750}, 
-			secondary = {r = 0.27, g =0.53, b = 0.12, a = 0.900}, 
-		},
-		subgroup = "fluid-recipes",
-		order = "y08[biomethanol]",
-	},
-	{
-		type = "recipe",
 		name = "lithium-sulfur-battery",
 		category = "chemistry",
 		always_show_made_in = true,

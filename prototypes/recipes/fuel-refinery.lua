@@ -164,6 +164,39 @@ return
 			tertiary = {r = 0.454, g = 0.517, b = 0.529, a = 0.500}, 
 			quaternary = {r = 0.662, g = 0.807, b = 0.839, a = 0.900} 
 		}
+	},
+	---
+	{
+		type = "recipe",
+		name = "biomethanol",
+		category = "fuel-refinery",
+		icon = kr_fluids_icons_path  .. "biomethanol.png",
+		icon_size = 64,
+		energy_required = 30,
+		enabled = false,
+		always_show_made_in = true,
+		always_show_products = true,
+		allow_productivity = true,
+		ingredients =
+		{
+			{type="item", name="wood", amount=30},
+			{type="fluid", name="sulfuric-acid", amount=5, catalyst_amount = 5},
+			
+		},
+		results =
+		{ 
+			{type="item", name="coal", amount=10},
+			{type="fluid", name="biomethanol", amount=50}
+		},
+		crafting_machine_tint =
+		{
+			primary = {r = 0.25, g = 0.53, b = 0.15, a = 0.000}, 
+			secondary = {r = 0.27, g =0.53, b = 0.12, a = 0.250}, 
+			primary = {r = 0.25, g = 0.53, b = 0.15, a = 0.750}, 
+			secondary = {r = 0.27, g =0.53, b = 0.12, a = 0.900}, 
+		},
+		subgroup = "fluid-recipes",
+		order = "y08[biomethanol]",
 	}
 	---
 }

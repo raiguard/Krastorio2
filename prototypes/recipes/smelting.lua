@@ -3,20 +3,6 @@ return
 {
 	{
 		type = "recipe",
-		name = "coal",
-		category = "smelting",
-		energy_required = 5,
-		enabled = true,
-		allow_productivity = true,
-		ingredients =
-		{
-			{"wood", 5},
-		},
-		result = "coal",
-		result_count = 3
-	},
-	{
-		type = "recipe",
 		name = "coke",
 		category = "smelting",
 		energy_required = 10,

@@ -51,7 +51,7 @@ data:extend(
 		weight = 12000,
 		max_speed = 0.926,
 		max_power = "3MW",
-		reversing_power_modifier = 0.6,
+		reversing_power_modifier = 0.75,
 		braking_force = 40,
 		friction_force = 0.50,
 		vertical_selection_shift = -0.5,
@@ -147,7 +147,7 @@ data:extend(
 		},
 		back_light = rolling_stock_back_light(),
 		stand_by_light = rolling_stock_stand_by_light(),
-		color = default_locomotive_color,
+		color = {r = 0.92, g = 0.07, b = 0, a = 0.5},
 		pictures =
 		{
 			layers =
@@ -357,7 +357,7 @@ data:extend(
 		},
 		open_sound = { filename = "__base__/sound/train-door-open.ogg", volume=0.5 },
 		close_sound = { filename = "__base__/sound/train-door-close.ogg", volume = 0.4 },
-		sound_minimum_speed = 0.1,
+		sound_minimum_speed = 0.25,
 		water_reflection = locomotive_reflection()
 	}
 })
