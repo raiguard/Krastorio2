@@ -15,6 +15,8 @@ fluid_burner_util.generateBurnFluidsRecipes()
 -- a void recipe for destroy it
 -- (This must be done after adding other recipes)
 require(kr_recipes_prototypes_path .. "generate-void-crushing-recipes")
+local matter_util = require(kr_public_lib .. "matter-util")
+matter_util.createStandardKrastorioMatterRecipes()
 ---------------------------------------------------------------------------
 -- -- -- COMPATIBILITY INITIALIZATION (data update stage)
 ---------------------------------------------------------------------------

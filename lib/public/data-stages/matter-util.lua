@@ -33,13 +33,14 @@ krastorio.matter_func = {}
 function krastorio.matter_func.createMatterRecipe(args)
 
 	local _item = krastorio.items.getItem(args.item_name)
-	local true_item_type = _item.type
-	if true_item_type == "tool" then
-		true_item_type = "item"
-	end
-
+	log(_item.name)
 	if _item then
 	
+		local true_item_type = _item.type
+		if true_item_type == "tool" then
+			true_item_type = "item"
+		end
+		
 		local _return_item = krastorio.items.getItem(args.return_item)				
 		if not _return_item then
 			_return_item = _item
@@ -51,7 +52,7 @@ function krastorio.matter_func.createMatterRecipe(args)
 		
 		local _energy_required = args.energy_required or 2
 		
-		local _technology = args.unlocked_by_technology or "k-matter"
+		local _technology = args.unlocked_by_technology or "kr-matter-processing"
 
 		if args.only_deconversion == nil or args.only_deconversion ~= true then
 			local item_to_matter = 
@@ -59,11 +60,11 @@ function krastorio.matter_func.createMatterRecipe(args)
 				type = "recipe",
 				name = _item.name .. "-to-matter",
 				localised_name={"recipe-name.to-matter", {true_item_type .. "-name." .. _item.name}},
-				category = "matter-extraction",
-				subgroup = "raw-to-matter",
+				category = "matter-conversion",
+				subgroup = "matter-conversion",
 				icons =
 				{
-					{ icon = krstr_icon_path .. "arrows/arrow-m.png", icon_size = 64 }
+					{ icon = kr_arrows_icons_path .. "arrow-m.png", icon_size = 64 }
 				},
 				energy_required = _energy_required,
 				enabled = false,
@@ -78,7 +79,7 @@ function krastorio.matter_func.createMatterRecipe(args)
 				},
 				results=
 				{
-					{ type = "fluid", name = "k-matter", amount = args.matter_value }
+					{ type = "fluid", name = "matter", amount = args.matter_value }
 				},
 				order = "z[".. _item.name .."-to-matter]"
 			}
@@ -89,7 +90,7 @@ function krastorio.matter_func.createMatterRecipe(args)
 			table.insert
 			(
 				item_to_matter.icons,
-				{ icon = krstr_icon_path .. "matter.png",         icon_size = 64,              scale = 0.28,                        shift = {4, 8} }
+				{ icon = kr_fluids_icons_path .. "matter.png", icon_size = 64, scale = 0.28, shift = {4, 8} }
 			)
 			
 			data:extend({item_to_matter})
@@ -107,12 +108,12 @@ function krastorio.matter_func.createMatterRecipe(args)
 				type = "recipe",
 				name = "matter-to-".. _return_item.name,
 				localised_name={"recipe-name.matter-to", {true_return_item_type .. "-name." .. _item.name}},
-				category = "matter-usage",
-				subgroup = "matter-to-" .. _return_item.type .. stab_string,
+				category = "matter-deconversion",
+				subgroup = "matter-deconversion",
 				icons =
 				{
-					{ icon = krstr_icon_path .. "arrows/arrow-i.png", icon_size = 64 },
-					{ icon = krstr_icon_path .. "matter.png",         icon_size = 64,                     scale = 0.28,                               shift = {8, -6} }
+					{ icon = kr_arrows_icons_path .. "arrow-i.png", icon_size = 64 },
+					{ icon = kr_fluids_icons_path .. "matter.png",  icon_size = 64, scale = 0.28, shift = {8, -6} }
 				},
 				energy_required = _energy_required,
 				enabled = false,
@@ -122,7 +123,7 @@ function krastorio.matter_func.createMatterRecipe(args)
 				show_amount_in_title = false,
 				ingredients =
 				{
-					{ type = "fluid", name = "k-matter", amount = args.matter_value}
+					{ type = "fluid", name = "matter", amount = args.matter_value, catalyst_amount = args.matter_value }
 				},
 				results=
 				{
@@ -136,8 +137,8 @@ function krastorio.matter_func.createMatterRecipe(args)
 			
 			if args.need_stabilizer ~= nil and args.need_stabilizer == true then
 				matter_to_item.localised_description = {"recipe-description.matter-recipe-with-stabilizer"}
-				table.insert(matter_to_item.ingredients, {type="item", name="matter-stabilizer", amount=1, catalyst_amount = 1})
-				table.insert(matter_to_item.results,     {type="item", name="empty-matter-stabilizer", probability = 0.99, amount=1, amount_max = 1, catalyst_amount = 1})
+				--table.insert(matter_to_item.ingredients, {type="item", name="matter-stabilizer", amount=1, catalyst_amount = 1})
+				--table.insert(matter_to_item.results,     {type="item", name="empty-matter-stabilizer", probability = 0.99, amount=1, amount_max = 1, catalyst_amount = 1})
 			end
 			
 			data:extend({matter_to_item})
@@ -148,7 +149,7 @@ function krastorio.matter_func.createMatterRecipe(args)
 		end
 		
 	end
-		
+	
 end
 
 --[[
@@ -230,7 +231,7 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 
 	-- -- Bidirectional
 
-	-- k-matter technology
+	-- matter technology
 	----
 	-- wood
 	local wood =
@@ -269,7 +270,7 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "sand",
 		minimum_conversion_quantity = 10, 
 		matter_value = 2,
-		unlocked_by_technology = "matter+sand-processing", 
+		-- unlocked_by_technology = "matter+sand-processing", 
 		energy_required = 1
 	}
 	krastorio.matter_func.createMatterRecipe(sand)
@@ -280,7 +281,7 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "stone",
 		minimum_conversion_quantity = 10, 
 		matter_value = 3.25,
-		unlocked_by_technology = "matter+stone-processing", 
+		-- unlocked_by_technology = "matter+stone-processing", 
 		energy_required = 1
 	}
 	krastorio.matter_func.createMatterRecipe(stone)
@@ -291,7 +292,7 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "coal",
 		minimum_conversion_quantity = 10, 
 		matter_value = 3.25,
-		unlocked_by_technology = "matter+coal-processing", 
+		-- unlocked_by_technology = "matter+coal-processing", 
 		energy_required = 1
 	}
 	krastorio.matter_func.createMatterRecipe(coal)
@@ -302,44 +303,22 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "water",
 		minimum_conversion_quantity = 100, 
 		matter_value = 0.5,
-		unlocked_by_technology = "matter+water-processing", 
+		-- unlocked_by_technology = "matter+water-processing", 
 		only_deconversion = true,
 		energy_required = 1,
 	}
 	krastorio.matter_func.createMatterRecipe(water)
 	
-	-- pure water
-	local pure_water =
-	{
-		item_name = "k-pure-water",
-		minimum_conversion_quantity = 100, 
-		matter_value = 0.5,
-		unlocked_by_technology = "matter+water-processing", 
-		energy_required = 1,
-	}
-	krastorio.matter_func.createMatterRecipe(pure_water)
-		
 	-- crude oil
 	local crude_oil =
 	{
 		item_name = "crude-oil",
 		minimum_conversion_quantity = 100, 
 		matter_value = 10,
-		unlocked_by_technology = "matter+oil-processing", 
+		-- unlocked_by_technology = "matter+oil-processing", 
 		energy_required = 1
 	}
 	krastorio.matter_func.createMatterRecipe(crude_oil)
-	
-	-- gold-ore
-	local gold_ore =
-	{
-		item_name = "gold-ore",
-		minimum_conversion_quantity = 10, 
-		matter_value = 6.5,
-		unlocked_by_technology = "matter+gold-processing", 
-		energy_required = 1
-	}
-	krastorio.matter_func.createMatterRecipe(gold_ore)
 	
 	-- uranium-ore
 	local uranium_ore =
@@ -347,7 +326,7 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "uranium-ore",
 		minimum_conversion_quantity = 10, 
 		matter_value = 8,
-		unlocked_by_technology = "matter+uranium-processing", 
+		-- unlocked_by_technology = "matter+uranium-processing", 
 		energy_required = 1
 	}
 	krastorio.matter_func.createMatterRecipe(uranium_ore)
@@ -358,51 +337,30 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "uranium-238",
 		minimum_conversion_quantity = 10,
 		matter_value = 80,
-		unlocked_by_technology = "matter+uranium-processing", 
+		-- unlocked_by_technology = "matter+uranium-processing", 
 		energy_required = 1
 	}
 	krastorio.matter_func.createMatterRecipe(uranium_238)
-		
-	-- titanium
-	local titanium =
-	{
-		item_name = "k-titanium",
-		minimum_conversion_quantity = 10, 
-		matter_value = 10,
-		unlocked_by_technology = "matter+minerals-processing", 
-		energy_required = 1
-	}
-	krastorio.matter_func.createMatterRecipe(titanium)
-	
-	-- tantalum
-	local tantalum =
-	{
-		item_name = "k-tantalum",
-		minimum_conversion_quantity = 10, 
-		matter_value = 10,
-		unlocked_by_technology = "matter+minerals-processing", 
-		energy_required = 1
-	}
-	krastorio.matter_func.createMatterRecipe(tantalum)
 
-	-- menarite powder
-	local menarite_powder =
+	-- raw-imersite
+	local raw_imersite =
 	{
-		item_name = "menarite-powder",
+		item_name = "raw-imersite",
 		minimum_conversion_quantity = 10, 
-		matter_value = 10,
-		unlocked_by_technology = "matter+minerals-processing", 
-		energy_required = 1
+		matter_value = 20,
+		-- unlocked_by_technology = "matter+minerals-processing", 
+		energy_required = 1,
+		only_conversion = true
 	}
-	krastorio.matter_func.createMatterRecipe(menarite_powder)	
+	krastorio.matter_func.createMatterRecipe(raw_imersite)	
 	
-	-- menarite powder
+	-- imersite powder
 	local imersite_powder =
 	{
 		item_name = "imersite-powder",
 		minimum_conversion_quantity = 10, 
 		matter_value = 10,
-		unlocked_by_technology = "matter+minerals-processing", 
+		-- unlocked_by_technology = "matter+minerals-processing", 
 		energy_required = 1
 	}
 	krastorio.matter_func.createMatterRecipe(imersite_powder)	
@@ -412,38 +370,14 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 	-- quartz
 	local quartz =
 	{
-		item_name = "k-quartz",
+		item_name = "quartz",
 		minimum_conversion_quantity = 10, 
 		matter_value = 2.25,
-		unlocked_by_technology = "matter+sand-processing", 
+		-- unlocked_by_technology = "matter+sand-processing", 
 		energy_required = 1,
 		only_conversion = true
 	}
 	krastorio.matter_func.createMatterRecipe(quartz)
-	
-	-- raw-menarite
-	local raw_menarite =
-	{
-		item_name = "raw-menarite",
-		minimum_conversion_quantity = 10, 
-		matter_value = 20,
-		unlocked_by_technology = "matter+minerals-processing", 
-		energy_required = 1,
-		only_conversion = true
-	}
-	krastorio.matter_func.createMatterRecipe(raw_menarite)
-	
-	-- raw-imersite
-	local raw_imersite =
-	{
-		item_name = "raw-imersite",
-		minimum_conversion_quantity = 10, 
-		matter_value = 20,
-		unlocked_by_technology = "matter+minerals-processing", 
-		energy_required = 1,
-		only_conversion = true
-	}
-	krastorio.matter_func.createMatterRecipe(raw_imersite)
 
 	-- sulfur
 	local sulfur =
@@ -451,7 +385,7 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "sulfur",
 		minimum_conversion_quantity = 10, 
 		matter_value = 9,
-		unlocked_by_technology = "matter-assembler-plus", 
+		-- unlocked_by_technology = "matter-assembler-plus", 
 		energy_required = 4,
 		need_stabilizer = true,
 		allow_productivity = true
@@ -463,108 +397,7 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 	
 	-- -- -- Intermediate (need stabilizer)
 	-- -- Only from matter (matter -> item)
-	
-	-- science
-	
-	-- automation-science-pack
-	local automation_science_pack =
-	{
-		item_name = "automation-science-pack",
-		minimum_conversion_quantity = 5, 
-		matter_value = 9,
-		unlocked_by_technology = "matter-is-science", 
-		energy_required = 5,
-		only_deconversion = true,
-		need_stabilizer = true,
-		allow_productivity = true
-	}
-	krastorio.matter_func.createMatterRecipe(automation_science_pack)
-	
-	-- logistic-science-pack
-	local logistic_science_pack =
-	{
-		item_name = "logistic-science-pack",
-		minimum_conversion_quantity = 5, 
-		matter_value = 19,
-		unlocked_by_technology = "matter-is-science", 
-		energy_required = 5,
-		only_deconversion = true,
-		need_stabilizer = true,
-		allow_productivity = true
-	}
-	krastorio.matter_func.createMatterRecipe(logistic_science_pack)
-	
-	-- military-science-pack
-	local military_science_pack =
-	{
-		item_name = "military-science-pack",
-		minimum_conversion_quantity = 5, 
-		matter_value = 37,
-		unlocked_by_technology = "matter-is-science", 
-		energy_required = 5,
-		only_deconversion = true,
-		need_stabilizer = true,
-		allow_productivity = true
-	}
-	krastorio.matter_func.createMatterRecipe(military_science_pack)
-	
-	-- chemical-science-pack
-	local chemical_science_pack =
-	{
-		item_name = "chemical-science-pack",
-		minimum_conversion_quantity = 5, 
-		matter_value = 60,
-		unlocked_by_technology = "matter-is-science", 
-		energy_required = 5,
-		only_deconversion = true,
-		need_stabilizer = true,
-		allow_productivity = true
-	}
-	krastorio.matter_func.createMatterRecipe(chemical_science_pack)
-	
-	-- production-science-pack
-	local production_science_pack =
-	{
-		item_name = "production-science-pack",
-		minimum_conversion_quantity = 5, 
-		matter_value = 388,
-		unlocked_by_technology = "matter-is-science", 
-		energy_required = 5,
-		only_deconversion = true,
-		need_stabilizer = true,
-		allow_productivity = true
-	}
-	krastorio.matter_func.createMatterRecipe(production_science_pack)
-
-	-- utility-science-pack
-	local utility_science_pack =
-	{
-		item_name = "utility-science-pack",
-		minimum_conversion_quantity = 5, 
-		matter_value = 432,
-		unlocked_by_technology = "matter-is-science", 
-		energy_required = 5,
-		only_deconversion = true,
-		need_stabilizer = true,
-		allow_productivity = true
-	}
-	krastorio.matter_func.createMatterRecipe(utility_science_pack)
-	
-	--[[
-	k_experimental_data
-	local k_experimental_data =
-	{
-		item_name = "k-experimental-data",
-		minimum_conversion_quantity = 5, 
-		matter_value = 90,
-		energy_required = 50,
-		only_deconversion = true,
-		need_stabilizer = true,
-		allow_productivity = true
-	}
-	krastorio.matter_func.createMatterRecipe(k_experimental_data)
-	--]]
-	
+		
 	-- other
 
 	-- glass
@@ -573,7 +406,7 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "glass",
 		minimum_conversion_quantity = 10, 
 		matter_value = 10,
-		unlocked_by_technology = "matter-assembler-plus", 
+		-- unlocked_by_technology = "matter-assembler-plus", 
 		energy_required = 2,
 		only_deconversion = true,
 		need_stabilizer = true,
@@ -581,13 +414,13 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 	}
 	krastorio.matter_func.createMatterRecipe(glass)
 		
-	-- k-silicon
+	-- silicon
 	local k_silicon =
 	{
-		item_name = "k-silicon",
+		item_name = "silicon",
 		minimum_conversion_quantity = 10, 
 		matter_value = 7,
-		unlocked_by_technology = "matter-assembler-plus", 
+		-- unlocked_by_technology = "matter-assembler-plus", 
 		energy_required = 2,
 		only_deconversion = true,
 		need_stabilizer = true,
@@ -601,7 +434,7 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "copper-plate",
 		minimum_conversion_quantity = 10, 
 		matter_value = 6,
-		unlocked_by_technology = "matter-assembler-plus", 
+		-- unlocked_by_technology = "matter-assembler-plus", 
 		energy_required = 2,
 		only_deconversion = true,
 		need_stabilizer = true,
@@ -615,7 +448,7 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "iron-plate",
 		minimum_conversion_quantity = 10, 
 		matter_value = 6,
-		unlocked_by_technology = "matter-assembler-plus", 
+		-- unlocked_by_technology = "matter-assembler-plus", 
 		energy_required = 2,
 		only_deconversion = true,
 		need_stabilizer = true,
@@ -629,7 +462,7 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "steel-plate",
 		minimum_conversion_quantity = 10, 
 		matter_value = 18,
-		unlocked_by_technology = "matter-assembler-plus", 
+		-- unlocked_by_technology = "matter-assembler-plus", 
 		energy_required = 2,
 		only_deconversion = true,
 		need_stabilizer = true,
@@ -637,75 +470,19 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 	}
 	krastorio.matter_func.createMatterRecipe(steel_plate)
 	
-	-- k steel 
-	local k_steel =
-	{
-		item_name = "k-steel",
-		minimum_conversion_quantity = 10, 
-		matter_value = 30,
-		unlocked_by_technology = "matter-assembler-plus", 
-		energy_required = 2,
-		only_deconversion = true,
-		need_stabilizer = true,
-		allow_productivity = true
-	}
-	krastorio.matter_func.createMatterRecipe(k_steel)
-
 	-- plastic bar
 	local plastic_bar =
 	{
 		item_name = "plastic-bar",
 		minimum_conversion_quantity = 10, 
 		matter_value = 14,
-		unlocked_by_technology = "matter-assembler-plus", 
+		-- unlocked_by_technology = "matter-assembler-plus", 
 		energy_required = 2,
 		only_deconversion = true,
 		need_stabilizer = true,
 		allow_productivity = true
 	}
 	krastorio.matter_func.createMatterRecipe(plastic_bar)
-	
-	-- gold plate
-	local gold_plate =
-	{
-		item_name = "gold-plate",
-		minimum_conversion_quantity = 10, 
-		matter_value = 20,
-		unlocked_by_technology = "matter-assembler-plus", 
-		energy_required = 2,
-		only_deconversion = true,
-		need_stabilizer = true,
-		allow_productivity = true
-	}
-	krastorio.matter_func.createMatterRecipe(gold_plate)
-	
-	-- titanium plate
-	local titanium_plate =
-	{
-		item_name = "k-titanium-plate",
-		minimum_conversion_quantity = 10, 
-		matter_value = 40,
-		unlocked_by_technology = "matter-assembler-plus", 
-		energy_required = 2,
-		only_deconversion = true,
-		need_stabilizer = true,
-		allow_productivity = true
-	}
-	krastorio.matter_func.createMatterRecipe(titanium_plate)
-	
-	-- tantalum plate
-	local tantalum_plate =
-	{
-		item_name = "k-tantalum-plate",
-		minimum_conversion_quantity = 10, 
-		matter_value = 40,
-		unlocked_by_technology = "matter-assembler-plus", 
-		energy_required = 2,
-		only_deconversion = true,
-		need_stabilizer = true,
-		allow_productivity = true
-	}
-	krastorio.matter_func.createMatterRecipe(tantalum_plate)	
 	
 end
 

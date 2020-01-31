@@ -20,8 +20,7 @@ data:extend(
 			{
 				production_type = "input",
 				pipe_picture = kr_pipe_path,
-				pipe_covers = pipecoverspictures(),
-				
+				pipe_covers = pipecoverspictures(),				
 				base_area = 100,
 				base_level = -1,
 				pipe_connections = {{ type="input-output", position = {0, -4} }}

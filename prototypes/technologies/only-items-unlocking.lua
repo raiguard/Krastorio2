@@ -210,7 +210,36 @@ data:extend(
 			},
 			time = 60
 		}
-    }
+    },
+	{
+		type = "technology",
+		name = "kr-matter-tech-card",
+		icon = kr_technologies_icons_path .. "matter-tech-card.png",
+		icon_size = 128,
+		effects =
+		{			
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["matter-research-data"] or "matter-research-data"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["matter-tech-card"] or "matter-tech-card"
+			}
+		},
+		prerequisites = {"kr-singularity-lab", "space-science-pack"},
+		unit =
+		{
+			count = 750,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1}
+			},
+			time = 60
+		}
+    },
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

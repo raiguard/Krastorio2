@@ -74,5 +74,28 @@ data:extend(
 		name = "kr-void",
 		group = "other",
 		order = "zzz"
+	},
+	
+	-- Matter
+	
+	{
+		type = "item-subgroup",
+		name = "matter-conversion",
+		group = "intermediate-products",
+		order = "m1"
+	},
+	-- From matter to items
+	{
+		type = "item-subgroup",
+		name = "matter-deconversion",
+		group = "intermediate-products",
+		order = "m2"
+	},	
+	-- Items that in parts use matter 
+	{
+		type = "item-subgroup",
+		name = "matter-items",
+		group = "intermediate-products",
+		order = "m3"
 	}
 })

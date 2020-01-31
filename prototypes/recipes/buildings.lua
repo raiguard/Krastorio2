@@ -480,6 +480,34 @@ return
 		},
 		result = "kr-advanced-steam-turbine"
     },
+	{
+		type = "recipe",
+		name = "kr-matter-plant",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"steel-beam", 10},
+			{"kr-steel-pipe", 10},		
+			{"electronic-components", 10},				
+			{"ai-core", 5}					
+		},
+		result = "kr-matter-plant"
+    },
+	{
+		type = "recipe",
+		name = "kr-matter-assembler",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"steel-beam", 4},
+			{"kr-steel-pipe", 4},		
+			{"electronic-components", 10},			
+			{"ai-core", 3}					
+		},
+		result = "kr-matter-assembler"
+    },
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

@@ -112,7 +112,7 @@ data:extend(
 		icon =  kr_entities_icons_path .. "biusart-lab.png",
 		icon_size = 64,
 		subgroup = "production-machine",
-		order = "z-g2[advanced-lab]",
+		order = "g[lab]-g2[advanced-lab]",
 		place_result = "biusart-lab",
 		stack_size = 10
     },
@@ -122,7 +122,7 @@ data:extend(
 		icon =  kr_entities_icons_path .. "singularity-lab.png",
 		icon_size = 64,
 		subgroup = "production-machine",
-		order = "z-g3[kr-singularity-lab]",
+		order = "g[lab]-g3[kr-singularity-lab]",
 		place_result = "kr-singularity-lab",
 		stack_size = 10,
 	},
@@ -411,8 +411,28 @@ data:extend(
 		order = "a2[rocket-turret]",
 		place_result = "kr-rocket-turret",
 		stack_size = 50
-    }
+    },
 	-- -- --	
+	{
+		type = "item",
+		name = "kr-matter-plant",
+		icon = kr_entities_icons_path .. "matter-plant.png",
+		icon_size = 64,
+		stack_size = 50,		
+		subgroup = "production-machine",
+		order = "i[matter]-a[matter-plant]",
+		place_result = "kr-matter-plant"
+	}, 
+	{
+		type = "item",
+		name = "kr-matter-assembler",
+		icon = kr_entities_icons_path .. "matter-assembler.png",
+		icon_size = 64,
+		stack_size = 50,		
+		subgroup = "production-machine",
+		order = "i[matter]-b[matter-assembler]",
+		place_result = "kr-matter-assembler"
+	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

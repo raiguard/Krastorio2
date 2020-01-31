@@ -200,34 +200,6 @@ data:extend({
   },
   {
     type = "technology",
-    name = data_util.mod_prefix .. "antimatter-reactor",
-    effects = {
-     { type = "unlock-recipe", recipe = data_util.mod_prefix .. "antimatter-reactor", },
-    },
-    icon = "__space-exploration-graphics__/graphics/technology/antimatter-reactor.png",
-    icon_size = 128,
-    order = "e-g",
-    prerequisites = {
-      "nuclear-power",
-      data_util.mod_prefix .. "antimatter-production"
-    },
-    unit = {
-     count = 1000,
-     time = 10,
-     ingredients = {
-       { "automation-science-pack", 1 },
-       { "logistic-science-pack", 1 },
-       { "chemical-science-pack", 1 },
-       { "space-science-pack", 1 },
-       { data_util.mod_prefix .. "energy-science-pack", 1 },
-       { data_util.mod_prefix .. "material-science-pack", 1 },
-       { data_util.mod_prefix .. "astronomic-science-pack", 1 },
-       { data_util.mod_prefix .. "deep-space-science-pack", 1 },
-     }
-    },
-  },
-  {
-    type = "technology",
     name = data_util.mod_prefix .. "astronomic-science-pack",
     effects = {
      {

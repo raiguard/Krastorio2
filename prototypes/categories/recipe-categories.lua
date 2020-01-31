@@ -61,7 +61,29 @@ data:extend(
 	{
 		type = "recipe-category",
 		name = "fuel-refinery"
+	},
+	
+-----------------------------------------------------------------------------------------------------------------
+	
+	-- -- Matter
+	-- From items to matter
+	{
+		type = "recipe-category",
+		name = "matter-conversion"
+	},
+	
+	-- From matter to items
+	{
+		type = "recipe-category",
+		name = "matter-deconversion"
+	},
+	
+	-- Items that in parts use matter 
+	{
+		type = "recipe-category",
+		name = "matter-items"
 	}
+	
 	
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

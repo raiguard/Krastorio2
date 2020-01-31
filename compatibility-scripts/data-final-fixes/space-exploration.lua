@@ -1,6 +1,5 @@
-local data_util = require("__space-exploration__/data_util")
-
 if mods["space-exploration"] then
+	local data_util = require("__space-exploration__/data_util")
 
 -- -- Entities
 ---------------------------------------------------------------------------------------------
@@ -317,7 +316,8 @@ if mods["space-exploration"] then
 	end
 	
 -- -- Icons
----------------------------------------------------------------------------------------------	
+---------------------------------------------------------------------------------------------
+	--[[
 	if data.raw.recipe["se-rocket-fuel-from-water-copper"] then
 		data.raw.recipe["se-rocket-fuel-from-water-copper"].icons = data_util.transition_icons(
 			"__base__/graphics/icons/fluid/water.png",
@@ -327,6 +327,7 @@ if mods["space-exploration"] then
 		-- data.raw.recipe["se-rocket-fuel-from-water-copper"].icon  = kr_icons_path .. "nn-icons/rocket-fuel.png"
 		-- data.raw.recipe["se-rocket-fuel-from-water-copper"].icon_size = 64
 	end
+	--]]
 ---------------------------------------------------------------------------------------------
 
 end

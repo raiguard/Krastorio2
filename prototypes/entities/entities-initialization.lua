@@ -30,6 +30,8 @@ require("buildings/steel-pipe-to-ground")
 require("buildings/steel-pump")
 require("buildings/water-pumpjack")
 require("buildings/wind-turbine")
+require("buildings/matter-plant")
+require("buildings/matter-assembler")
 -- -- Turrets
 require("buildings/turrets/railgun-turret")
 require("buildings/turrets/rocket-turret")
@@ -63,6 +65,7 @@ require("remnants/antimatter-reactor-remnant")
 require("remnants/kr-big-random-pipes-remnant")
 require("remnants/kr-medium-random-pipes-remnant")
 require("remnants/kr-water-pumpjack-remnant")
+require("remnants/matter-plant")
 ---------------------------------------------------------------------------------------
 -- -- -- VEHICLES
 ---------------------------------------------------------------------------------------

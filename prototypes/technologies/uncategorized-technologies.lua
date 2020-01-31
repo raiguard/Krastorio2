@@ -457,6 +457,37 @@ data:extend(
 			},
 			time = 60
 		}
+    },
+	{
+		type = "technology",
+		name = "kr-matter-processing",
+		icon = kr_technologies_icons_path .. "matter.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-matter-plant"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-matter-assembler"
+			}
+		},
+		prerequisites = {"kr-matter-tech-card"},
+		order = "g-e-d",
+		unit =
+		{
+			count = 1500,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"matter-tech-card", 1}				
+			},
+			time = 45
+		}
     }
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
