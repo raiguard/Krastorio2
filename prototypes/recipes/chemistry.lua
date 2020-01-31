@@ -342,6 +342,27 @@ return
 	},
 	{
 		type = "recipe",
+		name = "deuterium-oxide",
+		energy_required = 60,
+		category = "chemistry",
+		enabled = false,
+		always_show_made_in = true,
+		allow_productivity = true,
+		ingredients =
+		{
+			{type="fluid", name="heavy-water", amount=10},
+		},
+		result = "deuterium-oxide",
+		crafting_machine_tint = 
+		{
+			primary = {r = 0.650, g = 0.576, b = 0.313, a = 0.000},
+			secondary = {r = 0.200, g = 0.680, b = 0.300, a = 0.350},
+			tertiary = {r = 0.430, g = 0.305, b = 0.2, a = 0.750}, 
+			quaternary = {r = 0.800, g = 0.776, b = 0.313, a = 0.900}
+		}
+    },
+	{
+		type = "recipe",
 		name = "dt-fuel",
 		energy_required = 60,
 		category = "chemistry",
@@ -361,5 +382,5 @@ return
 			tertiary = {r = 0.430, g = 0.305, b = 0.2, a = 0.750}, 
 			quaternary = {r = 0.800, g = 0.776, b = 0.313, a = 0.900}
 		}
-    }
+    }	
 }

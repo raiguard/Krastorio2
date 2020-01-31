@@ -1,3 +1,6 @@
+local hit_effects = require ("__base__.prototypes.entity.demo-hit-effects")
+--local sounds = require("__base__.prototypes.entity.demo-sounds")
+
 data:extend(
 {  
 	{
@@ -56,119 +59,66 @@ data:extend(
 		},
 		collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
 		selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+		damaged_trigger_effect = hit_effects.entity(),
 		fast_replaceable_group = "assembling-machine",
 		animation =
 		{
-			north =
+			layers =
 			{
-				filename = kr_entities_path .. "atmospheric-condenser/atmospheric-condenser-h.png",
-				width = 190,
-				height = 190,
-				frame_count = 1,
-				shift = {0, 0},
-				hr_version =
 				{
-					filename = kr_entities_path .. "atmospheric-condenser/hr-atmospheric-condenser-h.png",
-					width = 380,
-					height = 380,
-					scale = 0.5,
-					frame_count = 1,
-					shift = {0, 0}
-				}
-			},
-			east =
-			{
-				filename = kr_entities_path .. "atmospheric-condenser/atmospheric-condenser-v.png",
-				width = 190,
-				height = 190,
-				frame_count = 1,
-				shift = {0, 0},
-				hr_version =
-				{
-					filename = kr_entities_path .. "atmospheric-condenser/hr-atmospheric-condenser-v.png",
-					width = 380,
-					height = 380,
-					scale = 0.5,
-					frame_count = 1,
-					shift = {0, 0}
-				}
-			},
-			south =
-			{
-				filename = kr_entities_path .. "atmospheric-condenser/atmospheric-condenser-h.png",
-				width = 190,
-				height = 190,
-				frame_count = 1,
-				shift = {0, 0},
-				hr_version =
-				{
-					filename = kr_entities_path .. "atmospheric-condenser/hr-atmospheric-condenser-h.png",
-					width = 380,
-					height = 380,
-					scale = 0.5,
-					frame_count = 1,
-					shift = {0, 0}
-				}
-			},
-			west =
-			{
-				filename = kr_entities_path .. "atmospheric-condenser/atmospheric-condenser-v.png",
-				width = 190,
-				height = 190,
-				frame_count = 1,
-				shift = {0, 0},
-				hr_version =
-				{
-					filename = kr_entities_path .. "atmospheric-condenser/hr-atmospheric-condenser-v.png",
-					width = 380,
-					height = 380,
-					scale = 0.5,
-					frame_count = 1,
-					shift = {0, 0}
-				}
-			}
-		},
-		working_visualisations =
-		{
-			{
-				light =
-				{
-					intensity = 0.3,
-					size = 10,
-					shift = {0, 0},
-					color = {r=0.1, g=0.5, b=1}
-				}
-			},
-			{
-				animation =
-				{
-					filename = kr_entities_path .. "atmospheric-condenser/atmospheric-condenser-animation.png",
+					filename = kr_entities_path .. "atmospheric-condenser/atmospheric-condenser.png",
 					width = 190,
 					height = 190,
-					frame_count = 12,
-					line_length = 4,
+					frame_count = 20,
+					line_length = 5,
 					shift = {0, 0},
-					animation_speed = 1,
 					hr_version =
 					{
-						filename = kr_entities_path .. "atmospheric-condenser/hr-atmospheric-condenser-animation.png",
+						filename = kr_entities_path .. "atmospheric-condenser/hr-atmospheric-condenser.png",
 						width = 380,
 						height = 380,
 						scale = 0.5,
-						frame_count = 12,
-						line_length = 4,
-						shift = {0, 0},
-						animation_speed = 1
+						frame_count = 20,
+						line_length = 5,
+						shift = {0, 0}
 					}
-				}
+				},
+				{
+					filename = kr_entities_path .. "atmospheric-condenser/atmospheric-condenser-sh.png",
+					width = 190,
+					height = 190,
+					frame_count = 1,
+					repeat_count = 20,
+					draw_as_shadow = true,
+					shift = {0, 0},
+					hr_version =
+					{
+						filename = kr_entities_path .. "atmospheric-condenser/hr-atmospheric-condenser-sh.png",
+						width = 380,
+						height = 380,
+						scale = 0.5,
+						frame_count = 1,
+						repeat_count = 20,
+						draw_as_shadow = true,
+						shift = {0, 0}
+					}
+				},
 			}
 		},
 		crafting_categories = {"atmosphere-condensation"},
 		vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
 		working_sound =
 		{
-			sound = { filename = kr_buildings_sounds_path .. "atmospheric-condenser.ogg" },
-			idle_sound = { filename = "__base__/sound/idle1.ogg" },
+			sound = 
+			{
+				filename = kr_buildings_sounds_path .. "atmospheric-condenser.ogg",
+				volume = 1.5
+			},
+			idle_sound =
+			{
+				filename = "__base__/sound/idle1.ogg",
+				volume = 0.5
+			},
 			apparent_volume = 1.5
 		},
 		crafting_speed = 1.5,

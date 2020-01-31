@@ -1,3 +1,6 @@
+local hit_effects = require ("__base__.prototypes.entity.demo-hit-effects")
+--local sounds = require("__base__.prototypes.entity.demo-sounds")
+
 data:extend(
 {  
 	{
@@ -56,113 +59,74 @@ data:extend(
 		},
 		collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
 		selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+		damaged_trigger_effect = hit_effects.entity(),
 		fast_replaceable_group = "assembling-machine",
 		animation =
 		{
-			north =
+			layers =
 			{
-				filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant-h.png",
-				width = 190,
-				height = 190,
-				frame_count = 1,
-				shift = {0, 0},
-				hr_version =
 				{
-					filename = kr_entities_path .. "electrolysis-plant/hr-electrolysis-plant-h.png",
-					width = 380,
-					height = 380,
-					scale = 0.5,
+					filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant.png",
+					width = 190,
+					height = 190,
 					frame_count = 1,
-					--line_length = 6,
-					shift = {0, 0}
-				}
-			},
-			east =
-			{
-				filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant-v.png",
-				width = 190,
-				height = 190,
-				frame_count = 1,
-				shift = {0, 0},
-				hr_version =
+					shift = {0, 0},
+					hr_version =
+					{
+						filename = kr_entities_path .. "electrolysis-plant/hr-electrolysis-plant.png",
+						width = 380,
+						height = 380,
+						scale = 0.5,
+						frame_count = 1,
+						shift = {0, 0}
+					}
+				},
 				{
-					filename = kr_entities_path .. "electrolysis-plant/hr-electrolysis-plant-v.png",
-					width = 380,
-					height = 380,
-					scale = 0.5,
+					filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant-sh.png",
+					width = 190,
+					height = 190,
 					frame_count = 1,
-					shift = {0, 0}
-				}
-			},
-			south =
-			{
-				filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant-h.png",
-				width = 190,
-				height = 190,
-				frame_count = 1,
-				shift = {0, 0},
-				hr_version =
-				{
-					filename = kr_entities_path .. "electrolysis-plant/hr-electrolysis-plant-h.png",
-					width = 380,
-					height = 380,
-					scale = 0.5,
-					frame_count = 1,
-					shift = {0, 0}
-				}
-			},
-			west =
-			{
-				filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant-v.png",
-				width = 190,
-				height = 190,
-				frame_count = 1,
-				shift = {0, 0},
-				hr_version =
-				{
-					filename = kr_entities_path .. "electrolysis-plant/hr-electrolysis-plant-v.png",
-					width = 380,
-					height = 380,
-					scale = 0.5,
-					frame_count = 1,
-					shift = {0, 0}
-				}
+					draw_as_shadow = true,
+					shift = {0, 0},
+					hr_version =
+					{
+						filename = kr_entities_path .. "electrolysis-plant/hr-electrolysis-plant-sh.png",
+						width = 380,
+						height = 380,
+						scale = 0.5,
+						frame_count = 1,
+						draw_as_shadow = true,
+						shift = {0, 0}
+					}
+				},
 			}
 		},
 		working_visualisations =
 		{
 			{
-				light =
-				{
-					intensity = 0.3,
-					size = 10,
-					shift = {0, 0},
-					color = {r=0.1, g=0.5, b=1}
-				}
-			},
-			{
+				apply_recipe_tint = "primary",
 				animation =
 				{
-					filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant-anim.png",
+					filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant-work.png",
 					width = 190,
 					height = 190,
-					frame_count = 8,
-					line_length = 2,
+					frame_count = 12,
+					line_length = 6,
+					animation_speed = 0.5,
 					shift = {0, 0},
-					animation_speed = 0.3,
 					hr_version =
 					{
-						filename = kr_entities_path .. "electrolysis-plant/hr-electrolysis-plant-anim.png",
+						filename = kr_entities_path .. "electrolysis-plant/hr-electrolysis-plant-work.png",
 						width = 380,
 						height = 380,
 						scale = 0.5,
-						frame_count = 8,
-						line_length = 2,
-						shift = {0, 0},
-						animation_speed = 0.3
+						frame_count = 12,
+						line_length = 6,
+						animation_speed = 0.5,
+						shift = {0, 0}
 					}
 				}
-			}
+			},
 		},
 		crafting_categories = { "electrolysis" },
 		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
@@ -171,7 +135,7 @@ data:extend(
 			sound =
 			{
 				filename = kr_buildings_sounds_path .. "electrolysis-plant.ogg",
-				volume = 1.2	
+				volume = 1	
 			},
 			idle_sound = 
 			{ 
@@ -186,7 +150,7 @@ data:extend(
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions_per_second_per_watt = 2 / 10000000
+			emissions_per_minute = 0.5
 		},
 		energy_usage = "0.5MW",
 		ingredient_count = 6,

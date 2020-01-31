@@ -13,6 +13,16 @@ data:extend(
 		place_result = "kr-wind-turbine",
 		stack_size = 50
 	},
+	{
+		type = "item",
+		name = "kr-gas-turbine-power-station",
+		icon = kr_entities_icons_path .. "gas-turbine-power-station.png",
+		icon_size = 64,
+		stack_size = 10,		
+		subgroup = "energy",
+		order = "c[solar-panel]-b[gas-turbine-power-station]",
+		place_result = "kr-gas-turbine-power-station"
+	},
     {
 		type = "item",
 		name = "kr-greenhouse",
@@ -418,7 +428,7 @@ data:extend(
 		name = "kr-matter-plant",
 		icon = kr_entities_icons_path .. "matter-plant.png",
 		icon_size = 64,
-		stack_size = 50,		
+		stack_size = 10,		
 		subgroup = "production-machine",
 		order = "i[matter]-a[matter-plant]",
 		place_result = "kr-matter-plant"
@@ -428,7 +438,7 @@ data:extend(
 		name = "kr-matter-assembler",
 		icon = kr_entities_icons_path .. "matter-assembler.png",
 		icon_size = 64,
-		stack_size = 50,		
+		stack_size = 10,		
 		subgroup = "production-machine",
 		order = "i[matter]-b[matter-assembler]",
 		place_result = "kr-matter-assembler"

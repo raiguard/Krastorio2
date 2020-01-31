@@ -86,6 +86,9 @@ krastorio.technologies.addUnlockRecipe("battery-mk2-equipment", "big-battery-mk2
 
 krastorio.technologies.addUnlockRecipe(krastorio.technologies.getTechnologyThatUnlockRecipe("personal-roboport-equipment"), "vehicle-roboport")
 
+-- -- NUCLEAR
+krastorio.technologies.addUnlockRecipe("nuclear-power", "heavy-water")
+
 -- Removings
 
 -- Moving inserters unlocking in early game

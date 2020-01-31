@@ -78,7 +78,7 @@ data:extend(
 			}
 		},
 		audible_distance_modifier = 10,
-		min_perceived_performance = 0.2,
+		min_perceived_performance = 0.25,
 		performance_to_sound_speedup = 0.5,
 		max_power_output = "2000MW"
 	}

@@ -21,6 +21,10 @@ return
 			{ type = "fluid", name = "chlorine", amount = 20, catalyst_amount = 20 },
 			{ type = "fluid", name = "hydrogen", amount = 30, catalyst_amount = 30 }
 		},
+		crafting_machine_tint =
+		{
+			primary = {r = 0.10, g = 0.75, b = 0.10, a = 0.10}, --electrolysis plant have only primary color
+		},
 		subgroup = "fluid-recipes",
 		order = "y01[water-electrolysis]"
 	},
@@ -42,6 +46,10 @@ return
 		{
 			{ type = "fluid", name = "oxygen", amount = 20, catalyst_amount = 20 },
 			{ type = "fluid", name = "hydrogen", amount = 30, catalyst_amount = 30 }
+		},
+		crafting_machine_tint =
+		{
+			primary = {r = 0.75, g = 0.10, b = 0.10, a = 0.10}, --electrolysis plant have only primary color
 		},
 		subgroup = "fluid-recipes",
 		order = "y02[water-separation]"
@@ -66,21 +74,29 @@ return
 			{ type = "fluid", name = "chlorine", amount = 10, catalyst_amount = 10},
 			{ type = "item",  name = "lithium", amount = 5}
 		},
+		crafting_machine_tint =
+		{
+			primary = {r = 0.70, g = 0.50, b = 0.05, a = 0.10}, --electrolysis plant have only primary color
+		},
 		subgroup = "raw-material",
 		order = "h2[lithium]"
     },
 	{
 		type = "recipe",
-		name = "deuterium-oxide",
+		name = "heavy-water",
 		category = "electrolysis",
-		energy_required = 60,
+		energy_required = 90,
 		enabled = false,
 		always_show_made_in = true,
 		allow_productivity = true,
 		ingredients = 
 		{
-			{type="fluid", name="heavy-water", amount=200}
+			{type="fluid", name="water", amount=100}
 		},
-		result = "deuterium-oxide"
+		crafting_machine_tint =
+		{
+			primary = {r = 0.50, g = 0.50, b = 0.20, a = 0.10}, --electrolysis plant have only primary color
+		},
+		results = {{type="fluid", name="heavy-water", amount=10}}
     }
 }
