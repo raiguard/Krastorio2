@@ -442,7 +442,75 @@ data:extend(
 		subgroup = "production-machine",
 		order = "i[matter]-b[matter-assembler]",
 		place_result = "kr-matter-assembler"
-	}
+	},
+	-- -- --
+	-- Belts
+	-- -- --
+	-- Advanced
+	{
+		type = "item",
+		name = "kr-advanced-splitter",
+		localised_description = {"entity-description.splitter"},
+		icon = kr_entities_icons_path .. "transport-belts/advanced-transport-belt/advanced-splitter.png",
+		icon_size = 64,
+		subgroup = "belt",
+		order = "c[splitter]-c[advanced-splitter]",
+		place_result = "kr-advanced-splitter",
+		stack_size = 50
+	},
+	{
+		type = "item",
+		name = "kr-advanced-transport-belt",
+		icon = kr_entities_icons_path .. "transport-belts/advanced-transport-belt/advanced-transport-belt.png",
+		icon_size = 64,
+		subgroup = "belt",
+		order = "a[transport-belt]-c[advanced-transport-belt]",
+		place_result = "kr-advanced-transport-belt",
+		stack_size = 100
+	},	
+	{
+		type = "item",
+		name = "kr-advanced-underground-belt",
+		icon = kr_entities_icons_path .. "transport-belts/advanced-transport-belt/advanced-underground-belt.png",
+		icon_size = 64,
+		subgroup = "belt",
+		order = "b[underground-belt]-c[advanced-underground-belt]",
+		place_result = "kr-advanced-underground-belt",
+		stack_size = 50
+	},
+	-- Superior
+	{
+		type = "item",
+		name = "kr-superior-splitter",
+		localised_description = {"entity-description.splitter"},
+		icon = kr_entities_icons_path .. "transport-belts/superior-transport-belt/superior-splitter.png",
+		icon_size = 64,
+		subgroup = "belt",
+		order = "c[splitter]-c[superior-splitter]",
+		place_result = "kr-superior-splitter",
+		stack_size = 50
+	},
+	{
+		type = "item",
+		name = "kr-superior-transport-belt",
+		icon = kr_entities_icons_path .. "transport-belts/superior-transport-belt/superior-transport-belt.png",
+		icon_size = 64,
+		subgroup = "belt",
+		order = "a[transport-belt]-c[superior-transport-belt]",
+		place_result = "kr-superior-transport-belt",
+		stack_size = 100
+	},	
+	{
+		type = "item",
+		name = "kr-superior-underground-belt",
+		icon = kr_entities_icons_path .. "transport-belts/superior-transport-belt/superior-underground-belt.png",
+		icon_size = 64,
+		subgroup = "belt",
+		order = "b[underground-belt]-c[superior-underground-belt]",
+		place_result = "kr-superior-underground-belt",
+		stack_size = 50
+	}	
+	-- -- --
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

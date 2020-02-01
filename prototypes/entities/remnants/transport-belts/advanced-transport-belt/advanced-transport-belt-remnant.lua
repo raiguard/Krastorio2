@@ -2,7 +2,7 @@ data:extend(
 { 
 	{
 		type = "corpse",
-		name = "kr-advanced-underground-belt",
+		name = "kr-advanced-transport-belt-remnant",
 		icon = kr_entities_icons_path .. "transport-belts/advanced-transport-belt/advanced-transport-belt.png",
 		icon_size = 64,
 		flags = {"placeable-neutral", "not-on-map"},
@@ -15,7 +15,7 @@ data:extend(
 		time_before_removed = 60 * 60 * 15, -- 15 minutes
 		final_render_layer = "remnants",
 		remove_on_tile_placement = false,
-		animation =  make_rotated_animation_variations_from_sheet (8,
+		animation = make_rotated_animation_variations_from_sheet (8,
 		{
 			filename = kr_remnants_path .. "transport-belts/advanced-transport-belt/transport-belt/advanced-transport-belt-remnant.png",
 			line_length = 1,
@@ -28,7 +28,7 @@ data:extend(
 			shift = util.by_pixel(1, 0),
 			hr_version =
 			{
-				filename = kr_remnants_path .. "transport-belts/advanced-transport-belt/transport-belt/hr-k-transport-belt-remnant.png",
+				filename = kr_remnants_path .. "transport-belts/advanced-transport-belt/transport-belt/hr-advanced-transport-belt-remnant.png",
 				line_length = 1,
 				width = 106,
 				height = 102,

@@ -57,6 +57,17 @@ require("buildings/containers/big-containers/big-storage-container")
 -- -- Fluid storages
 require("buildings/fluid-storages/fluid-storage-1")
 require("buildings/fluid-storages/fluid-storage-2")
+-- -- Belts
+-- Advanced
+require("buildings/transport-belts/advanced-transport-belt/animation-set") -- Must be loaded before the belts set
+require("buildings/transport-belts/advanced-transport-belt/advanced-splitter")
+require("buildings/transport-belts/advanced-transport-belt/advanced-transport-belt")
+require("buildings/transport-belts/advanced-transport-belt/advanced-underground-belt")
+-- Superior
+require("buildings/transport-belts/superior-transport-belt/animation-set") -- Must be loaded before the belts set
+require("buildings/transport-belts/superior-transport-belt/superior-splitter")
+require("buildings/transport-belts/superior-transport-belt/superior-transport-belt")
+require("buildings/transport-belts/superior-transport-belt/superior-underground-belt")
 ---------------------------------------------------------------------------------------
 -- -- -- REMNANTS
 ---------------------------------------------------------------------------------------
@@ -67,6 +78,15 @@ require("remnants/kr-big-random-pipes-remnant")
 require("remnants/kr-medium-random-pipes-remnant")
 require("remnants/kr-water-pumpjack-remnant")
 require("remnants/matter-plant")
+-- -- Belts
+-- Advanced
+require("remnants/transport-belts/advanced-transport-belt/advanced-splitter-remnant")
+require("remnants/transport-belts/advanced-transport-belt/advanced-transport-belt-remnant")
+require("remnants/transport-belts/advanced-transport-belt/advanced-underground-belt-remnant")
+-- Superior
+require("remnants/transport-belts/superior-transport-belt/superior-splitter-remnant")
+require("remnants/transport-belts/superior-transport-belt/superior-transport-belt-remnant")
+require("remnants/transport-belts/superior-transport-belt/superior-underground-belt-remnant")
 ---------------------------------------------------------------------------------------
 -- -- -- VEHICLES
 ---------------------------------------------------------------------------------------

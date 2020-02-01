@@ -1,55 +1,3 @@
-kr_superior_transport_belt_animation_set = 
-{
-	animation_set =
-	{
-		filename = kr_entities_path .. "transport-belts/superior-transport-belt/superior-transport-belt.png",
-		priority = "extra-high",
-		width = 64,
-		height = 64,
-		frame_count = 32,
-		direction_count = 20,
-		hr_version =
-		{
-			filename = kr_entities_path .. "transport-belts/superior-transport-belt/hr-superior-transport-belt.png",
-			priority = "extra-high",
-			width = 128,
-			height = 128,
-			scale = 0.5,
-			frame_count = 32,
-			direction_count = 20
-		}
-	},
-
-	east_index = 1,
-	west_index = 2,
-	north_index = 3,
-	south_index = 4,
-
-	east_to_north_index = 5,
-	north_to_east_index = 6,
-
-	west_to_north_index = 7,
-	north_to_west_index = 8,
-
-	south_to_east_index = 9,
-	east_to_south_index = 10,
-
-	south_to_west_index = 11,
-	west_to_south_index = 12,
-
-	starting_south_index = 13,
-	ending_south_index = 14,
-
-	starting_west_index = 15,
-	ending_west_index = 16,
-
-	starting_north_index = 17,
-	ending_north_index = 18,
-
-	starting_east_index = 19,
-	ending_east_index = 20
-}
-
 data:extend(
 { 
 	{
@@ -79,10 +27,10 @@ data:extend(
 			},
 			persistent = true
 		},
-		animation_speed_coefficient = 32,
+		animation_speed_coefficient = 28,
 		animations =
 		{
-			filename = kr_entities_path .. "transport-belts/superior-transport-belt/superior-transport-belt.png",
+			filename = kr_entities_path .. "transport-belts/superior-transport-belt/transport-belt/superior-transport-belt.png",
 			priority = "extra-high",
 			width = 40,
 			height = 40,
@@ -90,7 +38,7 @@ data:extend(
 			direction_count = 12,
 			hr_version =
 			{
-				filename = kr_entities_path .. "transport-belts/superior-transport-belt/hr-superior-transport-belt.png",
+				filename = kr_entities_path .. "transport-belts/superior-transport-belt/transport-belt/hr-superior-transport-belt.png",
 				priority = "extra-high",
 				width = 128,
 				height = 128,
@@ -101,7 +49,7 @@ data:extend(
 		},
 		belt_animation_set = kr_superior_transport_belt_animation_set,
 		fast_replaceable_group = "transport-belt",
-		speed = 0.125,
+		speed = 0.1875,
 		connector_frame_sprites = transport_belt_connector_frame_sprites,
 		circuit_wire_connection_points = circuit_connector_definitions["belt"].points,
 		circuit_connector_sprites = circuit_connector_definitions["belt"].sprites,

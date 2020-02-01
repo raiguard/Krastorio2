@@ -33,7 +33,6 @@ krastorio.matter_func = {}
 function krastorio.matter_func.createMatterRecipe(args)
 
 	local _item = krastorio.items.getItem(args.item_name)
-	log(_item.name)
 	if _item then
 	
 		local true_item_type = _item.type

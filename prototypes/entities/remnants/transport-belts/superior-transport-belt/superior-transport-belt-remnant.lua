@@ -2,7 +2,7 @@ data:extend(
 { 
 	{
 		type = "corpse",
-		name = "kr-superior-underground-belt",
+		name = "kr-superior-transport-belt-remnant",
 		icon = kr_entities_icons_path .. "transport-belts/superior-transport-belt/superior-transport-belt.png",
 		icon_size = 64,
 		flags = {"placeable-neutral", "not-on-map"},
@@ -17,7 +17,7 @@ data:extend(
 		remove_on_tile_placement = false,
 		animation =  make_rotated_animation_variations_from_sheet (8,
 		{
-			filename = kr_remnants_path .. "transport-belts/superior-transport-belt/superior-transport-belt-remnant.png",
+			filename = kr_remnants_path .. "transport-belts/superior-transport-belt/transport-belt/superior-transport-belt-remnant.png",
 			line_length = 1,
 			width = 54,
 			height = 52,
@@ -28,7 +28,7 @@ data:extend(
 			shift = util.by_pixel(1, 0),
 			hr_version =
 			{
-				filename = kr_remnants_path .. "transport-belts/superior-transport-belt/hr-k-transport-belt-remnant.png",
+				filename = kr_remnants_path .. "transport-belts/superior-transport-belt/transport-belt/hr-superior-transport-belt-remnant.png",
 				line_length = 1,
 				width = 106,
 				height = 102,
