@@ -131,7 +131,7 @@ data:extend(
 	{
 		type = "technology",
 		name = "kr-advanced-fuel",
-		icon = kr_technologies_icons_path .. "bio-fuel.png",
+		icon = kr_technologies_icons_path .. "advanced-fuel.png",
 		icon_size = 128,
 		effects =
 		{
@@ -240,6 +240,63 @@ data:extend(
 			time = 60
 		}
     },
+	{
+		type = "technology",
+		name = "kr-advanced-tech-card",
+		icon = kr_technologies_icons_path .. "advanced-tech-card.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["advanced-tech-card"] or "advanced-tech-card"
+			}
+		},
+		prerequisites = {"kr-matter-tech-card"},
+		unit =
+		{
+			count = 1000,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"matter-tech-card", 1}
+			},
+			time = 45
+		}
+    },
+	{
+		type = "technology",
+		name = "kr-singularity-tech-card",
+		icon = kr_technologies_icons_path .. "singularity-tech-card.png",
+		icon_size = 128,
+		effects =
+		{			
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["singularity-research-data"] or "singularity-research-data"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["singularity-tech-card"] or "singularity-tech-card"
+			}
+		},
+		prerequisites = {"kr-advanced-tech-card"},
+		unit =
+		{
+			count = 1250,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"matter-tech-card", 1},
+				{"advanced-tech-card", 1}
+			},
+			time = 45
+		}
+    }
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

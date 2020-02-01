@@ -123,35 +123,6 @@ return
 	},
 	{
 		type = "recipe",
-		name = "heavy-water",
-		category = "chemistry",
-		icon = kr_fluids_icons_path  .. "heavy-water.png",
-		icon_size = 64,	
-		energy_required = 5,
-		enabled = false,
-		always_show_made_in = true,
-		always_show_products = true,
-		allow_productivity = true,
-		ingredients = 
-		{
-			{ type = "fluid", name = "water", amount = 100 }
-		},
-		results =
-		{
-			{ type = "fluid", name = "heavy-water", amount = 1 }
-		},
-		subgroup = "fluid-recipes",
-		order = "y06[heavy-water]",
-		crafting_machine_tint =
-		{
-			primary = {r = 0.405, g = 0.402, b = 1.000, a = 1.000}, 
-			secondary = {r = 0.391, g = 0.720, b = 1.000, a = 0.900}, 
-			tertiary = {r = 1.000, g = 1.000, b = 1.000, a = 0.500}, 
-			quaternary = {r = 1.000, g = 1.000, b = 1.000, a = 0.300} 
-		}
-	},
-	{
-		type = "recipe",
 		name = "enriched-iron",
 		category = "chemistry",
 		icon = kr_mip_icons_path .. "enriched-iron/enriched-iron.png",

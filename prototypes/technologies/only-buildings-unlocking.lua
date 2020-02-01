@@ -392,9 +392,6 @@ data:extend(
 			time = 30
 		}
     },
-	-----------------------------------------------------------------------
-	-- CHEMICAL TIER AND UPPER
-	-----------------------------------------------------------------------
 	{
 		type = "technology",
 		name = "kr-gas-power-station",
@@ -407,21 +404,22 @@ data:extend(
 				recipe = "kr-gas-power-station"
 			}
 		},
-		prerequisites = {"kr-fuel"},
+		prerequisites = {"oil-processing", "engine"},
 		unit =
 		{
-			count = 300,
+			count = 400,
 			ingredients = 
 			{
 				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
-				{"logistic-science-pack", 1},
-				{"chemical-science-pack", 1}
+				{"logistic-science-pack", 1}
 			},
 			time = 30
-		}
-		
+		}		
 	},
+	-----------------------------------------------------------------------
+	-- CHEMICAL TIER AND UPPER
+	-----------------------------------------------------------------------
 	{
 		type = "technology",
 		name = "kr-logistic-containers-1",

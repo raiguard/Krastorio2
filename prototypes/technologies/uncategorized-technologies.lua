@@ -186,6 +186,10 @@ data:extend(
 			{
 				type = "unlock-recipe",			
 				recipe = "kr-advanced-steam-turbine"
+			},			
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["heavy-water"] or "heavy-water"
 			},
 			{
 				type = "unlock-recipe",
@@ -198,7 +202,7 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = krastorio.recipes.changed_names["dt-fuel"] or "dt-fuel"
-			},
+			}			
 		},
 		prerequisites = {"advanced-electronics-2", "kr-lithium-processing", "nuclear-power"},
 		unit =
@@ -313,11 +317,7 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = krastorio.recipes.changed_names["biomethanol"] or "biomethanol"
-			},			
-			{
-				type = "unlock-recipe",
-				recipe = krastorio.recipes.changed_names["heavy-water"] or "heavy-water"
-			}			
+			}		
         },
         prerequisites = {"sulfur-processing", "kr-mineral-water-gathering", "kr-atmosphere-condensation"},
 		order = "d-a",
@@ -488,7 +488,34 @@ data:extend(
 			},
 			time = 45
 		}
-    }
+    },
+	{
+		type = "technology",
+		name = "kr-antimatter-reactor",
+		icon = kr_technologies_icons_path .. "antimatter-reactor.png",
+		icon_size = 128,
+		prerequisites = {"kr-fusion-energy", "kr-matter-processing"},
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-antimatter-reactor"
+			}
+		},
+		order = "g-f-z",
+		unit =
+		{
+			count = 3000,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"matter-tech-card", 1}				
+			},
+			time = 45
+		}
+	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

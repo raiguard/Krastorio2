@@ -38,5 +38,41 @@ return
 		},
 		result = "matter-tech-card",
 		result_count = 5
+	},
+	{
+		type = "recipe",
+		name = "advanced-tech-card",
+		energy_required = 20,
+		enabled = false,
+		ingredients =
+		{
+			{"wood", 1},
+		},
+		result = "advanced-tech-card",
+		result_count = 5
+	},
+	{
+		type = "recipe",
+		name = "singularity-research-data",
+		energy_required = 20,
+		enabled = false,
+		ingredients =
+		{
+			{"wood", 1},
+		},
+		result = "singularity-research-data",
+		result_count = 5
+	},	
+	{
+		type = "recipe",
+		name = "singularity-tech-card",
+		energy_required = 20,
+		enabled = false,
+		ingredients =
+		{
+			{"singularity-research-data", 10}
+		},
+		result = "singularity-tech-card",
+		result_count = 5
 	}
 }
