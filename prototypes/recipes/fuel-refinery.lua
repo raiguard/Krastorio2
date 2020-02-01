@@ -178,16 +178,15 @@ return
 		always_show_products = true,
 		allow_productivity = true,
 		ingredients =
-		{
-			{type="item", name="wood", amount=30},
-			{type="fluid", name="sulfuric-acid", amount=5, catalyst_amount = 5},
-			
-		},
-		results =
-		{ 
-			{type="item", name="coal", amount=10},
-			{type="fluid", name="biomethanol", amount=50}
-		},
+        {
+            {type="item", name="wood", amount=30},
+            {type="fluid", name="oxygen", amount=120, catalyst_amount = 120},
+            {type="fluid", name="steam", amount=120, catalyst_amount = 120}
+        },
+        results =
+        { 
+            {type="fluid", name="biomethanol", amount=60}
+        },
 		crafting_machine_tint =
 		{
 			primary = {r = 0.25, g = 0.53, b = 0.15, a = 0.000}, 

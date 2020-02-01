@@ -126,11 +126,19 @@ data:extend(
 	},
 	{
 		type = "virtual-signal",
-		name = "kr-energy",
-		icon = kr_signals_icons_path .. "energy.png",
+		name = "kr-energy-1",
+		icon = kr_signals_icons_path .. "energy_1.png",
 		icon_size = 64,
 		subgroup = "kr-special-signals",
-		order = "a[special-signals]-e[energy]"
+		order = "a[special-signals]-e[energy-1]"
+	},
+	{
+		type = "virtual-signal",
+		name = "kr-energy-2",
+		icon = kr_signals_icons_path .. "energy_2.png",
+		icon_size = 64,
+		subgroup = "kr-special-signals",
+		order = "a[special-signals]-e[energy-2]"
 	},
 	{
 		type = "virtual-signal",
@@ -187,6 +195,14 @@ data:extend(
 		icon_size = 64,
 		subgroup = "kr-special-signals-2",
 		order = "a[special-signals]-4[wtf]"
+	},
+	{
+		type = "virtual-signal",
+		name = "kr-heart",
+		icon = kr_signals_icons_path .. "heart.png",
+		icon_size = 64,
+		subgroup = "kr-special-signals-2",
+		order = "a[special-signals]-5[heart]"
 	},
 	{
 		type = "virtual-signal",

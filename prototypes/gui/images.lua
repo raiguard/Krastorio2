@@ -13,8 +13,8 @@ data:extend(
 		type     = "sprite",
 		name     = "kr-fuels-preview",
 		filename = kr_graphic_mod_path .. "gui/previews/fuels.png",
-		width    = 171,
-		height   = 67
+		width    = 286,
+		height   = 128
 	},
 	{
 		type     = "sprite",
