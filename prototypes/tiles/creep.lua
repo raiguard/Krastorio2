@@ -181,7 +181,7 @@ data:extend(
 		mined_sound = { filename = kr_tiles_sounds_path .. "creep-deconstruction.ogg" },
 		collision_mask = {"ground-tile"},
 		walking_speed_modifier = 0.5,
-		layer = 99,
+		layer = 59,
 		transition_overlay_layer_offset = 9,
 		decorative_removal_probability = 1,
 		variants = tile_variations_template
