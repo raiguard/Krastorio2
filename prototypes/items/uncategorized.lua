@@ -239,6 +239,33 @@ data:extend(
 	},
 	{
 		type = "item",
+		name = "imersium-plate",
+		icon = kr_icons_path .. "imersium-plate.png",
+		icon_size = 64,
+		subgroup = "intermediate-product",
+		order = "c-a2[imersium-plate]",
+		stack_size = 200
+	},
+	{
+		type = "item",
+		name = "imersium-gear-wheel",
+		icon = kr_icons_path .. "imersium-gear-wheel.png",
+		icon_size = 64,
+		subgroup = "intermediate-product",
+		order = "d-a3[imersium-gear-wheel]",
+		stack_size = 200
+	},
+	{
+		type = "item",
+		name = "imersium-beam",
+		icon = kr_icons_path .. "imersium-beam.png",
+		icon_size = 64,
+		subgroup = "intermediate-product",
+		order = "d-a3[imersium-beam]",
+		stack_size = 200
+	},
+	{
+		type = "item",
 		name = "kr-void",
 		icon = kr_icons_path .. "void.png",
 		flags = {"hidden"},		
