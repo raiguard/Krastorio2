@@ -532,7 +532,105 @@ return
 			{"wood", 1}					
 		},
 		result = "kr-antimatter-reactor"
+    },
+	---
+	-- Belts
+	---
+	-- Advanced
+	{
+		type = "recipe",
+		name = "kr-advanced-splitter",
+		category = "crafting-with-fluid",
+		energy_required = 2,
+		enabled = false,
+		ingredients =
+		{
+			{"express-splitter", 1},
+			{"steel-gear-wheel", 10},	
+			{"rare-metals", 5},			
+			{type = "fluid", name = "sulfuric-acid", amount = 50, catalyst_amount = 50}	
+		},
+		result = "kr-advanced-splitter"
+    },
+	{
+		type = "recipe",
+		name = "kr-advanced-transport-belt",
+		category = "crafting-with-fluid",
+		energy_required = 0.5,
+		enabled = false,
+		ingredients =
+		{
+			{"express-transport-belt", 1},	
+			{"steel-gear-wheel", 20},
+			{"rare-metals", 2},			
+			{type = "fluid", name = "sulfuric-acid", amount = 50, catalyst_amount = 50}				
+		},
+		result = "kr-advanced-transport-belt"
+    },	
+	{
+		type = "recipe",
+		name = "kr-advanced-underground-belt",
+		category = "crafting-with-fluid",
+		energy_required = 2,
+		enabled = false,
+		ingredients =
+		{
+			{"express-underground-belt", 2},	
+			{"steel-gear-wheel", 40},
+			{"rare-metals", 5},			
+			{type = "fluid", name = "sulfuric-acid", amount = 50, catalyst_amount = 50}				
+		},
+		result = "kr-advanced-underground-belt",
+		result_count = 2
+    },
+	-- Superior
+	{
+		type = "recipe",
+		name = "kr-superior-splitter",
+		category = "crafting-with-fluid",
+		energy_required = 2,
+		enabled = false,
+		ingredients =
+		{
+			{"kr-advanced-splitter", 1},
+			{"processing-unit", 10},	
+			{"wood", 5},			
+			{type = "fluid", name = "nitric-acid", amount = 50, catalyst_amount = 50}	
+		},
+		result = "kr-superior-splitter"
+    },
+	{
+		type = "recipe",
+		name = "kr-superior-transport-belt",
+		category = "crafting-with-fluid",
+		energy_required = 0.5,
+		enabled = false,
+		ingredients =
+		{
+			{"kr-advanced-transport-belt", 1},	
+			{"steel-gear-wheel", 40},
+			{"wood", 2},			
+			{type = "fluid", name = "nitric-acid", amount = 50, catalyst_amount = 50}				
+		},
+		result = "kr-superior-transport-belt"
+    },
+	{
+		type = "recipe",
+		name = "kr-superior-underground-belt",
+		category = "crafting-with-fluid",
+		energy_required = 2,
+		enabled = false,
+		ingredients =
+		{
+			{"kr-advanced-underground-belt", 2},	
+			{"steel-gear-wheel", 80},
+			{"wood", 5},			
+			{type = "fluid", name = "nitric-acid", amount = 50, catalyst_amount = 50}				
+		},
+		result = "kr-superior-underground-belt",
+		result_count = 2
     }
+	---
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

@@ -454,7 +454,7 @@ data:extend(
 		icon = kr_entities_icons_path .. "transport-belts/advanced-transport-belt/advanced-splitter.png",
 		icon_size = 64, icon_mipmaps = 4,
 		subgroup = "belt",
-		order = "c[splitter]-c[advanced-splitter]",
+		order = "c[splitter]-d[advanced-splitter]",
 		place_result = "kr-advanced-splitter",
 		stack_size = 50
 	},
@@ -464,7 +464,7 @@ data:extend(
 		icon = kr_entities_icons_path .. "transport-belts/advanced-transport-belt/advanced-transport-belt.png",
 		icon_size = 64, icon_mipmaps = 4,
 		subgroup = "belt",
-		order = "a[transport-belt]-c[advanced-transport-belt]",
+		order = "a[transport-belt]-d[advanced-transport-belt]",
 		place_result = "kr-advanced-transport-belt",
 		stack_size = 100
 	},	
@@ -474,7 +474,7 @@ data:extend(
 		icon = kr_entities_icons_path .. "transport-belts/advanced-transport-belt/advanced-underground-belt.png",
 		icon_size = 64, icon_mipmaps = 4,
 		subgroup = "belt",
-		order = "b[underground-belt]-c[advanced-underground-belt]",
+		order = "b[underground-belt]-d[advanced-underground-belt]",
 		place_result = "kr-advanced-underground-belt",
 		stack_size = 50
 	},
@@ -486,7 +486,7 @@ data:extend(
 		icon = kr_entities_icons_path .. "transport-belts/superior-transport-belt/superior-splitter.png",
 		icon_size = 64, icon_mipmaps = 4,
 		subgroup = "belt",
-		order = "c[splitter]-c[superior-splitter]",
+		order = "c[splitter]-e[superior-splitter]",
 		place_result = "kr-superior-splitter",
 		stack_size = 50
 	},
@@ -496,7 +496,7 @@ data:extend(
 		icon = kr_entities_icons_path .. "transport-belts/superior-transport-belt/superior-transport-belt.png",
 		icon_size = 64, icon_mipmaps = 4,
 		subgroup = "belt",
-		order = "a[transport-belt]-c[superior-transport-belt]",
+		order = "a[transport-belt]-e[superior-transport-belt]",
 		place_result = "kr-superior-transport-belt",
 		stack_size = 100
 	},	
@@ -506,7 +506,7 @@ data:extend(
 		icon = kr_entities_icons_path .. "transport-belts/superior-transport-belt/superior-underground-belt.png",
 		icon_size = 64, icon_mipmaps = 4,
 		subgroup = "belt",
-		order = "b[underground-belt]-c[superior-underground-belt]",
+		order = "b[underground-belt]-e[superior-underground-belt]",
 		place_result = "kr-superior-underground-belt",
 		stack_size = 50
 	}	

@@ -1,7 +1,7 @@
 
 krastorio_utils.log = {}
 krastorio_utils.inspect = require("inspect")
-krastorio_utils.log.enable = true
+krastorio_utils.log.enabled = true
 
 --[[ Level number and type:
 	INFO    <=1 -- information message (for dev)
@@ -12,46 +12,44 @@ krastorio_utils.log.enable = true
 ]]-- 
 
 function krastorio_utils.log.disableLogs()
-	krastorio_utils.log.enable = false
+	krastorio_utils.log.enabled = false
 end
 
 function krastorio_utils.log.enableLogs()
-	krastorio_utils.log.enable = true
+	krastorio_utils.log.enabled = true
 end
 
 -- @ txt
 function krastorio_utils.log.info(txt)
-	if krastorio_utils.log.enable then
+	if krastorio_utils.log.enabled then
 		return krastorio_utils.log._(txt, "INFO")
 	end
 end
 
 -- @ txt
 function krastorio_utils.log.config(txt)
-	if krastorio_utils.log.enable then
+	if krastorio_utils.log.enabled then
 		return krastorio_utils.log._(txt, "CONFIG")
 	end
 end
 
 -- @ txt
 function krastorio_utils.log.warning(txt)
-	if krastorio_utils.log.enable then
+	if krastorio_utils.log.enabled then
 		return krastorio_utils.log._(txt, "WARNING")
 	end
 end
 
 -- @ txt
 function krastorio_utils.log.error(txt)
-	if krastorio_utils.log.enable then
+	if krastorio_utils.log.enabled then
 		return krastorio_utils.log._(txt, "ERROR")
 	end
 end
 
 -- @ txt
 function krastorio_utils.log.severe(txt)
-	if krastorio_utils.log.enable then
-		return krastorio_utils.log._(txt, "SEVERE")
-	end
+	return krastorio_utils.log._(txt, "SEVERE")
 end
 
 -- @ level

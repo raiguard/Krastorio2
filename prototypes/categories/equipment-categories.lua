@@ -13,8 +13,14 @@ data:extend(
 	{
 		type = "item-subgroup",
 		group = "combat",
-		name = "vehicle-motor",
+		name = "vehicle-equipment",
 		order = "e-e3"		
+    },
+	{
+		type = "item-subgroup",
+		group = "combat",
+		name = "vehicle-motor",
+		order = "e-e4"		
     },
 	-- -- Group
 	-- New universal equipment category (all grids can use this)

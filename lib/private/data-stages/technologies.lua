@@ -242,6 +242,9 @@ function krastorio.technologies.addPrerequisite(technology_name, prerequisite_na
 			end
 		end
 	else
+		if type(technology_name) == "table" then
+			technology_name = technology_name[1]
+		end
 		krastorio_utils.log.write(4, string.format("Can't add prerequisite %s, on technology %s, because technology %s don't exist.", prerequisite_name, technology_name, prerequisite_name))
 	end
 	return false

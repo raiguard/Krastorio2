@@ -104,17 +104,20 @@ end
 -- -- END CHANGING (this lines must remain at the end of file)
 
 -- Apply basic tech card to all technologies with automation science pack (T1 tier)
+krastorio_utils.log.disableLogs()
 for technology_name, technology in pairs(data.raw.technology) do
 	if krastorio.technologies.hasIngredient(technology_name, "automation-science-pack") then
 		krastorio.technologies.addResearchUnitIngredient(technology_name, "basic-tech-card")
 	end
 end
+krastorio_utils.log.enableLogs()
 
 -- Remove basic tech card to all technologies of T2 tier
 for technology_name, technology in pairs(data.raw.technology) do
 	if 
 		krastorio.technologies.hasIngredient(technology_name, "production-science-pack") or
 		krastorio.technologies.hasIngredient(technology_name, "utility-science-pack") or
+		krastorio.technologies.hasIngredient(technology_name, "space-science-pack") or
 		krastorio.technologies.hasIngredient(technology_name, "matter-tech-card")
 	then
 		krastorio.technologies.removeResearchUnitIngredient(technology_name, "basic-tech-card")

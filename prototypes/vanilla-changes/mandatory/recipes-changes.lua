@@ -132,7 +132,7 @@ for name, technology in pairs(data.raw.technology) do
 end	
 
 -- Lamp
-krastorio.recipes.convertIngredient("small-lamp", "electronic-circuit", "glass")
+krastorio.recipes.convertIngredient("small-lamp", "automation-core", "glass")
 
 -- Assembling machine tier 1
 krastorio.recipes.replaceIngredient("assembling-machine-1", "iron-plate", {"iron-beam", 4})
@@ -148,16 +148,25 @@ krastorio.recipes.replaceIngredient("underground-belt", "iron-plate", {"iron-bea
 
 -- Splitter (Yellow tier 1)
 krastorio.recipes.replaceIngredient("splitter", "iron-plate", {"iron-gear-wheel", 5})
-krastorio.recipes.replaceIngredient("splitter", "electronic-circuit", {"automation-core", 1})
+krastorio.recipes.replaceIngredient("splitter", "automation-core", {"automation-core", 1})
 
 -- Fast belt (Red tier 2)
-krastorio.recipes.convertIngredient("fast-transport-belt", "iron-gear-wheel", "steel-gear-wheel")
+-- krastorio.recipes.convertIngredient("fast-transport-belt", "iron-gear-wheel", "steel-gear-wheel")
 
 -- Fast underground belt (Red tier 2)
-krastorio.recipes.convertIngredient("fast-underground-belt", "iron-gear-wheel", "steel-gear-wheel")
+-- krastorio.recipes.convertIngredient("fast-underground-belt", "iron-gear-wheel", "steel-gear-wheel")
 
 -- Fast splitter (Red tier 2)
-krastorio.recipes.convertIngredient("fast-splitter", "iron-gear-wheel", "steel-gear-wheel")
+-- krastorio.recipes.convertIngredient("fast-splitter", "iron-gear-wheel", "steel-gear-wheel")
+
+-- Express belt (Red tier 3)
+krastorio.recipes.convertIngredient("express-transport-belt", "iron-gear-wheel", "steel-gear-wheel")
+
+-- Express underground belt (Red tier 3)
+krastorio.recipes.convertIngredient("express-underground-belt", "iron-gear-wheel", "steel-gear-wheel")
+
+-- Express splitter (Red tier 3)
+krastorio.recipes.convertIngredient("express-splitter", "iron-gear-wheel", "steel-gear-wheel")
 
 -- Storage tank
 krastorio.recipes.replaceIngredient("storage-tank", "iron-plate", {"iron-plate", 10})

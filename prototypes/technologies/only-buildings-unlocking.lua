@@ -569,6 +569,75 @@ data:extend(
 			time = 60
 		}
     },
+	{
+		type = "technology",
+		name = "kr-logistic-4",
+		icon = kr_technologies_icons_path .. "logistics-4.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-advanced-splitter"
+			},
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-advanced-transport-belt"
+			},
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-advanced-underground-belt"
+			}
+		},
+		prerequisites = {"logistics-3"},
+		unit =
+		{
+			count = 1000,
+			ingredients = 
+			{
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1}
+			},
+			time = 30
+		}
+    },
+	{
+		type = "technology",
+		name = "kr-logistic-5",
+		icon = kr_technologies_icons_path .. "logistics-5.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-superior-splitter"
+			},
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-superior-transport-belt"
+			},
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-superior-underground-belt"
+			}
+		},
+		prerequisites = {"kr-logistic-4"},
+		unit =
+		{
+			count = 1500,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"science-science-pack", 1},
+				{"advanced-science-pack", 1}
+			},
+			time = 30
+		}
+    },
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

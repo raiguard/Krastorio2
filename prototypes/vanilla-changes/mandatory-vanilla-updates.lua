@@ -21,7 +21,8 @@ local modifications =
 	"smelting-overmodule-fix", -- Multiply smelting recipes stat for fix overmodule bug
 	"spawner-changes",         -- Modify spawners sprite	
 	"vanilla-lab-changes",     -- Modify stat and accepted science packs of vanilla lab
-	"fluids-changes"           -- Add some new properties to vanilla fluids
+	"fluids-changes",          -- Add some new properties to vanilla fluids
+	"next-upgrades"            -- Setup entity upgrates
 }
 
 -- Application of the modifications

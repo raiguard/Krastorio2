@@ -80,11 +80,14 @@ krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
 ---------------------------------------------------------------------------
 local scripts_path = "compatibility-scripts/data-final-fixes/"
 require(scripts_path .. "aai-industry")
+require(scripts_path .. "aai-vehicles-chaingunner")
 require(scripts_path .. "aai-vehicles-hauler")
 require(scripts_path .. "aircraft")
+require(scripts_path .. "DeadlockLargerLamp")
 require(scripts_path .. "Hovercrafts")
 -- Pyanodons
 require(scripts_path .. "Pyanodon")
 require(scripts_path .. "realistic-electric-trains")
 require(scripts_path .. "space-exploration")
+require(scripts_path .. "vtk-armor-plating")
 ---------------------------------------------------------------------------
