@@ -40,11 +40,11 @@ data:extend(
 			}
 		},
 		collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
-		selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-		animation_speed_coefficient = 28,
+		selection_box = {{-0.5, -0.5}, {0.5, 0.5}},		
 		belt_animation_set = kr_superior_transport_belt_animation_set,
 		fast_replaceable_group = "transport-belt",
 		speed = 0.1875,
+		animation_speed_coefficient = 30,
 		structure =
 		{
 			direction_in =

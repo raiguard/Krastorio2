@@ -20,7 +20,6 @@ require("buildings/fluid-burner")
 require("buildings/fuel-refinery")
 require("buildings/fusion-reactor")
 require("buildings/greenhouse")
-require("buildings/loaders")
 require("buildings/quarry-drill")
 require("buildings/research-server")
 require("buildings/sentinel")
@@ -68,6 +67,8 @@ require("buildings/transport-belts/superior-transport-belt/animation-set") -- Mu
 require("buildings/transport-belts/superior-transport-belt/superior-splitter")
 require("buildings/transport-belts/superior-transport-belt/superior-transport-belt")
 require("buildings/transport-belts/superior-transport-belt/superior-underground-belt")
+-- Loaders
+require("buildings/loaders") -- Must be required after belts
 ---------------------------------------------------------------------------------------
 -- -- -- REMNANTS
 ---------------------------------------------------------------------------------------

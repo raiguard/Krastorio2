@@ -642,3 +642,9 @@ data:extend(
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 })
+
+-- Loader recipes
+if krastorio.general.getSafeSettingValue("kr-loaders") then
+	krastorio.technologies.addUnlockRecipe("kr-logistic-4", "kr-advanced-loader")
+	krastorio.technologies.addUnlockRecipe("kr-logistic-5", "kr-superior-loader")
+end

@@ -18,18 +18,18 @@ data:extend(
 			}
 		},
 		collision_box = {{-0.9, -0.4}, {0.9, 0.4}},
-		selection_box = {{-0.9, -0.5}, {0.9, 0.5}},
-		animation_speed_coefficient = 28,
+		selection_box = {{-0.9, -0.5}, {0.9, 0.5}},		
 		structure_animation_speed_coefficient = 1.2,
 		structure_animation_movement_cooldown = 10,
 		belt_animation_set = kr_superior_transport_belt_animation_set,
 		fast_replaceable_group = "transport-belt",
 		speed = 0.1875,
+		animation_speed_coefficient = 30,
 		structure =
 		{
 			north =
 			{
-				filename = kr_entities_path .. "transport-belts/superior-transport-belt/superior-splitter-north.png",
+				filename = kr_entities_path .. "transport-belts/superior-transport-belt/splitter/superior-splitter-north.png",
 				frame_count = 32,
 				line_length = 8,
 				priority = "extra-high",

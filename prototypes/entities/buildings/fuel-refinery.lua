@@ -35,8 +35,8 @@ data:extend(
 			},
 			{
 				filename = kr_entities_path .. "fuel-refinery/fuel-refinery-shadow.png",
-				width = 175,
-				height = 110,
+				width = 156,
+				height = 141,
 				frame_count = 1,
 				shift = util.by_pixel(31.5, 11),
 				draw_as_shadow = true,

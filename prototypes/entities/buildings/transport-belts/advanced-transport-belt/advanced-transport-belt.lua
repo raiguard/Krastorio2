@@ -26,8 +26,7 @@ data:extend(
 				volume = 0.4
 			},
 			persistent = true
-		},
-		animation_speed_coefficient = 32,
+		},		
 		animations =
 		{
 			filename = kr_entities_path .. "transport-belts/advanced-transport-belt/transport-belt/advanced-transport-belt.png",
@@ -51,6 +50,7 @@ data:extend(
 		fast_replaceable_group = "transport-belt",
 		next_upgrade = "kr-superior-transport-belt",
 		speed = 0.125,
+		animation_speed_coefficient = 28,
 		connector_frame_sprites = transport_belt_connector_frame_sprites,
 		circuit_wire_connection_points = circuit_connector_definitions["belt"].points,
 		circuit_connector_sprites = circuit_connector_definitions["belt"].sprites,

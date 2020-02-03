@@ -1,3 +1,5 @@
+local color = require(kr_path .. "lib/private/data-stages/colorRGB")
+
 if krastorio.general.getSafeSettingValue("kr-loaders") then
 
 	-- Variable utils
@@ -6,19 +8,20 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 		[1] = "kr-loader",
 		[2] = "kr-fast-loader",
 		[3] = "kr-express-loader",
-		[4] = "kr-superior-loader"
+		[4] = "kr-advanced-loader",
+		[5] = "kr-superior-loader"
 	}
-	local kr_loader_path = kr_entities_path .. "loaders/"
 
 	-- ENTITY
 
-	function kr_loader(data)
+	function createKrastorioLoader(data)
 		local name = data.name
 		local speed = data.speed
 		local icon = data.icon
 		local belt_animation_set = data.belt_animation_set
 		local order = data.order
 		local upgrade = data.upgrade or nil
+		local loader_tint = data.tint or {r=1.0, g=1.0, b=1.0}
 
 		return 
 		{
@@ -55,43 +58,119 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 			{
 				direction_in =
 				{
-					sheet =
+					sheets = 
 					{
-						filename = kr_loader_path .. name .. "/" .. name .. ".png",
-						priority = "extra-high",
-						shift = {0.15625, 0.0703125},
-						width = 53,
-						height = 43,
-						y = 43,
-						hr_version =
 						{
-							filename = kr_loader_path .. name .. "/" .. "hr-" .. name .. ".png",
+							filename = kr_entities_path .. "loader/kr-loader.png",
 							priority = "extra-high",
 							shift = {0.15625, 0.0703125},
-							width = 106,
-							height = 85,
-							y = 85,
-							scale = 0.5
+							width = 53,
+							height = 43,
+							y = 43,
+							hr_version =
+							{
+								filename = kr_entities_path .. "loader/hr-kr-loader.png",
+								priority = "extra-high",
+								shift = {0.15625, 0.0703125},
+								width = 106,
+								height = 85,
+								y = 85,
+								scale = 0.5
+							}
+						},
+						{
+							filename = kr_entities_path .. "loader/kr-loader-mask.png",
+							priority = "extra-high",
+							shift = {0.15625, 0.0703125},
+							width = 53,
+							height = 43,
+							y = 43,
+							tint = loader_tint,
+							hr_version =
+							{
+								filename = kr_entities_path .. "loader/hr-kr-loader-mask.png",
+								priority = "extra-high",
+								shift = {0.15625, 0.0703125},
+								width = 106,
+								height = 85,
+								y = 85,
+								scale = 0.5,
+								tint = loader_tint
+							}
+						},
+						{
+							filename = kr_entities_path .. "loader/kr-loader-rust.png",
+							priority = "extra-high",
+							shift = {0.15625, 0.0703125},
+							width = 53,
+							height = 43,
+							y = 43,
+							hr_version =
+							{
+								filename = kr_entities_path .. "loader/hr-kr-loader-rust.png",
+								priority = "extra-high",
+								shift = {0.15625, 0.0703125},
+								width = 106,
+								height = 85,
+								y = 85,
+								scale = 0.5
+							}
 						}
 					}
 				},
 				direction_out =
 				{
-					sheet =
+					sheets = 
 					{
-						filename = kr_loader_path .. name .. "/" .. name .. ".png",
-						priority = "extra-high",
-						shift = {0.15625, 0.0703125},
-						width = 53,
-						height = 43,
-						hr_version =
 						{
-							filename = kr_loader_path .. name .. "/" .. "hr-" .. name .. ".png",
+							filename = kr_entities_path .. "loader/kr-loader.png",
 							priority = "extra-high",
 							shift = {0.15625, 0.0703125},
-							width = 106,
-							height = 85,
-							scale = 0.5
+							width = 53,
+							height = 43,
+							hr_version =
+							{
+								filename = kr_entities_path .. "loader/hr-kr-loader.png",
+								priority = "extra-high",
+								shift = {0.15625, 0.0703125},
+								width = 106,
+								height = 85,
+								scale = 0.5
+							}
+						},
+						{
+							filename = kr_entities_path .. "loader/kr-loader-mask.png",
+							priority = "extra-high",
+							shift = {0.15625, 0.0703125},
+							width = 53,
+							height = 43,
+							tint = loader_tint,
+							hr_version =
+							{
+								filename = kr_entities_path .. "loader/hr-kr-loader-mask.png",
+								priority = "extra-high",
+								shift = {0.15625, 0.0703125},
+								width = 106,
+								height = 85,
+								scale = 0.5,
+								tint = loader_tint
+							}
+						},
+						{
+							filename = kr_entities_path .. "loader/kr-loader-rust.png",
+							priority = "extra-high",
+							shift = {0.15625, 0.0703125},
+							width = 53,
+							height = 43,
+							hr_version =
+							{
+								filename = kr_entities_path .. "loader/hr-kr-loader-rust.png",
+								priority = "extra-high",
+								shift = {0.15625, 0.0703125},
+								width = 106,
+								height = 85,
+								scale = 0.5
+							}
 						}
 					}
 				}
@@ -102,39 +181,50 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 
 	local entities = 
 	{
-		kr_loader
+		createKrastorioLoader
 		{
 			name = loader_names[1],
 			speed = data.raw["transport-belt"]["transport-belt"].speed,
 			upgrade = loader_names[2],
 			belt_animation_set = data.raw["transport-belt"]["transport-belt"].belt_animation_set,
-			icon = kr_entities_icons_path .. "loaders/" .. loader_names[1] .. ".png"
+			icon = kr_entities_icons_path .. "loaders/" .. loader_names[1] .. ".png",
+			tint = color.convert(249, 207, 70) -- 220, 190, 90
 		},
-		kr_loader
+		createKrastorioLoader
 		{
 			name = loader_names[2],
 			speed =	data.raw["transport-belt"]["fast-transport-belt"].speed,
 			upgrade = loader_names[3],
 			belt_animation_set = data.raw["transport-belt"]["fast-transport-belt"].belt_animation_set,
-			icon = kr_entities_icons_path .. "loaders/" .. loader_names[2] .. ".png"
+			icon = kr_entities_icons_path .. "loaders/" .. loader_names[2] .. ".png",
+			tint = color.convert(228, 24, 38) -- 210, 70, 80
 		},
-		kr_loader
+		createKrastorioLoader
 		{
 			name = loader_names[3], 
 			speed =	data.raw["transport-belt"]["express-transport-belt"].speed,
-			-- upgrade = loader_names[4], -- DECOMMENT WHEN SUPERIOR LOADER IS ADDED
+			upgrade = loader_names[4],
 			belt_animation_set = data.raw["transport-belt"]["express-transport-belt"].belt_animation_set,
-			icon = kr_entities_icons_path .. "loaders/" .. loader_names[3] .. ".png"
+			icon = kr_entities_icons_path .. "loaders/" .. loader_names[3] .. ".png",
+			tint = color.convert(90, 190, 220)
 		},
-		--[[
-		kr_loader
+		createKrastorioLoader
 		{
-			name = loader_names[4], 
-			speed =	data.raw["transport-belt"]["k-transport-belt"].speed,
-			belt_animation_set = data.raw["transport-belt"]["k-transport-belt"].belt_animation_set,
-			icon = kr_entities_icons_path .. "loaders/" .. loader_names[4] .. ".png"
+			name = loader_names[4],
+			upgrade = loader_names[5],			
+			speed =	data.raw["transport-belt"]["kr-advanced-transport-belt"].speed,
+			belt_animation_set = data.raw["transport-belt"]["kr-advanced-transport-belt"].belt_animation_set,
+			icon = kr_entities_icons_path .. "loaders/" .. loader_names[4] .. ".png",
+			tint = color.convert(76, 232, 48)
+		},
+		createKrastorioLoader
+		{
+			name = loader_names[5],			
+			speed =	data.raw["transport-belt"]["kr-superior-transport-belt"].speed,
+			belt_animation_set = data.raw["transport-belt"]["kr-superior-transport-belt"].belt_animation_set,
+			icon = kr_entities_icons_path .. "loaders/" .. loader_names[5] .. ".png",
+			tint = color.convert(151, 34, 191)
 		}
-		--]]
 	}
 	data:extend(entities)
 	

@@ -6,7 +6,8 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 		[1] = "kr-loader",
 		[2] = "kr-fast-loader",
 		[3] = "kr-express-loader",
-		[4] = "kr-superior-loader"
+		[4] = "kr-advanced-loader",
+		[5] = "kr-superior-loader"
 	}
 	
 	-- ITEMS
@@ -45,13 +46,16 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 			name = loader_names[3],
 			order = "d[loader]-a3["..loader_names[3].."]",
 		},
-		--[[
 		kr_loader_item
 		{
 			name = loader_names[4],
 			order = "d[loader]-a4["..loader_names[4].."]",
+		},
+		kr_loader_item
+		{
+			name = loader_names[5],
+			order = "d[loader]-a5["..loader_names[5].."]",
 		}
-		--]]
 	}
 	data:extend(items)
 	

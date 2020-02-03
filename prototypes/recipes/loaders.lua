@@ -6,7 +6,8 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 		[1] = "kr-loader",
 		[2] = "kr-fast-loader",
 		[3] = "kr-express-loader",
-		[4] = "kr-superior-loader"
+		[4] = "kr-advanced-loader",
+		[5] = "kr-superior-loader"
 	}
 
 	-- RECIPES
@@ -60,17 +61,28 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 				{type = "fluid", name = "lubricant", amount = 40}
 			}
 		},
-		--[[
 		kr_loader_recipe
 		{
 			name = loader_names[4],
+			category = "crafting-with-fluid",
 			ingredients = 
 			{
-				{"superior-transport-belt", 1},
-				{"kr-express-loader", 2}
+				{"kr-advanced-transport-belt", 1},
+				{"kr-express-loader", 2},
+				{type = "fluid", name = "sulfuric-acid", amount = 50}
+			}
+		},
+		kr_loader_recipe
+		{
+			name = loader_names[5],
+			category = "crafting-with-fluid",
+			ingredients = 
+			{
+				{"kr-superior-transport-belt", 1},
+				{"kr-advanced-loader", 2},
+				{type = "fluid", name = "nitric-acid", amount = 25}
 			}
 		}
-		--]]
 	}
 	data:extend(recipes)
 	

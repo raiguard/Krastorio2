@@ -18,14 +18,14 @@ data:extend(
 			}
 		},
 		collision_box = {{-0.9, -0.4}, {0.9, 0.4}},
-		selection_box = {{-0.9, -0.5}, {0.9, 0.5}},
-		animation_speed_coefficient = 32,
+		selection_box = {{-0.9, -0.5}, {0.9, 0.5}},		
 		structure_animation_speed_coefficient = 1.2,
 		structure_animation_movement_cooldown = 10,
 		belt_animation_set = kr_advanced_transport_belt_animation_set,
 		fast_replaceable_group = "transport-belt",
 		next_upgrade = "kr-superior-splitter",
 		speed = 0.125,
+		animation_speed_coefficient = 28,
 		structure =
 		{
 			north =
