@@ -474,7 +474,7 @@ data:extend(
 				recipe = "kr-matter-assembler"
 			}
 		},
-		prerequisites = {"kr-matter-tech-card"},
+		prerequisites = {"kr-matter-tech-card", "kr-imersium-processing"},
 		order = "g-e-d",
 		unit =
 		{

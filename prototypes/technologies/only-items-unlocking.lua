@@ -242,6 +242,40 @@ data:extend(
     },
 	{
 		type = "technology",
+		name = "kr-imersium-processing",
+		icon = kr_technologies_icons_path .. "imersium-processing.png",
+		icon_size = 128,
+		effects =
+		{			
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["imersium-plate"] or "imersium-plate"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["imersium-gear-wheel"] or "imersium-gear-wheel"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["imersium-beam"] or "imersium-beam"
+			}
+		},
+		prerequisites = {"kr-advanced-tech-card"},
+		unit =
+		{
+			count = 750,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"matter-tech-card", 1}
+			},
+			time = 30
+		}
+    },
+	{
+		type = "technology",
 		name = "kr-advanced-tech-card",
 		icon = kr_technologies_icons_path .. "advanced-tech-card.png",
 		icon_size = 128,

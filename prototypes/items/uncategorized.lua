@@ -242,8 +242,8 @@ data:extend(
 		name = "imersium-plate",
 		icon = kr_icons_path .. "imersium-plate.png",
 		icon_size = 64,
-		subgroup = "intermediate-product",
-		order = "c-a2[imersium-plate]",
+		subgroup = "raw-material",
+		order = "e00-a2[imersium-plate]",
 		stack_size = 200
 	},
 	{
@@ -261,7 +261,7 @@ data:extend(
 		icon = kr_icons_path .. "imersium-beam.png",
 		icon_size = 64,
 		subgroup = "intermediate-product",
-		order = "d-a3[imersium-beam]",
+		order = "c-a3[imersium-beam]",
 		stack_size = 200
 	},
 	{
@@ -306,7 +306,7 @@ data:extend(
 			{ size = 64, filename = kr_mip_icons_path .. "enriched-iron/enriched-iron-2.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-material",
-		order = "e01[enriched-iron]",
+		order = "e05-a1[enriched-iron]",
 		stack_size = 200
     },	
 	{
@@ -322,7 +322,7 @@ data:extend(
 			{ size = 64, filename = kr_mip_icons_path .. "enriched-copper/enriched-copper-2.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-material",
-		order = "e02[enriched-copper]",
+		order = "e05-a2[enriched-copper]",
 		stack_size = 200
     },
 	{

@@ -501,7 +501,7 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"steel-beam", 10},
+			{"imersium-beam", 10},
 			{"kr-steel-pipe", 10},		
 			{"electronic-components", 10},				
 			{"ai-core", 5}					
@@ -515,7 +515,7 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"steel-beam", 4},
+			{"imersium-beam", 4},
 			{"kr-steel-pipe", 4},		
 			{"electronic-components", 10},			
 			{"ai-core", 3}					
@@ -529,7 +529,10 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"wood", 1}					
+			{"ai-core", 100},
+			{"electronic-components", 100},		
+			{"imersium-beam", 500},
+			{"imersium-plate", 500}			
 		},
 		result = "kr-antimatter-reactor"
     },
@@ -594,8 +597,8 @@ return
 		{
 			{"kr-advanced-splitter", 1},
 			{"processing-unit", 10},	
-			{"wood", 5},			
-			{type = "fluid", name = "nitric-acid", amount = 50, catalyst_amount = 50}	
+			{"imersium-gear-wheel", 10},			
+			{type = "fluid", name = "nitric-acid", amount = 25, catalyst_amount = 50}	
 		},
 		result = "kr-superior-splitter"
     },
@@ -608,9 +611,8 @@ return
 		ingredients =
 		{
 			{"kr-advanced-transport-belt", 1},	
-			{"steel-gear-wheel", 40},
-			{"wood", 2},			
-			{type = "fluid", name = "nitric-acid", amount = 50, catalyst_amount = 50}				
+			{"imersium-gear-wheel", 20},
+			{type = "fluid", name = "nitric-acid", amount = 25, catalyst_amount = 50}				
 		},
 		result = "kr-superior-transport-belt"
     },
@@ -623,8 +625,7 @@ return
 		ingredients =
 		{
 			{"kr-advanced-underground-belt", 2},	
-			{"steel-gear-wheel", 80},
-			{"wood", 5},			
+			{"imersium-gear-wheel", 40},	
 			{type = "fluid", name = "nitric-acid", amount = 50, catalyst_amount = 50}				
 		},
 		result = "kr-superior-underground-belt",

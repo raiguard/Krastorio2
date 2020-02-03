@@ -624,7 +624,7 @@ data:extend(
 				recipe = "kr-superior-underground-belt"
 			}
 		},
-		prerequisites = {"kr-logistic-4"},
+		prerequisites = {"kr-logistic-4", "kr-imersium-processing"},
 		unit =
 		{
 			count = 1500,

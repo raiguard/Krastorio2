@@ -79,5 +79,22 @@ return
 		},
 		result = "copper-plate",
 		result_count = 5 
+    },
+	{
+		type = "recipe",
+		name = "imersium-plate",
+		category = "smelting",
+		energy_required = 32,
+		enabled = false,
+		always_show_made_in = true,
+		always_show_products = true,
+		allow_productivity = true,
+		ingredients = 
+		{
+			{"imersite-powder", 5},
+			{"rare-metals", 5}
+		},
+		result = "imersium-plate",
+		result_count = 5 
     }
 }

@@ -375,7 +375,7 @@ data:extend(
 		icon = kr_entities_icons_path .. "advanced-steam-turbine.png",
 		icon_size = 64,
 		subgroup = "energy",
-		order = "f[nuclear-energy]-d2[advanced-steam-turbine]",
+		order = "f[nuclear-energy]-e2[advanced-steam-turbine]",
 		place_result = "kr-advanced-steam-turbine",
 		stack_size = 10
     },

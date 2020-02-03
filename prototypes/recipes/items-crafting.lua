@@ -146,6 +146,32 @@ return
 			{"imersite-crystal", 2}
 		},
 		result = "imersite-drill-head"
-    }
+    },
 	---
+	{
+		type = "recipe",
+		name = "imersium-gear-wheel",
+		energy_required = 0.5,
+		enabled = false,
+		allow_productivity = true,
+		ingredients =
+		{
+			{"imersium-plate", 2}
+		},
+		result = "imersium-gear-wheel",
+		result_count = 1
+	},
+	{
+		type = "recipe",
+		name = "imersium-beam",
+		energy_required = 3,
+		enabled = false,
+		allow_productivity = true,
+		ingredients =
+		{
+			{"imersium-plate", 2}
+		},
+		result = "imersium-beam",
+		result_count = 1
+	}
 }
