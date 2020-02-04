@@ -3,6 +3,61 @@ data:extend(
 -----------------------------------------------------------------------------------------------------------------
 --------------------------------------------------CHARACTER EQUIPMENTS-------------------------------------------
 ----------------------------------------------------------------------------------------------------------------- 
+	-- -- Armors
+	-- power armor mk3
+	{
+		type = "technology",
+		name = "kr-power-armor-mk3",
+		icon_size = 128,
+		icon = kr_technologies_icons_path .. "power-armor-mk3.png",
+		upgrade = false,
+		effects = 
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "power-armor-mk3"
+			}
+		},
+		prerequisites = {"power-armor-mk2"},
+		unit = 		
+		{
+			count = 1000,
+			ingredients = 
+			{
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"advanced-tech-card", 1}	
+			},
+			time = 60
+		}
+	},
+	-- power armor mk4
+	{
+		type = "technology",
+		name = "kr-power-armor-mk4",
+		icon_size = 128,
+		icon = kr_technologies_icons_path .. "power-armor-mk4.png",
+		upgrade = false,
+		effects = 
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "power-armor-mk4"
+			}
+		},
+		prerequisites = {"kr-power-armor-mk3", "kr-imersium-processing", "kr-singularity-tech-card"},
+		unit = 		
+		{
+			count = 1500,
+			ingredients = 
+			{
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"advanced-tech-card", 1}	
+			},
+			time = 90
+		}		
+	},
 	-- -- Exoskeletons
 	{
 		type = "technology",
@@ -213,7 +268,39 @@ data:extend(
 			},
 			time = 45
 		}
-	}
+	},
+	-- -- BATTERIES
+	{
+        type = "technology",
+        name = "kr-battery-mk3-equipment",
+        icon_size = 128,
+        icon = kr_technologies_icons_path .. "battery-mk3-equipment.png",
+        upgrade = false,
+        effects = 
+        {
+			{
+				type = "unlock-recipe",
+				recipe = "battery-mk3-equipment"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "big-battery-mk3-equipment"
+			}
+        },
+        prerequisites = {"kr-quarry-minerals-extraction", "kr-lithium-sulfur-battery", "battery-mk2-equipment", "utility-science-pack"},
+        unit =
+        {
+            count = 500,
+            ingredients = 
+            {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+                {"utility-science-pack", 1}
+            },
+            time = 60
+        }
+    }
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------- 

@@ -4,6 +4,38 @@ return
 -----------------------------------------------------------------------------------------------------------------
 --------------------------------------------------CHARACTER EQUIPMENTS-------------------------------------------
 ----------------------------------------------------------------------------------------------------------------- 
+	{
+		type = "recipe",
+		name = "power-armor-mk3",
+		enabled = false,
+		energy_required = 40,
+		ingredients = 
+		{
+			{"power-armor-mk2", 1},
+			{"speed-module-3", 25},
+			{"effectivity-module-3", 25},
+			{"electronic-components", 100}
+		},
+		result = "power-armor-mk3",
+		requester_paste_multiplier = 1
+	},
+	{
+		type = "recipe",
+		name = "power-armor-mk4",
+		enabled = false,
+		energy_required = 40,
+		category = "crafting-with-fluid",
+		ingredients = 
+		{
+			{"power-armor-mk3", 1},
+			{"ai-core", 40},			
+			{"imersium-plate", 40},
+			{"imersite-crystal", 10},
+			{type="fluid", name="nitric-acid", amount=50, catalyst_amount = 50}
+		},
+		result = "power-armor-mk4",
+		requester_paste_multiplier = 1
+	},
 	-- -- Exoskeletons
 	{
 		type = "recipe",
@@ -39,12 +71,14 @@ return
 		name = "imersite-night-vision-equipment",
 		enabled = false,
 		energy_required = 10,
+		category = "crafting-with-fluid",
 		ingredients =
 		{
 			{"night-vision-equipment", 1},
 			{"low-density-structure", 10},
 			{"advanced-circuit", 10},
-			{"imersite-crystal", 5}
+			{"imersite-crystal", 5},
+			{type="fluid", name="nitric-acid", amount=25, catalyst_amount = 25}
 		},
 		result = "imersite-night-vision-equipment"
 	},
@@ -103,7 +137,7 @@ return
 		ingredients =
 		{
 			{"battery-mk2-equipment", 2},
-			{"lithium-sulfur-battery", 2},
+			{"lithium-sulfur-battery", 4},
 			{"processing-unit", 1}
 		},
 		result = "battery-mk3-equipment"
@@ -131,7 +165,7 @@ return
 		ingredients =
 		{
 			{"big-battery-equipment", 2},
-			{"steel-plate", 4},
+			{"electronic-components", 4},
 			{"advanced-circuit", 1},
 		},
 		result = "big-battery-mk2-equipment"
@@ -215,7 +249,7 @@ return
 		ingredients =
 		{
 			{"solar-panel-equipment", 4},
-			{"steel-plate", 10}
+			{"electronic-components", 10}
 		},
 		result = "big-solar-panel-equipment"
 	}
