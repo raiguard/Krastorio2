@@ -5,12 +5,78 @@ return
 --------------------------------------------------CHARACTER EQUIPMENTS-------------------------------------------
 ----------------------------------------------------------------------------------------------------------------- 
 	-- -- Exoskeletons
-
+	{
+		type = "recipe",
+		name = "advanced-exoskeleton-equipment",
+		enabled = false,
+		energy_required = 10,
+		ingredients = 
+		{
+			{"exoskeleton-equipment", 1},
+			{"low-density-structure", 10},
+			{"advanced-circuit", 10},			
+			{"speed-module-2", 10}
+		},		
+		result = "advanced-exoskeleton-equipment"		
+	},
+	{
+		type = "recipe",
+		name = "superior-exoskeleton-equipment",
+		enabled = false,
+		energy_required = 10,
+		ingredients = 
+		{
+			{"advanced-exoskeleton-equipment", 1},
+			{"ai-core", 10},
+			{"imersium-plate", 25},
+			{"speed-module-3", 10}
+		},		
+		result = "superior-exoskeleton-equipment"		
+	},
 	-- -- Imersite night visor
-
+	{
+		type = "recipe",
+		name = "imersite-night-vision-equipment",
+		enabled = false,
+		energy_required = 10,
+		ingredients =
+		{
+			{"night-vision-equipment", 1},
+			{"low-density-structure", 10},
+			{"advanced-circuit", 10},
+			{"imersite-crystal", 5}
+		},
+		result = "imersite-night-vision-equipment"
+	},
 -----------------------------------------------------------------------------------------------------------------
 --------------------------------------------------VEHICLES EQUIPMENTS--------------------------------------------
 ----------------------------------------------------------------------------------------------------------------- 
+	{
+		type = "recipe",
+		name = "additional-engine",
+		energy_required = 20,
+		enabled = false,
+		ingredients =
+		{
+			{"electric-engine-unit", 2},
+			{"electronic-circuit", 5},
+			{"steel-plate", 5}
+		},
+		result = "additional-engine"
+    },
+	{
+		type = "recipe",
+		name = "advanced-additional-engine",
+		energy_required = 30,
+		enabled = false,
+		ingredients =
+		{
+			{"additional-engine", 2},
+			{"steel-plate", 5},
+			{"processing-unit", 1}			
+		},
+		result = "advanced-additional-engine"
+    },
 	{
 		type = "recipe",
 		name = "vehicle-roboport",

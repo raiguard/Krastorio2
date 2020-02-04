@@ -193,10 +193,6 @@ data:extend(
 			},
 			{
 				type = "unlock-recipe",
-				recipe = krastorio.recipes.changed_names["deuterium-oxide"] or "deuterium-oxide"
-			},
-			{
-				type = "unlock-recipe",
 				recipe = krastorio.recipes.changed_names["tritium"] or "tritium"
 			},
 			{

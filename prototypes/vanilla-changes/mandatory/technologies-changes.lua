@@ -85,6 +85,7 @@ krastorio.technologies.addUnlockRecipe("battery-equipment", "small-portable-gene
 krastorio.technologies.addUnlockRecipe("battery-mk2-equipment", "big-battery-mk2-equipment")
 
 krastorio.technologies.addUnlockRecipe(krastorio.technologies.getTechnologyThatUnlockRecipe("personal-roboport-equipment"), "vehicle-roboport")
+krastorio.technologies.addUnlockRecipe(krastorio.technologies.getTechnologyThatUnlockRecipe("electric-engine-unit"), "additional-engine")
 
 -- Removings
 

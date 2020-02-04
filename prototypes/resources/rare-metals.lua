@@ -25,7 +25,7 @@ data:extend(
 		{
 			name = "rare-metals",
 			order = "d",
-			base_density = 0.8,
+			base_density = 1.0,
 			base_spots_per_km2 = 0.75,
 			has_starting_area_placement = false,
 			random_spot_size_minimum = 0.25,

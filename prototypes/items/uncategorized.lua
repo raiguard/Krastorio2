@@ -428,15 +428,6 @@ data:extend(
 	},
 	{
 		type = "item",
-		name = "deuterium-oxide",
-		icon = kr_icons_path .. "deuterium-oxide.png",
-		icon_size = 64,
-		subgroup = "intermediate-product",
-		order = "p[deuterium-oxide]",
-		stack_size = 200
-    },
-	{
-		type = "item",
 		name = "tritium",
 		icon = kr_icons_path .. "tritium.png",
 		icon_size = 64,
