@@ -248,9 +248,9 @@ data:extend(
 {
   {
     type = "tile",
-    name = "black-reinforced-plate",
+    name = "kr-black-reinforced-plate",
     needs_correction = false,
-    minable = (not data.is_demo) and {mining_time = 0.1, result = "black-reinforced-plate"} or nil,
+    minable = (not data.is_demo) and {mining_time = 0.1, result = "kr-black-reinforced-plate"} or nil,
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
     collision_mask = {"ground-tile"},
     walking_speed_modifier = 1.75,
@@ -420,9 +420,9 @@ data:extend(
   
   {
     type = "tile",
-    name = "white-reinforced-plate",
+    name = "kr-white-reinforced-plate",
     needs_correction = false,
-    minable = (not data.is_demo) and {mining_time = 0.1, result = "white-reinforced-plate"} or nil,
+    minable = (not data.is_demo) and {mining_time = 0.1, result = "kr-white-reinforced-plate"} or nil,
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
     collision_mask = {"ground-tile"},
     walking_speed_modifier = 1.75,

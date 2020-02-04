@@ -154,8 +154,6 @@ data:extend(
 			time = 30
 		}
     },
-	
-	
 	---
 	{
 		type = "technology",
@@ -183,6 +181,51 @@ data:extend(
 			time = 30
 		}
     },
+	{
+		type = "technology",
+		name = "kr-military-5",
+		icon = kr_technologies_icons_path .. "military-5.png",
+		icon_size = 128,		
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["impulse-rifle"] or "impulse-rifle"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["impulse-rifle-ammo"] or "impulse-rifle-ammo"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["imersite-rounds-magazine"] or "imersite-rounds-magazine"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["heavy-rocket-launcher"] or "heavy-rocket-launcher"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["heavy-rocket"] or "heavy-rocket"
+			}
+		},
+		prerequisites = {"military-4", "kr-lithium-sulfur-battery", "kr-quarry-minerals-extraction", "personal-laser-defense-equipment"},
+		order = "g-d-d",
+		unit =
+		{
+			count = 500,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"military-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"utility-science-pack", 1}
+			},
+			time = 45
+		}
+	},
 	{
 		type = "technology",
 		name = "kr-ai-core",

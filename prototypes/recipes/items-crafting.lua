@@ -173,5 +173,72 @@ return
 		},
 		result = "imersium-beam",
 		result_count = 1
-	}
+	},	
+	{
+		type = "recipe",
+		name = "impulse-rifle",
+		energy_required = 30,
+		enabled = false,
+		ingredients =
+		{
+			{"steel-plate", 5},
+			{"low-density-structure", 5},
+			{"imersite-crystal", 1},
+			{"steel-gear-wheel", 1}
+		},
+		result = "impulse-rifle"
+    },	
+	{
+		type = "recipe",
+		name = "heavy-rocket-launcher",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"steel-plate", 5},
+			{"low-density-structure", 5},
+			{"steel-gear-wheel", 1},
+			{"processing-unit", 1}			
+		},
+		result = "heavy-rocket-launcher"
+    },	
+	{
+		type = "recipe",
+		name = "impulse-rifle-ammo",
+		energy_required = 5,
+		enabled = false,
+		ingredients =
+		{
+			{"lithium-sulfur-battery", 1},
+			{"imersite-crystal", 1}
+		},
+		result = "impulse-rifle-ammo"
+    },
+	{
+		type = "recipe",
+		name = "imersite-rounds-magazine",
+		enabled = false,
+		energy_required = 20,
+		ingredients =
+		{
+			{"imersite-powder", 2},
+			{"piercing-rounds-magazine", 1}
+		},
+		result = "imersite-rounds-magazine"
+    },	
+	{
+		type = "recipe",
+		name = "heavy-rocket",
+		energy_required = 30,
+		enabled = false,
+		ingredients =
+		{
+			{"explosives", 20},
+			{"steel-plate", 10},
+			{"rocket-fuel", 10},
+			{"plastic-bar", 10},			
+			{"processing-unit", 5}			
+		},
+		result = "heavy-rocket"
+    }
 }

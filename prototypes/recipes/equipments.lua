@@ -126,6 +126,20 @@ return
 		},
 		result = "nuclear-reactor-equipment"
 	},
+	-- antimatter-reactor-equipment
+	{
+		type = "recipe",
+		name = "antimatter-reactor-equipment",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"low-density-structure", 50},
+			{"imersium-plate", 100},
+			{"ai-core", 25}
+		},
+		result = "antimatter-reactor-equipment"
+	},
 	-- -- SOLAR PANELS (GENERATORS)
 	{
 		type = "recipe",

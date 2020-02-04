@@ -262,7 +262,7 @@ data:extend(
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "kr-water-pumpjack"
+				recipe = "kr-mineral-water-pumpjack"
 			}
 		},
 		unit =

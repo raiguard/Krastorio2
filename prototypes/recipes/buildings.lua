@@ -47,7 +47,7 @@ return
     },
 	{
 		type = "recipe",
-		name = "kr-water-pumpjack",
+		name = "kr-mineral-water-pumpjack",
 		energy_required = 60,
 		enabled = false,
 		ingredients =
@@ -57,7 +57,7 @@ return
 			{"steel-beam", 5},
 			{"pipe", 5}			
 		},
-		result = "kr-water-pumpjack"
+		result = "kr-mineral-water-pumpjack"
     },
 	{
 		type = "recipe",

@@ -65,12 +65,12 @@ data:extend(
     },	
     {
 		type = "item",
-		name = "kr-water-pumpjack",
-		icon =  kr_entities_icons_path .. "water-pumpjack.png",
+		name = "kr-mineral-water-pumpjack",
+		icon = kr_entities_icons_path .. "mineral-water-pumpjack.png",
 		icon_size = 64,
 		subgroup = "extraction-machine",
-		order = "b[fluids]-b[water-pumpjack]",
-		place_result = "kr-water-pumpjack",
+		order = "b[fluids]-b2[mineral-water-pumpjack]",
+		place_result = "kr-mineral-water-pumpjack",
 		stack_size = 50
     },	
 	{

@@ -2,15 +2,15 @@ data:extend(
 {
 	{
 		type = "mining-drill",
-		name = "kr-water-pumpjack",
-		icon = "__base__/graphics/icons/pumpjack.png",
-		icon_size = 32,
+		name = "kr-mineral-water-pumpjack",
+		icon = kr_entities_icons_path .. "mineral-water-pumpjack.png",
+		icon_size = 64,
 		flags = {"placeable-neutral", "player-creation"},
-		minable = {mining_time = 0.5, result = "kr-water-pumpjack"},
+		minable = {mining_time = 0.5, result = "kr-mineral-water-pumpjack"},
 		resource_categories = {"basic-fluid"},
 		max_health = 200,
 		dying_explosion = "medium-explosion",
-		corpse = "water-pumpjack-remnants",
+		corpse = "kr-mineral-water-pumpjack-remnant",
 		collision_box = {{ -1.2, -1.2}, {1.2, 1.2}},
 		selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},
 		drawing_box = {{-1.6, -2.5}, {1.5, 1.6}},
@@ -39,7 +39,7 @@ data:extend(
 		module_specification = { module_slots = 2 },
 		radius_visualisation_picture =
 		{
-			filename = kr_entities_path .. "water-pumpjack/water-pumpjack-radius-visualization.png",
+			filename = kr_entities_path .. "mineral-water-pumpjack/mineral-water-pumpjack-radius-visualization.png",
 			width = 12,
 			height = 12
 		},
@@ -50,14 +50,14 @@ data:extend(
 			sheets =
 			{
 				{
-					filename = kr_entities_path .. "water-pumpjack/water-pumpjack-base.png",
+					filename = kr_entities_path .. "mineral-water-pumpjack/mineral-water-pumpjack-base.png",
 					priority = "extra-high",
 					width = 131,
 					height = 137,
 					shift = util.by_pixel(-2.5, -4.5),
 					hr_version =
 					{
-						filename = kr_entities_path .. "water-pumpjack/hr-water-pumpjack-base.png",
+						filename = kr_entities_path .. "mineral-water-pumpjack/hr-mineral-water-pumpjack-base.png",
 						priority = "extra-high",
 						width = 261,
 						height = 273,
@@ -66,7 +66,7 @@ data:extend(
 					}
 				},
 				{
-					filename = kr_entities_path .. "water-pumpjack/water-pumpjack-base-shadow.png",
+					filename = kr_entities_path .. "mineral-water-pumpjack/mineral-water-pumpjack-base-shadow.png",
 					priority = "extra-high",
 					width = 110,
 					height = 111,
@@ -74,7 +74,7 @@ data:extend(
 					shift = util.by_pixel(6, 0.5),
 					hr_version =
 					{
-						filename = kr_entities_path .. "water-pumpjack/hr-water-pumpjack-base-shadow.png",
+						filename = kr_entities_path .. "mineral-water-pumpjack/hr-mineral-water-pumpjack-base-shadow.png",
 						width = 220,
 						height = 220,
 						scale = 0.5,
@@ -92,7 +92,7 @@ data:extend(
 				{
 					{
 						priority = "high",
-						filename = kr_entities_path .. "water-pumpjack/water-pumpjack-horsehead.png",
+						filename = kr_entities_path .. "mineral-water-pumpjack/mineral-water-pumpjack-horsehead.png",
 						line_length = 8,
 						width = 104,
 						height = 102,
@@ -102,7 +102,7 @@ data:extend(
 						hr_version =
 						{
 							priority = "high",
-							filename = kr_entities_path .. "water-pumpjack/hr-water-pumpjack-horsehead.png",
+							filename = kr_entities_path .. "mineral-water-pumpjack/hr-mineral-water-pumpjack-horsehead.png",
 							animation_speed = 0.5,
 							scale = 0.5,
 							line_length = 8,
@@ -114,7 +114,7 @@ data:extend(
 					},
 					{
 						priority = "high",
-						filename = kr_entities_path .. "water-pumpjack/water-pumpjack-horsehead-shadow.png",
+						filename = kr_entities_path .. "mineral-water-pumpjack/mineral-water-pumpjack-horsehead-shadow.png",
 						animation_speed = 0.5,
 						draw_as_shadow = true,
 						line_length = 8,
@@ -125,7 +125,7 @@ data:extend(
 						hr_version =
 						{
 							priority = "high",
-							filename = kr_entities_path .. "water-pumpjack/hr-water-pumpjack-horsehead-shadow.png",
+							filename = kr_entities_path .. "mineral-water-pumpjack/hr-mineral-water-pumpjack-horsehead-shadow.png",
 							animation_speed = 0.5,
 							draw_as_shadow = true,
 							line_length = 8,
