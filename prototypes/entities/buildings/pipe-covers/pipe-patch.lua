@@ -16,15 +16,15 @@ kr_pipe_path =
 	{
 		filename = kr_entities_path .. "pipe-patch/pipe-patch.png",
 		priority = "high",
-		width = 23,
-		height = 20,
+		width = 28,
+		height = 25,
 		shift = {0.01, -0.58},
 		hr_version =
 		{
 			filename = kr_entities_path .. "pipe-patch/hr-pipe-patch.png",
 			priority = "high",
-			width = 45,
-			height = 40,
+			width = 55,
+			height = 50,
 			scale = 0.5,
 			shift = {0.01, -0.58}
 		}

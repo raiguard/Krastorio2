@@ -44,23 +44,43 @@ data:extend(
 		{
 			picture =
 			{
-				sheet =
+				sheets =
 				{
-					filename = _fluid_storages_path .. "fluid-storage-2/fluid-storage-2.png",
-					priority = "extra-high",
-					frames = 1,
-					width = 213,
-					height = 213,
-					hr_version =
 					{
-						filename = _fluid_storages_path .. "fluid-storage-2/hr-fluid-storage-2.png",
+						filename = _fluid_storages_path .. "fluid-storage-2/fluid-storage-2.png",
 						priority = "extra-high",
 						frames = 1,
-						scale = 0.5,
-						width = 426,
-						height = 426
-					}
-				}
+						width = 213,
+						height = 213,
+						hr_version =
+						{
+							filename = _fluid_storages_path .. "fluid-storage-2/hr-fluid-storage-2.png",
+							priority = "extra-high",
+							frames = 1,
+							scale = 0.5,
+							width = 426,
+							height = 426
+						}
+					},
+					{
+						filename = _fluid_storages_path .. "fluid-storage-2/fluid-storage-2-sh.png",
+						priority = "extra-high",
+						frames = 1,
+						width = 213,
+						height = 213,
+						draw_as_shadow = true,
+						hr_version =
+						{
+							filename = _fluid_storages_path .. "fluid-storage-2/hr-fluid-storage-2-sh.png",
+							priority = "extra-high",
+							frames = 1,
+							scale = 0.5,
+							width = 426,
+							height = 426,
+							draw_as_shadow = true
+						}
+					},
+				},
 			},
 			fluid_background =
 			{
