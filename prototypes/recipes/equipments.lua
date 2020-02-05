@@ -288,9 +288,8 @@ return
 		ingredients = 
 		{
 			{"personal-laser-defense-equipment", 1},
-			{"processing-unit", 2},
-			{"lithium-sulfur-battery", 6},
-			{"low-density-structure", 6}
+			{"lithium-sulfur-battery", 5},
+			{"electronic-components", 50}
 		},
 		enabled = false,
 		result = "personal-laser-defense-mk2-equipment"		
@@ -358,7 +357,7 @@ return
 		energy_required = 40,
 		ingredients =
 		{
-			{"energy-shield-mk2-equipment", 6},
+			{"energy-shield-mk2-equipment", 10},
 			{"electronic-components", 40},
 			{"lithium-sulfur-battery", 10}
 		},
@@ -371,7 +370,7 @@ return
 		energy_required = 80,
 		ingredients =
 		{
-			{"energy-shield-mk3-equipment", 6},
+			{"energy-shield-mk3-equipment", 10},
 			{"ai-core", 10},
 			{"imersium-plate", 20}
 		},

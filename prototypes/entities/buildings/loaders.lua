@@ -17,18 +17,58 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 	function createKrastorioLoader(data)
 		local name = data.name
 		local speed = data.speed
-		local icon = data.icon
+		local icon = data.icon or kr_entities_icons_path .. "loaders/" .. name .. ".png"
+		local icon_size = data.icon_size or 32
 		local belt_animation_set = data.belt_animation_set
 		local order = data.order
 		local upgrade = data.upgrade or nil
 		local loader_tint = data.tint or {r=1.0, g=1.0, b=1.0}
+		local rust_layer_direction_in, rust_layer_direction_out = nil, nil
+		if data.apply_rust ~= false then
+			rust_layer_direction_in =
+			{
+				filename = kr_entities_path .. "loader/kr-loader-rust.png",
+				priority = "extra-high",
+				shift = {0.15625, 0.0703125},
+				width = 53,
+				height = 43,
+				y = 43,
+				hr_version =
+				{
+					filename = kr_entities_path .. "loader/hr-kr-loader-rust.png",
+					priority = "extra-high",
+					shift = {0.15625, 0.0703125},
+					width = 106,
+					height = 85,
+					y = 85,
+					scale = 0.5
+				}
+			}
+			rust_layer_direction_out =
+			{
+				filename = kr_entities_path .. "loader/kr-loader-rust.png",
+				priority = "extra-high",
+				shift = {0.15625, 0.0703125},
+				width = 53,
+				height = 43,
+				hr_version =
+				{
+					filename = kr_entities_path .. "loader/hr-kr-loader-rust.png",
+					priority = "extra-high",
+					shift = {0.15625, 0.0703125},
+					width = 106,
+					height = 85,
+					scale = 0.5
+				}
+			}
+		end
 
 		return 
 		{
 			type = "loader-1x1",
 			name = name,
 			icon = icon,
-			icon_size = 32,
+			icon_size = icon_size,
 			flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-build-while-moving"},
 			minable = {mining_time = 0.25, result = name},
 			max_health = 300,
@@ -98,24 +138,7 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 								tint = loader_tint
 							}
 						},
-						{
-							filename = kr_entities_path .. "loader/kr-loader-rust.png",
-							priority = "extra-high",
-							shift = {0.15625, 0.0703125},
-							width = 53,
-							height = 43,
-							y = 43,
-							hr_version =
-							{
-								filename = kr_entities_path .. "loader/hr-kr-loader-rust.png",
-								priority = "extra-high",
-								shift = {0.15625, 0.0703125},
-								width = 106,
-								height = 85,
-								y = 85,
-								scale = 0.5
-							}
-						}
+						rust_layer_direction_in
 					}
 				},
 				direction_out =
@@ -156,22 +179,7 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 								tint = loader_tint
 							}
 						},
-						{
-							filename = kr_entities_path .. "loader/kr-loader-rust.png",
-							priority = "extra-high",
-							shift = {0.15625, 0.0703125},
-							width = 53,
-							height = 43,
-							hr_version =
-							{
-								filename = kr_entities_path .. "loader/hr-kr-loader-rust.png",
-								priority = "extra-high",
-								shift = {0.15625, 0.0703125},
-								width = 106,
-								height = 85,
-								scale = 0.5
-							}
-						}
+						rust_layer_direction_out
 					}
 				}
 			},
@@ -187,7 +195,6 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 			speed = data.raw["transport-belt"]["transport-belt"].speed,
 			upgrade = loader_names[2],
 			belt_animation_set = data.raw["transport-belt"]["transport-belt"].belt_animation_set,
-			icon = kr_entities_icons_path .. "loaders/" .. loader_names[1] .. ".png",
 			tint = color.convert(249, 207, 70) -- 220, 190, 90
 		},
 		createKrastorioLoader
@@ -196,7 +203,6 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 			speed =	data.raw["transport-belt"]["fast-transport-belt"].speed,
 			upgrade = loader_names[3],
 			belt_animation_set = data.raw["transport-belt"]["fast-transport-belt"].belt_animation_set,
-			icon = kr_entities_icons_path .. "loaders/" .. loader_names[2] .. ".png",
 			tint = color.convert(228, 24, 38) -- 210, 70, 80
 		},
 		createKrastorioLoader
@@ -205,7 +211,6 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 			speed =	data.raw["transport-belt"]["express-transport-belt"].speed,
 			upgrade = loader_names[4],
 			belt_animation_set = data.raw["transport-belt"]["express-transport-belt"].belt_animation_set,
-			icon = kr_entities_icons_path .. "loaders/" .. loader_names[3] .. ".png",
 			tint = color.convert(90, 190, 220)
 		},
 		createKrastorioLoader
@@ -214,7 +219,6 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 			upgrade = loader_names[5],			
 			speed =	data.raw["transport-belt"]["kr-advanced-transport-belt"].speed,
 			belt_animation_set = data.raw["transport-belt"]["kr-advanced-transport-belt"].belt_animation_set,
-			icon = kr_entities_icons_path .. "loaders/" .. loader_names[4] .. ".png",
 			tint = color.convert(76, 232, 48)
 		},
 		createKrastorioLoader
@@ -222,7 +226,6 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 			name = loader_names[5],			
 			speed =	data.raw["transport-belt"]["kr-superior-transport-belt"].speed,
 			belt_animation_set = data.raw["transport-belt"]["kr-superior-transport-belt"].belt_animation_set,
-			icon = kr_entities_icons_path .. "loaders/" .. loader_names[5] .. ".png",
 			tint = color.convert(151, 34, 191)
 		}
 	}

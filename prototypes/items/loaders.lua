@@ -14,16 +14,18 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 
 	function kr_loader_item(data)
 		local name = data.name
+		local icon = data.icon or kr_entities_icons_path .. "loaders/" .. name .. ".png"
+		local icon_size = data.icon_size or 32
 		local subgroup = data.subgroup or "belt"
 		local order = data.order	
 		return 
 		{
 			type = "item",
 			name = name,
-			icon = kr_entities_icons_path .. "loaders/" .. name .. ".png",
-			icon_size = 32,
-			order = order,
+			icon = icon,
+			icon_size = icon_size,			
 			subgroup = subgroup,
+			order = order,
 			place_result = name,
 			stack_size = 50
 		}

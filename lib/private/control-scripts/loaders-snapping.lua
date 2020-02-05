@@ -8,6 +8,7 @@ local KRASTORIO_LOADERS =
 	["kr-loader"]          = true,
 	["kr-fast-loader"]     = true,
 	["kr-express-loader"]  = true,
+	["kr-advanced-loader"] = true,
 	["kr-superior-loader"] = true,
 	["kr-se-loader"]       = true
 }
@@ -49,6 +50,10 @@ local KRASTORIO_LOADER_BUILT_EVENT_FILTER =
     {
 		filter = "name", 
         name   = "kr-express-loader"
+    },
+	{
+		filter = "name", 
+        name   = "kr-advanced-loader"
     },
     {
 		filter = "name", 

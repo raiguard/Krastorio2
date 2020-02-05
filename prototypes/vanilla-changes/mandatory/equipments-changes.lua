@@ -100,6 +100,24 @@ data.raw["equipment-grid"]["medium-equipment-grid"].height = 6
 data.raw["equipment-grid"]["large-equipment-grid"].width   = 8
 data.raw["equipment-grid"]["large-equipment-grid"].height  = 8
 
+-- -- Vanilla armors recipes changing
+
+-- Heavy armor
+krastorio.recipes.addOrReplaceIngredient("heavy-armor", "light-armor", {"light-armor", 1})
+krastorio.recipes.removeIngredient("heavy-armor", "copper-plate")
+
+-- Modular armor
+krastorio.recipes.addOrReplaceIngredient("modular-armor", "heavy-armor", {"heavy-armor", 1})
+krastorio.recipes.removeIngredient("modular-armor", "steel-plate")
+
+-- Power armor (MK1)
+krastorio.recipes.addOrReplaceIngredient("power-armor", "modular-armor", {"modular-armor", 1})
+krastorio.recipes.removeIngredient("power-armor", "steel-plate")
+
+-- Power armor MK2
+krastorio.recipes.addOrReplaceIngredient("power-armor-mk2", "power-armor", {"power-armor", 1})
+krastorio.recipes.removeIngredient("power-armor-mk2", "processing-unit")
+
 ----------------------------------------------------------------------------------------------------------------- 
 ----------------------------------------------------------------------------------------------------------------- 
 ----------------------------------------------------------------------------------------------------------------- 
@@ -420,6 +438,9 @@ table.insert(data.raw["solar-panel-equipment"]["solar-panel-equipment"].categori
 data.raw["solar-panel-equipment"]["solar-panel-equipment"].power = "40kW" -- 40kW * 1  * 1 * 1
 data.raw.item["solar-panel-equipment"].order = "a[energy-source]-a1[solar-panel]"
 data.raw.item["solar-panel-equipment"].subgroup = "equipment"
+
+krastorio.recipes.addIngredient("solar-panel-equipment", {name = "glass", amount = 5})
+krastorio.recipes.removeIngredient("solar-panel", {name = "glass", amount = 5})
 
 -----------------------------------------------------------------------------------------------------------------
 -- -- Belt Immunity

@@ -1,12 +1,126 @@
 if mods["space-exploration"] then
-	local data_util = require("__space-exploration__/data_util")
+	-- local data_util = require("__space-exploration__/data_util")
+	local color = require(kr_path .. "lib/private/data-stages/colorRGB")
+
+-- -- Technologies
+---------------------------------------------------------------------------------------------
+
+	-- --  Modules
+	-- Return to Krastorio 2/Vanilla modules on the first 3 tiers
+	
+	-- Speed modules
+	krastorio.technologies.removeResearchUnitIngredient("speed-module-2", "production-science-pack", 1)
+	
+	krastorio.technologies.removeResearchUnitIngredient("speed-module-3", "space-science-pack")
+	krastorio.technologies.removeResearchUnitIngredient("speed-module-3", "se-material-science-pack")
+	
+	-- Productivity modules
+	krastorio.technologies.removeResearchUnitIngredient("productivity-module-2", "production-science-pack", 1)
+	
+	krastorio.technologies.removeResearchUnitIngredient("productivity-module-3", "space-science-pack")
+	krastorio.technologies.removeResearchUnitIngredient("productivity-module-3", "se-material-science-pack")
+	
+	-- Efficiency modules
+	krastorio.technologies.removeResearchUnitIngredient("effectivity-module-2", "production-science-pack", 1)
+	
+	krastorio.technologies.removeResearchUnitIngredient("effectivity-module-3", "space-science-pack")
+	krastorio.technologies.removeResearchUnitIngredient("effectivity-module-3", "se-biological-science-pack")
+
+	-- Removing tecs
+	data.raw.technology["se-antimatter-reactor"] = nil
+	--krastorio.technologies.convertPrerequisiteFromAllTechnologies("se-antimatter-reactor", "kr-antimatter-reactor", true)
+	
+	data.raw.technology["se-fuel-refining"] = nil
+	krastorio.technologies.convertPrerequisiteFromAllTechnologies("se-fuel-refining", "kr-fuel", true)
+	krastorio.technologies.addUnlockRecipe("kr-fuel", "solid-fuel-from-petroleum-gas")
+	krastorio.technologies.addUnlockRecipe("kr-fuel", "solid-fuel-from-light-oil")
+	krastorio.technologies.addUnlockRecipe("kr-fuel", "solid-fuel-from-heavy-oil")
+
+	-- Final fix for all SE techs
+	require("__Krastorio2__/compatibility-scripts/data-final-fixes/space-exploration/technology")
+	
+	krastorio.technologies.removeResearchUnitIngredient("kr-battery-mk3-equipment", "space-science-pack")
+	
+	--[[
+	local function startsWith(str, start)
+	   return str:sub(1, #start) == start
+	end
+	
+	local se_tech_recovery_blacklist =
+	{
+		["se-electric-boiler"] = true,
+		["se-adaptive-armour-1"] = true,
+		["se-adaptive-armour-2"] = true,
+		["se-core-miner"] = true,
+		["se-meteor-point-defence"] = true,
+		["se-meteor-defence"] = true,
+		["se-medpack"] = true,
+		["se-medpack-2"] = true,
+		["se-rocket-fuel-from-water"] = true,
+		["se-rocket-landing-pad"] = true,
+		["se-rocket-launch-pad"] = true,
+		["se-rocket-cargo-safety-1"] = true,
+		["se-rocket-reusability-1"] = true,
+		["se-rocket-survivability-1"] = true,
+		["se-rtg-equipment"] = true,
+		["se-space-lifesupport-facility"] = true,
+		["se-space-platform-scaffold"] = true,
+		["se-space-science-lab"] = true,
+		["se-thruster-suit"] = true,
+		["se-heat-shielding"] = true
+	}
+	
+	for technology_name, _ in pairs(data.raw.technology) do
+		if startsWith(technology_name, "se-") and not se_tech_recovery_blacklist[technology_name] then
+			-- Addings
+			krastorio.technologies.addResearchUnitIngredient(technology_name, "production-science-pack", 1, true)
+			krastorio.technologies.addResearchUnitIngredient(technology_name, "utility-science-pack", 1, true)
+			krastorio.technologies.addResearchUnitIngredient(technology_name, "matter-tech-card", 1, true)
+			krastorio.technologies.addResearchUnitIngredient(technology_name, "space-science-pack", 1, true)		
+			-- Removing
+			krastorio.technologies.removeResearchUnitIngredient(technology_name, "basic-tech-card")
+		end
+	end	
+	--]]
 
 -- -- Entities
 ---------------------------------------------------------------------------------------------
 
 	-- Adding new space loader if krastorio 2 loaders are enabled
 	if krastorio.general.getSafeSettingValue("kr-loaders") then
-		-- MISSING!!!!!!!!!!!!
+		data:extend(
+		{
+			kr_loader_item
+			{
+				name = "kr-se-loader",
+				icon = kr_graphic_mod_path .. "compatibility/space-exploration/kr-se-loader.png",
+				icon_size = 32,
+				order = "z-l[loader]-z[loader]",
+				subgroup = "space-logistics"
+			},
+			createKrastorioLoader
+			{				
+				name = "kr-se-loader", 
+				speed =	data.raw["transport-belt"]["se-space-transport-belt"].speed,
+				belt_animation_set = data.raw["transport-belt"]["se-space-transport-belt"].belt_animation_set,
+				order = "z-l[loader]-z[loader]", 
+				icon = kr_graphic_mod_path .. "compatibility/space-exploration/kr-se-loader.png",
+				icon_size = 32,
+				tint = color.convert(240, 240, 240, 125),
+				apply_rust = false
+			},	
+			kr_loader_recipe
+			{
+				name = "kr-se-loader",
+				ingredients = 
+				{
+					{"kr-express-loader", 1},
+					{"rare-metals", 10}
+				},
+				subgroup = "space-logistics"
+			}					
+		})
+		krastorio.technologies.addUnlockRecipe("se-space-platform-scaffold", "kr-se-loader")
 	end
 
 	-- SPACE COLLISIONS
@@ -213,85 +327,10 @@ if mods["space-exploration"] then
 	data.raw.item["se-rtg-equipment-2"].subgroup  = "equipment"
 	data.raw.item["se-rtg-equipment-2"].order     = "a2[energy-source]-a42[portable-nuclear-core]"	
 	data.raw["generator-equipment"]["se-rtg-equipment-2"].power = "1200kW"
+	
+	-- Portable fusion reactor
+	krastorio.technologies.removePrerequisite("fusion-reactor-equipment", "se-deep-space-science-pack")
 
--- -- Technologies
----------------------------------------------------------------------------------------------
-
-	-- --  Modules
-	-- Return to Krastorio 2/Vanilla modules on the first 3 tiers
-	
-	-- Speed modules
-	krastorio.technologies.removeResearchUnitIngredient("speed-module-2", "production-science-pack", 1)
-	
-	krastorio.technologies.removeResearchUnitIngredient("speed-module-3", "space-science-pack")
-	krastorio.technologies.removeResearchUnitIngredient("speed-module-3", "se-material-science-pack")
-	
-	-- Productivity modules
-	krastorio.technologies.removeResearchUnitIngredient("productivity-module-2", "production-science-pack", 1)
-	
-	krastorio.technologies.removeResearchUnitIngredient("productivity-module-3", "space-science-pack")
-	krastorio.technologies.removeResearchUnitIngredient("productivity-module-3", "se-material-science-pack")
-	
-	-- Efficiency modules
-	krastorio.technologies.removeResearchUnitIngredient("effectivity-module-2", "production-science-pack", 1)
-	
-	krastorio.technologies.removeResearchUnitIngredient("effectivity-module-3", "space-science-pack")
-	krastorio.technologies.removeResearchUnitIngredient("effectivity-module-3", "se-biological-science-pack")
-
-	-- Removing tecs
-	data.raw.technology["se-antimatter-reactor"] = nil
-	--krastorio.technologies.convertPrerequisiteFromAllTechnologies("se-antimatter-reactor", "kr-antimatter-reactor", true)
-	
-	data.raw.technology["se-fuel-refining"] = nil
-	krastorio.technologies.convertPrerequisiteFromAllTechnologies("se-fuel-refining", "kr-fuel", true)
-	krastorio.technologies.addUnlockRecipe("kr-fuel", "solid-fuel-from-petroleum-gas")
-	krastorio.technologies.addUnlockRecipe("kr-fuel", "solid-fuel-from-light-oil")
-	krastorio.technologies.addUnlockRecipe("kr-fuel", "solid-fuel-from-heavy-oil")
-
-	-- Final fix for all SE techs
-	require("__Krastorio2__/compatibility-scripts/data-final-fixes/space-exploration/technology")
-	
-	--[[
-	local function startsWith(str, start)
-	   return str:sub(1, #start) == start
-	end
-	
-	local se_tech_recovery_blacklist =
-	{
-		["se-electric-boiler"] = true,
-		["se-adaptive-armour-1"] = true,
-		["se-adaptive-armour-2"] = true,
-		["se-core-miner"] = true,
-		["se-meteor-point-defence"] = true,
-		["se-meteor-defence"] = true,
-		["se-medpack"] = true,
-		["se-medpack-2"] = true,
-		["se-rocket-fuel-from-water"] = true,
-		["se-rocket-landing-pad"] = true,
-		["se-rocket-launch-pad"] = true,
-		["se-rocket-cargo-safety-1"] = true,
-		["se-rocket-reusability-1"] = true,
-		["se-rocket-survivability-1"] = true,
-		["se-rtg-equipment"] = true,
-		["se-space-lifesupport-facility"] = true,
-		["se-space-platform-scaffold"] = true,
-		["se-space-science-lab"] = true,
-		["se-thruster-suit"] = true,
-		["se-heat-shielding"] = true
-	}
-	
-	for technology_name, _ in pairs(data.raw.technology) do
-		if startsWith(technology_name, "se-") and not se_tech_recovery_blacklist[technology_name] then
-			-- Addings
-			krastorio.technologies.addResearchUnitIngredient(technology_name, "production-science-pack", 1, true)
-			krastorio.technologies.addResearchUnitIngredient(technology_name, "utility-science-pack", 1, true)
-			krastorio.technologies.addResearchUnitIngredient(technology_name, "matter-tech-card", 1, true)
-			krastorio.technologies.addResearchUnitIngredient(technology_name, "space-science-pack", 1, true)		
-			-- Removing
-			krastorio.technologies.removeResearchUnitIngredient(technology_name, "basic-tech-card")
-		end
-	end	
-	--]]
 -- -- Items
 ---------------------------------------------------------------------------------------------
 

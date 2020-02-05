@@ -131,8 +131,11 @@ for name, technology in pairs(data.raw.technology) do
 	end
 end	
 
--- Lamp
+-- Lamp (glass)
 krastorio.recipes.convertIngredient("small-lamp", "automation-core", "glass")
+krastorio.recipes.addOrReplaceIngredient("small-lamp", {name = "glass", amount = 1})
+-- Solar panel (glass)
+krastorio.recipes.addOrReplaceIngredient("solar-panel", {name = "glass", amount = 5})
 
 -- Assembling machine tier 1
 krastorio.recipes.replaceIngredient("assembling-machine-1", "iron-plate", {"iron-beam", 4})
