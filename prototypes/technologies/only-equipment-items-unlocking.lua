@@ -300,7 +300,257 @@ data:extend(
             },
             time = 60
         }
-    }
+    },
+	-- -- SOLAR PANELS
+	{
+		type = "technology",
+		name = "kr-imersite-solar-panel-equipment",
+		icon_size = 128,
+		icon = kr_technologies_icons_path .. "imersite-solar-panel-equipment.png",
+		upgrade = false,
+		effects = 
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "imersite-solar-panel-equipment"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "big-imersite-solar-panel-equipment"
+			}
+		},
+		prerequisites = {"kr-quarry-minerals-extraction", "solar-panel-equipment"},
+		unit = 		
+		{
+			count = 250,
+			ingredients = 
+			{
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"utility-science-pack", 1}
+			},
+			time = 30
+		}		
+	},
+	-- -- PERSONAL LASERS
+	-- personal-laser-defense-SNIPER-mk2-equipment
+	{
+		type = "technology",
+		name = "kr-personal-laser-defense-mk2-equipment",
+		icon_size = 128,
+		icon = kr_technologies_icons_path .. "personal-laser-defense-mk2-equipment.png",
+		upgrade = false,
+		effects = 
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "personal-laser-defense-mk2-equipment"
+			}
+		},
+		prerequisites = 
+		{
+			"kr-military-5",
+			"personal-laser-defense-equipment"
+		},
+		unit = 		
+		{
+			count = 500,
+			ingredients = 
+			{
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"utility-science-pack", 1}
+			},
+			time = 60
+		}		
+	},
+	-- personal-laser-defense-mk1-equipment
+	{
+		type = "technology",
+		name = "kr-personal-submachine-laser-defense-mk1-equipment",
+		icon = kr_technologies_icons_path .. "personal-submachine-laser-defense-mk1-equipment.png",
+		icon_size = 128,
+		effects = 
+		{
+			{
+				recipe = "personal-submachine-laser-defense-mk1-equipment",
+				type = "unlock-recipe"
+			}
+		},		
+		order = "g-m",
+		prerequisites = 
+		{
+			"laser-turrets",
+			"military-3",
+			"low-density-structure",
+			"power-armor"
+		},		
+		unit = 
+		{
+			count = 300,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-research-data", 1},
+				{"military-research-data", 1},
+				{"chemical-research-data", 1}
+			},
+			time = 45
+		}
+    },
+	-- personal-laser-defense-mk2-equipment
+	{
+		type = "technology",
+		name = "kr-personal-submachine-laser-defense-mk2-equipment",
+		icon = kr_technologies_icons_path .. "personal-submachine-laser-defense-mk2-equipment.png",
+		icon_size = 128,
+		effects = 
+		{
+			{
+				recipe = "personal-submachine-laser-defense-mk2-equipment",
+				type = "unlock-recipe"
+			}
+		},		
+		order = "g-m",
+		prerequisites = 
+		{
+			"kr-personal-submachine-laser-defense-mk1-equipment"
+		},		
+		unit = 
+		{
+			count = 500,
+			ingredients = 
+			{
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"utility-science-pack", 1}
+			},
+			time = 60
+		}
+    },		
+	-- personal-laser-defense-mk3-equipment
+	{
+		type = "technology",
+		name = "kr-personal-submachine-laser-defense-mk3-equipment",
+		icon = kr_technologies_icons_path .. "personal-submachine-laser-defense-mk3-equipment.png",
+		icon_size = 128,
+		effects = 
+		{
+			{
+				recipe = "personal-submachine-laser-defense-mk3-equipment",
+				type = "unlock-recipe"
+			}
+		},		
+		order = "g-m",
+		prerequisites = 
+		{
+			"kr-military-5",
+			"kr-personal-submachine-laser-defense-mk2-equipment",
+			"kr-lithium-sulfur-battery"
+		},		
+		unit = 
+		{
+			count = 750,
+			ingredients = 
+			{
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"advanced-tech-card", 1}			
+			},
+			time = 75
+		}
+    },	
+	-- personal-laser-defense-mk4-equipment
+	{
+		type = "technology",
+		name = "kr-personal-submachine-laser-defense-mk4-equipment",
+		icon = kr_technologies_icons_path .. "personal-submachine-laser-defense-mk4-equipment.png",
+		icon_size = 128,
+		effects = 
+		{
+			{
+				recipe = "personal-submachine-laser-defense-mk4-equipment",
+				type = "unlock-recipe"
+			}
+		},		
+		order = "g-m",
+		prerequisites = 
+		{
+			"kr-personal-submachine-laser-defense-mk3-equipment",
+			"kr-singularity-tech-card"
+		},		
+		unit = 
+		{
+			count = 500,
+			ingredients = 
+			{
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"advanced-tech-card", 1},
+				{"singularity-tech-card", 1}
+			},
+			time = 90
+		}
+    },	
+	-- -- SHIELDS
+	-- energy-shield-mk3-equipment
+	{
+		type = "technology",
+		name = "kr-energy-shield-mk3-equipment",
+		icon_size = 128,
+		icon = kr_technologies_icons_path .. "energy-shield-mk3-equipment.png",
+		upgrade = false,
+		effects = 
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "energy-shield-mk3-equipment"
+			}
+		},
+		prerequisites = {"energy-shield-mk2-equipment", "kr-lithium-sulfur-battery"},
+		unit = 
+		{			
+			count = 500,
+			ingredients = 
+			{
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"utility-science-pack", 1}
+			},
+			time = 60		
+		}
+	},
+	-- energy-shield-mk4-equipment
+	{
+		type = "technology",
+		name = "kr-energy-shield-mk4-equipment",
+		icon_size = 128,
+		icon = kr_technologies_icons_path .. "energy-shield-mk4-equipment.png",
+		upgrade = false,
+		effects = 
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "energy-shield-mk4-equipment"
+			}
+		},
+		prerequisites = {"kr-energy-shield-mk3-equipment", "kr-advanced-tech-card"},
+		unit = 
+		{			
+			count = 750,
+			ingredients = 
+			{
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"advanced-tech-card", 1}
+			},
+			time = 90			
+		}
+	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------- 

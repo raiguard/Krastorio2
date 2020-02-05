@@ -252,6 +252,130 @@ return
 			{"electronic-components", 10}
 		},
 		result = "big-solar-panel-equipment"
+	},
+	{
+		type = "recipe",
+		name = "imersite-solar-panel-equipment",
+		energy_required = 20,
+		enabled = false,
+		category = "crafting-with-fluid",
+		ingredients =
+		{
+			{"solar-panel-equipment", 1},
+			{"imersite-crystal", 5},
+			{type="fluid", name="nitric-acid", amount=25, catalyst_amount = 25},
+			{"processing-unit", 1}
+		},
+		result = "imersite-solar-panel-equipment"
+    },
+	{
+		type = "recipe",
+		name = "big-imersite-solar-panel-equipment",
+		energy_required = 20,
+		enabled = false,
+		ingredients =
+		{
+			{"imersite-solar-panel-equipment", 4},
+			{"electronic-components", 40},
+		},
+		result = "big-imersite-solar-panel-equipment"
+	},
+	-- -- PERSONAL DEFENCES
+	{
+		type = "recipe",
+		name = "personal-laser-defense-mk2-equipment",		
+		energy_required = 10,
+		ingredients = 
+		{
+			{"personal-laser-defense-equipment", 1},
+			{"processing-unit", 2},
+			{"lithium-sulfur-battery", 6},
+			{"low-density-structure", 6}
+		},
+		enabled = false,
+		result = "personal-laser-defense-mk2-equipment"		
+	},	
+	{
+		type = "recipe",
+		name = "personal-submachine-laser-defense-mk1-equipment",
+		energy_required = 15,
+		enabled = false,
+		ingredients =
+		{
+			{"laser-turret", 1},
+			{"battery", 5},
+			{"electronic-components", 10},
+			{"iron-plate", 5}
+		},
+		result = "personal-submachine-laser-defense-mk1-equipment"
+    },
+	{
+		type = "recipe",
+		name = "personal-submachine-laser-defense-mk2-equipment",
+		energy_required = 30,
+		enabled = false,
+		ingredients =
+		{
+			{"personal-submachine-laser-defense-mk1-equipment", 1},
+			{"battery", 10},
+			{"advanced-circuit", 10},
+			{"steel-plate", 5}
+		},
+		result = "personal-submachine-laser-defense-mk2-equipment"
+    },
+	{
+		type = "recipe",
+		name = "personal-submachine-laser-defense-mk3-equipment",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"personal-submachine-laser-defense-mk2-equipment", 1},
+			{"processing-unit", 10},
+			{"lithium-sulfur-battery", 5},
+			{"low-density-structure", 5}
+		},
+		result = "personal-submachine-laser-defense-mk3-equipment"
+    },	
+	{
+		type = "recipe",
+		name = "personal-submachine-laser-defense-mk4-equipment",
+		energy_required = 90,
+		enabled = false,
+		ingredients =
+		{
+			{"personal-submachine-laser-defense-mk3-equipment", 1},
+			{"ai-core", 10},
+			{"lithium-sulfur-battery", 10},
+			{"imersium-plate", 5}
+		},
+		result = "personal-submachine-laser-defense-mk4-equipment"
+    },	
+	{
+		type = "recipe",
+		name = "energy-shield-mk3-equipment",
+		enabled = false,
+		energy_required = 40,
+		ingredients =
+		{
+			{"energy-shield-mk2-equipment", 6},
+			{"electronic-components", 40},
+			{"lithium-sulfur-battery", 10}
+		},
+		result = "energy-shield-mk3-equipment"
+	},
+	{
+		type = "recipe",
+		name = "energy-shield-mk4-equipment",
+		enabled = false,
+		energy_required = 80,
+		ingredients =
+		{
+			{"energy-shield-mk3-equipment", 6},
+			{"ai-core", 10},
+			{"imersium-plate", 20}
+		},
+		result = "energy-shield-mk4-equipment"
 	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
