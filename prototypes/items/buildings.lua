@@ -509,7 +509,30 @@ data:extend(
 		order = "b[underground-belt]-e[superior-underground-belt]",
 		place_result = "kr-superior-underground-belt",
 		stack_size = 50
-	}	
+	},	
+	-- -- --
+	-- Roboports
+	-- -- --
+	{
+		type = "item",
+		name = "kr-small-roboport",
+		icon = kr_entities_icons_path .. "small-roboport.png",
+		icon_size = 64,
+		subgroup = "logistic-network",
+		order = "c[signal]-b[small-roboport]",
+		place_result = "kr-small-roboport",
+		stack_size = 50
+	},
+	{
+		type = "item",
+		name = "kr-large-roboport",
+		icon = kr_entities_icons_path .. "large-roboport.png",
+		icon_size = 64,
+		subgroup = "logistic-network",
+		order = "c[signal]-c[large-roboport]",
+		place_result = "kr-large-roboport",
+		stack_size = 50
+	}
 	-- -- --
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

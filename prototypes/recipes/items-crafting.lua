@@ -240,5 +240,18 @@ return
 			{"processing-unit", 5}			
 		},
 		result = "heavy-rocket"
-    }
+    },
+	{
+		type = "recipe",
+		name = "energy-control-unit",
+		enabled = false,
+		energy_required = 10,
+		ingredients =
+		{
+			{"low-density-structure", 5},
+			{"imersite-powder", 3},
+			{"lithium-sulfur-battery", 3}
+		},
+		result = "energy-control-unit"
+    },
 }

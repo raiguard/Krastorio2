@@ -481,6 +481,15 @@ data:extend(
 		subgroup = "intermediate-product",
 		order = "w08[drill-heads]-a3[imersite-drill-head]",
 		stack_size = 200
-    }
+    },
 	---
+	{
+		type = "item",
+		name = "energy-control-unit",
+		icon = kr_icons_path .. "energy-control-unit.png",
+		icon_size = 64,
+		subgroup = "intermediate-product",
+		order = "j1[energy-control-unit]",
+		stack_size = 100
+    }
 })

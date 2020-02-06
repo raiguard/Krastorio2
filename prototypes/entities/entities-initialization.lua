@@ -38,6 +38,9 @@ require("buildings/turrets/rocket-turret")
 -- -- Laboratories
 require("buildings/biusart-lab")
 require("buildings/singularity-lab")
+-- -- Roboports
+require("buildings/small-roboport")
+require("buildings/large-roboport")
 -- -- Conteiners
 -- Mediums
 require("buildings/containers/medium-containers/medium-active-provider-container")

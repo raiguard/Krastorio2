@@ -285,6 +285,31 @@ data:extend(
     },
 	{
 		type = "technology",
+		name = "kr-energy-control-unit",
+		icon = kr_technologies_icons_path .. "energy-control-unit.png",
+		icon_size = 128,
+		effects =
+		{			
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["energy-control-unit"] or "energy-control-unit"
+			}
+		},
+		prerequisites = {"kr-singularity-lab", "kr-lithium-sulfur-battery"},
+		unit =
+		{
+			count = 500,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1}
+			},
+			time = 30
+		}
+    },
+	{
+		type = "technology",
 		name = "kr-imersium-processing",
 		icon = kr_technologies_icons_path .. "imersium-processing.png",
 		icon_size = 128,

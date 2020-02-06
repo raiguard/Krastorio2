@@ -2,7 +2,9 @@
 -----------------------------------------------------------------------------
 local supported_roboports =
 {
-	"roboport"
+	"roboport",
+	"kr-small-roboport",
+	"kr-large-roboport"
 }
 
 local function changeRoboportEntity(old_entity, new_entity_name, player_index, tooltip_name)
