@@ -16,32 +16,6 @@ local KRASTORIO_SHELTER_EVENT_FILTER =
     }
 }
 
-local function showOnSurfaceText(tag)
-	if not tag then error("You shouldn't be creating a tag without any parameters.") end
-	if not tag.entity then error("No entity to follow for tag.") end
-	if not tag.entity.valid then error("Well the entity wasn't valid to create a tag.") end
-	if not tag.position then
-		if not tag.offset then
-			tag.offset = {x = 0, y = 0}
-		else
-		if not tag.offset.x then tag.offset.x = tag.offset[1] or 0 end
-		if not tag.offset.y then tag.offset.y = tag.offset[2] or 0 end
-		end
-		tag.position = {x = tag.entity.position.x + tag.offset.x, y = tag.entity.position.y + tag.offset.y}
-	end
-		
-	tag.entity.surface.create_entity
-	{
-		type         = "flying-text",
-		name         = "flying-text",
-		position     = tag.position,
-		text         = tag.text or tag.entity.localised_name,
-		color        = tag.color or {},
-		time_to_live = 200,
-		speed        = 0.05
-	}
-end
-
 -- The dictionary is structured like:
 -- default_spawn_points[surface][force] -> position
 -- spawn_points[surface][force] -> {animation, light}entity of shelter 
@@ -108,7 +82,7 @@ local function onBuiltAnEntity(event)
 				for _, product in pairs(entity.prototype.mineable_properties.products) do
 					entity.last_user.insert{name=product.name or product[1], count=product.amount or product[2]}
 				end				
-				showOnSurfaceText
+				krastorio.flying_texts.showOnSurfaceText
 				{
 					entity = entity,
 					text   = {"other.kr-shelter-error"},

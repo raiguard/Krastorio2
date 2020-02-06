@@ -1,11 +1,11 @@
 -- Path 
 local control_scripts_path = "__Krastorio2__/lib/private/control-scripts/"
-local gui_lib_path = control_scripts_path .. "control-lib/control-lib-initialization"
+local control_lib_path = control_scripts_path .. "control-lib/control-lib-initialization"
 
 -- Lib
 ControlCallbackMerger = require(control_scripts_path .. "control-callbacks-merger")
 local ccm = ControlCallbackMerger:new()
-require(gui_lib_path)
+require(control_lib_path)
 
 -- Scrips
 local scripts =
@@ -14,6 +14,8 @@ local scripts =
 	require(control_scripts_path .. "creep-generator"),
 	-- Adding inserters changeable drop lane 
 	require(control_scripts_path .. "inserters-changeable-drop-lane"),
+	-- Adding change roboport state
+	require(control_scripts_path .. "change-roboport-state"),
 	-- Enable a auto snapping for loaders
 	require(control_scripts_path .. "loaders-snapping"),
 	-- Reset technologies unlocking when the game effect could be modified

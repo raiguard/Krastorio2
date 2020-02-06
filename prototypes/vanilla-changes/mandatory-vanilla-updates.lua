@@ -22,7 +22,8 @@ local modifications =
 	"spawner-changes",         -- Modify spawners sprite	
 	"vanilla-lab-changes",     -- Modify stat and accepted science packs of vanilla lab
 	"fluids-changes",          -- Add some new properties to vanilla fluids
-	"next-upgrades"            -- Setup entity upgrates
+	"next-upgrades",           -- Setup entity upgrates
+	"roboport-variations"      -- Generate roboport variations for roboport states
 }
 
 -- Application of the modifications
