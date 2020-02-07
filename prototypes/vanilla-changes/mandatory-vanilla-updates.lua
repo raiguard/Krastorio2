@@ -6,6 +6,7 @@ local modifications =
 {	
 	-- High priority
 	"technologies-changes",    -- Modifications to vanilla technologies
+	"apply-vanilla-technologies-tag", -- Apply a special tag to all vanilla technologies to recognize them
 	-- Low priority
 	"character-armor-changes", -- Adding new armor tiers sprites
 	"entities-changes",        -- Entities/prototypes definition modifications

@@ -46,6 +46,7 @@ kr_ammos_icons_path                    = kr_icons_path .. "ammos/"
 kr_stacked_icons_path                  = kr_graphic_mod_path .. "compatibility/deadlock-beltboxes-loaders/"
 -- Equipments paths
 kr_equipments_icon_path                = kr_icons_path           .. "equipments/"
+kr_equipments_tiers_icon_path          = kr_equipments_icon_path .. "tiers/"
 kr_character_equipments_icons_path     = kr_equipments_icon_path .. "character/"
 kr_universal_equipments_icons_path     = kr_equipments_icon_path .. "universal/"
 kr_vehicle_equipments_icons_path       = kr_equipments_icon_path .. "vehicle/"

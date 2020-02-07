@@ -6,6 +6,7 @@ data:extend(
 	{
 		type = "technology",
 		name = "kr-iron-pickaxe",
+		mod = "Krastorio2",
 		icon_size = 128,
 		icon = kr_technologies_icons_path .. "iron-pickaxe.png",
 		effects =
@@ -33,6 +34,7 @@ data:extend(
 	{
 		type = "technology",
 		name = "kr-fluids-chemistry",
+		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "fluids-chemistry.png",
 		icon_size = 128,
 		effects =
@@ -69,6 +71,7 @@ data:extend(
 	{
 		type = "technology",
 		name = "kr-fluid-excess-handling",
+		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "fluid-burner.png",
 		icon_size = 128,
 		effects =
@@ -94,6 +97,7 @@ data:extend(
 	{
 		type = "technology",
 		name = "kr-atmosphere-condensation",
+		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "atmospheric-condenser.png",
 		icon_size = 128,
 		effects =
@@ -136,6 +140,7 @@ data:extend(
 	{
 		type = "technology",
 		name = "kr-air-purification",
+		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "air-purifier.png",
 		icon_size = 128,
 		effects =
@@ -175,6 +180,7 @@ data:extend(
 	{
 		type = "technology",
 		name = "kr-fusion-energy",
+		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "fusion-energy.png",
 		icon_size = 128,
 		effects =
@@ -220,6 +226,7 @@ data:extend(
 	{
 		type = "technology",
 		name = "kr-fuel",
+		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "fuel-refinery.png",
 		icon_size = 128,
 		effects =
@@ -256,6 +263,7 @@ data:extend(
 	{
         type = "technology",
         name = "kr-silicon-processing",
+		mod = "Krastorio2",
         icon = kr_technologies_icons_path .. "silicon-processing.png",
         icon_size = 128,
         effects =
@@ -286,6 +294,7 @@ data:extend(
 	{
         type = "technology",
         name = "kr-advanced-chemistry",
+		mod = "Krastorio2",
         icon = kr_technologies_icons_path .. "advanced-chemistry.png",
         icon_size = 128,
         effects =
@@ -334,6 +343,7 @@ data:extend(
 	{
 		type = "technology",
 		name = "kr-enriched-ores",
+		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "enriched-ores.png",
 		icon_size = 128,
 		effects =
@@ -380,6 +390,7 @@ data:extend(
 	{
 		type = "technology",
 		name = "kr-lithium-processing",
+		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "lithium-processing.png",
 		icon_size = 128,
 		effects =
@@ -410,6 +421,7 @@ data:extend(
 	{
 		type = "technology",
 		name = "kr-quarry-minerals-extraction",
+		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "quarry-drill.png",
 		icon_size = 128,
 		effects =
@@ -457,6 +469,7 @@ data:extend(
 	{
 		type = "technology",
 		name = "kr-matter-processing",
+		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "matter.png",
 		icon_size = 128,
 		effects =
@@ -488,6 +501,7 @@ data:extend(
 	{
 		type = "technology",
 		name = "kr-antimatter-reactor",
+		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "antimatter-reactor.png",
 		icon_size = 128,
 		prerequisites = {"kr-fusion-energy", "kr-matter-processing"},

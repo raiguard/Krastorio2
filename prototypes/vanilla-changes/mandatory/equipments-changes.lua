@@ -34,8 +34,18 @@ function updateVanillaEquipmentGraphics(_objects_to_modify, icons_path, sprites_
 	for category_name, items in pairs(_objects_to_modify) do
 		for item_name, item in pairs(items) do
 			if data.raw.item[item_name] then
-				data.raw.item[item_name].icon      = icons_path .. item[1]
-				data.raw.item[item_name].icon_size = item[2]
+				if not item[5] then -- tier
+					data.raw.item[item_name].icon      = icons_path .. item[1] -- icon name
+					data.raw.item[item_name].icon_size = item[2] -- icon size
+				else
+					data.raw.item[item_name].icon      = nil
+					data.raw.item[item_name].icons     =
+					{
+						{ icon = icons_path .. item[1], icon_size = item[2] },
+						{ icon = kr_equipments_tiers_icon_path .. tostring(item[5]) .. ".png", icon_size = 64} -- , scale = item[2]/64
+					}
+					data.raw.item[item_name].icon_size = item[2] -- icon size
+				end
 				if data.raw[category_name][item_name] then
 					data.raw[category_name][item_name].sprite.filename = sprites_path .. item[1]
 					data.raw[category_name][item_name].sprite.width    = item[3]
@@ -227,12 +237,12 @@ objects_to_modify =
 {
 	["battery-equipment"] =
 	{
-		["battery-equipment"]     = {"battery-mk1-equipment.png", 32, 32, 64},
-		["battery-mk2-equipment"] = {"battery-mk2-equipment.png", 32, 32, 64}
+		["battery-equipment"]     = {"battery-mk1-equipment.png", 64, 32, 64, 1},
+		["battery-mk2-equipment"] = {"battery-mk2-equipment.png", 64, 32, 64, 2}
 	},
 	["active-defense-equipment"] = 
 	{
-		["personal-laser-defense-equipment"] = {"personal-laser-defense-mk1-equipment.png", 32, 64, 64}
+		["personal-laser-defense-equipment"] = {"personal-laser-defense-mk1-equipment.png", 64, 64, 64, 1}
 	}
 }
 
@@ -304,7 +314,7 @@ objects_to_modify =
 {		
 	["generator-equipment"] =
 	{
-		["fusion-reactor-equipment"] = {"fusion-reactor-equipment.png", 64, 128, 128}
+		["fusion-reactor-equipment"] = {"fusion-reactor-equipment.png", 64, 128, 128, 2}
 	}
 }
 -- iterating...

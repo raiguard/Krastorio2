@@ -1,0 +1,5 @@
+All recipes and technologies (not items) of Krastorio 2 have this special tag:
+mod = "Krastorio2"
+So for recognize quickly if something is added by Krastorio 2 you can look for that.
+Also Krastorio 2 apply this to all vanilla technologies with:
+mod = "base"

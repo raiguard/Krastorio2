@@ -45,7 +45,11 @@ data:extend(
 	{
 		type = "item",
 		name = "additional-engine",
-		icon = kr_vehicle_equipments_icons_path .. "additional-engine.png",
+		icons =
+		{
+			{ icon = kr_vehicle_equipments_icons_path .. "additional-engine.png", icon_size = 32 },
+			{ icon = kr_equipments_tiers_icon_path .. "1.png", icon_size = 64, scale = 0.5 }
+		},
 		icon_size = 32,
 		placed_as_equipment_result = "additional-engine",
 		subgroup = "vehicle-motor",
@@ -55,7 +59,11 @@ data:extend(
 	{
 		type = "item",
 		name = "advanced-additional-engine",
-		icon = kr_vehicle_equipments_icons_path .. "advanced-additional-engine.png",
+		icons =
+		{
+			{ icon = kr_vehicle_equipments_icons_path .. "advanced-additional-engine.png", icon_size = 32 },
+			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64, scale = 0.5 }
+		},
 		icon_size = 32,
 		placed_as_equipment_result = "advanced-additional-engine",
 		subgroup = "vehicle-motor",
@@ -81,8 +89,12 @@ data:extend(
 	{
 		type = "item",
 		name = "battery-mk3-equipment",
-		icon = kr_universal_equipments_icons_path .. "battery-mk3-equipment.png",	
-		icon_size = 32,
+		icons =
+		{
+			{ icon = kr_universal_equipments_icons_path .. "battery-mk3-equipment.png", icon_size = 64 },
+			{ icon = kr_equipments_tiers_icon_path .. "3.png", icon_size = 64 }
+		},
+		icon_size = 64,
 		placed_as_equipment_result = "battery-mk3-equipment",
 		subgroup = "equipment",
 		order = "b3[battery]-b5[battery-equipment]",
@@ -93,8 +105,12 @@ data:extend(
 	{
 		type = "item",
 		name = "big-battery-equipment",
-		icon = kr_universal_equipments_icons_path .. "big-battery-equipment.png",
-		icon_size = 32,
+		icons = 
+		{
+			{ icon = kr_universal_equipments_icons_path .. "big-battery-equipment.png", icon_size = 64},
+			{ icon = kr_equipments_tiers_icon_path .. "1.png", icon_size = 64}
+		},
+		icon_size = 64,
 		placed_as_equipment_result = "big-battery-equipment",
 		subgroup = "equipment",
 		order = "b1[battery]-b2[battery-equipment]",
@@ -104,8 +120,12 @@ data:extend(
 	{
 		type = "item",
 		name = "big-battery-mk2-equipment",
-		icon = kr_universal_equipments_icons_path .. "big-battery-mk2-equipment.png",
-		icon_size = 32,
+		icons = 
+		{ 
+			{ icon = kr_universal_equipments_icons_path .. "big-battery-mk2-equipment.png", icon_size = 64 },
+			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
+		},
+		icon_size = 64,
 		placed_as_equipment_result = "big-battery-mk2-equipment",
 		subgroup = "equipment",
 		order = "b2[battery]-b4[battery-equipment]",
@@ -115,8 +135,12 @@ data:extend(
 	{
 		type = "item",
 		name = "big-battery-mk3-equipment",
-		icon = kr_universal_equipments_icons_path .. "big-battery-mk3-equipment.png",
-		icon_size = 32,
+		icons =
+		{		
+			{ icon = kr_universal_equipments_icons_path .. "big-battery-mk3-equipment.png", icon_size = 64 },
+			{ icon = kr_equipments_tiers_icon_path .. "3.png", icon_size = 64 }
+		},
+		icon_size = 64,
 		placed_as_equipment_result = "big-battery-mk3-equipment",
 		subgroup = "equipment",
 		order = "b3[battery]-b6[battery-equipment]",
@@ -127,7 +151,11 @@ data:extend(
 	{
 		type = "item",
 		name = "small-portable-generator",
-		icon = kr_universal_equipments_icons_path .. "small-portable-generator.png",
+		icons = 
+		{
+			{ icon = kr_universal_equipments_icons_path .. "small-portable-generator.png", icon_size = 32 },
+			{ icon = kr_equipments_tiers_icon_path .. "1.png", icon_size = 64, scale = 0.5 }
+		},
 		icon_size = 32,
 		placed_as_equipment_result = "small-portable-generator",
 		subgroup = "equipment",
@@ -138,7 +166,11 @@ data:extend(
 	{
 		type = "item",
 		name = "portable-generator",
-		icon = kr_universal_equipments_icons_path .. "portable-generator.png",
+		icons = 
+		{
+			{ icon = kr_universal_equipments_icons_path .. "portable-generator.png", icon_size = 32 },
+			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64, scale = 0.5 }
+		},
 		icon_size = 32,
 		placed_as_equipment_result = "portable-generator",
 		subgroup = "equipment",
@@ -149,7 +181,11 @@ data:extend(
 	{
 		type = "item",
 		name = "nuclear-reactor-equipment",
-		icon = kr_universal_equipments_icons_path .. "nuclear-reactor-equipment.png",
+		icons = 
+		{
+			{ icon = kr_universal_equipments_icons_path .. "nuclear-reactor-equipment.png", icon_size = 64 },
+			{ icon = kr_equipments_tiers_icon_path .. "1.png", icon_size = 64 }
+		},
 		icon_size = 64,
 		placed_as_equipment_result = "nuclear-reactor-equipment",
 		subgroup = "equipment",
@@ -160,7 +196,11 @@ data:extend(
 	{
 		type = "item",
 		name = "antimatter-reactor-equipment",
-		icon = kr_universal_equipments_icons_path .. "antimatter-reactor-equipment.png",
+		icons = 
+		{
+			{ icon = kr_universal_equipments_icons_path .. "antimatter-reactor-equipment.png", icon_size = 64 },
+			{ icon = kr_equipments_tiers_icon_path .. "3.png", icon_size = 64 }
+		},
 		icon_size = 64,
 		placed_as_equipment_result = "antimatter-reactor-equipment",
 		subgroup = "equipment",
@@ -209,8 +249,12 @@ data:extend(
 		name = "personal-laser-defense-mk2-equipment",
 		localised_name = {"item-name.personal-sniper-laser-defense-mk2-equipment"},
 		localised_description = {"item-description.personal-sniper-laser-defense-mk2-equipment"},
-		icon = kr_universal_equipments_icons_path .. "personal-laser-defense-mk2-equipment.png",
-		icon_size = 32,		
+		icons = 
+		{
+			{ icon = kr_universal_equipments_icons_path .. "personal-laser-defense-mk2-equipment.png", icon_size = 64 },
+			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
+		},
+		icon_size = 64,		
 		order = "d[active-defense]-a[personal-laser-defense-mk2-equipment]",
 		placed_as_equipment_result = "personal-laser-defense-mk2-equipment",
 		stack_size = 20,
@@ -220,8 +264,12 @@ data:extend(
 	{
 		type = "item",
 		name = "personal-submachine-laser-defense-mk1-equipment",
-		icon = kr_universal_equipments_icons_path .. "personal-submachine-laser-defense-mk1-equipment.png",
-		icon_size = 32,
+		icons = 
+		{
+			{ icon = kr_universal_equipments_icons_path .. "personal-submachine-laser-defense-mk1-equipment.png" },
+			{ icon = kr_equipments_tiers_icon_path .. "1.png", icon_size = 64 }
+		},
+		icon_size = 64,
 		placed_as_equipment_result = "personal-submachine-laser-defense-mk1-equipment",
 		subgroup = "equipment",
 		order = "d[active-defense]-a2[personal-laser-defense-mk2-equipment]",
@@ -231,8 +279,12 @@ data:extend(
 	{
 		type = "item",
 		name = "personal-submachine-laser-defense-mk2-equipment",
-		icon = kr_universal_equipments_icons_path .. "personal-submachine-laser-defense-mk2-equipment.png",
-		icon_size = 32,
+		icons = 
+		{
+			{ icon = kr_universal_equipments_icons_path .. "personal-submachine-laser-defense-mk2-equipment.png" },
+			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
+		},
+		icon_size = 64,
 		placed_as_equipment_result = "personal-submachine-laser-defense-mk2-equipment",
 		subgroup = "equipment",
 		order = "d[active-defense]-a3[personal-laser-defense-mk2-equipment]",
@@ -242,8 +294,12 @@ data:extend(
 	{
 		type = "item",
 		name = "personal-submachine-laser-defense-mk3-equipment",
-		icon = kr_universal_equipments_icons_path .. "personal-submachine-laser-defense-mk3-equipment.png",
-		icon_size = 32,
+		icons = 
+		{
+			{ icon = kr_universal_equipments_icons_path .. "personal-submachine-laser-defense-mk3-equipment.png" },
+			{ icon = kr_equipments_tiers_icon_path .. "3.png", icon_size = 64 }
+		},
+		icon_size = 64,
 		placed_as_equipment_result = "personal-submachine-laser-defense-mk3-equipment",
 		subgroup = "equipment",
 		order = "d[active-defense]-a4[personal-laser-defense-mk3-equipment]",
@@ -253,8 +309,12 @@ data:extend(
 	{
 		type = "item",
 		name = "personal-submachine-laser-defense-mk4-equipment",
-		icon = kr_universal_equipments_icons_path .. "personal-submachine-laser-defense-mk4-equipment.png",
-		icon_size = 32,
+		icons = 
+		{
+			{ icon = kr_universal_equipments_icons_path .. "personal-submachine-laser-defense-mk4-equipment.png" },
+			{ icon = kr_equipments_tiers_icon_path .. "4.png", icon_size = 64}
+		},
+		icon_size = 64,
 		placed_as_equipment_result = "personal-submachine-laser-defense-mk4-equipment",
 		subgroup = "equipment",
 		order = "d[active-defense]-a5[personal-laser-defense-mk4-equipment]",

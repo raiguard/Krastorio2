@@ -26,7 +26,8 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 			["ingredients"]     = ingredients,
 			["enabled"]         = enabled,
 			["energy_required"] = energy_required,
-			["result"]          = name
+			["result"]          = name,
+			["mod"]             = "Krastorio2"
 		}
 	end
 
