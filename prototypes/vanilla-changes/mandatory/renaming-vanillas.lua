@@ -32,3 +32,6 @@ data.raw.technology["space-science-pack"].localised_name={"technology-name.satel
 -- Pumpjack
 data.raw["mining-drill"]["pumpjack"].localised_name={"entity-name.kr-oil-pumpjack"}
 data.raw.item["pumpjack"].localised_name={"item-name.kr-oil-pumpjack"}
+
+-- TECHNOLOGIES
+data.raw.technology["personal-laser-defense-equipment"].localised_name={"technology-name.kr-personal-laser-defense-mk1-equipment"}

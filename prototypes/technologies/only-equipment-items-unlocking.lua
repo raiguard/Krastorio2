@@ -345,92 +345,31 @@ data:extend(
 		}		
 	},
 	-- -- PERSONAL LASERS
-	-- personal-laser-defense-SNIPER-mk2-equipment
+	-- personal-laser-defense-mk2-equipment
 	{
 		type = "technology",
 		name = "kr-personal-laser-defense-mk2-equipment",
 		mod = "Krastorio2",
-		icon_size = 128,
-		icon = kr_technologies_icons_path .. "personal-laser-defense-mk2-equipment.png",
-		upgrade = false,
-		effects = 
-		{
-			{
-				type = "unlock-recipe",
-				recipe = "personal-laser-defense-mk2-equipment"
-			}
-		},
-		prerequisites = 
-		{
-			"kr-military-5",
-			"personal-laser-defense-equipment"
-		},
-		unit = 		
-		{
-			count = 500,
-			ingredients = 
-			{
-				{"automation-science-pack", 1},
-				{"logistic-science-pack", 1},
-				{"chemical-science-pack", 1},
-				{"utility-science-pack", 1}
-			},
-			time = 60
-		}		
-	},
-	-- personal-laser-defense-mk1-equipment
-	{
-		type = "technology",
-		name = "kr-personal-submachine-laser-defense-mk1-equipment",
-		mod = "Krastorio2",
-		icon = kr_technologies_icons_path .. "personal-submachine-laser-defense-mk1-equipment.png",
-		icon_size = 128,
-		effects = 
-		{
-			{
-				recipe = "personal-submachine-laser-defense-mk1-equipment",
-				type = "unlock-recipe"
-			}
-		},		
-		order = "g-m",
-		prerequisites = 
-		{
-			"laser-turrets",
-			"military-3",
-			"low-density-structure",
-			"power-armor"
-		},		
-		unit = 
-		{
-			count = 300,
-			ingredients = 
-			{
-				{"basic-tech-card", 1},
-				{"automation-research-data", 1},
-				{"military-research-data", 1},
-				{"chemical-research-data", 1}
-			},
-			time = 45
-		}
-    },
-	-- personal-laser-defense-mk2-equipment
-	{
-		type = "technology",
-		name = "kr-personal-submachine-laser-defense-mk2-equipment",
-		mod = "Krastorio2",
-		icon = kr_technologies_icons_path .. "personal-submachine-laser-defense-mk2-equipment.png",
+		icon = kr_technologies_icons_path .. "personal-laser-defense-mk2-equipments.png",
 		icon_size = 128,
 		effects = 
 		{
 			{
 				recipe = "personal-submachine-laser-defense-mk2-equipment",
 				type = "unlock-recipe"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "personal-laser-defense-mk2-equipment"
 			}
 		},		
 		order = "g-m",
 		prerequisites = 
 		{
-			"kr-personal-submachine-laser-defense-mk1-equipment"
+			"personal-laser-defense-equipment",
+			"military-4",
+			"low-density-structure",
+			"power-armor-mk2"
 		},		
 		unit = 
 		{
@@ -448,23 +387,28 @@ data:extend(
 	-- personal-laser-defense-mk3-equipment
 	{
 		type = "technology",
-		name = "kr-personal-submachine-laser-defense-mk3-equipment",
+		name = "kr-personal-laser-defense-mk3-equipment",
 		mod = "Krastorio2",
-		icon = kr_technologies_icons_path .. "personal-submachine-laser-defense-mk3-equipment.png",
+		icon = kr_technologies_icons_path .. "personal-laser-defense-mk3-equipments.png",
 		icon_size = 128,
 		effects = 
 		{
 			{
 				recipe = "personal-submachine-laser-defense-mk3-equipment",
 				type = "unlock-recipe"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "personal-laser-defense-mk3-equipment"
 			}
 		},		
 		order = "g-m",
 		prerequisites = 
 		{
-			"kr-military-5",
-			"kr-personal-submachine-laser-defense-mk2-equipment",
-			"kr-lithium-sulfur-battery"
+			"kr-personal-laser-defense-mk2-equipment",
+			"kr-military-5",			
+			"kr-lithium-sulfur-battery",
+			"kr-imersium-processing"
 		},		
 		unit = 
 		{
@@ -481,22 +425,27 @@ data:extend(
 	-- personal-laser-defense-mk4-equipment
 	{
 		type = "technology",
-		name = "kr-personal-submachine-laser-defense-mk4-equipment",
+		name = "kr-personal-laser-defense-mk4-equipment",
 		mod = "Krastorio2",
-		icon = kr_technologies_icons_path .. "personal-submachine-laser-defense-mk4-equipment.png",
+		icon = kr_technologies_icons_path .. "personal-laser-defense-mk4-equipments.png",
 		icon_size = 128,
 		effects = 
 		{
 			{
 				recipe = "personal-submachine-laser-defense-mk4-equipment",
 				type = "unlock-recipe"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "personal-laser-defense-mk4-equipment"
 			}
 		},		
 		order = "g-m",
 		prerequisites = 
 		{
-			"kr-personal-submachine-laser-defense-mk3-equipment",
-			"kr-singularity-tech-card"
+			"kr-personal-laser-defense-mk3-equipment",
+			"kr-singularity-tech-card",
+			"kr-energy-control-unit"
 		},		
 		unit = 
 		{

@@ -255,8 +255,42 @@ data:extend(
 			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
 		},
 		icon_size = 64,		
-		order = "d[active-defense]-a[personal-laser-defense-mk2-equipment]",
+		order = "d[active-defense]-b2[personal-laser-defense-mk2-equipment]",
 		placed_as_equipment_result = "personal-laser-defense-mk2-equipment",
+		stack_size = 20,
+		subgroup = "equipment"
+	},
+	-- personal-laser-defense-mk3-equipment
+	{
+		type = "item",
+		name = "personal-laser-defense-mk3-equipment",
+		localised_name = {"item-name.personal-sniper-laser-defense-mk3-equipment"},
+		localised_description = {"item-description.personal-sniper-laser-defense-mk3-equipment"},
+		icons = 
+		{
+			{ icon = kr_universal_equipments_icons_path .. "personal-laser-defense-mk3-equipment.png", icon_size = 64 },
+			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
+		},
+		icon_size = 64,		
+		order = "d[active-defense]-b3[personal-laser-defense-mk3-equipment]",
+		placed_as_equipment_result = "personal-laser-defense-mk3-equipment",
+		stack_size = 20,
+		subgroup = "equipment"
+	},
+	-- personal-laser-defense-mk4-equipment
+	{
+		type = "item",
+		name = "personal-laser-defense-mk4-equipment",
+		localised_name = {"item-name.personal-sniper-laser-defense-mk4-equipment"},
+		localised_description = {"item-description.personal-sniper-laser-defense-mk4-equipment"},
+		icons = 
+		{
+			{ icon = kr_universal_equipments_icons_path .. "personal-laser-defense-mk4-equipment.png", icon_size = 64 },
+			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
+		},
+		icon_size = 64,		
+		order = "d[active-defense]-b4[personal-laser-defense-mk4-equipment]",
+		placed_as_equipment_result = "personal-laser-defense-mk4-equipment",
 		stack_size = 20,
 		subgroup = "equipment"
 	},

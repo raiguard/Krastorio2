@@ -88,6 +88,8 @@ krastorio.technologies.addUnlockRecipe("battery-mk2-equipment", "big-battery-mk2
 krastorio.technologies.addUnlockRecipe(krastorio.technologies.getTechnologyThatUnlockRecipe("personal-roboport-equipment"), "vehicle-roboport")
 krastorio.technologies.addUnlockRecipe(krastorio.technologies.getTechnologyThatUnlockRecipe("electric-engine-unit"), "additional-engine")
 
+krastorio.technologies.addUnlockRecipe("personal-laser-defense-equipment", "personal-submachine-laser-defense-mk1-equipment")
+
 -- Removings
 
 -- Moving inserters unlocking in early game

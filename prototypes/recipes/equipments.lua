@@ -234,7 +234,7 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"low-density-structure", 50},
+			{"energy-control-unit", 25},
 			{"imersium-plate", 100},
 			{"ai-core", 25}
 		},
@@ -289,10 +289,38 @@ return
 		{
 			{"personal-laser-defense-equipment", 1},
 			{"lithium-sulfur-battery", 5},
-			{"electronic-components", 50}
+			{"advanced-circuit", 10}
 		},
 		enabled = false,
 		result = "personal-laser-defense-mk2-equipment"		
+	},	
+	{
+		type = "recipe",
+		name = "personal-laser-defense-mk3-equipment",		
+		energy_required = 10,
+		ingredients = 
+		{
+			{"personal-laser-defense-equipment", 1},
+			{"processing-unit", 10},
+			{"lithium-sulfur-battery", 10},
+			{"imersium-plate", 5}
+		},
+		enabled = false,
+		result = "personal-laser-defense-mk3-equipment"		
+	},	
+	{
+		type = "recipe",
+		name = "personal-laser-defense-mk4-equipment",		
+		energy_required = 10,
+		ingredients = 
+		{
+			{"personal-laser-defense-mk3-equipment", 1},
+			{"ai-core", 10},
+			{"lithium-sulfur-battery", 20},
+			{"energy-control-unit", 10}
+		},
+		enabled = false,
+		result = "personal-laser-defense-mk4-equipment"		
 	},	
 	{
 		type = "recipe",
@@ -332,7 +360,7 @@ return
 			{"personal-submachine-laser-defense-mk2-equipment", 1},
 			{"processing-unit", 10},
 			{"lithium-sulfur-battery", 5},
-			{"low-density-structure", 5}
+			{"imersium-plate", 5}
 		},
 		result = "personal-submachine-laser-defense-mk3-equipment"
     },	
@@ -346,10 +374,11 @@ return
 			{"personal-submachine-laser-defense-mk3-equipment", 1},
 			{"ai-core", 10},
 			{"lithium-sulfur-battery", 10},
-			{"imersium-plate", 5}
+			{"energy-control-unit", 5}
 		},
 		result = "personal-submachine-laser-defense-mk4-equipment"
     },	
+	-- -- SHIELDS
 	{
 		type = "recipe",
 		name = "energy-shield-mk3-equipment",

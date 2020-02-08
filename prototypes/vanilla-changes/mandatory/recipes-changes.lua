@@ -84,6 +84,9 @@ krastorio.recipes.replaceIngredient("repair-pack", "iron-gear-wheel", {"iron-pla
 krastorio.recipes.replaceIngredient("repair-pack", "electronic-circuit", {"copper-plate", 2})
 krastorio.recipes.addIngredient("repair-pack", {"stone", 2})
 
+-- EQUIPMENTS
+krastorio.recipes.replaceIngredient("personal-laser-defense-equipment", "processing-unit", {"electronic-components", 50})
+
 --------------------------------------------------------------------
 -- -- -- BUILDINGS
 --------------------------------------------------------------------

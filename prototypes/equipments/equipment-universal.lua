@@ -338,7 +338,7 @@ data:extend(
 			cooldown = 80,
 			damage_modifier = 15,
 			projectile_center = {0, 0},
-			range = 35,
+			range = 32.5,
 			ammo_type = 
 			{
 				category = "laser-turret",
@@ -392,6 +392,138 @@ data:extend(
 			width = 64
 		}	
 	},
+	-- personal-laser-defense-mk3-equipment
+	{
+		type = "active-defense-equipment",
+		name = "personal-laser-defense-mk3-equipment",
+		localised_name = {"equipment-name.personal-sniper-laser-defense-mk3-equipment"},
+		localised_description = {"equipment-description.personal-sniper-laser-defense-mk3-equipment"},
+		attack_parameters = 
+		{
+			type = "beam",
+			cooldown = 90,
+			damage_modifier = 20,
+			projectile_center = {0, 0},
+			range = 35,
+			ammo_type = 
+			{
+				category = "laser-turret",
+				energy_consumption = "6MJ",
+				action = 
+				{
+					type = "direct",
+					action_delivery =
+					{
+						{
+							type = "instant",
+							target_effects =
+							{
+								{
+									type = "create-entity",
+									entity_name = "explosion-hit"
+								}
+							}
+						},
+						{
+							type = "beam",
+							beam = "laser-beam",
+							max_length = 40,
+							duration = 40,
+							source_offset = {0, -1.31439}
+						}
+					}
+				}
+			}
+		},
+		automatic = true,
+		categories = {"universal-equipment"},
+		energy_source = 
+		{
+			buffer_capacity = "36MJ",
+			input_flow_limit = "6MW",
+			type = "electric",
+			usage_priority = "secondary-input"
+		},
+		shape = 
+		{
+			width = 2,
+			height = 2,
+			type = "full"		
+		},
+		sprite = 
+		{
+			filename = kr_universal_equipments_path .. "personal-laser-defense-mk3-equipment.png",
+			height = 64,
+			priority = "medium",
+			width = 64
+		}	
+	},
+	-- personal-laser-defense-mk4-equipment
+	{
+		type = "active-defense-equipment",
+		name = "personal-laser-defense-mk4-equipment",
+		localised_name = {"equipment-name.personal-sniper-laser-defense-mk4-equipment"},
+		localised_description = {"equipment-description.personal-sniper-laser-defense-mk4-equipment"},
+		attack_parameters = 
+		{
+			type = "beam",
+			cooldown = 100,
+			damage_modifier = 25,
+			projectile_center = {0, 0},
+			range = 37.5,
+			ammo_type = 
+			{
+				category = "laser-turret",
+				energy_consumption = "8MJ",
+				action = 
+				{
+					type = "direct",
+					action_delivery =
+					{
+						{
+							type = "instant",
+							target_effects =
+							{
+								{
+									type = "create-entity",
+									entity_name = "explosion-hit"
+								}
+							}
+						},
+						{
+							type = "beam",
+							beam = "laser-beam",
+							max_length = 40,
+							duration = 40,
+							source_offset = {0, -1.31439}
+						}
+					}
+				}
+			}
+		},
+		automatic = true,
+		categories = {"universal-equipment"},
+		energy_source = 
+		{
+			buffer_capacity = "50MJ",
+			input_flow_limit = "10MW",
+			type = "electric",
+			usage_priority = "secondary-input"
+		},
+		shape = 
+		{
+			width = 2,
+			height = 2,
+			type = "full"		
+		},
+		sprite = 
+		{
+			filename = kr_universal_equipments_path .. "personal-laser-defense-mk4-equipment.png",
+			height = 64,
+			priority = "medium",
+			width = 64
+		}	
+	},
 	-- personal-submachine-laser-defense-mk1-equipment
 	{
 		type = "active-defense-equipment",
@@ -414,7 +546,7 @@ data:extend(
 			type = "electric",
 			usage_priority = "secondary-input",
 			buffer_capacity = "20MJ",
-			input_flow_limit = "1MW"
+			input_flow_limit = "2MW"
 		},
 		attack_parameters =
 		{
@@ -483,13 +615,13 @@ data:extend(
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			buffer_capacity = "36MJ",
-			input_flow_limit = "2MW"
+			buffer_capacity = "40MJ",
+			input_flow_limit = "4MW"
 		},
 		attack_parameters =
 		{
 			type = "beam",
-			damage_modifier = 3.5,
+			damage_modifier = 3,
 			cooldown = 6,
 			range = 18,
 			projectile_center = {0, 0.25},
@@ -548,13 +680,13 @@ data:extend(
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			buffer_capacity = "50MJ",
-			input_flow_limit = "5MW"
+			buffer_capacity = "60MJ",
+			input_flow_limit = "6MW"
 		},
 		attack_parameters =
 		{
 			type = "beam",
-			damage_modifier = 5,
+			damage_modifier = 4,
 			cooldown = 6,
 			range = 20,
 			projectile_center = {0, 0.25},
