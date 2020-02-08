@@ -46,12 +46,13 @@ local function onRemovingAnEntity(event)
 	end
 end
 
+-- Test if a team have with every 2 seconds
 local function checkVictory()
-	for force, it in pairs(global.intergalactic_transceivers) do
-		if it.valid and it.energy == it.prototype.electric_energy_source_prototype.buffer_capacity then
-			game.set_game_state{game_finished = true, player_won = true, can_continue = true, victorious_force = force}
-		end
-	end
+    for force_index, it in pairs(global.intergalactic_transceivers) do
+        if it.valid and it.energy == it.prototype.electric_energy_source_prototype.buffer_capacity then
+            game.set_game_state{game_finished = true, player_won = true, can_continue = true, victorious_force = game.forces[force_index]}
+        end
+    end
 end
 
 return
