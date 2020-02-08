@@ -31,7 +31,9 @@ local scripts =
 	-- Wiki GUI
 	require(control_scripts_path .. "wiki"),
 	-- Supporter thanks
-	require(control_scripts_path .. "supporters-thanks")
+	require(control_scripts_path .. "supporters-thanks"),
+	-- Intergalactic transceiver
+	require(control_scripts_path .. "intergalactic-transceiver")
 }
 
 -- Load all callbacks from control scripts (not for GUI events)

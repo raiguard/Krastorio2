@@ -532,8 +532,18 @@ data:extend(
 		order = "c[signal]-c[large-roboport]",
 		place_result = "kr-large-roboport",
 		stack_size = 50
-	}
+	},
 	-- -- --
+	{
+		type = "item",
+		name = "kr-intergalactic-transceiver",
+		icon = "__base__/graphics/icons/accumulator.png",
+		icon_size = 64, icon_mipmaps = 4,
+		subgroup = "defensive-structure",
+		order = "e[rocket-silo]-z[intergalactic-transceiver]",
+		place_result = "kr-intergalactic-transceiver",
+		stack_size = 1
+	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
