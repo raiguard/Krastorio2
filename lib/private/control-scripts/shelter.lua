@@ -132,7 +132,7 @@ return
 	{ saveStartPoint, "on_surface_created" }, 
 	{ onBuiltAnEntity, "on_built_entity", KRASTORIO_SHELTER_EVENT_FILTER },
 	{ onBuiltAnEntity, "on_robot_built_entity", KRASTORIO_SHELTER_EVENT_FILTER },
-	{ onRemovingAnEntity, "on_player_mined_entity" },
-	{ onRemovingAnEntity, "on_robot_mined_entity" },
+	{ onRemovingAnEntity, "on_player_mined_entity", KRASTORIO_SHELTER_EVENT_FILTER },
+	{ onRemovingAnEntity, "on_robot_mined_entity", KRASTORIO_SHELTER_EVENT_FILTER },
 	{ onRemovingAnEntity, "on_entity_died", KRASTORIO_SHELTER_EVENT_FILTER }
 }
