@@ -111,6 +111,8 @@ krastorio.technologies.addUnlockRecipe("rocket-fuel", "rocket-fuel-with-hydrogen
 krastorio.technologies.removeUnlockRecipe("automation", "long-handed-inserter")
 krastorio.technologies.removeUnlockRecipe("oil-processing", "chemical-plant")
 
+krastorio.technologies.removeUnlockRecipe("kovarex-enrichment-process", "nuclear-fuel")
+
 --------------------------------------------------------------------
 -- Loaders
 if krastorio.general.getSafeSettingValue("kr-loaders") then

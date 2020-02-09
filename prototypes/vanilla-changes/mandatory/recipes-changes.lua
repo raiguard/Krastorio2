@@ -28,6 +28,7 @@ end
 --------------------------------------------------------------------
 
 -- Rocket fuel category
+krastorio.recipes.convertIngredientFromAllRecipes("nuclear-fuel", "rocket-fuel")
 krastorio.recipes.setCategoryIfExist("rocket-fuel", "fuel-refinery")
 krastorio.recipes.addOrReplaceIngredient("rocket-fuel", "light-oil", {type="fluid", name="light-oil", amount=30, catalyst_amount=30})
 krastorio.recipes.replaceIngredient("rocket-fuel", "solid-fuel", {"iron-plate", 5})
