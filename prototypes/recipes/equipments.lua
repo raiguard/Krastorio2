@@ -14,7 +14,7 @@ return
 			{"power-armor-mk2", 1},
 			{"speed-module-3", 25},
 			{"effectivity-module-3", 25},
-			{"electronic-components", 100}
+			{"energy-control-unit", 25}
 		},
 		result = "power-armor-mk3",
 		requester_paste_multiplier = 1

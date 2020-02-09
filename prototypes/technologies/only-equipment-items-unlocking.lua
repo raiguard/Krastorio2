@@ -19,7 +19,7 @@ data:extend(
 				recipe = "power-armor-mk3"
 			}
 		},
-		prerequisites = {"power-armor-mk2"},
+		prerequisites = {"power-armor-mk2", "kr-energy-control-unit"},
 		unit = 		
 		{
 			count = 1000,
@@ -55,7 +55,8 @@ data:extend(
 			{
 				{"utility-science-pack", 1},
 				{"space-science-pack", 1},
-				{"advanced-tech-card", 1}	
+				{"advanced-tech-card", 1},
+				{"singularity-tech-card", 1}				
 			},
 			time = 90
 		}		

@@ -652,12 +652,142 @@ data:extend(
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"science-science-pack", 1},
-				{"advanced-science-pack", 1}
+				{"space-science-pack", 1},
+				{"advanced-tech-card", 1}
 			},
 			time = 30
 		}
     },
+	{
+		type = "technology",
+		name = "kr-advanced-furnace",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "advanced-furnace.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-advanced-furnace"
+			}
+		},
+		prerequisites = {"kr-imersium-processing", "kr-energy-control-unit"},
+		unit =
+		{
+			count = 1000,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"matter-tech-card", 1},
+				{"advanced-tech-card", 1}
+			},
+			time = 45
+		}
+    },
+	{
+		type = "technology",
+		name = "kr-advanced-roboports",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "advanced-roboports.png",
+		icon_size = 128,
+		effects =
+		{
+		
+		},
+		prerequisites = {"kr-imersium-processing", "kr-energy-control-unit"},
+		unit =
+		{
+			count = 1000,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"matter-tech-card", 1},
+				{"advanced-tech-card", 1}
+			},
+			time = 45
+		}
+    },
+	{
+		type = "technology",
+		name = "kr-advanced-chemical-plant",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "advanced-chemical-plant.png",
+		icon_size = 128,
+		effects =
+		{
+		
+		},
+		prerequisites = {"kr-imersium-processing", "kr-energy-control-unit"},
+		unit =
+		{
+			count = 1000,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"matter-tech-card", 1},
+				{"advanced-tech-card", 1}
+			},
+			time = 45
+		}
+    },
+	{
+		type = "technology",
+		name = "kr-singularity-beacon",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "singularity-beacon.png",
+		icon_size = 128,
+		effects =
+		{
+		
+		},
+		prerequisites = {"kr-imersium-processing", "kr-energy-control-unit", "kr-singularity-tech-card"},
+		unit =
+		{
+			count = 1500,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"matter-tech-card", 1},
+				{"advanced-tech-card", 1},
+				{"singularity-tech-card", 1}
+			},
+			time = 45
+		}
+    },
+	{
+		type = "technology",
+		name = "kr-intergalactic-transceiver",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "intergalactic-transceiver.png",
+		icon_size = 128,
+		effects =
+		{
+		
+		},
+		prerequisites = {"kr-imersium-processing", "kr-energy-control-unit", "kr-singularity-tech-card"},
+		unit =
+		{
+			count = 3000,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"matter-tech-card", 1},
+				{"advanced-tech-card", 1},
+				{"singularity-tech-card", 1}
+			},
+			time = 60
+		}
+    }
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

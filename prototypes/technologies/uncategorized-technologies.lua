@@ -483,7 +483,7 @@ data:extend(
 				recipe = "kr-matter-assembler"
 			}
 		},
-		prerequisites = {"kr-matter-tech-card", "kr-imersium-processing"},
+		prerequisites = {"kr-matter-tech-card", "kr-imersium-processing", "kr-energy-control-unit"},
 		order = "g-e-d",
 		unit =
 		{
@@ -521,7 +521,8 @@ data:extend(
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
 				{"space-science-pack", 1},
-				{"matter-tech-card", 1}				
+				{"matter-tech-card", 1},
+				{"advanced-tech-card", 1}				
 			},
 			time = 45
 		}

@@ -32,6 +32,7 @@ krastorio.technologies.removePrerequisite("fluid-handling", "automation-2")
 krastorio.technologies.removePrerequisite("engine", "steel-processing")
 krastorio.technologies.removePrerequisite("battery-equipment", "solar-panel-equipment")
 krastorio.technologies.removePrerequisite("battery-mk2-equipment", "low-density-structure")
+krastorio.technologies.removePrerequisite("personal-laser-defense-equipment", "low-density-structure")
 
 --------------------------------------------------------------------
 -- -- Research unit ingredients

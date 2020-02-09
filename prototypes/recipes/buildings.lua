@@ -503,7 +503,7 @@ return
 		{
 			{"imersium-beam", 10},
 			{"kr-steel-pipe", 10},		
-			{"electronic-components", 10},				
+			{"energy-control-unit", 10},				
 			{"ai-core", 5}					
 		},
 		result = "kr-matter-plant"
@@ -517,7 +517,7 @@ return
 		{
 			{"imersium-beam", 4},
 			{"kr-steel-pipe", 4},		
-			{"electronic-components", 10},			
+			{"energy-control-unit", 10},			
 			{"ai-core", 3}					
 		},
 		result = "kr-matter-assembler"
@@ -529,8 +529,8 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"ai-core", 100},
-			{"electronic-components", 100},		
+			{"ai-core", 50},
+			{"energy-control-unit", 50},		
 			{"imersium-beam", 500},
 			{"imersium-plate", 500}			
 		},
@@ -630,8 +630,21 @@ return
 		},
 		result = "kr-superior-underground-belt",
 		result_count = 2
-    }
+    },
 	---
+	{
+		type = "recipe",
+		name = "kr-advanced-furnace",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"imersium-beam", 20},
+			{"copper-plate", 60},
+			{"energy-control-unit", 10}
+		},
+		result = "kr-advanced-furnace"
+    },
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
