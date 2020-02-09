@@ -29,7 +29,8 @@ end
 
 -- Rocket fuel category
 krastorio.recipes.setCategoryIfExist("rocket-fuel", "fuel-refinery")
-krastorio.recipes.replaceIngredient("rocket-fuel", "light-oil", {type="fluid", name="light-oil", amount=30, catalyst_amount=30})
+krastorio.recipes.addOrReplaceIngredient("rocket-fuel", "light-oil", {type="fluid", name="light-oil", amount=30, catalyst_amount=30})
+krastorio.recipes.replaceIngredient("rocket-fuel", "solid-fuel", {"iron-plate", 5})
 
 -- Apply automation core to the early game items
 krastorio.recipes.addIngredient("burner-inserter", {"automation-core", 1})

@@ -202,12 +202,18 @@ return
 		type = "recipe",
 		name = "rocket-fuel-with-ammonia",
 		localized_name = {"item-name.rocket-fuel"},
+		icons = 
+		{
+			{ icon = kr_recipes_icons_path .. "rocket-fuel.png", icon_size = 64 },
+			{ icon = kr_fluids_icons_path  .. "hydrogen-chloride.png", icon_size = 64, scale = 0.26, shift = {8,-8}}
+		},
+		icon_size = 64,		
 		energy_required = 30,
 		enabled = false,
 		category = "fuel-refinery",
 		ingredients =
 		{
-			{"solid-fuel", 10},
+			{"iron-plate", 5},
 			{type="fluid", name="ammonia", amount=50, catalyst_amount=50}
 		},
 		result = "rocket-fuel"
@@ -216,12 +222,18 @@ return
 		type = "recipe",
 		name = "rocket-fuel-with-hydrogen-chloride",
 		localized_name = {"item-name.rocket-fuel"},
+		icons = 
+		{
+			{ icon = kr_recipes_icons_path .. "rocket-fuel.png", icon_size = 64 },
+			{ icon = kr_fluids_icons_path  .. "ammonia.png", icon_size = 64, scale = 0.26, shift = {8,-8}}
+		},
+		icon_size = 64,		
 		energy_required = 30,
 		enabled = false,
 		category = "fuel-refinery",
 		ingredients =
 		{
-			{"solid-fuel", 10},
+			{"iron-plate", 5},
 			{type="fluid", name="hydrogen-chloride", amount=50, catalyst_amount=50}
 		},
 		result = "rocket-fuel"

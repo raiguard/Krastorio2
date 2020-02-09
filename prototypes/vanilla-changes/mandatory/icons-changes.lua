@@ -51,7 +51,20 @@ krastorio.icons.setItemIcon("steel-plate",                            kr_icons_p
 -- Changing iron gear wheel
 krastorio.icons.setItemIcon("iron-gear-wheel",                        kr_icons_path .. "iron-gear-wheel.png")
 
-krastorio.icons.addOverlayIcons(krastorio.recipes.getRecipeFromName("rocket-fuel"), krastorio.icons.getIconsForOverlay(krastorio.items.getItem("light-oil")), 64, 0.28, {-4, 8})	
+local light_oil_icon = nil
+if data.raw.fluid["light-oil"].icon == "__base__/graphics/icons/fluid/light-oil.png" then
+	light_oil_icon = kr_fluids_icons_path  .. "light-oil.png"
+else
+	light_oil_icon = data.raw.fluid["light-oil"].icon
+end
+local rocket_fuel_icons = 
+{
+	{ icon = kr_recipes_icons_path .. "rocket-fuel.png", icon_size = 64 },
+	{ icon = light_oil_icon, icon_size = data.raw.fluid["light-oil"].icon_size or 64, scale = 0.26, shift = {8,-8}}
+}
+krastorio.icons.setRecipeIcons("rocket-fuel", rocket_fuel_icons)
+
+--krastorio.icons.addOverlayIcons(krastorio.recipes.getRecipeFromName("rocket-fuel"), krastorio.icons.getIconsForOverlay(krastorio.items.getItem("light-oil")), 64, 0.28, {-4, 8})	
 
 -----------------------------------------------------------------
 -- -- Fluids
