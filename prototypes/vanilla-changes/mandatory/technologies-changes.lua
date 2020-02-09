@@ -26,6 +26,11 @@ krastorio.technologies.addPrerequisite("production-science-pack", "kr-advanced-l
 krastorio.technologies.addPrerequisite("battery-equipment", "modular-armor")
 krastorio.technologies.addPrerequisite("fusion-reactor-equipment", "kr-fusion-energy")
 
+-- Modules 
+krastorio.technologies.addPrerequisite("speed-module-3", "advanced-electronics-2")
+krastorio.technologies.addPrerequisite("productivity-module-3", "advanced-electronics-2")
+krastorio.technologies.addPrerequisite("effectivity-module-3", "advanced-electronics-2")
+
 --Removing
 krastorio.technologies.removePrerequisite("heavy-armor", "military")
 krastorio.technologies.removePrerequisite("fluid-handling", "automation-2")
@@ -33,6 +38,11 @@ krastorio.technologies.removePrerequisite("engine", "steel-processing")
 krastorio.technologies.removePrerequisite("battery-equipment", "solar-panel-equipment")
 krastorio.technologies.removePrerequisite("battery-mk2-equipment", "low-density-structure")
 krastorio.technologies.removePrerequisite("personal-laser-defense-equipment", "low-density-structure")
+
+-- Modules
+krastorio.technologies.removePrerequisite("speed-module-2", "advanced-electronics-2")
+krastorio.technologies.removePrerequisite("productivity-module-2", "advanced-electronics-2")
+krastorio.technologies.removePrerequisite("effectivity-module-2", "advanced-electronics-2")
 
 --------------------------------------------------------------------
 -- -- Research unit ingredients
@@ -90,6 +100,10 @@ krastorio.technologies.addUnlockRecipe(krastorio.technologies.getTechnologyThatU
 krastorio.technologies.addUnlockRecipe(krastorio.technologies.getTechnologyThatUnlockRecipe("electric-engine-unit"), "additional-engine")
 
 krastorio.technologies.addUnlockRecipe("personal-laser-defense-equipment", "personal-submachine-laser-defense-mk1-equipment")
+
+-- Rocket fuel recipes
+krastorio.technologies.addUnlockRecipe("rocket-fuel", "rocket-fuel-with-ammonia")
+krastorio.technologies.addUnlockRecipe("rocket-fuel", "rocket-fuel-with-hydrogen-chloride")
 
 -- Removings
 

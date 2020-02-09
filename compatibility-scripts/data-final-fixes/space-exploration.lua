@@ -6,7 +6,13 @@ if mods["space-exploration"] then
 ---------------------------------------------------------------------------------------------
 
 	-- --  Modules
-	-- Return to Krastorio 2/Vanilla modules on the first 3 tiers
+	-- Return to Krastorio 2/Vanilla modules on the first 3 tiers 
+	krastorio.technologies.addPrerequisite("speed-module-3", "advanced-electronics-2")
+	krastorio.technologies.addPrerequisite("productivity-module-3", "advanced-electronics-2")
+	krastorio.technologies.addPrerequisite("effectivity-module-3", "advanced-electronics-2")
+	krastorio.technologies.removePrerequisite("speed-module-2", "advanced-electronics-2")
+	krastorio.technologies.removePrerequisite("productivity-module-2", "advanced-electronics-2")
+	krastorio.technologies.removePrerequisite("effectivity-module-2", "advanced-electronics-2")
 	
 	-- Speed modules
 	krastorio.technologies.removeResearchUnitIngredient("speed-module-2", "production-science-pack", 1)
@@ -353,6 +359,122 @@ if mods["space-exploration"] then
 		krastorio.technologies.removeUnlockRecipeFromAllTechnologies("glass-from-sand")
 		krastorio.modules.removeProductivityLimitation("glass-from-sand")
 	end
+	
+	-- MODULES
+	-- Speed modules
+
+	-- Speed module 1
+	krastorio.recipes.setEnergyCost("speed-module", 15)
+	krastorio.recipes.overrideIngredients
+	(	
+		"speed-module", 
+		{
+			{"electronic-circuit", 5},
+			{"electronic-components", 10}
+		}
+	)
+
+	-- Speed module 2
+	krastorio.recipes.setEnergyCost("speed-module-2", 15)
+	krastorio.recipes.overrideIngredients
+	(	
+		"speed-module-2", 
+		{
+			{"advanced-circuit", 5},
+			{"electronic-circuit", 5},
+			{"speed-module", 5}
+		}
+	)
+
+	-- Speed module 3
+	krastorio.recipes.setEnergyCost("speed-module-3", 15)
+	krastorio.recipes.overrideIngredients
+	(	
+		"speed-module-3", 
+		{
+			{"processing-unit", 5},
+			{"advanced-circuit", 5},
+			{"speed-module-2", 5}
+		}
+	)
+
+	------------------------------------------------
+	-- -- Productivity modules
+
+	-- Productivity module 1	
+	krastorio.recipes.setEnergyCost("productivity-module", 15)
+	krastorio.recipes.overrideIngredients
+	(	
+		"productivity-module", 
+		{
+			{"electronic-circuit", 5},
+			{"electronic-components", 10}
+		}
+	)
+
+	-- Productivity module 2	
+	krastorio.recipes.setEnergyCost("productivity-module-2", 15)
+	krastorio.recipes.overrideIngredients
+	(	
+		"productivity-module-2", 
+		{
+			{"advanced-circuit", 5},
+			{"electronic-circuit", 5},
+			{"productivity-module", 5}
+		}
+	)	
+		
+	-- Productivity module 3	
+	krastorio.recipes.setEnergyCost("productivity-module-3", 15)
+	krastorio.recipes.overrideIngredients
+	(	
+		"productivity-module-3", 
+		{
+			{"processing-unit", 5},
+			{"advanced-circuit", 5},
+			{"productivity-module-2", 5}
+		}
+	)
+		
+	------------------------------------------------
+	-- -- Effectivity modules
+
+	-- Effectivity module 1
+	krastorio.recipes.setEnergyCost("effectivity-module", 15)
+	krastorio.recipes.overrideIngredients
+	(	
+		"effectivity-module", 
+		{
+			{"electronic-circuit", 5},
+			{"electronic-components", 10}
+		}
+	)
+		
+	-- Effectivity module 2
+	krastorio.recipes.setEnergyCost("effectivity-module-2", 15)
+	krastorio.recipes.overrideIngredients
+	(	
+		"effectivity-module-2", 
+		{
+			{"advanced-circuit", 5},
+			{"electronic-circuit", 5},
+			{"effectivity-module", 5}
+		}
+	)
+
+	-- Effectivity module 3
+	krastorio.recipes.setEnergyCost("effectivity-module-3", 15)
+	krastorio.recipes.overrideIngredients
+	(	
+		"effectivity-module-3", 
+		{
+			{"processing-unit", 5},
+			{"advanced-circuit", 5},
+			{"effectivity-module-2", 5}
+		}
+	)
+	
+	krastorio.recipes.setCategoryIfExist("rocket-fuel", "fuel-refinery")
 	
 -- -- Icons
 ---------------------------------------------------------------------------------------------

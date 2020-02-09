@@ -196,6 +196,34 @@ return
 		},
 		subgroup = "fluid-recipes",
 		order = "y08[biomethanol]",
-	}
+	},
 	---
+	{
+		type = "recipe",
+		name = "rocket-fuel-with-ammonia",
+		localized_name = {"item-name.rocket-fuel"},
+		energy_required = 30,
+		enabled = false,
+		category = "fuel-refinery",
+		ingredients =
+		{
+			{"solid-fuel", 10},
+			{type="fluid", name="ammonia", amount=50, catalyst_amount=50}
+		},
+		result = "rocket-fuel"
+	}, -- hydrogen-chloride
+	{
+		type = "recipe",
+		name = "rocket-fuel-with-hydrogen-chloride",
+		localized_name = {"item-name.rocket-fuel"},
+		energy_required = 30,
+		enabled = false,
+		category = "fuel-refinery",
+		ingredients =
+		{
+			{"solid-fuel", 10},
+			{type="fluid", name="hydrogen-chloride", amount=50, catalyst_amount=50}
+		},
+		result = "rocket-fuel"
+	}
 }

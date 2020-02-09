@@ -70,17 +70,7 @@ end
 -- @item_or_recipe, item or recipe
 function krastorio.icons.getIconsForOverlay(item_or_recipe)
 	local icons_table = {}
-	if item_or_recipe.icon then
-		-- single icon, simple insert
-		table.insert
-		(
-			icons_table,
-			{
-				icon = item_or_recipe.icon,
-				icon_size = item_or_recipe.icon_size
-			}
-		)
-	else
+	if item_or_recipe.icons then
 		-- copy all icons from the source item to the returned table,
 		-- but populate the icon_size in each icon; we want the icon size defined in each icon for future overlay scaling
 		for _, original_icon in ipairs(item_or_recipe.icons) do
@@ -94,6 +84,21 @@ function krastorio.icons.getIconsForOverlay(item_or_recipe)
 				new_icon
 			)
 		end
+	else
+		if not item_or_recipe.icon and item_or_recipe.type == "recipe" then
+			return krastorio.icons.getIconsForOverlay(krastorio.items.getItem(item_or_recipe.name))
+		else
+			return {}
+		end
+		-- single icon, simple insert
+		table.insert
+		(
+			icons_table,
+			{
+				icon = item_or_recipe.icon,
+				icon_size = item_or_recipe.icon_size
+			}
+		)
 	end
 	return icons_table
 end
@@ -103,8 +108,8 @@ function krastorio.icons.addOverlayIcons(item_or_recipe, icons_to_add, icon_size
 	scale = (scale or 1)
 	shift = (shift or {0, 0})
 	icon_size = (icon_size or 64)
-
-	if item_or_recipe.icon_size then
+	
+	if not item_or_recipe.icons then		
 		-- normalize to icon specification option 1, with icon size defined in each layer
 		item_or_recipe.icons = krastorio.icons.getIconsForOverlay(item_or_recipe)
 		-- clean up after ourselves

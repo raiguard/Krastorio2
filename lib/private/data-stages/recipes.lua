@@ -1576,10 +1576,10 @@ end
 -- @ category_name
 -- return a category
 function krastorio.recipes.existRecipesCategory(category_name)
-	if type(recipe_name) == "string" then
+	if type(category_name) == "string" then
 		for name, category in pairs(data.raw["recipe-category"]) do
 			if name == category_name then 
-				return category
+				return true
 			end
 		end
 	end
@@ -1593,7 +1593,7 @@ function krastorio.recipes.setCategoryIfExist(recipe_name, category_name)
 	if category then
 		local recipe = krastorio.recipes.getRecipeFromName(recipe_name)
 		if recipe then
-			recipe.category = category
+			recipe.category = category_name
 		end	
 	end
 end

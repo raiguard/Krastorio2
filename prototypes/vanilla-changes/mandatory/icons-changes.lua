@@ -51,6 +51,8 @@ krastorio.icons.setItemIcon("steel-plate",                            kr_icons_p
 -- Changing iron gear wheel
 krastorio.icons.setItemIcon("iron-gear-wheel",                        kr_icons_path .. "iron-gear-wheel.png")
 
+krastorio.icons.addOverlayIcons(krastorio.recipes.getRecipeFromName("rocket-fuel"), krastorio.icons.getIconsForOverlay(krastorio.items.getItem("light-oil")), 64, 0.28, {-4, 8})	
+
 -----------------------------------------------------------------
 -- -- Fluids
 krastorio.icons.setItemIcon("water",                                  kr_fluids_icons_path  .. "water.png")
