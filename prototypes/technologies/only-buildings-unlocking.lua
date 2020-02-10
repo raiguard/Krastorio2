@@ -694,9 +694,16 @@ data:extend(
 		icon_size = 128,
 		effects =
 		{
-		
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-small-roboport"
+			},
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-large-roboport"
+			}
 		},
-		prerequisites = {"kr-imersium-processing", "kr-energy-control-unit"},
+		prerequisites = {"kr-imersium-processing"},
 		unit =
 		{
 			count = 1000,
@@ -719,9 +726,12 @@ data:extend(
 		icon_size = 128,
 		effects =
 		{
-		
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-advanced-chemical-plant"
+			}		
 		},
-		prerequisites = {"kr-imersium-processing", "kr-energy-control-unit"},
+		prerequisites = {"kr-imersium-processing"},
 		unit =
 		{
 			count = 1000,

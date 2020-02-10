@@ -7,6 +7,7 @@ require("buildings/pipe-covers/steel-pipecovers")
 -- -- -- BUILDINGS
 ---------------------------------------------------------------------------------------
 -- -- Generals
+require("buildings/advanced-chemical-plant")
 require("buildings/advanced-furnace")
 require("buildings/advanced-steam-turbine")
 require("buildings/air-purifier")

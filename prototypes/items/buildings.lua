@@ -399,6 +399,16 @@ data:extend(
 		place_result = "kr-advanced-furnace",
 		stack_size = 50
 	},
+	{
+		type = "item",
+		name = "kr-advanced-chemical-plant",
+		icon = kr_entities_icons_path .. "advanced-chemical-plant.png",
+		icon_size = 64,
+		subgroup = "production-machine",
+		order = "e[chemical-plant]-b[advanced-chemical-plant]",
+		place_result = "kr-advanced-chemical-plant",
+		stack_size = 50
+	},
 	-- -- --
 	-- Turrets
 	-- -- --	

@@ -645,6 +645,49 @@ return
 		},
 		result = "kr-advanced-furnace"
     },
+	{
+		type = "recipe",
+		name = "kr-advanced-chemical-plant",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"processing-unit", 20},
+			{"imersium-beam", 20},
+			{"imersium-gear-wheel", 20},
+			{"kr-steel-pipe", 10}
+		},
+		result = "kr-advanced-chemical-plant"
+    },
+	{
+		type = "recipe",
+		name = "kr-large-roboport",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"imersium-beam", 20},
+			{"imersium-gear-wheel", 20},
+			{"ai-core", 10},
+			{"roboport", 1}
+		},
+		result = "kr-large-roboport"
+    },
+	{
+		type = "recipe",
+		name = "kr-small-roboport",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"imersium-beam", 20},
+			{"imersium-gear-wheel", 20},
+			{"ai-core", 10},
+			{"roboport", 1}
+		},
+		result = "kr-small-roboport",
+		result_count = 2
+    },
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
