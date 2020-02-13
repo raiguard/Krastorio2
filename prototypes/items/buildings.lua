@@ -546,9 +546,20 @@ data:extend(
 	-- -- --
 	{
 		type = "item",
+		name = "kr-energy-storage",
+		icon = kr_entities_icons_path .. "energy-storage.png",
+		icon_size = 64,
+		subgroup = "energy",
+		order = "e[accumulator]-b[energy-storage]",
+		place_result = "kr-energy-storage",
+		stack_size = 50
+	},
+	-- -- --
+	{
+		type = "item",
 		name = "kr-intergalactic-transceiver",
-		icon = "__base__/graphics/icons/accumulator.png",
-		icon_size = 64, icon_mipmaps = 4,
+		icon = kr_entities_icons_path .. "intergalactic-transceiver.png",
+		icon_size = 64,
 		subgroup = "defensive-structure",
 		order = "e[rocket-silo]-z[intergalactic-transceiver]",
 		place_result = "kr-intergalactic-transceiver",

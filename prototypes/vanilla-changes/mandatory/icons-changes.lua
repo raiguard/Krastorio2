@@ -36,6 +36,8 @@ krastorio.icons.setItemIcon("space-science-pack",                     kr_cards_i
 data.raw.tool["space-science-pack"].order = "b09[optimization-tech-card]"
 krastorio.icons.setTechnologyIcon("space-science-pack",               kr_technologies_icons_path .. "optimization-tech-card.png")
 
+-- Other
+krastorio.icons.setItemIcon("battery",                                kr_icons_path  .. "battery.png")
 -----------------------------------------------------------------
 -- -- Chaning intermediate products icons
 
@@ -80,6 +82,7 @@ krastorio.icons.setItemIcon("petroleum-gas",                          kr_fluids_
 -- -- -- TECHNOLOGIES
 
 krastorio.icons.setTechnologyIcon("steel-processing",                 kr_technologies_icons_path .. "steel-processing.png")
+krastorio.icons.setTechnologyIcon("battery",                          kr_technologies_icons_path .. "battery.png")
 
 -- Logistics
 krastorio.icons.setTechnologyIcon("logistics",                        kr_technologies_icons_path .. "logistics-1.png")

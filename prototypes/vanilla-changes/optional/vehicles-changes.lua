@@ -32,7 +32,11 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 	krastorio.recipes.replaceIngredient("tank", "steel-plate", {"steel-plate", 60})
 	krastorio.recipes.replaceIngredient("tank", "iron-gear-wheel", {"steel-gear-wheel", 30})
 	---------------------
+	
+	---------------------
+	-- -- Battle Tank
 
+	data.raw.car["kr-advanced-tank"].burner.fuel_category = "vehicle-fuel"
 	
 	
 end

@@ -34,6 +34,7 @@ require("buildings/matter-plant")
 require("buildings/matter-assembler")
 require("buildings/gas-power-station")
 require("buildings/intergalactic-transceiver")
+require("buildings/energy-storage")
 -- -- Turrets
 require("buildings/turrets/railgun-turret")
 require("buildings/turrets/rocket-turret")

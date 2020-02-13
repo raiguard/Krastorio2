@@ -213,8 +213,9 @@ return
 		category = "fuel-refinery",
 		ingredients =
 		{
-			{"iron-plate", 5},
-			{type="fluid", name="ammonia", amount=50, catalyst_amount=50}
+			{"iron-plate", 1},
+			{type="fluid", name="ammonia", amount=50, catalyst_amount=50},
+			{type="fluid", name="oxygen", amount=50, catalyst_amount=50},
 		},
 		result = "rocket-fuel"
 	}, -- hydrogen-chloride
@@ -233,8 +234,9 @@ return
 		category = "fuel-refinery",
 		ingredients =
 		{
-			{"iron-plate", 5},
-			{type="fluid", name="hydrogen-chloride", amount=50, catalyst_amount=50}
+			{"iron-plate", 1},
+			{type="fluid", name="hydrogen-chloride", amount=50, catalyst_amount=50},
+			{type="fluid", name="oxygen", amount=50, catalyst_amount=50},
 		},
 		result = "rocket-fuel"
 	}

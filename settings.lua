@@ -94,4 +94,11 @@ data:extend(
 		default_value = true,
 		order = "b3"
 	},
+	{
+		type = "bool-setting",
+		name = "kr-vehicles-minable-changes",
+		setting_type = "startup",
+		default_value = false,
+		order = "b4"
+	},
 })

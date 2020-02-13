@@ -3,10 +3,11 @@
 
 local modifications =
 {	
-	"train-changes",   		-- Modify trains
-	"vehicles-changes",		-- Modify vehicles
-	"radar-changes",    	-- Modify vanilla radar
-	"fuels-changes"			-- Modify vanilla fuels
+	"train-changes",   		     -- Modify trains
+	"vehicles-changes",		     -- Modify vehicles
+	"radar-changes",    	     -- Modify vanilla radar
+	"fuels-changes",		     -- Modify vanilla fuels
+	"vehicles-minable-changes"   -- Turn off vehicles minable
 }
 
 -- Application of the modifications
