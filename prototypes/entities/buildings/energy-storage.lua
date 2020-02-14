@@ -33,7 +33,7 @@ data:extend(
 		},
 		picture = 
 		{
-			layers=
+			layers =
 			{
 				{
 					filename = kr_entities_path .. "energy-storage/energy-storage.png",
@@ -76,7 +76,7 @@ data:extend(
 		},
 		charge_animation = 
 		{
-			layers=
+			layers =
 			{
 				{
 					filename = kr_entities_path .. "energy-storage/energy-storage.png",
@@ -84,7 +84,7 @@ data:extend(
 					height = 190,
 					frame_count = 1,
 					repeat_count = 2,
-					animation_speed=0.03,
+					animation_speed = 0.03,
 					scale = 1.1,
 					shift = {0, -0.4},
 					hr_version =
@@ -95,7 +95,7 @@ data:extend(
 						scale = 0.55,
 						frame_count = 1,
 						repeat_count = 2,
-						animation_speed=0.03,
+						animation_speed = 0.03,
 						shift = {0, -0.4},
 					}
 				},
@@ -105,7 +105,7 @@ data:extend(
 					height = 135,
 					frame_count = 1,
 					repeat_count = 2,
-					animation_speed=0.03,
+					animation_speed = 0.03,
 					draw_as_shadow = true,
 					scale = 1.1,
 					shift = {0.72, 0.56},
@@ -117,7 +117,7 @@ data:extend(
 						scale = 0.55,
 						frame_count = 1,
 						repeat_count = 2,
-						animation_speed=0.03,
+						animation_speed = 0.03,
 						draw_as_shadow = true,
 						shift = {0.72, 0.56}
 					}
@@ -128,7 +128,7 @@ data:extend(
 					height = 190,
 					frame_count = 2,
 					line_length = 2,
-					animation_speed=0.03,
+					animation_speed = 0.03,
 					scale = 1.1,
 					shift = {0, -0.4},
 					hr_version =
@@ -139,7 +139,7 @@ data:extend(
 						scale = 0.55,
 						frame_count = 2,
 						line_length = 2,
-						animation_speed=0.03,
+						animation_speed = 0.03,
 						shift = {0, -0.4},
 					}
 				}
@@ -155,7 +155,7 @@ data:extend(
 					height = 190,
 					frame_count = 1,
 					repeat_count = 2,
-					animation_speed=0.06,
+					animation_speed = 0.06,
 					scale = 1.1,
 					shift = {0, -0.4},
 					hr_version =
@@ -166,7 +166,7 @@ data:extend(
 						scale = 0.55,
 						frame_count = 1,
 						repeat_count = 2,
-						animation_speed=0.06,
+						animation_speed = 0.06,
 						shift = {0, -0.4},
 					}
 				},
@@ -176,7 +176,7 @@ data:extend(
 					height = 135,
 					frame_count = 1,
 					repeat_count = 2,
-					animation_speed=0.06,
+					animation_speed = 0.06,
 					draw_as_shadow = true,
 					scale = 1.1,
 					shift = {0.72, 0.56},
@@ -188,7 +188,7 @@ data:extend(
 						scale = 0.55,
 						frame_count = 1,
 						repeat_count = 2,
-						animation_speed=0.06,
+						animation_speed = 0.06,
 						draw_as_shadow = true,
 						shift = {0.72, 0.56}
 					}
@@ -199,7 +199,7 @@ data:extend(
 					height = 190,
 					frame_count = 2,
 					line_length = 2,
-					animation_speed=0.06,
+					animation_speed = 0.06,
 					scale = 1.1,
 					shift = {0, -0.4},
 					hr_version =
@@ -210,15 +210,12 @@ data:extend(
 						scale = 0.55,
 						frame_count = 2,
 						line_length = 2,
-						animation_speed=0.06,
+						animation_speed = 0.06,
 						shift = {0, -0.4},
 					}
 				}
 			}
-		},
-		
-		
-		
+		},		
 		charge_cooldown = 5,
 		discharge_cooldown = 5,
 		charge_light =
@@ -253,6 +250,6 @@ data:extend(
 		circuit_wire_connection_point = circuit_connector_definitions["accumulator"].points,
 		circuit_connector_sprites = circuit_connector_definitions["accumulator"].sprites,
 		circuit_wire_max_distance = default_circuit_wire_max_distance,
-		default_output_signal = {type = "virtual", name = "signal-I"}
+		default_output_signal = {type = "virtual", name = "signal-A"}
 	}
 })

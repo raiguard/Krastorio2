@@ -567,11 +567,25 @@ data:extend(
 	-- -- --
 	{
 		type = "item",
+		name = "kr-singularity-beacon",
+		icon = kr_entities_icons_path .. "singularity-beacon.png",
+		icon_size = 64,
+		icon_mipmaps = 1,
+		pictures =
+		{
+			{ size = 64, filename = kr_entities_icons_path .. "singularity-beacon.png", scale = 0.25, mipmap_count = 4 }
+		}, 
+		order = "8[singularity-beacon]",
+		place_result = "kr-singularity-beacon",
+		stack_size = 10
+    },
+	{
+		type = "item",
 		name = "kr-intergalactic-transceiver",
 		icon = kr_entities_icons_path .. "intergalactic-transceiver.png",
 		icon_size = 64,
-		subgroup = "defensive-structure",
-		order = "e[rocket-silo]-z[intergalactic-transceiver]",
+		subgroup = "radars-and-rockets",
+		order = "zzz[rocket-silo]-zzzz[intergalactic-transceiver]",
 		place_result = "kr-intergalactic-transceiver",
 		stack_size = 1
 	}

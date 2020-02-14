@@ -3,7 +3,7 @@ data:extend(
 	{
 		type = "radar",
 		name = "kr-sentinel",
-		icon =  kr_entities_icons_path .. "sentinel.png",
+		icon = kr_entities_icons_path .. "sentinel.png",
 		icon_size = 64,
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 0.1, result = "kr-sentinel"},

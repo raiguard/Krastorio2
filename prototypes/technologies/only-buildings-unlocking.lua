@@ -754,7 +754,10 @@ data:extend(
 		icon_size = 128,
 		effects =
 		{
-		
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-singularity-beacon"
+			}			
 		},
 		prerequisites = {"kr-imersium-processing", "kr-energy-control-unit", "kr-singularity-tech-card"},
 		unit =
@@ -780,7 +783,10 @@ data:extend(
 		icon_size = 128,
 		effects =
 		{
-		
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-intergalactic-transceiver"
+			}
 		},
 		prerequisites = {"kr-imersium-processing", "kr-energy-control-unit", "kr-singularity-tech-card"},
 		unit =

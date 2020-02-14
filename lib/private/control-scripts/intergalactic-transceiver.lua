@@ -11,6 +11,7 @@ local KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER =
 -- Called when the game is created
 local function intergalactic_transceiverVariablesInitializing()
 	global.intergalactic_transceivers = {}
+	global.intergalactic_transceivers_energy_status = {}
 end
 
 -- @event, on_built_entity or on_robot_built_entity
@@ -49,8 +50,23 @@ end
 -- Test if a team have with every 2 seconds
 local function checkVictory()
     for force_index, it in pairs(global.intergalactic_transceivers) do
-        if it.valid and it.energy == it.prototype.electric_energy_source_prototype.buffer_capacity then
+        if it.valid and it.energy == it.prototype.electric_energy_source_prototype.buffer_capacity then -- Win!
             game.set_game_state{game_finished = true, player_won = true, can_continue = true, victorious_force = game.forces[force_index]}
+		elseif it.valid then -- Energy drain			
+			if not global.intergalactic_transceivers_energy_status[force_index] then -- Initialize
+				global.intergalactic_transceivers_energy_status[force_index] = it.energy
+			else -- Exist entity
+				if it.energy ~= 0 and global.intergalactic_transceivers_energy_status[force_index] == it.energy then -- Must drain
+					if global.intergalactic_transceivers_energy_status[force_index] <= 2000000000 then -- Cut off
+						it.energy = 0
+					else -- Reduce to 20%
+						it.energy = it.energy - (it.energy * 20 / 100)
+						global.intergalactic_transceivers_energy_status[force_index] = it.energy
+					end
+				else -- Not building in use so update the latest value
+					global.intergalactic_transceivers_energy_status[force_index] = it.energy
+				end
+			end
         end
     end
 end

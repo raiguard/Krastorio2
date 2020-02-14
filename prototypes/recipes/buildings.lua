@@ -688,6 +688,34 @@ return
 		result = "kr-small-roboport",
 		result_count = 2
     },
+	{
+		type = "recipe",
+		name = "kr-singularity-beacon",
+		energy_required = 1200,
+		enabled = false,
+		ingredients =
+		{
+			{"beacon", 1},
+			{"ai-core", 10},
+			{"processing-unit", 20},
+			{"energy-control-unit", 10}			
+		},
+		result = "kr-intergalactic-transceiver"		
+	},
+	{
+		type = "recipe",
+		name = "kr-intergalactic-transceiver",
+		energy_required = 1200,
+		enabled = false,
+		ingredients =
+		{
+			{"imersium-beam", 500},
+			{"energy-control-unit", 500},
+			{"ai-core", 200},
+			{"concrete", 500}
+		},
+		result = "kr-intergalactic-transceiver"		
+	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
