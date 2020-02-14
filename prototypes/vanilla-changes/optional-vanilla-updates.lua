@@ -3,6 +3,9 @@
 
 local modifications =
 {	
+	"long-hands",                -- Long hands, obviously
+	"bonus-inventory",           -- Bonus inventory space
+	"electric-poles-changes",    -- Slightly modify electric poles
 	"train-changes",   		     -- Modify trains
 	"vehicles-changes",		     -- Modify vehicles
 	"radar-changes",    	     -- Modify vanilla radar

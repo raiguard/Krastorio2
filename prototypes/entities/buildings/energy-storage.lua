@@ -14,9 +14,9 @@ data:extend(
 		corpse = "big-remnants",
 		dying_explosion = "big-explosion",
 		damaged_trigger_effect = hit_effects.entity(),
-		collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
-		selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
-		drawing_box = {{-2.5, -2.5}, {2.5, 2.5}},
+		collision_box = {{-2.75, -2.75}, {2.75, 2.75}},
+		selection_box = {{-3, -3}, {3, 3}},
+		drawing_box = {{-3, -3}, {3, 3}},
 		resistances = 
 		{
 			{type = "physical", percent = 25},
@@ -40,15 +40,16 @@ data:extend(
 					width = 190,
 					height = 190,
 					frame_count = 1,
-					shift = {0, 0},
+					scale = 1.1,
+					shift = {0, -0.4},
 					hr_version =
 					{
 						filename = kr_entities_path .. "energy-storage/hr-energy-storage.png",
 						width = 380,
 						height = 380,
-						scale = 0.5,
+						scale = 0.55,
 						frame_count = 1,
-						shift = {0, 0}
+						shift = {0, -0.4},
 					}
 				},
 				{
@@ -57,16 +58,17 @@ data:extend(
 					height = 135,
 					frame_count = 1,
 					draw_as_shadow = true,
-					shift = {0.65, 0.86},
+					scale = 1.1,
+					shift = {0.72, 0.56},
 					hr_version =
 					{
 						filename = kr_entities_path .. "energy-storage/hr-energy-storage-sh.png",
 						width = 414,
 						height = 270,
-						scale = 0.5,
+						scale = 0.55,
 						frame_count = 1,
 						draw_as_shadow = true,
-						shift = {0.65, 0.86}
+						shift = {0.72, 0.56}
 					}
 				},
 			
@@ -83,17 +85,18 @@ data:extend(
 					frame_count = 1,
 					repeat_count = 2,
 					animation_speed=0.03,
-					shift = {0, 0},
+					scale = 1.1,
+					shift = {0, -0.4},
 					hr_version =
 					{
 						filename = kr_entities_path .. "energy-storage/hr-energy-storage.png",
 						width = 380,
 						height = 380,
-						scale = 0.5,
+						scale = 0.55,
 						frame_count = 1,
 						repeat_count = 2,
 						animation_speed=0.03,
-						shift = {0, 0}
+						shift = {0, -0.4},
 					}
 				},
 				{
@@ -104,18 +107,19 @@ data:extend(
 					repeat_count = 2,
 					animation_speed=0.03,
 					draw_as_shadow = true,
-					shift = {0.65, 0.86},
+					scale = 1.1,
+					shift = {0.72, 0.56},
 					hr_version =
 					{
 						filename = kr_entities_path .. "energy-storage/hr-energy-storage-sh.png",
 						width = 414,
 						height = 270,
-						scale = 0.5,
+						scale = 0.55,
 						frame_count = 1,
 						repeat_count = 2,
 						animation_speed=0.03,
 						draw_as_shadow = true,
-						shift = {0.65, 0.86}
+						shift = {0.72, 0.56}
 					}
 				},
 				{
@@ -125,17 +129,18 @@ data:extend(
 					frame_count = 2,
 					line_length = 2,
 					animation_speed=0.03,
-					--shift = {0, 0},
+					scale = 1.1,
+					shift = {0, -0.4},
 					hr_version =
 					{
 						filename = kr_entities_path .. "energy-storage/hr-energy-storage-charge.png",
 						width = 380,
 						height = 380,
-						scale = 0.5,
+						scale = 0.55,
 						frame_count = 2,
 						line_length = 2,
 						animation_speed=0.03,
-						--shift = {0, 0}
+						shift = {0, -0.4},
 					}
 				}
 			}
@@ -151,17 +156,18 @@ data:extend(
 					frame_count = 1,
 					repeat_count = 2,
 					animation_speed=0.06,
-					shift = {0, 0},
+					scale = 1.1,
+					shift = {0, -0.4},
 					hr_version =
 					{
 						filename = kr_entities_path .. "energy-storage/hr-energy-storage.png",
 						width = 380,
 						height = 380,
-						scale = 0.5,
+						scale = 0.55,
 						frame_count = 1,
 						repeat_count = 2,
 						animation_speed=0.06,
-						shift = {0, 0}
+						shift = {0, -0.4},
 					}
 				},
 				{
@@ -172,18 +178,19 @@ data:extend(
 					repeat_count = 2,
 					animation_speed=0.06,
 					draw_as_shadow = true,
-					shift = {0.65, 0.86},
+					scale = 1.1,
+					shift = {0.72, 0.56},
 					hr_version =
 					{
 						filename = kr_entities_path .. "energy-storage/hr-energy-storage-sh.png",
 						width = 414,
 						height = 270,
-						scale = 0.5,
+						scale = 0.55,
 						frame_count = 1,
 						repeat_count = 2,
 						animation_speed=0.06,
 						draw_as_shadow = true,
-						shift = {0.65, 0.86}
+						shift = {0.72, 0.56}
 					}
 				},
 				{
@@ -193,17 +200,18 @@ data:extend(
 					frame_count = 2,
 					line_length = 2,
 					animation_speed=0.06,
-					--shift = {0, 0},
+					scale = 1.1,
+					shift = {0, -0.4},
 					hr_version =
 					{
 						filename = kr_entities_path .. "energy-storage/hr-energy-storage-discharge.png",
 						width = 380,
 						height = 380,
-						scale = 0.5,
+						scale = 0.55,
 						frame_count = 2,
 						line_length = 2,
 						animation_speed=0.06,
-						--shift = {0, 0}
+						shift = {0, -0.4},
 					}
 				}
 			}

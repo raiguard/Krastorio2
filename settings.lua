@@ -5,17 +5,31 @@ data:extend(
 	-- A - Config
 	{
 		type = "bool-setting",
-		name = "kr-loaders",
+		name = "kr-long-hands",
 		setting_type = "startup",
-		default_value = true,
+		default_value = false,
 		order = "a1"
+	},
+	{
+		type = "bool-setting",
+		name = "kr-bonus-inventory",
+		setting_type = "startup",
+		default_value = false,
+		order = "a2"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-disable-wiki",
 		setting_type = "runtime-per-user",
 		default_value = false,
-		order = "a2"
+		order = "a3"
+	},
+	{
+		type = "bool-setting",
+		name = "kr-loaders",
+		setting_type = "startup",
+		default_value = true,
+		order = "a4"
 	},
 	-- S - Science
 	{
@@ -96,9 +110,16 @@ data:extend(
 	},
 	{
 		type = "bool-setting",
+		name = "kr-electric-poles-changes",
+		setting_type = "startup",
+		default_value = true,
+		order = "b4"
+	},
+	{
+		type = "bool-setting",
 		name = "kr-vehicles-minable-changes",
 		setting_type = "startup",
 		default_value = false,
-		order = "b4"
+		order = "b5"
 	},
 })

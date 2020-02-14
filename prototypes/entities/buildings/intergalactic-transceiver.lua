@@ -83,7 +83,7 @@ data:extend(
 					frame_count = 1,
 					repeat_count = 60,
 					shift = {0, -0.8},
-					animation_speed=0.3445,
+					animation_speed=0.3447,
 					hr_version =
 					{
 						filename = kr_entities_path .. "intergalactic-transceiver/hr-intergalactic-transceiver.png",
@@ -92,7 +92,7 @@ data:extend(
 						scale = 0.5,
 						frame_count = 1,
 						repeat_count = 60,
-						animation_speed=0.3445,
+						animation_speed=0.3447,
 						shift = {0, -0.8}
 					}
 				},
@@ -103,7 +103,7 @@ data:extend(
 					frame_count = 1,
 					repeat_count = 60,
 					draw_as_shadow = true,
-					animation_speed=0.3445,
+					animation_speed=0.3447,
 					shift = {0.52, 0.5},
 					hr_version =
 					{
@@ -114,7 +114,7 @@ data:extend(
 						frame_count = 1,
 						repeat_count = 60,
 						draw_as_shadow = true,
-						animation_speed=0.3445,
+						animation_speed=0.3447,
 						shift = {0.52, 0.5}
 					}
 				},
@@ -124,7 +124,7 @@ data:extend(
 					height = 400,
 					frame_count = 60,
 					line_length = 10,
-					animation_speed=0.3445,
+					animation_speed=0.3447,
 					shift = {0, -0.8},
 					hr_version =
 					{
@@ -134,7 +134,7 @@ data:extend(
 						scale = 0.5,
 						frame_count = 60,
 						line_length = 10,
-						animation_speed=0.3445,
+						animation_speed=0.3447,
 						shift = {0, -0.8}
 					}
 				}

@@ -554,6 +554,16 @@ data:extend(
 		place_result = "kr-energy-storage",
 		stack_size = 50
 	},
+	{
+		type = "item",
+		name = "kr-advanced-solar-panel",
+		icon = kr_entities_icons_path .. "advanced-solar-panel.png",
+		icon_size = 64,
+		subgroup = "energy",
+		order = "d[solar-panel]-b[advanced-solar-panel]",
+		place_result = "kr-advanced-solar-panel",
+		stack_size = 50
+	},
 	-- -- --
 	{
 		type = "item",
