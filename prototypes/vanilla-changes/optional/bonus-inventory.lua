@@ -1,5 +1,6 @@
 -- -- -- Bonus inventory
+if krastorio.general.getSafeSettingValue("kr-bonus-inventory") then
 
-if settings.startup["kr-bonus-inventory"].value then
    data.raw["character"]["character"].inventory_size = 120
+   
 end

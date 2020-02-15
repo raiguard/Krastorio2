@@ -18,13 +18,11 @@ end
 local function onBuiltAnEntity(event)
 	local entity = event.created_entity
 	if entity and entity.valid and entity.name == "kr-intergalactic-transceiver" then
-		local force = entity.force.index
-		if not global.intergalactic_transceivers[force] then
-			global.intergalactic_transceivers[force] = entity
+		local force_index = entity.force.index
+		if not global.intergalactic_transceivers[force_index] then
+			global.intergalactic_transceivers[force_index] = entity
 		else
-			for _, product in pairs(entity.prototype.mineable_properties.products) do
-				entity.last_user.insert{name=product.name or product[1], count=product.amount or product[2]}
-			end				
+			entity.last_user.insert{name="kr-intergalactic-transceiver", count=1}
 			krastorio.flying_texts.showOnSurfaceText
 			{
 				entity = entity,
@@ -40,9 +38,10 @@ end
 local function onRemovingAnEntity(event)
 	local entity = event.entity	
 	if entity and entity.valid and entity.name == "kr-intergalactic-transceiver" then
-		local force = entity.force.index
-		if global.intergalactic_transceivers[force] then
-			global.intergalactic_transceivers[force] = nil
+		local force_index = entity.force.index
+		if global.intergalactic_transceivers[force_index] then
+			global.intergalactic_transceivers[force_index] = nil
+			global.intergalactic_transceivers_energy_status[force_index] = nil
 		end
 	end
 end
@@ -59,6 +58,7 @@ local function checkVictory()
 				if it.energy ~= 0 and global.intergalactic_transceivers_energy_status[force_index] == it.energy then -- Must drain
 					if global.intergalactic_transceivers_energy_status[force_index] <= 2000000000 then -- Cut off
 						it.energy = 0
+						global.intergalactic_transceivers_energy_status[force_index] = 0
 					else -- Reduce to 20%
 						it.energy = it.energy - (it.energy * 20 / 100)
 						global.intergalactic_transceivers_energy_status[force_index] = it.energy

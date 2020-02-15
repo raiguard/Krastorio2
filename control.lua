@@ -10,6 +10,7 @@ require(control_lib_path)
 -- Scrips
 local scripts =
 {
+	-- -- KRASTORIO 2 SCRIPTS
 	-- Generate creep under biter nests
 	require(control_scripts_path .. "creep-generator"),
 	-- Adding inserters changeable drop lane 
@@ -33,7 +34,10 @@ local scripts =
 	-- Supporter thanks
 	require(control_scripts_path .. "supporters-thanks"),
 	-- Intergalactic transceiver
-	require(control_scripts_path .. "intergalactic-transceiver")
+	require(control_scripts_path .. "intergalactic-transceiver"),
+	-- -- COMPATIBILITY
+	-- DiscoScience
+	require("__Krastorio2__/compatibility-scripts/control/DiscoScience")
 }
 
 -- Load all callbacks from control scripts (not for GUI events)

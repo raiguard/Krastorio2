@@ -236,6 +236,15 @@ if mods["space-exploration"] then
 		["radar"] =
 		{
 			"kr-sentinel"
+		},
+		["solar-panel"] =
+		{
+			"kr-advanced-solar-panel"
+		},
+		["accumulator"] =
+		{
+			"kr-energy-storage",
+			"kr-intergalactic-transceiver"
 		}
 	}
 	

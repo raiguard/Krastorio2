@@ -697,7 +697,7 @@ data:extend(
 				recipe = "kr-superior-underground-belt"
 			}
 		},
-		prerequisites = {"kr-logistic-4", "kr-imersium-processing"},
+		prerequisites = {"kr-logistic-4", "kr-imersium-processing", "kr-advanced-tech-card"},
 		unit =
 		{
 			count = 1500,
@@ -724,7 +724,7 @@ data:extend(
 				recipe = "kr-advanced-furnace"
 			}
 		},
-		prerequisites = {"kr-imersium-processing", "kr-energy-control-unit"},
+		prerequisites = {"kr-imersium-processing", "kr-energy-control-unit", "kr-advanced-tech-card"},
 		unit =
 		{
 			count = 1000,
@@ -756,7 +756,7 @@ data:extend(
 				recipe = "kr-large-roboport"
 			}
 		},
-		prerequisites = {"kr-imersium-processing"},
+		prerequisites = {"kr-imersium-processing", "kr-advanced-tech-card"},
 		unit =
 		{
 			count = 1000,
@@ -765,7 +765,6 @@ data:extend(
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
 				{"space-science-pack", 1},
-				{"matter-tech-card", 1},
 				{"advanced-tech-card", 1}
 			},
 			time = 45
@@ -784,7 +783,7 @@ data:extend(
 				recipe = "kr-advanced-chemical-plant"
 			}		
 		},
-		prerequisites = {"kr-imersium-processing"},
+		prerequisites = {"kr-imersium-processing", "kr-advanced-tech-card"},
 		unit =
 		{
 			count = 1000,
