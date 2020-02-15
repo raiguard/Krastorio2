@@ -5,11 +5,11 @@ data:extend(
 {   
 	{
 		type = "assembling-machine",
-		name = "kr-greenhouse",
+		name = "kr-bio-lab",
 		icon_size = 64,
 		icon =  kr_entities_icons_path .. "greenhouse.png",
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
-		minable = {hardness = 1, mining_time = 1, result = "kr-greenhouse"},
+		minable = {hardness = 1, mining_time = 1, result = "kr-bio-lab"},
 		max_health = 500,
 		corpse = "big-remnants",
 		dying_explosion = "big-explosion",
@@ -17,7 +17,7 @@ data:extend(
 		resistances = 
 		{
 			{type = "physical",percent = 50},
-			{type = "fire",percent = 70}
+			{type = "fire",percent = 50}
 		},
 		fluid_boxes =
 		{
@@ -63,7 +63,7 @@ data:extend(
 			layers =
 			{
 				{
-					filename = kr_entities_path .. "greenhouse/greenhouse.png",
+					filename = kr_entities_path .. "bio-lab/bio-lab.png",
 					priority = "high",
 					scale = scale,
 					width = 256,
@@ -71,7 +71,7 @@ data:extend(
 					frame_count = 1,
 					hr_version =
 					{
-						filename = kr_entities_path .. "greenhouse/hr-greenhouse.png",
+						filename = kr_entities_path .. "bio-lab/hr-bio-lab.png",
 						priority = "high",
 						scale = scale,
 						width = 512,
@@ -81,7 +81,7 @@ data:extend(
 					}
 				},
 				{
-					filename = kr_entities_path .. "greenhouse/greenhouse-sh.png",
+					filename = kr_entities_path .. "bio-lab/bio-lab-sh.png",
 					priority = "high",
 					scale = scale,
 					width = 256,
@@ -91,7 +91,7 @@ data:extend(
 					draw_as_shadow = true,
 					hr_version =
 					{
-						filename = kr_entities_path .. "greenhouse/hr-greenhouse-sh.png",
+						filename = kr_entities_path .. "bio-lab/hr-bio-lab-sh.png",
 						priority = "high",
 						scale = scale,
 						width = 512,
@@ -109,20 +109,22 @@ data:extend(
 			{
 				animation =
 				{
-					filename = kr_entities_path .. "greenhouse/greenhouse-working.png",
+					filename = kr_entities_path .. "bio-lab/bio-lab-working.png",
 					scale = scale,
-					width = 256,
-					height = 256,
-					frame_count = 10,
+					width = 193,
+					height = 171,
+					shift = {0.05, -0.31},
+					frame_count = 30,
 					line_length = 5,
 					animation_speed=0.35,
 					hr_version =
 					{
-						filename = kr_entities_path .. "greenhouse/hr-greenhouse-working.png",
+						filename = kr_entities_path .. "bio-lab/hr-bio-lab-working.png",
 						scale = scale,
-						width = 512,
-						height = 512,
-						frame_count = 10,
+						width = 387,
+						height = 342,
+						shift = {0.05, -0.31},
+						frame_count = 30,
 						line_length = 5,
 						scale = 0.5,
 						animation_speed=0.35,
@@ -130,10 +132,10 @@ data:extend(
 				},
 				light =
 				{
-					intensity = 0.75,
+					intensity = 0.5,
 					size = 15,
 					shift = {0.0, 0.0},
-					color = {r=0.7, g=1, b=0.7}
+					color = {r=1, g=0.5, b=0.6}
 				}
 			}
 		},

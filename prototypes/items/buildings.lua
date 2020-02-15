@@ -35,6 +35,16 @@ data:extend(
     },
     {
 		type = "item",
+		name = "kr-bio-lab",
+		icon =  kr_entities_icons_path .. "bio-lab.png",
+		icon_size = 64,
+		subgroup = "production-machine",
+		order = "d-g2[bio-lab]",
+		place_result = "kr-bio-lab",
+		stack_size = 50
+    },
+    {
+		type = "item",
 		name = "kr-research-server",
 		icon =  kr_entities_icons_path .. "research-server.png",
 		icon_size = 64,
