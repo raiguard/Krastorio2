@@ -84,6 +84,6 @@ data:extend(
 			}
 		},
 		vehicle_impact_sound = sounds.generic_impact,
-		production = "250kW"
+		production = "300kW"
 	}
 })

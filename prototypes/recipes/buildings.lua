@@ -468,6 +468,20 @@ return
 	},	
 	{
 		type = "recipe",
+		name = "kr-advanced-solar-panel",
+		category = "crafting-with-fluid",
+		energy_required = 20,
+		enabled = false,
+		ingredients = 
+		{
+			{"solar-panel", 1},
+			{"imersite-crystal", 5},			
+			{type = "fluid", name = "nitric-acid", amount = 25, catalyst_amount = 50}	
+		},
+		result = "kr-advanced-solar-panel"
+	},			
+	{
+		type = "recipe",
 		name = "kr-fusion-reactor",
 		energy_required = 120,
 		enabled = false,
@@ -494,6 +508,19 @@ return
 		},
 		result = "kr-advanced-steam-turbine"
     },
+	{
+		type = "recipe",
+		name = "kr-energy-storage",
+		energy_required = 20,
+		enabled = false,
+		ingredients = 
+		{
+			{"steel-beam", 10},
+			{"processing-unit", 10},	
+			{"energy-control-unit", 50}	
+		},
+		result = "kr-energy-storage"
+	},
 	{
 		type = "recipe",
 		name = "kr-matter-plant",

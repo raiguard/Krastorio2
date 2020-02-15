@@ -169,3 +169,6 @@ data.raw.corpse["pumpjack-remnants"].animation = make_rotated_animation_variatio
 	}
 })
 
+-- Solar panel
+data.raw["solar-panel"]["solar-panel"].production = "100KW"
+

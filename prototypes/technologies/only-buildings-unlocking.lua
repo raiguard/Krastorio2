@@ -505,7 +505,33 @@ data:extend(
 	-----------------------------------------------------------------------
 	-- PRODUCTION TIER AND UPPER
 	-----------------------------------------------------------------------
-	-- nothing
+	{
+		type = "technology",
+		name = "kr-advanced-solar-panel",
+		mod  = "Krastorio2",
+		icon = kr_technologies_icons_path .. "advanced-solar-panel.png",
+		icon_size = 128,
+		prerequisites = {"solar-energy", "kr-quarry-minerals-extraction"},
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-advanced-solar-panel"	
+			}
+		},
+		unit =
+		{
+			count = 500,
+			ingredients = 
+			{
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"production-science-pack", 1}
+			},
+			time = 45
+		}
+	},
 	-----------------------------------------------------------------------
 	-- UTILITY TIER AND UPPER
 	-----------------------------------------------------------------------
@@ -621,6 +647,33 @@ data:extend(
 				{"utility-science-pack", 1}
 			},
 			time = 30
+		}
+    },
+	{
+		type = "technology",
+		name = "kr-energy-storage",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "energy-storage.png",
+		icon_size = 128,
+		effects =
+		{			
+			{
+				type = "unlock-recipe",
+				recipe = "kr-energy-storage"
+			}
+		},
+		prerequisites = {"kr-matter-tech-card", "kr-energy-control-unit"},
+		unit =
+		{
+			count = 500,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"matter-tech-card", 1}
+			},
+			time = 45
 		}
     },
 	{
