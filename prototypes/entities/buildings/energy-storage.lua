@@ -10,7 +10,7 @@ data:extend(
 		icon_size = 64,
 		flags = {"placeable-neutral","placeable-player", "player-creation", "not-rotatable"},
 		minable = {mining_time = 1, result = "kr-energy-storage"},
-		max_health = 1000,
+		max_health = 750,
 		corpse = "big-remnants",
 		dying_explosion = "big-explosion",
 		damaged_trigger_effect = hit_effects.entity(),
@@ -26,10 +26,10 @@ data:extend(
 		energy_source =
 		{
 			type = "electric",
-			buffer_capacity = "1GJ",
+			buffer_capacity = "250GJ",
 			usage_priority = "tertiary",
-			input_flow_limit = "50MW",
-			output_flow_limit = "10MW"
+			input_flow_limit = "25MW",
+			output_flow_limit = "5MW"
 		},
 		picture = 
 		{

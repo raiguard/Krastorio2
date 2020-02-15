@@ -76,7 +76,7 @@ data:extend(
 			type = "electric",
 			usage_priority = "secondary-input"
 		},
-		energy_usage = "960KW",
+		energy_usage = "750KW",
 		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
 		allowed_effects = {"consumption", "speed", "pollution"},
 		module_specification =
