@@ -727,7 +727,7 @@ return
 			{"processing-unit", 20},
 			{"energy-control-unit", 10}			
 		},
-		result = "kr-intergalactic-transceiver"		
+		result = "kr-singularity-beacon"		
 	},
 	{
 		type = "recipe",
