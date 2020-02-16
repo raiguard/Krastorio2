@@ -1,3 +1,6 @@
+local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
+local sounds      = require("__base__/prototypes/entity/demo-sounds")
+
 data:extend(
 {
 	{
@@ -17,6 +20,7 @@ data:extend(
 		dying_explosion = "medium-explosion",
 		collision_box = {{-0.75, -0.75}, {0.75, 0.75}},
 		selection_box = {{-0.9, -0.9}, {0.9, 0.9}},		
+		damaged_trigger_effect = hit_effects.entity(),
 		base_picture =
 		{
 			filename = kr_entities_path .. "singularity-beacon/singularity-beacon.png",
@@ -77,16 +81,16 @@ data:extend(
 			usage_priority = "secondary-input"
 		},
 		energy_usage = "750KW",
-		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		vehicle_impact_sound = sounds.generic_impact,
 		allowed_effects = {"consumption", "speed", "pollution"},
 		module_specification =
 		{
-			module_slots = 1,
+			module_slots = 3,
 			module_info_icon_shift = {0, 0.5},
 			module_info_multi_row_initial_height_modifier = -0.3
 		},
 		supply_area_distance = 2.0,
-		distribution_effectivity = 1,
+		distribution_effectivity = 0.5,
 		open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.6 },
 		close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.6 }
     }

@@ -31,6 +31,11 @@ data:extend(
 	   type = "recipe-category",
 	   name = "growing"
 	},
+	-- Bioprocessing, used by bio-lab
+	{
+	   type = "recipe-category",
+	   name = "bioprocessing"
+	},
 	-- Crushing, used by crusher
 	{
 	   type = "recipe-category",

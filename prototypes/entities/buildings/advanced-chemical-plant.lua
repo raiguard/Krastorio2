@@ -1,3 +1,6 @@
+local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
+local sounds      = require("__base__/prototypes/entity/demo-sounds")
+
 data:extend(
 {  
 	{
@@ -10,6 +13,7 @@ data:extend(
 		max_health = 2000,
 		corpse = "kr-big-random-pipes-remnant",
 		dying_explosion = "big-explosion",
+		damaged_trigger_effect = hit_effects.entity(),
 		resistances = 
 		{
 			{type = "physical",percent = 50},
@@ -127,7 +131,7 @@ data:extend(
 			}
 		},	  
 		crafting_categories = {"chemistry"},
-		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{
 			sound = { filename = kr_buildings_sounds_path .. "advanced-chemical-plant.ogg" },

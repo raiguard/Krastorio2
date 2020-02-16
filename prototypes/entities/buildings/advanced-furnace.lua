@@ -1,3 +1,6 @@
+local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
+local sounds      = require("__base__/prototypes/entity/demo-sounds")
+
 local advanced_furnace_sound =
 {
 	variations =
@@ -34,6 +37,7 @@ data:extend(
 		},
 		collision_box = {{-3.25, -3.25}, {3.25, 3.25}},
 		selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+		damaged_trigger_effect = hit_effects.entity(),
 		fast_replaceable_group = "assembling-machine",
 		animation =
 		{
@@ -121,7 +125,7 @@ data:extend(
 			}
 		},
 		crafting_categories = {"smelting"},
-		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		vehicle_impact_sound = sounds.generic_impact,
 		working_sound = advanced_furnace_sound,
 		idle_sound = { filename = "__base__/sound/idle1.ogg" },
 		crafting_speed = 10,

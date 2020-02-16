@@ -39,6 +39,7 @@ require("buildings/steel-pump")
 require("buildings/wind-turbine")
 require("buildings/singularity-beacon")
 require("buildings/substation-mk2")
+require("buildings/superior-inserters")
 -- -- Turrets
 require("buildings/turrets/railgun-turret")
 require("buildings/turrets/rocket-turret")
@@ -89,6 +90,7 @@ require("remnants/kr-big-random-pipes-remnant")
 require("remnants/kr-medium-random-pipes-remnant")
 require("remnants/kr-mineral-water-pumpjack-remnant")
 require("remnants/matter-plant")
+require("remnants/superior-inserter-remnant")
 -- -- Belts
 -- Advanced
 require("remnants/transport-belts/advanced-transport-belt/advanced-splitter-remnant")

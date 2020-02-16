@@ -139,8 +139,8 @@ data:extend(
 				}
 			}
 		},
-		crafting_categories = {"growing"},
-		vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		crafting_categories = {"bioprocessing"},
+		vehicle_impact_sound = sounds.generic_impact,
         --working_sound =
         --{
         --sound =

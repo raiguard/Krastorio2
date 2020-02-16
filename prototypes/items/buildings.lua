@@ -608,6 +608,47 @@ data:extend(
 		order = "zzz[rocket-silo]-zzzz[intergalactic-transceiver]",
 		place_result = "kr-intergalactic-transceiver",
 		stack_size = 1
+	},
+	-- -- --
+	{
+		type = "item",
+		name = "kr-superior-inserter",
+		icon = kr_entities_icons_path .. "inserters/superior-inserter.png",
+		icon_size = 64,
+		subgroup = "inserter",
+		order = "h1[superior-inserter]",
+		place_result = "kr-superior-inserter",
+		stack_size = 50
+	},
+	{
+		type = "item",
+		name = "kr-superior-long-inserter",
+		icon = kr_entities_icons_path .. "inserters/superior-long-inserter.png",
+		icon_size = 64,
+		subgroup = "inserter",
+		order = "h2[superior-long-inserter]",
+		place_result = "kr-superior-long-inserter",
+		stack_size = 50
+	},
+	{
+		type = "item",
+		name = "kr-superior-filter-inserter",
+		icon = kr_entities_icons_path .. "inserters/superior-filter-inserter.png",
+		icon_size = 64,
+		subgroup = "inserter",
+		order = "h3[superior-filter-inserter]",
+		place_result = "kr-superior-filter-inserter",
+		stack_size = 50
+	},
+	{
+		type = "item",
+		name = "kr-superior-long-filter-inserter",
+		icon = kr_entities_icons_path .. "inserters/superior-long-filter-inserter.png",
+		icon_size = 64,
+		subgroup = "inserter",
+		order = "h4[superior-long-filter-inserter]",
+		place_result = "kr-superior-long-filter-inserter",
+		stack_size = 50
 	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

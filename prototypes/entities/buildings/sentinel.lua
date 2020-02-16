@@ -1,3 +1,6 @@
+local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
+local sounds      = require("__base__/prototypes/entity/demo-sounds")
+
 data:extend(
 {
 	{
@@ -7,6 +10,7 @@ data:extend(
 		icon_size = 64,
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 0.1, result = "kr-sentinel"},
+		damaged_trigger_effect = hit_effects.entity(),
 		max_health = 100,
 		corpse = "small-remnants",
 		resistances =
@@ -61,7 +65,7 @@ data:extend(
 				}
 			}
 		},
-		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 1 },
+		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{
 			sound = { filename = kr_buildings_sounds_path .. "sentinel.ogg" },
