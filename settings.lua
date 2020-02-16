@@ -92,34 +92,55 @@ data:extend(
 		name = "kr-rebalance-vehicles&fuels",
 		setting_type = "startup",
 		default_value = true,
-		order = "b1"
+		order = "b01"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-rebalance-radar",
 		setting_type = "startup",
 		default_value = true,
-		order = "b2"
+		order = "b02"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-rebalance-fuels",
 		setting_type = "startup",
 		default_value = true,
-		order = "b3"
+		order = "b03"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-electric-poles-changes",
 		setting_type = "startup",
 		default_value = true,
-		order = "b4"
+		order = "b04"
+	},
+	{
+		type = "bool-setting",
+		name = "kr-stack-size",
+		setting_type = "startup",
+		default_value = true,
+		order = "b05"
+	},
+	{
+		type = "bool-setting",
+		name = "kr-damage-and-ammo",
+		setting_type = "startup",
+		default_value = true,
+		order = "b05"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-vehicles-minable-changes",
 		setting_type = "startup",
 		default_value = false,
-		order = "b5"
+		order = "b90"
+	},
+	{
+		type = "bool-setting",
+		name = "kr-keep-infinite-technology",
+		setting_type = "startup",
+		default_value = false,
+		order = "b91"
 	},
 })

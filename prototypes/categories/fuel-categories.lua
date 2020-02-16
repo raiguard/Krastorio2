@@ -20,11 +20,6 @@ data:extend(
 		type = "fuel-category",
 		name = "antimatter-fuel"
 	},
-	-- Used by quarry drills
-	{
-		type = "fuel-category",
-		name = "kr-quarry-drill-fuel"
-	},
 	-- Burnable fluid fuel for gas power station
 	{
 		type = "fuel-category",

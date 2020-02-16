@@ -10,7 +10,13 @@ local modifications =
 	"vehicles-changes",		     -- Modify vehicles
 	"radar-changes",    	     -- Modify vanilla radar
 	"fuels-changes",		     -- Modify vanilla fuels
-	"vehicles-minable-changes"   -- Turn off vehicles minable
+	"vehicles-minable-changes",  -- Turn off vehicles minable
+	"stack-size-changes",        -- Increase stacks size
+	"damage-and-ammo",           -- Damage and ammo rebalance
+	"infinite-technology",       -- Remove or keep infinite technologies
+	
+	
+	
 }
 
 -- Application of the modifications

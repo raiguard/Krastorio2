@@ -7,7 +7,7 @@ data:extend(
 		type = "gun",
 		name = "impulse-rifle",
 		icon = kr_guns_icons_path .. "impulse-rifle.png",
-		icon_size = 32,
+		icon_size = 64,
 		subgroup = "gun",
 		order = "c[impulse-rifle]",
 		attack_parameters =
@@ -33,7 +33,7 @@ data:extend(
 		type = "gun",
 		name = "heavy-rocket-launcher",
 		icon = kr_guns_icons_path .. "heavy-rocket-launcher.png",
-		icon_size = 32,
+		icon_size = 64,
 		subgroup = "gun",
 		order = "d[heavy-rocket-launcher]",
 		attack_parameters =

@@ -108,46 +108,6 @@ return
 		order = "06[restore-used-pollution-filter]"
     },
 	---
-	-- Drill heads
-	---
-	{
-		type = "recipe",
-		name = "steel-drill-head",
-		energy_required = 10,
-		enabled = false,
-		ingredients =
-		{
-			{"steel-plate", 10},
-			{"steel-gear-wheel", 5},
-			{"steel-beam", 1}
-		},
-		result = "steel-drill-head"
-    },	
-	{
-		type = "recipe",
-		name = "alloy-drill-head",
-		energy_required = 5,
-		enabled = false,
-		ingredients =
-		{
-			{"steel-drill-head", 1},
-			{"rare-metals", 2}
-		},
-		result = "alloy-drill-head"
-    },
-	{
-		type = "recipe",
-		name = "imersite-drill-head",
-		energy_required = 5,
-		enabled = false,
-		ingredients =
-		{
-			{"alloy-drill-head", 1},
-			{"imersite-crystal", 2}
-		},
-		result = "imersite-drill-head"
-    },
-	---
 	{
 		type = "recipe",
 		name = "imersium-gear-wheel",

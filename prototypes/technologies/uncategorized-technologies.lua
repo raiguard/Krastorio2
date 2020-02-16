@@ -437,19 +437,7 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = krastorio.recipes.changed_names["imersite-crystal"] or "imersite-crystal"
-			},			
-			{
-				type = "unlock-recipe",
-				recipe = krastorio.recipes.changed_names["steel-drill-head"] or "steel-drill-head"
 			},
-			{
-				type = "unlock-recipe",
-				recipe = krastorio.recipes.changed_names["alloy-drill-head"] or "alloy-drill-head"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = krastorio.recipes.changed_names["imersite-drill-head"] or "imersite-drill-head"
-			}
 		},
 		prerequisites = {"kr-advanced-chemistry", "advanced-electronics-2", "electric-engine"},
 		order = "g-e-d",

@@ -24,24 +24,9 @@ data:extend(
 		allowed_effects = {"consumption", "speed", "productivity", "pollution"},
 		energy_source =
 		{
-			type = "burner",
-			fuel_category = "kr-quarry-drill-fuel",
-			fuel_inventory_size = 1,
-			emissions_per_second_per_watt = 1 / 100000,
-			smoke =
-			{
-				{
-					name = "turbine-smoke",
-					north_position = {0, -0.5},
-					east_position = {0, -0.5},
-					west_position = {0, -0.5},
-					south_position = {0, -0.5},
-					frequency = 40,
-					starting_vertical_speed = 0.1,
-					slow_down_factor = 1,
-					starting_frame_deviation = 60
-				}
-			}
+			type = "electric",
+			usage_priority = "secondary-input",
+			emissions_per_minute = 100
 		},
 		energy_usage = "1MW",
 		mining_speed = 10,

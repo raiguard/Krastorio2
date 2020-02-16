@@ -38,6 +38,7 @@ require("buildings/steel-pipe-to-ground")
 require("buildings/steel-pump")
 require("buildings/wind-turbine")
 require("buildings/singularity-beacon")
+require("buildings/substation-mk2")
 -- -- Turrets
 require("buildings/turrets/railgun-turret")
 require("buildings/turrets/rocket-turret")

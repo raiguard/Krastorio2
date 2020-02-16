@@ -123,6 +123,16 @@ data:extend(
 		place_result = "kr-fuel-refinery",
 		stack_size = 10,
 	},
+    {
+		type = "item",
+		name = "kr-substation-mk2",
+		icon = kr_entities_icons_path .. "substation-mk2.png",
+		icon_size = 64,
+		subgroup = "energy-pipe-distribution",
+		order = "a[energy]-e[substation-mk2]",
+		place_result = "kr-substation-mk2",
+		stack_size = 50
+	},
 	-- -- --
 	-- NEW LABORATORIES
 	-- -- --
@@ -154,7 +164,7 @@ data:extend(
 		name = "kr-medium-active-provider-container",
 		icon = kr_entities_icons_path .. "containers/medium-containers/" .. "medium-active-provider-container.png",
 		stack_size = 50,
-		icon_size = 32,    
+		icon_size = 64,    
 		subgroup = "kr-logistics-2",
 		order = "a[medium-active-provider-container]",
 		place_result = "kr-medium-active-provider-container"
@@ -164,7 +174,7 @@ data:extend(
 		name = "kr-medium-buffer-container",
 		icon = kr_entities_icons_path .. "containers/medium-containers/" .. "medium-buffer-container.png",
 		stack_size = 50,
-		icon_size = 32,    
+		icon_size = 64,    
 		subgroup = "kr-logistics-2",
 		order = "b[medium-buffer-container]",
 		place_result = "kr-medium-buffer-container"
@@ -174,7 +184,7 @@ data:extend(
 		name = "kr-medium-container",
 		icon = kr_entities_icons_path .. "containers/medium-containers/" .. "medium-container.png",
 		stack_size = 50,
-		icon_size = 32,
+		icon_size = 64,
 		subgroup = "storage",
 		order = "a[items]-d[medium-container]",
 		place_result = "kr-medium-container"
@@ -184,7 +194,7 @@ data:extend(
 		name = "kr-medium-passive-provider-container",
 		icon = kr_entities_icons_path .. "containers/medium-containers/" .. "medium-passive-provider-container.png",
 		stack_size = 50,
-		icon_size = 32,    
+		icon_size = 64,    
 		subgroup = "kr-logistics-2",
 		order = "c[medium-passive-provider-container]",
 		place_result = "kr-medium-passive-provider-container"
@@ -194,7 +204,7 @@ data:extend(
 		name = "kr-medium-requester-container",
 		icon = kr_entities_icons_path .. "containers/medium-containers/" .. "medium-requester-container.png",
 		stack_size = 50,
-		icon_size = 32,    
+		icon_size = 64,    
 		subgroup = "kr-logistics-2",
 		order = "d[medium-requester-container]",
 		place_result = "kr-medium-requester-container"
@@ -204,7 +214,7 @@ data:extend(
 		name = "kr-medium-storage-container",
 		icon = kr_entities_icons_path .. "containers/medium-containers/" .. "medium-storage-container.png",
 		stack_size = 50,
-		icon_size = 32,    
+		icon_size = 64,    
 		subgroup = "kr-logistics-2",
 		order = "e[medium-storage-container]",
 		place_result = "kr-medium-storage-container"
@@ -217,7 +227,7 @@ data:extend(
 		name = "kr-big-active-provider-container",
 		icon = kr_entities_icons_path .. "containers/big-containers/" .. "big-active-provider-container.png",
 		stack_size = 50,
-		icon_size = 32,    
+		icon_size = 64,    
 		subgroup = "kr-logistics-3",
 		order = "a[big-active-provider-container]",
 		place_result = "kr-big-active-provider-container"
@@ -227,7 +237,7 @@ data:extend(
 		name = "kr-big-buffer-container",
 		icon = kr_entities_icons_path .. "containers/big-containers/" .. "big-buffer-container.png",
 		stack_size = 50,
-		icon_size = 32,    
+		icon_size = 64,    
 		subgroup = "kr-logistics-3",
 		order = "b[big-buffer-container]",
 		place_result = "kr-big-buffer-container"
@@ -237,7 +247,7 @@ data:extend(
 		name = "kr-big-container",
 		icon = kr_entities_icons_path .. "containers/big-containers/" .. "big-container.png",
 		stack_size = 50,
-		icon_size = 32,    
+		icon_size = 64,    
 		subgroup = "storage",
 		order = "a[items]-dz[big-container]",
 		place_result = "kr-big-container"
@@ -247,7 +257,7 @@ data:extend(
 		name = "kr-big-passive-provider-container",
 		icon = kr_entities_icons_path .. "containers/big-containers/" .. "big-passive-provider-container.png",
 		stack_size = 50,
-		icon_size = 32,    
+		icon_size = 64,    
 		subgroup = "kr-logistics-3",
 		order = "c[big-passive-provider-container]",
 		place_result = "kr-big-passive-provider-container"
@@ -257,7 +267,7 @@ data:extend(
 		name = "kr-big-requester-container",
 		icon = kr_entities_icons_path .. "containers/big-containers/" .. "big-requester-container.png",
 		stack_size = 50,
-		icon_size = 32,    
+		icon_size = 64,    
 		subgroup = "kr-logistics-3",
 		order = "d[big-requester-container]",
 		place_result = "kr-big-requester-container"
@@ -267,7 +277,7 @@ data:extend(
 		name = "kr-big-storage-container",
 		icon = kr_entities_icons_path .. "containers/big-containers/" .. "big-storage-container.png",
 		stack_size = 50,
-		icon_size = 32,    
+		icon_size = 64,    
 		subgroup = "kr-logistics-3",
 		order = "e[big-storage-container]",
 		place_result = "kr-big-storage-container"
@@ -280,7 +290,7 @@ data:extend(
 		name = "kr-fluid-storage-1",
 		icon = kr_entities_icons_path .. "fluid-storages/fluid-storage-1.png",
 		stack_size = 50,
-		icon_size = 32,    
+		icon_size = 64,    
 		subgroup = "storage",
 		order = "b[fluid]-bb2[storage-tank-2]",
 		place_result = "kr-fluid-storage-1"
@@ -290,7 +300,7 @@ data:extend(
 		name = "kr-fluid-storage-2",
 		icon = kr_entities_icons_path .. "fluid-storages/fluid-storage-2.png",
 		stack_size = 50,
-		icon_size = 32,    
+		icon_size = 64,    
 		subgroup = "storage",
 		order = "b[fluid]-c[storage-tank-3]",
 		place_result = "kr-fluid-storage-2"
@@ -302,7 +312,7 @@ data:extend(
 		type = "item",
 		name = "kr-steel-pipe",
 		icon = kr_entities_icons_path .. "steel-pipe.png",
-		icon_size = 32,
+		icon_size = 64,
 		subgroup = "energy-pipe-distribution",
 		order = "a[pipes]-a2[steel-pipe]",
 		place_result = "kr-steel-pipe",
@@ -312,7 +322,7 @@ data:extend(
 		type = "item",
 		name = "kr-steel-pipe-to-ground",
 		icon = kr_entities_icons_path .. "steel-pipe-to-ground.png",
-		icon_size = 32,
+		icon_size = 64,
 		subgroup = "energy-pipe-distribution",
 		order = "a[pipes]-b2[steel-pipe-to-ground]",
 		place_result = "kr-steel-pipe-to-ground",
@@ -322,7 +332,7 @@ data:extend(
 		type = "item",
 		name = "kr-steel-pump",
 		icon = kr_entities_icons_path .. "steel-pump.png",
-		icon_size = 32,
+		icon_size = 64,
 		subgroup = "energy-pipe-distribution",
 		order = "b[pipes]-c2[steel-pump]",
 		place_result = "kr-steel-pump",

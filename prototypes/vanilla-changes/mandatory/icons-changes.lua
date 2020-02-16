@@ -111,3 +111,9 @@ krastorio.icons.setTechnologyIcon("personal-laser-defense-equipment", kr_technol
 -- -- -- BUILDINGS
 krastorio.icons.setItemIcon("pumpjack",                               kr_entities_icons_path .. "oil-pumpjack.png")
 -----------------------------------------------------------------
+
+-----------------------------------------------------------------
+-- -- -- OTHER
+krastorio.icons.setItemIcon("plastic-bar",                            kr_icons_path .. "plastic-bar.png")
+krastorio.icons.setItemIcon("atomic-bomb",                            kr_icons_path .. "ammos/atomic-bomb.png")
+-----------------------------------------------------------------

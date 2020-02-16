@@ -7,7 +7,7 @@ data:extend(
 		type = "ammo",
 		name = "imersite-rounds-magazine",
 		icon = kr_ammos_icons_path .. "imersite-rounds-magazine.png",
-		icon_size = 32,
+		icon_size = 64,
 		ammo_type =
 		{
 			category = "bullet",
@@ -79,7 +79,7 @@ data:extend(
 		name = "impulse-rifle-ammo",
 		description = "impulse-rifle-ammo",
 		icon = kr_ammos_icons_path .. "impulse-rifle-ammo.png",
-		icon_size = 32,
+		icon_size = 64,
 		ammo_type =
 		{
 			category = "impulse-rifle",
@@ -116,7 +116,7 @@ data:extend(
 		type = "ammo",
 		name = "heavy-rocket",
 		icon = kr_ammos_icons_path .. "heavy-rocket.png",
-		icon_size = 32,
+		icon_size = 64,
 		ammo_type =
 		{
 			cooldown_modifier = 0.75,
@@ -150,7 +150,7 @@ data:extend(
 		type = "ammo",
 		name = "antimatter-rocket",
 		icon = kr_ammos_icons_path .. "antimatter-rocket.png",
-		icon_size = 32,
+		icon_size = 64,
 		ammo_type =
 		{
 			range_modifier = 1,
@@ -290,7 +290,7 @@ data:extend(
 		name = "explosion-rocket-for-turret",
 		description = "explosion-rocket-for-turret",
 		icon = kr_ammos_icons_path .. "explosion-rocket-for-turret.png",
-		icon_size = 32,
+		icon_size = 64,
 		ammo_type =
 		{
 			category = "missiles-for-turrets",
@@ -325,7 +325,7 @@ data:extend(
 		name = "nuclear-rocket-for-turret",
 		description = "nuclear-rocket-for-turret",
 		icon = kr_ammos_icons_path .. "nuclear-rocket-for-turret.png",
-		icon_size = 32,
+		icon_size = 64,
 		ammo_type =
 		{
 			category = "missiles-for-turrets",
@@ -360,7 +360,7 @@ data:extend(
 		name = "antimatter-rocket-for-turret",
 		description = "antimatter-rocket-for-turret",
 		icon = kr_ammos_icons_path .. "antimatter-rocket-for-turret.png",
-		icon_size = 32,
+		icon_size = 64,
 		ammo_type =
 		{
 			category = "missiles-for-turrets",
