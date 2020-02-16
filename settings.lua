@@ -131,6 +131,13 @@ data:extend(
 	},
 	{
 		type = "bool-setting",
+		name = "kr-pipes-and-belts-changes",
+		setting_type = "startup",
+		default_value = true,
+		order = "b06"
+	},
+	{
+		type = "bool-setting",
 		name = "kr-vehicles-minable-changes",
 		setting_type = "startup",
 		default_value = false,

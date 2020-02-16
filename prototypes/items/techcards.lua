@@ -6,11 +6,20 @@ data:extend(
 
 	{
 		type = "item",
+		name = "biters-research-data",
+		icon =  kr_cards_icons_path  .. "biters-research-data.png",
+		icon_size = 64,
+		subgroup = "science-pack",
+		order = "a01[biters-research-data]",
+		stack_size = 200
+	},
+	{
+		type = "item",
 		name = "matter-research-data",
 		icon =  kr_cards_icons_path  .. "matter-research-data.png",
 		icon_size = 64,
 		subgroup = "science-pack",
-		order = "a01[matter-research-data]",
+		order = "a02[matter-research-data]",
 		stack_size = 200
 	},
 	{
@@ -19,7 +28,7 @@ data:extend(
 		icon =  kr_cards_icons_path  .. "space-research-data.png",
 		icon_size = 64,
 		subgroup = "science-pack",
-		order = "a02[space-research-data]",
+		order = "a03[space-research-data]",
 		stack_size = 200
 	},
 	{
@@ -28,7 +37,7 @@ data:extend(
 		icon =  kr_cards_icons_path  .. "singularity-research-data.png",
 		icon_size = 64,
 		subgroup = "science-pack",
-		order = "a03[singularity-research-data]",
+		order = "a04[singularity-research-data]",
 		stack_size = 200
 	},
 

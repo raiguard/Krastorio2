@@ -28,7 +28,7 @@ data:extend(
 			type = "electric",
 			buffer_capacity = "250MJ",
 			usage_priority = "tertiary",
-			input_flow_limit = "25MW",
+			input_flow_limit = "5W",
 			output_flow_limit = "5MW"
 		},
 		picture = 
@@ -235,13 +235,13 @@ data:extend(
 		{
 			sound =
 			{
-				filename = "__base__/sound/accumulator-working.ogg",
-				volume = 0.7
+				filename = kr_buildings_sounds_path .. "energy-storage-working.ogg",
+				volume = 1
 			},
 			idle_sound =
 			{
 				filename = "__base__/sound/accumulator-idle.ogg",
-				volume = 0.5
+				volume = 1
 			},
 			max_sounds_per_type = 3,
 			fade_in_ticks = 10,

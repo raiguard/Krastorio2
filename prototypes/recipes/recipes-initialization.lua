@@ -49,7 +49,10 @@ local krastorio_new_recipes =
 	require(kr_recipes_prototypes_path .. "centrifuging"),
 	
 	-- -- Recipes used for purify air from pollution
-	require(kr_recipes_prototypes_path .. "air-purification")
+	require(kr_recipes_prototypes_path .. "air-purification"),
+
+	-- -- Recipes used for bio- and crep processing
+	require(kr_recipes_prototypes_path .. "bioprocessing")
 }
 
 -- -- Anti recipes override check

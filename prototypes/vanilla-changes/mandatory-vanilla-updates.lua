@@ -26,6 +26,8 @@ local modifications =
 	"next-upgrades",                  -- Setup entity upgrates
 	"roboport-variations",            -- Generate roboport variations for roboport states
 	"damage-technologies-bonuses",    -- Rebalance the damage donus from technologies
+	"vanilla-energy-changes",         -- Rebalance accumulators ans panels
+	"vanilla-robots-changes",         -- Rebalance vanilla drones
 }
 
 -- Application of the modifications

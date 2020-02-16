@@ -14,6 +14,7 @@ local modifications =
 	"stack-size-changes",        -- Increase stacks size
 	"damage-and-ammo",           -- Damage and ammo rebalance
 	"infinite-technology",       -- Remove or keep infinite technologies
+	"pipes-and-belts-changes"    -- Vanilla pipes and belts modification
 	
 	
 	

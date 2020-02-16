@@ -68,6 +68,44 @@ data:extend(
 		stack_size = 200
 	},
 	{
+		type = "capsule",
+		name = "first-aid-kit",
+		icon = kr_icons_path .. "first-aid-kit.png",
+		icon_size = 64,
+		subgroup = "raw-resource",
+		capsule_action =
+		{
+			type = "use-on-self",
+			attack_parameters =
+			{
+				type = "projectile",
+				ammo_category = "capsule",
+				cooldown = 300,
+				range = 0,
+				ammo_type =
+				{
+					category = "capsule",
+					target_type = "position",
+					action =
+					{
+						type = "direct",
+						action_delivery =
+						{
+							type = "instant",
+							target_effects =
+							{
+								type = "damage",
+								damage = {type = "physical", amount = -100}
+							}
+						}
+					}
+				}
+			}
+		},
+		order = "h[first-aid-kit]",
+		stack_size = 100
+	},
+	{
 		type = "item",
 		name = "automation-core",
 		icon = kr_icons_path .. "automation-core.png",
