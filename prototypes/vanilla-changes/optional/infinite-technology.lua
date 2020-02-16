@@ -1,6 +1,6 @@
 -- -- -- Remove or keep infinite technologies
 
-if krastorio.general.getSafeSettingValue("kr-keep-infinite-technology") then
+if krastorio.general.getSafeSettingValue("kr-infinite-technology") then
 
 	data.raw.technology["physical-projectile-damage-7"].max_level = "infinite"
 	data.raw.technology["stronger-explosives-7"].max_level        = "infinite"

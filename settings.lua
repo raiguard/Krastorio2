@@ -145,7 +145,7 @@ data:extend(
 	},
 	{
 		type = "bool-setting",
-		name = "kr-keep-infinite-technology",
+		name = "kr-infinite-technology",
 		setting_type = "startup",
 		default_value = false,
 		order = "b91"

@@ -1,7 +1,6 @@
 -- -- -- Vehicles minable changes
 if krastorio.general.getSafeSettingValue("kr-vehicles-minable-changes") then
 
-	---------------------
 	data.raw.car["car"].minable = nil
 	data.raw.car["tank"].minable = nil
 	data.raw.car["kr-advanced-tank"].minable = nil
