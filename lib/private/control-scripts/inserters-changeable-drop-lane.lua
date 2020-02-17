@@ -48,10 +48,10 @@ function changeInserterDropLane(event)
 		{
 			name           = "kr-welding-particle",
 			position       = {inserter.position.x, inserter.position.y+1},		
-			movement       = {0.0, 0.0},
+			movement       = {0.0, -0.05},
 			height         = 1.0,
 			vertical_speed = 0.015,
-			frame_speed    = 1.0
+			frame_speed    = 1
 		}
 	end
 end
