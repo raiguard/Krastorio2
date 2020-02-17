@@ -42,6 +42,8 @@ require(kr_fluids_prototypes_path .. "fluids-initialization")
 require(kr_gui_path .. "gui-initialization")
 -- -- Adding new items
 require(kr_items_prototypes_path .. "items-initialization")
+-- -- Adding new particles
+require(kr_particles_prototypes_path .. "particles-initialization")
 -- -- Adding new recipes
 require(kr_recipes_prototypes_path .. "recipes-initialization")
 -- -- Adding new resources

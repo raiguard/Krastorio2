@@ -34,7 +34,24 @@ function changeInserterDropLane(event)
 			entity = inserter,
 			text   = tooltip_name,
 			color  = {1, 0.615, 0.235},
-			time_to_live = 300
+			time_to_live = 200
+		}
+		-- Welding sound
+		game.play_sound
+		{
+			path            = "kr-welding",
+			position        = inserter.position,
+			volume_modifier = 1.0
+		}
+		-- Welding particle
+		inserter.surface.create_particle
+		{
+			name           = "kr-welding-particle",
+			position       = {inserter.position.x, inserter.position.y+1},		
+			movement       = {0.0, 0.0},
+			height         = 1.0,
+			vertical_speed = 0.015,
+			frame_speed    = 1.0
 		}
 	end
 end

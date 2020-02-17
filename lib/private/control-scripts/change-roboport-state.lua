@@ -59,6 +59,24 @@ local function changeRoboportEntity(old_entity, new_entity_name, player_index, t
 		color  = {1, 0.615, 0.235},
 		time_to_live = 300
 	}
+	
+	-- Welding sound
+	game.play_sound
+	{
+		path            = "kr-welding",
+		position        = new_entity.position,
+		volume_modifier = 1.0
+	}
+	-- Welding particle
+	new_entity.surface.create_particle
+	{
+		name           = "kr-welding-particle",
+		position       = {new_entity.position.x, new_entity.position.y+1},		
+		movement       = {0.0, 0.0},
+		height         = 1.0,
+		vertical_speed = 0.015,
+		frame_speed    = 1.0
+	}
 end
 
 function changeRoboportState(event)

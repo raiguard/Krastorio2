@@ -18,7 +18,7 @@ function doRadioactiveDamage(player)
 	if player.valid and player.character.valid then
 		player.play_sound
 		{
-			path            = "radioactive",
+			path            = "kr-radioactive",
 			position        = player.character.position,
 			volume_modifier = 0.5
 		}
