@@ -1,3 +1,5 @@
+require("__Krastorio2__/lib/private/control-scripts/control-lib/control-lib-initialization")
+
 -- Adding inserters changeable drop lane 
 -----------------------------------------------------------------------------
 -- Constant
@@ -13,15 +15,26 @@ function round(num)
 end
 
 function changeInserterDropLane(event)
-	local inserter = game.players[event.player_index].selected or nil
+	local inserter = game.players[event.player_index].selected or false
 	if inserter and inserter.type == "inserter" then
+		-- Change lane
 		local delta_drop_pos = {x = inserter.drop_position.x - inserter.position.x, y = inserter.drop_position.y - inserter.position.y}
 		local vector_length = math.sqrt(delta_drop_pos.x*delta_drop_pos.x + delta_drop_pos.y*delta_drop_pos.y)	
-		local dpf = DROP_POSITIONS_FRAC[math.fmod(vector_length, 1.0) < 0.5][inserter.direction]
+		local is_near = math.fmod(vector_length, 1.0) < 0.5
+		local dpf = DROP_POSITIONS_FRAC[is_near][inserter.direction]
 		inserter.drop_position = 
 		{
 			inserter.position.x + round(delta_drop_pos.x) + dpf[1],
 			inserter.position.y + round(delta_drop_pos.y) + dpf[2]
+		}
+		-- Tooltip
+		local tooltip_name = is_near and {"other.drop-near"} or {"other.drop-far"}
+		global.krastorio.flying_texts.showOnSurfaceText
+		{
+			entity = inserter,
+			text   = tooltip_name,
+			color  = {1, 0.615, 0.235},
+			time_to_live = 300
 		}
 	end
 end

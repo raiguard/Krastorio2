@@ -136,6 +136,9 @@ krastorio.recipes.overrideIngredients
 	}
 )
 
+-- Ammos
+krastorio.recipes.convertIngredient("flamethrower-ammo", "steel-plate", "iron-plate")
+
 ------------------------------------------------
 -- -- Productivity modules
 

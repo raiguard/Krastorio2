@@ -52,11 +52,12 @@ local function changeRoboportEntity(old_entity, new_entity_name, player_index, t
 			new_entity.insert({name=item, count=quantity})
 		end
 	end
-	krastorio.flying_texts.showOnSurfaceText
+	global.krastorio.flying_texts.showOnSurfaceText
 	{
 		entity = new_entity,
 		text   = tooltip_name,
-		color  = {1, 0.615, 0.235}
+		color  = {1, 0.615, 0.235},
+		time_to_live = 300
 	}
 end
 

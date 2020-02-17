@@ -1,6 +1,6 @@
 -- Load lib functions
-if not krastorio then
-	krastorio = {}
-	require("flying-texts")
-	require("gui")	
+if not global.krastorio then
+	global.krastorio = {}
 end
+require("flying-texts")
+require("gui")

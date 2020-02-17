@@ -2,8 +2,8 @@
 local control_scripts_path = "__Krastorio2__/lib/private/control-scripts/"
 local control_lib_path = control_scripts_path .. "control-lib/control-lib-initialization"
 
--- Lib
-ControlCallbackMerger = require(control_scripts_path .. "control-callbacks-merger")
+-- Libs
+ControlCallbackMerger = require(control_scripts_path .. "control-lib/control-callbacks-merger")
 local ccm = ControlCallbackMerger:new()
 require(control_lib_path)
 
@@ -50,9 +50,9 @@ for _, script in pairs(scripts) do
 end
 
 -- GUI events
-local ce = krastorio.gui.getCollectiveClickEventsCallback()
+local ce = global.krastorio.gui.getCollectiveClickEventsCallback()
 ccm:addCallBack({ce, "on_gui_click"})
-local se = krastorio.gui.getCollectiveSelectEventsCallback()
+local se = global.krastorio.gui.getCollectiveSelectEventsCallback()
 ccm:addCallBack({se, "on_gui_selection_state_changed"})
 
 -- Active merged callbacks

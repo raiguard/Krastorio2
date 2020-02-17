@@ -11,9 +11,9 @@ local topics =
 }
 
 function getDescrptionGUIPane(event)
-	local wiki = krastorio.gui.getElementByName(event.player_index, w_prefix.."main-frame")
+	local wiki = global.krastorio.gui.getElementByName(event.player_index, w_prefix.."main-frame")
 	if wiki and wiki.valid then
-		local wiki_info_pane = krastorio.gui.getElementByName(event.player_index, w_prefix.."info-pane")
+		local wiki_info_pane = global.krastorio.gui.getElementByName(event.player_index, w_prefix.."info-pane")
 		if wiki_info_pane and wiki_info_pane.valid then
 			wiki_info_pane.clear()
 			return wiki_info_pane
@@ -27,20 +27,20 @@ function showCreepDescription(event)
 	if wiki_info_pane then
 		
 		-- Title
-		local title_label = krastorio.gui.addLabel(wiki_info_pane, 
+		local title_label = global.krastorio.gui.addLabel(wiki_info_pane, 
 		{
 			name    = w_prefix.."description-title", 
 			caption = {"gui.creep"},
 			style   = "bold_label"
 		})
-		krastorio.gui.addLine(wiki_info_pane, 
+		global.krastorio.gui.addLine(wiki_info_pane, 
 		{
 			name    = w_prefix.."title-line",
 			style   = "dark_line"
 		})
 		
 		-- Creep image
-		krastorio.gui.addSprite(wiki_info_pane,
+		global.krastorio.gui.addSprite(wiki_info_pane,
 		{
 			name   = w_prefix.."preview-1", 
 			sprite = "kr-creep-preview"
@@ -54,20 +54,20 @@ function showFuelsDescription(event)
 	if wiki_info_pane then
 		
 		-- Title
-		local title_label = krastorio.gui.addLabel(wiki_info_pane, 
+		local title_label = global.krastorio.gui.addLabel(wiki_info_pane, 
 		{
 			name    = w_prefix.."description-title", 
 			caption = {"gui.fuels"},
 			style   = "bold_label"
 		})
-		krastorio.gui.addLine(wiki_info_pane, 
+		global.krastorio.gui.addLine(wiki_info_pane, 
 		{
 			name    = w_prefix.."title-line",
 			style   = "dark_line"
 		})
 		
 		-- Fuels image
-		krastorio.gui.addSprite(wiki_info_pane,
+		global.krastorio.gui.addSprite(wiki_info_pane,
 		{
 			name   = w_prefix.."preview-1", 
 			sprite = "kr-fuels-preview"
@@ -81,38 +81,38 @@ function showFusionReactorDescription(event)
 	if wiki_info_pane then
 		
 		-- Title
-		local title_label = krastorio.gui.addLabel(wiki_info_pane, 
+		local title_label = global.krastorio.gui.addLabel(wiki_info_pane, 
 		{
 			name    = w_prefix.."description-title", 
 			caption = {"gui.fusion-reactor"},
 			style   = "bold_label"
 		})
-		krastorio.gui.addLine(wiki_info_pane, 
+		global.krastorio.gui.addLine(wiki_info_pane, 
 		{
 			name    = w_prefix.."title-line",
 			style   = "dark_line"
 		})
 		
 		-- Fusion reactor image
-		krastorio.gui.addSprite(wiki_info_pane,
+		global.krastorio.gui.addSprite(wiki_info_pane,
 		{
 			name   = w_prefix.."preview-1", 
 			sprite = "kr-fusion-reactor-preview"
 		})			
 		-- Description 1
-		krastorio.gui.addDescription(wiki_info_pane,
+		global.krastorio.gui.addDescription(wiki_info_pane,
 		{
 			name    = w_prefix.."description-1", 
 			caption = {"gui.fusion-reactor-description-1"}
 		})
 		-- Advanced Turbine image
-		krastorio.gui.addSprite(wiki_info_pane,
+		global.krastorio.gui.addSprite(wiki_info_pane,
 		{
 			name   = w_prefix.."preview-2", 
 			sprite = "kr-advanced-steam-turbine-preview"
 		})
 		-- Description 2
-		krastorio.gui.addDescription(wiki_info_pane,
+		global.krastorio.gui.addDescription(wiki_info_pane,
 		{
 			name    = w_prefix.."description-2", 
 			caption = {"gui.fusion-reactor-description-2"}
@@ -126,26 +126,26 @@ function showShelterDescription(event)
 	if wiki_info_pane then
 		
 		-- Title
-		local title_label = krastorio.gui.addLabel(wiki_info_pane, 
+		local title_label = global.krastorio.gui.addLabel(wiki_info_pane, 
 		{
 			name    = w_prefix.."description-title", 
 			caption = {"gui.shelter"},
 			style   = "bold_label"
 		})
-		krastorio.gui.addLine(wiki_info_pane, 
+		global.krastorio.gui.addLine(wiki_info_pane, 
 		{
 			name    = w_prefix.."title-line",
 			style   = "dark_line"
 		})
 		
 		-- Shelter image
-		krastorio.gui.addSprite(wiki_info_pane,
+		global.krastorio.gui.addSprite(wiki_info_pane,
 		{
 			name   = w_prefix.."preview-1", 
 			sprite = "kr-shelter-preview"
 		})			
 		-- Description 1
-		krastorio.gui.addDescription(wiki_info_pane,
+		global.krastorio.gui.addDescription(wiki_info_pane,
 		{
 			name    = w_prefix.."description-1", 
 			caption = {"gui.shelter-description-1"}
@@ -175,7 +175,7 @@ function createWiki(event)
 	local player_gui_center = game.players[event.player_index].gui.center
 	
 	-- Window
-	local wiki_frame = krastorio.gui.addFrame(player_gui_center, 
+	local wiki_frame = global.krastorio.gui.addFrame(player_gui_center, 
 	{
 		name      = w_prefix.."main-frame", 
 		caption   = {"gui.wiki-name"},
@@ -183,34 +183,34 @@ function createWiki(event)
 		style     = "kr-wiki-window"
 	})
 	-- Main Window Container 
-	local wiki_main_flow = krastorio.gui.addFlow(wiki_frame, 
+	local wiki_main_flow = global.krastorio.gui.addFlow(wiki_frame, 
 	{
 		name      = w_prefix.."main-flow",
 		direction = "horizontal",
 		style     = "kr-wiki-window-flow"
 	})
 	-- Back button section
-	local back_button_flow = krastorio.gui.addFlow(wiki_frame, 
+	local back_button_flow = global.krastorio.gui.addFlow(wiki_frame, 
 	{
 		name      = w_prefix.."back-button-flow",
 		direction = "horizontal",
 		style     = "kr-wiki-back-button-flow"
 	})
-	local inner_back_button_flow = krastorio.gui.addFlow(back_button_flow, 
+	local inner_back_button_flow = global.krastorio.gui.addFlow(back_button_flow, 
 	{
 		name      = w_prefix.."inner-back-button-flow",
 		direction = "horizontal",
 		style     = "horizontal_flow"
 	})	
 	-- Back button
-	krastorio.gui.addBackButton(inner_back_button_flow, 
+	global.krastorio.gui.addBackButton(inner_back_button_flow, 
 	{
 		name    = w_prefix.."close", 
 		caption = {"gui.close-wiki"},
 		style   = "kr-wiki-back-button"
 	})
 	--Filler
-	krastorio.gui.addElement
+	global.krastorio.gui.addElement
 	(
 		back_button_flow,
 		"empty-widget",
@@ -223,25 +223,25 @@ function createWiki(event)
 	-- -- LEFT
 	----------------------------------
 	-- Left container
-	local left_flow = krastorio.gui.addFlow(wiki_main_flow, 
+	local left_flow = global.krastorio.gui.addFlow(wiki_main_flow, 
 	{
 		name      = w_prefix.."left-flow",
 		direction = "vertical",
 		style     = "kr-wiki-left-window-flow"
 	})	
 	--Title
-	local title_label = krastorio.gui.addLabel(left_flow, 
+	local title_label = global.krastorio.gui.addLabel(left_flow, 
 	{
 		name    = w_prefix.."list-title", 
 		caption = {"gui.topic-list-title"},
 		style   = "caption_label"
 	})	
-	krastorio.gui.addLine(left_flow, 
+	global.krastorio.gui.addLine(left_flow, 
 	{
 		name    = w_prefix.."title-line"
 	})
 	-- Topics list
-	local wiki_thread_list = krastorio.gui.addList(left_flow, 
+	local wiki_thread_list = global.krastorio.gui.addList(left_flow, 
 	{
 		name    = w_prefix.."topics-list", 
 		items   = topics
@@ -250,7 +250,7 @@ function createWiki(event)
 	-- -- RIGHT
 	----------------------------------
 	-- Area where show topics
-	local wiki_info_pane = krastorio.gui.addScrollPane(wiki_main_flow, 
+	local wiki_info_pane = global.krastorio.gui.addScrollPane(wiki_main_flow, 
 	{
 		name                     = w_prefix.."info-pane", 
 		horizontal_scroll_policy = "never", 
@@ -258,11 +258,11 @@ function createWiki(event)
 		style                    = "kr-wiki-description-flow"
 	})	
 	
-	local info_label = krastorio.gui.addDescription(wiki_info_pane, {name=w_prefix.."info", caption={"gui.info-description"}})	
+	local info_label = global.krastorio.gui.addDescription(wiki_info_pane, {name=w_prefix.."info", caption={"gui.info-description"}})	
 end
 
 function toggleWiki(event)
-	local wiki = krastorio.gui.getElementByName(event.player_index, w_prefix.."main-frame")
+	local wiki = global.krastorio.gui.getElementByName(event.player_index, w_prefix.."main-frame")
 	if wiki and wiki.valid then
 		wiki.destroy()
 	else
@@ -271,7 +271,7 @@ function toggleWiki(event)
 end
 
 function closeWiki(event)
-	local wiki = krastorio.gui.getElementByName(event.player_index, w_prefix.."main-frame")
+	local wiki = global.krastorio.gui.getElementByName(event.player_index, w_prefix.."main-frame")
 	if wiki and wiki.valid then
 		wiki.destroy()	
 	end
@@ -285,7 +285,7 @@ function initializeWiki(event)
 	
 	-- main open button
 	local button_flow = mod_gui.get_button_flow(game.players[event.player_index])
-	krastorio.gui.addSpriteButton(button_flow, 
+	global.krastorio.gui.addSpriteButton(button_flow, 
 	{
 		name    = w_prefix.."toggle-wiki",
 		tooltip = {"gui.open-wiki-tooltip"},
@@ -294,19 +294,19 @@ function initializeWiki(event)
 	})
 	
 	-- Callbacks
-	krastorio.gui.addClickElementEvent(w_prefix.."toggle-wiki", toggleWiki)	
-	krastorio.gui.addClickElementEvent(w_prefix.."close", closeWiki)		
-	krastorio.gui.addSelectElementEvent(w_prefix.."topics-list", changeWikiDescription)
+	global.krastorio.gui.addClickElementEvent(w_prefix.."toggle-wiki", "toggleWiki")	
+	global.krastorio.gui.addClickElementEvent(w_prefix.."close", "closeWiki")		
+	global.krastorio.gui.addSelectElementEvent(w_prefix.."topics-list", "changeWikiDescription")
 end
 
 function addremoveWikiButton(event)
 	if event.setting_type == "runtime-per-user" and event.setting == "kr-disable-wiki" then
-		local button = krastorio.gui.getElementByName(event.player_index, w_prefix.."toggle-wiki")		
+		local button = global.krastorio.gui.getElementByName(event.player_index, w_prefix.."toggle-wiki")		
 		if game.players[event.player_index].mod_settings["kr-disable-wiki"].value then		
 			if button then
 				button.parent.destroy()
 			end
-			local wiki = krastorio.gui.getElementByName(event.player_index, w_prefix.."main-frame")
+			local wiki = global.krastorio.gui.getElementByName(event.player_index, w_prefix.."main-frame")
 			if wiki then
 				wiki.destroy()
 			end
