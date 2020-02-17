@@ -8,8 +8,6 @@
 krastorio.technologies.addPrerequisite("steel-axe", "kr-iron-pickaxe")
 krastorio.technologies.addPrerequisite("automation", "kr-automation-core")
 krastorio.technologies.addPrerequisite("automation", "automation-science-pack")
-krastorio.technologies.addPrerequisite("logistic-science-pack", "automation-science-pack")
-krastorio.technologies.addPrerequisite("logistic-science-pack", "electronics")
 krastorio.technologies.addPrerequisite("logistics", "automation-science-pack")
 krastorio.technologies.addPrerequisite("stone-walls", "military")
 krastorio.technologies.addPrerequisite("turrets", "automation-science-pack")
@@ -22,12 +20,16 @@ krastorio.technologies.addPrerequisite("oil-processing", "kr-fluids-chemistry")
 krastorio.technologies.addPrerequisite("fluid-handling", "kr-basic-fluid-handling")
 krastorio.technologies.addPrerequisite("advanced-electronics", "electronics")
 krastorio.technologies.addPrerequisite("advanced-electronics", "kr-silicon-processing")
-krastorio.technologies.addPrerequisite("production-science-pack", "kr-advanced-lab")
 krastorio.technologies.addPrerequisite("battery-equipment", "modular-armor")
 krastorio.technologies.addPrerequisite("fusion-reactor-equipment", "kr-fusion-energy")
-krastorio.technologies.addPrerequisite("production-science-pack", "kr-research-server")
-krastorio.technologies.addPrerequisite("utility-science-pack", "kr-research-server")
 
+-- Science
+krastorio.technologies.addPrerequisite("logistic-science-pack", "automation-science-pack")
+krastorio.technologies.addPrerequisite("logistic-science-pack", "electronics")
+krastorio.technologies.addPrerequisite("production-science-pack", "kr-research-server")
+krastorio.technologies.addPrerequisite("production-science-pack", "kr-advanced-lab")
+krastorio.technologies.addPrerequisite("production-science-pack", "uranium-processing")
+krastorio.technologies.addPrerequisite("utility-science-pack", "kr-research-server")
 
 -- Modules 
 krastorio.technologies.addPrerequisite("speed-module-3", "advanced-electronics-2")
@@ -107,6 +109,10 @@ krastorio.technologies.addUnlockRecipe("personal-laser-defense-equipment", "pers
 -- Rocket fuel recipes
 krastorio.technologies.addUnlockRecipe("rocket-fuel", "rocket-fuel-with-ammonia")
 krastorio.technologies.addUnlockRecipe("rocket-fuel", "rocket-fuel-with-hydrogen-chloride")
+
+-- Science
+krastorio.technologies.addUnlockRecipe("military-science-pack", "kr-biomass-from-creep")
+krastorio.technologies.addUnlockRecipe("military-science-pack", "biters-research-data")
 
 -- Removings
 

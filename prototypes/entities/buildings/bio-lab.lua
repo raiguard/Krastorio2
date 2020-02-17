@@ -7,17 +7,17 @@ data:extend(
 		type = "assembling-machine",
 		name = "kr-bio-lab",
 		icon_size = 64,
-		icon =  kr_entities_icons_path .. "greenhouse.png",
-		flags = {"placeable-neutral","placeable-player", "player-creation"},
+		icon =  kr_entities_icons_path .. "bio-lab.png",
+		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {hardness = 1, mining_time = 1, result = "kr-bio-lab"},
 		max_health = 500,
-		corpse = "big-remnants",
+		corpse = "kr-big-random-pipes-remnant",
 		dying_explosion = "big-explosion",
 		damaged_trigger_effect = hit_effects.entity(),
 		resistances = 
 		{
-			{type = "physical",percent = 50},
-			{type = "fire",percent = 50}
+			{type = "physical", percent = 50},
+			{type = "fire", percent = 50}
 		},
 		fluid_boxes =
 		{
@@ -30,9 +30,19 @@ data:extend(
 				pipe_connections = 
 				{
 					{ type="input-output", position = {0, -4} },
-					{ type="input-output", position = {-4, 0} },
-					{ type="input-output", position = {4, 0} },
 					{ type="input-output", position = {0, 4} }
+				}
+			},
+			{
+				production_type = "input",
+				pipe_picture = kr_pipe_path,
+				pipe_covers = pipecoverspictures(),				
+				base_area = 100,
+				base_level = -1,
+				pipe_connections = 
+				{
+					{ type="input-output", position = {4, 0} },
+					{ type="input-output", position = {-4, 0} }					
 				}
 			},
 			off_when_no_fluid_recipe = false
@@ -141,16 +151,10 @@ data:extend(
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions_per_minute = -10
+			emissions_per_minute = 10
 		},
 		energy_usage = "100KW",
-		ingredient_count = 6,
-		--module_specification =
-		--{
-		--	module_slots = 4
-		--},
-		allowed_effects = nil, --{"consumption", "speed", "productivity", "pollution"},
-		--open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
-		--close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 }
+		ingredient_count = 4,
+		allowed_effects = nil
 	}
 })

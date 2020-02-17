@@ -11,7 +11,7 @@ data:extend(
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {hardness = 1, mining_time = 1, result = "kr-greenhouse"},
 		max_health = 500,
-		corpse = "big-remnants",
+		corpse = "kr-big-random-pipes-remnant",
 		dying_explosion = "big-explosion",
 		damaged_trigger_effect = hit_effects.entity(),
 		resistances = 
@@ -142,13 +142,7 @@ data:extend(
 			emissions_per_minute = -10
 		},
 		energy_usage = "100KW",
-		ingredient_count = 6,
-		--module_specification =
-		--{
-		--	module_slots = 4
-		--},
-		allowed_effects = nil, --{"consumption", "speed", "productivity", "pollution"},
-		--open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
-		--close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 }
+		ingredient_count = 4,
+		allowed_effects = nil
 	}
 })

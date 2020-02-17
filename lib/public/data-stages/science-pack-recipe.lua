@@ -25,7 +25,10 @@ end
 if not krastorio.science_pack_recipes then
 	krastorio.science_pack_recipes = {}
 	
+	--------------------------------------------------------------------------------------
 	-- -- Base vanilla recipes
+	--------------------------------------------------------------------------------------
+	
 	krastorio.science_pack_recipes["Factorio"] = {}
 	-- Automation science pack (Vanilla)
 	krastorio.science_pack_recipes["Factorio"]["automation-science-pack"] = 
@@ -120,7 +123,10 @@ if not krastorio.science_pack_recipes then
 		result = "utility-science-pack"
     }
 	
+	--------------------------------------------------------------------------------------
 	-- -- Krastorio recipes
+	--------------------------------------------------------------------------------------
+	
 	krastorio.science_pack_recipes["Krastorio 2"] = {}
 	-- Automation science pack (Krastorio)
 	krastorio.science_pack_recipes["Krastorio 2"]["automation-science-pack"] = 
@@ -162,7 +168,9 @@ if not krastorio.science_pack_recipes then
 		result_count = 5,
 		ingredients =
 		{
-			{"wood", 1}
+			{"biters-research-data", 1},
+			{"electronic-circuit", 5},
+			{"steel-plate", 10}			
 		},
 		result = "military-science-pack"		
 	}
@@ -171,12 +179,15 @@ if not krastorio.science_pack_recipes then
 	{
 		type = "recipe",
 		name = "chemical-science-pack",
+		category = "crafting-with-fluid",
 		enabled = false,
-		energy_required = 20,
+		energy_required = 20,		
 		result_count = 5,
 		ingredients = 
 		{
 			{"glass", 10},
+			{"advanced-circuit", 10},
+			{ type = "fluid", name = "sulfuric-acid", amount = 50 }
 		},
 		result = "chemical-science-pack"
 	}
@@ -191,6 +202,8 @@ if not krastorio.science_pack_recipes then
 		ingredients = 
 		{
 			{"uranium-238", 10},
+			{"fast-transport-belt", 25},
+			{"productivity-module", 30}			
 		},
 		result = "production-science-pack"
 	}

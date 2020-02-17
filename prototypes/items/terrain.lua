@@ -11,8 +11,16 @@ data:extend(
     {
 		type = "item",
 		name = "kr-creep",
-		icon =  kr_icons_path .. "creep.png",
+		icon = kr_mip_icons_path .. "biomass/biomass.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
+		pictures =
+		{
+			{ size = 64, filename = kr_mip_icons_path .. "biomass/biomass.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "biomass/biomass-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "biomass/biomass-2.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "biomass/biomass-3.png", scale = 0.25, mipmap_count = 4 }
+		},
 		subgroup = "terrain",
 		order = "z[creep]-z[creep]",
 		place_as_tile =

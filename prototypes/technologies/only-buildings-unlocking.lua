@@ -65,34 +65,6 @@ data:extend(
     },
 	{
 		type = "technology",
-		name = "kr-greenhouse",
-		mod = "Krastorio2",
-		icon = kr_technologies_icons_path .. "greenhouse.png",
-		icon_size = 128,
-		effects =
-		{
-			{
-				type = "unlock-recipe",
-				recipe = "kr-greenhouse"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "kr-grow-wood-with-water"
-			}
-		},
-		prerequisites = {"kr-automation-core", "kr-stone-processing"},
-		unit =
-		{
-			count = 60,
-			ingredients = 
-			{
-				{"basic-tech-card", 1}
-			},
-			time = 30
-		}
-    },
-	{
-		type = "technology",
 		name = "kr-decorations",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "decorations.png",
@@ -345,7 +317,7 @@ data:extend(
 		type = "technology",
 		name = "kr-steel-fluid-handling",
 		mod = "Krastorio2",
-		icon = kr_technologies_icons_path .. "basic-fluid-handling.png",
+		icon = kr_technologies_icons_path .. "steel-fluid-handling.png",
 		icon_size = 128,
 		effects =
 		{

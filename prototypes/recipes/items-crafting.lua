@@ -56,7 +56,7 @@ return
 		},
 		result = "steel-beam",
 		result_count = 1
-	},	
+	},		
 	{
 		type = "recipe",
 		name = "first-aid-kit",

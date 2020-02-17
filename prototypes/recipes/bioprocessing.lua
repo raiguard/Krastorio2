@@ -3,7 +3,7 @@ return
 {
 	{
 		type = "recipe",
-		name = "kr-biomass",
+		name = "kr-biomass-growing",
 		category = "bioprocessing",
 		energy_required = 180,
 		enabled = false,

@@ -33,6 +33,34 @@ data:extend(
 -----------------------------------------------------------------------------------------------------------------
 	{
 		type = "technology",
+		name = "kr-greenhouse",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "greenhouse.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-greenhouse"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-grow-wood-with-water"
+			}
+		},
+		prerequisites = {"kr-automation-core", "kr-stone-processing"},
+		unit =
+		{
+			count = 60,
+			ingredients = 
+			{
+				{"basic-tech-card", 1}
+			},
+			time = 30
+		}
+    },
+	{
+		type = "technology",
 		name = "kr-fluids-chemistry",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "fluids-chemistry.png",
@@ -93,7 +121,7 @@ data:extend(
 			},
 			time = 30
 		}
-	},	
+	},		
 	{
 		type = "technology",
 		name = "kr-atmosphere-condensation",
@@ -339,6 +367,45 @@ data:extend(
             time = 60
         }
     },
+	{
+		type = "technology",
+		name = "kr-bio-processing",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "bio-lab.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-bio-lab"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-biomass-growing"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["first-aid-kit"] or "first-aid-kit"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["fertilizer"] or "fertilizer"
+			}			
+		},
+		prerequisites = { "kr-greenhouse", "kr-advanced-chemistry", "electronics" },
+		unit =
+		{
+			count = 150,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+				{"chemical-science-pack", 1}
+			},
+			time = 30
+		}
+	},	
 	-- Enriched ores, copper and iron
 	{
 		type = "technology",
