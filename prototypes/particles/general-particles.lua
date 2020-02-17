@@ -49,19 +49,45 @@ data:extend({
 		name = "kr-welding-particle",
 		pictures = 
 		{
-			sheet =
-			{
-				filename = kr_particles_path .. "welding/welding.png",
-				priority = "extra-high",
-				width = 600,
-				height = 600,
-				frame_count = 30,
-				line_length = 6,
-				animation_speed = 1.00,
-				variation_count = 1,
-				scale = 0.25
-			}
+				layers =
+				{
+					{
+					filename = kr_particles_path .. "welding/welding.png",
+					priority = "extra-high",
+					width = 200,
+					height = 200,
+					frame_count = 30,
+					line_length = 6,
+					animation_speed = 0.75,
+					variation_count = 1,
+					scale = 0.5
+					},
+					{
+					filename = kr_particles_path .. "welding/welding.png",
+					priority = "extra-high",
+					width = 200,
+					height = 200,
+					frame_count = 30,
+					line_length = 6,
+					animation_speed = 0.75,
+					variation_count = 1,
+					scale = 0.5,
+					blend_mode = "additive-soft",
+					},
+					{
+					filename = kr_particles_path .. "welding/welding.png",
+					priority = "extra-high",
+					width = 200,
+					height = 200,
+					frame_count = 30,
+					line_length = 6,
+					animation_speed = 0.75,
+					variation_count = 1,
+					scale = 0.5,
+					blend_mode = "additive-soft",
+					},
+				}
 		},
-		life_time = 200
+		life_time = 30
 	}
 })
