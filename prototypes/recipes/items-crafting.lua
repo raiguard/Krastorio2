@@ -56,6 +56,19 @@ return
 		},
 		result = "steel-beam",
 		result_count = 1
+	},	
+	{
+		type = "recipe",
+		name = "first-aid-kit",
+		energy_required = 5,
+		enabled = false,
+		ingredients =
+		{
+			{"biomass", 1},
+			{"wood", 1},
+			{"iron-plate", 1}
+		},
+		result = "first-aid-kit"
 	},
 	{
 		type = "recipe",
@@ -213,5 +226,5 @@ return
 			{"lithium-sulfur-battery", 3}
 		},
 		result = "energy-control-unit"
-    },
+    }
 }

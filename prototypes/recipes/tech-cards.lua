@@ -3,6 +3,18 @@ return
 {
 	{
 		type = "recipe",
+		name = "biters-research-data",
+		energy_required = 50,
+		enabled = false,
+		ingredients =
+		{
+			{"biomass", 25}
+		},
+		result = "biters-research-data",
+		result_count = 5
+	},
+	{
+		type = "recipe",
 		name = "basic-tech-card",
 		energy_required = 20,
 		enabled = true,

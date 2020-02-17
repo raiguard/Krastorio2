@@ -3,6 +3,30 @@ return
 {
 	{
 		type = "recipe",
+		name = "fertilizer",
+		category = "chemistry",
+		energy_required = 180,
+		enabled = false,
+		ingredients =
+		{
+			{type="fluid", name="sulfuric-acid", amount=5},
+			{type="fluid", name="nitric-acid", amount=5},
+			{name="biomass", amount=1}
+		},
+		results =
+		{ 
+			{type="item", name="fertilizer", amount=5}
+		},
+		crafting_machine_tint =
+		{
+			primary = {r = 0.160, g = 0.678, b = 0,274, a = 1.000}, 
+			secondary = {r = 0,121, g = 0.517, b = 0.235, a = 0.900}, 
+			tertiary = {r = 0.054, g = 0.239, b = 0.086, a = 0.500}, 
+			quaternary = {r = 0.054, g = 0.239, b = 0.086, a = 0.300}
+		}
+	},
+	{
+		type = "recipe",
 		name = "kr-water",
 		localized_name = {"fluid-name.water"},
 		category = "chemistry",		
