@@ -21,3 +21,7 @@ krastorio.recipes.removeIngredients("logistic-science-pack", unlockable_items)
 krastorio.recipes.removeIngredients("military-science-pack", unlockable_items)
 krastorio.recipes.removeIngredients("production-science-pack", unlockable_items)
 krastorio.recipes.removeIngredients("utility-science-pack", unlockable_items)
+
+krastorio.recipes.setCategoryIfExist("production-science-pack", "t2-tech-cards")
+krastorio.recipes.setCategoryIfExist("utility-science-pack", "t2-tech-cards")
+krastorio.recipes.setCategoryIfExist("space-science-pack", "t3-tech-cards")

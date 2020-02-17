@@ -6,11 +6,6 @@ data:extend(
 	
 	-- -- PROCESSING BUILDING CATEGORY
 	
-	-- Research, used by research servers and quantum computer
-	{
-	   type = "recipe-category",
-	   name = "research-data"
-	},
 	-- Nuclear fusion, used by fusion reactors for make steam
 	{
 	   type = "recipe-category",
@@ -61,16 +56,36 @@ data:extend(
 		type = "recipe-category",
 		name = "atmosphere-condensation"
 	},
-	
 	-- Fuel crafting category
 	{
 		type = "recipe-category",
 		name = "fuel-refinery"
 	},
+
+-----------------------------------------------------------------------------------------------------------------
 	
+	-- -- Science
+
+	-- Research, used by research servers and quantum computer
+	{
+	   type = "recipe-category",
+	   name = "research-data"
+	},
+	-- T2 tech cards category
+	{
+		type = "recipe-category",
+		name = "t2-tech-cards"
+	},	
+	-- T3 tech cards category
+	{
+		type = "recipe-category",
+		name = "t3-tech-cards"
+	},
+
 -----------------------------------------------------------------------------------------------------------------
 	
 	-- -- Matter
+	
 	-- From items to matter
 	{
 		type = "recipe-category",

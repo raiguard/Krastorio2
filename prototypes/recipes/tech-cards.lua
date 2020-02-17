@@ -29,6 +29,7 @@ return
 	{
 		type = "recipe",
 		name = "matter-research-data",
+		category = "t3-tech-cards",
 		energy_required = 20,
 		enabled = false,
 		ingredients =
@@ -41,6 +42,7 @@ return
 	{
 		type = "recipe",
 		name = "matter-tech-card",
+		category = "t3-tech-cards",
 		energy_required = 20,
 		enabled = false,
 		ingredients =
@@ -54,6 +56,7 @@ return
 	{
 		type = "recipe",
 		name = "advanced-tech-card",
+		category = "t3-tech-cards",
 		energy_required = 20,
 		enabled = false,
 		ingredients =
@@ -66,6 +69,7 @@ return
 	{
 		type = "recipe",
 		name = "singularity-research-data",
+		category = "t3-tech-cards",
 		energy_required = 20,
 		enabled = false,
 		ingredients =
@@ -78,6 +82,7 @@ return
 	{
 		type = "recipe",
 		name = "singularity-tech-card",
+		category = "t3-tech-cards",
 		energy_required = 20,
 		enabled = false,
 		ingredients =

@@ -5,7 +5,7 @@ data.raw["accumulator"]["accumulator"].energy_source.buffer_capacity = "10MJ" --
 data.raw["accumulator"]["accumulator"].energy_source.input_flow_limit = "600kW" --300
 data.raw["accumulator"]["accumulator"].energy_source.output_flow_limit = "6000kW" --300
 
-data.raw["solar-panel"]["solar-panel"].production = "60kW" --100
+data.raw["solar-panel"]["solar-panel"].production = "100kW" --100
 
 data.raw["lamp"]["small-lamp"].glow_size = 8 --6
 

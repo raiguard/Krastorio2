@@ -502,6 +502,33 @@ data:extend(
 			time = 30
 		}
 	},
+	{
+		type = "technology",
+		name = "kr-research-server",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "research-server.png",
+		icon_size = 128,
+		prerequisites = {"advanced-electronics"},
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-research-server"	
+			}
+		},
+		unit =
+		{
+			count = 500,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1}
+			},
+			time = 30
+		}
+	},
 	-----------------------------------------------------------------------
 	-- PRODUCTION TIER AND UPPER
 	-----------------------------------------------------------------------
@@ -587,6 +614,34 @@ data:extend(
     },
 	{
 		type = "technology",
+		name = "kr-quantum-computer",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "quantum-computer.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-quantum-computer"
+			}
+		},
+		prerequisites = {"kr-ai-core"},
+		unit =
+		{
+			count = 1000,
+			ingredients = 
+			{
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1}
+			},
+			time = 60
+		}
+    },
+	{
+		type = "technology",
 		name = "kr-singularity-lab",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "singularity-lab.png",
@@ -598,7 +653,7 @@ data:extend(
 				recipe = "kr-singularity-lab"
 			}
 		},
-		prerequisites = {"kr-ai-core", "rocket-silo"},
+		prerequisites = {"kr-quantum-computer", "rocket-silo"},
 		unit =
 		{
 			count = 1200,
@@ -674,6 +729,45 @@ data:extend(
 				{"matter-tech-card", 1}
 			},
 			time = 45
+		}
+    },
+	{
+		type = "technology",
+		name = "kr-superior-inserters",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "superior-inserters.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-superior-inserter"
+			},
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-superior-long-inserter"
+			},
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-superior-filter-inserter"
+			},
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-superior-long-filter-inserter"
+			}
+		},
+		prerequisites = {"stack-inserter", "kr-imersium-processing", "kr-advanced-tech-card"},
+		unit =
+		{
+			count = 1500,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"advanced-tech-card", 1}
+			},
+			time = 30
 		}
     },
 	{

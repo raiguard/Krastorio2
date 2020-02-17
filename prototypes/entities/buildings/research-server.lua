@@ -2,21 +2,20 @@ data:extend(
 {
 	{
 		type = "assembling-machine",
-		name = "kr-research-server",
-		icon_size = 32,
+		name = "kr-research-server",		
 		icon =  kr_entities_icons_path .. "research-server.png",
+		icon_size = 64,
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "kr-research-server"},
 		max_health = 250,
-		corpse = "medium-remnants",
+		corpse = "kr-medium-random-pipes-remnant",
 		resistances = 
 		{
-			{type = "physical",percent = 20},
-			{type = "fire",percent = 20}
+			{type = "physical", percent = 20},
+			{type = "fire", percent = 20}
 		},
 		collision_box = {{-1.25, -1.25}, {1.25, 1.25}},
-		selection_box = {{-1.4, -1.4}, {1.4, 1.4}},
-		fast_replaceable_group = "assembling-machine",		
+		selection_box = {{-1.4, -1.4}, {1.4, 1.4}},	
 		animation =
 		{
 			layers =
@@ -85,7 +84,6 @@ data:extend(
 				}
 			}
 		},
-		crafting_categories = {"crafting", "basic-crafting", "advanced-crafting", "research-data"},
 		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
 		working_sound =
 		{
@@ -99,6 +97,7 @@ data:extend(
 			idle_sound = { filename = "__base__/sound/idle1.ogg" },
 			apparent_volume = 1.5
 		},
+		crafting_categories = {"research-data", "t2-tech-cards"},
 		crafting_speed = 1,
 		energy_source =
 		{
@@ -106,15 +105,11 @@ data:extend(
 			usage_priority = "secondary-input",
 			emissions_per_minute = 0.5
 		},
-		energy_usage = "0.25MW",
+		energy_usage = "250KW",
 		ingredient_count = 6,
-		module_specification =
-		{
-			module_slots = 2
-		},
+		module_specification = { module_slots = 2 },
 		allowed_effects = {"consumption", "speed", "productivity", "pollution"},
 		open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
 		close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 }
 	}
 })
-

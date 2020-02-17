@@ -350,6 +350,9 @@ function krastorio.recipes.getParsedItem(item)
 		if item.temperature then
 			parsed_item.temperature = item.temperature
 		end
+		if item.fluidbox_index then
+			parsed_item.fluidbox_index = item.fluidbox_index
+		end
 		-- get mandatory property in case have no index strings
 		if not parsed_item.name or not parsed_item.amount then
 			for _, value in pairs(item) do		
@@ -368,8 +371,17 @@ function krastorio.recipes.mergeParsedItems(item_a, item_b)
 	local merged_item  = {}
 	-- mandatory property
 	merged_item.name   = item_b.name
-	merged_item.amount = item_a.amount + item_b.amount
 	merged_item.type   = item_b.type
+	
+	if item_a.amount and item_b.amount then
+		merged_item.amount = item_a.amount + item_b.amount
+	elseif item_a.amount_min then
+		merged_item.amount_min = item_a.amount_min + item_b.amount
+		merged_item.amount_max = item_a.amount_max + item_b.amount
+	elseif item_b.amount_min then
+		merged_item.amount_min = item_b.amount_min + item_a.amount
+		merged_item.amount_max = item_b.amount_max + item_a.amount
+	end	
 	-- optional property (prioritized on second item)
 	if item_b.catalyst_amount then
 		merged_item.catalyst_amount = item_b.catalyst_amount
@@ -385,6 +397,11 @@ function krastorio.recipes.mergeParsedItems(item_a, item_b)
 		merged_item.temperature = item_b.temperature
 	elseif item_a.temperature then
 		merged_item.temperature = item_a.temperature
+	end
+	if item_b.fluidbox_index then
+		merged_item.fluidbox_index = item_b.fluidbox_index
+	elseif item_a.fluidbox_index then
+		merged_item.fluidbox_index = item_a.fluidbox_index
 	end
 	return merged_item
 end

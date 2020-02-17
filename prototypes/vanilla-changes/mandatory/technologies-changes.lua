@@ -25,6 +25,9 @@ krastorio.technologies.addPrerequisite("advanced-electronics", "kr-silicon-proce
 krastorio.technologies.addPrerequisite("production-science-pack", "kr-advanced-lab")
 krastorio.technologies.addPrerequisite("battery-equipment", "modular-armor")
 krastorio.technologies.addPrerequisite("fusion-reactor-equipment", "kr-fusion-energy")
+krastorio.technologies.addPrerequisite("production-science-pack", "kr-research-server")
+krastorio.technologies.addPrerequisite("utility-science-pack", "kr-research-server")
+
 
 -- Modules 
 krastorio.technologies.addPrerequisite("speed-module-3", "advanced-electronics-2")

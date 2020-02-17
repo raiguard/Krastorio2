@@ -245,6 +245,13 @@ if mods["space-exploration"] then
 		{
 			"kr-energy-storage",
 			"kr-intergalactic-transceiver"
+		},
+		["inserter"] =
+		{
+			"kr-superior-inserter",
+			"kr-superior-long-inserter",
+			"kr-superior-filter-inserter",
+			"kr-superior-long-filter-inserter"
 		}
 	}
 	

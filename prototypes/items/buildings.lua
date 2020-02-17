@@ -43,16 +43,30 @@ data:extend(
 		place_result = "kr-bio-lab",
 		stack_size = 50
     },
+	-- -- --
+	-- Research servers
+	-- -- --
     {
 		type = "item",
 		name = "kr-research-server",
 		icon =  kr_entities_icons_path .. "research-server.png",
 		icon_size = 64,
 		subgroup = "production-machine",
-		order = "aaa",
+		order = "f3[research-servers]-a1[research-server]",
 		place_result = "kr-research-server",
 		stack_size = 50
     },
+	{
+		type = "item",
+		name = "kr-quantum-computer",
+		icon =  kr_entities_icons_path .. "quantum-computer.png",
+		icon_size = 64,
+		subgroup = "production-machine",
+		order = "f3[research-servers]-b1[quantum-computer]",
+		place_result = "kr-quantum-computer",
+		stack_size = 50
+    },
+	-- -- --
     {
 		type = "item",
 		name = "kr-crusher",
@@ -610,6 +624,8 @@ data:extend(
 		stack_size = 1
 	},
 	-- -- --
+	-- Superior inserters
+	-- -- --
 	{
 		type = "item",
 		name = "kr-superior-inserter",
@@ -650,6 +666,7 @@ data:extend(
 		place_result = "kr-superior-long-filter-inserter",
 		stack_size = 50
 	}
+	-- -- --
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

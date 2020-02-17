@@ -148,6 +148,35 @@ return
 		result = "kr-singularity-lab"
     },
 	-- -- --
+	-- Research servers
+	-- -- --
+	{
+		type = "recipe",
+		name = "kr-research-server",
+		energy_required = 20,
+		enabled = false,
+		ingredients =
+		{
+			{"steel-beam", 4},
+			{"advanced-circuit", 5},
+			{"electronic-components", 50}
+		},
+		result = "kr-research-server"
+    },
+	{
+		type = "recipe",
+		name = "kr-quantum-computer",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"steel-beam", 10},
+			{"ai-core", 10},
+			{"processing-unit", 20}
+		},
+		result = "kr-quantum-computer"
+    },
+	-- -- --
 	-- MEDIUM CONTEINERS
 	-- -- --
 	{
@@ -657,8 +686,61 @@ return
 		},
 		result = "kr-superior-underground-belt",
 		result_count = 2
+    },	
+	-- -- --
+	-- Superior inserters
+	-- -- --
+	{
+		type = "recipe",
+		name = "kr-superior-inserter",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"stack-inserter", 1},
+			{"imersium-plate", 5},
+			{"imersium-gear-wheel", 10},
+			{"processing-unit", 1}
+		},
+		result = "kr-superior-inserter"
     },
-	---
+	{
+		type = "recipe",
+		name = "kr-superior-long-inserter",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"kr-superior-inserter", 1},
+			{"imersium-beam", 1}
+		},
+		result = "kr-superior-long-inserter"
+    },
+	{
+		type = "recipe",
+		name = "kr-superior-filter-inserter",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"kr-superior-inserter", 1},
+			{"processing-unit", 1}
+		},
+		result = "kr-superior-filter-inserter"
+    },
+	{
+		type = "recipe",
+		name = "kr-superior-long-filter-inserter",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"kr-superior-filter-inserter", 1},
+			{"imersium-beam", 1}
+		},
+		result = "kr-superior-long-filter-inserter"
+    },
+	-- -- --
 	{
 		type = "recipe",
 		name = "kr-advanced-furnace",

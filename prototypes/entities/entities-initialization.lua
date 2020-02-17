@@ -40,6 +40,7 @@ require("buildings/wind-turbine")
 require("buildings/singularity-beacon")
 require("buildings/substation-mk2")
 require("buildings/superior-inserters")
+require("buildings/quantum-computer")
 -- -- Turrets
 require("buildings/turrets/railgun-turret")
 require("buildings/turrets/rocket-turret")
