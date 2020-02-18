@@ -35,6 +35,8 @@ local scripts =
 	require(control_scripts_path .. "supporters-thanks"),
 	-- Intergalactic transceiver
 	require(control_scripts_path .. "intergalactic-transceiver"),
+	-- Creep collector
+	require(control_scripts_path .. "creep-collector"),
 	-- -- COMPATIBILITY
 	-- DiscoScience
 	require("__Krastorio2__/compatibility-scripts/control/DiscoScience")
