@@ -8,7 +8,6 @@ data:extend(
 		name = "kr-singularity-beacon",
 		icon = kr_entities_icons_path .. "singularity-beacon.png",
 		icon_size = 64,
-		icon_mipmaps = 1,
 		pictures =
 		{
 			{ size = 64, filename = kr_entities_icons_path .. "singularity-beacon.png", scale = 0.25, mipmap_count = 4 }
@@ -85,12 +84,12 @@ data:extend(
 		allowed_effects = {"consumption", "speed", "pollution"},
 		module_specification =
 		{
-			module_slots = 3,
+			module_slots = 2,
 			module_info_icon_shift = {0, 0.5},
 			module_info_multi_row_initial_height_modifier = -0.3
 		},
 		supply_area_distance = 2.0,
-		distribution_effectivity = 0.5,
+		distribution_effectivity = 0.75,
 		open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.6 },
 		close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.6 }
     }
