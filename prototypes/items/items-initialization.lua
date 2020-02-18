@@ -24,6 +24,9 @@ require(kr_items_prototypes_path .. "terrain")
 -- -- Items for vehicles
 require(kr_items_prototypes_path .. "vehicles")
 
+-- -- Selection tools
+require(kr_items_prototypes_path .. "selection-tools")
+
 -- -- All other items
 require(kr_items_prototypes_path .. "uncategorized")
 
