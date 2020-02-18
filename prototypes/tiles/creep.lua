@@ -222,9 +222,9 @@ data:extend(
 		},		
 		collision_mask = {"ground-tile"},
 		walking_speed_modifier = 0.5,
-		layer = 59,
-		transition_overlay_layer_offset = 9,
-		decorative_removal_probability = 1,
+		layer = 1,
+		transition_overlay_layer_offset = 1,
+		decorative_removal_probability = 0.25,
 		variants = tile_variations_template
 		(
 			kr_tiles_path .. "creep/creep.png", "__base__/graphics/terrain/masks/transition-1.png",
@@ -236,9 +236,9 @@ data:extend(
 				[8] = { probability = 0.10, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} }
 			}
 		),		
-		map_color={r=75, g=60, b=70},
+		map_color={r=80, g=60, b=65},
 		pollution_absorption_per_second = 0.01,
-		vehicle_friction_modifier = 200,
+		vehicle_friction_modifier = 175,
 		
 		mined_sound = collect_creep_sound,
 		walking_sound = creep_walking_sound,
