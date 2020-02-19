@@ -8,24 +8,22 @@ not_valid_replacers =
 	"water-green", 
 	"deepwater-green", 
 	"water-shallow", 
-	"water-mud"
+	"water-mud",
+	"landfill"
 }
 random_generator = nil
 
 function initializeCreepCollectorConstats()
 	global.MAX_TILE_DISTANCE   = 10
-	global.COLLECT_PROBABILITY = 0.8
+	global.COLLECT_PROBABILITY = 75
 end
 
 function hasDroppedBiomass()
 	if not random_generator or not random_generator.valid then
 		random_generator = game.create_random_generator()
+		math.randomseed(random_generator())
 	end
-	math.randomseed(random_generator())
-	
-	local chance = math.random(0.01, 1.00)
-	
-	return global.COLLECT_PROBABILITY >= chance
+	return global.COLLECT_PROBABILITY >= math.random(1, 100)
 end
 
 function isTooDistantFromArea(position, area)
@@ -67,7 +65,7 @@ function showCollectionCountMessage(character, count)
 	global.krastorio.flying_texts.showOnSurfaceText
 	{
 		entity = character,
-		text   = {"other.kr-collect-message", tostring(count), {"item-name.biomass"}},
+		text   = {"other.kr-collect-message-with-icon", tostring(count), {"item-name.biomass"}, "biomass"},
 		color  = {0.3, 1, 0.3}
 	}
 end
@@ -86,15 +84,20 @@ function getNearestTileType(surface, area)
 	local mid_pos = {x = (a.x+b.x)/2,y = (a.y+b.y)/2}
 	local delta_pos = {x = a.x - b.x, y = a.y - b.y}
 	local vector_length = math.sqrt(delta_pos.x*delta_pos.x + delta_pos.y*delta_pos.y)	
-	local tiles = surface.find_tiles_filtered
-	{
-		position = mid_pos,
-		radius = vector_length*2
-	}
-	for _, tile in pairs(tiles) do
-		if isAValidReplacer(tile.name) then
-			return tile.name
+	local iteration = 0
+	local tiles = nil
+	while iteration < 11 do
+		tiles = surface.find_tiles_filtered
+		{
+			position = mid_pos,
+			radius = vector_length*(iteration+2)
+		}
+		for _, tile in pairs(tiles) do
+			if isAValidReplacer(tile.name) then
+				return tile.name
+			end
 		end
+		iteration = iteration+2
 	end
 	return "landfill"
 end
@@ -125,13 +128,14 @@ function onCollection(event)
 							end
 						end
 					end
-					player.character.surface.set_tiles(replacements)
-					inventory.insert({type = "item", name = "biomass", count = count})
+					
+					player.character.surface.set_tiles(replacements)					
 					if inventory_error then
 						showInventoryFullErrorMessage(player.character)
-					elseif count == 0 then
+					elseif count == 0 and #replacements == 0 then
 						showDistanceErrorMessage(player.character)
-					else
+					elseif count > 0 then
+						inventory.insert({type = "item", name = "biomass", count = count})
 						showCollectionCountMessage(player.character, count)
 					end
 				end

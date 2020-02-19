@@ -1,10 +1,10 @@
-local random_generator = nil
+random_generator = nil
 
 local function randomizePosition(start_position, range)
 	if not random_generator or not random_generator.valid then
 		random_generator = game.create_random_generator()
-	end
-	math.randomseed(random_generator())
+		math.randomseed(random_generator())
+	end	
 	
 	local x_modifier = (math.random(-1, 1)) * math.random(1, range)
 	local y_modifier = (math.random(-1, 1)) * math.random(1, range)
@@ -71,7 +71,6 @@ local function createCrashSite()
 					if not random_generator or not random_generator.valid then
 						random_generator = game.create_random_generator()
 					end
-					math.randomseed(random_generator())
 					item_name = start_items[math.random(1, 4)]
 					item_count = math.random(5, 10)
 					
