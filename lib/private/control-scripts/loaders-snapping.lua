@@ -38,6 +38,10 @@ local KRASTORIO_LOADER_BUILT_EVENT_FILTER =
 		filter = "type", 
         type    = "loader"
     },
+	{
+		filter = "type", 
+        type    = "loader-1x1"
+    },
 	-- Loaders
     {
 		filter = "name", 
