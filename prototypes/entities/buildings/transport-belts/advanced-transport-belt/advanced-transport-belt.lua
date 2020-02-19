@@ -50,7 +50,7 @@ data:extend(
 		fast_replaceable_group = "transport-belt",
 		next_upgrade = "kr-superior-transport-belt",
 		speed = 0.125,
-		animation_speed_coefficient = 28,
+		animation_speed_coefficient = 32,
 		connector_frame_sprites = transport_belt_connector_frame_sprites,
 		circuit_wire_connection_points = circuit_connector_definitions["belt"].points,
 		circuit_connector_sprites = circuit_connector_definitions["belt"].sprites,
