@@ -111,8 +111,8 @@ krastorio.technologies.addUnlockRecipe("rocket-fuel", "rocket-fuel-with-ammonia"
 krastorio.technologies.addUnlockRecipe("rocket-fuel", "rocket-fuel-with-hydrogen-chloride")
 
 -- Science
-krastorio.technologies.addUnlockRecipe("military-science-pack", "kr-biomass-from-creep")
 krastorio.technologies.addUnlockRecipe("military-science-pack", "biters-research-data")
+krastorio.technologies.addUnlockRecipe("military-science-pack", "kr-creep-collector")
 
 -- Removings
 

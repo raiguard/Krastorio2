@@ -136,8 +136,9 @@ function krastorio.matter_func.createMatterRecipe(args)
 			
 			if args.need_stabilizer ~= nil and args.need_stabilizer == true then
 				matter_to_item.localised_description = {"recipe-description.matter-recipe-with-stabilizer"}
-				--table.insert(matter_to_item.ingredients, {type="item", name="matter-stabilizer", amount=1, catalyst_amount = 1})
-				--table.insert(matter_to_item.results,     {type="item", name="empty-matter-stabilizer", probability = 0.99, amount=1, amount_max = 1, catalyst_amount = 1})
+				matter_to_item.main_product = _return_item.name
+				table.insert(matter_to_item.ingredients, {type="item", name="charged-matter-stabilizer", amount=1, catalyst_amount = 1})
+				table.insert(matter_to_item.results,     {type="item", name="matter-stabilizer", probability = 0.95, amount=1, amount_max = 1, catalyst_amount = 1})
 			end
 			
 			data:extend({matter_to_item})
@@ -248,7 +249,8 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "iron-ore",
 		minimum_conversion_quantity = 10, 
 		matter_value = 5,
-		energy_required = 1
+		energy_required = 1,
+		unlocked_by_technology = "kr-matter-iron-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(iron_ore)
 	
@@ -258,7 +260,8 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "copper-ore",
 		minimum_conversion_quantity = 10, 
 		matter_value = 5,
-		energy_required = 1
+		energy_required = 1,
+		unlocked_by_technology = "kr-matter-copper-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(copper_ore)
 	----
@@ -268,9 +271,9 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 	{
 		item_name = "sand",
 		minimum_conversion_quantity = 10, 
-		matter_value = 2,
-		-- unlocked_by_technology = "matter+sand-processing", 
-		energy_required = 1
+		matter_value = 2, 
+		energy_required = 1,
+		unlocked_by_technology = "kr-matter-stone-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(sand)
 	
@@ -280,8 +283,8 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "stone",
 		minimum_conversion_quantity = 10, 
 		matter_value = 3.25,
-		-- unlocked_by_technology = "matter+stone-processing", 
-		energy_required = 1
+		energy_required = 1,
+		unlocked_by_technology = "kr-matter-stone-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(stone)
 	
@@ -291,8 +294,8 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "coal",
 		minimum_conversion_quantity = 10, 
 		matter_value = 3.25,
-		-- unlocked_by_technology = "matter+coal-processing", 
-		energy_required = 1
+		energy_required = 1,
+		unlocked_by_technology = "kr-matter-copper-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(coal)
 		
@@ -302,9 +305,9 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "water",
 		minimum_conversion_quantity = 100, 
 		matter_value = 0.5,
-		-- unlocked_by_technology = "matter+water-processing", 
 		only_deconversion = true,
 		energy_required = 1,
+		unlocked_by_technology = "kr-matter-water-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(water)
 	
@@ -313,9 +316,9 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 	{
 		item_name = "crude-oil",
 		minimum_conversion_quantity = 100, 
-		matter_value = 10,
-		-- unlocked_by_technology = "matter+oil-processing", 
-		energy_required = 1
+		matter_value = 10, 
+		energy_required = 1,
+		unlocked_by_technology = "kr-matter-oil-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(crude_oil)
 	
@@ -325,8 +328,8 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "uranium-ore",
 		minimum_conversion_quantity = 10, 
 		matter_value = 8,
-		-- unlocked_by_technology = "matter+uranium-processing", 
-		energy_required = 1
+		energy_required = 1,
+		unlocked_by_technology = "kr-matter-uranium-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(uranium_ore)
 	
@@ -335,9 +338,9 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 	{
 		item_name = "uranium-238",
 		minimum_conversion_quantity = 10,
-		matter_value = 80,
-		-- unlocked_by_technology = "matter+uranium-processing", 
-		energy_required = 1
+		matter_value = 80, 
+		energy_required = 1,
+		unlocked_by_technology = "kr-matter-uranium-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(uranium_238)
 
@@ -347,9 +350,9 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "raw-imersite",
 		minimum_conversion_quantity = 10, 
 		matter_value = 20,
-		-- unlocked_by_technology = "matter+minerals-processing", 
 		energy_required = 1,
-		only_conversion = true
+		only_conversion = true,
+		unlocked_by_technology = "kr-matter-minerals-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(raw_imersite)	
 	
@@ -358,9 +361,9 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 	{
 		item_name = "imersite-powder",
 		minimum_conversion_quantity = 10, 
-		matter_value = 10,
-		-- unlocked_by_technology = "matter+minerals-processing", 
-		energy_required = 1
+		matter_value = 10, 
+		energy_required = 1,
+		unlocked_by_technology = "kr-matter-minerals-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(imersite_powder)	
 	
@@ -372,9 +375,9 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "quartz",
 		minimum_conversion_quantity = 10, 
 		matter_value = 2.25,
-		-- unlocked_by_technology = "matter+sand-processing", 
 		energy_required = 1,
-		only_conversion = true
+		only_conversion = true,
+		unlocked_by_technology = "kr-matter-stone-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(quartz)
 
@@ -384,10 +387,9 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "sulfur",
 		minimum_conversion_quantity = 10, 
 		matter_value = 9,
-		-- unlocked_by_technology = "matter-assembler-plus", 
 		energy_required = 4,
 		need_stabilizer = true,
-		allow_productivity = true
+		unlocked_by_technology = "kr-matter-oil-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(sulfur)
 	
@@ -405,11 +407,10 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "glass",
 		minimum_conversion_quantity = 10, 
 		matter_value = 10,
-		-- unlocked_by_technology = "matter-assembler-plus", 
 		energy_required = 2,
 		only_deconversion = true,
 		need_stabilizer = true,
-		allow_productivity = true
+		unlocked_by_technology = "kr-matter-stone-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(glass)
 		
@@ -419,11 +420,10 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "silicon",
 		minimum_conversion_quantity = 10, 
 		matter_value = 7,
-		-- unlocked_by_technology = "matter-assembler-plus", 
 		energy_required = 2,
 		only_deconversion = true,
 		need_stabilizer = true,
-		allow_productivity = true
+		unlocked_by_technology = "kr-matter-stone-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(k_silicon)
 	
@@ -433,11 +433,10 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "copper-plate",
 		minimum_conversion_quantity = 10, 
 		matter_value = 6,
-		-- unlocked_by_technology = "matter-assembler-plus", 
 		energy_required = 2,
 		only_deconversion = true,
 		need_stabilizer = true,
-		allow_productivity = true
+		unlocked_by_technology = "kr-matter-copper-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(copper_plate)
 	
@@ -447,11 +446,10 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "iron-plate",
 		minimum_conversion_quantity = 10, 
 		matter_value = 6,
-		-- unlocked_by_technology = "matter-assembler-plus", 
 		energy_required = 2,
 		only_deconversion = true,
 		need_stabilizer = true,
-		allow_productivity = true
+		unlocked_by_technology = "kr-matter-iron-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(iron_plate)
 	
@@ -461,11 +459,10 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "steel-plate",
 		minimum_conversion_quantity = 10, 
 		matter_value = 18,
-		-- unlocked_by_technology = "matter-assembler-plus", 
 		energy_required = 2,
 		only_deconversion = true,
 		need_stabilizer = true,
-		allow_productivity = true
+		unlocked_by_technology = "kr-matter-iron-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(steel_plate)
 	
@@ -474,12 +471,11 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 	{
 		item_name = "plastic-bar",
 		minimum_conversion_quantity = 10, 
-		matter_value = 14,
-		-- unlocked_by_technology = "matter-assembler-plus", 
+		matter_value = 14, 
 		energy_required = 2,
 		only_deconversion = true,
 		need_stabilizer = true,
-		allow_productivity = true
+		unlocked_by_technology = "kr-matter-oil-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(plastic_bar)
 	

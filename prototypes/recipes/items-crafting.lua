@@ -13,8 +13,7 @@ return
 			{"iron-stick", 2},
 			{"copper-plate", 3}
 		},
-		result = "automation-core",
-		result_count = 1
+		result = "automation-core"
 	},
 	{
 		type = "recipe",
@@ -41,8 +40,7 @@ return
 		{
 			{"steel-plate", 2}
 		},
-		result = "steel-gear-wheel",
-		result_count = 1
+		result = "steel-gear-wheel"
 	},
 	{
 		type = "recipe",
@@ -54,9 +52,21 @@ return
 		{
 			{"steel-plate", 2}
 		},
-		result = "steel-beam",
-		result_count = 1
+		result = "steel-beam"
 	},		
+	{
+		type = "recipe",
+		name = "kr-creep-collector",
+		energy_required = 3,
+		enabled = false,
+		ingredients =
+		{
+			{"iron-stick", 1},
+			{"iron-gear-wheel", 5},
+			{"automation-core", 1}
+		},
+		result = "kr-creep-collector"
+	},	
 	{
 		type = "recipe",
 		name = "first-aid-kit",

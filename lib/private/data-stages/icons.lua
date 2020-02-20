@@ -87,7 +87,7 @@ function krastorio.icons.getIconsForOverlay(item_or_recipe)
 	else
 		if not item_or_recipe.icon and item_or_recipe.type == "recipe" then
 			return krastorio.icons.getIconsForOverlay(krastorio.items.getItem(item_or_recipe.name))
-		else
+		elseif not item_or_recipe.icon and item_or_recipe.type ~= "recipe" then
 			return {}
 		end
 		-- single icon, simple insert

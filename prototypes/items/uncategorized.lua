@@ -493,5 +493,24 @@ data:extend(
 		subgroup = "intermediate-product",
 		order = "j1[energy-control-unit]",
 		stack_size = 100
+    },
+	---
+	{
+		type = "item",
+		name = "matter-stabilizer",
+		icon = kr_icons_path .. "matter-stabilizer.png",
+		icon_size = 64,
+		subgroup = "intermediate-product",
+		order = "w1[matter-stabilizers]-a1[matter-stabilizer]",
+		stack_size = 100
+    },
+	{
+		type = "item",
+		name = "charged-matter-stabilizer",
+		icon = kr_icons_path .. "charged-matter-stabilizer.png",
+		icon_size = 64,
+		subgroup = "intermediate-product",
+		order = "w1[matter-stabilizers]-a2[charged-matter-stabilizer]",
+		stack_size = 100
     }
 })

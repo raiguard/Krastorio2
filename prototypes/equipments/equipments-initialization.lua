@@ -1,4 +1,4 @@
 -- Adding character equipment
-require("equipment-character")
-require("equipment-vehicle")
-require("equipment-universal")
+require(kr_equipments_prototypes_path .. "equipment-character")
+require(kr_equipments_prototypes_path .. "equipment-vehicle")
+require(kr_equipments_prototypes_path .. "equipment-universal")
