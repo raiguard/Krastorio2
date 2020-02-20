@@ -31,9 +31,10 @@ function changeInserterDropLane(event)
 		local tooltip_name = is_near and {"other.drop-near"} or {"other.drop-far"}
 		global.krastorio.flying_texts.showOnSurfaceText
 		{
-			entity = inserter,
-			text   = tooltip_name,
-			color  = {1, 0.615, 0.235},
+			entity       = inserter,
+			position     = {inserter.position.x, inserter.position.y-1},
+			text         = tooltip_name,
+			color        = {1, 0.615, 0.235},
 			time_to_live = 200
 		}
 		-- Welding sound

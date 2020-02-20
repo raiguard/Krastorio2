@@ -4,9 +4,14 @@ require("__core__/lualib/mod-gui")
 local w_prefix = "kr-wiki-"
 local topics =
 {
+	{"gui.air-purifier"},
 	{"gui.creep"},
 	{"gui.fuels"},
 	{"gui.fusion-reactor"},
+	{"gui.inserters-hotkey"},
+	{"gui.intergalactic-transceiver"},
+	{"gui.radiation"},
+	{"gui.roboports-hotkey"},
 	{"gui.shelter"}
 }
 
@@ -22,30 +27,69 @@ function getDescrptionGUIPane(event)
 	return nil
 end
 
+function addTitleToDescrptionGUIPane(pane, title_name)
+	local title_label = global.krastorio.gui.addLabel(pane, 
+	{
+		name    = w_prefix.."description-title", 
+		caption = {title_name},
+		style   = "bold_label"
+	})
+	global.krastorio.gui.addLine(pane, 
+	{
+		name    = w_prefix.."title-line",
+		style   = "dark_line"
+	})
+end
+
+function addTextToDescrptionGUIPane(pane, text_name, index)
+	global.krastorio.gui.addDescription(pane,
+	{
+		name    = w_prefix.."description-" .. index, 
+		caption = {text_name}
+	})
+end
+
+function addImageToDescrptionGUIPane(pane, image_name, index)
+	local image_flow = global.krastorio.gui.addFlow(pane, 
+	{
+		name      = w_prefix.."image-flow-" .. index,
+		direction = "horizontal",
+		style     = "kr-wiki-image-flow"
+	})
+	global.krastorio.gui.addSprite(image_flow,
+	{
+		name   = w_prefix.."preview-" .. index, 
+		sprite = image_name
+	})
+end
+
+function showAirPurifierDescription(event)
+	local wiki_info_pane = getDescrptionGUIPane(event)
+	if wiki_info_pane then
+	
+		-- Title
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.air-purifier")		
+		-- Air purifier image
+		addImageToDescrptionGUIPane(wiki_info_pane, "air-purifier-preview-1", 1)
+		-- Description 1
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.air-purifier-description-1", 1)
+		-- Filter restoration image
+		addImageToDescrptionGUIPane(wiki_info_pane, "air-purifier-preview-2", 2)
+		-- Description 2
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.air-purifier-description-2", 2)
+		
+	end
+end
+
 function showCreepDescription(event)
 	local wiki_info_pane = getDescrptionGUIPane(event)
 	if wiki_info_pane then
 		
 		-- Title
-		local title_label = global.krastorio.gui.addLabel(wiki_info_pane, 
-		{
-			name    = w_prefix.."description-title", 
-			caption = {"gui.creep"},
-			style   = "bold_label"
-		})
-		global.krastorio.gui.addLine(wiki_info_pane, 
-		{
-			name    = w_prefix.."title-line",
-			style   = "dark_line"
-		})
-		
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.creep")		
 		-- Creep image
-		global.krastorio.gui.addSprite(wiki_info_pane,
-		{
-			name   = w_prefix.."preview-1", 
-			sprite = "kr-creep-preview"
-		})	
-		
+		addImageToDescrptionGUIPane(wiki_info_pane, "kr-creep-preview", 1)
+
 	end
 end
 
@@ -54,24 +98,9 @@ function showFuelsDescription(event)
 	if wiki_info_pane then
 		
 		-- Title
-		local title_label = global.krastorio.gui.addLabel(wiki_info_pane, 
-		{
-			name    = w_prefix.."description-title", 
-			caption = {"gui.fuels"},
-			style   = "bold_label"
-		})
-		global.krastorio.gui.addLine(wiki_info_pane, 
-		{
-			name    = w_prefix.."title-line",
-			style   = "dark_line"
-		})
-		
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.fuels")		
 		-- Fuels image
-		global.krastorio.gui.addSprite(wiki_info_pane,
-		{
-			name   = w_prefix.."preview-1", 
-			sprite = "kr-fuels-preview"
-		})
+		addImageToDescrptionGUIPane(wiki_info_pane, "kr-fuels-preview", 1)
 		
 	end
 end
@@ -81,42 +110,67 @@ function showFusionReactorDescription(event)
 	if wiki_info_pane then
 		
 		-- Title
-		local title_label = global.krastorio.gui.addLabel(wiki_info_pane, 
-		{
-			name    = w_prefix.."description-title", 
-			caption = {"gui.fusion-reactor"},
-			style   = "bold_label"
-		})
-		global.krastorio.gui.addLine(wiki_info_pane, 
-		{
-			name    = w_prefix.."title-line",
-			style   = "dark_line"
-		})
-		
-		-- Fusion reactor image
-		global.krastorio.gui.addSprite(wiki_info_pane,
-		{
-			name   = w_prefix.."preview-1", 
-			sprite = "kr-fusion-reactor-preview"
-		})			
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.fusion-reactor")		
+		-- Fusion reactor image	
+		addImageToDescrptionGUIPane(wiki_info_pane, "kr-fusion-reactor-preview", 1)
 		-- Description 1
-		global.krastorio.gui.addDescription(wiki_info_pane,
-		{
-			name    = w_prefix.."description-1", 
-			caption = {"gui.fusion-reactor-description-1"}
-		})
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.fusion-reactor-description-1", 1)
 		-- Advanced Turbine image
-		global.krastorio.gui.addSprite(wiki_info_pane,
-		{
-			name   = w_prefix.."preview-2", 
-			sprite = "kr-advanced-steam-turbine-preview"
-		})
+		addImageToDescrptionGUIPane(wiki_info_pane, "kr-advanced-steam-turbine-preview", 2)
 		-- Description 2
-		global.krastorio.gui.addDescription(wiki_info_pane,
-		{
-			name    = w_prefix.."description-2", 
-			caption = {"gui.fusion-reactor-description-2"}
-		})
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.fusion-reactor-description-2", 2)
+		
+	end
+end
+
+function showInsertersHotkeyDescription(event)
+	local wiki_info_pane = getDescrptionGUIPane(event)
+	if wiki_info_pane then
+		
+		-- Title
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.inserters-hotkey")
+		-- Change inserter drop position image
+		addImageToDescrptionGUIPane(wiki_info_pane, "kr-inserters-hotkey-preview", 1)
+		-- Description 1
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.inserters-krastorio-hotkey-description-1", 1)
+		
+	end
+end
+
+function showIntergalacticTransceiverDescription(event)
+	local wiki_info_pane = getDescrptionGUIPane(event)
+	if wiki_info_pane then
+		
+		-- Title
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.intergalactic-transceiver")		
+		-- Intergalactic transceiver image
+		addImageToDescrptionGUIPane(wiki_info_pane, "kr-intergalactic-transceiver-preview", 1)
+		
+	end
+end
+
+function showRadiationDescription(event)
+	local wiki_info_pane = getDescrptionGUIPane(event)
+	if wiki_info_pane then
+		
+		-- Title
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.radiation")			
+		-- Description 1
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.radiation-description-1", 1)
+		
+	end
+end
+
+function showRoboportsHotkeyDescription(event)
+	local wiki_info_pane = getDescrptionGUIPane(event)
+	if wiki_info_pane then
+		
+		-- Title
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.roboports-hotkey")
+		-- Change roboport mode image
+		addImageToDescrptionGUIPane(wiki_info_pane, "roboports-hotkey-preview", 1)
+		-- Description 1
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.roboports-krastorio-hotkey-description-1", 1)
 		
 	end
 end
@@ -126,40 +180,26 @@ function showShelterDescription(event)
 	if wiki_info_pane then
 		
 		-- Title
-		local title_label = global.krastorio.gui.addLabel(wiki_info_pane, 
-		{
-			name    = w_prefix.."description-title", 
-			caption = {"gui.shelter"},
-			style   = "bold_label"
-		})
-		global.krastorio.gui.addLine(wiki_info_pane, 
-		{
-			name    = w_prefix.."title-line",
-			style   = "dark_line"
-		})
-		
-		-- Shelter image
-		global.krastorio.gui.addSprite(wiki_info_pane,
-		{
-			name   = w_prefix.."preview-1", 
-			sprite = "kr-shelter-preview"
-		})			
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.shelter")		
+		-- Shelter image	
+		addImageToDescrptionGUIPane(wiki_info_pane, "kr-shelter-preview", 1)
 		-- Description 1
-		global.krastorio.gui.addDescription(wiki_info_pane,
-		{
-			name    = w_prefix.."description-1", 
-			caption = {"gui.shelter-description-1"}
-		})
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.shelter-description-1", 1)
 		
 	end
 end
 
 local topics_gui =
 {
-	[1] = showCreepDescription,
-	[2] = showFuelsDescription,
-	[3] = showFusionReactorDescription,
-	[4] = showShelterDescription
+	[1] = showAirPurifierDescription,
+	[2] = showCreepDescription,
+	[3] = showFuelsDescription,
+	[4] = showFusionReactorDescription,
+	[5]	= showInsertersHotkeyDescription,
+	[6] = showIntergalacticTransceiverDescription,
+	[7] = showRadiationDescription,
+	[8]	= showRoboportsHotkeyDescription,
+	[9] = showShelterDescription
 }
 
 function changeWikiDescription(event)

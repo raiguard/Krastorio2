@@ -181,3 +181,11 @@ styles["kr-wiki-description-label"] =
 	  rich_text_setting = "enabled",
 	  single_line = false
 }
+
+styles["kr-wiki-image-flow"] =
+{
+	type = "horizontal_flow_style",
+    horizontal_align = "center",
+	natural_width = 500,
+	vertically_stretchable = "off"
+}

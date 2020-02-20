@@ -52,14 +52,15 @@ local function changeRoboportEntity(old_entity, new_entity_name, player_index, t
 			new_entity.insert({name=item, count=quantity})
 		end
 	end
+	-- Tooltip
 	global.krastorio.flying_texts.showOnSurfaceText
 	{
-		entity = new_entity,
-		text   = tooltip_name,
-		color  = {1, 0.615, 0.235},
+		entity       = new_entity,
+		position     = {new_entity.position.x, new_entity.position.y-1},
+		text         = tooltip_name,
+		color        = {1, 0.615, 0.235},
 		time_to_live = 300
-	}
-	
+	}	
 	-- Welding sound
 	game.play_sound
 	{
