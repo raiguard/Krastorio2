@@ -1,6 +1,19 @@
 local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
 local sounds      = require("__base__/prototypes/entity/demo-sounds")
 
+local greenhouse_working_sound =
+{
+	filename = kr_buildings_sounds_path .. "bio-lab.ogg",
+	volume = 1.25,
+	idle_sound = { filename = "__base__/sound/idle1.ogg" },
+	aggregation =
+	{
+		max_count = 3,
+		remove = false,
+		count_already_playing = true
+	}
+}
+
 data:extend(
 {   
 	{
@@ -133,18 +146,7 @@ data:extend(
 		},
 		crafting_categories = {"bioprocessing"},
 		vehicle_impact_sound = sounds.generic_impact,
-        --working_sound =
-        --{
-        --sound =
-        --{
-        --{
-        --    filename = "__Krastorio__/sound/matter-assembler.ogg",
-        --    volume = 1
-        --}
-        --},
-        --idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 1 },
-        --apparent_volume = 1.5
-        --},
+        working_sound = greenhouse_working_sound,
 		crafting_speed = 1,
 		return_ingredients_on_change = true,
 		energy_source =
