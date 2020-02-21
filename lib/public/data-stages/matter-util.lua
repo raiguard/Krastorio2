@@ -295,7 +295,7 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		minimum_conversion_quantity = 10, 
 		matter_value = 3.25,
 		energy_required = 1,
-		unlocked_by_technology = "kr-matter-copper-processing"
+		unlocked_by_technology = "kr-matter-coal-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(coal)
 		

@@ -16,6 +16,10 @@ data:extend(
 	   type = "recipe-category",
 	   name = "air-purification"
 	},
+	{
+	   type = "recipe-category",
+	   name = "stabilizer-charging"
+	},
 
 -----------------------------------------------------------------------------------------------------------------
 	

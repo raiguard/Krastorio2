@@ -236,5 +236,30 @@ return
 			{"lithium-sulfur-battery", 3}
 		},
 		result = "energy-control-unit"
+    },
+	{
+		type = "recipe",
+		name = "matter-stabilizer",
+		enabled = false,
+		energy_required = 10,
+		ingredients =
+		{
+			{"low-density-structure", 10},
+			{"energy-control-unit", 10},
+			{"processing-unit", 1}
+		},
+		result = "matter-stabilizer"
+    },
+	{
+		type = "recipe",
+		name = "matter-cube",
+		category = "matter-deconversion",
+		enabled = false,
+		energy_required = 10,
+		ingredients =
+		{
+			{ type = "fluid", name = "matter", amount = 1000, catalyst_amount = 1000}
+		},
+		result = "matter-cube"
     }
 }

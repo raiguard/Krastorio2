@@ -15,7 +15,19 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = "kr-matter-assembler"
-			}
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-stabilizer-charging-station"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["matter-stabilizer"] or "matter-stabilizer"
+			},	
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["charge-stabilizer"] or "charge-stabilizer"
+			}				
 		},
 		prerequisites = {"kr-matter-tech-card", "kr-imersium-processing", "kr-energy-control-unit"},
 		order = "g-e-d",

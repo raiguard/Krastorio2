@@ -52,7 +52,10 @@ local krastorio_new_recipes =
 	require(kr_recipes_prototypes_path .. "air-purification"),
 
 	-- -- Recipes used for bio- and crep processing
-	require(kr_recipes_prototypes_path .. "bioprocessing")
+	require(kr_recipes_prototypes_path .. "bioprocessing"),
+	
+	-- -- Recipe for charge stabilizers
+	require(kr_recipes_prototypes_path .. "stabilizer-charging")
 }
 
 -- -- Anti recipes override check

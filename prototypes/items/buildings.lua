@@ -471,22 +471,32 @@ data:extend(
 		type = "item",
 		name = "kr-matter-plant",
 		icon = kr_entities_icons_path .. "matter-plant.png",
-		icon_size = 64,
-		stack_size = 10,		
+		icon_size = 64,				
 		subgroup = "production-machine",
 		order = "i[matter]-a[matter-plant]",
-		place_result = "kr-matter-plant"
+		place_result = "kr-matter-plant",
+		stack_size = 10
 	}, 
 	{
 		type = "item",
 		name = "kr-matter-assembler",
 		icon = kr_entities_icons_path .. "matter-assembler.png",
-		icon_size = 64,
-		stack_size = 10,		
+		icon_size = 64,			
 		subgroup = "production-machine",
 		order = "i[matter]-b[matter-assembler]",
-		place_result = "kr-matter-assembler"
+		place_result = "kr-matter-assembler",
+		stack_size = 10	
 	},
+	{
+		type = "item",
+		name = "kr-stabilizer-charging-station",
+		icon = kr_entities_icons_path .. "stabilizer-charging-station.png",
+		icon_size = 64,				
+		subgroup = "production-machine",
+		order = "i[matter]-c[stabilizer-charging-station]",
+		place_result = "kr-stabilizer-charging-station",
+		stack_size = 50
+	},	
 	-- -- --
 	-- Belts
 	-- -- --

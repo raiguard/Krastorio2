@@ -594,6 +594,19 @@ return
     },
 	{
 		type = "recipe",
+		name = "kr-stabilizer-charging-station",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"imersium-beam", 4},	
+			{"energy-control-unit", 20},			
+			{"processing-unit", 1}					
+		},
+		result = "kr-stabilizer-charging-station"
+    },
+	{
+		type = "recipe",
 		name = "kr-antimatter-reactor",
 		energy_required = 600,
 		enabled = false,

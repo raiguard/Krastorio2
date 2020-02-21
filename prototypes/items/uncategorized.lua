@@ -512,5 +512,14 @@ data:extend(
 		subgroup = "intermediate-product",
 		order = "w1[matter-stabilizers]-a2[charged-matter-stabilizer]",
 		stack_size = 100
+    },
+	{
+		type = "item",
+		name = "matter-cube",
+		icon = kr_icons_path .. "matter-cube.png",
+		icon_size = 64,
+		subgroup = "intermediate-product",
+		order = "w1[matter]-a3[matter-cube]",
+		stack_size = 200
     }
 })

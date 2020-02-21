@@ -2,13 +2,8 @@ local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
 local sounds      = require("__base__/prototypes/entity/demo-sounds")
 
 local advanced_furnace_sound =
-{
-	variations =
-	{
-		{
-			filename = kr_buildings_sounds_path .. "advanced-furnace.ogg"
-		}
-	},
+{	
+	filename = kr_buildings_sounds_path .. "advanced-furnace.ogg",
 	aggregation =
 	{
 		max_count = 2,
@@ -31,14 +26,13 @@ data:extend(
 		dying_explosion = "big-explosion",
 		resistances = 
 		{
-			{type = "physical",percent = 50},
-			{type = "fire",percent = 95},
-			{type = "impact",percent = 80}
+			{type = "physical", percent = 50},
+			{type = "fire", percent = 95},
+			{type = "impact", percent = 80}
 		},
 		collision_box = {{-3.25, -3.25}, {3.25, 3.25}},
 		selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
 		damaged_trigger_effect = hit_effects.entity(),
-		fast_replaceable_group = "assembling-machine",
 		animation =
 		{
 			layers =
