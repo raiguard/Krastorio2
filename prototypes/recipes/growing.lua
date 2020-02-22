@@ -28,6 +28,6 @@ return
 			{name="fertilizer", amount=1}
 		},
 		result = "wood",
-		result_count = 60
+		result_count = 90
 	}
 }

@@ -390,6 +390,10 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = krastorio.recipes.changed_names["fertilizer"] or "fertilizer"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-grow-wood-plus"
 			}			
 		},
 		prerequisites = { "kr-greenhouse", "kr-advanced-chemistry", "electronics" },
@@ -401,6 +405,7 @@ data:extend(
 				{"basic-tech-card", 1},
                 {"automation-science-pack", 1},
                 {"logistic-science-pack", 1},
+				{"military-science-pack", 1},
 				{"chemical-science-pack", 1}
 			},
 			time = 30
@@ -533,7 +538,11 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = "kr-antimatter-reactor"
-			}
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["antimatter-fuel-cell"] or "antimatter-fuel-cell"
+			}			
 		},
 		order = "g-f-z",
 		unit =

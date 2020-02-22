@@ -399,7 +399,7 @@ data:extend(
 				recipe = krastorio.recipes.changed_names["singularity-tech-card"] or "singularity-tech-card"
 			}
 		},
-		prerequisites = {"kr-advanced-tech-card"},
+		prerequisites = {"kr-advanced-tech-card", "kr-imersium-processing", "kr-energy-control-unit"},
 		unit =
 		{
 			count = 1250,
@@ -413,7 +413,35 @@ data:extend(
 			},
 			time = 45
 		}
-    }
+    },
+	{
+		type = "technology",
+		name = "kr-advanced-tank",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "advanced-tank.png",
+		icon_size = 128,
+		effects =
+		{			
+			{
+				type = "unlock-recipe",
+				recipe = "kr-advanced-tank"
+			}
+		},
+		prerequisites = {"tanks", "kr-imersium-processing", "kr-advanced-tech-card"},
+		unit =
+		{
+			count = 750,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"matter-tech-card", 1},
+				{"advanced-tech-card", 1}
+			},
+			time = 60
+		}
+    }	
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

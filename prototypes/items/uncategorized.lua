@@ -37,8 +37,8 @@ else
 	bio_fuel_acceleration_multiplier = 1.2
 	bio_fuel_top_speed_multiplier    = 1.1
 	
-	-- Advanced fuel
 	advanced_fuel_value = "15MJ"
+	-- Advanced fuel
 end
 
 data:extend(
@@ -56,6 +56,8 @@ data:extend(
 			{ size = 64, filename = kr_mip_icons_path .. "biomass/biomass-2.png", scale = 0.25, mipmap_count = 4 },
 			{ size = 64, filename = kr_mip_icons_path .. "biomass/biomass-3.png", scale = 0.25, mipmap_count = 4 }
 		},
+		subgroup = "raw-material",
+		order = "a[fertilizer]",
 		stack_size = 200
 	},
 	{
@@ -64,7 +66,7 @@ data:extend(
 		icon = kr_icons_path .. "fertilizer.png",
 		icon_size = 64,
 		subgroup = "raw-material",
-		order = "a[fertilizer]",
+		order = "a2[fertilizer]",
 		stack_size = 200
 	},
 	{
@@ -479,9 +481,9 @@ data:extend(
 		icon = kr_icons_path .. "dt-fuel.png",
 		icon_size = 32,
 		fuel_category = "fusion-fuel",
-		fuel_value = "50GJ",
+		fuel_value = "16GJ",
 		subgroup = "intermediate-product",
-		order = "r[uranium-processing]-b[dt-fuel]",
+		order = "r[uranium-processing]-b1[dt-fuel]",
 		stack_size = 50
     },
 	---
@@ -521,5 +523,16 @@ data:extend(
 		subgroup = "intermediate-product",
 		order = "w1[matter]-a3[matter-cube]",
 		stack_size = 200
+    },
+	{
+		type = "item",
+		name = "antimatter-fuel-cell",
+		icon = kr_icons_path .. "antimatter-fuel-cell.png",
+		icon_size = 64,
+		fuel_category = "antimatter-fuel",
+		fuel_value = "32GJ",
+		subgroup = "intermediate-product",
+		order = "r[uranium-processing]-b2[antimatter-fuel-cell]",
+		stack_size = 50
     }
 })

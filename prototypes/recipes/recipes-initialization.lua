@@ -55,7 +55,10 @@ local krastorio_new_recipes =
 	require(kr_recipes_prototypes_path .. "bioprocessing"),
 	
 	-- -- Recipe for charge stabilizers
-	require(kr_recipes_prototypes_path .. "stabilizer-charging")
+	require(kr_recipes_prototypes_path .. "stabilizer-charging"),
+	
+	-- -- Recipe for charge stabilizers
+	require(kr_recipes_prototypes_path .. "vehicles")
 }
 
 -- -- Anti recipes override check

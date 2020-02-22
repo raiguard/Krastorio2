@@ -24,12 +24,14 @@ krastorio.technologies.addPrerequisite("battery-equipment", "modular-armor")
 krastorio.technologies.addPrerequisite("fusion-reactor-equipment", "kr-fusion-energy")
 
 -- Science
+krastorio.technologies.addPrerequisite("military-science-pack", "advanced-electronics")
 krastorio.technologies.addPrerequisite("logistic-science-pack", "automation-science-pack")
 krastorio.technologies.addPrerequisite("logistic-science-pack", "electronics")
 krastorio.technologies.addPrerequisite("production-science-pack", "kr-research-server")
 krastorio.technologies.addPrerequisite("production-science-pack", "kr-advanced-lab")
 krastorio.technologies.addPrerequisite("production-science-pack", "uranium-processing")
 krastorio.technologies.addPrerequisite("utility-science-pack", "kr-research-server")
+krastorio.technologies.addPrerequisite("utility-science-pack", "rocket-fuel")
 
 -- Modules 
 krastorio.technologies.addPrerequisite("speed-module-3", "advanced-electronics-2")

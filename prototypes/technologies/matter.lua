@@ -219,5 +219,27 @@ data:extend(
 			},
 			time = 45
 		}
+    },
+	{
+		type = "technology",
+		name = "kr-matter-rare-metals-processing",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "matter-rare-metals.png",
+		icon_size = 128,
+		effects = {},
+		prerequisites = {"kr-matter-processing"},
+		order = "g-e-e",
+		unit =
+		{
+			count = 1000,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"matter-tech-card", 1}				
+			},
+			time = 45
+		}
     }
 })

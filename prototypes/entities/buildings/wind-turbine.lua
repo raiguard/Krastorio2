@@ -1,3 +1,5 @@
+local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
+
 local wind_turbine_persistent_sound =
 {
 	variations =
@@ -46,6 +48,7 @@ data:extend(
 			}
 		},
 		fast_replaceable_group = "kr-wind-turbine",
+		damaged_trigger_effect = hit_effects.entity(),
 		collision_box = {{-0.75, -0.75}, {0.75, 0.75}},
 		selection_box = {{-0.95, -0.95}, {0.95, 0.95}},
 		drawing_box = {{-0.5, -2}, {0.5, 1}},
@@ -109,8 +112,8 @@ data:extend(
 						draw_as_shadow = true,
 						shift = {0.95, 0.1}
 					}
-				},
-			},
+				}
+			}
 		},
 		continuous_animation = true,
 		working_sound =

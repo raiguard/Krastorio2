@@ -50,6 +50,23 @@ return
     },
 	{
 		type = "recipe",
+		name = "rare-metals",
+		category = "smelting",
+		subgroup = "raw-material",
+		energy_required = 16,
+		enabled = true,
+		always_show_made_in = true,
+		always_show_products = true,
+		allow_productivity = true,
+		ingredients = 
+		{
+			{"raw-rare-metals", 10}
+		},
+		result = "rare-metals",
+		result_count = 5
+    },
+	{
+		type = "recipe",
 		name = "enriched-iron-plate",
 		category = "smelting",
 		energy_required = 16,

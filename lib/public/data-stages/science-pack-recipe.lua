@@ -169,8 +169,7 @@ if not krastorio.science_pack_recipes then
 		ingredients =
 		{
 			{"biters-research-data", 1},
-			{"electronic-circuit", 5},
-			{"steel-plate", 10}			
+			{"electronic-components", 5}
 		},
 		result = "military-science-pack"		
 	}
@@ -217,7 +216,10 @@ if not krastorio.science_pack_recipes then
 		result_count = 5,
 		ingredients = 
 		{
-			{"wood", 1}
+			{"processing-unit", 10},
+			{"rocket-fuel", 20},
+			{"low-density-structure", 5},
+			{"steel-beam", 5}
 		},
 		result = "utility-science-pack"
     }

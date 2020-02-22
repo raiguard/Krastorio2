@@ -619,6 +619,7 @@ data:extend(
 		{
 			{ size = 64, filename = kr_entities_icons_path .. "singularity-beacon.png", scale = 0.25, mipmap_count = 4 }
 		}, 
+		subgroup = "module",
 		order = "8[singularity-beacon]",
 		place_result = "kr-singularity-beacon",
 		stack_size = 10

@@ -242,8 +242,9 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		energy_required = 1
 	}
 	krastorio.matter_func.createMatterRecipe(wood)
+	----
 	
-	-- iron_ore
+	-- iron ore
 	local iron_ore =
 	{
 		item_name = "iron-ore",
@@ -254,7 +255,7 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 	}
 	krastorio.matter_func.createMatterRecipe(iron_ore)
 	
-	-- copper_ore
+	-- copper ore
 	local copper_ore =
 	{
 		item_name = "copper-ore",
@@ -264,8 +265,18 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		unlocked_by_technology = "kr-matter-copper-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(copper_ore)
-	----
 	
+	-- raw rare metals
+	local raw_rare_metals =
+	{
+		item_name = "raw-rare-metals",
+		minimum_conversion_quantity = 10, 
+		matter_value = 50,
+		energy_required = 1,
+		unlocked_by_technology = "kr-matter-rare-metals-processing"
+	}
+	krastorio.matter_func.createMatterRecipe(raw_rare_metals)
+		
 	-- sand
 	local sand =
 	{
@@ -432,7 +443,7 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 	{
 		item_name = "copper-plate",
 		minimum_conversion_quantity = 10, 
-		matter_value = 6,
+		matter_value = 5,
 		energy_required = 2,
 		only_deconversion = true,
 		need_stabilizer = true,
@@ -445,13 +456,26 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 	{
 		item_name = "iron-plate",
 		minimum_conversion_quantity = 10, 
-		matter_value = 6,
+		matter_value = 5,
 		energy_required = 2,
 		only_deconversion = true,
 		need_stabilizer = true,
 		unlocked_by_technology = "kr-matter-iron-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(iron_plate)
+	
+	-- rare metals
+	local rare_metals =
+	{
+		item_name = "rare-metals",
+		minimum_conversion_quantity = 10, 
+		matter_value = 100,
+		energy_required = 2,
+		only_deconversion = true,
+		need_stabilizer = true,
+		unlocked_by_technology = "kr-matter-rare-metals-processing"
+	}
+	krastorio.matter_func.createMatterRecipe(rare_metals)	
 	
 	-- steel plate (vanilla)
 	local steel_plate =

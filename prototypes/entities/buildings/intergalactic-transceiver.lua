@@ -70,15 +70,45 @@ local intergalactic_transceiver_animation =
 	}
 }
 
+local intergalactic_transceiver_working_sound =
+{
+	sound =
+	{
+		variations =
+		{
+			{
+				filename = kr_buildings_sounds_path .. "intergalactic-transceiver-charge.ogg",
+				volume = 1.5
+			},
+			{
+				filename = kr_buildings_sounds_path .. "intergalactic-transceiver-charge.ogg",
+				volume = 1.5
+			},
+			{
+				filename = kr_buildings_sounds_path .. "intergalactic-transceiver-charge-morse.ogg",
+				volume = 1.5
+			}
+		}
+	},
+	idle_sound =
+	{
+		filename = kr_buildings_sounds_path .. "intergalactic-transceiver.ogg",
+		volume = 1
+	},
+	max_sounds_per_type = 3,
+	fade_in_ticks = 10,
+	fade_out_ticks = 30
+}
+
 data:extend(
 { 
+	-- Normal
 	{
 		type = "accumulator",
 		name = "kr-intergalactic-transceiver",
 		icon = kr_entities_icons_path .. "intergalactic-transceiver.png",
 		icon_size = 64,
 		flags = {"placeable-neutral","placeable-player", "player-creation", "not-rotatable"},
-		--minable = {mining_time = 5, result = "kr-intergalactic-transceiver"},
 		max_health = 10000,
 		corpse = "kr-big-random-pipes-remnant",
 		dying_explosion = "nuclear-reactor-explosion",
@@ -137,9 +167,9 @@ data:extend(
 						draw_as_shadow = true,
 						shift = {0.52, 0.5}
 					}
-				},
+				}
 			
-			},
+			}
 		},
 		charge_animation = intergalactic_transceiver_animation,
 		discharge_animation = intergalactic_transceiver_animation,
@@ -153,39 +183,45 @@ data:extend(
 			color = {r=1, g=0.5, b=0.75}
 		},
 		vehicle_impact_sound = sounds.generic_impact,
-		working_sound =
-		{
-			sound =
-			{
-				variations =
-				{
-					{
-						filename = kr_buildings_sounds_path .. "intergalactic-transceiver-charge.ogg",
-						volume = 1.5
-					},
-					{
-						filename = kr_buildings_sounds_path .. "intergalactic-transceiver-charge.ogg",
-						volume = 1.5
-					},
-					{
-						filename = kr_buildings_sounds_path .. "intergalactic-transceiver-charge-morse.ogg",
-						volume = 1.5
-					},
-				}
-			},
-			idle_sound =
-			{
-				filename = kr_buildings_sounds_path .. "intergalactic-transceiver.ogg",
-				volume = 1
-			},
-			max_sounds_per_type = 3,
-			fade_in_ticks = 10,
-			fade_out_ticks = 30
-		},
+		working_sound = intergalactic_transceiver_working_sound,
 		audible_distance_modifier = 30,		
 		circuit_wire_connection_point = nil, --circuit_connector_definitions["accumulator"].points,
 		circuit_connector_sprites = nil, --circuit_connector_definitions["accumulator"].sprites,
 		circuit_wire_max_distance = 0, --default_circuit_wire_max_distance,
 		default_output_signal = {type = "virtual", name = "signal-I"}
+	},
+	-- Activated
+	{
+		type = "electric-energy-interface",
+		name = "kr-activated-intergalactic-transceiver",
+		icon = kr_entities_icons_path .. "intergalactic-transceiver.png",
+		icon_size = 64,
+		max_health = 10000,
+		corpse = "kr-big-random-pipes-remnant",
+		dying_explosion = "nuclear-reactor-explosion",
+		damaged_trigger_effect = hit_effects.entity(),
+		collision_box = {{-5.75, -5.25}, {5.75, 5.25}},
+		selection_box = {{-6, -5.5}, {6, 5.5}},
+		drawing_box = {{-5.75, -5.25}, {5.75, 5.25}},
+		resistances = 
+		{
+			{type = "physical", percent = 75},
+			{type = "fire", percent = 75},
+			{type = "impact", percent = 75}
+		},
+		energy_source =
+		{
+			type = "electric",
+			buffer_capacity = "10GJ",
+			usage_priority = "secondary-output",
+			input_flow_limit = "10GW",
+			output_flow_limit = "10GW",
+			render_no_power_icon = false
+		},
+		energy_production = "10GW",
+		energy_usage = "0kW",
+		animation = intergalactic_transceiver_animation,
+		continuous_animation = true,
+		working_sound = intergalactic_transceiver_working_sound
 	}
 })

@@ -8,7 +8,9 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"biomass", 25}
+			{"biomass", 25},
+			{"coke", 5},
+			{"steel-plate", 5}			
 		},
 		result = "biters-research-data",
 		result_count = 5
@@ -34,7 +36,10 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"wood", 1},
+			{"imersite-crystal", 5},
+			{"rare-metals", 5},
+			{"lithium", 5},
+			{"plastic-bar", 5}
 		},
 		result = "matter-research-data",
 		result_count = 5
@@ -48,7 +53,8 @@ return
 		ingredients =
 		{
 			{"matter-research-data", 10},
-			{"processing-unit", 5}
+			{"processing-unit", 5},
+			{"steel-plate", 5}
 		},
 		result = "matter-tech-card",
 		result_count = 5
@@ -61,7 +67,9 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"wood", 1},
+			{"imersium-gear-wheel", 20},
+			{"lithium-sulfur-battery", 10},
+			{"electric-engine-unit", 5}
 		},
 		result = "advanced-tech-card",
 		result_count = 5
@@ -74,7 +82,9 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"wood", 1},
+			{"imersium-plate", 20},
+			{"charged-matter-stabilizer", 5},
+			{"energy-control-unit", 5}
 		},
 		result = "singularity-research-data",
 		result_count = 5
@@ -87,7 +97,8 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"singularity-research-data", 10}
+			{"singularity-research-data", 10},
+			{"ai-core", 5}			
 		},
 		result = "singularity-tech-card",
 		result_count = 5

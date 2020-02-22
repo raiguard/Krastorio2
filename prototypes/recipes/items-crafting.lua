@@ -245,7 +245,7 @@ return
 		ingredients =
 		{
 			{"low-density-structure", 10},
-			{"energy-control-unit", 10},
+			{"energy-control-unit", 5},
 			{"processing-unit", 1}
 		},
 		result = "matter-stabilizer"
@@ -261,5 +261,18 @@ return
 			{ type = "fluid", name = "matter", amount = 1000, catalyst_amount = 1000}
 		},
 		result = "matter-cube"
-    }
+    },
+	{
+		type = "recipe",
+		name = "antimatter-fuel-cell",
+		category = "crafting-with-fluid",
+		enabled = true,
+		energy_required = 10,
+		ingredients =
+		{
+			{ type = "fluid", name = "matter", amount = 6661, catalyst_amount = 6661},
+			{ "matter-stabilizer", 2 }
+		},
+		result = "antimatter-fuel-cell"
+    }	
 }
