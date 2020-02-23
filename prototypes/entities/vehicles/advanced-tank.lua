@@ -406,7 +406,7 @@ data:extend(
 		{
 			"advanced-tank-machine-gun",
 			"advanced-tank-laser-cannon",
-			"advanced-tank-tank-cannon-a",
+			"advanced-tank-cannon-a",
 			"advanced-tank-cannon-b",
 			"advanced-tank-cannon-c"
 		}

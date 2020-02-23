@@ -74,7 +74,7 @@ data:extend(
 ----------------------------------------------------------------------------------------------------------------- 
 	{
 		type = "gun",
-		name = "advanced-tank-tank-cannon-a",
+		name = "advanced-tank-cannon-a",
 		icon = kr_guns_icons_path .. "advanced-tank-cannon-a.png",
 		icon_size = 64,
 		flags = {"hidden"},
