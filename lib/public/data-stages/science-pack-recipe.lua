@@ -202,7 +202,7 @@ if not krastorio.science_pack_recipes then
 		{
 			{"uranium-238", 10},
 			{"fast-transport-belt", 25},
-			{"productivity-module", 30}			
+			{"productivity-module", 10}			
 		},
 		result = "production-science-pack"
 	}

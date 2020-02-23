@@ -41,7 +41,7 @@ data:extend(
 			}
 		},
 		crafting_categories = {"research-data", "t2-tech-cards", "t3-tech-cards"},
-		crafting_speed = 2,
+		crafting_speed = 3,
 		energy_source =
 		{
 			type = "electric",
