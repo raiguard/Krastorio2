@@ -877,7 +877,7 @@ data:extend(
 				recipe = "kr-singularity-beacon"
 			}			
 		},
-		prerequisites = {"kr-imersium-processing", "kr-energy-control-unit", "kr-singularity-tech-card"},
+		prerequisites = {"effect-transmission", "kr-imersium-processing", "kr-energy-control-unit", "kr-singularity-tech-card"},
 		unit =
 		{
 			count = 1500,

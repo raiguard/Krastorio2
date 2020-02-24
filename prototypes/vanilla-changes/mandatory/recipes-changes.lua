@@ -72,6 +72,8 @@ krastorio.recipes.convertIngredient("engine-unit", "steel-plate", "iron-plate")
 if krastorio.recipes.exist("stone-brick") then
 	data.raw.recipe["stone-brick"].subgroup = "raw-material"
 end
+krastorio.recipes.replaceIngredient("refined-concrete", "steel-plate", {"iron-beam", 5})
+krastorio.recipes.removeIngredient("refined-concrete", "iron-stick")
 
 -- ROBOT/DRONES
 krastorio.recipes.replaceIngredient("flying-robot-frame", "electronic-circuit", {"electronic-components", 10})

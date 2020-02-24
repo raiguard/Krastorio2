@@ -122,7 +122,38 @@ data:extend(
 		prerequisites = {"kr-fuel", "kr-advanced-chemistry"},
 		unit =
 		{
-			count = 200,
+			count = 250,
+			ingredients = 
+			{
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1}
+			},
+			time = 30
+		}
+    },
+	{
+		type = "technology",
+		name = "kr-reinforced-plates",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "reinforced-plates.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-black-reinforced-plate"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-white-reinforced-plate"
+			}
+		},
+		prerequisites = {"concrete", "steel-processing"},
+		unit =
+		{
+			count = 250,
 			ingredients = 
 			{
 				{"basic-tech-card", 1},
@@ -149,7 +180,7 @@ data:extend(
 		prerequisites = {"kr-quarry-minerals-extraction", "kr-fuel", "kr-advanced-chemistry"},
 		unit =
 		{
-			count = 200,
+			count = 350,
 			ingredients = 
 			{
 				{"basic-tech-card", 1},

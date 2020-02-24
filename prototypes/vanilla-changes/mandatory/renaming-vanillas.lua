@@ -25,7 +25,7 @@ data.raw.technology["utility-science-pack"].localised_name={"item-name.utility-t
 
 -- Space science pack
 data.raw.tool["space-science-pack"].localised_name={"item-name.optimization-tech-card"}
-data.raw.technology["space-science-pack"].localised_name={"technology-name.satellite"}
+data.raw.technology["space-science-pack"].localised_name={"item-name.optimization-tech-card"}
 
 -- RENAMING VANILLA BUILDINGS
 

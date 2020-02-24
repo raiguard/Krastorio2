@@ -32,6 +32,7 @@ krastorio.technologies.addPrerequisite("production-science-pack", "kr-advanced-l
 krastorio.technologies.addPrerequisite("production-science-pack", "uranium-processing")
 krastorio.technologies.addPrerequisite("utility-science-pack", "kr-research-server")
 krastorio.technologies.addPrerequisite("utility-science-pack", "rocket-fuel")
+krastorio.technologies.addPrerequisite("space-science-pack", "kr-singularity-lab")
 
 -- Modules 
 krastorio.technologies.addPrerequisite("speed-module-3", "advanced-electronics-2")
@@ -115,6 +116,7 @@ krastorio.technologies.addUnlockRecipe("rocket-fuel", "rocket-fuel-with-hydrogen
 -- Science
 krastorio.technologies.addUnlockRecipe("military-science-pack", "biters-research-data")
 krastorio.technologies.addUnlockRecipe("military-science-pack", "kr-creep-collector")
+krastorio.technologies.addUnlockRecipe("space-science-pack", "space-science-pack")
 
 -- Removings
 

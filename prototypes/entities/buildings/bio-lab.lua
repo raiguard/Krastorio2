@@ -70,7 +70,6 @@ data:extend(
 				{
 					filename = kr_entities_path .. "bio-lab/bio-lab.png",
 					priority = "high",
-					scale = scale,
 					width = 256,
 					height = 256,
 					frame_count = 1,
@@ -78,7 +77,6 @@ data:extend(
 					{
 						filename = kr_entities_path .. "bio-lab/hr-bio-lab.png",
 						priority = "high",
-						scale = scale,
 						width = 512,
 						height = 512,
 						frame_count = 1,
@@ -88,7 +86,6 @@ data:extend(
 				{
 					filename = kr_entities_path .. "bio-lab/bio-lab-sh.png",
 					priority = "high",
-					scale = scale,
 					width = 256,
 					height = 256,
 					shift = {0.32, 0},
@@ -98,7 +95,6 @@ data:extend(
 					{
 						filename = kr_entities_path .. "bio-lab/hr-bio-lab-sh.png",
 						priority = "high",
-						scale = scale,
 						width = 512,
 						height = 512,
 						shift = {0.32, 0},
@@ -115,24 +111,22 @@ data:extend(
 				animation =
 				{
 					filename = kr_entities_path .. "bio-lab/bio-lab-working.png",
-					scale = scale,
 					width = 193,
 					height = 171,
 					shift = {0.05, -0.31},
 					frame_count = 30,
 					line_length = 5,
-					animation_speed=0.35,
+					animation_speed = 0.35,
 					hr_version =
 					{
 						filename = kr_entities_path .. "bio-lab/hr-bio-lab-working.png",
-						scale = scale,
 						width = 387,
 						height = 342,
 						shift = {0.05, -0.31},
 						frame_count = 30,
 						line_length = 5,
 						scale = 0.5,
-						animation_speed=0.35,
+						animation_speed = 0.35,
 					}
 				},
 				light =

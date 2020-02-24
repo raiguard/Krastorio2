@@ -20,11 +20,18 @@ data:extend(
 	-- Images
 	{
 		type     = "sprite",
-		name     = "kr-creep-preview",
+		name     = "kr-creep-preview-1",
 		filename = kr_graphic_mod_path .. "gui/previews/creep-preview.png",
 		width    = 700,
 		height   = 518,
-		scale    = 0.5
+		scale    = 0.70
+	},
+	{
+		type     = "sprite",
+		name     = "kr-creep-preview-2",
+		filename = kr_graphic_mod_path .. "gui/previews/bio-lab.png",
+		width    = 232,
+		height   = 244
 	},
 	{
 		type     = "sprite",
@@ -46,8 +53,8 @@ data:extend(
 		type     = "sprite",
 		name     = "kr-intergalactic-transceiver-preview",
 		filename = kr_graphic_mod_path .. "gui/previews/intergalactic-transceiver-preview.png",
-		width    = 1721,
-		height   = 1192
+		width    = 700,
+		height   = 485
 	},
 	{
 		type     = "sprite",

@@ -37,6 +37,8 @@ local scripts =
 	require(control_scripts_path .. "intergalactic-transceiver"),
 	-- Creep collector
 	require(control_scripts_path .. "creep-collector"),
+	-- for future updates...
+	require(control_scripts_path .. "planetary-teleporters"),
 	-- -- COMPATIBILITY
 	-- DiscoScience
 	require("__Krastorio2__/compatibility-scripts/control/DiscoScience")
@@ -52,9 +54,9 @@ for _, script in pairs(scripts) do
 end
 
 -- GUI events
-local ce = global.krastorio.gui.getCollectiveClickEventsCallback()
+local ce = krastorio.gui.getCollectiveClickEventsCallback()
 ccm:addCallBack({ce, "on_gui_click"})
-local se = global.krastorio.gui.getCollectiveSelectEventsCallback()
+local se = krastorio.gui.getCollectiveSelectEventsCallback()
 ccm:addCallBack({se, "on_gui_selection_state_changed"})
 
 -- Active merged callbacks

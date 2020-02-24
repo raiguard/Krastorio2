@@ -30,6 +30,19 @@ return
 	},
 	{
 		type = "recipe",
+		name = "space-science-pack",
+		category = "t3-tech-cards",
+		energy_required = 20,
+		enabled = false,
+		ingredients =
+		{
+			{"space-research-data", 5}
+		},
+		result = "space-science-pack",
+		result_count = 5
+	},	
+	{
+		type = "recipe",
 		name = "matter-research-data",
 		category = "t3-tech-cards",
 		energy_required = 20,

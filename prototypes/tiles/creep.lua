@@ -221,7 +221,7 @@ data:extend(
 			}
 		},		
 		collision_mask = {"ground-tile"},
-		walking_speed_modifier = 0.5,
+		walking_speed_modifier = 0.30,
 		layer = 1,
 		transition_overlay_layer_offset = 1,
 		decorative_removal_probability = 0.25,

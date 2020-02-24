@@ -79,7 +79,31 @@ return
 			{"iron-plate", 1}
 		},
 		result = "first-aid-kit"
+	},	
+	{
+		type = "recipe",
+		name = "kr-black-reinforced-plate",
+		energy_required = 5,
+		enabled = false,
+		ingredients =
+		{
+			{"refined-concrete", 20},
+			{"steel-beam", 5}
+		},
+		result = "kr-black-reinforced-plate"
 	},
+	{
+		type = "recipe",
+		name = "kr-white-reinforced-plate",
+		energy_required = 5,
+		enabled = false,
+		ingredients =
+		{
+			{"refined-concrete", 20},
+			{"steel-beam", 5}
+		},
+		result = "kr-white-reinforced-plate"
+	},	
 	{
 		type = "recipe",
 		name = "ai-core",

@@ -10,11 +10,18 @@ if not global.krastorio.gui.select_events then
 	global.krastorio.gui.select_events = {}
 end
 
+if not krastorio then
+	krastorio = {}
+end
+if not krastorio.gui then
+	krastorio.gui = {}
+end
+
 -------------------------------------------------------------
 -- -- Local functions
 -------------------------------------------------------------
 
-function getOthersTable(name, caption, tooltip, others)
+function krastorio.gui.getOthersTable(name, caption, tooltip, others)
 	if type(name) == "table" then
 		others = name
 		name = others.name
@@ -30,7 +37,7 @@ function getOthersTable(name, caption, tooltip, others)
 	return others
 end
 
-function getElementNameFromEvent(event)
+function krastorio.gui.getElementNameFromEvent(event)
 	return event.element.name
 end
 
@@ -38,7 +45,7 @@ end
 -- -- Global pointers
 -------------------------------------------------------------
 
-function inizializePointers(player_index)
+function krastorio.gui.inizializePointers(player_index)
 	if not global.gui then
 		global.gui = {}
 		global.gui.pointers = {}
@@ -48,16 +55,16 @@ function inizializePointers(player_index)
 	end
 end
 
-function global.krastorio.gui.getElementByName(player_index, name)
-	inizializePointers(player_index)
+function krastorio.gui.getElementByName(player_index, name)
+	krastorio.gui.inizializePointers(player_index)
 	if global.gui.pointers[player_index][name] and global.gui.pointers[player_index][name].valid then
 		return global.gui.pointers[player_index][name]
 	end
 	return nil
 end
 
-function global.krastorio.gui.setElementByName(player_index, element, name)
-	inizializePointers(player_index)
+function krastorio.gui.setElementByName(player_index, element, name)
+	krastorio.gui.inizializePointers(player_index)
 	if element and element.valid then
 		name = name or element.name
 		global.gui.pointers[player_index][name] = element
@@ -70,7 +77,7 @@ end
 
 -- -- General
 
-function global.krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others)
+function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others)
 	if parent and parent.valid then	
 	
 		-- construct the element
@@ -236,7 +243,7 @@ function global.krastorio.gui.addElement(parent, e_type, name, caption, tooltip,
 		
 		-- add the element		
 		element = parent.add(element)
-		global.krastorio.gui.setElementByName(element.player_index, element)
+		krastorio.gui.setElementByName(element.player_index, element)
 		
 		return element
 		
@@ -246,123 +253,123 @@ end
 
 -- -- Sections/Elements-Containers
 
-function global.krastorio.gui.addMenu(parent, name, caption, others)
-	others = getOthersTable(name, caption, nil, others)
+function krastorio.gui.addMenu(parent, name, caption, others)
+	others = krastorio.gui.getOthersTable(name, caption, nil, others)
 	others.style = others.style or "menu_frame"
-	return global.krastorio.gui.addElement(parent, "frame", name, caption, nil, others)
+	return krastorio.gui.addElement(parent, "frame", name, caption, nil, others)
 end
 
-function global.krastorio.gui.addFrame(parent, name, caption, others)
-	others = getOthersTable(name, caption, nil, others)
+function krastorio.gui.addFrame(parent, name, caption, others)
+	others = krastorio.gui.getOthersTable(name, caption, nil, others)
 	others.style = others.style or nil
-	return global.krastorio.gui.addElement(parent, "frame", name, caption, nil, others)
+	return krastorio.gui.addElement(parent, "frame", name, caption, nil, others)
 end
 
-function global.krastorio.gui.addFlow(parent, name, caption, others)
-	others = getOthersTable(name, caption, nil, others)
+function krastorio.gui.addFlow(parent, name, caption, others)
+	others = krastorio.gui.getOthersTable(name, caption, nil, others)
 	others.style = others.style or "flow"
-	return global.krastorio.gui.addElement(parent, "flow", name, caption, nil, others)
+	return krastorio.gui.addElement(parent, "flow", name, caption, nil, others)
 end
 
-function global.krastorio.gui.addPane(parent, name, caption, others)
-	others = getOthersTable(name, caption, nil, others)
+function krastorio.gui.addPane(parent, name, caption, others)
+	others = krastorio.gui.getOthersTable(name, caption, nil, others)
 	others.style = others.style or "tabbed_pane"
-	return global.krastorio.gui.addElement(parent, "tabbed-pane", name, caption, nil, others)
+	return krastorio.gui.addElement(parent, "tabbed-pane", name, caption, nil, others)
 end
 
-function global.krastorio.gui.addScrollPane(parent, name, caption, others)
-	others = getOthersTable(name, caption, nil, others)
+function krastorio.gui.addScrollPane(parent, name, caption, others)
+	others = krastorio.gui.getOthersTable(name, caption, nil, others)
 	others.style = others.style or "changelog_scroll_pane"
-	return global.krastorio.gui.addElement(parent, "scroll-pane", name, caption, nil, others)
+	return krastorio.gui.addElement(parent, "scroll-pane", name, caption, nil, others)
 end
 
-function global.krastorio.gui.addTab(parent, name, caption, others)
-	others = getOthersTable(name, caption, nil, others)
+function krastorio.gui.addTab(parent, name, caption, others)
+	others = krastorio.gui.getOthersTable(name, caption, nil, others)
 	others.style = others.style or "tab"
-	return global.krastorio.gui.addElement(parent, "tab", name, caption, nil, others)
+	return krastorio.gui.addElement(parent, "tab", name, caption, nil, others)
 end
 
-function global.krastorio.gui.addTable(parent, name, caption, column_count, others)
-	others = getOthersTable(name, caption, nil, others)
+function krastorio.gui.addTable(parent, name, caption, column_count, others)
+	others = krastorio.gui.getOthersTable(name, caption, nil, others)
 	others.style = others.style or "removed_content_table"
 	others.column_count = column_count or others.column_count or 1
-	return global.krastorio.gui.addElement(parent, "table", name, caption, nil, others)
+	return krastorio.gui.addElement(parent, "table", name, caption, nil, others)
 end
 
-function global.krastorio.gui.addDropDown(parent, name, caption, others)
-	others = getOthersTable(name, caption, nil, others)
+function krastorio.gui.addDropDown(parent, name, caption, others)
+	others = krastorio.gui.getOthersTable(name, caption, nil, others)
 	others.style = others.style or "dropdown"
-	return global.krastorio.gui.addElement(parent, "drop-down", name, caption, nil, others)
+	return krastorio.gui.addElement(parent, "drop-down", name, caption, nil, others)
 end
 
-function global.krastorio.gui.addList(parent, name, caption, others)
-	others = getOthersTable(name, caption, nil, others)
+function krastorio.gui.addList(parent, name, caption, others)
+	others = krastorio.gui.getOthersTable(name, caption, nil, others)
 	others.style = others.style or "list_box"
-	return global.krastorio.gui.addElement(parent, "list-box", name, caption, nil, others)
+	return krastorio.gui.addElement(parent, "list-box", name, caption, nil, others)
 end
 
 -- -- Texts
 
-function global.krastorio.gui.addLabel(parent, name, caption, tooltip, others)
-	others = getOthersTable(name, caption, tooltip, others)
+function krastorio.gui.addLabel(parent, name, caption, tooltip, others)
+	others = krastorio.gui.getOthersTable(name, caption, tooltip, others)
 	others.style = others.style or "label"
-	return global.krastorio.gui.addElement(parent, "label", name, caption, tooltip, others)
+	return krastorio.gui.addElement(parent, "label", name, caption, tooltip, others)
 end
 
-function global.krastorio.gui.addDescription(parent, name, caption, tooltip, others)
-	others = getOthersTable(name, caption, tooltip, others)
+function krastorio.gui.addDescription(parent, name, caption, tooltip, others)
+	others = krastorio.gui.getOthersTable(name, caption, tooltip, others)
 	others.style = others.style or "kr-wiki-description-label"
-	return global.krastorio.gui.addElement(parent, "label", name, caption, tooltip, others)
+	return krastorio.gui.addElement(parent, "label", name, caption, tooltip, others)
 end
 
 -- -- Buttons
 
-function global.krastorio.gui.addTextButton(parent, name, caption, tooltip, others)
-	others = getOthersTable(name, caption, tooltip, others)
+function krastorio.gui.addTextButton(parent, name, caption, tooltip, others)
+	others = krastorio.gui.getOthersTable(name, caption, tooltip, others)
 	others.style = others.style or "button"
-	return global.krastorio.gui.addElement(parent, "button", name, caption, tooltip, others)
+	return krastorio.gui.addElement(parent, "button", name, caption, tooltip, others)
 end
 
-function global.krastorio.gui.addConfirmButton(parent, name, caption, tooltip, others)
-	others = getOthersTable(name, caption, tooltip, others)
+function krastorio.gui.addConfirmButton(parent, name, caption, tooltip, others)
+	others = krastorio.gui.getOthersTable(name, caption, tooltip, others)
 	others.style = others.style or "confirm_button"
-	return global.krastorio.gui.addElement(parent, "button", name, caption, tooltip, others)
+	return krastorio.gui.addElement(parent, "button", name, caption, tooltip, others)
 end
 
-function global.krastorio.gui.addBackButton(parent, name, caption, tooltip, others)
-	others = getOthersTable(name, caption, tooltip, others)
+function krastorio.gui.addBackButton(parent, name, caption, tooltip, others)
+	others = krastorio.gui.getOthersTable(name, caption, tooltip, others)
 	others.style = others.style or "red_back_button"
-	return global.krastorio.gui.addElement(parent, "button", name, caption, tooltip, others)
+	return krastorio.gui.addElement(parent, "button", name, caption, tooltip, others)
 end
 
-function global.krastorio.gui.addSpriteButton(parent, name, sprite, tooltip, others)
-	others = getOthersTable(name, nil, tooltip, others)
+function krastorio.gui.addSpriteButton(parent, name, sprite, tooltip, others)
+	others = krastorio.gui.getOthersTable(name, nil, tooltip, others)
 	others.sprite = others.sprite or sprite
 	others.style  = others.style or "button"
-	return global.krastorio.gui.addElement(parent, "sprite-button", name, nil, tooltip, others)
+	return krastorio.gui.addElement(parent, "sprite-button", name, nil, tooltip, others)
 end
 
 -- -- Lines
-function global.krastorio.gui.addLine(parent, name, direction, others)
-	others = getOthersTable(name, nil, nil, others)
+function krastorio.gui.addLine(parent, name, direction, others)
+	others = krastorio.gui.getOthersTable(name, nil, nil, others)
 	others.direction = direction or others.direction or "horizontal"
 	others.style = others.style or "line"
-	return global.krastorio.gui.addElement(parent, "line", name, nil, tooltip, others)
+	return krastorio.gui.addElement(parent, "line", name, nil, tooltip, others)
 end
 
 -- Sprite
-function global.krastorio.gui.addSprite(parent, name, sprite, others)
-	others = getOthersTable(name, nil, nil, others)
+function krastorio.gui.addSprite(parent, name, sprite, others)
+	others = krastorio.gui.getOthersTable(name, nil, nil, others)
 	others.sprite = others.sprite or sprite
 	others.style = others.style or nil
-	return global.krastorio.gui.addElement(parent, "sprite", name, nil, nil, others)
+	return krastorio.gui.addElement(parent, "sprite", name, nil, nil, others)
 end
 
 -------------------------------------------------------------
 -- -- Events
 -------------------------------------------------------------
 
-function global.krastorio.gui.addClickElementEvent(element_name, callback_name)
+function krastorio.gui.addClickElementEvent(element_name, callback_name)
 	if type(callback_name) == "string" then 
 		if type(element_name) == "table" then
 			element_name = element_name.name
@@ -371,10 +378,10 @@ function global.krastorio.gui.addClickElementEvent(element_name, callback_name)
 	end
 end
 
-function global.krastorio.gui.getCollectiveClickEventsCallback()
+function krastorio.gui.getCollectiveClickEventsCallback()
 	return 
 	function(...)
-		local called_element_name = getElementNameFromEvent(...)
+		local called_element_name = krastorio.gui.getElementNameFromEvent(...)
 		for element_name, callback in pairs(global.krastorio.gui.click_events) do
 			if called_element_name == element_name then 
 				_ENV[callback](...)
@@ -383,7 +390,7 @@ function global.krastorio.gui.getCollectiveClickEventsCallback()
 	end
 end
 
-function global.krastorio.gui.addSelectElementEvent(element_name, callback_name)
+function krastorio.gui.addSelectElementEvent(element_name, callback_name)
 	if type(callback_name) == "string" then
 		if type(element_name) == "table" then
 			element_name = element_name.name
@@ -392,10 +399,10 @@ function global.krastorio.gui.addSelectElementEvent(element_name, callback_name)
 	end
 end
 
-function global.krastorio.gui.getCollectiveSelectEventsCallback()
+function krastorio.gui.getCollectiveSelectEventsCallback()
 	return 
 	function(...)
-		local called_element_name = getElementNameFromEvent(...)
+		local called_element_name = krastorio.gui.getElementNameFromEvent(...)
 		for element_name, callback in pairs(global.krastorio.gui.select_events) do
 			if called_element_name == element_name then 
 				_ENV[callback](...)
