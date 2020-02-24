@@ -526,13 +526,23 @@ data:extend(
     },
 	{
 		type = "item",
+		name = "empty-antimatter-fuel-cell",
+		icon = kr_icons_path .. "empty-antimatter-fuel-cell.png",
+		icon_size = 64,
+		subgroup = "intermediate-product",
+		order = "r[uranium-processing]-b2[empty-antimatter-fuel-cell]",
+		stack_size = 10
+    },
+	{
+		type = "item",
 		name = "antimatter-fuel-cell",
 		icon = kr_icons_path .. "antimatter-fuel-cell.png",
 		icon_size = 64,
 		fuel_category = "antimatter-fuel",
-		fuel_value = "32GJ",
+		fuel_value = "600GJ",
+		burnt_result = "empty-antimatter-fuel-cell",
 		subgroup = "intermediate-product",
-		order = "r[uranium-processing]-b2[antimatter-fuel-cell]",
-		stack_size = 50
+		order = "r[uranium-processing]-b3[antimatter-fuel-cell]",
+		stack_size = 10
     }
 })

@@ -1,5 +1,5 @@
 local default_locomotive_color = {r = 0.50, g = 0.54, b = 0.53, a = 0.5}
-local nuclear_smoke_color = {r = 0.2,  g = 0.51, b = 0.2, a = 0.4}
+local nuclear_smoke_color = {r = 0.4,  g = 0.5, b = 0.4, a = 0.35}
 local hit_effects = require ("__base__.prototypes.entity.demo-hit-effects")
 local sounds = require("__base__.prototypes.entity.demo-sounds")
 
@@ -89,15 +89,16 @@ data:extend(
 		},
 		burner =
 		{
-			fuel_category = "nuclear-fuel",
-			effectivity = 1,
-			fuel_inventory_size = 3,
+			fuel_category = "nuclear",
+			effectivity = 0.5,
+			fuel_inventory_size = 1,
+			burnt_inventory_size = 1,
 			smoke =
 			{
 				{
 					name = "nuclear-train-smoke",
 					deviation = {0.3, 0.3},
-					frequency = 100,
+					frequency = 180,
 					position = {0, 0},
 					starting_frame = 0,
 					starting_frame_deviation = 60,

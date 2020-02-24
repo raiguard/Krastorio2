@@ -29,5 +29,7 @@ if krastorio.general.getSafeSettingValue("kr-stack-size") then
 	data.raw.item["rocket-fuel"].stack_size = 100
 	data.raw.item["low-density-structure"].stack_size = 100
 	data.raw.ammo["artillery-shell"].stack_size = 25
+	data.raw.item["uranium-fuel-cell"].stack_size = 10
+	data.raw.item["used-up-uranium-fuel-cell"].stack_size = 10
 
 end

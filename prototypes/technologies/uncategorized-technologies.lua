@@ -541,8 +541,12 @@ data:extend(
 			},
 			{
 				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["empty-antimatter-fuel-cell"] or "empty-antimatter-fuel-cell"
+			},
+			{
+				type = "unlock-recipe",
 				recipe = krastorio.recipes.changed_names["antimatter-fuel-cell"] or "antimatter-fuel-cell"
-			}			
+			}
 		},
 		order = "g-f-z",
 		unit =

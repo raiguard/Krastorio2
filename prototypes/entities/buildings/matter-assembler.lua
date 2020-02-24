@@ -1,3 +1,6 @@
+local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
+local sounds      = require("__base__/prototypes/entity/demo-sounds")
+
 data:extend(
 {
 	{
@@ -8,6 +11,7 @@ data:extend(
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "kr-matter-assembler"},
 		max_health = 750,
+		damaged_trigger_effect = hit_effects.entity(),
 		corpse = "kr-medium-random-pipes-remnant",
 		dying_explosion = "matter-explosion",
 		resistances = 
@@ -21,75 +25,122 @@ data:extend(
 			-- Inputs
 			{
 				production_type = "input",
-				pipe_covers = pipecoverspictures(),
+				pipe_picture = kr_pipe_path,
+				pipe_covers = pipecoverspictures(),	
 				base_area = 100,
 				base_level = -1,
-				pipe_connections = {{ type="input-output", position = {0, -3} }}
+				pipe_connections = {{ type="input-output", position = {0, -4} }}
 			},
 			{
 				production_type = "input",
-				pipe_covers = pipecoverspictures(),
+				pipe_picture = kr_pipe_path,
+				pipe_covers = pipecoverspictures(),	
 				base_area = 100,
 				base_level = 1,
-				pipe_connections = {{ type="input-output", position = {-3, 0} }}
+				pipe_connections = {{ type="input-output", position = {-4, 0} }}
 			},
 			{
 				production_type = "input",
-				pipe_covers = pipecoverspictures(),
+				pipe_picture = kr_pipe_path,
+				pipe_covers = pipecoverspictures(),	
 				base_area = 100,
 				base_level = 1,
-				pipe_connections = {{ type="input-output", position = {3, 0} }}
+				pipe_connections = {{ type="input-output", position = {4, 0} }}
 			},
 			-- Outputs
 			{
 				production_type = "output",
-				pipe_covers = pipecoverspictures(),
+				pipe_picture = kr_pipe_path,
+				pipe_covers = pipecoverspictures(),	
 				base_area = 100,
 				base_level = 1,
-				pipe_connections = {{ type="output", position = {0, 3} }}
+				pipe_connections = {{ type="output", position = {0, 4} }}
 			},
 			off_when_no_fluid_recipe = false
 		},
-		collision_box = {{-2.25, -2.25}, {2.25, 2.25}},
-		selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+		collision_box = {{-3.25, -3.25}, {3.25, 3.25}},
+		selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
 		fast_replaceable_group = "assembling-machine",
 		animation =
 		{
-			filename = kr_entities_path .. "matter-assembler/matter-assembler.png",
-			priority = "high",
-			scale = scale,
-			width = 213,
-			height = 213,
-			frame_count = 12,
-			line_length = 6,
-			nimation_speed = 0.1,
-			hr_version =
+			layers =
 			{
-				filename = kr_entities_path .. "matter-assembler/hr-matter-assembler.png",
+				{
+				filename = kr_entities_path .. "matter-assembler/matter-assembler.png",
 				priority = "high",
-				scale = scale,
-				width = 426,
-				height = 426,
-				frame_count = 12,
-				line_length = 6,
-				scale = 0.5,
-				nimation_speed = 0.1
+				width = 236,
+				height = 244,
+				frame_count = 1,
+				shift = {0, -0.15},
+				hr_version =
+				{
+					filename = kr_entities_path .. "matter-assembler/hr-matter-assembler.png",
+					priority = "high",
+					scale = scale,
+					width = 473,
+					height = 489,
+					frame_count = 1,
+					scale = 0.5,
+					shift = {0, -0.15},
+				}
+				},
+				{
+				filename = kr_entities_path .. "matter-assembler/matter-assembler.png",
+				priority = "high",
+				width = 254,
+				height = 223,
+				frame_count = 1,
+				shift = {0.2, 0.1},
+				draw_as_shadow = true,
+				hr_version =
+				{
+					filename = kr_entities_path .. "matter-assembler/hr-matter-assembler-sh.png",
+					priority = "high",
+					width = 508,
+					height = 446,
+					frame_count = 1,
+					scale = 0.5,
+					shift = {0.25, 0.25},
+					draw_as_shadow = true,
+				}
+				},
 			}
 		},		
 		working_visualisations =
 		{
 			{
+				animation =
+				{
+					filename = kr_entities_path .. "matter-assembler/matter-assembler-working.png",
+					priority = "high",
+					width = 236,
+					height = 244,
+					frame_count = 30,
+					line_length = 6,
+					animation_speed = 0.75,
+					hr_version =
+					{
+						filename = kr_entities_path .. "matter-assembler/hr-matter-assembler-working.png",
+						priority = "high",
+						width = 473,
+						height = 489,
+						frame_count = 30,
+						line_length = 6,
+						scale = 0.5,
+						animation_speed = 0.75,
+					}
+				},
 				light =
 				{
-					intensity = 0.7,
-					size = 15,
+					intensity = 1.25,
+					size = 16,
 					shift = {0.0, 0.0},
 					color = {r=0.1, g=0.5, b=1}
 				}
 			}
 		},		
 		crafting_categories = {"matter-deconversion", "matter-items"},
-		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{
 			sound = { filename = kr_buildings_sounds_path .. "matter-assembler.ogg" },
@@ -103,7 +154,7 @@ data:extend(
 			usage_priority = "secondary-input",
 			emissions_per_minute = 10
 		},
-		energy_usage = "10MW",
+		energy_usage = "25MW",
 		ingredient_count = 6,
 		module_specification = { module_slots = 4 },
 		allowed_effects = {"consumption", "productivity", "speed", "pollution"},

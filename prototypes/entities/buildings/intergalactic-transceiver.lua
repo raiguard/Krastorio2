@@ -125,9 +125,9 @@ data:extend(
 		energy_source =
 		{
 			type = "electric",
-			buffer_capacity = "20TJ",
+			buffer_capacity = "30TJ",
 			usage_priority = "tertiary",
-			input_flow_limit = "50GW",
+			input_flow_limit = "60GW",
 			output_flow_limit = "0W"
 		},
 		picture = 

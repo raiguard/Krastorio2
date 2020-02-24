@@ -49,37 +49,41 @@ data:extend(
 					filename = kr_entities_path .. "matter-plant/matter-plant.png",
 					priority = "high",
 					scale = scale,
-					width = 268,
-					height = 268,
+					width = 231,
+					height = 250,
 					frame_count = 1,
+					shift = {0, 0},
 					hr_version =
 					{
 						filename = kr_entities_path .. "matter-plant/hr-matter-plant.png",
 						priority = "high",
 						scale = scale,
-						width = 536,
-						height = 536,
+						width = 462,
+						height = 500,
 						frame_count = 1,
+						shift = {0, 0},
 						scale = 0.5
 					}
 				},
 				{
-					filename = kr_entities_path .. "matter-plant/matter-plant-shadow.png",
+					filename = kr_entities_path .. "matter-plant/matter-plant-sh.png",
 					priority = "high",
 					scale = scale,
-					width = 268,
-					height = 268,
+					width = 252,
+					height = 222,
 					frame_count = 1,
 					draw_as_shadow = true,
+					shift = {0, 0},
 					hr_version =
 					{
-						filename = kr_entities_path .. "matter-plant/hr-matter-plant-shadow.png",
+						filename = kr_entities_path .. "matter-plant/hr-matter-plant-sh.png",
 						priority = "high",
 						scale = scale,
-						width = 536,
-						height = 536,
+						width = 504,
+						height = 444,
 						frame_count = 1,
 						draw_as_shadow = true,
+						shift = {0, 0},
 						scale = 0.5
 					}
 				}
@@ -92,21 +96,23 @@ data:extend(
 				{
 					filename = kr_entities_path .. "matter-plant/matter-plant-working.png",
 					scale = scale,
-					width = 268,
-					height = 268,
-					frame_count = 16,
-					line_length = 4,
-					animation_speed=0.6,
+					width = 231,
+					height = 250,
+					frame_count = 30,
+					line_length = 6,
+					shift = {0, 0},
+					animation_speed=0.5,
 					hr_version =
 					{
 						filename = kr_entities_path .. "matter-plant/hr-matter-plant-working.png",
 						scale = scale,
-						width = 536,
-						height = 536,
-						frame_count = 16,
-						line_length = 4,
+						width = 462,
+						height = 500,
+						frame_count = 30,
+						line_length = 6,
+						shift = {0, 0},
 						scale = 0.5,
-						animation_speed=0.6
+						animation_speed=0.5
 					}
 				},
 				light =

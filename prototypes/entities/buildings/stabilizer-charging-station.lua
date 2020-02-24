@@ -11,6 +11,7 @@ data:extend(
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "kr-stabilizer-charging-station"},
 		max_health = 250,
+		damaged_trigger_effect = hit_effects.entity(),
 		corpse = "medium-remnants",
 		resistances = 
 		{
@@ -21,23 +22,54 @@ data:extend(
 		selection_box = {{-0.9, -0.9}, {0.9, 0.9}},
 		animation =
 		{
-			filename = kr_entities_path .. "stabilizer-charging-station/stabilizer-charging-station.png",
-			priority = "high",
-			width = 85,
-			height = 85,
-			frame_count = 6,
-			line_length = 3,
-			animation_speed = 0.2,
-			hr_version =
+			layers =
 			{
-				filename = kr_entities_path .. "stabilizer-charging-station/hr-stabilizer-charging-station.png",
+				{
+				filename = kr_entities_path .. "stabilizer-charging-station/stabilizer-charging-station.png",
 				priority = "high",
-				width = 170,
-				height = 170,
-				frame_count = 6,
-				line_length = 3,
-				animation_speed = 0.2,
-				scale = 0.5
+				width = 85,
+				height = 85,
+				frame_count = 80,
+				line_length = 10,
+				animation_speed = 0.4,
+				scale = 0.8,
+				hr_version =
+				{
+					filename = kr_entities_path .. "stabilizer-charging-station/hr-stabilizer-charging-station.png",
+					priority = "high",
+					width = 170,
+					height = 170,
+					frame_count = 80,
+					line_length = 10,
+					animation_speed = 0.4,
+					scale = 0.4
+				}
+				},
+				{
+				filename = kr_entities_path .. "stabilizer-charging-station/stabilizer-charging-station-sh.png",
+				priority = "high",
+				width = 85,
+				height = 72,
+				frame_count = 80,
+				line_length = 8,
+				animation_speed = 0.4,
+				shift = {0.23, 0.262},
+				draw_as_shadow = true,
+				scale = 0.9,
+				hr_version =
+				{
+					filename = kr_entities_path .. "stabilizer-charging-station/hr-stabilizer-charging-station-sh.png",
+					priority = "high",
+					width = 170,
+					height = 144,
+					frame_count = 80,
+					line_length = 8,
+					animation_speed = 0.4,
+					shift = {0.23, 0.262},
+					draw_as_shadow = true,
+					scale = 0.4
+				}
+				}
 			}
 		},		
 		working_visualisations =
@@ -45,15 +77,14 @@ data:extend(
 			{
 				light =
 				{
-					intensity = 0.5,
-					size = 5,
+					intensity = 1.1,
+					size = 6,
 					shift = {0.0, 0.3},
 					color = {r=0.1, g=0.5, b=1}
 				}
 			}
 		},		
 		crafting_categories = {"stabilizer-charging"},
-		damaged_trigger_effect = hit_effects.entity(),
 		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{
