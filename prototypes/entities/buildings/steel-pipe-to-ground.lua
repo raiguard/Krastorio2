@@ -4,7 +4,7 @@ data:extend(
 		type = "pipe-to-ground",
 		name = "kr-steel-pipe-to-ground",
 		icon = kr_entities_icons_path .. "steel-pipe-to-ground.png",
-		icon_size = 32,
+		icon_size = 64,
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 0.1, result = "kr-steel-pipe-to-ground"},
 		max_health = 150,

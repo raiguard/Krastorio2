@@ -13,7 +13,7 @@ data:extend(
 		{
 			{
 				type = "character-mining-speed",
-				modifier = 0.75
+				modifier = 0.50
 			}
 		},
 		prerequisites = {},
@@ -27,6 +27,33 @@ data:extend(
 			time = 30
 		},
 		order = "b-c-a"
+	},
+	{
+		type = "technology",
+		name = "kr-advanced-pickaxe",
+		mod = "Krastorio2",
+		icon_size = 128,
+		icon = kr_technologies_icons_path .. "imersium-pickaxe.png",
+		effects =
+		{
+			{
+				type = "character-mining-speed",
+				modifier = 2
+			}
+		},
+		prerequisites = {"steel-axe", "kr-imersium-processing"},
+		unit =
+		{
+			count = 250,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"matter-tech-card", 1}
+			},
+			time = 60
+		},
 	},
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------BUILDINGS AND PROCESS RECIPES-------------------------------------
@@ -56,7 +83,7 @@ data:extend(
 			{
 				{"basic-tech-card", 1}
 			},
-			time = 30
+			time = 45
 		}
     },
 	{
@@ -93,7 +120,7 @@ data:extend(
 				{"basic-tech-card", 1},
 				{"automation-science-pack", 1}
 			},
-			time = 30
+			time = 45
 		}
     },
 	{
@@ -119,7 +146,7 @@ data:extend(
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1}
 			},
-			time = 30
+			time = 45
 		}
 	},		
 	{
@@ -162,7 +189,7 @@ data:extend(
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
 			},
-			time = 30
+			time = 45
 		}
     },
 	{
@@ -202,7 +229,7 @@ data:extend(
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
 			},
-			time = 30
+			time = 45
 		}
     },	
 	{
@@ -245,7 +272,7 @@ data:extend(
 				{"chemical-science-pack", 1},
 				{"production-science-pack", 1}
 			},
-			time = 45
+			time = 60
 		}
     },
 	---
@@ -282,7 +309,7 @@ data:extend(
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1}
 			},
-			time = 30
+			time = 45
 		}
     },
 -----------------------------------------------------------------------------------------------------------------
@@ -408,7 +435,7 @@ data:extend(
 				{"military-science-pack", 1},
 				{"chemical-science-pack", 1}
 			},
-			time = 30
+			time = 45
 		}
 	},	
 	-- Enriched ores, copper and iron
@@ -560,9 +587,64 @@ data:extend(
 				{"matter-tech-card", 1},
 				{"advanced-tech-card", 1}				
 			},
+			time = 60
+		}
+	},
+-----------------------------------------------------------------------------------------------------------------
+--------------------------------------------------BONUS RECIPES--------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+    {
+		type = "technology",
+		name = "kr-robot-battery",
+		icon = kr_technologies_icons_path .. "robot-battery.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "worker-robot-battery",
+				modifier = 0.35
+			}
+		},
+		prerequisites = {"kr-advanced-roboports"},
+		unit =
+		{
+			count = 500,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"advanced-tech-card", 1}
+			},
 			time = 45
 		}
-	}
+	},
+    {
+		type = "technology",
+		name = "kr-robot-battery-plus",
+		icon = kr_technologies_icons_path .. "robot-battery-plus.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "worker-robot-battery",
+				modifier = 0.75
+			}
+		},
+		prerequisites = {"kr-robot-battery", "kr-energy-control-unit"},
+		unit =
+		{
+			count = 1000,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"matter-tech-card", 1}
+			},
+			time = 60
+		}
+	},
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

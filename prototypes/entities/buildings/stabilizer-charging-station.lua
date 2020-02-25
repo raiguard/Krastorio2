@@ -7,7 +7,7 @@ data:extend(
 		type = "furnace",
 		name = "kr-stabilizer-charging-station",
 		icon = kr_entities_icons_path .. "stabilizer-charging-station.png",
-		icon_size = 64,		
+		icon_size = 128,		
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "kr-stabilizer-charging-station"},
 		max_health = 250,
@@ -104,9 +104,9 @@ data:extend(
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions_per_second_per_watt = 0.000001
+			emissions_per_minute = 1
 		},
-		energy_usage = "0.5MW",
+		energy_usage = "1MW",
 		-- ingredient_count = 1,
 		result_inventory_size = 1,
 		source_inventory_size = 1,

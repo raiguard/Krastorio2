@@ -7,10 +7,10 @@ data:extend(
 		type = "assembling-machine",
 		name = "kr-matter-assembler",		
 		icon = kr_entities_icons_path .. "matter-assembler.png",
-		icon_size = 64,
+		icon_size = 128,
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "kr-matter-assembler"},
-		max_health = 750,
+		max_health = 3000,
 		damaged_trigger_effect = hit_effects.entity(),
 		corpse = "kr-medium-random-pipes-remnant",
 		dying_explosion = "matter-explosion",
@@ -31,22 +31,6 @@ data:extend(
 				base_level = -1,
 				pipe_connections = {{ type="input-output", position = {0, -4} }}
 			},
-			{
-				production_type = "input",
-				pipe_picture = kr_pipe_path,
-				pipe_covers = pipecoverspictures(),	
-				base_area = 100,
-				base_level = 1,
-				pipe_connections = {{ type="input-output", position = {-4, 0} }}
-			},
-			{
-				production_type = "input",
-				pipe_picture = kr_pipe_path,
-				pipe_covers = pipecoverspictures(),	
-				base_area = 100,
-				base_level = 1,
-				pipe_connections = {{ type="input-output", position = {4, 0} }}
-			},
 			-- Outputs
 			{
 				production_type = "output",
@@ -54,7 +38,23 @@ data:extend(
 				pipe_covers = pipecoverspictures(),	
 				base_area = 100,
 				base_level = 1,
-				pipe_connections = {{ type="output", position = {0, 4} }}
+				pipe_connections = {{ type="input-output", position = {-4, 0} }}
+			},
+			{
+				production_type = "output",
+				pipe_picture = kr_pipe_path,
+				pipe_covers = pipecoverspictures(),	
+				base_area = 100,
+				base_level = 1,
+				pipe_connections = {{ type="input-output", position = {4, 0} }}
+			},
+			{
+				production_type = "output",
+				pipe_picture = kr_pipe_path,
+				pipe_covers = pipecoverspictures(),	
+				base_area = 100,
+				base_level = 1,
+				pipe_connections = {{ type="input-output", position = {0, 4} }}
 			},
 			off_when_no_fluid_recipe = false
 		},
@@ -100,7 +100,7 @@ data:extend(
 					height = 446,
 					frame_count = 1,
 					scale = 0.5,
-					shift = {0.25, 0.25},
+					shift = {0.38, 0.22},
 					draw_as_shadow = true,
 				}
 				},
@@ -111,31 +111,86 @@ data:extend(
 			{
 				animation =
 				{
-					filename = kr_entities_path .. "matter-assembler/matter-assembler-working.png",
-					priority = "high",
-					width = 236,
-					height = 244,
-					frame_count = 30,
-					line_length = 6,
-					animation_speed = 0.75,
-					hr_version =
+					layers =
 					{
-						filename = kr_entities_path .. "matter-assembler/hr-matter-assembler-working.png",
+						{
+						filename = kr_entities_path .. "matter-assembler/matter-assembler-working.png",
 						priority = "high",
-						width = 473,
-						height = 489,
+						width = 236,
+						height = 244,
 						frame_count = 30,
 						line_length = 6,
-						scale = 0.5,
 						animation_speed = 0.75,
+						shift = {0, -0.15},
+						hr_version =
+						{
+							filename = kr_entities_path .. "matter-assembler/hr-matter-assembler-working.png",
+							priority = "high",
+							width = 473,
+							height = 489,
+							frame_count = 30,
+							line_length = 6,
+							scale = 0.5,
+							animation_speed = 0.75,
+							shift = {0, -0.15}
+						}
+						},
+						{
+						filename = kr_entities_path .. "matter-assembler/matter-assembler-working-glow.png",
+						priority = "high",
+						width = 72,
+						height = 55,
+						frame_count = 30,
+						line_length = 6,
+						blend_mode = "additive-soft",
+						animation_speed = 0.75,
+						shift = {0, -0.23},
+						hr_version =
+						{
+							filename = kr_entities_path .. "matter-assembler/hr-matter-assembler-working-glow.png",
+							priority = "high",
+							width = 144,
+							height = 110,
+							frame_count = 30,
+							line_length = 6,
+							scale = 0.5,
+							blend_mode = "additive-soft",
+							animation_speed = 0.75,
+							shift = {0, -0.23}
+						}
+						},
+						{
+						filename = kr_entities_path .. "matter-assembler/matter-assembler-working-glow.png",
+						priority = "high",
+						width = 72,
+						height = 55,
+						frame_count = 30,
+						line_length = 6,
+						blend_mode = "additive-soft",
+						animation_speed = 0.75,
+						shift = {0, -0.28},
+						hr_version =
+						{
+							filename = kr_entities_path .. "matter-assembler/hr-matter-assembler-working-glow.png",
+							priority = "high",
+							width = 144,
+							height = 110,
+							frame_count = 30,
+							line_length = 6,
+							scale = 0.5,
+							blend_mode = "additive-soft",
+							animation_speed = 0.75,
+							shift = {0, -0.28}
+						}
+						},
 					}
 				},
 				light =
 				{
-					intensity = 1.25,
+					intensity = 1.5,
 					size = 16,
-					shift = {0.0, 0.0},
-					color = {r=0.1, g=0.5, b=1}
+					shift = {0, -0.15},
+					color = {r=0.35, g=0.5, b=1}
 				}
 			}
 		},		
@@ -152,9 +207,9 @@ data:extend(
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions_per_minute = 10
+			emissions_per_minute = 50
 		},
-		energy_usage = "25MW",
+		energy_usage = "50MW",
 		ingredient_count = 6,
 		module_specification = { module_slots = 4 },
 		allowed_effects = {"consumption", "productivity", "speed", "pollution"},

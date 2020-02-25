@@ -40,6 +40,22 @@ data:extend(
 		order = "a04[singularity-research-data]",
 		stack_size = 200
 	},
+	{
+		type = "item",
+		name = "tech-card-base-plate",
+		icon =  kr_cards_icons_path  .. "base-1.png",
+		icon_size = 64,
+		icon_mipmaps = 1,
+		pictures =
+		{
+			{ size = 64, filename = kr_cards_icons_path .. "base-1.png",   scale = 0.25, mipmap_count = 1 },
+			{ size = 64, filename = kr_cards_icons_path .. "base-2.png", scale = 0.25, mipmap_count = 1 },
+			{ size = 64, filename = kr_cards_icons_path .. "base-3.png", scale = 0.25, mipmap_count = 1 }
+		},
+		subgroup = "science-pack",
+		order = "a00[tech-card-base-plate]",
+		stack_size = 200
+	},
 
 -----------------------------------------------------------------------------------------------------------------
 	

@@ -9,7 +9,7 @@ data:extend(
 		type = "logistic-container",
 		name = "kr-big-requester-container",
 		icon = _icon_path .. "big-requester-container.png",
-		icon_size = 32,
+		icon_size = 64,
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "kr-big-requester-container"},
 		logistic_slots_count = 30,

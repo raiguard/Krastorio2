@@ -383,7 +383,7 @@ data:extend(
 				{"space-science-pack", 1},
 				{"matter-tech-card", 1}
 			},
-			time = 30
+			time = 60
 		}
     },
 	{

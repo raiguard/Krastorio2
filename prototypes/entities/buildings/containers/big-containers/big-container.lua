@@ -9,7 +9,7 @@ data:extend(
 		type = "container",
 		name = "kr-big-container",
 		icon = _icon_path .. "big-container.png",
-		icon_size = 32,
+		icon_size = 64,
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "kr-big-container"},
 		max_health = 1500,

@@ -18,7 +18,7 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 		local name = data.name
 		local speed = data.speed
 		local icon = data.icon or kr_entities_icons_path .. "loaders/" .. name .. ".png"
-		local icon_size = data.icon_size or 32
+		local icon_size = data.icon_size or 64
 		local belt_animation_set = data.belt_animation_set
 		local order = data.order
 		local upgrade = data.upgrade or nil

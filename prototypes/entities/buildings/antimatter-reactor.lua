@@ -44,7 +44,7 @@ data:extend(
 			burnt_inventory_size = 1,
 			effectivity = 1,
 			emissions_per_minute = 200,
-			light_flicker = {intensity = 1.5, minimum_light_size = 3, color = {r=1, g=0.5, b=0.8}},
+			light_flicker = {intensity = 1.5, minimum_light_size = 2, color = {r=1, g=0.5, b=0.8}},
 		},
 		vehicle_impact_sound = sounds.generic_impact,
 		animation = 

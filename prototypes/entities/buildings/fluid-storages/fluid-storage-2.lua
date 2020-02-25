@@ -6,7 +6,7 @@ data:extend(
 		type = "storage-tank",
 		name = "kr-fluid-storage-2",
 		icon = kr_entities_icons_path .. "fluid-storages/fluid-storage-2.png",
-		icon_size = 32,
+		icon_size = 64,
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "kr-fluid-storage-2"},
 		max_health = 2000,
