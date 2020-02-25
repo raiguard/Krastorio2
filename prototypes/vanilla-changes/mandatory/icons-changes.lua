@@ -33,7 +33,7 @@ krastorio.icons.setTechnologyIcon("utility-science-pack",             kr_technol
 
 -- Space science pack
 krastorio.icons.setItemIcon("space-science-pack",                     kr_cards_icons_path .. "optimization-tech-card.png")
-data.raw.tool["space-science-pack"].order = "b09[optimization-tech-card]"
+data.raw.tool["space-science-pack"].order = "b08[optimization-tech-card]"
 krastorio.icons.setTechnologyIcon("space-science-pack",               kr_technologies_icons_path .. "optimization-tech-card.png")
 
 -- Other

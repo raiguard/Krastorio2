@@ -138,8 +138,8 @@ if not krastorio.science_pack_recipes then
 		result_count = 5,
 		ingredients = 
 		{
-			{"automation-core", 2},
-			{"copper-cable", 6}
+			{"blank-tech-card", 5},
+			{"automation-core", 1}
 		},
 		result = "automation-science-pack"
 	}
@@ -153,8 +153,9 @@ if not krastorio.science_pack_recipes then
 		result_count = 5,
 		ingredients =
 		{
+			{"blank-tech-card", 5},
 			{"electronic-circuit", 5},
-			{"iron-gear-wheel", 10}
+			{"iron-gear-wheel", 5}
 		},
 		result = "logistic-science-pack"
 	}
@@ -168,6 +169,7 @@ if not krastorio.science_pack_recipes then
 		result_count = 5,
 		ingredients =
 		{
+			{"blank-tech-card", 5},
 			{"biters-research-data", 1},
 			{"electronic-components", 5}
 		},
@@ -184,8 +186,9 @@ if not krastorio.science_pack_recipes then
 		result_count = 5,
 		ingredients = 
 		{
-			{"glass", 10},
-			{"advanced-circuit", 10},
+			{"blank-tech-card", 5},
+			{"glass", 15},
+			{"advanced-circuit", 5},
 			{ type = "fluid", name = "sulfuric-acid", amount = 50 }
 		},
 		result = "chemical-science-pack"
@@ -200,8 +203,9 @@ if not krastorio.science_pack_recipes then
 		result_count = 5,
 		ingredients = 
 		{
+			{"blank-tech-card", 10},
 			{"uranium-238", 10},
-			{"fast-transport-belt", 25},
+			{"fast-transport-belt", 20},
 			{"productivity-module", 10}			
 		},
 		result = "production-science-pack"
@@ -216,10 +220,10 @@ if not krastorio.science_pack_recipes then
 		result_count = 5,
 		ingredients = 
 		{
+			{"blank-tech-card", 10},
 			{"processing-unit", 10},
 			{"rocket-fuel", 20},
-			{"low-density-structure", 5},
-			{"steel-beam", 5}
+			{"low-density-structure", 5}			
 		},
 		result = "utility-science-pack"
     }

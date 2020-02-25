@@ -3,8 +3,21 @@ return
 {
 	{
 		type = "recipe",
+		name = "blank-tech-card",
+		energy_required = 1,
+		enabled = false,
+		ingredients =
+		{
+			{"iron-plate", 1},
+			{"copper-cable", 1}			
+		},
+		result = "blank-tech-card",
+		result_count = 5
+	},
+	{
+		type = "recipe",
 		name = "biters-research-data",
-		energy_required = 50,
+		energy_required = 40,
 		enabled = false,
 		ingredients =
 		{
@@ -36,6 +49,7 @@ return
 		enabled = false,
 		ingredients =
 		{
+			{"blank-tech-card", 10},
 			{"space-research-data", 5}
 		},
 		result = "space-science-pack",
@@ -65,9 +79,9 @@ return
 		enabled = false,
 		ingredients =
 		{
+			{"blank-tech-card", 15},
 			{"matter-research-data", 10},
-			{"processing-unit", 5},
-			{"steel-plate", 5}
+			{"processing-unit", 5}			
 		},
 		result = "matter-tech-card",
 		result_count = 5
@@ -80,6 +94,7 @@ return
 		enabled = false,
 		ingredients =
 		{
+			{"blank-tech-card", 15},
 			{"imersium-gear-wheel", 20},
 			{"lithium-sulfur-battery", 10},
 			{"electric-engine-unit", 5}
@@ -95,7 +110,7 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"imersium-plate", 20},
+			{"imersium-plate", 10},
 			{"charged-matter-stabilizer", 5},
 			{"energy-control-unit", 5}
 		},
@@ -110,6 +125,7 @@ return
 		enabled = false,
 		ingredients =
 		{
+			{"blank-tech-card", 15},
 			{"singularity-research-data", 10},
 			{"ai-core", 5}			
 		},

@@ -114,6 +114,7 @@ krastorio.technologies.addUnlockRecipe("rocket-fuel", "rocket-fuel-with-ammonia"
 krastorio.technologies.addUnlockRecipe("rocket-fuel", "rocket-fuel-with-hydrogen-chloride")
 
 -- Science
+krastorio.technologies.addUnlockRecipe("automation-science-pack", "blank-tech-card")
 krastorio.technologies.addUnlockRecipe("military-science-pack", "biters-research-data")
 krastorio.technologies.addUnlockRecipe("military-science-pack", "kr-creep-collector")
 krastorio.technologies.addUnlockRecipe("space-science-pack", "space-science-pack")

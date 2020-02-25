@@ -572,7 +572,7 @@ data:extend(
 			},
 			{
 				type = "unlock-recipe",
-				recipe = krastorio.recipes.changed_names["antimatter-fuel-cell"] or "antimatter-fuel-cell"
+				recipe = krastorio.recipes.changed_names["charged-antimatter-fuel-cell"] or "charged-antimatter-fuel-cell"
 			}
 		},
 		order = "g-f-z",

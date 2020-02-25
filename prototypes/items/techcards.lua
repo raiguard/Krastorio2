@@ -6,6 +6,22 @@ data:extend(
 
 	{
 		type = "item",
+		name = "blank-tech-card",
+		icon =  kr_cards_icons_path  .. "blank-tech-card.png",
+		icon_size = 64,
+		icon_mipmaps = 4,
+		pictures =
+		{
+			{ size = 64, filename = kr_mip_icons_path .. "blank-tech-card/blank-tech-card-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "blank-tech-card/blank-tech-card-2.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "blank-tech-card/blank-tech-card-3.png", scale = 0.25, mipmap_count = 4 }
+		},
+		subgroup = "science-pack",
+		order = "a00[blank-tech-card]",
+		stack_size = 200
+	},
+	{
+		type = "item",
 		name = "biters-research-data",
 		icon =  kr_cards_icons_path  .. "biters-research-data.png",
 		icon_size = 64,
@@ -40,22 +56,6 @@ data:extend(
 		order = "a04[singularity-research-data]",
 		stack_size = 200
 	},
-	{
-		type = "item",
-		name = "tech-card-base-plate",
-		icon =  kr_cards_icons_path  .. "base-1.png",
-		icon_size = 64,
-		icon_mipmaps = 1,
-		pictures =
-		{
-			{ size = 64, filename = kr_cards_icons_path .. "base-1.png",   scale = 0.25, mipmap_count = 1 },
-			{ size = 64, filename = kr_cards_icons_path .. "base-2.png", scale = 0.25, mipmap_count = 1 },
-			{ size = 64, filename = kr_cards_icons_path .. "base-3.png", scale = 0.25, mipmap_count = 1 }
-		},
-		subgroup = "science-pack",
-		order = "a00[tech-card-base-plate]",
-		stack_size = 200
-	},
 
 -----------------------------------------------------------------------------------------------------------------
 	
@@ -78,7 +78,7 @@ data:extend(
 		stack_size = 200,
 		icon_size = 64,
 		subgroup = "science-pack",
-		order = "b08[matter-tech-card]",
+		order = "b09[matter-tech-card]",
 		durability = 1,
 		durability_description_key = "description.science-pack-remaining-amount-key",
 		durability_description_value = "description.science-pack-remaining-amount-value"

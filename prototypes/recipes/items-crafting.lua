@@ -289,27 +289,29 @@ return
 	{
 		type = "recipe",
 		name = "empty-antimatter-fuel-cell",
+		category = "crafting-with-fluid",
 		enabled = false,
 		energy_required = 10,
 		ingredients =
 		{
-			{ "imersite-crystal", 50 },
+			{ type = "fluid", name = "nitric-acid", amount = 50 },
+			{ "imersite-crystal", 25 },
 			{ "imersium-plate", 10 },
-			{ "matter-stabilizer", 2 }
+			{ "matter-stabilizer", 2 }			
 		},
 		result = "empty-antimatter-fuel-cell"
     },
 	{
 		type = "recipe",
-		name = "antimatter-fuel-cell",
+		name = "charged-antimatter-fuel-cell",
 		category = "matter-deconversion",
 		enabled = false,
-		energy_required = 10,
+		energy_required = 30,
 		ingredients =
 		{
 			{ type = "fluid", name = "matter", amount = 6660, catalyst_amount = 6660},
 			{ "empty-antimatter-fuel-cell", 1 }
 		},
-		result = "antimatter-fuel-cell"
-    },
+		result = "charged-antimatter-fuel-cell"
+    }
 }
