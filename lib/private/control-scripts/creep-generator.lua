@@ -1,4 +1,11 @@
 -----------------------------------------------------------------------------
+local function onInitAndConf()
+	if not global.krastorio.script_initialization_status["creep-generator"] then
+		creepVariablesInitializing()
+		global.krastorio.script_initialization_status["creep-generator"] = true
+	end
+end
+
 -- Initialization of needed variables for the script
 -- must be called on on_init
 function creepVariablesInitializing()
@@ -185,7 +192,8 @@ return
 {
 	-- -- Bootstrap
 	-- For setup variables
-	{ creepVariablesInitializing, "on_init" },      
+	{ onInitAndConf, "on_init" },   
+	{ onInitAndConf, "on_configuration_changed" },	
 	-- -- Actions
 	-- For generate creep when a biter migrate
 	{ pushCreepToGenerate, "on_biter_base_built" }, 

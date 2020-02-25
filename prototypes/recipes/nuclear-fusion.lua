@@ -7,7 +7,7 @@ return
 		category = "nuclear-fusion",
 		icon = kr_recipes_icons_path .. "fusion-energy.png",
 		icon_size = 64,
-		energy_required = 2,
+		energy_required = 1,
 		enabled = true,
 		hidden = true,
 		ingredients =
@@ -16,7 +16,7 @@ return
 		},
 		results =
 		{
-			{type="fluid", name="steam", amount=7000, temperature = 975}
+			{type="fluid", name="steam", amount=2000, temperature = 975}
 		},
 		subgroup = "intermediate-product",
 		order = "z[fusion]"

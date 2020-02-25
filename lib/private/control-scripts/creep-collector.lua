@@ -13,6 +13,13 @@ not_valid_replacers =
 }
 random_generator = nil
 
+local function onInitAndConf()
+	if not global.krastorio.script_initialization_status["creep-collector"] then
+		initializeCreepCollectorConstats()
+		global.krastorio.script_initialization_status["creep-collector"] = true
+	end
+end
+
 function initializeCreepCollectorConstats()
 	global.MAX_TILE_DISTANCE   = 10
 	global.COLLECT_PROBABILITY = 75
@@ -129,7 +136,7 @@ function onCollection(event)
 						end
 					end
 					
-					player.character.surface.set_tiles(replacements)					
+					tiles[1].surface.set_tiles(replacements)					
 					if inventory_error then
 						showInventoryFullErrorMessage(player.character)
 					elseif count == 0 and #replacements == 0 then
@@ -148,7 +155,8 @@ return
 {
 	-- -- Bootstrap
 	-- For setup variables
-	{ initializeCreepCollectorConstats, "on_init" },    
+	{ onInitAndConf, "on_init" },    
+	{ onInitAndConf, "on_configuration_changed" },
 	-- -- Actions
 	-- When player select creep
 	{ onCollection, "on_player_selected_area" }

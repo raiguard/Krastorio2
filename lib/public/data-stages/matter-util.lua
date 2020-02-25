@@ -138,7 +138,7 @@ function krastorio.matter_func.createMatterRecipe(args)
 				matter_to_item.localised_description = {"recipe-description.matter-recipe-with-stabilizer"}
 				matter_to_item.main_product = _return_item.name
 				table.insert(matter_to_item.ingredients, {type="item", name="charged-matter-stabilizer", amount=1, catalyst_amount = 1})
-				table.insert(matter_to_item.results,     {type="item", name="matter-stabilizer", probability = 0.95, amount=1, amount_max = 1, catalyst_amount = 1})
+				table.insert(matter_to_item.results,     {type="item", name="matter-stabilizer", probability = 0.99, amount=1, amount_max = 1, catalyst_amount = 1})
 			end
 			
 			data:extend({matter_to_item})

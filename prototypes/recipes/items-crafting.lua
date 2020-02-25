@@ -268,9 +268,10 @@ return
 		energy_required = 10,
 		ingredients =
 		{
-			{"low-density-structure", 10},
+			{"imersite-crystal", 10},
+			{"imersium-plate", 10},
 			{"energy-control-unit", 5},
-			{"processing-unit", 1}
+			{"processing-unit", 5}
 		},
 		result = "matter-stabilizer"
     },

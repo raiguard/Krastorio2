@@ -18,7 +18,7 @@ data:extend(
 			{type = "physical", percent = 20},
 			{type = "fire", percent = 35}
 		},
-		collision_box = {{-0.75, -0.75}, {0.75, 0.75}},
+		collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
 		selection_box = {{-0.9, -0.9}, {0.9, 0.9}},
 		animation =
 		{

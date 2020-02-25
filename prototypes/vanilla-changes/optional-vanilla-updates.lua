@@ -14,7 +14,8 @@ local modifications =
 	"stack-size-changes",        -- Increase stacks size
 	"damage-and-ammo",           -- Damage and ammo rebalance
 	"infinite-technology",       -- Remove or keep infinite technologies
-	"pipes-and-belts-changes"    -- Vanilla pipes and belts modification
+	"pipes-and-belts-changes",   -- Vanilla pipes and belts modification
+	"more-realistic-weapon"      -- Add to bullets more realistic range, tragectory, and drop of bullet speed during flight
 	
 	
 	

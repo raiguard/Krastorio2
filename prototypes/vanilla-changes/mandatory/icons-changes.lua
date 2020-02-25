@@ -116,4 +116,5 @@ krastorio.icons.setItemIcon("pumpjack",                               kr_entitie
 -- -- -- OTHER
 krastorio.icons.setItemIcon("plastic-bar",                            kr_icons_path .. "plastic-bar.png")
 krastorio.icons.setItemIcon("atomic-bomb",                            kr_icons_path .. "ammos/atomic-bomb.png")
+krastorio.icons.setItemIcon("artillery-shell",                        kr_icons_path .. "ammos/artillery-shell.png")
 -----------------------------------------------------------------

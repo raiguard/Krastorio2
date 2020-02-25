@@ -17,12 +17,19 @@ local KRASTORIO_SHELTER_EVENT_FILTER =
     }
 }
 
+local function onInitAndConf()
+	if not global.krastorio.script_initialization_status["shelter"] then
+		shelterVariablesInitializing()
+		global.krastorio.script_initialization_status["shelter"] = true
+	end
+end
+
 -- The dictionary is structured like:
 -- default_spawn_points[surface][force] -> position
 -- spawn_points[surface][force] -> {animation, light}entity of shelter 
 
 -- Called when the game is created
-local function shelterVariablesInitializing()
+function shelterVariablesInitializing()
 	global.default_spawn_points = {}
 	global.spawn_points         = {}
 	
@@ -128,7 +135,8 @@ return
 { 
 	-- -- Bootstrap
 	-- For setup variables
-	{ shelterVariablesInitializing, "on_init" },
+	{ onInitAndConf, "on_init" },
+	{ onInitAndConf, "on_configuration_changed" },
 	-- -- Actions		
 	{ saveStartPoint, "on_surface_created" }, 
 	{ onBuiltAnEntity, "on_built_entity", KRASTORIO_SHELTER_EVENT_FILTER },

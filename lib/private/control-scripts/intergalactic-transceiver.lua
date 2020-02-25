@@ -8,8 +8,15 @@ local KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER =
     }
 }
 
+local function onInitAndConf()
+	if not global.krastorio.script_initialization_status["intergalactic-transceiver"] then
+		intergalactic_transceiverVariablesInitializing()
+		global.krastorio.script_initialization_status["intergalactic-transceiver"] = true
+	end
+end
+
 -- Called when the game is created
-local function intergalactic_transceiverVariablesInitializing()
+function intergalactic_transceiverVariablesInitializing()
 	-- global variable
 	global.intergalactic_transceivers = {}
 	global.intergalactic_transceivers_energy_status = {}
@@ -120,7 +127,8 @@ return
 { 
 	-- -- Bootstrap
 	-- For setup variables
-	{ intergalactic_transceiverVariablesInitializing, "on_init" },
+	{ onInitAndConf, "on_init" },
+	{ onInitAndConf, "on_configuration_changed" },	
 	-- -- Actions		
 	{ onBuiltAnEntity, "on_built_entity", KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER },
 	{ onBuiltAnEntity, "on_robot_built_entity", KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER },

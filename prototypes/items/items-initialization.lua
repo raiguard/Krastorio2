@@ -36,4 +36,4 @@ require(kr_items_prototypes_path .. "guns")
 -- Adavanced tank guns
 require(kr_items_prototypes_path .. "adavanced-tank-guns")
 -- Ammos
-require(kr_items_prototypes_path .. "ammos")
+require(kr_items_prototypes_path .. "ammo")

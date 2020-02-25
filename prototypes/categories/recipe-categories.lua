@@ -65,7 +65,12 @@ data:extend(
 		type = "recipe-category",
 		name = "fuel-refinery"
 	},
-
+	-- Advanced Smelting crafting category for Advanced Furnace
+	{
+		type = "recipe-category",
+		name = "advanced-smelting"
+	},
+	
 -----------------------------------------------------------------------------------------------------------------
 	
 	-- -- Science

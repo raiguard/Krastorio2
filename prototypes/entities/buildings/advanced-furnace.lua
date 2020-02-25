@@ -118,7 +118,7 @@ data:extend(
 				}
 			}
 		},
-		crafting_categories = {"smelting"},
+		crafting_categories = {"smelting", "advanced-smelting"},
 		vehicle_impact_sound = sounds.generic_impact,
 		working_sound = advanced_furnace_sound,
 		idle_sound = { filename = "__base__/sound/idle1.ogg" },
@@ -127,7 +127,7 @@ data:extend(
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions_per_minute = 10
+			emissions_per_minute = 20
 		},
 		energy_usage = "2MW",
 		ingredient_count = 6,

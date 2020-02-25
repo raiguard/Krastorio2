@@ -159,8 +159,6 @@ data:extend(
 		},
 		audible_distance_modifier = 25,
 		crafting_speed = 1,
-		energy_source = { type = "void" },
-		--[[
 		energy_source =
 		{
 			type = "burner",
@@ -206,9 +204,8 @@ data:extend(
 					starting_frame_deviation = 60
 				}
 			}
-		},		
-		--]]
-		energy_usage = "500MW",
+		},	
+		energy_usage = "2000MW",
 		source_inventory_size = 1,
 		result_inventory_size = 1,
 		open_sound = { filename = kr_buildings_sounds_path .. "open.ogg", volume = 1 },

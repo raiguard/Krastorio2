@@ -380,3 +380,60 @@ krastorio.recipes.removeIngredient("red-wire", "electronic-circuit")
 krastorio.recipes.removeIngredient("green-wire", "electronic-circuit")
 
 --------------------------------------------------------------------
+-- -- -- NUCLEAR
+--------------------------------------------------------------------
+
+	-- Add stone and iron as waste
+krastorio.recipes.setEnergyCost("uranium-processing", 15)
+--krastorio.recipes.replaceIngredient("uranium-processing", "uranium-ore", {"uranium-ore", 15})
+krastorio.recipes.addOrReplaceProducts
+(	
+	"uranium-processing", 	
+	{
+		"uranium-235",
+		"uranium-238",
+		"iron-ore",
+		"stone"
+	}, 	
+	{
+		{
+			name = "uranium-235",
+			probability = 0.007,
+			amount = 1
+		},
+		{
+			name = "uranium-238",
+			probability = 0.993,
+			amount = 1
+		},
+		{
+			name = "iron-ore",
+			probability = 0.25,
+			amount = 1
+		},
+		{
+			name = "stone",
+			probability = 0.5,
+			amount = 1
+		}
+	}
+)
+
+	-- Increase uranium usage and ad stone as waste
+krastorio.recipes.replaceIngredient("kovarex-enrichment-process", "uranium-235", {name = "uranium-235", amount = 50})
+krastorio.recipes.replaceIngredient("kovarex-enrichment-process", "uranium-238", {name = "uranium-238", amount = 8})
+
+krastorio.recipes.replaceProduct("kovarex-enrichment-process", "uranium-235", {"uranium-235", 52})
+krastorio.recipes.replaceProduct("kovarex-enrichment-process", "uranium-238", {"stone", 5})
+
+krastorio.recipes.replaceIngredient("uranium-fuel-cell", "uranium-235", {name = "uranium-235", amount = 1})
+krastorio.recipes.replaceIngredient("uranium-fuel-cell", "uranium-238", {name = "uranium-238", amount = 9})
+krastorio.recipes.replaceIngredient("uranium-fuel-cell", "iron-plate", {name = "rare-metals", amount = 1})
+krastorio.recipes.replaceProduct("uranium-fuel-cell", "uranium-fuel-cell", {"uranium-fuel-cell", 1})
+
+krastorio.recipes.replaceIngredient("nuclear-fuel-reprocessing", "used-up-uranium-fuel-cell", {name = "used-up-uranium-fuel-cell", amount = 1})
+krastorio.recipes.replaceProduct("nuclear-fuel-reprocessing", "uranium-238", {"uranium-238", 5})
+krastorio.recipes.addProduct("nuclear-fuel-reprocessing", {"stone", 5})
+krastorio.recipes.addProduct("nuclear-fuel-reprocessing", {type="item", name="tritium", probability = 0.05, amount=1})
+
+--------------------------------------------------------------------

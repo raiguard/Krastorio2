@@ -138,6 +138,13 @@ data:extend(
 	},
 	{
 		type = "bool-setting",
+		name = "kr-more-realistic-weapon",
+		setting_type = "startup",
+		default_value = true,
+		order = "b07"
+	},
+	{
+		type = "bool-setting",
 		name = "kr-vehicles-minable-changes",
 		setting_type = "startup",
 		default_value = false,

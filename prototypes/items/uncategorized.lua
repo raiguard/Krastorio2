@@ -481,7 +481,7 @@ data:extend(
 		icon = kr_icons_path .. "dt-fuel.png",
 		icon_size = 32,
 		fuel_category = "fusion-fuel",
-		fuel_value = "16GJ",
+		fuel_value = "10GJ",
 		subgroup = "intermediate-product",
 		order = "r[uranium-processing]-b1[dt-fuel]",
 		stack_size = 50
