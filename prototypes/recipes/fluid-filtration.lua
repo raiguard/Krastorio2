@@ -4,7 +4,7 @@ return
 	{
 		type = "recipe",
 		name = "quartz",
-		icon = kr_mip_icons_path .. "quartz/quartz.png",
+		icon = kr_items_with_variations_icons_path .. "quartz/quartz.png",
 		icon_size = 64,
 		category = "fluid-filtration",
 		subgroup = "raw-material",

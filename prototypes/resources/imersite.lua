@@ -5,7 +5,7 @@ data:extend(
 		type = "resource",
 		name = "imersite",
 		category = "kr-quarry",
-		icon = kr_mip_icons_path .. "raw-imersite/raw-imersite.png",
+		icon = kr_items_with_variations_icons_path .. "raw-imersite/raw-imersite.png",
 		icon_size = 64,
 		flags = {"placeable-neutral"},
 		order="a-b-a",

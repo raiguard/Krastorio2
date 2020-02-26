@@ -24,7 +24,7 @@ return
 		type = "recipe",
 		name = "imersite-powder",
 		category = "crushing",
-		icon = kr_mip_icons_path .. "imersite-powder/imersite-powder.png",
+		icon = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder.png",
 		icon_size = 64,
 		hide_from_player_crafting = true,
 		always_show_made_in = true,

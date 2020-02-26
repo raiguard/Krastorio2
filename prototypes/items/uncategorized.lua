@@ -46,15 +46,15 @@ data:extend(
 	{
 		type = "item",
 		name = "biomass",
-		icon = kr_mip_icons_path .. "biomass/biomass.png",
+		icon = kr_items_with_variations_icons_path .. "biomass/biomass.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_mip_icons_path .. "biomass/biomass.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "biomass/biomass-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "biomass/biomass-2.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "biomass/biomass-3.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "biomass/biomass.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "biomass/biomass-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "biomass/biomass-2.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "biomass/biomass-3.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-material",
 		order = "a[fertilizer]",
@@ -63,8 +63,9 @@ data:extend(
 	{
 		type = "item",
 		name = "fertilizer",
-		icon = kr_icons_path .. "fertilizer.png",
+		icon = kr_items_icons_path .. "fertilizer.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "raw-material",
 		order = "a2[fertilizer]",
 		stack_size = 200
@@ -72,8 +73,9 @@ data:extend(
 	{
 		type = "capsule",
 		name = "first-aid-kit",
-		icon = kr_icons_path .. "first-aid-kit.png",
+		icon = kr_icons_path .. "items/first-aid-kit.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "raw-resource",
 		capsule_action =
 		{
@@ -110,8 +112,9 @@ data:extend(
 	{
 		type = "item",
 		name = "automation-core",
-		icon = kr_icons_path .. "automation-core.png",
+		icon = kr_items_icons_path .. "automation-core.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "intermediate-product",
 		order = "e1[automation-core]",
 		stack_size = 200
@@ -119,14 +122,14 @@ data:extend(
 	{
 		type = "item",
 		name = "sand",
-		icon = kr_mip_icons_path .. "sand/sand.png",
+		icon = kr_items_with_variations_icons_path .. "sand/sand.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_mip_icons_path .. "sand/sand.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "sand/sand-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "sand/sand-2.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "sand/sand.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "sand/sand-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "sand/sand-2.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-resource",
 		order = "a[sand]",
@@ -135,8 +138,9 @@ data:extend(
 	{
 		type = "item",
 		name = "glass",
-		icon = kr_icons_path .."glass.png",
+		icon = kr_items_icons_path .. "glass.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "raw-material",
 		order = "a1[glass]",
 		stack_size = 200
@@ -144,15 +148,15 @@ data:extend(
 	{
 		type = "item",
 		name = "quartz",
-		icon = kr_mip_icons_path .. "quartz/quartz.png",
+		icon = kr_items_with_variations_icons_path .. "quartz/quartz.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_mip_icons_path .. "quartz/quartz.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "quartz/quartz-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "quartz/quartz-2.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "quartz/quartz-3.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "quartz/quartz.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "quartz/quartz-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "quartz/quartz-2.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "quartz/quartz-3.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-material",
 		order = "b3[quartz]",
@@ -161,14 +165,14 @@ data:extend(
 	{
 		type = "item",
 		name = "silicon",
-		icon = kr_mip_icons_path .. "silicon/silicon.png",
+		icon = kr_items_with_variations_icons_path .. "silicon/silicon.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_mip_icons_path .. "silicon/silicon.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "silicon/silicon-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "silicon/silicon-2.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "silicon/silicon.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "silicon/silicon-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "silicon/silicon-2.png", scale = 0.25, mipmap_count = 4 }
 		},  
 		subgroup = "raw-material",
 		order = "b4[silicon]",
@@ -177,16 +181,17 @@ data:extend(
 	{
 		type = "item",
 		name = "electronic-components",
-		icon = kr_mip_icons_path .. "electronic-components/electronic-components.png",
+		icon = kr_items_with_variations_icons_path .. "electronic-components/electronic-components.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_mip_icons_path .. "electronic-components/electronic-components.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "electronic-components/electronic-components-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "electronic-components/electronic-components-2.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "electronic-components/electronic-components-3.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "electronic-components/electronic-components-4.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "electronic-components/electronic-components-5.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "electronic-components/electronic-components.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "electronic-components/electronic-components-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "electronic-components/electronic-components-2.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "electronic-components/electronic-components-3.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "electronic-components/electronic-components-4.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "electronic-components/electronic-components-5.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "intermediate-product",
 		order = "e[ei-electronic-components]",
@@ -198,14 +203,14 @@ data:extend(
 	{
 		type = "item",
 		name = "coke",
-		icon = kr_mip_icons_path .. "coke/coke.png",
+		icon = kr_items_with_variations_icons_path .. "coke/coke.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_mip_icons_path .. "coke/coke.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "coke/coke-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "coke/coke-2.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "coke/coke.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "coke/coke-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "coke/coke-2.png", scale = 0.25, mipmap_count = 4 }
 		},
 		fuel_category = "chemical",
 		fuel_value = coke_value,
@@ -219,8 +224,9 @@ data:extend(
 	{
 		type = "item",
 		name = "fuel",
-		icon = kr_icons_path .. "fuel.png",
+		icon = kr_items_icons_path .. "fuel.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		fuel_category = "vehicle-fuel",
 		fuel_value = fuel_value,
 		fuel_emissions_multiplier = 1,
@@ -233,8 +239,9 @@ data:extend(
 	{
 		type = "item",
 		name = "bio-fuel",
-		icon = kr_icons_path .. "bio-fuel.png",
+		icon = kr_items_icons_path .. "bio-fuel.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		fuel_category = "vehicle-fuel",
 		fuel_value = bio_fuel_value,
 		fuel_emissions_multiplier = 0.5,
@@ -247,8 +254,9 @@ data:extend(
 	{
 		type = "item",
 		name = "advanced-fuel",
-		icon = kr_icons_path .. "advanced-fuel.png",
+		icon = kr_items_icons_path .. "advanced-fuel.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		fuel_category = "vehicle-fuel",
 		fuel_value = advanced_fuel_value,
 		fuel_emissions_multiplier = 1.75,
@@ -262,8 +270,9 @@ data:extend(
 	{
 		type = "item",
 		name = "iron-beam",
-		icon = kr_icons_path .. "iron-beam.png",
+		icon = kr_items_icons_path .. "iron-beam.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "intermediate-product",
 		order = "c-a2[iron-beam]",
 		stack_size = 200
@@ -271,8 +280,9 @@ data:extend(
 	{
 		type = "item",
 		name = "steel-gear-wheel",
-		icon = kr_icons_path .. "steel-gear-wheel.png",
+		icon = kr_items_icons_path .. "steel-gear-wheel.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "intermediate-product",
 		order = "d-a2[steel-gear-wheel]",
 		stack_size = 200
@@ -280,8 +290,9 @@ data:extend(
 	{
 		type = "item",
 		name = "steel-beam",
-		icon = kr_icons_path .. "steel-beam.png",
+		icon = kr_items_icons_path .. "steel-beam.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "intermediate-product",
 		order = "c-a2[steel-beam]",
 		stack_size = 200
@@ -289,8 +300,9 @@ data:extend(
 	{
 		type = "item",
 		name = "imersium-plate",
-		icon = kr_icons_path .. "imersium-plate.png",
+		icon = kr_items_icons_path .. "imersium-plate.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "raw-material",
 		order = "e00-a2[imersium-plate]",
 		stack_size = 200
@@ -298,8 +310,9 @@ data:extend(
 	{
 		type = "item",
 		name = "imersium-gear-wheel",
-		icon = kr_icons_path .. "imersium-gear-wheel.png",
+		icon = kr_items_icons_path .. "imersium-gear-wheel.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "intermediate-product",
 		order = "d-a3[imersium-gear-wheel]",
 		stack_size = 200
@@ -307,8 +320,9 @@ data:extend(
 	{
 		type = "item",
 		name = "imersium-beam",
-		icon = kr_icons_path .. "imersium-beam.png",
+		icon = kr_items_icons_path .. "imersium-beam.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "intermediate-product",
 		order = "c-a3[imersium-beam]",
 		stack_size = 200
@@ -316,27 +330,28 @@ data:extend(
 	{
 		type = "item",
 		name = "kr-void",
-		icon = kr_icons_path .. "void.png",
+		icon = kr_items_icons_path .. "void.png",
 		flags = {"hidden"},		
-		icon_size = 32,
+		icon_size = 64,
+		icon_mipmaps = 4,
 		order = "zzz[kr-void]",
 		stack_size = 999
     },
 	{
 		type = "item",
 		name = "rare-metals",
-		icon = kr_mip_icons_path .. "rare-metals/rare-metals.png",
+		icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_mip_icons_path .. "rare-metals/rare-metals.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "rare-metals/rare-metals-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "rare-metals/rare-metals-2.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "rare-metals/rare-metals-3.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "rare-metals/rare-metals-4.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "rare-metals/rare-metals-5.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "rare-metals/rare-metals-6.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "rare-metals/rare-metals-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "rare-metals/rare-metals-2.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "rare-metals/rare-metals-3.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "rare-metals/rare-metals-4.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "rare-metals/rare-metals-5.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "rare-metals/rare-metals-6.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "intermediate-product",
 		order = "x[rare-metals]",
@@ -345,14 +360,14 @@ data:extend(
 	{
 		type = "item",
 		name = "enriched-iron",
-		icon = kr_mip_icons_path .. "enriched-iron/enriched-iron.png",
+		icon = kr_items_with_variations_icons_path .. "enriched-iron/enriched-iron.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_mip_icons_path .. "enriched-iron/enriched-iron.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "enriched-iron/enriched-iron-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "enriched-iron/enriched-iron-2.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "enriched-iron/enriched-iron.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "enriched-iron/enriched-iron-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "enriched-iron/enriched-iron-2.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-material",
 		order = "e05-a1[enriched-iron]",
@@ -361,14 +376,14 @@ data:extend(
 	{
 		type = "item",
 		name = "enriched-copper",
-		icon = kr_mip_icons_path .. "enriched-copper/enriched-copper.png",
+		icon = kr_items_with_variations_icons_path .. "enriched-copper/enriched-copper.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_mip_icons_path .. "enriched-copper/enriched-copper.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "enriched-copper/enriched-copper-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "enriched-copper/enriched-copper-2.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "enriched-copper/enriched-copper.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "enriched-copper/enriched-copper-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "enriched-copper/enriched-copper-2.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-material",
 		order = "e05-a2[enriched-copper]",
@@ -377,14 +392,14 @@ data:extend(
 	{
 		type = "item",
 		name = "lithium",
-		icon = kr_mip_icons_path .. "lithium/lithium.png",
+		icon = kr_items_with_variations_icons_path .. "lithium/lithium.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_mip_icons_path .. "lithium/lithium.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "lithium/lithium-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "lithium/lithium-2.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "lithium/lithium.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "lithium/lithium-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "lithium/lithium-2.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-material",
 		order = "h2[lithium]",
@@ -393,13 +408,13 @@ data:extend(
 	{
 		type = "item",
 		name = "lithium-chloride",
-		icon = kr_mip_icons_path .. "lithium-chloride/lithium-chloride.png",
+		icon = kr_items_with_variations_icons_path .. "lithium-chloride/lithium-chloride.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_mip_icons_path .. "lithium-chloride/lithium-chloride.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "lithium-chloride/lithium-chloride-1.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "lithium-chloride/lithium-chloride.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "lithium-chloride/lithium-chloride-1.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-material",
 		order = "h1[lithium-chloride]",
@@ -408,14 +423,14 @@ data:extend(
 	{
 		type = "item",
 		name = "imersite-powder",
-		icon = kr_mip_icons_path .. "imersite-powder/imersite-powder.png",
+		icon = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_mip_icons_path .. "imersite-powder/imersite-powder.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "imersite-powder/imersite-powder-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "imersite-powder/imersite-powder-2.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder-2.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-material",
 		order = "q01[imersite-powder]",
@@ -424,16 +439,16 @@ data:extend(
 	{
 		type = "item",
 		name = "imersite-crystal",
-		icon = kr_mip_icons_path .. "imersite-crystal/imersite-crystal.png",
+		icon = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_mip_icons_path .. "imersite-crystal/imersite-crystal.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "imersite-crystal/imersite-crystal-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "imersite-crystal/imersite-crystal-2.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "imersite-crystal/imersite-crystal-3.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_mip_icons_path .. "imersite-crystal/imersite-crystal-4.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-2.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-3.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-4.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "intermediate-product",
 		order = "q03[imersite-crystal]",
@@ -442,8 +457,9 @@ data:extend(
 	{
 		type = "item",
 		name = "lithium-sulfur-battery",
-		icon = kr_icons_path .. "lithium-sulfur-battery.png",
+		icon = kr_items_icons_path .. "lithium-sulfur-battery.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "raw-material",
 		order = "i2[lithium-sulfur-battery]",
 		stack_size = 200
@@ -451,8 +467,9 @@ data:extend(
 	{
 		type = "item",
 		name = "ai-core",
-		icon = kr_icons_path .. "ai-core.png",
+		icon = kr_items_icons_path .. "ai-core.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "intermediate-product",
 		order = "h1[ai-core]",
 		stack_size = 200
@@ -460,26 +477,29 @@ data:extend(
 	{
 		type = "item",
 		name = "pollution-filter",
-		icon = kr_icons_path .. "pollution-filter.png",
+		icon = kr_items_icons_path .. "pollution-filter.png",
 		icon_size = 64,
-		stack_size = 50,		
+		icon_mipmaps = 4,				
 		subgroup = "intermediate-product",
 		order = "06[pollution-filter]",
+		stack_size = 50
 	},
 	{
 		type = "item",
 		name = "used-pollution-filter",
-		icon = kr_icons_path .. "used-pollution-filter.png",
+		icon = kr_items_icons_path .. "used-pollution-filter.png",
 		icon_size = 64,
-		stack_size = 50,		
+		icon_mipmaps = 4,				
 		subgroup = "intermediate-product",
 		order = "07[used-pollution-filter]",
+		stack_size = 50
 	},
 	{
 		type = "item",
 		name = "tritium",
-		icon = kr_icons_path .. "tritium.png",
+		icon = kr_items_icons_path .. "tritium.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "raw-material",
 		order = "s[tritium]",
 		stack_size = 200
@@ -487,7 +507,7 @@ data:extend(
 	{
 		type = "item",
 		name = "dt-fuel",
-		icon = kr_icons_path .. "dt-fuel.png",
+		icon = kr_items_icons_path .. "dt-fuel.png",
 		icon_size = 32,
 		fuel_category = "fusion-fuel",
 		fuel_value = "10GJ",
@@ -499,8 +519,9 @@ data:extend(
 	{
 		type = "item",
 		name = "energy-control-unit",
-		icon = kr_icons_path .. "energy-control-unit.png",
+		icon = kr_items_icons_path .. "energy-control-unit.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "intermediate-product",
 		order = "j1[energy-control-unit]",
 		stack_size = 100
@@ -509,8 +530,9 @@ data:extend(
 	{
 		type = "item",
 		name = "matter-stabilizer",
-		icon = kr_icons_path .. "matter-stabilizer.png",
+		icon = kr_items_icons_path .. "matter-stabilizer.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "intermediate-product",
 		order = "w1[matter-stabilizers]-a1[matter-stabilizer]",
 		stack_size = 100
@@ -518,8 +540,9 @@ data:extend(
 	{
 		type = "item",
 		name = "charged-matter-stabilizer",
-		icon = kr_icons_path .. "charged-matter-stabilizer.png",
+		icon = kr_items_icons_path .. "charged-matter-stabilizer.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "intermediate-product",
 		order = "w1[matter-stabilizers]-a2[charged-matter-stabilizer]",
 		stack_size = 100
@@ -527,8 +550,9 @@ data:extend(
 	{
 		type = "item",
 		name = "matter-cube",
-		icon = kr_icons_path .. "matter-cube.png",
+		icon = kr_items_icons_path .. "matter-cube.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "intermediate-product",
 		order = "w1[matter]-a3[matter-cube]",
 		stack_size = 200
@@ -536,8 +560,9 @@ data:extend(
 	{
 		type = "item",
 		name = "empty-antimatter-fuel-cell",
-		icon = kr_icons_path .. "empty-antimatter-fuel-cell.png",
+		icon = kr_items_icons_path .. "empty-antimatter-fuel-cell.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "intermediate-product",
 		order = "r[uranium-processing]-b2[antimatter-fuel-cell]-a1[empty-antimatter-fuel-cell]",
 		stack_size = 10
@@ -545,8 +570,9 @@ data:extend(
 	{
 		type = "item",
 		name = "charged-antimatter-fuel-cell",
-		icon = kr_icons_path .. "charged-antimatter-fuel-cell.png",
+		icon = kr_items_icons_path .. "charged-antimatter-fuel-cell.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		fuel_category = "antimatter-fuel",
 		fuel_value = "600GJ",
 		burnt_result = "empty-antimatter-fuel-cell",

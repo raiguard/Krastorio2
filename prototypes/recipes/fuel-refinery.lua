@@ -28,8 +28,9 @@ return
 		icons =
 		{
 			{
-				icon = kr_icons_path .. "fuel.png",
-				icon_size = 64
+				icon = kr_items_icons_path .. "fuel.png",
+				icon_size = 64,
+				icon_mipmaps = 4
 			},
 			{
 				icon = main_fuel_ingredient_icon_1,
@@ -70,8 +71,9 @@ return
 		icons =
 		{
 			{
-				icon = kr_icons_path .. "fuel.png",
-				icon_size = 64
+				icon = kr_items_icons_path .. "fuel.png",
+				icon_size = 64,
+				icon_mipmaps = 4
 			},
 			{
 				icon = main_fuel_ingredient_icon_2,
@@ -109,8 +111,9 @@ return
 		type = "recipe",
 		name = "bio-fuel",
 		category = "fuel-refinery",
-		icon = kr_icons_path .. "bio-fuel.png",
+		icon = kr_items_icons_path .. "bio-fuel.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		energy_required = 10,
 		enabled = false,
 		always_show_made_in = true,
@@ -139,8 +142,9 @@ return
 		type = "recipe",
 		name = "advanced-fuel",
 		category = "fuel-refinery",
-		icon = kr_icons_path .. "advanced-fuel.png",
+		icon = kr_items_icons_path .. "advanced-fuel.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		energy_required = 10,
 		enabled = false,
 		always_show_made_in = true,

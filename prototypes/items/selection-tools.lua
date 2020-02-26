@@ -3,7 +3,7 @@ data:extend(
 	{
 		type = "selection-tool",
 		name = "kr-creep-collector",
-		icon = kr_icons_path .. "creep-collector.png",
+		icon = kr_icons_path .. "items/creep-collector.png",
 		icon_size = 64,
 		flags = { "not-stackable" },
 		stack_size = 1,

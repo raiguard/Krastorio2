@@ -144,7 +144,7 @@ end
 -- @ _recipe_name
 -- @ _icon_path
 -- @ _icon_size
-function krastorio.icons.setItemIcon(_item_name, _icon_path, _icon_size)
+function krastorio.icons.setItemIcon(_item_name, _icon_path, _icon_size, _icon_mipmaps)
 	if krastorio.items.exist(_item_name) then
 		local item_type = krastorio.items.getItemType(_item_name)
 		if data.raw[item_type][_item_name].icons then
@@ -152,6 +152,7 @@ function krastorio.icons.setItemIcon(_item_name, _icon_path, _icon_size)
 		end
 		data.raw[item_type][_item_name].icon = _icon_path
 		data.raw[item_type][_item_name].icon_size = _icon_size or 64
+		data.raw[item_type][_item_name].icon_mipmaps = _icon_mipmaps
 	end
 end
 
@@ -170,10 +171,10 @@ end
 
 -- @ _recipe_name
 -- @ _icons
-function krastorio.icons.setItemMipmaps(_item_name, _mipmaps, _icon_mipmaps)
+function krastorio.icons.setItemPictures(_item_name, _mipmaps, _icon_mipmaps)
 	if krastorio.items.exist(_item_name) then
 		local item_type = krastorio.items.getItemType(_item_name)		
-		data.raw[item_type][_item_name].icon_mipmaps = _icon_mipmaps or #_mipmaps
+		data.raw[item_type][_item_name].icon_mipmaps = _icon_mipmaps
 		data.raw[item_type][_item_name].pictures = _mipmaps
 	end
 end

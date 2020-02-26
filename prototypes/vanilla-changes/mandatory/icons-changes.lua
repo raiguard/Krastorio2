@@ -37,21 +37,21 @@ data.raw.tool["space-science-pack"].order = "b08[optimization-tech-card]"
 krastorio.icons.setTechnologyIcon("space-science-pack",               kr_technologies_icons_path .. "optimization-tech-card.png")
 
 -- Other
-krastorio.icons.setItemIcon("battery",                                kr_icons_path  .. "battery.png")
+krastorio.icons.setItemIcon("battery",                                kr_items_icons_path .. "battery.png")
 -----------------------------------------------------------------
 -- -- Chaning intermediate products icons
 
 -- Chaning iron plate
-krastorio.icons.setItemIcon("iron-plate",                             kr_icons_path .. "iron-plate.png")
+krastorio.icons.setItemIcon("iron-plate",                             kr_items_icons_path .. "iron-plate.png", 64, 4)
 
 -- Changing copper plate
-krastorio.icons.setItemIcon("copper-plate",                           kr_icons_path .. "copper-plate.png")
+krastorio.icons.setItemIcon("copper-plate",                           kr_items_icons_path .. "copper-plate.png", 64, 4)
 
 -- Chaning steel icon
-krastorio.icons.setItemIcon("steel-plate",                            kr_icons_path .. "steel-plate.png")
+krastorio.icons.setItemIcon("steel-plate",                            kr_items_icons_path .. "steel-plate.png", 64, 4)
 
 -- Changing iron gear wheel
-krastorio.icons.setItemIcon("iron-gear-wheel",                        kr_icons_path .. "iron-gear-wheel.png")
+krastorio.icons.setItemIcon("iron-gear-wheel",                        kr_items_icons_path .. "iron-gear-wheel.png", 64, 4)
 
 local light_oil_icon = nil
 if data.raw.fluid["light-oil"].icon == "__base__/graphics/icons/fluid/light-oil.png" then
@@ -82,7 +82,7 @@ krastorio.icons.setItemIcon("petroleum-gas",                          kr_fluids_
 -- -- -- TECHNOLOGIES
 
 krastorio.icons.setTechnologyIcon("steel-processing",                 kr_technologies_icons_path .. "steel-processing.png")
-krastorio.icons.setTechnologyIcon("battery",                          kr_technologies_icons_path .. "battery.png")
+krastorio.icons.setTechnologyIcon("battery",                          kr_technologies_icons_path .. "battery.png", 64, 4)
 
 -- Logistics
 krastorio.icons.setTechnologyIcon("logistics",                        kr_technologies_icons_path .. "logistics-1.png")
@@ -114,11 +114,11 @@ krastorio.icons.setItemIcon("pumpjack",                               kr_entitie
 
 -----------------------------------------------------------------
 -- -- -- OTHER
-krastorio.icons.setItemIcon("firearm-magazine",                       kr_mip_icons_path .. "ammo/pistol-ammo-1.png")
-krastorio.icons.setItemIcon("plastic-bar",                            kr_icons_path .. "plastic-bar.png")
-krastorio.icons.setItemIcon("copper-cable",                           kr_icons_path .. "copper-cable.png")
-krastorio.icons.setItemIcon("red-wire",                               kr_icons_path .. "red-wire.png")
-krastorio.icons.setItemIcon("green-wire",                             kr_icons_path .. "green-wire.png")
+krastorio.icons.setItemIcon("firearm-magazine",                       kr_items_with_variations_icons_path .. "ammo/pistol-ammo-1.png")
+krastorio.icons.setItemIcon("plastic-bar",                            kr_items_icons_path .. "plastic-bar.png", 64, 4)
+krastorio.icons.setItemIcon("copper-cable",                           kr_items_icons_path .. "copper-cable.png", 64, 4)
+krastorio.icons.setItemIcon("red-wire",                               kr_items_icons_path .. "red-wire.png", 64, 4)
+krastorio.icons.setItemIcon("green-wire",                             kr_items_icons_path .. "green-wire.png", 64, 4)
 krastorio.icons.setItemIcon("atomic-bomb",                            kr_icons_path .. "ammo/atomic-bomb.png")
 krastorio.icons.setItemIcon("artillery-shell",                        kr_icons_path .. "ammo/artillery-shell.png")
 -----------------------------------------------------------------
