@@ -116,6 +116,9 @@ krastorio.icons.setItemIcon("pumpjack",                               kr_entitie
 -- -- -- OTHER
 krastorio.icons.setItemIcon("firearm-magazine",                       kr_mip_icons_path .. "ammo/pistol-ammo-1.png")
 krastorio.icons.setItemIcon("plastic-bar",                            kr_icons_path .. "plastic-bar.png")
+krastorio.icons.setItemIcon("copper-cable",                           kr_icons_path .. "copper-cable.png")
+krastorio.icons.setItemIcon("red-wire",                               kr_icons_path .. "red-wire.png")
+krastorio.icons.setItemIcon("green-wire",                             kr_icons_path .. "green-wire.png")
 krastorio.icons.setItemIcon("atomic-bomb",                            kr_icons_path .. "ammo/atomic-bomb.png")
 krastorio.icons.setItemIcon("artillery-shell",                        kr_icons_path .. "ammo/artillery-shell.png")
 -----------------------------------------------------------------

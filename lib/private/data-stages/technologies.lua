@@ -493,7 +493,10 @@ function krastorio.technologies.addResearchUnitIngredient(technology_name, scien
 	if technology and next(technology) ~= nil then	
 		correct_count = count or 1
 		-- add prerequisite
-		krastorio.technologies.addPrerequisite({technology_name, technology.prerequisites}, science_pack_name, check_circular_dependency or false)
+		local science_pack_tech = krastorio.technologies.getTechnologyFromName(science_pack_name) or krastorio.technologies.getTechnologyThatUnlockRecipe(science_pack_name)
+		if science_pack_tech then
+			krastorio.technologies.addPrerequisite({technology_name, technology.prerequisites}, science_pack_tech.name, check_circular_dependency or false)
+		end
 		-- add ingredient
 		for _, ingredient in pairs(technology.unit.ingredients) do
 			for _, value  in pairs(ingredient) do
