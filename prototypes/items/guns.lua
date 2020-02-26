@@ -9,7 +9,7 @@ data:extend(
 		icon = kr_guns_icons_path .. "impulse-rifle.png",
 		icon_size = 64,
 		subgroup = "gun",
-		order = "c[impulse-rifle]",
+		order = "c2[impulse-rifle]",
 		attack_parameters =
 		{
 			type = "projectile",

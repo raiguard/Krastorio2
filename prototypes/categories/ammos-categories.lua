@@ -34,4 +34,29 @@ data.raw["ammo-category"]["missiles-for-turrets"] =
 	name = "missiles-for-turrets"
 }
 
+if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 
+-- Pistol ammo
+data.raw["ammo-category"]["pistol-ammo"] = 
+{
+	bonus_gui_order = "r",
+	type = "ammo-category",
+	name = "pistol-ammo"
+}
+
+-- Rifle and turret ammo
+data.raw["ammo-category"]["rifle-ammo"] = 
+{
+	bonus_gui_order = "s",
+	type = "ammo-category",
+	name = "rifle-ammo"
+}
+
+-- Rifle and turret ammo
+data.raw["ammo-category"]["anti-materiel-rifle-ammo"] = 
+{
+	bonus_gui_order = "t",
+	type = "ammo-category",
+	name = "anti-materiel-rifle-ammo"
+}
+end
