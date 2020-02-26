@@ -726,20 +726,20 @@ krastorio.technologies.addEffect("weapon-shooting-speed-6", {type = "gun-speed",
 
 -- --
 
-krastorio.technologies.addEffect("physical-projectile-damage-1", {type = "ammo-damage",	ammo_category = "anti-materiel-rifle-ammo", modifier = 0.25})
-krastorio.technologies.addEffect("physical-projectile-damage-2", {type = "ammo-damage",	ammo_category = "anti-materiel-rifle-ammo", modifier = 0.25})
-krastorio.technologies.addEffect("physical-projectile-damage-3", {type = "ammo-damage",	ammo_category = "anti-materiel-rifle-ammo", modifier = 0.25})
-krastorio.technologies.addEffect("physical-projectile-damage-4", {type = "ammo-damage",	ammo_category = "anti-materiel-rifle-ammo", modifier = 0.35})
-krastorio.technologies.addEffect("physical-projectile-damage-5", {type = "ammo-damage",	ammo_category = "anti-materiel-rifle-ammo", modifier = 0.35})
-krastorio.technologies.addEffect("physical-projectile-damage-6", {type = "ammo-damage",	ammo_category = "anti-materiel-rifle-ammo", modifier = 0.35})
-krastorio.technologies.addEffect("physical-projectile-damage-7", {type = "ammo-damage",	ammo_category = "anti-materiel-rifle-ammo", modifier = 0.1})
+krastorio.technologies.addEffect("physical-projectile-damage-1", {type = "ammo-damage",	ammo_category = "anti-material-rifle-ammo", modifier = 0.25})
+krastorio.technologies.addEffect("physical-projectile-damage-2", {type = "ammo-damage",	ammo_category = "anti-material-rifle-ammo", modifier = 0.25})
+krastorio.technologies.addEffect("physical-projectile-damage-3", {type = "ammo-damage",	ammo_category = "anti-material-rifle-ammo", modifier = 0.25})
+krastorio.technologies.addEffect("physical-projectile-damage-4", {type = "ammo-damage",	ammo_category = "anti-material-rifle-ammo", modifier = 0.35})
+krastorio.technologies.addEffect("physical-projectile-damage-5", {type = "ammo-damage",	ammo_category = "anti-material-rifle-ammo", modifier = 0.35})
+krastorio.technologies.addEffect("physical-projectile-damage-6", {type = "ammo-damage",	ammo_category = "anti-material-rifle-ammo", modifier = 0.35})
+krastorio.technologies.addEffect("physical-projectile-damage-7", {type = "ammo-damage",	ammo_category = "anti-material-rifle-ammo", modifier = 0.1})
 
-krastorio.technologies.addEffect("weapon-shooting-speed-1", {type = "gun-speed", ammo_category = "anti-materiel-rifle-ammo", modifier = 0.2})
-krastorio.technologies.addEffect("weapon-shooting-speed-2", {type = "gun-speed", ammo_category = "anti-materiel-rifle-ammo", modifier = 0.2})
-krastorio.technologies.addEffect("weapon-shooting-speed-3", {type = "gun-speed", ammo_category = "anti-materiel-rifle-ammo", modifier = 0.15})
-krastorio.technologies.addEffect("weapon-shooting-speed-4", {type = "gun-speed", ammo_category = "anti-materiel-rifle-ammo", modifier = 0.15})
-krastorio.technologies.addEffect("weapon-shooting-speed-5", {type = "gun-speed", ammo_category = "anti-materiel-rifle-ammo", modifier = 0.15})
-krastorio.technologies.addEffect("weapon-shooting-speed-6", {type = "gun-speed", ammo_category = "anti-materiel-rifle-ammo", modifier = 0.15})
+krastorio.technologies.addEffect("weapon-shooting-speed-1", {type = "gun-speed", ammo_category = "anti-material-rifle-ammo", modifier = 0.2})
+krastorio.technologies.addEffect("weapon-shooting-speed-2", {type = "gun-speed", ammo_category = "anti-material-rifle-ammo", modifier = 0.2})
+krastorio.technologies.addEffect("weapon-shooting-speed-3", {type = "gun-speed", ammo_category = "anti-material-rifle-ammo", modifier = 0.15})
+krastorio.technologies.addEffect("weapon-shooting-speed-4", {type = "gun-speed", ammo_category = "anti-material-rifle-ammo", modifier = 0.15})
+krastorio.technologies.addEffect("weapon-shooting-speed-5", {type = "gun-speed", ammo_category = "anti-material-rifle-ammo", modifier = 0.15})
+krastorio.technologies.addEffect("weapon-shooting-speed-6", {type = "gun-speed", ammo_category = "anti-material-rifle-ammo", modifier = 0.15})
 
 -- Technology for railgun turret
 

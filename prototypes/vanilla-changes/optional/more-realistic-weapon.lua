@@ -206,7 +206,7 @@ data:extend(
 	{
 		type = "recipe",
 		name = "firearm-magazine",
-		energy_required = 60,
+		energy_required = 1,
 		enabled = true,
 		ingredients =
 		{
@@ -329,7 +329,7 @@ data:extend(
 	{
 		type = "recipe",
 		name = "piercing-rounds-magazine",
-		energy_required = 60,
+		energy_required = 1,
 		enabled = false,
 		ingredients =
 		{
@@ -473,13 +473,13 @@ data:extend(
 	{
 		type = "recipe",
 		name = "rifle-magazine",
-		energy_required = 60,
+		energy_required = 2,
 		enabled = false,
 		ingredients =
 		{
-			{"coal", 2},
-			{"iron-plate", 2},
-			{"copper-plate", 1}
+			{"coal", 4},
+			{"iron-plate", 4},
+			{"copper-plate", 2}
 		},
 		result = "rifle-magazine"	
     },
@@ -597,12 +597,12 @@ data:extend(
 	{
 		type = "recipe",
 		name = "armor-piercing-rifle-magazine",
-		energy_required = 60,
+		energy_required = 3,
 		enabled = false,
 		ingredients =
 		{
 			{"rifle-magazine", 1},
-			{"steel-plate", 2},
+			{"steel-plate", 4},
 		},
 		result = "armor-piercing-rifle-magazine"	
     },
@@ -720,6 +720,19 @@ data:extend(
 		light = {intensity = 0.25, size = 7, color = {r=0.5, g=1, b=0.5}},
 	},
 	
+	{
+		type = "recipe",
+		name = "uranium-rifle-magazine",
+		energy_required = 4,
+		enabled = false,
+		ingredients =
+		{
+			{"rifle-magazine", 1},
+			{"uranium-238", 4},
+		},
+		result = "uranium-rifle-magazine"
+    },
+	
 -- ---------------------------------------------------------------------------------------------------------------- --
 	
 	{
@@ -831,12 +844,25 @@ data:extend(
 		hit_at_collision_position = true,
 		force_condition = "not-same",
 		light = {intensity = 0.25, size = 8, color = {r=1, g=0.45, b=0.8}},
-	}
+	},
+	
+	{
+		type = "recipe",
+		name = "imersite-rifle-magazine",
+		energy_required = 5,
+		enabled = false,
+		ingredients =
+		{
+			{"rifle-magazine", 1},
+			{"imersite-crystal", 4},
+		},
+		result = "imersite-rifle-magazine"
+    },
 	
 })
 
 ----------------------------------------------------------------------------------------------------------------------
------------------------------------------ -- ANTI-MATERIEL-RIFLE STUFF -- --------------------------------------------
+----------------------------------------- -- ANTI-MATERIAL RIFLE STUFF -- --------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------
 	
 data:extend(
@@ -845,15 +871,15 @@ data:extend(
 
 	{
 		type = "gun",
-		name = "anti-materiel-rifle",
-		icon = kr_guns_icons_path .. "anti-materiel-rifle.png",
+		name = "anti-material-rifle",
+		icon = kr_guns_icons_path .. "anti-material-rifle.png",
 		icon_size = 64,
 		subgroup = "gun",
-		order = "c1[anti-materiel-rifle]",
+		order = "c1[anti-material-rifle]",
 		attack_parameters =
 		{
 			type = "projectile",
-			ammo_category = "anti-materiel-rifle-ammo",
+			ammo_category = "anti-material-rifle-ammo",
 			cooldown = 60,
 			movement_slow_down_factor = 0.9,
 			shell_particle =
@@ -881,21 +907,35 @@ data:extend(
 		stack_size = 10
 	},
 	
+	{
+		type = "recipe",
+		name = "anti-material-rifle",
+		energy_required = 20,
+		enabled = false,
+		ingredients =
+		{
+			{"submachine-gun", 1},
+			{"steel-plate", 4},
+			{"plastic-bar", 2},
+		},
+		result = "anti-material-rifle"
+    },
+	
 -- ---------------------------------------------------------------------------------------------------------------- --
 
 	{
 		type = "ammo",
-		name = "anti-materiel-rifle-magazine",
-		icon = kr_items_with_variations_icons_path .. "ammo/anti-materiel-rifle-ammo-1.png",
+		name = "anti-material-rifle-magazine",
+		icon = kr_items_with_variations_icons_path .. "ammo/anti-material-rifle-ammo-1.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_items_with_variations_icons_path .. "ammo/anti-materiel-rifle-ammo-1.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "ammo/anti-material-rifle-ammo-1.png",   scale = 0.25, mipmap_count = 4 },
 		},
 		ammo_type =
 		{
-			category = "anti-materiel-rifle-ammo",
+			category = "anti-material-rifle-ammo",
 			cooldown_modifier = 0.8,
 			target_type = "position",
 			action =
@@ -906,7 +946,7 @@ data:extend(
 				{
 					{
 						type = "projectile",
-						projectile = "anti-materiel-rifle-1",
+						projectile = "anti-material-rifle-1",
 						starting_speed = 3,
 						direction_deviation = 0.02,
 						range_deviation = 0.02,
@@ -925,13 +965,13 @@ data:extend(
 		},
 		magazine_size = 7,
 		subgroup = "ammo",
-		order = "a[basic-clips]-a07[anti-materiel-rifle-magazine]",
+		order = "a[basic-clips]-a07[anti-material-rifle-magazine]",
 		stack_size = 200
 	},
 	
 	{
 		type = "projectile",
-		name = "anti-materiel-rifle-1",
+		name = "anti-material-rifle-1",
 		flags = {"not-on-map"},
 		collision_box = {{-0.5, -1}, {0.5, 1}},
 		acceleration = -0.025,
@@ -972,7 +1012,7 @@ data:extend(
 		},
 		animation =
 		{
-			filename = kr_entities_path .. "bullets/anti-materiel-rifle-bullet-1.png",
+			filename = kr_entities_path .. "bullets/anti-material-rifle-bullet-1.png",
 			frame_count = 1,
 			width = 3,
 			height = 100,
@@ -980,7 +1020,7 @@ data:extend(
 		},
 		shadow =
 		{
-			filename = kr_entities_path .. "bullets/anti-materiel-rifle-bullet-1.png",
+			filename = kr_entities_path .. "bullets/anti-material-rifle-bullet-1.png",
 			frame_count = 1,
 			width = 3,
 			height = 100,
@@ -992,22 +1032,36 @@ data:extend(
 		light = {intensity = 0.45, size = 8, color = {r=1.0, g=1.0, b=0.5}},
 	},	
 	
+	{
+		type = "recipe",
+		name = "anti-material-rifle-magazine",
+		energy_required = 3,
+		enabled = false,
+		ingredients =
+		{
+			{"coal", 5},
+			{"iron-plate", 4},
+			{"copper-plate", 3}
+		},
+		result = "anti-material-rifle-magazine"
+    },
+	
 -- ---------------------------------------------------------------------------------------------------------------- --
 	
 	
 	{
 		type = "ammo",
-		name = "armor-piercing-anti-materiel-rifle-magazine",
-		icon = kr_items_with_variations_icons_path .. "ammo/anti-materiel-rifle-ammo-2.png",
+		name = "armor-piercing-anti-material-rifle-magazine",
+		icon = kr_items_with_variations_icons_path .. "ammo/anti-material-rifle-ammo-2.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_items_with_variations_icons_path .. "ammo/anti-materiel-rifle-ammo-2.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "ammo/anti-material-rifle-ammo-2.png",   scale = 0.25, mipmap_count = 4 },
 		},
 		ammo_type =
 		{
-			category = "anti-materiel-rifle-ammo",
+			category = "anti-material-rifle-ammo",
 			target_type = "position",
 			action =
 			{
@@ -1017,7 +1071,7 @@ data:extend(
 				{
 					{
 						type = "projectile",
-						projectile = "anti-materiel-rifle-ammo-2",
+						projectile = "anti-material-rifle-ammo-2",
 						starting_speed = 3,
 						direction_deviation = 0.02,
 						range_deviation = 0.02,
@@ -1036,13 +1090,13 @@ data:extend(
 		},
 		magazine_size = 7,
 		subgroup = "ammo",
-		order = "a[basic-clips]-a08[anti-materiel-rifle-magazine]",
+		order = "a[basic-clips]-a08[anti-material-rifle-magazine]",
 		stack_size = 200
 	},
 	
 	{
 		type = "projectile",
-		name = "anti-materiel-rifle-ammo-2",
+		name = "anti-material-rifle-ammo-2",
 		flags = {"not-on-map"},
 		collision_box = {{-0.5, -1}, {0.5, 1}},
 		acceleration = -0.025,
@@ -1082,7 +1136,7 @@ data:extend(
 		},
 		animation =
 		{
-			filename = kr_entities_path .. "bullets/anti-materiel-rifle-bullet-2.png",
+			filename = kr_entities_path .. "bullets/anti-material-rifle-bullet-2.png",
 			frame_count = 1,
 			width = 3,
 			height = 50,
@@ -1090,7 +1144,7 @@ data:extend(
 		},
 		shadow =
 		{
-			filename = kr_entities_path .. "bullets/anti-materiel-rifle-bullet-2.png",
+			filename = kr_entities_path .. "bullets/anti-material-rifle-bullet-2.png",
 			frame_count = 1,
 			width = 3,
 			height = 50,
@@ -1102,21 +1156,34 @@ data:extend(
 		light = {intensity = 0.45, size = 8, color = {r=1.0, g=0.8, b=0.5}},
 	},
 	
+	{
+		type = "recipe",
+		name = "armor-piercing-anti-material-rifle-magazine",
+		energy_required = 4,
+		enabled = false,
+		ingredients =
+		{
+			{"anti-material-rifle-magazine", 1},
+			{"steel-plate", 4}
+		},
+		result = "armor-piercing-anti-material-rifle-magazine"
+    },
+	
 -- ---------------------------------------------------------------------------------------------------------------- --
 	
 	{
 		type = "ammo",
-		name = "uranium-anti-materiel-rifle-magazine",
-		icon = kr_items_with_variations_icons_path .. "ammo/anti-materiel-rifle-ammo-3.png",
+		name = "uranium-anti-material-rifle-magazine",
+		icon = kr_items_with_variations_icons_path .. "ammo/anti-material-rifle-ammo-3.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_items_with_variations_icons_path .. "ammo/anti-materiel-rifle-ammo-3.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "ammo/anti-material-rifle-ammo-3.png",   scale = 0.25, mipmap_count = 4 },
 		},
 		ammo_type =
 		{
-			category = "anti-materiel-rifle-ammo",
+			category = "anti-material-rifle-ammo",
 			target_type = "position",
 			action =
 			{
@@ -1126,7 +1193,7 @@ data:extend(
 				{
 					{
 						type = "projectile",
-						projectile = "anti-materiel-rifle-ammo-3",
+						projectile = "anti-material-rifle-ammo-3",
 						starting_speed = 3,
 						direction_deviation = 0.02,
 						range_deviation = 0.02,
@@ -1145,13 +1212,13 @@ data:extend(
 		},
 		magazine_size = 7,
 		subgroup = "ammo",
-		order = "a[basic-clips]-a09[anti-materiel-rifle-magazine]",
+		order = "a[basic-clips]-a09[anti-material-rifle-magazine]",
 		stack_size = 200
 	},
 	
 	{
 		type = "projectile",
-		name = "anti-materiel-rifle-ammo-3",
+		name = "anti-material-rifle-ammo-3",
 		flags = {"not-on-map"},
 		collision_box = {{-0.5, -1}, {0.5, 1}},
 		acceleration = -0.025,
@@ -1195,7 +1262,7 @@ data:extend(
 		},
 		animation =
 		{
-			filename = kr_entities_path .. "bullets/anti-materiel-rifle-bullet-3.png",
+			filename = kr_entities_path .. "bullets/anti-material-rifle-bullet-3.png",
 			frame_count = 1,
 			width = 3,
 			height = 100,
@@ -1203,7 +1270,7 @@ data:extend(
 		},
 		shadow =
 		{
-			filename = kr_entities_path .. "bullets/anti-materiel-rifle-bullet-3.png",
+			filename = kr_entities_path .. "bullets/anti-material-rifle-bullet-3.png",
 			frame_count = 1,
 			width = 3,
 			height = 100,
@@ -1215,21 +1282,34 @@ data:extend(
 		light = {intensity = 0.45, size = 8, color = {r=0.5, g=1, b=0.5}},
 	},
 	
+	{
+		type = "recipe",
+		name = "uranium-anti-material-rifle-magazine",
+		energy_required = 5,
+		enabled = false,
+		ingredients =
+		{
+			{"anti-material-rifle-magazine", 1},
+			{"uranium-238", 4}
+		},
+		result = "uranium-anti-material-rifle-magazine"
+    },
+	
 -- ---------------------------------------------------------------------------------------------------------------- --
 	
 	{
 		type = "ammo",
-		name = "imersite-anti-materiel-rifle-magazine",
-		icon = kr_items_with_variations_icons_path .. "ammo/anti-materiel-rifle-ammo-4.png",
+		name = "imersite-anti-material-rifle-magazine",
+		icon = kr_items_with_variations_icons_path .. "ammo/anti-material-rifle-ammo-4.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_items_with_variations_icons_path .. "ammo/anti-materiel-rifle-ammo-4.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "ammo/anti-material-rifle-ammo-4.png",   scale = 0.25, mipmap_count = 4 },
 		},
 		ammo_type =
 		{
-			category = "anti-materiel-rifle-ammo",
+			category = "anti-material-rifle-ammo",
 			target_type = "position",
 			action =
 			{
@@ -1239,7 +1319,7 @@ data:extend(
 				{
 					{
 						type = "projectile",
-						projectile = "anti-materiel-rifle-ammo-4",
+						projectile = "anti-material-rifle-ammo-4",
 						starting_speed = 5,
 						direction_deviation = 0.02,
 						range_deviation = 0.02,
@@ -1258,13 +1338,13 @@ data:extend(
 		},
 		magazine_size = 7,
 		subgroup = "ammo",
-		order = "a[basic-clips]-a10[anti-materiel-rifle-magazine]",
+		order = "a[basic-clips]-a10[anti-material-rifle-magazine]",
 		stack_size = 200
 	},
 	
 	{
 		type = "projectile",
-		name = "anti-materiel-rifle-ammo-4",
+		name = "anti-material-rifle-ammo-4",
 		flags = {"not-on-map"},
 		collision_box = {{-0.5, -1}, {0.5, 1}},
 		acceleration = -0.02,
@@ -1308,7 +1388,7 @@ data:extend(
 		},
 		animation =
 		{
-			filename = kr_entities_path .. "bullets/anti-materiel-rifle-bullet-4.png",
+			filename = kr_entities_path .. "bullets/anti-material-rifle-bullet-4.png",
 			frame_count = 1,
 			width = 3,
 			height = 100,
@@ -1316,7 +1396,7 @@ data:extend(
 		},
 		shadow =
 		{
-			filename = kr_entities_path .. "bullets/anti-materiel-rifle-bullet-4.png",
+			filename = kr_entities_path .. "bullets/anti-material-rifle-bullet-4.png",
 			frame_count = 1,
 			width = 3,
 			height = 100,
@@ -1326,7 +1406,20 @@ data:extend(
 		hit_at_collision_position = true,
 		force_condition = "not-same",
 		light = {intensity = 0.5, size = 9, color = {r=1, g=0.45, b=0.8}},
-	}
+	},
+	
+	{
+		type = "recipe",
+		name = "imersite-anti-material-rifle-magazine",
+		energy_required = 5,
+		enabled = false,
+		ingredients =
+		{
+			{"anti-material-rifle-magazine", 1},
+			{"imersite-crystal", 4}
+		},
+		result = "imersite-anti-material-rifle-magazine"
+    },
 	
 })
 
@@ -1359,7 +1452,7 @@ data.raw.gun["rocket-launcher"].attack_parameters.range = 50
 
 -- -- Krastorio
 
-data.raw.gun["advanced-tank-machine-gun"].attack_parameters.ammo_category = "anti-materiel-rifle-ammo"
+data.raw.gun["advanced-tank-machine-gun"].attack_parameters.ammo_category = "anti-material-rifle-ammo"
 data.raw.gun["advanced-tank-machine-gun"].attack_parameters.range = 60
 data.raw.gun["advanced-tank-machine-gun"].attack_parameters.cooldown = 15
 data.raw.gun["advanced-tank-machine-gun"].sound =
@@ -1373,47 +1466,19 @@ data.raw.gun["advanced-tank-machine-gun"].sound =
 krastorio.technologies.removeUnlockRecipe("uranium-ammo", "uranium-rounds-magazine")
 krastorio.technologies.removeUnlockRecipe("kr-military-5", "imersite-rounds-magazine")
 
+krastorio.technologies.addUnlockRecipe("military", "rifle-magazine")
 
---krastorio.technologies.addUnlockRecipe("military-2", "uranium-rifle-magazine")
+krastorio.technologies.addUnlockRecipe("military-2", "armor-piercing-rifle-magazine")
 
---krastorio.technologies.addUnlockRecipe("uranium-ammo", "uranium-rifle-magazine")
---krastorio.technologies.addUnlockRecipe("uranium-ammo", "uranium-anti-materiel-rifle-magazine")
+krastorio.technologies.addUnlockRecipe("military-2", "anti-material-rifle")
+krastorio.technologies.addUnlockRecipe("military-2", "anti-material-rifle-magazine")
 
+krastorio.technologies.addUnlockRecipe("military-4", "armor-piercing-anti-material-rifle-magazine")
 
+krastorio.technologies.addUnlockRecipe("uranium-ammo", "uranium-rifle-magazine")
+krastorio.technologies.addUnlockRecipe("uranium-ammo", "uranium-anti-material-rifle-magazine")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+krastorio.technologies.addUnlockRecipe("kr-military-5", "imersite-rifle-magazine")
+krastorio.technologies.addUnlockRecipe("kr-military-5", "imersite-anti-material-rifle-magazine")
 	
 end
-
-	

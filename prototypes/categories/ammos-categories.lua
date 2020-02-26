@@ -53,10 +53,10 @@ data.raw["ammo-category"]["rifle-ammo"] =
 }
 
 -- Rifle and turret ammo
-data.raw["ammo-category"]["anti-materiel-rifle-ammo"] = 
+data.raw["ammo-category"]["anti-material-rifle-ammo"] = 
 {
 	bonus_gui_order = "t",
 	type = "ammo-category",
-	name = "anti-materiel-rifle-ammo"
+	name = "anti-material-rifle-ammo"
 }
 end
