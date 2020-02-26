@@ -31,10 +31,15 @@ data:extend(
 	
 	
 {
-  type = "ammo",
-  name = "firearm-magazine",
-  icon = "__base__/graphics/icons/firearm-magazine.png",
-  icon_size = 64,
+	type = "ammo",
+	name = "firearm-magazine",
+	icon = kr_mip_icons_path .. "ammo/pistol-ammo-1.png",
+	icon_size = 64,
+	icon_mipmaps = 4,
+	pictures =
+	{
+		{ size = 64, filename = kr_mip_icons_path .. "ammo/pistol-ammo-1.png",   scale = 0.25, mipmap_count = 4 },
+	},
   ammo_type =
   {
     category = "bullet",

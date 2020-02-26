@@ -6,7 +6,7 @@ data:extend(
     {
 		type = "ammo",
 		name = "imersite-rounds-magazine",
-		icon = kr_ammos_icons_path .. "imersite-rounds-magazine.png",
+		icon = kr_ammo_icons_path .. "imersite-rounds-magazine.png",
 		icon_size = 64,
 		ammo_type =
 		{
@@ -45,7 +45,7 @@ data:extend(
 	{
 		type = "ammo",
 		name = "antimatter-artillery-shell",
-		icon = kr_ammos_icons_path .. "antimatter-artillery-shell.png",
+		icon = kr_ammo_icons_path .. "antimatter-artillery-shell.png",
 		icon_size = 64,
 		ammo_type =
 		{
@@ -78,7 +78,7 @@ data:extend(
 		type = "ammo",
 		name = "impulse-rifle-ammo",
 		description = "impulse-rifle-ammo",
-		icon = kr_ammos_icons_path .. "impulse-rifle-ammo.png",
+		icon = kr_ammo_icons_path .. "impulse-rifle-ammo.png",
 		icon_size = 64,
 		ammo_type =
 		{
@@ -115,7 +115,7 @@ data:extend(
 	{
 		type = "ammo",
 		name = "heavy-rocket",
-		icon = kr_ammos_icons_path .. "heavy-rocket.png",
+		icon = kr_ammo_icons_path .. "heavy-rocket.png",
 		icon_size = 64,
 		ammo_type =
 		{
@@ -149,7 +149,7 @@ data:extend(
 	{
 		type = "ammo",
 		name = "antimatter-rocket",
-		icon = kr_ammos_icons_path .. "antimatter-rocket.png",
+		icon = kr_ammo_icons_path .. "antimatter-rocket.png",
 		icon_size = 64,
 		ammo_type =
 		{
@@ -184,7 +184,7 @@ data:extend(
     {
 		type = "ammo",
 		name = "basic-railgun-shell",
-		icon = kr_ammos_icons_path .. "basic-railgun-shell.png",
+		icon = kr_ammo_icons_path .. "basic-railgun-shell.png",
 		icon_size = 64,
 		ammo_type =
 		{
@@ -219,7 +219,7 @@ data:extend(
 		type = "ammo",
 		name = "explosion-railgun-shell",
 		description = "explosion-railgun-shell",
-		icon = kr_ammos_icons_path .. "explosion-railgun-shell.png",
+		icon = kr_ammo_icons_path .. "explosion-railgun-shell.png",
 		icon_size = 64,
 		ammo_type =
 		{
@@ -254,7 +254,7 @@ data:extend(
 		type = "ammo",
 		name = "antimatter-railgun-shell",
 		description = "antimatter-railgun-shell",
-		icon = kr_ammos_icons_path .. "antimatter-railgun-shell.png",
+		icon = kr_ammo_icons_path .. "antimatter-railgun-shell.png",
 		icon_size = 64,
 		ammo_type =
 		{
@@ -289,7 +289,7 @@ data:extend(
 		type = "ammo",
 		name = "explosion-rocket-for-turret",
 		description = "explosion-rocket-for-turret",
-		icon = kr_ammos_icons_path .. "explosion-rocket-for-turret.png",
+		icon = kr_ammo_icons_path .. "explosion-rocket-for-turret.png",
 		icon_size = 64,
 		ammo_type =
 		{
@@ -324,7 +324,7 @@ data:extend(
 		type = "ammo",
 		name = "nuclear-rocket-for-turret",
 		description = "nuclear-rocket-for-turret",
-		icon = kr_ammos_icons_path .. "nuclear-rocket-for-turret.png",
+		icon = kr_ammo_icons_path .. "nuclear-rocket-for-turret.png",
 		icon_size = 64,
 		ammo_type =
 		{
@@ -359,7 +359,7 @@ data:extend(
 		type = "ammo",
 		name = "antimatter-rocket-for-turret",
 		description = "antimatter-rocket-for-turret",
-		icon = kr_ammos_icons_path .. "antimatter-rocket-for-turret.png",
+		icon = kr_ammo_icons_path .. "antimatter-rocket-for-turret.png",
 		icon_size = 64,
 		ammo_type =
 		{

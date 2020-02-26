@@ -177,8 +177,17 @@ data:extend(
 	{
 		type = "item",
 		name = "electronic-components",
-		icon = kr_icons_path .. "electronic-components.png",
+		icon = kr_mip_icons_path .. "electronic-components/electronic-components.png",
 		icon_size = 64,
+		pictures =
+		{
+			{ size = 64, filename = kr_mip_icons_path .. "electronic-components/electronic-components.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "electronic-components/electronic-components-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "electronic-components/electronic-components-2.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "electronic-components/electronic-components-3.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "electronic-components/electronic-components-4.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_mip_icons_path .. "electronic-components/electronic-components-5.png", scale = 0.25, mipmap_count = 4 }
+		},
 		subgroup = "intermediate-product",
 		order = "e[ei-electronic-components]",
 		stack_size = 200
@@ -386,7 +395,7 @@ data:extend(
 		name = "lithium-chloride",
 		icon = kr_mip_icons_path .. "lithium-chloride/lithium-chloride.png",
 		icon_size = 64,
-		icon_mipmaps = 3,
+		icon_mipmaps = 4,
 		pictures =
 		{
 			{ size = 64, filename = kr_mip_icons_path .. "lithium-chloride/lithium-chloride.png",   scale = 0.25, mipmap_count = 4 },
