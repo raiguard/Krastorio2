@@ -23,6 +23,19 @@ data:extend(
 
 -- -- NEW POWER ARMORS (Tier MK3 and MK4)
 
+-- copying the animations of power armor mk2 to the higher tiers
+for _, animation in ipairs(data.raw["character"]["character"]["animations"]) do
+  if animation.armors then
+    for _, armor in ipairs(animation.armors) do
+      if armor == "power-armor-mk2" then
+        animation.armors[#animation.armors + 1] = "power-armor-mk3"
+		animation.armors[#animation.armors + 1] = "power-armor-mk4"
+        break
+      end
+    end
+  end
+end
+
 data:extend(
 {
 -----------------------------------------------------------------------------------------------------------------

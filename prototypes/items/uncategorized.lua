@@ -99,7 +99,7 @@ data:extend(
 							target_effects =
 							{
 								type = "damage",
-								damage = {type = "physical", amount = -100}
+								damage = {type = "physical", amount = -300}
 							}
 						}
 					}

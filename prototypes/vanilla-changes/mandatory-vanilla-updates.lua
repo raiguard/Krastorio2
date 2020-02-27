@@ -8,7 +8,6 @@ local modifications =
 	"technologies-changes",    -- Modifications to vanilla technologies
 	"apply-vanilla-technologies-tag", -- Apply a special tag to all vanilla technologies to recognize them
 	-- Low priority
-	"character-armor-changes",        -- Adding new armor tiers sprites
 	"entities-changes",               -- Entities/prototypes definition modifications
 	"equipments-changes",             -- Add properties or modify stat of equipments and armors
 	"icons-changes",                  -- Modify aspect of vanilla items (like science pack icons..)

@@ -43,7 +43,7 @@ data:extend(
 			movement_slow_down_factor = 0.80,
 			cooldown = 180,
 			projectile_creation_distance = 0.6,
-			range = 300,
+			range = 200,
 			projectile_center = {-0.17, 0},
 			sound =
 			{
@@ -54,8 +54,35 @@ data:extend(
 			}
 		},
 		stack_size = 5
-	}  
+	},
 -----------------------------------------------------------------------------------------------------------------
+	{
+		type = "gun",
+		name = "dolphin-gun",
+		icon = kr_guns_icons_path .. "dolphin-gun.png",
+		icon_size = 64,
+		subgroup = "gun",
+		order = "z[dolphin-gun]",
+		attack_parameters =
+		{
+			type = "projectile",
+			ammo_category = "heavy-rocket",
+			movement_slow_down_factor = 0.5,
+			cooldown = 90,
+			projectile_creation_distance = 0.6,
+			range = 300,
+			projectile_center = {-0.17, 0},
+			sound =
+			{
+				{
+					filename = kr_weapons_sounds_path .. "dolphin-gun.ogg",
+					volume = 1
+				}
+			}
+		},
+		stack_size = 1
+	},
+
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 })
