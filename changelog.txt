@@ -1,11 +1,23 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.0.1
-Date: 07.11.2019
+Version: 0.5.2
+Date: 27.02.2020
+  Changes:
+    - Add power generated in wind turbine in tooltips
+    - Fix that advance pickake tech don't have localized name
+    - Fix that antimatter assembler can't process items
+    - Wind turbines should be ordered in front of the steam engines + boilers
+    - Change big rock recipe from 5 to 20 stone in ingredients
+    - Nuclear locomotive tech fixed
+    - Shelter low resolution texture fixes
+    - And other small fixes
+---------------------------------------------------------------------------------------------------
+Version: 0.5.1
+Date: 27.02.2020
   Changes:
     - Added a tooltip to crash site buildings
     - Plates have right ores cost
 ---------------------------------------------------------------------------------------------------
-Version: 0.5.1
+Version: 0.5.0
 Date: 07.11.2019
   Features:
     - Starting alpha version
