@@ -175,11 +175,14 @@ styles["kr-wiki-back-button"] =
 -- Description labels
 styles["kr-wiki-description-label"] =
 {
-	  type = "label_style",
-	  parent = "label",
-	  font = "default",
-	  rich_text_setting = "enabled",
-	  single_line = false
+	type = "label_style",
+	parent = "label",
+	font = "default",
+	rich_text_setting = "enabled",
+	single_line = false,
+	vertically_stretchable = "on",
+	horizontally_stretchable = "off",
+	width = 500
 }
 
 styles["kr-wiki-image-flow"] =

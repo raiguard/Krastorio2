@@ -10,8 +10,11 @@ local topics =
 	{"gui.fusion-reactor"},
 	{"gui.inserters-hotkey"},
 	{"gui.intergalactic-transceiver"},
+	{"gui.matter-of-matter"},
+	{"gui.new-gun-play"},	
+	{"gui.new-metals"},	
 	{"gui.radiation"},
-	{"gui.roboports-hotkey"},
+	{"gui.roboports-hotkey"},	
 	{"gui.shelter"}
 }
 
@@ -63,6 +66,25 @@ function addImageToDescrptionGUIPane(pane, image_name, index)
 	})
 end
 
+function getPlayerDisplayResolution(event)
+	local player = game.players[event.player_index]
+	if player and player.valid then
+		return player.display_resolution
+	end
+end
+
+function getResolutionMultiplier(display_resolution)
+	local multiplier = 1.0
+	if display_resolution.width > 2560 then
+		multiplier = 1.2
+	elseif display_resolution.width > 1920 then
+		multiplier = 0.8
+	else
+		multiplier = 0.6
+	end
+	return multiplier
+end
+
 function showAirPurifierDescription(event)
 	local wiki_info_pane = getDescrptionGUIPane(event)
 	if wiki_info_pane then
@@ -107,7 +129,9 @@ function showFuelsDescription(event)
 		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.fuels")		
 		-- Fuels image
 		addImageToDescrptionGUIPane(wiki_info_pane, "kr-fuels-preview", 1)
-		
+		-- Description 1
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.fuels-description-1", 1)
+	
 	end
 end
 
@@ -157,6 +181,47 @@ function showIntergalacticTransceiverDescription(event)
 	end
 end
 
+function showMatterOfMatter(event)
+	local wiki_info_pane = getDescrptionGUIPane(event)
+	if wiki_info_pane then
+		
+		-- Title
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.matter-of-matter")	
+		-- Matter icon image
+		addImageToDescrptionGUIPane(wiki_info_pane, "kr-matter-preview", 1)		
+		-- Description 1
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.matter-of-matter-description-1", 1)
+		
+	end
+end
+
+function showNewGunPlay(event)
+	local wiki_info_pane = getDescrptionGUIPane(event)
+	if wiki_info_pane then
+		
+		-- Title
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.new-gun-play")			
+		-- Description 1
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.new-gun-play-description-1", 1)
+		
+	end
+end
+
+
+function showNewMetals(event)
+	local wiki_info_pane = getDescrptionGUIPane(event)
+	if wiki_info_pane then
+		
+		-- Title
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.new-metals")			
+		-- Description 1
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.rare-metals-description-1", 1)
+		-- Description 2
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.rare-metals-description-2", 2)
+		
+	end
+end
+
 function showRadiationDescription(event)
 	local wiki_info_pane = getDescrptionGUIPane(event)
 	if wiki_info_pane then
@@ -199,15 +264,18 @@ end
 
 local topics_gui =
 {
-	[1] = showAirPurifierDescription,
-	[2] = showCreepDescription,
-	[3] = showFuelsDescription,
-	[4] = showFusionReactorDescription,
-	[5]	= showInsertersHotkeyDescription,
-	[6] = showIntergalacticTransceiverDescription,
-	[7] = showRadiationDescription,
-	[8]	= showRoboportsHotkeyDescription,
-	[9] = showShelterDescription
+	[1]  = showAirPurifierDescription,
+	[2]  = showCreepDescription,
+	[3]  = showFuelsDescription,
+	[4]  = showFusionReactorDescription,
+	[5]	 = showInsertersHotkeyDescription,
+	[6]  = showIntergalacticTransceiverDescription,
+	[7]  = showMatterOfMatter,
+	[8]  = showNewGunPlay,
+	[9]  = showNewMetals,
+	[10]  = showRadiationDescription,
+	[11] = showRoboportsHotkeyDescription,
+	[12] = showShelterDescription
 }
 
 function changeWikiDescription(event)

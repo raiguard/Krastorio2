@@ -4,7 +4,7 @@ data:extend(
 	---
 	{
 		type     = "sprite",
-		name     = "air-purifier-preview-1",
+		name     = "air-purifier-preview-1",		
 		filename = kr_technologies_icons_path .. "air-purifier.png",
 		width    = 128,
 		height   = 128
@@ -17,7 +17,8 @@ data:extend(
 		height   = 128
 	},
 	---
-	-- Images
+	-- Creep
+	---
 	{
 		type     = "sprite",
 		name     = "kr-creep-preview-1",
@@ -33,6 +34,7 @@ data:extend(
 		width    = 232,
 		height   = 244
 	},
+	---
 	{
 		type     = "sprite",
 		name     = "kr-fuels-preview",
@@ -51,20 +53,6 @@ data:extend(
 	},
 	{
 		type     = "sprite",
-		name     = "kr-intergalactic-transceiver-preview",
-		filename = kr_graphic_mod_path .. "gui/previews/intergalactic-transceiver-preview.png",
-		width    = 700,
-		height   = 485
-	},
-	{
-		type     = "sprite",
-		name     = "kr-inserters-hotkey-preview",
-		filename = kr_graphic_mod_path .. "gui/previews/inserters-hotkey-preview.png",
-		width    = 700,
-		height   = 244
-	},
-	{
-		type     = "sprite",
 		name     = "kr-advanced-steam-turbine-preview",
 		filename = kr_graphic_mod_path .. "gui/previews/advanced-steam-turbine-preview.png",
 		width    = 227,
@@ -73,16 +61,41 @@ data:extend(
 	---
 	{
 		type     = "sprite",
+		name     = "kr-intergalactic-transceiver-preview",
+		filename = kr_graphic_mod_path .. "gui/previews/intergalactic-transceiver-preview.png",
+		width    = 700,
+		height   = 485,
+		scale    = 0.70
+	},
+	{
+		type     = "sprite",
+		name     = "kr-inserters-hotkey-preview",
+		filename = kr_graphic_mod_path .. "gui/previews/inserters-hotkey-preview.png",
+		width    = 700,
+		height   = 244,
+		scale    = 0.70
+	},
+	{
+		type     = "sprite",
+		name     = "kr-matter-preview",
+		filename = kr_technologies_icons_path .. "backgrounds/matter.png",
+		width    = 128,
+		height   = 128
+	},
+	{
+		type     = "sprite",
 		name     = "roboports-hotkey-preview",
 		filename = kr_graphic_mod_path .. "gui/previews/roboports-hotkey-preview.png",
 		width    = 700,
-		height   = 250
+		height   = 250,
+		scale    = 0.70
 	},
 	{
 		type     = "sprite",
 		name     = "kr-shelter-preview",
 		filename = kr_graphic_mod_path .. "gui/previews/shelter-preview.png",
 		width    = 584,
-		height   = 379
+		height   = 379,
+		scale    = 0.80
 	}	
 })

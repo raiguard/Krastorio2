@@ -76,7 +76,7 @@ it
 Matter of matter
 
 en
-You can turn almost any raw resource into elementary matter and create from it something more useful for you at the moment. But be prepared that it will require a huge amount of energy. Also, for more advanced recipes, you will need a charged matter stabilizer. It is important that the stabilizers are reusable, but with a probability of 1%, the stabilizer will break after completing the recipe.
+You can turn almost any raw resource into elementary matter and create from it something more useful for you at the moment. But be prepared that it will require a huge amount of energy. Also, for more advanced recipes, you will need a charged matter stabilizer [item=charged-matter-stabilizer]. It is important that the stabilizers are reusable, but with a probability of 1%, the stabilizer will break after completing the recipe.
 
 ru
 Вы можете превратить в элементарную материю практически любой сырой ресурс и создать из него что-то более полезное для вас в данный момент. Но будьте готовы, что это потребует огромного количества энергии. Также для более продвинутых рецептав вам потребуется заряженный стабилизатор материи. Важно, стабилизаторы многоразовые, но с вероятность в 1% стабилизатор сломается после выполнения рецепта.
