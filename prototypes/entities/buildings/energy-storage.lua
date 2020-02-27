@@ -28,7 +28,7 @@ data:extend(
 			type = "electric",
 			buffer_capacity = "250MJ",
 			usage_priority = "tertiary",
-			input_flow_limit = "5W",
+			input_flow_limit = "5MW",
 			output_flow_limit = "5MW"
 		},
 		picture = 

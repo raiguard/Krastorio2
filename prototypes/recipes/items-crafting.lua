@@ -257,6 +257,7 @@ return
 		{
 			{"low-density-structure", 5},
 			{"imersite-powder", 3},
+			{"electronic-components", 10},
 			{"lithium-sulfur-battery", 3}
 		},
 		result = "energy-control-unit"
@@ -364,7 +365,7 @@ return
 			{"explosive-turret-rocket", 1},
 			{"steel-plate", 10},
 			{"uranium-235", 10},
-			{"rocket-control-unit", 5}
+			{"rocket-control-unit", 1}
 		},
 		result = "nuclear-turret-rocket"
     },

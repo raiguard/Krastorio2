@@ -67,7 +67,7 @@ function krastorio.matter_func.createMatterRecipe(args)
 				},
 				energy_required = _energy_required,
 				enabled = false,
-				hidden = true,
+				hidden = false,
 				hide_from_player_crafting = true,
 				always_show_made_in = true,
 				always_show_products = true,

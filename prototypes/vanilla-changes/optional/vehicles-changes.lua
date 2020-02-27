@@ -38,6 +38,57 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 
 	data.raw.car["kr-advanced-tank"].burner.fuel_category = "vehicle-fuel"
 	
+	---------------------
+	-- -- Add Nuclear Locomotive
+	
+	data:extend(
+	{
+	
+	{
+		type = "recipe",
+		name = "kr-nuclear-locomotive",
+		energy_required = 200,
+		enabled = false,
+		allow_productivity = true,
+		ingredients =
+		{
+			{"locomotive", 1},
+			{"electronic-components", 20},
+			{"steel-gear-wheel", 20},
+			{"rare-metals", 50},
+		},
+		result = "kr-nuclear-locomotive"
+	},
+	
+	{
+		type = "technology",
+		name = "kr-nuclear-locomotive",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "nuclear-locomotive.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["kr-nuclear-locomotive"] or "kr-nuclear-locomotive"
+			}
+		},
+		prerequisites = {"railway", "nuclear-power", "production-science-pack"},
+		unit =
+		{
+			count = 500,
+			ingredients = 
+			{
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"production-science-pack", 1}
+			},
+			time = 60
+		}
+    },
+	
+	})
 	
 end
 
