@@ -27,12 +27,12 @@ data:extend(
 		prerequisites = {},
 		unit =
 		{
-			count = 30,
+			count = 15,
 			ingredients = 
 			{
 				{"basic-tech-card", 1}
 			},
-			time = 30
+			time = 20
 		}
     },
 	{

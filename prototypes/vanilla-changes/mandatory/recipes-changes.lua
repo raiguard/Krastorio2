@@ -425,6 +425,7 @@ krastorio.recipes.addOrReplaceProducts
 )
 
 	-- Increase uranium usage and ad stone as waste
+	
 krastorio.recipes.replaceIngredient("kovarex-enrichment-process", "uranium-235", {name = "uranium-235", amount = 50})
 krastorio.recipes.replaceIngredient("kovarex-enrichment-process", "uranium-238", {name = "uranium-238", amount = 8})
 
@@ -440,5 +441,24 @@ krastorio.recipes.replaceIngredient("nuclear-fuel-reprocessing", "used-up-uraniu
 krastorio.recipes.replaceProduct("nuclear-fuel-reprocessing", "uranium-238", {"uranium-238", 5})
 krastorio.recipes.addProduct("nuclear-fuel-reprocessing", {"stone", 5})
 krastorio.recipes.addProduct("nuclear-fuel-reprocessing", {type="item", name="tritium", probability = 0.05, amount=1})
+
+	-- More realistic weapons craft
+
+krastorio.recipes.replaceIngredient("pistol", "iron-plate", {"iron-plate", 2})
+krastorio.recipes.replaceIngredient("pistol", "copper-plate", {"copper-plate", 1})
+
+krastorio.recipes.replaceIngredient("submachine-gun", "iron-plate", {"iron-plate", 3})
+krastorio.recipes.replaceIngredient("submachine-gun", "copper-plate", {"copper-plate", 2})
+krastorio.recipes.replaceIngredient("submachine-gun", "iron-gear-wheel", {"iron-gear-wheel", 5})
+
+krastorio.recipes.replaceIngredient("shotgun", "wood", {"wood", 2})
+krastorio.recipes.replaceIngredient("shotgun", "iron-plate", {"iron-plate", 3})
+krastorio.recipes.replaceIngredient("shotgun", "copper-plate", {"copper-plate", 2})
+krastorio.recipes.replaceIngredient("shotgun", "iron-gear-wheel", {"iron-gear-wheel", 3})
+
+krastorio.recipes.replaceIngredient("combat-shotgun", "wood", {"wood", 3})
+krastorio.recipes.replaceIngredient("combat-shotgun", "steel-plate", {"steel-plate", 4})
+krastorio.recipes.replaceIngredient("combat-shotgun", "copper-plate", {"copper-plate", 2})
+krastorio.recipes.replaceIngredient("combat-shotgun", "iron-gear-wheel", {"iron-gear-wheel", 3})
 
 --------------------------------------------------------------------
