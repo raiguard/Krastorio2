@@ -314,5 +314,110 @@ return
 			{ "empty-antimatter-fuel-cell", 1 }
 		},
 		result = "charged-antimatter-fuel-cell"
-    }
+    },
+	{
+		type = "recipe",
+		name = "basic-railgun-shell",
+		enabled = false,
+		energy_required = 10,
+		ingredients =
+		{
+			{"steel-plate", 20},
+			{"explosives", 10},
+			{"advanced-circuit", 1}
+		},
+		result = "basic-railgun-shell"
+    },	
+	{
+		type = "recipe",
+		name = "explosion-railgun-shell",
+		enabled = false,
+		energy_required = 10,
+		ingredients =
+		{
+			{"basic-railgun-shell", 1},
+			{"explosives", 10}
+		},
+		result = "explosion-railgun-shell"
+    },	
+	{
+		type = "recipe",
+		name = "explosion-rocket-for-turret",
+		enabled = false,
+		energy_required = 20,
+		ingredients =
+		{
+			{"rocket-fuel", 10},
+			{"rocket-control-unit", 1},
+			{"steel-plate", 10},
+			{"explosives", 10}
+		},
+		result = "explosion-rocket-for-turret"
+    },	
+	{
+		type = "recipe",
+		name = "nuclear-rocket-for-turret",
+		enabled = false,
+		energy_required = 60,
+		ingredients =
+		{
+			{"explosion-rocket-for-turret", 1},
+			{"steel-plate", 10},
+			{"uranium-235", 10},
+			{"rocket-control-unit", 5}
+		},
+		result = "nuclear-rocket-for-turret"
+    },
+	{
+		type = "recipe",
+		name = "antimatter-rocket-for-turret",
+		enabled = false,
+		energy_required = 5,
+		ingredients =
+		{
+			{"explosion-rocket-for-turret", 1},
+			{"charged-antimatter-fuel-cell", 1},
+			{"processing-unit", 1}			
+		},
+		result = "antimatter-rocket-for-turret"
+	},
+	{
+		type = "recipe",
+		name = "antimatter-artillery-shell",
+		enabled = false,
+		energy_required = 5,
+		ingredients =
+		{
+			{"artillery-shell", 1},
+			{"charged-antimatter-fuel-cell", 1},
+			{"processing-unit", 1}		
+		},
+		result = "antimatter-artillery-shell"
+	},
+	{
+		type = "recipe",
+		name = "antimatter-rocket",
+		enabled = false,
+		energy_required = 5,
+		ingredients =
+		{
+			{"rocket", 2},
+			{"charged-antimatter-fuel-cell", 1},
+			{"processing-unit", 1}		
+		},
+		result = "antimatter-rocket"
+	},
+	{
+		type = "recipe",
+		name = "antimatter-railgun-shell",
+		enabled = false,
+		energy_required = 5,
+		ingredients =
+		{
+			{"basic-railgun-shell", 1},
+			{"charged-antimatter-fuel-cell", 1},
+			{"processing-unit", 1}		
+		},
+		result = "antimatter-railgun-shell"
+	}
 }

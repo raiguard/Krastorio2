@@ -840,6 +840,34 @@ return
 	},
 	{
 		type = "recipe",
+		name = "kr-railgun-turret",
+		enabled = false,
+		energy_required = 300,
+		ingredients =
+		{
+			{"gun-turret", 3},
+			{"steel-gear-wheel", 40},
+			{"processing-unit", 50},
+			{"plastic-bar", 20}
+		},
+		result = "kr-railgun-turret"
+    },  
+    {
+		type = "recipe",
+		name = "kr-rocket-turret",
+		enabled = false,
+		energy_required = 500,
+		ingredients =
+		{
+			{"rocket-launcher", 10},
+			{"steel-gear-wheel", 30},
+			{"processing-unit", 30},
+			{"plastic-bar", 30}
+		},
+		result = "kr-rocket-turret"
+    },
+	{
+		type = "recipe",
 		name = "kr-intergalactic-transceiver",
 		energy_required = 1200,
 		enabled = false,

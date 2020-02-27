@@ -8,6 +8,7 @@ data:extend(
 		name = "imersite-rounds-magazine",
 		icon = kr_ammo_icons_path .. "imersite-rounds-magazine.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		ammo_type =
 		{
 			category = "bullet",
@@ -47,6 +48,7 @@ data:extend(
 		name = "antimatter-artillery-shell",
 		icon = kr_ammo_icons_path .. "antimatter-artillery-shell.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		ammo_type =
 		{
 			category = "artillery-shell",
@@ -80,6 +82,7 @@ data:extend(
 		description = "impulse-rifle-ammo",
 		icon = kr_ammo_icons_path .. "impulse-rifle-ammo.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		ammo_type =
 		{
 			category = "impulse-rifle",
@@ -117,6 +120,7 @@ data:extend(
 		name = "heavy-rocket",
 		icon = kr_ammo_icons_path .. "heavy-rocket.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		ammo_type =
 		{
 			cooldown_modifier = 0.75,
@@ -151,6 +155,7 @@ data:extend(
 		name = "antimatter-rocket",
 		icon = kr_ammo_icons_path .. "antimatter-rocket.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		ammo_type =
 		{
 			range_modifier = 1,
@@ -186,6 +191,7 @@ data:extend(
 		name = "basic-railgun-shell",
 		icon = kr_ammo_icons_path .. "basic-railgun-shell.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		ammo_type =
 		{
 			category = "railgun-shell",
@@ -221,6 +227,7 @@ data:extend(
 		description = "explosion-railgun-shell",
 		icon = kr_ammo_icons_path .. "explosion-railgun-shell.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		ammo_type =
 		{
 			category = "railgun-shell",
@@ -256,6 +263,7 @@ data:extend(
 		description = "antimatter-railgun-shell",
 		icon = kr_ammo_icons_path .. "antimatter-railgun-shell.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		ammo_type =
 		{
 			category = "railgun-shell",
@@ -291,6 +299,7 @@ data:extend(
 		description = "explosion-rocket-for-turret",
 		icon = kr_ammo_icons_path .. "explosion-rocket-for-turret.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		ammo_type =
 		{
 			category = "missiles-for-turrets",
@@ -326,6 +335,7 @@ data:extend(
 		description = "nuclear-rocket-for-turret",
 		icon = kr_ammo_icons_path .. "nuclear-rocket-for-turret.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		ammo_type =
 		{
 			category = "missiles-for-turrets",
@@ -361,6 +371,7 @@ data:extend(
 		description = "antimatter-rocket-for-turret",
 		icon = kr_ammo_icons_path .. "antimatter-rocket-for-turret.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		ammo_type =
 		{
 			category = "missiles-for-turrets",
