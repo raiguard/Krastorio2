@@ -396,7 +396,7 @@ data:extend(
 		{			
 			{
 				type = "unlock-recipe",
-				recipe = krastorio.recipes.changed_names["antimatter-rocket-for-turret"] or "antimatter-rocket-for-turret"
+				recipe = krastorio.recipes.changed_names["antimatter-turret-rocket"] or "antimatter-turret-rocket"
 			},
 			{
 				type = "unlock-recipe",
@@ -411,12 +411,14 @@ data:extend(
 				recipe = krastorio.recipes.changed_names["antimatter-railgun-shell"] or "antimatter-railgun-shell"
 			}
 		},
-		prerequisites = {"kr-advanced-turrets", "kr-matter-tech-card"},
+		prerequisites = {"kr-railgun-turret", "kr-rocket-turret", "kr-singularity-tech-card"},
 		unit =
 		{
-			count = 1000,
+			count = 2000,
 			ingredients = 
 			{
+				{"kr-singularity-tech-card", 1},
+				{"kr-advanced-tech-card", 1},
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
 				{"space-science-pack", 1},
@@ -497,7 +499,7 @@ data:extend(
 				recipe = "kr-advanced-tank"
 			}
 		},
-		prerequisites = {"tanks", "kr-imersium-processing", "kr-advanced-tech-card"},
+		prerequisites = {"tanks", "kr-imersium-processing", "kr-advanced-tech-card", "kr-railgun-turret"},
 		unit =
 		{
 			count = 750,

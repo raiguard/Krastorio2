@@ -881,7 +881,7 @@ data:extend(
 			type = "projectile",
 			ammo_category = "anti-material-rifle-ammo",
 			cooldown = 60,
-			movement_slow_down_factor = 0.9,
+			movement_slow_down_factor = 0.5,
 			shell_particle =
 			{
 				name = "shell-particle",
@@ -1001,7 +1001,7 @@ data:extend(
 								{
 									{
 										type = "damage",
-										damage = {amount = 25, type = "physical"}
+										damage = {amount = 35, type = "physical"}
 									},
 								}
 							}
@@ -1125,7 +1125,7 @@ data:extend(
 								{
 									{
 										type = "damage",
-										damage = {amount = 35, type = "physical"}
+										damage = {amount = 45, type = "physical"}
 									},
 								}
 							}
@@ -1247,7 +1247,7 @@ data:extend(
 								{
 									{
 										type = "damage",
-										damage = {amount = 35, type = "physical"}
+										damage = {amount = 45, type = "physical"}
 									},
 									{
 										type = "damage",
@@ -1373,7 +1373,7 @@ data:extend(
 								{
 									{
 										type = "damage",
-										damage = {amount = 35, type = "physical"}
+										damage = {amount = 45, type = "physical"}
 									},
 									{
 										type = "damage",
@@ -1450,6 +1450,20 @@ data.raw.gun["tank-machine-gun"].attack_parameters.ammo_category = "rifle-ammo"
 data.raw.gun["tank-cannon"].attack_parameters.range = 50
 data.raw.gun["rocket-launcher"].attack_parameters.range = 50
 
+-- -- Vanilla worms
+
+data.raw.turret["small-worm-turret"].attack_parameters.range = 30
+data.raw.turret["small-worm-turret"].call_for_help_radius = 40
+
+data.raw.turret["medium-worm-turret"].attack_parameters.range = 35
+data.raw.turret["medium-worm-turret"].call_for_help_radius = 45
+
+data.raw.turret["big-worm-turret"].attack_parameters.range = 40
+data.raw.turret["big-worm-turret"].call_for_help_radius = 50
+
+data.raw.turret["behemoth-worm-turret"].attack_parameters.range = 55
+data.raw.turret["behemoth-worm-turret"].call_for_help_radius = 65
+
 -- -- Krastorio
 
 data.raw.gun["advanced-tank-machine-gun"].attack_parameters.ammo_category = "anti-material-rifle-ammo"
@@ -1480,5 +1494,5 @@ krastorio.technologies.addUnlockRecipe("uranium-ammo", "uranium-anti-material-ri
 
 krastorio.technologies.addUnlockRecipe("kr-military-5", "imersite-rifle-magazine")
 krastorio.technologies.addUnlockRecipe("kr-military-5", "imersite-anti-material-rifle-magazine")
-	
+
 end

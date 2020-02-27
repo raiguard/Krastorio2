@@ -1,19 +1,5 @@
 data:extend(
 {
-	-- Ammos
-	
-	{
-		type = "item-subgroup",
-		name = "railgun-shell",
-		group = "combat",
-		order = "e3"
-	},	
-	{
-		type = "item-subgroup",
-		name = "missiles-for-turrets",
-		group = "combat",
-		order = "e4"
-	},
 
 	-- Radars and rocket
 	{

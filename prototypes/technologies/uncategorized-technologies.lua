@@ -555,21 +555,17 @@ data:extend(
     },
 	{
 		type = "technology",
-		name = "kr-advanced-turrets",
+		name = "kr-railgun-turret",
 		mod = "Krastorio2",
-		icon = kr_technologies_icons_path .. "advanced-turrets.png",
+		icon = kr_technologies_icons_path .. "railgun-turret.png",
 		icon_size = 128,
-		prerequisites = {"kr-military-5", "space-science-pack"},
+		prerequisites = {"military-4", "utility-science-pack"},
 		effects =
 		{
 			{
 				type = "unlock-recipe",
 				recipe = "kr-railgun-turret"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "kr-rocket-turret"
-			},			
+			},		
 			{
 				type = "unlock-recipe",
 				recipe = krastorio.recipes.changed_names["basic-railgun-shell"] or "basic-railgun-shell"
@@ -577,14 +573,41 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = krastorio.recipes.changed_names["explosion-railgun-shell"] or "explosion-railgun-shell"
+			}
+		},
+		order = "g-f-z",
+		unit =
+		{
+			count = 1000,
+			ingredients = 
+			{
+				{"military-science-pack", 1},
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1}			
+			},
+			time = 60
+		}
+	},
+	{
+		type = "technology",
+		name = "kr-rocket-turret",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "rocket-turret.png",
+		icon_size = 128,
+		prerequisites = {"kr-military-5", "space-science-pack", "kr-railgun-turret"},
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-rocket-turret"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = krastorio.recipes.changed_names["explosion-rocket-for-turret"] or "explosion-rocket-for-turret"
+				recipe = krastorio.recipes.changed_names["explosive-turret-rocket"] or "explosive-turret-rocket"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = krastorio.recipes.changed_names["nuclear-rocket-for-turret"] or "nuclear-rocket-for-turret"
+				recipe = krastorio.recipes.changed_names["nuclear-turret-rocket"] or "nuclear-turret-rocket"
 			}
 		},
 		order = "g-f-z",
@@ -593,9 +616,10 @@ data:extend(
 			count = 1500,
 			ingredients = 
 			{
+				{"military-science-pack", 1},
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1}				
+				{"space-science-pack", 1}			
 			},
 			time = 60
 		}

@@ -216,8 +216,8 @@ data:extend(
 			}
 		},
 		magazine_size = 1,
-		subgroup = "railgun-shell",
-		order = "2[basic-railgun-shell]",
+		subgroup = "railgun-turret",
+		order = "b01[basic-railgun-shell]",
 		stack_size = 100
     },  
 -----------------------------------------------------------------------------------------------------------------
@@ -252,8 +252,8 @@ data:extend(
 			}
 		},
 		magazine_size = 1,
-		subgroup = "railgun-shell",
-		order = "3[explosion-railgun-shell]",
+		subgroup = "railgun-turret",
+		order = "b02[explosion-railgun-shell]",
 		stack_size = 100
     },  
 -----------------------------------------------------------------------------------------------------------------
@@ -288,14 +288,14 @@ data:extend(
 			}
 		},
 		magazine_size = 1,
-		subgroup = "railgun-shell",
-		order = "4[antimatter-railgun-shell]",
+		subgroup = "railgun-turret",
+		order = "b03[antimatter-railgun-shell]",
 		stack_size = 100
     },
 -----------------------------------------------------------------------------------------------------------------
 	{
 		type = "ammo",
-		name = "explosion-rocket-for-turret",
+		name = "explosive-turret-rocket",
 		description = "explosion-rocket-for-turret",
 		icon = kr_ammo_icons_path .. "explosion-rocket-for-turret.png",
 		icon_size = 64,
@@ -324,14 +324,14 @@ data:extend(
 			}
 		},
 		magazine_size = 1,
-		subgroup = "missiles-for-turrets",
-		order = "2[explosion-rocket-for-turret]",
+		subgroup = "rocket-turret",
+		order = "b01[explosion-rocket-for-turret]",
 		stack_size = 25
     },
 -----------------------------------------------------------------------------------------------------------------
 	{
 		type = "ammo",
-		name = "nuclear-rocket-for-turret",
+		name = "nuclear-turret-rocket",
 		description = "nuclear-rocket-for-turret",
 		icon = kr_ammo_icons_path .. "nuclear-rocket-for-turret.png",
 		icon_size = 64,
@@ -360,14 +360,14 @@ data:extend(
 			}
 		},
 		magazine_size = 1,
-		subgroup = "missiles-for-turrets",
-		order = "3[nuclear-rocket-for-turret]",
+		subgroup = "rocket-turret",
+		order = "b02[nuclear-rocket-for-turret]",
 		stack_size = 25
     },	
 -----------------------------------------------------------------------------------------------------------------
 	{
 		type = "ammo",
-		name = "antimatter-rocket-for-turret",
+		name = "antimatter-turret-rocket",
 		description = "antimatter-rocket-for-turret",
 		icon = kr_ammo_icons_path .. "antimatter-rocket-for-turret.png",
 		icon_size = 64,
@@ -396,8 +396,8 @@ data:extend(
 			}
 		},
 		magazine_size = 1,
-		subgroup = "missiles-for-turrets",
-		order = "4[antimatter-rocket-for-turret]",
+		subgroup = "rocket-turret",
+		order = "b03[antimatter-rocket-for-turret]",
 		stack_size = 25
     }
 -----------------------------------------------------------------------------------------------------------------

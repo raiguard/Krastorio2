@@ -342,7 +342,7 @@ return
     },	
 	{
 		type = "recipe",
-		name = "explosion-rocket-for-turret",
+		name = "explosive-turret-rocket",
 		enabled = false,
 		energy_required = 20,
 		ingredients =
@@ -352,34 +352,34 @@ return
 			{"steel-plate", 10},
 			{"explosives", 10}
 		},
-		result = "explosion-rocket-for-turret"
+		result = "explosive-turret-rocket"
     },	
 	{
 		type = "recipe",
-		name = "nuclear-rocket-for-turret",
+		name = "nuclear-turret-rocket",
 		enabled = false,
 		energy_required = 60,
 		ingredients =
 		{
-			{"explosion-rocket-for-turret", 1},
+			{"explosive-turret-rocket", 1},
 			{"steel-plate", 10},
 			{"uranium-235", 10},
 			{"rocket-control-unit", 5}
 		},
-		result = "nuclear-rocket-for-turret"
+		result = "nuclear-turret-rocket"
     },
 	{
 		type = "recipe",
-		name = "antimatter-rocket-for-turret",
+		name = "antimatter-turret-rocket",
 		enabled = false,
 		energy_required = 5,
 		ingredients =
 		{
-			{"explosion-rocket-for-turret", 1},
+			{"explosive-turret-rocket", 1},
 			{"charged-antimatter-fuel-cell", 1},
 			{"processing-unit", 1}			
 		},
-		result = "antimatter-rocket-for-turret"
+		result = "antimatter-turret-rocket"
 	},
 	{
 		type = "recipe",

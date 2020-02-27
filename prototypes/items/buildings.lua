@@ -452,7 +452,7 @@ data:extend(
 		icon = kr_entities_icons_path .. "railgun-turret.png",
 		icon_size = 64,
 		subgroup = "railgun-turret",
-		order = "a1[railgun-turret]",
+		order = "a01[railgun-turret]",
 		place_result = "kr-railgun-turret",
 		stack_size = 50
     },   
@@ -462,7 +462,7 @@ data:extend(
 		icon = kr_entities_icons_path .. "rocket-turret.png",
 		icon_size = 64,
 		subgroup = "rocket-turret",
-		order = "a2[rocket-turret]",
+		order = "a01[rocket-turret]",
 		place_result = "kr-rocket-turret",
 		stack_size = 50
     },

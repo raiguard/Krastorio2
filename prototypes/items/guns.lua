@@ -40,7 +40,7 @@ data:extend(
 		{
 			type = "projectile",
 			ammo_category = "heavy-rocket",
-			movement_slow_down_factor = 0.80,
+			movement_slow_down_factor = 0.75,
 			cooldown = 180,
 			projectile_creation_distance = 0.6,
 			range = 200,
@@ -67,7 +67,7 @@ data:extend(
 		{
 			type = "projectile",
 			ammo_category = "heavy-rocket",
-			movement_slow_down_factor = 0.5,
+			movement_slow_down_factor = 0.35,
 			cooldown = 90,
 			projectile_creation_distance = 0.6,
 			range = 300,

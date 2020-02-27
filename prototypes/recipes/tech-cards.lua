@@ -21,7 +21,7 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"biomass", 25},
+			{"biomass", 10},
 			{"coke", 5},
 			{"steel-plate", 5}			
 		},

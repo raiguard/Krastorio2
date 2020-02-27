@@ -107,7 +107,7 @@ data.raw["unit-spawner"]["spitter-spawner"].max_health = 1500
 
 data.raw["unit"]["medium-biter"].max_health = 100
 data.raw["unit"]["big-biter"].max_health = 500
-data.raw["unit"]["behemoth-biter"].max_health = 4500
+data.raw["unit"]["behemoth-biter"].max_health = 3750
 
 data.raw["unit"]["behemoth-biter"].pollution_to_join_attack = 500
 
@@ -115,12 +115,12 @@ data.raw["unit"]["behemoth-biter"].pollution_to_join_attack = 500
 
 data.raw["unit"]["medium-spitter"].max_health = 75
 data.raw["unit"]["big-spitter"].max_health = 375
-data.raw["unit"]["behemoth-spitter"].max_health = 3000
+data.raw["unit"]["behemoth-spitter"].max_health = 2500
 
 data.raw["unit"]["behemoth-spitter"].pollution_to_join_attack = 500
 
 -- -- Worms stats
 
-data.raw["turret"]["medium-worm-turret"].max_health = 750
-data.raw["turret"]["big-worm-turret"].max_health = 3000
+data.raw["turret"]["medium-worm-turret"].max_health = 950
+data.raw["turret"]["big-worm-turret"].max_health = 2500
 data.raw["turret"]["behemoth-worm-turret"].max_health = 7500

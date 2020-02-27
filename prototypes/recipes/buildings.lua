@@ -842,10 +842,11 @@ return
 		type = "recipe",
 		name = "kr-railgun-turret",
 		enabled = false,
-		energy_required = 300,
+		energy_required = 200,
 		ingredients =
 		{
-			{"gun-turret", 3},
+			{"gun-turret", 4},
+			{"steel-beam", 20},
 			{"steel-gear-wheel", 40},
 			{"processing-unit", 50},
 			{"plastic-bar", 20}
@@ -856,10 +857,11 @@ return
 		type = "recipe",
 		name = "kr-rocket-turret",
 		enabled = false,
-		energy_required = 500,
+		energy_required = 300,
 		ingredients =
 		{
 			{"rocket-launcher", 10},
+			{"steel-beam", 20},
 			{"steel-gear-wheel", 30},
 			{"processing-unit", 30},
 			{"plastic-bar", 30}
@@ -869,14 +871,16 @@ return
 	{
 		type = "recipe",
 		name = "kr-intergalactic-transceiver",
-		energy_required = 1200,
+		energy_required = 1800,
 		enabled = false,
 		ingredients =
 		{
 			{"imersium-beam", 500},
+			{"imersium-plate", 500},
+			{"rare-metals", 1000},
 			{"energy-control-unit", 500},
-			{"ai-core", 200},
-			{"concrete", 500}
+			{"ai-core", 300},
+			{"concrete", 750}
 		},
 		result = "kr-intergalactic-transceiver"		
 	}

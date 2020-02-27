@@ -5,6 +5,11 @@ data:extend(
 		name = "kr-creep-collector",
 		icon = kr_icons_path .. "items/creep-collector.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
+		pictures =
+		{
+			{ size = 64, filename = kr_icons_path .. "items/creep-collector.png",   scale = 0.25, mipmap_count = 4 }
+		},
 		flags = { "not-stackable" },
 		stack_size = 1,
 		subgroup = "terrain",

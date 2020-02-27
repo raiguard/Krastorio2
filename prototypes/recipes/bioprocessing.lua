@@ -11,11 +11,11 @@ return
 		{
 			{type="fluid", name="oxygen", amount=50},
 			{type="fluid", name="crude-oil", amount=50},
-			{name="biomass", amount=50}
+			{name="biomass", amount=1}
 		},
 		results =
 		{ 
-			{type="item", name="biomass", amount=60}
+			{type="item", name="biomass", amount=3}
 		},
 	}	
 }
