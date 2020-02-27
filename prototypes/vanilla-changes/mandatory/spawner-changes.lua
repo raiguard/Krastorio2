@@ -76,7 +76,7 @@ end
 -- For evolution factor of 1 the spawning probabilities are: small-biter 0%, medium-biter 1/8, big-biter 4/8, behemoth biter 3/8.
 spawn_rates =
 {
-	["small-biter"]      = {{0.0, 0.5}, {1.0, 0.1}},
+	["small-biter"]      = {{0.0, 0.8}, {1.0, 0.01}},
 	["medium-biter"]     = {{0.2, 0.0}, {0.6, 0.3}, {1.0, 0.1}},
 	["big-biter"]        = {{0.5, 0.0}, {1.0, 0.5}},
 	["behemoth-biter"]   = {{0.9, 0.0}, {1.0, 0.2}},

@@ -5,7 +5,7 @@ return
 		type = "recipe",
 		name = "kr-biomass-growing",
 		category = "bioprocessing",
-		energy_required = 180,
+		energy_required = 60,
 		enabled = false,
 		ingredients =
 		{
@@ -15,7 +15,7 @@ return
 		},
 		results =
 		{ 
-			{type="item", name="biomass", amount=3}
+			{type="item", name="biomass", amount=6}
 		},
 	}	
 }

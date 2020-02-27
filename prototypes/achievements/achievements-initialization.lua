@@ -5,7 +5,7 @@ data:extend(
         name = "10000-matter",
 		icons = 
 		{
-			{ icon = kr_achievements_icons_path .. "backgrounds/normal.png", icon_size = 128 },
+			{ icon = kr_achievements_icons_path .. "backgrounds/silver.png", icon_size = 128 },
 			{ icon = kr_achievements_icons_path .. "matter.png", icon_size = 128 }
 		},
 		icon_size = 128,
@@ -19,7 +19,7 @@ data:extend(
         name = "100000-matter",
 		icons = 
 		{
-			{ icon = kr_achievements_icons_path .. "backgrounds/silver.png", icon_size = 128 },
+			{ icon = kr_achievements_icons_path .. "backgrounds/gold.png", icon_size = 128 },
 			{ icon = kr_achievements_icons_path .. "matter.png", icon_size = 128 }
 		},
 		icon_size = 128,
@@ -33,7 +33,7 @@ data:extend(
         name = "1000000-matter",
 		icons = 
 		{
-			{ icon = kr_achievements_icons_path .. "backgrounds/gold.png", icon_size = 128 },
+			{ icon = kr_achievements_icons_path .. "backgrounds/epic.png", icon_size = 128 },
 			{ icon = kr_achievements_icons_path .. "matter.png", icon_size = 128 }
 		},
 		icon_size = 128,
@@ -41,6 +41,18 @@ data:extend(
 		limited_to_one_game = true,
 		fluid_product = "matter",
 		amount = 1000000
+    },
+	{
+        type = "research-achievement",
+        name = "destroyer-of-worlds",
+		icons = 
+		{
+			{ icon = kr_achievements_icons_path .. "backgrounds/epic.png", icon_size = 128 },
+			{ icon = kr_achievements_icons_path .. "destroyer-of-worlds.png", icon_size = 128 }
+		},
+		icon_size = 128,
+        order = "kr-p-m4",
+		technology = "kr-antimatter-ammo",
     },
 	{
         type = "build-entity-achievement",
@@ -55,5 +67,19 @@ data:extend(
 		limited_to_one_game = true,
 		to_build = "kr-quarry-drill",
 		amount = 1
-    }
+    },
+	{
+        type = "build-entity-achievement",
+        name = "death-on-wheels",
+		icons = 
+		{
+			{ icon = kr_achievements_icons_path .. "backgrounds/normal.png", icon_size = 128 },
+			{ icon = kr_achievements_icons_path .. "death-on-wheels.png", icon_size = 128 }
+		},
+		icon_size = 128,
+        order = "kr-b-2",
+		limited_to_one_game = true,
+		to_build = "kr-advanced-tank",
+		amount = 1
+    },
 })
