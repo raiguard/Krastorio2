@@ -27,6 +27,11 @@ end
 -- -- -- ITEMS
 --------------------------------------------------------------------
 
+-- Iron plate
+krastorio.recipes.replaceIngredient("iron-plate", "iron-ore", {"iron-ore", 2})
+-- Copper plate
+krastorio.recipes.replaceIngredient("copper-plate", "copper-ore", {"copper-ore", 2})
+
 -- Rocket fuel category
 krastorio.recipes.convertIngredientFromAllRecipes("nuclear-fuel", "rocket-fuel")
 krastorio.recipes.setCategoryIfExist("rocket-fuel", "fuel-refinery")

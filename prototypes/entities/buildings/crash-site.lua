@@ -29,12 +29,12 @@ local big_minable_ship_residues =
 local crash_site_lab_repaired_item = util.table.deepcopy(data.raw["item"]["crash-site-lab-repaired"])
 crash_site_lab_repaired_item.name = "kr-crash-site-lab-repaired"
 crash_site_lab_repaired_item.localised_name = {"entity-name.kr-damaged-ship-research-computer"}
-crash_site_lab_repaired_item.localised_description = {"entity-description.crash-site-lab-repaired"}
+crash_site_lab_repaired_item.localised_description = {"entity-description.kr-crash-site-building"}
 crash_site_lab_repaired_item.place_result = "kr-crash-site-lab-repaired"
 local crash_site_lab_repaired_entity = util.table.deepcopy(data.raw["lab"]["crash-site-lab-repaired"])
 crash_site_lab_repaired_entity.name = "kr-crash-site-lab-repaired"
 crash_site_lab_repaired_entity.localised_name = {"entity-name.kr-damaged-ship-research-computer"}
-crash_site_lab_repaired_entity.localised_description = {"entity-description.crash-site-lab-repaired"}
+crash_site_lab_repaired_entity.localised_description = {"entity-description.kr-crash-site-building"}
 crash_site_lab_repaired_entity.inputs = { "basic-tech-card" }
 crash_site_lab_repaired_entity.minable = big_minable_ship_residues
 data:extend({crash_site_lab_repaired_item, crash_site_lab_repaired_entity})
@@ -43,24 +43,24 @@ data:extend({crash_site_lab_repaired_item, crash_site_lab_repaired_entity})
 local crash_site_assembling_machine_1_repaired_item = util.table.deepcopy(data.raw["item"]["crash-site-assembling-machine-1-repaired"])
 crash_site_assembling_machine_1_repaired_item.name = "kr-crash-site-assembling-machine-1-repaired"
 crash_site_assembling_machine_1_repaired_item.localised_name = {"entity-name.kr-damaged-ship-assembler"}
-crash_site_assembling_machine_1_repaired_item.localised_description = {"entity-description.crash-site-assembling-machine-1-repaired"}
+crash_site_assembling_machine_1_repaired_item.localised_description = {"entity-description.kr-crash-site-building"}
 crash_site_assembling_machine_1_repaired_item.place_result = "kr-crash-site-assembling-machine-1-repaired"
 local crash_site_assembling_machine_1_repaired_entity = util.table.deepcopy(data.raw["assembling-machine"]["crash-site-assembling-machine-1-repaired"])
 crash_site_assembling_machine_1_repaired_entity.name = "kr-crash-site-assembling-machine-1-repaired"
 crash_site_assembling_machine_1_repaired_entity.localised_name = {"entity-name.kr-damaged-ship-assembler"}
-crash_site_assembling_machine_1_repaired_entity.localised_description = {"entity-description.crash-site-assembling-machine-1-repaired"}
+crash_site_assembling_machine_1_repaired_entity.localised_description = {"entity-description.kr-crash-site-building"}
 crash_site_assembling_machine_1_repaired_entity.minable = big_minable_ship_residues
 data:extend({crash_site_assembling_machine_1_repaired_item, crash_site_assembling_machine_1_repaired_entity})
 
 local crash_site_assembling_machine_2_repaired_item = util.table.deepcopy(data.raw["item"]["crash-site-assembling-machine-2-repaired"])
 crash_site_assembling_machine_2_repaired_item.name = "kr-crash-site-assembling-machine-2-repaired"
 crash_site_assembling_machine_2_repaired_item.localised_name = {"entity-name.kr-damaged-ship-assembler"}
-crash_site_assembling_machine_2_repaired_item.localised_description = {"entity-description.crash-site-assembling-machine-2-repaired"}
+crash_site_assembling_machine_2_repaired_item.localised_description = {"entity-description.kr-crash-site-building"}
 crash_site_assembling_machine_2_repaired_item.place_result = "kr-crash-site-assembling-machine-2-repaired"
 local crash_site_assembling_machine_2_repaired_entity = util.table.deepcopy(data.raw["assembling-machine"]["crash-site-assembling-machine-2-repaired"])
 crash_site_assembling_machine_2_repaired_entity.name = "kr-crash-site-assembling-machine-2-repaired"
 crash_site_assembling_machine_2_repaired_entity.localised_name = {"entity-name.kr-damaged-ship-assembler"}
-crash_site_assembling_machine_2_repaired_entity.localised_description = {"entity-description.crash-site-assembling-machine-2-repaired"}
+crash_site_assembling_machine_2_repaired_entity.localised_description = {"entity-description.kr-crash-site-building"}
 crash_site_assembling_machine_2_repaired_entity.minable = big_minable_ship_residues
 data:extend({crash_site_assembling_machine_2_repaired_item, crash_site_assembling_machine_2_repaired_entity})
 
@@ -68,12 +68,12 @@ data:extend({crash_site_assembling_machine_2_repaired_item, crash_site_assemblin
 local crash_site_generator_item = util.table.deepcopy(data.raw["item"]["crash-site-generator"])
 crash_site_generator_item.name = "kr-crash-site-generator"
 crash_site_generator_item.localised_name = {"entity-name.kr-damaged-ship-reactor"}
-crash_site_generator_item.localised_description = {"entity-description.crash-site-generator"}
+crash_site_generator_item.localised_description = {"entity-description.kr-crash-site-building"}
 crash_site_generator_item.place_result = "kr-crash-site-generator"
 local crash_site_generator_entity = util.table.deepcopy(data.raw["electric-energy-interface"]["crash-site-generator"])
 crash_site_generator_entity.name = "kr-crash-site-generator"
 crash_site_generator_entity.localised_name = {"entity-name.kr-damaged-ship-reactor"}
-crash_site_generator_entity.localised_description = {"entity-description.crash-site-generator"}
+crash_site_generator_entity.localised_description = {"entity-description.kr-crash-site-building"}
 crash_site_generator_entity.energy_source =
 {
   type = "electric",
@@ -90,12 +90,12 @@ data:extend({crash_site_generator_item, crash_site_generator_entity})
 local crash_site_chest_1_item = util.table.deepcopy(data.raw["item"]["crash-site-chest-1"])
 crash_site_chest_1_item.name = "kr-crash-site-chest-1"
 crash_site_chest_1_item.localised_name = {"entity-name.crash-site-chest-1"}
-crash_site_chest_1_item.localised_description = {"entity-description.crash-site-chest-1"}
+crash_site_chest_1_item.localised_description = {"entity-description.kr-crash-site-building"}
 crash_site_chest_1_item.place_result = "kr-crash-site-chest-1"
 local crash_site_chest_1_entity = util.table.deepcopy(data.raw["container"]["crash-site-chest-1"])
 crash_site_chest_1_entity.name = "kr-crash-site-chest-1"
 crash_site_chest_1_entity.localised_name = {"entity-name.crash-site-chest-1"}
-crash_site_chest_1_entity.localised_description = {"entity-description.crash-site-chest-1"}
+crash_site_chest_1_entity.localised_description = {"entity-description.kr-crash-site-building"}
 crash_site_chest_1_entity.minable = small_minable_ship_residues
 crash_site_chest_1_entity.inventory_size = 3
 data:extend({crash_site_chest_1_item, crash_site_chest_1_entity})
@@ -103,12 +103,12 @@ data:extend({crash_site_chest_1_item, crash_site_chest_1_entity})
 local crash_site_chest_2_item = util.table.deepcopy(data.raw["item"]["crash-site-chest-2"])
 crash_site_chest_2_item.name = "kr-crash-site-chest-2"
 crash_site_chest_2_item.localised_name = {"entity-name.crash-site-chest-2"}
-crash_site_chest_2_item.localised_description = {"entity-description.crash-site-chest-2"}
+crash_site_chest_2_item.localised_description = {"entity-description.kr-crash-site-building"}
 crash_site_chest_2_item.place_result = "kr-crash-site-chest-2"
 local crash_site_chest_2_entity = util.table.deepcopy(data.raw["container"]["crash-site-chest-2"])
 crash_site_chest_2_entity.name = "kr-crash-site-chest-2"
 crash_site_chest_2_entity.localised_name = {"entity-name.crash-site-chest-2"}
-crash_site_chest_2_entity.localised_description = {"entity-description.crash-site-chest-2"}
+crash_site_chest_2_entity.localised_description = {"entity-description.kr-crash-site-building"}
 crash_site_chest_2_entity.minable = small_minable_ship_residues
 crash_site_chest_2_entity.inventory_size = 3
 data:extend({crash_site_chest_2_item, crash_site_chest_2_entity})
