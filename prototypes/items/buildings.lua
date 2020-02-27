@@ -9,7 +9,7 @@ data:extend(
 		icon =  kr_entities_icons_path .. "wind-turbine.png",
 		icon_size = 64,
 		subgroup = "energy",
-		order = "c[solar-panel]-a[wind-turbine]",
+		order = "00[solar-panel]-a[wind-turbine]",
 		place_result = "kr-wind-turbine",
 		stack_size = 50
 	},

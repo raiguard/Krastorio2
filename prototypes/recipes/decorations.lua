@@ -139,7 +139,7 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"stone", 5}
+			{"stone", 25}
 		},
 		result = "rock-big",
 		result_count = 1

@@ -1432,6 +1432,8 @@ data:extend(
 
 -- -- Vanilla
 
+--data.raw["ammo-turret"]["gun-turret"].localised_name={"kr-gun-turret"}
+
 data.raw["ammo-turret"]["gun-turret"].attack_parameters.range = 25
 data.raw["ammo-turret"]["gun-turret"].attack_parameters.ammo_category = "rifle-ammo"
 
@@ -1494,5 +1496,7 @@ krastorio.technologies.addUnlockRecipe("uranium-ammo", "uranium-anti-material-ri
 
 krastorio.technologies.addUnlockRecipe("kr-military-5", "imersite-rifle-magazine")
 krastorio.technologies.addUnlockRecipe("kr-military-5", "imersite-anti-material-rifle-magazine")
+
+krastorio.technologies.addPrerequisite("turrets", "military")
 
 end
