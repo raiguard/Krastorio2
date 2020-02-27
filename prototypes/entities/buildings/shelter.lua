@@ -29,8 +29,8 @@ data:extend(
 				{
 					filename = kr_entities_path .. "shelter/shelter.png",
 					priority = "high",
-					width = 213,
-					height = 213,
+					width = 256,
+					height = 256,
 					scale = 0.9,
 					shift = {-0.05, 0},
 					frame_count = 6,
@@ -39,7 +39,7 @@ data:extend(
 					hr_version =
 					{
 						filename = kr_entities_path .. "shelter/hr-shelter.png",
-						priority = "medium",
+						priority = "high",
 						width = 512,
 						height = 512,
 						scale = 0.45,
@@ -52,8 +52,8 @@ data:extend(
 				{
 					filename = kr_entities_path .. "shelter/shelter-shadow.png",
 					priority = "high",
-					width = 213,
-					height = 213,
+					width = 256,
+					height = 256,
 					scale = 0.9,
 					shift = {0.42, 0},
 					frame_count = 6,
@@ -63,7 +63,7 @@ data:extend(
 					hr_version =
 					{
 						filename = kr_entities_path .. "shelter/hr-shelter-shadow.png",
-						priority = "medium",
+						priority = "high",
 						width = 512,
 						height = 512,
 						scale = 0.45,
