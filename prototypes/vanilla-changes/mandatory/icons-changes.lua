@@ -118,6 +118,6 @@ krastorio.icons.setItemIcon("plastic-bar",                            kr_items_i
 krastorio.icons.setItemIcon("copper-cable",                           kr_items_icons_path .. "copper-cable.png", 64, 4)
 krastorio.icons.setItemIcon("red-wire",                               kr_items_icons_path .. "red-wire.png", 64, 4)
 krastorio.icons.setItemIcon("green-wire",                             kr_items_icons_path .. "green-wire.png", 64, 4)
-krastorio.icons.setItemIcon("atomic-bomb",                            kr_icons_path .. "ammo/atomic-bomb.png")
-krastorio.icons.setItemIcon("artillery-shell",                        kr_icons_path .. "ammo/artillery-shell.png")
+krastorio.icons.setItemIcon("atomic-bomb",                            kr_icons_path .. "ammo/atomic-bomb.png", 64, 4)
+krastorio.icons.setItemIcon("artillery-shell",                        kr_icons_path .. "ammo/artillery-shell.png", 64, 4)
 -----------------------------------------------------------------

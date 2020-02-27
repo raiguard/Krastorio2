@@ -419,5 +419,19 @@ return
 			{"processing-unit", 1}		
 		},
 		result = "antimatter-railgun-shell"
-	}
+	},
+	{
+		type = "recipe",
+		name = "nuclear-artillery-shell",
+		enabled = false,
+		energy_required = 50,
+		ingredients =
+		{
+			{"rocket-control-unit", 10},
+			{"explosive-cannon-shell", 4},
+			{"radar", 1},
+			{"uranium-235", 30}
+		},
+		result = "nuclear-artillery-shell"
+	},
 }

@@ -127,6 +127,8 @@ krastorio.technologies.removeUnlockRecipe("oil-processing", "chemical-plant")
 
 krastorio.technologies.removeUnlockRecipe("kovarex-enrichment-process", "nuclear-fuel")
 
+krastorio.technologies.addUnlockRecipe("artillery", "nuclear-artillery-shell")
+
 --------------------------------------------------------------------
 -- Loaders
 if krastorio.general.getSafeSettingValue("kr-loaders") then

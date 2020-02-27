@@ -399,7 +399,39 @@ data:extend(
 		subgroup = "rocket-turret",
 		order = "b03[antimatter-rocket-for-turret]",
 		stack_size = 25
-    }
+    },
+	{
+		type = "ammo",
+		name = "nuclear-artillery-shell",
+		icon = kr_ammo_icons_path .. "nuclear-artillery-shell.png",
+		icon_size = 64,
+		icon_mipmaps = 4,
+		ammo_type =
+		{
+			category = "artillery-shell",
+			target_type = "position",
+			action =
+			{
+				type = "direct",
+				action_delivery =
+				{
+					type = "projectile",
+					projectile = "atomic-rocket",
+					starting_speed = 1,
+					direction_deviation = 0,
+					range_deviation = 0,
+					source_effects =
+					{
+						type = "create-entity",
+						entity_name = "artillery-cannon-muzzle-flash"
+					}
+				}
+			}
+		},
+		subgroup = "ammo",
+		order = "d[explosive-cannon-shell]-d[artillery]-a2[nuclear-artillery]",
+		stack_size = 1
+	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
