@@ -114,7 +114,6 @@ krastorio.icons.setItemIcon("pumpjack",                               kr_entitie
 
 -----------------------------------------------------------------
 -- -- -- OTHER
-krastorio.icons.setItemIcon("firearm-magazine",                       kr_items_with_variations_icons_path .. "ammo/pistol-ammo-1.png")
 krastorio.icons.setItemIcon("plastic-bar",                            kr_items_icons_path .. "plastic-bar.png", 64, 4)
 krastorio.icons.setItemIcon("copper-cable",                           kr_items_icons_path .. "copper-cable.png", 64, 4)
 krastorio.icons.setItemIcon("red-wire",                               kr_items_icons_path .. "red-wire.png", 64, 4)

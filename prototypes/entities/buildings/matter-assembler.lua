@@ -85,7 +85,7 @@ data:extend(
 				}
 				},
 				{
-				filename = kr_entities_path .. "matter-assembler/matter-assembler.png",
+				filename = kr_entities_path .. "matter-assembler/matter-assembler-sh.png",
 				priority = "high",
 				width = 254,
 				height = 223,
