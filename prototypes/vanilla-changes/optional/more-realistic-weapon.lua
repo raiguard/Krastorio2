@@ -88,7 +88,7 @@ data.raw.gun["submachine-gun"].attack_parameters.movement_slow_down_factor = 0.2
 
 data.raw.gun["pistol"].attack_parameters.ammo_category = "pistol-ammo"
 data.raw.gun["pistol"].attack_parameters.range = 22
-data.raw.gun["pistol"].attack_parameters.min_range =0.5
+data.raw.gun["pistol"].attack_parameters.min_range =0.75
 data.raw.gun["pistol"].attack_parameters.cooldown = 20
 data.raw.gun["pistol"].attack_parameters.movement_slow_down_factor = 0.15
 	
@@ -122,7 +122,7 @@ data:extend(
 						starting_speed = 1,
 						direction_deviation = 0.15,
 						range_deviation = 0.15,
-						max_range = 23,
+						max_range = 22,
 						source_effects =
 						{
 							{
@@ -245,7 +245,7 @@ data:extend(
 						starting_speed = 1.1,
 						direction_deviation = 0.15,
 						range_deviation = 0.15,
-						max_range = 23,
+						max_range = 22,
 						source_effects =
 						{
 							{
@@ -351,7 +351,7 @@ data.raw.ammo["piercing-rounds-magazine"].localised_name={"item-name.armor-pierc
 
 data.raw.gun["submachine-gun"].attack_parameters.ammo_category = "rifle-ammo"
 data.raw.gun["submachine-gun"].attack_parameters.range = 35
-data.raw.gun["submachine-gun"].attack_parameters.min_range =0.5
+data.raw.gun["submachine-gun"].attack_parameters.min_range =0.75
 data.raw.gun["submachine-gun"].attack_parameters.cooldown = 8
 data.raw.gun["submachine-gun"].attack_parameters.movement_slow_down_factor = 0.15
 	
@@ -388,7 +388,7 @@ data:extend(
 						starting_speed = 1.5,
 						direction_deviation = 0.15,
 						range_deviation = 0.15,
-						max_range = 60,
+						max_range = 35,
 						source_effects =
 						{
 							{
@@ -513,7 +513,7 @@ data:extend(
 						starting_speed = 1.75,
 						direction_deviation = 0.15,
 						range_deviation = 0.15,
-						max_range = 60,
+						max_range = 35,
 						source_effects =
 						{
 							{
@@ -635,7 +635,7 @@ data:extend(
 						starting_speed = 1.75,
 						direction_deviation = 0.15,
 						range_deviation = 0.15,
-						max_range = 60,
+						max_range = 35,
 						source_effects =
 						{
 							{
@@ -761,7 +761,7 @@ data:extend(
 						starting_speed = 2.25,
 						direction_deviation = 0.1,
 						range_deviation = 0.1,
-						max_range = 60,
+						max_range = 35,
 						source_effects =
 						{
 							{
@@ -881,7 +881,7 @@ data:extend(
 			type = "projectile",
 			ammo_category = "anti-material-rifle-ammo",
 			cooldown = 60,
-			movement_slow_down_factor = 0.5,
+			movement_slow_down_factor = 0.75,
 			shell_particle =
 			{
 				name = "shell-particle",
@@ -894,7 +894,7 @@ data:extend(
 				starting_frame_speed_deviation = 0.1
 			},
 			projectile_creation_distance = 1.125,
-			min_range = 1,
+			min_range = 2,
 			range = 70,
 			sound =
 			{
@@ -1001,7 +1001,7 @@ data:extend(
 								{
 									{
 										type = "damage",
-										damage = {amount = 35, type = "physical"}
+										damage = {amount = 45, type = "physical"}
 									},
 								}
 							}
@@ -1125,7 +1125,7 @@ data:extend(
 								{
 									{
 										type = "damage",
-										damage = {amount = 45, type = "physical"}
+										damage = {amount = 60, type = "physical"}
 									},
 								}
 							}
@@ -1247,11 +1247,11 @@ data:extend(
 								{
 									{
 										type = "damage",
-										damage = {amount = 45, type = "physical"}
+										damage = {amount = 60, type = "physical"}
 									},
 									{
 										type = "damage",
-										damage = {amount = 15, type = "radioactive"}
+										damage = {amount = 20, type = "radioactive"}
 									},
 								}
 							}
@@ -1373,11 +1373,11 @@ data:extend(
 								{
 									{
 										type = "damage",
-										damage = {amount = 45, type = "physical"}
+										damage = {amount = 60, type = "physical"}
 									},
 									{
 										type = "damage",
-										damage = {amount = 15, type = "laser"}
+										damage = {amount = 20, type = "laser"}
 									},
 								}
 							}
@@ -1434,6 +1434,8 @@ data:extend(
 
 --data.raw["ammo-turret"]["gun-turret"].localised_name={"kr-gun-turret"}
 
+
+
 data.raw["ammo-turret"]["gun-turret"].attack_parameters.range = 25
 data.raw["ammo-turret"]["gun-turret"].attack_parameters.ammo_category = "rifle-ammo"
 
@@ -1446,9 +1448,13 @@ data.raw["ammo"]["explosive-uranium-cannon-shell"].ammo_type.action.action_deliv
 data.raw.gun["artillery-wagon-cannon"].attack_parameters.range = 6 * 32
 
 data.raw.gun["vehicle-machine-gun"].attack_parameters.range = 25
+data.raw.gun["vehicle-machine-gun"].attack_parameters.min_range = 1.75
 data.raw.gun["vehicle-machine-gun"].attack_parameters.ammo_category = "rifle-ammo"
+
 data.raw.gun["tank-machine-gun"].attack_parameters.range = 25
+data.raw.gun["tank-machine-gun"].attack_parameters.min_range = 2
 data.raw.gun["tank-machine-gun"].attack_parameters.ammo_category = "rifle-ammo"
+
 data.raw.gun["tank-cannon"].attack_parameters.range = 50
 data.raw.gun["rocket-launcher"].attack_parameters.range = 50
 
@@ -1468,8 +1474,10 @@ data.raw.turret["behemoth-worm-turret"].call_for_help_radius = 65
 
 -- -- Krastorio
 
+data.raw.gun["advanced-tank-machine-gun"].icon = kr_guns_icons_path .. "anti-material-rifle.png"
 data.raw.gun["advanced-tank-machine-gun"].attack_parameters.ammo_category = "anti-material-rifle-ammo"
 data.raw.gun["advanced-tank-machine-gun"].attack_parameters.range = 60
+data.raw.gun["advanced-tank-machine-gun"].attack_parameters.min_range = 3.5
 data.raw.gun["advanced-tank-machine-gun"].attack_parameters.cooldown = 15
 data.raw.gun["advanced-tank-machine-gun"].sound =
 												{
