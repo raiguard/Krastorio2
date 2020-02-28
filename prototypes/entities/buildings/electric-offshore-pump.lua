@@ -57,6 +57,7 @@ data:extend(
 		category = "kr-electric-offshore-pump-crafting_categories",
 		energy_required = 1,
 		enabled = true,
+		hidden = true,
 		ingredients = {},
 		results =
 		{ 
