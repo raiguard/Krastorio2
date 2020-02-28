@@ -1,7 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.5
 Date: 28.02.2020
+  Features:
+    - Added color luts for nightvision.
+    - Added light to activated IT.
   Changes:
+    - Gunplay improvements.
+    - Changed the place of pipes on Advanced chemical plant (now it mix with new and old sprites...will be fixed soon).
     - Reduced steam engine technology pack units consumed from 30 to 20.
     - Reduced crusher technology pack units consumed from 50 to 30.
     - Reduced electric mining drill technology pack units consumed from 30 to 20.
