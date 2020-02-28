@@ -39,6 +39,10 @@ local scripts =
 	require(control_scripts_path .. "creep-collector"),
 	-- for future updates...
 	require(control_scripts_path .. "planetary-teleporters"),
+	-- Electric offshore pump
+	require(control_scripts_path .. "electric-offshore-pump"),
+	-- -- REMOTE INTERFACES
+	require(control_scripts_path .. "reset-krastorio-global-data"),
 	-- -- COMPATIBILITY
 	-- DiscoScience
 	require("__Krastorio2__/compatibility-scripts/control/DiscoScience")

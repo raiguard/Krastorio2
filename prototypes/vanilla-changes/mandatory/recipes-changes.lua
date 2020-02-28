@@ -1,9 +1,7 @@
 
 -- Disabling all vanilla recipes at the game start 
 krastorio.recipes.disable("electronic-circuit")
-krastorio.recipes.disable("transport-belt")
 krastorio.recipes.disable("inserter")
-krastorio.recipes.disable("burner-inserter")
 krastorio.recipes.disable("steam-engine")
 krastorio.recipes.disable("pipe")
 krastorio.recipes.disable("pipe-to-ground")

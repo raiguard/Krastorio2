@@ -12,11 +12,39 @@ local KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER =
     }
 }
 
+local function addRemoteInterface()
+	if not remote.interfaces["kr-intergalactic-transceiver"] then
+		remote.add_interface("kr-intergalactic-transceiver",
+		{
+			set_no_victory = 
+			function(bool)
+				if type(bool) ~= "boolean" then 
+					error("Value for 'set_no_victory' must be a boolean.")
+				end
+				global.krastorio_victory_disabled = bool
+			end,
+			charge_it =
+			function(force_index)
+				if type(force_index) ~= "number" then 
+					error("Value for 'force_index' must be a integer.")
+				end
+				if global.intergalactic_transceivers[force_index] then
+					global.intergalactic_transceivers[force_index].energy = global.intergalactic_transceivers[force_index].prototype.electric_energy_source_prototype.buffer_capacity
+				end			
+			end
+		})
+	end
+end
+
 local function onInitAndConf()
 	if not global.krastorio.script_initialization_status["intergalactic-transceiver"] then
 		intergalactic_transceiverVariablesInitializing()
 		global.krastorio.script_initialization_status["intergalactic-transceiver"] = true
 	end
+end
+
+local function onLoad()
+	addRemoteInterface()
 end
 
 -- Called when the game is created
@@ -25,26 +53,8 @@ function intergalactic_transceiverVariablesInitializing()
 	global.intergalactic_transceivers = {}
 	global.intergalactic_transceivers_energy_status = {}
 	global.game_won = false
-	-- interfaces
-	remote.add_interface("kr-intergalactic-transceiver",
-	{
-		set_no_victory = 
-		function(bool)
-			if type(bool) ~= "boolean" then 
-				error("Value for 'set_no_victory' must be a boolean.")
-			end
-			global.krastorio_victory_disabled = bool
-		end,
-		charge_it =
-		function(force_index)
-			if type(force_index) ~= "number" then 
-				error("Value for 'force_index' must be a integer.")
-			end
-			if global.intergalactic_transceivers[force_index] then
-				global.intergalactic_transceivers[force_index].energy = global.intergalactic_transceivers[force_index].prototype.electric_energy_source_prototype.buffer_capacity
-			end			
-		end
-	})
+	-- add interfaces
+	addRemoteInterface()
 end
 
 -- @event, on_built_entity or on_robot_built_entity
@@ -125,6 +135,7 @@ return
 	-- -- Bootstrap
 	-- For setup variables
 	{ onInitAndConf, "on_init" },
+	{ onLoad, "on_load" },
 	{ onInitAndConf, "on_configuration_changed" },	
 	-- -- Actions		
 	{ onBuiltAnEntity, "on_built_entity", KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER },

@@ -51,6 +51,18 @@ end
 
 data.raw["boiler"]["boiler"].energy_source.emissions_per_minute = 20
 
+-- Offshore pump energy modification
+
+if krastorio.entities.exist("offshore-pump", "offshore-pump") then
+	data.raw["offshore-pump"]["offshore-pump"].energy_source =
+	{
+		type = "electric",
+		usage_priority = "secondary-input",
+		drain = "1kW"
+	}
+	data.raw["offshore-pump"]["offshore-pump"].energy_usage = "19kW"
+end
+
 -- Pumpjack sprites modification
 
 data.raw["mining-drill"]["pumpjack"].icon = kr_entities_icons_path .. "oil-pumpjack.png"

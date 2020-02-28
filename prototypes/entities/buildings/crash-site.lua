@@ -37,6 +37,7 @@ crash_site_lab_repaired_entity.localised_name = {"entity-name.kr-damaged-ship-re
 crash_site_lab_repaired_entity.localised_description = {"entity-description.kr-crash-site-building"}
 crash_site_lab_repaired_entity.inputs = { "basic-tech-card" }
 crash_site_lab_repaired_entity.minable = big_minable_ship_residues
+crash_site_lab_repaired_entity.has_backer_name = false
 data:extend({crash_site_lab_repaired_item, crash_site_lab_repaired_entity})
 
 -- Assembling machines
@@ -50,6 +51,8 @@ crash_site_assembling_machine_1_repaired_entity.name = "kr-crash-site-assembling
 crash_site_assembling_machine_1_repaired_entity.localised_name = {"entity-name.kr-damaged-ship-assembler"}
 crash_site_assembling_machine_1_repaired_entity.localised_description = {"entity-description.kr-crash-site-building"}
 crash_site_assembling_machine_1_repaired_entity.minable = big_minable_ship_residues
+crash_site_assembling_machine_1_repaired_entity.crafting_speed = 0.5
+crash_site_assembling_machine_1_repaired_entity.has_backer_name = false
 data:extend({crash_site_assembling_machine_1_repaired_item, crash_site_assembling_machine_1_repaired_entity})
 
 local crash_site_assembling_machine_2_repaired_item = util.table.deepcopy(data.raw["item"]["crash-site-assembling-machine-2-repaired"])
@@ -62,6 +65,8 @@ crash_site_assembling_machine_2_repaired_entity.name = "kr-crash-site-assembling
 crash_site_assembling_machine_2_repaired_entity.localised_name = {"entity-name.kr-damaged-ship-assembler"}
 crash_site_assembling_machine_2_repaired_entity.localised_description = {"entity-description.kr-crash-site-building"}
 crash_site_assembling_machine_2_repaired_entity.minable = big_minable_ship_residues
+crash_site_assembling_machine_2_repaired_entity.crafting_speed = 0.25
+crash_site_assembling_machine_2_repaired_entity.has_backer_name = false
 data:extend({crash_site_assembling_machine_2_repaired_item, crash_site_assembling_machine_2_repaired_entity})
 
 -- Generator

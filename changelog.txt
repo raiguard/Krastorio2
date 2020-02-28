@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.6
+Date: 28.02.2020
+  Features:
+    - Added a remote command remote.call("kr-restore", "reset_global_data") that can be used for reset Krastorio 2 global data, in case some script changing will broke the save game.
+  Changes:
+    - Now transport belt and burner inserter can be crafted from the start like in vanilla.
+    - Added two more crash land assemblers.
+    - In the crash lands, 2 assemblers have two kind of crafting speed or 0.25 or 0.5 (2 and 2).
+    - Now offshore pump need to be powered, one wind turbine is sufficient for power it.
+---------------------------------------------------------------------------------------------------
 Version: 0.5.5
 Date: 28.02.2020
   Features:
