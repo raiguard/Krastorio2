@@ -1497,7 +1497,7 @@ krastorio.technologies.addUnlockRecipe("military-2", "armor-piercing-rifle-magaz
 krastorio.technologies.addUnlockRecipe("military-2", "anti-material-rifle")
 krastorio.technologies.addUnlockRecipe("military-2", "anti-material-rifle-magazine")
 
-krastorio.technologies.addUnlockRecipe("military-4", "armor-piercing-anti-material-rifle-magazine")
+krastorio.technologies.addUnlockRecipe("military-3", "armor-piercing-anti-material-rifle-magazine")
 
 krastorio.technologies.addUnlockRecipe("uranium-ammo", "uranium-rifle-magazine")
 krastorio.technologies.addUnlockRecipe("uranium-ammo", "uranium-anti-material-rifle-magazine")
