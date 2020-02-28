@@ -39,7 +39,6 @@ krastorio.recipes.addOrReplaceIngredient("rocket-fuel", "light-oil", {type="flui
 krastorio.recipes.replaceIngredient("rocket-fuel", "solid-fuel", {"iron-plate", 1})
 krastorio.recipes.addIngredient("rocket-fuel", {type="fluid", name="oxygen", amount=50})
 
-
 -- Apply automation core to the early game items
 krastorio.recipes.addIngredient("burner-inserter", {"automation-core", 1})
 krastorio.recipes.replaceIngredient("burner-inserter", "iron-plate", {"iron-stick", 2})
@@ -62,11 +61,11 @@ krastorio.recipes.overrideIngredients
 (
 	"steel-plate", 
 	{
-		{"iron-plate", 1},
-		{"coke", 1}
+		{"iron-plate", 10},
+		{"coke", 2}
 	}
 )
-krastorio.recipes.setEnergyCost("steel-plate", 3.2)
+krastorio.recipes.setEnergyCost("steel-plate", 16)
 
 krastorio.recipes.replaceIngredient("iron-gear-wheel", "iron-plate", {"iron-plate", 1})
 
@@ -268,6 +267,9 @@ for name, technology in pairs(data.raw.technology) do
 		end
 	end
 end	
+
+-- Exceptions
+krastorio.recipes.convertIngredient("fast-inserter", "automation-core", "electronic-circuit")
 
 -- Lamp (glass)
 krastorio.recipes.convertIngredient("small-lamp", "automation-core", "glass")

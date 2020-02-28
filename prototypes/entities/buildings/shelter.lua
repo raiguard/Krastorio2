@@ -8,6 +8,61 @@ local empty_sprite =
 	shift = {0, 0}
 }
 
+local shelter_animation =
+{
+	layers =
+	{
+		{
+			filename = kr_entities_path .. "shelter/shelter.png",
+			priority = "high",
+			width = 256,
+			height = 256,
+			scale = 0.9,
+			shift = {-0.05, 0},
+			frame_count = 6,
+			line_length = 3,
+			animation_speed = 0.5,
+			hr_version =
+			{
+				filename = kr_entities_path .. "shelter/hr-shelter.png",
+				priority = "high",
+				width = 512,
+				height = 512,
+				scale = 0.45,
+				shift = {-0.05, 0},
+				frame_count = 6,
+				line_length = 3,
+				animation_speed = 0.5
+			}
+		},
+		{
+			filename = kr_entities_path .. "shelter/shelter-shadow.png",
+			priority = "high",
+			width = 256,
+			height = 256,
+			scale = 0.9,
+			shift = {0.42, 0},
+			frame_count = 6,
+			line_length = 3,
+			animation_speed = 0.5,
+			draw_as_shadow = true,
+			hr_version =
+			{
+				filename = kr_entities_path .. "shelter/hr-shelter-shadow.png",
+				priority = "high",
+				width = 512,
+				height = 512,
+				scale = 0.45,
+				shift = {0.42, 0},
+				frame_count = 6,
+				line_length = 3,
+				animation_speed = 0.5,
+				draw_as_shadow = true
+			}
+		}
+	}
+}
+
 -- Shelter
 data:extend(
 {
@@ -22,60 +77,7 @@ data:extend(
 		minable = {mining_time = 2, result = "kr-shelter"},
 		collision_box = {{-2, -2}, {2, 2}},
 		selection_box = {{0, 0}, {0, 0}},
-		animation =
-		{
-			layers =
-			{
-				{
-					filename = kr_entities_path .. "shelter/shelter.png",
-					priority = "high",
-					width = 256,
-					height = 256,
-					scale = 0.9,
-					shift = {-0.05, 0},
-					frame_count = 6,
-					line_length = 3,
-					animation_speed = 0.5,
-					hr_version =
-					{
-						filename = kr_entities_path .. "shelter/hr-shelter.png",
-						priority = "high",
-						width = 512,
-						height = 512,
-						scale = 0.45,
-						shift = {-0.05, 0},
-						frame_count = 6,
-						line_length = 3,
-						animation_speed = 0.5
-					}
-				},
-				{
-					filename = kr_entities_path .. "shelter/shelter-shadow.png",
-					priority = "high",
-					width = 256,
-					height = 256,
-					scale = 0.9,
-					shift = {0.42, 0},
-					frame_count = 6,
-					line_length = 3,
-					animation_speed = 0.5,
-					draw_as_shadow = true,
-					hr_version =
-					{
-						filename = kr_entities_path .. "shelter/hr-shelter-shadow.png",
-						priority = "high",
-						width = 512,
-						height = 512,
-						scale = 0.45,
-						shift = {0.42, 0},
-						frame_count = 6,
-						line_length = 3,
-						animation_speed = 0.5,
-						draw_as_shadow = true
-					}
-				}
-			}
-		},
+		animation = shelter_animation,
 		continuous_animation = true,
 		energy_source =
 		{
@@ -98,7 +100,7 @@ data:extend(
 		icon = kr_entities_icons_path .. "shelter.png",
 		icon_size = 64,
 		allow_copy_paste = false,
-		flags = {"hidden", "player-creation", "not-rotatable", "not-blueprintable"},
+		flags = {"player-creation", "not-rotatable", "not-blueprintable"},
 		minable = {mining_time = 2, result = "kr-shelter"},
 		max_health = 1500,
 		corpse = "kr-big-random-pipes-remnant",
@@ -110,13 +112,11 @@ data:extend(
 			{type = "fire", percent = 75},
 			{type = "impact", percent = 75}
 		},
-		
+		picture = shelter_animation,
 		inventory_size = 200,
 		open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume = 0.5 },
 		close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.6 },
-		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-		picture = empty_sprite
-		
+		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },		
 	},
 	-- Shelter light
 	{

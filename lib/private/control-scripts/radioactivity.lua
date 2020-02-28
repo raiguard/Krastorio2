@@ -1,4 +1,7 @@
 local function onInitAndConf()
+	if not global.krastorio.radioactivity_lock then
+		global.krastorio.radioactivity_lock = true
+	end
 	if not global.krastorio.script_initialization_status["radioactivity"] then
 		setupKRRadioactivityGlobalVariables()
 		global.krastorio.script_initialization_status["radioactivity"] = true
@@ -71,7 +74,7 @@ local function radioactivity()
 				end				
 			end
 		end
-		global.radioactivity_lock = true
+		global.krastorio.radioactivity_lock = true
 	end
 end
 

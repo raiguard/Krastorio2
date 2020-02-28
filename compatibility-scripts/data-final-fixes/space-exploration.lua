@@ -4,6 +4,10 @@ if mods["space-exploration"] then
 
 -- -- Technologies
 ---------------------------------------------------------------------------------------------
+	
+	-- Radars
+	krastorio.technologies.convertPrerequisiteFromAllTechnologies("radar", "kr-radar", true)
+	data.raw.technology["radar"] = nil
 
 	-- --  Modules
 	-- Return to Krastorio 2/Vanilla modules on the first 3 tiers 
@@ -33,11 +37,11 @@ if mods["space-exploration"] then
 	krastorio.technologies.removeResearchUnitIngredient("effectivity-module-3", "se-biological-science-pack")
 
 	-- Removing tecs
+	krastorio.technologies.convertPrerequisiteFromAllTechnologies("se-antimatter-reactor", "kr-antimatter-reactor", true)
 	data.raw.technology["se-antimatter-reactor"] = nil
-	--krastorio.technologies.convertPrerequisiteFromAllTechnologies("se-antimatter-reactor", "kr-antimatter-reactor", true)
 	
-	data.raw.technology["se-fuel-refining"] = nil
 	krastorio.technologies.convertPrerequisiteFromAllTechnologies("se-fuel-refining", "kr-fuel", true)
+	data.raw.technology["se-fuel-refining"] = nil
 	krastorio.technologies.addUnlockRecipe("kr-fuel", "solid-fuel-from-petroleum-gas")
 	krastorio.technologies.addUnlockRecipe("kr-fuel", "solid-fuel-from-light-oil")
 	krastorio.technologies.addUnlockRecipe("kr-fuel", "solid-fuel-from-heavy-oil")
@@ -491,6 +495,24 @@ if mods["space-exploration"] then
 	)
 	
 	krastorio.recipes.setCategoryIfExist("rocket-fuel", "fuel-refinery")
+	
+	data:extend(
+	{
+		{
+			type = "recipe",
+			name = "space-science-pack",
+			category = "t3-tech-cards",
+			energy_required = 20,
+			enabled = false,
+			ingredients =
+			{
+				{"blank-tech-card", 10},
+				{"space-research-data", 5}
+			},
+			result = "space-science-pack",
+			result_count = 5
+		}
+	})
 	
 -- -- Icons
 ---------------------------------------------------------------------------------------------

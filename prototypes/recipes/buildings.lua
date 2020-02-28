@@ -94,7 +94,7 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"steel-beam", 1},
+			{"iron-beam", 1},
 			{"iron-plate", 2},
 			{"copper-cable", 1},
 			{"automation-core", 1}

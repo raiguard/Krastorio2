@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.3
+Date: 27.02.2020
+  Features:
+    - Added wiki closing via E or Esc key
+  Changes:
+    - Boosted greenhouse wood recipe from 180s to 60s
+    - Changed steel recipe from 5 iron 5 coke to 10 iron 2 coke 
+    - Changed coke fuel value from 8 to 10	
+    - Changed fast inserter automation core ingredient with a electric circuit
+  Fixes:
+    - Fixed some SE compatibility
+    - Fixed that shelter disapper after be hit	
+    - Fixed that radioactivity damage script do only one cicle
+---------------------------------------------------------------------------------------------------
 Version: 0.5.2
 Date: 27.02.2020
   Changes:

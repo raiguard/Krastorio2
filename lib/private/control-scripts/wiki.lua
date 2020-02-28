@@ -375,6 +375,9 @@ function createWiki(event)
 	})	
 	
 	local info_label = krastorio.gui.addDescription(wiki_info_pane, {name=w_prefix.."info", caption={"gui.info-description"}})	
+	
+	-- Add window frame to main player opened wiki
+	game.players[event.player_index].opened =	wiki_frame
 end
 
 function toggleWiki(event)
@@ -438,5 +441,6 @@ return
 { 
 	-- -- Bootstrap
 	{ initializeWiki, "on_player_created" },
+	{ closeWiki, "on_gui_closed" },
 	{ addremoveWikiButton, "on_runtime_mod_setting_changed"}
 }
