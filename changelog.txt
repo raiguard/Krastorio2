@@ -1,55 +1,71 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.5
+Date: 28.02.2020
+  Changes:
+    - Reduced steam engine technology pack units consumed from 30 to 20.
+    - Reduced crusher technology pack units consumed from 50 to 30.
+    - Reduced electric mining drill technology pack units consumed from 30 to 20.
+    - Reduced greenhouse technology pack units consumed from 60 to 40.
+    - Changed automation core crafting time from 3s to 1s.
+    - Reduced most of crafting times of early building from 60s to 30s.
+    - Reduced most of crafting times of others new building.
+  Fixes:
+    - Fixed SE unlockable Radar.
+    - Fixed that armors mk3 mk4 have the same grid of mk2.
+    - Fixed some option doesn't hidden unlockable items.	
+---------------------------------------------------------------------------------------------------
 Version: 0.5.4
 Date: 28.02.2020
   Changes:
-    - Steam engine max power 1MW --> 750kW
-    - Changed ratio for vanilla boiler:steam engine now it loke vanilla 1:2
-    - Some recipes was be hidden
-    - Some recipes was be unhidden
-    - Changed how work the intergalactic transceiver, now can be moved and replaced after the game is won
-    - Rebalanced again coke, now the recipe is 2 wood 2 coal -> 2 coke, referfed the fuel value to 8
-    - Nerfed greenhouse pollution absorbing from 10 to 7.5
-    - Boosted greenhouse grow recipes from 30 to 40
-    - Nerfed greenhouse grow with fertilizer from 90 to 80
-    - Nerfed greenhouse water consumption from 100 to 200
+    - Steam engine max power 1MW --> 750kW.
+    - Changed ratio for vanilla boiler:steam engine now it look vanilla 1:2.
+    - Some recipes was be hidden.
+    - Some recipes was be unhidden (sand and imersite poweder).
+    - Changed how work the intergalactic transceiver, now can be moved and replaced after the game is won.
+    - Rebalanced again coke, now the recipe is 2 wood 2 coal -> 2 coke, re-nerfed the fuel value to 8.
+    - Nerfed greenhouse pollution absorbing from 10 to 7.5.
+    - Boosted greenhouse wood grow recipes from 30 to 40.
+    - Nerfed greenhouse wood grow with fertilizer from 90 to 80.
+    - Nerfed greenhouse water consumption from 100 to 200 (both recipes).
   Fixes:
-    - Fixed that steel plate product was 5 time less than expected
-    - Fixed energy output priority for wind turbine and shelter
-    - Fixed that roboports hotkeys doesen't increase coverage area 25% larger than normal when changing mode to a single one
-    - Fixed SE satelite rocket_launch_product given
-    - Fixed SE shields techs overlaps
+    - Fixed that steel plate product was 5 time less than expected.
+    - Fixed energy output priority for wind turbine and shelter.
+    - Fixed that roboports hotkeys doesen't increase coverage area 25% larger than normal when changing mode to a single one.
+    - Fixed SE satelite rocket_launch_product given.
+    - Fixed SE shields techs overlaps.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.3
 Date: 27.02.2020
   Features:
-    - Added wiki closing via E or Esc key
+    - Added wiki closing via E or Esc key.
   Changes:
-    - Boosted greenhouse wood recipe from 180s to 60s
-    - Changed steel recipe from 5 iron 5 coke to 10 iron 2 coke 
-    - Changed coke fuel value from 8 to 10	
-    - Changed fast inserter automation core ingredient with a electric circuit
+    - Boosted greenhouse wood recipe from 180s to 60s.
+    - Changed steel recipe from 5 iron 5 coke to 10 iron 2 coke. 
+    - Changed coke fuel value from 8 to 10.	
+    - Changed fast inserter automation core ingredient with a electric circuit.
   Fixes:
-    - Fixed some SE compatibility
-    - Fixed that shelter disapper after be hit	
-    - Fixed that radioactivity damage script do only one cicle
+    - Fixed some SE compatibility.
+    - Fixed that shelter disapper after be hit.	
+    - Fixed that radioactivity damage script do only one cicle.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.2
 Date: 27.02.2020
   Changes:
-    - Add power generated in wind turbine in tooltips
-    - Fix that advance pickake tech don't have localized name
-    - Fix that antimatter assembler can't process items
-    - Wind turbines should be ordered in front of the steam engines + boilers
-    - Change big rock recipe from 5 to 20 stone in ingredients
-    - Nuclear locomotive tech fixed
-    - Shelter low resolution texture fixes
-    - And other small fixes
+    - Add power generated from wind turbine in their tooltips.
+    - Wind turbines should be ordered in front of the steam engines + boilers.
+    - Change big rock recipe from 5 to 20 stone in ingredients.
+    - Nuclear locomotive tech added.
+    - Shelter low resolution texture fixes.
+  Fixes:
+    - Fixed that advance pickake tech don't have localized name.
+    - Fixed that antimatter assembler can't process items.
+    - And other small fixes.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.1
 Date: 27.02.2020
   Changes:
-    - Added a tooltip to crash site buildings
-    - Plates have right ores cost
+    - Added a tooltip to crash site buildings.
+    - Plates have right ores cost.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.0
 Date: 07.11.2019

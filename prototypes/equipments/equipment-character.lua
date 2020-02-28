@@ -80,7 +80,7 @@ data:extend(
 		order = "f[power-armor-mk3]",
 		stack_size = 1,
 		infinite = true,
-		equipment_grid = "large-equipment-grid",
+		equipment_grid = "mk3-armor-grid",
 		inventory_size_bonus = 40	
 	},	
 ----------------------------------------------------------------------------------------------------------------- 
@@ -122,7 +122,7 @@ data:extend(
 		order = "g[power-armor-mk4]",
 		stack_size = 1,
 		infinite = true,
-		equipment_grid = "large-equipment-grid",
+		equipment_grid = "mk4-armor-grid",
 		inventory_size_bonus = 50	
 	},
 -----------------------------------------------------------------------------------------------------------------

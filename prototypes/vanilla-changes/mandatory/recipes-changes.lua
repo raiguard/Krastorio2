@@ -40,13 +40,20 @@ krastorio.recipes.replaceIngredient("rocket-fuel", "solid-fuel", {"iron-plate", 
 krastorio.recipes.addIngredient("rocket-fuel", {type="fluid", name="oxygen", amount=50})
 
 -- Apply automation core to the early game items
-krastorio.recipes.addIngredient("burner-inserter", {"automation-core", 1})
-krastorio.recipes.replaceIngredient("burner-inserter", "iron-plate", {"iron-stick", 2})
+krastorio.recipes.overrideIngredients
+(
+	"burner-inserter", 
+	{
+		{"automation-core", 1},
+		{"iron-stick", 1}
+	}
+)
 krastorio.recipes.overrideIngredients
 (
 	"inserter", 
 	{
-		{"burner-inserter", 1},
+		{"automation-core", 1},
+		{"iron-stick", 1},
 		{"copper-cable", 2}
 	}
 )

@@ -26,25 +26,26 @@ if #data.raw.furnace == 0 then
 	local _, first_assembler = next(data.raw["assembling-machine"])
 	local furnace = krastorio_utils.tables.fullCopy(first_assembler)
 	furnace.type = "furnace"
-	furnace.name = "shit-api-furnace"
+	furnace.name = "anti-crash-furnace"
 	furnace.flags = {"hidden"}
 	furnace.gui_mode = "none"
-	furnace.ubgroup = "other"
+	furnace.group = "other"
 	furnace.source_inventory_size = 1
 	furnace.result_inventory_size = 1
 	data:extend({
 	{
 		type = "item",
-		name = "shit-api-furnace",
+		name = "anti-crash-furnace",
+		flags = {"hidden"},
 		icon = "__base__/graphics/icons/stone-furnace.png",
-		icon_size = 32,
-		place_result = "shit-api-furnace",
+		icon_size = 64,
+		place_result = "anti-crash-furnace",
 		stack_size = 1
 	}})
 	data:extend({furnace})	
 end
 
-data.raw.item["shit-api-furnace"].flags = {"hidden"}
+
 
 -- Boilers
 

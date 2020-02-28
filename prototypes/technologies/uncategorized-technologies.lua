@@ -78,7 +78,7 @@ data:extend(
 		prerequisites = {"kr-automation-core", "kr-stone-processing"},
 		unit =
 		{
-			count = 60,
+			count = 40,
 			ingredients = 
 			{
 				{"basic-tech-card", 1}

@@ -55,7 +55,7 @@ data:extend(
 		prerequisites = {"kr-basic-fluid-handling"},
 		unit =
 		{
-			count = 30,
+			count = 20,
 			ingredients = 
 			{
 				{"basic-tech-card", 1}
@@ -119,7 +119,7 @@ data:extend(
 		prerequisites = {"kr-greenhouse"},
 		unit =
 		{
-			count = 60,
+			count = 30,
 			ingredients = 
 			{
 				{"basic-tech-card", 1}
@@ -143,7 +143,7 @@ data:extend(
 		prerequisites = {"kr-automation-core"},
 		unit =
 		{
-			count = 50,
+			count = 30,
 			ingredients = 
 			{
 				{"basic-tech-card", 1}
@@ -223,7 +223,7 @@ data:extend(
 		prerequisites = {"automation-science-pack"},
 		unit =
 		{
-			count = 40,
+			count = 20,
 			ingredients = 
 			{
 				{"basic-tech-card", 1},

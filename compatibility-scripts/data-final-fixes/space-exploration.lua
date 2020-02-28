@@ -7,6 +7,7 @@ if mods["space-exploration"] then
 	
 	-- Radars
 	krastorio.technologies.convertPrerequisiteFromAllTechnologies("radar", "kr-radar", true)
+	krastorio.technologies.addUnlockRecipe("kr-radar", "radar")
 	data.raw.technology["radar"] = nil
 
 	-- Shields

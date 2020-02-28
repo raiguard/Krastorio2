@@ -6,7 +6,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-greenhouse",
-		energy_required = 60,
+		energy_required = 20,
 		enabled = false,
 		ingredients =
 		{
@@ -20,7 +20,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-bio-lab",
-		energy_required = 60,
+		energy_required = 20,
 		enabled = false,
 		ingredients =
 		{
@@ -34,7 +34,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-crusher",
-		energy_required = 60,
+		energy_required = 20,
 		enabled = false,
 		ingredients =
 		{
@@ -48,7 +48,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-shelter",
-		energy_required = 60,
+		energy_required = 20,
 		enabled = false,
 		ingredients =
 		{
@@ -62,7 +62,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-mineral-water-pumpjack",
-		energy_required = 60,
+		energy_required = 20,
 		enabled = false,
 		ingredients =
 		{
@@ -118,7 +118,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-gas-power-station",
-		energy_required = 30,
+		energy_required = 20,
 		enabled = false,
 		ingredients =
 		{
@@ -149,7 +149,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-singularity-lab",
-		energy_required = 60,
+		energy_required = 30,
 		enabled = false,
 		ingredients =
 		{
@@ -180,7 +180,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-quantum-computer",
-		energy_required = 60,
+		energy_required = 30,
 		enabled = false,
 		ingredients =
 		{
@@ -443,7 +443,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-electrolysis-plant",
-		energy_required = 60,
+		energy_required = 20,
 		enabled = false,
 		ingredients =
 		{
@@ -457,7 +457,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-filtration-plant",
-		energy_required = 60,
+		energy_required = 20,
 		enabled = false,
 		ingredients =
 		{
@@ -471,7 +471,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-atmospheric-condenser",
-		energy_required = 60,
+		energy_required = 20,
 		enabled = false,
 		ingredients =
 		{
@@ -485,7 +485,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-fluid-burner",
-		energy_required = 30,
+		energy_required = 20,
 		enabled = false,
 		ingredients =
 		{
@@ -498,7 +498,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-quarry-drill",
-		energy_required = 120,
+		energy_required = 40,
 		enabled = false,
 		ingredients = 
 		{
@@ -581,7 +581,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-matter-assembler",
-		energy_required = 60,
+		energy_required = 40,
 		enabled = false,
 		ingredients =
 		{
@@ -595,7 +595,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-stabilizer-charging-station",
-		energy_required = 60,
+		energy_required = 40,
 		enabled = false,
 		ingredients =
 		{
@@ -720,7 +720,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-superior-inserter",
-		energy_required = 60,
+		energy_required = 10,
 		enabled = false,
 		ingredients =
 		{
@@ -734,7 +734,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-superior-long-inserter",
-		energy_required = 60,
+		energy_required = 10,
 		enabled = false,
 		ingredients =
 		{
@@ -746,7 +746,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-superior-filter-inserter",
-		energy_required = 60,
+		energy_required = 10,
 		enabled = false,
 		ingredients =
 		{
@@ -758,7 +758,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-superior-long-filter-inserter",
-		energy_required = 60,
+		energy_required = 10,
 		enabled = false,
 		ingredients =
 		{
@@ -771,7 +771,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-advanced-furnace",
-		energy_required = 60,
+		energy_required = 40,
 		enabled = false,
 		ingredients =
 		{
@@ -784,7 +784,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-advanced-chemical-plant",
-		energy_required = 60,
+		energy_required = 40,
 		enabled = false,
 		ingredients =
 		{
@@ -798,7 +798,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-large-roboport",
-		energy_required = 60,
+		energy_required = 40,
 		enabled = false,
 		ingredients =
 		{
@@ -812,7 +812,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-small-roboport",
-		energy_required = 60,
+		energy_required = 20,
 		enabled = false,
 		ingredients =
 		{
@@ -827,7 +827,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-singularity-beacon",
-		energy_required = 1200,
+		energy_required = 60,
 		enabled = false,
 		ingredients =
 		{
@@ -842,7 +842,7 @@ return
 		type = "recipe",
 		name = "kr-railgun-turret",
 		enabled = false,
-		energy_required = 200,
+		energy_required = 60,
 		ingredients =
 		{
 			{"gun-turret", 4},
@@ -857,7 +857,7 @@ return
 		type = "recipe",
 		name = "kr-rocket-turret",
 		enabled = false,
-		energy_required = 300,
+		energy_required = 60,
 		ingredients =
 		{
 			{"rocket-launcher", 10},

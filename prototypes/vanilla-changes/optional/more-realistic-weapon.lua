@@ -1423,9 +1423,6 @@ data:extend(
 	
 })
 
-
-
-
 ----------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------- -- EDIT THINGS -- ----------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------
@@ -1468,17 +1465,22 @@ data.raw.turret["behemoth-worm-turret"].call_for_help_radius = 65
 
 -- -- Krastorio
 
+data.raw.ammo["uranium-rounds-magazine"].flags = {"hidden"}
+data.raw.ammo["imersite-rounds-magazine"].flags = {"hidden"}
+
 data.raw.gun["advanced-tank-machine-gun"].attack_parameters.ammo_category = "anti-material-rifle-ammo"
 data.raw.gun["advanced-tank-machine-gun"].attack_parameters.range = 60
 data.raw.gun["advanced-tank-machine-gun"].attack_parameters.cooldown = 15
 data.raw.gun["advanced-tank-machine-gun"].sound =
-												{
-													{
-													  filename = kr_weapons_sounds_path .. "anti-material-rifle.ogg",
-													  volume = 0.8
-													}
-												}
-												
+{
+	{
+	  filename = kr_weapons_sounds_path .. "anti-material-rifle.ogg",
+	  volume = 0.8
+	}
+}
+
+-- Technologies 
+
 krastorio.technologies.removeUnlockRecipe("uranium-ammo", "uranium-rounds-magazine")
 krastorio.technologies.removeUnlockRecipe("kr-military-5", "imersite-rounds-magazine")
 

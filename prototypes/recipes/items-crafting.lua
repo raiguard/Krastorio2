@@ -4,7 +4,7 @@ return
 	{
 		type = "recipe",
 		name = "automation-core",
-		energy_required = 3,
+		energy_required = 1,
 		enabled = false,
 		allow_productivity = true,
 		ingredients =
