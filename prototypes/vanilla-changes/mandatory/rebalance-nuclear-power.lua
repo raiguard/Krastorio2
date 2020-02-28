@@ -2,10 +2,10 @@
 
 --data.raw.fluid["steam"].max_temperature = 1000
 data.raw.fluid["steam"].heat_capacity = "0.5KJ"
-data.raw["generator"]["steam-engine"].effectivity = 0.75
+data.raw["generator"]["steam-engine"].effectivity = 0.5
 data.raw["generator"]["steam-engine"].fluid_usage_per_tick = 1/3
-data.raw["generator"]["steam-engine"].max_power_output = "1MW"
-data.raw["boiler"]["boiler"].energy_consumption = "1.5MW"
+data.raw["generator"]["steam-engine"].max_power_output = "0.75MW"
+data.raw["boiler"]["boiler"].energy_consumption = "1.2MW"
 
 -- Nuclear reactor
 

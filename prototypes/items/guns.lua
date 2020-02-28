@@ -61,8 +61,10 @@ data:extend(
 		name = "dolphin-gun",
 		icon = kr_guns_icons_path .. "dolphin-gun.png",
 		icon_size = 64,
-		subgroup = "gun",
-		order = "z[dolphin-gun]",
+		subgroup = "other",
+		flags = {"hidden"},
+		--subgroup = "gun",
+		--order = "z[dolphin-gun]",
 		attack_parameters =
 		{
 			type = "projectile",

@@ -27,6 +27,9 @@ if #data.raw.furnace == 0 then
 	local furnace = krastorio_utils.tables.fullCopy(first_assembler)
 	furnace.type = "furnace"
 	furnace.name = "shit-api-furnace"
+	furnace.flags = {"hidden"}
+	furnace.gui_mode = "none"
+	furnace.ubgroup = "other"
 	furnace.source_inventory_size = 1
 	furnace.result_inventory_size = 1
 	data:extend({
@@ -35,14 +38,13 @@ if #data.raw.furnace == 0 then
 		name = "shit-api-furnace",
 		icon = "__base__/graphics/icons/stone-furnace.png",
 		icon_size = 32,
-		subgroup = "smelting-machine",
-		order = "a[shit-api-furnace]",
 		place_result = "shit-api-furnace",
 		stack_size = 1
 	}})
 	data:extend({furnace})	
 end
 
+data.raw.item["shit-api-furnace"].flags = {"hidden"}
 
 -- Boilers
 
