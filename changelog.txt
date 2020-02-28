@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.4
+Date: 28.02.2020
+  Changes:
+    - Steam engine max power 1MW --> 750kW
+    - Changed ratio for vanilla boiler:steam engine now it loke vanilla 1:2
+    - Some recipes was be hidden
+    - Some recipes was be unhidden
+  Fixes:
+    - Fixed energy output priority for wind turbine and shelter
+---------------------------------------------------------------------------------------------------
 Version: 0.5.3
 Date: 27.02.2020
   Features:
@@ -35,4 +45,3 @@ Version: 0.5.0
 Date: 07.11.2019
   Features:
     - Starting alpha version
----------------------------------------------------------------------------------------------------
