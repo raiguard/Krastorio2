@@ -75,7 +75,7 @@ data:extend(
             }
           }
         }
-      }
+      },
     },
     animation =
     {
@@ -109,7 +109,8 @@ data:extend(
         starting_frame_speed = 0,
         starting_frame_speed_deviation = 5
       }
-    }
+    },
+	light = {intensity = 0.5, size = 10, color = {r=1.0, g=1.0, b=0.5}},
 	},
   
 -----------------------------------------------------------------------------------------------------------------
@@ -209,7 +210,8 @@ data:extend(
         starting_frame_speed = 0,
         starting_frame_speed_deviation = 5
       }
-    }
+    },
+	light = {intensity = 0.5, size = 10, color = {r=0.8, g=1.0, b=1}},
   },
   
   
@@ -445,6 +447,7 @@ data:extend(
       height = 90,
       priority = "high"
     },
+	light = {intensity = 0.5, size = 10, color = {r=0.8, g=0.8, b=0.5}},
     },
    
     {
@@ -530,6 +533,7 @@ data:extend(
       height = 90,
       priority = "high"
     },
+	light = {intensity = 0.5, size = 10, color = {r=1.0, g=0.8, b=0.5}},
     },
 
 	{
@@ -638,6 +642,7 @@ data:extend(
       height = 167,
       priority = "high"
     },
+	light = {intensity = 0.5, size = 10, color = {r=0.75, g=0.5, b=1}},
 	},
 	
 -----------------------------------------------------------------------------------------------------------------
@@ -728,7 +733,8 @@ data:extend(
         starting_frame_speed = 0,
         starting_frame_speed_deviation = 5
       }
-    }
+    },
+	light = {intensity = 0.5, size = 10, color = {r=1.0, g=0.75, b=0.5}},
     },
 	
 	{
@@ -792,7 +798,8 @@ data:extend(
             }
           }
         }
-      }
+      },
+	light = {intensity = 0.5, size = 10, color = {r=0.5, g=1.0, b=0.75}},
     },
     animation =
     {
@@ -922,7 +929,8 @@ data:extend(
         starting_frame_speed = 0,
         starting_frame_speed_deviation = 5
       }
-    }
+    },
+	light = {intensity = 0.5, size = 10, color = {r=0.75, g=0.8, b=1}},
   },
 	
 -----------------------------------------------------------------------------------------------------------------

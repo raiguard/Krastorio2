@@ -123,4 +123,4 @@ data.raw["unit"]["behemoth-spitter"].pollution_to_join_attack = 500
 
 data.raw["turret"]["medium-worm-turret"].max_health = 950
 data.raw["turret"]["big-worm-turret"].max_health = 2500
-data.raw["turret"]["behemoth-worm-turret"].max_health = 7500
+data.raw["turret"]["behemoth-worm-turret"].max_health = 5000

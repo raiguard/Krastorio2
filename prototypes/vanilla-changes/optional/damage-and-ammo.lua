@@ -92,9 +92,13 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
 
 	-- Projectile accelerations
 	data.raw.projectile["cannon-projectile"].acceleration = 0.1
+	data.raw.projectile["cannon-projectile"].light = {intensity = 0.45, size = 8, color = {r=0.8, g=0.8, b=0.8}}
 	data.raw.projectile["explosive-cannon-projectile"].acceleration = 0.1
+	data.raw.projectile["explosive-cannon-projectile"].light = {intensity = 0.45, size = 8, color = {r=1.0, g=0.75, b=0.75}}
 	data.raw.projectile["uranium-cannon-projectile"].acceleration = 0.1
+	data.raw.projectile["uranium-cannon-projectile"].light = {intensity = 0.45, size = 8, color = {r=0.5, g=0.75, b=0.75}}
 	data.raw.projectile["explosive-uranium-cannon-projectile"].acceleration = 0.1
+	data.raw.projectile["explosive-uranium-cannon-projectile"].light = {intensity = 0.45, size = 8, color = {r=0.5, g=1.0, b=0.75}}
     
 	-- Grenade (normal)
 	data.raw["projectile"]["grenade"].action =
@@ -191,6 +195,7 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
 
 	-- Rocket
 	data.raw["projectile"]["rocket"].acceleration = 0.05
+	data.raw["projectile"]["rocket"].light = {intensity = 0.45, size = 8, color = {r=0.8, g=0.8, b=0.8}}
 	data.raw["projectile"]["rocket"].action.action_delivery.target_effects =
 	{
 		{
@@ -210,6 +215,7 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
 	
 	-- Explosive rocket
 	data.raw["projectile"]["explosive-rocket"].acceleration = 0.05
+	data.raw["projectile"]["explosive-rocket"].light = {intensity = 0.45, size = 8, color = {r=1, g=0.75, b=0.8}}
 	data.raw["projectile"]["explosive-rocket"].action.action_delivery.target_effects =
         {
           {
@@ -256,6 +262,7 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
 
 
 	data.raw["projectile"]["atomic-rocket"].acceleration = 0.01
+	data.raw["projectile"]["atomic-rocket"].light = {intensity = 0.45, size = 9, color = {r=0.5, g=1, b=0.75}}
 	data.raw["projectile"]["atomic-rocket"].action.action_delivery.target_effects =
 	{
 		{

@@ -472,6 +472,8 @@ objects_to_modify =
 	}
 }
 
+data.raw["night-vision-equipment"]["night-vision-equipment"].color_lookup = {{0.75, "__Krastorio2__/graphics/others/nightvision-1.png"}}
+
 -- iterating...
 updateVanillaEquipmentGraphics(objects_to_modify, kr_character_equipments_icons_path, kr_character_equipments_path)
 

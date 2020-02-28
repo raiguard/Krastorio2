@@ -402,8 +402,8 @@ return
 		energy_required = 5,
 		ingredients =
 		{
-			{"rocket", 2},
-			{"charged-antimatter-fuel-cell", 1},
+			{"heavy-rocket", 3},
+			{"charged-antimatter-fuel-cell", 5},
 			{"processing-unit", 1}		
 		},
 		result = "antimatter-rocket"

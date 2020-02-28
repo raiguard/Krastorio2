@@ -223,6 +223,27 @@ data:extend(
 		energy_production = "10GW",
 		energy_usage = "0kW",
 		animation = intergalactic_transceiver_animation,
+		charge_light =
+		{
+			intensity = 1.5,
+			size = 50,
+			shift = {0, 0},
+			color = {r=1, g=0.5, b=0.75}
+		},
+		discharge_light =
+		{
+			intensity = 1.5,
+			size = 50,
+			shift = {0, 0},
+			color = {r=1, g=0.5, b=0.75}
+		},
+		light =
+		{
+			intensity = 1.5,
+			size = 50,
+			shift = {0, 0},
+			color = {r=1, g=0.5, b=0.75}
+		},
 		continuous_animation = true,
 		working_sound = intergalactic_transceiver_working_sound
 	}

@@ -28,7 +28,7 @@ data:extend(
 				pipe_picture = kr_pipe_path,
 				base_area = 100,
 				base_level = -1,
-				pipe_connections = {{ type="input", position = {1, -4} }}
+				pipe_connections = {{ type="input", position = {2, -4} }}
 			},		
 			{
 				production_type = "input",
@@ -44,7 +44,7 @@ data:extend(
 				pipe_picture = kr_pipe_path,
 				base_area = 100,
 				base_level = -1,
-				pipe_connections = {{ type="input", position = {-1, -4} }}
+				pipe_connections = {{ type="input", position = {-2, -4} }}
 			},				
 			{
 				production_type = "output",
@@ -52,7 +52,7 @@ data:extend(
 				pipe_picture = kr_pipe_path,
 				base_area = 10,
 				base_level = 1,
-				pipe_connections = {{ type="output", position = {1, 4} }}
+				pipe_connections = {{ type="output", position = {2, 4} }}
 			},
 			{
 				production_type = "output",
@@ -68,7 +68,7 @@ data:extend(
 				pipe_picture = kr_pipe_path,
 				base_area = 10,
 				base_level = 1,
-				pipe_connections = {{ type="output", position = {-1, 4} }}
+				pipe_connections = {{ type="output", position = {-2, 4} }}
 			},
 			
 			off_when_no_fluid_recipe = false
