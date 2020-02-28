@@ -9,10 +9,10 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{type="fluid", name="water", amount=100}
+			{type="fluid", name="water", amount=200}
 		},
 		result = "wood",
-		result_count = 30
+		result_count = 40
 	},
 	{
 		type = "recipe",
@@ -24,10 +24,10 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{type="fluid", name="water", amount=100},
+			{type="fluid", name="water", amount=200},
 			{name="fertilizer", amount=1}
 		},
 		result = "wood",
-		result_count = 90
+		result_count = 80
 	}
 }

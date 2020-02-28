@@ -6,8 +6,18 @@ Date: 28.02.2020
     - Changed ratio for vanilla boiler:steam engine now it loke vanilla 1:2
     - Some recipes was be hidden
     - Some recipes was be unhidden
+    - Changed how work the intergalactic transceiver, now can be moved and replaced after the game is won
+    - Rebalanced again coke, now the recipe is 2 wood 2 coal -> 2 coke, referfed the fuel value to 8
+    - Nerfed greenhouse pollution absorbing from 10 to 7.5
+    - Boosted greenhouse grow recipes from 30 to 40
+    - Nerfed greenhouse grow with fertilizer from 90 to 80
+    - Nerfed greenhouse water consumption from 100 to 200
   Fixes:
+    - Fixed that steel plate product was 5 time less than expected
     - Fixed energy output priority for wind turbine and shelter
+    - Fixed that roboports hotkeys doesen't increase coverage area 25% larger than normal when changing mode to a single one
+    - Fixed SE satelite rocket_launch_product given
+    - Fixed SE shields techs overlaps
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.3
 Date: 27.02.2020

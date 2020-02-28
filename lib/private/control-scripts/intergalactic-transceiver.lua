@@ -5,6 +5,10 @@ local KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER =
 	{
 		filter = "name", 
         name   = "kr-intergalactic-transceiver"
+    },
+	{
+		filter = "name", 
+        name   = "kr-activated-intergalactic-transceiver"
     }
 }
 
@@ -46,18 +50,9 @@ end
 -- @event, on_built_entity or on_robot_built_entity
 local function onBuiltAnEntity(event)
 	local entity = event.created_entity
-	if entity and entity.valid and entity.name == "kr-intergalactic-transceiver" then
+	if entity and entity.valid and (entity.name == "kr-intergalactic-transceiver" or entity.name == "kr-activated-intergalactic-transceiver") then
 		local force_index = entity.force.index
-		if global.game_won then
-			entity.last_user.insert{name="kr-intergalactic-transceiver", count=1}
-			global.krastorio.flying_texts.showOnSurfaceText
-			{
-				entity = entity,
-				text   = {"other.kr-win-error"},
-				color  = {1, 0, 0}
-			}
-			entity.destroy()
-		elseif not global.intergalactic_transceivers[force_index] then
+		if not global.intergalactic_transceivers[force_index] then
 			global.intergalactic_transceivers[force_index] = entity
 		else
 			entity.last_user.insert{name="kr-intergalactic-transceiver", count=1}
@@ -75,7 +70,7 @@ end
 -- @event, on_player_mined_entity or on_robot_mined_entity or on_entity_died
 local function onRemovingAnEntity(event)
 	local entity = event.entity	
-	if entity and entity.valid and entity.name == "kr-intergalactic-transceiver" then
+	if entity and entity.valid and (entity.name == "kr-intergalactic-transceiver" or entity.name == "kr-activated-intergalactic-transceiver") then
 		local force_index = entity.force.index
 		if global.intergalactic_transceivers[force_index] then
 			global.intergalactic_transceivers[force_index] = nil
@@ -85,41 +80,43 @@ local function onRemovingAnEntity(event)
 end
 
 -- Test if a team have with every 2 seconds (120 tick)
-local function checkVictory()
-	-- If disabled from other mods
-	if global.krastorio_victory_disabled or global.game_won then return end	
+local function checkVictory()	
 	-- Check for each team
     for force_index, it in pairs(global.intergalactic_transceivers) do
-        if it.valid and it.energy == it.prototype.electric_energy_source_prototype.buffer_capacity then -- Win!
-			global.game_won = true
-            game.set_game_state{game_finished = true, player_won = true, can_continue = true, victorious_force = game.forces[force_index]}
-			it.surface.create_entity
-			{
-				type     = "electric-energy-interface",
-				name     = "kr-activated-intergalactic-transceiver",
-				force    = it.force,
-				player   = it.last_user,
-				position = it.position,
-				create_build_effect_smoke = false
-			}
-			it.destroy()
-		elseif it.valid then -- Energy drain			
-			if not global.intergalactic_transceivers_energy_status[force_index] then -- Initialize
-				global.intergalactic_transceivers_energy_status[force_index] = it.energy
-			else -- Exist entity
-				if it.energy ~= 0 and global.intergalactic_transceivers_energy_status[force_index] == it.energy then -- Must drain
-					if global.intergalactic_transceivers_energy_status[force_index] <= 2000000000 then -- Cut off on 2GJ
-						it.energy = 0
-						global.intergalactic_transceivers_energy_status[force_index] = 0
-					else -- Reduce by 20%
-						it.energy = it.energy - (it.energy * 2 / 10)
+		if it.valid and it.name == "kr-intergalactic-transceiver" then
+			if it.energy == it.prototype.electric_energy_source_prototype.buffer_capacity then -- Win!
+				if not (global.krastorio_victory_disabled or global.game_won) then -- If disabled from other mods or if already winned
+					global.game_won = true
+					game.set_game_state{game_finished = true, player_won = true, can_continue = true, victorious_force = game.forces[force_index]}
+				end
+				it.surface.create_entity
+				{
+					type     = "electric-energy-interface",
+					name     = "kr-activated-intergalactic-transceiver",
+					force    = it.force,
+					player   = it.last_user,
+					position = it.position,
+					create_build_effect_smoke = false
+				}
+				it.destroy()
+			else -- Energy drain			
+				if not global.intergalactic_transceivers_energy_status[force_index] then -- Initialize
+					global.intergalactic_transceivers_energy_status[force_index] = it.energy
+				else -- Exist entity
+					if it.energy ~= 0 and global.intergalactic_transceivers_energy_status[force_index] == it.energy then -- Must drain
+						if global.intergalactic_transceivers_energy_status[force_index] <= 2000000000 then -- Cut off on 2GJ
+							it.energy = 0
+							global.intergalactic_transceivers_energy_status[force_index] = 0
+						else -- Reduce by 20%
+							it.energy = it.energy - (it.energy * 2 / 10)
+							global.intergalactic_transceivers_energy_status[force_index] = it.energy
+						end
+					else -- Not building in use so update the latest value
 						global.intergalactic_transceivers_energy_status[force_index] = it.energy
 					end
-				else -- Not building in use so update the latest value
-					global.intergalactic_transceivers_energy_status[force_index] = it.energy
 				end
 			end
-        end
+		end
     end
 end
 

@@ -65,6 +65,13 @@ krastorio.recipes.overrideIngredients
 		{"coke", 2}
 	}
 )
+krastorio.recipes.overrideProducts
+(
+	"steel-plate", 
+	{
+		{"steel-plate", 5}
+	}
+)
 krastorio.recipes.setEnergyCost("steel-plate", 16)
 
 krastorio.recipes.replaceIngredient("iron-gear-wheel", "iron-plate", {"iron-plate", 1})

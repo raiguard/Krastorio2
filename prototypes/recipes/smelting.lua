@@ -5,16 +5,16 @@ return
 		type = "recipe",
 		name = "coke",
 		category = "smelting",
-		energy_required = 10,
+		energy_required = 12,
 		enabled = false,
 		allow_productivity = true,
 		ingredients =
 		{
-			{"coal", 3},
-			{"wood", 3}
+			{"coal", 4},
+			{"wood", 4}
 		},
 		result = "coke",
-		result_count = 2
+		result_count = 4
 	},
 	{
 		type = "recipe",

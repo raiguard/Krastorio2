@@ -9,6 +9,12 @@ if mods["space-exploration"] then
 	krastorio.technologies.convertPrerequisiteFromAllTechnologies("radar", "kr-radar", true)
 	data.raw.technology["radar"] = nil
 
+	-- Shields
+	krastorio.technologies.convertPrerequisiteFromAllTechnologies("energy-shield-mk3-equipment", "kr-energy-shield-mk3-equipment", true)
+	data.raw.technology["energy-shield-mk3-equipment"] = nil
+	krastorio.technologies.convertPrerequisiteFromAllTechnologies("energy-shield-mk4-equipment", "kr-energy-shield-mk4-equipment", true)
+	data.raw.technology["energy-shield-mk4-equipment"] = nil
+
 	-- --  Modules
 	-- Return to Krastorio 2/Vanilla modules on the first 3 tiers 
 	krastorio.technologies.addPrerequisite("speed-module-3", "advanced-electronics-2")
@@ -359,6 +365,9 @@ if mods["space-exploration"] then
 
 -- -- Items
 ---------------------------------------------------------------------------------------------
+
+	-- Satellite
+	data.raw.item["satellite"].rocket_launch_product = {"space-research-data", 1000}
 
 	if data.raw.item["se-antimatter-canister"] then
 		data.raw.item["se-antimatter-canister"].fuel_category = "antimatter-fuel"
