@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.5
+Date: 28.02.2020
+  Features:
+    - Added color luts for nightvision
+    - Added light to activated IT
+  Changes:
+    - Gunplay improvements
+    - Changed the place of pipes on Advanced chemical plant (now it mix with new and old sprites...will be fixed soon)
+---------------------------------------------------------------------------------------------------
 Version: 0.5.4
 Date: 28.02.2020
   Changes:
