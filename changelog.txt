@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.8
 Date: 29.02.2020
+  Changes:
+    - Nerfed boilers with greenhouse to produce energy.
+---------------------------------------------------------------------------------------------------
+Version: 0.5.8
+Date: 29.02.2020
   Features:
     - Improved some equipment icons.
   Changes:
