@@ -344,29 +344,7 @@ data:extend({
      }
     },
   },
-
-  {
-    type = "technology",
-    name = data_util.mod_prefix .. "fuel-refining",
-    effects = {
-      { type = "unlock-recipe", recipe = data_util.mod_prefix .. "fuel-refinery", },
-    },
-    icon = "__space-exploration-graphics__/graphics/technology/fuel-refinery.png",
-    icon_size = 128,
-    order = "e-g",
-    prerequisites = {
-      "oil-processing"
-    },
-    unit = {
-     count = 100,
-     time = 30,
-     ingredients = {
-       { "automation-science-pack", 1 },
-       { "logistic-science-pack", 1 },
-     }
-    },
-  },
-
+  
   {
     type = "technology",
     name = data_util.mod_prefix .. "heat-shielding",

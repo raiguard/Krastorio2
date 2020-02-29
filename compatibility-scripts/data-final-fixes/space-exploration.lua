@@ -16,6 +16,10 @@ if mods["space-exploration"] then
 	krastorio.technologies.convertPrerequisiteFromAllTechnologies("energy-shield-mk4-equipment", "kr-energy-shield-mk4-equipment", true)
 	data.raw.technology["energy-shield-mk4-equipment"] = nil
 
+	-- Fuels
+	krastorio.technologies.convertPrerequisiteFromAllTechnologies("se-fuel-refining", "kr-fuel", true)
+	data.raw.technology["se-fuel-refining"] = nil
+
 	-- --  Modules
 	-- Return to Krastorio 2/Vanilla modules on the first 3 tiers 
 	krastorio.technologies.addPrerequisite("speed-module-3", "advanced-electronics-2")

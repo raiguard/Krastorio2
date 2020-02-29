@@ -10,6 +10,7 @@ Date: 29.02.2020
     - Inserters parts was added.
   Fixes:
     - Fixed water pump recipe wasn't hidden.
+    - Removed SE fuel refinery when both mod installed.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.6
 Date: 28.02.2020
