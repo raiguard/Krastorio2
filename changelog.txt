@@ -1,10 +1,15 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.8
 Date: 29.02.2020
-  Fixes:
-    - Fixed broken recipes.
+  Features:
+    - Improved some equipment icons.
   Changes:
     - Marked KS combat mod incompatible with K2.
+    - Removed military science pack from fusion reactor equipment.
+  Fixes:
+    - Fixed some locales.
+    - Fixed broken recipes.
+    - Fixed that offshore pump result different in blueprints.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.7
 Date: 29.02.2020

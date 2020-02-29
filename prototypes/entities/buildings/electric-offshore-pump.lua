@@ -14,6 +14,7 @@ electric_offshore_pump.energy_source =
 }
 electric_offshore_pump.crafting_categories = {"kr-electric-offshore-pump-crafting_categories"}
 electric_offshore_pump.animation = electric_offshore_pump.picture
+electric_offshore_pump.placeable_by = {item = "offshore-pump", count = 1}
 electric_offshore_pump.fixed_recipe = "kr-drain-water"
 electric_offshore_pump.ingredient_count = 1
 electric_offshore_pump.show_recipe_icon = false
@@ -37,12 +38,6 @@ electric_offshore_pump.fluid_boxes =
 	off_when_no_fluid_recipe = false
 }
 
-electric_offshore_pump_item = util.table.deepcopy(data.raw["item"]["offshore-pump"])
-electric_offshore_pump_item.name = "kr-electric-offshore-pump"
-electric_offshore_pump_item.name = "kr-electric-offshore-pump"
-electric_offshore_pump_item.localised_name = {"entity-name.offshore-pump"}
-electric_offshore_pump_item.place_result = "kr-electric-offshore-pump"
-
 data:extend(
 {
 	-- Crafting category
@@ -65,6 +60,5 @@ data:extend(
 		}
 	},
 	-- Entity
-	electric_offshore_pump,
-	electric_offshore_pump_item
+	electric_offshore_pump
 })

@@ -39,7 +39,7 @@ krastorio.technologies.addPrerequisite("speed-module-3", "advanced-electronics-2
 krastorio.technologies.addPrerequisite("productivity-module-3", "advanced-electronics-2")
 krastorio.technologies.addPrerequisite("effectivity-module-3", "advanced-electronics-2")
 
---Removing
+-- Removing
 krastorio.technologies.removePrerequisite("heavy-armor", "military")
 krastorio.technologies.removePrerequisite("fluid-handling", "automation-2")
 krastorio.technologies.removePrerequisite("engine", "steel-processing")
@@ -71,6 +71,7 @@ krastorio.technologies.removeResearchUnitIngredient("fluid-handling", "logistic-
 krastorio.technologies.removeResearchUnitIngredient("oil-processing", "logistic-science-pack")
 krastorio.technologies.removeResearchUnitIngredient("engine", "logistic-science-pack")
 krastorio.technologies.removeResearchUnitIngredient("plastics", "logistic-science-pack")
+krastorio.technologies.removeResearchUnitIngredient("fusion-reactor-equipment", "military-science-pack")
 
 --------------------------------------------------------------------
 -- -- Recipes Unlocking
