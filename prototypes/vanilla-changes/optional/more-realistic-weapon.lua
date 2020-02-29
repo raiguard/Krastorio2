@@ -1,83 +1,81 @@
 -- -- -- Vehicles minable changes
 if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 
+local bullets_collision_box = {{-1, -1}, {1, 1}}
+
 ----------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------- -- NEW EXPLOSION -- ---------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------
 	
 data:extend(
 {
-	
-	
 	{
-	type = "explosion",
-	name = "explosion-hit-p",
-	flags = {"not-on-map"},
-	subgroup = "explosions",
-	animations = 
-	{
+		type = "explosion",
+		name = "explosion-hit-p",
+		flags = {"not-on-map"},
+		subgroup = "explosions",
+		animations = 
 		{
-			filename = "__base__/graphics/entity/explosion-hit/explosion-hit.png",
-			priority = "extra-high",
-			width = 34,
-			height = 38,
-			frame_count = 13,
-			animation_speed = 1.5,
-			shift = {0, -0.3125}
-		}
-	},
-	light = {intensity = 1, size = 9, color = {r=1.0, g=0.8, b=0.5}},
-	smoke = "smoke-fast",
-	smoke_count = 1,
-	smoke_slow_down_factor = 1
+			{
+				filename = "__base__/graphics/entity/explosion-hit/explosion-hit.png",
+				priority = "extra-high",
+				width = 34,
+				height = 38,
+				frame_count = 13,
+				animation_speed = 1.5,
+				shift = {0, -0.3125}
+			}
+		},
+		light = {intensity = 1, size = 9, color = {r=1.0, g=0.8, b=0.5}},
+		smoke = "smoke-fast",
+		smoke_count = 1,
+		smoke_slow_down_factor = 1
 	},
 	{
-	type = "explosion",
-	name = "explosion-hit-u",
-	flags = {"not-on-map"},
-	subgroup = "explosions",
-	animations = 
-	{
+		type = "explosion",
+		name = "explosion-hit-u",
+		flags = {"not-on-map"},
+		subgroup = "explosions",
+		animations = 
 		{
-			filename = "__base__/graphics/entity/explosion-hit/explosion-hit.png",
-			priority = "extra-high",
-			width = 34,
-			height = 38,
-			frame_count = 13,
-			animation_speed = 1.5,
-			shift = {0, -0.3125}
-		}
-	},
-	light = {intensity = 1, size = 9, color = {r=0.5, g=1, b=0.5}},
-	smoke = "smoke-fast",
-	smoke_count = 2,
-	smoke_slow_down_factor = 0.75
+			{
+				filename = "__base__/graphics/entity/explosion-hit/explosion-hit.png",
+				priority = "extra-high",
+				width = 34,
+				height = 38,
+				frame_count = 13,
+				animation_speed = 1.5,
+				shift = {0, -0.3125}
+			}
+		},
+		light = {intensity = 1, size = 9, color = {r=0.5, g=1, b=0.5}},
+		smoke = "smoke-fast",
+		smoke_count = 2,
+		smoke_slow_down_factor = 0.75
 	},
 	{
-	type = "explosion",
-	name = "explosion-hit-i",
-	flags = {"not-on-map"},
-	subgroup = "explosions",
-	animations = 
-	{
+		type = "explosion",
+		name = "explosion-hit-i",
+		flags = {"not-on-map"},
+		subgroup = "explosions",
+		animations = 
 		{
-			filename = "__base__/graphics/entity/explosion-hit/explosion-hit.png",
-			priority = "extra-high",
-			width = 34,
-			height = 38,
-			frame_count = 13,
-			animation_speed = 1.5,
-			shift = {0, -0.3125}
-		}
-	},
-	light = {intensity = 1.5, size = 10, color = {r=1, g=0.45, b=0.8}},
-	smoke = "smoke-fast",
-	smoke_count = 3,
-	smoke_slow_down_factor = 0.5
-	},
-
-}
-)
+			{
+				filename = "__base__/graphics/entity/explosion-hit/explosion-hit.png",
+				priority = "extra-high",
+				width = 34,
+				height = 38,
+				frame_count = 13,
+				animation_speed = 1.5,
+				shift = {0, -0.3125}
+			}
+		},
+		light = {intensity = 1.5, size = 10, color = {r=1, g=0.45, b=0.8}},
+		smoke = "smoke-fast",
+		smoke_count = 3,
+		smoke_slow_down_factor = 0.5
+	}
+})
 	
 data.raw.gun["submachine-gun"].attack_parameters.range = 50
 data.raw.gun["submachine-gun"].attack_parameters.movement_slow_down_factor = 0.25
@@ -103,7 +101,7 @@ data:extend(
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_items_with_variations_icons_path .. "ammo/pistol-ammo-1.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "ammo/pistol-ammo-1.png", scale = 0.25, mipmap_count = 4 },
 		},
 		ammo_type =
 		{
@@ -113,25 +111,25 @@ data:extend(
 			action =
 			{
 				{
-				type = "direct",
-				action_delivery =
-				{
+					type = "direct",
+					action_delivery =
 					{
-						type = "projectile",
-						projectile = "pistol-ammo-1",
-						starting_speed = 1,
-						direction_deviation = 0.15,
-						range_deviation = 0.15,
-						max_range = 22,
-						source_effects =
 						{
+							type = "projectile",
+							projectile = "pistol-ammo-1",
+							starting_speed = 1,
+							direction_deviation = 0.15,
+							range_deviation = 0.15,
+							max_range = 22,
+							source_effects =
 							{
-								type = "create-explosion",
-								entity_name = "explosion-gunshot"
+								{
+									type = "create-explosion",
+									entity_name = "explosion-gunshot"
+								}
 							}
 						}
 					}
-				}
 				}
 			}
 		},
@@ -145,7 +143,7 @@ data:extend(
 		type = "projectile",
 		name = "pistol-ammo-1",
 		flags = {"not-on-map"},
-		collision_box = {{-0.05, -0.25}, {0.05, 0.25}},
+		collision_box = bullets_collision_box,
 		acceleration = -0.015,
 		action =
 		{
@@ -164,7 +162,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = 0.5,
+							radius = 1.0,
 							action_delivery =
 							{
 								type = "instant",
@@ -268,7 +266,7 @@ data:extend(
 		type = "projectile",
 		name = "pistol-ammo-2",
 		flags = {"not-on-map"},
-		collision_box = {{-0.05, -0.25}, {0.05, 0.25}},
+		collision_box = bullets_collision_box,
 		acceleration = -0.015,
 		action =
 		{
@@ -287,7 +285,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = 0.5,
+							radius = 1.0,
 							action_delivery =
 							{
 								type = "instant",
@@ -411,7 +409,7 @@ data:extend(
 		type = "projectile",
 		name = "rifle-ammo-1",
 		flags = {"not-on-map"},
-		collision_box = {{-0.05, -0.25}, {0.05, 0.25}},
+		collision_box = bullets_collision_box,
 		acceleration = -0.018,
 		--direction_only = true,
 		action =
@@ -431,7 +429,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = 0.5,
+							radius = 1.0,
 							action_delivery =
 							{
 								type = "instant",
@@ -536,7 +534,7 @@ data:extend(
 		type = "projectile",
 		name = "rifle-ammo-2",
 		flags = {"not-on-map"},
-		collision_box = {{-0.05, -0.25}, {0.05, 0.25}},
+		collision_box = bullets_collision_box,
 		acceleration = -0.02,
 		action =
 		{
@@ -555,7 +553,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = 0.5,
+							radius = 1.0,
 							action_delivery =
 							{
 								type = "instant",
@@ -658,7 +656,7 @@ data:extend(
 		type = "projectile",
 		name = "rifle-ammo-3",
 		flags = {"not-on-map"},
-		collision_box = {{-0.05, -0.25}, {0.05, 0.25}},
+		collision_box = bullets_collision_box,
 		acceleration = -0.02,
 		action =
 		{
@@ -677,7 +675,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = 0.5,
+							radius = 1.0,
 							action_delivery =
 							{
 								type = "instant",
@@ -784,7 +782,7 @@ data:extend(
 		type = "projectile",
 		name = "rifle-ammo-4",
 		flags = {"not-on-map"},
-		collision_box = {{-0.05, -0.25}, {0.05, 0.25}},
+		collision_box = bullets_collision_box,
 		acceleration = -0.02,
 		action =
 		{
@@ -803,7 +801,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = 0.5,
+							radius = 1.0,
 							action_delivery =
 							{
 								type = "instant",
@@ -973,7 +971,7 @@ data:extend(
 		type = "projectile",
 		name = "anti-material-rifle-1",
 		flags = {"not-on-map"},
-		collision_box = {{-0.5, -1}, {0.5, 1}},
+		collision_box = bullets_collision_box,
 		acceleration = -0.025,
 		--direction_only = true,
 		action =
@@ -993,7 +991,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = 0.75,
+							radius = 1.0,
 							action_delivery =
 							{
 								type = "instant",
@@ -1098,7 +1096,7 @@ data:extend(
 		type = "projectile",
 		name = "anti-material-rifle-ammo-2",
 		flags = {"not-on-map"},
-		collision_box = {{-0.5, -1}, {0.5, 1}},
+		collision_box = bullets_collision_box,
 		acceleration = -0.025,
 		action =
 		{
@@ -1117,7 +1115,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = 0.75,
+							radius = 1.0,
 							action_delivery =
 							{
 								type = "instant",
@@ -1220,7 +1218,7 @@ data:extend(
 		type = "projectile",
 		name = "anti-material-rifle-ammo-3",
 		flags = {"not-on-map"},
-		collision_box = {{-0.5, -1}, {0.5, 1}},
+		collision_box = bullets_collision_box,
 		acceleration = -0.025,
 		action =
 		{
@@ -1239,7 +1237,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = 0.75,
+							radius = 1.0,
 							action_delivery =
 							{
 								type = "instant",
@@ -1346,7 +1344,7 @@ data:extend(
 		type = "projectile",
 		name = "anti-material-rifle-ammo-4",
 		flags = {"not-on-map"},
-		collision_box = {{-0.5, -1}, {0.5, 1}},
+		collision_box = bullets_collision_box,
 		acceleration = -0.02,
 		action =
 		{
@@ -1365,7 +1363,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = 0.75,
+							radius = 1.0,
 							action_delivery =
 							{
 								type = "instant",
