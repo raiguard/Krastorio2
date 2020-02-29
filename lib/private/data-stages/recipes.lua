@@ -1511,16 +1511,16 @@ end
 function krastorio.recipes.addWithOverrideSafeNewRecipe(recipe)
 	if recipe.type == "recipe" and recipe.name then
 		if data.raw.recipe[recipe.name] then		
-			if not recipe.localised_name then
-				if recipe.result then
-					recipe.localised_name = {"other.krastorio-recipe", {"item-name."..recipe.result}}
-				else
-					recipe.localised_name = {"other.krastorio-recipe", {"recipe-name."..recipe.name}}
-				end
-			end
 			local suffix = 2
 			while data.raw.recipe[recipe.name.."-"..suffix] do
 				suffix = suffix + 1
+			end
+			if not recipe.localised_name then
+				if recipe.result then
+					recipe.localised_name = {"other.krastorio-recipe-variation-n", {"item-name."..recipe.result}, tostring(suffix)}
+				else
+					recipe.localised_name = {"other.krastorio-recipe-variation-n", {"recipe-name."..recipe.name}, tostring(suffix)}
+				end
 			end
 			-- log activity
 			krastorio_utils.log.write(3, string.format("Avoided recipe override chaning recipe name from %s to %s", recipe.name, recipe.name.."-"..suffix))	

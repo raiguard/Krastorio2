@@ -3,20 +3,6 @@ return
 {
 	{
 		type = "recipe",
-		name = "inserter-parts",
-		energy_required = 1,
-		enabled = true,
-		allow_productivity = true,
-		ingredients =
-		{
-			{"iron-plate", 3},
-			{"iron-gear-wheel", 4},
-			{"copper-plate", 1}
-		},
-		result = "inserter-parts"
-	},
-	{
-		type = "recipe",
 		name = "automation-core",
 		energy_required = 1,
 		enabled = false,
@@ -94,6 +80,17 @@ return
 			{"iron-plate", 1}
 		},
 		result = "first-aid-kit"
+	},	
+	{
+		type = "recipe",
+		name = "empty-dt-fuel",
+		energy_required = 5,
+		enabled = false,
+		ingredients =
+		{
+			{"steel-plate", 5}
+		},
+		result = "empty-dt-fuel"
 	},	
 	{
 		type = "recipe",

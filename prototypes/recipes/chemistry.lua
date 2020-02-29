@@ -320,7 +320,8 @@ return
 		ingredients =
 		{
 			{ type = "fluid", name = "heavy-water", amount = 20, catalyst_amount = 20},
-			{ type = "item", name = "tritium", amount = 2}
+			{ type = "item", name = "tritium", amount = 2},
+			{ "empty-dt-fuel", 1}
 		},
 		result = "dt-fuel",
 		crafting_machine_tint = 

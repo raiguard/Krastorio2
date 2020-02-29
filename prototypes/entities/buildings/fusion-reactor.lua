@@ -164,6 +164,7 @@ data:extend(
 			type = "burner",
 			fuel_categories = {"fusion-fuel"},
 			fuel_inventory_size = 1,
+			burnt_inventory_size = 1,
 			emissions_per_minute = 2,
 			effectivity = 1,
 			emissions_per_minute = nil,

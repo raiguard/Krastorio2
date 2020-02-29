@@ -29,6 +29,19 @@ return
 		},	
 		result = "kr-wind-turbine",
 		result_count = 1		
+	},
+	{
+		type = "recipe",
+		name = "inserter-parts",
+		energy_required = 1,
+		enabled = true,
+		allow_productivity = true,
+		ingredients =
+		{
+			{"iron-stick", 2},
+			{"iron-gear-wheel", 2}
+		},
+		result = "inserter-parts"
 	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

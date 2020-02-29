@@ -23,7 +23,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-fuels") then
 	advanced_fuel_value = "10MJ"
 else
 	-- Coke
-	coke_value                   = "10MJ"
+	coke_value                   = "8MJ"
 	coke_acceleration_multiplier = 1.1
 	coke_top_speed_multiplier    = 1.1
 	
@@ -506,14 +506,25 @@ data:extend(
     },
 	{
 		type = "item",
+		name = "empty-dt-fuel",
+		icon = kr_items_icons_path .. "empty-dt-fuel.png",
+		icon_size = 64,
+		icon_mipmaps = 4,
+		subgroup = "intermediate-product",
+		order = "r[uranium-processing]-b1[dt-fuel]-a1[empty-dt-fuel]",
+		stack_size = 10
+    },
+	{
+		type = "item",
 		name = "dt-fuel",
 		icon = kr_items_icons_path .. "dt-fuel.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
 		fuel_category = "fusion-fuel",
 		fuel_value = "10GJ",
+		burnt_result = "empty-dt-fuel",
 		subgroup = "intermediate-product",
-		order = "r[uranium-processing]-b1[dt-fuel]",
+		order = "r[uranium-processing]-b1[dt-fuel]-a2[dt-fuel]",
 		stack_size = 10
     },
 	---

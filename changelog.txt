@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.7
 Date: 29.02.2020
+  Features:
+    - Added empty fuel cell for dt fuel
   Changes:
     - Increased bullet collision boxes with gun-play option.
     - Gunplay balancing.

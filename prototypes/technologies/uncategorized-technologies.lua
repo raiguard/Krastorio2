@@ -258,6 +258,10 @@ data:extend(
 			},
 			{
 				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["empty-dt-fuel"] or "empty-dt-fuel"
+			},
+			{
+				type = "unlock-recipe",
 				recipe = krastorio.recipes.changed_names["dt-fuel"] or "dt-fuel"
 			}			
 		},
