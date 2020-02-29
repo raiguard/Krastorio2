@@ -208,6 +208,19 @@ local objects_to_modify = nil
 -- -- Personal roboports 
 -----------------------------------------------------------------------------------------------------------------
 
+-- -- Items visual(icon, sprites)/modifcation
+objects_to_modify =
+{
+	["roboport-equipment"] =
+	{
+		["personal-roboport-equipment"]     = {"personal-roboport-equipment.png", 64, 64, 64, 1, 4},
+		["personal-roboport-mk2-equipment"] = {"personal-roboport-mk2-equipment.png", 64, 64, 64, 2, 4}
+	}
+}
+
+-- iterating...
+updateVanillaEquipmentGraphics(objects_to_modify, kr_universal_equipments_icons_path, kr_universal_equipments_path)
+
 -- Personal roboports (both vanilla)
 if data.raw["roboport-equipment"]["personal-roboport-equipment"] then
 	data.raw["roboport-equipment"]["personal-roboport-equipment"].robot_limit = 20
@@ -450,6 +463,18 @@ data.raw["energy-shield-equipment"]["energy-shield-mk2-equipment"].localised_des
 -- -- Solar pannel
 -----------------------------------------------------------------------------------------------------------------
 
+-- -- Items visual(icon, sprites)/modifcation
+objects_to_modify =
+{
+	["solar-panel-equipment"] =
+	{
+		["solar-panel-equipment"]     = {"solar-panel-equipment.png", 64, 32, 32, 1, 4}
+	}
+}
+
+-- iterating...
+updateVanillaEquipmentGraphics(objects_to_modify, kr_universal_equipments_icons_path, kr_universal_equipments_path)
+
 -- Equipments categories
 table.insert(data.raw["solar-panel-equipment"]["solar-panel-equipment"].categories, "universal-equipment")
 
@@ -476,7 +501,7 @@ objects_to_modify =
 {
 	["night-vision-equipment"] =
 	{
-		["night-vision-equipment"] = {"night-vision-equipment.png", 32, 64, 64}
+		["night-vision-equipment"] = {"night-vision-equipment.png", 64, 64, 64, 1}
 	}
 }
 
@@ -531,7 +556,7 @@ objects_to_modify =
 {
 	["movement-bonus-equipment"] = 
 	{
-		["exoskeleton-equipment"] = {"exoskeleton-equipment.png", 32, 64, 128}
+		["exoskeleton-equipment"] = {"exoskeleton-equipment.png", 64, 64, 128, 1}
 	}
 }
 

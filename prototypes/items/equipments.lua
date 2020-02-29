@@ -7,8 +7,12 @@ data:extend(
 	{	
 		type = "item",
 		name = "advanced-exoskeleton-equipment",
-		icon = kr_character_equipments_icons_path .. "advanced-exoskeleton-equipment.png",
-		icon_size = 32,
+		icons =
+		{
+			{ icon = kr_character_equipments_icons_path .. "advanced-exoskeleton-equipment.png", icon_size = 64, icon_mipmaps = 4 },
+			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
+		},
+		icon_size = 64,
 		placed_as_equipment_result = "advanced-exoskeleton-equipment",		
 		subgroup = "character-equipment",
 		order = "e[exoskeleton]-a2[advanced-exoskeleton-equipment]",
@@ -18,8 +22,12 @@ data:extend(
 	{	
 		type = "item",
 		name = "superior-exoskeleton-equipment",
-		icon = kr_character_equipments_icons_path .. "superior-exoskeleton-equipment.png",
-		icon_size = 32,
+		icons =
+		{
+			{ icon = kr_character_equipments_icons_path .. "superior-exoskeleton-equipment.png", icon_size = 64, icon_mipmaps = 4 },
+			{ icon = kr_equipments_tiers_icon_path .. "3.png", icon_size = 64 }
+		},
+		icon_size = 64,
 		placed_as_equipment_result = "superior-exoskeleton-equipment",		
 		subgroup = "character-equipment",
 		order = "e[exoskeleton]-a3[superior-exoskeleton-equipment]",
@@ -30,8 +38,12 @@ data:extend(
 	{
 		type = "item",
 		name = "imersite-night-vision-equipment",
-		icon = kr_character_equipments_icons_path .. "imersite-night-vision-equipment.png",	
-		icon_size = 32,
+		icons =
+		{
+			{ icon = kr_character_equipments_icons_path .. "imersite-night-vision-equipment.png", icon_size = 64 },
+			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
+		},	
+		icon_size = 64,
 		placed_as_equipment_result = "imersite-night-vision-equipment",
 		subgroup = "character-equipment",
 		order = "f[night-vision]-b[imersite-night-vision-equipment]",
@@ -212,7 +224,11 @@ data:extend(
 	{
 		type = "item",
 		name = "big-solar-panel-equipment",
-		icon = kr_universal_equipments_icons_path .. "big-solar-panel-equipment.png",
+		icons =
+		{
+			{ icon = kr_universal_equipments_icons_path .. "big-solar-panel-equipment.png", icon_size = 32 },
+			{ icon = kr_equipments_tiers_icon_path .. "1.png", icon_size = 64 }
+		},
 		icon_size = 32,
 		placed_as_equipment_result = "big-solar-panel-equipment",
 		subgroup = "equipment",
@@ -223,7 +239,11 @@ data:extend(
 	{
 		type = "item",
 		name = "imersite-solar-panel-equipment",
-		icon = kr_universal_equipments_icons_path .. "imersite-solar-panel-equipment.png",
+		icons =
+		{
+			{ icon = kr_universal_equipments_icons_path .. "imersite-solar-panel-equipment.png", icon_size = 32 },
+			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
+		},
 		icon_size = 32,
 		placed_as_equipment_result = "imersite-solar-panel-equipment",
 		subgroup = "equipment",
@@ -235,7 +255,11 @@ data:extend(
 	{
 		type = "item",
 		name = "big-imersite-solar-panel-equipment",
-		icon = kr_universal_equipments_icons_path .. "big-imersite-solar-panel-equipment.png",
+		icons =
+		{
+			{ icon = kr_universal_equipments_icons_path .. "big-imersite-solar-panel-equipment.png", icon_size = 32 },
+			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
+		},
 		icon_size = 32,
 		placed_as_equipment_result = "big-imersite-solar-panel-equipment",
 		subgroup = "equipment",
