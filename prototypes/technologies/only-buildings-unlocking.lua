@@ -174,7 +174,8 @@ data:extend(
 			count = 100,
 			ingredients = 
 			{
-				{"basic-tech-card", 1}
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1}
 			},
 			time = 30
 		}

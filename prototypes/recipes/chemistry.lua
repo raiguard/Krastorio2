@@ -294,8 +294,9 @@ return
 		allow_productivity = true,
 		ingredients =
 		{
-			{type="item", name="imersite-powder", amount=5},
-			{type="fluid", name="nitric-acid", amount=10, catalyst_amount = 50}
+			{type="item", name="imersite-powder", amount=6},
+			{type="fluid", name="nitric-acid", amount=10, catalyst_amount = 50},
+			{type="fluid", name="sulfuric-acid", amount=10, catalyst_amount = 50},
 		},
 		result = "imersite-crystal",
 		subgroup = "intermediate-product",

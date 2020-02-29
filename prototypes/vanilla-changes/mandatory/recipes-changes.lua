@@ -27,6 +27,8 @@ end
 
 -- Iron plate
 krastorio.recipes.replaceIngredient("iron-plate", "iron-ore", {"iron-ore", 2})
+krastorio.recipes.replaceIngredient("iron-gear-wheel", "iron-ore", {"iron-ore", 2})
+
 -- Copper plate
 krastorio.recipes.replaceIngredient("copper-plate", "copper-ore", {"copper-ore", 2})
 
@@ -42,24 +44,74 @@ krastorio.recipes.overrideIngredients
 (
 	"burner-inserter", 
 	{
-		{"automation-core", 1},
-		{"iron-stick", 1}
+		{"inserter-parts", 1},
+		{"iron-plate", 1}
 	}
 )
 krastorio.recipes.overrideIngredients
 (
 	"inserter", 
 	{
-		{"automation-core", 1},
-		{"iron-stick", 1},
-		{"copper-cable", 2}
+		{"inserter-parts", 1},
+		{"automation-core", 1}
 	}
 )
-krastorio.recipes.replaceIngredient("long-handed-inserter", "iron-plate", {"iron-stick", 2})
+krastorio.recipes.overrideIngredients
+(
+	"long-handed-inserter", 
+	{
+		{"inserter-parts", 1},
+		{"automation-core", 1},
+		{"iron-stick", 2}
+	}
+)
+krastorio.recipes.overrideIngredients
+(
+	"fast-inserter", 
+	{
+		{"inserter-parts", 1},
+		{"electronic-circuit", 2},
+		{"steel-plate", 1}
+	}
+)
+krastorio.recipes.overrideIngredients
+(
+	"filter-inserter", 
+	{
+		{"inserter-parts", 1},
+		{"electronic-circuit", 4},
+		{"steel-plate", 1}
+	}
+)
+krastorio.recipes.overrideIngredients
+(
+	"stack-inserter", 
+	{
+		{"inserter-parts", 1},
+		{"advanced-circuit", 2},
+		{"steel-plate", 1},
+		{"steel-gear-wheel", 2}
+	}
+)
+krastorio.recipes.overrideIngredients
+(
+	"stack-filter-inserter", 
+	{
+		{"inserter-parts", 1},
+		{"advanced-circuit", 4},
+		{"steel-plate", 1},
+		{"steel-gear-wheel", 2}
+	}
+)
 
--- Other inserters
-krastorio.recipes.replaceIngredient("fast-inserter", "iron-plate", {"steel-plate", 1})
-krastorio.recipes.convertIngredient("stack-inserter", "iron-gear-wheel", "steel-gear-wheel")
+
+
+
+
+
+
+
+
 
 -- Chaning steel recipes
 krastorio.recipes.overrideIngredients
@@ -79,7 +131,7 @@ krastorio.recipes.overrideProducts
 )
 krastorio.recipes.setEnergyCost("steel-plate", 16)
 
-krastorio.recipes.replaceIngredient("iron-gear-wheel", "iron-plate", {"iron-plate", 1})
+krastorio.recipes.replaceProduct("iron-gear-wheel", "iron-gear-wheel", {"iron-gear-wheel", 2})
 
 -- Engine
 krastorio.recipes.convertIngredient("engine-unit", "steel-plate", "iron-plate")
@@ -370,7 +422,6 @@ krastorio.recipes.replaceIngredient("nuclear-reactor", "copper-plate", {"copper-
 krastorio.recipes.addIngredient("nuclear-reactor", {"rare-metals", 250})
 krastorio.recipes.addIngredient("nuclear-reactor", {type="fluid", name="heavy-water", amount=500})
 
-
 -- -- Turbines
 ----------------------------
 
@@ -382,6 +433,16 @@ krastorio.recipes.setEnergyCost("steam-turbine", 10)
 krastorio.recipes.addIngredient("steam-turbine", {"steam-engine", 2})
 krastorio.recipes.replaceIngredient("steam-turbine", "iron-gear-wheel", {"iron-gear-wheel", 14})
 krastorio.recipes.replaceIngredient("steam-turbine", "pipe", {"pipe", 10})
+
+
+
+-- Assembling machine
+krastorio.recipes.replaceIngredient("assembling-machine-3", "assembling-machine-2", {"assembling-machine-2", 1})
+krastorio.recipes.replaceIngredient("assembling-machine-3", "speed-module", {"speed-module", 2})
+krastorio.recipes.addIngredient("assembling-machine-3", {"advanced-circuit", 3})
+krastorio.recipes.addIngredient("assembling-machine-3", {"steel-gear-wheel", 5})
+
+
 ----------------------------
 
 --------------------------------------------------------------------
@@ -458,8 +519,14 @@ krastorio.recipes.addProduct("nuclear-fuel-reprocessing", {type="item", name="tr
 
 	-- More realistic weapons craft
 
+krastorio.recipes.addIngredient("atomic-bomb", {"heavy-rocket", 1})
+	
 krastorio.recipes.replaceIngredient("pistol", "iron-plate", {"iron-plate", 2})
 krastorio.recipes.replaceIngredient("pistol", "copper-plate", {"copper-plate", 1})
+
+krastorio.recipes.replaceIngredient("piercing-shotgun-shell", "shotgun-shell", {"shotgun-shell", 1})
+krastorio.recipes.replaceIngredient("piercing-shotgun-shell", "steel-plate", {"steel-plate", 3})
+krastorio.recipes.removeIngredient("piercing-shotgun-shell", "copper-plate")
 
 krastorio.recipes.replaceIngredient("submachine-gun", "iron-plate", {"iron-plate", 3})
 krastorio.recipes.replaceIngredient("submachine-gun", "copper-plate", {"copper-plate", 2})

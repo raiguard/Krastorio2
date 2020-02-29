@@ -720,13 +720,13 @@ return
 	{
 		type = "recipe",
 		name = "kr-superior-inserter",
-		energy_required = 10,
+		energy_required = 1,
 		enabled = false,
 		ingredients =
 		{
-			{"stack-inserter", 1},
-			{"imersium-plate", 5},
-			{"imersium-gear-wheel", 10},
+			{"inserter-parts", 1},
+			{"imersium-plate", 1},
+			{"imersium-gear-wheel", 4},
 			{"processing-unit", 1}
 		},
 		result = "kr-superior-inserter"
@@ -734,36 +734,42 @@ return
 	{
 		type = "recipe",
 		name = "kr-superior-long-inserter",
-		energy_required = 10,
+		energy_required = 1,
 		enabled = false,
 		ingredients =
 		{
-			{"kr-superior-inserter", 1},
-			{"imersium-beam", 1}
+			{"inserter-parts", 2},
+			{"imersium-plate", 2},
+			{"imersium-gear-wheel", 4},
+			{"processing-unit", 1}
 		},
 		result = "kr-superior-long-inserter"
     },
 	{
 		type = "recipe",
 		name = "kr-superior-filter-inserter",
-		energy_required = 10,
+		energy_required = 1,
 		enabled = false,
 		ingredients =
 		{
-			{"kr-superior-inserter", 1},
-			{"processing-unit", 1}
+			{"inserter-parts", 1},
+			{"imersium-plate", 1},
+			{"imersium-gear-wheel", 4},
+			{"processing-unit", 2}
 		},
 		result = "kr-superior-filter-inserter"
     },
 	{
 		type = "recipe",
 		name = "kr-superior-long-filter-inserter",
-		energy_required = 10,
+		energy_required = 1,
 		enabled = false,
 		ingredients =
 		{
-			{"kr-superior-filter-inserter", 1},
-			{"imersium-beam", 1}
+			{"inserter-parts", 2},
+			{"imersium-plate", 2},
+			{"imersium-gear-wheel", 4},
+			{"processing-unit", 2}
 		},
 		result = "kr-superior-long-filter-inserter"
     },

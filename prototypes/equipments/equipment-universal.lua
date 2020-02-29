@@ -172,7 +172,7 @@ data:extend(
 		{
 			fuel_categories = {"chemical", "vehicle-fuel"},
 			effectivity = 2,
-			fuel_inventory_size = 3,
+			fuel_inventory_size = 2,
 			burnt_inventory_size = 1
 		},
 		energy_source =
@@ -204,7 +204,7 @@ data:extend(
 		{
 			fuel_category = "nuclear",
 			effectivity = 2,
-			fuel_inventory_size = 3,
+			fuel_inventory_size = 1,
 			burnt_inventory_size = 1
 		},
 		energy_source =
@@ -236,7 +236,7 @@ data:extend(
 		{
 			fuel_category = "antimatter-fuel",
 			effectivity = 2,
-			fuel_inventory_size = 3,
+			fuel_inventory_size = 1,
 			burnt_inventory_size = 1
 		},
 		energy_source =

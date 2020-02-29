@@ -108,10 +108,10 @@ return
 		allow_productivity = true,
 		ingredients = 
 		{
-			{"imersite-powder", 5},
-			{"rare-metals", 5}
+			{"imersite-powder", 9},
+			{"rare-metals", 6}
 		},
 		result = "imersium-plate",
-		result_count = 5 
+		result_count = 3
     }
 }

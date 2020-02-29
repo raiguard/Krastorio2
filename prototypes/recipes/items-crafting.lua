@@ -3,6 +3,20 @@ return
 {
 	{
 		type = "recipe",
+		name = "inserter-parts",
+		energy_required = 1,
+		enabled = true,
+		allow_productivity = true,
+		ingredients =
+		{
+			{"iron-plate", 3},
+			{"iron-gear-wheel", 4},
+			{"copper-plate", 1}
+		},
+		result = "inserter-parts"
+	},
+	{
+		type = "recipe",
 		name = "automation-core",
 		energy_required = 1,
 		enabled = false,
@@ -38,9 +52,10 @@ return
 		allow_productivity = true,
 		ingredients =
 		{
-			{"steel-plate", 2}
+			{"steel-plate", 1}
 		},
-		result = "steel-gear-wheel"
+		result = "steel-gear-wheel",
+		result_count = 2
 	},
 	{
 		type = "recipe",
@@ -163,10 +178,10 @@ return
 		allow_productivity = true,
 		ingredients =
 		{
-			{"imersium-plate", 2}
+			{"imersium-plate", 1}
 		},
 		result = "imersium-gear-wheel",
-		result_count = 1
+		result_count = 2
 	},
 	{
 		type = "recipe",
@@ -228,7 +243,7 @@ return
 		energy_required = 20,
 		ingredients =
 		{
-			{"imersite-powder", 2},
+			{"imersite-crystal", 2},
 			{"piercing-rounds-magazine", 1}
 		},
 		result = "imersite-rounds-magazine"
@@ -255,9 +270,9 @@ return
 		energy_required = 10,
 		ingredients =
 		{
-			{"low-density-structure", 5},
-			{"imersite-powder", 3},
-			{"electronic-components", 10},
+			{"low-density-structure", 6},
+			{"imersite-crystal", 3},
+			{"electronic-components", 9},
 			{"lithium-sulfur-battery", 3}
 		},
 		result = "energy-control-unit"
@@ -376,6 +391,7 @@ return
 		energy_required = 5,
 		ingredients =
 		{
+			{"imersium-plate", 1},
 			{"explosive-turret-rocket", 1},
 			{"charged-antimatter-fuel-cell", 1},
 			{"processing-unit", 1}			
@@ -389,6 +405,7 @@ return
 		energy_required = 5,
 		ingredients =
 		{
+			{"imersium-plate", 1},
 			{"artillery-shell", 1},
 			{"charged-antimatter-fuel-cell", 1},
 			{"processing-unit", 1}		
@@ -402,7 +419,8 @@ return
 		energy_required = 5,
 		ingredients =
 		{
-			{"heavy-rocket", 3},
+			{"imersium-plate", 2},
+			{"heavy-rocket", 1},
 			{"charged-antimatter-fuel-cell", 5},
 			{"processing-unit", 1}		
 		},
@@ -415,6 +433,7 @@ return
 		energy_required = 5,
 		ingredients =
 		{
+			{"imersium-plate", 1},
 			{"basic-railgun-shell", 1},
 			{"charged-antimatter-fuel-cell", 1},
 			{"processing-unit", 1}		

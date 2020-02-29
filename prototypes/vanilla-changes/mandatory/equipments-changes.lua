@@ -344,7 +344,7 @@ data.raw["generator-equipment"]["fusion-reactor-equipment"].burner =
 {
 	fuel_category = "fusion-fuel",
 	effectivity = 2,
-	fuel_inventory_size = 3,
+	fuel_inventory_size = 1,
 	burnt_inventory_size = 1
 }
 

@@ -19,17 +19,24 @@ data:extend(
 	},
 	{
 		type = "bool-setting",
+		name = "kr-bonus-items",
+		setting_type = "startup",
+		default_value = false,
+		order = "a3"
+	},
+	{
+		type = "bool-setting",
 		name = "kr-disable-wiki",
 		setting_type = "runtime-per-user",
 		default_value = false,
-		order = "a3"
+		order = "a4"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-loaders",
 		setting_type = "startup",
 		default_value = true,
-		order = "a4"
+		order = "a5"
 	},
 	-- S - Science
 	{

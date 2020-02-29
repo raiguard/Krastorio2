@@ -65,3 +65,18 @@ ccm:addCallBack({se, "on_gui_selection_state_changed"})
 
 -- Active merged callbacks
 ccm:activeCallbacks()
+
+-- Cheat Stuff
+if settings.startup["kr-bonus-items"].value then
+script.on_event(defines.events.on_player_created, function(event)
+	local iteminsert = game.players[event.player_index].insert
+		iteminsert{name="construction-robot", count=50}
+		iteminsert{name="modular-armor", count=1}
+		iteminsert{name="car", count=1}
+		iteminsert{name="big-battery-equipment", count=1}
+		iteminsert{name="personal-roboport-equipment", count=1}
+		iteminsert{name="small-portable-generator", count=2}
+		iteminsert{name="cliff-explosives", count=50}
+		iteminsert{name="landfill", count=50}
+	end)
+	end

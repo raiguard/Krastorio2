@@ -514,7 +514,7 @@ data:extend(
 		fuel_value = "10GJ",
 		subgroup = "intermediate-product",
 		order = "r[uranium-processing]-b1[dt-fuel]",
-		stack_size = 50
+		stack_size = 10
     },
 	---
 	{
@@ -580,5 +580,24 @@ data:extend(
 		subgroup = "intermediate-product",
 		order = "r[uranium-processing]-b2[antimatter-fuel-cell]-a2[charged-antimatter-fuel-cell]",
 		stack_size = 10
-    }
+    },
+	{
+		type = "item",
+		name = "inserter-parts",
+		icon = kr_items_with_variations_icons_path .. "inserter-parts/inserter-parts.png",
+		icon_size = 64,
+		icon_mipmaps = 4,
+		pictures =
+		{
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "inserter-parts/inserter-parts.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "inserter-parts/inserter-parts-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "inserter-parts/inserter-parts-2.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "inserter-parts/inserter-parts-3.png", scale = 0.25, mipmap_count = 4 }
+		},
+		subgroup = "inserter",
+		order = "000[inserter-parts]",
+		--subgroup = "intermediate-product",
+		--order = "e[ei-inserter-parts]",
+		stack_size = 200
+    },
 })

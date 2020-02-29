@@ -91,3 +91,5 @@ require(scripts_path .. "realistic-electric-trains")
 require(scripts_path .. "space-exploration")
 require(scripts_path .. "vtk-armor-plating")
 ---------------------------------------------------------------------------
+-- Filter inserter fix
+krastorio.recipes.addOrReplaceIngredient("filter-inserter", "automation-core", {"electronic-circuit", 2})

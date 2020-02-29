@@ -2,6 +2,9 @@
 if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 
 local bullets_collision_box = {{-1, -1}, {1, 1}}
+local pistol_range = 22
+local rifle_range = 30
+local sniper_range = 60
 
 ----------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------- -- NEW EXPLOSION -- ---------------------------------------------------
@@ -85,7 +88,7 @@ data.raw.gun["submachine-gun"].attack_parameters.movement_slow_down_factor = 0.2
 ----------------------------------------------------------------------------------------------------------------------
 
 data.raw.gun["pistol"].attack_parameters.ammo_category = "pistol-ammo"
-data.raw.gun["pistol"].attack_parameters.range = 22
+data.raw.gun["pistol"].attack_parameters.range = pistol_range
 data.raw.gun["pistol"].attack_parameters.min_range =0.5
 data.raw.gun["pistol"].attack_parameters.cooldown = 20
 data.raw.gun["pistol"].attack_parameters.movement_slow_down_factor = 0.15
@@ -120,7 +123,7 @@ data:extend(
 							starting_speed = 1,
 							direction_deviation = 0.15,
 							range_deviation = 0.15,
-							max_range = 22,
+							max_range = pistol_range,
 							source_effects =
 							{
 								{
@@ -170,7 +173,7 @@ data:extend(
 								{
 									{
 										type = "damage",
-										damage = {amount = 6, type = "physical"}
+										damage = {amount = 8, type = "physical"}
 									},
 								}
 							}
@@ -243,7 +246,7 @@ data:extend(
 						starting_speed = 1.1,
 						direction_deviation = 0.15,
 						range_deviation = 0.15,
-						max_range = 22,
+						max_range = pistol_range,
 						source_effects =
 						{
 							{
@@ -293,7 +296,7 @@ data:extend(
 								{
 									{
 										type = "damage",
-										damage = {amount = 8, type = "physical"}
+										damage = {amount = 12, type = "physical"}
 									},
 								}
 							}
@@ -348,7 +351,7 @@ data.raw.ammo["piercing-rounds-magazine"].localised_name={"item-name.armor-pierc
 
 
 data.raw.gun["submachine-gun"].attack_parameters.ammo_category = "rifle-ammo"
-data.raw.gun["submachine-gun"].attack_parameters.range = 35
+data.raw.gun["submachine-gun"].attack_parameters.range = rifle_range
 data.raw.gun["submachine-gun"].attack_parameters.min_range = 0.75
 data.raw.gun["submachine-gun"].attack_parameters.cooldown = 8
 data.raw.gun["submachine-gun"].attack_parameters.movement_slow_down_factor = 0.15
@@ -386,7 +389,7 @@ data:extend(
 						starting_speed = 1.5,
 						direction_deviation = 0.15,
 						range_deviation = 0.15,
-						max_range = 35,
+						max_range = rifle_range,
 						source_effects =
 						{
 							{
@@ -511,7 +514,7 @@ data:extend(
 						starting_speed = 1.75,
 						direction_deviation = 0.15,
 						range_deviation = 0.15,
-						max_range = 35,
+						max_range = rifle_range,
 						source_effects =
 						{
 							{
@@ -633,7 +636,7 @@ data:extend(
 						starting_speed = 1.75,
 						direction_deviation = 0.15,
 						range_deviation = 0.15,
-						max_range = 35,
+						max_range = rifle_range,
 						source_effects =
 						{
 							{
@@ -759,7 +762,7 @@ data:extend(
 						starting_speed = 2.25,
 						direction_deviation = 0.1,
 						range_deviation = 0.1,
-						max_range = 64,
+						max_range = rifle_range,
 						source_effects =
 						{
 							{
@@ -893,7 +896,7 @@ data:extend(
 			},
 			projectile_creation_distance = 1.125,
 			min_range = 2,
-			range = 70,
+			range = sniper_range,
 			sound =
 			{
 				{
@@ -948,7 +951,7 @@ data:extend(
 						starting_speed = 3,
 						direction_deviation = 0.02,
 						range_deviation = 0.02,
-						max_range = 75,
+						max_range = sniper_range,
 						source_effects =
 						{
 							{
@@ -1073,7 +1076,7 @@ data:extend(
 						starting_speed = 3,
 						direction_deviation = 0.02,
 						range_deviation = 0.02,
-						max_range = 75,
+						max_range = sniper_range,
 						source_effects =
 						{
 							{
@@ -1195,7 +1198,7 @@ data:extend(
 						starting_speed = 3,
 						direction_deviation = 0.02,
 						range_deviation = 0.02,
-						max_range = 75,
+						max_range = sniper_range,
 						source_effects =
 						{
 							{
@@ -1321,7 +1324,7 @@ data:extend(
 						starting_speed = 5,
 						direction_deviation = 0.02,
 						range_deviation = 0.02,
-						max_range = 75,
+						max_range = sniper_range,
 						source_effects =
 						{
 							{
@@ -1427,8 +1430,58 @@ data:extend(
 
 -- -- Vanilla
 
---data.raw["ammo-turret"]["gun-turret"].localised_name={"kr-gun-turret"}
+data.raw.gun["shotgun"].attack_parameters.cooldown = 60
+data.raw.gun["shotgun"].movement_slow_down_factor = 0.2
+data.raw.gun["shotgun"].attack_parameters.damage_modifier = 1.5
 
+
+data.raw.gun["combat-shotgun"].attack_parameters.cooldown = 30
+data.raw.gun["combat-shotgun"].movement_slow_down_factor = 0.3
+data.raw.gun["combat-shotgun"].attack_parameters.damage_modifier = 1.5
+
+data.raw.ammo["shotgun-shell"].magazine_size = 6
+data.raw.ammo["piercing-shotgun-shell"].magazine_size = 6
+data.raw.ammo["shotgun-shell"].ammo_type.action =
+	{
+		{
+			type = "direct",
+			action_delivery =
+			{
+				type = "instant",
+				source_effects =
+				{
+					{
+						type = "create-explosion",
+						entity_name = "explosion-gunshot"
+					}
+				}
+			}
+		},
+		{
+			type = "direct",
+			repeat_count = 16,
+			action_delivery =
+			{
+				type = "projectile",
+				projectile = "shotgun-pellet",
+				starting_speed = 1,
+				starting_speed_deviation = 0.1,
+				direction_deviation = 0.3,
+				range_deviation = 0.3,
+				max_range = 15
+			}
+		}
+	}
+	
+	
+data.raw.projectile["shotgun-pellet"].acceleration = -0.01
+data.raw.projectile["shotgun-pellet"].action.action_delivery.target_effects.damage = {amount = 6, type = "physical"}
+
+data.raw.projectile["piercing-shotgun-pellet"].acceleration = -0.01
+data.raw.projectile["piercing-shotgun-pellet"].action.action_delivery.target_effects.damage = {amount = 10, type = "physical"}
+
+
+--data.raw["ammo-turret"]["gun-turret"].localised_name={"kr-gun-turret"}
 data.raw["ammo-turret"]["gun-turret"].attack_parameters.range = 25
 data.raw["ammo-turret"]["gun-turret"].attack_parameters.ammo_category = "rifle-ammo"
 
@@ -1440,10 +1493,10 @@ data.raw["ammo"]["explosive-uranium-cannon-shell"].ammo_type.action.action_deliv
 
 data.raw.gun["artillery-wagon-cannon"].attack_parameters.range = 6 * 32
 
-data.raw.gun["vehicle-machine-gun"].attack_parameters.range = 25
+data.raw.gun["vehicle-machine-gun"].attack_parameters.range = rifle_range
 data.raw.gun["vehicle-machine-gun"].attack_parameters.min_range = 1.75
 data.raw.gun["vehicle-machine-gun"].attack_parameters.ammo_category = "rifle-ammo"
-data.raw.gun["tank-machine-gun"].attack_parameters.range = 25
+data.raw.gun["tank-machine-gun"].attack_parameters.range = rifle_range
 data.raw.gun["tank-machine-gun"].attack_parameters.min_range = 2
 data.raw.gun["tank-machine-gun"].attack_parameters.ammo_category = "rifle-ammo"
 data.raw.gun["tank-cannon"].attack_parameters.range = 50
@@ -1469,7 +1522,7 @@ data.raw.ammo["uranium-rounds-magazine"].flags = {"hidden"}
 data.raw.ammo["imersite-rounds-magazine"].flags = {"hidden"}
 
 data.raw.gun["advanced-tank-machine-gun"].attack_parameters.ammo_category = "anti-material-rifle-ammo"
-data.raw.gun["advanced-tank-machine-gun"].attack_parameters.range = 60
+data.raw.gun["advanced-tank-machine-gun"].attack_parameters.range = sniper_range
 data.raw.gun["advanced-tank-machine-gun"].attack_parameters.min_range = 3.5
 data.raw.gun["advanced-tank-machine-gun"].attack_parameters.cooldown = 15
 data.raw.gun["advanced-tank-machine-gun"].sound =
