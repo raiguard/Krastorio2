@@ -8,10 +8,6 @@ data:extend(
 		name = "kr-singularity-beacon",
 		icon = kr_entities_icons_path .. "singularity-beacon.png",
 		icon_size = 64,
-		pictures =
-		{
-			{ size = 64, filename = kr_entities_icons_path .. "singularity-beacon.png", scale = 0.25, mipmap_count = 4 }
-		}, 
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "kr-singularity-beacon"},
 		max_health = 350,

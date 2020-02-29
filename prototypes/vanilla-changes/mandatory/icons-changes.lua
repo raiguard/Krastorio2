@@ -3,36 +3,36 @@
 -- -- Adapting the vanilla science packs with the new icons style
 
 -- Automation science pack
-krastorio.icons.setItemIcon("automation-science-pack",                kr_cards_icons_path .. "automation-tech-card.png")
+krastorio.icons.setItemIcon("automation-science-pack",                kr_cards_icons_path .. "automation-tech-card.png", 64, 4)
 data.raw.tool["automation-science-pack"].order = "b02[automation-tech-card]"
 
 -- Logistic science pack
-krastorio.icons.setItemIcon("logistic-science-pack",                  kr_cards_icons_path .. "logistic-tech-card.png")
+krastorio.icons.setItemIcon("logistic-science-pack",                  kr_cards_icons_path .. "logistic-tech-card.png", 64, 4)
 data.raw.tool["logistic-science-pack"].order = "b03[logistic-tech-card]"
 krastorio.icons.setTechnologyIcon("logistic-science-pack",            kr_technologies_icons_path .. "logistic-tech-card.png")
 
 -- Military science pack
-krastorio.icons.setItemIcon("military-science-pack",                  kr_cards_icons_path .. "military-tech-card.png")
+krastorio.icons.setItemIcon("military-science-pack",                  kr_cards_icons_path .. "military-tech-card.png", 64, 4)
 data.raw.tool["military-science-pack"].order = "b04[military-tech-card]"
 krastorio.icons.setTechnologyIcon("military-science-pack",            kr_technologies_icons_path .. "military-tech-card.png")
 
 -- Chemical science pack
-krastorio.icons.setItemIcon("chemical-science-pack",                  kr_cards_icons_path .. "chemical-tech-card.png")
+krastorio.icons.setItemIcon("chemical-science-pack",                  kr_cards_icons_path .. "chemical-tech-card.png", 64, 4)
 data.raw.tool["chemical-science-pack"].order = "b05[chemical-tech-card]"
 krastorio.icons.setTechnologyIcon("chemical-science-pack",            kr_technologies_icons_path .. "chemical-tech-card.png")
 
 -- Production science pack
-krastorio.icons.setItemIcon("production-science-pack",                kr_cards_icons_path .. "production-tech-card.png")
+krastorio.icons.setItemIcon("production-science-pack",                kr_cards_icons_path .. "production-tech-card.png", 64, 4)
 data.raw.tool["production-science-pack"].order = "b06[production-tech-card]"
 krastorio.icons.setTechnologyIcon("production-science-pack",          kr_technologies_icons_path .. "production-tech-card.png")
 
 -- Utility science pack
-krastorio.icons.setItemIcon("utility-science-pack",                   kr_cards_icons_path .. "utility-tech-card.png")
+krastorio.icons.setItemIcon("utility-science-pack",                   kr_cards_icons_path .. "utility-tech-card.png", 64, 4)
 data.raw.tool["utility-science-pack"].order = "b07[utility-tech-card]"
 krastorio.icons.setTechnologyIcon("utility-science-pack",             kr_technologies_icons_path .. "utility-tech-card.png")
 
 -- Space science pack
-krastorio.icons.setItemIcon("space-science-pack",                     kr_cards_icons_path .. "optimization-tech-card.png")
+krastorio.icons.setItemIcon("space-science-pack",                     kr_cards_icons_path .. "optimization-tech-card.png", 64, 4)
 data.raw.tool["space-science-pack"].order = "b08[optimization-tech-card]"
 krastorio.icons.setTechnologyIcon("space-science-pack",               kr_technologies_icons_path .. "optimization-tech-card.png")
 
@@ -95,7 +95,9 @@ krastorio.icons.setTechnologyIcon("mining-productivity-2",            kr_technol
 krastorio.icons.setTechnologyIcon("mining-productivity-3",            kr_technologies_icons_path .. "mining-productivity-3.png")
 krastorio.icons.setTechnologyIcon("mining-productivity-4",            kr_technologies_icons_path .. "mining-productivity-4.png")
 
-krastorio.icons.setTechnologyIcon("steel-axe",                        kr_technologies_icons_path .. "steel-pickaxe.png")
+if krastorio.icons.setTechnologyIcon("steel-axe",                     kr_technologies_icons_path .. "steel-pickaxe.png") then
+	data.raw.technology["steel-axe"].icon_mipmaps = nil
+end
 
 -- Equipments
 krastorio.icons.setTechnologyIcon("heavy-armor",                      kr_technologies_icons_path .. "heavy-armor.png")

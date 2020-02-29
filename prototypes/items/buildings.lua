@@ -613,12 +613,7 @@ data:extend(
 		type = "item",
 		name = "kr-singularity-beacon",
 		icon = kr_entities_icons_path .. "singularity-beacon.png",
-		icon_size = 64,
-		icon_mipmaps = 1,
-		pictures =
-		{
-			{ size = 64, filename = kr_entities_icons_path .. "singularity-beacon.png", scale = 0.25, mipmap_count = 4 }
-		}, 
+		icon_size = 64, 
 		subgroup = "module",
 		order = "8[singularity-beacon]",
 		place_result = "kr-singularity-beacon",

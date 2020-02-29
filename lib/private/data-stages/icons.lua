@@ -153,7 +153,10 @@ function krastorio.icons.setItemIcon(_item_name, _icon_path, _icon_size, _icon_m
 		data.raw[item_type][_item_name].icon = _icon_path
 		data.raw[item_type][_item_name].icon_size = _icon_size or 64
 		data.raw[item_type][_item_name].icon_mipmaps = _icon_mipmaps
+		
+		return true
 	end
+	return false
 end
 
 -- @ _recipe_name
@@ -166,7 +169,10 @@ function krastorio.icons.setItemIcons(_item_name, _icons)
 			data.raw[item_type][_item_name].icon_size = nil		
 		end
 		data.raw[item_type][_item_name].icons = _icons
+		
+		return true
 	end
+	return false
 end
 
 -- @ _recipe_name
@@ -176,7 +182,10 @@ function krastorio.icons.setItemPictures(_item_name, _mipmaps, _icon_mipmaps)
 		local item_type = krastorio.items.getItemType(_item_name)		
 		data.raw[item_type][_item_name].icon_mipmaps = _icon_mipmaps
 		data.raw[item_type][_item_name].pictures = _mipmaps
+		
+		return true
 	end
+	return false
 end
 
 -- -- Recipes
@@ -191,7 +200,10 @@ function krastorio.icons.setRecipeIcon(_recipe_name, _icon_path, _icon_size)
 		end
 		data.raw.recipe[_recipe_name].icon = _icon_path
 		data.raw.recipe[_recipe_name].icon_size = _icon_size or 64
+		
+		return true
 	end
+	return false
 end
 
 -- @ _recipe_name
@@ -203,7 +215,10 @@ function krastorio.icons.setRecipeIcons(_recipe_name, _icons)
 			data.raw.recipe[_recipe_name].icon_size = nil		
 		end
 		data.raw.recipe[_recipe_name].icons = _icons
+		
+		return true
 	end
+	return false
 end
 
 -- -- Technologies
@@ -217,7 +232,10 @@ function krastorio.icons.setTechnologyIcon(_technology_name, _icon_path, _icon_s
 		end	
 		data.raw.technology[_technology_name].icon = _icon_path
 		data.raw.technology[_technology_name].icon_size = _icon_size or 128
+		
+		return true
 	end
+	return false
 end
 
 -- @ _technology_name
@@ -229,5 +247,8 @@ function krastorio.icons.setTechnologyIcons(_technology_name, _icons)
 			data.raw.technology[_technology_name].icon_size = nil		
 		end	
 		data.raw.technology[_technology_name].icons = _icons
+		
+		return true
 	end
+	return false
 end

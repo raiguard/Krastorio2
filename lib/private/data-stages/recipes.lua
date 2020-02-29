@@ -94,6 +94,20 @@ end
 
 -- @ recipe_name
 -- return a boolean
+function krastorio.recipes.useFluids(recipe_name)
+	local ingredients = krastorio.recipes.getIngredients(recipe_name)
+	if ingredients and #ingredients > 0 then
+		for _, ingredient in pairs(ingredients) do
+			if ingredient.type and ingredient.type == "fluid" then
+				return true
+			end
+		end
+	end
+	return false
+end
+
+-- @ recipe_name
+-- return a boolean
 function krastorio.recipes.hasNoIngredients(recipe_name)
 	return (next(krastorio.recipes.getIngredients(recipe_name)) == nil)
 end 
@@ -1124,7 +1138,9 @@ function krastorio.recipes.addProduct(recipe_name, product)
 		if added and ( #products > 1 and ( not(recipe.icon and recipe.subgroup) or recipe.main_product ) )then 
 			local i, product = next(products)
 			recipe.main_product = product.name
-			krastorio_utils.log.write(3, string.format("Maybe %s recipe needs the icon to be set correctly.", recipe.name))
+			if not (recipe.icon or recipe.icons) then
+				krastorio_utils.log.write(3, string.format("Maybe %s recipe needs the icon to be set correctly.", recipe.name))
+			end
 		end
 		return added
 	end

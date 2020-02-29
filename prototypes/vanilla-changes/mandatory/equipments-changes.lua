@@ -27,6 +27,13 @@ end
 
 -- Update a icon and sprites a given table (dictionary),
 -- formatted with: { categories{ items-->[path,icon_size,sprite.width,sprite.height]... }... }
+-- Possible property:
+-- [1] -> icon name
+-- [2] -> icon size
+-- [3] -> sprite width
+-- [4] -> sprite height
+-- [5] -> tier of overlay
+-- [6] -> icon_mipmaps
 -- @_objects_to_modify, list of graphics to modify with the format over described
 -- @icons_path, path where is the new icons of this objects
 -- @sprites_path, path where is the new sprites of this objects
@@ -37,15 +44,16 @@ function updateVanillaEquipmentGraphics(_objects_to_modify, icons_path, sprites_
 				if not item[5] then -- tier
 					data.raw.item[item_name].icon      = icons_path .. item[1] -- icon name
 					data.raw.item[item_name].icon_size = item[2] -- icon size
+					data.raw.item[item_name].icon_mipmaps = item[6]
 				else
 					data.raw.item[item_name].icon      = nil
 					data.raw.item[item_name].icons     =
 					{
-						{ icon = icons_path .. item[1], icon_size = item[2] },
+						{ icon = icons_path .. item[1], icon_size = item[2], icon_mipmaps = item[6] },
 						{ icon = kr_equipments_tiers_icon_path .. tostring(item[5]) .. ".png", icon_size = 64} -- , scale = item[2]/64
 					}
 					data.raw.item[item_name].icon_size = item[2] -- icon size
-				end
+				end				
 				if data.raw[category_name][item_name] then
 					data.raw[category_name][item_name].sprite.filename = sprites_path .. item[1]
 					data.raw[category_name][item_name].sprite.width    = item[3]
