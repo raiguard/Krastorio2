@@ -3,6 +3,8 @@ Version: 0.5.8
 Date: 29.02.2020
   Fixes:
     - Fixed broken recipes.
+  Changes:
+    - Marked KS combat mod incompatible with K2.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.7
 Date: 29.02.2020
