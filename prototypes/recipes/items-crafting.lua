@@ -41,7 +41,7 @@ return
 			{"steel-plate", 1}
 		},
 		result = "steel-gear-wheel",
-		result_count = 2
+		result_count = 1
 	},
 	{
 		type = "recipe",
@@ -178,7 +178,7 @@ return
 			{"imersium-plate", 1}
 		},
 		result = "imersium-gear-wheel",
-		result_count = 2
+		result_count = 1
 	},
 	{
 		type = "recipe",

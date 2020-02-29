@@ -194,7 +194,7 @@ data:extend(
 			{ size = 64, filename = kr_items_with_variations_icons_path .. "electronic-components/electronic-components-5.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "intermediate-product",
-		order = "e[ei-electronic-components]",
+		order = "e02[ei-electronic-components]",
 		stack_size = 200
 	},
 	---
@@ -605,10 +605,8 @@ data:extend(
 			{ size = 64, filename = kr_items_with_variations_icons_path .. "inserter-parts/inserter-parts-2.png", scale = 0.25, mipmap_count = 4 },
 			{ size = 64, filename = kr_items_with_variations_icons_path .. "inserter-parts/inserter-parts-3.png", scale = 0.25, mipmap_count = 4 }
 		},
-		subgroup = "inserter",
-		order = "000[inserter-parts]",
-		--subgroup = "intermediate-product",
-		--order = "e[ei-inserter-parts]",
+		subgroup = "intermediate-product",
+		order = "e01[ei-inserter-parts]",
 		stack_size = 200
     },
 })

@@ -27,7 +27,7 @@ end
 
 -- Iron plate
 krastorio.recipes.replaceIngredient("iron-plate", "iron-ore", {"iron-ore", 2})
-krastorio.recipes.replaceIngredient("iron-gear-wheel", "iron-ore", {"iron-ore", 2})
+krastorio.recipes.replaceIngredient("iron-gear-wheel", "iron-plate", {"iron-plate", 1})
 
 -- Copper plate
 krastorio.recipes.replaceIngredient("copper-plate", "copper-ore", {"copper-ore", 2})
@@ -131,7 +131,7 @@ krastorio.recipes.overrideProducts
 )
 krastorio.recipes.setEnergyCost("steel-plate", 16)
 
-krastorio.recipes.replaceProduct("iron-gear-wheel", "iron-gear-wheel", {"iron-gear-wheel", 2})
+krastorio.recipes.replaceProduct("iron-gear-wheel", "iron-gear-wheel", {"iron-gear-wheel", 1})
 
 -- Engine
 krastorio.recipes.convertIngredient("engine-unit", "steel-plate", "iron-plate")
