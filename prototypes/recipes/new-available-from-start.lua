@@ -12,8 +12,7 @@ return
 		{
 			{"iron-plate", 2}
 		},
-		result = "iron-beam",
-		result_count = 1
+		result = "iron-beam"
 	},
     {
 		type = "recipe",

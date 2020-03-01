@@ -726,13 +726,13 @@ end
 -- @ science_pack_name
 -- @ science_pack_incompatibilities - a set
 function krastorio.technologies.removeSciencePackIncompatibleWith(science_pack_name, science_pack_incompatibilities)
-	if type(science_pack_name) == "string" and science_pack_incompatibilities and next(science_pack_incompatibilities) then
+	if type(science_pack_name) == "string" and science_pack_incompatibilities and #science_pack_incompatibilities > 0 then
 			
 		for technology_name, technology in pairs(data.raw.technology) do
 			
 			local is_in = false
 			local ingredients = technology.unit.ingredients				
-			if ingredients and next(ingredients) ~= nil then				
+			if ingredients and #ingredients > 1 then				
 				for i = 1, #ingredients do
 					local ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])					
 					if science_pack_name == ingredient_name then

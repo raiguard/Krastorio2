@@ -2,10 +2,15 @@
 Version: 0.5.10
 Date: 01.03.2020
   Changes:
+    - Locomotives can take chemical and vehicle fuels
+    - Reduced steel beam time cost from 3s to 2s.
     - Add energy tooltip to offshore pumps.
     - Boosted fish.
     - Rebalanced technology cost.
     - Added new additional icon for inserter parts.
+    - Removed utility science pack from personal roboports tech with SE installed
+  Fixes:
+    - Trying to resolve the fighting between automatic SE science pack inheritance algorithm over the automatic K2 science pack tiers coherence
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.9
 Date: 01.03.2020

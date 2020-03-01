@@ -7,7 +7,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 	data.raw.locomotive["locomotive"].max_health = 1500
 	data.raw.locomotive["locomotive"].braking_force = 30
 	data.raw.locomotive["locomotive"].burner.fuel_inventory_size = 3
-	data.raw.locomotive["locomotive"].burner.fuel_category = "vehicle-fuel"
+	data.raw.locomotive["locomotive"].burner.fuel_categories = {"chemical", "vehicle-fuel"}
 	data.raw.locomotive["locomotive"].burner.emissions_per_minute = 20
 	data.raw.locomotive["locomotive"].minable = {mining_time = 1, result = "locomotive"}
 	data.raw.locomotive["locomotive"].weight = 10000
@@ -16,7 +16,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 	data.raw.locomotive["locomotive"].burner.effectivity = 1
 
 	-- recipe modification
-	krastorio.recipes.setEnergyCost("locomotive", 180, 360)	
+	krastorio.recipes.setEnergyCost("locomotive", 60, 120)	
 	krastorio.recipes.replaceIngredient("locomotive", "steel-plate", {"steel-plate", 80})
 	---------------------
 	

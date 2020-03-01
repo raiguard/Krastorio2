@@ -46,7 +46,7 @@ return
 	{
 		type = "recipe",
 		name = "steel-beam",
-		energy_required = 3,
+		energy_required = 2,
 		enabled = false,
 		allow_productivity = true,
 		ingredients =

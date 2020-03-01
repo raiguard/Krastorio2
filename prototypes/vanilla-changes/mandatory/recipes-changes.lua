@@ -499,7 +499,7 @@ krastorio.recipes.addOrReplaceProducts
 	}
 )
 
-	-- Increase uranium usage and ad stone as waste
+-- Increase uranium usage and ad stone as waste
 	
 krastorio.recipes.replaceIngredient("kovarex-enrichment-process", "uranium-235", {name = "uranium-235", amount = 50})
 krastorio.recipes.replaceIngredient("kovarex-enrichment-process", "uranium-238", {name = "uranium-238", amount = 8})
@@ -517,7 +517,7 @@ krastorio.recipes.replaceProduct("nuclear-fuel-reprocessing", "uranium-238", {"u
 krastorio.recipes.addProduct("nuclear-fuel-reprocessing", {"stone", 5})
 krastorio.recipes.addProduct("nuclear-fuel-reprocessing", {type="item", name="tritium", probability = 0.05, amount=1})
 
-	-- More realistic weapons craft
+-- More realistic weapons craft
 
 krastorio.recipes.addIngredient("atomic-bomb", {"heavy-rocket", 1})
 	

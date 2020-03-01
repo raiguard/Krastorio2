@@ -22,6 +22,8 @@ krastorio.technologies.addPrerequisite("advanced-electronics", "electronics")
 krastorio.technologies.addPrerequisite("advanced-electronics", "kr-silicon-processing")
 krastorio.technologies.addPrerequisite("battery-equipment", "modular-armor")
 krastorio.technologies.addPrerequisite("fusion-reactor-equipment", "kr-fusion-energy")
+krastorio.technologies.addPrerequisite("automobilism", "kr-fuel")
+krastorio.technologies.addPrerequisite("tanks", "kr-fuel")
 
 -- Science
 krastorio.technologies.addPrerequisite("military-science-pack", "advanced-electronics")

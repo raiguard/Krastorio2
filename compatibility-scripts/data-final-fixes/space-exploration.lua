@@ -4,6 +4,21 @@ if mods["space-exploration"] then
 
 -- -- Technologies
 ---------------------------------------------------------------------------------------------
+	-- Pre-fix for all SE techs
+	require("__Krastorio2__/compatibility-scripts/data-final-fixes/space-exploration/technology")
+
+	-- -- Removing SE technologies
+	
+	-- Antimatter reactor
+	krastorio.technologies.convertPrerequisiteFromAllTechnologies("se-antimatter-reactor", "kr-antimatter-reactor", true)
+	data.raw.technology["se-antimatter-reactor"] = nil
+	
+	-- Fuels
+	krastorio.technologies.convertPrerequisiteFromAllTechnologies("se-fuel-refining", "kr-fuel", true)
+	data.raw.technology["se-fuel-refining"] = nil
+	krastorio.technologies.addUnlockRecipe("kr-fuel", "solid-fuel-from-petroleum-gas")
+	krastorio.technologies.addUnlockRecipe("kr-fuel", "solid-fuel-from-light-oil")
+	krastorio.technologies.addUnlockRecipe("kr-fuel", "solid-fuel-from-heavy-oil")
 	
 	-- Radars
 	krastorio.technologies.convertPrerequisiteFromAllTechnologies("radar", "kr-radar", true)
@@ -16,10 +31,7 @@ if mods["space-exploration"] then
 	krastorio.technologies.convertPrerequisiteFromAllTechnologies("energy-shield-mk4-equipment", "kr-energy-shield-mk4-equipment", true)
 	data.raw.technology["energy-shield-mk4-equipment"] = nil
 
-	-- Fuels
-	krastorio.technologies.convertPrerequisiteFromAllTechnologies("se-fuel-refining", "kr-fuel", true)
-	data.raw.technology["se-fuel-refining"] = nil
-
+	-------------------------------------------------------------
 	-- --  Modules
 	-- Return to Krastorio 2/Vanilla modules on the first 3 tiers 
 	krastorio.technologies.addPrerequisite("speed-module-3", "advanced-electronics-2")
@@ -46,21 +58,55 @@ if mods["space-exploration"] then
 	
 	krastorio.technologies.removeResearchUnitIngredient("effectivity-module-3", "space-science-pack")
 	krastorio.technologies.removeResearchUnitIngredient("effectivity-module-3", "se-biological-science-pack")
-
-	-- Removing tecs
-	krastorio.technologies.convertPrerequisiteFromAllTechnologies("se-antimatter-reactor", "kr-antimatter-reactor", true)
-	data.raw.technology["se-antimatter-reactor"] = nil
+	-------------------------------------------------------------
 	
-	krastorio.technologies.convertPrerequisiteFromAllTechnologies("se-fuel-refining", "kr-fuel", true)
-	data.raw.technology["se-fuel-refining"] = nil
-	krastorio.technologies.addUnlockRecipe("kr-fuel", "solid-fuel-from-petroleum-gas")
-	krastorio.technologies.addUnlockRecipe("kr-fuel", "solid-fuel-from-light-oil")
-	krastorio.technologies.addUnlockRecipe("kr-fuel", "solid-fuel-from-heavy-oil")
-
-	-- Final fix for all SE techs
-	require("__Krastorio2__/compatibility-scripts/data-final-fixes/space-exploration/technology")
+	-- Others
 	
+	-- Other research units
+	krastorio.technologies.addResearchUnitIngredient("battery-mk2-equipment", "automation-science-pack")
+	krastorio.technologies.addResearchUnitIngredient("battery-mk2-equipment", "logistic-science-pack")
+	krastorio.technologies.addResearchUnitIngredient("battery-mk2-equipment", "chemical-science-pack")
+	krastorio.technologies.removeResearchUnitIngredient("battery-mk2-equipment", "utility-science-pack")
+	krastorio.technologies.removeResearchUnitIngredient("battery-mk2-equipment", "space-science-pack")
+	
+	krastorio.technologies.addResearchUnitIngredient("kr-battery-mk3-equipment", "automation-science-pack")
+	krastorio.technologies.addResearchUnitIngredient("kr-battery-mk3-equipment", "logistic-science-pack")
+	krastorio.technologies.addResearchUnitIngredient("kr-battery-mk3-equipment", "chemical-science-pack")
 	krastorio.technologies.removeResearchUnitIngredient("kr-battery-mk3-equipment", "space-science-pack")
+
+	krastorio.technologies.removeResearchUnitIngredient("personal-roboport-equipment", "utility-science-pack")
+
+	-- -- -- Repeting Krastorio science coerence sanification 
+	for technology_name, technology in pairs(data.raw.technology) do
+		local ingredients = technology.unit.ingredients
+		if ingredients and #ingredients >1 then	
+			local is_in = false
+			for i = 1, #ingredients do
+				local ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])					
+				if ingredient_name == "production-science-pack" or ingredient_name == "utility-science-pack" then
+					is_in = true
+					break
+				end	
+			end	
+			if is_in then
+				for i = 1, #ingredients do
+					local ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])					
+					if ingredient_name == "basic-tech-card" then
+						for j, prerequisite_name in pairs(technology.prerequisites) do
+							for _, value in pairs(ingredients[i]) do
+								if prerequisite_name == value then
+									table.remove(technology.prerequisites, j)
+									break
+								end
+							end								
+						end
+						table.remove(ingredients, i)
+						break
+					end	
+				end	
+			end
+		end
+	end
 	
 	--[[
 	local function startsWith(str, start)
