@@ -122,7 +122,7 @@ data:extend(
 		prerequisites = {"kr-fuel", "kr-advanced-chemistry"},
 		unit =
 		{
-			count = 250,
+			count = 200,
 			ingredients = 
 			{
 				{"basic-tech-card", 1},
@@ -153,7 +153,7 @@ data:extend(
 		prerequisites = {"concrete", "steel-processing"},
 		unit =
 		{
-			count = 250,
+			count = 200,
 			ingredients = 
 			{
 				{"basic-tech-card", 1},
@@ -180,7 +180,7 @@ data:extend(
 		prerequisites = {"kr-quarry-minerals-extraction", "kr-fuel", "kr-advanced-chemistry"},
 		unit =
 		{
-			count = 350,
+			count = 250,
 			ingredients = 
 			{
 				{"basic-tech-card", 1},
@@ -208,7 +208,7 @@ data:extend(
 		prerequisites = {"kr-lithium-processing"},
 		unit =
 		{
-			count = 250,
+			count = 200,
 			ingredients = 
 			{
 				{"basic-tech-card", 1},
@@ -314,7 +314,7 @@ data:extend(
 		prerequisites = {"kr-singularity-lab", "space-science-pack"},
 		unit =
 		{
-			count = 750,
+			count = 500,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
@@ -340,7 +340,7 @@ data:extend(
 		prerequisites = {"kr-singularity-lab", "kr-lithium-sulfur-battery", "kr-matter-tech-card"},
 		unit =
 		{
-			count = 500,
+			count = 350,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
@@ -375,7 +375,7 @@ data:extend(
 		prerequisites = {"kr-matter-tech-card"},
 		unit =
 		{
-			count = 750,
+			count = 500,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
@@ -411,10 +411,10 @@ data:extend(
 				recipe = krastorio.recipes.changed_names["antimatter-railgun-shell"] or "antimatter-railgun-shell"
 			}
 		},
-		prerequisites = {"kr-railgun-turret", "kr-rocket-turret", "kr-singularity-tech-card"},
+		prerequisites = {"kr-railgun-turret", "kr-rocket-turret", "kr-singularity-tech-card", "atomic-bomb"},
 		unit =
 		{
-			count = 2000,
+			count = 2500,
 			ingredients = 
 			{
 				{"kr-singularity-tech-card", 1},

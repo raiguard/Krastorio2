@@ -22,7 +22,7 @@ data:extend(
 		prerequisites = {"power-armor-mk2", "kr-energy-control-unit"},
 		unit = 		
 		{
-			count = 1000,
+			count = 500,
 			ingredients = 
 			{
 				{"utility-science-pack", 1},
@@ -50,7 +50,7 @@ data:extend(
 		prerequisites = {"kr-power-armor-mk3", "kr-imersium-processing", "kr-singularity-tech-card"},
 		unit = 		
 		{
-			count = 1500,
+			count = 750,
 			ingredients = 
 			{
 				{"utility-science-pack", 1},
@@ -206,7 +206,7 @@ data:extend(
 		prerequisites = {"battery-equipment", "chemical-science-pack"},
 		unit = 		
 		{
-			count = 120,
+			count = 50,
 			ingredients = 
 			{
 				{"automation-science-pack", 1},
@@ -237,7 +237,7 @@ data:extend(
 		prerequisites = {"nuclear-power", "power-armor"},
 		unit = 		
 		{
-			count = 120,
+			count = 250,
 			ingredients = 
 			{
 				{"automation-science-pack", 1},
@@ -268,7 +268,7 @@ data:extend(
 		prerequisites = {"kr-nuclear-reactor-equipment", "kr-antimatter-reactor"},
 		unit = 		
 		{
-			count = 1500,
+			count = 500,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
@@ -374,7 +374,7 @@ data:extend(
 		},		
 		unit = 
 		{
-			count = 500,
+			count = 350,
 			ingredients = 
 			{
 				{"automation-science-pack", 1},
@@ -413,7 +413,7 @@ data:extend(
 		},		
 		unit = 
 		{
-			count = 750,
+			count = 450,
 			ingredients = 
 			{
 				{"utility-science-pack", 1},
@@ -480,7 +480,7 @@ data:extend(
 		prerequisites = {"energy-shield-mk2-equipment", "kr-lithium-sulfur-battery"},
 		unit = 
 		{			
-			count = 500,
+			count = 350,
 			ingredients = 
 			{
 				{"automation-science-pack", 1},
@@ -509,7 +509,7 @@ data:extend(
 		prerequisites = {"kr-energy-shield-mk3-equipment", "kr-advanced-tech-card"},
 		unit = 
 		{			
-			count = 750,
+			count = 500,
 			ingredients = 
 			{
 				{"utility-science-pack", 1},

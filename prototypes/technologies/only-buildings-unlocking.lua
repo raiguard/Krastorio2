@@ -27,7 +27,7 @@ data:extend(
 		prerequisites = {},
 		unit =
 		{
-			count = 15,
+			count = 10,
 			ingredients = 
 			{
 				{"basic-tech-card", 1}
@@ -249,7 +249,7 @@ data:extend(
 		},
 		unit =
 		{
-			count = 100,
+			count = 50,
 			ingredients = 
 			{
 				{"basic-tech-card", 1},
@@ -304,7 +304,7 @@ data:extend(
 		},
 		unit =
 		{
-			count = 200,
+			count = 100,
 			ingredients = 
 			{
 				{"basic-tech-card", 1},
@@ -394,7 +394,7 @@ data:extend(
 		prerequisites = {"oil-processing", "engine"},
 		unit =
 		{
-			count = 400,
+			count = 250,
 			ingredients = 
 			{
 				{"basic-tech-card", 1},
@@ -491,7 +491,7 @@ data:extend(
 		},
 		unit =
 		{
-			count = 500,
+			count = 350,
 			ingredients = 
 			{
 				{"basic-tech-card", 1},
@@ -573,7 +573,7 @@ data:extend(
 		prerequisites = {"kr-containers", "logistic-system"},
 		unit =
 		{
-			count = 600,
+			count = 500,
 			ingredients = 
 			{
 				{"automation-science-pack", 1},
@@ -601,7 +601,7 @@ data:extend(
 		prerequisites = {"kr-ai-core"},
 		unit =
 		{
-			count = 1000,
+			count = 750,
 			ingredients = 
 			{
 				{"automation-science-pack", 1},
@@ -629,7 +629,7 @@ data:extend(
 		prerequisites = {"kr-quantum-computer", "rocket-silo"},
 		unit =
 		{
-			count = 1200,
+			count = 750,
 			ingredients = 
 			{
 				{"automation-science-pack", 1},
@@ -665,7 +665,7 @@ data:extend(
 		prerequisites = {"logistics-3"},
 		unit =
 		{
-			count = 1000,
+			count = 500,
 			ingredients = 
 			{
 				{"automation-science-pack", 1},
@@ -693,7 +693,7 @@ data:extend(
 		prerequisites = {"kr-matter-tech-card", "kr-energy-control-unit"},
 		unit =
 		{
-			count = 500,
+			count = 350,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
@@ -732,7 +732,7 @@ data:extend(
 		prerequisites = {"stack-inserter", "kr-imersium-processing", "kr-advanced-tech-card"},
 		unit =
 		{
-			count = 1500,
+			count = 500,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
@@ -767,7 +767,7 @@ data:extend(
 		prerequisites = {"kr-logistic-4", "kr-imersium-processing", "kr-advanced-tech-card"},
 		unit =
 		{
-			count = 1500,
+			count = 750,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
@@ -794,7 +794,7 @@ data:extend(
 		prerequisites = {"kr-imersium-processing", "kr-energy-control-unit", "kr-advanced-tech-card"},
 		unit =
 		{
-			count = 1000,
+			count = 500,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
@@ -826,7 +826,7 @@ data:extend(
 		prerequisites = {"kr-imersium-processing", "kr-advanced-tech-card"},
 		unit =
 		{
-			count = 1000,
+			count = 500,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
@@ -853,7 +853,7 @@ data:extend(
 		prerequisites = {"kr-imersium-processing", "kr-advanced-tech-card"},
 		unit =
 		{
-			count = 1000,
+			count = 500,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
@@ -881,7 +881,7 @@ data:extend(
 		prerequisites = {"effect-transmission", "kr-imersium-processing", "kr-energy-control-unit", "kr-singularity-tech-card"},
 		unit =
 		{
-			count = 1500,
+			count = 1000,
 			ingredients = 
 			{
 				{"production-science-pack", 1},

@@ -33,7 +33,7 @@ data:extend(
 		order = "g-e-d",
 		unit =
 		{
-			count = 1500,
+			count = 1000,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
@@ -55,7 +55,7 @@ data:extend(
 		order = "g-e-e",
 		unit =
 		{
-			count = 1000,
+			count = 350,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
@@ -77,7 +77,7 @@ data:extend(
 		order = "g-e-e",
 		unit =
 		{
-			count = 1000,
+			count = 350,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
@@ -99,7 +99,7 @@ data:extend(
 		order = "g-e-e",
 		unit =
 		{
-			count = 1000,
+			count = 350,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
@@ -121,7 +121,7 @@ data:extend(
 		order = "g-e-e",
 		unit =
 		{
-			count = 1000,
+			count = 350,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
@@ -143,7 +143,7 @@ data:extend(
 		order = "g-e-e",
 		unit =
 		{
-			count = 1000,
+			count = 350,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
@@ -165,7 +165,7 @@ data:extend(
 		order = "g-e-e",
 		unit =
 		{
-			count = 1000,
+			count = 350,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
@@ -187,7 +187,7 @@ data:extend(
 		order = "g-e-e",
 		unit =
 		{
-			count = 1000,
+			count = 350,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
@@ -209,7 +209,7 @@ data:extend(
 		order = "g-e-e",
 		unit =
 		{
-			count = 1000,
+			count = 350,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
@@ -231,7 +231,7 @@ data:extend(
 		order = "g-e-e",
 		unit =
 		{
-			count = 1000,
+			count = 350,
 			ingredients = 
 			{
 				{"production-science-pack", 1},

@@ -163,7 +163,8 @@ end
 	
 		--------------
 		-- rocket
-
+		
+		data.raw.technology["space-science-pack"].unit.count = 1000
 		data.raw.technology["rocket-control-unit"].unit.count = 500
 		
 	--------------
@@ -175,11 +176,11 @@ end
 	--------------
 	-- military
 	
-	data.raw.technology["military-4"].unit.count = 500	
-	data.raw.technology["discharge-defense-equipment"].unit.count = 350
-	data.raw.technology["uranium-ammo"].unit.count = 350
-	data.raw.technology["combat-robotics-3"].unit.count = 500
-	data.raw.technology["artillery"].unit.count = 2500
+	data.raw.technology["military-4"].unit.count = 350	
+	data.raw.technology["discharge-defense-equipment"].unit.count = 300
+	data.raw.technology["uranium-ammo"].unit.count = 300
+	data.raw.technology["combat-robotics-3"].unit.count = 350
+	data.raw.technology["artillery"].unit.count = 1000
 	data.raw.technology["laser"].unit.count = 200
 	data.raw.technology["physical-projectile-damage-7"].unit.count_formula = "((L-6)^2)*5000"
 	data.raw.technology["stronger-explosives-7"].unit.count_formula = "((L-6)^2)*5000"	
@@ -191,24 +192,25 @@ end
 	--------------
 	-- miscellaneous
 	
-	data.raw.technology["logistic-system"].unit.count = 350		
-	data.raw.technology["coal-liquefaction"].unit.count = 200	
+	data.raw.technology["logistic-system"].unit.count = 250
+	data.raw.technology["coal-liquefaction"].unit.count = 150	
 	data.raw.technology["automation-3"].unit.count = 300		
-	data.raw.technology["effect-transmission"].unit.count = 750		
+	data.raw.technology["effect-transmission"].unit.count = 500
 	data.raw.technology["low-density-structure"].unit.count = 500
 	
 	--------------
 	-- nuclear
 	
-	data.raw.technology["uranium-processing"].unit.count = 2500
-	data.raw.technology["nuclear-power"].unit.count = 3000
+	data.raw.technology["uranium-processing"].unit.count = 750
+	data.raw.technology["nuclear-power"].unit.count = 500
 	data.raw.technology["nuclear-fuel-reprocessing"].unit.count = 250
-	data.raw.technology["atomic-bomb"].unit.count = 5000
+	data.raw.technology["atomic-bomb"].unit.count = 1500
 
 	
 	--------------
 	-- stats
 	
+	data.raw.technology["fusion-reactor-equipment"].unit.count = 350	
 	data.raw.technology["mining-productivity-3"].unit.count = 500	
 	data.raw.technology["mining-productivity-4"].unit.count_formula = "(L^2)*200"				
 	data.raw.technology["follower-robot-count-7"].unit.count_formula = "((L-6)^2)*7500"	 

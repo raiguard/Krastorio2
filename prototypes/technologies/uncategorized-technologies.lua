@@ -306,7 +306,7 @@ data:extend(
 		prerequisites = {"oil-processing"},
 		unit =
 		{
-			count = 150,
+			count = 100,
 			ingredients = 
 			{
 				{"basic-tech-card", 1},
@@ -340,7 +340,7 @@ data:extend(
 		order = "c-a",
         unit =
         {
-            count = 150,
+            count = 100,
             ingredients =
             {
 				{"basic-tech-card", 1},
@@ -387,7 +387,7 @@ data:extend(
 		order = "d-a",
         unit =
         {
-            count = 300,
+            count = 250,
             ingredients =
             {
 				{"basic-tech-card", 1},
@@ -546,7 +546,7 @@ data:extend(
 		order = "g-e-d",
 		unit =
 		{
-			count = 1000,
+			count = 350,
 			ingredients = 
 			{
 				{"automation-science-pack", 1},
@@ -582,7 +582,7 @@ data:extend(
 		order = "g-f-z",
 		unit =
 		{
-			count = 1000,
+			count = 500,
 			ingredients = 
 			{
 				{"military-science-pack", 1},
@@ -617,7 +617,7 @@ data:extend(
 		order = "g-f-z",
 		unit =
 		{
-			count = 1500,
+			count = 750,
 			ingredients = 
 			{
 				{"military-science-pack", 1},
@@ -653,7 +653,7 @@ data:extend(
 		order = "g-f-z",
 		unit =
 		{
-			count = 3000,
+			count = 2000,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
