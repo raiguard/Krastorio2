@@ -603,7 +603,8 @@ data:extend(
 			{ size = 64, filename = kr_items_with_variations_icons_path .. "inserter-parts/inserter-parts.png",   scale = 0.25, mipmap_count = 4 },
 			{ size = 64, filename = kr_items_with_variations_icons_path .. "inserter-parts/inserter-parts-1.png", scale = 0.25, mipmap_count = 4 },
 			{ size = 64, filename = kr_items_with_variations_icons_path .. "inserter-parts/inserter-parts-2.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_items_with_variations_icons_path .. "inserter-parts/inserter-parts-3.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "inserter-parts/inserter-parts-3.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "inserter-parts/inserter-parts-4.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "intermediate-product",
 		order = "e01[ei-inserter-parts]",
