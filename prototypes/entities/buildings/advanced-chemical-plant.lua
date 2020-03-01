@@ -28,7 +28,7 @@ data:extend(
 				pipe_picture = kr_pipe_path,
 				base_area = 100,
 				base_level = -1,
-				pipe_connections = {{ type="input", position = {2, -3.98} }}
+				pipe_connections = {{ type="input", position = {2, -4} }}
 			},		
 			{
 				production_type = "input",
@@ -36,7 +36,7 @@ data:extend(
 				pipe_picture = kr_pipe_path,
 				base_area = 100,
 				base_level = -1,
-				pipe_connections = {{ type="input", position = {0, -3.98} }}
+				pipe_connections = {{ type="input", position = {0, -4} }}
 			},	
 			{
 				production_type = "input",
@@ -44,7 +44,7 @@ data:extend(
 				pipe_picture = kr_pipe_path,
 				base_area = 100,
 				base_level = -1,
-				pipe_connections = {{ type="input", position = {-2, -3.98} }}
+				pipe_connections = {{ type="input", position = {-2, -4} }}
 			},				
 			{
 				production_type = "output",
@@ -52,7 +52,7 @@ data:extend(
 				pipe_picture = kr_pipe_path,
 				base_area = 10,
 				base_level = 1,
-				pipe_connections = {{ type="output", position = {2, 3.98} }}
+				pipe_connections = {{ type="output", position = {2, 4} }}
 			},
 			{
 				production_type = "output",
@@ -60,7 +60,7 @@ data:extend(
 				pipe_picture = kr_pipe_path,
 				base_area = 10,
 				base_level = 1,
-				pipe_connections = {{ type="output", position = {0, 3.98} }}
+				pipe_connections = {{ type="output", position = {0, 4} }}
 			},
 			{
 				production_type = "output",
@@ -68,7 +68,7 @@ data:extend(
 				pipe_picture = kr_pipe_path,
 				base_area = 10,
 				base_level = 1,
-				pipe_connections = {{ type="output", position = {-2, 3.98} }}
+				pipe_connections = {{ type="output", position = {-2, 4} }}
 			},
 			
 			off_when_no_fluid_recipe = false
@@ -88,7 +88,7 @@ data:extend(
 					shift = {0, -0.48},
 					frame_count = 20,
 					line_length = 5,
-					animation_speed=0.3,
+					animation_speed=0.25,
 					scale = 1,
 					hr_version =
 					{
@@ -100,7 +100,7 @@ data:extend(
 						scale = 0.5,
 						frame_count = 20,
 						line_length = 5,
-						animation_speed=0.3,
+						animation_speed=0.25,
 						scale = 0.5
 					}
 					},
@@ -112,7 +112,7 @@ data:extend(
 					shift = {0, 0},
 					frame_count = 1,
 					repeat_count = 20,
-					animation_speed=0.3,
+					animation_speed=0.25,
 					scale = 1,
 					draw_as_shadow = true,
 					hr_version =
@@ -125,7 +125,7 @@ data:extend(
 						shift = {0.33, 0.32},
 						frame_count = 1,
 						repeat_count = 20,
-						animation_speed=0.3,
+						animation_speed=0.25,
 						scale = 0.5,
 						draw_as_shadow = true
 					}

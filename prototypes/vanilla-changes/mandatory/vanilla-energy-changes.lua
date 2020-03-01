@@ -2,9 +2,6 @@
 -- -- Wood
 	-- data.raw.item["wood"].fuel_category = "chemical"
 	data.raw.item["wood"].fuel_value = "1MJ" --2
-	-- data.raw.item["wood"].fuel_acceleration_multiplier = 1 --empty
-	-- data.raw.item["wood"].fuel_top_speed_multiplier = 1 --empty
-	-- data.raw.item["wood"].fuel_emissions_multiplier = 1 --empty
 
 -- -- -- Vanilla steam stat changes
 

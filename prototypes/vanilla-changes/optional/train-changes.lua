@@ -31,7 +31,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 	data.raw["cargo-wagon"]["cargo-wagon"].minable = {mining_time = 0.5, result = "cargo-wagon"}
 	data.raw["cargo-wagon"]["cargo-wagon"].weight = 2000
 	
-	krastorio.recipes.setEnergyCost("cargo-wagon", 60)
+	krastorio.recipes.setEnergyCost("cargo-wagon", 20)
 	---------------------
 	
 	---------------------
@@ -41,7 +41,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 	data.raw["fluid-wagon"]["fluid-wagon"].minable = {mining_time = 0.5, result = "fluid-wagon"}
 	data.raw["fluid-wagon"]["fluid-wagon"].weight = 2000
 	
-	krastorio.recipes.setEnergyCost("fluid-wagon", 60)
+	krastorio.recipes.setEnergyCost("fluid-wagon", 20)
 	---------------------
 	
 	---------------------
@@ -49,8 +49,22 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 	data.raw["artillery-wagon"]["artillery-wagon"].max_health = 2000
 	data.raw["artillery-wagon"]["artillery-wagon"].minable = {mining_time = 0.5, result = "artillery-wagon"}
 	data.raw["artillery-wagon"]["artillery-wagon"].weight = 3000
+	
+	krastorio.recipes.overrideIngredients
+	(
+		"artillery-wagon", 
+		{
+			{"artillery-turret", 1},
+			{"cargo-wagon", 1},
+			{"rare-metals", 20},
+			{"steel-plate", 20},
+			{"steel-gear-wheel", 20},
+		}
+	)
+	
+	krastorio.recipes.replaceIngredient("artillery-turret", "pipe", {"steel-plate", 80})
 
-	krastorio.recipes.setEnergyCost("artillery-wagon", 120)
+	krastorio.recipes.setEnergyCost("artillery-wagon", 40)
 	---------------------
 	
 end

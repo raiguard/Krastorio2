@@ -54,7 +54,8 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 				{"locomotive", 1},
 				{"electronic-components", 20},
 				{"steel-gear-wheel", 20},
-				{"rare-metals", 50},
+				{"processing-unit", 20},
+				{"rare-metals", 80}
 			},
 			result = "kr-nuclear-locomotive"
 		},

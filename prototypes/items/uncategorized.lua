@@ -354,7 +354,7 @@ data:extend(
 			{ size = 64, filename = kr_items_with_variations_icons_path .. "rare-metals/rare-metals-6.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "intermediate-product",
-		order = "x[rare-metals]",
+		order = "w0[rare-metals]",
 		stack_size = 200
 	},
 	{
