@@ -573,6 +573,7 @@ if mods["space-exploration"] then
 			result_count = 5
 		}
 	})
+	data.raw.item["satellite"].rocket_launch_product = {"space-research-data", 1000}
 	
 -- -- Icons
 ---------------------------------------------------------------------------------------------

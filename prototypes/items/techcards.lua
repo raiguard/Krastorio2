@@ -48,7 +48,7 @@ data:extend(
 		icon_mipmaps = 4,
 		subgroup = "science-pack",
 		order = "a03[space-research-data]",
-		stack_size = 200
+		stack_size = 1000
 	},
 	{
 		type = "item",

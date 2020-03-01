@@ -45,13 +45,15 @@ function shelterVariablesInitializing()
 end
 
 -- @surface_index, index of the new surface
-local function saveStartPoint(surface_index)
+local function saveStartPoint(event)
+	local surface_index = event.surface_index
 	global.default_spawn_points[surface_index] = {}
 	global.spawn_points[surface_index]         = {}
-	
-	for _, player in pairs(game.players) do
+		
+	for _, player in pairs(game.players) do		
 		if not global.default_spawn_points[surface_index][player.force.index] then
-			global.default_spawn_points[surface_index][player.force.index] = player.force.get_spawn_position(surface_index)
+			local base_spawn_point = player.force.get_spawn_position(surface_index) or {x = 0, y = 0}
+			global.default_spawn_points[surface_index][player.force.index] = base_spawn_point
 		end
 	end
 end
