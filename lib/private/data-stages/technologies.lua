@@ -548,7 +548,7 @@ function krastorio.technologies.convertResearchUnitIngredient(technology_name, o
 					end
 				end		
 				
-				if      index_old == -1 and index_new == -1 then
+				if     index_old == -1 and index_new == -1 then
 					table.insert(prerequisites, new_science_pack_name)
 				elseif index_old ~= -1 and index_new ~= -1 then
 					table.remove(prerequisites, index_old)
@@ -562,6 +562,17 @@ function krastorio.technologies.convertResearchUnitIngredient(technology_name, o
 	end
 		
 	return converted
+end
+
+function krastorio.technologies.setMaxLevelInfinite(technology_name)
+	local technology = krastorio.technologies.getTechnologyFromName(technology_name)
+	if technology and next(technology) ~= nil then
+		technology.max_level = "infinite"
+		technology.upgrade = true
+		if not technology.unit.count_formula then
+			technology.unit.count_formula = "2^(L-6)*1000"
+		end
+	end
 end
 
 -- -- RESEARCH UNIT

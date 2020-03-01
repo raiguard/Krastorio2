@@ -1,5 +1,7 @@
 if krastorio.general.getSafeSettingValue("kr-loaders") then
 
+	local standard_loaders_crafting_speed = 3
+
 	-- Variable utils
 	local loader_names = 
 	{
@@ -17,7 +19,7 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 		local category        = data.category or nil
 		local ingredients     = data.ingredients or { {"wood", 1} }
 		local enabled         = data.enabled or false
-		local energy_required = data.energy_required or 10
+		local energy_required = data.energy_required or standard_loaders_crafting_speed
 		return
 		{
 			["type"]            = "recipe",

@@ -62,3 +62,7 @@ data:extend(
 	-- Entity
 	electric_offshore_pump
 })
+
+-- Fixes
+data.raw.item["offshore-pump"].localised_description = {"other.offshore-pump-is-electric", {"entity-description.offshore-pump"}}
+

@@ -163,7 +163,7 @@ data:extend(
 		type = "bool-setting",
 		name = "kr-infinite-technology",
 		setting_type = "startup",
-		default_value = false,
+		default_value = true,
 		order = "b91"
 	},
 })
