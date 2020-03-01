@@ -6,7 +6,6 @@ data:extend(
 		name     = "kr-open-gui",
 		filename = kr_graphic_mod_path .. "gui/buttons/open-wiki.png",
 		width    = 128,
-		height   = 128,
-		scale    = 0.6
+		height   = 128
 	}
 })

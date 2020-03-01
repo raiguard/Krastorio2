@@ -111,12 +111,12 @@ styles["kr-wiki-back-button-flow"] =
 local base_icon_button_grahphical_set =
 {
 	filename = "__core__/graphics/gui-new.png",
+	stretch_image_to_widget_size = true,
 	position = {0, 0},
 	corner_size = 2,
 	opacity = 0.2,
 	draw_type = "outer",
 	background_blur = true,
-	size = {48, 48},
 	scale = 1,
 	border = 1
 }
@@ -126,8 +126,10 @@ styles["kr-wiki-icon-button"] =
 	horizontal_align = "center",
 	vertical_align = "center",
 	icon_horizontal_align = "center",
-	width  = 48,
-	height = 48,
+	minimal_width = 36,
+	height = 36,
+	padding = 0,
+	stretch_image_to_widget_size = true,
 	default_graphical_set = base_icon_button_grahphical_set,
 	hovered_graphical_set =
     {
