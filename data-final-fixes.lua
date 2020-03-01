@@ -94,19 +94,3 @@ require(scripts_path .. "vtk-armor-plating")
 -- Filter inserter fix
 krastorio.recipes.addOrReplaceIngredient("filter-inserter", "automation-core", {"electronic-circuit", 2})
 ---------------------------------------------------------------------------
--- -- Peaceful mod
-
-if krastorio.general.getSafeSettingValue("kr-peaceful-mod") then
-
-data.raw.item["biters-research-data"].localised_name={"item-name.military-research-data"}
-krastorio.recipes.overrideIngredients
-(
-	"biters-research-data", 
-	{
-		{"submachine-gun", 3},
-		{"grenade", 3},
-		{"stone-wall", 6},
-	}
-)
-
-end
