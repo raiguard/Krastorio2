@@ -1,10 +1,35 @@
--- -- -- Vehicles minable changes
 if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 
-local bullets_collision_box = {{-1, -1}, {1, 1}}
-local pistol_range = 22
-local rifle_range = 30
-local sniper_range = 60
+	-- -- --
+
+	local pistol_range = 22
+	local rifle_range = 30
+	local sniper_range = 60
+
+	-- -- --
+
+	local bullets_collision_box = {{-1, -1}, {1, 1}}
+	local k_target_type = "position" -- "entity", "position" or "direction"
+	local k_d_radius = 0.75
+	local k_pistol_min_range = 0.5
+	local k_rifle_min_range = 0.75
+	local k_s_rifle_min_range = 2	
+
+	if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon-auto-aim") then
+
+		pistol_range = 20
+		rifle_range = 25
+		sniper_range = 50
+		bullets_collision_box = {{-0.25, -0.25}, {0.25, 0.25}}
+		k_target_type = "entity" -- "entity", "position" or "direction"
+		k_d_radius = 0.5
+		k_pistol_min_range = 0.25
+		k_rifle_min_range = 0.25
+		k_s_rifle_min_range = 0.5
+		
+	end
+	
+	-- -- --
 
 ----------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------- -- NEW EXPLOSION -- ---------------------------------------------------
@@ -89,7 +114,7 @@ data.raw.gun["submachine-gun"].attack_parameters.movement_slow_down_factor = 0.2
 
 data.raw.gun["pistol"].attack_parameters.ammo_category = "pistol-ammo"
 data.raw.gun["pistol"].attack_parameters.range = pistol_range
-data.raw.gun["pistol"].attack_parameters.min_range =0.5
+data.raw.gun["pistol"].attack_parameters.min_range = k_pistol_min_range
 data.raw.gun["pistol"].attack_parameters.cooldown = 20
 data.raw.gun["pistol"].attack_parameters.movement_slow_down_factor = 0.15
 	
@@ -110,7 +135,7 @@ data:extend(
 		{
 			category = "pistol-ammo",
 			cooldown_modifier = 0.8,
-			target_type = "position",
+			target_type = k_target_type,
 			action =
 			{
 				{
@@ -165,7 +190,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = 1.0,
+							radius = k_d_radius,
 							action_delivery =
 							{
 								type = "instant",
@@ -233,7 +258,7 @@ data:extend(
 		ammo_type =
 		{
 			category = "pistol-ammo",
-			target_type = "position",
+			target_type = k_target_type,
 			action =
 			{
 				{
@@ -288,7 +313,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = 1.0,
+							radius = k_d_radius,
 							action_delivery =
 							{
 								type = "instant",
@@ -352,7 +377,7 @@ data.raw.ammo["piercing-rounds-magazine"].localised_name={"item-name.armor-pierc
 
 data.raw.gun["submachine-gun"].attack_parameters.ammo_category = "rifle-ammo"
 data.raw.gun["submachine-gun"].attack_parameters.range = rifle_range
-data.raw.gun["submachine-gun"].attack_parameters.min_range = 0.75
+data.raw.gun["submachine-gun"].attack_parameters.min_range = k_rifle_min_range
 data.raw.gun["submachine-gun"].attack_parameters.cooldown = 8
 data.raw.gun["submachine-gun"].attack_parameters.movement_slow_down_factor = 0.15
 	
@@ -376,7 +401,7 @@ data:extend(
 		{
 			category = "rifle-ammo",
 			cooldown_modifier = 0.8,
-			target_type = "position",
+			target_type = k_target_type,
 			action =
 			{
 				{
@@ -432,7 +457,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = 1.0,
+							radius = k_d_radius,
 							action_delivery =
 							{
 								type = "instant",
@@ -501,7 +526,7 @@ data:extend(
 		ammo_type =
 		{
 			category = "rifle-ammo",
-			target_type = "position",
+			target_type = k_target_type,
 			action =
 			{
 				{
@@ -556,7 +581,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = 1.0,
+							radius = k_d_radius,
 							action_delivery =
 							{
 								type = "instant",
@@ -623,7 +648,7 @@ data:extend(
 		ammo_type =
 		{
 			category = "rifle-ammo",
-			target_type = "position",
+			target_type = k_target_type,
 			action =
 			{
 				{
@@ -678,7 +703,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = 1.0,
+							radius = k_d_radius,
 							action_delivery =
 							{
 								type = "instant",
@@ -749,7 +774,7 @@ data:extend(
 		ammo_type =
 		{
 			category = "rifle-ammo",
-			target_type = "position",
+			target_type = k_target_type,
 			action =
 			{
 				{
@@ -804,7 +829,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = 1.0,
+							radius = k_d_radius,
 							action_delivery =
 							{
 								type = "instant",
@@ -895,7 +920,7 @@ data:extend(
 				starting_frame_speed_deviation = 0.1
 			},
 			projectile_creation_distance = 1.125,
-			min_range = 2,
+			min_range = k_s_rifle_min_range,
 			range = sniper_range,
 			sound =
 			{
@@ -911,13 +936,12 @@ data:extend(
 	{
 		type = "recipe",
 		name = "anti-material-rifle",
-		energy_required = 20,
+		energy_required = 10,
 		enabled = false,
 		ingredients =
 		{
-			{"submachine-gun", 1},
-			{"steel-plate", 4},
-			{"plastic-bar", 2},
+			{"submachine-gun", 2},
+			{"steel-plate", 4}
 		},
 		result = "anti-material-rifle"
     },
@@ -938,7 +962,7 @@ data:extend(
 		{
 			category = "anti-material-rifle-ammo",
 			cooldown_modifier = 0.8,
-			target_type = "position",
+			target_type = k_target_type,
 			action =
 			{
 				{
@@ -994,7 +1018,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = 1.0,
+							radius = k_d_radius,
 							action_delivery =
 							{
 								type = "instant",
@@ -1063,7 +1087,7 @@ data:extend(
 		ammo_type =
 		{
 			category = "anti-material-rifle-ammo",
-			target_type = "position",
+			target_type = k_target_type,
 			action =
 			{
 				{
@@ -1118,7 +1142,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = 1.0,
+							radius = k_d_radius,
 							action_delivery =
 							{
 								type = "instant",
@@ -1185,7 +1209,7 @@ data:extend(
 		ammo_type =
 		{
 			category = "anti-material-rifle-ammo",
-			target_type = "position",
+			target_type = k_target_type,
 			action =
 			{
 				{
@@ -1240,7 +1264,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = 1.0,
+							radius = k_d_radius,
 							action_delivery =
 							{
 								type = "instant",
@@ -1311,7 +1335,7 @@ data:extend(
 		ammo_type =
 		{
 			category = "anti-material-rifle-ammo",
-			target_type = "position",
+			target_type = k_target_type,
 			action =
 			{
 				{
@@ -1366,7 +1390,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = 1.0,
+							radius = k_d_radius,
 							action_delivery =
 							{
 								type = "instant",

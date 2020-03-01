@@ -28,7 +28,7 @@ data:extend(
 				pipe_picture = kr_pipe_path,
 				base_area = 100,
 				base_level = -1,
-				pipe_connections = {{ type="input", position = {2, -4} }}
+				pipe_connections = {{ type="input", position = {2, -3.98} }}
 			},		
 			{
 				production_type = "input",
@@ -36,7 +36,7 @@ data:extend(
 				pipe_picture = kr_pipe_path,
 				base_area = 100,
 				base_level = -1,
-				pipe_connections = {{ type="input", position = {0, -4} }}
+				pipe_connections = {{ type="input", position = {0, -3.98} }}
 			},	
 			{
 				production_type = "input",
@@ -44,7 +44,7 @@ data:extend(
 				pipe_picture = kr_pipe_path,
 				base_area = 100,
 				base_level = -1,
-				pipe_connections = {{ type="input", position = {-2, -4} }}
+				pipe_connections = {{ type="input", position = {-2, -3.98} }}
 			},				
 			{
 				production_type = "output",
@@ -52,7 +52,7 @@ data:extend(
 				pipe_picture = kr_pipe_path,
 				base_area = 10,
 				base_level = 1,
-				pipe_connections = {{ type="output", position = {2, 4} }}
+				pipe_connections = {{ type="output", position = {2, 3.98} }}
 			},
 			{
 				production_type = "output",
@@ -60,7 +60,7 @@ data:extend(
 				pipe_picture = kr_pipe_path,
 				base_area = 10,
 				base_level = 1,
-				pipe_connections = {{ type="output", position = {0, 4} }}
+				pipe_connections = {{ type="output", position = {0, 3.98} }}
 			},
 			{
 				production_type = "output",
@@ -68,7 +68,7 @@ data:extend(
 				pipe_picture = kr_pipe_path,
 				base_area = 10,
 				base_level = 1,
-				pipe_connections = {{ type="output", position = {-2, 4} }}
+				pipe_connections = {{ type="output", position = {-2, 3.98} }}
 			},
 			
 			off_when_no_fluid_recipe = false
@@ -78,56 +78,58 @@ data:extend(
 		fast_replaceable_group = "assembling-machine",
 		animation =
 		{
-			filename = kr_entities_path .. "advanced-chemical-plant/advanced-chemical-plant.png",
-			priority = "high",
-			scale = scale,
-			width = 300,
-			height = 300,
-			frame_count = 1,
-			hr_version =
+			layers =
 			{
-				filename = kr_entities_path .. "advanced-chemical-plant/hr-advanced-chemical-plant.png",
-				priority = "high",
-				scale = scale,
-				width = 600,
-				height = 600,
-				frame_count = 1,
-				scale = 0.5,
-			}
-		},
-		working_visualisations =
-		{
-			{
-				animation =
-				{
-					filename = kr_entities_path .. "advanced-chemical-plant/advanced-chemical-plant-animation.png",
+					{
+					filename = kr_entities_path .. "advanced-chemical-plant/advanced-chemical-plant.png",
 					priority = "high",
-					scale = scale,
-					width = 200,
-					height = 220,
-					frame_count = 12,
-					line_length = 4,
-					animation_speed = 0.05,
+					width = 226,
+					height = 268,
+					shift = {0, -0.48},
+					frame_count = 20,
+					line_length = 5,
+					animation_speed=0.3,
+					scale = 1,
 					hr_version =
 					{
-						filename = kr_entities_path .. "advanced-chemical-plant/hr-advanced-chemical-plant-animation.png",
+						filename = kr_entities_path .. "advanced-chemical-plant/hr-advanced-chemical-plant.png",
 						priority = "high",
-						scale = scale,
-						width = 400,
-						height = 440,
-						frame_count = 12,
-						line_length = 4,
-						animation_speed = 0.05,
+						width = 451,
+						height = 535,
+						shift = {0, -0.48},
+						scale = 0.5,
+						frame_count = 20,
+						line_length = 5,
+						animation_speed=0.3,
 						scale = 0.5
 					}
-				},
-				light =
-				{
-					intensity = 0.1,
-					size = 15,
-					shift = {2.0, 0.0},
-					color = {r=0.1, g=0.5, b=1}
-				}
+					},
+					{
+					filename = kr_entities_path .. "advanced-chemical-plant/advanced-chemical-plant-sh.png",
+					priority = "high",
+					width = 258,
+					height = 229,
+					shift = {0, 0},
+					frame_count = 1,
+					repeat_count = 20,
+					animation_speed=0.3,
+					scale = 1,
+					draw_as_shadow = true,
+					hr_version =
+					{
+						filename = kr_entities_path .. "advanced-chemical-plant/hr-advanced-chemical-plant-sh.png",
+						priority = "high",
+						scale = scale,
+						width = 516,
+						height = 458,
+						shift = {0.33, 0.32},
+						frame_count = 1,
+						repeat_count = 20,
+						animation_speed=0.3,
+						scale = 0.5,
+						draw_as_shadow = true
+					}
+					},
 			}
 		},	  
 		crafting_categories = {"chemistry"},
