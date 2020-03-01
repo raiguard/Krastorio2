@@ -120,7 +120,7 @@ data:extend(
 						frame_count = 10,
 						line_length = 5,
 						scale = 0.5,
-						animation_speed=0.35,
+						animation_speed = 0.35,
 					}
 				},
 				light =
@@ -143,7 +143,7 @@ data:extend(
 			usage_priority = "secondary-input",
 			emissions_per_minute = -7.5
 		},
-		energy_usage = "200KW",
+		energy_usage = "150KW",
 		ingredient_count = 4,
 		allowed_effects = nil
 	}

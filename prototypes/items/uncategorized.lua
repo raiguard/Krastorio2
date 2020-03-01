@@ -11,8 +11,8 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-fuels") then
 	
 	-- Fuel
 	fuel_value                   = "10MJ"
-	fuel_acceleration_multiplier = 1
-	fuel_top_speed_multiplier    = 1
+	fuel_acceleration_multiplier = 1.0
+	fuel_top_speed_multiplier    = 1.0
 	
 	-- Bio fuel
 	bio_fuel_value                   = "10MJ"

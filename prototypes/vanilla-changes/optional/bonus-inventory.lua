@@ -1,6 +1,8 @@
 -- -- -- Bonus inventory
-if krastorio.general.getSafeSettingValue("kr-bonus-inventory") then
+local inventory_bonus = krastorio.general.getSafeSettingValue("kr-bonus-inventory")
 
-   data.raw["character"]["character"].inventory_size = 120
+if inventory_bonus and inventory_bonus > 0 then
+
+   data.raw["character"]["character"].inventory_size = data.raw["character"]["character"].inventory_size + inventory_bonus
    
 end

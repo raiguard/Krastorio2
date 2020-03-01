@@ -1,8 +1,15 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.5.8
-Date: 29.02.2020
+Version: 0.5.9
+Date: 01.03.2020
+  Features:
+    - Now is possible choise the bonus slots for the inventory.
+    - Now is possible choise the bonus reach multiplier for build and interaction distances.
   Changes:
-    - Nerfed boilers with greenhouse to produce energy.
+    - Nerfed wood fuel value from 2MJ to 1MJ.
+    - Nerfed greenhouse energy usage from 100KW to 150KW.
+    - Rebalanced boilers (ratio is not changed only fuel usage).
+  Fixes:
+    - Fixed that roboports Mk1 and Mk2 are unplaceable inside power armors Mk3 and Mk4.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.8
 Date: 29.02.2020

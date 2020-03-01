@@ -4,17 +4,19 @@ data:extend(
 {
 	-- A - Config
 	{
-		type = "bool-setting",
+		type = "int-setting",
 		name = "kr-long-hands",
 		setting_type = "startup",
-		default_value = false,
+		default_value = 1,
+        allowed_values = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
 		order = "a1"
 	},
 	{
-		type = "bool-setting",
+		type = "int-setting",
 		name = "kr-bonus-inventory",
 		setting_type = "startup",
-		default_value = false,
+		default_value = 0,
+        allowed_values = {0, 10, 20, 30, 40},
 		order = "a2"
 	},
 	{

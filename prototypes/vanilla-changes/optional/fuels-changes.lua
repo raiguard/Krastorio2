@@ -3,16 +3,9 @@
 if krastorio.general.getSafeSettingValue("kr-rebalance-fuels") then
 
 	---------------------	
-	-- -- Wood
-		-- data.raw.item["wood"].fuel_category = "chemical"
-		data.raw.item["wood"].fuel_value = "2MJ" --2
-		-- data.raw.item["wood"].fuel_acceleration_multiplier = 1 --empty
-		-- data.raw.item["wood"].fuel_top_speed_multiplier = 1 --empty
-		-- data.raw.item["wood"].fuel_emissions_multiplier = 1 --empty
-	---------------------	
 	-- -- Coal
 		-- data.raw.item["coal"].fuel_category = "chemical"
-		data.raw.item["coal"].fuel_value = "5MJ" --4
+		-- data.raw.item["coal"].fuel_value = "4MJ" --4
 		-- data.raw.item["coal"].fuel_acceleration_multiplier = 1 --empty
 		-- data.raw.item["coal"].fuel_top_speed_multiplier = 1 --empty
 		data.raw.item["coal"].fuel_emissions_multiplier = 1.25 --empty
