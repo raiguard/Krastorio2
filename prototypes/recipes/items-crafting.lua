@@ -23,12 +23,12 @@ return
 		allow_productivity = true,
 		ingredients =
 		{
-			{"silicon", 1},
-			{"plastic-bar", 1},
-			{"glass", 1}
+			{"silicon", 3},
+			{"plastic-bar", 2},
+			{"glass", 2}
 		},
 		result = "electronic-components",
-		result_count = 2
+		result_count = 5
 	},
 	{
 		type = "recipe",

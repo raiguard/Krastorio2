@@ -33,7 +33,7 @@ data:extend(
 			}
 		},
 		energy_usage = "90kW",
-		mining_speed = 1,
+		mining_speed = 50,
 		resource_searching_radius = 0.49,
 		vector_to_place_result = {0, 0},
 		module_specification = { module_slots = 2 },

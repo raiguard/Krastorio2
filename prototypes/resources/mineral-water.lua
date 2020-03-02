@@ -25,9 +25,7 @@ data:extend(
 				{
 					type = "fluid",
 					name = "mineral-water",
-					amount_min = 50,
-					amount_max = 50,
-					probability = 1
+					amount = 1
 				}
 			}
 		},
@@ -37,7 +35,7 @@ data:extend(
 		{
 			name = "mineral-water",
 			order = "c",
-			base_density = 2,
+			base_density = 4,
 			base_spots_per_km2 = 0.5,
 			random_probability = 1/50,
 			random_spot_size_minimum = 1,

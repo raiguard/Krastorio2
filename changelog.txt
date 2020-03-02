@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.12
+Date: 02.03.2020
+  Changes:
+    - Added steel prerequisite to fast inserter tech.
+    - Redesigned electronic components recipe.
+  Fixes:
+    - Improved compatibility with AAI.
+    - Fixed that mineral water patch have a strange multiplier.
+    - Try to fix that fluid miner have wrong tooltip.
+---------------------------------------------------------------------------------------------------
 Version: 0.5.11
 Date: 02.03.2020
   Changes:

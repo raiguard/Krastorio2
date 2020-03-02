@@ -9,17 +9,15 @@ data.raw.resource["crude-oil"].normal = 100000
 data.raw.resource["crude-oil"].infinite_depletion_amount = 5
 data.raw.resource["crude-oil"].minable =
 {
-  mining_time = 1,
-  results =
-  {
+	mining_time = 1,
+	results =
 	{
-	  type = "fluid",
-	  name = "crude-oil",
-	  amount_min = 50,
-	  amount_max = 50,
-	  probability = 1
+		{
+			type = "fluid",
+			name = "crude-oil",
+			amount = 1
+		}
 	}
-  }
 }
 
 data.raw.resource["crude-oil"].autoplace = resource_autoplace.resource_autoplace_settings
