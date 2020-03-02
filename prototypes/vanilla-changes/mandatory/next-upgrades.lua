@@ -22,5 +22,5 @@ data.raw.pipe["pipe"].fast_replaceable_group = "pipe"
 data.raw.pipe["pipe"].next_upgrade = "kr-steel-pipe"
 
 --Underground pipes
-data.raw["pipe-to-ground"]["pipe-to-ground"].fast_replaceable_group = "pipe-to-ground"
+data.raw["pipe-to-ground"]["pipe-to-ground"].fast_replaceable_group = "pipe"
 data.raw["pipe-to-ground"]["pipe-to-ground"].next_upgrade = "kr-steel-pipe-to-ground"

@@ -20,7 +20,7 @@ data:extend(
 				percent = 60
 			}
 		},
-		fast_replaceable_group = "pipe-to-ground",
+		fast_replaceable_group = "pipe",
 		collision_box = {{-0.29, -0.29}, {0.29, 0.2}},
 		selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
 		fluid_box =

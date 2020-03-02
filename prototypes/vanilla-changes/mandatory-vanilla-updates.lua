@@ -27,6 +27,7 @@ local modifications =
 	"damage-technologies-bonuses",    -- Rebalance the damage donus from technologies
 	"vanilla-energy-changes",         -- Rebalance accumulators ans panels
 	"vanilla-robots-changes",         -- Rebalance vanilla drones
+	"electrify-offshore-pump"         -- Add energy source to offshore-pump
 }
 
 -- Application of the modifications

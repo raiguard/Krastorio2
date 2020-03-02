@@ -40,9 +40,13 @@ local function onBuiltAnEntity(event)
 	end
 end
 
-return
-{ 
-	-- -- Actions		
-	{ onBuiltAnEntity, "on_built_entity", KRASTORIO_OFFSHORE_PUMP_EVENT_FILTER },
-	{ onBuiltAnEntity, "on_robot_built_entity", KRASTORIO_OFFSHORE_PUMP_EVENT_FILTER }
-}
+if script.active_mods["aai-industry"] then
+	return {}
+else
+	return
+	{ 
+		-- -- Actions		
+		{ onBuiltAnEntity, "on_built_entity", KRASTORIO_OFFSHORE_PUMP_EVENT_FILTER },
+		{ onBuiltAnEntity, "on_robot_built_entity", KRASTORIO_OFFSHORE_PUMP_EVENT_FILTER }
+	}
+end
