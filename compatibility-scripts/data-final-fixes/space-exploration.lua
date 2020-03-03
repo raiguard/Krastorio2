@@ -28,8 +28,12 @@ if mods["space-exploration"] then
 	-- Shields
 	krastorio.technologies.convertPrerequisiteFromAllTechnologies("energy-shield-mk3-equipment", "kr-energy-shield-mk3-equipment", true)
 	data.raw.technology["energy-shield-mk3-equipment"] = nil
+	
 	krastorio.technologies.convertPrerequisiteFromAllTechnologies("energy-shield-mk4-equipment", "kr-energy-shield-mk4-equipment", true)
 	data.raw.technology["energy-shield-mk4-equipment"] = nil
+	krastorio.technologies.removeResearchUnitIngredient("kr-energy-shield-mk4-equipment", "automation-science-pack")
+	krastorio.technologies.removeResearchUnitIngredient("kr-energy-shield-mk4-equipment", "logistic-science-pack")
+	krastorio.technologies.removeResearchUnitIngredient("kr-energy-shield-mk4-equipment", "chemical-science-pack")
 
 	-------------------------------------------------------------
 	-- --  Modules

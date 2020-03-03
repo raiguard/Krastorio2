@@ -503,9 +503,9 @@ data:extend(
 		enabled = false,
 		ingredients =
 		{
-			{"coal", 4},
-			{"iron-plate", 4},
-			{"copper-plate", 2}
+			{"coal", 2},
+			{"iron-plate", 2},
+			{"copper-plate", 1}
 		},
 		result = "rifle-magazine"	
     },
@@ -1064,9 +1064,9 @@ data:extend(
 		enabled = false,
 		ingredients =
 		{
-			{"coal", 5},
-			{"iron-plate", 4},
-			{"copper-plate", 3}
+			{"coal", 4},
+			{"iron-plate", 3},
+			{"copper-plate", 2}
 		},
 		result = "anti-material-rifle-magazine"
     },

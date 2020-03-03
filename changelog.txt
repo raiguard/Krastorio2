@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.13
+Date: 03.03.2020
+  Features:
+    - Added a command called "kr-restore", that to the same of remote.call("kr-restore", "reset_global_data"), now will also remove and give back the entities in the owner's inventory property.
+  Changes:
+    - Improved filtration plant sprites.
+    - Improved advanced chemical plant.
+    - With the option "more realistic weapon" the ammo recipe cost was rebalanced again.
+    - Now now boilers don't waste fuel value keeping 2:1 ratio with steam engine, also removed efficency.
+  Fixes:
+    - Solved problem with the new offshore pump.
+    - Fixed another SE shield bug.
+---------------------------------------------------------------------------------------------------
 Version: 0.5.12
 Date: 02.03.2020
   Changes:
