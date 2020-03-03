@@ -57,7 +57,7 @@ data.raw["mining-drill"]["pumpjack"].icon = kr_entities_icons_path .. "oil-pumpj
 data.raw["mining-drill"]["pumpjack"].icon_size = 64
 data.raw["mining-drill"]["pumpjack"].icon_mipmaps = nil
 data.raw["mining-drill"]["pumpjack"].energy_usage = "100kW"
-data.raw["mining-drill"]["pumpjack"].mining_speed = 50
+data.raw["mining-drill"]["pumpjack"].mining_speed = 2
 data.raw["mining-drill"]["pumpjack"].radius_visualisation_picture.filename = kr_entities_path .. "oil-pumpjack/oil-pumpjack-radius-visualization.png"
 data.raw["mining-drill"]["pumpjack"].base_picture.sheets =
 {

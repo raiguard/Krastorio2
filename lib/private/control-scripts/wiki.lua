@@ -4,18 +4,21 @@ require("__core__/lualib/mod-gui")
 local w_prefix = "kr-wiki-"
 local topics =
 {
-	{"gui.air-purifier"},
+	{"gui.about-k2"},
+	{"gui.shelter"},
+	{"gui.new-gun-play"},
+	{"gui.new-metals"},
 	{"gui.creep"},
 	{"gui.fuels"},
-	{"gui.fusion-reactor"},
+	{"gui.air-purifier"},
 	{"gui.inserters-hotkey"},
-	{"gui.intergalactic-transceiver"},
+	{"gui.roboports-hotkey"},
+	{"gui.fusion-reactor"},
 	{"gui.matter-of-matter"},
-	{"gui.new-gun-play"},	
-	{"gui.new-metals"},	
-	{"gui.radiation"},
-	{"gui.roboports-hotkey"},	
-	{"gui.shelter"}
+	{"gui.intergalactic-transceiver"},
+	{"gui.faq"},
+
+
 }
 
 function getDescrptionGUIPane(event)
@@ -85,20 +88,60 @@ function getResolutionMultiplier(display_resolution)
 	return multiplier
 end
 
-function showAirPurifierDescription(event)
+function showAbout_K2Description(event)
 	local wiki_info_pane = getDescrptionGUIPane(event)
 	if wiki_info_pane then
 	
 		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.air-purifier")		
-		-- Air purifier image
-		addImageToDescrptionGUIPane(wiki_info_pane, "air-purifier-preview-1", 1)
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.about-k2")		
+		-- About K2 image
+		addImageToDescrptionGUIPane(wiki_info_pane, "about-k2-preview", 1)
 		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.air-purifier-description-1", 1)
-		-- Filter restoration image
-		addImageToDescrptionGUIPane(wiki_info_pane, "air-purifier-preview-2", 2)
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.about-k2-description", 1)
+		
+	end
+end
+
+function showShelterDescription(event)
+	local wiki_info_pane = getDescrptionGUIPane(event)
+	if wiki_info_pane then
+		
+		-- Title
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.shelter")		
+		-- Shelter image	
+		addImageToDescrptionGUIPane(wiki_info_pane, "kr-shelter-preview", 1)
+		-- Description 1
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.shelter-description-1", 1)
+		
+	end
+end
+
+function showNewGunPlay(event)
+	local wiki_info_pane = getDescrptionGUIPane(event)
+	if wiki_info_pane then
+		
+		-- Title
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.new-gun-play")			
+		-- NewGunPlay icon image
+		addImageToDescrptionGUIPane(wiki_info_pane, "kr-new-gun-play-preview", 1)	
+		-- Description 1
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.new-gun-play-description-1", 1)
+		
+	end
+end
+
+function showNewMetals(event)
+	local wiki_info_pane = getDescrptionGUIPane(event)
+	if wiki_info_pane then
+		
+		-- Title
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.new-metals")			
+		-- NewMetals icon image
+		addImageToDescrptionGUIPane(wiki_info_pane, "new-metals-preview", 1)	
+		-- Description 1
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.rare-metals-description-1", 1)
 		-- Description 2
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.air-purifier-description-2", 2)
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.rare-metals-description-2", 2)
 		
 	end
 end
@@ -135,20 +178,20 @@ function showFuelsDescription(event)
 	end
 end
 
-function showFusionReactorDescription(event)
+function showAirPurifierDescription(event)
 	local wiki_info_pane = getDescrptionGUIPane(event)
 	if wiki_info_pane then
-		
+	
 		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.fusion-reactor")		
-		-- Fusion reactor image	
-		addImageToDescrptionGUIPane(wiki_info_pane, "kr-fusion-reactor-preview", 1)
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.air-purifier")		
+		-- Air purifier image
+		addImageToDescrptionGUIPane(wiki_info_pane, "air-purifier-preview-1", 1)
 		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.fusion-reactor-description-1", 1)
-		-- Advanced Turbine image
-		addImageToDescrptionGUIPane(wiki_info_pane, "kr-advanced-steam-turbine-preview", 2)
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.air-purifier-description-1", 1)
+		-- Filter restoration image
+		addImageToDescrptionGUIPane(wiki_info_pane, "air-purifier-preview-2", 2)
 		-- Description 2
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.fusion-reactor-description-2", 2)
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.air-purifier-description-2", 2)
 		
 	end
 end
@@ -167,16 +210,34 @@ function showInsertersHotkeyDescription(event)
 	end
 end
 
-function showIntergalacticTransceiverDescription(event)
+function showRoboportsHotkeyDescription(event)
 	local wiki_info_pane = getDescrptionGUIPane(event)
 	if wiki_info_pane then
 		
 		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.intergalactic-transceiver")		
-		-- Intergalactic transceiver image
-		addImageToDescrptionGUIPane(wiki_info_pane, "kr-intergalactic-transceiver-preview", 1)
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.roboports-hotkey")
+		-- Change roboport mode image
+		addImageToDescrptionGUIPane(wiki_info_pane, "roboports-hotkey-preview", 1)
 		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.intergalactic-transceiver-description-1", 1)
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.roboports-krastorio-hotkey-description-1", 1)
+		
+	end
+end
+
+function showFusionReactorDescription(event)
+	local wiki_info_pane = getDescrptionGUIPane(event)
+	if wiki_info_pane then
+		
+		-- Title
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.fusion-reactor")		
+		-- Fusion reactor image	
+		addImageToDescrptionGUIPane(wiki_info_pane, "kr-fusion-reactor-preview", 1)
+		-- Description 1
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.fusion-reactor-description-1", 1)
+		-- Advanced Turbine image
+		addImageToDescrptionGUIPane(wiki_info_pane, "kr-advanced-steam-turbine-preview", 2)
+		-- Description 2
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.fusion-reactor-description-2", 2)
 		
 	end
 end
@@ -195,87 +256,49 @@ function showMatterOfMatter(event)
 	end
 end
 
-function showNewGunPlay(event)
+function showIntergalacticTransceiverDescription(event)
 	local wiki_info_pane = getDescrptionGUIPane(event)
 	if wiki_info_pane then
 		
 		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.new-gun-play")			
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.intergalactic-transceiver")		
+		-- Intergalactic transceiver image
+		addImageToDescrptionGUIPane(wiki_info_pane, "kr-intergalactic-transceiver-preview", 1)
 		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.new-gun-play-description-1", 1)
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.intergalactic-transceiver-description-1", 1)
 		
 	end
 end
 
-
-function showNewMetals(event)
+function showFAQDescription(event)
 	local wiki_info_pane = getDescrptionGUIPane(event)
 	if wiki_info_pane then
 		
 		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.new-metals")			
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.faq")			
 		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.rare-metals-description-1", 1)
-		-- Description 2
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.rare-metals-description-2", 2)
-		
-	end
-end
-
-function showRadiationDescription(event)
-	local wiki_info_pane = getDescrptionGUIPane(event)
-	if wiki_info_pane then
-		
-		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.radiation")			
-		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.radiation-description-1", 1)
-		
-	end
-end
-
-function showRoboportsHotkeyDescription(event)
-	local wiki_info_pane = getDescrptionGUIPane(event)
-	if wiki_info_pane then
-		
-		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.roboports-hotkey")
-		-- Change roboport mode image
-		addImageToDescrptionGUIPane(wiki_info_pane, "roboports-hotkey-preview", 1)
-		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.roboports-krastorio-hotkey-description-1", 1)
-		
-	end
-end
-
-function showShelterDescription(event)
-	local wiki_info_pane = getDescrptionGUIPane(event)
-	if wiki_info_pane then
-		
-		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.shelter")		
-		-- Shelter image	
-		addImageToDescrptionGUIPane(wiki_info_pane, "kr-shelter-preview", 1)
-		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.shelter-description-1", 1)
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.faq-description-1", 1)
 		
 	end
 end
 
 local topics_gui =
 {
-	[1]  = showAirPurifierDescription,
-	[2]  = showCreepDescription,
-	[3]  = showFuelsDescription,
-	[4]  = showFusionReactorDescription,
-	[5]	 = showInsertersHotkeyDescription,
-	[6]  = showIntergalacticTransceiverDescription,
-	[7]  = showMatterOfMatter,
-	[8]  = showNewGunPlay,
-	[9]  = showNewMetals,
-	[10]  = showRadiationDescription,
-	[11] = showRoboportsHotkeyDescription,
-	[12] = showShelterDescription
+
+	[1]  = showAbout_K2Description,
+	[2]  = showShelterDescription,
+	[3]  = showNewGunPlay,
+	[4]  = showNewMetals,
+	[5]  = showCreepDescription,
+	[6]  = showFuelsDescription,
+	[7]  = showAirPurifierDescription,
+	[8]	 = showInsertersHotkeyDescription,
+	[9]  = showRoboportsHotkeyDescription,
+	[10] = showFusionReactorDescription,
+	[11] = showMatterOfMatter,
+	[12] = showIntergalacticTransceiverDescription,
+	[13] = showFAQDescription,
+	
 }
 
 function changeWikiDescription(event)

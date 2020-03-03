@@ -109,7 +109,7 @@ data:extend(
 					priority = "high",
 					width = 258,
 					height = 229,
-					shift = {0, 0},
+					shift = {0.33, 0.32},
 					frame_count = 1,
 					repeat_count = 20,
 					animation_speed=0.25,

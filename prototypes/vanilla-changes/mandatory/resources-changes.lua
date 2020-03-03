@@ -15,7 +15,9 @@ data.raw.resource["crude-oil"].minable =
 		{
 			type = "fluid",
 			name = "crude-oil",
-			amount = 1
+			amount_min = 20,
+			amount_max = 20,
+			probability = 1
 		}
 	}
 }

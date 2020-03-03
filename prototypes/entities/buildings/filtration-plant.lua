@@ -1,3 +1,6 @@
+local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
+local sounds      = require("__base__/prototypes/entity/demo-sounds")
+
 data:extend(
 {  
 	{
@@ -10,6 +13,7 @@ data:extend(
 		max_health = 2000,
 		corpse = "kr-big-random-pipes-remnant",
 		dying_explosion = "big-explosion",
+		damaged_trigger_effect = hit_effects.entity(),
 		resistances = 
 		{
 			{type = "physical",percent = 50},
@@ -41,59 +45,61 @@ data:extend(
 		fast_replaceable_group = "assembling-machine",
 		animation =
 		{
-			filename = kr_entities_path .. "filtration-plant/filtration-plant.png",
-			priority = "high",
-			scale = scale,
-			width = 300,
-			height = 300,
-			frame_count = 1,
-			hr_version =
+			layers =
 			{
-				filename = kr_entities_path .. "filtration-plant/hr-filtration-plant.png",
-				priority = "high",
-				scale = scale,
-				width = 600,
-				height = 600,
-				frame_count = 1,
-				scale = 0.5
-			}
-		},
-		working_visualisations =
-		{
-			{
-				animation =
-				{
-					filename = kr_entities_path .. "filtration-plant/filtration-plant-animation.png",
+					{
+					filename = kr_entities_path .. "filtration-plant/filtration-plant.png",
 					priority = "high",
-					scale = scale,
-					width = 200,
-					height = 220,
-					frame_count = 24,
-					line_length = 5,
-					animation_speed=0.5,
+					width = 230,
+					height = 260,
+					shift = {0, -0.65},
+					frame_count = 30,
+					line_length = 6,
+					animation_speed=0.6,
+					scale = 1,
 					hr_version =
 					{
-						filename = kr_entities_path .. "filtration-plant/hr-filtration-plant-animation.png",
+						filename = kr_entities_path .. "filtration-plant/hr-filtration-plant.png",
 						priority = "high",
-						scale = scale,
-						width = 400,
-						height = 440,
-						frame_count = 24,
-						line_length = 5,
-						animation_speed=0.5,
+						width = 460,
+						height = 520,
+						shift = {0, -0.2},
+						scale = 0.5,
+						frame_count = 30,
+						line_length = 6,
+						animation_speed=0.6,
 						scale = 0.5
 					}
-				},
-				light =
-				{
-					intensity = 0.1,
-					size = 15,
-					shift = {2.0, 0.0},
-					color = {r=0.1, g=0.5, b=1}
-				}
-			},
-		},		
-		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+					},
+					{
+					filename = kr_entities_path .. "filtration-plant/filtration-plant-sh.png",
+					priority = "high",
+					width = 249,
+					height = 219,
+					shift = {0, 0},
+					frame_count = 1,
+					repeat_count = 30,
+					animation_speed=0.6,
+					scale = 1,
+					draw_as_shadow = true,
+					hr_version =
+					{
+						filename = kr_entities_path .. "filtration-plant/hr-filtration-plant-sh.png",
+						priority = "high",
+						scale = scale,
+						width = 498,
+						height = 438,
+						shift = {0.33, 0.32},
+						frame_count = 1,
+						repeat_count = 30,
+						animation_speed=0.6,
+						scale = 0.5,
+						draw_as_shadow = true
+					}
+					},
+			}
+		},	  
+		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{
 			sound = { filename = kr_buildings_sounds_path .. "filtration-plant.ogg" },

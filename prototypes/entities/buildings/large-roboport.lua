@@ -1,3 +1,5 @@
+local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
+local sounds      = require("__base__/prototypes/entity/demo-sounds")
 local variations_util = require(kr_public_lib .. "create-roboport-states")
 
 data:extend(
@@ -7,12 +9,13 @@ data:extend(
 		name = "kr-large-roboport",
 		icon = kr_entities_icons_path .. "large-roboport.png",
 		icon_size = 64,
-		flags = {"placeable-player", "player-creation"},
+		flags = {"placeable-neutral","placeable-player", "player-creation", "not-rotatable"},
 		minable = {mining_time = 1, result = "kr-large-roboport"},
 		max_health = 3500,
 		corpse = "kr-big-random-pipes-remnant",
-		collision_box = {{-3.75, -3.75}, {3.75, 3.75}},
-		selection_box = {{-4, -4}, {4, 4}},
+		damaged_trigger_effect = hit_effects.entity(),
+		collision_box = {{-3.75, -3.25}, {3.75, 3.25}},
+		selection_box = {{-4, -3.5}, {4, 3.5}},
 		resistances = 
 		{
 			{type = "physical",percent = 60},
@@ -51,9 +54,9 @@ data:extend(
 			hr_version =
 			{
 				filename = kr_entities_path .. "large-roboport/hr-large-roboport.png",
-				width = 680,
-				height = 680,
-				shift = {0, 0.4},
+				width = 560,
+				height = 560,
+				shift = {0, -0.52},
 				scale = 0.5
 			}
 		},
@@ -66,9 +69,9 @@ data:extend(
 			hr_version =
 			{
 				filename = kr_entities_path .. "large-roboport/hr-large-roboport-patch.png",
-				width = 130,
-				height = 100,
-				shift = {0, 0.01},
+				width = 138,
+				height = 112,
+				shift = {0, -0.32},
 				scale = 0.5
 			}
 		},

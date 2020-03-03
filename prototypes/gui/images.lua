@@ -1,5 +1,25 @@
 data:extend(
 {
+	-- About K2
+	---
+	{
+		type     = "sprite",
+		name     = "about-k2-preview",		
+		filename = kr_graphic_mod_path .. "gui/previews/about-k2-preview.png",
+		width    = 700,
+		height   = 105,
+		scale    = 0.70
+	},
+	-- New metals
+	---
+	{
+		type     = "sprite",
+		name     = "new-metals-preview",		
+		filename = kr_graphic_mod_path .. "gui/previews/new-metals-preview.png",
+		width    = 700,
+		height   = 300,
+		scale    = 0.70
+	},
 	-- Air purification
 	---
 	{
@@ -14,7 +34,8 @@ data:extend(
 		name     = "air-purifier-preview-2",
 		filename = kr_recipes_icons_path .. "restore-used-pollution-filter.png",
 		width    = 128,
-		height   = 128
+		height   = 128,
+		scale    = 0.5
 	},
 	---
 	-- Creep
@@ -41,6 +62,16 @@ data:extend(
 		filename = kr_graphic_mod_path .. "gui/previews/fuels-preview.png",
 		width    = 274,
 		height   = 117
+	},
+	-- New gun play
+	---
+	{
+		type     = "sprite",
+		name     = "kr-new-gun-play-preview",
+		filename = kr_graphic_mod_path .. "gui/previews/new-gun-play-preview.png",
+		width    = 700,
+		height   = 327,
+		scale    = 0.70
 	},
 	-- Fusion
 	---
