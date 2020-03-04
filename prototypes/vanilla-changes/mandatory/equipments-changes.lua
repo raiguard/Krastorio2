@@ -551,6 +551,8 @@ data.raw.item["night-vision-equipment"].order     = "f[night-vision]-a1[night-vi
 -- Exoskeleton equipment
 -----------------------------------------------------------------------------------------------------------------
 
+data.raw["movement-bonus-equipment"]["exoskeleton-equipment"].movement_bonus = 0.2
+
 -- -- Items visual(icon, sprites)/modifcation
 objects_to_modify =
 {

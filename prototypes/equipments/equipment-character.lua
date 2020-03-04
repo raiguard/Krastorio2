@@ -139,7 +139,7 @@ data:extend(
 			type = "electric",
 			usage_priority = "secondary-input"
 		},
-		movement_bonus = 0.6,      
+		movement_bonus = 0.4,      
 		shape = 
 		{
 			width = 2,
@@ -165,7 +165,7 @@ data:extend(
 			type = "electric",
 			usage_priority = "secondary-input"
 		},
-		movement_bonus = 0.90,      
+		movement_bonus = 0.6,      
 		shape = 
 		{
 			width = 2,
