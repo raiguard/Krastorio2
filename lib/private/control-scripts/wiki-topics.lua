@@ -15,7 +15,7 @@
 return
 {
 	{
-		name  = "gui.about-k2",
+		name  = "gui.about-k2-with-icon",
 		topic =
 		{
 			{type = "title", title = "gui.about-k2" },
@@ -24,7 +24,7 @@ return
 		}
 	},
 	{
-		name  = "gui.shelter",
+		name  = "gui.shelter-with-icon",
 		topic =
 		{
 			{type = "title", title = "gui.shelter" },
@@ -33,7 +33,7 @@ return
 		}
 	},
 	{
-		name  = "gui.new-gun-play",
+		name  = "gui.new-gun-play-with-icon",
 		topic =
 		{
 			{type = "title", title = "gui.new-gun-play" },
@@ -42,7 +42,7 @@ return
 		}
 	},
 	{
-		name  = "gui.new-metals",
+		name  = "gui.new-metals-with-icon",
 		topic =
 		{
 			{type = "title", title = "gui.new-metals" },
@@ -52,7 +52,7 @@ return
 		}
 	},
 	{
-		name  = "gui.creep",
+		name  = "gui.creep-with-icon",
 		topic =
 		{
 			{type = "title", title = "gui.creep" },
@@ -63,7 +63,7 @@ return
 		}
 	},
 	{
-		name  = "gui.fuels",
+		name  = "gui.fuels-with-icon",
 		topic =
 		{
 			{type = "title", title = "gui.fuels" },
@@ -72,7 +72,7 @@ return
 		}
 	},
 	{
-		name  = "gui.air-purifier",
+		name  = "gui.air-purifier-with-icon",
 		topic =
 		{
 			{type = "title", title = "gui.air-purifier" },
@@ -83,7 +83,7 @@ return
 		}
 	},
 	{
-		name  = "gui.inserters-hotkey",
+		name  = "gui.inserters-hotkey-with-icon",
 		topic =
 		{
 			{type = "title", title = "gui.inserters-hotkey" },
@@ -92,7 +92,7 @@ return
 		}
 	},
 	{
-		name  = "gui.roboports-hotkey",
+		name  = "gui.roboports-hotkey-with-icon",
 		topic =
 		{
 			{type = "title", title = "gui.roboports-hotkey" },
@@ -101,7 +101,7 @@ return
 		}
 	},
 	{
-		name  = "gui.fusion-reactor",
+		name  = "gui.fusion-reactor-with-icon",
 		topic =
 		{
 			{type = "title", title = "gui.fusion-reactor" },
@@ -112,7 +112,7 @@ return
 		}
 	},
 	{
-		name  = "gui.matter-of-matter",
+		name  = "gui.matter-of-matter-with-icon",
 		topic =
 		{
 			{type = "title", title = "gui.matter-of-matter" },
@@ -121,7 +121,7 @@ return
 		}
 	},
 	{
-		name  = "gui.intergalactic-transceiver",
+		name  = "gui.intergalactic-transceiver-with-icon",
 		topic =
 		{
 			{type = "title", title = "gui.intergalactic-transceiver" },
@@ -130,7 +130,24 @@ return
 		}
 	},
 	{
-		name  = "gui.faq",
+		name  = "gui.radiation-with-icon",
+		topic =
+		{
+			{type = "title", title = "gui.radiation" },
+			{type = "text", text = "gui.radiation-description-1"}
+		}
+	},
+	{
+		name  = "gui.crusher-with-icon",
+		topic =
+		{
+			{type = "title", title = "gui.crusher" },
+			{type = "image", spritename = "kr-crusher-preview"},
+			{type = "text", text = "gui.crusher-description-1"}
+		}
+	},
+	{
+		name  = "gui.faq-with-icon",
 		topic =
 		{
 			{type = "title", title = "gui.faq" },

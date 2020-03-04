@@ -227,5 +227,13 @@ data:extend(
 		icon_size = 64,
 		subgroup = "kr-special-signals-2",
 		order = "a[special-signals]-zzz[krastorio]"
-	}
+	},  
+	{
+		type = "virtual-signal",
+		name = "kr-question-mark",
+		icon = kr_signals_icons_path .. "question-mark.png",
+		icon_size = 64,
+		subgroup = "kr-special-signals-2",
+		order = "a[special-signals]-www[question-mark]"
+	}	
 })

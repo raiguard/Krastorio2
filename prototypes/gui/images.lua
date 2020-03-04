@@ -128,5 +128,12 @@ data:extend(
 		width    = 584,
 		height   = 379,
 		scale    = 0.80
+	},
+	{
+		type     = "sprite",
+		name     = "kr-crusher-preview",
+		filename = kr_graphic_mod_path .. "gui/previews/crusher-preview.png",
+		width    = 232,
+		height   = 236
 	}	
 })
