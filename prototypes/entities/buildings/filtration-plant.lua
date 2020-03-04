@@ -53,9 +53,7 @@ data:extend(
 					width = 230,
 					height = 260,
 					shift = {0, -0.65},
-					frame_count = 30,
-					line_length = 6,
-					animation_speed=0.6,
+					frame_count = 1,
 					scale = 1,
 					hr_version =
 					{
@@ -65,9 +63,7 @@ data:extend(
 						height = 520,
 						shift = {0, -0.2},
 						scale = 0.5,
-						frame_count = 30,
-						line_length = 6,
-						animation_speed=0.6,
+						frame_count = 1,
 						scale = 0.5
 					}
 					},
@@ -78,8 +74,6 @@ data:extend(
 					height = 219,
 					shift = {0, 0},
 					frame_count = 1,
-					repeat_count = 30,
-					animation_speed=0.6,
 					scale = 1,
 					draw_as_shadow = true,
 					hr_version =
@@ -91,8 +85,6 @@ data:extend(
 						height = 438,
 						shift = {0.33, 0.32},
 						frame_count = 1,
-						repeat_count = 30,
-						animation_speed=0.6,
 						scale = 0.5,
 						draw_as_shadow = true
 					}
@@ -101,6 +93,33 @@ data:extend(
 		},
 		working_visualisations =
 		{
+			{
+				animation =
+				{
+					filename = kr_entities_path .. "filtration-plant/filtration-plant-working.png",
+					priority = "high",
+					width = 230,
+					height = 260,
+					shift = {0.3, -0.58},
+					frame_count = 30,
+					line_length = 6,
+					animation_speed=0.6,
+					scale = 1,
+					hr_version =
+					{
+						filename = kr_entities_path .. "filtration-plant/hr-filtration-plant-working.png",
+						priority = "high",
+						width = 340,
+						height = 370,
+						shift = {0.3, -0.58},
+						scale = 0.5,
+						frame_count = 30,
+						line_length = 6,
+						animation_speed=0.6,
+						scale = 0.5
+					}
+				},
+			},
 			{
 				apply_recipe_tint = "primary",
 				animation =
@@ -149,9 +168,7 @@ data:extend(
 					}
 				}
 			},
-
 		},
-
 		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{
