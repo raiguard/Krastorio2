@@ -537,11 +537,11 @@ return
 		enabled = false,
 		ingredients = 
 		{
-			{"steel-beam", 500},
-			{"steel-plate", 500},
-			{"rare-metals", 350},
 			{"concrete", 500},
 			{"copper-plate", 500},
+			{"steel-plate", 500},
+			{"steel-beam", 350},
+			{"rare-metals", 350},
 			{"processing-unit", 100}
 		},
 		result = "kr-fusion-reactor"
@@ -627,7 +627,7 @@ return
 			{"energy-control-unit", 100},		
 			{"imersium-beam", 500},
 			{"imersium-plate", 500},
-			{"concrete", 500},
+			{"rare-metals", 500},
 			{"nuclear-reactor", 1}
 		},
 		result = "kr-antimatter-reactor"

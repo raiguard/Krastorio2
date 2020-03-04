@@ -416,10 +416,10 @@ krastorio.recipes.replaceIngredient("lab", "transport-belt", {"copper-cable", 10
 data.raw.recipe["nuclear-reactor"].energy_required = 300
 data.raw.recipe["nuclear-reactor"].category = "crafting-with-fluid"
 krastorio.recipes.replaceIngredient("nuclear-reactor", "concrete", {"concrete", 500}) --it's not a mistake. it's for future rebalance
-krastorio.recipes.replaceIngredient("nuclear-reactor", "steel-plate", {"steel-plate", 250}) --it's not a mistake. it's for future rebalance
-krastorio.recipes.replaceIngredient("nuclear-reactor", "advanced-circuit", {"advanced-circuit", 250}) --it's not a mistake. it's for future rebalance
-krastorio.recipes.replaceIngredient("nuclear-reactor", "copper-plate", {"copper-plate", 250})
-krastorio.recipes.addIngredient("nuclear-reactor", {"rare-metals", 250})
+krastorio.recipes.replaceIngredient("nuclear-reactor", "steel-plate", {"steel-plate", 200}) --it's not a mistake. it's for future rebalance
+krastorio.recipes.replaceIngredient("nuclear-reactor", "advanced-circuit", {"advanced-circuit", 200}) --it's not a mistake. it's for future rebalance
+krastorio.recipes.replaceIngredient("nuclear-reactor", "copper-plate", {"copper-plate", 200})
+krastorio.recipes.addIngredient("nuclear-reactor", {"rare-metals", 200})
 
 -- -- Turbines
 ----------------------------
