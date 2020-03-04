@@ -33,12 +33,13 @@ data:extend(
 				base_level = -1,
 				pipe_connections = {{ type="input-output", position = {0, -4} }}
 			},
+			-- Outputs
 			{
 				production_type = "output",
 				pipe_picture = kr_pipe_path,
 				pipe_covers = pipecoverspictures(),	
 				base_area = 100,
-				base_level = -1,
+				base_level = 1,
 				pipe_connections = {{ type="input-output", position = {-4, 0} }}
 			},
 			{
@@ -46,10 +47,9 @@ data:extend(
 				pipe_picture = kr_pipe_path,
 				pipe_covers = pipecoverspictures(),	
 				base_area = 100,
-				base_level = -1,
+				base_level = 1,
 				pipe_connections = {{ type="input-output", position = {4, 0} }}
 			},
-			-- Outputs
 			{
 				production_type = "output",
 				pipe_picture = kr_pipe_path,
