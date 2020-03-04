@@ -28,8 +28,8 @@ data:extend(
 				{
 					filename = kr_entities_path .. "advanced-solar-panel/advanced-solar-panel.png",
 					priority = "high",
-					width = 116,
-					height = 112,
+					width = 140,
+					height = 140,
 					shift = {0.1, 0.1},
 					hr_version =
 					{
@@ -44,8 +44,8 @@ data:extend(
 				{
 					filename = kr_entities_path .. "advanced-solar-panel/advanced-solar-panel-sh.png",
 					priority = "high",
-					width = 112,
-					height = 90,
+					width = 140,
+					height = 140,
 					shift = {0.1, 0.1},
 					draw_as_shadow = true,
 					hr_version =
@@ -68,8 +68,8 @@ data:extend(
 				{
 					filename = kr_entities_path .. "advanced-solar-panel/advanced-solar-panel-sh-ov.png",
 					priority = "high",
-					width = 108,
-					height = 90,
+					width = 140,
+					height = 140,
 					shift = {0.1, 0.1},
 					hr_version =
 					{

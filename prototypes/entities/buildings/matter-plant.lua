@@ -74,7 +74,7 @@ data:extend(
 					width = 231,
 					height = 250,
 					frame_count = 1,
-					shift = {0, 0},
+					shift = {-0.1, -0.2},
 					hr_version =
 					{
 						filename = kr_entities_path .. "matter-plant/hr-matter-plant.png",
@@ -95,7 +95,7 @@ data:extend(
 					height = 222,
 					frame_count = 1,
 					draw_as_shadow = true,
-					shift = {0, 0},
+					shift = {0.23, 0.24},
 					hr_version =
 					{
 						filename = kr_entities_path .. "matter-plant/hr-matter-plant-sh.png",
@@ -122,7 +122,7 @@ data:extend(
 					height = 250,
 					frame_count = 30,
 					line_length = 6,
-					shift = {0, 0},
+					shift = {-0.1, -0.2},
 					animation_speed=0.75,
 					hr_version =
 					{
