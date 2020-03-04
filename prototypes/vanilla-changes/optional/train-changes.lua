@@ -4,7 +4,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 
 	---------------------	
 	-- -- Locomotive
-	data.raw.locomotive["locomotive"].max_health = 1500
+	data.raw.locomotive["locomotive"].max_health = 1000
 	data.raw.locomotive["locomotive"].braking_force = 30
 	data.raw.locomotive["locomotive"].burner.fuel_inventory_size = 3
 	data.raw.locomotive["locomotive"].burner.fuel_categories = {"chemical", "vehicle-fuel"}
@@ -23,11 +23,11 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 	---------------------
 	-- -- Cargo wagon
 	for _, wagon in pairs(data.raw["cargo-wagon"]) do 
-		if wagon.inventory_size < 75 then -- mod compatibility check
-			wagon.inventory_size = 100
+		if wagon.inventory_size < 50 then -- mod compatibility check
+			wagon.inventory_size = 50
 		end
 	end
-	data.raw["cargo-wagon"]["cargo-wagon"].max_health = 1500
+	data.raw["cargo-wagon"]["cargo-wagon"].max_health = 750
 	data.raw["cargo-wagon"]["cargo-wagon"].minable = {mining_time = 0.5, result = "cargo-wagon"}
 	data.raw["cargo-wagon"]["cargo-wagon"].weight = 2000
 	
@@ -36,8 +36,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 	
 	---------------------
 	-- -- Fluid wagon
-	data.raw["fluid-wagon"]["fluid-wagon"].capacity = 30000
-	data.raw["fluid-wagon"]["fluid-wagon"].max_health = 1500
+	data.raw["fluid-wagon"]["fluid-wagon"].max_health = 150
 	data.raw["fluid-wagon"]["fluid-wagon"].minable = {mining_time = 0.5, result = "fluid-wagon"}
 	data.raw["fluid-wagon"]["fluid-wagon"].weight = 2000
 	
@@ -46,7 +45,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 	
 	---------------------
 	-- -- Artillery wagon
-	data.raw["artillery-wagon"]["artillery-wagon"].max_health = 2000
+	data.raw["artillery-wagon"]["artillery-wagon"].max_health = 1000
 	data.raw["artillery-wagon"]["artillery-wagon"].minable = {mining_time = 0.5, result = "artillery-wagon"}
 	data.raw["artillery-wagon"]["artillery-wagon"].weight = 3000
 	

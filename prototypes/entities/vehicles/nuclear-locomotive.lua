@@ -40,7 +40,7 @@ data:extend(
 		flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
 		minable = {mining_time = 1, result = "kr-nuclear-locomotive"},
 		mined_sound = {filename = "__core__/sound/deconstruct-medium.ogg"},
-		max_health = 2000,
+		max_health = 1500,
 		corpse = "locomotive-remnants",
 		dying_explosion = "locomotive-explosion",
 		collision_box = {{-0.6, -2.6}, {0.6, 2.6}},
