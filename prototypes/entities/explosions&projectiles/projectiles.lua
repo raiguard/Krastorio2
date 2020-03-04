@@ -1,3 +1,18 @@
+local smoke_fast_animation = function(opts)
+  local opts = opts or {}
+  return
+  {
+    filename = "__base__/graphics/entity/smoke-fast/smoke-fast.png",
+    priority = "high",
+    width = 50,
+    height = 50,
+    frame_count = 16,
+    animation_speed = opts.animation_speed or 16 / 60,
+    scale = opts.scale,
+    tint = opts.tint
+  }
+end
+
 data:extend(
 {
 -----------------------------------------------------------------------------------------------------------------
@@ -931,6 +946,265 @@ data:extend(
       }
     },
 	light = {intensity = 0.5, size = 10, color = {r=0.75, g=0.8, b=1}},
+  },
+  
+-----------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------- 
+ 
+  {
+    type = "trivial-smoke",
+    name = "poop-particle-smoke",
+    animation = smoke_fast_animation(
+      {
+        scale = 0.2
+      }
+    ),
+    duration = 60,
+    fade_away_duration = 60,
+    render_layer = "higher-object-above",
+    color = {r = 0.5, g = 0.4, b = 0.35, a = 0.690}
+  },
+ 
+  {
+    type = "smoke-with-trigger",
+    name = "poop-cloud-visual-dummy",
+    flags = {"not-on-map"},
+    show_when_smoke_off = true,
+    particle_count = 24,
+    particle_spread = { 3.6 * 1.05, 3.6 * 0.6 * 1.05 },
+    particle_distance_scale_factor = 0.5,
+    particle_scale_factor = { 1, 0.707 },
+    particle_duration_variation = 60 * 3;
+    wave_speed = { 0.5 / 80, 0.5 / 60 },
+    wave_distance = { 1, 0.5 },
+    spread_duration_variation = 300 - 20;
+
+    render_layer = "object",
+
+    affected_by_wind = false,
+    cyclic = true,
+    duration = 60 * 20 + 4 * 60,
+    fade_away_duration = 3 * 60,
+    spread_duration = (300 - 20) / 2 ,
+    color = {r = 0.5, g = 0.4, b = 0.35, a = 0.690}, -- #035b6452
+
+    animation =
+    {
+      width = 152,
+      height = 120,
+      line_length = 5,
+      frame_count = 60,
+      shift = {-0.53125, -0.4375},
+      priority = "high",
+      animation_speed = 0.25,
+      filename = "__base__/graphics/entity/smoke/smoke.png",
+      flags = { "smoke" }
+    },
+
+    --working_sound =
+    --{
+    --  sound =
+    --  {
+    --    filename = "__base__/sound/fight/poison-cloud.ogg",
+    --    volume = 0.5
+    --  },
+    --},
+  },
+ 
+  {
+    name = "poop-cloud",
+    type = "smoke-with-trigger",
+    flags = {"not-on-map"},
+    show_when_smoke_off = true,
+    particle_count = 16,
+    particle_spread = { 3.6 * 1.05, 3.6 * 0.6 * 1.05 },
+    particle_distance_scale_factor = 0.5,
+    particle_scale_factor = { 1, 0.707 },
+    wave_speed = { 1/80, 1/60 },
+    wave_distance = { 0.3, 0.2 },
+    spread_duration_variation = 20;
+    particle_duration_variation = 60 * 3;
+    render_layer = "object",
+
+    affected_by_wind = false,
+    cyclic = true,
+    duration = 60 * 20,
+    fade_away_duration = 2 * 60,
+    spread_duration = 20,
+    color = {r = 0.5, g = 0.4, b = 0.35, a = 0.690}, -- #3ddffdb0,
+
+    animation =
+    {
+      width = 152,
+      height = 120,
+      line_length = 5,
+      frame_count = 60,
+      shift = {-0.53125, -0.4375},
+      priority = "high",
+      animation_speed = 0.25,
+      filename = "__base__/graphics/entity/smoke/smoke.png",
+      flags = { "smoke" }
+    },
+
+    created_effect =
+    {
+      {
+        type = "cluster",
+        cluster_count = 10,
+        distance = 4,
+        distance_deviation = 5,
+        action_delivery =
+        {
+          type = "instant",
+          target_effects =
+          {
+            type = "create-smoke",
+            show_in_tooltip = false,
+            entity_name = "poop-cloud-visual-dummy",
+            initial_height = 0
+          }
+        }
+      },
+      {
+        type = "cluster",
+        cluster_count = 11,
+        distance = 8 * 1.1,
+        distance_deviation = 2,
+        action_delivery =
+        {
+          type = "instant",
+          target_effects =
+          {
+            type = "create-smoke",
+            show_in_tooltip = false,
+            entity_name = "poop-cloud-visual-dummy",
+            initial_height = 0
+          }
+        }
+      }
+    },
+
+    working_sound =
+    {
+      sound =
+      {
+        filename = "__base__/sound/fight/poison-cloud.ogg",
+        volume = 0.7
+      },
+    },
+    action =
+    {
+      type = "direct",
+      action_delivery =
+      {
+        type = "instant",
+        target_effects =
+        {
+          type = "nested-result",
+          action =
+          {
+            type = "area",
+            radius = 11,
+            entity_flags = {"breaths-air"},
+            action_delivery =
+            {
+              type = "instant",
+              target_effects =
+              {
+                type = "damage",
+                damage = { amount = 8, type = "poison"}
+              }
+            }
+          }
+        }
+      }
+    },
+    action_cooldown = 30
+  },
+  {
+    type = "projectile",
+    name = "poop-projectile",
+    flags = {"not-on-map"},
+    acceleration = 0.005,
+    action =
+    {
+      {
+        type = "direct",
+        action_delivery =
+        {
+          type = "instant",
+          target_effects =
+          {
+            {
+              type = "create-smoke",
+              show_in_tooltip = true,
+              entity_name = "poop-cloud",
+              initial_height = 0
+            },
+          }
+        }
+      }
+    },
+    light = {intensity = 0.5, size = 4},
+    animation =
+    {
+      filename = kr_entities_path .. "bullets/poop.png",
+      frame_count = 12,
+      animation_speed = 0.3,
+      width = 32,
+      height = 32,
+      shift = util.by_pixel(1, 0.5),
+      priority = "high",
+	  scale = 0.7,
+      hr_version =
+      {
+        filename = kr_entities_path .. "bullets/hr-poop.png",
+        frame_count = 12,
+        animation_speed = 0.3,
+        width = 64,
+        height = 64,
+        shift = util.by_pixel(1, 0.5),
+        priority = "high",
+        scale = 0.35
+      }
+
+    },
+    shadow =
+    {
+      filename = kr_entities_path .. "bullets/poop.png",
+      frame_count = 12,
+      animation_speed = 0.3,
+      width = 32,
+      height = 32,
+      shift = util.by_pixel(1, 2),
+      priority = "high",
+      draw_as_shadow = true,
+	  scale = 0.7,
+      hr_version =
+      {
+        filename = kr_entities_path .. "bullets/hr-poop.png",
+        frame_count = 12,
+        animation_speed = 0.3,
+        width = 64,
+        height = 64,
+        shift = util.by_pixel(1, 2),
+        priority = "high",
+        draw_as_shadow = true,
+        scale = 0.35
+      }
+    },
+    smoke =
+    {
+      {
+        name = "poop-particle-smoke",
+        deviation = {0.15, 0.15},
+        frequency = 1,
+        position = {0, 0},
+        starting_frame = 3,
+        starting_frame_deviation = 5,
+        starting_frame_speed_deviation = 5
+      }
+    }
   },
 	
 -----------------------------------------------------------------------------------------------------------------

@@ -47,25 +47,46 @@ data:extend(
 		},
 		base =
 		{
-			filename = kr_entities_path .. "large-roboport/large-roboport.png",
-			width = 340,
-			height = 340,
-			shift = {0, 0.4},
-			hr_version =
+			layers =
 			{
-				filename = kr_entities_path .. "large-roboport/hr-large-roboport.png",
-				width = 560,
-				height = 560,
+				{
+				filename = kr_entities_path .. "large-roboport/large-roboport.png",
+				width = 280,
+				height = 280,
 				shift = {0, -0.52},
-				scale = 0.5
+				hr_version =
+				{
+					filename = kr_entities_path .. "large-roboport/hr-large-roboport.png",
+					width = 560,
+					height = 560,
+					shift = {0, -0.52},
+					scale = 0.5
+				}
+				},
+				{
+				filename = kr_entities_path .. "large-roboport/large-roboport-sh.png",
+				width = 313,
+				height = 213,
+				shift = {1.1, 0.59},
+				draw_as_shadow = true,
+				hr_version =
+				{
+					filename = kr_entities_path .. "large-roboport/hr-large-roboport-sh.png",
+					width = 626,
+					height = 426,
+					shift = {1.1, 0.59},
+					draw_as_shadow = true,
+					scale = 0.5
+				}
+				},
 			}
 		},
 		base_patch =
 		{
 			filename = kr_entities_path .. "large-roboport/large-roboport-patch.png",
-			width = 65,
-			height = 50,
-			shift = {0, 0.01},
+			width = 68,
+			height = 56,
+			shift = {0, -0.32},
 			hr_version =
 			{
 				filename = kr_entities_path .. "large-roboport/hr-large-roboport-patch.png",
@@ -79,22 +100,22 @@ data:extend(
 		{
 			filename = kr_entities_path .. "large-roboport/large-roboport-animation.png",
 			priority = "medium",
-			width = 187,
-			height = 137,
+			width = 175,
+			height = 143,
 			line_length = 6,
 			frame_count = 12,
-			shift = {0, -0.97},
+			shift = {0, -1.35},
 			animation_speed = 0.1,
 			hr_version =
 			{
 				filename = kr_entities_path .. "large-roboport/hr-large-roboport-animation.png",
 				priority = "medium",
-				width = 374,
-				height = 274,
+				width = 350,
+				height = 286,
 				scale = 0.5,
 				line_length = 6,
 				frame_count = 12,
-				shift = {0, -0.97},
+				shift = {0, -1.35},
 				animation_speed = 0.1
 			}
 		},
@@ -102,38 +123,38 @@ data:extend(
 		{
 			filename = kr_entities_path .. "large-roboport/large-roboport-door-up.png",
 			priority = "medium",
-			width = 52,
-			height = 22,
+			width = 49,
+			height = 18,
 			frame_count = 16,
-			shift = {0, -1.06},
+			shift = {0, -1.45},
 			hr_version =
 			{
 				filename = kr_entities_path .. "large-roboport/hr-large-roboport-door-up.png",
 				priority = "medium",
-				width = 102,
-				height = 43,
+				width = 98,
+				height = 38,
 				scale = 0.5,
 				frame_count = 16,
-				shift = {0, -1.06}
+				shift = {0, -1.46}
 			}
 		},
 		door_animation_down =
 		{
 			filename = kr_entities_path .. "large-roboport/large-roboport-door-down.png",
 			priority = "medium",
-			width = 51,
+			width = 49,
 			height = 18,
 			frame_count = 16,
-			shift = {0, -0.45},
+			shift = {0, -0.89},
 			hr_version =
 			{
 				filename = kr_entities_path .. "large-roboport/hr-large-roboport-door-down.png",
 				priority = "medium",
-				width = 102,
+				width = 98,
 				height = 36,
 				scale = 0.5,
 				frame_count = 16,
-				shift = {0, -0.45}
+				shift = {0, -0.885}
 			}
 		},
 		recharging_animation =
@@ -156,7 +177,7 @@ data:extend(
 		},
 		recharging_light = {intensity = 0.4, size = 6, color = {r = 1.0, g = 1.0, b = 1.0}},
 		request_to_open_door_timeout = 15,
-		spawn_and_station_height = 0,
+		spawn_and_station_height = 0.2,
 		draw_logistic_radius_visualization = true,
 		draw_construction_radius_visualization = true,
 		open_door_trigger_effect =

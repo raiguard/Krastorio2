@@ -21,6 +21,11 @@ return
 		{
 			{ type = "item", name = "quartz", amount = 3 },
 			{ type = "item", name = "stone", probability = 0.3, amount = 1 }
+		},
+		crafting_machine_tint =
+		{
+			primary = {r = 0.75, g = 0.72, b = 0.5, a = 1}, --dirty
+			secondary = {r = 0.9, g = 0.8, b = 0.95, a = 1} --clear
 		}
     },
 	---
@@ -58,6 +63,11 @@ return
 			{type = "item",  name = "stone", probability = 0.30, amount = 1},
 			{type = "item",  name = "iron-ore", probability = 0.10, amount = 1}
 		},
+		crafting_machine_tint =
+		{
+			primary = {r = 0.5, g = 0.4, b = 0.6, a = 1}, --dirty
+			secondary = {r = 0.6, g = 0.75, b = 1, a = 1} --clear
+		},
 		subgroup = "raw-material",
 		order = "w011[dirty-water-filtration-1]"
 	},	
@@ -92,6 +102,11 @@ return
 			{type = "fluid", name = "water", amount = 100, catalyst_amount = 100},
 			{type = "item",  name = "stone", probability = 0.30, amount = 1},
 			{type = "item",  name = "copper-ore", probability = 0.10, amount = 1}
+		},
+		crafting_machine_tint =
+		{
+			primary = {r = 0.75, g = 0.4, b = 0.5, a = 1}, --dirty
+			secondary = {r = 0.6, g = 0.75, b = 1, a = 1} --clear
 		},
 		subgroup = "raw-material",
 		order = "w012[dirty-water-filtration-2]"

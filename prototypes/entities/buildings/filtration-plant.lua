@@ -98,7 +98,60 @@ data:extend(
 					}
 					},
 			}
-		},	  
+		},
+		working_visualisations =
+		{
+			{
+				apply_recipe_tint = "primary",
+				animation =
+				{
+					filename = kr_entities_path .. "filtration-plant/filtration-plant-dirty-mask.png",
+					width = 78,
+					height = 60,
+					frame_count = 30,
+					line_length = 6,
+					animation_speed = 0.6,
+					shift = {0, 0},
+					hr_version =
+					{
+						filename = kr_entities_path .. "filtration-plant/hr-filtration-plant-dirty-mask.png",
+						width = 156,
+						height = 120,
+						scale = 0.5,
+						frame_count = 30,
+						line_length = 6,
+						animation_speed = 0.6,
+						shift = {1.61, -1.01}
+					}
+				}
+			},
+			{
+				apply_recipe_tint = "secondary",
+				animation =
+				{
+					filename = kr_entities_path .. "filtration-plant/filtration-plant-clear-mask.png",
+					width = 78,
+					height = 60,
+					frame_count = 30,
+					line_length = 6,
+					animation_speed = 0.6,
+					shift = {0, 0},
+					hr_version =
+					{
+						filename = kr_entities_path .. "filtration-plant/hr-filtration-plant-clear-mask.png",
+						width = 156,
+						height = 120,
+						scale = 0.5,
+						frame_count = 30,
+						line_length = 6,
+						animation_speed = 0.6,
+						shift = {1.61, 1.32}
+					}
+				}
+			},
+
+		},
+
 		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{

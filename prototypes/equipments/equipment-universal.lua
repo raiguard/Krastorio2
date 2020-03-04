@@ -247,6 +247,31 @@ data:extend(
 		power = "4.0MW", -- 50kW * 16 * 5 * 1
 		categories = {"universal-equipment"},
 	},
+	-- cyber-potato-equipment
+	{
+		type = "generator-equipment",
+		name = "cyber-potato-equipment",
+		sprite =
+		{
+			filename = kr_universal_equipments_path .. "cyber-potato-equipment.png",
+			width = 128,
+			height = 128,
+			priority = "medium"
+		},
+		shape =
+		{
+			width = 4,
+			height = 4,
+			type = "full"
+		},
+		energy_source =
+		{
+			type = "electric",
+			usage_priority = "primary-output"
+		},
+		power = "5.0MW", -- 50kW * 16 * 5 * 1
+		categories = {"universal-equipment"},
+	},
 ----------------------------------------------------------------------------------------------------
 	-- SOLAR PANELS (GENERATORS)
 	-- big-solar-panel-equipment

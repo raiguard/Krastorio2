@@ -1,7 +1,6 @@
 -- -- Increase stacks size
 if krastorio.general.getSafeSettingValue("kr-stack-size") then 
 
-	data.raw["capsule"]["cliff-explosives"].stack_size = 100
 	data.raw.item["processing-unit"].stack_size = 200
 	data.raw.item["uranium-ore"].stack_size = 200
 	data.raw.item["coal"].stack_size = 200
@@ -31,5 +30,8 @@ if krastorio.general.getSafeSettingValue("kr-stack-size") then
 	data.raw.ammo["artillery-shell"].stack_size = 25
 	data.raw.item["uranium-fuel-cell"].stack_size = 10
 	data.raw.item["used-up-uranium-fuel-cell"].stack_size = 10
-
+	data.raw.item["iron-gear-wheel"].stack_size = 200
+	data.raw.capsule["cliff-explosives"].stack_size = 100
+	data.raw.capsule["raw-fish"].stack_size = 50
+	
 end

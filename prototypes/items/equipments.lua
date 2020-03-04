@@ -219,6 +219,17 @@ data:extend(
 		order = "a2[energy-source]-a6[antimatter-reactor-equipment]",
 		stack_size = 10
 	},
+	-- cyber-potato-equipment
+	{
+		type = "item",
+		name = "cyber-potato-equipment",
+		icon = kr_universal_equipments_icons_path .. "cyber-potato-equipment.png",
+		icon_size = 64,
+		placed_as_equipment_result = "cyber-potato-equipment",
+		subgroup = "other",
+		flags = {"hidden"},
+		stack_size = 10
+	},
 	-- -- SOLAR PANELS (GENERATORS)
 	-- big-solar-panel-equipment
 	{

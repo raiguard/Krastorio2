@@ -10,6 +10,7 @@ local topics =
 	{"gui.new-metals"},
 	{"gui.creep"},
 	{"gui.fuels"},
+	{"gui.radiation"},
 	{"gui.air-purifier"},
 	{"gui.inserters-hotkey"},
 	{"gui.roboports-hotkey"},
@@ -178,6 +179,18 @@ function showFuelsDescription(event)
 	end
 end
 
+function showRadiationDescription(event)
+	local wiki_info_pane = getDescrptionGUIPane(event)
+	if wiki_info_pane then
+		
+		-- Title
+		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.radiation")		
+		-- Description 1
+		addTextToDescrptionGUIPane(wiki_info_pane, "gui.radiation-description", 1)
+	
+	end
+end
+
 function showAirPurifierDescription(event)
 	local wiki_info_pane = getDescrptionGUIPane(event)
 	if wiki_info_pane then
@@ -291,13 +304,14 @@ local topics_gui =
 	[4]  = showNewMetals,
 	[5]  = showCreepDescription,
 	[6]  = showFuelsDescription,
-	[7]  = showAirPurifierDescription,
-	[8]	 = showInsertersHotkeyDescription,
-	[9]  = showRoboportsHotkeyDescription,
-	[10] = showFusionReactorDescription,
-	[11] = showMatterOfMatter,
-	[12] = showIntergalacticTransceiverDescription,
-	[13] = showFAQDescription,
+	[7]  = showRadiationDescription,
+	[8]  = showAirPurifierDescription,
+	[9]	 = showInsertersHotkeyDescription,
+	[10] = showRoboportsHotkeyDescription,
+	[11] = showFusionReactorDescription,
+	[12] = showMatterOfMatter,
+	[13] = showIntergalacticTransceiverDescription,
+	[14] = showFAQDescription,
 	
 }
 
