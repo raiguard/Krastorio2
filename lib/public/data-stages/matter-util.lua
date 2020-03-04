@@ -271,7 +271,7 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 	{
 		item_name = "raw-rare-metals",
 		minimum_conversion_quantity = 10, 
-		matter_value = 50,
+		matter_value = 15,
 		energy_required = 1,
 		unlocked_by_technology = "kr-matter-rare-metals-processing"
 	}
@@ -469,7 +469,7 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 	{
 		item_name = "rare-metals",
 		minimum_conversion_quantity = 10, 
-		matter_value = 100,
+		matter_value = 15,
 		energy_required = 2,
 		only_deconversion = true,
 		need_stabilizer = true,
