@@ -10,7 +10,7 @@ data:extend(
 		icon_size = 128,
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 2, result = "kr-antimatter-reactor"},
-		max_health = 10000,
+		max_health = 5000,
 		damaged_trigger_effect = hit_effects.entity(),
 		corpse = "kr-antimatter-reactor-remnant",
 		dying_explosion = "big-matter-explosion",

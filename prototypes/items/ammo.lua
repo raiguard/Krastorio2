@@ -136,7 +136,7 @@ data:extend(
 					starting_speed = 0,
 					direction_deviation = 0.1,
 					range_deviation = 0.1,
-					max_range = 300,
+					max_range = 100,
 					source_effects =
 					{
 						type = "create-explosion",
@@ -158,7 +158,7 @@ data:extend(
 		icon_mipmaps = 4,
 		ammo_type =
 		{
-			range_modifier = 1,
+			range_modifier = 3,
 			cooldown_modifier = 3,
 			target_type = "position",
 			category = "heavy-rocket",
@@ -172,7 +172,7 @@ data:extend(
 					starting_speed = 0,
 					direction_deviation = 0.1,
 					range_deviation = 0.1,
-					max_range = 300,
+					--max_range = 100,
 					source_effects =
 					{
 						type = "create-explosion",

@@ -88,7 +88,8 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"steel-plate", 5}
+			{"low-density-structure", 2},
+			{"rare-metals", 1},
 		},
 		result = "empty-dt-fuel"
 	},	
@@ -309,8 +310,8 @@ return
 		ingredients =
 		{
 			{ type = "fluid", name = "nitric-acid", amount = 50 },
-			{ "imersite-crystal", 25 },
-			{ "imersium-plate", 10 },
+			{ "imersite-crystal", 20 },
+			{ "imersium-plate", 8 },
 			{ "matter-stabilizer", 2 }			
 		},
 		result = "empty-antimatter-fuel-cell"
@@ -323,7 +324,7 @@ return
 		energy_required = 30,
 		ingredients =
 		{
-			{ type = "fluid", name = "matter", amount = 6660, catalyst_amount = 6660},
+			{ type = "fluid", name = "matter", amount = 1000, catalyst_amount = 5000},
 			{ "empty-antimatter-fuel-cell", 1 }
 		},
 		result = "charged-antimatter-fuel-cell"

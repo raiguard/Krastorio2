@@ -10,7 +10,7 @@ data:extend(
 		icon_size = 64,
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "kr-singularity-beacon"},
-		max_health = 350,
+		max_health = 300,
 		corpse = "medium-remnants",
 		dying_explosion = "medium-explosion",
 		collision_box = {{-0.75, -0.75}, {0.75, 0.75}},

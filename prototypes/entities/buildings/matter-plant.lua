@@ -10,7 +10,7 @@ data:extend(
 		icon_size = 128,
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "kr-matter-plant"},
-		max_health = 3000,
+		max_health = 2000,
 		damaged_trigger_effect = hit_effects.entity(),
 		result_inventory_size = 1,
 		source_inventory_size = 1,

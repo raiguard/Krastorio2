@@ -11,7 +11,7 @@ data:extend(
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 0.1, result = "kr-sentinel"},
 		damaged_trigger_effect = hit_effects.entity(),
-		max_health = 100,
+		max_health = 75,
 		corpse = "small-remnants",
 		resistances =
 		{

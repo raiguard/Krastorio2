@@ -7,7 +7,7 @@ data:extend(
 		icon =  kr_entities_icons_path .. "crusher.png",
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {hardness = 1, mining_time = 1, result = "kr-crusher"},
-		max_health = 500,
+		max_health = 750,
 		corpse = "big-remnants",
 		dying_explosion = "big-explosion",
 		resistances = 

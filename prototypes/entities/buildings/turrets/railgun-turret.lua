@@ -71,7 +71,7 @@ data:extend(
 		icon_size = 64,
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "kr-railgun-turret"},
-		max_health = 1500,
+		max_health = 1000,
 		corpse = "big-remnants",
 		resistances = 
 		{

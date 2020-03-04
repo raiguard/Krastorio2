@@ -10,7 +10,7 @@ data:extend(
 		icon_size = 128,		
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "kr-stabilizer-charging-station"},
-		max_health = 250,
+		max_health = 200,
 		damaged_trigger_effect = hit_effects.entity(),
 		corpse = "medium-remnants",
 		resistances = 

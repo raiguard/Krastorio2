@@ -10,7 +10,7 @@ data:extend(
 		icon_size = 64,
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "kr-advanced-chemical-plant"},
-		max_health = 2000,
+		max_health = 1500,
 		corpse = "kr-big-random-pipes-remnant",
 		dying_explosion = "big-explosion",
 		damaged_trigger_effect = hit_effects.entity(),

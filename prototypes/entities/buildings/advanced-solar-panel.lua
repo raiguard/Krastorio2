@@ -10,7 +10,7 @@ data:extend(
 		icon_size = 64,
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 0.5, result = "kr-advanced-solar-panel"},
-		max_health = 250,
+		max_health = 300,
 		corpse = "solar-panel-remnants",
 		dying_explosion = "solar-panel-explosion",
 		collision_box = {{-1.75, -1.75}, {1.75, 1.75}},
@@ -30,7 +30,7 @@ data:extend(
 					priority = "high",
 					width = 116,
 					height = 112,
-					shift = {0.1, 0.0},
+					shift = {0.1, 0.1},
 					hr_version =
 					{
 						filename = kr_entities_path .. "advanced-solar-panel/hr-advanced-solar-panel.png",

@@ -712,7 +712,7 @@ data:extend(
 		icon_size = 64,
 		icon_mipmaps = 4,
 		fuel_category = "antimatter-fuel",
-		fuel_value = "600GJ",
+		fuel_value = "300GJ",
 		burnt_result = "empty-antimatter-fuel-cell",
 		subgroup = "intermediate-product",
 		order = "r[uranium-processing]-b2[antimatter-fuel-cell]-a2[charged-antimatter-fuel-cell]",

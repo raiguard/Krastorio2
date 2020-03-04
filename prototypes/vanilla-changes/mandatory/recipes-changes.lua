@@ -518,7 +518,7 @@ krastorio.recipes.replaceProduct("kovarex-enrichment-process", "uranium-238", {"
 
 krastorio.recipes.replaceIngredient("uranium-fuel-cell", "uranium-235", {name = "uranium-235", amount = 1})
 krastorio.recipes.replaceIngredient("uranium-fuel-cell", "uranium-238", {name = "uranium-238", amount = 9})
-krastorio.recipes.replaceIngredient("uranium-fuel-cell", "iron-plate", {name = "rare-metals", amount = 1})
+krastorio.recipes.replaceIngredient("uranium-fuel-cell", "iron-plate", {name = "steel-plate", amount = 1})
 krastorio.recipes.replaceProduct("uranium-fuel-cell", "uranium-fuel-cell", {"uranium-fuel-cell", 1})
 
 krastorio.recipes.replaceIngredient("nuclear-fuel-reprocessing", "used-up-uranium-fuel-cell", {name = "used-up-uranium-fuel-cell", amount = 1})

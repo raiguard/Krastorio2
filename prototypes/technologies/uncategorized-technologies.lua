@@ -265,7 +265,7 @@ data:extend(
 				recipe = krastorio.recipes.changed_names["dt-fuel"] or "dt-fuel"
 			}			
 		},
-		prerequisites = {"advanced-electronics-2", "kr-lithium-processing", "nuclear-power"},
+		prerequisites = {"advanced-electronics-2", "kr-lithium-processing", "nuclear-power", "utility-science-pack"},
 		unit =
 		{
 			count = 1000,
@@ -274,7 +274,8 @@ data:extend(
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1},
-				{"production-science-pack", 1}
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
 			},
 			time = 60
 		}

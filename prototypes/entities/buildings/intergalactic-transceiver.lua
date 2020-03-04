@@ -109,7 +109,7 @@ data:extend(
 		icon = kr_entities_icons_path .. "intergalactic-transceiver.png",
 		icon_size = 64,
 		flags = {"placeable-neutral","placeable-player", "player-creation", "not-rotatable"},
-		max_health = 10000,
+		max_health = 20000,
 		minable = {mining_time = 10, result = "kr-intergalactic-transceiver"},
 		corpse = "kr-big-random-pipes-remnant",
 		dying_explosion = "nuclear-reactor-explosion",

@@ -7,7 +7,7 @@ data:extend(
 		icon_size = 64,
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 2, result = "kr-singularity-lab"},
-		max_health = 3000,
+		max_health = 2000,
 		dying_explosion = "big-explosion",
 		corpse = "kr-big-random-pipes-remnant",
 		resistances = 
