@@ -43,6 +43,20 @@ data:extend(
 		amount = 1000000
     },
 	{
+        type = "produce-achievement",
+        name = "10000-ai-core",
+		icons = 
+		{
+			{ icon = kr_achievements_icons_path .. "backgrounds/gold.png", icon_size = 128 },
+			{ icon = kr_achievements_icons_path .. "ai-core.png", icon_size = 128 }
+		},
+		icon_size = 128,
+        order = "kr-p-a1",
+		limited_to_one_game = true,
+		item_product = "ai-core",
+		amount = 10000
+    },
+	{
         type = "research-achievement",
         name = "destroyer-of-worlds",
 		icons = 
@@ -82,4 +96,57 @@ data:extend(
 		to_build = "kr-advanced-tank",
 		amount = 1
     },
+	{
+        type = "build-entity-achievement",
+        name = "big-brother",
+		icons = 
+		{
+			{ icon = kr_achievements_icons_path .. "backgrounds/normal.png", icon_size = 128 },
+			{ icon = kr_achievements_icons_path .. "sentinel.png", icon_size = 128 }
+		},
+		icon_size = 128,
+        order = "kr-b-2",
+		limited_to_one_game = true,
+		to_build = "kr-sentinel",
+		amount = 100
+    },
+	{
+		type = "finish-the-game-achievement",
+		name = "faster-than-sound",
+		icons = 
+		{			
+			{ icon = kr_achievements_icons_path .. "speedy-win.png", icon_size = 128 },
+			{ icon = kr_achievements_icons_path .. "backgrounds/gold.png", icon_size = 128 }
+		},
+		icon_size = 128,
+		until_second = 60 * 60 * 60, -- 60 hours
+		allowed_without_fight = false,
+		order = "kr-z-1"
+	},
+	{
+		type = "finish-the-game-achievement",
+		name = "faster-than-light",
+		icons = 
+		{			
+			{ icon = kr_achievements_icons_path .. "speedy-win.png", icon_size = 128 },
+			{ icon = kr_achievements_icons_path .. "backgrounds/epic.png", icon_size = 128 }
+		},
+		icon_size = 128,
+		until_second = 60 * 60 * 40, -- 40 hours
+		allowed_without_fight = false,
+		order = "kr-z-2"
+	},
+	{
+		type = "dont-build-entity-achievement",
+		name = "no-antimatter",
+		icons = 
+		{
+			{ icon = kr_achievements_icons_path .. "no-antimatter.png", icon_size = 128 },
+			{ icon = kr_achievements_icons_path .. "backgrounds/red.png", icon_size = 128 }
+		},
+		icon_size = 128,
+		allowed_without_fight = false,
+		dont_build = "kr-antimatter-reactor",
+		order = "kr-c-1"
+	}
 })

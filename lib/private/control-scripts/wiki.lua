@@ -27,12 +27,21 @@ function getDescrptionGUIPane(event)
 end
 
 function addTitleToDescrptionGUIPane(pane, title_name)
-	local title_label = krastorio.gui.addLabel(pane, 
+	-- Title flow
+	local title_flow = krastorio.gui.addFlow(pane, 
+	{
+		name      = w_prefix.."title-flow",
+		direction = "horizontal",
+		style     = "kr-title-flow"
+	})
+	-- Title
+	krastorio.gui.addLabel(title_flow, 
 	{
 		name    = w_prefix.."description-title", 
 		caption = {title_name},
 		style   = "bold_label"
 	})
+	-- Separator line
 	krastorio.gui.addLine(pane, 
 	{
 		name    = w_prefix.."title-line",

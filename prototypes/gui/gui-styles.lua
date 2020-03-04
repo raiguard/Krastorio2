@@ -174,6 +174,15 @@ styles["kr-wiki-back-button"] =
 	disabled_graphical_set = arrow_back(red_arrow_tileset, arrow_disabled_index, "glow", default_dirt_color)
 }
 
+styles["kr-title-flow"] =
+{
+	type = "horizontal_flow_style",
+    horizontal_align = "center",
+	vertically_stretchable = "off",
+	natural_width = 500,
+    padding = 1,
+	margin = 1
+}
 -- Description labels
 styles["kr-wiki-description-label"] =
 {

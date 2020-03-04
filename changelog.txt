@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.14
+Date: 03.03.2020
+  Features:
+    - Added new topics to the wiki.
+    - Added new fantastic achievements!
+  Changes:
+    - Improved wiki code, now is more easy add new topics
+    - Improved filtration plant sprites, now the animation color change with the recipe selected.
+    - Improved large roboport sprite.
+---------------------------------------------------------------------------------------------------
 Version: 0.5.13
 Date: 03.03.2020
   Features:

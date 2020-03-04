@@ -18,7 +18,6 @@ return
 		name  = "gui.about-k2-with-icon",
 		topic =
 		{
-			{type = "title", title = "gui.about-k2" },
 			{type = "image", spritename = "about-k2-preview"},		
 			{type = "text", text = "gui.about-k2-description"}
 		}
@@ -144,6 +143,22 @@ return
 			{type = "title", title = "gui.crusher" },
 			{type = "image", spritename = "kr-crusher-preview"},
 			{type = "text", text = "gui.crusher-description-1"}
+		}
+	},
+	{
+		name  = "gui.kr-commands-with-icon",
+		topic =
+		{
+			{type = "title", title = "gui.kr-commands" },
+			{type = "text", text = "gui.kr-commands-description-1"}
+		}
+	},
+	{
+		name  = "gui.kr-achievements-with-icon",
+		topic =
+		{
+			{type = "title", title = "gui.kr-achievements" },
+			{type = "text", text = "gui.kr-achievements-description-1"}
 		}
 	},
 	{
