@@ -3,7 +3,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-advanced-tank",
-		energy_required = 800,
+		energy_required = 300,
 		enabled = false,
 		allow_productivity = true,
 		ingredients =
@@ -11,8 +11,9 @@ return
 			{"tank", 2},
 			{"imersium-plate", 50},
 			{"low-density-structure", 100},
-			{"imersium-gear-wheel", 100},
-			{"energy-control-unit", 20}			
+			{"imersium-gear-wheel", 50},
+			{"energy-control-unit", 10},
+			{"rare-metals", 50}
 		},
 		result = "kr-advanced-tank"
 	}	

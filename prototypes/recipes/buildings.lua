@@ -94,7 +94,7 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"iron-beam", 1},
+			{"glass", 1},
 			{"iron-plate", 2},
 			{"copper-cable", 1},
 			{"automation-core", 1}
@@ -135,7 +135,7 @@ return
     {
 		type = "recipe",
 		name = "biusart-lab",
-		energy_required = 10,
+		energy_required = 15,
 		enabled = false,
 		ingredients =
 		{
@@ -149,7 +149,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-singularity-lab",
-		energy_required = 30,
+		energy_required = 180,
 		enabled = false,
 		ingredients =
 		{
@@ -157,7 +157,8 @@ return
 			{"steel-beam", 30},
 			{"steel-plate", 60},
 			{"electric-engine-unit", 30},
-			{"rare-metals", 20}
+			{"rare-metals", 60},
+			{"processing-unit", 100}
 		},
 		result = "kr-singularity-lab"
     },
@@ -167,7 +168,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-research-server",
-		energy_required = 20,
+		energy_required = 30,
 		enabled = false,
 		ingredients =
 		{
@@ -180,13 +181,16 @@ return
 	{
 		type = "recipe",
 		name = "kr-quantum-computer",
-		energy_required = 30,
+		energy_required = 180,
 		enabled = false,
 		ingredients =
 		{
-			{"steel-beam", 10},
-			{"ai-core", 10},
-			{"processing-unit", 20}
+			{"steel-beam", 20},
+			{"copper-plate", 20},
+			{"rare-metals", 50},
+			{"ai-core", 50},
+			{"electronic-components", 100},
+			{"processing-unit", 100}
 		},
 		result = "kr-quantum-computer"
     },
@@ -374,7 +378,8 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"steel-beam", 20},
+			{"steel-beam", 10},
+			{"steel-plate", 20},
 			{"kr-steel-pipe", 4}
 		},
 		result = "kr-fluid-storage-1"
@@ -382,11 +387,12 @@ return
 	{
 		type = "recipe",
 		name = "kr-fluid-storage-2",
-		energy_required = 30,
+		energy_required = 20,
 		enabled = false,
 		ingredients =
 		{
 			{"steel-beam", 20},
+			{"steel-plate", 60},
 			{"kr-steel-pipe", 12}
 		},
 		result = "kr-fluid-storage-2"
@@ -464,7 +470,7 @@ return
 			{"steel-beam", 10},
 			{"automation-core", 3},
 			{"glass", 10},
-			{"engine-unit", 2}
+			{"engine-unit", 4}
 		},
 		result = "kr-filtration-plant"
     },
@@ -503,7 +509,8 @@ return
 		ingredients = 
 		{
 			{"steel-beam", 50},
-			{"steel-plate", 50},			
+			{"steel-plate", 50},
+			{"rare-metals", 50},
 			{"electric-engine-unit", 100},
 			{"processing-unit", 20}
 		},
@@ -526,12 +533,15 @@ return
 	{
 		type = "recipe",
 		name = "kr-fusion-reactor",
-		energy_required = 120,
+		energy_required = 600,
 		enabled = false,
 		ingredients = 
 		{
 			{"steel-beam", 500},
 			{"steel-plate", 500},
+			{"rare-metals", 350},
+			{"concrete", 500},
+			{"copper-plate", 500},
 			{"processing-unit", 100}
 		},
 		result = "kr-fusion-reactor"
@@ -545,9 +555,9 @@ return
 		{
 			{"steam-turbine", 2},
 			{"steel-gear-wheel", 10},
-			{"steel-beam", 50},
-			{"kr-steel-pipe", 10},				
-			{"electric-engine-unit", 50}					
+			{"steel-beam", 10},	
+			{"rare-metals", 60},
+			{"electric-engine-unit", 10}					
 		},
 		result = "kr-advanced-steam-turbine"
     },
@@ -559,7 +569,8 @@ return
 		ingredients = 
 		{
 			{"steel-beam", 10},
-			{"processing-unit", 10},	
+			{"processing-unit", 10},
+			{"rare-metals", 50},
 			{"energy-control-unit", 50}	
 		},
 		result = "kr-energy-storage"
@@ -608,14 +619,16 @@ return
 	{
 		type = "recipe",
 		name = "kr-antimatter-reactor",
-		energy_required = 600,
+		energy_required = 900,
 		enabled = false,
 		ingredients =
 		{
 			{"ai-core", 50},
-			{"energy-control-unit", 50},		
+			{"energy-control-unit", 100},		
 			{"imersium-beam", 500},
-			{"imersium-plate", 500}			
+			{"imersium-plate", 500},
+			{"concrete", 500},
+			{"nuclear-reactor", 1}
 		},
 		result = "kr-antimatter-reactor"
     },
@@ -777,12 +790,15 @@ return
 	{
 		type = "recipe",
 		name = "kr-advanced-furnace",
-		energy_required = 40,
+		energy_required = 60,
 		enabled = false,
 		ingredients =
 		{
 			{"imersium-beam", 20},
+			{"steel-beam", 80},
+			{"rare-metals", 80},
 			{"copper-plate", 60},
+			{"electronic-components", 20},
 			{"energy-control-unit", 10}
 		},
 		result = "kr-advanced-furnace"
@@ -790,13 +806,15 @@ return
 	{
 		type = "recipe",
 		name = "kr-advanced-chemical-plant",
-		energy_required = 40,
+		energy_required = 60,
 		enabled = false,
 		ingredients =
 		{
 			{"processing-unit", 20},
 			{"imersium-beam", 20},
+			{"rare-metals", 80},
 			{"imersium-gear-wheel", 20},
+			{"electronic-components", 40},
 			{"kr-steel-pipe", 10}
 		},
 		result = "kr-advanced-chemical-plant"
@@ -804,12 +822,14 @@ return
 	{
 		type = "recipe",
 		name = "kr-large-roboport",
-		energy_required = 40,
+		energy_required = 120,
 		enabled = false,
 		ingredients =
 		{
+			{"steel-plate", 20},
 			{"imersium-beam", 20},
 			{"imersium-gear-wheel", 20},
+			{"rare-metals", 80},
 			{"ai-core", 10},
 			{"roboport", 1}
 		},
@@ -818,14 +838,15 @@ return
 	{
 		type = "recipe",
 		name = "kr-small-roboport",
-		energy_required = 20,
+		energy_required = 30,
 		enabled = false,
 		ingredients =
 		{
-			{"imersium-beam", 20},
-			{"imersium-gear-wheel", 20},
-			{"ai-core", 10},
-			{"roboport", 1}
+			{"imersium-beam", 3},
+			{"steel-plate", 10},
+			{"rare-metals", 20},
+			{"ai-core", 1},
+			{"electronic-components", 5}
 		},
 		result = "kr-small-roboport",
 		result_count = 2
@@ -852,10 +873,10 @@ return
 		ingredients =
 		{
 			{"gun-turret", 4},
-			{"steel-beam", 20},
-			{"steel-gear-wheel", 40},
-			{"processing-unit", 50},
-			{"plastic-bar", 20}
+			{"steel-beam", 10},
+			{"processing-unit", 10},
+			{"rare-metals", 20},
+			{"low-density-structure", 10}
 		},
 		result = "kr-railgun-turret"
     },  
@@ -866,11 +887,11 @@ return
 		energy_required = 60,
 		ingredients =
 		{
-			{"rocket-launcher", 10},
-			{"steel-beam", 20},
-			{"steel-gear-wheel", 30},
-			{"processing-unit", 30},
-			{"plastic-bar", 30}
+			{"rocket-launcher", 6},
+			{"steel-beam", 10},
+			{"rare-metals", 20},
+			{"processing-unit", 20},
+			{"low-density-structure", 10}
 		},
 		result = "kr-rocket-turret"
     },
