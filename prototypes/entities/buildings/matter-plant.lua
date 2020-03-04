@@ -147,7 +147,7 @@ data:extend(
 			},
 		},
 		crafting_categories = {"matter-conversion"},
-		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{
 			sound = { filename = kr_buildings_sounds_path .. "matter-plant.ogg" },

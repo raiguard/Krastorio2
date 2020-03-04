@@ -52,7 +52,7 @@ data:extend(
 					priority = "high",
 					width = 230,
 					height = 260,
-					shift = {0, -0.65},
+					shift = {0, -0.2},
 					frame_count = 1,
 					scale = 1,
 					hr_version =
@@ -72,7 +72,7 @@ data:extend(
 					priority = "high",
 					width = 249,
 					height = 219,
-					shift = {0, 0},
+					shift = {0.33, 0.32},
 					frame_count = 1,
 					scale = 1,
 					draw_as_shadow = true,
@@ -98,8 +98,8 @@ data:extend(
 				{
 					filename = kr_entities_path .. "filtration-plant/filtration-plant-working.png",
 					priority = "high",
-					width = 230,
-					height = 260,
+					width = 170,
+					height = 185,
 					shift = {0.3, -0.58},
 					frame_count = 30,
 					line_length = 6,
@@ -130,7 +130,7 @@ data:extend(
 					frame_count = 30,
 					line_length = 6,
 					animation_speed = 0.6,
-					shift = {0, 0},
+					shift = {1.61, -1.01},
 					hr_version =
 					{
 						filename = kr_entities_path .. "filtration-plant/hr-filtration-plant-dirty-mask.png",
@@ -154,7 +154,7 @@ data:extend(
 					frame_count = 30,
 					line_length = 6,
 					animation_speed = 0.6,
-					shift = {0, 0},
+					shift = {1.61, 1.32},
 					hr_version =
 					{
 						filename = kr_entities_path .. "filtration-plant/hr-filtration-plant-clear-mask.png",

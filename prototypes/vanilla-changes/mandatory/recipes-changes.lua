@@ -32,6 +32,16 @@ krastorio.recipes.replaceIngredient("iron-gear-wheel", "iron-plate", {"iron-plat
 -- Copper plate
 krastorio.recipes.replaceIngredient("copper-plate", "copper-ore", {"copper-ore", 2})
 
+-- rail
+krastorio.recipes.overrideIngredients
+(
+	"rail", 
+	{
+		{"steel-beam", 1},
+		{"stone", 2}
+	}
+)
+
 -- Rocket fuel category
 krastorio.recipes.convertIngredientFromAllRecipes("nuclear-fuel", "rocket-fuel")
 krastorio.recipes.setCategoryIfExist("rocket-fuel", "fuel-refinery")

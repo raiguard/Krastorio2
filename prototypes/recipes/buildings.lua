@@ -624,11 +624,11 @@ return
 		ingredients =
 		{
 			{"ai-core", 50},
-			{"energy-control-unit", 100},		
-			{"imersium-beam", 500},
-			{"imersium-plate", 500},
-			{"rare-metals", 500},
-			{"nuclear-reactor", 1}
+			{"energy-control-unit", 50},		
+			{"imersium-beam", 100},
+			{"imersium-plate", 350},
+			{"rare-metals", 350},
+			{"steel-plate", 350}
 		},
 		result = "kr-antimatter-reactor"
     },

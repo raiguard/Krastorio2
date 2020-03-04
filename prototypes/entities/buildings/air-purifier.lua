@@ -1,3 +1,6 @@
+local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
+local sounds      = require("__base__/prototypes/entity/demo-sounds")
+
 data:extend(
 {  
 	{
@@ -11,6 +14,7 @@ data:extend(
 		source_inventory_size = 1,
 		max_health = 200,
 		corpse = "medium-remnants",
+		damaged_trigger_effect = hit_effects.entity(),
 		dying_explosion = "explosion",
 		collision_box = {{-0.75, -0.75}, {0.75, 0.75}},
 		selection_box = {{-0.9, -0.9}, {0.9, 0.9}},
@@ -38,7 +42,7 @@ data:extend(
 			}
 		},
 		crafting_categories = {"air-purification"},
-		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{
 			sound = { filename = kr_buildings_sounds_path .. "air-purifier.ogg" },		

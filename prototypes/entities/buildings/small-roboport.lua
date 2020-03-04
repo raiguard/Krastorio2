@@ -1,3 +1,5 @@
+local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
+local sounds      = require("__base__/prototypes/entity/demo-sounds")
 local variations_util = require(kr_public_lib .. "create-roboport-states")
 local empty_sprite =
 {
@@ -18,6 +20,7 @@ data:extend(
 		minable = {mining_time = 0.5, result = "kr-small-roboport"},
 		max_health = 350,
 		corpse = "big-remnants",
+		damaged_trigger_effect = hit_effects.entity(),
 		collision_box = {{-0.8, -0.8}, {0.8, 0.8}},
 		selection_box = {{-1, -1}, {1, 1}},
 		resistances = 
@@ -50,19 +53,41 @@ data:extend(
 		},
 		base =
 		{
-			filename = kr_entities_path .. "small-roboport/small-roboport.png",
-			width = 85,
-			height = 85,
-			shift = {0.15, -0.1},
-			scale = scale,
-			hr_version =
+			layers =
 			{
-				filename = kr_entities_path .. "small-roboport/hr-small-roboport.png",
-				width = 170,
-				height = 170,
-				shift = {0.15, -0.1},
-				scale = scale,
-				scale = 0.5
+				{
+					filename = kr_entities_path .. "small-roboport/small-roboport.png",
+					width = 120,
+					height = 150,
+					shift = {0, -0.1},
+					scale = 0.5,
+					hr_version =
+					{
+						filename = kr_entities_path .. "small-roboport/hr-small-roboport.png",
+						width = 240,
+						height = 300,
+						shift = {0, -0.1},
+						scale = scale,
+						scale = 0.25
+					}
+				},
+				{
+					filename = kr_entities_path .. "small-roboport/small-roboport-sh.png",
+					width = 163,
+					height = 84,
+					shift = {0.48, 0.43},
+					draw_as_shadow = true,
+					scale = 0.5,
+					hr_version =
+					{
+						filename = kr_entities_path .. "small-roboport/hr-small-roboport-sh.png",
+						width = 322,
+						height = 166,
+						shift = {0.48, 0.43},
+						draw_as_shadow = true,
+						scale = 0.25
+					}
+				}
 			}
 		},
 		base_patch = empty_sprite,
@@ -70,24 +95,22 @@ data:extend(
 		{
 			filename = kr_entities_path .. "small-roboport/small-roboport-animation.png",
 			priority = "medium",
-			width = 21,
-			height = 15,
-			scale = scale,
-			frame_count = 10,
-			line_length = 5,
-			shift = {0.03, -0.88},
+			width = 55,
+			height = 40,
+			scale = 0.5,
+			frame_count = 8,
+			shift = {0, -0.92},
 			animation_speed = 0.1,
 			hr_version =
 			{
 				filename = kr_entities_path .. "small-roboport/hr-small-roboport-animation.png",
 				priority = "medium",
-				width = 42,
-				height = 30,
+				width = 110,
+				height = 80,
 				scale = scale,
-				scale = 0.5,
-				frame_count = 10,
-				line_length = 5,
-				shift = {0.03, -0.88},
+				scale = 0.25,
+				frame_count = 8,
+				shift = {0, -0.92},
 				animation_speed = 0.1
 			}
 		},
@@ -103,7 +126,7 @@ data:extend(
 			scale = 1.5,
 			animation_speed = 0.5
 		},
-		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		vehicle_impact_sound = sounds.generic_impact,
 		recharging_light = {intensity = 0.4, size = 5, color = {r = 1.0, g = 1.0, b = 1.0}},
 		request_to_open_door_timeout = 15,
 		spawn_and_station_height = 0.33
