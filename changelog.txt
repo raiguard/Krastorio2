@@ -8,6 +8,7 @@ Date: 05.03.2020
     - Reduced low density structure copper cost.
     - Nerf exoskeletons to 20 - 40 - 60.
     - Rebalanced trains.
+    - A bit increased copper and coal base density.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.14
 Date: 04.03.2020

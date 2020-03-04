@@ -1,3 +1,13 @@
+function increaseBaseDensity(resource, multiplier)
+	if data.raw["resource"][resource] then 
+		if data.raw["resource"][resource].autoplace.base_density then
+			data.raw["resource"][resource].autoplace.base_density = data.raw["resource"][resource].autoplace.base_density * multiplier
+		else
+			data.raw["resource"][resource].autoplace.base_density = multiplier
+		end
+	end
+end
+
 -----------------------------------------------------------------
 
 -- Oil
@@ -46,10 +56,16 @@ data.raw.resource["crude-oil"].stages.sheet.scale = 0.75
 
 data.raw.resource["crude-oil"].map_color = {0.1, 0.05, 0.1}
 
------------------------------------------------------------------
+--------------
 
 -- Pumpjack
 
 data.raw["mining-drill"]["pumpjack"].resource_categories = {"oil"}
 
+-----------------------------------------------------------------
+-- Copper ore
+increaseBaseDensity("copper-ore", 1.5)
+-----------------------------------------------------------------
+-- Coal
+increaseBaseDensity("coal", 2)
 -----------------------------------------------------------------
