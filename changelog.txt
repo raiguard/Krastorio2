@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.15
+Date: 04.03.2020
+  Changes:
+    - Rebalanced some recipes.
+    - Rebalanced nuclear and fusion fuel recipes.
+    - Moved fusion under untility tech tier.
+    - Reduced low density structure copper cost.
+---------------------------------------------------------------------------------------------------
 Version: 0.5.14
 Date: 04.03.2020
   Features:

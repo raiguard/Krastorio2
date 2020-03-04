@@ -115,14 +115,6 @@ krastorio.recipes.overrideIngredients
 )
 
 
-
-
-
-
-
-
-
-
 -- Chaning steel recipes
 krastorio.recipes.overrideIngredients
 (
@@ -177,6 +169,8 @@ krastorio.recipes.addIngredient("repair-pack", {"stone", 2})
 
 -- EQUIPMENTS
 krastorio.recipes.replaceIngredient("personal-laser-defense-equipment", "processing-unit", {"electronic-components", 50})
+
+krastorio.recipes.replaceIngredient("low-density-structure", "copper-plate", {"copper-plate", 10})
 
 -- MODULES
 -- Speed modules

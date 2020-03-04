@@ -24,7 +24,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 	-- -- Cargo wagon
 	for _, wagon in pairs(data.raw["cargo-wagon"]) do 
 		if wagon.inventory_size < 75 then -- mod compatibility check
-			wagon.inventory_size = wagon.inventory_size * 2
+			wagon.inventory_size = 100
 		end
 	end
 	data.raw["cargo-wagon"]["cargo-wagon"].max_health = 1500
@@ -36,7 +36,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 	
 	---------------------
 	-- -- Fluid wagon
-	data.raw["fluid-wagon"]["fluid-wagon"].capacity = 50000
+	data.raw["fluid-wagon"]["fluid-wagon"].capacity = 30000
 	data.raw["fluid-wagon"]["fluid-wagon"].max_health = 1500
 	data.raw["fluid-wagon"]["fluid-wagon"].minable = {mining_time = 0.5, result = "fluid-wagon"}
 	data.raw["fluid-wagon"]["fluid-wagon"].weight = 2000
