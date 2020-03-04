@@ -1,5 +1,5 @@
 local default_locomotive_color = {r = 0.50, g = 0.54, b = 0.53, a = 0.5}
-local nuclear_smoke_color = {r = 0.4,  g = 0.5, b = 0.4, a = 0.35}
+local nuclear_smoke_color = {r = 0.45,  g = 0.5, b = 0.45, a = 0.5}
 local hit_effects = require ("__base__.prototypes.entity.demo-hit-effects")
 local sounds = require("__base__.prototypes.entity.demo-sounds")
 
@@ -49,7 +49,9 @@ data:extend(
 		alert_icon_shift = util.by_pixel(0, -24),
 		damaged_trigger_effect = hit_effects.entity(),
 		weight = 12000,
-		max_speed = 0.926,
+		max_speed = 1.15725,
+		--max_speed = 1.0185,
+		--max_speed = 1.2035,
 		max_power = "3MW",
 		reversing_power_modifier = 0.75,
 		braking_force = 40,

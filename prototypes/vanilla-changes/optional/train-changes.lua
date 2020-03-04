@@ -11,7 +11,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 	data.raw.locomotive["locomotive"].burner.emissions_per_minute = 20
 	data.raw.locomotive["locomotive"].minable = {mining_time = 1, result = "locomotive"}
 	data.raw.locomotive["locomotive"].weight = 10000
-	data.raw.locomotive["locomotive"].max_speed = 0.8335
+	data.raw.locomotive["locomotive"].max_speed = 1.0185
 	data.raw.locomotive["locomotive"].max_power = "2MW"
 	data.raw.locomotive["locomotive"].burner.effectivity = 1
 
