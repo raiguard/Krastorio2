@@ -10,6 +10,9 @@ Date: 04.03.2020
     - Improved small and large roboport sprite.
     - Rebalanced almost all end game recipes.
     - Changed rail recipe.
+  Fixes:
+    - Fixed that nuclear have a wrong ingredients.
+    - Fixed that advanced fuel have a wrong tech ingredients.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.13
 Date: 03.03.2020
