@@ -1,11 +1,13 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.15
-Date: 04.03.2020
+Date: 05.03.2020
   Changes:
     - Rebalanced some recipes.
     - Rebalanced nuclear and fusion fuel recipes.
-    - Moved fusion under untility tech tier.
+    - Moved fusion under utility tech tier.
     - Reduced low density structure copper cost.
+    - Nerf exoskeletons to 20 - 40 - 60.
+    - Rebalanced trains.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.14
 Date: 04.03.2020
@@ -13,7 +15,7 @@ Date: 04.03.2020
     - Added new topics to the wiki.
     - Added new fantastic achievements!
   Changes:
-    - Improved wiki code, now is more easy add new topics
+    - Improved wiki code, now is more easy add new topics.
     - Improved filtration plant sprites, now the animation color change with the recipe selected.
     - Improved small and large roboport sprite.
     - Rebalanced almost all end game recipes.
@@ -30,7 +32,7 @@ Date: 03.03.2020
     - Improved filtration plant sprites.
     - Improved advanced chemical plant.
     - With the option "more realistic weapon" the ammo recipe cost was rebalanced again.
-    - Now now boilers don't waste fuel value keeping 2:1 ratio with steam engine, also removed efficency.
+    - Now boilers don't waste fuel value keeping 2:1 ratio with steam engine, also removed efficency from both.
   Fixes:
     - Solved problem with the new offshore pump.
     - Fixed another SE shield bug.
@@ -42,13 +44,13 @@ Date: 02.03.2020
     - Redesigned electronic components recipe.
   Fixes:
     - Improved compatibility with AAI.
-    - Fixed that mineral water patch have a strange multiplier.
+    - Fixed that mineral water and oil patch have a strange multiplier in the tooltip.
     - Try to fix that fluid miner have wrong tooltip.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.11
 Date: 02.03.2020
   Changes:
-    - Improved wiki button view.
+    - Improved wiki button icon.
   Fixes:
     - Space research data don't have right stack size.
     - Fixed SE don't give 1000 space research data.
