@@ -1,26 +1,18 @@
 require("__Krastorio2__/lib/private/control-scripts/control-lib/control-lib-initialization")
 require("__core__/lualib/mod-gui")
 
+-- Global prefix
 local w_prefix = "kr-wiki-"
-local topics =
-{
-	{"gui.about-k2"},
-	{"gui.shelter"},
-	{"gui.new-gun-play"},
-	{"gui.new-metals"},
-	{"gui.creep"},
-	{"gui.fuels"},
-	{"gui.radiation"},
-	{"gui.air-purifier"},
-	{"gui.inserters-hotkey"},
-	{"gui.roboports-hotkey"},
-	{"gui.fusion-reactor"},
-	{"gui.matter-of-matter"},
-	{"gui.intergalactic-transceiver"},
-	{"gui.faq"},
+-- Get topics
+local topics = require("__Krastorio2__/lib/private/control-scripts/wiki-topics")
+--
+local topics_names  = {}
+local topics_indexs = {}
+for i, topic_def in pairs(topics) do
+	topics_names[i]  = {topic_def.name}
+	topics_indexs[i] = topic_def.topic
+end
 
-
-}
 
 function getDescrptionGUIPane(event)
 	local wiki = krastorio.gui.getElementByName(event.player_index, w_prefix.."main-frame")
@@ -89,238 +81,30 @@ function getResolutionMultiplier(display_resolution)
 	return multiplier
 end
 
-function showAbout_K2Description(event)
-	local wiki_info_pane = getDescrptionGUIPane(event)
-	if wiki_info_pane then
-	
-		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.about-k2")		
-		-- About K2 image
-		addImageToDescrptionGUIPane(wiki_info_pane, "about-k2-preview", 1)
-		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.about-k2-description", 1)
-		
-	end
-end
-
-function showShelterDescription(event)
-	local wiki_info_pane = getDescrptionGUIPane(event)
-	if wiki_info_pane then
-		
-		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.shelter")		
-		-- Shelter image	
-		addImageToDescrptionGUIPane(wiki_info_pane, "kr-shelter-preview", 1)
-		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.shelter-description-1", 1)
-		
-	end
-end
-
-function showNewGunPlay(event)
-	local wiki_info_pane = getDescrptionGUIPane(event)
-	if wiki_info_pane then
-		
-		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.new-gun-play")			
-		-- NewGunPlay icon image
-		addImageToDescrptionGUIPane(wiki_info_pane, "kr-new-gun-play-preview", 1)	
-		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.new-gun-play-description-1", 1)
-		
-	end
-end
-
-function showNewMetals(event)
-	local wiki_info_pane = getDescrptionGUIPane(event)
-	if wiki_info_pane then
-		
-		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.new-metals")			
-		-- NewMetals icon image
-		addImageToDescrptionGUIPane(wiki_info_pane, "new-metals-preview", 1)	
-		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.rare-metals-description-1", 1)
-		-- Description 2
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.rare-metals-description-2", 2)
-		
-	end
-end
-
-function showCreepDescription(event)
-	local wiki_info_pane = getDescrptionGUIPane(event)
-	if wiki_info_pane then
-		
-		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.creep")		
-		-- Creep image
-		addImageToDescrptionGUIPane(wiki_info_pane, "kr-creep-preview-1", 1)
-		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.creep-description-1", 1)	
-		-- Biolab image
-		addImageToDescrptionGUIPane(wiki_info_pane, "kr-creep-preview-2", 2)
-		-- Description 2
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.creep-description-2", 2)
-
-	end
-end
-
-function showFuelsDescription(event)
-	local wiki_info_pane = getDescrptionGUIPane(event)
-	if wiki_info_pane then
-		
-		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.fuels")		
-		-- Fuels image
-		addImageToDescrptionGUIPane(wiki_info_pane, "kr-fuels-preview", 1)
-		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.fuels-description-1", 1)
-	
-	end
-end
-
-function showRadiationDescription(event)
-	local wiki_info_pane = getDescrptionGUIPane(event)
-	if wiki_info_pane then
-		
-		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.radiation")		
-		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.radiation-description", 1)
-	
-	end
-end
-
-function showAirPurifierDescription(event)
-	local wiki_info_pane = getDescrptionGUIPane(event)
-	if wiki_info_pane then
-	
-		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.air-purifier")		
-		-- Air purifier image
-		addImageToDescrptionGUIPane(wiki_info_pane, "air-purifier-preview-1", 1)
-		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.air-purifier-description-1", 1)
-		-- Filter restoration image
-		addImageToDescrptionGUIPane(wiki_info_pane, "air-purifier-preview-2", 2)
-		-- Description 2
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.air-purifier-description-2", 2)
-		
-	end
-end
-
-function showInsertersHotkeyDescription(event)
-	local wiki_info_pane = getDescrptionGUIPane(event)
-	if wiki_info_pane then
-		
-		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.inserters-hotkey")
-		-- Change inserter drop position image
-		addImageToDescrptionGUIPane(wiki_info_pane, "kr-inserters-hotkey-preview", 1)
-		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.inserters-krastorio-hotkey-description-1", 1)
-		
-	end
-end
-
-function showRoboportsHotkeyDescription(event)
-	local wiki_info_pane = getDescrptionGUIPane(event)
-	if wiki_info_pane then
-		
-		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.roboports-hotkey")
-		-- Change roboport mode image
-		addImageToDescrptionGUIPane(wiki_info_pane, "roboports-hotkey-preview", 1)
-		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.roboports-krastorio-hotkey-description-1", 1)
-		
-	end
-end
-
-function showFusionReactorDescription(event)
-	local wiki_info_pane = getDescrptionGUIPane(event)
-	if wiki_info_pane then
-		
-		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.fusion-reactor")		
-		-- Fusion reactor image	
-		addImageToDescrptionGUIPane(wiki_info_pane, "kr-fusion-reactor-preview", 1)
-		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.fusion-reactor-description-1", 1)
-		-- Advanced Turbine image
-		addImageToDescrptionGUIPane(wiki_info_pane, "kr-advanced-steam-turbine-preview", 2)
-		-- Description 2
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.fusion-reactor-description-2", 2)
-		
-	end
-end
-
-function showMatterOfMatter(event)
-	local wiki_info_pane = getDescrptionGUIPane(event)
-	if wiki_info_pane then
-		
-		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.matter-of-matter")	
-		-- Matter icon image
-		addImageToDescrptionGUIPane(wiki_info_pane, "kr-matter-preview", 1)		
-		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.matter-of-matter-description-1", 1)
-		
-	end
-end
-
-function showIntergalacticTransceiverDescription(event)
-	local wiki_info_pane = getDescrptionGUIPane(event)
-	if wiki_info_pane then
-		
-		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.intergalactic-transceiver")		
-		-- Intergalactic transceiver image
-		addImageToDescrptionGUIPane(wiki_info_pane, "kr-intergalactic-transceiver-preview", 1)
-		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.intergalactic-transceiver-description-1", 1)
-		
-	end
-end
-
-function showFAQDescription(event)
-	local wiki_info_pane = getDescrptionGUIPane(event)
-	if wiki_info_pane then
-		
-		-- Title
-		addTitleToDescrptionGUIPane(wiki_info_pane, "gui.faq")			
-		-- Description 1
-		addTextToDescrptionGUIPane(wiki_info_pane, "gui.faq-description-1", 1)
-		
-	end
-end
-
-local topics_gui =
-{
-
-	[1]  = showAbout_K2Description,
-	[2]  = showShelterDescription,
-	[3]  = showNewGunPlay,
-	[4]  = showNewMetals,
-	[5]  = showCreepDescription,
-	[6]  = showFuelsDescription,
-	[7]  = showRadiationDescription,
-	[8]  = showAirPurifierDescription,
-	[9]	 = showInsertersHotkeyDescription,
-	[10] = showRoboportsHotkeyDescription,
-	[11] = showFusionReactorDescription,
-	[12] = showMatterOfMatter,
-	[13] = showIntergalacticTransceiverDescription,
-	[14] = showFAQDescription,
-	
-}
-
 function changeWikiDescription(event)
 	local list = event.element
-	if list and list.valid then
-		if topics_gui[list.selected_index] then
-			topics_gui[list.selected_index](event)
-		end
+	if list and list.valid then	
+		local topic = topics_indexs[list.selected_index]
+		local wiki_info_pane = getDescrptionGUIPane(event)
+		if topic and wiki_info_pane then -- if topic exist and wiki window
+			local image_count, texts_count = 0, 0
+			local element_type = nil
+			for _, element in pairs(topic) do
+				element_type = element.type or element[1]
+				if element_type == "title" then
+					-- Add title
+					addTitleToDescrptionGUIPane(wiki_info_pane, element.title or element[2])		
+				elseif element_type == "image" then
+					-- Add image
+					image_count = image_count + 1
+					addImageToDescrptionGUIPane(wiki_info_pane, element.spritename or element[2], image_count)
+				elseif element_type == "text" then
+					-- Add text
+					texts_count = texts_count + 1
+					addTextToDescrptionGUIPane(wiki_info_pane, element.text or element[2], texts_count)
+				end
+			end
+		end		
 	end
 end
 
@@ -397,7 +181,7 @@ function createWiki(event)
 	local wiki_thread_list = krastorio.gui.addList(left_flow, 
 	{
 		name    = w_prefix.."topics-list", 
-		items   = topics
+		items   = topics_names
 	})
 	
 	-- -- RIGHT
@@ -448,11 +232,7 @@ function initializeWiki(event)
 		sprite  = "kr-open-gui",
 		style   = "kr-wiki-icon-button"
 	})
-	
-	-- Callbacks
-	krastorio.gui.addClickElementEvent(w_prefix.."toggle-wiki", "toggleWiki")	
-	krastorio.gui.addClickElementEvent(w_prefix.."close", "closeWiki")		
-	krastorio.gui.addSelectElementEvent(w_prefix.."topics-list", "changeWikiDescription")
+
 end
 
 function addremoveWikiButton(event)
@@ -473,6 +253,11 @@ function addremoveWikiButton(event)
 		end
 	end
 end
+
+-- Callbacks
+krastorio.gui.addClickElementEvent(w_prefix.."toggle-wiki", "toggleWiki")	
+krastorio.gui.addClickElementEvent(w_prefix.."close", "closeWiki")		
+krastorio.gui.addSelectElementEvent(w_prefix.."topics-list", "changeWikiDescription")
 
 return
 { 
