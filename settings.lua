@@ -8,7 +8,7 @@ data:extend(
 		name = "kr-stack-size",
 		setting_type = "startup",
 		default_value = 200,
-        allowed_values = {50, 100, 200},
+        allowed_values = {50, 100, 200, 400},
 		order = "a1"
 	},
 	{

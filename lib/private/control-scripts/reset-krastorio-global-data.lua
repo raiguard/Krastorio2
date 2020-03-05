@@ -45,6 +45,7 @@ local function restore()
 		"kr-shelter-light",		
 		"kr-intergalactic-transceiver",
 		"kr-activated-intergalactic-transceiver",
+		"kr-electric-offshore-pump"
 	})
 	game.print({"other.forced-reset-message"})
 end

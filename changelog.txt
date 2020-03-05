@@ -7,6 +7,9 @@ Date: 06.03.2020
     - Finished placeholders!
     - Setted some icon scaling on large buildings.
     - Boosted greenhouse pollution absorbing from 7.5 -> 8.
+    - Stack size option now have multiple values instead fixed one.
+  Fixes:
+    - Fixed Krastorio 2 technology functions.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.15
 Date: 05.03.2020

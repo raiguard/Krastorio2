@@ -57,6 +57,7 @@ function krastorio.technologies.getEffects(technology_name)
 	return {}
 end
 
+-- This function return the name not the table of the technology
 function krastorio.technologies.getTechnologyThatUnlockRecipe(recipe_name)
 	for name, technology in pairs(data.raw.technology) do
 		if (technology.enabled == true or technology.enabled == nil) and technology.effects then
@@ -143,6 +144,9 @@ end
 -- @ recipe_name
 -- return a table or nil
 function krastorio.technologies.getTechnologyFromName(technology_name)
+	if type(technology_name) == "table" then
+		return technology_name
+	end
 	if type(technology_name) == "string" then
 		for name, technology in pairs(data.raw.technology) do
 			if name == technology_name then 
@@ -782,11 +786,16 @@ function krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
 	-- calculate existance of science pack technologies
 	local science_techs = {}
 	for _, science_pack in pairs(krastorio.items.getAllItemsOfType("tool")) do
-		if krastorio.technologies.getTechnologyFromName(science_pack.name) then
-			science_techs[science_pack.name] = true
+		local science_pack_tech = krastorio.technologies.getTechnologyFromName(science_pack.name) or krastorio.technologies.getTechnologyThatUnlockRecipe(science_pack.name)
+		if science_pack_tech then
+			if type(science_pack_tech) == "table" then
+				science_techs[science_pack.name] = science_pack_tech.name
+			else
+				science_techs[science_pack.name] = science_pack_tech
+			end			
 		end
 	end
-		
+
 	-- enforce science packs in prerequisites (or in their prerequisites) for each technology
 	for technology_name, technology in pairs(data.raw.technology) do
 		local prerequisites     = technology.prerequisites
@@ -805,12 +814,12 @@ function krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
 							   krastorio.technologies.hasPrerequisite(prerequisite, science_pack_name) 
 							then
 								hold = true
-								break			
-							end										
+								break		
+							end
 						end
 					end
 					if not hold then
-						krastorio.technologies.addPrerequisite(technology_name, science_pack_name, true)
+						krastorio.technologies.addPrerequisite(technology_name, science_techs[science_pack_name], true)
 					end					
 				end	
 			end	
