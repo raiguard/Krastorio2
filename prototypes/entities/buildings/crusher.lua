@@ -70,6 +70,7 @@ data:extend(
 			}
 		},
 		crafting_categories = {"crushing"},
+		scale_entity_info_icon = true,
 		vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
         working_sound =
         {

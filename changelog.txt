@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.16
+Date: 06.03.2020
+  Changes:
+    - Finished placeholders!
+    - Setted some icon scaling on large buildings.
+    - Boosted greenhouse pollution absorbing from 7.5 -> 8.
+---------------------------------------------------------------------------------------------------
 Version: 0.5.15
 Date: 05.03.2020
   Changes:

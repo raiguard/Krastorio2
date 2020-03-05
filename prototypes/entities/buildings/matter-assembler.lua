@@ -195,6 +195,7 @@ data:extend(
 			}
 		},		
 		crafting_categories = {"matter-deconversion", "matter-items"},
+		scale_entity_info_icon = true,
 		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{

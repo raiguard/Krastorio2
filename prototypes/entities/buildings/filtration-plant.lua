@@ -184,6 +184,7 @@ data:extend(
 			emissions_per_minute = 5
 		},
 		crafting_categories = { "fluid-filtration" },
+		scale_entity_info_icon = true,
 		energy_usage = "500kW",
 		ingredient_count = 6,
 		module_specification = { module_slots = 2 },

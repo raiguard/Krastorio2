@@ -119,6 +119,7 @@ data:extend(
 			}
 		},
 		crafting_categories = {"smelting", "advanced-smelting"},
+		scale_entity_info_icon = true,
 		vehicle_impact_sound = sounds.generic_impact,
 		working_sound = advanced_furnace_sound,
 		idle_sound = { filename = "__base__/sound/idle1.ogg" },

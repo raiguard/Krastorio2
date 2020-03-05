@@ -12,8 +12,6 @@ data:extend(
 		minable = {mining_time = 1, result = "kr-matter-plant"},
 		max_health = 2000,
 		damaged_trigger_effect = hit_effects.entity(),
-		result_inventory_size = 1,
-		source_inventory_size = 1,
 		corpse = "matter-plant-remnant",
 		dying_explosion = "big-matter-explosion",
 		resistances = 
@@ -147,6 +145,7 @@ data:extend(
 			},
 		},
 		crafting_categories = {"matter-conversion"},
+		scale_entity_info_icon = true,
 		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{

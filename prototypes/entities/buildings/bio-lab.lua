@@ -139,6 +139,7 @@ data:extend(
 			}
 		},
 		crafting_categories = {"bioprocessing"},
+		scale_entity_info_icon = true,
 		vehicle_impact_sound = sounds.generic_impact,
         working_sound = greenhouse_working_sound,
 		crafting_speed = 1,

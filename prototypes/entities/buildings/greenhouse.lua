@@ -133,6 +133,7 @@ data:extend(
 			}
 		},
 		crafting_categories = {"growing"},
+		scale_entity_info_icon = true,
 		vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
         working_sound = greenhouse_working_sound,
 		crafting_speed = 1,
@@ -141,7 +142,7 @@ data:extend(
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions_per_minute = -7.5
+			emissions_per_minute = -8
 		},
 		energy_usage = "150KW",
 		ingredient_count = 4,

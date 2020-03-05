@@ -114,6 +114,7 @@ data:extend(
 		},
 		picture = shelter_animation,
 		inventory_size = 200,
+		scale_info_icons = true,
 		open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume = 0.5 },
 		close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.6 },
 		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },		

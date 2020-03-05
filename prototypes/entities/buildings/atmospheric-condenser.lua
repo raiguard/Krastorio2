@@ -106,6 +106,7 @@ data:extend(
 			}
 		},
 		crafting_categories = {"atmosphere-condensation"},
+		scale_entity_info_icon = true,
 		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{
