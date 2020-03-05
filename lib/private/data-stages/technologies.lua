@@ -57,7 +57,7 @@ function krastorio.technologies.getEffects(technology_name)
 	return {}
 end
 
--- This function return the name not the table of the technology
+-- This function return the table, not the name of the technology!
 function krastorio.technologies.getTechnologyThatUnlockRecipe(recipe_name)
 	for name, technology in pairs(data.raw.technology) do
 		if (technology.enabled == true or technology.enabled == nil) and technology.effects then
