@@ -34,9 +34,13 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 	---------------------
 	
 	---------------------
-	-- -- Battle Tank
-
-	data.raw.car["kr-advanced-tank"].burner.fuel_category = "vehicle-fuel"
+	-- -- Fuels
+	for _, car in pairs(data.raw.car) do
+		if car.burner then
+			car.burner.fuel_category = "vehicle-fuel"
+			car.burner.fuel_categories = nil
+		end			
+	end
 	
 	---------------------
 	-- -- Add Nuclear Locomotive

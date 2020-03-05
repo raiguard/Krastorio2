@@ -5,6 +5,7 @@ if mods["aai-vehicles-hauler"] then
 		krastorio.recipes.overrideIngredients("vehicle-hauler", krastorio.recipes.getIngredients("car"))
 		krastorio.recipes.multiplyRecipeStat("vehicle-hauler", 2)
 
-		krastorio.technologies.addPrerequisite("basic-vehicles", "engine")
+		krastorio.technologies.addPrerequisite("basic-vehicles", "engine")		
+		krastorio.technologies.addPrerequisite("basic-vehicles", "kr-fuel")
 	end
 end

@@ -10,7 +10,7 @@ data:extend(
 		},
 		icon_size = 128,
         order = "kr-p-m1",
-		limited_to_one_game = true,
+		limited_to_one_game = false,
 		fluid_product = "matter",
 		amount = 10000
     },
@@ -24,7 +24,7 @@ data:extend(
 		},
 		icon_size = 128,
         order = "kr-p-m2",
-		limited_to_one_game = true,
+		limited_to_one_game = false,
 		fluid_product = "matter",
 		amount = 100000
     },
@@ -38,7 +38,7 @@ data:extend(
 		},
 		icon_size = 128,
         order = "kr-p-m3",
-		limited_to_one_game = true,
+		limited_to_one_game = false,
 		fluid_product = "matter",
 		amount = 1000000
     },
@@ -52,7 +52,7 @@ data:extend(
 		},
 		icon_size = 128,
         order = "kr-p-a1",
-		limited_to_one_game = true,
+		limited_to_one_game = false,
 		item_product = "ai-core",
 		amount = 10000
     },
@@ -65,6 +65,7 @@ data:extend(
 			{ icon = kr_achievements_icons_path .. "destroyer-of-worlds.png", icon_size = 128 }
 		},
 		icon_size = 128,
+		limited_to_one_game = false,
         order = "kr-p-m4",
 		technology = "kr-antimatter-ammo",
     },
@@ -78,7 +79,7 @@ data:extend(
 		},
 		icon_size = 128,
         order = "kr-b-1",
-		limited_to_one_game = true,
+		limited_to_one_game = false,
 		to_build = "kr-quarry-drill",
 		amount = 1
     },
@@ -92,7 +93,7 @@ data:extend(
 		},
 		icon_size = 128,
         order = "kr-b-2",
-		limited_to_one_game = true,
+		limited_to_one_game = false,
 		to_build = "kr-advanced-tank",
 		amount = 1
     },
@@ -106,7 +107,7 @@ data:extend(
 		},
 		icon_size = 128,
         order = "kr-b-2",
-		limited_to_one_game = true,
+		limited_to_one_game = false,
 		to_build = "kr-sentinel",
 		amount = 100
     },
@@ -121,6 +122,7 @@ data:extend(
 		icon_size = 128,
 		until_second = 60 * 60 * 60, -- 60 hours
 		allowed_without_fight = false,
+		limited_to_one_game = false,
 		order = "kr-z-1"
 	},
 	{
@@ -134,6 +136,7 @@ data:extend(
 		icon_size = 128,
 		until_second = 60 * 60 * 40, -- 40 hours
 		allowed_without_fight = false,
+		limited_to_one_game = false,
 		order = "kr-z-2"
 	},
 	{
@@ -146,6 +149,7 @@ data:extend(
 		},
 		icon_size = 128,
 		allowed_without_fight = false,
+		limited_to_one_game = false,
 		dont_build = "kr-antimatter-reactor",
 		order = "kr-c-1"
 	}
