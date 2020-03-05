@@ -224,7 +224,7 @@ data:extend(
 			}
 		}
 		},
-		stack_size = 100
+		stack_size = 50
 	},
 	{
 		type = "item",

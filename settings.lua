@@ -5,11 +5,19 @@ data:extend(
 	-- A - Config
 	{
 		type = "int-setting",
+		name = "kr-stack-size",
+		setting_type = "startup",
+		default_value = 200,
+        allowed_values = {50, 100, 200},
+		order = "a1"
+	},
+	{
+		type = "int-setting",
 		name = "kr-long-hands",
 		setting_type = "startup",
 		default_value = 1,
         allowed_values = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
-		order = "a1"
+		order = "a2"
 	},
 	{
 		type = "int-setting",
@@ -17,28 +25,28 @@ data:extend(
 		setting_type = "startup",
 		default_value = 0,
         allowed_values = {0, 10, 20, 30, 40},
-		order = "a2"
+		order = "a3"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-bonus-items",
 		setting_type = "startup",
 		default_value = false,
-		order = "a3"
+		order = "a4"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-disable-wiki",
 		setting_type = "runtime-per-user",
 		default_value = false,
-		order = "a4"
+		order = "a5"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-loaders",
 		setting_type = "startup",
 		default_value = true,
-		order = "a5"
+		order = "a6"
 	},
 	-- S - Science
 	{
@@ -123,13 +131,6 @@ data:extend(
 		setting_type = "startup",
 		default_value = true,
 		order = "b04"
-	},
-	{
-		type = "bool-setting",
-		name = "kr-stack-size",
-		setting_type = "startup",
-		default_value = true,
-		order = "b05"
 	},
 	{
 		type = "bool-setting",

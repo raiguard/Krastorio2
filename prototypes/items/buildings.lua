@@ -135,7 +135,7 @@ data:extend(
 		subgroup = "production-machine",
 		order = "e[fuel-refinery]",
 		place_result = "kr-fuel-refinery",
-		stack_size = 10,
+		stack_size = 50,
 	},
     {
 		type = "item",
@@ -159,7 +159,7 @@ data:extend(
 		subgroup = "production-machine",
 		order = "g[lab]-g2[advanced-lab]",
 		place_result = "biusart-lab",
-		stack_size = 10
+		stack_size = 50
     },
     {
 		type = "item",
@@ -169,7 +169,7 @@ data:extend(
 		subgroup = "production-machine",
 		order = "g[lab]-g3[kr-singularity-lab]",
 		place_result = "kr-singularity-lab",
-		stack_size = 10,
+		stack_size = 25
 	},
 	-- -- --
 	-- MEDIUM CONTEINERS
@@ -331,7 +331,7 @@ data:extend(
 		subgroup = "energy-pipe-distribution",
 		order = "a[pipes]-a2[steel-pipe]",
 		place_result = "kr-steel-pipe",
-		stack_size = 100
+		stack_size = 50
 	},  
 	{
 		type = "item",
@@ -402,7 +402,7 @@ data:extend(
 		subgroup = "energy",
 		order = "f[nuclear-energy]-b2[fusion-reactor]",
 		place_result = "kr-fusion-reactor",
-		stack_size = 10
+		stack_size = 1
     },
 	{
 		type = "item",
@@ -412,7 +412,7 @@ data:extend(
 		subgroup = "energy",
 		order = "f[nuclear-energy]-e2[advanced-steam-turbine]",
 		place_result = "kr-advanced-steam-turbine",
-		stack_size = 10
+		stack_size = 25
     },
 	{
 		type = "item",
@@ -486,7 +486,7 @@ data:extend(
 		subgroup = "production-machine",
 		order = "i[matter]-b[matter-assembler]",
 		place_result = "kr-matter-assembler",
-		stack_size = 10	
+		stack_size = 25
 	},
 	{
 		type = "item",
@@ -618,7 +618,7 @@ data:extend(
 		subgroup = "module",
 		order = "8[singularity-beacon]",
 		place_result = "kr-singularity-beacon",
-		stack_size = 10
+		stack_size = 50
     },
 	{
 		type = "item",
