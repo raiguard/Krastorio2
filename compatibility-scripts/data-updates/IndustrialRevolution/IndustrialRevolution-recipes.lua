@@ -19,14 +19,14 @@ if mods["IndustrialRevolution"] then
 		for name, downgrade in pairs(steel_to_iron) do
 			krastorio.recipes.convertIngredient(recipe_name, name, downgrade)
 		end
-		krastorio.technologies.convertPrerequisite(krastorio.technologies.getTechnologyThatUnlockRecipe(recipe_name), "deadlock-steel-age", "deadlock-iron-age")
-		krastorio.technologies.convertPrerequisite(krastorio.technologies.getTechnologyThatUnlockRecipe(recipe_name), "steel-processing", "deadlock-iron-age")
+		krastorio.technologies.convertPrerequisite(krastorio.technologies.getTechnologyThatUnlockRecipe(recipe_name).name, "deadlock-steel-age", "deadlock-iron-age")
+		krastorio.technologies.convertPrerequisite(krastorio.technologies.getTechnologyThatUnlockRecipe(recipe_name).name, "steel-processing", "deadlock-iron-age")
 	end
 	local function changeTierFromIrontoSteel(recipe_name)
 		for name, downgrade in pairs(steel_to_iron) do
 			krastorio.recipes.convertIngredient(recipe_name, downgrade, name)
 		end
-		krastorio.technologies.convertPrerequisite(krastorio.technologies.getTechnologyThatUnlockRecipe(recipe_name), "deadlock-iron-age", "deadlock-steel-age")
+		krastorio.technologies.convertPrerequisite(krastorio.technologies.getTechnologyThatUnlockRecipe(recipe_name).name, "deadlock-iron-age", "deadlock-steel-age")
 	end
 
 	-- -- RAW PROCESSING

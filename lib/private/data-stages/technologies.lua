@@ -63,7 +63,7 @@ function krastorio.technologies.getTechnologyThatUnlockRecipe(recipe_name)
 		if (technology.enabled == true or technology.enabled == nil) and technology.effects then
 			for _, effect in pairs(technology.effects) do
 				if effect.type == "unlock-recipe" and effect.recipe == recipe_name then
-					return name
+					return technology
 				end
 			end
 		end
@@ -788,11 +788,7 @@ function krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
 	for _, science_pack in pairs(krastorio.items.getAllItemsOfType("tool")) do
 		local science_pack_tech = krastorio.technologies.getTechnologyFromName(science_pack.name) or krastorio.technologies.getTechnologyThatUnlockRecipe(science_pack.name)
 		if science_pack_tech then
-			if type(science_pack_tech) == "table" then
-				science_techs[science_pack.name] = science_pack_tech.name
-			else
-				science_techs[science_pack.name] = science_pack_tech
-			end			
+			science_techs[science_pack.name] = science_pack_tech.name		
 		end
 	end
 

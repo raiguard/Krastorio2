@@ -608,8 +608,8 @@ end
 function krastorio.recipes.removeIngredientWithPrerequisite(recipe_name, ingredient_name)
 	krastorio.technologies.removePrerequisite
 	(
-		krastorio.technologies.getTechnologyThatUnlockRecipe(recipe_name), 
-		krastorio.technologies.getTechnologyThatUnlockRecipe(ingredient_name)
+		krastorio.technologies.getTechnologyThatUnlockRecipe(recipe_name).name, 
+		krastorio.technologies.getTechnologyThatUnlockRecipe(ingredient_name).name
 	)
 	return krastorio.recipes.removeIngredient(recipe_name, ingredient_name)
 end
