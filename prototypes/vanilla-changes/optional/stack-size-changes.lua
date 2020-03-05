@@ -40,7 +40,7 @@ if krastorio.general.getSafeSettingValue("kr-stack-size") then
 	data.raw.item["uranium-fuel-cell"].stack_size = 10
 	data.raw.item["used-up-uranium-fuel-cell"].stack_size = 10
 
-
+	data.raw.tool["space-science-pack"].stack_size = 200
 	data.raw.capsule["raw-fish"].stack_size = 50
 	data.raw.item["empty-barrel"].stack_size = 10
 	data.raw.item["nuclear-fuel"].stack_size = 25	
@@ -94,7 +94,7 @@ if krastorio.general.getSafeSettingValue("kr-stack-size") then
 	data.raw.item["blank-tech-card"].stack_size = 200
 	data.raw.item["biters-research-data"].stack_size = 200
 	data.raw.item["matter-research-data"].stack_size = 200
-	data.raw.item["space-research-data"].stack_size = 200
+	data.raw.item["space-research-data"].stack_size = 1000
 	data.raw.item["singularity-research-data"].stack_size = 200
 	data.raw.tool["basic-tech-card"].stack_size = 200
 	data.raw.tool["matter-tech-card"].stack_size = 200
