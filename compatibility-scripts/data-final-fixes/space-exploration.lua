@@ -423,14 +423,33 @@ if mods["space-exploration"] then
 ---------------------------------------------------------------------------------------------
 
 	-- Science packs
+	data.raw.tool["se-astronomic-science-pack"].localised_name={"item-name.se-astronomic-tech-card"}
+	data.raw.technology["se-astronomic-science-pack"].localised_name={"item-name.se-astronomic-tech-card"}
 	krastorio.icons.setItemIcon("se-astronomic-science-pack", kr_se_graphic_path .. "se-astronomic-science-pack.png")
+	krastorio.icons.setTechnologyIcon("se-astronomic-science-pack", kr_se_graphic_path .. "se-astronomic-science-pack-tech.png")
+	
+	data.raw.tool["se-biological-science-pack"].localised_name={"item-name.se-biological-tech-card"}
+	data.raw.technology["se-biological-science-pack"].localised_name={"item-name.se-biological-tech-card"}
 	krastorio.icons.setItemIcon("se-biological-science-pack", kr_se_graphic_path .. "se-biological-science-pack.png")
+	krastorio.icons.setTechnologyIcon("se-biological-science-pack", kr_se_graphic_path .. "se-biological-science-pack-tech.png")
+	
+	data.raw.tool["se-deep-space-science-pack"].localised_name={"item-name.se-deep-space-tech-card"}
+	data.raw.technology["se-deep-space-science-pack"].localised_name={"item-name.se-deep-space-tech-card"}
 	krastorio.icons.setItemIcon("se-deep-space-science-pack", kr_se_graphic_path .. "se-deep-space-science-pack.png")
 	data.raw.recipe["se-deep-space-science-pack"].main_product = "se-deep-space-science-pack"
 	krastorio.icons.setRecipeIcon("se-deep-space-science-pack", kr_se_graphic_path .. "se-deep-space-science-pack.png")
+	krastorio.icons.setTechnologyIcon("se-deep-space-science-pack", kr_se_graphic_path .. "se-deep-space-science-pack-tech.png")
+	
+	data.raw.tool["se-energy-science-pack"].localised_name={"item-name.se-energy-tech-card"}
+	data.raw.technology["se-energy-science-pack"].localised_name={"item-name.se-energy-tech-card"}
 	krastorio.icons.setItemIcon("se-energy-science-pack", kr_se_graphic_path .. "se-energy-science-pack.png")
+	krastorio.icons.setTechnologyIcon("se-energy-science-pack", kr_se_graphic_path .. "se-energy-science-pack-tech.png")
+	
+	data.raw.tool["se-material-science-pack"].localised_name={"item-name.se-material-tech-card"}
+	data.raw.technology["se-material-science-pack"].localised_name={"item-name.se-material-tech-card"}
 	krastorio.icons.setItemIcon("se-material-science-pack", kr_se_graphic_path .. "se-material-science-pack.png")
-
+	krastorio.icons.setTechnologyIcon("se-material-science-pack", kr_se_graphic_path .. "se-material-science-pack-tech.png")
+	
 	-- Satellite
 	data.raw.item["satellite"].rocket_launch_product = {"space-research-data", 1000}
 
