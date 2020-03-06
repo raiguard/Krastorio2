@@ -11,9 +11,9 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	local bullets_collision_box = {{-1, -1}, {1, 1}}
 	local k_target_type = "position" -- "entity", "position" or "direction"
 	local k_d_radius = 0.75
-	local k_pistol_min_range = 0.5
-	local k_rifle_min_range = 0.75
-	local k_s_rifle_min_range = 2	
+	local k_pistol_min_range = 1
+	local k_rifle_min_range = 1
+	local k_s_rifle_min_range = 1	
 
 	if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon-auto-aim") then
 
@@ -23,9 +23,9 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 		bullets_collision_box = {{-0.25, -0.25}, {0.25, 0.25}}
 		k_target_type = "entity" -- "entity", "position" or "direction"
 		k_d_radius = 0.5
-		k_pistol_min_range = 0.25
-		k_rifle_min_range = 0.25
-		k_s_rifle_min_range = 0.5
+		k_pistol_min_range = 0.35
+		k_rifle_min_range = 0.35
+		k_s_rifle_min_range = 0.75
 		
 	end
 	
@@ -113,10 +113,14 @@ data.raw.gun["submachine-gun"].attack_parameters.movement_slow_down_factor = 0.2
 ----------------------------------------------------------------------------------------------------------------------
 
 data.raw.gun["pistol"].attack_parameters.ammo_category = "pistol-ammo"
-data.raw.gun["pistol"].attack_parameters.range = pistol_range
+data.raw.gun["pistol"].attack_parameters.range = pistol_range-2
 data.raw.gun["pistol"].attack_parameters.min_range = k_pistol_min_range
 data.raw.gun["pistol"].attack_parameters.cooldown = 20
 data.raw.gun["pistol"].attack_parameters.movement_slow_down_factor = 0.15
+
+data.raw.gun["kr-accelerator"].attack_parameters.ammo_category = "pistol-ammo"
+data.raw.gun["kr-accelerator"].attack_parameters.range = pistol_range
+data.raw.gun["kr-accelerator"].min_range = k_pistol_min_range
 	
 data:extend(
 {

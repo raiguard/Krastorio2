@@ -19,7 +19,8 @@ return
 		topic =
 		{
 			{type = "image", spritename = "about-k2-preview"},		
-			{type = "text", text = "gui.about-k2-description"}
+			{type = "text", text = "gui.about-k2-description-1"},
+			{type = "text", text = "gui.about-k2-description-2"}
 		}
 	},
 	{
