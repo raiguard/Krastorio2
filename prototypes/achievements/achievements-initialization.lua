@@ -120,7 +120,7 @@ data:extend(
 			{ icon = kr_achievements_icons_path .. "backgrounds/gold.png", icon_size = 128 }
 		},
 		icon_size = 128,
-		until_second = 60 * 60 * 60, -- 60 hours
+		until_second = 60 * 60 * 30, -- 30 hours
 		allowed_without_fight = false,
 		limited_to_one_game = false,
 		order = "kr-z-1"
@@ -134,7 +134,7 @@ data:extend(
 			{ icon = kr_achievements_icons_path .. "backgrounds/epic.png", icon_size = 128 }
 		},
 		icon_size = 128,
-		until_second = 60 * 60 * 40, -- 40 hours
+		until_second = 60 * 60 * 20, -- 20 hours
 		allowed_without_fight = false,
 		limited_to_one_game = false,
 		order = "kr-z-2"

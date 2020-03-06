@@ -8,6 +8,8 @@ Date: 06.03.2020
     - Now Krastorio 2 loaders have fast_replaceable_group of transport belts.
     - Now lab tier 1 and 2 have the same fast_replaceable_group to be fast replaced (basic tech will be given back to the player inventory).
     - Rebalanced matter values and Uranium fuel cell recipe.
+    - Changed some vanilla recipes icons.
+    - Rebalanced achievements.
   Fixes:
     - Improved compatibility with deadlock beltboxes about icons replacing.
     - Fix that turret will shot when their range can reach the target.
