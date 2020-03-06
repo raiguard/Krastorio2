@@ -422,6 +422,10 @@ if mods["space-exploration"] then
 -- -- Items
 ---------------------------------------------------------------------------------------------
 
+	-- Rocket fuel
+	krastorio.recipes.addIngredient("se-rocket-fuel-from-water-copper", {type="fluid", name="oxygen", amount=50, catalyst_amount=50})
+	krastorio.recipes.setEnergyCost("se-rocket-fuel-from-water-copper", 600)
+
 	-- Science packs
 	data.raw.tool["se-astronomic-science-pack"].localised_name={"item-name.se-astronomic-tech-card"}
 	data.raw.technology["se-astronomic-science-pack"].localised_name={"item-name.se-astronomic-tech-card"}
