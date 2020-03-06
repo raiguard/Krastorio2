@@ -9,6 +9,8 @@ local function removeFromLab(name, inputs)
 end
 
 if data.raw.lab["lab"] then
+	data.raw.lab["lab"].fast_replaceable_group = "lab"
+
 	local vanilla_lab_inputs = data.raw.lab["lab"].inputs	
 	
 	-- Remove only (for compatibility) the vanilla know science pack that should not be here

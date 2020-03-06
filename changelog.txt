@@ -4,11 +4,13 @@ Date: 06.03.2020
   Features:
     - Added Krastorio 2 stylized icons for SE.
   Changes:
-    - Rebalanced coke fuel value from 8 ->9.
+    - Rebalanced coke fuel value from 8MJ -> 9MJ.
     - Now Krastorio 2 loaders have fast_replaceable_group of transport belts.
+    - Now lab tier 1 and 2 have the same fast_replaceable_group to be fast replaced (basic tech will be given back to the player inventory).
     - Rebalanced matter values and Uranium fuel cell recipe.
   Fixes:
     - Improved compatibility with deadlock beltboxes about icons replacing.
+    - Fix that turret will shot when their range can reach the target.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.16
 Date: 06.03.2020

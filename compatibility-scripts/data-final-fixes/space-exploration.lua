@@ -426,6 +426,8 @@ if mods["space-exploration"] then
 	krastorio.icons.setItemIcon("se-astronomic-science-pack", kr_se_graphic_path .. "se-astronomic-science-pack.png")
 	krastorio.icons.setItemIcon("se-biological-science-pack", kr_se_graphic_path .. "se-biological-science-pack.png")
 	krastorio.icons.setItemIcon("se-deep-space-science-pack", kr_se_graphic_path .. "se-deep-space-science-pack.png")
+	data.raw.recipe["se-deep-space-science-pack"].main_product = "se-deep-space-science-pack"
+	krastorio.icons.setRecipeIcon("se-deep-space-science-pack", kr_se_graphic_path .. "se-deep-space-science-pack.png")
 	krastorio.icons.setItemIcon("se-energy-science-pack", kr_se_graphic_path .. "se-energy-science-pack.png")
 	krastorio.icons.setItemIcon("se-material-science-pack", kr_se_graphic_path .. "se-material-science-pack.png")
 

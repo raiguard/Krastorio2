@@ -7,6 +7,7 @@ data:extend({
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 0.2, result = "biusart-lab"},
 		max_health = 150,
+		fast_replaceable_group = "lab",
 		corpse = "lab-remnants",
 		dying_explosion = "medium-explosion",
 		collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
