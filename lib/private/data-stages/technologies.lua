@@ -30,12 +30,13 @@ function krastorio.technologies.getPrerequisites(technology_name)
 			return technology.prerequisites
 		end
 	end
-	return {}
+	technology.prerequisites = {}
+	return technology.prerequisites
 end
 
 function krastorio.technologies.hasPrerequisite(technology_name, prerequisite_name)
 	local prerequisites = krastorio.technologies.getPrerequisites(technology_name)
-	if next(prerequisites) ~= nil then
+	if prerequisites and #prerequisites > 0 then
 		for _, prerequisite in pairs(prerequisites) do
 			if prerequisite == prerequisite_name then
 				return true
@@ -765,13 +766,15 @@ function krastorio.technologies.removeSciencePackIncompatibleWith(science_pack_n
 						if wrong_one == -1 then
 							is_sanitized = true
 						else
-							for j, prerequisite_name in pairs(technology.prerequisites) do
-								for _, value in pairs(ingredients[wrong_one]) do
-									if prerequisite_name == value then
-										table.remove(technology.prerequisites, j)
-										break
-									end
-								end								
+							if technology.prerequisites and #technology.prerequisites > 0 then
+								for j, prerequisite_name in pairs(technology.prerequisites) do
+									for _, value in pairs(ingredients[wrong_one]) do
+										if prerequisite_name == value then
+											table.remove(technology.prerequisites, j)
+											break
+										end
+									end								
+								end
 							end
 							table.remove(ingredients, wrong_one)								
 						end							

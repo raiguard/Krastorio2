@@ -5,9 +5,11 @@ Date: 06.03.2020
     - Rebalanced rocket fuel with SE installed.
     - Boosted liquid fuels.
     - Make SE liquid rocket fuel burnable in the gas turbine.
+    - Improved Krastorio 2 library.
   Fixes:
     - Fixed missing locales.
     - Fixed swapped icons.
+    - Fixed incomptibility with QoL mod.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.17
 Date: 06.03.2020
