@@ -3,6 +3,9 @@ Version: 0.6.0
 Date: 06.03.2020
   Changes:
     - Rebalanced rocket fuel with SE installed.
+  Fixes:
+    - Fixed missing locales.
+    - Fixed swapped icons.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.17
 Date: 06.03.2020
