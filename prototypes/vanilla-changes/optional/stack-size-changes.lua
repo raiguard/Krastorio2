@@ -1,6 +1,13 @@
 -- -- Increase stacks size
 
 local stack_size = krastorio.general.getSafeSettingValue("kr-stack-size")
+local fuel_stack_size = 100
+
+
+if stack_size > 100 then
+   fuel_stack_size = krastorio.general.getSafeSettingValue("kr-stack-size")
+end
+
 
 if krastorio.general.getSafeSettingValue("kr-stack-size") then 
 
@@ -103,9 +110,9 @@ if krastorio.general.getSafeSettingValue("kr-stack-size") then
 
 	-- -- Fuels
 	
-	data.raw.item["fuel"].stack_size = stack_size*2
-	data.raw.item["bio-fuel"].stack_size = stack_size*2
-	data.raw.item["advanced-fuel"].stack_size = stack_size*2
+	data.raw.item["fuel"].stack_size = fuel_stack_size
+	data.raw.item["bio-fuel"].stack_size = fuel_stack_size
+	data.raw.item["advanced-fuel"].stack_size = fuel_stack_size
 	
 	-- -- Decorations
 	
