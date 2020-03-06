@@ -193,13 +193,14 @@ end
 -- @ _recipe_name
 -- @ _icon_path
 -- @ _icon_size
-function krastorio.icons.setRecipeIcon(_recipe_name, _icon_path, _icon_size)
+function krastorio.icons.setRecipeIcon(_recipe_name, _icon_path, _icon_size, _icon_mipmaps)
 	if krastorio.recipes.exist(_recipe_name) then
 		if data.raw.recipe[_recipe_name].icons then
 			data.raw.recipe[_recipe_name].icons = nil
 		end
 		data.raw.recipe[_recipe_name].icon = _icon_path
 		data.raw.recipe[_recipe_name].icon_size = _icon_size or 64
+		data.raw.recipe[_recipe_name].icon_mipmaps = _icon_mipmaps
 		
 		return true
 	end

@@ -53,6 +53,12 @@ krastorio.icons.setItemIcon("steel-plate",                            kr_items_i
 -- Changing iron gear wheel
 krastorio.icons.setItemIcon("iron-gear-wheel",                        kr_items_icons_path .. "iron-gear-wheel.png", 64, 4)
 
+-- Changing plastic bar
+krastorio.icons.setItemIcon("plastic-bar",                            kr_items_icons_path .. "plastic-bar.png", 64, 4)
+
+-- Chaning copper cable
+krastorio.icons.setItemIcon("copper-cable",                           kr_items_icons_path .. "copper-cable.png", 64, 4)
+
 local light_oil_icon = nil
 if data.raw.fluid["light-oil"].icon == "__base__/graphics/icons/fluid/light-oil.png" then
 	light_oil_icon = kr_fluids_icons_path  .. "light-oil.png"
@@ -68,6 +74,11 @@ krastorio.icons.setRecipeIcons("rocket-fuel", rocket_fuel_icons)
 
 --krastorio.icons.addOverlayIcons(krastorio.recipes.getRecipeFromName("rocket-fuel"), krastorio.icons.getIconsForOverlay(krastorio.items.getItem("light-oil")), 64, 0.28, {-4, 8})	
 
+-----------------------------------------------------------------
+-- -- Recipes
+krastorio.icons.setRecipeIcon("heavy-oil-cracking", kr_recipes_icons_path .. "heavy-oil-cracking.png", 64, 4)
+krastorio.icons.setRecipeIcon("light-oil-cracking", kr_recipes_icons_path .. "light-oil-cracking.png", 64, 4)
+krastorio.icons.setRecipeIcon("coal-liquefaction", kr_recipes_icons_path .. "coal-liquefaction.png", 64, 4)
 -----------------------------------------------------------------
 -- -- Fluids
 krastorio.icons.setItemIcon("water",                                  kr_fluids_icons_path  .. "water.png")
@@ -115,8 +126,6 @@ krastorio.icons.setItemIcon("pumpjack",                               kr_entitie
 
 -----------------------------------------------------------------
 -- -- -- OTHER
-krastorio.icons.setItemIcon("plastic-bar",                            kr_items_icons_path .. "plastic-bar.png", 64, 4)
-krastorio.icons.setItemIcon("copper-cable",                           kr_items_icons_path .. "copper-cable.png", 64, 4)
 krastorio.icons.setItemIcon("red-wire",                               kr_items_icons_path .. "red-wire.png", 64, 4)
 krastorio.icons.setItemIcon("green-wire",                             kr_items_icons_path .. "green-wire.png", 64, 4)
 krastorio.icons.setItemIcon("atomic-bomb",                            kr_icons_path .. "ammo/atomic-bomb.png", 64, 4)
