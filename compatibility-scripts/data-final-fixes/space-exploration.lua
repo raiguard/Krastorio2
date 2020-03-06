@@ -1,6 +1,7 @@
 if mods["space-exploration"] then
 	-- local data_util = require("__space-exploration__/data_util")
 	local color = require(kr_path .. "lib/private/data-stages/colorRGB")
+	local kr_se_graphic_path = kr_graphic_mod_path .. "compatibility/space-exploration/"
 
 -- -- Technologies
 ---------------------------------------------------------------------------------------------
@@ -164,7 +165,7 @@ if mods["space-exploration"] then
 			kr_loader_item
 			{
 				name = "kr-se-loader",
-				icon = kr_graphic_mod_path .. "compatibility/space-exploration/kr-se-loader.png",
+				icon = kr_se_graphic_path .. "kr-se-loader.png",
 				icon_size = 32,
 				order = "z-l[loader]-z[loader]",
 				subgroup = "space-logistics"
@@ -175,7 +176,7 @@ if mods["space-exploration"] then
 				speed =	data.raw["transport-belt"]["se-space-transport-belt"].speed,
 				belt_animation_set = data.raw["transport-belt"]["se-space-transport-belt"].belt_animation_set,
 				order = "z-l[loader]-z[loader]", 
-				icon = kr_graphic_mod_path .. "compatibility/space-exploration/kr-se-loader.png",
+				icon = kr_se_graphic_path .. "kr-se-loader.png",
 				icon_size = 32,
 				tint = color.convert(240, 240, 240, 125),
 				apply_rust = false
@@ -420,6 +421,13 @@ if mods["space-exploration"] then
 
 -- -- Items
 ---------------------------------------------------------------------------------------------
+
+	-- Science packs
+	krastorio.icons.setItemIcon("se-astronomic-science-pack", kr_se_graphic_path .. "se-astronomic-science-pack.png")
+	krastorio.icons.setItemIcon("se-biological-science-pack", kr_se_graphic_path .. "se-biological-science-pack.png")
+	krastorio.icons.setItemIcon("se-deep-space-science-pack", kr_se_graphic_path .. "se-deep-space-science-pack.png")
+	krastorio.icons.setItemIcon("se-energy-science-pack", kr_se_graphic_path .. "se-energy-science-pack.png")
+	krastorio.icons.setItemIcon("se-material-science-pack", kr_se_graphic_path .. "se-material-science-pack.png")
 
 	-- Satellite
 	data.raw.item["satellite"].rocket_launch_product = {"space-research-data", 1000}

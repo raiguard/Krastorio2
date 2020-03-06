@@ -84,6 +84,7 @@ require(scripts_path .. "aai-vehicles-chaingunner")
 require(scripts_path .. "aai-vehicles-hauler")
 require(scripts_path .. "aircraft")
 require(scripts_path .. "DeadlockLargerLamp")
+require(scripts_path .. "deadlock-beltboxes-loaders")
 require(scripts_path .. "Hovercrafts")
 -- Pyanodons
 require(scripts_path .. "Pyanodon")

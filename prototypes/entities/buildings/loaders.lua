@@ -91,7 +91,7 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 			structure_render_layer = "object",
 			-- structure_render_layer = "transport-belt-circuit-connector", --Default:"lower-object" 
 			belt_animation_set = belt_animation_set,
-			fast_replaceable_group = "loader",
+			fast_replaceable_group = "transport-belt",
 			next_upgrade = upgrade,
 			speed = speed,
 			structure =

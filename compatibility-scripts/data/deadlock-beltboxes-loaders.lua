@@ -73,7 +73,8 @@ if mods["deadlock-beltboxes-loaders"] then
 		{   -- Tier 1
 			"blank-tech-card",
 			"automation-core",
-			"coke"
+			"coke",
+			"iron-beam"
 		},
 		[2] = 
 		{	-- Tier 2
@@ -134,8 +135,8 @@ if mods["deadlock-beltboxes-loaders"] then
 			},
 			[2] = 
 			{	-- Tier 2
-				"steel-beam",
-				"steel-gear-wheel"			
+				"steel-gear-wheel",
+				"steel-beam"
 			}
 		}
 		

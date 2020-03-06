@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.17
+Date: 06.03.2020
+  Features:
+    - Added Krastorio 2 stylized icons for SE.
+  Changes:
+    - Rebalanced coke fuel value from 8 ->9.
+    - Now Krastorio 2 loaders have fast_replaceable_group of transport belts.
+  Fixes:
+    - Improved compatibility with deadlock beltboxes about icons replacing.
+---------------------------------------------------------------------------------------------------
 Version: 0.5.16
 Date: 06.03.2020
   Features:
