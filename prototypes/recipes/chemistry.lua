@@ -225,7 +225,7 @@ return
 		allow_productivity = true,
 		ingredients =
 		{
-			{type="fluid", name="mineral-water", amount=10},
+			{type="fluid", name="mineral-water", amount=50},
 			{type="fluid", name="hydrogen-chloride", amount=10}
 		},
 		results =
@@ -312,7 +312,7 @@ return
 	{
 		type = "recipe",
 		name = "dt-fuel",
-		energy_required = 60,
+		energy_required = 20,
 		category = "chemistry",
 		enabled = false,
 		always_show_made_in = true,

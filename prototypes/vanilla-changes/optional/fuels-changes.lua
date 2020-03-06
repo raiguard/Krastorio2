@@ -19,7 +19,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-fuels") then
 	---------------------
 	-- -- Rocket fuel
 		data.raw.item["rocket-fuel"].fuel_category = "chemical"
-		data.raw.item["rocket-fuel"].fuel_value = "100MJ"
+		data.raw.item["rocket-fuel"].fuel_value = "15MJ"
 		data.raw.item["rocket-fuel"].fuel_acceleration_multiplier = 1 --1.8
 		data.raw.item["rocket-fuel"].fuel_top_speed_multiplier = 1 --1.15
 		data.raw.item["rocket-fuel"].fuel_emissions_multiplier = 1 --empty

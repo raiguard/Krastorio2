@@ -160,7 +160,7 @@ data:extend(
 			usage_priority = "secondary-input",
 			emissions_per_minute = 20
 		},
-		energy_usage = "20MW",
+		energy_usage = "24.19MW",
 		ingredient_count = 6,
 		module_specification = { module_slots = 4 },
 		allowed_effects = {"consumption", "speed", "pollution"},

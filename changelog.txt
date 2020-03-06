@@ -6,6 +6,7 @@ Date: 06.03.2020
   Changes:
     - Rebalanced coke fuel value from 8 ->9.
     - Now Krastorio 2 loaders have fast_replaceable_group of transport belts.
+    - Rebalanced matter values and Uranium fuel cell recipe.
   Fixes:
     - Improved compatibility with deadlock beltboxes about icons replacing.
 ---------------------------------------------------------------------------------------------------
