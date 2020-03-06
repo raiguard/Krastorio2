@@ -424,7 +424,14 @@ if mods["space-exploration"] then
 
 	-- Rocket fuel
 	krastorio.recipes.addIngredient("se-rocket-fuel-from-water-copper", {type="fluid", name="oxygen", amount=50, catalyst_amount=50})
-	krastorio.recipes.setEnergyCost("se-rocket-fuel-from-water-copper", 600)
+	krastorio.recipes.setEnergyCost("se-rocket-fuel-from-water-copper", 1000)
+	
+	data.raw.fluid["se-liquid-rocket-fuel"].fuel_value = "1200KJ"
+	data.raw.fluid["se-liquid-rocket-fuel"].fuel_category = "burnable-fluid-fuel"
+	data.raw.fluid["se-liquid-rocket-fuel"].fuel_emissions_multiplier = 1.5
+	data.raw.fluid["se-liquid-rocket-fuel"].default_temperature = 25
+	data.raw.fluid["se-liquid-rocket-fuel"].max_temperature = 100
+	data.raw.fluid["se-liquid-rocket-fuel"].auto_barrel = true
 
 	-- Science packs
 	data.raw.tool["se-astronomic-science-pack"].localised_name={"item-name.se-astronomic-tech-card"}
