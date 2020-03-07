@@ -51,10 +51,10 @@ krastorio.recipes.addIngredient("rocket-fuel", {type="fluid", name="oxygen", amo
 
 data.raw.recipe["rocket-fuel"].crafting_machine_tint =
 		{
-			primary = {r = 0.921, g = 0.800, b = 0.750, a = 0.000}, 
-			secondary = {r = 0.741, g = 0.847, b = 0.670, a = 0.250}, 
-			tertiary = {r = 0.654, g = 0.517, b = 0.529, a = 0.500}, 
-			quaternary = {r = 0.762, g = 0.807, b = 0.839, a = 0.900} 
+			primary = {r = 0.692, g = 0.800, b = 0.550, a = 0.100}, 
+			secondary = {r = 0.581, g = 0.817, b = 0.670, a = 0.250}, 
+			tertiary = {r = 0.554, g = 0.417, b = 0.529, a = 0.500}, 
+			quaternary = {r = 0.462, g = 0.607, b = 0.839, a = 0.900} 
 		}
 
 

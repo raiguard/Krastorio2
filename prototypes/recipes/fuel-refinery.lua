@@ -224,10 +224,10 @@ return
 		result = "rocket-fuel",
 		crafting_machine_tint =
 		{
-			primary = {r = 0.921, g = 0.800, b = 0.750, a = 0.000}, 
-			secondary = {r = 0.741, g = 0.847, b = 0.670, a = 0.250}, 
-			tertiary = {r = 0.654, g = 0.517, b = 0.529, a = 0.500}, 
-			quaternary = {r = 0.762, g = 0.807, b = 0.839, a = 0.900} 
+			primary = {r = 0.261, g = 0.200, b = 0.650, a = 0.100}, 
+			secondary = {r = 0.211, g = 0.447, b = 0.670, a = 0.250}, 
+			tertiary = {r = 0.204, g = 0.417, b = 0.529, a = 0.500}, 
+			quaternary = {r = 0.312, g = 0.407, b = 0.739, a = 0.900} 
 		}
 	}, -- hydrogen-chloride
 	{
@@ -252,10 +252,10 @@ return
 		result = "rocket-fuel",
 		crafting_machine_tint =
 		{
-			primary = {r = 0.921, g = 0.800, b = 0.750, a = 0.000}, 
-			secondary = {r = 0.741, g = 0.847, b = 0.670, a = 0.250}, 
-			tertiary = {r = 0.654, g = 0.517, b = 0.529, a = 0.500}, 
-			quaternary = {r = 0.762, g = 0.807, b = 0.839, a = 0.900} 
+			primary = {r = 0.421, g = 0.720, b = 0.350, a = 0.100}, 
+			secondary = {r = 0.541, g = 0.797, b = 0.370, a = 0.250}, 
+			tertiary = {r = 0.354, g = 0.527, b = 0.229, a = 0.500}, 
+			quaternary = {r = 0.362, g = 0.617, b = 0.439, a = 0.900} 
 		}
 	}
 }
