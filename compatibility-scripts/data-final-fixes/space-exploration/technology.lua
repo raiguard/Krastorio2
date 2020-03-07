@@ -177,39 +177,6 @@ data:extend({
     },
   },
   {
-    type = "technology",
-    name = data_util.mod_prefix .. "core-miner",
-    effects = {
-      {
-        type = "unlock-recipe",
-        recipe = data_util.mod_prefix .. "core-miner",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = data_util.mod_prefix .. "core-fragment-processor",
-      }
-    },
-    icon = "__space-exploration-graphics__/graphics/technology/core-miner.png",
-    icon_size = 128,
-    order = "e-g",
-    prerequisites = {
-     "oil-processing",
-     "concrete",
-     "steel-processing",
-     "laser",
-    },
-    unit = {
-     count = 250,
-     time = 10,
-     ingredients = {
-       { "automation-science-pack", 1 },
-       { "logistic-science-pack", 1 },
-     }
-    },
-  },
-
-
-  {
      name = data_util.mod_prefix .. "meteor-point-defence",
      effects = {
        { type = "unlock-recipe", recipe = data_util.mod_prefix .."meteor-point-defence" },

@@ -619,6 +619,26 @@ if mods["space-exploration"] then
 	})
 	data.raw.item["satellite"].rocket_launch_product = {"space-research-data", 1000}
 	
+	-- Core fragments
+	local function scaleCoreFragmentRecipe(_item_name, _multiplier)
+		local cf_recipe_name = "se-core-fragment-" .. _item_name
+		local amount = krastorio.recipes.countProduct("se-core-fragment-omni", _item_name)
+		krastorio.recipes.replaceIngredient("se-core-fragment-omni", _item_name, {_item_name, amount*_multiplier})
+		krastorio.recipes.replaceIngredient(cf_recipe_name, _item_name, {_item_name, amount*_multiplier})
+	end
+	
+	local core_fragment_to_change =
+	{
+		["imersite"] = 0.2,
+		["raw-rare-metals"] = 0.2,
+		["mineral-water"] = 0.5
+	}
+	
+	for item_name, multiplier in pairs(core_fragment_to_change) do
+		scaleCoreFragmentRecipe(item_name, multiplier)
+	end
+	
+	
 -- -- Icons
 ---------------------------------------------------------------------------------------------
 	--[[

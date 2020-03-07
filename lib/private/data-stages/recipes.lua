@@ -279,6 +279,20 @@ function krastorio.recipes.hasProducts(recipe_name, product_names)
 	return has_all
 end
 
+function krastorio.recipes.countProduct(recipe_name, product_name)
+	local products = krastorio.recipes.getProducts(recipe_name)
+	if products and #products > 0 then
+		local inner_product_name = nil
+		for i = 1, #products do
+			inner_product_name = krastorio.recipes.getIngredientName(products[i])
+			if inner_product_name == product_name then
+				return krastorio.recipes.getIngredientAmount(products[i])
+			end
+		end
+	end	
+	return 0
+end
+
 -- -- OTHERS
 
 -- wrapper
