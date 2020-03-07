@@ -70,7 +70,7 @@ data:extend(
 				priority = "high",
 				filename = kr_entities_path .. "quarry-drill/quarry-drill-sh.png",
 				width = 250,
-				height = 411,
+				height = 211,
 				frame_count = 1,
 				repeat_count = 60,
 				shift = {0, 0.05},
