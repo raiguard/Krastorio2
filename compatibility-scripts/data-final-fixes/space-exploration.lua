@@ -432,34 +432,6 @@ if mods["space-exploration"] then
 	data.raw.fluid["se-liquid-rocket-fuel"].default_temperature = 25
 	data.raw.fluid["se-liquid-rocket-fuel"].max_temperature = 100
 	data.raw.fluid["se-liquid-rocket-fuel"].auto_barrel = true
-
-	-- Science packs
-	data.raw.tool["se-astronomic-science-pack"].localised_name={"item-name.se-astronomic-tech-card"}
-	data.raw.technology["se-astronomic-science-pack"].localised_name={"item-name.se-astronomic-tech-card"}
-	krastorio.icons.setItemIcon("se-astronomic-science-pack", kr_se_graphic_path .. "se-astronomic-science-pack.png")
-	krastorio.icons.setTechnologyIcon("se-astronomic-science-pack", kr_se_graphic_path .. "se-astronomic-science-pack-tech.png")
-	
-	data.raw.tool["se-biological-science-pack"].localised_name={"item-name.se-biological-tech-card"}
-	data.raw.technology["se-biological-science-pack"].localised_name={"item-name.se-biological-tech-card"}
-	krastorio.icons.setItemIcon("se-biological-science-pack", kr_se_graphic_path .. "se-biological-science-pack.png")
-	krastorio.icons.setTechnologyIcon("se-biological-science-pack", kr_se_graphic_path .. "se-biological-science-pack-tech.png")
-	
-	data.raw.tool["se-deep-space-science-pack"].localised_name={"item-name.se-deep-space-tech-card"}
-	data.raw.technology["se-deep-space-science-pack"].localised_name={"item-name.se-deep-space-tech-card"}
-	krastorio.icons.setItemIcon("se-deep-space-science-pack", kr_se_graphic_path .. "se-deep-space-science-pack.png")
-	data.raw.recipe["se-deep-space-science-pack"].main_product = "se-deep-space-science-pack"
-	krastorio.icons.setRecipeIcon("se-deep-space-science-pack", kr_se_graphic_path .. "se-deep-space-science-pack.png")
-	krastorio.icons.setTechnologyIcon("se-deep-space-science-pack", kr_se_graphic_path .. "se-deep-space-science-pack-tech.png")
-	
-	data.raw.tool["se-energy-science-pack"].localised_name={"item-name.se-energy-tech-card"}
-	data.raw.technology["se-energy-science-pack"].localised_name={"item-name.se-energy-tech-card"}
-	krastorio.icons.setItemIcon("se-energy-science-pack", kr_se_graphic_path .. "se-energy-science-pack.png")
-	krastorio.icons.setTechnologyIcon("se-energy-science-pack", kr_se_graphic_path .. "se-energy-science-pack-tech.png")
-	
-	data.raw.tool["se-material-science-pack"].localised_name={"item-name.se-material-tech-card"}
-	data.raw.technology["se-material-science-pack"].localised_name={"item-name.se-material-tech-card"}
-	krastorio.icons.setItemIcon("se-material-science-pack", kr_se_graphic_path .. "se-material-science-pack.png")
-	krastorio.icons.setTechnologyIcon("se-material-science-pack", kr_se_graphic_path .. "se-material-science-pack-tech.png")
 	
 	-- Satellite
 	data.raw.item["satellite"].rocket_launch_product = {"space-research-data", 1000}
@@ -617,41 +589,59 @@ if mods["space-exploration"] then
 			result_count = 5
 		}
 	})
+	data.raw.recipe["space-science-pack-2"] = nil
 	data.raw.item["satellite"].rocket_launch_product = {"space-research-data", 1000}
 	
 	-- Core fragments
-	local function scaleCoreFragmentRecipe(_item_name, _multiplier)
-		local cf_recipe_name = "se-core-fragment-" .. _item_name
+	local function scaleCoreFragmentRecipe(_recipe_name, _item_name, _multiplier)
+		local cf_recipe_name = "se-core-fragment-" .. _recipe_name
 		local amount = krastorio.recipes.countProduct("se-core-fragment-omni", _item_name)
-		krastorio.recipes.replaceIngredient("se-core-fragment-omni", _item_name, {_item_name, amount*_multiplier})
-		krastorio.recipes.replaceIngredient(cf_recipe_name, _item_name, {_item_name, amount*_multiplier})
+		local _item_type = krastorio.items.getItemType(_item_name)
+		krastorio.recipes.replaceProduct("se-core-fragment-omni", _item_name, {type=_item_type, name=_item_name, amount=amount*_multiplier})		
+		krastorio.recipes.replaceProduct(cf_recipe_name, _item_name, {type=_item_type, name=_item_name, amount=amount*_multiplier})
 	end
 	
 	local core_fragment_to_change =
 	{
-		["imersite"] = 0.2,
-		["raw-rare-metals"] = 0.2,
-		["mineral-water"] = 0.5
+		["imersite"] = {"raw-imersite", 0.2},
+		["rare-metals"] = {"raw-rare-metals", 0.2},
+		["mineral-water"] = {"mineral-water", 0.25},
+		["crude-oil"] = {"crude-oil", 0.5}
 	}
 	
 	for item_name, multiplier in pairs(core_fragment_to_change) do
-		scaleCoreFragmentRecipe(item_name, multiplier)
+		scaleCoreFragmentRecipe(item_name, multiplier[1], multiplier[2])
 	end
-	
 	
 -- -- Icons
 ---------------------------------------------------------------------------------------------
-	--[[
-	if data.raw.recipe["se-rocket-fuel-from-water-copper"] then
-		data.raw.recipe["se-rocket-fuel-from-water-copper"].icons = data_util.transition_icons(
-			"__base__/graphics/icons/fluid/water.png",
-			"__base__/graphics/icons/rocket-fuel.png"
-		)
-		-- Brutal fix
-		-- data.raw.recipe["se-rocket-fuel-from-water-copper"].icon  = kr_icons_path .. "nn-icons/rocket-fuel.png"
-		-- data.raw.recipe["se-rocket-fuel-from-water-copper"].icon_size = 64
-	end
-	--]]
+	-- Science packs
+	data.raw.tool["se-astronomic-science-pack"].localised_name={"item-name.se-astronomic-tech-card"}
+	data.raw.technology["se-astronomic-science-pack"].localised_name={"item-name.se-astronomic-tech-card"}
+	krastorio.icons.setItemIcon("se-astronomic-science-pack", kr_se_graphic_path .. "se-astronomic-science-pack.png")
+	krastorio.icons.setTechnologyIcon("se-astronomic-science-pack", kr_se_graphic_path .. "se-astronomic-science-pack-tech.png")
+	
+	data.raw.tool["se-biological-science-pack"].localised_name={"item-name.se-biological-tech-card"}
+	data.raw.technology["se-biological-science-pack"].localised_name={"item-name.se-biological-tech-card"}
+	krastorio.icons.setItemIcon("se-biological-science-pack", kr_se_graphic_path .. "se-biological-science-pack.png")
+	krastorio.icons.setTechnologyIcon("se-biological-science-pack", kr_se_graphic_path .. "se-biological-science-pack-tech.png")
+	
+	data.raw.tool["se-deep-space-science-pack"].localised_name={"item-name.se-deep-space-tech-card"}
+	data.raw.technology["se-deep-space-science-pack"].localised_name={"item-name.se-deep-space-tech-card"}
+	krastorio.icons.setItemIcon("se-deep-space-science-pack", kr_se_graphic_path .. "se-deep-space-science-pack.png")
+	data.raw.recipe["se-deep-space-science-pack"].main_product = "se-deep-space-science-pack"
+	krastorio.icons.setRecipeIcon("se-deep-space-science-pack", kr_se_graphic_path .. "se-deep-space-science-pack.png")
+	krastorio.icons.setTechnologyIcon("se-deep-space-science-pack", kr_se_graphic_path .. "se-deep-space-science-pack-tech.png")
+	
+	data.raw.tool["se-energy-science-pack"].localised_name={"item-name.se-energy-tech-card"}
+	data.raw.technology["se-energy-science-pack"].localised_name={"item-name.se-energy-tech-card"}
+	krastorio.icons.setItemIcon("se-energy-science-pack", kr_se_graphic_path .. "se-energy-science-pack.png")
+	krastorio.icons.setTechnologyIcon("se-energy-science-pack", kr_se_graphic_path .. "se-energy-science-pack-tech.png")
+	
+	data.raw.tool["se-material-science-pack"].localised_name={"item-name.se-material-tech-card"}
+	data.raw.technology["se-material-science-pack"].localised_name={"item-name.se-material-tech-card"}
+	krastorio.icons.setItemIcon("se-material-science-pack", kr_se_graphic_path .. "se-material-science-pack.png")
+	krastorio.icons.setTechnologyIcon("se-material-science-pack", kr_se_graphic_path .. "se-material-science-pack-tech.png")
 ---------------------------------------------------------------------------------------------
 
 end

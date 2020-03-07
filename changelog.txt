@@ -10,6 +10,7 @@ Date: 06.03.2020
     - Fixed missing locales.
     - Fixed swapped icons.
     - Fixed incomptibility with QoL mod.
+    - Fixed incomptibility with SE and core fragments system (this fix is tempornay, will be improved when SE author provide an interface for a better result).
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.17
 Date: 06.03.2020
