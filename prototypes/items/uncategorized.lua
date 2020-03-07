@@ -648,6 +648,7 @@ data:extend(
 		icon_mipmaps = 4,
 		fuel_category = "fusion-fuel",
 		fuel_value = "10GJ",
+		burnt_result = "empty-dt-fuel",
 		subgroup = "intermediate-product",
 		order = "r[uranium-processing]-b1[dt-fuel]-a2[dt-fuel]",
 		stack_size = 10
