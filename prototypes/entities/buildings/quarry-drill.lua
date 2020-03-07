@@ -41,25 +41,56 @@ data:extend(
 		},
 		animations =
 		{
-			priority = "high",
-			filename = kr_entities_path .. "quarry-drill/quarry-drill.png",
-			line_length = 8,
-			width = 250,
-			height = 250,
-			frame_count = 48,
-			shift = {0.4, 0},
-			animation_speed = 0.25,
-			hr_version =
+			layers =
 			{
+				{
 				priority = "high",
-				filename = kr_entities_path .. "quarry-drill/hr-quarry-drill.png",
-				line_length = 8,
-				width = 500,
-				height = 500,
-				frame_count = 48,
-				shift = {0.4, 0},
+				filename = kr_entities_path .. "quarry-drill/quarry-drill.png",
+				width = 216,
+				height = 227,
+				frame_count = 60,
+				line_length = 15,
+				shift = {0, -0.23},
 				animation_speed = 0.25,
-				scale = 0.5
+				scale = 1.04,
+				hr_version =
+				{
+					priority = "high",
+					filename = kr_entities_path .. "quarry-drill/hr-quarry-drill.png",
+					width = 432,
+					height = 454,
+					frame_count = 60,
+					line_length = 15,
+					shift = {0, -0.23},
+					animation_speed = 0.25,
+					scale = 0.52
+				}
+				},
+				{
+				priority = "high",
+				filename = kr_entities_path .. "quarry-drill/quarry-drill-sh.png",
+				width = 250,
+				height = 411,
+				frame_count = 1,
+				repeat_count = 60,
+				shift = {0, 0.05},
+				draw_as_shadow = true,
+				animation_speed = 0.25,
+				scale = 1.04,
+				hr_version =
+				{
+					priority = "high",
+					filename = kr_entities_path .. "quarry-drill/hr-quarry-drill-sh.png",
+					width = 500,
+					height = 422,
+					frame_count = 1,
+					repeat_count = 60,
+					shift = {0, 0.05},
+					draw_as_shadow = true,
+					animation_speed = 0.25,
+					scale = 0.52
+				}
+				},
 			}
 		},
 		vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},

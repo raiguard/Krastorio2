@@ -2,6 +2,7 @@ local supporters =
 {
 	{"Wassabee", 10},
 	{"jonasrejman", 10},
+	{"Saulius Zilis", 10},
 	{"rcobbe", 6}
 }
 
@@ -18,8 +19,8 @@ end
 local function thanksOnPlayerJoin(event)	
 	game.players[event.player_index].print
 	(
-		"[font=heading-1]Krastorio 2[/font] [img=virtual-signal/kr-krastorio]\n" ..
-		"[font=heading-2]we would like to thank these people who supported us on Patreon more than other:[/font]\n" ..
+		"[font=heading-1]Welcome back to Krastorio![/font] [img=virtual-signal/kr-krastorio]\n" ..
+		"[font=heading-2]This mod is developing thanks to our subscribers! /nAnd we would like to thank these people who supported us on Patreon more than other:[/font]\n" ..
 		createThanksList() .. 
 		"[font=heading-2]and thanks to all others that support us, thank you all![/font]\n\n",
 		{1.0, 1.0, 0.2, 1.0}

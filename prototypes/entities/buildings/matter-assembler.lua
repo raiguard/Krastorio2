@@ -90,7 +90,7 @@ data:extend(
 				width = 254,
 				height = 223,
 				frame_count = 1,
-				shift = {0.2, 0.1},
+				shift = {0.38, 0.22},
 				draw_as_shadow = true,
 				hr_version =
 				{

@@ -164,7 +164,6 @@ data:extend(
 			type = "burner",
 			fuel_categories = {"fusion-fuel"},
 			fuel_inventory_size = 1,
-			burnt_inventory_size = 1,
 			emissions_per_minute = 2,
 			effectivity = 1,
 			emissions_per_minute = nil,
@@ -207,7 +206,7 @@ data:extend(
 			}
 		},	
 		energy_usage = "2000MW",
-		source_inventory_size = 1,
+		source_inventory_size = 0,
 		result_inventory_size = 1,
 		open_sound = { filename = kr_buildings_sounds_path .. "open.ogg", volume = 1 },
 		close_sound = { filename = kr_buildings_sounds_path .. "close.ogg", volume = 0.85 }

@@ -49,6 +49,16 @@ krastorio.recipes.addOrReplaceIngredient("rocket-fuel", "light-oil", {type="flui
 krastorio.recipes.replaceIngredient("rocket-fuel", "solid-fuel", {"iron-plate", 1})
 krastorio.recipes.addIngredient("rocket-fuel", {type="fluid", name="oxygen", amount=50})
 
+data.raw.recipe["rocket-fuel"].crafting_machine_tint =
+		{
+			primary = {r = 0.921, g = 0.800, b = 0.750, a = 0.000}, 
+			secondary = {r = 0.741, g = 0.847, b = 0.670, a = 0.250}, 
+			tertiary = {r = 0.654, g = 0.517, b = 0.529, a = 0.500}, 
+			quaternary = {r = 0.762, g = 0.807, b = 0.839, a = 0.900} 
+		}
+
+
+
 -- Apply automation core to the early game items
 krastorio.recipes.overrideIngredients
 (
