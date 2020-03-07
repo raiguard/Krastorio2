@@ -1,12 +1,4 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.6.1
-Date: 07.03.2020
-  Changes:
-    - New sptites for Quarry drill.
-  Fixes:
-    - Fixed some recipe colors.
-    - Fixed problem with DT-fuel.
----------------------------------------------------------------------------------------------------
 Version: 0.6.0
 Date: 06.03.2020
   Changes:
@@ -14,7 +6,12 @@ Date: 06.03.2020
     - Boosted liquid fuels.
     - Make SE liquid rocket fuel burnable in the gas turbine.
     - Improved Krastorio 2 library.
+    - New sptites for Quarry drill (big drill)!
   Fixes:
+    - Fixed bonus items with wrong class references.
+    - Fixed control scripts errors with multiple code format, this will fix the not appearing initial message and wiki button.
+    - Fixed some recipe colors.
+    - Fixed problem with DT-fuel.
     - Fixed missing locales.
     - Fixed swapped icons.
     - Fixed incomptibility with QoL mod.
