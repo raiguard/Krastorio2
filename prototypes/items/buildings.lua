@@ -87,6 +87,16 @@ data:extend(
 		place_result = "kr-shelter",
 		stack_size = 1
     },	
+	{
+		type = "item",
+		name = "kr-armored-shelter",
+		icon =  kr_entities_icons_path .. "armored-shelter.png",
+		icon_size = 64,
+		subgroup = "storage",
+		order = "aaa",
+		place_result = "kr-armored-shelter",
+		stack_size = 1
+    },
     {
 		type = "item",
 		name = "kr-mineral-water-pumpjack",

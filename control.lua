@@ -13,6 +13,8 @@ local scripts =
 	-- -- KRASTORIO 2 SCRIPTS
 	-- Bonus items
 	require(control_scripts_path .. "bonus-items"),
+	-- Patreon
+	require(control_scripts_path .. "patreon"),	
 	-- Generate creep under biter nests
 	require(control_scripts_path .. "creep-generator"),
 	-- Adding inserters changeable drop lane 

@@ -9,7 +9,14 @@ not_valid_replacers =
 	"deepwater-green", 
 	"water-shallow", 
 	"water-mud",
-	"landfill"
+	"landfill",
+	"stone-brick",
+	"refined-concrete",
+	"refined-hazard-concrete",
+	"hazard-concrete",
+	"concrete",
+	"kr-white-reinforced-plate",
+	"kr-black-reinforced-plate"
 }
 random_generator = nil
 
@@ -25,12 +32,17 @@ function initializeCreepCollectorConstats()
 	global.COLLECT_PROBABILITY = 75
 end
 
-function hasDroppedBiomass()
+-- Util function for calculate the round of number
+function round(num)
+    return (num + 0.5 - (num + 0.5) % 1.0)
+end
+
+function droppedBiomass()
 	if not random_generator or not random_generator.valid then
 		random_generator = game.create_random_generator()
 		math.randomseed(random_generator())
 	end
-	return global.COLLECT_PROBABILITY >= math.random(1, 100)
+	return math.random(global.COLLECT_PROBABILITY, 100)
 end
 
 function isTooDistantFromArea(position, area)
@@ -68,11 +80,11 @@ function showInventoryFullErrorMessage(character)
 	}
 end
 
-function showCollectionCountMessage(character, count)
+function showCollectionCountMessage(character, percentage, num)
 	global.krastorio.flying_texts.showOnSurfaceText
 	{
 		entity = character,
-		text   = {"other.kr-collect-message-with-icon", tostring(count), {"item-name.biomass"}, "biomass"},
+		text   = {"other.kr-collect-message-with-icon-prob", tostring(num), tostring(percentage), {"item-name.biomass"}, "biomass"},
 		color  = {0.3, 1, 0.3}
 	}
 end
@@ -130,20 +142,23 @@ function onCollection(event)
 						end
 						if isInRange(player.character.position, tile.position) then		
 							table.insert(replacements, {name = replacement_tile_name, position = tile.position})
-							if hasDroppedBiomass() then
-								count = count + 1
-							end
+							count = count + 1
 						end
 					end
-					
-					tiles[1].surface.set_tiles(replacements)					
+
+					local percentage = droppedBiomass()
+					local effective_count = round(count*(percentage/100))					
 					if inventory_error then
 						showInventoryFullErrorMessage(player.character)
 					elseif count == 0 and #replacements == 0 then
 						showDistanceErrorMessage(player.character)
-					elseif count > 0 then
-						inventory.insert({type = "item", name = "biomass", count = count})
-						showCollectionCountMessage(player.character, count)
+					elseif count > 0 and effective_count > 0 then
+						tiles[1].surface.set_tiles(replacements)
+						inventory.insert({type = "item", name = "biomass", count = effective_count})
+						showCollectionCountMessage(player.character, percentage, effective_count)
+					elseif count > 0 and effective_count == 0 then
+						tiles[1].surface.set_tiles(replacements)
+						showCollectionCountMessage(player.character, 0, 0)
 					end
 				end
 			end

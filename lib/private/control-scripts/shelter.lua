@@ -14,6 +14,18 @@ local KRASTORIO_SHELTER_EVENT_FILTER =
 	{
 		filter = "name", 
         name   = "kr-shelter-light"
+    },
+	{
+		filter = "name", 
+        name   = "kr-armored-shelter"
+    },
+	{
+		filter = "name", 
+        name   = "kr-armored-shelter-container"
+    },
+	{
+		filter = "name", 
+        name   = "kr-armored-shelter-light"
     }
 }
 
@@ -61,33 +73,56 @@ end
 -- @event, on_built_entity or on_robot_built_entity
 local function onBuiltAnEntity(event)
 	local entity = event.created_entity
-	if entity.valid and entity.name == "kr-shelter" then
+	if entity.valid and (entity.name == "kr-shelter" or entity.name == "kr-armored-shelter") then
 		local surface = entity.surface.index
 		local force   = entity.force.index
 	
 		if global.spawn_points[surface] then
 			if not global.spawn_points[surface][force] then -- the first on the surface
 				entity.force.set_spawn_position({entity.position.x, entity.position.y + 3}, surface)
-				-- create shelter light
-				entity.surface.create_entity
-				{
-					type     = "container",
-					name     = "kr-shelter-container",
-					force    = entity.force,
-					player   = entity.last_user,
-					position = entity.position,
-					create_build_effect_smoke = false
-				}
-				local light = entity.surface.create_entity
-				{
-					type     = "lamp",
-					name     = "kr-shelter-light",
-					force    = entity.force,
-					player   = entity.last_user,
-					position = entity.position,
-					create_build_effect_smoke = false
-				}
-				global.spawn_points[surface][force] = {entity, light}
+				if entity.name == "kr-shelter" then
+					-- create shelter light
+					entity.surface.create_entity
+					{
+						type     = "container",
+						name     = "kr-shelter-container",
+						force    = entity.force,
+						player   = entity.last_user,
+						position = entity.position,
+						create_build_effect_smoke = false
+					}
+					local light = entity.surface.create_entity
+					{
+						type     = "lamp",
+						name     = "kr-shelter-light",
+						force    = entity.force,
+						player   = entity.last_user,
+						position = entity.position,
+						create_build_effect_smoke = false
+					}
+					global.spawn_points[surface][force] = {entity, light}
+				else
+					-- create armored shelter light
+					entity.surface.create_entity
+					{
+						type     = "container",
+						name     = "kr-armored-shelter-container",
+						force    = entity.force,
+						player   = entity.last_user,
+						position = entity.position,
+						create_build_effect_smoke = false
+					}
+					local light = entity.surface.create_entity
+					{
+						type     = "lamp",
+						name     = "kr-armored-shelter-light",
+						force    = entity.force,
+						player   = entity.last_user,
+						position = entity.position,
+						create_build_effect_smoke = false
+					}
+					global.spawn_points[surface][force] = {entity, light}			
+				end
 			else -- exist another shelter 
 				for _, product in pairs(entity.prototype.mineable_properties.products) do
 					entity.last_user.insert{name=product.name or product[1], count=product.amount or product[2]}
@@ -108,7 +143,7 @@ end
 local function onRemovingAnEntity(event)
 	local entity = event.entity
 	
-	if entity.valid and (entity.name == "kr-shelter" or entity.name == "kr-shelter-container" or entity.name == "kr-shelter-light") then
+	if entity.valid and (entity.name == "kr-shelter" or entity.name == "kr-shelter-container" or entity.name == "kr-shelter-light" or entity.name == "kr-armored-shelter" or entity.name == "kr-armored-shelter-container" or entity.name == "kr-armored-shelter-light") then
 		local surface = entity.surface.index
 		local force   = entity.force.index
 	

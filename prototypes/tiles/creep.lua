@@ -211,16 +211,8 @@ data:extend(
 		type = "tile",
 		name = "kr-creep",
 		needs_correction = false,
-		can_be_part_of_blueprint = false,
-		minable = 
-		{
-			mining_time = 1, 
-			results =
-			{
-				{ type = "item", name = "biomass", amount = 1, probability = 0.7 }
-			}
-		},		
-		collision_mask = {"ground-tile"},
+		can_be_part_of_blueprint = false,		
+		collision_mask = { "ghost-layer", "floor-layer", "not-colliding-with-itself" },
 		walking_speed_modifier = 0.30,
 		layer = 1,
 		transition_overlay_layer_offset = 1,

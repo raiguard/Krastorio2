@@ -47,6 +47,10 @@ local function radioactivity()
 		global.krastorio.radioactivity_lock = false
 		for _, player in pairs(game.connected_players) do
 			local character = player.valid and player.character
+			local cursor_stack = false
+			if player.valid and player.cursor_stack and player.cursor_stack.valid_for_read then
+				cursor_stack = player.cursor_stack.name
+			end
 			if character and character.valid then			
 				local position = character.position
 				-- Entities damages
@@ -62,16 +66,41 @@ local function radioactivity()
 				then
 					doRadioactiveDamage(player)				
 				end
-				-- Items damages				
-				local inventory = player.valid and player.get_main_inventory()
-				if inventory and inventory.valid and not inventory.is_empty() then
+				
+				-- -- Items damages	
+				-------------------
+				-- Cursor item
+				if cursor_stack then
 					for _, item_name in pairs(global.krastorio.radioactive_items) do
-						if inventory.valid and inventory.get_item_count(item_name) > 0 then
+						if cursor_stack == item_name then
 							doRadioactiveDamage(player)
 							break
 						end
 					end
-				end				
+				end	
+				
+				-- Main inventory
+				local inventory = player.valid and player.get_main_inventory()
+				if inventory and inventory.valid and not inventory.is_empty() then
+					for _, item_name in pairs(global.krastorio.radioactive_items) do
+						if inventory.get_item_count(item_name) > 0 then
+							doRadioactiveDamage(player)
+							break
+						end
+					end
+				end		
+				
+				-- Trash inventory
+				local trash_inventory = character.valid and character.get_inventory(defines.inventory.character_trash)
+				if trash_inventory and trash_inventory.valid and not trash_inventory.is_empty() then
+					for _, item_name in pairs(global.krastorio.radioactive_items) do
+						if trash_inventory.get_item_count(item_name) > 0 then
+							doRadioactiveDamage(player)
+							break
+						end
+					end
+				end	
+				-------------------
 			end
 		end
 		global.krastorio.radioactivity_lock = true

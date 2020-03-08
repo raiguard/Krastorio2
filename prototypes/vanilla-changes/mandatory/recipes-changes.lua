@@ -361,9 +361,6 @@ krastorio.recipes.replaceIngredient("assembling-machine-1", "iron-plate", {"iron
 -- Electric mining drill 1
 krastorio.recipes.replaceIngredient("electric-mining-drill", "iron-plate", {"iron-beam", 2})
 
--- Gun turret
-krastorio.recipes.replaceIngredient("gun-turret", "iron-plate", {"iron-beam", 10})
-
 -- Underground belt (Yellow tier 1)
 krastorio.recipes.replaceIngredient("underground-belt", "iron-plate", {"iron-beam", 5})
 
@@ -447,14 +444,18 @@ krastorio.recipes.addIngredient("steam-turbine", {"steam-engine", 2})
 krastorio.recipes.replaceIngredient("steam-turbine", "iron-gear-wheel", {"iron-gear-wheel", 14})
 krastorio.recipes.replaceIngredient("steam-turbine", "pipe", {"pipe", 10})
 
-
-
 -- Assembling machine
 krastorio.recipes.replaceIngredient("assembling-machine-3", "assembling-machine-2", {"assembling-machine-2", 1})
 krastorio.recipes.replaceIngredient("assembling-machine-3", "speed-module", {"speed-module", 2})
 krastorio.recipes.addIngredient("assembling-machine-3", {"advanced-circuit", 3})
 krastorio.recipes.addIngredient("assembling-machine-3", {"steel-gear-wheel", 5})
 
+-- TURRETS
+
+-- Gun turret
+krastorio.recipes.replaceIngredient("gun-turret", "iron-plate", {"iron-beam", 5})
+krastorio.recipes.replaceIngredient("gun-turret", "copper-plate", {"automation-core", 3})
+krastorio.recipes.replaceIngredient("gun-turret", "iron-gear-wheel", {"iron-gear-wheel", 4})
 
 ----------------------------
 
