@@ -298,7 +298,7 @@ data:extend(
 				recipe = "big-battery-mk3-equipment"
 			}
         },
-        prerequisites = {"kr-quarry-minerals-extraction", "kr-lithium-sulfur-battery", "battery-mk2-equipment", "utility-science-pack"},
+        prerequisites = {"kr-quarry-minerals-extraction", "kr-lithium-sulfur-battery", "battery-mk2-equipment", "advanced-electronics-2"},
         unit =
         {
             count = 500,
@@ -307,7 +307,7 @@ data:extend(
                 {"automation-science-pack", 1},
                 {"logistic-science-pack", 1},
                 {"chemical-science-pack", 1},
-                {"utility-science-pack", 1}
+                {"production-science-pack", 1}
             },
             time = 60
         }

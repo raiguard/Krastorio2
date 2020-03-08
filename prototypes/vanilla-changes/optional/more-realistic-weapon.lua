@@ -6,28 +6,12 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	local rifle_range = 30
 	local sniper_range = 60
 
-	-- -- --
-
-	local bullets_collision_box = {{-1, -1}, {1, 1}}
-	local k_target_type = "position" -- "entity", "position" or "direction"
-	local k_d_radius = 0.75
-	local k_pistol_min_range = 1
-	local k_rifle_min_range = 1
-	local k_s_rifle_min_range = 1	
-
-	if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon-auto-aim") then
-
-		pistol_range = 20
-		rifle_range = 25
-		sniper_range = 50
-		bullets_collision_box = {{-0.25, -0.25}, {0.25, 0.25}}
-		k_target_type = "entity" -- "entity", "position" or "direction"
-		k_d_radius = 0.5
-		k_pistol_min_range = 0.35
-		k_rifle_min_range = 0.35
-		k_s_rifle_min_range = 0.75
-		
-	end
+	local bullets_collision_box = {{-0.25, -0.25}, {0.25, 0.25}}
+	local k_target_type = "entity" -- "entity", "position" or "direction"
+	local k_d_radius = 0.5
+	local k_pistol_min_range = 0.35
+	local k_rifle_min_range = 0.35
+	local k_s_rifle_min_range = 0.75
 	
 	-- -- --
 

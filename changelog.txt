@@ -1,6 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.1
+Date: 08.03.2020
+  Changes:
+    - Weapons overhaul will have auto aim by default.
+  Fixes:
+    - Fixed that portable fusion reactor is supposed to give burnt result.
+    - Fixed bug in low resolution graphics about bad sprite size definition.
+    - Fixed missing locales.
+    - Fixed wrong battery mk3 prerequisite.
+---------------------------------------------------------------------------------------------------
 Version: 0.6.0
-Date: 06.03.2020
+Date: 07.03.2020
   Changes:
     - Rebalanced rocket fuel with SE installed.
     - Boosted liquid fuels.

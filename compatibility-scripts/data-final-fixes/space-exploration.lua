@@ -404,6 +404,9 @@ if mods["space-exploration"] then
 	data.raw.item["se-adaptive-armour-equipment-4"].order     = "s[energy-shield]-a4[adaptive-armour]"
 	data.raw.item["se-adaptive-armour-equipment-5"].subgroup  = "character-equipment"
 	data.raw.item["se-adaptive-armour-equipment-5"].order     = "s[energy-shield]-a5[adaptive-armour]"
+	
+	-- Armor requirments
+	krastorio.technologies.removeResearchUnitIngredient("power-armor", "utility-science-pack")
 
 	-- -- Portable fusion core
 	-- Portable RTG

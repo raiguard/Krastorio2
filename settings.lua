@@ -155,13 +155,6 @@ data:extend(
 	},
 	{
 		type = "bool-setting",
-		name = "kr-more-realistic-weapon-auto-aim",
-		setting_type = "startup",
-		default_value = false,
-		order = "b08"
-	},
-	{
-		type = "bool-setting",
 		name = "kr-peaceful-mod",
 		setting_type = "startup",
 		default_value = false,
