@@ -304,7 +304,7 @@ data:extend(
 		icons = 
 		{
 			{ icon = kr_universal_equipments_icons_path .. "personal-laser-defense-mk3-equipment.png", icon_size = 64 },
-			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
+			{ icon = kr_equipments_tiers_icon_path .. "3.png", icon_size = 64 }
 		},
 		icon_size = 64,		
 		order = "d[active-defense]-b3[personal-laser-defense-mk3-equipment]",
@@ -321,7 +321,7 @@ data:extend(
 		icons = 
 		{
 			{ icon = kr_universal_equipments_icons_path .. "personal-laser-defense-mk4-equipment.png", icon_size = 64 },
-			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
+			{ icon = kr_equipments_tiers_icon_path .. "4.png", icon_size = 64 }
 		},
 		icon_size = 64,		
 		order = "d[active-defense]-b4[personal-laser-defense-mk4-equipment]",

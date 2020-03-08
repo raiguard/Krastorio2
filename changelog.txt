@@ -4,6 +4,8 @@ Date: 08.03.2020
   Changes:
     - Boosted quartz production, now recipe give more product and in less time, better ratio for the mod structure.
     - Marked TinyStart as incompatible with Krastorio 2, use the built in option instead.
+  Fixes:
+    - Fixed Wrong equipment icon tiers.
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.1
 Date: 08.03.2020
