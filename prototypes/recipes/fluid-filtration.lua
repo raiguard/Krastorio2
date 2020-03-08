@@ -24,8 +24,34 @@ return
 		},
 		crafting_machine_tint =
 		{
-			primary = {r = 0.75, g = 0.72, b = 0.5, a = 1}, --dirty
-			secondary = {r = 0.9, g = 0.8, b = 0.95, a = 1} --clear
+			primary = {r = 0.96, g = 0.64, b = 0.38, a = 0.6}, --dirty
+			secondary = {r = 0.55, g = 0.55, b = 0.51, a = 0.5} --clear
+		}
+    },
+	{
+		type = "recipe",
+		name = "coal-filtration",
+		icon = kr_recipes_icons_path .. "coal-filtration.png",
+		icon_size = 64,
+		category = "fluid-filtration",
+		subgroup = "raw-material",
+		energy_required = 2,
+		enabled = false,
+		always_show_made_in = true,
+		always_show_products = true,
+		ingredients = 
+		{
+			{ type = "fluid", name = "heavy-oil", amount = 60 }
+		},
+		results = 
+		{
+			{ type = "item", name = "coal", amount = 10 },
+			{ type = "fluid", name = "water", amount = 50, catalyst_amount = 50 }
+		},
+		crafting_machine_tint =
+		{
+			primary = data.raw.fluid["heavy-oil"].base_color, --dirty
+			secondary = {r = 0.64, g = 0.83, b = 0.93, a = 0.9} --clear
 		}
     },
 	---
@@ -65,8 +91,8 @@ return
 		},
 		crafting_machine_tint =
 		{
-			primary = {r = 0.5, g = 0.4, b = 0.6, a = 1}, --dirty
-			secondary = {r = 0.6, g = 0.75, b = 1, a = 1} --clear
+			primary = {r = 0.49, g = 0.62, b = 0.75, a = 0.6}, --dirty
+			secondary = {r = 0.64, g = 0.83, b = 0.93, a = 0.9} --clear
 		},
 		subgroup = "raw-material",
 		order = "w011[dirty-water-filtration-1]"
@@ -100,13 +126,13 @@ return
 		results =
 		{
 			{type = "fluid", name = "water", amount = 100, catalyst_amount = 100},
-			{type = "item",  name = "stone", probability = 0.30, amount = 1},
-			{type = "item",  name = "copper-ore", probability = 0.10, amount = 1}
+			{type = "item",  name = "stone", probability = 0.30, amount = 0.9},
+			{type = "item",  name = "copper-ore", probability = 0.10, amount = 0.9}
 		},
 		crafting_machine_tint =
 		{
-			primary = {r = 0.75, g = 0.4, b = 0.5, a = 1}, --dirty
-			secondary = {r = 0.6, g = 0.75, b = 1, a = 1} --clear
+			primary = {r = 0.60, g = 0.20, b = 0, a = 0.6}, --dirty
+			secondary = {r = 0.64, g = 0.83, b = 0.93, a = 0.9} --clear
 		},
 		subgroup = "raw-material",
 		order = "w012[dirty-water-filtration-2]"

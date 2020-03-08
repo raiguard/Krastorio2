@@ -5,6 +5,7 @@ function givePatreonItems(event)
 		["Krastor"] = true,
 		["Linver"] = true,
 		["jonasrejman"] = true,
+		["Pandabeezy"] = true,
 		["Wassabee"] = true
 	}
 	

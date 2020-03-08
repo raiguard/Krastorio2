@@ -6,7 +6,9 @@ Date: 08.03.2020
     - Now radioactivity damage is dealt from the item in the cursor.
     - Now radioactivity damage is dealt from the trash inventory.
     - Add one of two bonus content for patreon energy demon.
+    - Add a water filtration recipe.
   Changes:
+    - Improved filtration plant recipe color.
     - Changed gun turret recipe.
     - Now creep is minable only via creep collector.
     - Boosted quartz production, now recipe give more product and in less time, better ratio for the mod structure.
