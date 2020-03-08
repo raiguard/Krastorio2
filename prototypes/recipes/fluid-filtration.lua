@@ -8,18 +8,18 @@ return
 		icon_size = 64,
 		category = "fluid-filtration",
 		subgroup = "raw-material",
-		energy_required = 3,
+		energy_required = 2.1,
 		enabled = false,
 		always_show_made_in = true,
 		always_show_products = true,
 		ingredients = 
 		{
-			{ type = "item", name = "sand", amount = 6 },
-			{ type = "fluid", name = "water", amount = 10 }
+			{ type = "item", name = "sand", amount = 12 },
+			{ type = "fluid", name = "water", amount = 12 }
 		},
 		results = 
 		{
-			{ type = "item", name = "quartz", amount = 3 },
+			{ type = "item", name = "quartz", amount = 6 },
 			{ type = "item", name = "stone", probability = 0.3, amount = 1 }
 		},
 		crafting_machine_tint =
