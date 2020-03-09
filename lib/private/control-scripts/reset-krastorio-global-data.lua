@@ -38,6 +38,7 @@ local function restore()
 	initializePlanetaryTeleportersGlobalVariables()
 	setupKRRadioactivityGlobalVariables()
 	shelterVariablesInitializing()
+	initializePatreonsGlobalVariables()
 	destroyScriptedEntities(
 	{
 		"kr-shelter",

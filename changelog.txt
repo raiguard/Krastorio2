@@ -1,13 +1,15 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.2
-Date: 08.03.2020
+Date: 09.03.2020
   Features:
     - Improve creep collector script.
     - Now radioactivity damage is dealt from the item in the cursor.
     - Now radioactivity damage is dealt from the trash inventory.
     - Added bonus content for Energy Demons (Guys from Patreon).
-    - Add a water filtration recipe.
+    - Added a coal filtration recipe.
+    - Added a coke liquefaction recipe.
   Changes:
+    - Changed biolab recipe, now take only oxygen and petroleum gas.
     - Improved filtration plant recipe color.
     - Changed gun turret recipe.
     - Now creep is minable only via creep collector.

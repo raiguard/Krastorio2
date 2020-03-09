@@ -115,6 +115,7 @@ krastorio.technologies.addUnlockRecipe("rocket-fuel", "rocket-fuel-with-hydrogen
 
 -- Coal liquefaction
 krastorio.technologies.addUnlockRecipe("coal-liquefaction", "coal-filtration")
+krastorio.technologies.addUnlockRecipe("coal-liquefaction", "coke-liquefaction")
 
 -- Science
 krastorio.technologies.addUnlockRecipe("automation-science-pack", "blank-tech-card")

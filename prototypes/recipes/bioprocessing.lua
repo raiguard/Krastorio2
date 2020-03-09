@@ -9,13 +9,12 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{type="fluid", name="oxygen", amount=50},
-			{type="fluid", name="crude-oil", amount=50},
-			{name="biomass", amount=1}
+			{type="fluid", name="petroleum-gas", amount=50},
+			{type="fluid", name="oxygen", amount=50}			
 		},
 		results =
 		{ 
-			{type="item", name="biomass", amount=6}
-		},
+			{type="item", name="biomass", amount=5}
+		}
 	}	
 }
