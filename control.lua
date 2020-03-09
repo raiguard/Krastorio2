@@ -17,6 +17,8 @@ local scripts =
 	require(control_scripts_path .. "patreon"),	
 	-- Generate creep under biter nests
 	require(control_scripts_path .. "creep-generator"),
+	-- Factory tile collector
+	require(control_scripts_path .. "jackhammer"),
 	-- Adding inserters changeable drop lane 
 	require(control_scripts_path .. "inserters-changeable-drop-lane"),
 	-- Adding change roboport state

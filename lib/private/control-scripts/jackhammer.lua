@@ -1,31 +1,28 @@
 require("__Krastorio2__/lib/private/control-scripts/control-lib/control-lib-initialization")
 
 not_valid_replacers = require("__Krastorio2__/lib/private/control-scripts/control-lib/not-valid-replacers")
-random_generator = nil
+tiles_items = 
+{ 
+	["stone-path"] = "stone-brick", 
+	["concrete"] = "concrete", 
+	["hazard-concrete-left"] = "hazard-concrete", 
+	["hazard-concrete-right"] = "hazard-concrete", 
+	["refined-concrete"] = "refined-concrete", 
+	["refined-hazard-concrete-left"] = "refined-hazard-concrete", 
+	["refined-hazard-concrete-right"] = "refined-hazard-concrete", 	
+	["kr-white-reinforced-plate"] = "kr-white-reinforced-plate", 
+	["kr-black-reinforced-plate"] = "kr-black-reinforced-plate"
+}
 
 local function onInitAndConf()
-	if not global.krastorio.script_initialization_status["creep-collector"] then
-		initializeCreepCollectorConstats()
-		global.krastorio.script_initialization_status["creep-collector"] = true
+	if not global.krastorio.script_initialization_status["jackhammer"] then
+		initializeJackhammerConstats()
+		global.krastorio.script_initialization_status["jackhammer"] = true
 	end
 end
 
-function initializeCreepCollectorConstats()
+function initializeJackhammerConstats()
 	global.MAX_TILE_DISTANCE   = 10
-	global.COLLECT_PROBABILITY = 75
-end
-
--- Util function for calculate the round of number
-function round(num)
-    return (num + 0.5 - (num + 0.5) % 1.0)
-end
-
-function droppedBiomass()
-	if not random_generator or not random_generator.valid then
-		random_generator = game.create_random_generator()
-		math.randomseed(random_generator())
-	end
-	return math.random(global.COLLECT_PROBABILITY, 100)
 end
 
 function isTooDistantFromArea(position, area)
@@ -63,11 +60,11 @@ function showInventoryFullErrorMessage(character)
 	}
 end
 
-function showCollectionBiomassCountMessage(character, percentage, num)
+function showCollectionCountMessage(character, num)
 	global.krastorio.flying_texts.showOnSurfaceText
 	{
 		entity = character,
-		text   = {"other.kr-collect-message-with-icon-prob", tostring(num), tostring(percentage), {"item-name.biomass"}, "biomass"},
+		text   = {"other.kr-collect-message", tostring(num), "tiles"},
 		color  = {0.3, 1, 0.3}
 	}
 end
@@ -96,7 +93,7 @@ function getNearestTileType(surface, area)
 end
 
 function onCollection(event)
-	if event.item == "kr-creep-collector" then	
+	if event.item == "kr-jackhammer" then	
 		local player = game.players[event.player_index] or false
 		if player and player.valid and player.character and player.character.valid then
 			if isTooDistantFromArea(player.character.position, event.area) then
@@ -104,31 +101,26 @@ function onCollection(event)
 			else
 				local tiles = event.tiles
 				if #tiles > 0 then
-					local inventory = player.get_main_inventory()	
-
+					local inventory = player.get_main_inventory()
+					
 					local replacement_tile_name = getNearestTileType(player.character.surface, event.area)
-					local count = 0
 					local replacements = {}
+					local items = {}
 					for _, tile in pairs(tiles) do
 						if isInRange(player.character.position, tile.position) then		
 							table.insert(replacements, {name = replacement_tile_name, position = tile.position})
-							count = count + 1
+							table.insert(items, {name = tiles_items[tile.name], count=1})
 						end
 					end
 
-					local percentage = droppedBiomass()
-					local effective_count = round(count*(percentage/100))					
-					if not inventory.can_insert({type = "item", name = "biomass", count = effective_count}) then
-						showInventoryFullErrorMessage(player.character)
-					elseif count == 0 and #replacements == 0 then
+					if #items == 0 and #replacements == 0 then
 						showDistanceErrorMessage(player.character)
-					elseif count > 0 and effective_count > 0 then
+					elseif #items > 0  then
 						tiles[1].surface.set_tiles(replacements)
-						inventory.insert({type = "item", name = "biomass", count = effective_count})
-						showCollectionBiomassCountMessage(player.character, percentage, effective_count)
-					elseif count > 0 and effective_count == 0 then
-						tiles[1].surface.set_tiles(replacements)
-						showCollectionBiomassCountMessage(player.character, 0, 0)
+						for _, item in pairs(items) do
+							inventory.insert(item)
+						end
+						showCollectionCountMessage(player.character, #items)
 					end
 				end
 			end

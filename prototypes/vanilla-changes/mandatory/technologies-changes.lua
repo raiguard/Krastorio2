@@ -123,6 +123,9 @@ krastorio.technologies.addUnlockRecipe("military-science-pack", "biters-research
 krastorio.technologies.addUnlockRecipe("military-science-pack", "kr-creep-collector")
 krastorio.technologies.addUnlockRecipe("space-science-pack", "space-science-pack")
 
+-- Jackhammer
+krastorio.technologies.addUnlockRecipe(krastorio.technologies.getTechnologyThatUnlockRecipe("concrete").name, "kr-jackhammer")
+
 -- Removings
 
 -- Moving inserters unlocking in early game

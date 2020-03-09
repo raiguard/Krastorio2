@@ -1,3 +1,16 @@
+local factory_tiles =
+{
+	"stone-path",
+	"concrete",
+	"hazard-concrete-left",
+	"hazard-concrete-right",
+	"refined-concrete",
+	"refined-hazard-concrete-left",
+	"refined-hazard-concrete-right",	
+	"kr-white-reinforced-plate",
+	"kr-black-reinforced-plate"
+}
+
 data:extend(
 {
 	{
@@ -30,6 +43,35 @@ data:extend(
 		show_in_library = false,
 		tile_filters = { "kr-creep" },
 		alt_tile_filters = { "kr-creep" },
+		tile_filter_mode = "whitelist",
+		alt_tile_filter_mode = "whitelist"
+	},
+	{
+		type = "selection-tool",
+		name = "kr-jackhammer",
+		icon = kr_icons_path .. "items/jackhammer.png",
+		icon_size = 64,
+		icon_mipmaps = 4,
+		flags = { "not-stackable" },
+		stack_size = 1,
+		subgroup = "terrain",
+		order = "z-[collector-tools]-a[jackhammer]",
+		selection_color = {r = 0.50, g = 0, b = 0.35},
+		alt_selection_color = {r = 0.55, g = 0, b = 0.40},
+		selection_mode =
+		{
+			"any-tile"
+		},
+		alt_selection_mode =
+		{
+			"any-tile"
+		},
+		selection_cursor_box_type = "not-allowed",
+		alt_selection_cursor_box_type = "not-allowed",
+		always_include_tiles = true,
+		show_in_library = false,
+		tile_filters = factory_tiles,
+		alt_tile_filters = factory_tiles,
 		tile_filter_mode = "whitelist",
 		alt_tile_filter_mode = "whitelist"
 	}
