@@ -101,6 +101,46 @@ function onCollection(event)
 			else
 				local tiles = event.tiles
 				if #tiles > 0 then
+					local replacement_tile_name = getNearestTileType(player.character.surface, event.area)
+					local items = {}
+					for _, tile in pairs(tiles) do
+						local item_name = nil
+						if isInRange(player.character.position, tile.position) then	
+							item_name = tiles_items[tile.name]
+							if not items[item_name] then
+								items[item_name] = {count=0, replacements={}}
+							end
+							
+							table.insert(items[item_name].replacements, {name = replacement_tile_name, position = tile.position})
+							items[item_name].count = items[item_name].count + 1
+						end
+					end
+					
+					if not next(items) then -- no item in range, then error
+						showDistanceErrorMessage(player.character)
+					else
+						local inventory = player.get_main_inventory()
+						local insert_items_count = 0
+						for item_name, item in pairs(items) do
+							if inventory.can_insert({name = item_name, count=item.count}) then
+								tiles[1].surface.set_tiles(item.replacements)
+								inventory.insert({name = item_name, count=item.count})
+								insert_items_count = insert_items_count + item.count
+							end
+						end
+						if insert_items_count  == 0 then -- probabily not space, so inventory is full
+							showInventoryFullErrorMessage(player.character)
+						else -- tell the quantity of inserted items 
+							showCollectionCountMessage(player.character, insert_items_count)
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+--[[
 					local inventory = player.get_main_inventory()
 					
 					local replacement_tile_name = getNearestTileType(player.character.surface, event.area)
@@ -122,11 +162,7 @@ function onCollection(event)
 						end
 						showCollectionCountMessage(player.character, #items)
 					end
-				end
-			end
-		end
-	end
-end
+--]]
 
 return
 {
