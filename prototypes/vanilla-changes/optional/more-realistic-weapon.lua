@@ -6,12 +6,28 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	local rifle_range = 30
 	local sniper_range = 60
 
-	local bullets_collision_box = {{-0.25, -0.25}, {0.25, 0.25}}
-	local k_target_type = "entity" -- "entity", "position" or "direction"
+	-- -- --
+
+	local bullets_collision_box = {{-0.5, -1}, {0.5, 1}}
+	local k_target_type = "position" -- "entity", "position" or "direction"
 	local k_d_radius = 0.5
-	local k_pistol_min_range = 0.35
-	local k_rifle_min_range = 0.35
-	local k_s_rifle_min_range = 0.75
+	local k_pistol_min_range = 0.5
+	local k_rifle_min_range = 0.5
+	local k_s_rifle_min_range = 1	
+
+	if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon-auto-aim") then
+
+		pistol_range = 20
+		rifle_range = 25
+		sniper_range = 50
+		bullets_collision_box = {{-0.1, -0.5}, {0.1, 0.5}}
+		k_target_type = "entity" -- "entity", "position" or "direction"
+		k_d_radius = 0.25
+		k_pistol_min_range = 0.25
+		k_rifle_min_range = 0.25
+		k_s_rifle_min_range = 0.5
+		
+	end
 	
 	-- -- --
 
@@ -174,24 +190,9 @@ data:extend(
 						entity_name = "explosion-hit"
 					},
 					{
-						type = "nested-result",
-						action =
-						{
-							type = "area",
-							radius = k_d_radius,
-							action_delivery =
-							{
-								type = "instant",
-								target_effects =
-								{
-									{
-										type = "damage",
-										damage = {amount = 8, type = "physical"}
-									},
-								}
-							}
-						}
-					}
+						type = "damage",
+						damage = {amount = 8, type = "physical"}
+					},
 				}
 			}
 		},
@@ -212,7 +213,7 @@ data:extend(
 			priority = "high",
 			draw_as_shadow = true
 		},
-		hit_at_collision_position = true,
+		--hit_at_collision_position = true,
 		force_condition = "not-same",
 		light = {intensity = 0.45, size = 5, color = {r=1.0, g=1.0, b=0.5}},
 	},	
@@ -297,24 +298,9 @@ data:extend(
 						entity_name = "explosion-hit-p"
 					},
 					{
-						type = "nested-result",
-						action =
-						{
-							type = "area",
-							radius = k_d_radius,
-							action_delivery =
-							{
-								type = "instant",
-								target_effects =
-								{
-									{
-										type = "damage",
-										damage = {amount = 12, type = "physical"}
-									},
-								}
-							}
-						}
-					}
+						type = "damage",
+						damage = {amount = 12, type = "physical"}
+					},
 				}
 			}
 		},
@@ -335,7 +321,7 @@ data:extend(
 			priority = "high",
 			draw_as_shadow = true
 		},
-		hit_at_collision_position = true,
+		--hit_at_collision_position = true,
 		force_condition = "not-same",
 		light = {intensity = 0.35, size = 7, color = {r=1.0, g=0.8, b=0.5}},
 	},
@@ -427,7 +413,6 @@ data:extend(
 		flags = {"not-on-map"},
 		collision_box = bullets_collision_box,
 		acceleration = -0.018,
-		--direction_only = true,
 		action =
 		{
 			type = "direct",
@@ -441,24 +426,9 @@ data:extend(
 						entity_name = "explosion-hit"
 					},
 					{
-						type = "nested-result",
-						action =
-						{
-							type = "area",
-							radius = k_d_radius,
-							action_delivery =
-							{
-								type = "instant",
-								target_effects =
-								{
-									{
-										type = "damage",
-										damage = {amount = 10, type = "physical"}
-									},
-								}
-							}
-						}
-					}
+						type = "damage",
+						damage = {amount = 10, type = "physical"}
+					},
 				}
 			}
 		},
@@ -479,7 +449,7 @@ data:extend(
 			priority = "high",
 			draw_as_shadow = true
 		},
-		hit_at_collision_position = true,
+		--hit_at_collision_position = true,
 		force_condition = "not-same",
 		light = {intensity = 0.45, size = 5, color = {r=1.0, g=1.0, b=0.5}},
 	},	
@@ -565,24 +535,9 @@ data:extend(
 						entity_name = "explosion-hit-p"
 					},
 					{
-						type = "nested-result",
-						action =
-						{
-							type = "area",
-							radius = k_d_radius,
-							action_delivery =
-							{
-								type = "instant",
-								target_effects =
-								{
-									{
-										type = "damage",
-										damage = {amount = 14, type = "physical"}
-									},
-								}
-							}
-						}
-					}
+						type = "damage",
+						damage = {amount = 14, type = "physical"}
+					},
 				}
 			}
 		},
@@ -603,7 +558,7 @@ data:extend(
 			priority = "high",
 			draw_as_shadow = true
 		},
-		hit_at_collision_position = true,
+		--hit_at_collision_position = true,
 		force_condition = "not-same",
 		light = {intensity = 0.25, size = 7, color = {r=1.0, g=0.8, b=0.5}},
 	},
@@ -687,28 +642,13 @@ data:extend(
 						entity_name = "explosion-hit-u"
 					},
 					{
-						type = "nested-result",
-						action =
-						{
-							type = "area",
-							radius = k_d_radius,
-							action_delivery =
-							{
-								type = "instant",
-								target_effects =
-								{
-									{
-										type = "damage",
-										damage = {amount = 14, type = "physical"}
-									},
-									{
-										type = "damage",
-										damage = {amount = 6, type = "radioactive"}
-									},
-								}
-							}
-						}
-					}
+						type = "damage",
+						damage = {amount = 14, type = "physical"}
+					},
+					{
+						type = "damage",
+						damage = {amount = 6, type = "radioactive"}
+					},
 				}
 			}
 		},
@@ -729,7 +669,7 @@ data:extend(
 			priority = "high",
 			draw_as_shadow = true
 		},
-		hit_at_collision_position = true,
+		--hit_at_collision_position = true,
 		force_condition = "not-same",
 		light = {intensity = 0.25, size = 7, color = {r=0.5, g=1, b=0.5}},
 	},
@@ -813,28 +753,13 @@ data:extend(
 						entity_name = "explosion-hit-i"
 					},
 					{
-						type = "nested-result",
-						action =
-						{
-							type = "area",
-							radius = k_d_radius,
-							action_delivery =
-							{
-								type = "instant",
-								target_effects =
-								{
-									{
-										type = "damage",
-										damage = {amount = 14, type = "physical"}
-									},
-									{
-										type = "damage",
-										damage = {amount = 10, type = "laser"}
-									},
-								}
-							}
-						}
-					}
+						type = "damage",
+						damage = {amount = 14, type = "physical"}
+					},
+					{
+						type = "damage",
+						damage = {amount = 10, type = "laser"}
+					},
 				}
 			}
 		},
@@ -855,7 +780,7 @@ data:extend(
 			priority = "high",
 			draw_as_shadow = true
 		},
-		hit_at_collision_position = true,
+		--hit_at_collision_position = true,
 		force_condition = "not-same",
 		light = {intensity = 0.25, size = 8, color = {r=1, g=0.45, b=0.8}},
 	},
@@ -988,7 +913,6 @@ data:extend(
 		flags = {"not-on-map"},
 		collision_box = bullets_collision_box,
 		acceleration = -0.025,
-		--direction_only = true,
 		action =
 		{
 			type = "direct",
@@ -1006,7 +930,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = k_d_radius,
+							radius = k_d_radius+0.25,
 							action_delivery =
 							{
 								type = "instant",
@@ -1040,7 +964,7 @@ data:extend(
 			priority = "high",
 			draw_as_shadow = true
 		},
-		hit_at_collision_position = true,
+		--hit_at_collision_position = true,
 		force_condition = "not-same",
 		light = {intensity = 0.45, size = 8, color = {r=1.0, g=1.0, b=0.5}},
 	},	
@@ -1130,7 +1054,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = k_d_radius,
+							radius = k_d_radius+0.25,
 							action_delivery =
 							{
 								type = "instant",
@@ -1164,7 +1088,7 @@ data:extend(
 			priority = "high",
 			draw_as_shadow = true
 		},
-		hit_at_collision_position = true,
+		--hit_at_collision_position = true,
 		force_condition = "not-same",
 		light = {intensity = 0.45, size = 8, color = {r=1.0, g=0.8, b=0.5}},
 	},
@@ -1252,7 +1176,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = k_d_radius,
+							radius = k_d_radius+0.25,
 							action_delivery =
 							{
 								type = "instant",
@@ -1290,7 +1214,7 @@ data:extend(
 			priority = "high",
 			draw_as_shadow = true
 		},
-		hit_at_collision_position = true,
+		--hit_at_collision_position = true,
 		force_condition = "not-same",
 		light = {intensity = 0.45, size = 8, color = {r=0.5, g=1, b=0.5}},
 	},
@@ -1378,7 +1302,7 @@ data:extend(
 						action =
 						{
 							type = "area",
-							radius = k_d_radius,
+							radius = k_d_radius+0.25,
 							action_delivery =
 							{
 								type = "instant",
@@ -1416,7 +1340,7 @@ data:extend(
 			priority = "high",
 			draw_as_shadow = true
 		},
-		hit_at_collision_position = true,
+		--hit_at_collision_position = true,
 		force_condition = "not-same",
 		light = {intensity = 0.5, size = 9, color = {r=1, g=0.45, b=0.8}},
 	},
@@ -1557,7 +1481,7 @@ krastorio.technologies.addUnlockRecipe("military-2", "armor-piercing-rifle-magaz
 krastorio.technologies.addUnlockRecipe("military-2", "anti-material-rifle")
 krastorio.technologies.addUnlockRecipe("military-2", "anti-material-rifle-magazine")
 
-krastorio.technologies.addUnlockRecipe("military-4", "armor-piercing-anti-material-rifle-magazine")
+krastorio.technologies.addUnlockRecipe("military-3", "armor-piercing-anti-material-rifle-magazine")
 
 krastorio.technologies.addUnlockRecipe("uranium-ammo", "uranium-rifle-magazine")
 krastorio.technologies.addUnlockRecipe("uranium-ammo", "uranium-anti-material-rifle-magazine")

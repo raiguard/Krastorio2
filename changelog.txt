@@ -5,7 +5,7 @@ Date: 08.03.2020
     - Improve creep collector script.
     - Now radioactivity damage is dealt from the item in the cursor.
     - Now radioactivity damage is dealt from the trash inventory.
-    - Add one of two bonus content for patreon energy demon.
+    - Added bonus content for Energy Demons (Guys from Patreon).
     - Add a water filtration recipe.
   Changes:
     - Improved filtration plant recipe color.
@@ -13,6 +13,7 @@ Date: 08.03.2020
     - Now creep is minable only via creep collector.
     - Boosted quartz production, now recipe give more product and in less time, better ratio for the mod structure.
     - Marked TinyStart as incompatible with Krastorio 2, use the built in option instead.
+    - Massive gun-play improvements + icons for sniper rifle and BRL was updaed. Now ALL old problems must be fixed, but now pistol and rifle ammo do not make damage on frendly buildings at all. So, now you must use crusher for destroing you items instead wooden chest... :D
   Fixes:
     - Fixed wrong equipment icon tiers.
 ---------------------------------------------------------------------------------------------------

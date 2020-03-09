@@ -17,15 +17,15 @@ local KRASTORIO_SHELTER_EVENT_FILTER =
     },
 	{
 		filter = "name", 
-        name   = "kr-armored-shelter"
+        name   = "kr-shelter-plus"
     },
 	{
 		filter = "name", 
-        name   = "kr-armored-shelter-container"
+        name   = "kr-shelter-plus-container"
     },
 	{
 		filter = "name", 
-        name   = "kr-armored-shelter-light"
+        name   = "kr-shelter-plus-light"
     }
 }
 
@@ -73,7 +73,7 @@ end
 -- @event, on_built_entity or on_robot_built_entity
 local function onBuiltAnEntity(event)
 	local entity = event.created_entity
-	if entity.valid and (entity.name == "kr-shelter" or entity.name == "kr-armored-shelter") then
+	if entity.valid and (entity.name == "kr-shelter" or entity.name == "kr-shelter-plus") then
 		local surface = entity.surface.index
 		local force   = entity.force.index
 	
@@ -102,11 +102,11 @@ local function onBuiltAnEntity(event)
 					}
 					global.spawn_points[surface][force] = {entity, light}
 				else
-					-- create armored shelter light
+					-- create shelter plus light
 					entity.surface.create_entity
 					{
 						type     = "container",
-						name     = "kr-armored-shelter-container",
+						name     = "kr-shelter-plus-container",
 						force    = entity.force,
 						player   = entity.last_user,
 						position = entity.position,
@@ -115,7 +115,7 @@ local function onBuiltAnEntity(event)
 					local light = entity.surface.create_entity
 					{
 						type     = "lamp",
-						name     = "kr-armored-shelter-light",
+						name     = "kr-shelter-plus-light",
 						force    = entity.force,
 						player   = entity.last_user,
 						position = entity.position,
@@ -143,7 +143,7 @@ end
 local function onRemovingAnEntity(event)
 	local entity = event.entity
 	
-	if entity.valid and (entity.name == "kr-shelter" or entity.name == "kr-shelter-container" or entity.name == "kr-shelter-light" or entity.name == "kr-armored-shelter" or entity.name == "kr-armored-shelter-container" or entity.name == "kr-armored-shelter-light") then
+	if entity.valid and (entity.name == "kr-shelter" or entity.name == "kr-shelter-container" or entity.name == "kr-shelter-light" or entity.name == "kr-shelter-plus" or entity.name == "kr-shelter-plus-container" or entity.name == "kr-shelter-plus-light") then
 		local surface = entity.surface.index
 		local force   = entity.force.index
 	

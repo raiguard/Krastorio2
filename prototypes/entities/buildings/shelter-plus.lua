@@ -1,3 +1,34 @@
+local s_tint = {r=1, g=1, b=1, a=1}
+
+if krastorio.general.getSafeSettingValue("kr-shelter-tint") == "Yellow" then
+s_tint = {r=0.9, g=0.7, b=0, a=0.75}
+end
+if krastorio.general.getSafeSettingValue("kr-shelter-tint") == "Olive" then
+s_tint = {r=0.75, g=0.75, b=0.3, a=0.5}
+end
+if krastorio.general.getSafeSettingValue("kr-shelter-tint") == "Pink" then
+s_tint = {r=1, g=0.75, b=0.3, a=0.5}
+end
+if krastorio.general.getSafeSettingValue("kr-shelter-tint") == "Red" then
+s_tint = {r=1, g=0.3, b=0.3, a=1}
+end
+if krastorio.general.getSafeSettingValue("kr-shelter-tint") == "Blue" then
+s_tint = {r=0.25, g=0.25, b=0.75, a=0.75}
+end
+if krastorio.general.getSafeSettingValue("kr-shelter-tint") == "Green" then
+s_tint = {r=0.3, g=1, b=0.3, a=0.75}
+end
+if krastorio.general.getSafeSettingValue("kr-shelter-tint") == "Сyan" then
+s_tint = {r=0.6, g=1, b=1, a=1}
+end
+if krastorio.general.getSafeSettingValue("kr-shelter-tint") == "Rurple" then
+s_tint = {r=0.5, g=0.1, b=0.8, a=0.8}
+end
+if krastorio.general.getSafeSettingValue("kr-shelter-tint") == "Gray" then
+s_tint = {r=0.2, g=0.2, b=0.2, a=0.8}
+end
+
+
 local empty_sprite =
 {
 	filename = kr_entities_path .. "empty.png",
@@ -13,47 +44,47 @@ local armored_shelter_animation =
 	layers =
 	{
 		{
-			filename = kr_entities_path .. "armored-shelter/armored-shelter.png",
+			filename = kr_entities_path .. "shelter-plus/shelter-plus.png",
 			priority = "high",
 			width = 225,
 			height = 225,
 			scale = 0.9,
-			shift = {-0.05, 0},
+			shift = {0, -0.15},
 			frame_count = 6,
 			line_length = 3,
 			animation_speed = 0.5,
 			hr_version =
 			{
-				filename = kr_entities_path .. "armored-shelter/hr-armored-shelter.png",
+				filename = kr_entities_path .. "shelter-plus/hr-shelter-plus.png",
 				priority = "high",
 				width = 450,
 				height = 450,
 				scale = 0.45,
-				shift = {-0.05, 0},
+				shift = {0, -0.15},
 				frame_count = 6,
 				line_length = 3,
 				animation_speed = 0.5
 			}
 		},
 		{
-			filename = kr_entities_path .. "armored-shelter/armored-shelter-shadow.png",
+			filename = kr_entities_path .. "shelter-plus/shelter-plus-sh.png",
 			priority = "high",
 			width = 260,
 			height = 171,
 			scale = 0.9,
-			shift = {0.42, 0},
+			shift = {0.54, 0.46},
 			frame_count = 1,
 			repeat_count = 6,
 			animation_speed = 0.5,
 			draw_as_shadow = true,
 			hr_version =
 			{
-				filename = kr_entities_path .. "armored-shelter/hr-armored-shelter-shadow.png",
+				filename = kr_entities_path .. "shelter-plus/hr-shelter-plus-sh.png",
 				priority = "high",
 				width = 520,
 				height = 342,
 				scale = 0.45,
-				shift = {0.42, 0},
+				shift = {0.54, 0.46},
 				frame_count = 1,
 				repeat_count = 6,
 				animation_speed = 0.5,
@@ -61,32 +92,32 @@ local armored_shelter_animation =
 			}
 		},
 		{
-			filename = kr_entities_path .. "armored-shelter/armored-shelter-mask.png",
+			filename = kr_entities_path .. "shelter-plus/shelter-plus-mask.png",
 			flags = { "mask" },
 			priority = "extra-high",
 			width = 225,
 			height = 225,
 			scale = 0.9,
-			shift = {0.42, 0},
+			shift = {0, -0.15},
 			frame_count = 1,
 			repeat_count = 6,
 			animation_speed = 0.5,
 			apply_runtime_tint = true,
-			draw_as_shadow = true,
+			tint = s_tint,
 			hr_version =
 			{
-				filename = kr_entities_path .. "armored-shelter/hr-armored-shelter-mask.png",
+				filename = kr_entities_path .. "shelter-plus/hr-shelter-plus-mask.png",
 				flags = { "mask" },
 				priority = "extra-high",
 				width = 450,
 				height = 450,
 				scale = 0.45,
-				shift = {0.42, 0},
+				shift = {0, -0.15},
 				frame_count = 1,
 				repeat_count = 6,
 				animation_speed = 0.5,
 				apply_runtime_tint = true,
-				draw_as_shadow = true
+				tint = s_tint
 			}
 		}
 	}
@@ -97,45 +128,45 @@ data:extend(
 {
 	{
 		type = "electric-energy-interface",
-		name = "kr-armored-shelter",
-		localised_description = {"item-description.kr-shelter"},
-		icon = kr_entities_icons_path .. "armored-shelter.png",
+		name = "kr-shelter-plus",
+		localised_description = {"item-description.kr-shelter-plus"},
+		icon = kr_entities_icons_path .. "shelter-plus.png",
 		icon_size = 64,
 		allow_copy_paste = false,
 		flags = {"placeable-player", "player-creation", "not-deconstructable", "not-rotatable", "not-blueprintable", "not-repairable", "not-on-map"},
-		fast_replaceable_group = "kr-armored-shelter",
-		minable = {mining_time = 2, result = "kr-armored-shelter"},
-		collision_box = {{-2, -2}, {2, 2}},
+		fast_replaceable_group = "kr-shelter-plus",
+		minable = {mining_time = 0.5, result = "kr-shelter-plus"},
+		collision_box = {{-2.75, -2.75}, {2.75, 2.75}},
 		selection_box = {{0, 0}, {0, 0}},
 		animation = armored_shelter_animation,
 		continuous_animation = true,
 		energy_source =
 		{
 			type = "electric",
-			buffer_capacity = "120kJ",
+			buffer_capacity = "250kJ",
 			usage_priority = "primary-output",
 			input_flow_limit = "0kW",
-			output_flow_limit = "120kW",
+			output_flow_limit = "250kW",
 			render_no_power_icon = false,
 			render_no_network_icon = false
 		},
-		energy_production = "120kW"
+		energy_production = "250kW"
 	},
 	-- Shelter
 	{
 		type = "container",
-		name = "kr-armored-shelter-container",
-		localised_name        = {"item-name.kr-armored-shelter"},
-		localised_description = {"item-description.kr-shelter"},
-		icon = kr_entities_icons_path .. "armored-shelter.png",
+		name = "kr-shelter-plus-container",
+		localised_name        = {"item-name.kr-shelter-plus"},
+		localised_description = {"item-description.kr-shelter-plus"},
+		icon = kr_entities_icons_path .. "shelter-plus.png",
 		icon_size = 64,
 		allow_copy_paste = false,
 		flags = {"player-creation", "not-rotatable", "not-blueprintable"},
-		minable = {mining_time = 2, result = "kr-armored-shelter"},
-		max_health = 10000,
+		minable = {mining_time = 0.5, result = "kr-shelter-plus"},
+		max_health = 5000,
 		corpse = "kr-big-random-pipes-remnant",
 		collision_box = {{-2.75, -2.75}, {2.75, 2.75}},
-		selection_box = {{-3, -3}, {3, 3.5}},
+		selection_box = {{-3, -3}, {3, 3}},
 		resistances = 
 		{
 			{type = "physical", percent = 50},
@@ -152,9 +183,9 @@ data:extend(
 	-- Shelter light
 	{
 		type = "lamp",
-		name = "kr-armored-shelter-light",
-		localised_name        = {"item-name.kr-armored-shelter"},
-		localised_description = {"item-description.kr-shelter"},
+		name = "kr-shelter-plus-light",
+		localised_name        = {"item-name.kr-shelter-plus"},
+		localised_description = {"item-description.kr-shelter-plus"},
 		icon = kr_entities_path .. "empty.png",
 		icon_size = 1,
 		allow_copy_paste = false,

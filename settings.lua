@@ -153,6 +153,13 @@ data:extend(
 		default_value = true,
 		order = "b07"
 	},
+ 	{
+ 		type = "bool-setting",
+		name = "kr-more-realistic-weapon-auto-aim",
+		setting_type = "startup",
+		default_value = false,
+		order = "b08"
+	},
 	{
 		type = "bool-setting",
 		name = "kr-peaceful-mod",
@@ -173,5 +180,13 @@ data:extend(
 		setting_type = "startup",
 		default_value = true,
 		order = "b91"
+	},
+	{
+        type = "string-setting",
+        name = "kr-shelter-tint",
+        setting_type = "startup",
+        default_value = "White",
+        allowed_values = {"White", "Gray", "Yellow", "Pink", "Olive", "Red", "Blue", "Green", "Сyan", "Rurple"},
+		order = "z01"
 	},
 })

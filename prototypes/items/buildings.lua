@@ -89,12 +89,12 @@ data:extend(
     },	
 	{
 		type = "item",
-		name = "kr-armored-shelter",
-		icon =  kr_entities_icons_path .. "armored-shelter.png",
+		name = "kr-shelter-plus",
+		icon =  kr_entities_icons_path .. "shelter-plus.png",
 		icon_size = 64,
 		subgroup = "storage",
 		order = "aaa",
-		place_result = "kr-armored-shelter",
+		place_result = "kr-shelter-plus",
 		stack_size = 1
     },
     {
