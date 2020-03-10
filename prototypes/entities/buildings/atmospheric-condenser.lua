@@ -21,23 +21,6 @@ data:extend(
 		},
 		fluid_boxes =
 		{
-			-- Input
-			{
-				production_type = "input",
-				pipe_covers = pipecoverspictures(),
-				pipe_picture = kr_pipe_path,
-				base_area = 10,
-				base_level = -1,
-				pipe_connections = {{ type="input", position = {-3, -1} }}
-			},						
-			{
-				production_type = "input",
-				pipe_covers = pipecoverspictures(),
-				pipe_picture = kr_pipe_path,
-				base_area = 10,
-				base_level = -1,
-				pipe_connections = {{ type="input", position = {-3, 1} }}
-			},
 			-- Output
 			{
 				production_type = "output",
@@ -45,15 +28,17 @@ data:extend(
 				pipe_picture = kr_pipe_path,
 				base_area = 10,
 				base_level = 1,
-				pipe_connections = {{ type="output", position = {3, -1} }}
-			},
-			{
-				production_type = "output",
-				pipe_covers = pipecoverspictures(),
-				pipe_picture = kr_pipe_path,
-				base_area = 10,
-				base_level = 1,
-				pipe_connections = {{ type="output", position = {3, 1} }}
+				pipe_connections = 
+				{
+					{ type="output", position = {3, -1} },
+					{ type="output", position = {3, 1} },
+					{ type="output", position = {-3, -1} },
+					{ type="output", position = {-3, 1} },					
+					{ type="output", position = {1, -3} },
+					{ type="output", position = {1, 3} },
+					{ type="output", position = {-1, -3} },
+					{ type="output", position = {-1, 3} }
+				}
 			},
 			off_when_no_fluid_recipe = false
 		},

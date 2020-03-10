@@ -18,7 +18,7 @@ local function onCollection(event)
 	if event.item == "kr-creep-collector" then	
 		local player = game.players[event.player_index] or false
 		if player and player.valid and player.character and player.character.valid then
-			if cu.isTooDistantFromArea(player.character.position, event.area) then
+			if event.surface ~= player.character.surface or cu.isTooDistantFromArea(player.character.position, event.area) then
 				cu.showDistanceErrorMessage(player.character)
 			else
 				local tiles = event.tiles
@@ -42,16 +42,16 @@ local function onCollection(event)
 					elseif count == 0 and #replacements == 0 then
 						cu.showDistanceErrorMessage(player.character)
 					elseif count > 0 and effective_count > 0 then
-						tiles[1].surface.set_tiles(replacements)
+						event.surface.set_tiles(replacements)
 						local inserted = inventory.insert({type = "item", name = "biomass", count = effective_count})
 						if inserted ~= effective_count then
-							tiles[1].surface.spill_item_stack(player.character.position, {type = "item", name = "biomass", count=effective_count - inserted})
+							event.surface.spill_item_stack(player.character.position, {type = "item", name = "biomass", count=effective_count - inserted})
 						end						
 						inventory.insert({type = "item", name = "biomass", count = effective_count})
 						cu.showCollectionBiomassCountMessage(player.character, percentage, inserted)
 						cu.playCollectCreepSound(player)
 					elseif count > 0 and effective_count == 0 then
-						tiles[1].surface.set_tiles(replacements)
+						event.surface.surface.set_tiles(replacements)
 						cu.showCollectionBiomassCountMessage(player.character, 0, 0)
 						cu.playCollectCreepSound(player)
 					end

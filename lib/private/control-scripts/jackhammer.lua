@@ -57,7 +57,7 @@ local function onCollection(event)
 	if event.item == "kr-jackhammer" then	
 		local player = game.players[event.player_index] or false
 		if player and player.valid and player.character and player.character.valid then
-			if cu.isTooDistantFromArea(player.character.position, event.area) then
+			if event.surface ~= player.character.surface or cu.isTooDistantFromArea(player.character.position, event.area) then
 				cu.showDistanceErrorMessage(player.character)
 			else
 				local tiles = event.tiles
@@ -84,10 +84,10 @@ local function onCollection(event)
 						local insert_items_count = 0
 						for item_name, item in pairs(items) do
 							if inventory.can_insert({name = item_name, count=item.count}) then
-								tiles[1].surface.set_tiles(item.replacements)
+								event.surface.set_tiles(item.replacements)
 								local inserted = inventory.insert({name = item_name, count=item.count})
 								if inserted ~= item.count then
-									tiles[1].surface.spill_item_stack(player.character.position, {name = item_name, count=item.count - inserted})
+									event.surface.spill_item_stack(player.character.position, {name = item_name, count=item.count - inserted})
 								end
 								insert_items_count = insert_items_count + inserted 
 							end

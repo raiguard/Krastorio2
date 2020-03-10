@@ -1,13 +1,14 @@
+-- Requirements
+local color = require(kr_path .. "lib/private/data-stages/colorRGB")
+-- Pre-fix for all SE techs
+require("__Krastorio2__/compatibility-scripts/data-final-fixes/space-exploration/technology")
+
 if mods["space-exploration"] then
 	-- local data_util = require("__space-exploration__/data_util")
-	local color = require(kr_path .. "lib/private/data-stages/colorRGB")
 	local kr_se_graphic_path = kr_graphic_mod_path .. "compatibility/space-exploration/"
 
 -- -- Technologies
 ---------------------------------------------------------------------------------------------
-	-- Pre-fix for all SE techs
-	require("__Krastorio2__/compatibility-scripts/data-final-fixes/space-exploration/technology")
-
 	-- -- Removing SE technologies
 	
 	-- Antimatter reactor

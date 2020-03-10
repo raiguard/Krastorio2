@@ -1,6 +1,6 @@
 {
 	"name": "Krastorio2",
-	"version": "0.6.4",
+	"version": "0.6.5",
 	"title": "Krastorio 2 - Beta Tester Edition",
 	"description": "WIP",
 	"author": "Linver, Krastor",
@@ -8,7 +8,7 @@
 	"factorio_version": "0.18",
 	"dependencies":
 	[
-		"base >= 0.18.10",		
+		"base >= 0.18.11",		
 		"(?) aai-industry >= 0.3.17",	
 		"(?) aai-vehicles-chaingunner >= 0.5.2",
 		"(?) Aircraft >= 1.6.6",									

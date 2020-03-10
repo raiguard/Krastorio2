@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.5
+Date: 10.03.2020
+  Changes:
+    - Now Krastorio 2 need 0.18.11 to work.
+    - Improved collector tools scripts with the new update of factorio API in 0.18.11.
+    - Improved quantum computer sprites and animation!
+    - Changed fertilizer crafting time.
+    - Improved atmospheric condenser fluidbox for how is designed in Krastorio 2.
+  Fixes:
+    - Fixed that make an empty blueprint could crash the game.
+    - Now all CRC mod desync error should be solved.
+    - Solved Factorio raw calculation problem with matter.
+--------------------------------------------------------------------------------------------------
 Version: 0.6.4
 Date: 10.03.2020
   Fixes:

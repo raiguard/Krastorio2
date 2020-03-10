@@ -1,6 +1,6 @@
-if mods["IndustrialRevolution"] then
+local science_pack_recipe = require("__Krastorio2__/lib/public/data-stages/science-pack-recipe")
 
-	local science_pack_recipe = require("__Krastorio2__/lib/public/data-stages/science-pack-recipe")
+if mods["IndustrialRevolution"] then
 
 	-- Automation science pack
 	science_pack_recipe.addRecipeVariation

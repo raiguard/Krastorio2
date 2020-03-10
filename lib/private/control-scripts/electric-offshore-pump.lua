@@ -44,15 +44,17 @@ function onBlueprint(event)
     local player = game.players[event.player_index]
 	if player and player.valid and player.cursor_stack.valid_for_read and player.cursor_stack.is_blueprint_setup() then
 		local blueprint_entities = player.cursor_stack.get_blueprint_entities()
-		local have_an_offshore_pump = false
-		for _, entity in pairs(blueprint_entities) do
-			if entity.name == "kr-electric-offshore-pump" then
-				entity.name = "offshore-pump"
-				have_an_offshore_pump = true
+		if blueprint_entities and next(blueprint_entities) then
+			local have_an_offshore_pump = false
+			for _, entity in pairs(blueprint_entities) do
+				if entity.name == "kr-electric-offshore-pump" then
+					entity.name = "offshore-pump"
+					have_an_offshore_pump = true
+				end
 			end
-		end
-		if have_an_offshore_pump then
-			player.cursor_stack.set_blueprint_entities(blueprint_entities)
+			if have_an_offshore_pump then
+				player.cursor_stack.set_blueprint_entities(blueprint_entities)
+			end
 		end
 	end
 end		

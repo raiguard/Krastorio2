@@ -1,3 +1,5 @@
+if not mods["space-exploration"] then return end
+
 local data_util = require("__space-exploration__/data_util")
 
 data:extend({
