@@ -11,11 +11,11 @@ return
 		{
 			{type="fluid", name="sulfuric-acid", amount=10},
 			{type="fluid", name="nitric-acid", amount=10},
-			{name="biomass", amount=5}
+			{name="biomass", amount=2}
 		},
 		results =
 		{ 
-			{type="item", name="fertilizer", amount=2}
+			{type="item", name="fertilizer", amount=5}
 		},
 		crafting_machine_tint =
 		{

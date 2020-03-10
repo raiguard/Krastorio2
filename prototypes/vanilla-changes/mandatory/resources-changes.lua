@@ -41,7 +41,7 @@ data.raw.resource["crude-oil"].autoplace = resource_autoplace.resource_autoplace
 	random_probability = 1/48,
 	random_spot_size_minimum = 1,
 	random_spot_size_maximum = 1, -- don't randomize spot size
-	additional_richness = 10000, -- this increases the total everywhere, so base_density needs to be decreased to compensate
+	additional_richness = 20000, -- this increases the total everywhere, so base_density needs to be decreased to compensate
 	has_starting_area_placement = false,
 	regular_rq_factor_multiplier = 1
 }

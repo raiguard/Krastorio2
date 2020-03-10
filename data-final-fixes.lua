@@ -119,3 +119,26 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 	data.raw.item["rocket-fuel"].fuel_emissions_multiplier = 1.5 --empty
 	
 end
+---------------------------------------------------------------------------
+if krastorio.general.getSafeSettingValue("kr-peaceful-mod") then
+krastorio.recipes.overrideIngredients
+(
+	"fertilizer", 
+	{
+			{type="fluid", name="sulfuric-acid", amount=50},
+			{type="fluid", name="nitric-acid", amount=50},
+			{name="coal", amount=1}
+	}
+)
+krastorio.recipes.overrideIngredients
+(
+	"first-aid-kit", 
+	{
+			{"raw-fish", 1},
+			{"wood", 1},
+			{"iron-plate", 1}
+	}
+)
+
+end
+---------------------------------------------------------------------------
