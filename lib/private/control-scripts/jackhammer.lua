@@ -124,8 +124,11 @@ function onCollection(event)
 						for item_name, item in pairs(items) do
 							if inventory.can_insert({name = item_name, count=item.count}) then
 								tiles[1].surface.set_tiles(item.replacements)
-								inventory.insert({name = item_name, count=item.count})
-								insert_items_count = insert_items_count + item.count
+								local inserted = inventory.insert({name = item_name, count=item.count})
+								if inserted ~= item.count then
+									tiles[1].surface.spill_item_stack(player.character.position, {name = item_name, count=item.count - inserted})
+								end
+								insert_items_count = insert_items_count + inserted 
 							end
 						end
 						if insert_items_count  == 0 then -- probabily not space, so inventory is full

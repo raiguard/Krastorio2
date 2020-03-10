@@ -95,6 +95,15 @@ function getNearestTileType(surface, area)
 	return "landfill"
 end
 
+local function playCollectCreepSound(player)
+	player.play_sound
+	{
+		path            = "kr-collect-creep",
+		position        = player.character.position,
+		volume_modifier = 1.5
+	}
+end
+
 function onCollection(event)
 	if event.item == "kr-creep-collector" then	
 		local player = game.players[event.player_index] or false
@@ -124,11 +133,17 @@ function onCollection(event)
 						showDistanceErrorMessage(player.character)
 					elseif count > 0 and effective_count > 0 then
 						tiles[1].surface.set_tiles(replacements)
+						local inserted = inventory.insert({type = "item", name = "biomass", count = effective_count})
+						if inserted ~= effective_count then
+							tiles[1].surface.spill_item_stack(player.character.position, {type = "item", name = "biomass", count=effective_count - inserted})
+						end						
 						inventory.insert({type = "item", name = "biomass", count = effective_count})
-						showCollectionBiomassCountMessage(player.character, percentage, effective_count)
+						showCollectionBiomassCountMessage(player.character, percentage, inserted)
+						playCollectCreepSound(player)
 					elseif count > 0 and effective_count == 0 then
 						tiles[1].surface.set_tiles(replacements)
 						showCollectionBiomassCountMessage(player.character, 0, 0)
+						playCollectCreepSound(player)
 					end
 				end
 			end
