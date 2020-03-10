@@ -5,17 +5,17 @@ return
 		type = "recipe",
 		name = "fertilizer",
 		category = "chemistry",
-		energy_required = 180,
+		energy_required = 30,
 		enabled = false,
 		ingredients =
 		{
-			{type="fluid", name="sulfuric-acid", amount=5},
-			{type="fluid", name="nitric-acid", amount=5},
-			{name="biomass", amount=1}
+			{type="fluid", name="sulfuric-acid", amount=10},
+			{type="fluid", name="nitric-acid", amount=10},
+			{name="biomass", amount=5}
 		},
 		results =
 		{ 
-			{type="item", name="fertilizer", amount=5}
+			{type="item", name="fertilizer", amount=2}
 		},
 		crafting_machine_tint =
 		{
