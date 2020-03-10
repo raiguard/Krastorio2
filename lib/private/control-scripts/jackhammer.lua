@@ -14,6 +14,34 @@ tiles_items =
 	["kr-black-reinforced-plate"] = "kr-black-reinforced-plate"
 }
 
+if script.active_mods["Dectorio"] then
+	local directions = 
+	{
+		{this="left", next="right"},
+		{this="right", next="left"}
+	}
+	local paint_variants = 
+	{
+		{name="danger", color={r=0.81,g=0.31,b=0.31}},
+		{name="emergency", color={r=0.86,g=0.36,b=0.38}},
+		{name="caution", color={r=0.85,g=0.56,b=0.26}},
+		{name="radiation", color={r=0.86,g=0.56,b=0.78}},
+		{name="defect", color={r=0.47,g=0.50,b=1.00}},
+		{name="operations", color={r=0.37,g=0.37,b=0.37}},
+		{name="safety", color={r=0.61,g=0.77,b=0.40}}
+	}
+	for _, variant in pairs(paint_variants) do
+		for _, direction in pairs(directions) do
+			tiles_items["dect-paint-"..variant.name.."-"..direction.this] = "dect-paint-"..variant.name
+			tiles_items["dect-paint-refined-"..variant.name.."-"..direction.this] = "dect-paint-refined-"..variant.name
+		end
+	end
+	if settings.startup["dectorio-concrete"] and settings.startup["dectorio-concrete"].value then
+		tiles_items["dect-concrete-grid"] = "dect-concrete-grid"
+	end
+end
+
+
 local function onInitAndConf()
 	if not global.krastorio.script_initialization_status["jackhammer"] then
 		initializeJackhammerConstats()
@@ -22,7 +50,7 @@ local function onInitAndConf()
 end
 
 function initializeJackhammerConstats()
-	global.MAX_TILE_DISTANCE   = 10
+	global.MAX_TILE_DISTANCE = 15
 end
 
 function isTooDistantFromArea(position, area)
@@ -92,6 +120,15 @@ function getNearestTileType(surface, area)
 	return "landfill"
 end
 
+local function playJackhammerSound(player)
+	player.play_sound
+	{
+		path            = "kr-jackhammer",
+		position        = player.character.position,
+		volume_modifier = 1.0
+	}
+end
+
 function onCollection(event)
 	if event.item == "kr-jackhammer" then	
 		local player = game.players[event.player_index] or false
@@ -135,6 +172,7 @@ function onCollection(event)
 							showInventoryFullErrorMessage(player.character)
 						else -- tell the quantity of inserted items 
 							showCollectionCountMessage(player.character, insert_items_count)
+							playJackhammerSound(player)
 						end
 					end
 				end

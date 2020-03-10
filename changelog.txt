@@ -1,10 +1,17 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.3
 Date: 10.03.2020
-  Fixes:
-    - Fixed that was possible place offshore pump anywhere with blueprints. 
+  Features:
+    - Added a jackhammer! Same of creep collector but for concrete based tiles! (is an optional(not required) tool).
+    - Added compatibility for Dectorio to jackhammer!
   Changes:
+    - A bit improved creep collector script.
     - Sprites for singularity-lab was updated.
+    - Updated some buildings icons (quarry drill for example).
+    - Now in paceful mode can be crafted fertilizer and first aid kit.
+  Fixes:
+    - Now collector tools are safe from lost collected tiles if the inventory is full (will drop the rest on the ground).
+    - Fixed that was possible place offshore pump anywhere with blueprints. 
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.2
 Date: 09.03.2020

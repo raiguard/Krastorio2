@@ -100,7 +100,7 @@ local function playCollectCreepSound(player)
 	{
 		path            = "kr-collect-creep",
 		position        = player.character.position,
-		volume_modifier = 1.5
+		volume_modifier = 1.0
 	}
 end
 

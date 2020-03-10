@@ -41,5 +41,19 @@ data:extend(
 			remove = false,
 			count_already_playing = true
 		}
+	},
+	{
+		type     = "sound",
+		name     = "kr-jackhammer",
+		category = "alert",
+		filename = "__Krastorio2__/sounds/others/jackhammer.ogg",
+		volume   = 1.0,
+		audible_distance_modifier = 0.5,		
+		aggregation =
+		{
+			max_count = 1,
+			remove = false,
+			count_already_playing = true
+		}
 	}
 })

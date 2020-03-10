@@ -11,6 +11,23 @@ local factory_tiles =
 	"kr-black-reinforced-plate"
 }
 
+if mods["Dectorio"] then
+	local directions = 
+	{
+		{this="left", next="right"},
+		{this="right", next="left"}
+	}
+	for _, variant in pairs(DECT.CONFIG.PAINT_VARIANTS) do
+		for _, direction in pairs(directions) do
+			table.insert(factory_tiles, "dect-paint-"..variant.name.."-"..direction.this)
+			table.insert(factory_tiles, "dect-paint-refined-"..variant.name.."-"..direction.this)
+		end
+	end
+	if DECT.ENABLED["concrete"] then
+		table.insert(factory_tiles, "dect-concrete-grid")
+	end
+end
+
 data:extend(
 {
 	{
@@ -56,8 +73,8 @@ data:extend(
 		stack_size = 1,
 		subgroup = "terrain",
 		order = "z-[collector-tools]-a[jackhammer]",
-		selection_color = {r = 0.50, g = 0, b = 0.35},
-		alt_selection_color = {r = 0.55, g = 0, b = 0.40},
+		selection_color = {r = 0.55, g = 0.35, b = 0.22},
+		alt_selection_color = {r = 0.55, g = 0.35, b = 0.22},
 		selection_mode =
 		{
 			"any-tile"
