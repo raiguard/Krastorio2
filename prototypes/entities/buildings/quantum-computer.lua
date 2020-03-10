@@ -1,3 +1,6 @@
+local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
+local sounds      = require("__base__/prototypes/entity/demo-sounds")
+
 data:extend(
 {
 	{
@@ -7,6 +10,7 @@ data:extend(
 		icon_size = 64,
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "kr-quantum-computer"},
+		damaged_trigger_effect = hit_effects.entity(),
 		max_health = 1000,
 		corpse = "kr-medium-random-pipes-remnant",
 		dying_explosion = "medium-explosion",
@@ -21,23 +25,54 @@ data:extend(
 		fast_replaceable_group = "assembling-machine",
 		animation =
 		{
-			filename = kr_entities_path .. "quantum-computer/quantum-computer.png",
-			priority = "high",
-			width = 250,
-			height = 250,
-			frame_count = 48,
-			line_length = 8,
-			animation_speed = 0.05,
-			hr_version =
+			layers = 
 			{
-				filename = kr_entities_path .. "quantum-computer/hr-quantum-computer.png",
+				{
+				filename = kr_entities_path .. "quantum-computer/quantum-computer.png",
 				priority = "high",
-				width = 500,
-				height = 500,
+				width = 200,
+				height = 210,
+				shift = {0, -0.2},
 				frame_count = 48,
 				line_length = 8,
-				animation_speed = 0.05,
-				scale = 0.5
+				animation_speed = 0.25,
+				hr_version =
+				{
+					filename = kr_entities_path .. "quantum-computer/hr-quantum-computer.png",
+					priority = "high",
+					width = 400,
+					height = 420,
+					shift = {0, -0.2},
+					frame_count = 48,
+					line_length = 8,
+					animation_speed = 0.25,
+					scale = 0.5
+				}
+				},
+				{
+				filename = kr_entities_path .. "quantum-computer/quantum-computer-sh.png",
+				priority = "high",
+				width = 201,
+				height = 181,
+				shift = {0.19, 0.315},
+				frame_count = 1,
+				repeat_count = 48,
+				draw_as_shadow = true,
+				animation_speed = 0.25,
+				hr_version =
+				{
+					filename = kr_entities_path .. "quantum-computer/hr-quantum-computer-sh.png",
+					priority = "high",
+					width = 402,
+					height = 362,
+					shift = {0.19, 0.315},
+					frame_count = 1,
+					repeat_count = 48,
+					draw_as_shadow = true,
+					animation_speed = 0.25,
+					scale = 0.5
+				}
+				}
 			}
 		},
 		crafting_categories = {"research-data", "t2-tech-cards", "t3-tech-cards"},
@@ -48,13 +83,13 @@ data:extend(
 			usage_priority = "secondary-input",
 			emissions_per_minute = 10
 		},
-		energy_usage = "500KW",		
+		energy_usage = "750KW",		
 		working_visualisations =
 		{
 			{
 				light =
 				{
-					intensity = 0.75,
+					intensity = 1,
 					size = 20,
 					shift = {0.0, 0.0},
 					color = {r=0.35, g=0.75, b=1}
@@ -65,7 +100,7 @@ data:extend(
 		allowed_effects = {"consumption", "speed", "productivity", "pollution"},
 		open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
 		close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-		vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{
 			sound      = { filename = kr_buildings_sounds_path .. "quantum-computer.ogg" },

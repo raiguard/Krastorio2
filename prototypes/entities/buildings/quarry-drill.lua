@@ -1,3 +1,6 @@
+local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
+local sounds      = require("__base__/prototypes/entity/demo-sounds")
+
 data:extend(
 {
 	{
@@ -7,6 +10,7 @@ data:extend(
 		icon_size = 64,
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 1, result = "kr-quarry-drill"},
+		damaged_trigger_effect = hit_effects.entity(),
 		fast_replaceable_group = "kr-quarry-drills",
 		max_health = 1000,
 		resource_categories = {"kr-quarry"},
@@ -93,7 +97,7 @@ data:extend(
 				},
 			}
 		},
-		vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{			
 			sound = { filename = kr_buildings_sounds_path .. "quarry-drill.ogg" },
