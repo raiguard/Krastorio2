@@ -6,6 +6,7 @@ return
 		name = "charge-stabilizer",
 		category = "stabilizer-charging",
 		subgroup = "intermediate-product",
+		allow_as_intermediate = false,
 		energy_required = 6,
 		enabled = false,
 		ingredients =

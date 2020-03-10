@@ -61,6 +61,7 @@ function krastorio.matter_func.createMatterRecipe(args)
 				localised_name={"recipe-name.to-matter", {true_item_type .. "-name." .. _item.name}},
 				category = "matter-conversion",
 				subgroup = "matter-conversion",
+				allow_as_intermediate = false,
 				icons =
 				{
 					{ icon = kr_arrows_icons_path .. "arrow-m.png", icon_size = 64 }
@@ -109,6 +110,7 @@ function krastorio.matter_func.createMatterRecipe(args)
 				localised_name={"recipe-name.matter-to", {true_return_item_type .. "-name." .. _item.name}},
 				category = "matter-deconversion",
 				subgroup = "matter-deconversion",
+				allow_as_intermediate = false,
 				icons =
 				{
 					{ icon = kr_arrows_icons_path .. "arrow-i.png", icon_size = 64 },

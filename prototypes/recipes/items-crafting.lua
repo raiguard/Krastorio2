@@ -292,6 +292,7 @@ return
 		type = "recipe",
 		name = "matter-stabilizer",
 		enabled = false,
+		allow_as_intermediate = false,
 		energy_required = 10,
 		ingredients =
 		{
@@ -307,6 +308,7 @@ return
 		name = "matter-cube",
 		category = "matter-deconversion",
 		enabled = false,
+		allow_as_intermediate = false,
 		energy_required = 10,
 		ingredients =
 		{
@@ -319,6 +321,7 @@ return
 		name = "empty-antimatter-fuel-cell",
 		category = "crafting-with-fluid",
 		enabled = false,
+		allow_as_intermediate = false,
 		energy_required = 10,
 		ingredients =
 		{
@@ -334,6 +337,7 @@ return
 		name = "charged-antimatter-fuel-cell",
 		category = "matter-deconversion",
 		enabled = false,
+		allow_as_intermediate = false,
 		energy_required = 30,
 		ingredients =
 		{
