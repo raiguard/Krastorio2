@@ -1,3 +1,6 @@
+local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
+local sounds      = require("__base__/prototypes/entity/demo-sounds")
+
 data:extend(
 {
 	{
@@ -8,6 +11,7 @@ data:extend(
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 2, result = "kr-singularity-lab"},
 		max_health = 2000,
+		damaged_trigger_effect = hit_effects.entity(),
 		dying_explosion = "big-explosion",
 		corpse = "kr-big-random-pipes-remnant",
 		resistances = 
@@ -26,17 +30,17 @@ data:extend(
 				{
 					filename = kr_entities_path .. "singularity-lab/singularity-lab.png",
 					priority = "high",
-					scale = scale,
-					width = 300,
-					height = 300,
+					width = 260,
+					height = 250,
+					shift = {0.0, -0.1},
 					frame_count = 1,
 					hr_version =
 					{
 						filename = kr_entities_path .. "singularity-lab/hr-singularity-lab.png",
 						priority = "high",
-						scale = scale,
-						width = 600,
-						height = 600,
+						width = 520,
+						height = 500,
+						shift = {0.0, -0.1},
 						frame_count = 1,
 						scale = 0.5
 					}
@@ -44,18 +48,18 @@ data:extend(
 				{
 					filename = kr_entities_path .. "singularity-lab/singularity-lab-sh.png",
 					priority = "high",
-					scale = scale,
-					width = 300,
-					height = 300,
+					width = 274,
+					height = 241,
+					shift = {0.22, 0.18},
 					frame_count = 1,
 					draw_as_shadow = true,
 					hr_version =
 					{
 						filename = kr_entities_path .. "singularity-lab/hr-singularity-lab-sh.png",
 						priority = "high",
-						scale = scale,
-						width = 600,
-						height = 600,
+						width = 548,
+						height = 482,
+						shift = {0.22, 0.18},
 						frame_count = 1,
 						draw_as_shadow = true,
 						scale = 0.5
@@ -69,9 +73,9 @@ data:extend(
 			{
 				{
 					filename = kr_entities_path .. "singularity-lab/singularity-lab-working.png",
-					scale = scale,
-					width = 300,
-					height = 300,
+					width = 260,
+					height = 250,
+					shift = {0.0, -0.1},
 					frame_count = 60,
 					line_length = 10,
 					animation_speed=0.85,
@@ -79,8 +83,9 @@ data:extend(
 					{
 						filename = kr_entities_path .. "singularity-lab/hr-singularity-lab-working.png",
 						scale = 0.5,
-						width = 600,
-						height = 600,
+						width = 520,
+						height = 500,
+						shift = {0.0, -0.1},
 						frame_count = 60,
 						line_length = 10,
 						scale = 0.5,
@@ -89,10 +94,9 @@ data:extend(
 				},
 				{
 					filename = kr_entities_path .. "singularity-lab/singularity-lab-glow.png",
-					scale = scale,
 					width = 77,
 					height = 59,
-					shift = {0,-0.67},
+					shift = {0,-0.8},
 					frame_count = 60,
 					line_length = 6,
 					animation_speed=0.85,
@@ -103,7 +107,7 @@ data:extend(
 						scale = 0.5,
 						width = 153,
 						height = 117,
-						shift = {0,-0.67},
+						shift = {0,-0.8},
 						frame_count = 60,
 						line_length = 6,
 						scale = 0.5,
@@ -114,19 +118,18 @@ data:extend(
 				{
 					filename = kr_entities_path .. "singularity-lab/singularity-lab-sh.png",
 					priority = "high",
-					scale = scale,
-					width = 300,
-					height = 300,
+					width = 274,
+					height = 241,
+					shift = {0.22, 0.18},
 					frame_count = 1,
 					repeat_count = 60,
-					draw_as_shadow = true,
 					hr_version =
 					{
 						filename = kr_entities_path .. "singularity-lab/hr-singularity-lab-sh.png",
 						priority = "high",
-						scale = scale,
-						width = 600,
-						height = 600,
+						width = 548,
+						height = 482,
+						shift = {0.22, 0.18},
 						frame_count = 1,
 						repeat_count = 60,
 						draw_as_shadow = true,
@@ -152,7 +155,7 @@ data:extend(
 		},
 		researching_speed = 1,
 		inputs = {},
-		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{
 			sound =
