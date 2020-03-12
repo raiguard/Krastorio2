@@ -415,8 +415,8 @@ data:extend(
 				type = "direct",
 				action_delivery =
 				{
-					type = "projectile",
-					projectile = "atomic-rocket",
+					type = "artillery",
+					projectile = "atomic-artillery",
 					starting_speed = 1,
 					direction_deviation = 0,
 					range_deviation = 0,
@@ -430,7 +430,7 @@ data:extend(
 		},
 		subgroup = "ammo",
 		order = "d[explosive-cannon-shell]-d[artillery]-a2[nuclear-artillery]",
-		stack_size = 1
+		stack_size = 25
 	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

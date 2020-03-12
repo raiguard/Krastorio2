@@ -5,7 +5,7 @@ return
 		type = "recipe",
 		name = "coke",
 		category = "smelting",
-		energy_required = 12,
+		energy_required = 10,
 		enabled = false,
 		allow_productivity = true,
 		ingredients =

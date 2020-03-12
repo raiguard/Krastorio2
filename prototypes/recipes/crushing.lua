@@ -15,10 +15,12 @@ return
 		allow_productivity = true,
 		ingredients =
 		{
-			{"stone", 2}
+			{"stone", 3}
 		},
-		result = "sand",
-		result_count = 6
+		results =
+		{
+			{type="item", name="sand", amount_min = 7, amount_max = 8}
+		}
 	},
 	{
 		type = "recipe",

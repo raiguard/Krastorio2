@@ -176,14 +176,14 @@ return
 		category = "fuel-refinery",
 		icon = kr_fluids_icons_path  .. "biomethanol.png",
 		icon_size = 64,
-		energy_required = 60,
+		energy_required = 30,
 		enabled = false,
 		always_show_made_in = true,
 		always_show_products = true,
 		allow_productivity = true,
 		ingredients =
         {
-            {type="item", name="wood", amount=60},
+            {type="item", name="wood", amount=40},
             {type="fluid", name="oxygen", amount=60, catalyst_amount = 60},
             {type="fluid", name="steam", amount=120, catalyst_amount = 120}
         },

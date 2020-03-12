@@ -263,8 +263,8 @@ data:extend(
 		energy_usage = "0.1MW",
 		source_inventory_size = 1,
 		result_inventory_size = 1,
-		module_specification = { module_slots = 2 },
-		allowed_effects = {"speed"},
+		module_specification = { module_slots = 1 },
+		allowed_effects = {"speed", "pollution", "consumption"},
 		open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
 		close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 }
 	}

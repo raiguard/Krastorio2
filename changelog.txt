@@ -1,3 +1,20 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.9.0
+Date: 13.03.2020
+  Changes:
+    - Now reinforced plates recipe give 10x more produtcs.
+    - Rebalanced biomethanol recipe (previous rebalance make it too slow).
+    - Changed coke recipe time from 12s -> 10s
+    - Production science, now take 10 transport belt and 5 module instead 20 and 10.
+    - Now is possible crush the sand.
+    - Fluid burner now can take only one module.
+    - Reduced rare metals required to produce processor units to 1.
+  Fixes:
+    - Some english locales.
+    - Nuclear artillery shell now stacks to 25.
+    - Solved that nuclear artillery is not showed on the map.
+    - Fixed that fluid burner can't take module.
+---------------------------------------------------------------------------------------------------
 Version: 0.6.6
 Date: 12.03.2020
   Changes:

@@ -116,7 +116,8 @@ return
 			{"refined-concrete", 20},
 			{"steel-beam", 5}
 		},
-		result = "kr-black-reinforced-plate"
+		result = "kr-black-reinforced-plate",
+		result_count = 10
 	},
 	{
 		type = "recipe",
@@ -128,7 +129,8 @@ return
 			{"refined-concrete", 20},
 			{"steel-beam", 5}
 		},
-		result = "kr-white-reinforced-plate"
+		result = "kr-white-reinforced-plate",
+		result_count = 10
 	},	
 	{
 		type = "recipe",
