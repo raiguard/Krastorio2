@@ -331,6 +331,9 @@ if mods["space-exploration"] then
 	-- Adding to Krastorio fuel refinery the SE fuel refinery crafting category
 	krastorio.entities.addCraftingCategory("assembling-machine", "kr-fuel-refinery", "fuel-refining")
 
+	-- Fix laboratory
+	table.insert(data.raw.lab["kr-singularity-lab"].inputs, "space-science-pack")
+
 -- -- Equipments
 ---------------------------------------------------------------------------------------------	
 

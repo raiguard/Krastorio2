@@ -5,7 +5,8 @@ krastorio_patreons =
 	["Linver"] = true,
 	["jonasrejman"] = true,
 	["Pandabeezy"] = true,
-	["Wassabee"] = true
+	["Wassabee"] = true,
+	["Rivsung"] = true
 }
 
 -- Patreon Stuff

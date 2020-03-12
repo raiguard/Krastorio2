@@ -49,8 +49,8 @@ if data.raw.lab["lab"] then
 			removeFromLab("logistic-science-pack", singularity_lab_inputs)
 			removeFromLab("military-science-pack", singularity_lab_inputs)
 			removeFromLab("chemical-science-pack", singularity_lab_inputs)
-			table.insert(singularity_lab_inputs, "matter-tech-card")
 			table.insert(singularity_lab_inputs, "space-science-pack")
+			table.insert(singularity_lab_inputs, "matter-tech-card")			
 			table.insert(singularity_lab_inputs, "advanced-tech-card")
 			table.insert(singularity_lab_inputs, "singularity-tech-card")
 		

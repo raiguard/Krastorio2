@@ -175,11 +175,7 @@ data:extend(
 			emissions_per_minute = 20
 		},
 		energy_usage = "10MW",
-		module_specification =
-		{
-			module_slots = 4,
-			module_info_icon_shift = {0, 0.9}
-		},
+		module_specification = { module_slots = 4, module_info_icon_shift = {0, 2.1}, module_info_icon_scale = 0.6 },
 		open_sound = { filename = kr_buildings_sounds_path .. "open.ogg", volume = 1 },
 		close_sound = { filename = kr_buildings_sounds_path .. "close.ogg", volume = 0.85 }
 	}

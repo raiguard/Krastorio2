@@ -93,11 +93,8 @@ data:extend(
 			emissions_per_minute = 20
 		},
 		energy_usage = "225KW",
-		--module_specification =
-		--{
-		--	module_slots = 4
-		--},
-		allowed_effects = nil, --{"consumption", "speed", "productivity", "pollution"},
+		module_specification = { module_slots = 4, module_info_icon_shift = {0, 1.7}, module_info_icon_scale = 1 },
+		allowed_effects = {"consumption", "speed", "productivity", "pollution"},
 		--open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
 		--close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 }
 	}

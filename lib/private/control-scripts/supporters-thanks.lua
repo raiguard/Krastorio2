@@ -3,6 +3,7 @@ local supporters =
 	{"Wassabee", 10},
 	{"jonasrejman", 10},
 	{"Saulius Zilis", 10},
+	{"Rivsung", 10},	
 	{"rcobbe", 6}
 }
 

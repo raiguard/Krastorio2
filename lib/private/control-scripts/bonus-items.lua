@@ -12,6 +12,11 @@ function giveBonusItems(event)
 		{name="cliff-explosives", count=50},
 		{name="landfill", count=50}
 	}
+	
+	if settings.startup["kr-rebalance-vehicles&fuels"] and settings.startup["kr-rebalance-vehicles&fuels"].value then
+		table.insert(bonus_items, {name="fuel", count=50})
+	end
+	
 	for _, item in pairs(bonus_items) do
 		if inventory.can_insert(item) then
 			inventory.insert(item)

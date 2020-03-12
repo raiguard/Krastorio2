@@ -1,9 +1,21 @@
+Version: 0.6.6
+Date: 12.03.2020
+  Changes:
+    - Changed module position when they are showed on the big Krastorio 2 buildings.
+    - Now crusher can use modules.
+    - Rebalanced biomethanol recipe (more a nerf than a rebalance).
+    - Changed fuel refinery speed to 1.
+    - Updated patreon scripts.
+  Fixes:
+    - Some english locales.
+    - Fixed that start bonus items don't give fuel for car if the rebalance fuel for vehicles option is enabled (that make car useless at the start).
+    - Fix laboratory incomptibility for SE.
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.5
 Date: 10.03.2020
   Changes:
     - Now Krastorio 2 need 0.18.11 to work.
-    - Improved collector tools scripts with the new update of factorio API in 0.18.11.
+    - Improved collector tools scripts with the new update of Factorio API in 0.18.11.
     - Improved quantum computer sprites and animation!
     - Changed fertilizer crafting time.
     - Improved atmospheric condenser fluidbox for how is designed in Krastorio 2.

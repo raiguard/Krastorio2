@@ -83,8 +83,8 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
 
 	data.raw.recipe["gun-turret"].energy_required = 10
 	data.raw.recipe["flamethrower-turret"].energy_required = 20
-	data.raw.recipe["laser-turret"].energy_required = 60
-	data.raw.recipe["artillery-turret"].energy_required = 120
+	data.raw.recipe["laser-turret"].energy_required = 30
+	data.raw.recipe["artillery-turret"].energy_required = 60
    
 	-----------------------------------------------------------------------------
 	-- -- -- Projectile

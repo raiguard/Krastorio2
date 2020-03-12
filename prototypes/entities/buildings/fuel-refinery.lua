@@ -184,7 +184,7 @@ data:extend(
 			},
 			apparent_volume = 1.5
 		},
-		crafting_speed = 1.25,
+		crafting_speed = 1,
 		energy_source =
 		{
 			type = "electric",
