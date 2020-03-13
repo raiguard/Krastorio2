@@ -32,13 +32,20 @@ end
 
 function doRadioactiveDamage(player)
 	if player.valid and player.character.valid then
+		local character = player.character
+		local base_damage = 7.25
 		player.play_sound
 		{
 			path            = "kr-radioactive",
-			position        = player.character.position,
+			position        = character.position,
 			volume_modifier = 0.5
 		}
-		player.character.damage(7.25, "enemy", "radioactive")
+		if character.grid and character.grid.valid then
+			if character.grid.max_shield > 0 then
+				base_damage = base_damage + (character.grid.max_shield*0.15)
+			end
+		end
+		character.damage(base_damage, "enemy", "radioactive")
 	end
 end
 

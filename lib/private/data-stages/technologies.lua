@@ -500,22 +500,71 @@ function krastorio.technologies.addResearchUnitIngredient(technology_name, scien
 		-- add prerequisite
 		local science_pack_tech = krastorio.technologies.getTechnologyFromName(science_pack_name) or krastorio.technologies.getTechnologyThatUnlockRecipe(science_pack_name)
 		if science_pack_tech then
-			krastorio.technologies.addPrerequisite({technology_name, technology.prerequisites}, science_pack_tech.name, check_circular_dependency or false)
+			local hold = false
+			if technology.prerequisites and #technology.prerequisites > 0 then
+				for _, prerequisite in pairs(technology.prerequisites) do
+					if prerequisite == science_pack_name or
+					   krastorio.technologies.hasIngredient(prerequisite, science_pack_name) or 
+					   krastorio.technologies.hasPrerequisite(prerequisite, science_pack_name) 
+					then
+						hold = true
+						break		
+					end
+				end
+			end
+			if not hold then
+				krastorio.technologies.addPrerequisite({technology_name, technology.prerequisites}, science_pack_tech.name, check_circular_dependency or false)
+			end
 		end
 		-- add ingredient
 		for _, ingredient in pairs(technology.unit.ingredients) do
-			for _, value  in pairs(ingredient) do
-				if value == science_pack_name then
-					for _, value in pairs(ingredient) do
-						if type(value) == "number" then
-							value = value + correct_count
-						end
+			local ingredient_name = krastorio.technologies.getIngredientName(ingredient)
+			if ingredient_name == science_pack_name then
+				for _, value in pairs(ingredient) do
+					if type(value) == "number" then
+						value = value + correct_count
 					end
-					return true
 				end
-			end			
+				return true
+			end
 		end				
 		table.insert(technology.unit.ingredients, {science_pack_name, correct_count})		
+		return true
+	end
+	return false
+end
+
+function krastorio.technologies.overrideResearchUnitIngredient(technology_name, ingredients, check_circular_dependency)
+	local technology = krastorio.technologies.getTechnologyFromName(technology_name)
+	
+	if technology and next(technology) ~= nil then	
+		-- add prerequisites
+		local hold = nil
+		local science_pack_name = nil
+		local science_pack_tech = nil
+		for _, ingredient in pairs(ingredients) do 
+			local science_pack_name = krastorio.technologies.getIngredientName(ingredient) 
+			local science_pack_tech = krastorio.technologies.getTechnologyFromName(science_pack_name) or krastorio.technologies.getTechnologyThatUnlockRecipe(science_pack_name)
+			if science_pack_tech then
+				hold = false
+				if technology.prerequisites and #technology.prerequisites > 0 then
+					for _, prerequisite in pairs(technology.prerequisites) do
+						if prerequisite == science_pack_name or
+						   krastorio.technologies.hasIngredient(prerequisite, science_pack_name) or 
+						   krastorio.technologies.hasPrerequisite(prerequisite, science_pack_name) 
+						then
+							hold = true
+							break		
+						end
+					end
+				end
+				if not hold then
+					krastorio.technologies.addPrerequisite({technology_name, technology.prerequisites}, science_pack_tech.name, check_circular_dependency or false)
+				end
+			end
+		end
+		-- add ingredient
+		technology.unit.ingredients = ingredients	
 		return true
 	end
 	return false

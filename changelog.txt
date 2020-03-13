@@ -9,11 +9,14 @@ Date: 13.03.2020
     - Now is possible crush the sand.
     - Fluid burner now can take only one module.
     - Reduced rare metals required to produce processor units to 1.
+    - Nerfed shields with radioactivit.
   Fixes:
+    - Fixed ammo incomptibility with Aircraft mod.
     - Some english locales.
     - Nuclear artillery shell now stacks to 25.
     - Solved that nuclear artillery is not showed on the map.
     - Fixed that fluid burner can't take module.
+    - Fixed free energy bug with SE.
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.6
 Date: 12.03.2020

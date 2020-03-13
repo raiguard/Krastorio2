@@ -169,6 +169,7 @@ return
 			{type = "title", title = "gui.faq" },
 			{type = "text", text = "gui.faq-description-1"},
 			{type = "text", text = "gui.faq-description-2"},
+			{type = "text", text = "gui.faq-description-3"}
 		}
 	}
 }

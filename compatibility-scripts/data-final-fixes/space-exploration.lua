@@ -27,7 +27,29 @@ if mods["space-exploration"] then
 	krastorio.technologies.addUnlockRecipe("kr-radar", "radar")
 	data.raw.technology["radar"] = nil
 
-	-- Shields
+	-- -- Shields
+	-- Energy shield mk1
+	data.raw.technology["energy-shield-equipment"].prerequisites = {"modular-armor", "military-science-pack"}
+	data.raw.technology["energy-shield-equipment"].unit.count = 150
+	krastorio.technologies.overrideResearchUnitIngredient("energy-shield-equipment",
+	{
+		{"basic-tech-card", 1},
+		{"automation-science-pack", 1},
+		{"logistic-science-pack", 1},
+		{"military-science-pack", 1}
+	})
+	
+	-- Energy shield mk2
+	krastorio.technologies.overrideResearchUnitIngredient("energy-shield-mk2-equipment",
+	{
+		{"basic-tech-card", 1},
+		{"automation-science-pack", 1},
+		{"logistic-science-pack", 1},
+		{"military-science-pack", 1},
+		{"chemical-science-pack", 1}
+	})
+	krastorio.technologies.removePrerequisite("energy-shield-mk2-equipment", "se-material-science-pack")
+	
 	krastorio.technologies.convertPrerequisiteFromAllTechnologies("energy-shield-mk3-equipment", "kr-energy-shield-mk3-equipment", true)
 	data.raw.technology["energy-shield-mk3-equipment"] = nil
 	
@@ -209,6 +231,10 @@ if mods["space-exploration"] then
 			"kr-air-filter",
 			"kr-fuel-refinery"
 		},
+		["boiler"] =
+		{
+			"se-electric-boiler"
+		},
 		["generator"] =
 		{
 			"kr-advanced-steam-turbine"
@@ -333,6 +359,9 @@ if mods["space-exploration"] then
 
 	-- Fix laboratory
 	table.insert(data.raw.lab["kr-singularity-lab"].inputs, "space-science-pack")
+	
+	-- Electric boiler rebalance
+	data.raw["boiler"]["se-electric-boiler"].target_temperature = 99
 
 -- -- Equipments
 ---------------------------------------------------------------------------------------------	
@@ -343,17 +372,8 @@ if mods["space-exploration"] then
 	data.raw.armor["se-thruster-suit-3"].equipment_grid = "mk3-armor-grid"
 	data.raw.armor["se-thruster-suit-4"].equipment_grid = "mk4-armor-grid"
 	
-		-- -- Shields
-	-- Energy shield mk1
-	data.raw.technology["energy-shield-equipment"].prerequisites = {"modular-armor", "military-science-pack"}
-	data.raw.technology["energy-shield-equipment"].unit.count = 150
-	data.raw.technology["energy-shield-equipment"].unit.ingredients =
-	{
-		{"automation-science-pack", 1},
-		{"logistic-science-pack", 1},
-		{"military-science-pack", 1}
-	}
-	
+	-- -- Shields
+	-- Energy shield mk1	
 	krastorio.recipes.overrideIngredients("energy-shield-equipment", 
 	{
 		{"battery" , 2},
@@ -362,13 +382,17 @@ if mods["space-exploration"] then
 	})
 	
 	-- Energy shield mk2
-	krastorio.technologies.removePrerequisite("energy-shield-mk2-equipment", "se-material-science-pack")
 	krastorio.recipes.removeIngredientWithPrerequisite("energy-shield-mk2-equipment", "se-subatomic-data")
 	krastorio.recipes.removeIngredientWithPrerequisite("energy-shield-mk2-equipment", "se-plasma-thermodynamics-data")
 	
-	-- Energy shield mk3	
-	krastorio.recipes.removeIngredientWithPrerequisite("energy-shield-mk3-equipment", "se-forcefield-data")
-		
+	-- Energy shield mk3		
+	krastorio.recipes.overrideIngredients("energy-shield-mk3-equipment",
+	{
+		{"energy-shield-mk2-equipment", 10},
+		{"electronic-components", 40},
+		{"lithium-sulfur-battery", 10}
+	})
+
 	-- Energy shield mk4
 	krastorio.recipes.removeIngredientWithPrerequisite("energy-shield-mk4-equipment", "se-superconductive-cable")
 	

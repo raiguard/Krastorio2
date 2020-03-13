@@ -3,6 +3,65 @@ if not mods["space-exploration"] then return end
 local data_util = require("__space-exploration__/data_util")
 
 data:extend({
+----------------------------
+	-- Krastorio 2
+	{
+		type = "technology",
+		name = "kr-energy-shield-mk3-equipment",
+		mod = "Krastorio2",
+		icon_size = 128,
+		icon = kr_technologies_icons_path .. "energy-shield-mk3-equipment.png",
+		upgrade = false,
+		effects = 
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "energy-shield-mk3-equipment"
+			}
+		},
+		prerequisites = {"energy-shield-mk2-equipment", "kr-lithium-sulfur-battery"},
+		unit = 
+		{			
+			count = 350,
+			ingredients = 
+			{
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"utility-science-pack", 1}
+			},
+			time = 60		
+		}
+	},
+	-- energy-shield-mk4-equipment
+	{
+		type = "technology",
+		name = "kr-energy-shield-mk4-equipment",
+		mod = "Krastorio2",
+		icon_size = 128,
+		icon = kr_technologies_icons_path .. "energy-shield-mk4-equipment.png",
+		upgrade = false,
+		effects = 
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "energy-shield-mk4-equipment"
+			}
+		},
+		prerequisites = {"kr-energy-shield-mk3-equipment", "kr-advanced-tech-card"},
+		unit = 
+		{			
+			count = 500,
+			ingredients = 
+			{
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"advanced-tech-card", 1}
+			},
+			time = 90			
+		}
+	},
+----------------------------
   -- alphabetical
   {
     type = "technology",

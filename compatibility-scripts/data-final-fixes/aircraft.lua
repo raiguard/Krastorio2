@@ -62,7 +62,12 @@ if mods["Aircraft"] then
 		data.raw["movement-bonus-equipment"]["aircraft-afterburner"].categories = {"aircraft-equipment"}
 		data.raw.item["aircraft-afterburner"].subgroup = "vehicle-motor"
 	end
-
+	
+	--Change ammo if the option is active
+	if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
+		data.raw.gun["aircraft-machine-gun"].attack_parameters.ammo_category = "rifle-ammo"
+	end
+	
 	-- Inter/Cross compatibility with Aircraft Realism compatibility
 	if mods["AircraftRealism"] then
 		-- Modifing airborne grids
