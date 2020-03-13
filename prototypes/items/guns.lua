@@ -96,7 +96,7 @@ data:extend(
 		attack_parameters =
 		{
 			type = "projectile",
-			ammo_category = kr_ammo,
+			ammo_category = "bullet",
 			damage_modifier = 4,
 			cooldown = 7.5,
 			movement_slow_down_factor = 0.1,
