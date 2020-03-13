@@ -15,6 +15,7 @@ Date: 13.03.2020
     - Nerfed shields with radioactivity.
     - Removed dirty water from intermediate.
     - Rebalanced processor unit recipe.
+    - Removed modules from air purifier.
   Fixes:
     - Fixed ammo incomptibility with Aircraft mod.
     - Some english locales.
