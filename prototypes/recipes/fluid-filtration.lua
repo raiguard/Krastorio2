@@ -77,6 +77,7 @@ return
 		icon_size = data.raw.fluid["dirty-water"].icon_size,
 		energy_required = 2,
 		enabled = false,
+		allow_as_intermediate = false,
 		always_show_made_in = true,
 		always_show_products = true,
 		ingredients =
@@ -117,6 +118,7 @@ return
 		icon_size = data.raw.fluid["dirty-water"].icon_size,
 		energy_required = 2,
 		enabled = false,
+		allow_as_intermediate = false,
 		always_show_made_in = true,
 		always_show_products = true,
 		ingredients =

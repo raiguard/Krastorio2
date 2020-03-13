@@ -176,7 +176,7 @@ return
 		category = "fuel-refinery",
 		icon = kr_fluids_icons_path  .. "biomethanol.png",
 		icon_size = 64,
-		energy_required = 30,
+		energy_required = 20,
 		enabled = false,
 		always_show_made_in = true,
 		always_show_products = true,

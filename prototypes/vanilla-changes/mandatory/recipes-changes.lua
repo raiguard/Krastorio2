@@ -169,9 +169,11 @@ krastorio.recipes.replaceIngredient("advanced-circuit", "plastic-bar", {"electro
 krastorio.recipes.setEnergyCost("advanced-circuit", 4)
 
 krastorio.recipes.removeIngredient("processing-unit", "electronic-circuit")
-krastorio.recipes.replaceIngredient("processing-unit", "advanced-circuit", {"advanced-circuit", 4})
-krastorio.recipes.addIngredient("processing-unit", {"rare-metals", 1})
-krastorio.recipes.replaceIngredient("processing-unit", "sulfuric-acid", {type="fluid", name="sulfuric-acid", amount=4})
+krastorio.recipes.replaceIngredient("processing-unit", "advanced-circuit", {"advanced-circuit", 6})
+krastorio.recipes.addIngredient("processing-unit", {"rare-metals", 3})
+krastorio.recipes.replaceIngredient("processing-unit", "sulfuric-acid", {type="fluid", name="sulfuric-acid", amount=10})
+krastorio.recipes.replaceProduct("processing-unit", "processing-unit", {"processing-unit", 2})
+krastorio.recipes.setEnergyCost("processing-unit", 12)
 
 krastorio.recipes.replaceIngredient("repair-pack", "iron-gear-wheel", {"iron-plate", 2})
 krastorio.recipes.replaceIngredient("repair-pack", "electronic-circuit", {"copper-plate", 2})

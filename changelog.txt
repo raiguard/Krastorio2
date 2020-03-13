@@ -1,6 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.0
 Date: 13.03.2020
+  Features:
+    - Release on the mod portal!
+    - Added compatibility to LightedPolesPlus.
   Changes:
     - Now reinforced plates recipe give 10x more produtcs.
     - Rebalanced biomethanol recipe (previous rebalance make it too slow).
@@ -9,7 +12,9 @@ Date: 13.03.2020
     - Now is possible crush the sand.
     - Fluid burner now can take only one module.
     - Reduced rare metals required to produce processor units to 1.
-    - Nerfed shields with radioactivit.
+    - Nerfed shields with radioactivity.
+    - Removed dirty water from intermediate.
+    - Rebalanced processor unit recipe.
   Fixes:
     - Fixed ammo incomptibility with Aircraft mod.
     - Some english locales.

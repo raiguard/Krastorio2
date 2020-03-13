@@ -86,6 +86,7 @@ require(scripts_path .. "aircraft")
 require(scripts_path .. "DeadlockLargerLamp")
 require(scripts_path .. "deadlock-beltboxes-loaders")
 require(scripts_path .. "Hovercrafts")
+require(scripts_path .. "LightedPolesPlus")
 -- Pyanodons
 require(scripts_path .. "Pyanodon")
 require(scripts_path .. "realistic-electric-trains")
