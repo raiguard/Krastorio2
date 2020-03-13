@@ -23,8 +23,6 @@ matter_util.createStandardKrastorioMatterRecipes()
 local scripts_path = "compatibility-scripts/data-updates/"
 require(scripts_path .. "Flow_Control")
 require(scripts_path .. "Load-Furn")
--- Deadlocks
-require(scripts_path .. "IndustrialRevolution")
 -- Pyanodons
 require(scripts_path .. "Pyanodon")
 ---------------------------------------------------------------------------
