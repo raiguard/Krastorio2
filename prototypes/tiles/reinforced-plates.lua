@@ -254,7 +254,7 @@ data:extend(
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
     collision_mask = {"ground-tile"},
     walking_speed_modifier = 1.75,
-    layer = 91,
+    layer = 95,
     transition_overlay_layer_offset = 2, -- need to render border overlay on top of hazard-concrete
     decorative_removal_probability = 0.95,
     variants =

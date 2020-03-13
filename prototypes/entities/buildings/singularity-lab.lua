@@ -122,6 +122,7 @@ data:extend(
 					height = 241,
 					shift = {0.22, 0.18},
 					frame_count = 1,
+					draw_as_shadow = true,
 					repeat_count = 60,
 					hr_version =
 					{

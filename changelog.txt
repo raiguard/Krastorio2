@@ -48,7 +48,7 @@ Date: 10.03.2020
     - Fixed that make an empty blueprint could crash the game.
     - Now all CRC mod desync error should be solved.
     - Solved Factorio raw calculation problem with matter.
---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 Version: 0.6.4
 Date: 10.03.2020
   Fixes:
