@@ -129,7 +129,7 @@ data:extend(
 		flags = {"placeable-player", "player-creation", "not-deconstructable", "not-rotatable", "not-blueprintable", "not-repairable", "not-on-map"},
 		fast_replaceable_group = "kr-shelter-plus",
 		minable = {mining_time = 0.5, result = "kr-shelter-plus"},
-		collision_box = {{-2.75, -2.75}, {2.75, 2.75}},
+		collision_box = {{-2.72, -2.72}, {2.72, 2.72}},
 		selection_box = {{0, 0}, {0, 0}},
 		animation = armored_shelter_animation,
 		continuous_animation = true,

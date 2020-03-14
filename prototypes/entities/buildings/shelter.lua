@@ -75,7 +75,7 @@ data:extend(
 		flags = {"placeable-player", "player-creation", "not-deconstructable", "not-rotatable", "not-blueprintable", "not-repairable", "not-on-map"},
 		fast_replaceable_group = "kr-shelter",
 		minable = {mining_time = 0.5, result = "kr-shelter"},
-		collision_box = {{-2, -2}, {2, 2}},
+		collision_box = {{-2.72, -2.72}, {2.72, 2.72}},
 		selection_box = {{0, 0}, {0, 0}},
 		animation = shelter_animation,
 		continuous_animation = true,
@@ -105,7 +105,7 @@ data:extend(
 		max_health = 1500,
 		corpse = "kr-big-random-pipes-remnant",
 		collision_box = {{-2.75, -2.75}, {2.75, 2.75}},
-		selection_box = {{-3, -3}, {3, 3.5}},
+		selection_box = {{-3, -3}, {3, 3.20}},
 		resistances = 
 		{
 			{type = "physical", percent = 50},
