@@ -3,6 +3,8 @@ krastorio_patreons =
 {
 	["Krastor"] = true,
 	["Linver"] = true,
+	["Aski_Raven"] = true,
+	["Cvamp"] = true,
 	["jonasrejman"] = true,
 	["Pandabeezy"] = true,
 	["Wassabee"] = true,

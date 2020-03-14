@@ -1,9 +1,12 @@
 local supporters =
 {
-	{"Wassabee", 10},
-	{"jonasrejman", 10},
+	{"Aski Rawen", 10},
+	{"Austin", 10},
+	{"Jonas Rejman", 10},
+	{"Josh Strunk", 10},
+	{"Rivsung", 10},
 	{"Saulius Zilis", 10},
-	{"Rivsung", 10},	
+	{"Jan Dragsbæk", 6},
 	{"rcobbe", 6}
 }
 

@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.1
 Date: 14.03.2020
+  Features:
+    - Added new option with KL reinforced plates.
   Changes:
     - The color has been removed from almost all item names.
     - Added additional description for some items.

@@ -15,7 +15,7 @@ elseif setting_color == "Green" then
 	s_tint = {r=0.3, g=1, b=0.3, a=0.75}
 elseif setting_color == "Сyan" then
 	s_tint = {r=0.6, g=1, b=1, a=1}
-elseif setting_color == "Rurple" then
+elseif setting_color == "Purple" then
 	s_tint = {r=0.5, g=0.1, b=0.8, a=0.8}
 elseif setting_color == "Gray" then
 	s_tint = {r=0.2, g=0.2, b=0.2, a=0.8}

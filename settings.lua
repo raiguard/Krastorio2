@@ -182,11 +182,18 @@ data:extend(
 		order = "b91"
 	},
 	{
+		type = "bool-setting",
+		name = "kr-kl-stuff",
+		setting_type = "startup",
+		default_value = false,
+		order = "b92"
+	},
+	{
         type = "string-setting",
         name = "kr-shelter-tint",
         setting_type = "startup",
         default_value = "White",
-        allowed_values = {"White", "Gray", "Yellow", "Pink", "Olive", "Red", "Blue", "Green", "Сyan", "Rurple"},
+        allowed_values = {"White", "Gray", "Yellow", "Pink", "Olive", "Red", "Blue", "Green", "Сyan", "Purple"},
 		order = "z01"
 	},
 })
