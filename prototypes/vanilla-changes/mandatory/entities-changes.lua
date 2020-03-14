@@ -174,6 +174,9 @@ data.raw.corpse["pumpjack-remnants"].animation = make_rotated_animation_variatio
 	}
 })
 
+-- Lab
+data.raw.lab["lab"].fast_replaceable_group = "lab"
+data.raw.lab["lab"].next_upgrade = "biusart-lab"
+
 -- Solar panel
 data.raw["solar-panel"]["solar-panel"].production = "100KW"
-

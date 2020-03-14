@@ -557,5 +557,3 @@ krastorio.recipes.replaceIngredient("combat-shotgun", "wood", {"wood", 3})
 krastorio.recipes.replaceIngredient("combat-shotgun", "steel-plate", {"steel-plate", 4})
 krastorio.recipes.replaceIngredient("combat-shotgun", "copper-plate", {"copper-plate", 2})
 krastorio.recipes.replaceIngredient("combat-shotgun", "iron-gear-wheel", {"iron-gear-wheel", 3})
-
---------------------------------------------------------------------

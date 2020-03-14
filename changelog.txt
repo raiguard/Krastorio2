@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.1
+Date: 14.03.2020
+  Changes:
+    - The color has been removed from almost all item names.
+    - Added additional description for some items.
+  Fixes:
+    - Fixed some problems with locale.
+---------------------------------------------------------------------------------------------------
 Version: 0.9.0
 Date: 13.03.2020
   Features:

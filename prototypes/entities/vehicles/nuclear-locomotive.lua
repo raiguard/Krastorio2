@@ -1,5 +1,5 @@
 local default_locomotive_color = {r = 0.50, g = 0.54, b = 0.53, a = 0.5}
-local nuclear_smoke_color = {r = 0.45,  g = 0.5, b = 0.45, a = 0.5}
+local nuclear_smoke_color = {r = 0.5,  g = 0.5, b = 0.45, a = 0.35}
 local hit_effects = require ("__base__.prototypes.entity.demo-hit-effects")
 local sounds = require("__base__.prototypes.entity.demo-sounds")
 
@@ -100,7 +100,7 @@ data:extend(
 				{
 					name = "nuclear-train-smoke",
 					deviation = {0.3, 0.3},
-					frequency = 180,
+					frequency = 60,
 					position = {0, 0},
 					starting_frame = 0,
 					starting_frame_deviation = 60,
