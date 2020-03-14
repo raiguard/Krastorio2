@@ -2,6 +2,7 @@ local cu = {}
 
 cu.not_valid_replacers = 
 { 
+	["out-of-map"] = true, 
 	["kr-creep"] = true, 
 	["water"] = true, 
 	["deepwater"] = true, 
