@@ -13,6 +13,7 @@ Date: 14.03.2020
     - Fixed incomptibility problems with Clockwork mod.
     - Fixed missing optional dependecy to Dectorio.
     - Fixed that Activated intergalactic transceiver don't show on map.
+    - Fixed incomptibility with mod Construction Drones when they build an offshore pump.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.0
 Date: 13.03.2020

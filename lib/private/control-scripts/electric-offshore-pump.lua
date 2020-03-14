@@ -9,7 +9,7 @@ local KRASTORIO_OFFSHORE_PUMP_EVENT_FILTER =
 
 -- @event, on_built_entity or on_robot_built_entity
 local function onBuiltAnEntity(event)
-	local old_entity = event.created_entity
+	local old_entity = event.created_entity or event.entity
 	if old_entity.valid and old_entity.name == "offshore-pump" then
 		local with_damage        = old_entity.prototype.max_health - old_entity.health
 		local network            = old_entity.circuit_connection_definitions
@@ -66,6 +66,8 @@ else
 	{ 
 		-- -- Actions		
 		{ onBuiltAnEntity, "on_built_entity", KRASTORIO_OFFSHORE_PUMP_EVENT_FILTER },
+		{ onBuiltAnEntity, "script_raised_built" },
+		{ onBuiltAnEntity, "script_raised_revive" },
 		{ onBuiltAnEntity, "on_robot_built_entity", KRASTORIO_OFFSHORE_PUMP_EVENT_FILTER },
 		{ onBlueprint, "on_player_setup_blueprint" }
 	}
