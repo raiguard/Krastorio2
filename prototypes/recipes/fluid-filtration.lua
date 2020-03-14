@@ -41,12 +41,12 @@ return
 		always_show_products = true,
 		ingredients = 
 		{
-			{ type = "fluid", name = "heavy-oil", amount = 60 }
+			{ type = "fluid", name = "heavy-oil", amount = 80 }
 		},
 		results = 
 		{
 			{ type = "item", name = "coal", amount = 10 },
-			{ type = "fluid", name = "water", amount = 50, catalyst_amount = 50 }
+			{ type = "fluid", name = "water", amount = 40, catalyst_amount = 40 }
 		},
 		crafting_machine_tint =
 		{

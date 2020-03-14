@@ -12,6 +12,7 @@ local factory_tiles =
 }
 
 if mods["Dectorio"] then
+	DECT = require("__Dectorio__/config")
 	local directions = 
 	{
 		{this="left", next="right"},

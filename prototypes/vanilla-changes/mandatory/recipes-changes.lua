@@ -350,6 +350,7 @@ end
 
 -- Exceptions
 krastorio.recipes.convertIngredient("fast-inserter", "automation-core", "electronic-circuit")
+krastorio.recipes.addOrReplaceIngredient("filter-inserter", "automation-core", {"electronic-circuit", 2})
 
 -- Lamp (glass)
 krastorio.recipes.convertIngredient("small-lamp", "automation-core", "glass")

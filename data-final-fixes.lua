@@ -76,25 +76,7 @@ krastorio.technologies.removeSciencePackIncompatibleWith("utility-science-pack",
 -- -- -- ENFORCE SCIENCE PACK PREREQUISITE COHERENCE 
 krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
 ---------------------------------------------------------------------------
--- -- -- COMPATIBILITY INITIALIZATION (data final fixes stage)
----------------------------------------------------------------------------
-local scripts_path = "compatibility-scripts/data-final-fixes/"
-require(scripts_path .. "aai-industry")
-require(scripts_path .. "aai-vehicles-chaingunner")
-require(scripts_path .. "aai-vehicles-hauler")
-require(scripts_path .. "aircraft")
-require(scripts_path .. "DeadlockLargerLamp")
-require(scripts_path .. "deadlock-beltboxes-loaders")
-require(scripts_path .. "Hovercrafts")
-require(scripts_path .. "LightedPolesPlus")
--- Pyanodons
-require(scripts_path .. "Pyanodon")
-require(scripts_path .. "realistic-electric-trains")
-require(scripts_path .. "space-exploration")
-require(scripts_path .. "vtk-armor-plating")
----------------------------------------------------------------------------
--- Filter inserter fix
-krastorio.recipes.addOrReplaceIngredient("filter-inserter", "automation-core", {"electronic-circuit", 2})
+-- OPTION FIXES
 ---------------------------------------------------------------------------
 if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 	
@@ -122,24 +104,43 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 end
 ---------------------------------------------------------------------------
 if krastorio.general.getSafeSettingValue("kr-peaceful-mod") then
-krastorio.recipes.overrideIngredients
-(
-	"fertilizer", 
-	{
+
+	krastorio.recipes.overrideIngredients
+	(
+		"fertilizer", 
+		{
 			{type="fluid", name="sulfuric-acid", amount=50},
-			{type="fluid", name="nitric-acid", amount=50},
-			{name="coal", amount=1}
-	}
-)
-krastorio.recipes.overrideIngredients
-(
-	"first-aid-kit", 
-	{
+			{type="fluid", name="nitric-acid",   amount=50},
+			{type="item",  name="coal",          amount=1}
+		}
+	)
+	krastorio.recipes.overrideIngredients
+	(
+		"first-aid-kit", 
+		{
 			{"raw-fish", 1},
 			{"wood", 1},
 			{"iron-plate", 1}
-	}
-)
-
+		}
+	)
+	
 end
---------------------------------------------------------------------
+---------------------------------------------------------------------------
+-- -- -- COMPATIBILITY INITIALIZATION (data final fixes stage)
+---------------------------------------------------------------------------
+local scripts_path = "compatibility-scripts/data-final-fixes/"
+require(scripts_path .. "aai-industry")
+require(scripts_path .. "aai-vehicles-chaingunner")
+require(scripts_path .. "aai-vehicles-hauler")
+require(scripts_path .. "aircraft")
+require(scripts_path .. "Clockwork")
+require(scripts_path .. "DeadlockLargerLamp")
+require(scripts_path .. "deadlock-beltboxes-loaders")
+require(scripts_path .. "Hovercrafts")
+require(scripts_path .. "LightedPolesPlus")
+-- Pyanodons
+require(scripts_path .. "Pyanodon")
+require(scripts_path .. "realistic-electric-trains")
+require(scripts_path .. "space-exploration")
+require(scripts_path .. "vtk-armor-plating")
+---------------------------------------------------------------------------

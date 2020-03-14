@@ -253,6 +253,10 @@ if mods["space-exploration"] then
 			"kr-superior-splitter",
 			"kr-superior-underground-belt"
 		},
+		["lab"] =
+		{
+			"biusart-lab"
+		},
 		["loader-1x1"] =
 		{
 			"kr-loader",
@@ -314,7 +318,6 @@ if mods["space-exploration"] then
 		},
 		["lab"] =
 		{
-			"biusart-lab",
 			"kr-singularity-lab"
 		},	
 		["mining-drill"] =
@@ -457,15 +460,12 @@ if mods["space-exploration"] then
 	krastorio.recipes.addIngredient("se-rocket-fuel-from-water-copper", {type="fluid", name="oxygen", amount=50, catalyst_amount=50})
 	krastorio.recipes.setEnergyCost("se-rocket-fuel-from-water-copper", 1000)
 	
-	data.raw.fluid["se-liquid-rocket-fuel"].fuel_value = "1200KJ"
+	data.raw.fluid["se-liquid-rocket-fuel"].fuel_value = "1000KJ"
 	data.raw.fluid["se-liquid-rocket-fuel"].fuel_category = "burnable-fluid-fuel"
 	data.raw.fluid["se-liquid-rocket-fuel"].fuel_emissions_multiplier = 1.5
 	data.raw.fluid["se-liquid-rocket-fuel"].default_temperature = 25
 	data.raw.fluid["se-liquid-rocket-fuel"].max_temperature = 100
 	data.raw.fluid["se-liquid-rocket-fuel"].auto_barrel = true
-	
-	-- Satellite
-	data.raw.item["satellite"].rocket_launch_product = {"space-research-data", 1000}
 
 	if data.raw.item["se-antimatter-canister"] then
 		data.raw.item["se-antimatter-canister"].fuel_category = "antimatter-fuel"
@@ -603,11 +603,48 @@ if mods["space-exploration"] then
 	
 	krastorio.recipes.setCategoryIfExist("rocket-fuel", "fuel-refinery")
 	
+		-- Space science packs
 	data:extend(
 	{
-		{
+		-- this is much more efficient that rocket returns
+		{			
 			type = "recipe",
 			name = "space-science-pack",
+			category = "t3-tech-cards",
+			enabled = false,
+			energy_required = 20,
+			ingredients = 
+			{
+				{ "se-heat-shielding", 2 },
+				{ "low-density-structure", 2 },
+				{ "battery", 7 },
+				{ "processing-unit", 2 },
+				{ "rocket-fuel", 3 }
+			},
+			results = {{"space-science-pack", 5}},
+			main_product = "space-science-pack",
+			requester_paste_multiplier = 1,
+			always_show_made_in = true,
+		},
+		{
+			type = "recipe",
+			name = "space-science-pack-2",
+			localised_name = {"other.krastorio-recipe-variation", {"item-name.optimization-tech-card"}},
+			icons =
+			{
+				{
+					icon = kr_cards_icons_path .. "optimization-tech-card.png",
+					icon_size = 64,
+					icon_mipmaps = 4
+				},
+				{
+					icon = kr_cards_icons_path .. "space-research-data.png",
+					icon_size = 64,
+					scale = 0.26,
+					shift = {8, -8}
+				}
+			},
+			icon_size = 64,
 			category = "t3-tech-cards",
 			energy_required = 20,
 			enabled = false,
@@ -620,7 +657,9 @@ if mods["space-exploration"] then
 			result_count = 5
 		}
 	})
-	data.raw.recipe["space-science-pack-2"] = nil
+	krastorio.technologies.addUnlockRecipe("space-science-pack", "space-science-pack-2")
+	
+	-- Satellite
 	data.raw.item["satellite"].rocket_launch_product = {"space-research-data", 1000}
 	
 	-- Core fragments

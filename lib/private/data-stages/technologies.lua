@@ -26,12 +26,12 @@ krastorio.technologies.science_pack_collections =
 function krastorio.technologies.getPrerequisites(technology_name)
 	local technology = krastorio.technologies.getTechnologyFromName(technology_name)
 	if technology and next(technology) ~= nil then
-		if technology.prerequisites then
-			return technology.prerequisites
-		end
-	end
-	technology.prerequisites = {}
-	return technology.prerequisites
+		if not technology.prerequisites then
+			technology.prerequisites = {}
+		end		
+		return technology.prerequisites
+	end	
+	return {}
 end
 
 function krastorio.technologies.hasPrerequisite(technology_name, prerequisite_name)
