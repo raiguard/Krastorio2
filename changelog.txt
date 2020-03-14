@@ -3,11 +3,13 @@ Version: 0.9.1
 Date: 14.03.2020
   Features:
     - Added new option with KL reinforced plates.
+    - Added a mod assertion error when players try to add too many mods that add tiles to the game (Factorio can't support more than 255 tiles loaded).
   Changes:
     - The color has been removed from almost all item names.
     - Added additional description for some items.
     - Nerfed coal filtration.
     - Now with space exploration is possible craft space science pack (optimization tech card), with SE and K2 recipes.
+    - Imrpoved compatibility with Dectorio.
   Fixes:
     - Fixes many locales.
     - Fixes that creep can use out-of-map tile like as a replacement after be collected.

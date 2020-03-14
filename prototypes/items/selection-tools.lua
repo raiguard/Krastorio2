@@ -11,24 +11,6 @@ local factory_tiles =
 	"kr-black-reinforced-plate"
 }
 
-if mods["Dectorio"] then
-	DECT = require("__Dectorio__/config")
-	local directions = 
-	{
-		{this="left", next="right"},
-		{this="right", next="left"}
-	}
-	for _, variant in pairs(DECT.CONFIG.PAINT_VARIANTS) do
-		for _, direction in pairs(directions) do
-			table.insert(factory_tiles, "dect-paint-"..variant.name.."-"..direction.this)
-			table.insert(factory_tiles, "dect-paint-refined-"..variant.name.."-"..direction.this)
-		end
-	end
-	if DECT.ENABLED["concrete"] then
-		table.insert(factory_tiles, "dect-concrete-grid")
-	end
-end
-
 data:extend(
 {
 	{
