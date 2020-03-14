@@ -22,30 +22,37 @@ cu.not_valid_replacers =
 	["kr-black-reinforced-plate"] = true
 }
 if script.active_mods["Dectorio"] then
-	local directions = 
-	{
-		{this="left", next="right"},
-		{this="right", next="left"}
-	}
-	local paint_variants = 
-	{
-		{name="danger", color={r=0.81,g=0.31,b=0.31}},
-		{name="emergency", color={r=0.86,g=0.36,b=0.38}},
-		{name="caution", color={r=0.85,g=0.56,b=0.26}},
-		{name="radiation", color={r=0.86,g=0.56,b=0.78}},
-		{name="defect", color={r=0.47,g=0.50,b=1.00}},
-		{name="operations", color={r=0.37,g=0.37,b=0.37}},
-		{name="safety", color={r=0.61,g=0.77,b=0.40}}
-	}
-	for _, variant in pairs(paint_variants) do
-		for _, direction in pairs(directions) do
-			cu.not_valid_replacers["dect-paint-"..variant.name.."-"..direction.this] = true
-			cu.not_valid_replacers["dect-paint-refined-"..variant.name.."-"..direction.this] = true
+	if settings.startup["dectorio-painted-concrete"] and settings.startup["dectorio-painted-concrete"].value then
+		local directions = 
+		{
+			"left",
+			"right"
+		}
+		local paint_variants = 
+		{
+			"danger",
+			"emergency",
+			"caution",
+			"radiation",
+			"defect",
+			"operations",
+			"safety"
+		}
+		for _, variant in pairs(paint_variants) do
+			for _, direction in pairs(directions) do
+				cu.not_valid_replacers["dect-paint-"..variant.."-"..direction] = true
+				cu.not_valid_replacers["dect-paint-refined-"..variant.."-"..direction] = true
+			end
 		end
 	end
 	if settings.startup["dectorio-concrete"] and settings.startup["dectorio-concrete"].value then
 		cu.not_valid_replacers["dect-concrete-grid"] = true
 	end
+end
+
+if settings.startup["kr-kl-stuff"] and settings.startup["kr-kl-stuff"].value then
+	cu.not_valid_replacers["kr-white-reinforced-plate-l"] = true
+	cu.not_valid_replacers["kr-black-reinforced-plate-l"] = true
 end
 
 cu.random_generator = nil

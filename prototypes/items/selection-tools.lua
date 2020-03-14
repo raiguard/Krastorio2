@@ -11,6 +11,13 @@ local factory_tiles =
 	"kr-black-reinforced-plate"
 }
 
+if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
+
+	table.insert(factory_tiles, "kr-white-reinforced-plate-l")
+	table.insert(factory_tiles, "kr-black-reinforced-plate-l")
+
+end
+
 data:extend(
 {
 	{
