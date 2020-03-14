@@ -47,7 +47,7 @@ data:extend(
 		name     = "kr-jackhammer",
 		category = "alert",
 		filename = "__Krastorio2__/sounds/others/jackhammer.ogg",
-		volume   = 1.0,
+		volume   = 0.75,
 		audible_distance_modifier = 0.5,		
 		aggregation =
 		{

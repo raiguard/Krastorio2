@@ -197,8 +197,11 @@ data.raw.technology["stronger-explosives-7"].unit.count_formula = "((L-6)^2)*500
 data.raw.technology["refined-flammables-7"].unit.count_formula = "((L-6)^2)*5000"
 data.raw.technology["energy-weapons-damage-7"].unit.count_formula = "((L-6)^2)*5000"
 data.raw.technology["artillery-shell-range-1"].unit.count_formula = "L^2*5000"
-data.raw.technology["artillery-shell-speed-1"].unit.count_formula = "L^2*75000"	
+data.raw.technology["artillery-shell-speed-1"].unit.count_formula = "L^2*75000"
 
+krastorio.technologies.removePrerequisite("gates", "military-2")
+krastorio.technologies.addPrerequisite("gates", "electronics")
+krastorio.technologies.removeResearchUnitIngredient("gates", "logistic-science-pack")
 --------------
 -- miscellaneous
 

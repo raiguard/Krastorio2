@@ -14,7 +14,7 @@ function giveBonusItems(event)
 	}
 	
 	if settings.startup["kr-rebalance-vehicles&fuels"] and settings.startup["kr-rebalance-vehicles&fuels"].value then
-		table.insert(bonus_items, {name="fuel", count=50})
+		table.insert(bonus_items, {name="fuel", count=200})
 	end
 	
 	for _, item in pairs(bonus_items) do

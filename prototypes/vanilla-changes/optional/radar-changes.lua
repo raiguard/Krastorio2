@@ -7,6 +7,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
 	data.raw["radar"]["radar"].energy_per_sector = "2MJ"
 	data.raw["radar"]["radar"].energy_per_nearby_scan = "250kJ"
 	data.raw["radar"]["radar"].energy_usage = "1MW"
+	data.raw["radar"]["radar"].next_upgrade = "advanced-radar"
 
 	data:extend(
 	{  
@@ -81,6 +82,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
 			flags = {"placeable-player", "player-creation"},
 			minable = {mining_time = 0.1, result = "advanced-radar"},
 			max_health = 350,
+			fast_replaceable_group = "radar",
 			corpse = "advanced-radar-remnants",
 			resistances =
 			{

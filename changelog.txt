@@ -11,6 +11,7 @@ Date: 14.03.2020
     - Nerfed coal filtration.
     - Now with space exploration is possible craft space science pack (optimization tech card), with SE and K2 recipes.
     - Imrpoved compatibility with Dectorio.
+    - Now minimal stack size for biomass is 100.
   Fixes:
     - Fixes many locales.
     - Fixes that creep can use out-of-map tile like as a replacement after be collected.

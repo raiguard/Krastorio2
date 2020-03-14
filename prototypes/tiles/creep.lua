@@ -211,12 +211,13 @@ data:extend(
 		type = "tile",
 		name = "kr-creep",
 		needs_correction = false,
-		can_be_part_of_blueprint = false,		
+		can_be_part_of_blueprint = true,		
 		collision_mask = { "ghost-layer", "floor-layer", "not-colliding-with-itself" },
-		walking_speed_modifier = 0.30,
+		--minable = {mining_time = 15, result = "biomass", probability = 0.35, amount = 1},
+		walking_speed_modifier = 0.35,
 		layer = 1,
 		transition_overlay_layer_offset = 1,
-		decorative_removal_probability = 0.25,
+		decorative_removal_probability = 0.35,
 		variants = tile_variations_template
 		(
 			kr_tiles_path .. "creep/creep.png", "__base__/graphics/terrain/masks/transition-1.png",
@@ -229,7 +230,7 @@ data:extend(
 			}
 		),		
 		map_color={r=80, g=60, b=65},
-		pollution_absorption_per_second = 0.01,
+		pollution_absorption_per_second = 0.005,
 		vehicle_friction_modifier = 175,
 		
 		mined_sound = collect_creep_sound,

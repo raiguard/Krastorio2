@@ -9,6 +9,7 @@ if stack_size > 100 then
 end
 
 
+
 if krastorio.general.getSafeSettingValue("kr-stack-size") then 
 
  -- -- Vanilla
@@ -55,7 +56,7 @@ if krastorio.general.getSafeSettingValue("kr-stack-size") then
  -- -- K2-Suff
 	
 	data.raw.item["raw-rare-metals"].stack_size = stack_size
-	data.raw.item["biomass"].stack_size = stack_size
+	data.raw.item["biomass"].stack_size = fuel_stack_size
 	data.raw.item["fertilizer"].stack_size = stack_size
 	data.raw.item["automation-core"].stack_size = stack_size
 	data.raw.item["sand"].stack_size = stack_size
