@@ -7,6 +7,7 @@ Date: 15.03.2020
   Changes:
     - Rebalanced nitric acid production, now use ammonia, rare metals and mineral water.
     - Now on iron beam recipe can be used productivity modules.
+    - Lowered formula scaling of infinite artillery upgrades.
   Fixes:
     - Fixed wrong advanced tech card prerequisites.
 ---------------------------------------------------------------------------------------------------
