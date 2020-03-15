@@ -440,7 +440,7 @@ data:extend(
 				recipe = krastorio.recipes.changed_names["advanced-tech-card"] or "advanced-tech-card"
 			}
 		},
-		prerequisites = {"kr-singularity-lab", "space-science-pack"},
+		prerequisites = {"kr-imersium-processing"},
 		unit =
 		{
 			count = 1000,

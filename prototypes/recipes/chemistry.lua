@@ -98,8 +98,9 @@ return
 		allow_productivity = true,
 		ingredients =
 		{
-			{type="fluid", name="ammonia", amount=50},
-			{type="fluid", name="oxygen", amount=50}
+			{type="fluid", name="ammonia",       amount=50},
+			{type="fluid", name="mineral-water", amount=25},
+			{type="item",  name="rare-metals",   amount=1}
 		},
 		results =
 		{ 

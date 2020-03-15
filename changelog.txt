@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.2
+Date: 15.03.2020
+  Changes:
+    - Rebalanced nitric acid production, now use ammonia, rare metals and mineral water.
+  Fixes:
+    - Fixed wrong advanced tech card prerequisites.
+---------------------------------------------------------------------------------------------------
 Version: 0.9.1
 Date: 14.03.2020
   Features:
