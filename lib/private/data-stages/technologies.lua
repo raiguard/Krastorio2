@@ -781,40 +781,37 @@ end
 -- @ science_pack_incompatibilities - a set
 function krastorio.technologies.removeSciencePackIncompatibleWith(science_pack_name, science_pack_incompatibilities)
 	if type(science_pack_name) == "string" and science_pack_incompatibilities and #science_pack_incompatibilities > 0 then
-			
-		for technology_name, technology in pairs(data.raw.technology) do
-			
-			local is_in = false
+		local incompatibilities_dictionary = {}
+		for _, science_pack_incompatible in pairs(science_pack_incompatibilities) do
+			incompatibilities_dictionary[science_pack_incompatible] = true
+		end
+		
+		for technology_name, technology in pairs(data.raw.technology) do			
 			local ingredients = technology.unit.ingredients				
-			if ingredients and #ingredients > 1 then				
+			if ingredients and #ingredients > 1 then	
+				local is_in = false
+				local ingredient_name = nil	
 				for i = 1, #ingredients do
-					local ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])					
+					ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])					
 					if science_pack_name == ingredient_name then
 						is_in = true
 						break
 					end	
 				end					
 				if is_in then
-					local is_sanitized = false
-					local wrong_one = nil
-					while not is_sanitized do
+					local wrong_one = 0
+					while wrong_one ~= -1 do
 						wrong_one = -1
+
 						for i = 1, #ingredients do
-							local ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])								
-							for _, science_pack_incompatible in pairs(science_pack_incompatibilities) do
-								if science_pack_incompatible == ingredient_name then
-									wrong_one = i
-									break
-								end	
-							end
-							if wrong_one then
+							ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])
+							if incompatibilities_dictionary[ingredient_name] then
+								wrong_one = i
 								break
 							end									
 						end
 						
-						if wrong_one == -1 then
-							is_sanitized = true
-						else
+						if wrong_one ~= -1 then
 							if technology.prerequisites and #technology.prerequisites > 0 then
 								for j, prerequisite_name in pairs(technology.prerequisites) do
 									for _, value in pairs(ingredients[wrong_one]) do

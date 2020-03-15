@@ -504,18 +504,17 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 	}
 	krastorio.matter_func.createMatterRecipe(plastic_bar)
 	
-	-- plastic bar
-	local plastic_bar =
+	-- matter cube
+	local matter_cube =
 	{
 		item_name = "matter-cube",
 		minimum_conversion_quantity = 1, 
 		matter_value = 1000, 
 		energy_required = 15,
-		only_deconversion = true,
 		need_stabilizer = true,
 		unlocked_by_technology = "kr-matter-cube"
 	}
-	krastorio.matter_func.createMatterRecipe(plastic_bar)
+	krastorio.matter_func.createMatterRecipe(matter_cube)
 	
 end
 
