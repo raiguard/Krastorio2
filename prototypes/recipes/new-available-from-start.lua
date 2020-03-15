@@ -8,6 +8,7 @@ return
 		name = "iron-beam",
 		energy_required = 2,
 		enabled = true,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"iron-plate", 2}

@@ -1,8 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.2
 Date: 15.03.2020
+  Features:
+    - Added Japanese translation! (Thanks to whoever contributed)
+    - Added Polish translation! (Thanks to whoever contributed)
   Changes:
     - Rebalanced nitric acid production, now use ammonia, rare metals and mineral water.
+    - Now on iron beam recipe can be used productivity modules.
   Fixes:
     - Fixed wrong advanced tech card prerequisites.
 ---------------------------------------------------------------------------------------------------
