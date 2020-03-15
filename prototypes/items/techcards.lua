@@ -66,6 +66,7 @@ data:extend(
 	{
 		type = "tool",
 		name = "basic-tech-card",
+		localised_description = {"item-description.science-pack"},
 		icon =  kr_cards_icons_path  .. "basic-tech-card.png",
 		stack_size = 200,
 		icon_size = 64,
@@ -79,6 +80,7 @@ data:extend(
 	{
 		type = "tool",
 		name = "matter-tech-card",
+		localised_description = {"item-description.science-pack"},
 		icon =  kr_cards_icons_path  .. "matter-tech-card.png",
 		stack_size = 200,
 		icon_size = 64,
@@ -92,6 +94,7 @@ data:extend(
 	{
 		type = "tool",
 		name = "advanced-tech-card",
+		localised_description = {"item-description.science-pack"},
 		icon =  kr_cards_icons_path  .. "advanced-tech-card.png",
 		stack_size = 200,
 		icon_size = 64,
@@ -105,6 +108,7 @@ data:extend(
 	{
 		type = "tool",
 		name = "singularity-tech-card",
+		localised_description = {"item-description.science-pack"},
 		icon =  kr_cards_icons_path  .. "singularity-tech-card.png",
 		stack_size = 200,
 		icon_size = 64,
