@@ -7,11 +7,13 @@ Date: 15.03.2020
     - Re-added to the game the matter cube!
   Changes:
     - Rebalanced nitric acid production, now use ammonia, rare metals and mineral water.
-    - Now on iron beam recipe can be used productivity modules.
     - Lowered formula scaling of infinite artillery upgrades.
+    - Improved compatibility with AAI industry.
+    - Allow productivity modules in some recipes (end game tech cards and iron beam).
   Fixes:
     - Fixed wrong advanced tech card prerequisites.
     - Fixed science pack tiers coherence algorithm.
+    - Fixed many other small fixes.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.1
 Date: 14.03.2020

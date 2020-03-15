@@ -582,6 +582,11 @@ if not mods["aai-industry"] then
 	-- Modification to offshore pump copied prototype to be an assembler
 	electric_offshore_pump.type = "assembling-machine"
 	electric_offshore_pump.name = "kr-electric-offshore-pump"
+	if electric_offshore_pump.flags then
+		table.insert(electric_offshore_pump.flags, "hidden")
+	else
+		electric_offshore_pump.flags = {"placeable-neutral","placeable-player", "player-creation", "hidden"}
+	end
 	electric_offshore_pump.localised_name = {"entity-name.offshore-pump"}
 	electric_offshore_pump.localised_description = {"entity-description.offshore-pump"}
 	electric_offshore_pump.crafting_speed = 1

@@ -40,5 +40,16 @@ if mods["aai-industry"] then
 	
 	-- -- -- Entities fixes
 	data.raw["lab"]["burner-lab"].inputs = {"basic-tech-card", "automation-science-pack"}
+	
+	-- Fix for fuels
+	if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
+		data.raw.item["processed-fuel"].fuel_category = "vehicle-fuel"
+		data.raw.item["processed-fuel"].fuel_acceleration_multiplier = 0.9
+		data.raw.item["processed-fuel"].fuel_top_speed_multiplier = 0.9
+		data.raw.item["processed-fuel"].fuel_emissions_multiplier = 0.9
+		data.raw.recipe["processed-fuel-from-fuel"] = nil
+		data.raw.recipe["processed-fuel-from-bio-fuel"] = nil
+		data.raw.recipe["processed-fuel-advanced-fuel"] = nil
+	end
 
 end

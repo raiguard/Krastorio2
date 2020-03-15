@@ -7,6 +7,7 @@ return
 		category = "chemistry",
 		energy_required = 30,
 		enabled = false,
+		allow_productivity = true,
 		ingredients =
 		{
 			{type="fluid", name="sulfuric-acid", amount=10},

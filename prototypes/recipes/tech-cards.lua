@@ -6,6 +6,7 @@ return
 		name = "blank-tech-card",
 		energy_required = 1,
 		enabled = false,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"iron-plate", 1},
@@ -19,6 +20,7 @@ return
 		name = "biters-research-data",
 		energy_required = 40,
 		enabled = false,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"biomass", 10},
@@ -33,6 +35,7 @@ return
 		name = "basic-tech-card",
 		energy_required = 20,
 		enabled = true,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"wood", 5},
@@ -47,6 +50,7 @@ return
 		category = "t3-tech-cards",
 		energy_required = 20,
 		enabled = false,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"blank-tech-card", 10},
@@ -61,6 +65,7 @@ return
 		category = "t3-tech-cards",
 		energy_required = 20,
 		enabled = false,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"imersite-crystal", 5},
@@ -77,6 +82,7 @@ return
 		category = "t3-tech-cards",
 		energy_required = 20,
 		enabled = false,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"blank-tech-card", 15},
@@ -92,6 +98,7 @@ return
 		category = "t3-tech-cards",
 		energy_required = 20,
 		enabled = false,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"blank-tech-card", 15},
@@ -108,6 +115,7 @@ return
 		category = "t3-tech-cards",
 		energy_required = 20,
 		enabled = false,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"imersium-plate", 10},
@@ -123,6 +131,7 @@ return
 		category = "t3-tech-cards",
 		energy_required = 20,
 		enabled = false,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"blank-tech-card", 15},
