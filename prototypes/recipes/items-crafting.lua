@@ -307,19 +307,6 @@ return
     },
 	{
 		type = "recipe",
-		name = "matter-cube",
-		category = "matter-deconversion",
-		enabled = false,
-		allow_as_intermediate = false,
-		energy_required = 10,
-		ingredients =
-		{
-			{ type = "fluid", name = "matter", amount = 1000, catalyst_amount = 1000}
-		},
-		result = "matter-cube"
-    },
-	{
-		type = "recipe",
 		name = "empty-antimatter-fuel-cell",
 		category = "crafting-with-fluid",
 		enabled = false,

@@ -196,8 +196,8 @@ data.raw.technology["physical-projectile-damage-7"].unit.count_formula = "((L-6)
 data.raw.technology["stronger-explosives-7"].unit.count_formula = "((L-6)^2)*5000"	
 data.raw.technology["refined-flammables-7"].unit.count_formula = "((L-6)^2)*5000"
 data.raw.technology["energy-weapons-damage-7"].unit.count_formula = "((L-6)^2)*5000"
-data.raw.technology["artillery-shell-range-1"].unit.count_formula = "L^2*5000"
-data.raw.technology["artillery-shell-speed-1"].unit.count_formula = "L^2*75000"
+data.raw.technology["artillery-shell-range-1"].unit.count_formula = "L^2*3500"
+data.raw.technology["artillery-shell-speed-1"].unit.count_formula = "L^2*3500"
 
 krastorio.technologies.removePrerequisite("gates", "military-2")
 krastorio.technologies.addPrerequisite("gates", "electronics")

@@ -513,7 +513,29 @@ data:extend(
 			},
 			time = 60
 		}
-    }	
+    },
+	{
+		type = "technology",
+		name = "kr-matter-cube",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "matter-cube.png",
+		icon_size = 128,
+		prerequisites = {"kr-matter-processing"},
+		order = "g-f-z",
+		unit =
+		{
+			count = 500,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"matter-tech-card", 1},
+				{"advanced-tech-card", 1}				
+			},
+			time = 60
+		}
+    }
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
