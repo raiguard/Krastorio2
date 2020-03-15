@@ -692,7 +692,7 @@ data:extend(
 		icon_size = 64,
 		icon_mipmaps = 4,
 		subgroup = "intermediate-product",
-		order = "w1[matter]-a3[matter-cube]",
+		order = "000[matter]-000[matter-cube]",
 		stack_size = 200
     },
 	{
