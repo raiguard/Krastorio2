@@ -337,12 +337,15 @@ function krastorio.recipes.normalEnergyRequired(recipe_name)
 	local recipe  = krastorio.recipes.getRecipeFromName(recipe_name)
 	local seconds = 0
 	if recipe then
-		seconds = 0.5	
+		seconds = 0.5
+		local not_defined = true
 		if recipe.energy_required then
-			seconds = recipe.energy_required	
-		elseif recipe.normal.energy_required then
+			seconds = recipe.energy_required
+			not_defined = false
+		elseif recipe.normal and recipe.normal.energy_required then
 			seconds = recipe.normal.energy_required	
-		elseif seconds == 0.5 and recipe.expensive.energy_required then
+			not_defined = false
+		elseif not_defined and recipe.expensive and recipe.expensive.energy_required then
 			seconds = recipe.expensive.energy_required
 		end
 	end
@@ -1709,27 +1712,17 @@ end
 function krastorio.recipes.setEnergyCost(recipe_name, energy_cost, expensive_cost)
 	local recipe = krastorio.recipes.getRecipeFromName(recipe_name)
 		
-	if recipe ~= nil then
-		local effective_expensive_cost = expensive_cost or energy_cost
-		
-		if recipe.energy_required then
+	if recipe then		
+		if recipe.energy_required or not (recipe.normal == nil or recipe.expensive == nil) then
 			recipe.energy_required = energy_cost
 		elseif recipe.ingredients then
 			recipe.energy_required = energy_cost
 		end		
 		if recipe.normal then
-			if recipe.normal.energy_required then
-				recipe.normal.energy_required = energy_cost
-			else
-				recipe.normal.energy_required = energy_cost
-			end
+			recipe.normal.energy_required = energy_cost
 		end
 		if recipe.expensive then
-			if recipe.expensive.energy_required then
-				recipe.expensive.energy_required = effective_expensive_cost
-			else
-				recipe.expensive.energy_required = effective_expensive_cost
-			end
+			recipe.expensive.energy_required = expensive_cost or energy_cost
 		end		
 	end
 end
@@ -1788,11 +1781,14 @@ end
 function krastorio.recipes.changeEnabledState(recipe_name, state)
 	local recipe = krastorio.recipes.getRecipeFromName(recipe_name)
 	if recipe then
-		if recipe.normal then
-			recipe.normal.enabled = state or false
-			recipe.expensive.enabled = state or false
-		else
+		if recipe.enabled ~= nil or recipe.normal == nil then
 			recipe.enabled = state or false
+		end
+		if recipe.normal and (recipe.normal.enabled ~= nil or recipe.enabled == nil) then
+			recipe.normal.enabled = state or false
+		end	
+		if recipe.expensive and recipe.expensive.enabled ~= nil then
+			recipe.expensive.enabled = state or false
 		end		
 	end	
 end
