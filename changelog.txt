@@ -3,6 +3,7 @@ Version: 0.9.3
 Date: 16.03.2020
   Features:
     - All sprites with Air purifier and filters was updated.
+    - Increased medium electric pole supply area distance (3.5 to 4.5). Many asked about this.
   Changes:
     - Nerfed creep collection.
     - Improved Squeak Through compatibility, anyway is recommended don't play with that mod and K2.
