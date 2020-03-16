@@ -74,7 +74,8 @@ if mods["deadlock-beltboxes-loaders"] then
 			"blank-tech-card",
 			"automation-core",
 			"coke",
-			"iron-beam"
+			"iron-beam",
+			"inserter-parts"
 		},
 		[2] = 
 		{	-- Tier 2
@@ -92,7 +93,8 @@ if mods["deadlock-beltboxes-loaders"] then
 			"pollution-filter",
 			"used-pollution-filter",
 			"first-aid-kit",
-			"electronic-components"
+			"electronic-components",
+			"lithium"
 		},
 		[3] = 
 		{	-- Tier 3
