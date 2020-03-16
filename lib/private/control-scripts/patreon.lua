@@ -9,7 +9,8 @@ krastorio_patreons =
 	["Pandabeezy"] = true,
 	["Wassabee"] = true,
 	["Rivsung"] = true,
-	["ReysDad"] = true
+	["ReysDad"] = true,
+	["melphin"] = true
 }
 
 -- Patreon Stuff

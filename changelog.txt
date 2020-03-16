@@ -5,7 +5,7 @@ Date: 16.03.2020
     - All sprites with Air purifier and filters was updated.
   Changes:
     - Nerfed creep collection.
-    - Improved Squeak Through compatibility, anyway is recommanded don't play with that mod and K2.
+    - Improved Squeak Through compatibility, anyway is recommended don't play with that mod and K2.
     - Now is possible use roboports on vanilla wagons (modded need to be compatibilizers).
   Fixes:
     - Fixed crash if the electric boiler of SE is disabled
