@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.3
 Date: 16.03.2020
+  Features:
+    - All sprites with Air purifier and filters was update.
   Changes:
     - Nerfed creep collection.
     - Improved Squeak Through compatibility, anyway is recommanded don't play with that mod and K2.

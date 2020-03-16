@@ -20,25 +20,56 @@ data:extend(
 		selection_box = {{-0.9, -0.9}, {0.9, 0.9}},
 		animation =
 		{
-			filename = kr_entities_path .. "air-purifier/air-purifier.png",
-			priority = "high",
-			scale = scale,
-			width = 85,
-			height = 85,
-			frame_count = 18,
-			line_length = 6,
-			animation_speed=0.5,
-			hr_version =
+			layers =
 			{
-				filename = kr_entities_path .. "air-purifier/hr-air-purifier.png",
-				priority = "high",
-				scale = scale,
-				width = 170,
-				height = 170,
-				frame_count = 18,
-				line_length = 6,
-				animation_speed=0.5,
-				scale = 0.5
+				{
+					filename = kr_entities_path .. "air-purifier/air-purifier.png",
+					priority = "high",
+					scale = scale,
+					width = 75,
+					height = 75,
+					shift = {0, -0.1},
+					frame_count = 16,
+					line_length = 4,
+					animation_speed=0.5,
+					hr_version =
+					{
+						filename = kr_entities_path .. "air-purifier/hr-air-purifier.png",
+						priority = "high",
+						scale = scale,
+						width = 150,
+						height = 150,
+						shift = {0, -0.1},
+						frame_count = 16,
+						line_length = 4,
+						animation_speed=0.5,
+						scale = 0.5
+					}
+				},
+				{
+					filename = kr_entities_path .. "air-purifier/air-purifier-gh.png",
+					priority = "high",
+					scale = scale,
+					width = 82,
+					height = 51,
+					shift = {0.22, 0.25},
+					repeat_count = 16,
+					draw_as_shadow = true,
+					animation_speed=0.5,
+					hr_version =
+					{
+						filename = kr_entities_path .. "air-purifier/hr-air-purifier-sh.png",
+						priority = "high",
+						scale = scale,
+						width = 164,
+						height = 102,
+						shift = {0.22, 0.25},
+						repeat_count = 16,
+						draw_as_shadow = true,
+						animation_speed=0.5,
+						scale = 0.5
+					}
+				},
 			}
 		},
 		crafting_categories = {"air-purification"},

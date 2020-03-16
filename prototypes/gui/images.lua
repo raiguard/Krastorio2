@@ -27,7 +27,8 @@ data:extend(
 		name     = "air-purifier-preview-1",		
 		filename = kr_technologies_icons_path .. "air-purifier.png",
 		width    = 128,
-		height   = 128
+		height   = 128,
+		scale    = 1.5
 	},
 	{
 		type     = "sprite",
@@ -35,7 +36,7 @@ data:extend(
 		filename = kr_recipes_icons_path .. "restore-used-pollution-filter.png",
 		width    = 128,
 		height   = 128,
-		scale    = 0.5
+		scale    = 1
 	},
 	---
 	-- Creep
