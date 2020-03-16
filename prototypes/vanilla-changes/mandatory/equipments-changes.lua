@@ -183,7 +183,7 @@ data:extend(
 		name = "kr-wagons-grid",
 		width = 6,
 		height = 16,
-		equipment_categories = {"universal-equipment", "vehicle-equipment"}
+		equipment_categories = {"universal-equipment", "vehicle-equipment", "robot-interaction-equipment", "vehicle-robot-interaction-equipment"}
 	}
  
 })
@@ -192,8 +192,11 @@ data:extend(
 applyAndIntegrateEquipmentCategories("car", "car", "kr-car-grid")
 applyAndIntegrateEquipmentCategories("car", "tank", "kr-tank-grid")
 applyAndIntegrateEquipmentCategories("locomotive", "locomotive", "kr-locomotive-grid")
-applyAndIntegrateEquipmentCategories("locomotive", "nuclear-locomotive", "kr-locomotive-grid") ---TEMPORARY
+applyAndIntegrateEquipmentCategories("locomotive", "nuclear-locomotive", "kr-locomotive-grid")
 applyAndIntegrateEquipmentCategories("cargo-wagon", "cargo-wagon", "kr-wagons-grid")
+if data.raw["cargo-wagon"]["cargo-wagon"] then
+	data.raw["cargo-wagon"]["cargo-wagon"].allow_robot_dispatch_in_automatic_mode = true
+end
 applyAndIntegrateEquipmentCategories("fluid-wagon", "fluid-wagon", "kr-wagons-grid")
 applyAndIntegrateEquipmentCategories("artillery-wagon", "artillery-wagon", "kr-wagons-grid")
 

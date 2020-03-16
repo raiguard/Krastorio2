@@ -21,43 +21,108 @@ end
 
 local exclusions_to_add =
 {	
-	["lab"] =
+	["ammo-turret"] =
 	{
-		"biusart_lab"
+		"kr-railgun-turret",
+		"kr-rocket-turret"
 	},
-	["furnace"] =
+	["accumulator"] =
 	{
-		"kr-crusher"
+		"kr-energy-storage",
+		"kr-intergalactic-transceiver"
 	},
 	["assembling-machine"] =
 	{
-		"kr-greenhouse"
+		"kr-greenhouse",
+		"kr-advanced-furnace",			
+		"kr-electrolysis-plant",
+		"kr-filtration-plant",				
+		"kr-air-filter",
+		"kr-fuel-refinery",
+		"kr-atmospheric-condenser",
+		"kr-bio-lab",
+		"kr-fuel-refinery",
+		"kr-advanced-chemical-plant",
+		"kr-matter-assembler",
+		"kr-matter-plant",
+		"kr-quantum-computer"
 	},
-	["mining-drill"] =
+	["beacon"] =
 	{
-		"water-pumpjack"
+		"kr-singularity-beacon"
 	},
-	["electric-energy-interface"] =
+	["burner-generator"] =
 	{
-		"kr-wind-turbine"
+		"kr-antimatter-reactor"
 	},
 	["container"] =
 	{
-		"medium-container",
-		"big-container"
+		"kr-medium-container",
+		"kr-big-container",
+		"kr-shelter-container",
+		"kr-shelter-plus-container"
 	},
+	["lab"] =
+	{
+		"biusart_lab",
+		"kr-singularity-lab"
+	},
+	["furnace"] =
+	{
+		"kr-crusher",
+		"kr-fluid-burner",
+		"kr-crusher",
+		"kr-air-purifier",
+		"kr-fusion-reactor",
+		"kr-stabilizer-charging-station"
+	},
+	["mining-drill"] =
+	{
+		"kr-mineral-water-pumpjack",
+		"kr-quarry-drill"
+	},
+	["electric-energy-interface"] =
+	{
+		"kr-wind-turbine",
+		"kr-shelter",
+		"kr-shelter-plus",
+		"kr-activated-intergalactic-transceiver"
+	},	
 	["logistic-container"] =
 	{
-		"medium-active-provider-container",
-		"medium-buffer-container",
-		"medium-passive-provider-container",
-		"medium-requester-container",
-		"medium-storage-container",
-		"big-active-provider-container",
-		"big-buffer-container",
-		"big-passive-provider-container",
-		"big-requester-container",
-		"big-storage-container"
+		"kr-medium-active-provider-container",
+		"kr-medium-buffer-container",
+		"kr-medium-passive-provider-container",
+		"kr-medium-requester-container",
+		"kr-medium-storage-container",
+		"kr-big-active-provider-container",
+		"kr-big-buffer-container",
+		"kr-big-passive-provider-container",
+		"kr-big-requester-container",
+		"kr-big-storage-container"
+	},	
+	["storage-tank"] =
+	{
+		"fluid-storage-1",
+		"fluid-storage-2"
+	},
+	["generator"] =
+	{
+		"kr-advanced-steam-turbine",
+		"kr-gas-power-station"
+	},
+	["radar"] =
+	{
+		"kr-sentinel"
+	},
+	["solar-panel"] =
+	{
+		"kr-advanced-solar-panel"
+	},
+	["roboport"] =
+	{
+		"kr-small-roboport",
+		"kr-large-roboport"
 	}
 }
 

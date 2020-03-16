@@ -364,8 +364,10 @@ if mods["space-exploration"] then
 	table.insert(data.raw.lab["kr-singularity-lab"].inputs, "space-science-pack")
 	
 	-- Electric boiler rebalance
-	data.raw["boiler"]["se-electric-boiler"].target_temperature = 99
-
+	if krastorio.general.getSafeSettingValue("se-electric-boiler") then
+		data.raw["boiler"]["se-electric-boiler"].target_temperature = 99
+	end
+	
 -- -- Equipments
 ---------------------------------------------------------------------------------------------	
 
