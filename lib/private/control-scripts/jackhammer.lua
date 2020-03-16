@@ -50,10 +50,7 @@ if settings.startup["kr-kl-stuff"] and settings.startup["kr-kl-stuff"].value the
 end
 
 local function onInitAndConf()
-	if not global.krastorio.script_initialization_status["jackhammer"] then
-		initializeJackhammerConstats()
-		global.krastorio.script_initialization_status["jackhammer"] = true
-	end
+	initializeJackhammerConstats()
 end
 
 function initializeJackhammerConstats()

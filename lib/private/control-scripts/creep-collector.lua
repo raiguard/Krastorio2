@@ -3,15 +3,12 @@ require("__Krastorio2__/lib/private/control-scripts/control-lib/control-lib-init
 local cu = require("__Krastorio2__/lib/private/control-scripts/control-lib/collectors-utils")
 
 local function onInitAndConf()
-	if not global.krastorio.script_initialization_status["creep-collector"] then
-		initializeCreepCollectorConstats()
-		global.krastorio.script_initialization_status["creep-collector"] = true
-	end
+	initializeCreepCollectorConstats()
 end
 
 function initializeCreepCollectorConstats()
 	global.MAX_TILE_DISTANCE   = 10
-	global.COLLECT_PROBABILITY = 70
+	global.COLLECT_PROBABILITY = 35
 end
 
 local function onCollection(event)
