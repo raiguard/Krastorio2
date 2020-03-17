@@ -29,14 +29,14 @@ data:extend(
 		{
 			name = "imersite",
 			order = "f",
-			base_density = 2,
+			base_density = 1,
 			base_spots_per_km2 = 0.2,
 			has_starting_area_placement = false,
 			random_spot_size_minimum = 0.01,
 			random_spot_size_maximum = 0.1,
 			regular_blob_amplitude_multiplier = 1,
-			richness_post_multiplier = 0.8,
-			additional_richness = 250000,
+			richness_post_multiplier = 1.0,
+			additional_richness = 350000,
 			regular_rq_factor_multiplier = 0.1,
 			candidate_spot_count = 22
 		},
