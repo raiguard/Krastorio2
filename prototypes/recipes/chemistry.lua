@@ -32,7 +32,7 @@ return
 		localized_name = {"fluid-name.water"},
 		category = "chemistry",		
 		icon = kr_recipes_icons_path .. "water.png",
-		icon_size = 256,
+		icon_size = 128,
 		energy_required = 5,
 		enabled = false,
 		always_show_made_in = true,

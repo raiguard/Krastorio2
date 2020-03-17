@@ -13,6 +13,7 @@ Date: 17.03.2020
     - Biofuel top speed has slightly improved (0.8->0.9).
     - Changed tiles stack size. Now minimal stack is 100.
     - Processing-unit stack size increased to 200. Like other boards.
+    - Some icons size adjustments.
   Fixes:
     - Fixed crash if the electric boiler of SE is disabled.
     - Fixed and improved some library functions.

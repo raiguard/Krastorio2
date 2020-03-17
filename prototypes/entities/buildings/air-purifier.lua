@@ -47,7 +47,7 @@ data:extend(
 					}
 				},
 				{
-					filename = kr_entities_path .. "air-purifier/air-purifier-gh.png",
+					filename = kr_entities_path .. "air-purifier/air-purifier-sh.png",
 					priority = "high",
 					scale = scale,
 					width = 82,
