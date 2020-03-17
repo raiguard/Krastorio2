@@ -128,8 +128,8 @@ return
 		results =
 		{
 			{type = "fluid", name = "water", amount = 100, catalyst_amount = 100},
-			{type = "item",  name = "stone", probability = 0.30, amount = 0.9},
-			{type = "item",  name = "copper-ore", probability = 0.10, amount = 0.9}
+			{type = "item",  name = "stone", probability = 0.30, amount = 1},
+			{type = "item",  name = "copper-ore", probability = 0.10, amount = 1}
 		},
 		crafting_machine_tint =
 		{

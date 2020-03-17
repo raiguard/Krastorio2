@@ -146,3 +146,10 @@ require(scripts_path .. "space-exploration")
 require(scripts_path .. "vtk-armor-plating")
 require(scripts_path .. "mod-assertions")
 ---------------------------------------------------------------------------
+-- Add new fuels to entities
+
+data.raw["assembling-machine"]["stone-furnace"].energy_source.fuel_categories = {"chemical", "vehicle-fuel"}
+data.raw["assembling-machine"]["steel-furnace"].energy_source.fuel_categories = {"chemical", "vehicle-fuel"}
+data.raw["boiler"]["boiler"].energy_source.fuel_categories = {"chemical", "vehicle-fuel"}
+data.raw["inserter"]["burner-inserter"].energy_source.fuel_categories = {"chemical", "vehicle-fuel"}
+data.raw["mining-drill"]["burner-mining-drill"].energy_source.fuel_categories = {"chemical", "vehicle-fuel"}
