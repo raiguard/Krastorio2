@@ -1,8 +1,8 @@
 -- -- KRASTORIO SETTINGS
--- Setting order "[as]NUMBER"
+-- Setting order "[a-z]NUMBER"
 data:extend(
 {
-	-- A - Config
+	-- Mod config (Setting order "aNUMBER")
 	{
 		type = "int-setting",
 		name = "kr-stack-size",
@@ -48,7 +48,7 @@ data:extend(
 		default_value = true,
 		order = "a6"
 	},
-	-- S - Science
+	-- S - Science (Setting order "sNUMBER")
 	{
         type = "string-setting",
         name = "kr-automation-science-pack-recipe",
@@ -96,6 +96,37 @@ data:extend(
         default_value = "Krastorio 2",
         allowed_values = {"Factorio", "Krastorio 2"},
 		order = "s6"
+    },
+	-- Skin content (Setting order "uNUMBER")
+	{
+		type = "bool-setting",
+		name = "kr-kl-stuff",
+		setting_type = "startup",
+		default_value = false,
+		order = "u1"
+	},
+	{
+        type = "string-setting",
+        name = "kr-shelter-tint",
+        setting_type = "startup",
+        default_value = "White",
+        allowed_values = {"White", "Gray", "Yellow", "Pink", "Olive", "Red", "Blue", "Green", "Сyan", "Purple"},
+		order = "u2"
+	},
+	{
+		type = "bool-setting",
+		name = "kr-main-menu-song",
+		setting_type = "startup",
+		default_value = true,
+		order = "u3"
+	},
+	{
+        type = "string-setting",
+        name = "kr-main-menu-background",
+        setting_type = "startup",
+        default_value = "Krastorio 2",
+        allowed_values = {"Krastorio 2", "Krastorio Legacy", "Factorio"},
+		order = "u4"
     }
 })
 
@@ -109,91 +140,76 @@ data:extend(
 		name = "kr-rebalance-vehicles&fuels",
 		setting_type = "startup",
 		default_value = true,
-		order = "b01"
+		order = "b1"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-rebalance-radar",
 		setting_type = "startup",
 		default_value = true,
-		order = "b02"
+		order = "b2"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-rebalance-fuels",
 		setting_type = "startup",
 		default_value = true,
-		order = "b03"
+		order = "b3"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-electric-poles-changes",
 		setting_type = "startup",
 		default_value = true,
-		order = "b04"
+		order = "b4"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-damage-and-ammo",
 		setting_type = "startup",
 		default_value = true,
-		order = "b05"
+		order = "b5"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-pipes-and-belts-changes",
 		setting_type = "startup",
 		default_value = true,
-		order = "b06"
+		order = "b6"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-more-realistic-weapon",
 		setting_type = "startup",
 		default_value = true,
-		order = "b07"
+		order = "b7"
 	},
  	{
  		type = "bool-setting",
 		name = "kr-more-realistic-weapon-auto-aim",
 		setting_type = "startup",
 		default_value = false,
-		order = "b08"
+		order = "b8"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-peaceful-mod",
 		setting_type = "startup",
 		default_value = false,
-		order = "b09"
+		order = "b9"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-vehicles-minable-changes",
 		setting_type = "startup",
 		default_value = false,
-		order = "b90"
+		order = "b10"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-infinite-technology",
 		setting_type = "startup",
 		default_value = true,
-		order = "b91"
-	},
-	{
-		type = "bool-setting",
-		name = "kr-kl-stuff",
-		setting_type = "startup",
-		default_value = false,
-		order = "b92"
-	},
-	{
-        type = "string-setting",
-        name = "kr-shelter-tint",
-        setting_type = "startup",
-        default_value = "White",
-        allowed_values = {"White", "Gray", "Yellow", "Pink", "Olive", "Red", "Blue", "Green", "Сyan", "Purple"},
-		order = "z01"
-	},
+		order = "b11"
+	}
 })

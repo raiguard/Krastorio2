@@ -1,5 +1,25 @@
+if krastorio.general.getSafeSettingValue("kr-main-menu-song") then
+	data:extend(
+	{
+		-- -- Ambient
+		{
+			type     = "ambient-sound",
+			name     = "K2-main-menu",
+			sound    =
+			{
+				filename = "__Krastorio2__/sounds/ambient/K2-main-menu.ogg",
+				volume   = 2.0,
+				preload  = true
+			},
+			track_type = "main-track",
+			weight = 666
+		}
+	})
+end
+
 data:extend(
 {
+	-- -- Scripts
 	{
 		type     = "sound",
 		name     = "kr-radioactive",
