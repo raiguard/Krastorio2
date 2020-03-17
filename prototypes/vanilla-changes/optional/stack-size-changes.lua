@@ -14,7 +14,7 @@ if krastorio.general.getSafeSettingValue("kr-stack-size") then
 
  -- -- Vanilla
 
-	data.raw.item["processing-unit"].stack_size = stack_size
+	data.raw.item["processing-unit"].stack_size = 200
 	data.raw.item["uranium-ore"].stack_size = stack_size
 	data.raw.item["coal"].stack_size = stack_size
 	data.raw.item["stone"].stack_size = stack_size
@@ -30,19 +30,23 @@ if krastorio.general.getSafeSettingValue("kr-stack-size") then
 	data.raw.item["plastic-bar"].stack_size = stack_size
 	data.raw.item["concrete"].stack_size = stack_size
 	data.raw.item["sulfur"].stack_size = stack_size
-	data.raw.item["refined-concrete"].stack_size = stack_size
-	data.raw.item["hazard-concrete"].stack_size = stack_size
-	data.raw.item["refined-hazard-concrete"].stack_size = stack_size
+	
+	data.raw.item["landfill"].stack_size = fuel_stack_size
+	data.raw.item["stone-brick"].stack_size = fuel_stack_size
+	data.raw.item["concrete"].stack_size = fuel_stack_size
+	data.raw.item["refined-concrete"].stack_size = fuel_stack_size
+	data.raw.item["hazard-concrete"].stack_size = fuel_stack_size
+	data.raw.item["refined-hazard-concrete"].stack_size = fuel_stack_size
+	
 	data.raw.item["uranium-235"].stack_size = stack_size
 	data.raw.item["uranium-238"].stack_size = stack_size
 	data.raw.item["iron-gear-wheel"].stack_size = stack_size
-	data.raw.item["landfill"].stack_size = stack_size
 	data.raw.item["battery"].stack_size = stack_size
+	data.raw.capsule["cliff-explosives"].stack_size = stack_size
 	
 	data.raw.item["rocket-control-unit"].stack_size = stack_size*0.5
 	data.raw.item["rocket-fuel"].stack_size = stack_size*0.5
 	data.raw.item["low-density-structure"].stack_size = stack_size*0.5
-	data.raw.capsule["cliff-explosives"].stack_size = stack_size*0.5
 	
 	data.raw.ammo["artillery-shell"].stack_size = 25
 	data.raw.item["uranium-fuel-cell"].stack_size = 10
@@ -51,7 +55,7 @@ if krastorio.general.getSafeSettingValue("kr-stack-size") then
 	data.raw.tool["space-science-pack"].stack_size = 200
 	data.raw.capsule["raw-fish"].stack_size = 50
 	data.raw.item["empty-barrel"].stack_size = 10
-	data.raw.item["nuclear-fuel"].stack_size = 25	
+	data.raw.item["nuclear-fuel"].stack_size = 10
 	
  -- -- K2-Suff
 	
@@ -93,9 +97,9 @@ if krastorio.general.getSafeSettingValue("kr-stack-size") then
 	
 	-- -- Tiles
 	
-	data.raw.item["kr-white-reinforced-plate"].stack_size = stack_size
-	data.raw.item["kr-black-reinforced-plate"].stack_size = stack_size
-	data.raw.item["kr-creep"].stack_size = stack_size
+	data.raw.item["kr-white-reinforced-plate"].stack_size = fuel_stack_size
+	data.raw.item["kr-black-reinforced-plate"].stack_size = fuel_stack_size
+	data.raw.item["kr-creep"].stack_size = fuel_stack_size
 	
 	-- -- Tech cards
 	

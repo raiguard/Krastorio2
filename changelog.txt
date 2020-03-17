@@ -10,11 +10,14 @@ Date: 16.03.2020
     - Now is possible use roboports on vanilla wagons (modded need to be compatibilizers).
     - Now furnaces, boiler, burner inserter and burner mining drill CAN use "chemical" and "vehicle-fuel".
     - Biofuel top speed has slightly improved (0.8->0.9).
+    - Changed tiles stack size. Now minimal stack is 100.
+    - Processing-unit stack size increased to 200. Like other boards.
   Fixes:
     - Fixed crash if the electric boiler of SE is disabled.
     - Fixed and improved some library functions.
     - Fixed dirty water filtration bug.
     - Some locale fixes.
+    - Accumulator output fix.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.2
 Date: 15.03.2020

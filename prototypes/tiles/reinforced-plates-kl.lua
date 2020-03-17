@@ -1,5 +1,12 @@
 if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
 
+local stack_size = 100
+
+
+if stack_size > 100 then
+   stack_size = krastorio.general.getSafeSettingValue("kr-stack-size")
+end
+
 	data:extend(
 	{
 		{
@@ -16,7 +23,7 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
 				condition_size = 1,
 				condition = { "water-tile" }
 			},
-			stack_size = 200
+			stack_size = stack_size
 		},
 		{
 			type = "item",
@@ -32,7 +39,7 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
 				condition_size = 1,
 				condition = { "water-tile" }
 			},
-			stack_size = 200
+			stack_size = stack_size
 		},
 		
 		{
