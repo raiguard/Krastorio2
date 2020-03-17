@@ -1,7 +1,7 @@
 local backgrounds_util = require(kr_public_lib .. "main-menu-backgrounds-util")
 
 backgrounds_util.addBackgroundImage("Factorio",               "__core__/graphics/background-image.jpg")
-backgrounds_util.addBackgroundImage("Krastorio Legacy",       kr_backgrounds_icons_path .. "Krastorio-legacy.jpg")
+backgrounds_util.addBackgroundImage("Krastorio Legacy",       kr_backgrounds_icons_path .. "krastorio-legacy.jpg")
 backgrounds_util.addBackgroundImage("Krastorio 2",            kr_backgrounds_icons_path .. "krastorio-2.jpg")
 backgrounds_util.addBackgroundImage("Krastorio CyberSkull",   kr_backgrounds_icons_path .. "krastorio-cyberskull.jpg")
 backgrounds_util.addBackgroundImage("Krastorio Soldier",      kr_backgrounds_icons_path .. "krastorio-soldier.jpg")
