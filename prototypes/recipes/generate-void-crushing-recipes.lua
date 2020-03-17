@@ -27,6 +27,8 @@ for _, type_name in pairs(krastorio.items.item_types) do
 					{
 						type = "recipe",
 						name = void_crushing_recipes_prefix .. item_name,
+						icon = kr_recipes_icons_path .. "trash.png",
+						icon_size = 64,
 						category = "crushing",
 						hidden = true,
 						energy_required = 5,

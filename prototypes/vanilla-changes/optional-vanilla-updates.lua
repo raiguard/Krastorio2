@@ -15,10 +15,7 @@ local modifications =
 	"damage-and-ammo",           -- Damage and ammo rebalance
 	"infinite-technology",       -- Remove or keep infinite technologies
 	"pipes-and-belts-changes",   -- Vanilla pipes and belts modification
-	"more-realistic-weapon"      -- Add to bullets more realistic range, tragectory, and drop of bullet speed during flight
-	
-	
-	
+	"more-realistic-weapon"      -- Add to bullets more realistic range, tragectory, and drop of bullet speed during flight	
 }
 
 -- Application of the modifications

@@ -183,7 +183,7 @@ return
 		allow_productivity = true,
 		ingredients =
         {
-            {type="item", name="wood", amount=40},
+            {type="item", name="wood", amount=20},
             {type="fluid", name="oxygen", amount=60, catalyst_amount = 60},
             {type="fluid", name="steam", amount=120, catalyst_amount = 120}
         },

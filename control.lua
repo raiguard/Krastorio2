@@ -1,6 +1,7 @@
 -- Path 
-local control_scripts_path = "__Krastorio2__/lib/private/control-scripts/"
-local control_lib_path = control_scripts_path .. "control-lib/control-lib-initialization"
+local control_scripts_path               = "__Krastorio2__/lib/private/control-scripts/"
+local control_compatibility_scripts_path = "__Krastorio2__/compatibility-scripts/control/"
+local control_lib_path                   = control_scripts_path .. "control-lib/control-lib-initialization"
 
 -- Libs
 ControlCallbackMerger = require(control_scripts_path .. "control-lib/control-callbacks-merger")
@@ -51,7 +52,9 @@ local scripts =
 	require(control_scripts_path .. "reset-krastorio-global-data"),
 	-- -- COMPATIBILITY
 	-- DiscoScience
-	require("__Krastorio2__/compatibility-scripts/control/DiscoScience")
+	require(control_compatibility_scripts_path .. "DiscoScience"),
+	-- aai-industry
+	require(control_compatibility_scripts_path .. "aai-industry")
 }
 
 -- Load all callbacks from control scripts (not for GUI events)

@@ -25,3 +25,8 @@ Thanks also to:
   with explicit consent of external use,
   taken from mod More Achievements (0.5.1 - GNU GPLv3)
   https://mods.factorio.com/mod/MoreAchievements
+  
+- nyoko for the intro music:
+  "nyoko - Flowing Into The Darkness" - Creative Commons license (CC BY 3.0).
+  Music promoted by BreakingCopyright: https://youtu.be/x74grrke9qE, Genre: Dark Ambient,
+  nyoko contact: https://soundcloud.com/redowthered

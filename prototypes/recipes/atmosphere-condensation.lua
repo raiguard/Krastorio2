@@ -76,7 +76,7 @@ return
 		ingredients = {},
 		results =
 		{
-			{ type = "fluid", name = "water", amount = 10 }
+			{ type = "fluid", name = "water", amount = 30 }
 		},
 		subgroup = "raw-material",
 		order = "a[atmosphere-condensation]-a0[water]"

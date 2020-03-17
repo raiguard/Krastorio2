@@ -125,7 +125,7 @@ data:extend(
         name = "kr-main-menu-background",
         setting_type = "startup",
         default_value = "Krastorio 2",
-        allowed_values = {"Krastorio 2", "Krastorio Legacy", "Factorio"},
+        allowed_values = {"Krastorio 2", "Krastorio Legacy", "Factorio", "Factorio Alternative 1", "Factorio Alternative 2", "Factorio Alternative 3", "Factorio Alternative 4"},
 		order = "u4"
     }
 })
@@ -193,7 +193,7 @@ data:extend(
 	},
 	{
 		type = "bool-setting",
-		name = "kr-peaceful-mod",
+		name = "kr-peaceful-mode",
 		setting_type = "startup",
 		default_value = false,
 		order = "b9"

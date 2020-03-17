@@ -8,7 +8,7 @@ if krastorio.general.getSafeSettingValue("kr-main-menu-song") then
 			sound    =
 			{
 				filename = "__Krastorio2__/sounds/ambient/K2-main-menu.ogg",
-				volume   = 2.0,
+				volume   = 1.4,
 				preload  = true
 			},
 			track_type = "main-track",

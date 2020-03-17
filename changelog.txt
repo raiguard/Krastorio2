@@ -5,7 +5,11 @@ Date: 17.03.2020
     - Sprites with Air purifier and filters was updated.
     - Sprites with Fluid burner was updated.
     - Increased medium electric pole supply area distance (3.5 to 4.5). Many asked about this.
+    - Selectable background! (with customization option)
+    - Intro background song! (with customization option)
   Changes:
+    - Boosted water gathering from the atmospheric condenser recipe.
+    - Redued the quantity of greenhouse needed for produce biomethanol.
     - Nerfed creep collection.
     - No you can burn biomass if not needed.
     - Improved Squeak Through compatibility, anyway is recommended don't play with that mod and K2.
@@ -15,6 +19,7 @@ Date: 17.03.2020
     - Changed tiles stack size. Now minimal stack is 100.
     - Processing-unit stack size increased to 200. Like other boards.
     - Some icons size adjustments.
+    - Now with AAI industry mod crush site will no longer explode.
   Fixes:
     - Fixed crash if the electric boiler of SE is disabled.
     - Fixed and improved some library functions.

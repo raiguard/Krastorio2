@@ -25,17 +25,3 @@ krastorio.recipes.removeIngredients("utility-science-pack", unlockable_items)
 krastorio.recipes.setCategoryIfExist("production-science-pack", "t2-tech-cards")
 krastorio.recipes.setCategoryIfExist("utility-science-pack", "t2-tech-cards")
 krastorio.recipes.setCategoryIfExist("space-science-pack", "t3-tech-cards")
--- -- Peaceful mod
-
-if krastorio.general.getSafeSettingValue("kr-peaceful-mod") and settings.startup["kr-military-science-pack-recipe"].value == "Krastorio 2" then
-	data.raw.item["biters-research-data"].localised_name={"item-name.military-research-data"}
-	krastorio.recipes.overrideIngredients
-	(
-		"biters-research-data", 
-		{
-			{"submachine-gun", 3},
-			{"grenade", 3},
-			{"stone-wall", 6},
-		}
-	)
-end
