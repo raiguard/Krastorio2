@@ -29,7 +29,7 @@ data:extend(
 		{
 			name = "imersite",
 			order = "f",
-			base_density = 1,
+			base_density = 2,
 			base_spots_per_km2 = 0.2,
 			has_starting_area_placement = false,
 			random_spot_size_minimum = 0.01,
