@@ -7,9 +7,10 @@ Date: 17.03.2020
     - Increased medium electric pole supply area distance (3.5 to 4.5). Many asked about this.
   Changes:
     - Nerfed creep collection.
+    - No you can burn biomass if not needed.
     - Improved Squeak Through compatibility, anyway is recommended don't play with that mod and K2.
     - Now is possible use roboports on vanilla wagons (modded need to be compatibilizers).
-    - Now furnaces, boiler, burner inserter and burner mining drill CAN use "chemical" and "vehicle-fuel".
+    - Now furnaces, boiler, burner inserter and burner mining drill CAN use "chemical" and "vehicle fuel".
     - Biofuel top speed has slightly improved (0.8->0.9).
     - Changed tiles stack size. Now minimal stack is 100.
     - Processing-unit stack size increased to 200. Like other boards.
@@ -17,7 +18,7 @@ Date: 17.03.2020
   Fixes:
     - Fixed crash if the electric boiler of SE is disabled.
     - Fixed and improved some library functions.
-    - Fixed dirty water filtration bug.
+    - Fixed that dirty water purification into copper don't give nothing.
     - Some locale fixes.
     - Accumulator output fix.
 ---------------------------------------------------------------------------------------------------

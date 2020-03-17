@@ -56,8 +56,13 @@ data:extend(
 			{ size = 64, filename = kr_items_with_variations_icons_path .. "biomass/biomass-2.png", scale = 0.25, mipmap_count = 4 },
 			{ size = 64, filename = kr_items_with_variations_icons_path .. "biomass/biomass-3.png", scale = 0.25, mipmap_count = 4 }
 		},
+		fuel_category = "chemical",
+		fuel_value = "2MJ",
+		fuel_emissions_multiplier = 0.8,
+		fuel_acceleration_multiplier = 0.8,
+		fuel_top_speed_multiplier = 0.8,
 		subgroup = "raw-material",
-		order = "a[fertilizer]",
+		order = "a[biomass]",
 		stack_size = 200
 	},
 	{
