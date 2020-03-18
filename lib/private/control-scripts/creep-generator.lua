@@ -83,7 +83,7 @@ function pushCreepToGenerate(event)
 	if nest then
 		if isFarEnough(nest.position) then
 			global.last_nest_position = nest.position -- set new last nest finded
-			table.insert(global.creeps_to_generate, {surface = nest.surface, position = nest.position})
+			table.insert(global.creeps_to_generate, {name = nest.name, surface = nest.surface, position = nest.position})
 		end
 	else		
 		local nests = event.surface.find_entities_filtered
@@ -94,7 +94,7 @@ function pushCreepToGenerate(event)
 		}
 		
 		for _, nest in pairs(nests) do	
-			table.insert(global.creeps_to_generate, {surface = event.surface, position = nest.position})	
+			table.insert(global.creeps_to_generate, {name = nest.name, surface = event.surface, position = nest.position})	
 		end		
 	end	
 end
@@ -122,11 +122,11 @@ function continueCreepGeneration(event)
 			global.creep_index = 1
 		end		
 		
-		-- If no one have it calculate the generate the creep
+		-- If no one have calculate it then generate the creep
 		local creep = global.creeps_to_generate[i] or false
 		if creep then
 			table.remove(global.creeps_to_generate, i) -- remove from to-do
-			if creep.surface.valid then
+			if creep.surface.valid and (creep.name == nil or creep.surface.find_entity(creep.name, creep.position) ~= nil) then
 				spawnCreep(creep.surface, creep.position)
 			else
 				continueCreepGeneration(event)
