@@ -1,21 +1,8 @@
-local supporters =
-{
-	{"Aski Rawen", 10},
-	{"Austin", 10},
-	{"Jonas Rejman", 10},
-	{"Josh Strunk", 10},
-	{"Rivsung", 10},
-	{"Saulius Zilis", 10},
-	{"ReysDad", 10},
-	{"Константин Попичев", 10},
-	{"Сергій Руденко", 10},
-	{"Jan Dragsbæk", 6},
-	{"rcobbe", 6}
-}
+local patreons_list = require("__Krastorio2__/lib/private/control-scripts/control-lib/patreon-names")
 
 local function createThanksList()
 	list = ""
-	for i, supporter in pairs(supporters) do
+	for i, supporter in pairs(patreons_list.getHighSupportersList()) do
 		list = list .. "[font=default-large-semibold]" .. 
 		       supporter[1] ..  
 			   " with " .. "[color=green]$" .. supporter[2] .. "[/color]" .. " for month [/font]\n"
@@ -40,7 +27,7 @@ local function thanksOnPlayerJoin(event)
 end
 
 -- With control-callbacks-merger
-if #supporters > 0 then
+if #patreons_list.getHighSupportersList() > 0 then
 	return
 	{
 		-- -- Bootstrap

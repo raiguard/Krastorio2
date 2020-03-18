@@ -13,6 +13,19 @@ for i, topic_def in pairs(topics) do
 	topics_indexs[i] = topic_def.topic
 end
 
+function getFormattedCaption(text, localized)
+	local caption = nil
+	if type(text) == "table" and next(caption) then
+		_, caption = next(caption)
+	else
+		caption = text
+	end
+	if localized == true then
+		return {caption}
+	else
+		return caption
+	end	
+end
 
 function getDescrptionGUIPane(event)
 	local wiki = krastorio.gui.getElementByName(event.player_index, w_prefix.."main-frame")
@@ -26,49 +39,67 @@ function getDescrptionGUIPane(event)
 	return nil
 end
 
-function addTitleToDescrptionGUIPane(pane, title_name)
-	-- Title flow
-	local title_flow = krastorio.gui.addFlow(pane, 
-	{
-		name      = w_prefix.."title-flow",
-		direction = "horizontal",
-		style     = "kr-title-flow"
-	})
-	-- Title
-	krastorio.gui.addLabel(title_flow, 
-	{
-		name    = w_prefix.."description-title", 
-		caption = {title_name},
-		style   = "bold_label"
-	})
-	-- Separator line
-	krastorio.gui.addLine(pane, 
-	{
-		name    = w_prefix.."title-line",
-		style   = "dark_line"
-	})
+function addTitleToDescrptionGUIPane(pane, title_name, localized)
+	if pane then
+		if title_name == nil then
+			title_name = ""
+		end
+		if localized == nil then
+			localized = true
+		end
+		-- Title flow
+		local title_flow = krastorio.gui.addFlow(pane, 
+		{
+			name      = w_prefix.."title-flow",
+			direction = "horizontal",
+			style     = "kr-title-flow"
+		})
+		-- Title
+		krastorio.gui.addLabel(title_flow, 
+		{
+			name    = w_prefix.."description-title", 
+			caption = getFormattedCaption(title_name, localized),
+			style   = "bold_label"
+		})
+		-- Separator line
+		krastorio.gui.addLine(pane, 
+		{
+			name    = w_prefix.."title-line",
+			style   = "dark_line"
+		})
+	end
 end
 
-function addTextToDescrptionGUIPane(pane, text_name, index)
-	krastorio.gui.addDescription(pane,
-	{
-		name    = w_prefix.."description-" .. index, 
-		caption = {text_name}
-	})
+function addTextToDescrptionGUIPane(pane, text_name, localized, index)
+	if pane then
+		if text_name == nil then
+			text_name = ""
+		end
+		if localized == nil then
+			localized = true
+		end
+		krastorio.gui.addDescription(pane,
+		{
+			name    = w_prefix.."description-" .. index, 
+			caption = getFormattedCaption(text_name, localized)
+		})
+	end
 end
 
 function addImageToDescrptionGUIPane(pane, image_name, index)
-	local image_flow = krastorio.gui.addFlow(pane, 
-	{
-		name      = w_prefix.."image-flow-" .. index,
-		direction = "horizontal",
-		style     = "kr-wiki-image-flow"
-	})
-	krastorio.gui.addSprite(image_flow,
-	{
-		name   = w_prefix.."preview-" .. index, 
-		sprite = image_name
-	})
+	if pane and image_name then
+		local image_flow = krastorio.gui.addFlow(pane, 
+		{
+			name      = w_prefix.."image-flow-" .. index,
+			direction = "horizontal",
+			style     = "kr-wiki-image-flow"
+		})
+		krastorio.gui.addSprite(image_flow,
+		{
+			name   = w_prefix.."preview-" .. index, 
+			sprite = image_name
+		})
+	end
 end
 
 function getPlayerDisplayResolution(event)
@@ -98,11 +129,21 @@ function changeWikiDescription(event)
 		if topic and wiki_info_pane then -- if topic exist and wiki window
 			local image_count, texts_count = 0, 0
 			local element_type = nil
+			local element_localized = nil
+			local tilet_added = false
 			for _, element in pairs(topic) do
 				element_type = element.type or element[1]
-				if element_type == "title" then
+				
+				if element_type == "title" and not tilet_added then
 					-- Add title
-					addTitleToDescrptionGUIPane(wiki_info_pane, element.title or element[2])		
+					element_localized = true
+					if element.localized ~= nil then
+						element_localized = element.localized
+					elseif element[3] ~= nil then
+						element_localized = element[3]
+					end
+					addTitleToDescrptionGUIPane(wiki_info_pane, element.title or element[2], element_localized)
+					tilet_added = true
 				elseif element_type == "image" then
 					-- Add image
 					image_count = image_count + 1
@@ -110,7 +151,13 @@ function changeWikiDescription(event)
 				elseif element_type == "text" then
 					-- Add text
 					texts_count = texts_count + 1
-					addTextToDescrptionGUIPane(wiki_info_pane, element.text or element[2], texts_count)
+					element_localized = true
+					if element.localized ~= nil then
+						element_localized = element.localized
+					elseif element[3] ~= nil then
+						element_localized = element[3]
+					end
+					addTextToDescrptionGUIPane(wiki_info_pane, element.text or element[2], element_localized, texts_count)
 				end
 			end
 		end		

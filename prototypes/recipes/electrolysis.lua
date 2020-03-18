@@ -85,7 +85,7 @@ return
 		type = "recipe",
 		name = "heavy-water",
 		category = "electrolysis",
-		energy_required = 90,
+		energy_required = 100,
 		enabled = false,
 		always_show_made_in = true,
 		always_show_products = true,

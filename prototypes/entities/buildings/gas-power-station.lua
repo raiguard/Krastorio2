@@ -104,7 +104,7 @@ data:extend(
 		max_health = 750,
 		corpse = "kr-medium-random-pipes-remnant",
 		dying_explosion = "medium-explosion",
-		fluid_usage_per_tick = 0.1,
+		fluid_usage_per_tick = 0.083333333,
 		maximum_temperature = 25,
 		burns_fluid = true,
 		scale_fluid_usage = true,

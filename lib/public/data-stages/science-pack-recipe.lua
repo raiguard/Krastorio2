@@ -222,7 +222,7 @@ if not krastorio.science_pack_recipes then
 		{
 			{"blank-tech-card", 10},
 			{"processing-unit", 5},
-			{"rocket-fuel", 10},
+			{"rocket-fuel", 5},
 			{"low-density-structure", 5}			
 		},
 		result = "utility-science-pack"

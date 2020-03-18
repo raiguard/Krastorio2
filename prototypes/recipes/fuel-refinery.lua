@@ -189,7 +189,7 @@ return
         },
         results =
         { 
-            {type="fluid", name="biomethanol", amount=60}
+            {type="fluid", name="biomethanol", amount=120}
         },
 		crafting_machine_tint =
 		{
