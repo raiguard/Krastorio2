@@ -48,7 +48,7 @@ local function onCollection(event)
 						cu.showCollectionBiomassCountMessage(player.character, percentage, inserted)
 						cu.playCollectCreepSound(player)
 					elseif count > 0 and effective_count == 0 then
-						event.surface.surface.set_tiles(replacements)
+						event.surface.set_tiles(replacements)
 						cu.showCollectionBiomassCountMessage(player.character, 0, 0)
 						cu.playCollectCreepSound(player)
 					end
