@@ -326,7 +326,7 @@ end
 
 -- @event, on_built_entity or on_robot_built_entity
 local function onBuiltAnEntity(event)
-	local entity = event.created_entity
+	local entity = event.created_entity or event.entity
 	if entity.valid and not event.revived and entity.name ~= "entity-ghost" then
 		local name = getEffectiveName(entity)
 		local type = getEffectiveType(entity) 
@@ -368,7 +368,9 @@ if settings.startup["kr-loaders"] and settings.startup["kr-loaders"].value then
 		-- When bulding, if its a loader check for snapping and snap, if snapped or not snapping then add to list,
 		-- check anything else built and check for loaders around it they may need correcting.		
 		{ onBuiltAnEntity, "on_built_entity", KRASTORIO_LOADER_BUILT_EVENT_FILTER },
-		{ onBuiltAnEntity, "on_robot_built_entity", KRASTORIO_LOADER_BUILT_EVENT_FILTER }		
+		{ onBuiltAnEntity, "on_robot_built_entity", KRASTORIO_LOADER_BUILT_EVENT_FILTER },
+		{ onBuiltAnEntity, "script_raised_built" },
+		{ onBuiltAnEntity, "script_raised_revive" }		
 	}
 else
 	return {}

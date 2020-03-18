@@ -72,7 +72,7 @@ end
 
 -- @event, on_built_entity or on_robot_built_entity
 local function onBuiltAnEntity(event)
-	local entity = event.created_entity
+	local entity = event.created_entity or event.entity
 	if entity.valid and (entity.name == "kr-shelter" or entity.name == "kr-shelter-plus") then
 		local surface = entity.surface.index
 		local force   = entity.force.index
@@ -178,6 +178,8 @@ return
 	{ saveStartPoint, "on_surface_created" }, 
 	{ onBuiltAnEntity, "on_built_entity", KRASTORIO_SHELTER_EVENT_FILTER },
 	{ onBuiltAnEntity, "on_robot_built_entity", KRASTORIO_SHELTER_EVENT_FILTER },
+	{ onBuiltAnEntity, "script_raised_built" },
+	{ onBuiltAnEntity, "script_raised_revive" },		
 	{ onRemovingAnEntity, "on_player_mined_entity", KRASTORIO_SHELTER_EVENT_FILTER },
 	{ onRemovingAnEntity, "on_robot_mined_entity", KRASTORIO_SHELTER_EVENT_FILTER },
 	{ onRemovingAnEntity, "on_entity_died", KRASTORIO_SHELTER_EVENT_FILTER }

@@ -1,0 +1,2 @@
+/kr-restore, restore Krastorio 2 global data like the was in the game start, destroy and giving back any entity associated with scrips.
+/kr-patreon-stuff, give the patreon stuff is the player is in the patreon high supporter list.

@@ -50,39 +50,19 @@ local function restore()
 	})
 	game.print({"other.forced-reset-message"})
 end
-
-local function addCommandInterface()
-	if not commands.commands["kr-restore"] then
-		commands.add_command("kr-restore", {"other.kr-restore-help"}, restore)
-	end
+-- Associate command to function
+if not commands.commands["kr-restore"] then
+	commands.add_command("kr-restore", {"other.kr-restore-help"}, restore)
 end
 
-local function addRemoteInterface()
-	if not remote.interfaces["kr-restore"] then
-		remote.add_interface("kr-restore",
-		{
-			reset_global_data = 
-			function()
-				restore()
-			end
-		})
-	end
+if not remote.interfaces["kr-restore"] then
+	remote.add_interface("kr-restore",
+	{
+		reset_global_data = 
+		function()
+			restore()
+		end
+	})
 end
 
-local function onInit()
-	addRemoteInterface()
-	addCommandInterface()
-end
-
-local function onLoad()
-	addRemoteInterface()
-	addCommandInterface()
-end
-
-return
-{ 
-	-- -- Bootstrap
-	-- Adding interfaces
-	{ onInit, "on_init" },
-	{ onLoad, "on_load" }    
-}
+return{}

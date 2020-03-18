@@ -66,9 +66,9 @@ else
 	{ 
 		-- -- Actions		
 		{ onBuiltAnEntity, "on_built_entity", KRASTORIO_OFFSHORE_PUMP_EVENT_FILTER },
+		{ onBuiltAnEntity, "on_robot_built_entity", KRASTORIO_OFFSHORE_PUMP_EVENT_FILTER },
 		{ onBuiltAnEntity, "script_raised_built" },
 		{ onBuiltAnEntity, "script_raised_revive" },
-		{ onBuiltAnEntity, "on_robot_built_entity", KRASTORIO_OFFSHORE_PUMP_EVENT_FILTER },
 		{ onBlueprint, "on_player_setup_blueprint" }
 	}
 end

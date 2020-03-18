@@ -12,28 +12,26 @@ local KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER =
     }
 }
 
-local function addRemoteInterface()
-	if not remote.interfaces["kr-intergalactic-transceiver"] then
-		remote.add_interface("kr-intergalactic-transceiver",
-		{
-			set_no_victory = 
-			function(bool)
-				if type(bool) ~= "boolean" then 
-					error("Value for 'set_no_victory' must be a boolean.")
-				end
-				global.krastorio_victory_disabled = bool
-			end,
-			charge_it =
-			function(force_index)
-				if type(force_index) ~= "number" then 
-					error("Value for 'force_index' must be a integer.")
-				end
-				if global.intergalactic_transceivers[force_index] then
-					global.intergalactic_transceivers[force_index].energy = global.intergalactic_transceivers[force_index].prototype.electric_energy_source_prototype.buffer_capacity
-				end			
+if not remote.interfaces["kr-intergalactic-transceiver"] then
+	remote.add_interface("kr-intergalactic-transceiver",
+	{
+		set_no_victory = 
+		function(bool)
+			if type(bool) ~= "boolean" then 
+				error("Value for 'set_no_victory' must be a boolean.")
 			end
-		})
-	end
+			global.krastorio_victory_disabled = bool
+		end,
+		charge_it =
+		function(force_index)
+			if type(force_index) ~= "number" then 
+				error("Value for 'force_index' must be a integer.")
+			end
+			if global.intergalactic_transceivers[force_index] then
+				global.intergalactic_transceivers[force_index].energy = global.intergalactic_transceivers[force_index].prototype.electric_energy_source_prototype.buffer_capacity
+			end			
+		end
+	})
 end
 
 local function onInitAndConf()
@@ -43,23 +41,17 @@ local function onInitAndConf()
 	end
 end
 
-local function onLoad()
-	addRemoteInterface()
-end
-
 -- Called when the game is created
 function intergalactic_transceiverVariablesInitializing()
 	-- global variable
 	global.intergalactic_transceivers = {}
 	global.intergalactic_transceivers_energy_status = {}
 	global.game_won = false
-	-- add interfaces
-	addRemoteInterface()
 end
 
 -- @event, on_built_entity or on_robot_built_entity
 local function onBuiltAnEntity(event)
-	local entity = event.created_entity
+	local entity = event.created_entity or event.entity
 	if entity and entity.valid and (entity.name == "kr-intergalactic-transceiver" or entity.name == "kr-activated-intergalactic-transceiver") then
 		local force_index = entity.force.index
 		if not global.intergalactic_transceivers[force_index] then
@@ -135,11 +127,12 @@ return
 	-- -- Bootstrap
 	-- For setup variables
 	{ onInitAndConf, "on_init" },
-	{ onLoad, "on_load" },
 	{ onInitAndConf, "on_configuration_changed" },	
 	-- -- Actions		
 	{ onBuiltAnEntity, "on_built_entity", KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER },
 	{ onBuiltAnEntity, "on_robot_built_entity", KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER },
+	{ onBuiltAnEntity, "script_raised_built" },
+	{ onBuiltAnEntity, "script_raised_revive" },		
 	{ onRemovingAnEntity, "on_player_mined_entity", KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER },
 	{ onRemovingAnEntity, "on_robot_mined_entity", KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER },
 	{ onRemovingAnEntity, "on_entity_died", KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER },

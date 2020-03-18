@@ -1,0 +1,7 @@
+remote.add_interface("kr-intergalactic-transceiver", "set_no_victory", bool), will disable the victory via Krastorio 2 intergalactic transceiver win condition.
+remote.add_interface("kr-intergalactic-transceiver", "charge_it", force_index), completly charge the intergalactic transceiver of the indicated force.
+remote.add_interface("kr-restore", "reset_global_data"), restore Krastorio 2 global data like the was in the game start, destroy and giving back any entity associated with scrips.
+remote.add_interface("kr-radioactivity", "set_no_radioactivity", bool), disable/enable Krastorio 2 radioactivity.
+remote.add_interface("kr-creep", "set_creep_on_chunk_generated", bool), disable/enable creep generation when a nest is created with a chuck. 
+remote.add_interface("kr-creep", "set_creep_on_biter_base_built", bool) disable/enable creep generation when biters migrate creating a new base.
+remote.add_interface("kr-creep", "spawn_creep_at_position", surface, position) spawn the creep in the indicated position.

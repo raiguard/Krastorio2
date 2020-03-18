@@ -50,12 +50,10 @@ local function tryToGetPatreonItems(command)
 		game.print({"other.kr-patreon-stuff-fail"})
 	end
 end
-local function addCommandInterface()
-	if not commands.commands["kr-patreon-stuff"] then
-		commands.add_command("kr-patreon-stuff", {"other.kr-patreon-stuff-help"}, tryToGetPatreonItems)
-	end
+-- Associate command to function
+if not commands.commands["kr-patreon-stuff"] then
+	commands.add_command("kr-patreon-stuff", {"other.kr-patreon-stuff-help"}, tryToGetPatreonItems)
 end
-
 
 -- Init
 local function onInitAndConf()
@@ -66,7 +64,6 @@ local function onInitAndConf()
 end
 function initializePatreonsGlobalVariables()
 	global.patreon_item_given = {}
-	addCommandInterface()
 end
 
 return
@@ -75,8 +72,6 @@ return
 	-- For setup variables
 	{ onInitAndConf, "on_init" },
 	{ onInitAndConf, "on_configuration_changed" },
-	-- Adding interfaces
-	{ addCommandInterface, "on_load" }, 
 	-- On new game
 	{ givePatreonItems, "on_player_created" }
 }
