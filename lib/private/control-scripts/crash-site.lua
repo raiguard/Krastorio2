@@ -1,4 +1,66 @@
 random_generator = nil
+crash_site_enabled = true
+local start_items =
+{
+	"iron-plate",
+	"copper-cable",
+	"iron-gear-wheel",
+	"electronic-circuit"
+}
+local entities_to_place =
+{
+	"kr-crash-site-lab-repaired",
+	"kr-mineable-wreckage",
+	"kr-crash-site-assembling-machine-1-repaired",
+	"kr-mineable-wreckage",
+	"kr-crash-site-assembling-machine-2-repaired",
+	"kr-mineable-wreckage",
+	"kr-crash-site-generator",
+	"kr-mineable-wreckage",
+	"kr-crash-site-chest-1",
+	"kr-crash-site-chest-1",
+	"kr-crash-site-chest-1",
+	"kr-mineable-wreckage",
+	"kr-crash-site-chest-2",
+	"kr-crash-site-assembling-machine-1-repaired",
+	"kr-crash-site-chest-2",
+	"kr-crash-site-chest-2",
+	"kr-mineable-wreckage",
+	--"kr-big-ship-wreck-1",
+	"kr-mineable-wreckage",
+	"kr-big-ship-wreck-2",
+	"kr-crash-site-assembling-machine-2-repaired",
+	"kr-mineable-wreckage",
+	"kr-big-ship-wreck-3",
+	"kr-mineable-wreckage"
+}
+
+if not remote.interfaces["kr-crash-site"] then
+	remote.add_interface("kr-crash-site",
+	{
+		crash_site_enabled = 
+		function(bool)
+			if type(bool) ~= "boolean" then 
+				error("Value for 'set_crash_site' must be a boolean.")
+			end
+			crash_site_enabled = bool
+		end,
+		add_crash_site_item = 
+		function(item_name)
+			if type(bool) ~= "string" then 
+				error("Value for 'add_crash_site_item' must be a string.")
+			end
+			table.insert(start_items, item_name)
+		end,
+		add_crash_site_entity = 
+		function(entity_name)
+			if type(bool) ~= "string" then 
+				error("Value for 'add_crash_site_entity' must be a string.")
+			end
+			table.insert(entities_to_place, entity_name)
+		end
+	})
+end
 
 local function randomizePosition(start_position, range)
 	if not random_generator or not random_generator.valid then
@@ -13,40 +75,10 @@ local function randomizePosition(start_position, range)
 end
 
 local function createCrashSite()
-	local start_items =
-	{
-		"iron-plate",
-		"copper-cable",
-		"iron-gear-wheel",
-		"electronic-circuit"
-	}
-	local entities_to_place =
-	{
-		"kr-crash-site-lab-repaired",
-		"kr-mineable-wreckage",
-		"kr-crash-site-assembling-machine-1-repaired",
-		"kr-mineable-wreckage",
-		"kr-crash-site-assembling-machine-2-repaired",
-		"kr-mineable-wreckage",
-		"kr-crash-site-generator",
-		"kr-mineable-wreckage",
-		"kr-crash-site-chest-1",
-		"kr-crash-site-chest-1",
-		"kr-crash-site-chest-1",
-		"kr-mineable-wreckage",
-		"kr-crash-site-chest-2",
-		"kr-crash-site-assembling-machine-1-repaired",
-		"kr-crash-site-chest-2",
-		"kr-crash-site-chest-2",
-		"kr-mineable-wreckage",
-		--"kr-big-ship-wreck-1",
-		"kr-mineable-wreckage",
-		"kr-big-ship-wreck-2",
-		"kr-crash-site-assembling-machine-2-repaired",
-		"kr-mineable-wreckage",
-		"kr-big-ship-wreck-3",
-		"kr-mineable-wreckage"
-	}
+	if not crash_site_enabled then
+		return false
+	end
+
 	local surface = game.surfaces[1]
 	local player_force = game.forces[1]
 	local start_position = player_force.get_spawn_position(1)

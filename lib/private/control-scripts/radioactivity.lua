@@ -1,15 +1,17 @@
 radioactivity_enabled = true
 
-remote.add_interface("kr-radioactivity",
-{
-	set_no_radioactivity = 
-	function(bool)
-		if type(bool) ~= "boolean" then 
-			error("Value for 'set_no_radioactivity' must be a boolean.")
+if not remote.interfaces["kr-radioactivity"] then
+	remote.add_interface("kr-radioactivity",
+	{
+		set_no_radioactivity = 
+		function(bool)
+			if type(bool) ~= "boolean" then 
+				error("Value for 'set_no_radioactivity' must be a boolean.")
+			end
+			radioactivity_enabled = bool
 		end
-		radioactivity_enabled = bool
-	end
-})
+	})
+end
 
 local function onInitAndConf()
 	if not global.krastorio.radioactivity_lock then

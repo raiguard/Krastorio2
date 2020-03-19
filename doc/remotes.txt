@@ -5,3 +5,6 @@ remote.call("kr-radioactivity", "set_no_radioactivity", bool), disable/enable Kr
 remote.call("kr-creep", "set_creep_on_chunk_generated", bool), disable/enable creep generation when a nest is created with a chuck. 
 remote.call("kr-creep", "set_creep_on_biter_base_built", bool) disable/enable creep generation when biters migrate creating a new base.
 remote.call("kr-creep", "spawn_creep_at_position", surface, position) spawn the creep in the indicated position.
+remote.call("kr-crash-site", "crash_site_enabled", bool) disable/enable Krastorio 2 crash site
+remote.call("kr-crash-site", "add_crash_site_item", item_name) add in item to insert in the containers of crush site
+remote.call("kr-crash-site", "add_crash_site_entity", entity_name) add an entity to spawn in the crush site

@@ -11,7 +11,9 @@ Date: 20.03.2020
     - Reduce the number of rocket fuel necessary to produce utility tech cards.
     - Improved some script logics.
   Fixes:
+    - Fixed nuclear artillery icon.
     - Fixed crash in creep code if other mods try to delete surfaces.
+    - Probably fixed some error in spawning creep with RSO
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.4
 Date: 18.03.2020

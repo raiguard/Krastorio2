@@ -3,30 +3,32 @@
 creep_on_chunk_generated  = true
 creep_on_biter_base_built = true
 
-remote.add_interface("kr-creep",
-{
-	set_creep_on_chunk_generated = 
-	function(bool)
-		if type(bool) ~= "boolean" then 
-			error("Value for 'creep_on_chunk_generated' must be a boolean.")
+if not remote.interfaces["kr-creep"] then
+	remote.add_interface("kr-creep",
+	{
+		set_creep_on_chunk_generated = 
+		function(bool)
+			if type(bool) ~= "boolean" then 
+				error("Value for 'creep_on_chunk_generated' must be a boolean.")
+			end
+			creep_on_chunk_generated = bool
+		end,
+		set_creep_on_biter_base_built = 
+		function(bool)
+			if type(bool) ~= "boolean" then 
+				error("Value for 'creep_on_biter_base_built' must be a boolean.")
+			end
+			creep_on_biter_base_built = bool
+		end,
+		spawn_creep_at_position = 
+		function(surface, position)
+			if type(surface) ~= "table" or type(position) ~= "table" or not surface.valid then 
+				error("The surface or the position are invalid.")
+			end
+			table.insert(global.creeps_to_generate, {surface = surface, position = position})	
 		end
-		creep_on_chunk_generated = bool
-	end,
-	set_creep_on_biter_base_built = 
-	function(bool)
-		if type(bool) ~= "boolean" then 
-			error("Value for 'creep_on_biter_base_built' must be a boolean.")
-		end
-		creep_on_biter_base_built = bool
-	end,
-	spawn_creep_at_position = 
-	function(surface, position)
-		if type(surface) ~= "table" or type(position) ~= "table" or not surface.valid then 
-			error("The surface or the position are invalid.")
-		end
-		table.insert(global.creeps_to_generate, {surface = surface, position = position})	
-	end
-})
+	})
+end
 -----------------------------------------------------------------------------
 local function onInitAndConf()
 	if not global.krastorio.script_initialization_status["creep-generator"] then
