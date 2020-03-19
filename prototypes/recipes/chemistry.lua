@@ -10,13 +10,12 @@ return
 		allow_productivity = true,
 		ingredients =
 		{
-			{type="fluid", name="sulfuric-acid", amount=10},
 			{type="fluid", name="nitric-acid", amount=10},
 			{name="biomass", amount=2}
 		},
 		results =
 		{ 
-			{type="item", name="fertilizer", amount=5}
+			{type="item", name="fertilizer", amount=10}
 		},
 		crafting_machine_tint =
 		{

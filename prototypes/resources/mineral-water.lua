@@ -10,6 +10,7 @@ data:extend(
 		category = "basic-fluid",
 		order = "a-b-a",
 		infinite = false,
+		map_grid = false,
 		highlight = true,
 		minimum = 20000,
 		normal = 75000,

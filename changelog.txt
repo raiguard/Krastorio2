@@ -6,6 +6,7 @@ Date: 20.03.2020
   Changes:
     - Improved wiki code.
     - Significantly increased biomethanol production.
+    - Changed fertilizer recipe.
     - Gas power station take 5/s fluid instead 6/s.
     - Modified heavy water recipe to have better calculation.
     - Reduce the number of rocket fuel necessary to produce utility tech cards.
@@ -13,7 +14,8 @@ Date: 20.03.2020
   Fixes:
     - Fixed nuclear artillery icon.
     - Fixed crash in creep code if other mods try to delete surfaces.
-    - Probably fixed some error in spawning creep with RSO
+    - Probably fixed some error in spawning creep with RSO.
+    - Fixed That mineral water don't show correctly in map (only with new patch/savegame generated).
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.4
 Date: 18.03.2020
