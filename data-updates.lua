@@ -25,4 +25,6 @@ require(scripts_path .. "Flow_Control")
 require(scripts_path .. "Load-Furn")
 -- Pyanodons
 require(scripts_path .. "Pyanodon")
+-- Schall Uranium Processing
+require(scripts_path .. "SchallUranium")
 ---------------------------------------------------------------------------

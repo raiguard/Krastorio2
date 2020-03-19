@@ -54,7 +54,9 @@ local scripts =
 	-- DiscoScience
 	require(control_compatibility_scripts_path .. "DiscoScience"),
 	-- aai-industry
-	require(control_compatibility_scripts_path .. "aai-industry")
+	require(control_compatibility_scripts_path .. "aai-industry"),
+	-- Schall Uranium Processing
+	require(control_compatibility_scripts_path .. "SchallUranium")
 }
 
 -- Load all callbacks from control scripts (not for GUI events)
