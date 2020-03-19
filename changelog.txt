@@ -2,6 +2,7 @@
 Version: 0.9.5
 Date: 20.03.2020
   Features:
+    - Added Korean translation! (Thanks to whoever contributed)
     - Added some useful remotes for other modders, if you are a modder and want know more see the doc/remotes.txt file.
   Changes:
     - Improved wiki code.
@@ -15,7 +16,7 @@ Date: 20.03.2020
     - Fixed nuclear artillery icon.
     - Fixed crash in creep code if other mods try to delete surfaces.
     - Probably fixed some error in spawning creep with RSO.
-    - Fixed That mineral water don't show correctly in map (only with new patch/savegame generated).
+    - Fixed that mineral water don't show correctly in map (only with new patch/savegame generated).
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.4
 Date: 18.03.2020
