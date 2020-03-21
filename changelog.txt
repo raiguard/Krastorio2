@@ -3,7 +3,6 @@ Version: 0.9.6
 Date: 22.03.2020
   Features:
     - Added compatibility script for Early 3x3 Electric Furnaces mod. Thanx to ChipWolf!
-    - Now the gas turbine can use Hydrogen to work.
     - New K2 artwork for background.
     - Added wood inro start crash site chests.
   Changes:
