@@ -44,16 +44,6 @@ data:extend(
 		order = "a03[space-research-data]",
 		stack_size = 1000
 	},
-	{
-		type = "item",
-		name = "singularity-research-data",
-		icon =  kr_cards_icons_path  .. "singularity-research-data.png",
-		icon_size = 64,
-		icon_mipmaps = 4,
-		subgroup = "science-pack",
-		order = "a04[singularity-research-data]",
-		stack_size = 200
-	},
 
 -----------------------------------------------------------------------------------------------------------------
 	

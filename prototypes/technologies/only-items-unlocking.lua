@@ -461,11 +461,7 @@ data:extend(
 		icon = kr_technologies_icons_path .. "singularity-tech-card.png",
 		icon_size = 128,
 		effects =
-		{			
-			{
-				type = "unlock-recipe",
-				recipe = krastorio.recipes.changed_names["singularity-research-data"] or "singularity-research-data"
-			},
+		{
 			{
 				type = "unlock-recipe",
 				recipe = krastorio.recipes.changed_names["singularity-tech-card"] or "singularity-tech-card"

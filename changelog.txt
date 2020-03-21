@@ -12,6 +12,8 @@ Date: 22.03.2020
     - Nerfed the greenhouses pollution absorption to -5 from -8.
     - Increased time ans resourses for tree production.
     - Increased wind turbine build zone.
+    - Singularity research data has been deleted.
+    - The recipe for the Singularity techcard has been changed.
   Fixes:
     - Fixed broken creep.
     - Fixed some minor bugs.
