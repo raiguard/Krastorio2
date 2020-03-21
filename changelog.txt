@@ -13,6 +13,7 @@ Date: 22.03.2020
     - Increased time ans resourses for tree production.
     - Increased wind turbine build zone.
   Fixes:
+    - Fixed broken creep.
     - Fixed some minor bugs.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.5
