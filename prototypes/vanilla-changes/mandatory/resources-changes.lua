@@ -54,7 +54,7 @@ data.raw.resource["crude-oil"].stages.sheet.height = 128
 data.raw.resource["crude-oil"].stages.sheet.frame_count = 4
 data.raw.resource["crude-oil"].stages.sheet.scale = 0.75
 
-data.raw.resource["crude-oil"].map_color = {0.1, 0.05, 0.1}
+data.raw.resource["crude-oil"].map_color = {1, 0.6, 0}
 
 --------------
 

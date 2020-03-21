@@ -102,7 +102,7 @@ crash_site_chest_1_entity.name = "kr-crash-site-chest-1"
 crash_site_chest_1_entity.localised_name = {"entity-name.crash-site-chest-1"}
 crash_site_chest_1_entity.localised_description = {"entity-description.kr-crash-site-building"}
 crash_site_chest_1_entity.minable = small_minable_ship_residues
-crash_site_chest_1_entity.inventory_size = 3
+crash_site_chest_1_entity.inventory_size = 5
 data:extend({crash_site_chest_1_item, crash_site_chest_1_entity})
 
 local crash_site_chest_2_item = util.table.deepcopy(data.raw["item"]["crash-site-chest-2"])
@@ -115,7 +115,7 @@ crash_site_chest_2_entity.name = "kr-crash-site-chest-2"
 crash_site_chest_2_entity.localised_name = {"entity-name.crash-site-chest-2"}
 crash_site_chest_2_entity.localised_description = {"entity-description.kr-crash-site-building"}
 crash_site_chest_2_entity.minable = small_minable_ship_residues
-crash_site_chest_2_entity.inventory_size = 3
+crash_site_chest_2_entity.inventory_size = 5
 data:extend({crash_site_chest_2_item, crash_site_chest_2_entity})
 
 -- Ship wreck

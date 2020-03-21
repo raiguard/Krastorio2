@@ -88,7 +88,7 @@ data:extend(
 		effect_darkness_multiplier = 5,
 		min_effect_alpha = 0.2,
 		max_effect_alpha = 0.3,
-		map_color = {r=0.5, g=0.3, b=0.5}
+		map_color = {r=0.6, g=0.3, b=1}
 	},
 	{
 		type = "autoplace-control",

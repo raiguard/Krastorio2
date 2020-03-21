@@ -72,9 +72,9 @@ data:extend(
 	{
 		type = "trivial-smoke",
 		name = "gas-power-station-smoke",
-		duration = 250,
+		duration = 300,
 		fade_in_duration = 0,
-		fade_away_duration = 150,
+		fade_away_duration = 180,
 		spread_duration = 400,
 		start_scale = 0.17,
 		end_scale = 1.15,
@@ -152,7 +152,7 @@ data:extend(
 				south_position = util.by_pixel(47, -88),
 				east_position = util.by_pixel(47, -88),
 				west_position = util.by_pixel(47, -88),
-				frequency = 0.625,
+				frequency = 0.350,
 				starting_vertical_speed = 0.05,
 				slow_down_factor = 1,
 				starting_frame_deviation = 60
@@ -193,6 +193,6 @@ data:extend(
 		audible_distance_modifier = 5,
 		min_perceived_performance = 0.25,
 		performance_to_sound_speedup = 0.5,
-		max_power_output = "3600KW"
+		max_power_output = "5000KW"
 	}
 })

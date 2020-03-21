@@ -142,7 +142,7 @@ data:extend(
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions_per_minute = -8
+			emissions_per_minute = -5
 		},
 		energy_usage = "150KW",
 		ingredient_count = 4,

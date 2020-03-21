@@ -67,6 +67,7 @@ require(kr_others_prototypes_path .. "key-bind-initialization")
 ---------------------------------------------------------------------------
 local scripts_path = "compatibility-scripts/data/"
 require(scripts_path .. "aircraft")
+require(scripts_path .. "early-electric-furnaces")
 require(scripts_path .. "deadlock-beltboxes-loaders")
 require(scripts_path .. "Squeak_Through")
 ---------------------------------------------------------------------------
