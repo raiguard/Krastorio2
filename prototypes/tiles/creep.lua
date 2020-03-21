@@ -210,12 +210,13 @@ data:extend(
 	{	
 		type = "tile",
 		name = "kr-creep",
+		order = "b-a-a",
 		needs_correction = false,
-		can_be_part_of_blueprint = true,		
+		can_be_part_of_blueprint = false,		
 		collision_mask = { "ghost-layer", "ground-tile", "floor-layer", "not-colliding-with-itself" },
 		--minable = {mining_time = 15, result = "biomass", probability = 0.35, amount = 1},
 		walking_speed_modifier = 0.35,
-		layer = 1,
+		layer = 30,
 		transition_overlay_layer_offset = 1,
 		decorative_removal_probability = 0.35,
 		variants = tile_variations_template
