@@ -104,7 +104,7 @@ data:extend(
 		max_health = 750,
 		corpse = "kr-medium-random-pipes-remnant",
 		dying_explosion = "medium-explosion",
-		fluid_usage_per_tick = 0.083333333,
+		fluid_usage_per_tick = 2/3,
 		maximum_temperature = 25,
 		burns_fluid = true,
 		scale_fluid_usage = true,
@@ -193,6 +193,6 @@ data:extend(
 		audible_distance_modifier = 5,
 		min_perceived_performance = 0.25,
 		performance_to_sound_speedup = 0.5,
-		max_power_output = "5000KW"
+		max_power_output = "4500KW"
 	}
 })

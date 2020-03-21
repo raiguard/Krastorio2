@@ -114,7 +114,7 @@ data:extend(
 			usage_priority = "secondary-input",
 			emissions_per_second_per_watt = 2 / 10000000
 		},
-		energy_usage = "0.5MW",
+		energy_usage = "0.25MW",
 		ingredient_count = 1,
 		module_specification = { module_slots = 2, module_info_icon_shift = {0, 1.2}, module_info_icon_scale = 1 },
 		allowed_effects = {"consumption", "speed", "productivity", "pollution"},
