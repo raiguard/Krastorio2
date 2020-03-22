@@ -217,6 +217,8 @@ data.raw.technology["low-density-structure"].unit.count = 500
 data.raw.technology["uranium-processing"].unit.count = 750
 data.raw.technology["nuclear-power"].unit.count = 500
 data.raw.technology["nuclear-fuel-reprocessing"].unit.count = 250
+krastorio.technologies.removePrerequisite("atomic-bomb", "military-4")
+krastorio.technologies.addPrerequisite("atomic-bomb", "kr-military-5")
 data.raw.technology["atomic-bomb"].unit.count = 1500
 
 
