@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.7
+Date: 23.03.2020
+  Features:
+    - Added compatibility with angelsaddons-smeltingtrain, thanks to Methadone.
+  Changes:
+    - Now bio-labs and greenhouses can share liquids with pipes.	
+---------------------------------------------------------------------------------------------------
 Version: 0.9.6
 Date: 22.03.2020
   Features:
