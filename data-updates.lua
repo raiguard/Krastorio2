@@ -21,6 +21,7 @@ matter_util.createStandardKrastorioMatterRecipes()
 -- -- -- COMPATIBILITY INITIALIZATION (data update stage)
 ---------------------------------------------------------------------------
 local scripts_path = "compatibility-scripts/data-updates/"
+require(scripts_path .. "angelsaddons-smeltingtrain")
 require(scripts_path .. "Flow_Control")
 require(scripts_path .. "Load-Furn")
 -- Pyanodons
