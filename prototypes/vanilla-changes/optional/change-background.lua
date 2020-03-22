@@ -4,7 +4,7 @@ backgrounds_util.addBackgroundImage("Factorio",               "__core__/graphics
 backgrounds_util.addBackgroundImage("Krastorio Legacy",       kr_backgrounds_icons_path .. "krastorio-legacy.jpg")
 backgrounds_util.addBackgroundImage("Krastorio 2",            kr_backgrounds_icons_path .. "krastorio-2.jpg")
 backgrounds_util.addBackgroundImage("Krastorio CyberSkull",   kr_backgrounds_icons_path .. "krastorio-cyberskull.jpg")
-backgrounds_util.addBackgroundImage("Krastorio Soldier",      kr_backgrounds_icons_path .. "krastorio-soldier.jpg")
+backgrounds_util.addBackgroundImage("Krastorio Chan",      kr_backgrounds_icons_path .. "krastorio-chan.jpg")
 backgrounds_util.addBackgroundImage("Krastorio Explorer",     kr_backgrounds_icons_path .. "krastorio-explorer.jpg")
 backgrounds_util.addBackgroundImage("Factorio Alternative 1", kr_backgrounds_icons_path .. "factorio-alternative-1.jpg")
 backgrounds_util.addBackgroundImage("Factorio Alternative 2", kr_backgrounds_icons_path .. "factorio-alternative-2.jpg")

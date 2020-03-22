@@ -13,8 +13,9 @@ Date: 22.03.2020
     - Increased wind turbine build zone.
     - Singularity research data has been deleted.
     - The recipe for the Singularity techcard has been changed.
+    - The music track in the menu is made quieter and shorter.
   Fixes:
-    - Fixed broken creep.
+    - Fixed broken creep (+sprite update, now creep tiles is more various).
     - Fixed some minor bugs.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.5

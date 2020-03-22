@@ -111,7 +111,7 @@ data:extend(
         name = "kr-main-menu-background",
         setting_type = "startup",
         default_value = "Krastorio 2",
-        allowed_values = {"Factorio", "Krastorio Legacy", "Krastorio 2", "Krastorio CyberSkull", "Krastorio Soldier", "Krastorio Explorer", "Factorio Alternative 1", "Factorio Alternative 2", "Factorio Alternative 3", "Factorio Alternative 4"},
+        allowed_values = {"Factorio", "Krastorio Legacy", "Krastorio 2", "Krastorio CyberSkull", "Krastorio Chan", "Krastorio Explorer", "Factorio Alternative 1", "Factorio Alternative 2", "Factorio Alternative 3", "Factorio Alternative 4"},
 		order = "u02"
     },
 	{
