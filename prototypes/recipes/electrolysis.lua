@@ -18,8 +18,8 @@ return
 		},
 		results =
 		{
-			{ type = "fluid", name = "chlorine", amount = 20, catalyst_amount = 20 },
-			{ type = "fluid", name = "hydrogen", amount = 30, catalyst_amount = 30 }
+			{ type = "fluid", name = "chlorine", amount = 20 },
+			{ type = "fluid", name = "hydrogen", amount = 30 }
 		},
 		crafting_machine_tint =
 		{
@@ -44,8 +44,8 @@ return
 		},
 		results =
 		{
-			{ type = "fluid", name = "oxygen", amount = 20, catalyst_amount = 20 },
-			{ type = "fluid", name = "hydrogen", amount = 30, catalyst_amount = 30 }
+			{ type = "fluid", name = "oxygen", amount = 20 },
+			{ type = "fluid", name = "hydrogen", amount = 30 }
 		},
 		crafting_machine_tint =
 		{
@@ -71,7 +71,7 @@ return
 		},
 		results =
 		{
-			{ type = "fluid", name = "chlorine", amount = 10, catalyst_amount = 10},
+			{ type = "fluid", name = "chlorine", amount = 10},
 			{ type = "item",  name = "lithium", amount = 5}
 		},
 		crafting_machine_tint =

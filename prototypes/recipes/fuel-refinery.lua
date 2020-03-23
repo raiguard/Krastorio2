@@ -91,7 +91,7 @@ return
 		ingredients =
 		{
 			{ type = "item", name = "solid-fuel", amount = 4},
-			{ type = "fluid", name = "hydrogen", amount = 50, catalyst_amount = 50}
+			{ type = "fluid", name = "hydrogen", amount = 50}
 		},
 		results =
 		{ 
@@ -122,7 +122,7 @@ return
 		ingredients =
 		{
 			{type="item", name="fuel", amount=5},
-			{type="fluid", name="biomethanol", amount=50, catalyst_amount = 50}
+			{type="fluid", name="biomethanol", amount=50}
 		},
 		results =
 		{ 
@@ -184,8 +184,8 @@ return
 		ingredients =
         {
             {type="item", name="wood", amount=5},
-            {type="fluid", name="oxygen", amount=60, catalyst_amount = 60},
-            {type="fluid", name="steam", amount=120, catalyst_amount = 120}
+            {type="fluid", name="oxygen", amount=60},
+            {type="fluid", name="steam", amount=120}
         },
         results =
         { 
@@ -218,8 +218,8 @@ return
 		ingredients =
 		{
 			{"iron-plate", 1},
-			{type="fluid", name="ammonia", amount=50, catalyst_amount=50},
-			{type="fluid", name="oxygen", amount=50, catalyst_amount=50},
+			{type="fluid", name="ammonia", amount=50},
+			{type="fluid", name="oxygen", amount=50},
 		},
 		result = "rocket-fuel",
 		crafting_machine_tint =
@@ -246,8 +246,8 @@ return
 		ingredients =
 		{
 			{"iron-plate", 1},
-			{type="fluid", name="hydrogen-chloride", amount=50, catalyst_amount=50},
-			{type="fluid", name="oxygen", amount=50, catalyst_amount=50},
+			{type="fluid", name="hydrogen-chloride", amount=50},
+			{type="fluid", name="oxygen", amount=50},
 		},
 		result = "rocket-fuel",
 		crafting_machine_tint =

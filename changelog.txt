@@ -2,16 +2,21 @@
 Version: 0.9.7
 Date: 23.03.2020
   Features:
-    - Added compatibility with angelsaddons-smeltingtrain, thanks to Methadone.
+    - Added compatibility with angelsaddons-smeltingtrain, thanks to Methadone!
   Changes:
     - Now bio-labs and greenhouses can share liquids with pipes.	
+    - Increased oxygen production in atmospheric condenser 5s instead of 10s.
+    - Increased water production in atmospheric condenser 10s instead of 30s.
+    - Now creep is minable via drones (and with hand if you have a very long patience, we suggest you to continue using the creep collector).
+  Fixes:
+    - Changed recipes definitions to walkaround Factorio products statistic blacklisting. 
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.6
 Date: 22.03.2020
   Features:
-    - Added compatibility script for Early 3x3 Electric Furnaces mod. Thanx to ChipWolf!
-    - New K2 artwork for background.
-    - Added wood inro start crash site chests.
+    - Added compatibility script for Early 3x3 Electric Furnaces mod, thanks to ChipWolf!
+    - Added new K2 artwork for background.
+    - Added wood into start crash site chests.
   Changes:
     - Increased gas turbine power.
     - Improved resources color on the map.
@@ -19,7 +24,7 @@ Date: 22.03.2020
     - Increased time ans resourses for tree production.
     - Increased wind turbine build zone.
     - Singularity research data has been deleted.
-    - The recipe for the Singularity techcard has been changed.
+    - The recipe for the Singularity tech card has been changed.
     - The music track in the menu is made quieter and shorter.
   Fixes:
     - Fixed broken creep (+sprite update, now creep tiles is more various).

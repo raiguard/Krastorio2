@@ -46,7 +46,7 @@ return
 		results = 
 		{
 			{ type = "item", name = "coal", amount = 10 },
-			{ type = "fluid", name = "water", amount = 40, catalyst_amount = 40 }
+			{ type = "fluid", name = "water", amount = 40 }
 		},
 		crafting_machine_tint =
 		{

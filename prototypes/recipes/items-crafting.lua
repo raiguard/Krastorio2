@@ -330,7 +330,7 @@ return
 		energy_required = 30,
 		ingredients =
 		{
-			{ type = "fluid", name = "matter", amount = 1000, catalyst_amount = 5000},
+			{ type = "fluid", name = "matter", amount = 1000},
 			{ "empty-antimatter-fuel-cell", 1 }
 		},
 		result = "charged-antimatter-fuel-cell"

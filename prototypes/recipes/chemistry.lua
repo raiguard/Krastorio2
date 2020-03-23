@@ -167,7 +167,7 @@ return
 		results =
 		{ 
 			{type = "item",  name = "enriched-iron", amount = 6},
-			{type = "fluid", name = "dirty-water", amount = 25, catalyst_amount = 25}
+			{type = "fluid", name = "dirty-water", amount = 25}
 		},
 		crafting_machine_tint =
 		{
@@ -200,7 +200,7 @@ return
 		results =
 		{ 
 			{type = "item",  name = "enriched-copper", amount = 6},
-			{type = "fluid", name = "dirty-water", amount = 25, catalyst_amount = 25}
+			{type = "fluid", name = "dirty-water", amount = 25}
 		},
 		crafting_machine_tint =
 		{
@@ -296,8 +296,8 @@ return
 		ingredients =
 		{
 			{type="item", name="imersite-powder", amount=6},
-			{type="fluid", name="nitric-acid", amount=10, catalyst_amount = 50},
-			{type="fluid", name="sulfuric-acid", amount=10, catalyst_amount = 50},
+			{type="fluid", name="nitric-acid", amount=10},
+			{type="fluid", name="sulfuric-acid", amount=10},
 		},
 		result = "imersite-crystal",
 		subgroup = "intermediate-product",
@@ -320,7 +320,7 @@ return
 		allow_productivity = true,
 		ingredients =
 		{
-			{ type = "fluid", name = "heavy-water", amount = 20, catalyst_amount = 20},
+			{ type = "fluid", name = "heavy-water", amount = 20},
 			{ type = "item", name = "tritium", amount = 2},
 			{ "empty-dt-fuel", 1}
 		},

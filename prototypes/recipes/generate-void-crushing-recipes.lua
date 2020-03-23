@@ -31,6 +31,7 @@ for _, type_name in pairs(krastorio.items.item_types) do
 						icon_size = 64,
 						category = "crushing",
 						hidden = true,
+						hide_from_stats = true,
 						energy_required = 5,
 						ingredients = { { item_name, 1 } },
 						results = { { "kr-void", 0 } }

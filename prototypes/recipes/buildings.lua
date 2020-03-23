@@ -526,7 +526,7 @@ return
 		{
 			{"solar-panel", 1},
 			{"imersite-crystal", 5},			
-			{type = "fluid", name = "nitric-acid", amount = 25, catalyst_amount = 50}	
+			{type = "fluid", name = "nitric-acid", amount = 25}	
 		},
 		result = "kr-advanced-solar-panel"
 	},			
@@ -647,7 +647,7 @@ return
 			{"express-splitter", 1},
 			{"steel-gear-wheel", 10},	
 			{"rare-metals", 5},			
-			{type = "fluid", name = "sulfuric-acid", amount = 50, catalyst_amount = 50}	
+			{type = "fluid", name = "sulfuric-acid", amount = 50}	
 		},
 		result = "kr-advanced-splitter"
     },
@@ -662,7 +662,7 @@ return
 			{"express-transport-belt", 1},	
 			{"steel-gear-wheel", 20},
 			{"rare-metals", 2},			
-			{type = "fluid", name = "sulfuric-acid", amount = 50, catalyst_amount = 50}				
+			{type = "fluid", name = "sulfuric-acid", amount = 50}				
 		},
 		result = "kr-advanced-transport-belt"
     },	
@@ -677,7 +677,7 @@ return
 			{"express-underground-belt", 2},	
 			{"steel-gear-wheel", 40},
 			{"rare-metals", 5},			
-			{type = "fluid", name = "sulfuric-acid", amount = 50, catalyst_amount = 50}				
+			{type = "fluid", name = "sulfuric-acid", amount = 50}				
 		},
 		result = "kr-advanced-underground-belt",
 		result_count = 2
@@ -694,7 +694,7 @@ return
 			{"kr-advanced-splitter", 1},
 			{"processing-unit", 10},	
 			{"imersium-gear-wheel", 10},			
-			{type = "fluid", name = "nitric-acid", amount = 25, catalyst_amount = 50}	
+			{type = "fluid", name = "nitric-acid", amount = 25}	
 		},
 		result = "kr-superior-splitter"
     },
@@ -708,7 +708,7 @@ return
 		{
 			{"kr-advanced-transport-belt", 1},	
 			{"imersium-gear-wheel", 20},
-			{type = "fluid", name = "nitric-acid", amount = 25, catalyst_amount = 50}				
+			{type = "fluid", name = "nitric-acid", amount = 25}				
 		},
 		result = "kr-superior-transport-belt"
     },
@@ -722,7 +722,7 @@ return
 		{
 			{"kr-advanced-underground-belt", 2},	
 			{"imersium-gear-wheel", 40},	
-			{type = "fluid", name = "nitric-acid", amount = 50, catalyst_amount = 50}				
+			{type = "fluid", name = "nitric-acid", amount = 50}				
 		},
 		result = "kr-superior-underground-belt",
 		result_count = 2
