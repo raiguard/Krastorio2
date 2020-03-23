@@ -10,6 +10,7 @@ Date: 23.03.2020
     - Now creep is minable via drones (and with hand if you have a very long patience, we suggest you to continue using the creep collector).
   Fixes:
     - Changed recipes definitions to walkaround Factorio products statistic blacklisting. 
+    - Fixed that remove modded biter nests during surface/chunk generation can cause a creep script crash.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.6
 Date: 22.03.2020
