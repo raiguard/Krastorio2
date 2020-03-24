@@ -7,7 +7,8 @@ Date: 23.03.2020
     - Now bio-labs and greenhouses can share liquids with pipes.	
     - Increased oxygen production in atmospheric condenser 5s instead of 10s.
     - Increased water production in atmospheric condenser 10s instead of 30s.
-    - Now creep is minable via drones (and with hand if you have a very long patience, we suggest you to continue using the creep collector).
+    - Now creep can be destroyed via robots, collectable with hands (if you have a very long patience). We suggest you to continue using the creep collector that is the faster way.
+    - Signed brave new world mod as incompatible with K2.
   Fixes:
     - Changed recipes definitions to walkaround Factorio products statistic blacklisting. 
     - Fixed that remove modded biter nests during surface/chunk generation can cause a creep script crash.
