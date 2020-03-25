@@ -678,7 +678,7 @@ data:extend(
 		{
 			{
 				type = "worker-robot-battery",
-				modifier = 0.35
+				modifier = 0.4
 			}
 		},
 		prerequisites = {"kr-advanced-roboports"},
@@ -704,7 +704,7 @@ data:extend(
 		{
 			{
 				type = "worker-robot-battery",
-				modifier = 0.75
+				modifier = 0.6
 			}
 		},
 		prerequisites = {"kr-robot-battery", "kr-energy-control-unit"},

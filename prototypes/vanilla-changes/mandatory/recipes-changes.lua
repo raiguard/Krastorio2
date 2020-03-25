@@ -160,19 +160,18 @@ krastorio.recipes.replaceIngredient("flying-robot-frame", "electronic-circuit", 
 
 -- Circuits
 krastorio.recipes.addIngredient("electronic-circuit", {"wood", 2})
-krastorio.recipes.replaceIngredient("electronic-circuit", "iron-plate", {"iron-plate", 2})
-krastorio.recipes.replaceIngredient("electronic-circuit", "copper-cable", {"copper-cable", 4})
+krastorio.recipes.replaceIngredient("electronic-circuit", "iron-plate", {"iron-plate", 1})
+krastorio.recipes.replaceIngredient("electronic-circuit", "copper-cable", {"copper-cable", 2})
 krastorio.recipes.setEnergyCost("electronic-circuit", 2)
-krastorio.recipes.replaceProduct("electronic-circuit", "electronic-circuit", {"electronic-circuit", 2})
 
+krastorio.recipes.replaceIngredient("advanced-circuit", "copper-cable", {"copper-cable", 2})
 krastorio.recipes.replaceIngredient("advanced-circuit", "plastic-bar", {"electronic-components", 1})
 krastorio.recipes.setEnergyCost("advanced-circuit", 4)
 
 krastorio.recipes.removeIngredient("processing-unit", "electronic-circuit")
-krastorio.recipes.replaceIngredient("processing-unit", "advanced-circuit", {"advanced-circuit", 6})
-krastorio.recipes.addIngredient("processing-unit", {"rare-metals", 3})
-krastorio.recipes.replaceIngredient("processing-unit", "sulfuric-acid", {type="fluid", name="sulfuric-acid", amount=10})
-krastorio.recipes.replaceProduct("processing-unit", "processing-unit", {"processing-unit", 2})
+krastorio.recipes.replaceIngredient("processing-unit", "advanced-circuit", {"advanced-circuit", 2})
+krastorio.recipes.addIngredient("processing-unit", {"rare-metals", 2})
+krastorio.recipes.replaceIngredient("processing-unit", "sulfuric-acid", {type="fluid", name="sulfuric-acid", amount=5})
 krastorio.recipes.setEnergyCost("processing-unit", 12)
 
 krastorio.recipes.replaceIngredient("repair-pack", "iron-gear-wheel", {"iron-plate", 2})
@@ -181,6 +180,8 @@ krastorio.recipes.addIngredient("repair-pack", {"stone", 2})
 
 -- EQUIPMENTS
 krastorio.recipes.replaceIngredient("personal-laser-defense-equipment", "processing-unit", {"electronic-components", 50})
+
+krastorio.recipes.replaceIngredient("energy-shield-mk2-equipment", "energy-shield-equipment", {"energy-shield-equipment", 5})
 
 krastorio.recipes.replaceIngredient("low-density-structure", "copper-plate", {"copper-plate", 10})
 

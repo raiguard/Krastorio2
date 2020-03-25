@@ -9,6 +9,9 @@ Date: 23.03.2020
     - Increased water production in atmospheric condenser 10s instead of 30s.
     - Now creep can be destroyed via robots, collectable with hands (if you have a very long patience). We suggest you to continue using the creep collector that is the faster way.
     - Signed brave new world mod as incompatible with K2.
+    - Infinite technology has been rebalance.
+    - Green and red circuits are now cheaper.
+    - Energy shields are now cheaper.
   Fixes:
     - Changed recipes definitions to walkaround Factorio products statistic blacklisting. 
     - Fixed that remove modded biter nests during surface/chunk generation can cause a creep script crash.

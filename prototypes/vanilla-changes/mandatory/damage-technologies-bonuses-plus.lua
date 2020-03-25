@@ -4,164 +4,199 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	-- -- physical-projectile-damage
 	data.raw["technology"]["physical-projectile-damage-1"].effects =
 	{
-	  {
-		type = "turret-attack",
-		turret_id = "gun-turret",
-		modifier = 0.25
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "shotgun-shell",
-		modifier = 0.25
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "artillery-shell",
-		modifier = 0.25
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "cannon-shell",
-		modifier = 0.25
-	  }
+		{
+			type = "ammo-damage",
+			ammo_category = "bullet",
+			modifier = 0.25
+		},
+		{
+			type = "turret-attack",
+			turret_id = "gun-turret",
+			modifier = 0.25
+		},
+		{
+			type = "ammo-damage",
+			ammo_category = "shotgun-shell",
+			modifier = 0.25
+		},
+		{
+			type = "ammo-damage",
+			ammo_category = "artillery-shell",
+			modifier = 0.25
+		},
+		{
+			type = "ammo-damage",
+			ammo_category = "cannon-shell",
+			modifier = 0.25
+		}
 	}
 	data.raw["technology"]["physical-projectile-damage-2"].effects =
 	{
-	  {
-		type = "turret-attack",
-		turret_id = "gun-turret",
-		modifier = 0.25
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "shotgun-shell",
-		modifier = 0.25
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "artillery-shell",
-		modifier = 0.25
-	  },	  
-	  {
-		type = "ammo-damage",
-		ammo_category = "cannon-shell",
-		modifier = 0.25
-	  }
+		{
+			type = "ammo-damage",
+			ammo_category = "bullet",
+			modifier = 0.25
+		},
+		{
+			type = "turret-attack",
+			turret_id = "gun-turret",
+			modifier = 0.25
+		},
+		{
+			type = "ammo-damage",
+			ammo_category = "shotgun-shell",
+			modifier = 0.25
+		},
+		{
+			type = "ammo-damage",
+			ammo_category = "artillery-shell",
+			modifier = 0.25
+		},
+		{
+			type = "ammo-damage",
+			ammo_category = "cannon-shell",
+			modifier = 0.25
+		}
 	}
 	data.raw["technology"]["physical-projectile-damage-3"].effects =
 	{
-	  {
-		type = "turret-attack",
-		turret_id = "gun-turret",
-		modifier = 0.25
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "shotgun-shell",
-		modifier = 0.25
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "artillery-shell",
-		modifier = 0.25
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "cannon-shell",
-		modifier = 0.25
-	  }
+		{
+			type = "ammo-damage",
+			ammo_category = "bullet",
+			modifier = 0.25
+		},
+		{
+			type = "turret-attack",
+			turret_id = "gun-turret",
+			modifier = 0.25
+		},
+		{
+			type = "ammo-damage",
+			ammo_category = "shotgun-shell",
+			modifier = 0.25
+		},
+		{
+			type = "ammo-damage",
+			ammo_category = "artillery-shell",
+			modifier = 0.25
+		},
+		{
+			type = "ammo-damage",
+			ammo_category = "cannon-shell",
+			modifier = 0.25
+		}
 	}
 	data.raw["technology"]["physical-projectile-damage-4"].effects =
 	{
-	  {
-		type = "turret-attack",
-		turret_id = "gun-turret",
-		modifier = 0.35
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "shotgun-shell",
-		modifier = 0.35
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "artillery-shell",
-		modifier = 0.35
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "cannon-shell",
-		modifier = 0.35
-	  }
+		{
+			type = "ammo-damage",
+			ammo_category = "bullet",
+			modifier = 0.35
+		},
+		{
+			type = "turret-attack",
+			turret_id = "gun-turret",
+			modifier = 0.35
+		},
+		{
+			type = "ammo-damage",
+			ammo_category = "shotgun-shell",
+			modifier = 0.35
+		},
+		{
+			type = "ammo-damage",
+			ammo_category = "artillery-shell",
+			modifier = 0.35
+		},
+		{
+			type = "ammo-damage",
+			ammo_category = "cannon-shell",
+			modifier = 0.35
+		}
 	}
 	data.raw["technology"]["physical-projectile-damage-5"].effects =
 	{
-	  {
-		type = "turret-attack",
-		turret_id = "gun-turret",
-		modifier = 0.35
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "shotgun-shell",
-		modifier = 0.35
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "artillery-shell",
-		modifier = 0.35
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "cannon-shell",
-		modifier = 0.35
-	  }
+		{
+			type = "ammo-damage",
+			ammo_category = "bullet",
+			modifier = 0.35
+		},
+		{
+			type = "turret-attack",
+			turret_id = "gun-turret",
+			modifier = 0.35
+		},
+		{
+			type = "ammo-damage",
+			ammo_category = "shotgun-shell",
+			modifier = 0.35
+		},
+		{
+			type = "ammo-damage",
+			ammo_category = "artillery-shell",
+			modifier = 0.35
+		},
+		{
+			type = "ammo-damage",
+			ammo_category = "cannon-shell",
+			modifier = 0.35
+		}
 	}
 	data.raw["technology"]["physical-projectile-damage-6"].effects =
 	{
-	  {
-		type = "turret-attack",
-		turret_id = "gun-turret",
-		modifier = 0.35
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "shotgun-shell",
-		modifier = 0.35
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "artillery-shell",
-		modifier = 0.35
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "cannon-shell",
-		modifier = 0.35
-	  }
+		{
+			type = "ammo-damage",
+			ammo_category = "bullet",
+			modifier = 0.35
+		},
+		{
+			type = "turret-attack",
+			turret_id = "gun-turret",
+			modifier = 0.35
+		},
+		{
+			type = "ammo-damage",
+			ammo_category = "shotgun-shell",
+			modifier = 0.35
+		},
+		{
+			type = "ammo-damage",
+			ammo_category = "artillery-shell",
+			modifier = 0.35
+		},
+		{
+			type = "ammo-damage",
+			ammo_category = "cannon-shell",
+			modifier = 0.35
+		}
 	}
 	data.raw["technology"]["physical-projectile-damage-7"].effects =
 	{
-	  {
-		type = "turret-attack",
-		turret_id = "gun-turret",
-		modifier = 0.1
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "shotgun-shell",
-		modifier = 0.1
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "artillery-shell",
-		modifier = 0.1
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "cannon-shell",
-		modifier = 0.1
-	  }
+		{
+			type = "ammo-damage",
+			ammo_category = "bullet",
+			modifier = 0.1
+		},
+		{
+			type = "turret-attack",
+			turret_id = "gun-turret",
+			modifier = 0.1
+		},
+		{
+			type = "ammo-damage",
+			ammo_category = "shotgun-shell",
+			modifier = 0.1
+		},
+		{
+			type = "ammo-damage",
+			ammo_category = "artillery-shell",
+			modifier = 0.1
+		},
+		{
+			type = "ammo-damage",
+			ammo_category = "cannon-shell",
+			modifier = 0.1
+		}
 	}
    
 ------------------------------------------------
@@ -636,7 +671,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
       {
         type = "gun-speed",
         ammo_category = "laser-turret",
-        modifier = 0.1
+        modifier = 0.2
       }
     }
 	data.raw["technology"]["laser-turret-speed-2"].effects =
@@ -644,7 +679,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
       {
         type = "gun-speed",
         ammo_category = "laser-turret",
-        modifier = 0.15
+        modifier = 0.2
       }
     }
 	data.raw["technology"]["laser-turret-speed-3"].effects =
@@ -679,14 +714,29 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
         modifier = 0.15
       }
     }
-	data.raw["technology"]["laser-turret-speed-7"].effects =
+	
+------------------------------------------------
+
+	data.raw["technology"]["artillery-shell-range-1"].
+    effects =
+    {
+      {
+        type = "artillery-range",
+        modifier = 0.4
+      }
+    }
+	
+	
+	data.raw["technology"]["artillery-shell-speed-1"].
+    effects =
     {
       {
         type = "gun-speed",
-        ammo_category = "laser-turret",
-        modifier = 0.15
+        ammo_category = "artillery-shell",
+        modifier = 0.25
       }
     }
+	
 	
 	-- -- -- Adding new Krastorio ammo damages effects in vanilla technologies
 
@@ -699,6 +749,8 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	krastorio.technologies.addEffect("physical-projectile-damage-5", {type = "ammo-damage",	ammo_category = "pistol-ammo", modifier = 0.35})
 	krastorio.technologies.addEffect("physical-projectile-damage-6", {type = "ammo-damage",	ammo_category = "pistol-ammo", modifier = 0.35})
 	krastorio.technologies.addEffect("physical-projectile-damage-7", {type = "ammo-damage",	ammo_category = "pistol-ammo", modifier = 0.1})
+	krastorio.technologies.addEffect("physical-projectile-damage-11", {type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.1})
+	krastorio.technologies.addEffect("physical-projectile-damage-16", {type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.1})
 
 	krastorio.technologies.addEffect("weapon-shooting-speed-1", {type = "gun-speed", ammo_category = "pistol-ammo", modifier = 0.2})
 	krastorio.technologies.addEffect("weapon-shooting-speed-2", {type = "gun-speed", ammo_category = "pistol-ammo", modifier = 0.2})
@@ -716,6 +768,9 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	krastorio.technologies.addEffect("physical-projectile-damage-5", {type = "ammo-damage",	ammo_category = "rifle-ammo", modifier = 0.35})
 	krastorio.technologies.addEffect("physical-projectile-damage-6", {type = "ammo-damage",	ammo_category = "rifle-ammo", modifier = 0.35})
 	krastorio.technologies.addEffect("physical-projectile-damage-7", {type = "ammo-damage",	ammo_category = "rifle-ammo", modifier = 0.1})
+	krastorio.technologies.addEffect("physical-projectile-damage-11", {type = "ammo-damage", ammo_category = "rifle-ammo", modifier = 0.1})
+	krastorio.technologies.addEffect("physical-projectile-damage-16", {type = "ammo-damage", ammo_category = "rifle-ammo", modifier = 0.1})
+	
 
 	krastorio.technologies.addEffect("weapon-shooting-speed-1", {type = "gun-speed", ammo_category = "rifle-ammo", modifier = 0.2})
 	krastorio.technologies.addEffect("weapon-shooting-speed-2", {type = "gun-speed", ammo_category = "rifle-ammo", modifier = 0.2})
@@ -733,6 +788,8 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	krastorio.technologies.addEffect("physical-projectile-damage-5", {type = "ammo-damage",	ammo_category = "anti-material-rifle-ammo", modifier = 0.35})
 	krastorio.technologies.addEffect("physical-projectile-damage-6", {type = "ammo-damage",	ammo_category = "anti-material-rifle-ammo", modifier = 0.35})
 	krastorio.technologies.addEffect("physical-projectile-damage-7", {type = "ammo-damage",	ammo_category = "anti-material-rifle-ammo", modifier = 0.1})
+	krastorio.technologies.addEffect("physical-projectile-damage-11", {type = "ammo-damage", ammo_category = "anti-material-rifle-ammo", modifier = 0.1})
+	krastorio.technologies.addEffect("physical-projectile-damage-16", {type = "ammo-damage", ammo_category = "anti-material-rifle-ammo", modifier = 0.1})
 
 	krastorio.technologies.addEffect("weapon-shooting-speed-1", {type = "gun-speed", ammo_category = "anti-material-rifle-ammo", modifier = 0.2})
 	krastorio.technologies.addEffect("weapon-shooting-speed-2", {type = "gun-speed", ammo_category = "anti-material-rifle-ammo", modifier = 0.2})
@@ -750,6 +807,8 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	krastorio.technologies.addEffect("physical-projectile-damage-5", {type = "ammo-damage",	ammo_category = "railgun-shell", modifier = 0.35})
 	krastorio.technologies.addEffect("physical-projectile-damage-6", {type = "ammo-damage",	ammo_category = "railgun-shell", modifier = 0.35})
 	krastorio.technologies.addEffect("physical-projectile-damage-7", {type = "ammo-damage",	ammo_category = "railgun-shell", modifier = 0.1})
+	krastorio.technologies.addEffect("physical-projectile-damage-11", {type = "ammo-damage", ammo_category = "railgun-shell", modifier = 0.1})
+	krastorio.technologies.addEffect("physical-projectile-damage-16", {type = "ammo-damage", ammo_category = "railgun-shell", modifier = 0.1})
 
 	krastorio.technologies.addEffect("weapon-shooting-speed-2", {type = "gun-speed", ammo_category = "railgun-shell", modifier = 0.2})
 	krastorio.technologies.addEffect("weapon-shooting-speed-3", {type = "gun-speed", ammo_category = "railgun-shell", modifier = 0.2})
@@ -766,6 +825,8 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	krastorio.technologies.addEffect("stronger-explosives-5", {type = "ammo-damage", ammo_category = "missiles-for-turrets", modifier = 0.35})
 	krastorio.technologies.addEffect("stronger-explosives-6", {type = "ammo-damage", ammo_category = "missiles-for-turrets", modifier = 0.35})
 	krastorio.technologies.addEffect("stronger-explosives-7", {type = "ammo-damage", ammo_category = "missiles-for-turrets", modifier = 0.1})
+	krastorio.technologies.addEffect("stronger-explosives-11", {type = "ammo-damage", ammo_category = "missiles-for-turrets", modifier = 0.1})
+	krastorio.technologies.addEffect("stronger-explosives-16", {type = "ammo-damage", ammo_category = "missiles-for-turrets", modifier = 0.1})
 
 	krastorio.technologies.addEffect("weapon-shooting-speed-2", {type = "gun-speed", ammo_category = "missiles-for-turrets", modifier = 0.2})
 	krastorio.technologies.addEffect("weapon-shooting-speed-3", {type = "gun-speed", ammo_category = "missiles-for-turrets", modifier = 0.2})
@@ -782,6 +843,8 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	krastorio.technologies.addEffect("stronger-explosives-5", {type = "ammo-damage", ammo_category = "heavy-rocket", modifier = 0.35})
 	krastorio.technologies.addEffect("stronger-explosives-6", {type = "ammo-damage", ammo_category = "heavy-rocket", modifier = 0.35})
 	krastorio.technologies.addEffect("stronger-explosives-7", {type = "ammo-damage", ammo_category = "heavy-rocket", modifier = 0.1})
+	krastorio.technologies.addEffect("stronger-explosives-11", {type = "ammo-damage", ammo_category = "heavy-rocket", modifier = 0.1})
+	krastorio.technologies.addEffect("stronger-explosives-16", {type = "ammo-damage", ammo_category = "heavy-rocket", modifier = 0.1})
 
 	krastorio.technologies.addEffect("weapon-shooting-speed-2", {type = "gun-speed", ammo_category = "heavy-rocket", modifier = 0.2})
 	krastorio.technologies.addEffect("weapon-shooting-speed-3", {type = "gun-speed", ammo_category = "heavy-rocket", modifier = 0.2})
@@ -798,6 +861,8 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	krastorio.technologies.addEffect("energy-weapons-damage-5", {type = "ammo-damage", ammo_category = "impulse-rifle", modifier = 0.35})
 	krastorio.technologies.addEffect("energy-weapons-damage-6", {type = "ammo-damage", ammo_category = "impulse-rifle", modifier = 0.35})
 	krastorio.technologies.addEffect("energy-weapons-damage-7", {type = "ammo-damage", ammo_category = "impulse-rifle", modifier = 0.1})
+	krastorio.technologies.addEffect("energy-weapons-damage-11", {type = "ammo-damage", ammo_category = "impulse-rifle", modifier = 0.1})
+	krastorio.technologies.addEffect("energy-weapons-damage-16", {type = "ammo-damage", ammo_category = "impulse-rifle", modifier = 0.1})
 
 	krastorio.technologies.addEffect("laser-turret-speed-1", {type = "gun-speed", ammo_category = "impulse-rifle", modifier = 0.2})
 	krastorio.technologies.addEffect("laser-turret-speed-2", {type = "gun-speed", ammo_category = "impulse-rifle", modifier = 0.2})
