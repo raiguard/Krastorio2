@@ -223,7 +223,8 @@ krastorio.technologies.removeResearchUnitIngredient("gates", "logistic-science-p
 
 data.raw.technology["logistic-system"].unit.count = 250
 data.raw.technology["coal-liquefaction"].unit.count = 150	
-data.raw.technology["automation-3"].unit.count = 300		
+data.raw.technology["automation-3"].unit.count = 500		
+krastorio.technologies.addUnlockRecipe("automation-3", "kr-big-assembling-machine")
 data.raw.technology["effect-transmission"].unit.count = 500
 data.raw.technology["low-density-structure"].unit.count = 500
 

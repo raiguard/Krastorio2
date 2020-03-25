@@ -170,9 +170,9 @@ krastorio.recipes.setEnergyCost("advanced-circuit", 4)
 
 krastorio.recipes.removeIngredient("processing-unit", "electronic-circuit")
 krastorio.recipes.replaceIngredient("processing-unit", "advanced-circuit", {"advanced-circuit", 2})
-krastorio.recipes.addIngredient("processing-unit", {"rare-metals", 2})
+krastorio.recipes.addIngredient("processing-unit", {"rare-metals", 1})
 krastorio.recipes.replaceIngredient("processing-unit", "sulfuric-acid", {type="fluid", name="sulfuric-acid", amount=5})
-krastorio.recipes.setEnergyCost("processing-unit", 12)
+krastorio.recipes.setEnergyCost("processing-unit", 6)
 
 krastorio.recipes.replaceIngredient("repair-pack", "iron-gear-wheel", {"iron-plate", 2})
 krastorio.recipes.replaceIngredient("repair-pack", "electronic-circuit", {"copper-plate", 2})
@@ -449,10 +449,13 @@ krastorio.recipes.replaceIngredient("steam-turbine", "iron-gear-wheel", {"iron-g
 krastorio.recipes.replaceIngredient("steam-turbine", "pipe", {"pipe", 10})
 
 -- Assembling machine
+krastorio.recipes.setEnergyCost("assembling-machine-1", 1)
+krastorio.recipes.setEnergyCost("assembling-machine-2", 2)
 krastorio.recipes.replaceIngredient("assembling-machine-3", "assembling-machine-2", {"assembling-machine-2", 1})
 krastorio.recipes.replaceIngredient("assembling-machine-3", "speed-module", {"speed-module", 2})
 krastorio.recipes.addIngredient("assembling-machine-3", {"advanced-circuit", 3})
 krastorio.recipes.addIngredient("assembling-machine-3", {"steel-gear-wheel", 5})
+krastorio.recipes.setEnergyCost("assembling-machine-3", 3)
 
 -- TURRETS
 

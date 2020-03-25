@@ -47,6 +47,19 @@ return
     },
 	{
 		type = "recipe",
+		name = "kr-big-assembling-machine",
+		energy_required = 5,
+		enabled = false,
+		ingredients =
+		{
+			{"assembling-machine-3", 4},
+			{"steel-beam", 6},
+			{"advanced-circuit", 2},
+		},
+		result = "kr-big-assembling-machine"
+    },
+	{
+		type = "recipe",
 		name = "kr-shelter",
 		energy_required = 20,
 		enabled = false,

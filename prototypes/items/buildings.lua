@@ -43,6 +43,16 @@ data:extend(
 		place_result = "kr-bio-lab",
 		stack_size = 50
     },
+    {
+		type = "item",
+		name = "kr-big-assembling-machine",
+		icon =  kr_entities_icons_path .. "big-assembling-machine.png",
+		icon_size = 64,
+		subgroup = "production-machine",
+		order = "c2[big-assembling-machine]",
+		place_result = "kr-big-assembling-machine",
+		stack_size = 50
+    },
 	-- -- --
 	-- Research servers
 	-- -- --

@@ -3,6 +3,7 @@ Version: 0.9.7
 Date: 23.03.2020
   Features:
     - Added compatibility with angelsaddons-smeltingtrain, thanks to Methadone!
+    - Added big assembling machine (It's NOT the Advanced assembling machine).
   Changes:
     - Now bio-labs and greenhouses can share liquids with pipes.	
     - Increased oxygen production in atmospheric condenser 5s instead of 10s.
