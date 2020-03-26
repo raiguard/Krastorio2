@@ -13,8 +13,8 @@ data.raw.item["nuclear-reactor"].stack_size = 1
 
 -- Heat pipe
 data.raw["heat-pipe"]["heat-pipe"].max_health = 100
-data.raw["heat-pipe"]["heat-pipe"].heat_buffer.specific_heat = "2.5MJ"
-data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_transfer = "2.5GW"
+data.raw["heat-pipe"]["heat-pipe"].heat_buffer.specific_heat = "6MJ"
+data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_transfer = "6GW"
 
 -- Heat exchanger
 data.raw["boiler"]["heat-exchanger"].max_health = 250
