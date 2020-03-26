@@ -560,6 +560,66 @@ data:extend(
     },
 	{
 		type = "technology",
+		name = "kr-automation",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "advanced-assembling-machine.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-advanced-assembling-machine"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["kr-s-c-copper-cable"] or "kr-s-c-copper-cable"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["kr-s-c-iron-stick"] or "kr-s-c-iron-stick"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["kr-s-c-iron-gear-wheel"] or "kr-s-c-iron-gear-wheel"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["kr-s-c-iron-beam"] or "kr-s-c-iron-beam"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["kr-s-c-steel-gear-wheel"] or "kr-s-c-steel-gear-wheel"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["kr-s-c-steel-beam"] or "kr-s-c-steel-beam"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["kr-s-c-imersium-gear-wheel"] or "kr-s-c-imersium-gear-wheel"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["kr-s-c-imersium-beam"] or "kr-s-c-imersium-beam"
+			}
+		},
+		prerequisites = {"automation-3", "kr-imersium-processing", "kr-energy-control-unit", "kr-advanced-tech-card"},
+		unit =
+		{
+			count = 500,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"matter-tech-card", 1},
+				{"advanced-tech-card", 1}
+			},
+			time = 45
+		}
+    },
+	{
+		type = "technology",
 		name = "kr-railgun-turret",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "railgun-turret.png",

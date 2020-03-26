@@ -26,6 +26,7 @@ data:extend(
 		group = "combat",
 		order = "g4"
 	},
+	
 	-- Containers and logistics containers
 	{
 		type = "item-subgroup",
@@ -96,5 +97,20 @@ data:extend(
 		name = "matter-items",
 		group = "intermediate-products",
 		order = "m3"
+	},
+	
+	--
+	{
+		type = "item-group",
+		name = "smelting-crafting",
+		order = "m4",
+		icon = kr_others_path .. "smelting-crafting.png",
+		icon_size = 64
+	},
+	{
+		type = "item-subgroup",
+		name = "smelting-crafting",
+		group = "smelting-crafting",
+		order = "m4"
 	}
 })

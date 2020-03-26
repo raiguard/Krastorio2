@@ -45,37 +45,40 @@ data:extend(
     },
     {
 		type = "item",
-		name = "kr-big-assembling-machine",
-		icon =  kr_entities_icons_path .. "big-assembling-machine.png",
+		name = "kr-advanced-assembling-machine",
+		icon =  kr_entities_icons_path .. "advanced-assembling-machine.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "production-machine",
-		order = "c2[big-assembling-machine]",
-		place_result = "kr-big-assembling-machine",
+		order = "c2[advanced-assembling-machine]",
+		place_result = "kr-advanced-assembling-machine",
 		stack_size = 50
     },
 	-- -- --
 	-- Electric mining drills
 	-- -- --
-  {
-    type = "item",
-    name = "kr-electric-mining-drill-mk2",
-    icon = kr_entities_icons_path .. "electric-mining-drill-mk2.png",
-    icon_size = 64, icon_mipmaps = 4,
-    subgroup = "extraction-machine",
-    order = "a[items]-c[electric-mining-drill-mk2]",
-    place_result = "kr-electric-mining-drill-mk2",
-    stack_size = 50
-  },
-  {
-    type = "item",
-    name = "kr-electric-mining-drill-mk3",
-    icon = kr_entities_icons_path .. "electric-mining-drill-mk3.png",
-    icon_size = 64, icon_mipmaps = 4,
-    subgroup = "extraction-machine",
-    order = "a[items]-d[electric-mining-drill-mk3]",
-    place_result = "kr-electric-mining-drill-mk3",
-    stack_size = 50
-  },
+	{
+		type = "item",
+		name = "kr-electric-mining-drill-mk2",
+		icon = kr_entities_icons_path .. "electric-mining-drill-mk2.png",
+		icon_size = 64, 
+		icon_mipmaps = 4,
+		subgroup = "extraction-machine",
+		order = "a[items]-c[electric-mining-drill-mk2]",
+		place_result = "kr-electric-mining-drill-mk2",
+		stack_size = 50
+	},
+	{
+		type = "item",
+		name = "kr-electric-mining-drill-mk3",
+		icon = kr_entities_icons_path .. "electric-mining-drill-mk3.png",
+		icon_size = 64, 
+		icon_mipmaps = 4,
+		subgroup = "extraction-machine",
+		order = "a[items]-d[electric-mining-drill-mk3]",
+		place_result = "kr-electric-mining-drill-mk3",
+		stack_size = 50
+	},
 	-- -- --
 	-- Research servers
 	-- -- --

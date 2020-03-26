@@ -47,19 +47,6 @@ return
     },
 	{
 		type = "recipe",
-		name = "kr-big-assembling-machine",
-		energy_required = 5,
-		enabled = false,
-		ingredients =
-		{
-			{"assembling-machine-3", 4},
-			{"steel-beam", 6},
-			{"advanced-circuit", 2},
-		},
-		result = "kr-big-assembling-machine"
-    },
-	{
-		type = "recipe",
 		name = "kr-electric-mining-drill-mk2",
 		energy_required = 5,
 		enabled = false,
@@ -841,6 +828,20 @@ return
 			{"energy-control-unit", 10}
 		},
 		result = "kr-advanced-furnace"
+    },
+	{
+		type = "recipe",
+		name = "kr-advanced-assembling-machine",
+		energy_required = 60,
+		enabled = false,
+		ingredients =
+		{
+			{"imersium-beam", 4},
+			{"assembling-machine-3", 2},
+			{"electric-furnace", 2},			
+			{"ai-core", 2}
+		},
+		result = "kr-advanced-assembling-machine"
     },
 	{
 		type = "recipe",

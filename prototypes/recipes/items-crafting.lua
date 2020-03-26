@@ -4,16 +4,17 @@ return
 	{
 		type = "recipe",
 		name = "automation-core",
-		energy_required = 1,
+		energy_required = 2,
 		enabled = false,
 		allow_productivity = true,
 		ingredients =
 		{
-			{"iron-gear-wheel", 2},
-			{"iron-stick", 2},
-			{"copper-plate", 3}
+			{"iron-gear-wheel", 4},
+			{"iron-stick", 4},
+			{"copper-plate", 6}
 		},
-		result = "automation-core"
+		result = "automation-core",
+		result_count = 2
 	},
 	{
 		type = "recipe",
@@ -142,11 +143,11 @@ return
 		ingredients =
 		{
 			{ type = "item",  name = "processing-unit", amount = 2 },
-			{ type = "item",  name = "imersite-crystal", amount = 1 },
-			{ type = "fluid", name = "nitric-acid", amount = 4 }
+			{ type = "item",  name = "imersite-crystal", amount = 2 },
+			{ type = "fluid", name = "nitric-acid", amount = 10 }
 		},
 		result = "ai-core",
-		result_count = 1
+		result_count = 2
 	},
 	{
 		type = "recipe",

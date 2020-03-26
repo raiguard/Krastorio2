@@ -70,6 +70,11 @@ data:extend(
 		type = "recipe-category",
 		name = "advanced-smelting"
 	},
+	-- Crafting category for building that are furnace and assemblers at the same time
+	{
+		type = "recipe-category",
+		name = "smelting-crafting"
+	},
 
 -----------------------------------------------------------------------------------------------------------------
 	

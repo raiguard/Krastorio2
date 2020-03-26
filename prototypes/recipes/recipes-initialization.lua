@@ -57,11 +57,14 @@ local krastorio_new_recipes =
 	-- -- Recipe for charge stabilizers
 	require(kr_recipes_prototypes_path .. "stabilizer-charging"),
 	
-	-- -- Recipe for charge stabilizers
+	-- -- Vehicle recipes
 	require(kr_recipes_prototypes_path .. "vehicles"),
 	
-	-- -- Recipe for refinery
-	require(kr_recipes_prototypes_path .. "oil-processing")
+	-- -- Recipes for refinery
+	require(kr_recipes_prototypes_path .. "oil-processing"),
+	
+	-- -- Recipes for smelting assemblers
+	require(kr_recipes_prototypes_path .. "smelting-crafting")
 }
 
 -- -- Anti recipes override check

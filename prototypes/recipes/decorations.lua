@@ -11,7 +11,7 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"wood", 30},
+			{"wood", 40},
 			{type="fluid", name="water", amount=100}
 		},
 		result = "tree-01",
@@ -25,7 +25,7 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"wood", 30},
+			{"wood", 40},
 			{type="fluid", name="water", amount=100}
 		},
 		result = "tree-02",
@@ -39,7 +39,7 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"wood", 30},
+			{"wood", 40},
 			{type="fluid", name="water", amount=100}
 		},
 		result = "tree-03",
@@ -53,7 +53,7 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"wood", 30},
+			{"wood", 40},
 			{type="fluid", name="water", amount=100}
 		},
 		result = "tree-04",
@@ -67,7 +67,7 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"wood", 30},
+			{"wood", 40},
 			{type="fluid", name="water", amount=100}
 		},
 		result = "tree-05",
@@ -81,7 +81,7 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"wood", 30},
+			{"wood", 40},
 			{type="fluid", name="water", amount=100}
 		},
 		result = "tree-06",
@@ -95,7 +95,7 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"wood", 30},
+			{"wood", 40},
 			{type="fluid", name="water", amount=100}
 		},
 		result = "tree-07",
@@ -109,7 +109,7 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"wood", 30},
+			{"wood", 40},
 			{type="fluid", name="water", amount=100}
 		},
 		result = "tree-08",
@@ -123,7 +123,7 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"wood", 30},
+			{"wood", 40},
 			{type="fluid", name="water", amount=100}
 		},
 		result = "tree-09",
