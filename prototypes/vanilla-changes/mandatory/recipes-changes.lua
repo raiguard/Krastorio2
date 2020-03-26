@@ -159,20 +159,26 @@ krastorio.recipes.removeIngredient("refined-concrete", "iron-stick")
 krastorio.recipes.replaceIngredient("flying-robot-frame", "electronic-circuit", {"electronic-components", 10})
 
 -- Circuits
-krastorio.recipes.addIngredient("electronic-circuit", {"wood", 2})
-krastorio.recipes.replaceIngredient("electronic-circuit", "iron-plate", {"iron-plate", 1})
+krastorio.recipes.addIngredient("electronic-circuit", {"wood", 1})
+krastorio.recipes.replaceIngredient("electronic-circuit", "iron-plate", {"iron-plate", 2})
 krastorio.recipes.replaceIngredient("electronic-circuit", "copper-cable", {"copper-cable", 2})
 krastorio.recipes.setEnergyCost("electronic-circuit", 2)
+krastorio.recipes.replaceProduct("electronic-circuit", "electronic-circuit", {"electronic-circuit", 2})
 
-krastorio.recipes.replaceIngredient("advanced-circuit", "copper-cable", {"copper-cable", 2})
-krastorio.recipes.replaceIngredient("advanced-circuit", "plastic-bar", {"electronic-components", 1})
+krastorio.recipes.replaceIngredient("advanced-circuit", "electronic-circuit", {"electronic-circuit", 2})
+krastorio.recipes.replaceIngredient("advanced-circuit", "copper-cable", {"copper-cable", 4})
+krastorio.recipes.replaceIngredient("advanced-circuit", "plastic-bar", {"electronic-components", 2})
 krastorio.recipes.setEnergyCost("advanced-circuit", 4)
+krastorio.recipes.replaceProduct("advanced-circuit", "advanced-circuit", {"advanced-circuit", 2})
 
 krastorio.recipes.removeIngredient("processing-unit", "electronic-circuit")
 krastorio.recipes.replaceIngredient("processing-unit", "advanced-circuit", {"advanced-circuit", 2})
-krastorio.recipes.addIngredient("processing-unit", {"rare-metals", 1})
-krastorio.recipes.replaceIngredient("processing-unit", "sulfuric-acid", {type="fluid", name="sulfuric-acid", amount=5})
+krastorio.recipes.addIngredient("processing-unit", {"rare-metals", 2})
+krastorio.recipes.replaceIngredient("processing-unit", "sulfuric-acid", {type="fluid", name="sulfuric-acid", amount=10})
 krastorio.recipes.setEnergyCost("processing-unit", 6)
+krastorio.recipes.replaceProduct("processing-unit", "processing-unit", {"processing-unit", 2})
+
+-- --
 
 krastorio.recipes.replaceIngredient("repair-pack", "iron-gear-wheel", {"iron-plate", 2})
 krastorio.recipes.replaceIngredient("repair-pack", "electronic-circuit", {"copper-plate", 2})

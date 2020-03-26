@@ -1,17 +1,24 @@
 -- -- -- Mandatory Fuels Changes
 -- -- Wood
 	-- data.raw.item["wood"].fuel_category = "chemical"
-	data.raw.item["wood"].fuel_value = "1MJ" --2
+	data.raw.item["wood"].fuel_value = "2MJ" --2
 
 -- -- -- Vanilla steam stat changes
 
---data.raw.fluid["steam"].max_temperature = 1000
+data.raw.fluid["sulfuric-acid"].heat_capacity = "0.25KJ"
+data.raw.fluid["water"].heat_capacity = "0.5KJ"
 data.raw.fluid["steam"].heat_capacity = "0.5KJ"
-data.raw["generator"]["steam-engine"].effectivity = 1.0
-data.raw["generator"]["steam-engine"].fluid_usage_per_tick = 0.417
-data.raw["generator"]["steam-engine"].max_power_output = "0.75MW"
+--data.raw.fluid["steam"].max_temperature = 1000 --1000
+
+data.raw["generator"]["steam-engine"].effectivity = 1
+data.raw["generator"]["steam-engine"].fluid_usage_per_tick = 1/6
+data.raw["generator"]["steam-engine"].maximum_temperature = 165
+data.raw["generator"]["steam-engine"].max_power_output = "20MW"
+
 data.raw["boiler"]["boiler"].energy_consumption = "1.5MW"
-data.raw["boiler"]["boiler"].energy_source.effectivity = 1.0
+data.raw["boiler"]["boiler"].target_temperature = 165
+data.raw["boiler"]["boiler"].energy_source.emissions_per_minute = 20
+--data.raw["boiler"]["boiler"].energy_source.effectivity = 1
 
 -- -- -- Accumulator and solar panel modification
 

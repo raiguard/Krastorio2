@@ -5,17 +5,17 @@ local advanced_fuel_value = nil
 
 if krastorio.general.getSafeSettingValue("kr-rebalance-fuels") then
 	-- Coke
-	coke_value                   = "9MJ"
+	coke_value                   = "18MJ"
 	coke_acceleration_multiplier = 1.0
 	coke_top_speed_multiplier    = 1.0
 	
 	-- Fuel
-	fuel_value                   = "10MJ"
+	fuel_value                   = "20MJ"
 	fuel_acceleration_multiplier = 1.0
 	fuel_top_speed_multiplier    = 1.0
 	
 	-- Bio fuel
-	bio_fuel_value                   = "10MJ"
+	bio_fuel_value                   = "20MJ"
 	bio_fuel_acceleration_multiplier = 0.8
 	bio_fuel_top_speed_multiplier    = 0.9
 	
@@ -23,17 +23,17 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-fuels") then
 	advanced_fuel_value = "10MJ"
 else
 	-- Coke
-	coke_value                   = "9MJ"
+	coke_value                   = "18MJ"
 	coke_acceleration_multiplier = 1.1
 	coke_top_speed_multiplier    = 1.1
 	
 	-- Fuel
-	fuel_value                   = "15MJ"
+	fuel_value                   = "30MJ"
 	fuel_acceleration_multiplier = 1.3
 	fuel_top_speed_multiplier    = 1.1
 	
 	-- Bio fuel
-	bio_fuel_value                   = "15MJ"
+	bio_fuel_value                   = "30MJ"
 	bio_fuel_acceleration_multiplier = 1.2
 	bio_fuel_top_speed_multiplier    = 1.1
 	
