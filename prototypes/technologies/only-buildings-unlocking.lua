@@ -670,6 +670,34 @@ data:extend(
     },
 	{
 		type = "technology",
+		name = "automation-4",
+		mod = "Krastorio2",
+		icon = "__base__/graphics/technology/automation.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-big-assembling-machine"
+			}
+		},
+		prerequisites = {"automation-3", "utility-science-pack"},
+		unit =
+		{
+			count = 500,
+			ingredients = 
+			{
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1}
+			},
+			time = 60
+		}
+    },
+	{
+		type = "technology",
 		name = "kr-logistic-4",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "logistics-4.png",
