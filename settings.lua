@@ -207,9 +207,16 @@ data:extend(
 	},
 	{
 		type = "bool-setting",
-		name = "kr-kl-stuff",
+		name = "kr-large-icons",
 		setting_type = "startup",
 		default_value = false,
 		order = "b12"
+	},
+	{
+		type = "bool-setting",
+		name = "kr-kl-stuff",
+		setting_type = "startup",
+		default_value = false,
+		order = "b13"
 	},
 })

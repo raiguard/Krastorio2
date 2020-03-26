@@ -113,6 +113,8 @@ data:extend(
 				}
 			}
 		},
+		open_sound = { filename = kr_sounds_mod .. "buildings/open.ogg", volume = 1 },
+		close_sound = { filename = kr_sounds_mod .. "buildings/close.ogg", volume = 1 },
 		audible_distance_modifier = 10,
 		min_perceived_performance = 0.25,
 		performance_to_sound_speedup = 0.5,

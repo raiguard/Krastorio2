@@ -6,7 +6,7 @@ data:extend(
 		icon = kr_entities_icons_path .. "remnants-icon.png",
 		icon_size = 32,
 		flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},
-		selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
+		selection_box = {{-3, -3}, {3, 3}},
 		tile_width = 9,
 		tile_height = 9,
 		selectable_in_game = false,
@@ -22,16 +22,16 @@ data:extend(
 			{
 				filename = kr_remnants_path .. "medium-random-pipes-remnant/medium-random-pipes-remnant.png",
 				line_length = 1,
-				width = 58,
-				height = 58,
+				width = 175,
+				height = 175,
 				frame_count = 1,
 				direction_count = 1,
 				hr_version =
 				{
 					filename = kr_remnants_path .. "medium-random-pipes-remnant/hr-medium-random-pipes-remnant.png",
 					line_length = 1,
-					width = 117,
-					height = 117,
+					width = 350,
+					height = 350,
 					frame_count = 1,
 					direction_count = 1,
 					scale = 0.5

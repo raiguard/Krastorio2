@@ -60,6 +60,32 @@ return
     },
 	{
 		type = "recipe",
+		name = "kr-electric-mining-drill-mk2",
+		energy_required = 5,
+		enabled = false,
+		ingredients =
+		{
+			{"electric-mining-drill", 1},
+			{"steel-gear-wheel", 5},
+			{"rare-metals", 4}
+		},
+		result = "kr-electric-mining-drill-mk2"
+    },
+	{
+		type = "recipe",
+		name = "kr-electric-mining-drill-mk3",
+		energy_required = 10,
+		enabled = false,
+		ingredients =
+		{
+			{"kr-electric-mining-drill-mk2", 1},
+			{"imersium-gear-wheel", 5},
+			{"imersite-crystal", 4}
+		},
+		result = "kr-electric-mining-drill-mk3"
+    },
+	{
+		type = "recipe",
 		name = "kr-shelter",
 		energy_required = 20,
 		enabled = false,

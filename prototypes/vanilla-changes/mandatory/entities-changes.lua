@@ -174,6 +174,10 @@ data.raw.corpse["pumpjack-remnants"].animation = make_rotated_animation_variatio
 	}
 })
 
+-- E Drill
+data.raw["mining-drill"]["electric-mining-drill"].fast_replaceable_group = "electric-mining-drill"
+data.raw["mining-drill"]["electric-mining-drill"].next_upgrade = "kr-electric-mining-drill-mk2"
+
 -- Lab
 data.raw.lab["lab"].fast_replaceable_group = "lab"
 data.raw.lab["lab"].next_upgrade = "biusart-lab"

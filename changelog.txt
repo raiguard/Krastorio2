@@ -4,6 +4,8 @@ Date: 23.03.2020
   Features:
     - Added compatibility with angelsaddons-smeltingtrain, thanks to Methadone!
     - Added big assembling machine (It's NOT the Advanced assembling machine).
+    - Added option for changing info icon size.
+    - Added mk2 and mk3 drills. We are tired of answering the question why this was deleted. It's easier to add this stuff back... you're guys weird. You vote to remove the "colored buildings" and then ask add this...well, it's here again.
   Changes:
     - Now bio-labs and greenhouses can share liquids with pipes.	
     - Increased oxygen production in atmospheric condenser 5s instead of 10s.
@@ -11,11 +13,13 @@ Date: 23.03.2020
     - Now creep can be destroyed via robots, collectable with hands (if you have a very long patience). We suggest you to continue using the creep collector that is the faster way.
     - Signed brave new world mod as incompatible with K2.
     - Infinite technology has been rebalance.
-    - Green and red circuits are now cheaper.
+    - Red circuits are now cheaper.
     - Energy shields are now cheaper.
+    - Buffed advanced solar panel (200->250).
   Fixes:
     - Changed recipes definitions to walkaround Factorio products statistic blacklisting. 
     - Fixed that remove modded biter nests during surface/chunk generation can cause a creep script crash.
+    - Many small fixes and improvements.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.6
 Date: 22.03.2020

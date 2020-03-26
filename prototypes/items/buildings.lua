@@ -54,6 +54,29 @@ data:extend(
 		stack_size = 50
     },
 	-- -- --
+	-- Electric mining drills
+	-- -- --
+  {
+    type = "item",
+    name = "kr-electric-mining-drill-mk2",
+    icon = kr_entities_icons_path .. "electric-mining-drill-mk2.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "extraction-machine",
+    order = "a[items]-c[electric-mining-drill-mk2]",
+    place_result = "kr-electric-mining-drill-mk2",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "kr-electric-mining-drill-mk3",
+    icon = kr_entities_icons_path .. "electric-mining-drill-mk3.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "extraction-machine",
+    order = "a[items]-d[electric-mining-drill-mk3]",
+    place_result = "kr-electric-mining-drill-mk3",
+    stack_size = 50
+  },
+	-- -- --
 	-- Research servers
 	-- -- --
     {
@@ -123,7 +146,7 @@ data:extend(
 		icon =  kr_entities_icons_path .. "quarry-drill.png",
 		icon_size = 64,
 		subgroup = "extraction-machine",
-		order = "a[items]-c[quarry-drill]",
+		order = "a[items]-e[quarry-drill]",
 		place_result = "kr-quarry-drill",
 		stack_size = 50
     },
