@@ -6,6 +6,7 @@ Date: 27.03.2020
     - Added advanced assembling machine!
     - Added option for changing info icon size.
     - Added option for changing cargo wagon capacity size.
+    - Improved compatibility with Dectorio.
     - Added mk2 and mk3 drills. We are tired of answering the question why this was deleted. It's easier to add this stuff back... you're guys weird. You vote to remove the "colored buildings" and then ask add this...well, it's here again.
   Changes:
     - Now bio-labs and greenhouses can share liquids with pipes.

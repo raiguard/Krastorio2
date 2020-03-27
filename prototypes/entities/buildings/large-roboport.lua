@@ -9,7 +9,7 @@ data:extend(
 		name = "kr-large-roboport",
 		icon = kr_entities_icons_path .. "large-roboport.png",
 		icon_size = 64,
-		flags = {"placeable-neutral","placeable-player", "player-creation", "not-rotatable"},
+		flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
 		minable = {mining_time = 1, result = "kr-large-roboport"},
 		max_health = 3500,
 		corpse = "kr-big-random-pipes-remnant",
