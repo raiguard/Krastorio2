@@ -300,7 +300,7 @@ return
 		energy_required = 10,
 		ingredients = 
 		{
-			{"personal-laser-defense-equipment", 1},
+			{"personal-laser-defense-mk2-equipment", 1},
 			{"processing-unit", 10},
 			{"lithium-sulfur-battery", 10},
 			{"imersium-plate", 5}
