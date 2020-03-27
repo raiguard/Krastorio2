@@ -19,7 +19,7 @@ data:extend(
 		prerequisites = {},
 		unit =
 		{
-			count = 50,
+			count = 25,
 			ingredients =
 			{
 				{"basic-tech-card", 1}
@@ -44,7 +44,7 @@ data:extend(
 		prerequisites = {"steel-axe", "kr-imersium-processing"},
 		unit =
 		{
-			count = 250,
+			count = 200,
 			ingredients = 
 			{
 				{"production-science-pack", 1},

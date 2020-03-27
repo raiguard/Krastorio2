@@ -24,7 +24,7 @@ data:extend(
 				recipe = "offshore-pump"
 			}
 		},
-		prerequisites = {},
+		prerequisites = {"kr-automation-core"},
 		unit =
 		{
 			count = 10,
