@@ -5,9 +5,10 @@ Date: 23.03.2020
     - Added compatibility with angelsaddons-smeltingtrain, thanks to Methadone!
     - Added advanced assembling machine!
     - Added option for changing info icon size.
+    - Added option for changing cargo wagon capacity size.
     - Added mk2 and mk3 drills. We are tired of answering the question why this was deleted. It's easier to add this stuff back... you're guys weird. You vote to remove the "colored buildings" and then ask add this...well, it's here again.
   Changes:
-    - Now bio-labs and greenhouses can share liquids with pipes.	
+    - Now bio-labs and greenhouses can share liquids with pipes.
     - Increased oxygen production in atmospheric condenser to 5s from 10s.
     - Increased water production in atmospheric condenser to 10s from 30s.
     - Now creep can be destroyed via robots, collectable with hands (if you have a very long patience). We suggest you to continue using the creep collector that is the faster way.
@@ -16,10 +17,13 @@ Date: 23.03.2020
     - All circuits (cores included) are cheaper, take less wood and copper.
     - Energy shields are now cheaper.
     - Buffed advanced solar panel (200->250).
-    - Some minor improvements.	
+    - Some minor improvements.
+    - DT-fuel more cheaper now.
+    - Energy usage was changed for many buildings.
+    - Advanced furnace (crafting speed 10->12) and advanced chemical plant (crafting speed 10->8) was rebalanced.
   Fixes:
     - Attention! Fixed a problem due to which the conversion of water to steam was too cheating! The basic relationships have remained the same, but in some cases it is necessary to remove and put back the nuclear reactors for the changes to take effect.
-    - Changed recipes definitions to walkaround Factorio products statistic blacklisting. 
+    - Changed recipes definitions to walkaround Factorio products statistic blacklisting.
     - Fixed that remove modded biter nests during surface/chunk generation can cause a creep script crash.
     - Many small fixes and improvements.
 ---------------------------------------------------------------------------------------------------

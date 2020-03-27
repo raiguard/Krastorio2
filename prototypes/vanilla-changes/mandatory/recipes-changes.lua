@@ -542,7 +542,7 @@ krastorio.recipes.replaceProduct("uranium-fuel-cell", "uranium-fuel-cell", {"ura
 krastorio.recipes.replaceIngredient("nuclear-fuel-reprocessing", "used-up-uranium-fuel-cell", {name = "used-up-uranium-fuel-cell", amount = 1})
 krastorio.recipes.replaceProduct("nuclear-fuel-reprocessing", "uranium-238", {"uranium-238", 6})
 krastorio.recipes.addProduct("nuclear-fuel-reprocessing", {"stone", 4})
-krastorio.recipes.addProduct("nuclear-fuel-reprocessing", {type="item", name="tritium", probability = 0.05, amount=1})
+krastorio.recipes.addProduct("nuclear-fuel-reprocessing", {type="item", name="tritium", probability = 0.1, amount=1})
 
 -- More realistic weapons craft
 

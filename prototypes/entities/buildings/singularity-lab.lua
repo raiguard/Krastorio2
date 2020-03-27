@@ -173,7 +173,7 @@ data:extend(
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions_per_minute = 20
+			--emissions_per_minute = 10
 		},
 		energy_usage = "10MW",
 		module_specification = { module_slots = 4, module_info_icon_shift = {0, 2.1}, module_info_icon_scale = 0.6 },

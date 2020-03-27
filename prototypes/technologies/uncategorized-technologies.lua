@@ -181,10 +181,9 @@ data:extend(
 		prerequisites = { "kr-fluids-chemistry", "electronics" },
 		unit =
 		{
-			count = 150,
+			count = 175,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
@@ -221,10 +220,9 @@ data:extend(
 		order = "a-e-d",
 		unit =
 		{
-			count = 250,
+			count = 275,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
@@ -307,7 +305,7 @@ data:extend(
 		prerequisites = {"oil-processing"},
 		unit =
 		{
-			count = 100,
+			count = 125,
 			ingredients = 
 			{
 				{"basic-tech-card", 1},
@@ -341,7 +339,7 @@ data:extend(
 		order = "c-a",
         unit =
         {
-            count = 100,
+            count = 125,
             ingredients =
             {
 				{"basic-tech-card", 1},
@@ -388,10 +386,9 @@ data:extend(
 		order = "d-a",
         unit =
         {
-            count = 250,
+            count = 275,
             ingredients =
             {
-				{"basic-tech-card", 1},
                 {"automation-science-pack", 1},
                 {"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
@@ -434,7 +431,6 @@ data:extend(
 			count = 150,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
                 {"automation-science-pack", 1},
                 {"logistic-science-pack", 1},
 				{"military-science-pack", 1},
@@ -480,10 +476,9 @@ data:extend(
 		prerequisites = {"kr-advanced-chemistry"},
 		unit =
 		{
-			count = 250,
+			count = 275,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
                 {"automation-science-pack", 1},
                 {"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
@@ -511,10 +506,9 @@ data:extend(
 		prerequisites = {"kr-advanced-chemistry"},
 		unit =
 		{
-			count = 250,
+			count = 275,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
                 {"automation-science-pack", 1},
                 {"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}

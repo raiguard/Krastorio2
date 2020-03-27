@@ -43,24 +43,30 @@ data.raw.inserter["stack-filter-inserter"].energy_per_movement = "14KJ"
 -- --  Mining drills
 ----------------------------------------
 -- Burner mining drill
-if data.raw["mining-drill"]["burner-mining-drill"] then
+if  data.raw["mining-drill"]["burner-mining-drill"] then
 	data.raw["mining-drill"]["burner-mining-drill"].energy_source.emissions_per_minute = 5
 	data.raw["mining-drill"]["burner-mining-drill"].energy_usage = "100kW"
 end
 
 -- Electric mining drill
-if data.raw["mining-drill"]["electric-mining-drill"] then
+if  data.raw["mining-drill"]["electric-mining-drill"] then
 	data.raw["mining-drill"]["electric-mining-drill"].energy_source.emissions_per_minute = 7.5
 	data.raw["mining-drill"]["electric-mining-drill"].energy_usage = "100kW"
 	data.raw["mining-drill"]["electric-mining-drill"].module_specification.module_slots = 2
 end
 ----------------------------------------
+-- Assembling machines
+data.raw["assembling-machine"]["assembling-machine-1"].energy_usage = "75kW"
+data.raw["assembling-machine"]["assembling-machine-2"].energy_usage = "125kW"
+data.raw["assembling-machine"]["assembling-machine-3"].energy_usage = "200kW"
+
 -- Laboratory
-if data.raw.lab["lab"] then
-	data.raw.lab["lab"].energy_usage = "250kW"
+if  data.raw.lab["lab"] then
+	data.raw.lab["lab"].energy_usage = "200kW"
 end
+
 -- Electric furnace
-if data.raw["furnace"]["electric-furnace"] then
+if  data.raw["furnace"]["electric-furnace"] then
 	data.raw["furnace"]["electric-furnace"].energy_usage = "350kW"
 	data.raw["furnace"]["electric-furnace"].energy_source.emissions_per_minute = 1
 end

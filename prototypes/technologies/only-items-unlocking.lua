@@ -125,7 +125,6 @@ data:extend(
 			count = 200,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
@@ -156,7 +155,6 @@ data:extend(
 			count = 200,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
@@ -211,7 +209,6 @@ data:extend(
 			count = 200,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
@@ -255,7 +252,6 @@ data:extend(
 			count = 500,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"military-science-pack", 1},
@@ -284,7 +280,6 @@ data:extend(
 			count = 500,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1},

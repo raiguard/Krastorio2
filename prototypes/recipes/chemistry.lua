@@ -320,8 +320,8 @@ return
 		allow_productivity = false,
 		ingredients =
 		{
-			{ type = "fluid", name = "heavy-water", amount = 20},
-			{ type = "item", name = "tritium", amount = 2},
+			{ type = "fluid", name = "heavy-water", amount = 10},
+			{ type = "item", name = "tritium", amount = 1},
 			{ type = "item", name = "empty-dt-fuel", amount = 1, catalyst_amount = 1}
 		},
 		result = "dt-fuel",

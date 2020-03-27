@@ -437,10 +437,9 @@ data:extend(
 		prerequisites = {"kr-containers", "logistic-robotics"},
 		unit =
 		{
-			count = 200,
+			count = 250,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
@@ -494,7 +493,6 @@ data:extend(
 			count = 350,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
@@ -521,7 +519,6 @@ data:extend(
 			count = 300,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}

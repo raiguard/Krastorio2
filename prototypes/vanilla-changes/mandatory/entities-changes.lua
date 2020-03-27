@@ -5,6 +5,7 @@ local function transferFromFurnacesToAssemblers(furnace_name)
 		local furnace = krastorio_utils.tables.fullCopy(data.raw.furnace[furnace_name])
 		furnace.type = "assembling-machine"
 		furnace.source_inventory_size = 2
+		furnace.energy_usage = "350kW"
 		data.raw.furnace[furnace_name] = nil
 		data:extend({furnace})
 	end
@@ -173,6 +174,9 @@ data.raw.corpse["pumpjack-remnants"].animation = make_rotated_animation_variatio
 		scale = 0.5
 	}
 })
+
+-- Chemical plant
+--data.raw["assembling-machine"]["chemical-plant"].energy_source.emissions_per_minute = 2
 
 -- E Drill
 data.raw["mining-drill"]["electric-mining-drill"].fast_replaceable_group = "electric-mining-drill"

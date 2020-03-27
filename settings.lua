@@ -24,29 +24,37 @@ data:extend(
 		name = "kr-bonus-inventory",
 		setting_type = "startup",
 		default_value = 0,
-        allowed_values = {0, 10, 20, 30, 40},
+        allowed_values = {-30, -20, -10, 0, 10, 20, 30, 40, 50, 60},
 		order = "a3"
+	},
+	{
+		type = "int-setting",
+		name = "kr-cargo-wagon-bonus",
+		setting_type = "startup",
+		default_value = 0,
+        allowed_values = {-30, -20, -10, 0, 10, 20, 30, 40, 50, 60},
+		order = "a4"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-bonus-items",
 		setting_type = "startup",
 		default_value = false,
-		order = "a4"
+		order = "a5"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-disable-wiki",
 		setting_type = "runtime-per-user",
 		default_value = false,
-		order = "a5"
+		order = "a6"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-loaders",
 		setting_type = "startup",
 		default_value = true,
-		order = "a6"
+		order = "a7"
 	},
 	-- S - Science (Setting order "sNUMBER")
 	{

@@ -85,7 +85,7 @@ return
 		type = "recipe",
 		name = "heavy-water",
 		category = "electrolysis",
-		energy_required = 100,
+		energy_required = 120,
 		enabled = false,
 		always_show_made_in = true,
 		always_show_products = true,
@@ -103,7 +103,7 @@ return
 		},
 		results = 
 		{
-			{ type = "fluid", name = "heavy-water", amount = 10}
+			{ type = "fluid", name = "heavy-water", amount = 20}
 		},
 		subgroup = "fluid-recipes",
 		order = "y06[heavy-water]"

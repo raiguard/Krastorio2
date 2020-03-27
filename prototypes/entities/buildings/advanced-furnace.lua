@@ -123,12 +123,12 @@ data:extend(
 		vehicle_impact_sound = sounds.generic_impact,
 		working_sound = advanced_furnace_sound,
 		idle_sound = { filename = "__base__/sound/idle1.ogg" },
-		crafting_speed = 10,
+		crafting_speed = 12,
 		energy_source =
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions_per_minute = 20
+			emissions_per_minute = 6
 		},
 		energy_usage = "2MW",
 		ingredient_count = 6,

@@ -32,7 +32,7 @@ data:extend(
 			usage_priority = "secondary-input",
 			emissions_per_minute = 100
 		},
-		energy_usage = "1MW",
+		energy_usage = "2.5MW",
 		mining_speed = 10,
 		mining_power = 3,
 		resource_searching_radius = 0.49,
