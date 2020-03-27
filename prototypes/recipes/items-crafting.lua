@@ -87,6 +87,7 @@ return
 		name = "first-aid-kit",
 		energy_required = 5,
 		enabled = false,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"biomass", 1},
@@ -100,6 +101,7 @@ return
 		name = "empty-dt-fuel",
 		energy_required = 5,
 		enabled = false,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"low-density-structure", 2},
@@ -154,6 +156,7 @@ return
 		name = "pollution-filter",
 		energy_required = 10,
 		enabled = false,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"coal", 2},
@@ -281,6 +284,7 @@ return
 		type = "recipe",
 		name = "energy-control-unit",
 		enabled = false,
+		allow_productivity = true,
 		energy_required = 10,
 		ingredients =
 		{
@@ -296,6 +300,7 @@ return
 		name = "matter-stabilizer",
 		enabled = false,
 		allow_as_intermediate = false,
+		allow_productivity = true,
 		energy_required = 10,
 		ingredients =
 		{
@@ -312,6 +317,7 @@ return
 		category = "crafting-with-fluid",
 		enabled = false,
 		allow_as_intermediate = false,
+		allow_productivity = true,
 		energy_required = 10,
 		ingredients =
 		{

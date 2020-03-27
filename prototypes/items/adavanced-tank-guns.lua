@@ -6,7 +6,7 @@ data:extend(
 	{
 		type = "gun",
 		name = "advanced-tank-machine-gun",
-		icon = "__base__/graphics/icons/submachine-gun.png",
+		icon = kr_guns_icons_path .. "advanced-tank-machine-gun.png",
 		icon_size = 64,
 		flags = {"hidden"},
 		subgroup = "gun",
@@ -46,7 +46,7 @@ data:extend(
 	{
 		type = "gun",
 		name = "advanced-tank-laser-cannon",
-		icon = kr_guns_icons_path .. "impulse-rifle.png",
+		icon = kr_guns_icons_path .. "advanced-tank-laser-cannon.png",
 		icon_size = 64,
 		flags = {"hidden"},
 		subgroup = "gun",

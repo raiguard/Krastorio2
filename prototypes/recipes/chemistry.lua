@@ -317,7 +317,7 @@ return
 		category = "chemistry",
 		enabled = false,
 		always_show_made_in = true,
-		allow_productivity = true,
+		allow_productivity = false,
 		ingredients =
 		{
 			{ type = "fluid", name = "heavy-water", amount = 20},

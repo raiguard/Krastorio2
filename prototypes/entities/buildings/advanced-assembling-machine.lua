@@ -319,13 +319,9 @@ data:extend(
 			sound =
 			{
 				{
-					filename = "__base__/sound/assembling-machine-t3-1.ogg",
-					volume = 0.8
+					filename = kr_buildings_sounds_path .. "advanced-assembling-machine.ogg",
+					volume = 1
 				},
-				{
-					filename = "__base__/sound/assembling-machine-t3-2.ogg",
-					volume = 0.8
-				}
 			},
 			idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.3 },
 			apparent_volume = 1.5,
