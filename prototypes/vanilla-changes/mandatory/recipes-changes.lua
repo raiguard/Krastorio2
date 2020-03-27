@@ -173,7 +173,7 @@ krastorio.recipes.replaceProduct("advanced-circuit", "advanced-circuit", {"advan
 
 krastorio.recipes.removeIngredient("processing-unit", "electronic-circuit")
 krastorio.recipes.replaceIngredient("processing-unit", "advanced-circuit", {"advanced-circuit", 2})
-krastorio.recipes.addIngredient("processing-unit", {"rare-metals", 2})
+krastorio.recipes.addIngredient("processing-unit", {"rare-metals", 3})
 krastorio.recipes.replaceIngredient("processing-unit", "sulfuric-acid", {type="fluid", name="sulfuric-acid", amount=10})
 krastorio.recipes.setEnergyCost("processing-unit", 6)
 krastorio.recipes.replaceProduct("processing-unit", "processing-unit", {"processing-unit", 2})

@@ -13,7 +13,7 @@ data.raw.fluid["steam"].heat_capacity = "0.5KJ"
 data.raw["generator"]["steam-engine"].effectivity = 1
 data.raw["generator"]["steam-engine"].fluid_usage_per_tick = 1/6
 data.raw["generator"]["steam-engine"].maximum_temperature = 165
-data.raw["generator"]["steam-engine"].max_power_output = "20MW"
+data.raw["generator"]["steam-engine"].max_power_output = "0.75MW"
 
 data.raw["boiler"]["boiler"].energy_consumption = "1.5MW"
 data.raw["boiler"]["boiler"].target_temperature = 165

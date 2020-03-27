@@ -15,7 +15,7 @@ return
 			{type="fluid", name="water", amount=100}
 		},
 		result = "tree-01",
-		result_count = 5
+		result_count = 2
 	},
 	{
 		type = "recipe",
@@ -29,7 +29,7 @@ return
 			{type="fluid", name="water", amount=100}
 		},
 		result = "tree-02",
-		result_count = 5
+		result_count = 2
 	},
 	{
 		type = "recipe",
@@ -43,7 +43,7 @@ return
 			{type="fluid", name="water", amount=100}
 		},
 		result = "tree-03",
-		result_count = 5
+		result_count = 2
 	},
 	{
 		type = "recipe",
@@ -57,7 +57,7 @@ return
 			{type="fluid", name="water", amount=100}
 		},
 		result = "tree-04",
-		result_count = 5
+		result_count = 2
 	},
 	{
 		type = "recipe",
@@ -71,7 +71,7 @@ return
 			{type="fluid", name="water", amount=100}
 		},
 		result = "tree-05",
-		result_count = 5
+		result_count = 2
 	},
 	{
 		type = "recipe",
@@ -85,7 +85,7 @@ return
 			{type="fluid", name="water", amount=100}
 		},
 		result = "tree-06",
-		result_count = 5
+		result_count = 2
 	},
 	{
 		type = "recipe",
@@ -99,7 +99,7 @@ return
 			{type="fluid", name="water", amount=100}
 		},
 		result = "tree-07",
-		result_count = 5
+		result_count = 2
 	},
 	{
 		type = "recipe",
@@ -113,7 +113,7 @@ return
 			{type="fluid", name="water", amount=100}
 		},
 		result = "tree-08",
-		result_count = 5
+		result_count = 2
 	},
 	{
 		type = "recipe",
@@ -127,7 +127,7 @@ return
 			{type="fluid", name="water", amount=100}
 		},
 		result = "tree-09",
-		result_count = 5
+		result_count = 2
 	},
 	
 -----------------------------------------------------------------------------------------------------------------

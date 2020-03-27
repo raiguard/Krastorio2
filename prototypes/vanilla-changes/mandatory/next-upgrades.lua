@@ -24,3 +24,10 @@ data.raw.pipe["pipe"].next_upgrade = "kr-steel-pipe"
 --Underground pipes
 data.raw["pipe-to-ground"]["pipe-to-ground"].fast_replaceable_group = "pipe"
 data.raw["pipe-to-ground"]["pipe-to-ground"].next_upgrade = "kr-steel-pipe-to-ground"
+
+--Inserters
+data.raw["inserter"]["stack-inserter"].next_upgrade = "kr-superior-inserter"
+data.raw["inserter"]["fast-inserter"].next_upgrade = "kr-superior-inserter"
+data.raw["inserter"]["stack-filter-inserter"].next_upgrade = "kr-superior-filter-inserter"
+data.raw["inserter"]["filter-inserter"].next_upgrade = "kr-superior-filter-inserter"
+data.raw["inserter"]["long-handed-inserter"].next_upgrade = "kr-superior-long-inserter"

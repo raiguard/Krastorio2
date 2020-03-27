@@ -92,7 +92,7 @@ data:extend(
 		burner =
 		{
 			fuel_category = "nuclear",
-			effectivity = 0.5,
+			effectivity = 0.1,
 			fuel_inventory_size = 1,
 			burnt_inventory_size = 1,
 			smoke =

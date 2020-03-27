@@ -11,7 +11,7 @@ Date: 27.03.2020
     - Now bio-labs and greenhouses can share liquids with pipes.
     - Increased oxygen production in atmospheric condenser to 5s from 10s.
     - Increased water production in atmospheric condenser to 10s from 30s.
-    - Now creep can be destroyed via robots, collectable with hands (if you have a very long patience). We suggest you to continue using the creep collector that is the faster way.
+    - Now creep can be destroyed via robots, collectable with hands (if you have a very long patience). We suggest you to continue using the creep collector that is the faster way. Also robot collection works only with "fresh" creep.
     - Signed brave new world mod as incompatible with K2.
     - Infinite technology has been rebalance.
     - All circuits (cores included) are cheaper, take less wood and copper.
