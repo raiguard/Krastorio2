@@ -3475,7 +3475,512 @@ data:extend({
        }
     },
 })
+--MODULES
+data:extend({
+    --productivity
+    {
+        type = "technology",
+        name = "productivity-module-4",
+        effects = {
+            {type = "unlock-recipe", recipe = "productivity-module-4"}
+        },
+        icon = "__space-exploration-graphics__/graphics/technology/modules/productivity-4.png",
+        icon_size = 128,
+        order = "i-e-a",
+        upgrade = true,
+        prerequisites = {
+           data_util.mod_prefix .. "space-electromagnetics-laboratory",
+           "productivity-module-3"
+        },
+        unit = {
+         count = 300,
+         time = 10,
+         ingredients = {
+           { "automation-science-pack", 1 },
+           { "logistic-science-pack", 1 },
+           { "chemical-science-pack", 1 },
+           { "production-science-pack", 1 },
+           { "space-science-pack", 1 },
+         }
+        },
+    },
+    {
+        type = "technology",
+        name = "productivity-module-5",
+        effects = {
+            {type = "unlock-recipe", recipe = "productivity-module-5"}
+        },
+        icon = "__space-exploration-graphics__/graphics/technology/modules/productivity-5.png",
+        icon_size = 128,
+        order = "i-e-a",
+        upgrade = true,
+        prerequisites = {
+           data_util.mod_prefix .. "space-catalogue-biological-1",
+           "productivity-module-4",
+        },
+        unit = {
+         count = 500,
+         time = 10,
+         ingredients = {
+           { "automation-science-pack", 1 },
+           { "logistic-science-pack", 1 },
+           { "chemical-science-pack", 1 },
+           { "production-science-pack", 1 },
+           { "space-science-pack", 1 },
+         }
+        },
+    },
+    {
+        type = "technology",
+        name = "productivity-module-6",
+        effects = {
+            {type = "unlock-recipe", recipe = "productivity-module-6"}
+        },
+        icon = "__space-exploration-graphics__/graphics/technology/modules/productivity-6.png",
+        icon_size = 128,
+        order = "i-e-a",
+        upgrade = true,
+        prerequisites = {
+           data_util.mod_prefix .. "space-catalogue-biological-2",
+           "productivity-module-5",
+        },
+        unit = {
+         count = 200,
+         time = 10,
+         ingredients = {
+           { "automation-science-pack", 1 },
+           { "logistic-science-pack", 1 },
+           { "chemical-science-pack", 1 },
+           { "production-science-pack", 1 },
+           { "space-science-pack", 1 },
+           { data_util.mod_prefix .. "biological-science-pack", 1 },
+         }
+        },
 
+    },
+    {
+        type = "technology",
+        name = "productivity-module-7",
+        effects = {
+            {type = "unlock-recipe", recipe = "productivity-module-7"}
+        },
+        icon = "__space-exploration-graphics__/graphics/technology/modules/productivity-7.png",
+        icon_size = 128,
+        order = "i-e-a",
+        upgrade = true,
+        prerequisites = {
+           data_util.mod_prefix .. "space-catalogue-biological-3",
+           "productivity-module-6"
+        },
+        unit = {
+         count = 500,
+         time = 10,
+         ingredients = {
+           { "automation-science-pack", 1 },
+           { "logistic-science-pack", 1 },
+           { "chemical-science-pack", 1 },
+           { "production-science-pack", 1 },
+           { "space-science-pack", 1 },
+           { data_util.mod_prefix .. "biological-science-pack", 1 },
+         }
+        },
+
+    },
+    {
+        type = "technology",
+        name = "productivity-module-8",
+        effects = {
+            {type = "unlock-recipe", recipe = "productivity-module-8"}
+        },
+        icon = "__space-exploration-graphics__/graphics/technology/modules/productivity-8.png",
+        icon_size = 128,
+        order = "i-e-a",
+        upgrade = true,
+        prerequisites = {
+           data_util.mod_prefix .. "space-catalogue-biological-4",
+           "productivity-module-7"
+        },
+        unit = {
+         count = 800,
+         time = 10,
+         ingredients = {
+           { "automation-science-pack", 1 },
+           { "logistic-science-pack", 1 },
+           { "chemical-science-pack", 1 },
+           { "production-science-pack", 1 },
+           { "space-science-pack", 1 },
+           { data_util.mod_prefix .. "biological-science-pack", 1 },
+         }
+        }
+    },
+    {
+        type = "technology",
+        name = "productivity-module-9",
+        effects = {
+            {type = "unlock-recipe", recipe = "productivity-module-9"}
+        },
+        icon = "__space-exploration-graphics__/graphics/technology/modules/productivity-9.png",
+        icon_size = 128,
+        order = "i-e-a",
+        upgrade = true,
+        prerequisites = {
+           data_util.mod_prefix .. "deep-space-science-pack",
+           "productivity-module-8"
+        },
+        unit = {
+         count = 1000,
+         time = 10,
+         ingredients = {
+           { "automation-science-pack", 1 },
+           { "logistic-science-pack", 1 },
+           { "chemical-science-pack", 1 },
+           { "production-science-pack", 1 },
+           { "space-science-pack", 1 },
+           { data_util.mod_prefix .. "biological-science-pack", 1 },
+           { data_util.mod_prefix .. "deep-space-science-pack", 1},
+         }
+        },
+
+    },
+	--speed
+    {
+        type = "technology",
+        name = "speed-module-4",
+        effects = {
+            {type = "unlock-recipe", recipe = "speed-module-4"}
+        },
+        icon = "__space-exploration-graphics__/graphics/technology/modules/speed-4.png",
+        icon_size = 128,
+        order = "i-c-a",
+        upgrade = true,
+        prerequisites = {
+           data_util.mod_prefix .. "space-electromagnetics-laboratory",
+           "speed-module-3"
+        },
+        unit = {
+         count = 300,
+         time = 10,
+         ingredients = {
+           { "automation-science-pack", 1 },
+           { "logistic-science-pack", 1 },
+           { "chemical-science-pack", 1 },
+           { "production-science-pack", 1 },
+           { "space-science-pack", 1 },
+         }
+        },
+
+    },
+    {
+        type = "technology",
+        name = "speed-module-5",
+        effects = {
+            {type = "unlock-recipe", recipe = "speed-module-5"}
+        },
+        icon = "__space-exploration-graphics__/graphics/technology/modules/speed-5.png",
+        icon_size = 128,
+        order = "i-c-a",
+        upgrade = true,
+        prerequisites = {
+           data_util.mod_prefix .. "space-catalogue-material-1",
+           "speed-module-4"
+        },
+        unit = {
+         count = 500,
+         time = 10,
+         ingredients = {
+           { "automation-science-pack", 1 },
+           { "logistic-science-pack", 1 },
+           { "chemical-science-pack", 1 },
+           { "production-science-pack", 1 },
+           { "space-science-pack", 1 },
+         }
+        },
+
+    },
+    {
+        type = "technology",
+        name = "speed-module-6",
+        effects = {
+            {type = "unlock-recipe", recipe = "speed-module-6"}
+        },
+        icon = "__space-exploration-graphics__/graphics/technology/modules/speed-6.png",
+        icon_size = 128,
+        order = "i-c-a",
+        upgrade = true,
+        prerequisites = {
+           data_util.mod_prefix .. "space-catalogue-material-2",
+           "speed-module-5"
+        },
+        unit = {
+         count = 200,
+         time = 10,
+         ingredients = {
+           { "automation-science-pack", 1 },
+           { "logistic-science-pack", 1 },
+           { "chemical-science-pack", 1 },
+           { "production-science-pack", 1 },
+           { "space-science-pack", 1 },
+           { data_util.mod_prefix .. "material-science-pack", 1 },
+         }
+        },
+
+    },
+    {
+        type = "technology",
+        name = "speed-module-7",
+        effects = {
+            {type = "unlock-recipe", recipe = "speed-module-7"}
+        },
+        icon = "__space-exploration-graphics__/graphics/technology/modules/speed-7.png",
+        icon_size = 128,
+        order = "i-c-a",
+        upgrade = true,
+        prerequisites = {
+           data_util.mod_prefix .. "space-catalogue-material-3",
+           "speed-module-6"
+        },
+        unit = {
+         count = 500,
+         time = 10,
+         ingredients = {
+           { "automation-science-pack", 1 },
+           { "logistic-science-pack", 1 },
+           { "chemical-science-pack", 1 },
+           { "production-science-pack", 1 },
+           { "space-science-pack", 1 },
+           { data_util.mod_prefix .. "material-science-pack", 1 },
+         }
+        },
+
+    },
+    {
+        type = "technology",
+        name = "speed-module-8",
+        effects = {
+            {type = "unlock-recipe", recipe = "speed-module-8"}
+        },
+        icon = "__space-exploration-graphics__/graphics/technology/modules/speed-8.png",
+        icon_size = 128,
+        order = "i-c-a",
+        upgrade = true,
+        prerequisites = {
+           data_util.mod_prefix .. "space-catalogue-material-4",
+           "speed-module-7"
+        },
+        unit = {
+         count = 800,
+         time = 10,
+         ingredients = {
+           { "automation-science-pack", 1 },
+           { "logistic-science-pack", 1 },
+           { "chemical-science-pack", 1 },
+           { "production-science-pack", 1 },
+           { "space-science-pack", 1 },
+           { data_util.mod_prefix .. "material-science-pack", 1 },
+         }
+        },
+
+    },
+    {
+        type = "technology",
+        name = "speed-module-9",
+        effects = {
+            {type = "unlock-recipe", recipe = "speed-module-9"}
+        },
+        icon = "__space-exploration-graphics__/graphics/technology/modules/speed-9.png",
+        icon_size = 128,
+        order = "i-c-a",
+        upgrade = true,
+        prerequisites = {
+           data_util.mod_prefix .. "deep-space-science-pack",
+           "speed-module-8"
+        },
+        unit = {
+         count = 1000,
+         time = 10,
+         ingredients = {
+           { "automation-science-pack", 1 },
+           { "logistic-science-pack", 1 },
+           { "chemical-science-pack", 1 },
+           { "production-science-pack", 1 },
+           { "space-science-pack", 1 },
+           { data_util.mod_prefix .. "material-science-pack", 1 },
+           { data_util.mod_prefix .. "deep-space-science-pack", 1 },
+         }
+        },
+
+    },
+      --efficiency
+    {
+        type = "technology",
+        name = "effectivity-module-4",
+        effects = {
+            {type = "unlock-recipe", recipe = "effectivity-module-4"}
+        },
+        icon = "__space-exploration-graphics__/graphics/technology/modules/effectivity-4.png",
+        icon_size = 128,
+        order = "i-g-a",
+        upgrade = true,
+        prerequisites = {
+           data_util.mod_prefix .. "space-electromagnetics-laboratory",
+           "effectivity-module-3"
+        },
+        unit = {
+         count = 300,
+         time = 10,
+         ingredients = {
+           { "automation-science-pack", 1 },
+           { "logistic-science-pack", 1 },
+           { "chemical-science-pack", 1 },
+           { "production-science-pack", 1 },
+           { "space-science-pack", 1 },
+         }
+        },
+
+    },
+    {
+        type = "technology",
+        name = "effectivity-module-5",
+        effects = {
+            {type = "unlock-recipe", recipe = "effectivity-module-5"}
+        },
+        icon = "__space-exploration-graphics__/graphics/technology/modules/effectivity-5.png",
+        icon_size = 128,
+        order = "i-g-a",
+        upgrade = true,
+        prerequisites = {
+           data_util.mod_prefix .. "space-catalogue-energy-1",
+           "effectivity-module-4"
+        },
+        unit = {
+         count = 500,
+         time = 10,
+         ingredients = {
+           { "automation-science-pack", 1 },
+           { "logistic-science-pack", 1 },
+           { "chemical-science-pack", 1 },
+           { "production-science-pack", 1 },
+           { "space-science-pack", 1 },
+         }
+        },
+
+    },
+    {
+        type = "technology",
+        name = "effectivity-module-6",
+        effects = {
+            {type = "unlock-recipe", recipe = "effectivity-module-6"}
+        },
+        icon = "__space-exploration-graphics__/graphics/technology/modules/effectivity-6.png",
+        icon_size = 128,
+        order = "i-g-a",
+        upgrade = true,
+        prerequisites = {
+           data_util.mod_prefix .. "space-catalogue-energy-2",
+           "effectivity-module-5"
+        },
+        unit = {
+         count = 200,
+         time = 10,
+         ingredients = {
+           { "automation-science-pack", 1 },
+           { "logistic-science-pack", 1 },
+           { "chemical-science-pack", 1 },
+           { "production-science-pack", 1 },
+           { "space-science-pack", 1 },
+           { data_util.mod_prefix .. "energy-science-pack", 1 },
+         }
+        },
+
+    },
+    {
+        type = "technology",
+        name = "effectivity-module-7",
+        effects = {
+            {type = "unlock-recipe", recipe = "effectivity-module-7"}
+        },
+        icon = "__space-exploration-graphics__/graphics/technology/modules/effectivity-7.png",
+        icon_size = 128,
+        order = "i-g-a",
+        upgrade = true,
+        prerequisites = {
+           data_util.mod_prefix .. "space-catalogue-energy-3",
+           "effectivity-module-6"
+        },
+        unit = {
+         count = 500,
+         time = 10,
+         ingredients = {
+           { "automation-science-pack", 1 },
+           { "logistic-science-pack", 1 },
+           { "chemical-science-pack", 1 },
+           { "production-science-pack", 1 },
+           { "space-science-pack", 1 },
+           { data_util.mod_prefix .. "energy-science-pack", 1 },
+         }
+        },
+
+    },
+    {
+        type = "technology",
+        name = "effectivity-module-8",
+        effects = {
+            {type = "unlock-recipe", recipe = "effectivity-module-8"}
+        },
+        icon = "__space-exploration-graphics__/graphics/technology/modules/effectivity-8.png",
+        icon_size = 128,
+        order = "i-g-a",
+        upgrade = true,
+        prerequisites = {
+           data_util.mod_prefix .. "space-catalogue-energy-4",
+           "effectivity-module-7"
+        },
+        unit = {
+         count = 800,
+         time = 10,
+         ingredients = {
+           { "automation-science-pack", 1 },
+           { "logistic-science-pack", 1 },
+           { "chemical-science-pack", 1 },
+           { "production-science-pack", 1 },
+           { "space-science-pack", 1 },
+           { data_util.mod_prefix .. "energy-science-pack", 1 },
+         }
+        },
+
+    },
+    {
+        type = "technology",
+        name = "effectivity-module-9",
+        effects = {
+            {type = "unlock-recipe", recipe = "effectivity-module-9"}
+        },
+        icon = "__space-exploration-graphics__/graphics/technology/modules/effectivity-9.png",
+        icon_size = 128,
+        order = "i-g-a",
+        upgrade = true,
+        prerequisites = {
+            data_util.mod_prefix .. "deep-space-science-pack",
+            "effectivity-module-8"
+        },
+        unit = {
+         count = 1000,
+         time = 10,
+         ingredients = {
+           { "automation-science-pack", 1 },
+           { "logistic-science-pack", 1 },
+           { "chemical-science-pack", 1 },
+           { "production-science-pack", 1 },
+           { "space-science-pack", 1 },
+           { data_util.mod_prefix .. "energy-science-pack", 1 },
+           { data_util.mod_prefix .. "deep-space-science-pack", 1 },
+         }
+        },
+
+    }	
+})
+
+-- FIXZES
 data_util.tech_add_prerequisites("energy-shield-mk5-equipment", { data_util.mod_prefix .. "space-catalogue-energy-4"})
 data_util.tech_add_prerequisites("energy-shield-mk5-equipment", { data_util.mod_prefix .. "space-catalogue-material-4"})
 data_util.tech_add_prerequisites("energy-shield-mk6-equipment", { data_util.mod_prefix .. "antimatter-production"})

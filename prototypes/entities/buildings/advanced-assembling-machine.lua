@@ -175,7 +175,7 @@ data:extend(
 					shift = {-1.2, -2.1},
 					frame_count = 32,
 					line_length = 8,
-					animation_speed = 0.1,
+					animation_speed = 1.5,
 					hr_version =
 					{
 						filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-steam.png",
@@ -185,7 +185,7 @@ data:extend(
 						shift = {-1.2, -2.1},
 						frame_count = 32,
 						line_length = 8,
-						animation_speed = 0.1,
+						animation_speed = 1.5,
 						scale = 0.5
 					}
 				},
