@@ -1,13 +1,13 @@
 local coke_value, coke_acceleration_multiplier, coke_top_speed_multiplier = nil, nil, nil
 local fuel_value, fuel_acceleration_multiplier, fuel_top_speed_multiplier = nil, nil, nil
 local bio_fuel_value, bio_fuel_acceleration_multiplier, bio_fuel_top_speed_multiplier = nil, nil, nil
-local advanced_fuel_value = nil
+local advanced_fuel_value, advanced_fuel_acceleration_multiplier, advanced_fuel_top_speed_multiplier = nil, nil, nil
 
 if krastorio.general.getSafeSettingValue("kr-rebalance-fuels") then
 	-- Coke
 	coke_value                   = "18MJ"
-	coke_acceleration_multiplier = 1.0
-	coke_top_speed_multiplier    = 1.0
+	coke_acceleration_multiplier = 0.9
+	coke_top_speed_multiplier    = 0.9
 	
 	-- Fuel
 	fuel_value                   = "20MJ"
@@ -15,12 +15,14 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-fuels") then
 	fuel_top_speed_multiplier    = 1.0
 	
 	-- Bio fuel
-	bio_fuel_value                   = "20MJ"
+	bio_fuel_value                   = "18MJ"
 	bio_fuel_acceleration_multiplier = 0.8
 	bio_fuel_top_speed_multiplier    = 0.9
 	
 	-- Advanced fuel
-	advanced_fuel_value = "10MJ"
+	advanced_fuel_value                   = "20MJ"
+	advanced_fuel_acceleration_multiplier = 1.25
+	advanced_fuel_top_speed_multiplier    = 1.25
 else
 	-- Coke
 	coke_value                   = "18MJ"
@@ -33,12 +35,14 @@ else
 	fuel_top_speed_multiplier    = 1.1
 	
 	-- Bio fuel
-	bio_fuel_value                   = "30MJ"
+	bio_fuel_value                   = "26MJ"
 	bio_fuel_acceleration_multiplier = 1.2
 	bio_fuel_top_speed_multiplier    = 1.1
 	
-	advanced_fuel_value = "15MJ"
 	-- Advanced fuel
+	advanced_fuel_value                   = "30MJ"	
+	advanced_fuel_acceleration_multiplier = 1.5
+	advanced_fuel_top_speed_multiplier    = 1.5
 end
 
 data:extend(
@@ -391,8 +395,8 @@ data:extend(
 		fuel_category = "vehicle-fuel",
 		fuel_value = advanced_fuel_value,
 		fuel_emissions_multiplier = 1.75,
-		fuel_acceleration_multiplier = 1.25,
-		fuel_top_speed_multiplier = 1.25,
+		fuel_acceleration_multiplier = advanced_fuel_acceleration_multiplier,
+		fuel_top_speed_multiplier = advanced_fuel_top_speed_multiplier,
 		subgroup = "raw-material",
 		order = "w03[advanced-fuel]",
 		stack_size = 200
