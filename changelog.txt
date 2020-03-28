@@ -4,6 +4,7 @@ Date: 27.03.2020
   Changes:
     - Adjusted wrong coke and fuels rebalance.
     - Rebalanced personal batteries recipes.
+    - First robots bonus battery tech is placed better in the tech tree.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.7
 Date: 27.03.2020

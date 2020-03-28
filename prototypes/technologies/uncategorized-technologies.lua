@@ -735,18 +735,18 @@ data:extend(
 				modifier = 0.4
 			}
 		},
-		prerequisites = {"kr-advanced-roboports"},
+		prerequisites = {"kr-lithium-sulfur-battery", "robotics"},
 		unit =
 		{
 			count = 500,
 			ingredients = 
 			{
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
-				{"advanced-tech-card", 1}
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-card", 1}
 			},
-			time = 45
+			time = 30
 		}
 	},
     {
@@ -761,7 +761,7 @@ data:extend(
 				modifier = 0.6
 			}
 		},
-		prerequisites = {"kr-robot-battery", "kr-energy-control-unit"},
+		prerequisites = {"kr-robot-battery", "kr-advanced-roboports", "kr-energy-control-unit"},
 		unit =
 		{
 			count = 1000,
@@ -772,7 +772,7 @@ data:extend(
 				{"space-science-pack", 1},
 				{"matter-tech-card", 1}
 			},
-			time = 60
+			time = 45
 		}
 	},
 -----------------------------------------------------------------------------------------------------------------
