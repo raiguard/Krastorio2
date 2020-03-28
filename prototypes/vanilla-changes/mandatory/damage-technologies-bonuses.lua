@@ -23,11 +23,6 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	  },
 	  {
 		type = "ammo-damage",
-		ammo_category = "artillery-shell",
-		modifier = 0.25
-	  },
-	  {
-		type = "ammo-damage",
 		ammo_category = "cannon-shell",
 		modifier = 0.25
 	  }
@@ -47,11 +42,6 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	  {
 		type = "ammo-damage",
 		ammo_category = "shotgun-shell",
-		modifier = 0.25
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "artillery-shell",
 		modifier = 0.25
 	  },	  
 	  {
@@ -79,11 +69,6 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	  },
 	  {
 		type = "ammo-damage",
-		ammo_category = "artillery-shell",
-		modifier = 0.25
-	  },
-	  {
-		type = "ammo-damage",
 		ammo_category = "cannon-shell",
 		modifier = 0.25
 	  }
@@ -103,11 +88,6 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	  {
 		type = "ammo-damage",
 		ammo_category = "shotgun-shell",
-		modifier = 0.35
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "artillery-shell",
 		modifier = 0.35
 	  },
 	  {
@@ -135,11 +115,6 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	  },
 	  {
 		type = "ammo-damage",
-		ammo_category = "artillery-shell",
-		modifier = 0.35
-	  },
-	  {
-		type = "ammo-damage",
 		ammo_category = "cannon-shell",
 		modifier = 0.35
 	  }
@@ -159,11 +134,6 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	  {
 		type = "ammo-damage",
 		ammo_category = "shotgun-shell",
-		modifier = 0.35
-	  },
-	  {
-		type = "ammo-damage",
-		ammo_category = "artillery-shell",
 		modifier = 0.35
 	  },
 	  {
@@ -191,11 +161,6 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	  },
 	  {
 		type = "ammo-damage",
-		ammo_category = "artillery-shell",
-		modifier = 0.1
-	  },
-	  {
-		type = "ammo-damage",
 		ammo_category = "cannon-shell",
 		modifier = 0.1
 	  }
@@ -216,6 +181,11 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
         ammo_category = "grenade",
         modifier = 0.25
       },
+	  {
+		type = "ammo-damage",
+		ammo_category = "artillery-shell",
+		modifier = 0.25
+	  },
       {
         type = "ammo-damage",
         ammo_category = "landmine",
@@ -234,6 +204,11 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
         ammo_category = "grenade",
         modifier = 0.25
       },
+	  {
+		type = "ammo-damage",
+		ammo_category = "artillery-shell",
+		modifier = 0.25
+	  },
       {
         type = "ammo-damage",
         ammo_category = "landmine",
@@ -252,6 +227,11 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
         ammo_category = "grenade",
         modifier = 0.25
       },
+	  {
+		type = "ammo-damage",
+		ammo_category = "artillery-shell",
+		modifier = 0.25
+	  },
       {
         type = "ammo-damage",
         ammo_category = "landmine",
@@ -270,6 +250,11 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
         ammo_category = "grenade",
         modifier = 0.35
       },
+	  {
+		type = "ammo-damage",
+		ammo_category = "artillery-shell",
+		modifier = 0.35
+	  },
       {
         type = "ammo-damage",
         ammo_category = "landmine",
@@ -288,6 +273,11 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
         ammo_category = "grenade",
         modifier = 0.35
       },
+	  {
+		type = "ammo-damage",
+		ammo_category = "artillery-shell",
+		modifier = 0.35
+	  },
       {
         type = "ammo-damage",
         ammo_category = "landmine",
@@ -306,6 +296,11 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
         ammo_category = "grenade",
         modifier = 0.35
       },
+	  {
+		type = "ammo-damage",
+		ammo_category = "artillery-shell",
+		modifier = 0.35
+	  },
       {
         type = "ammo-damage",
         ammo_category = "landmine",
@@ -325,6 +320,11 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
         ammo_category = "grenade",
         modifier = 0.1
       },
+	  {
+		type = "ammo-damage",
+		ammo_category = "artillery-shell",
+		modifier = 0.1
+	  },
       {
         type = "ammo-damage",
         ammo_category = "landmine",

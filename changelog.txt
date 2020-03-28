@@ -1,10 +1,16 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.8
-Date: 27.03.2020
+Date: 28.03.2020
   Changes:
     - Adjusted wrong coke and fuels rebalance.
     - Rebalanced personal batteries recipes.
     - First robots bonus battery tech is placed better in the tech tree.
+    - Changed the name of the tank guns.
+    - Artillery shell damage bonus moved to Stronger explosives from Physical projectile damage.
+  Fixes:
+    - Fixed sprites for Electric mining drill mk2.
+    - Fixed incorrect number of circuits in recipes. Now for one red you need two green, for one blue you need two red. Sorry we missed this in the previous update...
+    - Fixed problem with water during ore enrichment.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.7
 Date: 27.03.2020
@@ -31,7 +37,7 @@ Date: 27.03.2020
     - Advanced furnace (crafting speed 10->12) and advanced chemical plant (crafting speed 10->8) was rebalanced.
   Fixes:
     - Now nucrear locomotive have equipment grid.
-    - Attention! Fixed a problem due to which the conversion of water to steam was too cheating! The basic relationships have remained the same, but in some cases it is necessary to remove and put back the nuclear reactors for the changes to take effect.
+    - Attention! Fixed a problem due to which the conversion of water to steam was too cheating! The basic ratios have remained the same, but in some cases it is necessary to remove and put back the nuclear reactors for the changes to take effect.
     - Changed recipes definitions to walkaround Factorio products statistic blacklisting.
     - Fixed that remove modded biter nests during surface/chunk generation can cause a creep script crash.
     - Many small fixes and improvements.

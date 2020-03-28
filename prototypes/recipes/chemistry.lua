@@ -167,7 +167,7 @@ return
 		results =
 		{ 
 			{type = "item",  name = "enriched-iron", amount = 6},
-			{type = "fluid", name = "dirty-water", amount = 25}
+			{type = "fluid", name = "dirty-water", amount = 25, catalyst_amount = 25}
 		},
 		crafting_machine_tint =
 		{
@@ -200,7 +200,7 @@ return
 		results =
 		{ 
 			{type = "item",  name = "enriched-copper", amount = 6},
-			{type = "fluid", name = "dirty-water", amount = 25}
+			{type = "fluid", name = "dirty-water", amount = 25, catalyst_amount = 25}
 		},
 		crafting_machine_tint =
 		{
@@ -322,7 +322,7 @@ return
 		{
 			{ type = "fluid", name = "heavy-water", amount = 10},
 			{ type = "item", name = "tritium", amount = 1},
-			{ type = "item", name = "empty-dt-fuel", amount = 1, catalyst_amount = 1}
+			{ type = "item", name = "empty-dt-fuel", amount = 1}
 		},
 		result = "dt-fuel",
 		crafting_machine_tint = 

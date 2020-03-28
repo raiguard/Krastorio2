@@ -478,11 +478,6 @@ data:extend(
 			},
 			{
 				type = "ammo-damage",
-				ammo_category = "artillery-shell",
-				modifier = 0.1
-			},
-			{
-				type = "ammo-damage",
 				ammo_category = "cannon-shell",
 				modifier = 0.1
 			}
@@ -525,11 +520,6 @@ data:extend(
 			{
 				type = "ammo-damage",
 				ammo_category = "shotgun-shell",
-				modifier = 0.1
-			},
-			{
-				type = "ammo-damage",
-				ammo_category = "artillery-shell",
 				modifier = 0.1
 			},
 			{
@@ -579,6 +569,11 @@ data:extend(
 			},
 			{
 				type = "ammo-damage",
+				ammo_category = "artillery-shell",
+				modifier = 0.1
+			},
+			{
+				type = "ammo-damage",
 				ammo_category = "landmine",
 				modifier = 0.1
 			}
@@ -616,6 +611,11 @@ data:extend(
 			{
 				type = "ammo-damage",
 				ammo_category = "grenade",
+				modifier = 0.1
+			},
+			{
+				type = "ammo-damage",
+				ammo_category = "artillery-shell",
 				modifier = 0.1
 			},
 			{

@@ -90,7 +90,7 @@ return
 		allow_productivity = true,
 		ingredients =
 		{
-			{ type = "item", name = "solid-fuel", amount = 4},
+			{ type = "item", name = "solid-fuel", amount = 5},
 			{ type = "fluid", name = "hydrogen", amount = 50}
 		},
 		results =
