@@ -102,6 +102,7 @@ require(scripts_path .. "realistic-electric-trains")
 require(scripts_path .. "space-exploration")
 require(scripts_path .. "vtk-armor-plating")
 require(scripts_path .. "mod-assertions")
+require(scripts_path .. "bob's-mods")
 ---------------------------------------------------------------------------
 -- Add new fuels to entities
 

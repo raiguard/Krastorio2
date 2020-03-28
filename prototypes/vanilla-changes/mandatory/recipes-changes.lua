@@ -160,13 +160,13 @@ krastorio.recipes.replaceIngredient("flying-robot-frame", "electronic-circuit", 
 
 -- Circuits
 krastorio.recipes.addIngredient("electronic-circuit", {"wood", 1})
-krastorio.recipes.replaceIngredient("electronic-circuit", "iron-plate", {"iron-plate", 2})
-krastorio.recipes.replaceIngredient("electronic-circuit", "copper-cable", {"copper-cable", 2})
+krastorio.recipes.replaceIngredient("electronic-circuit", "iron-plate", {"iron-plate", 1})
+krastorio.recipes.replaceIngredient("electronic-circuit", "copper-cable", {"copper-cable", 4})
 krastorio.recipes.setEnergyCost("electronic-circuit", 2)
 krastorio.recipes.replaceProduct("electronic-circuit", "electronic-circuit", {"electronic-circuit", 2})
 
 krastorio.recipes.replaceIngredient("advanced-circuit", "electronic-circuit", {"electronic-circuit", 4})
-krastorio.recipes.replaceIngredient("advanced-circuit", "copper-cable", {"copper-cable", 6})
+krastorio.recipes.replaceIngredient("advanced-circuit", "copper-cable", {"copper-cable", 4})
 krastorio.recipes.replaceIngredient("advanced-circuit", "plastic-bar", {"electronic-components", 2})
 krastorio.recipes.setEnergyCost("advanced-circuit", 4)
 krastorio.recipes.replaceProduct("advanced-circuit", "advanced-circuit", {"advanced-circuit", 2})

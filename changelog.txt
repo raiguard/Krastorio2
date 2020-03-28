@@ -11,7 +11,8 @@ Date: 28.03.2020
     - Changed recipe for Electrolysis plant.
   Fixes:
     - Fixed sprites for Electric mining drill mk2.
-    - Fixed problem with water during ore enrichment.
+    - Fixed problem with extra water during ore enrichment.
+    - Fixed Incompatibility with "Bob's Adjustable Inserters mod".
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.7
 Date: 27.03.2020
