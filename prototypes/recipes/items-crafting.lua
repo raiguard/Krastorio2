@@ -29,7 +29,7 @@ return
 			{"glass", 2}
 		},
 		result = "electronic-components",
-		result_count = 5
+		result_count = 4
 	},
 	{
 		type = "recipe",

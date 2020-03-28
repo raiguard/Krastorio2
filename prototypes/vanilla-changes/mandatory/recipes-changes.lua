@@ -166,16 +166,16 @@ krastorio.recipes.setEnergyCost("electronic-circuit", 2)
 krastorio.recipes.replaceProduct("electronic-circuit", "electronic-circuit", {"electronic-circuit", 2})
 
 krastorio.recipes.replaceIngredient("advanced-circuit", "electronic-circuit", {"electronic-circuit", 4})
-krastorio.recipes.replaceIngredient("advanced-circuit", "copper-cable", {"copper-cable", 4})
+krastorio.recipes.replaceIngredient("advanced-circuit", "copper-cable", {"copper-cable", 6})
 krastorio.recipes.replaceIngredient("advanced-circuit", "plastic-bar", {"electronic-components", 2})
 krastorio.recipes.setEnergyCost("advanced-circuit", 4)
 krastorio.recipes.replaceProduct("advanced-circuit", "advanced-circuit", {"advanced-circuit", 2})
 
 krastorio.recipes.removeIngredient("processing-unit", "electronic-circuit")
-krastorio.recipes.replaceIngredient("processing-unit", "advanced-circuit", {"advanced-circuit", 4})
+krastorio.recipes.replaceIngredient("processing-unit", "advanced-circuit", {"advanced-circuit", 6})
 krastorio.recipes.addIngredient("processing-unit", {"rare-metals", 3})
 krastorio.recipes.replaceIngredient("processing-unit", "sulfuric-acid", {type="fluid", name="sulfuric-acid", amount=10})
-krastorio.recipes.setEnergyCost("processing-unit", 6)
+krastorio.recipes.setEnergyCost("processing-unit", 12)
 krastorio.recipes.replaceProduct("processing-unit", "processing-unit", {"processing-unit", 2})
 
 -- --
