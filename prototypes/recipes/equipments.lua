@@ -165,8 +165,8 @@ return
 		ingredients =
 		{
 			{"big-battery-equipment", 2},
-			{"electronic-components", 4},
-			{"advanced-circuit", 1},
+			{"steel-plate", 4},
+			{"advanced-circuit", 2},
 		},
 		result = "big-battery-mk2-equipment"
     }, 
@@ -179,8 +179,8 @@ return
 		ingredients =
 		{
 			{"big-battery-mk2-equipment", 2},
-			{"rare-metals", 4},
-			{"processing-unit", 1}
+			{"lithium-sulfur-battery", 4},
+			{"processing-unit", 2}
 		},
 		result = "big-battery-mk3-equipment"
     },
