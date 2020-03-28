@@ -24,7 +24,7 @@ return
 		allow_productivity = true,
 		ingredients =
 		{
-			{"silicon", 3},
+			{"silicon", 2},
 			{"plastic-bar", 2},
 			{"glass", 2}
 		},
@@ -139,7 +139,7 @@ return
 		type = "recipe",
 		name = "ai-core",
 		category = "crafting-with-fluid",
-		energy_required = 8,
+		energy_required = 16,
 		enabled = false,
 		allow_productivity = true,
 		ingredients =

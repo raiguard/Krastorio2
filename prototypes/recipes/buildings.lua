@@ -482,7 +482,7 @@ return
 			{"steel-beam", 10},
 			{"automation-core", 3},
 			{"copper-plate", 10},
-			{"engine-unit", 2}
+			{"glass", 10},
 		},
 		result = "kr-electrolysis-plant"
     },	
@@ -509,7 +509,7 @@ return
 		{
 			{"steel-beam", 10},
 			{"steel-gear-wheel", 10},
-			{"electronic-circuit", 3},			
+			{"electronic-circuit", 4},			
 			{"engine-unit", 2}
 		},
 		result = "kr-atmospheric-condenser"

@@ -8,6 +8,7 @@ Date: 28.03.2020
     - Changed the name of the tank guns.
     - Artillery shell damage bonus moved to Stronger explosives from Physical projectile damage.
     - Another circuits rebalance. We hope now it's fine.
+    - Changed recipe for Electrolysis plant.
   Fixes:
     - Fixed sprites for Electric mining drill mk2.
     - Fixed problem with water during ore enrichment.
