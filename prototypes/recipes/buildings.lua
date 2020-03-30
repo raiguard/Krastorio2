@@ -259,7 +259,7 @@ return
 		ingredients =
 		{
 			{"steel-chest", 2},
-			{"steel-beam", 10}
+			{"steel-beam", 6}
 		},
 		subgroup = "storage",
 		order = "a[items]-d[medium-container]",
@@ -672,8 +672,7 @@ return
 		{
 			{"express-splitter", 1},
 			{"steel-gear-wheel", 10},	
-			{"rare-metals", 5},			
-			{type = "fluid", name = "sulfuric-acid", amount = 50}	
+			{"rare-metals", 5}
 		},
 		result = "kr-advanced-splitter"
     },
@@ -686,9 +685,8 @@ return
 		ingredients =
 		{
 			{"express-transport-belt", 1},	
-			{"steel-gear-wheel", 20},
-			{"rare-metals", 2},			
-			{type = "fluid", name = "sulfuric-acid", amount = 50}				
+			{"steel-gear-wheel", 10},
+			{"rare-metals", 2},
 		},
 		result = "kr-advanced-transport-belt"
     },	
@@ -701,9 +699,7 @@ return
 		ingredients =
 		{
 			{"express-underground-belt", 2},	
-			{"steel-gear-wheel", 40},
-			{"rare-metals", 5},			
-			{type = "fluid", name = "sulfuric-acid", amount = 50}				
+			{"kr-advanced-transport-belt", 30},	
 		},
 		result = "kr-advanced-underground-belt",
 		result_count = 2
@@ -719,8 +715,7 @@ return
 		{
 			{"kr-advanced-splitter", 1},
 			{"processing-unit", 10},	
-			{"imersium-gear-wheel", 10},			
-			{type = "fluid", name = "nitric-acid", amount = 25}	
+			{"imersium-gear-wheel", 10},
 		},
 		result = "kr-superior-splitter"
     },
@@ -733,8 +728,8 @@ return
 		ingredients =
 		{
 			{"kr-advanced-transport-belt", 1},	
-			{"imersium-gear-wheel", 20},
-			{type = "fluid", name = "nitric-acid", amount = 25}				
+			{"imersium-gear-wheel", 10},
+			{"low-density-structure", 2},	
 		},
 		result = "kr-superior-transport-belt"
     },
@@ -747,8 +742,7 @@ return
 		ingredients =
 		{
 			{"kr-advanced-underground-belt", 2},	
-			{"imersium-gear-wheel", 40},	
-			{type = "fluid", name = "nitric-acid", amount = 50}				
+			{"kr-superior-transport-belt", 40},			
 		},
 		result = "kr-superior-underground-belt",
 		result_count = 2

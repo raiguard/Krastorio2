@@ -7,10 +7,12 @@ krastorio_patreons =
 	["Cvamp"] = true,
 	["jonasrejman"] = true,
 	["Pandabeezy"] = true,
-	["Wassabee"] = true,
+	["mkaito"] = true,
+	["Egdod"] = true,
 	["Rivsung"] = true,
 	["ReysDad"] = true,
-	["melphin"] = true
+	["melphin"] = true,
+	["Wassabee"] = true
 }
 
 -- Patreon Stuff

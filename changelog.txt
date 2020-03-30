@@ -1,12 +1,22 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.9.8
-Date: 01.04.2020
+Version: 0.9.9
+Date: 31.03.2020
   Changes:
     - Now wind turbines and solar panels are under the same fast replaceable group.
     - Revert changes that insert all inserters under the same fast replaceable group.
+    - Fusion reactor rebalance. Now the reactor more realistic and consume a lot of energy for work. Now this is not an ultimate way to get energy. Also, fusion reactor has good synergy with nuclear energy.
+    - Now kovarex enrichment process slightly easier.
+    - Changed recipe for tritium.
+    - Increased chanse to get tritium from used uranium cell.
+    - Now portable fusion reactor can produce empty dt-fuels.
+    - Added more wood into start ship fragments.
+    - Increased the medium chest storage capacity to 120 from 100.
+    - Increased the big chest storage capacity to 500 from 400.
+    - Changed recipes for belts and loaders.
   Fixes:
     - Fixed AAI industry mod and K2 tech fighting.
     - Fixed that deadlock beltboxes and loaders mod can crash the game if the players disable both loader kinds.
+    - Fixed sprites for Electric mining drill mk2 [2].
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.8
 Date: 28.03.2020

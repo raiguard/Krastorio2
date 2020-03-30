@@ -3,7 +3,9 @@ local patreons_list = {}
 -- Patreon how donate 10 or more dollars
 patreons_list.high_supporters =
 {
+	{"Chris Höppner", 20},
 	{"Josh Strunk", 15},
+	{"Egdod", 15},
 	{"Aski Rawen", 10},
 	{"Austin", 10},
 	{"Jonas Rejman", 10},

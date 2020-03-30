@@ -5,15 +5,16 @@ return
 		type = "recipe",
 		name = "tritium",
 		category = "centrifuging",
-		energy_required = 12,
+		energy_required = 30,
 		enabled = false,
 		always_show_made_in = true,
 		allow_productivity = true,
 		ingredients =
 		{
-			{"lithium", 5},
-			{"rare-metals", 5}
+			{"lithium", 30},
+			{"rare-metals", 5},
+			{"uranium-235", 1},
 		},
-		result = "tritium"
+		results = {{type="item", name="tritium", amount=5}}
 	}
 }

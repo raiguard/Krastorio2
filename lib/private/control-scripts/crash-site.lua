@@ -7,6 +7,7 @@ local start_items =
 	"iron-gear-wheel",
 	"electronic-circuit",
 	"wood",
+	"wood"
 }
 local entities_to_place =
 {
@@ -106,16 +107,19 @@ local function createCrashSite()
 					if not random_generator or not random_generator.valid then
 						random_generator = game.create_random_generator()
 					end
-					item_name = start_items[math.random(1, 5)]
-					item_name_2 = start_items[math.random(1, 5)]
-					item_name_3 = start_items[math.random(1, 5)]
-					item_count = math.random(1, 50)
-					item_count_2 = math.random(1, 50)
-					item_count_3 = math.random(1, 50)
+					item_name = start_items[math.random(1, 6)]
+					item_name_2 = start_items[math.random(1, 6)]
+					item_name_3 = start_items[math.random(1, 6)]
+					item_name_4 = start_items[math.random(1, 6)]
+					item_count = math.random(5, 50)
+					item_count_2 = math.random(5, 50)
+					item_count_3 = math.random(5, 50)
+					item_count_4 = math.random(5, 50)
 					
 					created_entity.get_inventory(defines.inventory.chest).insert({name = item_name, count = item_count})
 					created_entity.get_inventory(defines.inventory.chest).insert({name = item_name_2, count = item_count_2})
 					created_entity.get_inventory(defines.inventory.chest).insert({name = item_name_3, count = item_count_3})
+					created_entity.get_inventory(defines.inventory.chest).insert({name = item_name_4, count = item_count_4})
 					
 					if not insert_one_shelter then
 						created_entity.get_inventory(defines.inventory.chest).insert({name = "kr-shelter", count = 1})

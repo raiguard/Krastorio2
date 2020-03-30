@@ -133,7 +133,9 @@ krastorio.technologies.addUnlockRecipe(krastorio.technologies.getTechnologyThatU
 krastorio.technologies.removeUnlockRecipe("automation", "long-handed-inserter")
 krastorio.technologies.removeUnlockRecipe("oil-processing", "chemical-plant")
 
+
 krastorio.technologies.removeUnlockRecipe("kovarex-enrichment-process", "nuclear-fuel")
+data.raw.technology["kovarex-enrichment-process"].unit.count = 500
 
 krastorio.technologies.addUnlockRecipe("artillery", "nuclear-artillery-shell")
 

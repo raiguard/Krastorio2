@@ -34,8 +34,8 @@ data:extend(
 			{type = "impact",percent = 50}
 		},
 		fast_replaceable_group = "container",
-		inventory_size = 100,
-		scale_info_icons = true,
+		inventory_size = 120,
+		scale_info_icons = kr_icons_size,
 		logistic_mode = "requester",
 		open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume=0.65 },
 		close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },

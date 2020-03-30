@@ -371,30 +371,44 @@ krastorio.recipes.replaceIngredient("assembling-machine-1", "iron-plate", {"iron
 -- Electric mining drill 1
 krastorio.recipes.replaceIngredient("electric-mining-drill", "iron-plate", {"iron-beam", 2})
 
+-- -- -- -- -- -- -- -- -- -- -- -- -- 
+
 -- Underground belt (Yellow tier 1)
-krastorio.recipes.replaceIngredient("underground-belt", "iron-plate", {"iron-beam", 5})
+krastorio.recipes.replaceIngredient("underground-belt", "iron-plate", {"iron-beam", 2})
 
 -- Splitter (Yellow tier 1)
 krastorio.recipes.replaceIngredient("splitter", "iron-plate", {"iron-gear-wheel", 5})
 krastorio.recipes.replaceIngredient("splitter", "automation-core", {"automation-core", 1})
+
 
 -- Fast belt (Red tier 2)
 -- krastorio.recipes.convertIngredient("fast-transport-belt", "iron-gear-wheel", "steel-gear-wheel")
 
 -- Fast underground belt (Red tier 2)
 -- krastorio.recipes.convertIngredient("fast-underground-belt", "iron-gear-wheel", "steel-gear-wheel")
+krastorio.recipes.replaceIngredient("fast-underground-belt", "iron-gear-wheel", {"fast-transport-belt", 10})
 
 -- Fast splitter (Red tier 2)
 -- krastorio.recipes.convertIngredient("fast-splitter", "iron-gear-wheel", "steel-gear-wheel")
+
+
+
 
 -- Express belt (Red tier 3)
 krastorio.recipes.convertIngredient("express-transport-belt", "iron-gear-wheel", "steel-gear-wheel")
 
 -- Express underground belt (Red tier 3)
-krastorio.recipes.convertIngredient("express-underground-belt", "iron-gear-wheel", "steel-gear-wheel")
+krastorio.recipes.replaceIngredient("express-underground-belt", "iron-gear-wheel", {"express-transport-belt", 20})
+krastorio.recipes.removeIngredient("express-underground-belt", "lubricant")
 
 -- Express splitter (Red tier 3)
 krastorio.recipes.convertIngredient("express-splitter", "iron-gear-wheel", "steel-gear-wheel")
+krastorio.recipes.removeIngredient("express-splitter", "lubricant")
+
+
+
+
+
 
 -- Storage tank
 krastorio.recipes.replaceIngredient("storage-tank", "iron-plate", {"iron-plate", 10})
@@ -528,11 +542,12 @@ krastorio.recipes.addOrReplaceProducts
 
 -- Increase uranium usage and ad stone as waste
 	
-krastorio.recipes.replaceIngredient("kovarex-enrichment-process", "uranium-235", {name = "uranium-235", amount = 50})
-krastorio.recipes.replaceIngredient("kovarex-enrichment-process", "uranium-238", {name = "uranium-238", amount = 8})
+krastorio.recipes.replaceIngredient("kovarex-enrichment-process", "uranium-235", {name = "uranium-235", amount = 30})
+krastorio.recipes.replaceIngredient("kovarex-enrichment-process", "uranium-238", {name = "uranium-238", amount = 3})
+krastorio.recipes.setEnergyCost("kovarex-enrichment-process", 60)
 
-krastorio.recipes.replaceProduct("kovarex-enrichment-process", "uranium-235", {"uranium-235", 52})
-krastorio.recipes.replaceProduct("kovarex-enrichment-process", "uranium-238", {"stone", 5})
+krastorio.recipes.replaceProduct("kovarex-enrichment-process", "uranium-235", {"uranium-235", 31})
+krastorio.recipes.replaceProduct("kovarex-enrichment-process", "uranium-238", {"stone", 2})
 
 krastorio.recipes.replaceIngredient("uranium-fuel-cell", "uranium-235", {name = "uranium-235", amount = 2})
 krastorio.recipes.replaceIngredient("uranium-fuel-cell", "uranium-238", {name = "uranium-238", amount = 10})
@@ -542,7 +557,7 @@ krastorio.recipes.replaceProduct("uranium-fuel-cell", "uranium-fuel-cell", {"ura
 krastorio.recipes.replaceIngredient("nuclear-fuel-reprocessing", "used-up-uranium-fuel-cell", {name = "used-up-uranium-fuel-cell", amount = 1})
 krastorio.recipes.replaceProduct("nuclear-fuel-reprocessing", "uranium-238", {"uranium-238", 6})
 krastorio.recipes.addProduct("nuclear-fuel-reprocessing", {"stone", 4})
-krastorio.recipes.addProduct("nuclear-fuel-reprocessing", {type="item", name="tritium", probability = 0.1, amount=1})
+krastorio.recipes.addProduct("nuclear-fuel-reprocessing", {type="item", name="tritium", probability = 0.15, amount=1})
 
 -- More realistic weapons craft
 

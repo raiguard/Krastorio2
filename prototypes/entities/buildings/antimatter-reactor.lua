@@ -81,7 +81,7 @@ data:extend(
 				frame_count = 1,
 				width = 362,
 				height = 315,
-				shift = {0.2, 0.1},
+				shift = {0.57, 0.27},
 				frame_count = 1,
 				repeat_count = 30,
 				animation_speed=0.9,
