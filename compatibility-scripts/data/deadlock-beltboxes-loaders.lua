@@ -14,7 +14,7 @@ if mods["deadlock-beltboxes-loaders"] then
 	end
 
 	--Adding new 4 tier
-	local loader_tier_3 = krastorio.items.getItem("express-transport-belt-loader") or krastorio.items.getItem("kr-express-loader")
+	local loader_tier_3 = krastorio.items.getItem("express-transport-belt-loader") or krastorio.items.getItem("kr-express-loader") or "express-transport-belt"
 	deadlock.add_tier(
 	{
 		transport_belt      = "kr-advanced-transport-belt",
@@ -42,7 +42,7 @@ if mods["deadlock-beltboxes-loaders"] then
 	krastorio.technologies.addPrerequisite("deadlock-stacking-4", "deadlock-stacking-3")	
 	
 	--Adding new 5 tier
-	local loader_tier_4 = krastorio.items.getItem("kr-advanced-transport-belt-loader") or krastorio.items.getItem("kr-advanced-loader")
+	local loader_tier_4 = krastorio.items.getItem("kr-advanced-transport-belt-loader") or krastorio.items.getItem("kr-advanced-loader") or "advanced-transport-belt"
 	deadlock.add_tier(
 	{
 		transport_belt      = "kr-superior-transport-belt",

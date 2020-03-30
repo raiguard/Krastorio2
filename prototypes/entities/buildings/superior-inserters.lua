@@ -217,7 +217,7 @@ data:extend(
 		},
 		extension_speed = 0.105,
 		rotation_speed = 0.06,
-		fast_replaceable_group = "inserter",
+		fast_replaceable_group = "long-handed-inserter",
 		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{
@@ -577,7 +577,7 @@ data:extend(
 		},
 		extension_speed = 0.105,
 		rotation_speed = 0.06,
-		fast_replaceable_group = "inserter",
+		fast_replaceable_group = "long-handed-inserter",
 		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{

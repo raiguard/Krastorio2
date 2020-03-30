@@ -90,19 +90,20 @@ require(scripts_path .. "aai-industry")
 require(scripts_path .. "aai-vehicles-chaingunner")
 require(scripts_path .. "aai-vehicles-hauler")
 require(scripts_path .. "aircraft")
+-- Bobs (multiple scripts)
+require(scripts_path .. "bobs_mod")
 require(scripts_path .. "Clockwork")
 require(scripts_path .. "Dectorio")
 require(scripts_path .. "DeadlockLargerLamp")
 require(scripts_path .. "deadlock-beltboxes-loaders")
 require(scripts_path .. "Hovercrafts")
 require(scripts_path .. "LightedPolesPlus")
--- Pyanodons
+-- Pyanodons (multiple scripts)
 require(scripts_path .. "Pyanodon")
 require(scripts_path .. "realistic-electric-trains")
 require(scripts_path .. "space-exploration")
 require(scripts_path .. "vtk-armor-plating")
 require(scripts_path .. "mod-assertions")
-require(scripts_path .. "bob's-mods")
 ---------------------------------------------------------------------------
 -- Add new fuels to entities
 

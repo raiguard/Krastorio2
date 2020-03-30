@@ -1,5 +1,14 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.8
+Date: 01.04.2020
+  Changes:
+    - Now wind turbines and solar panels are under the same fast replaceable group.
+    - Revert changes that insert all inserters under the same fast replaceable group.
+  Fixes:
+    - Fixed AAI industry mod and K2 tech fighting.
+    - Fixed that deadlock beltboxes and loaders mod can crash the game if the players disable both loader kinds.
+---------------------------------------------------------------------------------------------------
+Version: 0.9.8
 Date: 28.03.2020
   Changes:
     - Adjusted wrong coke and fuels rebalance.

@@ -47,7 +47,7 @@ data:extend(
 				percent = 30
 			}
 		},
-		fast_replaceable_group = "kr-wind-turbine",
+		fast_replaceable_group = "solar-panel",
 		damaged_trigger_effect = hit_effects.entity(),
 		collision_box = {{-1.25, -1.25}, {1.25, 1.25}},
 		selection_box = {{-1.45, -1.45}, {1.45, 1.45}},

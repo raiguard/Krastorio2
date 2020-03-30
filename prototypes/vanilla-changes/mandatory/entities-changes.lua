@@ -188,6 +188,7 @@ data.raw.lab["lab"].next_upgrade = "biusart-lab"
 
 -- Solar panel
 data.raw["solar-panel"]["solar-panel"].production = "100KW"
+data.raw["solar-panel"]["solar-panel"].fast_replaceable_group = "solar-panel"
 
 -- Radar
 data.raw.radar["radar"].fast_replaceable_group = "radar"
