@@ -18,7 +18,7 @@ data:extend(
 			movement_slow_down_factor = 0.6,
 			projectile_creation_distance = 0.6,
 			fire_penalty = 1,
-			range = 60,
+			range = 50,
 			sound =
 			{
 				{

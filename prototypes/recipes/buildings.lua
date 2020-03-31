@@ -551,8 +551,9 @@ return
 		ingredients = 
 		{
 			{"solar-panel", 1},
-			{"imersite-crystal", 5},			
-			{type = "fluid", name = "nitric-acid", amount = 25}	
+			{"imersite-crystal", 5},
+			{"electronic-components", 5},
+			{type = "fluid", name = "nitric-acid", amount = 25}
 		},
 		result = "kr-advanced-solar-panel"
 	},			

@@ -47,7 +47,7 @@ return
 		allow_productivity = true,
 		ingredients =
 		{
-			{type = "fluid", name = "light-oil", amount = 50, catalyst_amount = 50}
+			{type = "fluid", name = "light-oil", amount = 60, catalyst_amount = 60}
 		},
 		results =
 		{ 
@@ -90,7 +90,7 @@ return
 		allow_productivity = true,
 		ingredients =
 		{
-			{ type = "item", name = "solid-fuel", amount = 5},
+			{ type = "item", name = "solid-fuel", amount = 6},
 			{ type = "fluid", name = "hydrogen", amount = 50}
 		},
 		results =
@@ -121,7 +121,7 @@ return
 		allow_productivity = true,
 		ingredients =
 		{
-			{type="item", name="fuel", amount=5},
+			{type="item", name="fuel", amount=6},
 			{type="fluid", name="biomethanol", amount=50}
 		},
 		results =
@@ -153,7 +153,7 @@ return
 		ingredients =
 		{
 			{type="item", name="fuel", amount=10},
-			{type="item", name="imersite-powder", amount=5}
+			{type="item", name="imersite-powder", amount=6}
 		},
 		results =
 		{ 

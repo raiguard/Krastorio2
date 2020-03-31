@@ -249,7 +249,8 @@ return
 		ingredients =
 		{
 			{"lithium-sulfur-battery", 1},
-			{"imersite-crystal", 1}
+			{"imersite-crystal", 3},
+			{"plastic-bar", 1},
 		},
 		result = "impulse-rifle-ammo"
     },

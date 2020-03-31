@@ -195,6 +195,10 @@ data.raw.technology["combat-robotics-3"].unit.count = 350
 data.raw.technology["artillery"].unit.count = 1000
 data.raw.technology["laser"].unit.count = 200
 
+--------------
+-- Solar energy
+krastorio.technologies.addPrerequisite("solar-energy", "kr-silicon-processing")
+
 -- --
 
 data.raw.technology["physical-projectile-damage-7"].unit.count_formula = "((L-6)^2)*3000"

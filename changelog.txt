@@ -14,6 +14,12 @@ Date: 31.03.2020
     - Increased the big chest storage capacity to 500 from 400.
     - Changed recipes for belts and loaders.
     - Now wooden chests and small electric poles are burnable.
+    - Small fuel rebalance. Because after 0.9.7 update fuel become too OP.
+    - Greenhouses and Bio-labs no longer have fire resistance.
+    - Reduced the Impulse rifle range to 50 from 60.
+    - Increased the Impulse rifle magazine cost.
+    - Changed recipe for solar panels.
+    - Changed recipe for laser turret.
   Fixes:
     - Fixed AAI industry mod and K2 tech fighting.
     - Fixed that deadlock beltboxes and loaders mod can crash the game if the players disable both loader kinds.

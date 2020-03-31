@@ -91,7 +91,7 @@ data:extend(
 			action =
 			{
 				type = "line",
-				range = 60,
+				range = 50,
 				width = 2,
 				source_effects =
 				{

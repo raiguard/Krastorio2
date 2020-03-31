@@ -29,8 +29,7 @@ data:extend(
 		damaged_trigger_effect = hit_effects.entity(),
 		resistances = 
 		{
-			{type = "physical", percent = 50},
-			{type = "fire", percent = 50}
+			{type = "impact", percent = 50}
 		},
 		fluid_boxes =
 		{
@@ -151,7 +150,7 @@ data:extend(
 			usage_priority = "secondary-input",
 			emissions_per_minute = 10
 		},
-		energy_usage = "100KW",
+		energy_usage = "144.8KW",
 		ingredient_count = 4,
 		allowed_effects = nil
 	}

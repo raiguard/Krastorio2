@@ -2,10 +2,10 @@
 
 -- -- Entities
 
-data.raw.item["wooden-chest"].fuel_value = "4MJ" --nil
+data.raw.item["wooden-chest"].fuel_value = "3MJ" --nil
 data.raw.item["wooden-chest"].fuel_category = "chemical"
 
-data.raw.item["small-electric-pole"].fuel_value = "2MJ" --nil
+data.raw.item["small-electric-pole"].fuel_value = "1.5MJ" --nil
 data.raw.item["small-electric-pole"].fuel_category = "chemical"
 
 -- -- Wood

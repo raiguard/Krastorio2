@@ -361,8 +361,15 @@ krastorio.recipes.addOrReplaceIngredient("filter-inserter", "automation-core", {
 -- Lamp (glass)
 krastorio.recipes.convertIngredient("small-lamp", "automation-core", "glass")
 krastorio.recipes.addOrReplaceIngredient("small-lamp", {name = "glass", amount = 1})
--- Solar panel (glass)
-krastorio.recipes.addOrReplaceIngredient("solar-panel", {name = "glass", amount = 5})
+
+-- Solar panel
+krastorio.recipes.replaceIngredient("solar-panel", "copper-plate", {"glass", 10})
+krastorio.recipes.replaceIngredient("solar-panel", "steel-plate", {"steel-plate", 5})
+krastorio.recipes.replaceIngredient("solar-panel", "electronic-circuit", {"electronic-circuit", 10})
+krastorio.recipes.addIngredient("solar-panel", {"silicon", 5})
+
+
+krastorio.recipes.replaceIngredient("solar-panel", "iron-plate", {"iron-beam", 4})
 
 -- Assembling machine tier 1
 krastorio.recipes.replaceIngredient("assembling-machine-1", "iron-plate", {"iron-beam", 4})
@@ -404,10 +411,11 @@ krastorio.recipes.removeIngredient("express-underground-belt", "lubricant")
 krastorio.recipes.convertIngredient("express-splitter", "iron-gear-wheel", "steel-gear-wheel")
 krastorio.recipes.removeIngredient("express-splitter", "lubricant")
 
+-- Turrets
+krastorio.recipes.addIngredient("laser-turret", {name = "quartz", amount = 5})
+krastorio.recipes.replaceIngredient("laser-turret", "steel-plate", {"steel-plate", 15})
 
-
-
-
+krastorio.recipes.replaceIngredient("flamethrower-turret", "steel-plate", {"steel-plate", 20})
 
 -- Storage tank
 krastorio.recipes.replaceIngredient("storage-tank", "iron-plate", {"iron-plate", 10})

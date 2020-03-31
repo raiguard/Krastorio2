@@ -13,7 +13,8 @@ data:extend(
 		resistances = 
 		{
 			{type = "physical",percent = 50},
-			{type = "fire",percent = 70}
+			{type = "fire",percent = 70},
+			{type = "impact",percent = 70}
 		},
 		collision_box = {{-3.25, -3.25}, {3.25, 3.25}},
 		selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
