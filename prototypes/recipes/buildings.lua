@@ -254,12 +254,12 @@ return
 	{
 		type = "recipe",
 		name = "kr-medium-container",
-		energy_required = 10,
+		energy_required = 5,
 		enabled = false,
 		ingredients =
 		{
-			{"steel-chest", 2},
-			{"steel-beam", 6}
+			{"steel-chest", 4},
+			{"steel-beam", 2}
 		},
 		subgroup = "storage",
 		order = "a[items]-d[medium-container]",
@@ -341,12 +341,12 @@ return
 	{
 		type = "recipe",
 		name = "kr-big-container",
-		energy_required = 30,
+		energy_required = 10,
 		enabled = false,
 		ingredients =
 		{
 			{"kr-medium-container", 4},
-			{"steel-beam", 20}
+			{"steel-beam", 10}
 		},
 		subgroup = "storage",
 		order = "a[items]-dz[big-container]",

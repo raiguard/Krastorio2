@@ -13,6 +13,7 @@ Date: 31.03.2020
     - Increased the medium chest storage capacity to 120 from 100.
     - Increased the big chest storage capacity to 500 from 400.
     - Changed recipes for belts and loaders.
+    - Now wooden chests and small electric poles are burnable.
   Fixes:
     - Fixed AAI industry mod and K2 tech fighting.
     - Fixed that deadlock beltboxes and loaders mod can crash the game if the players disable both loader kinds.

@@ -1,7 +1,16 @@
 -- -- -- Mandatory Fuels Changes
+
+-- -- Entities
+
+data.raw.item["wooden-chest"].fuel_value = "4MJ" --nil
+data.raw.item["wooden-chest"].fuel_category = "chemical"
+
+data.raw.item["small-electric-pole"].fuel_value = "2MJ" --nil
+data.raw.item["small-electric-pole"].fuel_category = "chemical"
+
 -- -- Wood
 	-- data.raw.item["wood"].fuel_category = "chemical"
-	data.raw.item["wood"].fuel_value = "2MJ" --2
+data.raw.item["wood"].fuel_value = "2MJ" --2
 
 -- -- -- Vanilla steam stat changes
 

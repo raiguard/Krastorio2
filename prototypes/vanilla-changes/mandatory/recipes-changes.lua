@@ -1,4 +1,3 @@
-
 -- Disabling all vanilla recipes at the game start 
 krastorio.recipes.disable("electronic-circuit")
 krastorio.recipes.disable("inserter")
@@ -431,6 +430,9 @@ krastorio.recipes.replaceIngredient("chemical-plant", "steel-plate", {"steel-bea
 krastorio.recipes.convertIngredient("chemical-plant", "iron-gear-wheel", "steel-gear-wheel")
 
 -- Poles
+krastorio.recipes.replaceIngredient("small-electric-pole", "copper-cable", {"copper-cable", 1})
+krastorio.recipes.replaceProduct("small-electric-pole", "small-electric-pole", {"small-electric-pole", 1})
+
 krastorio.recipes.replaceIngredient("medium-electric-pole", "copper-plate", {"copper-cable", 4})
 krastorio.recipes.replaceIngredient("medium-electric-pole", "steel-plate", {"iron-beam", 2})
 
