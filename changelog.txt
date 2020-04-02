@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.9
 Date: 31.03.2020
+  Features:
+    - Added compatibility with Booktorio, now if Booktorio is loaded Krastorio 2 will use the Booktorio Wiki code instead of his one, but don't worry, Krastorio 2 will continue have is standalone wiki, no dependecy are necessary.
   Changes:
     - Now wind turbines and solar panels are under the same fast replaceable group.
     - Revert changes that insert all inserters under the same fast replaceable group.

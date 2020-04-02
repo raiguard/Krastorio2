@@ -15,8 +15,8 @@ end
 
 function getFormattedCaption(text, localized)
 	local caption = nil
-	if type(text) == "table" and next(caption) then
-		_, caption = next(caption)
+	if type(text) == "table" and next(text) then
+		_, caption = next(text)
 	else
 		caption = text
 	end
@@ -315,10 +315,33 @@ krastorio.gui.addClickElementEvent(w_prefix.."toggle-wiki", "toggleWiki")
 krastorio.gui.addClickElementEvent(w_prefix.."close", "closeWiki")		
 krastorio.gui.addSelectElementEvent(w_prefix.."topics-list", "changeWikiDescription")
 
-return
-{ 
-	-- -- Bootstrap
-	{ initializeWiki, "on_player_created" },
-	{ closeWiki, "on_gui_closed" },
-	{ addremoveWikiButton, "on_runtime_mod_setting_changed"}
-}
+if script.active_mods["Booktorio"] then
+	krastorio_thread =
+	{
+		name = "gui.wiki-name",
+		topics = topics
+	}
+	local function migrateToBooktorio()
+		local button = nil
+		for _, player in pairs(game.players) do
+			button = krastorio.gui.getElementByName(player.index, w_prefix.."toggle-wiki")	
+			if button then
+				button.parent.destroy()
+			end
+		end
+		remote.call("Booktorio", "add_thread", krastorio_thread) 
+	end
+
+	return
+	{
+		{ migrateToBooktorio, "on_init" }
+	}
+else
+	return
+	{ 
+		-- -- Bootstrap
+		{ initializeWiki, "on_player_created" },
+		{ closeWiki, "on_gui_closed" },
+		{ addremoveWikiButton, "on_runtime_mod_setting_changed"}
+	}
+end
