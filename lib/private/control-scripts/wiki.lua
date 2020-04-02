@@ -292,7 +292,7 @@ function initializeWiki(event)
 end
 
 function addremoveWikiButton(event)
-	if event.setting_type == "runtime-per-user" and event.setting == "kr-disable-wiki" then
+	if event.mod_changes or (event.setting_type == "runtime-per-user" and event.setting == "kr-disable-wiki") then
 		local button = krastorio.gui.getElementByName(event.player_index, w_prefix.."toggle-wiki")		
 		if game.players[event.player_index].mod_settings["kr-disable-wiki"].value then		
 			if button then
@@ -307,6 +307,14 @@ function addremoveWikiButton(event)
 				initializeWiki(event)
 			end
 		end
+	end
+end
+
+function onConfigurationChanged(event)
+	local button = nil
+	for _, player in pairs(game.players) do
+		event.player_index = player.index
+		addremoveWikiButton(event)
 	end
 end
 
@@ -334,7 +342,8 @@ if script.active_mods["Booktorio"] then
 
 	return
 	{
-		{ migrateToBooktorio, "on_init" }
+		{ migrateToBooktorio, "on_init" },
+		{ migrateToBooktorio, "on_configuration_changed" }
 	}
 else
 	return
@@ -342,6 +351,7 @@ else
 		-- -- Bootstrap
 		{ initializeWiki, "on_player_created" },
 		{ closeWiki, "on_gui_closed" },
-		{ addremoveWikiButton, "on_runtime_mod_setting_changed"}
+		{ addremoveWikiButton, "on_runtime_mod_setting_changed" },
+		{ onConfigurationChanged, "on_configuration_changed" }
 	}
 end

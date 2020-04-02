@@ -673,7 +673,7 @@ return
 		{
 			{"express-splitter", 1},
 			{"steel-gear-wheel", 10},	
-			{"rare-metals", 5}
+			{"advanced-circuit", 5}
 		},
 		result = "kr-advanced-splitter"
     },

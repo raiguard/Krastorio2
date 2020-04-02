@@ -26,6 +26,7 @@ Date: 31.03.2020
     - Now you can conver biomass into matter.
     - Many minor changes.
   Fixes:
+    - Fixed that modded roboports can crash the game if used the change mode on it. Now if the modders don't use the Krastorio 2 API, use the hotkey return a warning message making clear that the roboport is not supported (don't crash the game).
     - Fixed AAI industry mod and K2 tech fighting.
     - Fixed that deadlock beltboxes and loaders mod can crash the game if the players disable both loader kinds.
     - Fixed sprites for Electric mining drill mk2 [2].
