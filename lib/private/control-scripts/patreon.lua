@@ -3,18 +3,18 @@ krastorio_patreons =
 {
 	["Krastor"] = true,
 	["Linver"] = true,
+	["mkaito"] = true,
+	["Egdod"] = true,
+	["Cvamp"] = true,
 	["AndrewSkier"] = true,
 	["Aski_Raven"] = true,
-	["Cvamp"] = true,
+	["Wassabee"] = true,
 	["jonasrejman"] = true,
-	["Pandabeezy"] = true,
-	["mkaito"] = true,
-	["grumbles"] = true,
-	["Egdod"] = true,
-	["Rivsung"] = true,
-	["ReysDad"] = true,
 	["melphin"] = true,
-	["Wassabee"] = true
+	["ReysDad"] = true,
+	["Rivsung"] = true,
+	["grumbles"] = true,
+	["Pandabeezy"] = true
 }
 
 -- Patreon Stuff

@@ -341,7 +341,7 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
 				{
 					{
 						type = "damage",
-						damage = {amount = 200, type = "explosion"}
+						damage = {amount = 400, type = "explosion"}
 					},
 				}
 			}
