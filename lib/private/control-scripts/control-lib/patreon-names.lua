@@ -10,6 +10,7 @@ patreons_list.high_supporters =
 	{"Austin", 10},
 	{"Jonas Rejman", 10},
 	{"Rivsung", 10},
+	{"Russell Obets", 10},
 	{"Saulius Zilis", 10},
 	{"ReysDad", 10},
 	{"Константин Попичев", 10},

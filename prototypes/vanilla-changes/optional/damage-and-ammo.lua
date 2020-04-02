@@ -343,10 +343,6 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
 						type = "damage",
 						damage = {amount = 200, type = "explosion"}
 					},
-					{
-						type = "damage",
-						damage = {amount = 200, type = "radioactive"}
-					}
 				}
 			}
 		}

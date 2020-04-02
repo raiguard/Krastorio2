@@ -192,3 +192,74 @@ data.raw["solar-panel"]["solar-panel"].fast_replaceable_group = "solar-panel"
 
 -- Radar
 data.raw.radar["radar"].fast_replaceable_group = "radar"
+
+-- Wall&gate
+data.raw.wall["stone-wall"].resistances =
+    {
+      {
+        type = "physical",
+        decrease = 3,
+        percent = 20
+      },
+      {
+        type = "impact",
+        decrease = 45,
+        percent = 60
+      },
+      {
+        type = "explosion",
+        decrease = 50,
+        percent = 80
+      },
+      {
+        type = "radioactive",
+        percent = 100
+      },
+      {
+        type = "fire",
+        percent = 100
+      },
+      {
+        type = "acid",
+        percent = 80
+      },
+      {
+        type = "laser",
+        percent = 70
+      }
+    }
+data.raw.gate["gate"].resistances =
+    {
+      {
+        type = "physical",
+        decrease = 3,
+        percent = 20
+      },
+      {
+        type = "impact",
+        decrease = 45,
+        percent = 60
+      },
+      {
+        type = "explosion",
+        decrease = 50,
+        percent = 80
+      },
+      {
+        type = "radioactive",
+        percent = 100
+      },
+      {
+        type = "fire",
+        percent = 100
+      },
+      {
+        type = "acid",
+        percent = 80
+      },
+      {
+        type = "laser",
+        percent = 70
+      }
+    }
+

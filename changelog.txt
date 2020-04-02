@@ -22,6 +22,9 @@ Date: 31.03.2020
     - Increased the Impulse rifle magazine cost.
     - Changed recipe for solar panels.
     - Changed recipe for laser turret.
+    - Now walls and gates have immunity to radiation and have good explosion resistance.
+    - Now you can conver biomass into matter.
+    - Many minor changes.
   Fixes:
     - Fixed AAI industry mod and K2 tech fighting.
     - Fixed that deadlock beltboxes and loaders mod can crash the game if the players disable both loader kinds.

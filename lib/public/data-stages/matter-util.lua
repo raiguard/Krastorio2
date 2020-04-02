@@ -211,6 +211,7 @@ function krastorio.matter_func.removeAllKrastorioMatterRecipes()
 	krastorio.matter_func.removeMatterRecipe("iron-plate")
 	krastorio.matter_func.removeMatterRecipe("steel-plate")
 	krastorio.matter_func.removeMatterRecipe("plastic-bar")
+	krastorio.matter_func.removeMatterRecipe("biomass")
 	krastorio.matter_func.removeMatterRecipe("matter-cube")	
 end
 
@@ -228,6 +229,16 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		item_name = "wood",
 		minimum_conversion_quantity = 10, 
 		matter_value = 2,
+		energy_required = 1
+	}
+	krastorio.matter_func.createMatterRecipe(wood)
+
+	-- biomass
+	local wood =
+	{
+		item_name = "biomass",
+		minimum_conversion_quantity = 10, 
+		matter_value = 5,
 		energy_required = 1
 	}
 	krastorio.matter_func.createMatterRecipe(wood)

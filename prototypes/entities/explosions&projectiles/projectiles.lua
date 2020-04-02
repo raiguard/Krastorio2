@@ -79,8 +79,8 @@ data:extend(
 				type = "area",
 				target_entities = false,
 				trigger_from_target = true,
-				repeat_count = 50,
-				radius = 12,
+				repeat_count = 25,
+				radius = 10,
 				action_delivery =
               {
                 type = "projectile",
@@ -784,7 +784,11 @@ data:extend(
           },
           {
             type = "damage",
-            damage = {amount = 3500, type = "explosion"}
+            damage = {amount = 1500, type = "explosion"}
+          },
+          {
+            type = "damage",
+            damage = {amount = 1500, type = "radioactive"}
           },
           {
             type = "create-entity",

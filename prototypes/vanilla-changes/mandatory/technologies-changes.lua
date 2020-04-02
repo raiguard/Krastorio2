@@ -371,7 +371,7 @@ data:extend(
 		{
 			{
 				type = "worker-robot-speed",
-				modifier = 0.35
+				modifier = 0.375
 			}
 		},
 		prerequisites = {"worker-robots-speed-7", "kr-singularity-tech-card"},
