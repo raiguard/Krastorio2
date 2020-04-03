@@ -89,7 +89,7 @@ data:extend(
 			},
 			{
 				type = "unlock-recipe",
-				recipe = krastorio.recipes.changed_names["glass"] or "glass"
+				recipe = krastorio.recipes.changed_names["kr-glass"] or "kr-glass"
 			}
 		},
 		prerequisites = {"kr-crusher"},

@@ -730,7 +730,7 @@ return
 		{
 			{"kr-advanced-transport-belt", 1},	
 			{"imersium-gear-wheel", 10},
-			{"low-density-structure", 2},	
+			{"low-density-structure", 1},	
 		},
 		result = "kr-superior-transport-belt"
     },

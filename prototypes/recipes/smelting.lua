@@ -3,7 +3,7 @@ return
 {
 	{
 		type = "recipe",
-		name = "coke",
+		name = "kr-coke",
 		category = "smelting",
 		energy_required = 10,
 		enabled = false,
@@ -18,7 +18,7 @@ return
 	},
 	{
 		type = "recipe",
-		name = "glass",
+		name = "kr-glass",
 		category = "smelting",
 		energy_required = 3,
 		enabled = false,
@@ -34,7 +34,7 @@ return
 	},
 	{
 		type = "recipe",
-		name = "silicon",
+		name = "kr-silicon",
 		category = "smelting",
 		energy_required = 6.4,
 		enabled = false,

@@ -84,7 +84,7 @@ krastorio.technologies.removeResearchUnitIngredient("fusion-reactor-equipment", 
 -- Addings
 
 -- Adding coke unlocking to steel production technology and steel things
-krastorio.technologies.addUnlockRecipe("steel-processing", "coke")
+krastorio.technologies.addUnlockRecipe("steel-processing", "kr-coke")
 krastorio.technologies.addUnlockRecipe("steel-processing", "steel-gear-wheel")
 krastorio.technologies.addUnlockRecipe("steel-processing", "steel-beam")
 
