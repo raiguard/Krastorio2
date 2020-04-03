@@ -1,5 +1,5 @@
-local default_locomotive_color = {r = 0.50, g = 0.54, b = 0.53, a = 0.5}
-local nuclear_smoke_color = {r = 0.5,  g = 0.5, b = 0.45, a = 0.35}
+local default_locomotive_color = {r = 0.50, g = 0.65, b = 0.53, a = 0.5}
+local nuclear_smoke_color = {r = 0.5,  g = 0.55, b = 0.45, a = 0.25}
 local hit_effects = require ("__base__.prototypes.entity.demo-hit-effects")
 local sounds = require("__base__.prototypes.entity.demo-sounds")
 
