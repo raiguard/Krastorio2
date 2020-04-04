@@ -328,11 +328,11 @@ data:extend(
         {
             {
                 type = "unlock-recipe",
-                recipe = krastorio.recipes.changed_names["kr-silicon"] or "kr-silicon"
+                recipe = krastorio.recipes.changed_names["silicon"] or "silicon"
             },
             {
                 type = "unlock-recipe",
-                recipe = krastorio.recipes.changed_names["kr-quartz"] or "kr-quartz"
+                recipe = krastorio.recipes.changed_names["quartz"] or "quartz"
             }
         },
         prerequisites = {"kr-fluids-chemistry", "automation-2"},

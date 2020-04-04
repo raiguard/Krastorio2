@@ -1,9 +1,0 @@
-{
-  "recipe":
-	[
-		["coke", "kr-coke"],
-		["quartz", "kr-quartz"],
-		["glass", "kr-glass"],
-		["silicon", "kr-silicon"]
-	]
-}

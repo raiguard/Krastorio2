@@ -3,7 +3,7 @@ return
 {
 	{
 		type = "recipe",
-		name = "kr-quartz",
+		name = "quartz",
 		icon = kr_items_with_variations_icons_path .. "quartz/quartz.png",
 		icon_size = 64,
 		category = "fluid-filtration",
