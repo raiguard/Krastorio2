@@ -117,7 +117,7 @@ data:extend(
 			{
 				{
 					filename = kr_weapons_sounds_path .. "accelerator.ogg",
-					volume = 0.4
+					volume = 0.3
 				}
 			}
 		},
