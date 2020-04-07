@@ -9,6 +9,7 @@ Date: 08.04.2020
   Fixes:
     - Some small fixes.
     - Fix crash site buildings property, now the generator is a primary energy source and all buildings can be marked to deconstruction.
+    - Fix steel pump fluid box.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.9
 Date: 02.04.2020

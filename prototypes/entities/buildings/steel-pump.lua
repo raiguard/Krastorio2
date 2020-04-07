@@ -26,7 +26,7 @@ data:extend(
 		fluid_box =
 		{
 			base_area = 1,
-			height = 2,
+			height = 4,
 			pipe_covers = steel_pipecoverspictures,
 			pipe_connections =
 			{
