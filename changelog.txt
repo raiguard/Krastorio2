@@ -5,8 +5,10 @@ Date: 08.04.2020
     - Many recipes began to be made faster.
     - Matter stabilizer have become cheaper.
     - Water pump was boosted from 1200 to 1250.
+    - Express splitter recipe use electronic components instead of advanced circuits.
   Fixes:
     - Some small fixes.
+    - Fix crash site buildings property, now the generator is a primary energy source and all buildings can be marked to deconstruction.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.9
 Date: 02.04.2020
