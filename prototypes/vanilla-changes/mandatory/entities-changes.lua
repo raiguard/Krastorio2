@@ -175,6 +175,9 @@ data.raw.corpse["pumpjack-remnants"].animation = make_rotated_animation_variatio
 	}
 })
 
+-- Offshore pump
+data.raw["offshore-pump"]["offshore-pump"].pumping_speed = 20.8334
+
 -- Chemical plant
 --data.raw["assembling-machine"]["chemical-plant"].energy_source.emissions_per_minute = 2
 

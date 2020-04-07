@@ -4,6 +4,7 @@ Date: 08.04.2020
   Changes:
     - Many recipes began to be made faster.
     - Matter stabilizer have become cheaper.
+    - Water pump was boosted from 1200 to 1250.
   Fixes:
     - Some small fixes.
 ---------------------------------------------------------------------------------------------------

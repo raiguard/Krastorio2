@@ -644,7 +644,7 @@ if not mods["aai-industry"] then
 			ingredients = {},
 			results =
 			{ 
-				{type = "fluid", name = "water", amount = 1200 }
+				{type = "fluid", name = "water", amount = 1250 }
 			}
 		},
 		-- Entity
