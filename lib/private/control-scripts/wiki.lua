@@ -326,7 +326,8 @@ krastorio.gui.addSelectElementEvent(w_prefix.."topics-list", "changeWikiDescript
 if script.active_mods["Booktorio"] then
 	krastorio_thread =
 	{
-		name = "gui.wiki-name",
+		name   = "gui.wiki-name",
+		mod    = "Krastorio2",
 		topics = topics
 	}
 	local function migrateToBooktorio()
