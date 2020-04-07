@@ -932,7 +932,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 									{
 										{
 											type = "damage",
-											damage = {amount = 45, type = "physical"}
+											damage = {amount = 75, type = "physical"}
 										},
 									}
 								}
@@ -1056,7 +1056,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 									{
 										{
 											type = "damage",
-											damage = {amount = 60, type = "physical"}
+											damage = {amount = 100, type = "physical"}
 										},
 									}
 								}
@@ -1178,11 +1178,11 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 									{
 										{
 											type = "damage",
-											damage = {amount = 60, type = "physical"}
+											damage = {amount = 100, type = "physical"}
 										},
 										{
 											type = "damage",
-											damage = {amount = 20, type = "radioactive"}
+											damage = {amount = 50, type = "radioactive"}
 										},
 									}
 								}
@@ -1304,11 +1304,11 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 									{
 										{
 											type = "damage",
-											damage = {amount = 60, type = "physical"}
+											damage = {amount = 100, type = "physical"}
 										},
 										{
 											type = "damage",
-											damage = {amount = 20, type = "laser"}
+											damage = {amount = 50, type = "laser"}
 										},
 									}
 								}
@@ -1342,7 +1342,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 		{
 			type = "recipe",
 			name = "imersite-anti-material-rifle-magazine",
-			energy_required = 5,
+			energy_required = 6,
 			enabled = false,
 			ingredients =
 			{

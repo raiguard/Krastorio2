@@ -5,7 +5,7 @@ return
 		type = "recipe",
 		name = "fertilizer",
 		category = "chemistry",
-		energy_required = 30,
+		energy_required = 10,
 		enabled = false,
 		allow_productivity = true,
 		ingredients =
@@ -313,7 +313,7 @@ return
 	{
 		type = "recipe",
 		name = "dt-fuel",
-		energy_required = 20,
+		energy_required = 5,
 		category = "chemistry",
 		enabled = false,
 		always_show_made_in = true,

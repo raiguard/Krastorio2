@@ -7,7 +7,7 @@ return
 		category = "stabilizer-charging",
 		subgroup = "intermediate-product",
 		allow_as_intermediate = false,
-		energy_required = 6,
+		energy_required = 2,
 		enabled = false,
 		ingredients =
 		{

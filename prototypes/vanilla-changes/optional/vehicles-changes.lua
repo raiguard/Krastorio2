@@ -9,7 +9,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 	data.raw.car["car"].minable = {mining_time = 3, result = "car"}
 	data.raw.car["car"].burner.fuel_category = "vehicle-fuel"
 	data.raw.car["car"].burner.emissions_per_minute = 5
-	krastorio.recipes.setEnergyCost("car", 60)
+	krastorio.recipes.setEnergyCost("car", 30)
 	---------------------
 
 	---------------------
@@ -27,7 +27,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
 	data.raw.car["tank"].braking_power = "1.75MW"
 
 	-- recipe modification
-	krastorio.recipes.setEnergyCost("tank", 120, 240)
+	krastorio.recipes.setEnergyCost("tank", 60, 120)
 	krastorio.recipes.replaceIngredient("tank", "engine-unit", {"engine-unit", 20})
 	krastorio.recipes.replaceIngredient("tank", "steel-plate", {"steel-plate", 60})
 	krastorio.recipes.replaceIngredient("tank", "iron-gear-wheel", {"steel-gear-wheel", 30})

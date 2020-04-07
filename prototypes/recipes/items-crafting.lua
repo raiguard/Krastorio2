@@ -99,7 +99,7 @@ return
 	{
 		type = "recipe",
 		name = "empty-dt-fuel",
-		energy_required = 5,
+		energy_required = 10,
 		enabled = false,
 		allow_productivity = true,
 		ingredients =
@@ -302,13 +302,12 @@ return
 		enabled = false,
 		allow_as_intermediate = false,
 		allow_productivity = true,
-		energy_required = 10,
+		energy_required = 5,
 		ingredients =
 		{
-			{"imersite-crystal", 10},
-			{"imersium-plate", 10},
-			{"energy-control-unit", 5},
-			{"processing-unit", 5}
+			{"imersium-plate", 6},
+			{"energy-control-unit", 3},
+			{"processing-unit", 3}
 		},
 		result = "matter-stabilizer"
     },
@@ -323,9 +322,9 @@ return
 		ingredients =
 		{
 			{ type = "fluid", name = "nitric-acid", amount = 50 },
-			{ "imersite-crystal", 20 },
+			{ "energy-control-unit", 10},
 			{ "imersium-plate", 8 },
-			{ "matter-stabilizer", 2 }			
+			{ "matter-stabilizer", 2 }
 		},
 		result = "empty-antimatter-fuel-cell"
     },
@@ -335,7 +334,7 @@ return
 		category = "matter-deconversion",
 		enabled = false,
 		allow_as_intermediate = false,
-		energy_required = 30,
+		energy_required = 5,
 		ingredients =
 		{
 			{ type = "fluid", name = "matter", amount = 1000},
@@ -391,7 +390,7 @@ return
 		{
 			{"explosive-turret-rocket", 1},
 			{"steel-plate", 10},
-			{"uranium-235", 10},
+			{"uranium-235", 5},
 			{"rocket-control-unit", 1}
 		},
 		result = "nuclear-turret-rocket"
@@ -460,9 +459,9 @@ return
 		ingredients =
 		{
 			{"rocket-control-unit", 10},
-			{"explosive-cannon-shell", 4},
-			{"radar", 1},
-			{"uranium-235", 30}
+			{"steel-plate", 10},
+			{"artillery-shell", 1},
+			{"uranium-235", 5}
 		},
 		result = "nuclear-artillery-shell"
 	},

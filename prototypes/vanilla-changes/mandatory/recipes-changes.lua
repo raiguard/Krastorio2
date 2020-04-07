@@ -459,7 +459,7 @@ krastorio.recipes.replaceIngredient("lab", "iron-gear-wheel", {"copper-plate", 1
 krastorio.recipes.replaceIngredient("lab", "transport-belt", {"copper-cable", 10})
 
 -- Nuclear reactor
-data.raw.recipe["nuclear-reactor"].energy_required = 300
+data.raw.recipe["nuclear-reactor"].energy_required = 120
 data.raw.recipe["nuclear-reactor"].category = "crafting-with-fluid"
 krastorio.recipes.replaceIngredient("nuclear-reactor", "concrete", {"concrete", 500}) --it's not a mistake. it's for future rebalance
 krastorio.recipes.replaceIngredient("nuclear-reactor", "steel-plate", {"steel-plate", 200}) --it's not a mistake. it's for future rebalance
