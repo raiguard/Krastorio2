@@ -347,7 +347,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 ----------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------- -- RIFLE STUFF -- -----------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------
-	data.raw.gun["submachine-gun"].attack_parameters.ammo_category = "rifle-ammo"
+	data.raw.gun["submachine-gun"].attack_parameters.ammo_category = "bullet"
 	data.raw.gun["submachine-gun"].attack_parameters.range = rifle_range
 	data.raw.gun["submachine-gun"].attack_parameters.min_range = k_rifle_min_range
 	data.raw.gun["submachine-gun"].attack_parameters.cooldown = 8
@@ -367,7 +367,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 			},
 			ammo_type =
 			{
-				category = "rifle-ammo",
+				category = "bullet",
 				cooldown_modifier = 0.8,
 				target_type = k_target_type,
 				action =
@@ -477,7 +477,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 			},
 			ammo_type =
 			{
-				category = "rifle-ammo",
+				category = "bullet",
 				target_type = k_target_type,
 				action =
 				{
@@ -584,7 +584,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 			},
 			ammo_type =
 			{
-				category = "rifle-ammo",
+				category = "bullet",
 				target_type = k_target_type,
 				action =
 				{
@@ -695,7 +695,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 			},
 			ammo_type =
 			{
-				category = "rifle-ammo",
+				category = "bullet",
 				target_type = k_target_type,
 				action =
 				{
@@ -1411,7 +1411,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 
 	--data.raw["ammo-turret"]["gun-turret"].localised_name={"kr-gun-turret"}
 	data.raw["ammo-turret"]["gun-turret"].attack_parameters.range = 25
-	data.raw["ammo-turret"]["gun-turret"].attack_parameters.ammo_category = "rifle-ammo"
+	data.raw["ammo-turret"]["gun-turret"].attack_parameters.ammo_category = "bullet"
 
 	data.raw["ammo"]["cannon-shell"].ammo_type.action.action_delivery.max_range = 50
 	data.raw["ammo"]["explosive-cannon-shell"].ammo_type.action.action_delivery.max_range = 50
@@ -1422,10 +1422,10 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 
 	data.raw.gun["vehicle-machine-gun"].attack_parameters.range = rifle_range
 	data.raw.gun["vehicle-machine-gun"].attack_parameters.min_range = 1.75
-	data.raw.gun["vehicle-machine-gun"].attack_parameters.ammo_category = "rifle-ammo"
+	data.raw.gun["vehicle-machine-gun"].attack_parameters.ammo_category = "bullet"
 	data.raw.gun["tank-machine-gun"].attack_parameters.range = rifle_range
 	data.raw.gun["tank-machine-gun"].attack_parameters.min_range = 2
-	data.raw.gun["tank-machine-gun"].attack_parameters.ammo_category = "rifle-ammo"
+	data.raw.gun["tank-machine-gun"].attack_parameters.ammo_category = "bullet"
 	data.raw.gun["tank-cannon"].attack_parameters.range = 50
 	data.raw.gun["rocket-launcher"].attack_parameters.range = 50
 
@@ -1481,12 +1481,5 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	krastorio.technologies.addUnlockRecipe("kr-military-5", "imersite-anti-material-rifle-magazine")
 
 	krastorio.technologies.addPrerequisite("turrets", "military")
-
-	-- Final fix
-	for _, gun in pairs(data.raw.gun) do
-		if gun.attack_parameters and gun.attack_parameters.ammo_category and gun.attack_parameters.ammo_category == "bullet" then
-			gun.attack_parameters.ammo_category = "rifle-ammo"
-		end
-	end
 
 end

@@ -6,6 +6,7 @@ Date: 08.04.2020
     - Matter stabilizer have become cheaper.
     - Water pump was boosted from 1200 to 1250.
     - Express splitter recipe use electronic components instead of advanced circuits.
+    - Now Krastorio 2 rewokerd weapon system will use vanilla ammo category for the rifle ammo, this should make it more compatible with other mods.
   Fixes:
     - Some small fixes.
     - Fix crash site buildings property, now the generator is a primary energy source and all buildings can be marked to deconstruction.
