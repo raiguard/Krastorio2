@@ -214,6 +214,8 @@ return
 		icon_size = 64,		
 		energy_required = 30,
 		enabled = false,
+		allow_productivity = true,
+		always_show_made_in = true,
 		category = "fuel-refinery",
 		ingredients =
 		{
@@ -242,6 +244,8 @@ return
 		icon_size = 64,		
 		energy_required = 30,
 		enabled = false,
+		allow_productivity = true,
+		always_show_made_in = true,
 		category = "fuel-refinery",
 		ingredients =
 		{
