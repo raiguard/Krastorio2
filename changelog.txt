@@ -12,6 +12,7 @@ Date: 08.04.2020
     - Fix crash site buildings property, now the generator is a primary energy source and all buildings can be marked to deconstruction.
     - Fix steel pump fluid box.
     - Now all rocket fuel recipes can take productivity modules.
+    - Fixed that robports construction mode doesn't increase the size construction zone.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.9
 Date: 02.04.2020
@@ -501,7 +502,7 @@ Date: 28.02.2020
   Fixes:
     - Fixed that steel plate product was 5 time less than expected.
     - Fixed energy output priority for wind turbine and shelter.
-    - Fixed that roboports hotkeys doesen't increase coverage area 25% larger than normal when changing mode to a single one.
+    - Fixed that roboports hotkeys doesn't increase coverage area 25% larger than normal when changing mode to a single one.
     - Fixed SE satelite rocket_launch_product given.
     - Fixed SE shields techs overlaps.
 ---------------------------------------------------------------------------------------------------
