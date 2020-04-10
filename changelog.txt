@@ -5,14 +5,15 @@ Date: 08.04.2020
     - Many recipes began to be made faster.
     - Matter stabilizer have become cheaper.
     - Water pump was boosted from 1200 to 1250.
-    - Express splitter recipe use electronic components instead of advanced circuits.
+    - Express splitter recipe use electronic components instead of advanced circuits for progression compliance with other splitters.
     - Now Krastorio 2 rewokerd weapon system will use vanilla ammo category for the rifle ammo, this should make it more compatible with other mods.
   Fixes:
     - Some small fixes.
-    - Fix crash site buildings property, now the generator is a primary energy source and all buildings can be marked to deconstruction.
-    - Fix steel pump fluid box.
+    - Fixed crash site buildings property, now the generator is a primary energy source and all buildings can be marked to deconstruction.
+    - Fixed steel pump fluid box and other steel pipe set.
     - Now all rocket fuel recipes can take productivity modules.
-    - Fixed that robports construction mode doesn't increase the size construction zone.
+    - Fixed that roboports construction mode doesn't increase the size construction zone.
+    - Fixed that setup a blueprint via blueprint selection tool can permit the placing of offshore pump everywhere.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.9
 Date: 02.04.2020
