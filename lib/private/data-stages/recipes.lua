@@ -1787,7 +1787,7 @@ function krastorio.recipes.changeEnabledState(recipe_name, state)
 		if recipe.normal and (recipe.normal.enabled ~= nil or recipe.enabled == nil) then
 			recipe.normal.enabled = state or false
 		end	
-		if recipe.expensive and recipe.expensive.enabled ~= nil then
+		if recipe.expensive and (recipe.expensive.enabled ~= nil or recipe.enabled == nil) then
 			recipe.expensive.enabled = state or false
 		end		
 	end	
