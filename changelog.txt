@@ -15,6 +15,7 @@ Date: 08.04.2020
     - Fixed that roboports construction mode doesn't increase the size construction zone.
     - Fixed that setup a blueprint via blueprint selection tool can permit the placing of offshore pump everywhere.
     - Fixed falsely enabled recipes at the start of the game in expensive mode.
+    - Fixed incompatibility with Booktorio and other mods that ad button in the top-left corner of the screen, K2 in the previous version will destroy all buttons on wiki disabling.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.9
 Date: 02.04.2020
