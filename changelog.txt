@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.10
 Date: 08.04.2020
+  Features:
+    - Added Italian translation, thanks to TheRealPagi fot the help!
   Changes:
     - Many recipes began to be made faster.
     - Matter stabilizer have become cheaper.
