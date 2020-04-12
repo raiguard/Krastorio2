@@ -1,15 +1,22 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.10
-Date: 08.04.2020
+Date: 12.04.2020
   Features:
-    - Added Italian translation, thanks to TheRealPagi fot the help!
+    - Added Italian translation, thanks to TheRealPagi for the help!
+    - Added Turkish translation thanks to Sarp Hangisi, Sinanbasar and Hasan Tunca Uysal!
+    - Added unfinished German translation thanks to Stimpatch, Fighter1000, Learbor, Fuggschen, Klaus Zinsmeister, Kildjan, Tobias Franz, BluePsyduck, Julian1701, Arcitos, Andreas_CH, RobocrafterLP, Bambam33, Heiko Domeier, Stefan Walesch and other!
+    - Many locales have been updated.
+    - Added new sprites for railgun turret with player color!
+    - Added new background artwork.
   Changes:
     - Many recipes began to be made faster.
     - Matter stabilizer have become cheaper.
     - Water pump was boosted from 1200 to 1250.
+    - Increased anti-material-rifle damage.
     - Express splitter recipe use electronic components instead of advanced circuits for progression compliance with other splitters.
     - Now Krastorio 2 rewokerd weapon system will use vanilla ammo category for the rifle ammo, this should make it more compatible with other mods.
-  Fixes:
+    - Many minor changes.
+	Fixes:
     - Some small fixes.
     - Fixed crash site buildings property, now the generator is a primary energy source and all buildings can be marked to deconstruction.
     - Fixed steel pump fluid box and other steel pipe set.

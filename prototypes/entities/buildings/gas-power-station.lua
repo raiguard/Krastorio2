@@ -139,7 +139,7 @@ data:extend(
 		energy_source =
 		{
 			type = "electric",
-			usage_priority = "primary-output",
+			usage_priority = "secondary-output",
 			emissions_per_minute = 30
 		},
 		horizontal_animation = animation,

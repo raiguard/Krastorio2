@@ -13,8 +13,9 @@ krastorio_patreons =
 	["melphin"] = true,
 	["ReysDad"] = true,
 	["Rivsung"] = true,
-	["grumbles"] = true,
-	["Pandabeezy"] = true
+	["Grumblesxl"] = true,
+	["Pandabeezy"] = true,
+	["NukeUFO"] = true
 }
 
 -- Patreon Stuff
