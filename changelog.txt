@@ -16,6 +16,7 @@ Date: 12.04.2020
     - Express splitter recipe use electronic components instead of advanced circuits for progression compliance with other splitters.
     - Now Krastorio 2 rewokerd weapon system will use vanilla ammo category for the rifle ammo, this should make it more compatible with other mods.
     - Many minor changes.
+    - Updated compatibility with Advanced Furnaces(Load-Furn) mod.
   Fixes:
     - Some small fixes.
     - Fixed crash site buildings property, now the generator is a primary energy source and all buildings can be marked to deconstruction.
