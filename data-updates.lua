@@ -24,6 +24,7 @@ local scripts_path = "compatibility-scripts/data-updates/"
 require(scripts_path .. "angelsaddons-smeltingtrain")
 require(scripts_path .. "Flow_Control")
 require(scripts_path .. "Load-Furn")
+require(scripts_path .. "Construction_Drones")
 -- Pyanodons
 require(scripts_path .. "Pyanodon")
 -- Schall Uranium Processing

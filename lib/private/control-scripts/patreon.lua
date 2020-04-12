@@ -15,7 +15,10 @@ krastorio_patreons =
 	["Rivsung"] = true,
 	["Grumblesxl"] = true,
 	["Pandabeezy"] = true,
-	["NukeUFO"] = true
+	["NukeUFO"] = true,
+	["therightmark"] = true,
+	["Senard"] = true,
+	["jkkelley86"] = true
 }
 
 -- Patreon Stuff
