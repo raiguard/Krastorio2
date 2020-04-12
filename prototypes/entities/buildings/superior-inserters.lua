@@ -40,33 +40,7 @@ data:extend(
 		rotation_speed = 0.06,
 		fast_replaceable_group = "inserter",
 		vehicle_impact_sound = sounds.generic_impact,
-		working_sound =
-		{
-		  match_progress_to_activity = true,
-		  sound =
-		  {
-			{
-			  filename = "__base__/sound/inserter-fast-1.ogg",
-			  volume = 0.75
-			},
-			{
-			  filename = "__base__/sound/inserter-fast-2.ogg",
-			  volume = 0.75
-			},
-			{
-			  filename = "__base__/sound/inserter-fast-3.ogg",
-			  volume = 0.75
-			},
-			{
-			  filename = "__base__/sound/inserter-fast-4.ogg",
-			  volume = 0.75
-			},
-			{
-			  filename = "__base__/sound/inserter-fast-5.ogg",
-			  volume = 0.75
-			}
-		  }
-		},
+		working_sound = sounds.inserter_fast,
 		hand_base_picture =
 		{
 		  filename = kr_entities_path .. "superior-inserters/superior-inserter-hand-base.png",
@@ -219,33 +193,7 @@ data:extend(
 		rotation_speed = 0.06,
 		fast_replaceable_group = "long-handed-inserter",
 		vehicle_impact_sound = sounds.generic_impact,
-		working_sound =
-		{
-		  match_progress_to_activity = true,
-		  sound =
-		  {
-			{
-			  filename = "__base__/sound/inserter-fast-1.ogg",
-			  volume = 0.75
-			},
-			{
-			  filename = "__base__/sound/inserter-fast-2.ogg",
-			  volume = 0.75
-			},
-			{
-			  filename = "__base__/sound/inserter-fast-3.ogg",
-			  volume = 0.75
-			},
-			{
-			  filename = "__base__/sound/inserter-fast-4.ogg",
-			  volume = 0.75
-			},
-			{
-			  filename = "__base__/sound/inserter-fast-5.ogg",
-			  volume = 0.75
-			}
-		  }
-		},
+		working_sound = sounds.inserter_fast,
 		hand_base_picture =
 		{
 		  filename = kr_entities_path .. "superior-inserters/superior-inserter-hand-base.png",
@@ -399,33 +347,7 @@ data:extend(
 		rotation_speed = 0.06,
 		fast_replaceable_group = "inserter",
 		vehicle_impact_sound = sounds.generic_impact,
-		working_sound =
-		{
-		  match_progress_to_activity = true,
-		  sound =
-		  {
-			{
-			  filename = "__base__/sound/inserter-fast-1.ogg",
-			  volume = 0.75
-			},
-			{
-			  filename = "__base__/sound/inserter-fast-2.ogg",
-			  volume = 0.75
-			},
-			{
-			  filename = "__base__/sound/inserter-fast-3.ogg",
-			  volume = 0.75
-			},
-			{
-			  filename = "__base__/sound/inserter-fast-4.ogg",
-			  volume = 0.75
-			},
-			{
-			  filename = "__base__/sound/inserter-fast-5.ogg",
-			  volume = 0.75
-			}
-		  }
-		},
+		working_sound = sounds.inserter_fast,
 		hand_base_picture =
 		{
 		  filename = kr_entities_path .. "superior-inserters/superior-inserter-hand-base.png",
@@ -579,33 +501,7 @@ data:extend(
 		rotation_speed = 0.06,
 		fast_replaceable_group = "long-handed-inserter",
 		vehicle_impact_sound = sounds.generic_impact,
-		working_sound =
-		{
-		  match_progress_to_activity = true,
-		  sound =
-		  {
-			{
-			  filename = "__base__/sound/inserter-fast-1.ogg",
-			  volume = 0.75
-			},
-			{
-			  filename = "__base__/sound/inserter-fast-2.ogg",
-			  volume = 0.75
-			},
-			{
-			  filename = "__base__/sound/inserter-fast-3.ogg",
-			  volume = 0.75
-			},
-			{
-			  filename = "__base__/sound/inserter-fast-4.ogg",
-			  volume = 0.75
-			},
-			{
-			  filename = "__base__/sound/inserter-fast-5.ogg",
-			  volume = 0.75
-			}
-		  }
-		},
+		working_sound = sounds.inserter_fast,
 		hand_base_picture =
 		{
 		  filename = kr_entities_path .. "superior-inserters/superior-inserter-hand-base.png",
