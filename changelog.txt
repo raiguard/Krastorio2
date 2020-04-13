@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.11
+Date: 13.04.2020
+  Features:
+    - Added Spanish translation. We are not sure that is correct, we fix something on our our own, can be removed in future if we receive bad feedbacks.
+  Fixes:
+    - Fixed German translation. Fix wrong folder name (that fortunatelly prevented the game from load it and then crash) and fixed many locale errors. Also updated with finished files.
+    - Fixed changelog errors.
+---------------------------------------------------------------------------------------------------
 Version: 0.9.10
 Date: 13.04.2020
   Features:
@@ -6,14 +14,14 @@ Date: 13.04.2020
     - Added Turkish translation thanks to Sarp Hangisi, Sinanbasar and Hasan Tunca Uysal!
     - Added unfinished German translation thanks to Stimpatch, Fighter1000, Learbor, Fuggschen, Klaus Zinsmeister, Kildjan, Tobias Franz, BluePsyduck, Julian1701, Arcitos, Andreas_CH, RobocrafterLP, Bambam33, Heiko Domeier, Stefan Walesch and other!
     - Many locales have been updated.
-    - Added compatibility with Construction_Drones.
-    - Added new sprites for railgun turret with player color!
+    - Added compatibility with Construction Drones.
+    - Added new sprites(appearance) for railgun turret, now turret color change with last user color!
     - Added new background artwork.
   Changes:
     - Many recipes began to be made faster.
     - Matter stabilizer have become cheaper.
     - Water pump was boosted from 1200 to 1250.
-    - Increased anti-material-rifle damage.
+    - Increased anti-materiel rifle damage.
     - Express splitter recipe use electronic components instead of advanced circuits for progression compliance with other splitters.
     - Now Krastorio 2 rewokerd weapon system will use vanilla ammo category for the rifle ammo, this should make it more compatible with other mods.
     - Basic tech card have been removed from all recipes with "military-science-pack" and "chemical-science-pack".
