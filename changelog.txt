@@ -1,8 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.11
 Date: 13.04.2020
-  Features:
-    - Added Spanish translation. We are not sure that is correct, we fix something on our our own, can be removed in future if we receive bad feedbacks.
   Fixes:
     - Fixed German translation. Fix wrong folder name (that fortunatelly prevented the game from load it and then crash) and fixed many locale errors. Also updated with finished files.
     - Fixed changelog errors.
