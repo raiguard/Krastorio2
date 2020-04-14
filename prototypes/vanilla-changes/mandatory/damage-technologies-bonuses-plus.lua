@@ -559,6 +559,11 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       {
         type = "gun-speed",
+        ammo_category = "bullet",
+        modifier = 0.2
+      },
+      {
+        type = "gun-speed",
         ammo_category = "shotgun-shell",
         modifier = 0.2
       },
@@ -575,6 +580,11 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     }
 	data.raw["technology"]["weapon-shooting-speed-2"].effects =
     {
+      {
+        type = "gun-speed",
+        ammo_category = "bullet",
+        modifier = 0.2
+      },
       {
         type = "gun-speed",
         ammo_category = "shotgun-shell",
@@ -595,6 +605,11 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       {
         type = "gun-speed",
+        ammo_category = "bullet",
+        modifier = 0.15
+      },
+      {
+        type = "gun-speed",
         ammo_category = "shotgun-shell",
         modifier = 0.15
       },
@@ -611,6 +626,11 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     }
 	data.raw["technology"]["weapon-shooting-speed-4"].effects =
     {
+      {
+        type = "gun-speed",
+        ammo_category = "bullet",
+        modifier = 0.15
+      },
       {
         type = "gun-speed",
         ammo_category = "shotgun-shell",
@@ -631,6 +651,11 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       {
         type = "gun-speed",
+        ammo_category = "bullet",
+        modifier = 0.15
+      },
+      {
+        type = "gun-speed",
         ammo_category = "shotgun-shell",
         modifier = 0.15
       },
@@ -647,6 +672,11 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     }
 	data.raw["technology"]["weapon-shooting-speed-6"].effects =
     {
+      {
+        type = "gun-speed",
+        ammo_category = "bullet",
+        modifier = 0.15
+      },
       {
         type = "gun-speed",
         ammo_category = "shotgun-shell",
