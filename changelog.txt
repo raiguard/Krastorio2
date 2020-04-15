@@ -1,10 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.11
-Date: 15.04.2020
+Date: 16.04.2020
   Features:
     - Added option for turn on infinite oil in the mod settings.
     - Added option for turn on Substation MK2 in the mod settings. If someday we find time to create a unique sprites for this, we will do this as default part of K2.
-  Fixes:
+  Changes:
+    - Some color tweaks for Shelter plus.
+	Fixes:
     - Fixed German translation. Fix wrong folder name (that fortunatelly prevented the game from load it and then crash) and fixed many locale errors. Also updated with finished files.
     - Fixed changelog errors.
     - Fixed that in the previous update, planes from Aircraft couldn't take ammos anymore, with the update for make the ammo more compatible with other mods (yes, you got the irony).
