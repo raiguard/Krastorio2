@@ -1,6 +1,6 @@
 if krastorio.general.getSafeSettingValue("kr-loaders") then
 
-	local standard_loaders_crafting_speed = 3
+	local standard_loaders_crafting_speed = 2
 
 	-- Variable utils
 	local loader_names = 

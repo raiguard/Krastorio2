@@ -296,7 +296,7 @@ function addremoveWikiButton(event)
 		local button = krastorio.gui.getElementByName(event.player_index, w_prefix.."toggle-wiki")		
 		if game.players[event.player_index].mod_settings["kr-disable-wiki"].value then		
 			if button then
-				button.parent.destroy()
+				button.destroy()
 			end
 			local wiki = krastorio.gui.getElementByName(event.player_index, w_prefix.."main-frame")
 			if wiki then
@@ -335,7 +335,7 @@ if script.active_mods["Booktorio"] then
 		for _, player in pairs(game.players) do
 			button = krastorio.gui.getElementByName(player.index, w_prefix.."toggle-wiki")	
 			if button then
-				button.parent.destroy()
+				button.destroy()
 			end
 		end
 		remote.call("Booktorio", "add_thread", krastorio_thread) 

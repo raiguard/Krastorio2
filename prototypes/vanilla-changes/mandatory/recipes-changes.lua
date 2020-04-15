@@ -49,12 +49,13 @@ krastorio.recipes.replaceIngredient("rocket-fuel", "solid-fuel", {"iron-plate", 
 krastorio.recipes.addIngredient("rocket-fuel", {type="fluid", name="oxygen", amount=50})
 
 data.raw.recipe["rocket-fuel"].crafting_machine_tint =
-		{
-			primary = {r = 0.692, g = 0.800, b = 0.550, a = 0.100}, 
-			secondary = {r = 0.581, g = 0.817, b = 0.670, a = 0.250}, 
-			tertiary = {r = 0.554, g = 0.417, b = 0.529, a = 0.500}, 
-			quaternary = {r = 0.462, g = 0.607, b = 0.839, a = 0.900} 
-		}
+{
+	primary = {r = 0.692, g = 0.800, b = 0.550, a = 0.100}, 
+	secondary = {r = 0.581, g = 0.817, b = 0.670, a = 0.250}, 
+	tertiary = {r = 0.554, g = 0.417, b = 0.529, a = 0.500}, 
+	quaternary = {r = 0.462, g = 0.607, b = 0.839, a = 0.900} 
+}
+data.raw.recipe["rocket-fuel"].always_show_products = true
 
 
 
@@ -388,29 +389,27 @@ krastorio.recipes.replaceIngredient("splitter", "automation-core", {"automation-
 
 
 -- Fast belt (Red tier 2)
--- krastorio.recipes.convertIngredient("fast-transport-belt", "iron-gear-wheel", "steel-gear-wheel")
+krastorio.recipes.replaceIngredient("fast-transport-belt", "iron-gear-wheel", {"iron-gear-wheel", 4})
 
 -- Fast underground belt (Red tier 2)
 -- krastorio.recipes.convertIngredient("fast-underground-belt", "iron-gear-wheel", "steel-gear-wheel")
 krastorio.recipes.replaceIngredient("fast-underground-belt", "iron-gear-wheel", {"fast-transport-belt", 10})
 
 -- Fast splitter (Red tier 2)
--- krastorio.recipes.convertIngredient("fast-splitter", "iron-gear-wheel", "steel-gear-wheel")
-
-
-
+krastorio.recipes.replaceIngredient("fast-splitter", "iron-gear-wheel", {"iron-gear-wheel", 8})
+krastorio.recipes.replaceIngredient("fast-splitter", "electronic-circuit", {"electronic-circuit", 2})
 
 -- Express belt (Red tier 3)
-krastorio.recipes.convertIngredient("express-transport-belt", "iron-gear-wheel", "steel-gear-wheel")
+krastorio.recipes.replaceIngredient("express-transport-belt", "iron-gear-wheel", {"steel-gear-wheel", 6})
 
 -- Express underground belt (Red tier 3)
 krastorio.recipes.replaceIngredient("express-underground-belt", "iron-gear-wheel", {"express-transport-belt", 20})
 krastorio.recipes.removeIngredient("express-underground-belt", "lubricant")
 
 -- Express splitter (Red tier 3)
-krastorio.recipes.convertIngredient("express-splitter", "iron-gear-wheel", "steel-gear-wheel")
+krastorio.recipes.replaceIngredient("express-splitter", "iron-gear-wheel", {"steel-gear-wheel", 8})
 krastorio.recipes.removeIngredient("express-splitter", "lubricant")
-krastorio.recipes.convertIngredient("express-splitter", "advanced-circuit", "electronic-components")
+krastorio.recipes.replaceIngredient("express-splitter", "advanced-circuit", {"electronic-components", 4})
 
 -- Turrets
 krastorio.recipes.addIngredient("laser-turret", {name = "quartz", amount = 5})

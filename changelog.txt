@@ -1,16 +1,50 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.11
+Date: 16.04.2020
+  Features:
+    - Added option for turn on infinite oil in the mod settings.
+    - Added option for turn on Substation MK2 in the mod settings. If someday we find time to create a unique sprites for this, we will do this as default part of K2.
+  Changes:
+    - Some color tweaks for Shelter plus.
+	Fixes:
+    - Fixed German translation. Fix wrong folder name (that fortunatelly prevented the game from load it and then crash) and fixed many locale errors. Also updated with finished files.
+    - Fixed changelog errors.
+    - Fixed that in the previous update, planes from Aircraft couldn't take ammos anymore, with the update for make the ammo more compatible with other mods (yes, you got the irony).
+    - Shooting speed fix.
+---------------------------------------------------------------------------------------------------
 Version: 0.9.10
-Date: 08.04.2020
+Date: 13.04.2020
+  Features:
+    - Added Italian translation, thanks to TheRealPagi for the help!
+    - Added Turkish translation thanks to Sarp Hangisi, Sinanbasar and Hasan Tunca Uysal!
+    - Added unfinished German translation thanks to Stimpatch, Fighter1000, Learbor, Fuggschen, Klaus Zinsmeister, Kildjan, Tobias Franz, BluePsyduck, Julian1701, Arcitos, Andreas_CH, RobocrafterLP, Bambam33, Heiko Domeier, Stefan Walesch and other!
+    - Many locales have been updated.
+    - Added compatibility with Construction Drones.
+    - Added new sprites(appearance) for railgun turret, now turret color change with last user color!
+    - Added new background artwork.
   Changes:
     - Many recipes began to be made faster.
     - Matter stabilizer have become cheaper.
     - Water pump was boosted from 1200 to 1250.
-    - Express splitter recipe use electronic components instead of advanced circuits.
+    - Increased anti-materiel rifle damage.
+    - Express splitter recipe use electronic components instead of advanced circuits for progression compliance with other splitters.
     - Now Krastorio 2 rewokerd weapon system will use vanilla ammo category for the rifle ammo, this should make it more compatible with other mods.
+    - Basic tech card have been removed from all recipes with "military-science-pack" and "chemical-science-pack".
+    - Now magazines are cheaper a bit.
+    - Now splitters and belts are cheaper too.
+    - Reduced hives HP by twice, because its too hard destroy it it the early game stage (Still harder than vanilla). 
+    - Reduced creep size.
+    - Updated compatibility with Advanced Furnaces(Load-Furn) mod.
+    - Many minor changes.
   Fixes:
     - Some small fixes.
-    - Fix crash site buildings property, now the generator is a primary energy source and all buildings can be marked to deconstruction.
-    - Fix steel pump fluid box.
+    - Fixed crash site buildings property, now the generator is a primary energy source and all buildings can be marked to deconstruction.
+    - Fixed steel pump fluid box and other steel pipe set.
+    - Now all rocket fuel recipes can take productivity modules.
+    - Fixed that roboports construction mode doesn't increase the size construction zone.
+    - Fixed that setup a blueprint via blueprint selection tool can permit the placing of offshore pump everywhere.
+    - Fixed falsely enabled recipes at the start of the game in expensive mode.
+    - Fixed incompatibility with Booktorio and other mods that add button in the top-left corner of the screen, K2 in the previous version will destroy all buttons on wiki disabling.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.9
 Date: 02.04.2020
@@ -500,7 +534,7 @@ Date: 28.02.2020
   Fixes:
     - Fixed that steel plate product was 5 time less than expected.
     - Fixed energy output priority for wind turbine and shelter.
-    - Fixed that roboports hotkeys doesen't increase coverage area 25% larger than normal when changing mode to a single one.
+    - Fixed that roboports hotkeys doesn't increase coverage area 25% larger than normal when changing mode to a single one.
     - Fixed SE satelite rocket_launch_product given.
     - Fixed SE shields techs overlaps.
 ---------------------------------------------------------------------------------------------------

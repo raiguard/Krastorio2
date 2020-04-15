@@ -222,7 +222,7 @@ data:extend(
 			maximum = 1
 		},
 		categories = {"armor"},
-		darkness_to_turn_on = 0.7,
+		darkness_to_turn_on = 0.45,
 		color_lookup = {{0.75, "__Krastorio2__/graphics/others/nightvision-2.png"}}
 	}
 -----------------------------------------------------------------------------------------------------------------

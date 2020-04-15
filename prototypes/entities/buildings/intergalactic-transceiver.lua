@@ -218,7 +218,7 @@ data:extend(
 		{
 			type = "electric",
 			buffer_capacity = "10GJ",
-			usage_priority = "secondary-output",
+			usage_priority = "primary-output",
 			input_flow_limit = "10GW",
 			output_flow_limit = "10GW",
 			render_no_power_icon = false

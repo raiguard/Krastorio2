@@ -672,8 +672,8 @@ return
 		ingredients =
 		{
 			{"express-splitter", 1},
-			{"steel-gear-wheel", 10},	
-			{"advanced-circuit", 5}
+			{"steel-gear-wheel", 8},	
+			{"advanced-circuit", 2}
 		},
 		result = "kr-advanced-splitter"
     },
@@ -686,7 +686,7 @@ return
 		ingredients =
 		{
 			{"express-transport-belt", 1},	
-			{"steel-gear-wheel", 10},
+			{"steel-gear-wheel", 6},
 			{"rare-metals", 2},
 		},
 		result = "kr-advanced-transport-belt"
@@ -715,8 +715,8 @@ return
 		ingredients =
 		{
 			{"kr-advanced-splitter", 1},
-			{"processing-unit", 10},	
-			{"imersium-gear-wheel", 10},
+			{"processing-unit", 2},	
+			{"imersium-gear-wheel", 8},
 		},
 		result = "kr-superior-splitter"
     },
@@ -729,7 +729,7 @@ return
 		ingredients =
 		{
 			{"kr-advanced-transport-belt", 1},	
-			{"imersium-gear-wheel", 10},
+			{"imersium-gear-wheel", 6},
 			{"low-density-structure", 1},	
 		},
 		result = "kr-superior-transport-belt"

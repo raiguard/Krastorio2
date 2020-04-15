@@ -111,7 +111,7 @@ data:extend(
         name = "kr-shelter-tint",
         setting_type = "startup",
         default_value = "White",
-        allowed_values = {"White", "Gray", "Yellow", "Pink", "Olive", "Red", "Blue", "Green", "Сyan", "Purple"},
+        allowed_values = {"White", "Gray", "Yellow", "Pink", "Olive", "Red", "Blue", "Green", "Cyan", "Purple"},
 		order = "u01"
 	},
 	{
@@ -119,7 +119,7 @@ data:extend(
         name = "kr-main-menu-background",
         setting_type = "startup",
         default_value = "Krastorio Chan",
-        allowed_values = {"Factorio", "Krastorio Legacy", "Krastorio 2", "Krastorio CyberSkull", "Krastorio Chan", "Krastorio Explorer", "Factorio Alternative 1", "Factorio Alternative 2", "Factorio Alternative 3", "Factorio Alternative 4"},
+        allowed_values = {"Factorio", "Krastorio Legacy", "Krastorio 2", "Krastorio CyberSkull", "Krastorio Chan", "Krastorio THE FACTORY MUST GROW", "Krastorio Explorer", "Factorio Alternative 1", "Factorio Alternative 2", "Factorio Alternative 3", "Factorio Alternative 4"},
 		order = "u02"
     },
 	{
@@ -185,23 +185,23 @@ data:extend(
 		default_value = true,
 		order = "b07"
 	},
+	{
+		type = "bool-setting",
+		name = "kr-finite-oil",
+		setting_type = "startup",
+		default_value = true,
+		order = "b08"
+	},
  	{
  		type = "bool-setting",
 		name = "kr-more-realistic-weapon-auto-aim",
-		setting_type = "startup",
-		default_value = false,
-		order = "b08"
-	},
-	{
-		type = "bool-setting",
-		name = "kr-peaceful-mode",
 		setting_type = "startup",
 		default_value = false,
 		order = "b09"
 	},
 	{
 		type = "bool-setting",
-		name = "kr-vehicles-minable-changes",
+		name = "kr-peaceful-mode",
 		setting_type = "startup",
 		default_value = false,
 		order = "b10"
@@ -215,16 +215,31 @@ data:extend(
 	},
 	{
 		type = "bool-setting",
-		name = "kr-large-icons",
+		name = "kr-substation-mk2",
 		setting_type = "startup",
 		default_value = false,
 		order = "b12"
 	},
 	{
 		type = "bool-setting",
-		name = "kr-kl-stuff",
+		name = "kr-vehicles-minable-changes",
 		setting_type = "startup",
 		default_value = false,
 		order = "b13"
 	},
+	{
+		type = "bool-setting",
+		name = "kr-large-icons",
+		setting_type = "startup",
+		default_value = false,
+		order = "b14"
+	},
+	{
+		type = "bool-setting",
+		name = "kr-kl-stuff",
+		setting_type = "startup",
+		default_value = false,
+		order = "b15"
+	},
+
 })

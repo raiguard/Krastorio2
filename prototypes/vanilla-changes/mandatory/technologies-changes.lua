@@ -92,6 +92,9 @@ krastorio.technologies.addUnlockRecipe("steel-processing", "steel-beam")
 krastorio.technologies.addUnlockRecipe("logistics", "inserter")
 krastorio.technologies.addUnlockRecipe("logistics", "long-handed-inserter")
 
+-- Add Prerequisite for fast inserters
+krastorio.technologies.addPrerequisite("fast-inserter", "logistics")
+
 -- Electronics I
 krastorio.technologies.addUnlockRecipe("electronics", "electronic-circuit")
 -- Electronics 2
@@ -162,6 +165,8 @@ krastorio_utils.log.enableLogs()
 -- Remove basic tech card to all technologies of T2 tier
 for technology_name, technology in pairs(data.raw.technology) do
 	if 
+		krastorio.technologies.hasIngredient(technology_name, "military-science-pack") or
+		krastorio.technologies.hasIngredient(technology_name, "chemical-science-pack") or
 		krastorio.technologies.hasIngredient(technology_name, "production-science-pack") or
 		krastorio.technologies.hasIngredient(technology_name, "utility-science-pack") or
 		krastorio.technologies.hasIngredient(technology_name, "space-science-pack") or
