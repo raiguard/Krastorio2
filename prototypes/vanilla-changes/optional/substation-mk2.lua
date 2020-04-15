@@ -49,4 +49,8 @@ data:extend(
 
 })
 
+data.raw.item["kr-substation-mk2"].flags = nil
+data.raw["electric-pole"]["substation"].fast_replaceable_group = "substation"
+data.raw["electric-pole"]["substation"].next_upgrade = "kr-substation-mk2"
+
 end

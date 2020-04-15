@@ -13,6 +13,7 @@ data:extend(
 		max_health = 250,
 		corpse = "substation-remnants",
 		dying_explosion = "substation-explosion",
+		fast_replaceable_group = "substation",
 		track_coverage_during_build_by_moving = true,
 		resistances =
 		{
