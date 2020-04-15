@@ -111,7 +111,7 @@ data:extend(
         name = "kr-shelter-tint",
         setting_type = "startup",
         default_value = "White",
-        allowed_values = {"White", "Gray", "Yellow", "Pink", "Olive", "Red", "Blue", "Green", "Сyan", "Purple"},
+        allowed_values = {"White", "Gray", "Yellow", "Pink", "Olive", "Red", "Blue", "Green", "Cyan", "Purple"},
 		order = "u01"
 	},
 	{
