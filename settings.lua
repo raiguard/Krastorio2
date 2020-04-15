@@ -185,23 +185,23 @@ data:extend(
 		default_value = true,
 		order = "b07"
 	},
+	{
+		type = "bool-setting",
+		name = "kr-finite-oil",
+		setting_type = "startup",
+		default_value = true,
+		order = "b08"
+	},
  	{
  		type = "bool-setting",
 		name = "kr-more-realistic-weapon-auto-aim",
-		setting_type = "startup",
-		default_value = false,
-		order = "b08"
-	},
-	{
-		type = "bool-setting",
-		name = "kr-peaceful-mode",
 		setting_type = "startup",
 		default_value = false,
 		order = "b09"
 	},
 	{
 		type = "bool-setting",
-		name = "kr-vehicles-minable-changes",
+		name = "kr-peaceful-mode",
 		setting_type = "startup",
 		default_value = false,
 		order = "b10"
@@ -215,16 +215,31 @@ data:extend(
 	},
 	{
 		type = "bool-setting",
-		name = "kr-large-icons",
+		name = "kr-substation-mk2",
 		setting_type = "startup",
 		default_value = false,
 		order = "b12"
 	},
 	{
 		type = "bool-setting",
-		name = "kr-kl-stuff",
+		name = "kr-vehicles-minable-changes",
 		setting_type = "startup",
 		default_value = false,
 		order = "b13"
 	},
+	{
+		type = "bool-setting",
+		name = "kr-large-icons",
+		setting_type = "startup",
+		default_value = false,
+		order = "b14"
+	},
+	{
+		type = "bool-setting",
+		name = "kr-kl-stuff",
+		setting_type = "startup",
+		default_value = false,
+		order = "b15"
+	},
+
 })

@@ -1,0 +1,52 @@
+-- -- -- Add Substation mk2
+
+if krastorio.general.getSafeSettingValue("kr-substation-mk2") then
+
+data:extend(
+{
+
+	{
+		type = "recipe",
+		name = "kr-substation-mk2",
+		energy_required = 1,
+		enabled = false,
+		ingredients =
+		{
+			{"imersium-beam", 3},
+			{"rare-metals", 6},
+			{"substation", 1},
+			{"processing-unit", 2}
+		},
+		result = "kr-substation-mk2",
+    },
+
+	{
+		type = "technology",
+		name = "electric-energy-distribution-3",
+		icon_size = 128,
+		icon = "__base__/graphics/technology/electric-energy-distribution.png",
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-substation-mk2"
+			}
+		},
+		prerequisites = {"electric-energy-distribution-2", "kr-advanced-tech-card"},
+		unit =
+		{
+			count = 250,
+			ingredients =
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"advanced-tech-card", 1}
+			},
+			time = 45
+		},
+	}
+
+})
+
+end

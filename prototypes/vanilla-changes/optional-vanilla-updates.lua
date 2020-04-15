@@ -16,7 +16,9 @@ local modifications =
 	"infinite-technology",       -- Remove or keep infinite technologies
 	"pipes-and-belts-changes",   -- Vanilla pipes and belts modification
 	"more-realistic-weapon",     -- Add to bullets more realistic range, tragectory, and drop of bullet speed during flight	
-	"cargo-wagon-bonus"          -- Cargo wagon capacity bonus
+	"cargo-wagon-bonus",         -- Cargo wagon capacity bonus
+	"finite-oil",                -- Makes oil is finite
+	"substation-mk2"             -- Adds Substation-mk2
 }
 
 -- Application of the modifications
