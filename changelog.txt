@@ -6,6 +6,10 @@ Date: XX.04.2020
     - Added option for turn on Substation MK2 in the mod settings. If someday we find time to create a unique sprites for this, we will do this as default part of K2.
   Changes:
     - Some color tweaks for Shelter plus.
+    - Reduced blank tech card production, now require 2s instead of 1s and need double ingredients in input.
+    - Increased richness of Imersite.
+  Fixes:
+	- Fix that inserters hotkey dropping to "near" lane on perpendicular belts had no effect.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.11
 Date: 13.04.2020

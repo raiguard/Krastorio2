@@ -4,13 +4,13 @@ return
 	{
 		type = "recipe",
 		name = "blank-tech-card",
-		energy_required = 1,
+		energy_required = 2,
 		enabled = false,
 		allow_productivity = true,
 		ingredients =
 		{
-			{"iron-plate", 1},
-			{"copper-cable", 1}			
+			{"iron-plate", 2},
+			{"copper-cable", 2}			
 		},
 		result = "blank-tech-card",
 		result_count = 5
