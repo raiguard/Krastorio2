@@ -57,8 +57,6 @@ data.raw["boiler"]["boiler"].energy_source.emissions_per_minute = 20
 data.raw["mining-drill"]["pumpjack"].icon = kr_entities_icons_path .. "oil-pumpjack.png"
 data.raw["mining-drill"]["pumpjack"].icon_size = 64
 data.raw["mining-drill"]["pumpjack"].icon_mipmaps = nil
-data.raw["mining-drill"]["pumpjack"].energy_usage = "100kW"
-data.raw["mining-drill"]["pumpjack"].mining_speed = 2
 data.raw["mining-drill"]["pumpjack"].radius_visualisation_picture.filename = kr_entities_path .. "oil-pumpjack/oil-pumpjack-radius-visualization.png"
 data.raw["mining-drill"]["pumpjack"].base_picture.sheets =
 {
@@ -198,71 +196,71 @@ data.raw.radar["radar"].fast_replaceable_group = "radar"
 
 -- Wall&gate
 data.raw.wall["stone-wall"].resistances =
-    {
-      {
-        type = "physical",
-        decrease = 3,
-        percent = 20
-      },
-      {
-        type = "impact",
-        decrease = 45,
-        percent = 60
-      },
-      {
-        type = "explosion",
-        decrease = 50,
-        percent = 80
-      },
-      {
-        type = "radioactive",
-        percent = 100
-      },
-      {
-        type = "fire",
-        percent = 100
-      },
-      {
-        type = "acid",
-        percent = 80
-      },
-      {
-        type = "laser",
-        percent = 70
-      }
-    }
+{
+  {
+	type = "physical",
+	decrease = 3,
+	percent = 20
+  },
+  {
+	type = "impact",
+	decrease = 45,
+	percent = 60
+  },
+  {
+	type = "explosion",
+	decrease = 50,
+	percent = 80
+  },
+  {
+	type = "radioactive",
+	percent = 100
+  },
+  {
+	type = "fire",
+	percent = 100
+  },
+  {
+	type = "acid",
+	percent = 80
+  },
+  {
+	type = "laser",
+	percent = 70
+  }
+}
 data.raw.gate["gate"].resistances =
-    {
-      {
-        type = "physical",
-        decrease = 3,
-        percent = 20
-      },
-      {
-        type = "impact",
-        decrease = 45,
-        percent = 60
-      },
-      {
-        type = "explosion",
-        decrease = 50,
-        percent = 80
-      },
-      {
-        type = "radioactive",
-        percent = 100
-      },
-      {
-        type = "fire",
-        percent = 100
-      },
-      {
-        type = "acid",
-        percent = 80
-      },
-      {
-        type = "laser",
-        percent = 70
-      }
-    }
+{
+  {
+	type = "physical",
+	decrease = 3,
+	percent = 20
+  },
+  {
+	type = "impact",
+	decrease = 45,
+	percent = 60
+  },
+  {
+	type = "explosion",
+	decrease = 50,
+	percent = 80
+  },
+  {
+	type = "radioactive",
+	percent = 100
+  },
+  {
+	type = "fire",
+	percent = 100
+  },
+  {
+	type = "acid",
+	percent = 80
+  },
+  {
+	type = "laser",
+	percent = 70
+  }
+}
 
