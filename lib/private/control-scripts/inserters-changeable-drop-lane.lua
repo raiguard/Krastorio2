@@ -5,7 +5,7 @@ require("__Krastorio2__/lib/private/control-scripts/control-lib/control-lib-init
 -- Constant
 DROP_POSITIONS_FRAC = 
 {
-    [true]  = { [0] = {0.0, -0.2}, [2] = {0.2, 0.0},  [4] = {0.0, 0.2},  [6] = {-0.2, 0.0} }, -- near lane
+    [true]  = { [0] = {0.01, -0.2}, [2] = {0.2, 0.01},  [4] = {-0.01, 0.2},  [6] = {-0.2, -0.01} }, -- near lane
     [false] = { [0] = {0.0, 0.2},  [2] = {-0.2, 0.0}, [4] = {0.0, -0.2}, [6] = {0.2, 0.0}  }  -- far lane
 }
 
