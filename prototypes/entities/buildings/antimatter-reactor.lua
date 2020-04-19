@@ -34,7 +34,7 @@ data:extend(
 		{
 			type = "electric",
 			render_no_power_icon = false,
-			usage_priority = "primary-output"
+			usage_priority = "secondary-output"
 		},		
 		burner =
 		{
