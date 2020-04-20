@@ -8,6 +8,7 @@ Date: XX.04.2020
     - Some color tweaks for Shelter plus.
     - Reduced blank tech card production, now require 2s instead of 1s and need double ingredients in input.
     - Increased richness of Imersite.
+    - Now K2's fuel refinery can be placed in space (SE mod).
   Fixes:
 	- Fix that inserters hotkey dropping to "near" lane on perpendicular belts had no effect.
 ---------------------------------------------------------------------------------------------------

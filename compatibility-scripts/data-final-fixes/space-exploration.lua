@@ -228,8 +228,7 @@ if mods["space-exploration"] then
 			"kr-advanced-furnace",			
 			"kr-electrolysis-plant",
 			"kr-filtration-plant",				
-			"kr-air-filter",
-			"kr-fuel-refinery"
+			"kr-air-filter"
 		},
 		["boiler"] =
 		{
