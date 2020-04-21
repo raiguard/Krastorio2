@@ -409,7 +409,7 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 	{
 		item_name = "sulfur",
 		minimum_conversion_quantity = 10, 
-		matter_value = 7.2,
+		matter_value = 4,
 		energy_required = 4,
 		need_stabilizer = true,
 		unlocked_by_technology = "kr-matter-oil-processing"
