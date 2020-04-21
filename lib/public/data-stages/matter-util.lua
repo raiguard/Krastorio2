@@ -403,21 +403,21 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		unlocked_by_technology = "kr-matter-stone-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(quartz)
-
+	
+	-- -- Only from matter (matter -> item)
+	
 	-- sulfur
 	local sulfur =
 	{
 		item_name = "sulfur",
 		minimum_conversion_quantity = 10, 
-		matter_value = 4,
+		matter_value = 8,
 		energy_required = 4,
 		need_stabilizer = true,
+		only_deconversion = true,
 		unlocked_by_technology = "kr-matter-oil-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(sulfur)
-	
-	-- -- Only from matter (matter -> item)
-	-- nothing...
 	
 	-- -- -- Intermediate (need stabilizer)
 	-- -- Only from matter (matter -> item)
