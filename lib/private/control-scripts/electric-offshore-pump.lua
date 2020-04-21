@@ -42,7 +42,14 @@ end
 
 function onBlueprint(event)
     local player = game.players[event.player_index]
-	if player and player.valid and player.cursor_stack.valid_for_read and player.cursor_stack.is_blueprint_setup() then
+	if 
+		player and 
+		player.valid and
+		player.cursor_stack and
+		player.cursor_stack.valid_for_read and
+		player.cursor_stack.is_blueprint and
+		player.cursor_stack.is_blueprint_setup() 
+	then
 		local blueprint_entities = player.cursor_stack.get_blueprint_entities()
 		if blueprint_entities and next(blueprint_entities) then
 			local have_an_offshore_pump = false

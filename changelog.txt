@@ -11,7 +11,8 @@ Date: XX.04.2020
     - Now K2's fuel refinery can be placed in space (SE mod).
 	- Modified matter to sulfur value, from 7.2 to 8.
   Fixes:
-	- Fix that inserters hotkey dropping to "near" lane on perpendicular belts had no effect.
+	- Fixed that inserters hotkey dropping to "near" lane on perpendicular belts had no effect.
+	- Fixed rare crash settuping blueprints.
 	- Not sulfur can't anymore be converted into matter, to avoid matter creation loops.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.11
