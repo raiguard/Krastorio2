@@ -13,7 +13,7 @@ Date: XX.04.2020
   Fixes:
 	- Fixed that inserters hotkey dropping to "near" lane on perpendicular belts had no effect.
 	- Fixed rare crash settuping blueprints.
-	- Not sulfur can't anymore be converted into matter, to avoid matter creation loops.
+	- Sulfur can't anymore be converted into matter, to avoid matter creation loops.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.11
 Date: 13.04.2020
