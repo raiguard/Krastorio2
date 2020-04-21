@@ -284,6 +284,10 @@ if mods["space-exploration"] then
 	-- This is a WHITELIST, all entities in this table CAN(POSITIVE) BE placed in the space
 	local krastorio_entities_to_remove =
 	{
+		["assembling-machine"] =
+		{
+			"kr-fuel-refinery"
+		},
 		["beacon"] =
 		{
 			"kr-singularity-beacon"
