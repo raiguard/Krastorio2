@@ -4,7 +4,8 @@ Date: XX.04.2020
   Features:
     - Added option for turn on infinite oil in the mod settings.
     - Added option for turn on Substation MK2 in the mod settings. If someday we find time to create a unique sprites for this, we will do this as default part of K2.
-  Changes:
+    - Added new sprites(appearance)for the rocket turret, now turret color will change with last user color!
+	Changes:
     - Some color tweaks for Shelter plus.
     - Reduced blank tech card production, now require 2s instead of 1s and need double ingredients in input.
     - Increased richness of Imersite.
@@ -30,7 +31,7 @@ Date: 13.04.2020
     - Added unfinished German translation thanks to Stimpatch, Fighter1000, Learbor, Fuggschen, Klaus Zinsmeister, Kildjan, Tobias Franz, BluePsyduck, Julian1701, Arcitos, Andreas_CH, RobocrafterLP, Bambam33, Heiko Domeier, Stefan Walesch and other!
     - Many locales have been updated.
     - Added compatibility with Construction Drones.
-    - Added new sprites(appearance) for railgun turret, now turret color change with last user color!
+    - Added new sprites(appearance) for the railgun turret, now turret color will change with last user color!
     - Added new background artwork.
   Changes:
     - Many recipes began to be made faster.
