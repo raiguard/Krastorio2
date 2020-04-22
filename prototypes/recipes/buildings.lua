@@ -666,7 +666,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-advanced-splitter",
-		category = "crafting-with-fluid",
+		--category = "crafting-with-fluid",
 		energy_required = 2,
 		enabled = false,
 		ingredients =
@@ -680,7 +680,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-advanced-transport-belt",
-		category = "crafting-with-fluid",
+		--category = "crafting-with-fluid",
 		energy_required = 0.5,
 		enabled = false,
 		ingredients =
@@ -694,7 +694,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-advanced-underground-belt",
-		category = "crafting-with-fluid",
+		--category = "crafting-with-fluid",
 		energy_required = 2,
 		enabled = false,
 		ingredients =
@@ -709,7 +709,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-superior-splitter",
-		category = "crafting-with-fluid",
+		--category = "crafting-with-fluid",
 		energy_required = 2,
 		enabled = false,
 		ingredients =
@@ -723,7 +723,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-superior-transport-belt",
-		category = "crafting-with-fluid",
+		--category = "crafting-with-fluid",
 		energy_required = 0.5,
 		enabled = false,
 		ingredients =
@@ -737,7 +737,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-superior-underground-belt",
-		category = "crafting-with-fluid",
+		--category = "crafting-with-fluid",
 		energy_required = 2,
 		enabled = false,
 		ingredients =

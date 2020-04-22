@@ -58,7 +58,6 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 		kr_loader_recipe
 		{
 			name = loader_names[3],
-			category = "crafting-with-fluid",
 			ingredients = 
 			{
 				{"express-transport-belt", 1},
@@ -69,7 +68,6 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 		kr_loader_recipe
 		{
 			name = loader_names[4],
-			category = "crafting-with-fluid",
 			ingredients = 
 			{
 				{"kr-advanced-transport-belt", 1},
@@ -80,7 +78,6 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 		kr_loader_recipe
 		{
 			name = loader_names[5],
-			category = "crafting-with-fluid",
 			ingredients = 
 			{
 				{"kr-superior-transport-belt", 1},
