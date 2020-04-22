@@ -5,16 +5,16 @@ Date: XX.04.2020
     - Added option for turn on infinite oil in the mod settings.
     - Added option for turn on Substation MK2 in the mod settings. If someday we find time to create a unique sprites for this, we will do this as default part of K2.
     - Added new sprites(appearance)for the rocket turret, now turret color will change with last user color!
-	Changes:
+  Changes:
     - Some color tweaks for Shelter plus.
     - Reduced blank tech card production, now require 2s instead of 1s and need double ingredients in input.
     - Increased richness of Imersite.
     - Now K2's fuel refinery can be placed in space (SE mod).
-	- Modified matter to sulfur value, from 7.2 to 8.
+    - Modified matter to sulfur value, from 7.2 to 8.
   Fixes:
-	- Fixed that inserters hotkey dropping to "near" lane on perpendicular belts had no effect.
-	- Fixed rare crash settuping blueprints.
-	- Sulfur can't anymore be converted into matter, to avoid matter creation loops.
+    - Fixed that inserters hotkey dropping to "near" lane on perpendicular belts had no effect.
+    - Fixed rare crash settuping blueprints.
+    - Sulfur can't anymore be converted into matter, to avoid matter creation loops.
     - Some minor fixes and improvements.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.11
