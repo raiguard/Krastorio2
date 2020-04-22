@@ -31,7 +31,7 @@ data:extend(
 			order = "f",
 			base_density = 1,
 			richness_multiplier = 1,
-			richness_multiplier_distance_bonus = 1,
+			richness_multiplier_distance_bonus = 1.5,
 			base_spots_per_km2 = 0.2,
 			has_starting_area_placement = false,
 			random_spot_size_minimum = 0.01,

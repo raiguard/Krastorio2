@@ -46,7 +46,7 @@ function setupKRRadioactivityGlobalVariables()
 end
 
 function doRadioactiveDamage(player)
-	if player.valid and player.character.valid then
+	if player.valid and player.character and player.character.valid then
 		local character = player.character
 		local base_damage = 7.25
 		player.play_sound
