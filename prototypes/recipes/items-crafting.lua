@@ -269,15 +269,15 @@ return
 	{
 		type = "recipe",
 		name = "heavy-rocket",
-		energy_required = 30,
+		energy_required = 10,
 		enabled = false,
 		ingredients =
 		{
-			{"explosives", 20},
-			{"steel-plate", 10},
+			{"explosives", 10},
+			{"steel-plate", 5},
 			{"rocket-fuel", 10},
-			{"plastic-bar", 10},			
-			{"processing-unit", 5}			
+			{"plastic-bar", 5},			
+			{"processing-unit", 1}			
 		},
 		result = "heavy-rocket"
     },
@@ -376,7 +376,7 @@ return
 		{
 			{"rocket-fuel", 10},
 			{"rocket-control-unit", 1},
-			{"steel-plate", 10},
+			{"steel-plate", 5},
 			{"explosives", 10}
 		},
 		result = "explosive-turret-rocket"
@@ -413,7 +413,7 @@ return
 		type = "recipe",
 		name = "antimatter-artillery-shell",
 		enabled = false,
-		energy_required = 5,
+		energy_required = 15,
 		ingredients =
 		{
 			{"imersium-plate", 1},
@@ -427,7 +427,7 @@ return
 		type = "recipe",
 		name = "antimatter-rocket",
 		enabled = false,
-		energy_required = 5,
+		energy_required = 10,
 		ingredients =
 		{
 			{"imersium-plate", 2},
@@ -455,7 +455,7 @@ return
 		type = "recipe",
 		name = "nuclear-artillery-shell",
 		enabled = false,
-		energy_required = 50,
+		energy_required = 15,
 		ingredients =
 		{
 			{"rocket-control-unit", 10},

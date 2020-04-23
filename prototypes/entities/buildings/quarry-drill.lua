@@ -54,7 +54,7 @@ data:extend(
 				height = 232,
 				frame_count = 90,
 				line_length = 10,
-				shift = {0, -0.23},
+				shift = {0, -0.18},
 				animation_speed = 0.3,
 				scale = 1.04,
 				hr_version =
@@ -65,7 +65,7 @@ data:extend(
 					height = 464,
 					frame_count = 90,
 					line_length = 10,
-					shift = {0, -0.23},
+					shift = {0, -0.18},
 					animation_speed = 0.3,
 					scale = 0.52
 				}

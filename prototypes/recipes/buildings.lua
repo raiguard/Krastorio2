@@ -167,7 +167,7 @@ return
 		{
 			{"advanced-circuit", 10},
 			{"steel-beam", 5},
-			{"iron-plate", 10},
+			{"lab", 1},
 			{"copper-cable", 10}
 		},
 		result = "biusart-lab"
@@ -180,8 +180,8 @@ return
 		ingredients =
 		{
 			{"ai-core", 20},
-			{"steel-beam", 30},
-			{"steel-plate", 60},
+			{"biusart-lab", 5},
+			{"steel-plate", 40},
 			{"electric-engine-unit", 30},
 			{"rare-metals", 60},
 			{"processing-unit", 100}
