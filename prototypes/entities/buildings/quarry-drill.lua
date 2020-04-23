@@ -50,23 +50,23 @@ data:extend(
 				{
 				priority = "high",
 				filename = kr_entities_path .. "quarry-drill/quarry-drill.png",
-				width = 216,
-				height = 227,
-				frame_count = 60,
-				line_length = 15,
+				width = 220,
+				height = 232,
+				frame_count = 90,
+				line_length = 10,
 				shift = {0, -0.23},
-				animation_speed = 0.25,
+				animation_speed = 0.3,
 				scale = 1.04,
 				hr_version =
 				{
 					priority = "high",
 					filename = kr_entities_path .. "quarry-drill/hr-quarry-drill.png",
-					width = 432,
-					height = 454,
-					frame_count = 60,
-					line_length = 15,
+					width = 440,
+					height = 464,
+					frame_count = 90,
+					line_length = 10,
 					shift = {0, -0.23},
-					animation_speed = 0.25,
+					animation_speed = 0.3,
 					scale = 0.52
 				}
 				},
@@ -76,10 +76,10 @@ data:extend(
 				width = 250,
 				height = 211,
 				frame_count = 1,
-				repeat_count = 60,
+				repeat_count = 90,
 				shift = {0, 0.05},
 				draw_as_shadow = true,
-				animation_speed = 0.25,
+				animation_speed = 0.3,
 				scale = 1.04,
 				hr_version =
 				{
@@ -88,10 +88,10 @@ data:extend(
 					width = 500,
 					height = 422,
 					frame_count = 1,
-					repeat_count = 60,
+					repeat_count = 90,
 					shift = {0, 0.05},
 					draw_as_shadow = true,
-					animation_speed = 0.25,
+					animation_speed = 0.3,
 					scale = 0.52
 				}
 				},
