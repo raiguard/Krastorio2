@@ -14,6 +14,7 @@ Date: XX.04.2020
     - Modified matter to sulfur value, from 7.2 to 8.
     - Changed some K2 building remaint sprites.
     - Changed recipes for labs.
+    - Optimization tech cards have been removed from many technologies. Now you can access to advanced buildings much earlier.
   Fixes:
     - Fixed that inserters hotkey dropping to "near" lane on perpendicular belts had no effect.
     - Fixed rare crash settuping blueprints.
