@@ -48,6 +48,8 @@ local scripts =
 	require(control_scripts_path .. "planetary-teleporters"),
 	-- Electric offshore pump
 	require(control_scripts_path .. "electric-offshore-pump"),
+	-- Viruses
+	require(control_scripts_path .. "viruses"),
 	-- -- REMOTE INTERFACES
 	require(control_scripts_path .. "reset-krastorio-global-data"),
 	-- -- COMPATIBILITY

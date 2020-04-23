@@ -451,6 +451,62 @@ data:extend(
     },
 	{
 		type = "technology",
+		name = "kr-creep-virus",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "creep-virus.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["kr-creep-virus"] or "kr-creep-virus"
+			}
+		},
+		prerequisites = {"kr-advanced-tech-card", "kr-military-5"},
+		unit =
+		{
+			count = 2000,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"matter-tech-card", 1},
+				{"advanced-tech-card", 1}
+			},
+			time = 45
+		}
+    },
+	{
+		type = "technology",
+		name = "kr-biter-virus",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "biter-virus.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["kr-biter-virus"] or "kr-biter-virus"
+			}
+		},
+		prerequisites = {"kr-creep-virus"},
+		unit =
+		{
+			count = 3000,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"matter-tech-card", 1},
+				{"advanced-tech-card", 1}
+			},
+			time = 45
+		}
+    },
+	{
+		type = "technology",
 		name = "kr-singularity-tech-card",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "singularity-tech-card.png",
