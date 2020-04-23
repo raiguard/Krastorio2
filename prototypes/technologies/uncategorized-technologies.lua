@@ -49,7 +49,7 @@ data:extend(
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
+				{"advanced-tech-card", 1},
 				{"matter-tech-card", 1}
 			},
 			time = 60
@@ -605,7 +605,6 @@ data:extend(
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
 				{"matter-tech-card", 1},
 				{"advanced-tech-card", 1}
 			},
@@ -653,7 +652,7 @@ data:extend(
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "rocket-turret.png",
 		icon_size = 128,
-		prerequisites = {"kr-military-5", "space-science-pack", "kr-railgun-turret"},
+		prerequisites = {"kr-military-5", "kr-advanced-tech-card", "kr-railgun-turret"},
 		effects =
 		{
 			{
@@ -678,7 +677,7 @@ data:extend(
 				{"military-science-pack", 1},
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1}			
+				{"advanced-tech-card", 1},
 			},
 			time = 60
 		}
@@ -689,7 +688,7 @@ data:extend(
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "antimatter-reactor.png",
 		icon_size = 128,
-		prerequisites = {"kr-fusion-energy", "kr-matter-processing"},
+		prerequisites = {"kr-fusion-energy", "kr-matter-processing", "kr-singularity-tech-card"},
 		effects =
 		{
 			{
@@ -715,7 +714,8 @@ data:extend(
 				{"utility-science-pack", 1},
 				{"space-science-pack", 1},
 				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1}				
+				{"advanced-tech-card", 1},
+				{"singularity-tech-card", 1}		
 			},
 			time = 60
 		}

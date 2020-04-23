@@ -35,12 +35,11 @@ data:extend(
 		prerequisites = {"electric-energy-distribution-2", "kr-advanced-tech-card"},
 		unit =
 		{
-			count = 250,
+			count = 300,
 			ingredients =
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
 				{"advanced-tech-card", 1}
 			},
 			time = 45

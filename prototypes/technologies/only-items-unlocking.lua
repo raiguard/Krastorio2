@@ -306,15 +306,14 @@ data:extend(
 				recipe = krastorio.recipes.changed_names["matter-tech-card"] or "matter-tech-card"
 			}
 		},
-		prerequisites = {"kr-singularity-lab", "space-science-pack"},
+		prerequisites = {"kr-singularity-lab"},
 		unit =
 		{
-			count = 500,
+			count = 750,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1}
 			},
 			time = 60
 		}
@@ -340,7 +339,6 @@ data:extend(
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
 				{"matter-tech-card", 1}
 			},
 			time = 30
@@ -375,7 +373,6 @@ data:extend(
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
 				{"matter-tech-card", 1}
 			},
 			time = 60
@@ -416,7 +413,6 @@ data:extend(
 				{"kr-advanced-tech-card", 1},
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
 				{"matter-tech-card", 1}
 			},
 			time = 60
@@ -443,7 +439,6 @@ data:extend(
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
 				{"matter-tech-card", 1}
 			},
 			time = 45
@@ -470,7 +465,6 @@ data:extend(
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
 				{"matter-tech-card", 1},
 				{"advanced-tech-card", 1}
 			},
@@ -498,7 +492,6 @@ data:extend(
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
 				{"matter-tech-card", 1},
 				{"advanced-tech-card", 1}
 			},
@@ -554,7 +547,6 @@ data:extend(
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
 				{"matter-tech-card", 1},
 				{"advanced-tech-card", 1}
 			},
@@ -567,7 +559,7 @@ data:extend(
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "matter-cube.png",
 		icon_size = 128,
-		prerequisites = {"kr-matter-processing"},
+		prerequisites = {"kr-matter-processing", "kr-singularity-tech-card"},
 		order = "g-f-z",
 		unit =
 		{
@@ -578,7 +570,8 @@ data:extend(
 				{"utility-science-pack", 1},
 				{"space-science-pack", 1},
 				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1}				
+				{"advanced-tech-card", 1},
+				{"singularity-tech-card", 1}		
 			},
 			time = 60
 		}
