@@ -6,6 +6,7 @@ Date: XX.04.2020
     - Added option for turn on Substation MK2 in the mod settings. If someday we find time to create a unique sprites for this, we will do this as default part of K2.
     - Added new sprites(appearance)for the rocket turret, now turret color will change with last user color!
     - Increased the number of frame of quarry drill animation to be more smooth (only for high resolution, VRAM of potato PCs will not be aggravated).
+    - Added viruses! End game capsule that players can use to remove creep definitively (from the map), or reduce the biters on the map drastrically.
   Changes:
     - Some color tweaks for Shelter plus.
     - Reduced blank tech card production, now require 2s instead of 1s and need double ingredients in input for the same output.
@@ -13,13 +14,14 @@ Date: XX.04.2020
     - Now K2's fuel refinery can be placed in space (SE mod).
     - Modified matter to sulfur value, from 7.2 to 8.
     - Changed some K2 building remaint sprites.
-    - Changed recipes for labs.
+    - Changed labs recipes, now they require the previous lab tier as ingredient.
     - Optimization tech cards have been removed from many technologies. Now you can access to advanced buildings much earlier.
   Fixes:
     - Fixed that inserters hotkey dropping to "near" lane on perpendicular belts had no effect.
     - Fixed rare crash settuping blueprints.
     - Fixed rare crash when player character die meanwhile the radioactivity damage try to reduce the character health.
-    - Sulfur can't anymore be converted into matter, to avoid matter creation loops.
+    - Sulfur can't anymore be converted into matter, to avoid cheaty matter creation loops.
+    - Fixed wrong German translation typo.
     - Some minor fixes and improvements.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.11
