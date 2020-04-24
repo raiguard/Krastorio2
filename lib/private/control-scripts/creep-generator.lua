@@ -1,9 +1,9 @@
 -----------------------------------------------------------------------------
 -- Remotes
-if not global.creep_on_chunk_generated then
+if global.creep_on_chunk_generated == nil then
 	global.creep_on_chunk_generated  = true
 end
-if not global.creep_on_biter_base_built then
+if global.creep_on_biter_base_built == nil then
 	global.creep_on_biter_base_built = true
 end
 
