@@ -23,6 +23,7 @@ Date: XX.04.2020
     - Sulfur can't anymore be converted into matter, to avoid cheaty matter creation loops.
     - Fixed wrong German translation typo.
     - Some minor fixes and improvements.
+    - Fixed non persistent remote calls on creep generation script.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.11
 Date: 13.04.2020

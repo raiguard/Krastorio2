@@ -44,10 +44,14 @@ end
 -- script.on_init(F) -> {F, "on_init"}
 -- script.on_event(defines.events.E, F) ->
 -- {F, E}
+-- 
+-- an additional property is the index,
+-- use to remove a callback later when the game is running
 function ControlCallbackMerger:addCallBack(input)
-	local callback   = input.callback or input[1] or false
+	local callback   = input.callback   or input[1] or false
 	local event_name = input.event_name or input[2] or false
-	local filter     = input.filter or input[3] or false
+	local filter     = input.filter     or input[3] or false
+	local index      = input.index      or input[4] or false
 	if not callback or not event_name then
 		return false
 	end
@@ -57,18 +61,30 @@ function ControlCallbackMerger:addCallBack(input)
 			if not self.on_nth_tick_callbacks[ticks] then
 				self.on_nth_tick_callbacks[ticks] = {}
 			end
-			table.insert(self.on_nth_tick_callbacks[ticks], callback)
+			if index then
+				table.insert(self.on_nth_tick_callbacks[ticks], {callback, index})				
+			else
+				table.insert(self.on_nth_tick_callbacks[ticks], callback)
+			end
 		else
 			if not self.filtered_callbacks[event_name] then
 				self.filtered_callbacks[event_name] = {}
 			end
-			table.insert(self.filtered_callbacks[event_name], {callback, filter})
+			if index then
+				table.insert(self.filtered_callbacks[event_name], {callback, filter, index})
+			else
+				table.insert(self.filtered_callbacks[event_name], {callback, filter})
+			end
 		end		
 	else -- without filter callback
 		if not self.simple_callbacks[event_name] then
 			self.simple_callbacks[event_name] = {}
 		end
-		table.insert(self.simple_callbacks[event_name], callback)	
+		if index then
+			table.insert(self.simple_callbacks[event_name], {callback, index})	
+		else
+			table.insert(self.simple_callbacks[event_name], callback)	
+		end
 	end
 	return true
 end

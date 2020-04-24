@@ -1,7 +1,11 @@
 -----------------------------------------------------------------------------
 -- Remotes
-creep_on_chunk_generated  = true
-creep_on_biter_base_built = true
+if not global.creep_on_chunk_generated then
+	global.creep_on_chunk_generated  = true
+end
+if not global.creep_on_biter_base_built then
+	global.creep_on_biter_base_built = true
+end
 
 if not remote.interfaces["kr-creep"] then
 	remote.add_interface("kr-creep",
@@ -11,14 +15,14 @@ if not remote.interfaces["kr-creep"] then
 			if type(bool) ~= "boolean" then 
 				error("Value for 'creep_on_chunk_generated' must be a boolean.")
 			end
-			creep_on_chunk_generated = bool
+			global.creep_on_chunk_generated = bool
 		end,
 		set_creep_on_biter_base_built = 
 		function(bool)
 			if type(bool) ~= "boolean" then 
 				error("Value for 'creep_on_biter_base_built' must be a boolean.")
 			end
-			creep_on_biter_base_built = bool
+			global.creep_on_biter_base_built = bool
 		end,
 		spawn_creep_at_position = 
 		function(surface, position)
@@ -113,13 +117,13 @@ function pushCreepToGenerate(event)
 end
 
 local function creepOnChunkGenerated(event)
-	if creep_on_chunk_generated then
+	if global.creep_on_chunk_generated then
 		pushCreepToGenerate(event)
 	end
 end
 
 local function creepOnBiterBaseBuilt(event)
-	if creep_on_biter_base_built then
+	if global.creep_on_biter_base_built then
 		pushCreepToGenerate(event)
 	end
 end
