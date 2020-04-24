@@ -13,9 +13,10 @@ local util = require("__core__/lualib/util")
 ControlCallbackMerger = 
 {
 	-- lists of callbacks
-	simple_callbacks      = {},
-	filtered_callbacks    = {},
-	on_nth_tick_callbacks = {}
+	simple_callbacks        = {},
+	filtered_callbacks      = {},
+	on_nth_tick_callbacks   = {},
+	listed_events_callbacks = {}
 }
 ControlCallbackMerger.__index = ControlCallbackMerger
 -----------------------------------------------------------------------------
@@ -64,7 +65,7 @@ function ControlCallbackMerger:addCallBack(input)
 			if index then
 				table.insert(self.on_nth_tick_callbacks[ticks], {callback, index})				
 			else
-				table.insert(self.on_nth_tick_callbacks[ticks], callback)
+				table.insert(self.on_nth_tick_callbacks[ticks], {callback})
 			end
 		else
 			if not self.filtered_callbacks[event_name] then
@@ -83,7 +84,7 @@ function ControlCallbackMerger:addCallBack(input)
 		if index then
 			table.insert(self.simple_callbacks[event_name], {callback, index})	
 		else
-			table.insert(self.simple_callbacks[event_name], callback)	
+			table.insert(self.simple_callbacks[event_name], {callback})	
 		end
 	end
 	return true
@@ -96,14 +97,64 @@ function ControlCallbackMerger:addCallBacks(callbacks)
 	end
 end
 
+function ControlCallbackMerger:listenCallBack(input)
+	local callback   = input.callback   or input[1] or false
+	local event_name = input.event_name or input[2] or false
+	local filter     = input.filter     or input[3] or false
+	local index      = input.index      or input[4] or false
+	if not self.listed_events_callbacks[event_name] then
+		local cc_list = {}	
+		cc_list[index or 1]	= callback
+		local cc = createCollectiveCallback(cc_list)
+		if     event_name == "on_init" then			
+			script.on_init(cc)
+		elseif event_name == "on_configuration_changed" then
+			script.on_configuration_changed(cc)
+		elseif event_name == "on_load" then
+			script.on_load(cc)
+		elseif event_name == "on_nth_tick" then
+			script.on_nth_tick(filter, cc)
+		elseif defines.events[event_name] then -- Check if is a vanilla event
+			script.on_event(defines.events[event_name], cc)
+		else
+			script.on_event(event_name, cc)
+		end
+		self.listed_events_callbacks[event_name] = cc
+	else
+		listCallbackWithIndex(self.listed_events_callbacks[event_name], callback, index)
+	end
+end
+
+function ControlCallbackMerger:unlistenCallBack(event_name, index)
+	if self.listed_events_callbacks[event_name] and self.listed_events_callbacks[event_name][index] then
+		self.listed_events_callbacks[index] = nil
+	end
+	if #self.listed_events_callbacks[event_name] == 0 then
+		if     event_name == "on_init" then			
+			script.on_init(nil)
+		elseif event_name == "on_configuration_changed" then
+			script.on_configuration_changed(nil)
+		elseif event_name == "on_load" then
+			script.on_load(nil)
+		elseif defines.events[event_name] then -- Check if is a vanilla event
+			script.on_event(defines.events[event_name], nil)
+		else
+			script.on_event(event_name, nil)
+		end
+		self.listed_events_callbacks[event_name] = nil
+	end
+end
+
 -- Return a function that call all functions in the given table,
 -- with the same argument(s) given to the collective function
 -- @callbacks, table of functions
 local function createCollectiveCallback(callbacks)
 	return 
 	function(...)
-		for _, callback in pairs(callbacks) do
-			callback(...)
+		if callbacks and #callbacks > 0 then
+			for _, callback in pairs(callbacks) do
+				callback(...)
+			end
 		end
 	end
 end
@@ -126,6 +177,17 @@ local function mergeFilters(filters_group_a, filters_group_b)
 	return new_filters_group
 end
 
+function listCallbackWithIndex(list, callback, index)
+	if index and index > 0 then
+		if list[index] then
+			list[#list+1]=list[index]
+		end
+		list[index]=callback
+	else
+		table.insert(list, callback)
+	end
+end
+
 -- Each time this function is called will overwrite the previuos calls listen.
 function ControlCallbackMerger:activeCallbacks()
 	-- Merge simple and filtered callbacks if necessary
@@ -139,7 +201,13 @@ function ControlCallbackMerger:activeCallbacks()
 	end
 	-- Simple
 	for event_name, callbacks in pairs(self.simple_callbacks) do
-		local cc = createCollectiveCallback(callbacks)
+		local cc_list = {}		
+		if #callbacks > 0 then		
+			for _, callback in pairs(callbacks) do
+				listCallbackWithIndex(cc_list, callback[1], callback[2] or false)
+			end
+		end
+		local cc = createCollectiveCallback(cc_list)
 		if     event_name == "on_init" then			
 			script.on_init(cc)
 		elseif event_name == "on_configuration_changed" then
@@ -151,33 +219,39 @@ function ControlCallbackMerger:activeCallbacks()
 		else
 			script.on_event(event_name, cc)
 		end
+		self.listed_events_callbacks[event_name] = cc_list
 	end	
 	-- Filtered
 	for event_name, callbacks in pairs(self.filtered_callbacks) do
 		local cc = nil
+		local cc_list = {}
 		local collective_filter = {}
 		if #callbacks > 1 then
-			local cc_list = {}			
 			for _, callback in pairs(callbacks) do
-				table.insert(cc_list, callback[1])
+				listCallbackWithIndex(cc_list, callback[1], callback[3] or false)
 				collective_filter = mergeFilters(collective_filter, callback[2])
 			end
 			cc = createCollectiveCallback(cc_list)
-		else
-			cc = callbacks[1][1]
+		elseif #callbacks > 0 then
+			listCallbackWithIndex(cc_list, callbacks[1][1], callbacks[1][3] or false)
 			collective_filter = callbacks[1][2]
+			cc = createCollectiveCallback(cc_list)
 		end
 		script.on_event(defines.events[event_name], cc, collective_filter)
+		self.listed_events_callbacks[event_name] = cc_list
 	end
 	-- On nth ticks
 	for ticks, callbacks in pairs(self.on_nth_tick_callbacks) do
 		local cc = nil
-		if #callbacks > 1 then
-			cc = createCollectiveCallback(callbacks)
-		else
-			cc = callbacks[1]
-		end	
+		local cc_list = {}		
+		if #callbacks > 0 then		
+			for _, callback in pairs(callbacks) do
+				listCallbackWithIndex(cc_list, callback[1], callback[2] or false)
+			end
+		end
+		cc = createCollectiveCallback(cc_list)
 		script.on_nth_tick(ticks, cc)
+		self.listed_events_callbacks["on_nth_tick"] = cc_list
 	end
 end
 -----------------------------------------------------------------------------

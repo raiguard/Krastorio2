@@ -136,6 +136,10 @@ if mods["space-exploration"] then
 		end
 	end
 	
+	-- Fix that portable fusion reactor is unlockable when is not anymore usefull 
+	krastorio.technologies.removePrerequisite("fusion-reactor-equipment", "se-rtg-equipment-2")
+	
+	
 	--[[
 	local function startsWith(str, start)
 	   return str:sub(1, #start) == start
@@ -401,8 +405,13 @@ if mods["space-exploration"] then
 		{"lithium-sulfur-battery", 10}
 	})
 
-	-- Energy shield mk4
-	krastorio.recipes.removeIngredientWithPrerequisite("energy-shield-mk4-equipment", "se-superconductive-cable")
+	-- Energy shield mk4	
+	krastorio.recipes.overrideIngredients("energy-shield-mk4-equipment",
+	{
+		{"energy-shield-mk3-equipment", 5},
+		{"ai-core", 5},
+		{"imersium-plate", 10}
+	})
 	
 	-- Re-graphics update
 	local objects_to_modify =

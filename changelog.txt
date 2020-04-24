@@ -7,6 +7,7 @@ Date: XX.04.2020
     - Added new sprites(appearance)for the rocket turret, now turret color will change with last user color!
     - Increased the number of frame of quarry drill animation to be more smooth (only for high resolution, VRAM of potato PCs will not be aggravated).
     - Added viruses! End game capsule that players can use to remove creep definitively (from the map), or reduce the biters on the map drastrically.
+    - Introduced a new way to freeze Factorio. :)
   Changes:
     - Some color tweaks for Shelter plus.
     - Reduced blank tech card production, now require 2s instead of 1s and need double ingredients in input for the same output.
@@ -16,6 +17,9 @@ Date: XX.04.2020
     - Changed some K2 building remaint sprites.
     - Changed labs recipes, now they require the previous lab tier as ingredient.
     - Optimization tech cards have been removed from many technologies. Now you can access to advanced buildings much earlier.
+    - Now matter bomb and railgun matter explosions can destroy cliff.
+    - Nerfed personal laser submachine guns, they was too strong compared with the sniper version.
+    - Boosted personal laser sniper guns, they was too weak compared with the submachine version.
   Fixes:
     - Fixed that inserters hotkey dropping to "near" lane on perpendicular belts had no effect.
     - Fixed rare crash settuping blueprints.
@@ -24,6 +28,9 @@ Date: XX.04.2020
     - Fixed wrong German translation typo.
     - Some minor fixes and improvements.
     - Fixed non persistent remote calls on creep generation script.
+    - Fixed that K2 doesn't support recipes that are selectively disabled for normal/marathon mode.
+    - Fixed that steel pipe have a worse flow compared with vanilla pipes, if not used many steel pumps (now should have the right 25% of bonus).
+    - Fixed shield MK4 recipe with SE installed.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.11
 Date: 13.04.2020

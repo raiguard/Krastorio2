@@ -5,7 +5,7 @@ local control_lib_path                   = control_scripts_path .. "control-lib/
 
 -- Libs
 ControlCallbackMerger = require(control_scripts_path .. "control-lib/control-callbacks-merger")
-local ccm = ControlCallbackMerger:new()
+ccm = ControlCallbackMerger:new()
 require(control_lib_path)
 
 -- Scrips

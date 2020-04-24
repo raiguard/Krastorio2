@@ -394,7 +394,7 @@ data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].attack_
 {
 	type = "beam",
 	cooldown = 80,
-	damage_modifier = 10,
+	damage_modifier = 15,
 	projectile_center = {0, 0},
 	range = 30,
 	ammo_type =

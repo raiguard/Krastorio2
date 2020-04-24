@@ -36,7 +36,7 @@ function krastorio.recipes.getIngredients(recipe_name)
 		if recipe.ingredients then		
 			return recipe.ingredients
 		end
-		if recipe.normal.ingredients then
+		if recipe.normal and recipe.normal.ingredients then
 			return recipe.normal.ingredients
 		end
 	end
@@ -118,12 +118,8 @@ end
 -- return a table
 function krastorio.recipes.getExpensiveIngredients(recipe_name)
 	local recipe = krastorio.recipes.getRecipeFromName(recipe_name)
-	if recipe then
-		if recipe.expensive then
-			if recipe.expensive.ingredients then		
-				return recipe.expensive.ingredients
-			end
-		end
+	if recipe and recipe.expensive and recipe.expensive.ingredients then		
+		return recipe.expensive.ingredients
 	end
 	return {}
 end

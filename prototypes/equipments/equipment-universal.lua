@@ -361,7 +361,7 @@ data:extend(
 		{
 			type = "beam",
 			cooldown = 80,
-			damage_modifier = 15,
+			damage_modifier = 20,
 			projectile_center = {0, 0},
 			range = 32.5,
 			ammo_type = 
@@ -427,7 +427,7 @@ data:extend(
 		{
 			type = "beam",
 			cooldown = 90,
-			damage_modifier = 20,
+			damage_modifier = 25,
 			projectile_center = {0, 0},
 			range = 35,
 			ammo_type = 
@@ -493,7 +493,7 @@ data:extend(
 		{
 			type = "beam",
 			cooldown = 100,
-			damage_modifier = 25,
+			damage_modifier = 30,
 			projectile_center = {0, 0},
 			range = 37.5,
 			ammo_type = 
@@ -576,7 +576,7 @@ data:extend(
 		attack_parameters =
 		{
 			type = "beam",
-			damage_modifier = 2,
+			damage_modifier = 1.5,
 			cooldown = 6,
 			range = 15,
 			projectile_center = {0, 0.25},
@@ -646,7 +646,7 @@ data:extend(
 		attack_parameters =
 		{
 			type = "beam",
-			damage_modifier = 3,
+			damage_modifier = 2,
 			cooldown = 6,
 			range = 18,
 			projectile_center = {0, 0.25},
@@ -711,7 +711,7 @@ data:extend(
 		attack_parameters =
 		{
 			type = "beam",
-			damage_modifier = 4,
+			damage_modifier = 3,
 			cooldown = 6,
 			range = 20,
 			projectile_center = {0, 0.25},
@@ -776,7 +776,7 @@ data:extend(
 		attack_parameters =
 		{
 			type = "beam",
-			damage_modifier = 7.5,
+			damage_modifier = 6,
 			cooldown = 6,
 			range = 22,
 			projectile_center = {0, 0.25},
