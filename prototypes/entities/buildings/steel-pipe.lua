@@ -25,8 +25,8 @@ data:extend(
 		selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
 		fluid_box =
 		{
-			base_area = 1.25,
-			height = 1,
+			base_area = 1,
+			height = 1.25,
 			pipe_connections =
 			{
 				{ position = {0, -1} },
