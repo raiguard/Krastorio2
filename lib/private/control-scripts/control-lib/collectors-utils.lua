@@ -65,9 +65,9 @@ end
 function cu.droppedBiomass()
 	if not cu.random_generator or not cu.random_generator.valid then
 		cu.random_generator = game.create_random_generator()
-		math.randomseed(cu.random_generator())
+		cu.random_generator.re_seed(666)
 	end
-	return math.random(global.COLLECT_PROBABILITY, 100)
+	return cu.random_generator(global.COLLECT_PROBABILITY, 80)
 end
 
 function cu.isTooDistantFromArea(position, area)

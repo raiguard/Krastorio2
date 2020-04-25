@@ -1,12 +1,5 @@
 -----------------------------------------------------------------------------
 -- Remotes
-if global.creep_on_chunk_generated == nil then
-	global.creep_on_chunk_generated  = true
-end
-if global.creep_on_biter_base_built == nil then
-	global.creep_on_biter_base_built = true
-end
-
 if not remote.interfaces["kr-creep"] then
 	remote.add_interface("kr-creep",
 	{
@@ -117,13 +110,13 @@ function pushCreepToGenerate(event)
 end
 
 local function creepOnChunkGenerated(event)
-	if global.creep_on_chunk_generated then
+	if global.creep_on_chunk_generated ~= false then
 		pushCreepToGenerate(event)
 	end
 end
 
 local function creepOnBiterBaseBuilt(event)
-	if global.creep_on_biter_base_built then
+	if global.creep_on_biter_base_built ~= false then
 		pushCreepToGenerate(event)
 	end
 end

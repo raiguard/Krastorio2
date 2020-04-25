@@ -127,9 +127,9 @@ end
 
 function ControlCallbackMerger:unlistenCallBack(event_name, index)
 	if self.listed_events_callbacks[event_name] and self.listed_events_callbacks[event_name][index] then
-		self.listed_events_callbacks[index] = nil
+		self.listed_events_callbacks[event_name][index] = nil
 	end
-	if #self.listed_events_callbacks[event_name] == 0 then
+	if self.listed_events_callbacks[event_name] and #self.listed_events_callbacks[event_name] == 0 then
 		if     event_name == "on_init" then			
 			script.on_init(nil)
 		elseif event_name == "on_configuration_changed" then
