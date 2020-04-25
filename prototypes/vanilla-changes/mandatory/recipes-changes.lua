@@ -572,6 +572,7 @@ krastorio.recipes.addProduct("nuclear-fuel-reprocessing", {type="item", name="tr
 -- More realistic weapons craft
 
 krastorio.recipes.addIngredient("atomic-bomb", {"heavy-rocket", 1})
+krastorio.recipes.replaceIngredient("atomic-bomb", "uranium-235", {"uranium-235", 20})
 krastorio.recipes.setEnergyCost("atomic-bomb", 10)
 	
 krastorio.recipes.replaceIngredient("pistol", "iron-plate", {"iron-plate", 2})

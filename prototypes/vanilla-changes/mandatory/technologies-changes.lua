@@ -140,8 +140,6 @@ krastorio.technologies.removeUnlockRecipe("oil-processing", "chemical-plant")
 krastorio.technologies.removeUnlockRecipe("kovarex-enrichment-process", "nuclear-fuel")
 data.raw.technology["kovarex-enrichment-process"].unit.count = 500
 
-krastorio.technologies.addUnlockRecipe("artillery", "nuclear-artillery-shell")
-
 --------------------------------------------------------------------
 -- Loaders
 if krastorio.general.getSafeSettingValue("kr-loaders") then
@@ -246,6 +244,7 @@ data.raw.technology["nuclear-power"].unit.count = 500
 data.raw.technology["nuclear-fuel-reprocessing"].unit.count = 250
 krastorio.technologies.removePrerequisite("atomic-bomb", "military-4")
 krastorio.technologies.addPrerequisite("atomic-bomb", "kr-military-5")
+krastorio.technologies.addUnlockRecipe("atomic-bomb", "nuclear-artillery-shell")
 data.raw.technology["atomic-bomb"].unit.count = 1500
 
 --------------

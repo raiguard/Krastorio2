@@ -1124,7 +1124,7 @@ data:extend(
           },
           {
             type = "damage",
-            damage = {amount = 400, type = "explosion"}
+            damage = {amount = 500, type = "explosion"}
           },
           {
             type = "create-entity",
@@ -1138,8 +1138,8 @@ data:extend(
               type = "area",
               target_entities = false,
               trigger_from_target = true,
-              repeat_count = 2000,
-              radius = 35,
+              repeat_count = 1000,
+              radius = 20,
               action_delivery =
               {
                 type = "projectile",

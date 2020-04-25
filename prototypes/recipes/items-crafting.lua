@@ -349,8 +349,7 @@ return
 		energy_required = 10,
 		ingredients =
 		{
-			{"steel-plate", 20},
-			{"explosives", 10},
+			{"steel-plate", 5},
 			{"advanced-circuit", 1}
 		},
 		result = "basic-railgun-shell"
@@ -363,7 +362,7 @@ return
 		ingredients =
 		{
 			{"basic-railgun-shell", 1},
-			{"explosives", 10}
+			{"explosives", 3}
 		},
 		result = "explosion-railgun-shell"
     },	
@@ -377,7 +376,7 @@ return
 			{"rocket-fuel", 10},
 			{"rocket-control-unit", 1},
 			{"steel-plate", 5},
-			{"explosives", 10}
+			{"explosives", 5}
 		},
 		result = "explosive-turret-rocket"
     },	
@@ -389,8 +388,8 @@ return
 		ingredients =
 		{
 			{"explosive-turret-rocket", 1},
-			{"steel-plate", 10},
-			{"uranium-235", 5},
+			{"steel-plate", 5},
+			{"uranium-235", 10},
 			{"rocket-control-unit", 1}
 		},
 		result = "nuclear-turret-rocket"
@@ -432,7 +431,7 @@ return
 		{
 			{"imersium-plate", 2},
 			{"heavy-rocket", 1},
-			{"charged-antimatter-fuel-cell", 5},
+			{"charged-antimatter-fuel-cell", 3},
 			{"processing-unit", 1}		
 		},
 		result = "antimatter-rocket"
@@ -461,7 +460,7 @@ return
 			{"rocket-control-unit", 10},
 			{"steel-plate", 10},
 			{"artillery-shell", 1},
-			{"uranium-235", 5}
+			{"uranium-235", 10}
 		},
 		result = "nuclear-artillery-shell"
 	}

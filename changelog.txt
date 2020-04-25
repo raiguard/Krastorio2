@@ -22,6 +22,8 @@ Date: XX.04.2020
     - Boosted personal laser sniper guns, they was too weak compared with the submachine version.
     - Slightly reduced sand consumption.
     - Added water into lithium production recipe.
+    - Nuclear artillery shell moved into Atomic bomb technology.
+    - Reduced cost for turret ammo.
   Fixes:
     - Fixed that inserters hotkey dropping to "near" lane on perpendicular belts had no effect.
     - Fixed rare crash settuping blueprints.
