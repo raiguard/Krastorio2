@@ -20,14 +20,14 @@ return
 		type = "recipe",
 		name = "glass",
 		category = "smelting",
-		energy_required = 3,
+		energy_required = 2,
 		enabled = false,
 		always_show_made_in = true,
 		always_show_products = true,
 		allow_productivity = true,
 		ingredients =
 		{
-			{"sand", 3}
+			{"sand", 2}
 		},
 		result = "glass",
 		result_count = 1

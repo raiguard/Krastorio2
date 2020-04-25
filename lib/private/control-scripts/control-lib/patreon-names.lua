@@ -12,7 +12,9 @@ patreons_list.high_supporters =
 	{"Andrew Deren", 10},
 	{"Aski Rawen", 10},
 	{"Austin", 10},
+	{"George Simpson", 10},
 	{"Jonas Rejman", 10},
+	{"lordfiSh", 10},
 	{"Mark Harrison", 10},
 	{"Matt Tyler", 10},
 	{"Konstantin Popichev", 10},
@@ -30,11 +32,13 @@ patreons_list.high_supporters =
 -- Patreon how donate 9 or less dollars
 patreons_list.low_supporters =
 {
+	"Andrew Spade",
 	"billbo99",
 	"Chosen",
 	"Daniel Vollmer",
 	"Dirk M",
 	"Donny",
+	"Gareth Knowles",
 	"Kai-Chi Huang",
 	"Kartikay Bagla",
 	"Niv",

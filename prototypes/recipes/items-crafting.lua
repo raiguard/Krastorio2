@@ -464,27 +464,5 @@ return
 			{"uranium-235", 5}
 		},
 		result = "nuclear-artillery-shell"
-	},
-	{
-		type = "recipe",
-		name = "kr-creep-virus",
-		enabled = false,
-		energy_required = 20,
-		ingredients =
-		{
-			{"wood", 1}
-		},
-		result = "kr-creep-virus"
-	},
-	{
-		type = "recipe",
-		name = "kr-biter-virus",
-		enabled = false,
-		energy_required = 20,
-		ingredients =
-		{
-			{"wood", 1}
-		},
-		result = "kr-biter-virus"
 	}
 }

@@ -18,7 +18,8 @@ krastorio_patreons =
 	["NukeUFO"] = true,
 	["therightmark"] = true,
 	["Senard"] = true,
-	["jkkelley86"] = true
+	["jkkelley86"] = true,
+	["rougefallout365"] = true
 }
 
 -- Patreon Stuff

@@ -20,6 +20,8 @@ Date: XX.04.2020
     - Now matter bomb and railgun matter explosions can destroy cliff.
     - Nerfed personal laser submachine guns, they was too strong compared with the sniper version.
     - Boosted personal laser sniper guns, they was too weak compared with the submachine version.
+    - Slightly reduced sand consumption.
+    - Added water into lithium production recipe.
   Fixes:
     - Fixed that inserters hotkey dropping to "near" lane on perpendicular belts had no effect.
     - Fixed rare crash settuping blueprints.

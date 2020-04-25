@@ -67,7 +67,8 @@ return
 		allow_productivity = true,
 		ingredients =
 		{
-			{ type = "item", name = "lithium-chloride", amount = 5}
+			{ type = "item", name = "lithium-chloride", amount = 5},
+			{ type = "fluid", name = "water", amount = 50},
 		},
 		results =
 		{
