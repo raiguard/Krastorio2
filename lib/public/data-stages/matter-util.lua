@@ -276,17 +276,6 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 		unlocked_by_technology = "kr-matter-rare-metals-processing"
 	}
 	krastorio.matter_func.createMatterRecipe(raw_rare_metals)
-		
-	-- sand
-	local sand =
-	{
-		item_name = "sand",
-		minimum_conversion_quantity = 10, 
-		matter_value = 1.17, 
-		energy_required = 1,
-		unlocked_by_technology = "kr-matter-stone-processing"
-	}
-	krastorio.matter_func.createMatterRecipe(sand)
 	
 	-- stone
 	local stone =
@@ -396,8 +385,7 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 	{
 		item_name = "quartz",
 		minimum_conversion_quantity = 10, 
-		matter_value = 2.33
-		,
+		matter_value = 2.33,
 		energy_required = 1,
 		only_conversion = true,
 		unlocked_by_technology = "kr-matter-stone-processing"
@@ -405,6 +393,18 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 	krastorio.matter_func.createMatterRecipe(quartz)
 	
 	-- -- Only from matter (matter -> item)
+	
+	-- sand
+	local sand =
+	{
+		item_name = "sand",
+		minimum_conversion_quantity = 10, 
+		matter_value = 1.17, 
+		energy_required = 1,
+		only_deconversion = true,
+		unlocked_by_technology = "kr-matter-stone-processing"
+	}
+	krastorio.matter_func.createMatterRecipe(sand)
 	
 	-- sulfur
 	local sulfur =

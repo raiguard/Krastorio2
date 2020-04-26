@@ -23,6 +23,7 @@ Date: XX.04.2020
     - Slightly reduced sand consumption.
     - Added water into lithium production recipe.
     - Nuclear artillery shell moved into Atomic bomb technology.
+    - Now sand can't anymore be converted in matter.
     - Reduced cost for turret ammo.
     - Now all smelting recipe have the same time(energy) cost.
   Fixes:
