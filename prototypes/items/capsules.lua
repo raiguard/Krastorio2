@@ -8,6 +8,7 @@ data:extend(
 		name = "kr-creep-virus",
 		icon = kr_capsules_icons_path .. "creep-virus.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		capsule_action =
 		{
 		  type = "throw",
@@ -44,6 +45,7 @@ data:extend(
 		name = "kr-biter-virus",
 		icon = kr_capsules_icons_path .. "biter-virus.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		capsule_action =
 		{
 		  type = "throw",

@@ -1,8 +1,9 @@
-if global.biter_virus_active == nil then
-	global.biter_virus_active = false
+
+if creep_virus_active == nil then
+	creep_virus_active = false
 end
-if global.creep_virus_active == nil then
-	global.creep_virus_active = false
+if biter_virus_active == nil then
+	biter_virus_active = false
 end
 
 -- Util function for calculate the round of number
@@ -29,7 +30,7 @@ end
 
 -- Remove all creep tiles for the indicated surface
 function removeAllCreepTiles(surface)
-	if surface and type(surface) == "table" and global.creep_virus_active ~= true then
+	if surface and type(surface) == "table" and creep_virus_active ~= true then
 		-- Find all creep
 		local creeps = surface.find_tiles_filtered
 		{ 
@@ -69,8 +70,8 @@ function removeAllCreepTiles(surface)
 		creeps_for_cicle = round(creeps_count/deincreaserPerIteration(creeps_count))
 		
 		-- If exist some creep
-		if creeps_count > 0 and global.creep_virus_active ~= true then
-			global.creep_virus_active = true -- Lock semaphore
+		if creeps_count > 0 and creep_virus_active ~= true then
+			creep_virus_active = true -- Lock semaphore
 			
 			-- Common random generator
 			local random_generator = game.create_random_generator()
@@ -99,13 +100,13 @@ function removeAllCreepTiles(surface)
 					surface.set_tiles(tiles_to_replace_this_cicle)
 				else
 					ccm:unlistenCallBack("on_nth_tick", 36)
-					global.creep_virus_active = false -- Release semaphore
+					creep_virus_active = false -- Release semaphore
 				end
 				
 				-- If all creeps is removed un-register the function
 				if creeps_count <= 0 then
 					ccm:unlistenCallBack("on_nth_tick", 36)
-					global.creep_virus_active = false -- Release semaphore
+					creep_virus_active = false -- Release semaphore
 				end
 			end
 			
@@ -141,10 +142,10 @@ end
 
 -- Function to remove biters the 33% of biters on the surface where the capsule is throwed
 function playerThrowAntiBiter(event)
-	if event.item and event.item.name == "kr-biter-virus" and not global.biter_virus_active then
+	if event.item and event.item.name == "kr-biter-virus" and not biter_virus_active then
 		local player = game.players[event.player_index]
 		if player and player.valid and player.character and player.character.valid then
-			global.biter_virus_active = true
+			biter_virus_active = true
 			local actual_player_surface = player.character.surface
 			local enemy_entities = actual_player_surface.find_entities_filtered
 			{
@@ -173,7 +174,7 @@ function playerThrowAntiBiter(event)
 				end
 				if entity_to_kill <= 0 then
 					ccm:unlistenCallBack("on_nth_tick", 33)
-					global.biter_virus_active = false
+					biter_virus_active = false
 				end
 			end
 			ccm:listenCallBack(
@@ -188,9 +189,6 @@ function playerThrowAntiBiter(event)
 			
 			-- Reduce by 33% enemy evolution factor
 			game.forces["enemy"].evolution_factor = game.forces["enemy"].evolution_factor * 0.66
-			
-			-- Remove all creep
-			-- removeAllCreepTiles(actual_player_surface)
 		end
 	end	
 end

@@ -1605,7 +1605,7 @@ data:extend(
           action =
           {
             type = "area",
-            radius = 16,
+            radius = 60,
             entity_flags = {"breaths-air"},
             action_delivery =
             {
@@ -1630,7 +1630,7 @@ data:extend(
         scale = 0.2
       }
     ),
-    duration = 60,
+    duration = 360,
     fade_away_duration = 60,
     render_layer = "higher-object-above",
     color = {r = 0.75, g = 0.2, b = 0.5, a = 0.5}
