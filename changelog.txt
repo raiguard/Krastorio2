@@ -27,6 +27,7 @@ Date: XX.04.2020
     - Reduced cost for turret ammo.
     - Now all smelting recipe have the same time(energy) cost.
   Fixes:
+    - Fixed that personal laser defense mk2 equipment don't need military tech card(science pack).
     - Fixed that inserters hotkey dropping to "near" lane on perpendicular belts had no effect.
     - Fixed rare crash settuping blueprints.
     - Fixed rare crash when player character die meanwhile the radioactivity damage try to reduce the character health.
