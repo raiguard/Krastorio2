@@ -145,6 +145,13 @@ function ControlCallbackMerger:unlistenCallBack(event_name, index)
 	end
 end
 
+function ControlCallbackMerger:existCallBack(event_name, index)
+	if self.listed_events_callbacks[event_name] and self.listed_events_callbacks[event_name][index] then
+		return true
+	end
+	return false
+end
+
 -- Return a function that call all functions in the given table,
 -- with the same argument(s) given to the collective function
 -- @callbacks, table of functions
