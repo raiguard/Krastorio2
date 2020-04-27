@@ -8,6 +8,7 @@ Date: 27.04.2020
     - Increased the number of frame of quarry drill animation to be more smooth (only for high resolution, VRAM of potato PCs will not be aggravated).
     - Added viruses! End game capsule that players can use to remove creep definitively (from the map), or reduce the biters on the map drastrically.
     - Introduced a new way to freeze Factorio. :)
+    - Added commands to disable radioactivity if you really really really can't play with it.
   Changes:
     - Some color tweaks for Shelter plus.
     - Reduced blank tech card production, now require 2s instead of 1s and need double ingredients in input for the same output.
@@ -39,6 +40,7 @@ Date: 27.04.2020
     - Fixed that K2 doesn't support recipes that are selectively disabled for normal/marathon mode.
     - Fixed that steel pipe have a worse flow compared with vanilla pipes, if not used many steel pumps (now should have the right 25% of bonus).
     - Fixed shield MK4 recipe with SE installed.
+    - Fixed that disable radioactivity will be not saved.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.11
 Date: 13.04.2020
