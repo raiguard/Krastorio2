@@ -733,7 +733,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
       {
         type = "gun-speed",
         ammo_category = "laser-turret",
-        modifier = 0.15
+        modifier = 0.1
       }
     }
 	data.raw["technology"]["laser-turret-speed-6"].effects =
@@ -741,7 +741,15 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
       {
         type = "gun-speed",
         ammo_category = "laser-turret",
-        modifier = 0.15
+        modifier = 0.1
+      }
+    }
+	data.raw["technology"]["laser-turret-speed-7"].effects =
+    {
+      {
+        type = "gun-speed",
+        ammo_category = "laser-turret",
+        modifier = 0.1
       }
     }
 	
@@ -896,10 +904,10 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 
 	krastorio.technologies.addEffect("laser-turret-speed-1", {type = "gun-speed", ammo_category = "impulse-rifle", modifier = 0.2})
 	krastorio.technologies.addEffect("laser-turret-speed-2", {type = "gun-speed", ammo_category = "impulse-rifle", modifier = 0.2})
-	krastorio.technologies.addEffect("laser-turret-speed-3", {type = "gun-speed", ammo_category = "impulse-rifle", modifier = 0.2})
-	krastorio.technologies.addEffect("laser-turret-speed-4", {type = "gun-speed", ammo_category = "impulse-rifle", modifier = 0.2})
-	krastorio.technologies.addEffect("laser-turret-speed-5", {type = "gun-speed", ammo_category = "impulse-rifle", modifier = 0.2})
-	krastorio.technologies.addEffect("laser-turret-speed-6", {type = "gun-speed", ammo_category = "impulse-rifle", modifier = 0.25})
-	krastorio.technologies.addEffect("laser-turret-speed-7", {type = "gun-speed", ammo_category = "impulse-rifle", modifier = 0.25})
+	krastorio.technologies.addEffect("laser-turret-speed-3", {type = "gun-speed", ammo_category = "impulse-rifle", modifier = 0.15})
+	krastorio.technologies.addEffect("laser-turret-speed-4", {type = "gun-speed", ammo_category = "impulse-rifle", modifier = 0.15})
+	krastorio.technologies.addEffect("laser-turret-speed-5", {type = "gun-speed", ammo_category = "impulse-rifle", modifier = 0.1})
+	krastorio.technologies.addEffect("laser-turret-speed-6", {type = "gun-speed", ammo_category = "impulse-rifle", modifier = 0.1})
+	krastorio.technologies.addEffect("laser-turret-speed-7", {type = "gun-speed", ammo_category = "impulse-rifle", modifier = 0.1})
 	
 end

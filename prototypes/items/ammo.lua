@@ -104,7 +104,7 @@ data:extend(
 					target_effects =
 					{
 						type = "damage",
-						damage = { amount = 250, type="laser"}
+						damage = { amount = 500, type="laser"}
 					}
 				}
 			}

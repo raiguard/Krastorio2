@@ -24,12 +24,16 @@ Date: 27.04.2020
     - Slightly reduced sand consumption.
     - Added water into lithium production recipe.
     - Nuclear artillery shell moved into Atomic bomb technology.
-    - Now sand can't anymore be converted in matter.
+    - Now sand can't anymore be converted in matter, to avoid cheaty matter creation loops.
     - Reduced cost for turret ammo.
     - Now all smelting recipe have the same time(energy) cost.
     - Removed TinyStart from incompatible mods, due the fact that in the 0.18.5 version was added a compatibility fix for K2.
     - Reduced amount of sand in the Imersite powder recipe.
     - Now crusher destroy items quicker (5->2).
+    - Now you can crush Imersite crystals for Imersite powder production.
+    - Laser turret have been nerfed a bit. But still more powerfull than vanilla.
+    - Impulse rifle damage have been increased (250->500).
+    - Many minor changes.
   Fixes:
     - Fixed that personal laser defense mk2 equipment don't need military tech card(science pack).
     - Fixed that inserters hotkey dropping to "near" lane on perpendicular belts had no effect.

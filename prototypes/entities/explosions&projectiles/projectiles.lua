@@ -407,8 +407,8 @@ data:extend(
               type = "area",
               target_entities = false,
               trigger_from_target = true,
-              repeat_count = 250,
-              radius = 16,
+              repeat_count = 750,
+              radius = 20,
               action_delivery =
               {
                 type = "projectile",
@@ -423,7 +423,7 @@ data:extend(
           },
           {
             type = "show-explosion-on-chart",
-            scale = 2
+            scale = 3
           }
         }
       }
@@ -1124,12 +1124,20 @@ data:extend(
           },
           {
             type = "damage",
-            damage = {amount = 500, type = "explosion"}
+            damage = {amount = 750, type = "explosion"}
+          },
+          {
+            type = "damage",
+            damage = {amount = 750, type = "radioactive"}
           },
           {
             type = "create-entity",
             entity_name = "big-scorchmark",
             check_buildability = true
+          },
+          {
+            type = "show-explosion-on-chart",
+            scale = 2
           },
           {
             type = "nested-result",
@@ -1138,8 +1146,8 @@ data:extend(
               type = "area",
               target_entities = false,
               trigger_from_target = true,
-              repeat_count = 1000,
-              radius = 20,
+              repeat_count = 750,
+              radius = 16,
               action_delivery =
               {
                 type = "projectile",
