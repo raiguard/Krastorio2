@@ -39,7 +39,6 @@
 		"! bobequipment >= 0.17.0",
 		"! bobvehicleequipment >= 0.17.0",
 		"! custom_power_armor_fix >= 0.10.0",
-		"! laborat >= 0.1.0",	
-		"! TinyStart >= 0.18.3"
+		"! laborat >= 0.1.0"
 	]
 }
