@@ -22,7 +22,7 @@ return
 		name = "kr-creep-virus",
 		category = "bioprocessing",
 		enabled = false,
-		energy_required = 60,
+		energy_required = 600,
 		ingredients =
 		{
 			{type="item",  name="poison-capsule",    amount=1},
@@ -37,7 +37,7 @@ return
 		name = "kr-biter-virus",
 		category = "bioprocessing",
 		enabled = false,
-		energy_required = 60,
+		energy_required = 600,
 		ingredients =
 		{
 			{type="item",  name="poison-capsule",  amount=1},

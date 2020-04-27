@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.12
-Date: XX.04.2020
+Date: 27.04.2020
   Features:
     - Added option for turn on infinite oil in the mod settings.
     - Added option for turn on Substation MK2 in the mod settings. If someday we find time to create a unique sprites for this, we will do this as default part of K2.

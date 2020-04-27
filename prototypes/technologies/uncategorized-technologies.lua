@@ -652,7 +652,7 @@ data:extend(
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "rocket-turret.png",
 		icon_size = 128,
-		prerequisites = {"kr-military-5", "kr-advanced-tech-card", "kr-railgun-turret"},
+		prerequisites = {"kr-military-5", "kr-advanced-tech-card", "kr-railgun-turret", "atomic-bomb"},
 		effects =
 		{
 			{
