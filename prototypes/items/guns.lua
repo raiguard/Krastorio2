@@ -1,3 +1,28 @@
+local impulse_rifle_shot_sound =
+{
+	variations =
+	{
+		{
+			filename = kr_weapons_sounds_path .. "impulse-shot-1.ogg",
+			volume = 0.85
+		},
+		{
+			filename = kr_weapons_sounds_path .. "impulse-shot-2.ogg",
+			volume = 0.85
+		},
+		{
+			filename = kr_weapons_sounds_path .. "impulse-shot-3.ogg",
+			volume = 0.85
+		}
+	},
+	aggregation =
+	{
+		max_count = 2,
+		remove = false,
+		count_already_playing = true
+	}
+}
+
 data:extend(
 {
 -----------------------------------------------------------------------------------------------------------------
@@ -19,13 +44,7 @@ data:extend(
 			projectile_creation_distance = 0.6,
 			fire_penalty = 1,
 			range = 50,
-			sound =
-			{
-				{
-					filename = kr_weapons_sounds_path .. "impulse-rifle.ogg",
-					volume = 0.75
-				}
-			}
+			sound = impulse_rifle_shot_sound
 		},
 		stack_size = 10
 	},

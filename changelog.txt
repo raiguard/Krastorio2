@@ -1,8 +1,14 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.13
 Date: 27.04.2020
+  Features:
+    - Now in the matter API of the mod, is possible specify a different (optional) value for converting the item into matter. 
+  Changes:
+    - Changed research server working sound.
+    - Changed impulse rifle sound.
   Fixes:
     - Fixed error with "Deadlock's Stacking Beltboxes & Compact Loaders" mod.
+    - Krastorio 2 require Factorio 0.18.21 to be loaded properly.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.12
 Date: 27.04.2020

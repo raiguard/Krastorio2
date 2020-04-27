@@ -52,16 +52,23 @@ if mods["deadlock-beltboxes-loaders"] then
 		loader_ingredients  = 
 		{
 			{loader_tier_4.name, 1},
+			{"low-density-structure", 2},
 			{"imersium-gear-wheel", 20}		
 		},
 		beltbox_ingredients = 
 		{
 			{"kr-advanced-transport-belt-beltbox", 1},
+			{"low-density-structure", 4},
 			{"imersium-gear-wheel", 10}		
 		},
 		beltbox_technology = "deadlock-stacking-5"
 	})
-	krastorio.technologies.addPrerequisite("deadlock-stacking-5", "deadlock-stacking-4")	
+	krastorio.technologies.addPrerequisite("deadlock-stacking-5", "deadlock-stacking-4")
+
+	krastorio.recipes.convertIngredient("express-transport-belt-loader", "iron-gear-wheel", "steel-gear-wheel")
+
+	krastorio.recipes.removeIngredient("express-transport-belt-beltbox", "iron-plate")
+	krastorio.recipes.convertIngredient("express-transport-belt-beltbox", "iron-gear-wheel", "steel-gear-wheel")
 		
 	local stackable_krastorio_items = 
 	{

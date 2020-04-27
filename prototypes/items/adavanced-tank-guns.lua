@@ -64,7 +64,7 @@ data:extend(
 			sound =
 			{
 				{
-					filename = kr_weapons_sounds_path .. "impulse-rifle.ogg",
+					filename = kr_weapons_sounds_path .. "heavy-impulse-shot.ogg",
 					volume = 1.0
 				}
 			}
