@@ -16,14 +16,16 @@ end
 if not commands.commands["kr-enable-radioactivity"] then
 	local function enableRadioactivity()
 		global.radioactivity_enabled = true
+		game.print({"other.kr-enable-radioactivity"})
 	end
-	commands.add_command("kr-enable-radioactivity", {"other.kr-enable-radioactivity"}, enableRadioactivity)
+	commands.add_command("kr-enable-radioactivity", {"other.kr-enable-radioactivity-help"}, enableRadioactivity)
 end
 if not commands.commands["kr-disable-radioactivity"] then
 	local function disableRadioactivity()
 		global.radioactivity_enabled = false
+		game.print({"other.kr-disable-radioactivity"})
 	end
-	commands.add_command("kr-disable-radioactivity", {"other.kr-disable-radioactivity"}, disableRadioactivity)
+	commands.add_command("kr-disable-radioactivity", {"other.kr-disable-radioactivity-help"}, disableRadioactivity)
 end
 
 local function onInitAndConf()
