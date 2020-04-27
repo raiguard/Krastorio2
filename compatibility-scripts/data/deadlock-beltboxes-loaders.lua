@@ -27,15 +27,13 @@ if mods["deadlock-beltboxes-loaders"] then
 		{
 			{loader_tier_3.name, 1},
 			{"steel-gear-wheel", 20},
-			{"rare-metals", 5},			
-			{type = "fluid", name = "sulfuric-acid", amount = 50, catalyst_amount = 50}	
+			{"rare-metals", 5}	
 		},
 		beltbox_ingredients = 
 		{
 			{"express-transport-belt-beltbox", 1},
 			{"steel-gear-wheel", 20},
-			{"rare-metals", 5},			
-			{type = "fluid", name = "sulfuric-acid", amount = 50, catalyst_amount = 50}	
+			{"rare-metals", 5}
 		},
 		beltbox_technology = "deadlock-stacking-4"
 	})
@@ -54,14 +52,12 @@ if mods["deadlock-beltboxes-loaders"] then
 		loader_ingredients  = 
 		{
 			{loader_tier_4.name, 1},
-			{"imersium-gear-wheel", 20},			
-			{type = "fluid", name = "nitric-acid", amount = 25, catalyst_amount = 50}
+			{"imersium-gear-wheel", 20}		
 		},
 		beltbox_ingredients = 
 		{
 			{"kr-advanced-transport-belt-beltbox", 1},
-			{"imersium-gear-wheel", 10},			
-			{type = "fluid", name = "nitric-acid", amount = 25, catalyst_amount = 50}
+			{"imersium-gear-wheel", 10}		
 		},
 		beltbox_technology = "deadlock-stacking-5"
 	})
