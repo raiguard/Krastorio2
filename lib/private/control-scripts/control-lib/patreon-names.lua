@@ -5,6 +5,7 @@ patreons_list.high_supporters =
 {
 	{"Chris Höppner", 20},
 	{"James Kelley", 20},
+	{"John Wrangle", 20},
 	{"Senard", 20},
 	{"Chris Hazen", 15},
 	{"Egdod", 15},
