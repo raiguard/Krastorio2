@@ -43,7 +43,7 @@ return
 		results =
 		{
 			{"imersite-powder", 3},
-			{"sand", 6}
+			{"sand", 3}
 		},
 		main_product = "imersite-powder"
 	},
@@ -304,13 +304,57 @@ return
 		},
 	},
 	
+	{
+		type = "recipe",
+		name = "imersite-crystal-to-dust",
+		icon = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder.png",
+		icon_size = 64,
+		subgroup = "intermediate-product",
+		order = "e[ei-electronic-components]",
+		category = "crushing",
+		hide_from_player_crafting = true,
+		always_show_made_in = true,
+		allow_as_intermediate = false,
+		allow_intermediates = false,
+		always_show_products = true,
+		energy_required = 1,
+		enabled = true,
+		allow_productivity = true,
+		ingredients =
+		{
+			{"imersite-crystal", 1}
+		},
+		results = 
+		{
+			{"imersite-powder", 6}
+		},
+	},
 	
-	
-	
-	
-	
-	
-	
+	{
+		type = "recipe",
+		name = "imersite-crystal-to-dust",
+		icon = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder.png",
+		icon_size = 64,
+		subgroup = "intermediate-product",
+		order = "e[ei-electronic-components]",
+		category = "crushing",
+		hide_from_player_crafting = true,
+		always_show_made_in = true,
+		allow_as_intermediate = false,
+		allow_intermediates = false,
+		always_show_products = true,
+		energy_required = 1,
+		enabled = true,
+		allow_productivity = true,
+		ingredients =
+		{
+			{"imersite-crystal", 1}
+		},
+		results = 
+		{
+			{"imersite-powder", 6}
+		},
+	}
 	
 	
 	
