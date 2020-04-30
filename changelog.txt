@@ -4,6 +4,7 @@ Date: XX.04.2020
   Fixes:
     - Fixed that substation MK2 return the wrong item when mined.
     - Fixed library bug with functions to compare mod versions (could have influenced compatibility).
+    - Removed debug prints from creeps script.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.13
 Date: 27.04.2020

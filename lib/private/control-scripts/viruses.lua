@@ -76,8 +76,6 @@ function removeCreepFromTheSurface(surface)
 		-- Get a random generator
 		local random_generator = getRandomGenerator()
 		
-		game.print("starting removing creep, total: "..creeps_count)
-		
 		-- Function on 10th ticks (will automatically remove itselft from the list of callback when the works is finished)
 		local function slowlyRemoveCreep()			
 			if surface and surface.valid then
