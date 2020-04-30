@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.14
 Date: XX.04.2020
+  Changes:
+    - Initial refactoring SE compatibility for the 0.3.X
   Fixes:
     - Fixed that substation MK2 return the wrong item when mined.
     - Fixed library bug with functions to compare mod versions (could have influenced compatibility).

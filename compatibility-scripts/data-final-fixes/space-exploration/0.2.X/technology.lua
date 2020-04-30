@@ -1,4 +1,4 @@
-if not mods["space-exploration"] then return end
+if not mods["space-exploration"] or not krastorio.general.isVersionLesserEqualThan(mods["space-exploration"], "0.2.999") then return end
 
 local data_util = require("__space-exploration__/data_util")
 
