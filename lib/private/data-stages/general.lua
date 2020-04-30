@@ -9,9 +9,9 @@ function krastorio.general.isVersionGreaterThan(_mod_version, _version)
 	local mod_version = split(_mod_version, ".")	
 	local version     = split(_version, ".")	
 	for i = 1, #mod_version do
-		if mod_version[i] ~= version[i] and mod_version[i] > version[i] then
+		if mod_version[i] > version[i] then
 			return true
-		else
+		elseif mod_version[i] ~= version[i] then
 			return false
 		end
 	end	
@@ -29,9 +29,9 @@ function krastorio.general.isVersionLesserThan(_mod_version, _version)
 	local mod_version = split(_mod_version, '.')	
 	local version     = split(_version, '.')	
 	for i = 1, #mod_version do
-		if mod_version[i] ~= version[i] and mod_version[i] < version[i] then
+		if mod_version[i] < version[i] then
 			return true
-		else
+		elseif mod_version[i] ~= version[i] then
 			return false
 		end
 	end	
