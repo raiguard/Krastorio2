@@ -6,6 +6,7 @@ Date: XX.04.2020
   Changes:
     - Initial refactoring SE compatibility for the 0.3.X
   Fixes:
+    - Fixed missing note in the changelog.
     - Fixed that substation MK2 return the wrong item when mined.
     - Fixed library bug with functions to compare mod versions (could have influenced compatibility).
     - Removed debug prints from creeps script.
@@ -32,6 +33,7 @@ Date: 27.04.2020
     - Introduced a new way to freeze Factorio. :)
     - Added commands to disable radioactivity if you really really really can't play with it.
   Changes:
+    - Removed stone from quartz recipe to avoid productivity exploit loops.
     - Some color tweaks for Shelter plus.
     - Reduced blank tech card production, now require 2s instead of 1s and need double ingredients in input for the same output.
     - Increased richness of Imersite.
