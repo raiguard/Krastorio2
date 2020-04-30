@@ -1,10 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.14
-Date: XX.04.2020
+Date: 30.04.2020
   Features:
     - Now is possible use sand to make landfill.
   Changes:
-    - Initial refactoring SE compatibility for the 0.3.X
+    - Initial refactoring SE compatibility for the 0.3.X, this update will test if the 0.2.X was damaged.
   Fixes:
     - Fixed missing note in the changelog.
     - Fixed that substation MK2 return the wrong item when mined.
