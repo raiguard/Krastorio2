@@ -133,7 +133,7 @@ krastorio.icons.setItemIcon("green-wire",                             kr_items_i
 krastorio.icons.setItemIcon("atomic-bomb",                            kr_icons_path .. "ammo/atomic-bomb.png", 64, 4)
 krastorio.icons.setItemIcon("artillery-shell",                        kr_icons_path .. "ammo/artillery-shell.png", 64, 4)
 -- Landfill
-local landfill = krastorio.items.getItem("landfill")	
+local landfill = data.raw.recipe["landfill"] or false	
 local stone    = krastorio.items.getItem("stone")	
 if landfill and stone then
 	krastorio.icons.addOverlayIcons(landfill, {{icon=stone.icon,  icon_size=stone.icon_size}}, landfill.icon_size, 0.26, {8,-8})
