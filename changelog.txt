@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.14
 Date: XX.04.2020
+  Features:
+    - Now is possible use sand to make landfill.
   Changes:
     - Initial refactoring SE compatibility for the 0.3.X
   Fixes:

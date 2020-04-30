@@ -98,6 +98,27 @@ return
 	},	
 	{
 		type = "recipe",
+		name = "landfill-2",
+		localized_name = {"item-name.landfill"},
+		localized_description = {"item-description.landfill"},
+		icons = 
+		{
+			{icon = "__base__/graphics/icons/landfill.png", icon_size = 64},
+			{icon = kr_items_with_variations_icons_path .. "sand/sand.png", icon_size = 64, scale = 0.26, shift = {8,-8}}
+		},
+		category = "crafting-with-fluid",
+		enabled = false,
+		allow_as_intermediate = false,
+		energy_required = 0.5,
+		ingredients =
+		{
+			{ "sand", 50 },
+			{ type = "fluid", name = "water", amount = 50 }
+		},
+		result = "landfill"
+    },
+	{
+		type = "recipe",
 		name = "empty-dt-fuel",
 		energy_required = 10,
 		enabled = false,

@@ -105,9 +105,16 @@ end
 
 -- @item_or_recipe, item or recipe
 function krastorio.icons.addOverlayIcons(item_or_recipe, icons_to_add, icon_size, scale, shift)
-	scale = (scale or 1)
-	shift = (shift or {0, 0})
-	icon_size = (icon_size or 64)
+	local scale = (scale or 1)
+	local shift = (shift or {0, 0})
+	local icon_size = (icon_size or item_or_recipe.icon_size or 64)
+	if type(icons_to_add) == "string" then
+		icons_to_add = 
+		{{
+			icon = icons_to_add, 
+			icon_size = icon_size
+		}}
+	end
 	
 	if not item_or_recipe.icons then		
 		-- normalize to icon specification option 1, with icon size defined in each layer
