@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.15
+Date: XX.04.2020
+  Features:
+    - Now use circuit connections on quarry drill.
+  Fixes:
+    - Fixed landfill icon changing instead of recipe icon.
+---------------------------------------------------------------------------------------------------
 Version: 0.9.14
 Date: 30.04.2020
   Features:

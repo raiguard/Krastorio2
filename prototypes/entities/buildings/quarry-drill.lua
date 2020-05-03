@@ -1,5 +1,15 @@
 local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
 local sounds      = require("__base__/prototypes/entity/demo-sounds")
+circuit_connector_definitions["kr-quarry-drill"] = circuit_connector_definitions.create
+(
+	universal_connector_template,
+	{
+		{ variation = 0, main_offset = util.by_pixel(5, -118), shadow_offset = util.by_pixel(7, -118), show_shadow = true },
+		{ variation = 2, main_offset = util.by_pixel(100, -22), shadow_offset = util.by_pixel(102, -22), show_shadow = true },
+		{ variation = 4, main_offset = util.by_pixel(-4, 82), shadow_offset = util.by_pixel(-2, 82), show_shadow = true },
+		{ variation = 6, main_offset = util.by_pixel(-100, -15), shadow_offset = util.by_pixel(-98, -15), show_shadow = true }
+	}
+)
 
 data:extend(
 {
@@ -103,6 +113,9 @@ data:extend(
 			sound = { filename = kr_buildings_sounds_path .. "quarry-drill.ogg" },
 			idle_sound = { filename = "__base__/sound/idle1.ogg" },
 			max_sounds_per_type = 2
-		}
+		},
+		circuit_wire_connection_points = circuit_connector_definitions["kr-quarry-drill"].points,
+		circuit_connector_sprites = circuit_connector_definitions["kr-quarry-drill"].sprites,
+		circuit_wire_max_distance = default_circuit_wire_max_distance
 	}
 })
