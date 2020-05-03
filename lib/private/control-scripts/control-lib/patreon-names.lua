@@ -27,7 +27,8 @@ patreons_list.high_supporters =
 	{"George Elliott-Hunter", 6},
 	{"Сергій Руденко", 6},
 	{"Jan Dragsbæk", 6},
-	{"rcobbe", 6}
+	{"rcobbe", 6},
+	{"donut7163", 10}
 }
 
 -- Patreon how donate 9 or less dollars
