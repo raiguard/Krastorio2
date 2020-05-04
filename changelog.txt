@@ -3,7 +3,9 @@ Version: 0.9.15
 Date: XX.04.2020
   Features:
     - Now is possible use circuit connections on quarry drill to read patch informations.
+    - Improved Schall Uranium Processing, users notice that uranium fuel cell recipe cost was too cheap for Krastorio 2.
   Fixes:
+    - Fixed wrong early robot battery upgrade prerequisites.
     - Fixed landfill item icon changing instead of recipe icon.
     - Fixed UPS drop using anti creep virus when there isn't creep on map (https://mods.factorio.com/mod/Krastorio2/discussion/5eaf2f90795d4c000d8501cd).
     - Fixed desync in long loaded games when collecting creep (https://mods.factorio.com/mod/Krastorio2/discussion/5eac7b88e0fdb1000b1b70d0). 
