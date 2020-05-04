@@ -28,5 +28,5 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
 end
 
 if tile_error then
-	krastorio.general.printWarningMessage(krastorio_assertions[1], "Warning! Have been installed too much mods that add tiles.\nDue the Factorio engine limitation, Factorio can't load more than 255 different tile types. One or more mod, that add tiles to the game, must be disabled.")
+	krastorio.general.printWarningMessage(krastorio_assertions[1], "Warning! Have been installed too much mods that add tiles.\nDue the Factorio engine limitation, Factorio can't load more than 255 different tile types. One or more mods, that add tiles to the game, must be disabled.")
 end

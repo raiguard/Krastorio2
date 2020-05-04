@@ -5,6 +5,7 @@ local function transferFromFurnacesToAssemblers(furnace_name)
 		local furnace = krastorio_utils.tables.fullCopy(data.raw.furnace[furnace_name])
 		furnace.type = "assembling-machine"
 		furnace.source_inventory_size = 2
+		furnace.energy_usage = "350kW"
 		data.raw.furnace[furnace_name] = nil
 		data:extend({furnace})
 	end
@@ -56,8 +57,6 @@ data.raw["boiler"]["boiler"].energy_source.emissions_per_minute = 20
 data.raw["mining-drill"]["pumpjack"].icon = kr_entities_icons_path .. "oil-pumpjack.png"
 data.raw["mining-drill"]["pumpjack"].icon_size = 64
 data.raw["mining-drill"]["pumpjack"].icon_mipmaps = nil
-data.raw["mining-drill"]["pumpjack"].energy_usage = "100kW"
-data.raw["mining-drill"]["pumpjack"].mining_speed = 2
 data.raw["mining-drill"]["pumpjack"].radius_visualisation_picture.filename = kr_entities_path .. "oil-pumpjack/oil-pumpjack-radius-visualization.png"
 data.raw["mining-drill"]["pumpjack"].base_picture.sheets =
 {
@@ -174,12 +173,94 @@ data.raw.corpse["pumpjack-remnants"].animation = make_rotated_animation_variatio
 	}
 })
 
+-- Offshore pump
+data.raw["offshore-pump"]["offshore-pump"].pumping_speed = 20.8334
+
+-- Chemical plant
+--data.raw["assembling-machine"]["chemical-plant"].energy_source.emissions_per_minute = 2
+
+-- E Drill
+data.raw["mining-drill"]["electric-mining-drill"].fast_replaceable_group = "electric-mining-drill"
+data.raw["mining-drill"]["electric-mining-drill"].next_upgrade = "kr-electric-mining-drill-mk2"
+
 -- Lab
 data.raw.lab["lab"].fast_replaceable_group = "lab"
 data.raw.lab["lab"].next_upgrade = "biusart-lab"
 
 -- Solar panel
 data.raw["solar-panel"]["solar-panel"].production = "100KW"
+data.raw["solar-panel"]["solar-panel"].fast_replaceable_group = "solar-panel"
 
 -- Radar
 data.raw.radar["radar"].fast_replaceable_group = "radar"
+
+-- Wall&gate
+data.raw.wall["stone-wall"].resistances =
+{
+  {
+	type = "physical",
+	decrease = 3,
+	percent = 20
+  },
+  {
+	type = "impact",
+	decrease = 45,
+	percent = 60
+  },
+  {
+	type = "explosion",
+	decrease = 50,
+	percent = 80
+  },
+  {
+	type = "radioactive",
+	percent = 100
+  },
+  {
+	type = "fire",
+	percent = 100
+  },
+  {
+	type = "acid",
+	percent = 80
+  },
+  {
+	type = "laser",
+	percent = 70
+  }
+}
+data.raw.gate["gate"].resistances =
+{
+  {
+	type = "physical",
+	decrease = 3,
+	percent = 20
+  },
+  {
+	type = "impact",
+	decrease = 45,
+	percent = 60
+  },
+  {
+	type = "explosion",
+	decrease = 50,
+	percent = 80
+  },
+  {
+	type = "radioactive",
+	percent = 100
+  },
+  {
+	type = "fire",
+	percent = 100
+  },
+  {
+	type = "acid",
+	percent = 80
+  },
+  {
+	type = "laser",
+	percent = 70
+  }
+}
+

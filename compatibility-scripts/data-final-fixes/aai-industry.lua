@@ -13,6 +13,9 @@ if mods["aai-industry"] then
 	-- steam power engine
 	krastorio.technologies.convertPrerequisiteFromAllTechnologies("steam-power", "kr-steam-engine")
 	data.raw.technology["steam-power"] = nil
+	-- Removed Krastorio drill tech-card
+	krastorio.technologies.convertPrerequisiteFromAllTechnologies("kr-electric-mining-drill", "electric-mining")
+	data.raw.technology["kr-electric-mining-drill"] = nil
 
 	krastorio.technologies.addUnlockRecipe("kr-basic-fluid-handling", "pipe")
 	krastorio.technologies.addUnlockRecipe("kr-basic-fluid-handling", "pipe-to-ground")
@@ -30,6 +33,7 @@ if mods["aai-industry"] then
 	
 	krastorio.technologies.addPrerequisite("basic-automation", "kr-automation-core")
 	krastorio.technologies.addPrerequisite("kr-basic-fluid-handling", "electricity")
+	krastorio.technologies.removeUnlockRecipe("electricity", "automation-science-pack")
 
 	-- -- -- Recipes fixes
 	krastorio.recipes.uniteDuplicateItemsOfRecipe("solar-panel")

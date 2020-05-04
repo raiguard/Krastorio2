@@ -204,9 +204,9 @@ if not krastorio.science_pack_recipes then
 		ingredients = 
 		{
 			{"blank-tech-card", 10},
-			{"uranium-238", 10},
 			{"fast-transport-belt", 10},
-			{"productivity-module", 5}			
+			{"productivity-module", 5},
+			{"uranium-238", 5}
 		},
 		result = "production-science-pack"
 	}

@@ -34,6 +34,9 @@ data.raw.item["personal-laser-defense-equipment"].order	  = "d[active-defense]-b
 
 -- Gate and wall
 data.raw.item["stone-wall"].subgroup          			  = "vanilla-turrets"
-data.raw.item["stone-wall"].order	  = "001[stone-wall]"
-data.raw.item["gate"].subgroup          			  = "vanilla-turrets"
-data.raw.item["gate"].order	  = "002[gate]"
+data.raw.item["stone-wall"].order	 					  = "001[stone-wall]"
+data.raw.item["gate"].subgroup          			      = "vanilla-turrets"
+data.raw.item["gate"].order								  = "002[gate]"
+
+-- Assembling machine
+data.raw.item["assembling-machine-3"].order				 = "c1[assembling-machine-3]"

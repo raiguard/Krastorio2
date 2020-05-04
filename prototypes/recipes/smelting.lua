@@ -5,48 +5,48 @@ return
 		type = "recipe",
 		name = "coke",
 		category = "smelting",
-		energy_required = 10,
+		energy_required = 16,
 		enabled = false,
 		allow_productivity = true,
 		ingredients =
 		{
-			{"coal", 4},
-			{"wood", 4}
+			{"coal", 6},
+			{"wood", 6}
 		},
 		result = "coke",
-		result_count = 4
+		result_count = 6
 	},
 	{
 		type = "recipe",
 		name = "glass",
 		category = "smelting",
-		energy_required = 3,
+		energy_required = 16,
 		enabled = false,
 		always_show_made_in = true,
 		always_show_products = true,
 		allow_productivity = true,
 		ingredients =
 		{
-			{"sand", 3}
+			{"sand", 16}
 		},
 		result = "glass",
-		result_count = 1
+		result_count = 8
 	},
 	{
 		type = "recipe",
 		name = "silicon",
 		category = "smelting",
-		energy_required = 6.4,
+		energy_required = 16,
 		enabled = false,
 		always_show_made_in = true,
 		always_show_products = true,
 		allow_productivity = true,
 		ingredients = 
 		{
-			{"quartz", 6}
+			{"quartz", 18}
 		},
 		result = "silicon",
-		result_count = 3
+		result_count = 9
     },
 	{
 		type = "recipe",

@@ -1,5 +1,5 @@
-local default_locomotive_color = {r = 0.50, g = 0.54, b = 0.53, a = 0.5}
-local nuclear_smoke_color = {r = 0.5,  g = 0.5, b = 0.45, a = 0.35}
+local default_locomotive_color = {r = 0.50, g = 0.65, b = 0.53, a = 0.5}
+local nuclear_smoke_color = {r = 0.5,  g = 0.55, b = 0.45, a = 0.25}
 local hit_effects = require ("__base__.prototypes.entity.demo-hit-effects")
 local sounds = require("__base__.prototypes.entity.demo-sounds")
 
@@ -41,6 +41,7 @@ data:extend(
 		minable = {mining_time = 1, result = "kr-nuclear-locomotive"},
 		mined_sound = {filename = "__core__/sound/deconstruct-medium.ogg"},
 		max_health = 1500,
+		equipment_grid = "kr-locomotive-grid",
 		corpse = "locomotive-remnants",
 		dying_explosion = "locomotive-explosion",
 		collision_box = {{-0.6, -2.6}, {0.6, 2.6}},
@@ -92,7 +93,7 @@ data:extend(
 		burner =
 		{
 			fuel_category = "nuclear",
-			effectivity = 0.5,
+			effectivity = 0.1,
 			fuel_inventory_size = 1,
 			burnt_inventory_size = 1,
 			smoke =

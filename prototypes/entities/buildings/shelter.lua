@@ -1,3 +1,9 @@
+local kr_icons_size = false
+
+if krastorio.general.getSafeSettingValue("kr-large-icons") then
+kr_icons_size = true
+end
+
 local empty_sprite =
 {
 	filename = kr_entities_path .. "empty.png",
@@ -103,7 +109,7 @@ data:extend(
 		flags = {"player-creation", "not-rotatable", "not-blueprintable"},
 		minable = {mining_time = 0.5, result = "kr-shelter"},
 		max_health = 1500,
-		corpse = "kr-big-random-pipes-remnant",
+		corpse = "kr-medium-random-pipes-remnant",
 		collision_box = {{-2.75, -2.75}, {2.75, 2.75}},
 		selection_box = {{-3, -3}, {3, 3.20}},
 		resistances = 
@@ -114,9 +120,9 @@ data:extend(
 		},
 		picture = shelter_animation,
 		inventory_size = 200,
-		scale_info_icons = true,
-		open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume = 0.5 },
-		close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.6 },
+		scale_info_icons = kr_icons_size,
+		open_sound = { filename = kr_sounds_mod .. "buildings/open.ogg", volume = 1 },
+		close_sound = { filename = kr_sounds_mod .. "buildings/close.ogg", volume = 1 },
 		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },		
 	},
 	-- Shelter light

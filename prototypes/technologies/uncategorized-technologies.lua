@@ -19,7 +19,7 @@ data:extend(
 		prerequisites = {},
 		unit =
 		{
-			count = 50,
+			count = 25,
 			ingredients =
 			{
 				{"basic-tech-card", 1}
@@ -44,12 +44,12 @@ data:extend(
 		prerequisites = {"steel-axe", "kr-imersium-processing"},
 		unit =
 		{
-			count = 250,
+			count = 200,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
+				{"advanced-tech-card", 1},
 				{"matter-tech-card", 1}
 			},
 			time = 60
@@ -181,10 +181,9 @@ data:extend(
 		prerequisites = { "kr-fluids-chemistry", "electronics" },
 		unit =
 		{
-			count = 150,
+			count = 175,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
@@ -221,10 +220,9 @@ data:extend(
 		order = "a-e-d",
 		unit =
 		{
-			count = 250,
+			count = 275,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
@@ -265,10 +263,10 @@ data:extend(
 				recipe = krastorio.recipes.changed_names["dt-fuel"] or "dt-fuel"
 			}			
 		},
-		prerequisites = {"advanced-electronics-2", "kr-lithium-processing", "nuclear-power", "utility-science-pack", "low-density-structure"},
+		prerequisites = {"advanced-electronics-2", "kr-lithium-processing", "nuclear-power", "utility-science-pack", "low-density-structure", "kovarex-enrichment-process"},
 		unit =
 		{
-			count = 1000,
+			count = 1500,
 			ingredients = 
 			{
 				{"automation-science-pack", 1},
@@ -307,7 +305,7 @@ data:extend(
 		prerequisites = {"oil-processing"},
 		unit =
 		{
-			count = 100,
+			count = 125,
 			ingredients = 
 			{
 				{"basic-tech-card", 1},
@@ -341,7 +339,7 @@ data:extend(
 		order = "c-a",
         unit =
         {
-            count = 100,
+            count = 125,
             ingredients =
             {
 				{"basic-tech-card", 1},
@@ -388,10 +386,9 @@ data:extend(
 		order = "d-a",
         unit =
         {
-            count = 250,
+            count = 275,
             ingredients =
             {
-				{"basic-tech-card", 1},
                 {"automation-science-pack", 1},
                 {"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
@@ -434,7 +431,6 @@ data:extend(
 			count = 150,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
                 {"automation-science-pack", 1},
                 {"logistic-science-pack", 1},
 				{"military-science-pack", 1},
@@ -480,10 +476,9 @@ data:extend(
 		prerequisites = {"kr-advanced-chemistry"},
 		unit =
 		{
-			count = 250,
+			count = 275,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
                 {"automation-science-pack", 1},
                 {"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
@@ -511,10 +506,9 @@ data:extend(
 		prerequisites = {"kr-advanced-chemistry"},
 		unit =
 		{
-			count = 250,
+			count = 275,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
                 {"automation-science-pack", 1},
                 {"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
@@ -560,6 +554,65 @@ data:extend(
     },
 	{
 		type = "technology",
+		name = "kr-automation",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "advanced-assembling-machine.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",			
+				recipe = "kr-advanced-assembling-machine"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["kr-s-c-copper-cable"] or "kr-s-c-copper-cable"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["kr-s-c-iron-stick"] or "kr-s-c-iron-stick"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["kr-s-c-iron-gear-wheel"] or "kr-s-c-iron-gear-wheel"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["kr-s-c-iron-beam"] or "kr-s-c-iron-beam"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["kr-s-c-steel-gear-wheel"] or "kr-s-c-steel-gear-wheel"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["kr-s-c-steel-beam"] or "kr-s-c-steel-beam"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["kr-s-c-imersium-gear-wheel"] or "kr-s-c-imersium-gear-wheel"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["kr-s-c-imersium-beam"] or "kr-s-c-imersium-beam"
+			}
+		},
+		prerequisites = {"automation-3", "kr-imersium-processing", "kr-energy-control-unit", "kr-advanced-tech-card"},
+		unit =
+		{
+			count = 500,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"matter-tech-card", 1},
+				{"advanced-tech-card", 1}
+			},
+			time = 45
+		}
+    },
+	{
+		type = "technology",
 		name = "kr-railgun-turret",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "railgun-turret.png",
@@ -599,7 +652,7 @@ data:extend(
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "rocket-turret.png",
 		icon_size = 128,
-		prerequisites = {"kr-military-5", "space-science-pack", "kr-railgun-turret"},
+		prerequisites = {"kr-military-5", "kr-advanced-tech-card", "kr-railgun-turret", "atomic-bomb"},
 		effects =
 		{
 			{
@@ -624,7 +677,7 @@ data:extend(
 				{"military-science-pack", 1},
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1}			
+				{"advanced-tech-card", 1},
 			},
 			time = 60
 		}
@@ -635,7 +688,7 @@ data:extend(
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "antimatter-reactor.png",
 		icon_size = 128,
-		prerequisites = {"kr-fusion-energy", "kr-matter-processing"},
+		prerequisites = {"kr-fusion-energy", "kr-matter-processing", "kr-singularity-tech-card"},
 		effects =
 		{
 			{
@@ -661,7 +714,8 @@ data:extend(
 				{"utility-science-pack", 1},
 				{"space-science-pack", 1},
 				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1}				
+				{"advanced-tech-card", 1},
+				{"singularity-tech-card", 1}		
 			},
 			time = 60
 		}
@@ -678,21 +732,21 @@ data:extend(
 		{
 			{
 				type = "worker-robot-battery",
-				modifier = 0.35
+				modifier = 0.4
 			}
 		},
-		prerequisites = {"kr-advanced-roboports"},
+		prerequisites = {"kr-lithium-sulfur-battery", "robotics"},
 		unit =
 		{
 			count = 500,
 			ingredients = 
 			{
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
-				{"advanced-tech-card", 1}
+				{"basic-tech-card", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-card", 1}
 			},
-			time = 45
+			time = 30
 		}
 	},
     {
@@ -704,10 +758,10 @@ data:extend(
 		{
 			{
 				type = "worker-robot-battery",
-				modifier = 0.75
+				modifier = 0.6
 			}
 		},
-		prerequisites = {"kr-robot-battery", "kr-energy-control-unit"},
+		prerequisites = {"kr-robot-battery", "kr-advanced-roboports", "kr-energy-control-unit"},
 		unit =
 		{
 			count = 1000,
@@ -718,7 +772,7 @@ data:extend(
 				{"space-science-pack", 1},
 				{"matter-tech-card", 1}
 			},
-			time = 60
+			time = 45
 		}
 	},
 -----------------------------------------------------------------------------------------------------------------

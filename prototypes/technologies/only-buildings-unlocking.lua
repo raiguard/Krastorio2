@@ -24,7 +24,7 @@ data:extend(
 				recipe = "offshore-pump"
 			}
 		},
-		prerequisites = {},
+		prerequisites = {"kr-automation-core"},
 		unit =
 		{
 			count = 10,
@@ -437,10 +437,9 @@ data:extend(
 		prerequisites = {"kr-containers", "logistic-robotics"},
 		unit =
 		{
-			count = 200,
+			count = 250,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
@@ -494,13 +493,38 @@ data:extend(
 			count = 350,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
 			},
 			time = 30
 		}
+	},
+	{
+		type = "technology",
+		name = "kr-electric-mining-drill-mk2",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "electric-mining-drill-mk2.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-electric-mining-drill-mk2"
+			}
+		},
+		prerequisites = {"kr-electric-mining-drill", "engine"},
+		unit =
+		{
+			count = 300,
+			ingredients = 
+			{
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1}
+			},
+			time = 45
+		}		
 	},
 	-----------------------------------------------------------------------
 	-- PRODUCTION TIER AND UPPER
@@ -698,7 +722,6 @@ data:extend(
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
 				{"matter-tech-card", 1}
 			},
 			time = 45
@@ -737,12 +760,37 @@ data:extend(
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
 				{"advanced-tech-card", 1}
 			},
-			time = 30
+			time = 45
 		}
     },
+	{
+		type = "technology",
+		name = "kr-electric-mining-drill-mk3",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "electric-mining-drill-mk3.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-electric-mining-drill-mk3"
+			}
+		},
+		prerequisites = {"kr-electric-mining-drill-mk2", "kr-imersium-processing"},
+		unit =
+		{
+			count = 300,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"advanced-tech-card", 1}
+			},
+			time = 45
+		}		
+	},
 	{
 		type = "technology",
 		name = "kr-logistic-5",
@@ -772,10 +820,9 @@ data:extend(
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
 				{"advanced-tech-card", 1}
 			},
-			time = 30
+			time = 45
 		}
     },
 	{
@@ -799,7 +846,6 @@ data:extend(
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
 				{"matter-tech-card", 1},
 				{"advanced-tech-card", 1}
 			},
@@ -831,10 +877,9 @@ data:extend(
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
 				{"advanced-tech-card", 1}
 			},
-			time = 45
+			time = 60
 		}
     },
 	{
@@ -858,11 +903,10 @@ data:extend(
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
 				{"matter-tech-card", 1},
 				{"advanced-tech-card", 1}
 			},
-			time = 45
+			time = 60
 		}
     },
 	{
@@ -891,7 +935,7 @@ data:extend(
 				{"advanced-tech-card", 1},
 				{"singularity-tech-card", 1}
 			},
-			time = 45
+			time = 60
 		}
     },
 	{

@@ -1,5 +1,4 @@
-radioactivity_enabled = true
-
+-- Remotes
 if not remote.interfaces["kr-radioactivity"] then
 	remote.add_interface("kr-radioactivity",
 	{
@@ -8,9 +7,25 @@ if not remote.interfaces["kr-radioactivity"] then
 			if type(bool) ~= "boolean" then 
 				error("Value for 'set_no_radioactivity' must be a boolean.")
 			end
-			radioactivity_enabled = bool
+			global.radioactivity_enabled = not bool
 		end
 	})
+end
+
+-- Commands for users
+if not commands.commands["kr-enable-radioactivity"] then
+	local function enableRadioactivity()
+		global.radioactivity_enabled = true
+		game.print({"other.kr-enable-radioactivity"})
+	end
+	commands.add_command("kr-enable-radioactivity", {"other.kr-enable-radioactivity-help"}, enableRadioactivity)
+end
+if not commands.commands["kr-disable-radioactivity"] then
+	local function disableRadioactivity()
+		global.radioactivity_enabled = false
+		game.print({"other.kr-disable-radioactivity"})
+	end
+	commands.add_command("kr-disable-radioactivity", {"other.kr-disable-radioactivity-help"}, disableRadioactivity)
 end
 
 local function onInitAndConf()
@@ -46,7 +61,7 @@ function setupKRRadioactivityGlobalVariables()
 end
 
 function doRadioactiveDamage(player)
-	if player.valid and player.character.valid then
+	if player.valid and player.character and player.character.valid then
 		local character = player.character
 		local base_damage = 7.25
 		player.play_sound
@@ -65,7 +80,7 @@ function doRadioactiveDamage(player)
 end
 
 local function radioactivity()
-	if radioactivity_enabled and global.krastorio.radioactivity_lock then	
+	if global.radioactivity_enabled ~= false and global.krastorio.radioactivity_lock then	
 		global.krastorio.radioactivity_lock = false
 		for _, player in pairs(game.connected_players) do
 			local character = player.valid and player.character

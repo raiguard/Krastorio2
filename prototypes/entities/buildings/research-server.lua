@@ -95,7 +95,7 @@ data:extend(
 			{
 				{
 					filename = kr_buildings_sounds_path .. "small-research-server.ogg",
-					volume = 0.5
+					volume = 0.75
 				}
 			},
 			idle_sound = { filename = "__base__/sound/idle1.ogg" },
@@ -113,7 +113,7 @@ data:extend(
 		ingredient_count = 6,
 		module_specification = { module_slots = 2 },
 		allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-		open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
-		close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 }
+		open_sound = { filename = kr_sounds_mod .. "buildings/open.ogg", volume = 1 },
+		close_sound = { filename = kr_sounds_mod .. "buildings/close.ogg", volume = 1 },
 	}
 })

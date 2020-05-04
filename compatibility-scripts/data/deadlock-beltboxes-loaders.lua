@@ -14,7 +14,7 @@ if mods["deadlock-beltboxes-loaders"] then
 	end
 
 	--Adding new 4 tier
-	local loader_tier_3 = krastorio.items.getItem("express-transport-belt-loader") or krastorio.items.getItem("kr-express-loader")
+	local loader_tier_3 = krastorio.items.getItem("express-transport-belt-loader") or krastorio.items.getItem("kr-express-loader") or "express-transport-belt"
 	deadlock.add_tier(
 	{
 		transport_belt      = "kr-advanced-transport-belt",
@@ -27,22 +27,20 @@ if mods["deadlock-beltboxes-loaders"] then
 		{
 			{loader_tier_3.name, 1},
 			{"steel-gear-wheel", 20},
-			{"rare-metals", 5},			
-			{type = "fluid", name = "sulfuric-acid", amount = 50, catalyst_amount = 50}	
+			{"rare-metals", 5}	
 		},
 		beltbox_ingredients = 
 		{
 			{"express-transport-belt-beltbox", 1},
 			{"steel-gear-wheel", 20},
-			{"rare-metals", 5},			
-			{type = "fluid", name = "sulfuric-acid", amount = 50, catalyst_amount = 50}	
+			{"rare-metals", 5}
 		},
 		beltbox_technology = "deadlock-stacking-4"
 	})
 	krastorio.technologies.addPrerequisite("deadlock-stacking-4", "deadlock-stacking-3")	
 	
 	--Adding new 5 tier
-	local loader_tier_4 = krastorio.items.getItem("kr-advanced-transport-belt-loader") or krastorio.items.getItem("kr-advanced-loader")
+	local loader_tier_4 = krastorio.items.getItem("kr-advanced-transport-belt-loader") or krastorio.items.getItem("kr-advanced-loader") or "advanced-transport-belt"
 	deadlock.add_tier(
 	{
 		transport_belt      = "kr-superior-transport-belt",
@@ -54,18 +52,23 @@ if mods["deadlock-beltboxes-loaders"] then
 		loader_ingredients  = 
 		{
 			{loader_tier_4.name, 1},
-			{"imersium-gear-wheel", 20},			
-			{type = "fluid", name = "nitric-acid", amount = 25, catalyst_amount = 50}
+			{"low-density-structure", 2},
+			{"imersium-gear-wheel", 20}		
 		},
 		beltbox_ingredients = 
 		{
 			{"kr-advanced-transport-belt-beltbox", 1},
-			{"imersium-gear-wheel", 10},			
-			{type = "fluid", name = "nitric-acid", amount = 25, catalyst_amount = 50}
+			{"low-density-structure", 4},
+			{"imersium-gear-wheel", 10}		
 		},
 		beltbox_technology = "deadlock-stacking-5"
 	})
-	krastorio.technologies.addPrerequisite("deadlock-stacking-5", "deadlock-stacking-4")	
+	krastorio.technologies.addPrerequisite("deadlock-stacking-5", "deadlock-stacking-4")
+
+	krastorio.recipes.convertIngredient("express-transport-belt-loader", "iron-gear-wheel", "steel-gear-wheel")
+
+	krastorio.recipes.removeIngredient("express-transport-belt-beltbox", "iron-plate")
+	krastorio.recipes.convertIngredient("express-transport-belt-beltbox", "iron-gear-wheel", "steel-gear-wheel")
 		
 	local stackable_krastorio_items = 
 	{

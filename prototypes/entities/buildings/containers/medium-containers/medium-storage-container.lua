@@ -1,3 +1,12 @@
+local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
+local sounds      = require("__base__/prototypes/entity/demo-sounds")
+
+local kr_icons_size = false
+
+if krastorio.general.getSafeSettingValue("kr-large-icons") then
+kr_icons_size = true
+end
+
 local _medium_containers = "containers/medium-containers/"
 local _specific = "medium-storage-container/"
 local _icon_path = kr_entities_icons_path .. _medium_containers
@@ -14,9 +23,10 @@ data:extend(
 		minable = {mining_time = 0.5, result = "kr-medium-storage-container"},
 		max_health = 500,
 		logistic_slots_count = 1,
-		corpse = "kr-medium-random-pipes-remnant",
+		corpse = "big-remnants",
 		collision_box = {{-0.8, -0.8}, {0.8, 0.8}},
 		selection_box = {{-1, -1}, {1, 1}},
+		damaged_trigger_effect = hit_effects.entity(),
 		resistances = 
 		{
 			{type = "physical",percent = 30},
@@ -24,12 +34,12 @@ data:extend(
 			{type = "impact",percent = 50}
 		},
 		fast_replaceable_group = "container",
-		inventory_size = 100,
-		scale_info_icons = true,
+		inventory_size = 120,
+		scale_info_icons = kr_icons_size,
 		logistic_mode = "storage",
 		open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume=0.65 },
 		close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
-		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		vehicle_impact_sound = sounds.generic_impact,
 		opened_duration = logistic_chest_opened_duration,
 		animation =
 		{

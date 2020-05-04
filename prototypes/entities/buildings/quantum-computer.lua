@@ -81,9 +81,9 @@ data:extend(
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions_per_minute = 10
+			emissions_per_minute = 5
 		},
-		energy_usage = "750KW",		
+		energy_usage = "1MW",		
 		working_visualisations =
 		{
 			{
@@ -98,8 +98,8 @@ data:extend(
 		},			
 		module_specification = { module_slots = 4 },
 		allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-		open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
-		close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
+		open_sound = { filename = kr_sounds_mod .. "buildings/open.ogg", volume = 1 },
+		close_sound = { filename = kr_sounds_mod .. "buildings/close.ogg", volume = 1 },
 		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{

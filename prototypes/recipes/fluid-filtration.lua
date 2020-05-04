@@ -14,13 +14,12 @@ return
 		always_show_products = true,
 		ingredients = 
 		{
-			{ type = "item", name = "sand", amount = 12 },
-			{ type = "fluid", name = "water", amount = 12 }
+			{ type = "item", name = "sand", amount = 10 },
+			{ type = "fluid", name = "water", amount = 10 }
 		},
 		results = 
 		{
-			{ type = "item", name = "quartz", amount = 6 },
-			{ type = "item", name = "stone", probability = 0.3, amount = 1 }
+			{ type = "item", name = "quartz", amount = 6 }
 		},
 		crafting_machine_tint =
 		{
@@ -46,7 +45,7 @@ return
 		results = 
 		{
 			{ type = "item", name = "coal", amount = 10 },
-			{ type = "fluid", name = "water", amount = 40, catalyst_amount = 40 }
+			{ type = "fluid", name = "water", amount = 40 }
 		},
 		crafting_machine_tint =
 		{

@@ -8,7 +8,7 @@ end
 
 function initializeCreepCollectorConstats()
 	global.MAX_TILE_DISTANCE   = 10
-	global.COLLECT_PROBABILITY = 35
+	global.COLLECT_PROBABILITY = 30
 end
 
 local function onCollection(event)

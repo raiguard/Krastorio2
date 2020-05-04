@@ -166,6 +166,14 @@ data:extend(
 	},
 	{
 		type = "virtual-signal",
+		name = "kr-recycling",
+		icon = kr_signals_icons_path .. "recycling.png",
+		icon_size = 64,
+		subgroup = "kr-special-signals",
+		order = "a[special-signals]-i[recycling]"
+	},
+	{
+		type = "virtual-signal",
 		name = "kr-build_here",
 		icon = kr_signals_icons_path .. "build_here.png",
 		icon_size = 64,

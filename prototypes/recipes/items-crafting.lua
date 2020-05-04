@@ -4,16 +4,17 @@ return
 	{
 		type = "recipe",
 		name = "automation-core",
-		energy_required = 1,
+		energy_required = 2,
 		enabled = false,
 		allow_productivity = true,
 		ingredients =
 		{
-			{"iron-gear-wheel", 2},
-			{"iron-stick", 2},
-			{"copper-plate", 3}
+			{"iron-gear-wheel", 4},
+			{"iron-stick", 4},
+			{"copper-plate", 6}
 		},
-		result = "automation-core"
+		result = "automation-core",
+		result_count = 2
 	},
 	{
 		type = "recipe",
@@ -23,12 +24,12 @@ return
 		allow_productivity = true,
 		ingredients =
 		{
-			{"silicon", 3},
+			{"silicon", 2},
 			{"plastic-bar", 2},
 			{"glass", 2}
 		},
 		result = "electronic-components",
-		result_count = 5
+		result_count = 4
 	},
 	{
 		type = "recipe",
@@ -86,6 +87,7 @@ return
 		name = "first-aid-kit",
 		energy_required = 5,
 		enabled = false,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"biomass", 1},
@@ -96,9 +98,31 @@ return
 	},	
 	{
 		type = "recipe",
-		name = "empty-dt-fuel",
-		energy_required = 5,
+		name = "landfill-2",
+		localized_name = {"item-name.landfill"},
+		localized_description = {"item-description.landfill"},
+		icons = 
+		{
+			{icon = "__base__/graphics/icons/landfill.png", icon_size = 64},
+			{icon = kr_items_with_variations_icons_path .. "sand/sand.png", icon_size = 64, scale = 0.26, shift = {8,-8}}
+		},
+		category = "crafting-with-fluid",
 		enabled = false,
+		allow_as_intermediate = false,
+		energy_required = 0.5,
+		ingredients =
+		{
+			{ "sand", 50 },
+			{ type = "fluid", name = "water", amount = 50 }
+		},
+		result = "landfill"
+    },
+	{
+		type = "recipe",
+		name = "empty-dt-fuel",
+		energy_required = 10,
+		enabled = false,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"low-density-structure", 2},
@@ -136,23 +160,24 @@ return
 		type = "recipe",
 		name = "ai-core",
 		category = "crafting-with-fluid",
-		energy_required = 8,
+		energy_required = 16,
 		enabled = false,
 		allow_productivity = true,
 		ingredients =
 		{
 			{ type = "item",  name = "processing-unit", amount = 2 },
-			{ type = "item",  name = "imersite-crystal", amount = 1 },
-			{ type = "fluid", name = "nitric-acid", amount = 4 }
+			{ type = "item",  name = "imersite-crystal", amount = 2 },
+			{ type = "fluid", name = "nitric-acid", amount = 10 }
 		},
 		result = "ai-core",
-		result_count = 1
+		result_count = 2
 	},
 	{
 		type = "recipe",
 		name = "pollution-filter",
 		energy_required = 10,
 		enabled = false,
+		allow_productivity = true,
 		ingredients =
 		{
 			{"coal", 2},
@@ -245,7 +270,8 @@ return
 		ingredients =
 		{
 			{"lithium-sulfur-battery", 1},
-			{"imersite-crystal", 1}
+			{"imersite-crystal", 3},
+			{"plastic-bar", 1},
 		},
 		result = "impulse-rifle-ammo"
     },
@@ -264,15 +290,15 @@ return
 	{
 		type = "recipe",
 		name = "heavy-rocket",
-		energy_required = 30,
+		energy_required = 10,
 		enabled = false,
 		ingredients =
 		{
-			{"explosives", 20},
-			{"steel-plate", 10},
+			{"explosives", 10},
+			{"steel-plate", 5},
 			{"rocket-fuel", 10},
-			{"plastic-bar", 10},			
-			{"processing-unit", 5}			
+			{"plastic-bar", 5},			
+			{"processing-unit", 1}			
 		},
 		result = "heavy-rocket"
     },
@@ -280,6 +306,7 @@ return
 		type = "recipe",
 		name = "energy-control-unit",
 		enabled = false,
+		allow_productivity = true,
 		energy_required = 10,
 		ingredients =
 		{
@@ -295,13 +322,13 @@ return
 		name = "matter-stabilizer",
 		enabled = false,
 		allow_as_intermediate = false,
-		energy_required = 10,
+		allow_productivity = true,
+		energy_required = 5,
 		ingredients =
 		{
-			{"imersite-crystal", 10},
-			{"imersium-plate", 10},
-			{"energy-control-unit", 5},
-			{"processing-unit", 5}
+			{"imersium-plate", 6},
+			{"energy-control-unit", 3},
+			{"processing-unit", 3}
 		},
 		result = "matter-stabilizer"
     },
@@ -311,13 +338,14 @@ return
 		category = "crafting-with-fluid",
 		enabled = false,
 		allow_as_intermediate = false,
+		allow_productivity = true,
 		energy_required = 10,
 		ingredients =
 		{
 			{ type = "fluid", name = "nitric-acid", amount = 50 },
-			{ "imersite-crystal", 20 },
+			{ "energy-control-unit", 10},
 			{ "imersium-plate", 8 },
-			{ "matter-stabilizer", 2 }			
+			{ "matter-stabilizer", 2 }
 		},
 		result = "empty-antimatter-fuel-cell"
     },
@@ -327,10 +355,10 @@ return
 		category = "matter-deconversion",
 		enabled = false,
 		allow_as_intermediate = false,
-		energy_required = 30,
+		energy_required = 5,
 		ingredients =
 		{
-			{ type = "fluid", name = "matter", amount = 1000, catalyst_amount = 5000},
+			{ type = "fluid", name = "matter", amount = 1000},
 			{ "empty-antimatter-fuel-cell", 1 }
 		},
 		result = "charged-antimatter-fuel-cell"
@@ -342,8 +370,7 @@ return
 		energy_required = 10,
 		ingredients =
 		{
-			{"steel-plate", 20},
-			{"explosives", 10},
+			{"steel-plate", 5},
 			{"advanced-circuit", 1}
 		},
 		result = "basic-railgun-shell"
@@ -356,7 +383,7 @@ return
 		ingredients =
 		{
 			{"basic-railgun-shell", 1},
-			{"explosives", 10}
+			{"explosives", 3}
 		},
 		result = "explosion-railgun-shell"
     },	
@@ -369,8 +396,8 @@ return
 		{
 			{"rocket-fuel", 10},
 			{"rocket-control-unit", 1},
-			{"steel-plate", 10},
-			{"explosives", 10}
+			{"steel-plate", 5},
+			{"explosives", 5}
 		},
 		result = "explosive-turret-rocket"
     },	
@@ -382,7 +409,7 @@ return
 		ingredients =
 		{
 			{"explosive-turret-rocket", 1},
-			{"steel-plate", 10},
+			{"steel-plate", 5},
 			{"uranium-235", 10},
 			{"rocket-control-unit", 1}
 		},
@@ -406,7 +433,7 @@ return
 		type = "recipe",
 		name = "antimatter-artillery-shell",
 		enabled = false,
-		energy_required = 5,
+		energy_required = 15,
 		ingredients =
 		{
 			{"imersium-plate", 1},
@@ -420,12 +447,12 @@ return
 		type = "recipe",
 		name = "antimatter-rocket",
 		enabled = false,
-		energy_required = 5,
+		energy_required = 10,
 		ingredients =
 		{
 			{"imersium-plate", 2},
 			{"heavy-rocket", 1},
-			{"charged-antimatter-fuel-cell", 5},
+			{"charged-antimatter-fuel-cell", 3},
 			{"processing-unit", 1}		
 		},
 		result = "antimatter-rocket"
@@ -448,14 +475,14 @@ return
 		type = "recipe",
 		name = "nuclear-artillery-shell",
 		enabled = false,
-		energy_required = 50,
+		energy_required = 15,
 		ingredients =
 		{
 			{"rocket-control-unit", 10},
-			{"explosive-cannon-shell", 4},
-			{"radar", 1},
-			{"uranium-235", 30}
+			{"steel-plate", 10},
+			{"artillery-shell", 1},
+			{"uranium-235", 10}
 		},
 		result = "nuclear-artillery-shell"
-	},
+	}
 }

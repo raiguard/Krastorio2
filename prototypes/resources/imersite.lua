@@ -30,6 +30,8 @@ data:extend(
 			name = "imersite",
 			order = "f",
 			base_density = 1,
+			richness_multiplier = 1,
+			richness_multiplier_distance_bonus = 1.5,
 			base_spots_per_km2 = 0.2,
 			has_starting_area_placement = false,
 			random_spot_size_minimum = 0.01,
@@ -53,7 +55,7 @@ data:extend(
 			variation_count = 1,
 			scale = 0.8,
 			hr_version =
-				{
+			{
 				filename = kr_resources_sprites_path .. "imersite/hr-imersite-rift.png",
 				priority = "extra-high",
 				width = 500,
@@ -61,7 +63,7 @@ data:extend(
 				frame_count = 6,
 				variation_count = 1,
 				scale = 0.4,
-				}
+			}
 		  }
 		},
 		stages_effect =

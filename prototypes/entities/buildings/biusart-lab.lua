@@ -258,7 +258,7 @@ data:extend({
 			type = "electric",
 			usage_priority = "secondary-input"
 		},
-		energy_usage = "120kW",
+		energy_usage = "250kW",
 		researching_speed = 1,
 		inputs = {},
 		module_specification =

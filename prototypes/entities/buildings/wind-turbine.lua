@@ -47,10 +47,10 @@ data:extend(
 				percent = 30
 			}
 		},
-		fast_replaceable_group = "kr-wind-turbine",
+		fast_replaceable_group = "wind-turbine",
 		damaged_trigger_effect = hit_effects.entity(),
-		collision_box = {{-0.75, -0.75}, {0.75, 0.75}},
-		selection_box = {{-0.95, -0.95}, {0.95, 0.95}},
+		collision_box = {{-1.25, -1.25}, {1.25, 1.25}},
+		selection_box = {{-1.45, -1.45}, {1.45, 1.45}},
 		drawing_box = {{-0.5, -2}, {0.5, 1}},
 		energy_source =
 		{

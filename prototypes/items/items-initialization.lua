@@ -27,6 +27,9 @@ require(kr_items_prototypes_path .. "vehicles")
 -- -- Selection tools
 require(kr_items_prototypes_path .. "selection-tools")
 
+-- -- Adding new capsules
+require(kr_items_prototypes_path .. "capsules")
+
 -- -- All other items
 require(kr_items_prototypes_path .. "uncategorized")
 

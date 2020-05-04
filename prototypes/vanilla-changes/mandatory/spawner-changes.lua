@@ -100,21 +100,21 @@ end
 
 -- -- Spawner stats
 
-data.raw["unit-spawner"]["biter-spawner"].max_health = 1500
-data.raw["unit-spawner"]["spitter-spawner"].max_health = 1500
+data.raw["unit-spawner"]["biter-spawner"].max_health = 750
+data.raw["unit-spawner"]["spitter-spawner"].max_health = 750
 
 -- -- Biters stats
 
 data.raw["unit"]["medium-biter"].max_health = 100
 data.raw["unit"]["big-biter"].max_health = 500
-data.raw["unit"]["behemoth-biter"].max_health = 3750
+data.raw["unit"]["behemoth-biter"].max_health = 3500
 
 data.raw["unit"]["behemoth-biter"].pollution_to_join_attack = 500
 
 -- -- Spitters stats
 
 data.raw["unit"]["medium-spitter"].max_health = 75
-data.raw["unit"]["big-spitter"].max_health = 375
+data.raw["unit"]["big-spitter"].max_health = 350
 data.raw["unit"]["behemoth-spitter"].max_health = 2500
 
 data.raw["unit"]["behemoth-spitter"].pollution_to_join_attack = 500

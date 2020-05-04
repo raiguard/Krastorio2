@@ -1,4 +1,223 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.15
+Date: XX.04.2020
+  Features:
+    - Now is possible use circuit connections on quarry drill to read patch informations.
+  Fixes:
+    - Fixed landfill item icon changing instead of recipe icon.
+    - Fixed UPS drop using anti creep virus when there isn't creep on map (https://mods.factorio.com/mod/Krastorio2/discussion/5eaf2f90795d4c000d8501cd).
+    - Fixed desync in long loaded games when collecting creep (https://mods.factorio.com/mod/Krastorio2/discussion/5eac7b88e0fdb1000b1b70d0). 
+---------------------------------------------------------------------------------------------------
+Version: 0.9.14
+Date: 30.04.2020
+  Features:
+    - Now is possible use sand to make landfill.
+  Changes:
+    - Initial refactoring SE compatibility for the 0.3.X, this update will test if the 0.2.X was damaged.
+  Fixes:
+    - Fixed missing note in the changelog.
+    - Fixed that substation MK2 return the wrong item when mined.
+    - Fixed library bug with functions to compare mod versions (could have influenced compatibility).
+    - Removed debug prints from creeps script.
+---------------------------------------------------------------------------------------------------
+Version: 0.9.13
+Date: 27.04.2020
+  Features:
+    - Now in the matter API of the mod, is possible specify a different (optional) value for converting the item into matter. 
+  Changes:
+    - Changed research server working sound.
+    - Changed impulse rifle sound.
+  Fixes:
+    - Fixed error with "Deadlock's Stacking Beltboxes & Compact Loaders" mod.
+    - Krastorio 2 require Factorio 0.18.21 to be loaded properly.
+---------------------------------------------------------------------------------------------------
+Version: 0.9.12
+Date: 27.04.2020
+  Features:
+    - Added option for turn on infinite oil in the mod settings.
+    - Added option for turn on Substation MK2 in the mod settings. If someday we find time to create a unique sprites for this, we will do this as default part of K2.
+    - Added new sprites(appearance)for the rocket turret, now turret color will change with last user color!
+    - Increased the number of frame of quarry drill animation to be more smooth.
+    - Added viruses! End game capsule that players can use to remove creep definitively (from the map), or reduce the biters on the map drastrically.
+    - Introduced a new way to freeze Factorio. :)
+    - Added commands to disable radioactivity if you really really really can't play with it.
+  Changes:
+    - Removed stone from quartz recipe to avoid productivity exploit loops.
+    - Some color tweaks for Shelter plus.
+    - Reduced blank tech card production, now require 2s instead of 1s and need double ingredients in input for the same output.
+    - Increased richness of Imersite.
+    - Now K2's fuel refinery can be placed in space (SE mod).
+    - Modified matter to sulfur value, from 7.2 to 8.
+    - Changed some K2 building remaint sprites.
+    - Changed labs recipes, now they require the previous lab tier as ingredient.
+    - Optimization tech cards have been removed from many technologies. Now you can access to advanced buildings much earlier.
+    - Now antimatter bomb and railgun antimatter explosions can destroy cliff.
+    - Nerfed personal laser submachine guns, they was too strong compared with the sniper version.
+    - Boosted personal laser sniper guns, they was too weak compared with the submachine version.
+    - Slightly reduced sand consumption.
+    - Added water into lithium production recipe.
+    - Nuclear artillery shell moved into Atomic bomb technology.
+    - Now sand can't anymore be converted in matter, to avoid cheaty matter creation loops.
+    - Reduced cost for turret ammo.
+    - Now all smelting recipe have the same time(energy) cost.
+    - Removed TinyStart from incompatible mods, due the fact that in the 0.18.5 version was added a compatibility fix for K2.
+    - Reduced amount of sand in the Imersite powder recipe.
+    - Now crusher destroy items quicker (5->2).
+    - Now you can crush Imersite crystals for Imersite powder production.
+    - Laser turret have been nerfed a bit. But still more powerfull than vanilla.
+    - Impulse rifle damage have been increased (250->500).
+    - Many minor changes.
+  Fixes:
+    - Fixed that personal laser defense mk2 equipment don't need military tech card(science pack).
+    - Fixed that inserters hotkey dropping to "near" lane on perpendicular belts had no effect.
+    - Fixed rare crash settuping blueprints.
+    - Fixed rare crash when player character die meanwhile the radioactivity damage try to reduce the character health.
+    - Sulfur can't anymore be converted into matter, to avoid cheaty matter creation loops.
+    - Fixed wrong German translation typo.
+    - Some minor fixes and improvements.
+    - Fixed non persistent remote calls on creep generation script.
+    - Fixed that K2 doesn't support recipes that are selectively disabled for normal/marathon mode.
+    - Fixed that steel pipe have a worse flow compared with vanilla pipes, if not used many steel pumps (now should have the right 25% of bonus).
+    - Fixed shield MK4 recipe with SE installed.
+    - Fixed that disable radioactivity will be not saved.
+---------------------------------------------------------------------------------------------------
+Version: 0.9.11
+Date: 13.04.2020
+  Fixes:
+    - Fixed German translation. Fix wrong folder name (that fortunatelly prevented the game from load it and then crash) and fixed many locale errors. Also updated with finished files.
+    - Fixed changelog errors.
+    - Fixed that in the previous update, planes from Aircraft couldn't take ammos anymore, with the update for make the ammo more compatible with other mods (yes, you got the irony).
+---------------------------------------------------------------------------------------------------
+Version: 0.9.10
+Date: 13.04.2020
+  Features:
+    - Added Italian translation, thanks to TheRealPagi for the help!
+    - Added Turkish translation thanks to Sarp Hangisi, Sinanbasar and Hasan Tunca Uysal!
+    - Added unfinished German translation thanks to Stimpatch, Fighter1000, Learbor, Fuggschen, Klaus Zinsmeister, Kildjan, Tobias Franz, BluePsyduck, Julian1701, Arcitos, Andreas_CH, RobocrafterLP, Bambam33, Heiko Domeier, Stefan Walesch and other!
+    - Many locales have been updated.
+    - Added compatibility with Construction Drones.
+    - Added new sprites(appearance) for the railgun turret, now turret color will change with last user color!
+    - Added new background artwork.
+  Changes:
+    - Many recipes began to be made faster.
+    - Matter stabilizer have become cheaper.
+    - Water pump was boosted from 1200 to 1250.
+    - Increased anti-materiel rifle damage.
+    - Express splitter recipe use electronic components instead of advanced circuits for progression compliance with other splitters.
+    - Now Krastorio 2 rewokerd weapon system will use vanilla ammo category for the rifle ammo, this should make it more compatible with other mods.
+    - Basic tech card have been removed from all recipes with "military-science-pack" and "chemical-science-pack".
+    - Now magazines are cheaper a bit.
+    - Now splitters and belts are cheaper too.
+    - Reduced hives HP by twice, because its too hard destroy it it the early game stage (Still harder than vanilla). 
+    - Reduced creep size.
+    - Updated compatibility with Advanced Furnaces(Load-Furn) mod.
+    - Many minor changes.
+  Fixes:
+    - Some small fixes.
+    - Fixed crash site buildings property, now the generator is a primary energy source and all buildings can be marked to deconstruction.
+    - Fixed steel pump fluid box and other steel pipe set.
+    - Now all rocket fuel recipes can take productivity modules.
+    - Fixed that roboports construction mode doesn't increase the size construction zone.
+    - Fixed that setup a blueprint via blueprint selection tool can permit the placing of offshore pump everywhere.
+    - Fixed falsely enabled recipes at the start of the game in expensive mode.
+    - Fixed incompatibility with Booktorio and other mods that add button in the top-left corner of the screen, K2 in the previous version will destroy all buttons on wiki disabling.
+---------------------------------------------------------------------------------------------------
+Version: 0.9.9
+Date: 02.04.2020
+  Features:
+    - Added compatibility with Booktorio, now if Booktorio is loaded Krastorio 2 will use the Booktorio Wiki code instead of his one, but don't worry, Krastorio 2 will continue have is standalone wiki, no dependecy are necessary.
+  Changes:
+    - Now wind turbines and solar panels are under the same fast replaceable group.
+    - Revert changes that insert all inserters under the same fast replaceable group.
+    - Fusion reactor rebalance. Now the reactor more realistic and consume a lot of energy for work. Now this is not an ultimate way to get energy. Also, fusion reactor has good synergy with nuclear energy.
+    - Now kovarex enrichment process slightly easier.
+    - Changed recipe for tritium.
+    - Increased chanse to get tritium from used uranium cell.
+    - Now portable fusion reactor can produce empty dt-fuels.
+    - Added more wood into start ship fragments.
+    - Increased the medium chest storage capacity to 120 from 100.
+    - Increased the big chest storage capacity to 500 from 400.
+    - Changed recipes for belts and loaders.
+    - Now wooden chests and small electric poles are burnable.
+    - Small fuel rebalance. Because after 0.9.7 update fuel become too OP.
+    - Greenhouses and Bio-labs no longer have fire resistance.
+    - Reduced the Impulse rifle range to 50 from 60.
+    - Increased the Impulse rifle magazine cost.
+    - Changed recipe for solar panels.
+    - Changed recipe for laser turret.
+    - Now walls and gates have immunity to radiation and have good explosion resistance.
+    - Now you can conver biomass into matter.
+    - Many minor changes.
+  Fixes:
+    - Fixed that modded roboports can crash the game if used the change mode on it. Now if the modders don't use the Krastorio 2 API, use the hotkey return a warning message making clear that the roboport is not supported (don't crash the game).
+    - Fixed AAI industry mod and K2 tech fighting.
+    - Fixed that deadlock beltboxes and loaders mod can crash the game if the players disable both loader kinds.
+    - Fixed sprites for Electric mining drill mk2 [2].
+---------------------------------------------------------------------------------------------------
+Version: 0.9.8
+Date: 28.03.2020
+  Changes:
+    - Adjusted wrong coke and fuels rebalance.
+    - Rebalanced personal batteries recipes.
+    - First robots bonus battery tech is placed better in the tech tree.
+    - Changed the name of the tank guns.
+    - Artillery shell damage bonus moved to Stronger explosives from Physical projectile damage.
+    - Another circuits rebalance. We hope now it's fine.
+    - Changed recipe for Electrolysis plant.
+  Fixes:
+    - Fixed sprites for Electric mining drill mk2.
+    - Fixed problem with extra water during ore enrichment.
+    - Fixed Incompatibility with "Bob's Adjustable Inserters mod".
+---------------------------------------------------------------------------------------------------
+Version: 0.9.7
+Date: 27.03.2020
+  Features:
+    - Added compatibility with angelsaddons-smeltingtrain, thanks to Methadone!
+    - Added advanced assembling machine!
+    - Added option for changing info icon size.
+    - Added option for changing cargo wagon capacity size.
+    - Improved compatibility with Dectorio.
+    - Added mk2 and mk3 drills. We are tired of answering the question why this was deleted. It's easier to add this stuff back... you're guys weird. You vote to remove the "colored buildings" and then ask add this...well, it's here again.
+  Changes:
+    - Now bio-labs and greenhouses can share liquids with pipes.
+    - Increased oxygen production in atmospheric condenser to 5s from 10s.
+    - Increased water production in atmospheric condenser to 10s from 30s.
+    - Now creep can be destroyed via robots, collectable with hands (if you have a very long patience). We suggest you to continue using the creep collector that is the faster way. Also robot collection works only with "fresh" creep.
+    - Signed brave new world mod as incompatible with K2.
+    - Infinite technology has been rebalance.
+    - All circuits (cores included) are cheaper, take less wood and copper.
+    - Energy shields are now cheaper.
+    - Buffed advanced solar panel (200->250).
+    - Some minor improvements.
+    - DT-fuel more cheaper now.
+    - Energy usage was changed for many buildings.
+    - Advanced furnace (crafting speed 10->12) and advanced chemical plant (crafting speed 10->8) was rebalanced.
+  Fixes:
+    - Now nucrear locomotive have equipment grid.
+    - Attention! Fixed a problem due to which the conversion of water to steam was too cheating! The basic ratios have remained the same, but in some cases it is necessary to remove and put back the nuclear reactors for the changes to take effect.
+    - Changed recipes definitions to walkaround Factorio products statistic blacklisting.
+    - Fixed that remove modded biter nests during surface/chunk generation can cause a creep script crash.
+    - Many small fixes and improvements.
+---------------------------------------------------------------------------------------------------
+Version: 0.9.6
+Date: 22.03.2020
+  Features:
+    - Added compatibility script for Early 3x3 Electric Furnaces mod, thanks to ChipWolf!
+    - Added new K2 artwork for background.
+    - Added wood into start crash site chests.
+  Changes:
+    - Increased gas turbine power.
+    - Improved resources color on the map.
+    - Nerfed the greenhouses pollution absorption to -5 from -8.
+    - Increased time ans resourses for tree production.
+    - Increased wind turbine build zone.
+    - Singularity research data has been deleted.
+    - The recipe for the Singularity tech card has been changed.
+    - The music track in the menu is made quieter and shorter.
+  Fixes:
+    - Fixed broken creep (+sprite update, now creep tiles is more various).
+    - Fixed some minor bugs.
+---------------------------------------------------------------------------------------------------
 Version: 0.9.5
 Date: 20.03.2020
   Features:
@@ -391,7 +610,7 @@ Date: 28.02.2020
   Fixes:
     - Fixed that steel plate product was 5 time less than expected.
     - Fixed energy output priority for wind turbine and shelter.
-    - Fixed that roboports hotkeys doesen't increase coverage area 25% larger than normal when changing mode to a single one.
+    - Fixed that roboports hotkeys doesn't increase coverage area 25% larger than normal when changing mode to a single one.
     - Fixed SE satelite rocket_launch_product given.
     - Fixed SE shields techs overlaps.
 ---------------------------------------------------------------------------------------------------

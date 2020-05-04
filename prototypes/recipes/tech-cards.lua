@@ -4,13 +4,13 @@ return
 	{
 		type = "recipe",
 		name = "blank-tech-card",
-		energy_required = 1,
+		energy_required = 2,
 		enabled = false,
 		allow_productivity = true,
 		ingredients =
 		{
-			{"iron-plate", 1},
-			{"copper-cable", 1}			
+			{"iron-plate", 2},
+			{"copper-cable", 2}			
 		},
 		result = "blank-tech-card",
 		result_count = 5
@@ -86,7 +86,7 @@ return
 		ingredients =
 		{
 			{"blank-tech-card", 15},
-			{"matter-research-data", 10},
+			{"matter-research-data", 5},
 			{"processing-unit", 5}			
 		},
 		result = "matter-tech-card",
@@ -111,22 +111,6 @@ return
 	},
 	{
 		type = "recipe",
-		name = "singularity-research-data",
-		category = "t3-tech-cards",
-		energy_required = 20,
-		enabled = false,
-		allow_productivity = true,
-		ingredients =
-		{
-			{"imersium-plate", 10},
-			{"charged-matter-stabilizer", 5},
-			{"energy-control-unit", 5}
-		},
-		result = "singularity-research-data",
-		result_count = 5
-	},	
-	{
-		type = "recipe",
 		name = "singularity-tech-card",
 		category = "t3-tech-cards",
 		energy_required = 20,
@@ -135,7 +119,7 @@ return
 		ingredients =
 		{
 			{"blank-tech-card", 15},
-			{"singularity-research-data", 10},
+			{"charged-matter-stabilizer", 5},
 			{"ai-core", 5}			
 		},
 		result = "singularity-tech-card",

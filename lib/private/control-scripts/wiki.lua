@@ -15,8 +15,8 @@ end
 
 function getFormattedCaption(text, localized)
 	local caption = nil
-	if type(text) == "table" and next(caption) then
-		_, caption = next(caption)
+	if type(text) == "table" and next(text) then
+		_, caption = next(text)
 	else
 		caption = text
 	end
@@ -292,11 +292,11 @@ function initializeWiki(event)
 end
 
 function addremoveWikiButton(event)
-	if event.setting_type == "runtime-per-user" and event.setting == "kr-disable-wiki" then
+	if event.mod_changes or (event.setting_type == "runtime-per-user" and event.setting == "kr-disable-wiki") then
 		local button = krastorio.gui.getElementByName(event.player_index, w_prefix.."toggle-wiki")		
 		if game.players[event.player_index].mod_settings["kr-disable-wiki"].value then		
 			if button then
-				button.parent.destroy()
+				button.destroy()
 			end
 			local wiki = krastorio.gui.getElementByName(event.player_index, w_prefix.."main-frame")
 			if wiki then
@@ -310,15 +310,49 @@ function addremoveWikiButton(event)
 	end
 end
 
+function onConfigurationChanged(event)
+	local button = nil
+	for _, player in pairs(game.players) do
+		event.player_index = player.index
+		addremoveWikiButton(event)
+	end
+end
+
 -- Callbacks
 krastorio.gui.addClickElementEvent(w_prefix.."toggle-wiki", "toggleWiki")	
 krastorio.gui.addClickElementEvent(w_prefix.."close", "closeWiki")		
 krastorio.gui.addSelectElementEvent(w_prefix.."topics-list", "changeWikiDescription")
 
-return
-{ 
-	-- -- Bootstrap
-	{ initializeWiki, "on_player_created" },
-	{ closeWiki, "on_gui_closed" },
-	{ addremoveWikiButton, "on_runtime_mod_setting_changed"}
-}
+if script.active_mods["Booktorio"] then
+	krastorio_thread =
+	{
+		name   = "gui.wiki-name",
+		mod    = "Krastorio2",
+		topics = topics
+	}
+	local function migrateToBooktorio()
+		local button = nil
+		for _, player in pairs(game.players) do
+			button = krastorio.gui.getElementByName(player.index, w_prefix.."toggle-wiki")	
+			if button then
+				button.destroy()
+			end
+		end
+		remote.call("Booktorio", "add_thread", krastorio_thread) 
+	end
+
+	return
+	{
+		{ migrateToBooktorio, "on_init" },
+		{ migrateToBooktorio, "on_configuration_changed" }
+	}
+else
+	return
+	{ 
+		-- -- Bootstrap
+		{ initializeWiki, "on_player_created" },
+		{ closeWiki, "on_gui_closed" },
+		{ addremoveWikiButton, "on_runtime_mod_setting_changed" },
+		{ onConfigurationChanged, "on_configuration_changed" }
+	}
+end

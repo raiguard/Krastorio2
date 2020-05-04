@@ -5,7 +5,7 @@ local control_lib_path                   = control_scripts_path .. "control-lib/
 
 -- Libs
 ControlCallbackMerger = require(control_scripts_path .. "control-lib/control-callbacks-merger")
-local ccm = ControlCallbackMerger:new()
+ccm = ControlCallbackMerger:new()
 require(control_lib_path)
 
 -- Scrips
@@ -48,13 +48,17 @@ local scripts =
 	require(control_scripts_path .. "planetary-teleporters"),
 	-- Electric offshore pump
 	require(control_scripts_path .. "electric-offshore-pump"),
+	-- Viruses
+	require(control_scripts_path .. "viruses"),
 	-- -- REMOTE INTERFACES
 	require(control_scripts_path .. "reset-krastorio-global-data"),
 	-- -- COMPATIBILITY
 	-- DiscoScience
 	require(control_compatibility_scripts_path .. "DiscoScience"),
 	-- aai-industry
-	require(control_compatibility_scripts_path .. "aai-industry")
+	require(control_compatibility_scripts_path .. "aai-industry"),
+	-- Schall Uranium Processing
+	require(control_compatibility_scripts_path .. "SchallUranium")
 }
 
 -- Load all callbacks from control scripts (not for GUI events)

@@ -1,3 +1,6 @@
+local particle_animations = require("__base__/prototypes/particle/demo-particle-animations")
+local sounds              = require("__base__/prototypes/entity/demo-sounds")
+
 local smoke_fast_animation = function(opts)
   local opts = opts or {}
   return
@@ -11,6 +14,110 @@ local smoke_fast_animation = function(opts)
     scale = opts.scale,
     tint = opts.tint
   }
+end
+-- Copy of main Factorio function to make particle
+local make_particle = function(params)
+
+  if not params then error("No params given to make_particle function") end
+  local name = params.name or error("No name given")
+
+  local ended_in_water_trigger_effect = params.ended_in_water_trigger_effect or default_ended_in_water_trigger_effect()
+  if params.ended_in_water_trigger_effect == false then
+    ended_in_water_trigger_effect = nil
+  end
+
+  local particle =
+  {
+
+    type = "optimized-particle",
+    name = name,
+
+    life_time = params.life_time or 60 * 15,
+    fade_away_duration = params.fade_away_duration,
+
+    render_layer = params.render_layer or "projectile",
+    render_layer_when_on_ground = params.render_layer_when_on_ground or "corpse",
+
+    regular_trigger_effect_frequency = params.regular_trigger_effect_frequency or 2,
+    regular_trigger_effect = params.regular_trigger_effect,
+    ended_in_water_trigger_effect = ended_in_water_trigger_effect,
+
+    pictures = params.pictures,
+    shadows = params.shadows,
+    draw_shadow_when_on_ground = params.draw_shadow_when_on_ground,
+
+    movement_modifier_when_on_ground = params.movement_modifier_when_on_ground,
+    movement_modifier = params.movement_modifier,
+    vertical_acceleration = params.vertical_acceleration,
+
+    mining_particle_frame_speed = params.mining_particle_frame_speed,
+
+  }
+
+  return particle
+
+end
+-- Copy of main Factorio function to make standard water reflect
+local default_ended_in_water_trigger_effect = function()
+  return
+  {
+
+    {
+
+      type = "create-particle",
+      probability = 1,
+      affects_target = false,
+      show_in_tooltip = false,
+      particle_name = "deep-water-particle",
+      offset_deviation = { { -0.05, -0.05 }, { 0.05, 0.05 } },
+      tile_collision_mask = nil,
+      initial_height = 0,
+      initial_height_deviation = 0.02,
+      initial_vertical_speed = 0.05,
+      initial_vertical_speed_deviation = 0.05,
+      speed_from_center = 0.01,
+      speed_from_center_deviation = 0.006,
+      frame_speed = 1,
+      frame_speed_deviation = 0,
+      tail_length = 2,
+      tail_length_deviation = 1,
+      tail_width = 3
+    },
+    {
+      type = "create-particle",
+      repeat_count = 10,
+      repeat_count_deviation = 6,
+      probability = 0.03,
+      affects_target = false,
+      show_in_tooltip = false,
+      particle_name = "deep-water-particle",
+      offsets =
+      {
+        { 0, 0 },
+        { 0.01563, -0.09375 },
+        { 0.0625, 0.09375 },
+        { -0.1094, 0.0625 }
+      },
+      offset_deviation = { { -0.2969, -0.1992 }, { 0.2969, 0.1992 } },
+      tile_collision_mask = nil,
+      initial_height = 0,
+      initial_height_deviation = 0.02,
+      initial_vertical_speed = 0.053,
+      initial_vertical_speed_deviation = 0.005,
+      speed_from_center = 0.02,
+      speed_from_center_deviation = 0.006,
+      frame_speed = 1,
+      frame_speed_deviation = 0,
+      tail_length = 9,
+      tail_length_deviation = 0,
+      tail_width = 1
+    },
+    {
+      type = "play-sound",
+      sound = sounds.small_splash,
+    },
+  }
+
 end
 
 data:extend(
@@ -79,8 +186,8 @@ data:extend(
 				type = "area",
 				target_entities = false,
 				trigger_from_target = true,
-				repeat_count = 50,
-				radius = 12,
+				repeat_count = 25,
+				radius = 10,
 				action_delivery =
               {
                 type = "projectile",
@@ -300,8 +407,8 @@ data:extend(
               type = "area",
               target_entities = false,
               trigger_from_target = true,
-              repeat_count = 250,
-              radius = 16,
+              repeat_count = 750,
+              radius = 20,
               action_delivery =
               {
                 type = "projectile",
@@ -316,7 +423,7 @@ data:extend(
           },
           {
             type = "show-explosion-on-chart",
-            scale = 2
+            scale = 3
           }
         }
       }
@@ -368,6 +475,21 @@ data:extend(
             {
               type = "create-entity",
               entity_name = "matter-explosion"
+            },
+			{
+              type = "destroy-cliffs",
+              radius = 1.5,
+              explosion = "explosion"
+            },
+            {
+              type = "destroy-decoratives",
+              from_render_layer = "decorative",
+              to_render_layer = "object",
+              include_soft_decoratives = true, -- soft decoratives are decoratives with grows_through_rail_path = true
+              include_decals = false,
+              invoke_decorative_trigger = true,
+              decoratives_with_trigger_only = false, -- if true, destroys only decoratives that have trigger_effect set
+              radius = 2 -- large radius for demostrative purposes
             }
           }
         }
@@ -645,6 +767,21 @@ data:extend(
             type = "create-entity",
             entity_name = "small-scorchmark",
             check_buildability = true
+          },
+		  {
+            type = "destroy-cliffs",
+            radius = 1.5,
+            explosion = "explosion"
+          },
+          {
+            type = "destroy-decoratives",
+            from_render_layer = "decorative",
+            to_render_layer = "object",
+            include_soft_decoratives = true, -- soft decoratives are decoratives with grows_through_rail_path = true
+            include_decals = false,
+            invoke_decorative_trigger = true,
+            decoratives_with_trigger_only = false, -- if true, destroys only decoratives that have trigger_effect set
+            radius = 2 -- large radius for demostrative purposes
           }
         }
       }
@@ -784,7 +921,11 @@ data:extend(
           },
           {
             type = "damage",
-            damage = {amount = 3500, type = "explosion"}
+            damage = {amount = 1500, type = "explosion"}
+          },
+          {
+            type = "damage",
+            damage = {amount = 1500, type = "radioactive"}
           },
           {
             type = "create-entity",
@@ -950,7 +1091,117 @@ data:extend(
   
 -----------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------- 
- 
+
+  {
+    type = "artillery-projectile",
+    name = "atomic-artillery",
+    flags = {"not-on-map"},
+	reveal_map = true,
+    map_color = {r=1, g=1, b=0},
+    acceleration = 0.005,
+    action =
+    {
+      type = "direct",
+      action_delivery =
+      {
+        type = "instant",
+        target_effects =
+        {
+          {
+              repeat_count = 100,
+              type = "create-trivial-smoke",
+              smoke_name = "nuclear-smoke",
+              offset_deviation = {{-1, -1}, {1, 1}},
+              starting_frame = 3,
+              starting_frame_deviation = 5,
+              starting_frame_speed = 0,
+              starting_frame_speed_deviation = 5,
+              speed_from_center = 0.5
+          },
+          {
+            type = "create-entity",
+            entity_name = "explosion"
+          },
+          {
+            type = "damage",
+            damage = {amount = 750, type = "explosion"}
+          },
+          {
+            type = "damage",
+            damage = {amount = 750, type = "radioactive"}
+          },
+          {
+            type = "create-entity",
+            entity_name = "big-scorchmark",
+            check_buildability = true
+          },
+          {
+            type = "show-explosion-on-chart",
+            scale = 2
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              target_entities = false,
+              trigger_from_target = true,
+              repeat_count = 750,
+              radius = 16,
+              action_delivery =
+              {
+                type = "projectile",
+                projectile = "atomic-bomb-wave",
+                starting_speed = 0.5
+              }
+            }
+          }
+        }
+      }
+    },
+    light = {intensity = 0.8, size = 15},
+    picture =
+    {
+      filename = "__base__/graphics/entity/artillery-projectile/hr-shell.png",
+      width = 64,
+      height = 64,
+      scale = 0.5
+    },
+    shadow =
+    {
+      filename = "__base__/graphics/entity/artillery-projectile/hr-shell-shadow.png",
+      width = 64,
+      height = 64,
+      scale = 0.5
+    },
+    chart_picture =
+    {
+      filename = "__base__/graphics/entity/artillery-projectile/artillery-shoot-map-visualization.png",
+      flags = { "icon" },
+      frame_count = 1,
+      width = 64,
+      height = 64,
+      priority = "high",
+      scale = 0.25
+    },
+    smoke =
+    {
+      {
+        name = "smoke-fast",
+        deviation = {0.15, 0.15},
+        frequency = 1,
+        position = {0, 1},
+        slow_down_factor = 1,
+        starting_frame = 3,
+        starting_frame_deviation = 5,
+        starting_frame_speed = 0,
+        starting_frame_speed_deviation = 5
+      }
+    }
+  },
+  
+----------------------------------------------------------------------------------------------------------------- 
+
   {
     type = "trivial-smoke",
     name = "poop-particle-smoke",
@@ -1010,7 +1261,7 @@ data:extend(
     --  },
     --},
   },
- 
+  
   {
     name = "poop-cloud",
     type = "smoke-with-trigger",
@@ -1206,13 +1457,150 @@ data:extend(
       }
     }
   },
+  
+-----------------------------------------------------------------------------------------------------------------
+ 
   {
-    type = "artillery-projectile",
-    name = "atomic-artillery",
+    type = "trivial-smoke",
+    name = "virus-particle-smoke",
+    animation = smoke_fast_animation(
+      {
+        scale = 0.2
+      }
+    ),
+    duration = 60,
+    fade_away_duration = 60,
+    render_layer = "higher-object-above",
+    color = {r = 0.5, g = 0.4, b = 0.35, a = 0.690}
+  },
+ 
+  {
+    type = "smoke-with-trigger",
+    name = "virus-cloud-visual-dummy",
     flags = {"not-on-map"},
-	reveal_map = true,
-    map_color = {r=1, g=1, b=0},
-    acceleration = 0.005,
+    show_when_smoke_off = true,
+    particle_count = 24,
+    particle_spread = { 3.6 * 1.05, 3.6 * 0.6 * 1.05 },
+    particle_distance_scale_factor = 0.5,
+    particle_scale_factor = { 1, 0.707 },
+    particle_duration_variation = 60 * 3;
+    wave_speed = { 0.5 / 80, 0.5 / 60 },
+    wave_distance = { 1, 0.5 },
+    spread_duration_variation = 300 - 20;
+
+    render_layer = "object",
+
+    affected_by_wind = false,
+    cyclic = true,
+    duration = 60 * 20 + 4 * 60,
+    fade_away_duration = 3 * 60,
+    spread_duration = (300 - 20) / 2 ,
+    color = {r = 0.6, g = 0.2, b = 0.4, a = 0.5}, -- #0
+
+    animation =
+    {
+      width = 152,
+      height = 120,
+      line_length = 5,
+      frame_count = 60,
+      shift = {-0.53125, -0.4375},
+      priority = "high",
+      animation_speed = 0.25,
+      filename = "__base__/graphics/entity/smoke/smoke.png",
+      flags = { "smoke" }
+    },
+
+    --working_sound =
+    --{
+    --  sound =
+    --  {
+    --    filename = "__base__/sound/fight/poison-cloud.ogg",
+    --    volume = 0.5
+    --  },
+    --},
+  },
+ 
+  {
+    name = "virus-cloud",
+    type = "smoke-with-trigger",
+    flags = {"not-on-map"},
+    show_when_smoke_off = true,
+    particle_count = 20,
+    particle_spread = { 3.6 * 1.05, 3.6 * 0.6 * 1.05 },
+    particle_distance_scale_factor = 0.5,
+    particle_scale_factor = { 1, 0.707 },
+    wave_speed = { 1/80, 1/60 },
+    wave_distance = { 0.3, 0.2 },
+    spread_duration_variation = 20;
+    particle_duration_variation = 60 * 3;
+    render_layer = "object",
+
+    affected_by_wind = false,
+    cyclic = true,
+    duration = 60 * 20,
+    fade_away_duration = 2 * 60,
+    spread_duration = 20,
+    color = {r = 0.75, g = 0.2, b = 0.5, a = 0.5}, -- #
+
+    animation =
+    {
+      width = 152,
+      height = 120,
+      line_length = 5,
+      frame_count = 60,
+      shift = {-0.53125, -0.4375},
+      priority = "high",
+      animation_speed = 0.25,
+      filename = "__base__/graphics/entity/smoke/smoke.png",
+      flags = { "smoke" }
+    },
+
+    created_effect =
+    {
+      {
+        type = "cluster",
+        cluster_count = 20,
+        distance = 5,
+        distance_deviation = 5.5,
+        action_delivery =
+        {
+          type = "instant",
+          target_effects =
+          {
+            type = "create-smoke",
+            show_in_tooltip = false,
+            entity_name = "virus-cloud-visual-dummy",
+            initial_height = 0
+          }
+        }
+      },
+      {
+        type = "cluster",
+        cluster_count = 20,
+        distance = 9 * 1.1,
+        distance_deviation = 3.5,
+        action_delivery =
+        {
+          type = "instant",
+          target_effects =
+          {
+            type = "create-smoke",
+            show_in_tooltip = false,
+            entity_name = "virus-cloud-visual-dummy",
+            initial_height = 0
+          }
+        }
+      }
+    },
+
+    working_sound =
+    {
+      sound =
+      {
+        filename = "__base__/sound/fight/poison-cloud.ogg",
+        volume = 0.7
+      },
+    },
     action =
     {
       type = "direct",
@@ -1221,91 +1609,154 @@ data:extend(
         type = "instant",
         target_effects =
         {
+          type = "nested-result",
+          action =
           {
-              repeat_count = 100,
-              type = "create-trivial-smoke",
-              smoke_name = "nuclear-smoke",
-              offset_deviation = {{-1, -1}, {1, 1}},
-              starting_frame = 3,
-              starting_frame_deviation = 5,
-              starting_frame_speed = 0,
-              starting_frame_speed_deviation = 5,
-              speed_from_center = 0.5
-          },
-          {
-            type = "create-entity",
-            entity_name = "explosion"
-          },
-          {
-            type = "damage",
-            damage = {amount = 400, type = "explosion"}
-          },
-          {
-            type = "create-entity",
-            entity_name = "big-scorchmark",
-            check_buildability = true
-          },
-          {
-            type = "nested-result",
-            action =
+            type = "area",
+            radius = 60,
+            entity_flags = {"breaths-air"},
+            action_delivery =
             {
-              type = "area",
-              target_entities = false,
-              trigger_from_target = true,
-              repeat_count = 2000,
-              radius = 35,
-              action_delivery =
+              type = "instant",
+              target_effects =
               {
-                type = "projectile",
-                projectile = "atomic-bomb-wave",
-                starting_speed = 0.5
+                type = "damage",
+                damage = { amount = 30, type = "poison"}
               }
             }
           }
         }
       }
     },
-    light = {intensity = 0.8, size = 15},
-    picture =
+    action_cooldown = 30
+  },
+  {
+    type = "trivial-smoke",
+    name = "poison-capsule-particle-smoke",
+    animation = smoke_fast_animation(
+      {
+        scale = 0.2
+      }
+    ),
+    duration = 360,
+    fade_away_duration = 60,
+    render_layer = "higher-object-above",
+    color = {r = 0.75, g = 0.2, b = 0.5, a = 0.5}
+  },
+  make_particle
+  {
+    name = "virus-capsule-metal-particle",
+    pictures = particle_animations.get_metal_particle_small_pictures({}),
+    shadows = particle_animations.get_metal_particle_small_pictures({ tint = shadowtint(), shift = util.by_pixel (1,0)}),
+    regular_trigger_effect =
     {
-      filename = "__base__/graphics/entity/artillery-projectile/hr-shell.png",
-      width = 64,
-      height = 64,
-      scale = 0.5
+      type = "create-trivial-smoke",
+      smoke_name = "poison-capsule-particle-smoke",
+      starting_frame_deviation = 0,
+      starting_frame_speed_deviation = 0,
+      offset_deviation = {{-0.03, -0.03}, {0.03, 0.03}},
+      speed_from_center = nil,
+    },
+    ended_in_water_trigger_effect = default_ended_in_water_trigger_effect(),
+  },
+  {
+    type = "projectile",
+    name = "virus-capsule",
+    flags = {"not-on-map"},
+    acceleration = 0.005,
+    action =
+    {
+      {
+        type = "direct",
+        action_delivery =
+        {
+          type = "instant",
+          target_effects =
+          {
+            {
+              type = "create-smoke",
+              show_in_tooltip = true,
+              entity_name = "virus-cloud",
+              initial_height = 0
+            },
+            {
+              type = "create-particle",
+              particle_name = "virus-capsule-metal-particle",
+              repeat_count = 8,
+              initial_height = 1,
+              initial_vertical_speed = 0.1,
+              initial_vertical_speed_deviation = 0.05,
+              offset_deviation = {{-0.1, -0.1}, {0.1, 0.1}},
+              speed_from_center = 0.05,
+              speed_from_center_deviation = 0.01
+            }
+          }
+        }
+      }
+    },
+    light = {intensity = 0.5, size = 4},
+    animation =
+    {
+      filename = kr_entities_path .. "bullets/virus-capsule.png",
+      frame_count = 16,
+	  line_length = 8,
+      animation_speed = 0.250,
+      width = 29,
+      height = 29,
+      shift = util.by_pixel(1, 0.5),
+      priority = "high",
+      hr_version =
+      {
+        filename = kr_entities_path .. "bullets/hr-virus-capsule.png",
+        frame_count = 16,
+		line_length = 8,
+        animation_speed = 0.250,
+        width = 58,
+        height = 59,
+        shift = util.by_pixel(1, 0.5),
+        priority = "high",
+        scale = 0.5
+      }
+
     },
     shadow =
     {
-      filename = "__base__/graphics/entity/artillery-projectile/hr-shell-shadow.png",
-      width = 64,
-      height = 64,
-      scale = 0.5
-    },
-    chart_picture =
-    {
-      filename = "__base__/graphics/entity/artillery-projectile/artillery-shoot-map-visualization.png",
-      flags = { "icon" },
-      frame_count = 1,
-      width = 64,
-      height = 64,
+      filename = kr_entities_path .. "bullets/virus-capsule-sh.png",
+      frame_count = 16,
+	  line_length = 8,
+      animation_speed = 0.25,
+      width = 27,
+      height = 21,
+      shift = util.by_pixel(1, 2),
       priority = "high",
-      scale = 0.25
+      draw_as_shadow = true,
+      hr_version =
+      {
+        filename = kr_entities_path .. "bullets/hr-virus-capsule-sh.png",
+        frame_count = 16,
+		line_length = 8,
+        animation_speed = 0.25,
+        width = 54,
+        height = 42,
+        shift = util.by_pixel(1, 2),
+        priority = "high",
+        draw_as_shadow = true,
+        scale = 0.5
+      }
     },
     smoke =
     {
       {
-        name = "smoke-fast",
+        name = "poop-particle-smoke",
         deviation = {0.15, 0.15},
         frequency = 1,
-        position = {0, 1},
-        slow_down_factor = 1,
+        position = {0, 0},
         starting_frame = 3,
         starting_frame_deviation = 5,
-        starting_frame_speed = 0,
         starting_frame_speed_deviation = 5
       }
     }
-  }
-	
+  }	
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

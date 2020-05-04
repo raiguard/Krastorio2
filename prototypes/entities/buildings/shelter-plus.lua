@@ -1,22 +1,28 @@
+local kr_icons_size = false
+
+if krastorio.general.getSafeSettingValue("kr-large-icons") then
+kr_icons_size = true
+end
+
 local s_tint = {r=1, g=1, b=1, a=1} -- White (should be never setted)
 local setting_color = krastorio.general.getSafeSettingValue("kr-shelter-tint") or "Yellow"
 
 if setting_color == "Yellow" then
 	s_tint = {r=0.9, g=0.7, b=0, a=0.75}
 elseif setting_color == "Olive" then
-	s_tint = {r=0.75, g=0.75, b=0.3, a=0.5}
+	s_tint = {r=0.50, g=0.60, b=0.2, a=0.5}
 elseif setting_color == "Pink" then
 	s_tint = {r=1, g=0.75, b=0.3, a=0.5}
 elseif setting_color == "Red" then
 	s_tint = {r=1, g=0.3, b=0.3, a=1}
 elseif setting_color == "Blue" then
-	s_tint = {r=0.25, g=0.25, b=0.75, a=0.75}
+	s_tint = {r=0.20, g=0.25, b=0.75, a=0.75}
 elseif setting_color == "Green" then
-	s_tint = {r=0.3, g=1, b=0.3, a=0.75}
-elseif setting_color == "Сyan" then
+	s_tint = {r=0.2, g=0.8, b=0.2, a=0.8}
+elseif setting_color == "Cyan" then
 	s_tint = {r=0.6, g=1, b=1, a=1}
 elseif setting_color == "Purple" then
-	s_tint = {r=0.5, g=0.1, b=0.8, a=0.8}
+	s_tint = {r=0.45, g=0.25, b=0.7, a=0.72}
 elseif setting_color == "Gray" then
 	s_tint = {r=0.2, g=0.2, b=0.2, a=0.8}
 end
@@ -157,7 +163,7 @@ data:extend(
 		flags = {"player-creation", "not-rotatable", "not-blueprintable"},
 		minable = {mining_time = 0.5, result = "kr-shelter-plus"},
 		max_health = 5000,
-		corpse = "kr-big-random-pipes-remnant",
+		corpse = "kr-medium-random-pipes-remnant",
 		collision_box = {{-2.75, -2.75}, {2.75, 2.75}},
 		selection_box = {{-3, -3}, {3, 3}},
 		resistances = 
@@ -168,9 +174,9 @@ data:extend(
 		},
 		picture = armored_shelter_animation,
 		inventory_size = 200,
-		scale_info_icons = true,
-		open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume = 0.5 },
-		close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.6 },
+		scale_info_icons = kr_icons_size,
+		open_sound = { filename = kr_sounds_mod .. "buildings/open.ogg", volume = 1 },
+		close_sound = { filename = kr_sounds_mod .. "buildings/close.ogg", volume = 1 },
 		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },		
 	},
 	-- Shelter light

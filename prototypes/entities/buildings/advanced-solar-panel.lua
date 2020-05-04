@@ -11,6 +11,7 @@ data:extend(
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 0.5, result = "kr-advanced-solar-panel"},
 		max_health = 300,
+		fast_replaceable_group = "solar-panel",
 		corpse = "solar-panel-remnants",
 		dying_explosion = "solar-panel-explosion",
 		collision_box = {{-1.75, -1.75}, {1.75, 1.75}},
@@ -84,6 +85,6 @@ data:extend(
 			}
 		},
 		vehicle_impact_sound = sounds.generic_impact,
-		production = "200kW"
+		production = "250kW"
 	}
 })

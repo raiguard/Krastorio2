@@ -210,23 +210,24 @@ data:extend(
 	{	
 		type = "tile",
 		name = "kr-creep",
+		order = "b-a-a",
 		needs_correction = false,
 		can_be_part_of_blueprint = true,		
-		collision_mask = { "ghost-layer", "floor-layer", "not-colliding-with-itself" },
-		--minable = {mining_time = 15, result = "biomass", probability = 0.35, amount = 1},
+		collision_mask = { "ghost-layer", "ground-tile", "floor-layer", "not-colliding-with-itself" },
+		minable = {mining_time = 15, result = "biomass", probability = 0.35, amount = 1},
 		walking_speed_modifier = 0.35,
-		layer = 1,
-		transition_overlay_layer_offset = 1,
+		layer = 200,
+		transition_overlay_layer_offset = 3,
 		decorative_removal_probability = 0.35,
 		variants = tile_variations_template
 		(
 			kr_tiles_path .. "creep/creep.png", "__base__/graphics/terrain/masks/transition-1.png",
 			kr_tiles_path .. "creep/hr-creep.png", "__base__/graphics/terrain/masks/hr-transition-1.png",
 			{
-				max_size = 8,
-				[2] = { probability = 0.39, weights = {0.025, 0.010, 0.013, 0.025, 0.025, 0.100, 0.100, 0.005, 0.010, 0.010, 0.005, 0.005, 0.001, 0.015, 0.020, 0.020} },
-				[4] = { probability = 0.20, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} },
-				[8] = { probability = 0.10, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} }
+				max_size = 4,
+				[1] = { weights =                  {0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05 }, },
+				[2] = { probability = 1, weights = {0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05 }, },
+				[4] = { probability = 1, weights = {0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05 }, },
 			}
 		),		
 		map_color={r=80, g=60, b=65},

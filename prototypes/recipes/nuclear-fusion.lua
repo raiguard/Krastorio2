@@ -12,7 +12,8 @@ return
 		hidden = true,
 		ingredients =
 		{
-			{type="fluid", name="water", amount=1000, catalyst_amount = 1000}
+			{type="fluid", name="water", amount=1000, catalyst_amount = 1000},
+			{type="item", name="dt-fuel", amount=1}
 		},
 		results =
 		{

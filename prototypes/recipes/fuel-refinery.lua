@@ -47,7 +47,7 @@ return
 		allow_productivity = true,
 		ingredients =
 		{
-			{type = "fluid", name = "light-oil", amount = 50, catalyst_amount = 50}
+			{type = "fluid", name = "light-oil", amount = 60, catalyst_amount = 60}
 		},
 		results =
 		{ 
@@ -90,8 +90,8 @@ return
 		allow_productivity = true,
 		ingredients =
 		{
-			{ type = "item", name = "solid-fuel", amount = 4},
-			{ type = "fluid", name = "hydrogen", amount = 50, catalyst_amount = 50}
+			{ type = "item", name = "solid-fuel", amount = 6},
+			{ type = "fluid", name = "hydrogen", amount = 50}
 		},
 		results =
 		{ 
@@ -121,8 +121,8 @@ return
 		allow_productivity = true,
 		ingredients =
 		{
-			{type="item", name="fuel", amount=5},
-			{type="fluid", name="biomethanol", amount=50, catalyst_amount = 50}
+			{type="item", name="fuel", amount=6},
+			{type="fluid", name="biomethanol", amount=50}
 		},
 		results =
 		{ 
@@ -153,7 +153,7 @@ return
 		ingredients =
 		{
 			{type="item", name="fuel", amount=10},
-			{type="item", name="imersite-powder", amount=5}
+			{type="item", name="imersite-powder", amount=6}
 		},
 		results =
 		{ 
@@ -183,9 +183,9 @@ return
 		allow_productivity = true,
 		ingredients =
         {
-            {type="item", name="wood", amount=20},
-            {type="fluid", name="oxygen", amount=60, catalyst_amount = 60},
-            {type="fluid", name="steam", amount=120, catalyst_amount = 120}
+            {type="item", name="wood", amount=5},
+            {type="fluid", name="oxygen", amount=60},
+            {type="fluid", name="steam", amount=120}
         },
         results =
         { 
@@ -214,12 +214,14 @@ return
 		icon_size = 64,		
 		energy_required = 30,
 		enabled = false,
+		allow_productivity = true,
+		always_show_made_in = true,
 		category = "fuel-refinery",
 		ingredients =
 		{
 			{"iron-plate", 1},
-			{type="fluid", name="ammonia", amount=50, catalyst_amount=50},
-			{type="fluid", name="oxygen", amount=50, catalyst_amount=50},
+			{type="fluid", name="ammonia", amount=50},
+			{type="fluid", name="oxygen", amount=50},
 		},
 		result = "rocket-fuel",
 		crafting_machine_tint =
@@ -242,12 +244,14 @@ return
 		icon_size = 64,		
 		energy_required = 30,
 		enabled = false,
+		allow_productivity = true,
+		always_show_made_in = true,
 		category = "fuel-refinery",
 		ingredients =
 		{
 			{"iron-plate", 1},
-			{type="fluid", name="hydrogen-chloride", amount=50, catalyst_amount=50},
-			{type="fluid", name="oxygen", amount=50, catalyst_amount=50},
+			{type="fluid", name="hydrogen-chloride", amount=50},
+			{type="fluid", name="oxygen", amount=50},
 		},
 		result = "rocket-fuel",
 		crafting_machine_tint =

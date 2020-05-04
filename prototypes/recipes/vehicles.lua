@@ -3,7 +3,7 @@ return
 	{
 		type = "recipe",
 		name = "kr-advanced-tank",
-		energy_required = 300,
+		energy_required = 200,
 		enabled = false,
 		allow_productivity = true,
 		ingredients =

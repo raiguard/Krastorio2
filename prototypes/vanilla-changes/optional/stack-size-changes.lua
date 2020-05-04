@@ -107,7 +107,6 @@ if krastorio.general.getSafeSettingValue("kr-stack-size") then
 	data.raw.item["biters-research-data"].stack_size = 200
 	data.raw.item["matter-research-data"].stack_size = 200
 	data.raw.item["space-research-data"].stack_size = 1000
-	data.raw.item["singularity-research-data"].stack_size = 200
 	data.raw.tool["basic-tech-card"].stack_size = 200
 	data.raw.tool["matter-tech-card"].stack_size = 200
 	data.raw.tool["advanced-tech-card"].stack_size = 200

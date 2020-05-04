@@ -34,7 +34,7 @@ data:extend(
 		{
 			type = "electric",
 			render_no_power_icon = false,
-			usage_priority = "primary-output"
+			usage_priority = "secondary-output"
 		},		
 		burner =
 		{
@@ -81,7 +81,7 @@ data:extend(
 				frame_count = 1,
 				width = 362,
 				height = 315,
-				shift = {0.2, 0.1},
+				shift = {0.57, 0.27},
 				frame_count = 1,
 				repeat_count = 30,
 				animation_speed=0.9,
@@ -113,6 +113,8 @@ data:extend(
 				}
 			}
 		},
+		open_sound = { filename = kr_sounds_mod .. "buildings/open.ogg", volume = 1 },
+		close_sound = { filename = kr_sounds_mod .. "buildings/close.ogg", volume = 1 },
 		audible_distance_modifier = 10,
 		min_perceived_performance = 0.25,
 		performance_to_sound_speedup = 0.5,

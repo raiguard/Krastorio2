@@ -5,7 +5,7 @@ return
 		type = "recipe",
 		name = "fertilizer",
 		category = "chemistry",
-		energy_required = 30,
+		energy_required = 10,
 		enabled = false,
 		allow_productivity = true,
 		ingredients =
@@ -296,8 +296,8 @@ return
 		ingredients =
 		{
 			{type="item", name="imersite-powder", amount=6},
-			{type="fluid", name="nitric-acid", amount=10, catalyst_amount = 50},
-			{type="fluid", name="sulfuric-acid", amount=10, catalyst_amount = 50},
+			{type="fluid", name="nitric-acid", amount=10},
+			{type="fluid", name="sulfuric-acid", amount=10},
 		},
 		result = "imersite-crystal",
 		subgroup = "intermediate-product",
@@ -313,16 +313,16 @@ return
 	{
 		type = "recipe",
 		name = "dt-fuel",
-		energy_required = 20,
+		energy_required = 5,
 		category = "chemistry",
 		enabled = false,
 		always_show_made_in = true,
-		allow_productivity = true,
+		allow_productivity = false,
 		ingredients =
 		{
-			{ type = "fluid", name = "heavy-water", amount = 20, catalyst_amount = 20},
-			{ type = "item", name = "tritium", amount = 2},
-			{ "empty-dt-fuel", 1}
+			{ type = "fluid", name = "heavy-water", amount = 10},
+			{ type = "item", name = "tritium", amount = 1},
+			{ type = "item", name = "empty-dt-fuel", amount = 1}
 		},
 		result = "dt-fuel",
 		crafting_machine_tint = 

@@ -1,7 +1,7 @@
 data:extend(
 {  
 	{
-		type = "furnace",
+		type = "assembling-machine", --type = "furnace",
 		name = "kr-fusion-reactor",
 		icon = kr_entities_icons_path .. "fusion-reactor.png",
 		icon_size = 64,
@@ -10,6 +10,7 @@ data:extend(
 		max_health = 7500,
 		corpse = "kr-fusion-reactor-remnant",
 		dying_explosion = "medium-explosion",
+		fixed_recipe = "kr-fusion",
 		resistances = 
 		{
 			{type = "physical",percent = 60},
@@ -161,51 +162,11 @@ data:extend(
 		crafting_speed = 1,
 		energy_source =
 		{
-			type = "burner",
-			fuel_categories = {"fusion-fuel"},
-			fuel_inventory_size = 1,
-			emissions_per_minute = 2,
-			effectivity = 1,
-			emissions_per_minute = nil,
-			light_flicker = {intensity = 2, minimum_light_size = 3, color = {r=0.35, g=0.75, b=1}},
-			smoke =
-			{
-				{
-					name = "turbine-smoke",
-					north_position = {6.35, -3.75},
-					east_position = {6.35, -3.75},
-					west_position = {6.35, -3.75},
-					south_position = {6.35, -3.75},
-					frequency = 10,
-					starting_vertical_speed = 0.05,
-					slow_down_factor = 1,
-					starting_frame_deviation = 60
-				},
-				{
-					name = "turbine-smoke",
-					north_position = {6.5, -2.7},
-					east_position = {6.5, -2.7},
-					west_position = {6.5, -2.7},
-					south_position = {6.5, -2.7},
-					frequency = 10,
-					starting_vertical_speed = 0.05,
-					slow_down_factor = 1,
-					starting_frame_deviation = 60
-				},
-				{
-					name = "turbine-smoke",
-					north_position = {0, -6.35},
-					east_position = {0, -6.35},
-					west_position = {0, -6.35},
-					south_position = {0, -6.35},
-					frequency = 10,
-					starting_vertical_speed = 0.05,
-					slow_down_factor = 1,
-					starting_frame_deviation = 60
-				}
-			}
-		},	
-		energy_usage = "2000MW",
+			type = "electric",
+			usage_priority = "secondary-input",
+			emissions_per_minute = 5
+		},
+		energy_usage = "483.4MW",
 		source_inventory_size = 0,
 		result_inventory_size = 1,
 		open_sound = { filename = kr_buildings_sounds_path .. "open.ogg", volume = 1 },

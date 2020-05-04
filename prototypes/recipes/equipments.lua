@@ -60,7 +60,7 @@ return
 		{
 			{"advanced-exoskeleton-equipment", 1},
 			{"ai-core", 10},
-			{"imersium-plate", 25},
+			{"imersium-plate", 10},
 			{"speed-module-3", 10}
 		},		
 		result = "superior-exoskeleton-equipment"		
@@ -165,8 +165,8 @@ return
 		ingredients =
 		{
 			{"big-battery-equipment", 2},
-			{"electronic-components", 4},
-			{"advanced-circuit", 1},
+			{"steel-plate", 4},
+			{"advanced-circuit", 2},
 		},
 		result = "big-battery-mk2-equipment"
     }, 
@@ -179,8 +179,8 @@ return
 		ingredients =
 		{
 			{"big-battery-mk2-equipment", 2},
-			{"rare-metals", 4},
-			{"processing-unit", 1}
+			{"lithium-sulfur-battery", 4},
+			{"processing-unit", 2}
 		},
 		result = "big-battery-mk3-equipment"
     },
@@ -300,7 +300,7 @@ return
 		energy_required = 10,
 		ingredients = 
 		{
-			{"personal-laser-defense-equipment", 1},
+			{"personal-laser-defense-mk2-equipment", 1},
 			{"processing-unit", 10},
 			{"lithium-sulfur-battery", 10},
 			{"imersium-plate", 5}
@@ -386,8 +386,8 @@ return
 		energy_required = 40,
 		ingredients =
 		{
-			{"energy-shield-mk2-equipment", 10},
-			{"electronic-components", 40},
+			{"energy-shield-mk2-equipment", 5},
+			{"electronic-components", 20},
 			{"lithium-sulfur-battery", 10}
 		},
 		result = "energy-shield-mk3-equipment"
@@ -399,9 +399,9 @@ return
 		energy_required = 80,
 		ingredients =
 		{
-			{"energy-shield-mk3-equipment", 10},
-			{"ai-core", 10},
-			{"imersium-plate", 20}
+			{"energy-shield-mk3-equipment", 5},
+			{"ai-core", 5},
+			{"imersium-plate", 10}
 		},
 		result = "energy-shield-mk4-equipment"
 	}

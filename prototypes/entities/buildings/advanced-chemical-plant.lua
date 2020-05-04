@@ -141,14 +141,14 @@ data:extend(
 			idle_sound = { filename = "__base__/sound/idle1.ogg" },
 			apparent_volume = 1.5
 		},
-		crafting_speed = 10,
+		crafting_speed = 8,
 		energy_source =
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions_per_minute = 10
+			emissions_per_minute = 30
 		},
-		energy_usage = "2MW",
+		energy_usage = "1.75MW",
 		ingredient_count = 6,
 		module_specification = { module_slots = 4, module_info_icon_shift = {0, 1.7}, module_info_icon_scale = 1 },
 		allowed_effects = {"consumption", "speed", "productivity", "pollution"},

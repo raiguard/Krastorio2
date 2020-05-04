@@ -16,5 +16,35 @@ return
 		{ 
 			{type="item", name="biomass", amount=5}
 		}
-	}	
+	},
+	{
+		type = "recipe",
+		name = "kr-creep-virus",
+		category = "bioprocessing",
+		enabled = false,
+		energy_required = 600,
+		ingredients =
+		{
+			{type="item",  name="poison-capsule",    amount=1},
+			{type="item",  name="imersite-powder",   amount=5},
+			{type="fluid", name="hydrogen-chloride", amount=50},
+			{type="fluid", name="sulfuric-acid",     amount=50}
+		},
+		result = "kr-creep-virus"
+	},
+	{
+		type = "recipe",
+		name = "kr-biter-virus",
+		category = "bioprocessing",
+		enabled = false,
+		energy_required = 600,
+		ingredients =
+		{
+			{type="item",  name="poison-capsule",  amount=1},
+			{type="item",  name="imersite-powder", amount=5},
+			{type="fluid", name="nitric-acid",     amount=50},
+			{type="fluid", name="biomethanol",     amount=50}
+		},
+		result = "kr-biter-virus"
+	}
 }

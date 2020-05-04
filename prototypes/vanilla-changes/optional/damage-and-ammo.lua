@@ -35,51 +35,38 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
 	data.raw["electric-turret"]["laser-turret"].energy_source = -- nerf x2
 	{
 		type = "electric",
-		buffer_capacity = "1602kJ",
-		input_flow_limit = "19200kW",
-		drain = "48kW",
+		buffer_capacity = "2000kJ",
+		input_flow_limit = "4000kW",
+		drain = "100kW",
 		usage_priority = "primary-input"
     }
 
-	data.raw["electric-turret"]["laser-turret"].attack_parameters = -- boost range +5 and damage x2
-	{
-		ammo_type = 
-		{	
-			action = 
-			{
-				action_delivery = 
-				{
-					beam = "laser-beam",
-					duration = 10,
-					max_length = 35,
-					source_offset = 
-					{
-						0,
-						-1.3143899999999999
-					},
-					type = "beam"
-				},
-				type = "direct"
-			},
-			category = "laser-turret",
-			energy_consumption = "800kJ"
-		},
-		cooldown = 20,
-		damage_modifier = 4,
-		range = 30,
-		source_direction_count = 64,
-		source_offset = 
-		{
-			0,
-			-0.85587225
-		},
-		type = "beam",
-		sound =
-		{
-			filename = "__base__/sound/fight/pulse.ogg",
-			volume = 0.75
-		}
-	}	
+	data.raw["electric-turret"]["laser-turret"].attack_parameters =
+    {
+      type = "beam",
+      cooldown = 30,
+      range = 30,
+      source_direction_count = 64,
+      source_offset = {0, -3.423489 / 4},
+      damage_modifier = 3,
+      ammo_type =
+      {
+        category = "laser-turret",
+        energy_consumption = "975kJ",
+        action =
+        {
+          type = "direct",
+          action_delivery =
+          {
+            type = "beam",
+            beam = "laser-beam",
+            max_length = 30,
+            duration = 30,
+            source_offset = {0, -1.31439 }
+          }
+        }
+      }
+    }
 
 	data.raw.recipe["gun-turret"].energy_required = 10
 	data.raw.recipe["flamethrower-turret"].energy_required = 20
@@ -341,12 +328,8 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
 				{
 					{
 						type = "damage",
-						damage = {amount = 200, type = "explosion"}
+						damage = {amount = 400, type = "explosion"}
 					},
-					{
-						type = "damage",
-						damage = {amount = 200, type = "radioactive"}
-					}
 				}
 			}
 		}

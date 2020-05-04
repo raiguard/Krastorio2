@@ -125,7 +125,6 @@ data:extend(
 			count = 200,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
@@ -156,7 +155,6 @@ data:extend(
 			count = 200,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
@@ -211,7 +209,6 @@ data:extend(
 			count = 200,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1}
@@ -255,7 +252,6 @@ data:extend(
 			count = 500,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"military-science-pack", 1},
@@ -284,7 +280,6 @@ data:extend(
 			count = 500,
 			ingredients = 
 			{
-				{"basic-tech-card", 1},
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1},
@@ -311,15 +306,14 @@ data:extend(
 				recipe = krastorio.recipes.changed_names["matter-tech-card"] or "matter-tech-card"
 			}
 		},
-		prerequisites = {"kr-singularity-lab", "space-science-pack"},
+		prerequisites = {"kr-singularity-lab"},
 		unit =
 		{
-			count = 500,
+			count = 750,
 			ingredients = 
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1}
 			},
 			time = 60
 		}
@@ -345,7 +339,6 @@ data:extend(
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
 				{"matter-tech-card", 1}
 			},
 			time = 30
@@ -380,7 +373,6 @@ data:extend(
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
 				{"matter-tech-card", 1}
 			},
 			time = 60
@@ -411,7 +403,7 @@ data:extend(
 				recipe = krastorio.recipes.changed_names["antimatter-railgun-shell"] or "antimatter-railgun-shell"
 			}
 		},
-		prerequisites = {"kr-railgun-turret", "kr-rocket-turret", "kr-singularity-tech-card", "atomic-bomb"},
+		prerequisites = {"kr-railgun-turret", "kr-rocket-turret", "kr-singularity-tech-card"},
 		unit =
 		{
 			count = 2500,
@@ -421,7 +413,6 @@ data:extend(
 				{"kr-advanced-tech-card", 1},
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
 				{"matter-tech-card", 1}
 			},
 			time = 60
@@ -448,8 +439,61 @@ data:extend(
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
 				{"matter-tech-card", 1}
+			},
+			time = 45
+		}
+    },
+	{
+		type = "technology",
+		name = "kr-creep-virus",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "creep-virus.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["kr-creep-virus"] or "kr-creep-virus"
+			}
+		},
+		prerequisites = {"kr-advanced-tech-card", "kr-military-5"},
+		unit =
+		{
+			count = 2000,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"matter-tech-card", 1},
+				{"advanced-tech-card", 1}
+			},
+			time = 45
+		}
+    },
+	{
+		type = "technology",
+		name = "kr-biter-virus",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "biter-virus.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["kr-biter-virus"] or "kr-biter-virus"
+			}
+		},
+		prerequisites = {"kr-creep-virus"},
+		unit =
+		{
+			count = 3000,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"matter-tech-card", 1},
+				{"advanced-tech-card", 1}
 			},
 			time = 45
 		}
@@ -461,11 +505,7 @@ data:extend(
 		icon = kr_technologies_icons_path .. "singularity-tech-card.png",
 		icon_size = 128,
 		effects =
-		{			
-			{
-				type = "unlock-recipe",
-				recipe = krastorio.recipes.changed_names["singularity-research-data"] or "singularity-research-data"
-			},
+		{
 			{
 				type = "unlock-recipe",
 				recipe = krastorio.recipes.changed_names["singularity-tech-card"] or "singularity-tech-card"
@@ -507,7 +547,6 @@ data:extend(
 			{
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
 				{"matter-tech-card", 1},
 				{"advanced-tech-card", 1}
 			},
@@ -520,7 +559,7 @@ data:extend(
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "matter-cube.png",
 		icon_size = 128,
-		prerequisites = {"kr-matter-processing"},
+		prerequisites = {"kr-matter-processing", "kr-singularity-tech-card"},
 		order = "g-f-z",
 		unit =
 		{
@@ -531,7 +570,8 @@ data:extend(
 				{"utility-science-pack", 1},
 				{"space-science-pack", 1},
 				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1}				
+				{"advanced-tech-card", 1},
+				{"singularity-tech-card", 1}		
 			},
 			time = 60
 		}

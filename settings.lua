@@ -24,29 +24,37 @@ data:extend(
 		name = "kr-bonus-inventory",
 		setting_type = "startup",
 		default_value = 0,
-        allowed_values = {0, 10, 20, 30, 40},
+        allowed_values = {-30, -20, -10, 0, 10, 20, 30, 40, 50, 60},
 		order = "a3"
+	},
+	{
+		type = "int-setting",
+		name = "kr-cargo-wagon-bonus",
+		setting_type = "startup",
+		default_value = 0,
+        allowed_values = {-30, -20, -10, 0, 10, 20, 30, 40, 50, 60},
+		order = "a4"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-bonus-items",
 		setting_type = "startup",
 		default_value = false,
-		order = "a4"
+		order = "a5"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-disable-wiki",
 		setting_type = "runtime-per-user",
 		default_value = false,
-		order = "a5"
+		order = "a6"
 	},
 	{
 		type = "bool-setting",
 		name = "kr-loaders",
 		setting_type = "startup",
 		default_value = true,
-		order = "a6"
+		order = "a7"
 	},
 	-- S - Science (Setting order "sNUMBER")
 	{
@@ -103,15 +111,15 @@ data:extend(
         name = "kr-shelter-tint",
         setting_type = "startup",
         default_value = "White",
-        allowed_values = {"White", "Gray", "Yellow", "Pink", "Olive", "Red", "Blue", "Green", "Сyan", "Purple"},
+        allowed_values = {"White", "Gray", "Yellow", "Pink", "Olive", "Red", "Blue", "Green", "Cyan", "Purple"},
 		order = "u01"
 	},
 	{
         type = "string-setting",
         name = "kr-main-menu-background",
         setting_type = "startup",
-        default_value = "Krastorio 2",
-        allowed_values = {"Factorio", "Krastorio Legacy", "Krastorio 2", "Krastorio CyberSkull", "Krastorio Soldier", "Krastorio Explorer", "Factorio Alternative 1", "Factorio Alternative 2", "Factorio Alternative 3", "Factorio Alternative 4"},
+        default_value = "Krastorio Chan",
+        allowed_values = {"Factorio", "Krastorio Legacy", "Krastorio 2", "Krastorio CyberSkull", "Krastorio Chan", "Krastorio THE FACTORY MUST GROW", "Krastorio Explorer", "Factorio Alternative 1", "Factorio Alternative 2", "Factorio Alternative 3", "Factorio Alternative 4"},
 		order = "u02"
     },
 	{
@@ -177,23 +185,23 @@ data:extend(
 		default_value = true,
 		order = "b07"
 	},
+	{
+		type = "bool-setting",
+		name = "kr-finite-oil",
+		setting_type = "startup",
+		default_value = true,
+		order = "b08"
+	},
  	{
  		type = "bool-setting",
 		name = "kr-more-realistic-weapon-auto-aim",
-		setting_type = "startup",
-		default_value = false,
-		order = "b08"
-	},
-	{
-		type = "bool-setting",
-		name = "kr-peaceful-mode",
 		setting_type = "startup",
 		default_value = false,
 		order = "b09"
 	},
 	{
 		type = "bool-setting",
-		name = "kr-vehicles-minable-changes",
+		name = "kr-peaceful-mode",
 		setting_type = "startup",
 		default_value = false,
 		order = "b10"
@@ -207,9 +215,31 @@ data:extend(
 	},
 	{
 		type = "bool-setting",
-		name = "kr-kl-stuff",
+		name = "kr-substation-mk2",
 		setting_type = "startup",
 		default_value = false,
 		order = "b12"
 	},
+	{
+		type = "bool-setting",
+		name = "kr-vehicles-minable-changes",
+		setting_type = "startup",
+		default_value = false,
+		order = "b13"
+	},
+	{
+		type = "bool-setting",
+		name = "kr-large-icons",
+		setting_type = "startup",
+		default_value = false,
+		order = "b14"
+	},
+	{
+		type = "bool-setting",
+		name = "kr-kl-stuff",
+		setting_type = "startup",
+		default_value = false,
+		order = "b15"
+	},
+
 })

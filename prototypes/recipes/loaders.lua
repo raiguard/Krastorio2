@@ -1,6 +1,6 @@
 if krastorio.general.getSafeSettingValue("kr-loaders") then
 
-	local standard_loaders_crafting_speed = 3
+	local standard_loaders_crafting_speed = 2
 
 	-- Variable utils
 	local loader_names = 
@@ -41,7 +41,8 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 			ingredients = 
 			{
 				{"transport-belt", 1},
-				{"iron-gear-wheel", 10}
+				{"iron-gear-wheel", 10},
+				{"iron-beam", 2},
 			}
 		},
 		kr_loader_recipe
@@ -50,42 +51,38 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 			ingredients = 
 			{
 				{"fast-transport-belt", 1},
-				{"kr-loader", 2}				
+				{"kr-loader", 2},
+				{"iron-gear-wheel", 10},
 			}
 		},
 		kr_loader_recipe
 		{
 			name = loader_names[3],
-			category = "crafting-with-fluid",
 			ingredients = 
 			{
 				{"express-transport-belt", 1},
 				{"kr-fast-loader", 2},
-				{type = "fluid", name = "lubricant", amount = 40}
+				{"steel-gear-wheel", 10}
 			}
 		},
 		kr_loader_recipe
 		{
 			name = loader_names[4],
-			category = "crafting-with-fluid",
 			ingredients = 
 			{
 				{"kr-advanced-transport-belt", 1},
 				{"kr-express-loader", 2},
-				{"rare-metals", 5},			
-				{type = "fluid", name = "sulfuric-acid", amount = 50, catalyst_amount = 50}	
+				{"rare-metals", 10}
 			}
 		},
 		kr_loader_recipe
 		{
 			name = loader_names[5],
-			category = "crafting-with-fluid",
 			ingredients = 
 			{
 				{"kr-superior-transport-belt", 1},
 				{"kr-advanced-loader", 2},
-				{"imersium-gear-wheel", 10},			
-			{type = "fluid", name = "nitric-acid", amount = 25, catalyst_amount = 50}	
+				{"imersium-gear-wheel", 10}
 			}
 		}
 	}

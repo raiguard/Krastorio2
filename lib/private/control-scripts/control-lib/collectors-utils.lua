@@ -55,19 +55,13 @@ if settings.startup["kr-kl-stuff"] and settings.startup["kr-kl-stuff"].value the
 	cu.not_valid_replacers["kr-black-reinforced-plate-l"] = true
 end
 
-cu.random_generator = nil
-
 -- Util function for calculate the round of number
 function cu.round(num)
     return (num + 0.5 - (num + 0.5) % 1.0)
 end
 
 function cu.droppedBiomass()
-	if not cu.random_generator or not cu.random_generator.valid then
-		cu.random_generator = game.create_random_generator()
-		math.randomseed(cu.random_generator())
-	end
-	return math.random(global.COLLECT_PROBABILITY, 100)
+	return math.random(global.COLLECT_PROBABILITY, 80)
 end
 
 function cu.isTooDistantFromArea(position, area)

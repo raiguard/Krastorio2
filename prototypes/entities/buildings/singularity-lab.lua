@@ -173,11 +173,11 @@ data:extend(
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions_per_minute = 20
+			--emissions_per_minute = 10
 		},
 		energy_usage = "10MW",
 		module_specification = { module_slots = 4, module_info_icon_shift = {0, 2.1}, module_info_icon_scale = 0.6 },
-		open_sound = { filename = kr_buildings_sounds_path .. "open.ogg", volume = 1 },
-		close_sound = { filename = kr_buildings_sounds_path .. "close.ogg", volume = 0.85 }
+		open_sound = { filename = kr_sounds_mod .. "buildings/open.ogg", volume = 1 },
+		close_sound = { filename = kr_sounds_mod .. "buildings/close.ogg", volume = 1 },
 	}
 })

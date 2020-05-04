@@ -18,8 +18,8 @@ return
 		},
 		results =
 		{
-			{ type = "fluid", name = "chlorine", amount = 20, catalyst_amount = 20 },
-			{ type = "fluid", name = "hydrogen", amount = 30, catalyst_amount = 30 }
+			{ type = "fluid", name = "chlorine", amount = 20 },
+			{ type = "fluid", name = "hydrogen", amount = 30 }
 		},
 		crafting_machine_tint =
 		{
@@ -44,8 +44,8 @@ return
 		},
 		results =
 		{
-			{ type = "fluid", name = "oxygen", amount = 20, catalyst_amount = 20 },
-			{ type = "fluid", name = "hydrogen", amount = 30, catalyst_amount = 30 }
+			{ type = "fluid", name = "oxygen", amount = 20 },
+			{ type = "fluid", name = "hydrogen", amount = 30 }
 		},
 		crafting_machine_tint =
 		{
@@ -67,11 +67,12 @@ return
 		allow_productivity = true,
 		ingredients =
 		{
-			{ type = "item", name = "lithium-chloride", amount = 5}
+			{ type = "item", name = "lithium-chloride", amount = 5},
+			{ type = "fluid", name = "water", amount = 50},
 		},
 		results =
 		{
-			{ type = "fluid", name = "chlorine", amount = 10, catalyst_amount = 10},
+			{ type = "fluid", name = "chlorine", amount = 10},
 			{ type = "item",  name = "lithium", amount = 5}
 		},
 		crafting_machine_tint =
@@ -85,7 +86,7 @@ return
 		type = "recipe",
 		name = "heavy-water",
 		category = "electrolysis",
-		energy_required = 100,
+		energy_required = 120,
 		enabled = false,
 		always_show_made_in = true,
 		always_show_products = true,
@@ -103,7 +104,7 @@ return
 		},
 		results = 
 		{
-			{ type = "fluid", name = "heavy-water", amount = 10}
+			{ type = "fluid", name = "heavy-water", amount = 20}
 		},
 		subgroup = "fluid-recipes",
 		order = "y06[heavy-water]"

@@ -27,10 +27,8 @@ data:extend(
 		corpse = "kr-big-random-pipes-remnant",
 		dying_explosion = "big-explosion",
 		damaged_trigger_effect = hit_effects.entity(),
-		resistances = 
 		{
-			{type = "physical",percent = 50},
-			{type = "fire",percent = 70}
+			{type = "impact", percent = 50}
 		},
 		fluid_boxes =
 		{
@@ -38,7 +36,8 @@ data:extend(
 				production_type = "input",
 				pipe_picture = kr_pipe_path,
 				pipe_covers = pipecoverspictures(),				
-				base_area = 100,
+				base_area = 50,
+				height = 2,
 				base_level = -1,
 				pipe_connections = 
 				{
@@ -142,9 +141,9 @@ data:extend(
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions_per_minute = -8
+			emissions_per_minute = -5
 		},
-		energy_usage = "150KW",
+		energy_usage = "144.8KW",
 		ingredient_count = 4,
 		allowed_effects = nil
 	}

@@ -36,7 +36,7 @@ function krastorio.recipes.getIngredients(recipe_name)
 		if recipe.ingredients then		
 			return recipe.ingredients
 		end
-		if recipe.normal.ingredients then
+		if recipe.normal and recipe.normal.ingredients then
 			return recipe.normal.ingredients
 		end
 	end
@@ -118,12 +118,8 @@ end
 -- return a table
 function krastorio.recipes.getExpensiveIngredients(recipe_name)
 	local recipe = krastorio.recipes.getRecipeFromName(recipe_name)
-	if recipe then
-		if recipe.expensive then
-			if recipe.expensive.ingredients then		
-				return recipe.expensive.ingredients
-			end
-		end
+	if recipe and recipe.expensive and recipe.expensive.ingredients then		
+		return recipe.expensive.ingredients
 	end
 	return {}
 end
@@ -1787,7 +1783,7 @@ function krastorio.recipes.changeEnabledState(recipe_name, state)
 		if recipe.normal and (recipe.normal.enabled ~= nil or recipe.enabled == nil) then
 			recipe.normal.enabled = state or false
 		end	
-		if recipe.expensive and recipe.expensive.enabled ~= nil then
+		if recipe.expensive and (recipe.expensive.enabled ~= nil or recipe.enabled == nil) then
 			recipe.expensive.enabled = state or false
 		end		
 	end	
@@ -1848,7 +1844,7 @@ function krastorio.recipes.findNotUnlockableRecipes()
 		krastorio_utils.log.write(1, string.format("All recipes are unlockable."))
 	else
 		local inspect = require(kr_private_lib .. "/utils/inspect")
-		krastorio_utils.log.write(3, string.format("This recipes is not unlockable, maybe is an error: %s [from findNotUnlockableRecipes()]", inspect(not_unlockable_recipe_names)))
+		krastorio_utils.log.write(3, string.format("This recipes are not unlockable, maybe is an error: %s [from findNotUnlockableRecipes()]", inspect(not_unlockable_recipe_names)))
 	end
 	return not_unlockable_recipe_names
 end

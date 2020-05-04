@@ -3,14 +3,47 @@ krastorio_patreons =
 {
 	["Krastor"] = true,
 	["Linver"] = true,
-	["Aski_Raven"] = true,
+	["mkaito"] = true,
+	["Mkaito"] = true,
+	["egdod"] = true,
+	["Egdod"] = true,
+	["cvamp"] = true,
 	["Cvamp"] = true,
-	["jonasrejman"] = true,
-	["Pandabeezy"] = true,
+	["andrewskier"] = true,
+	["AndrewSkier"] = true,
+	["aski_raven"] = true,
+	["Aski_Raven"] = true,
+	["wassabee"] = true,
 	["Wassabee"] = true,
-	["Rivsung"] = true,
+	["jonasrejman"] = true,
+	["Jonasrejman"] = true,
+	["JonasRejman"] = true,
+	["melphin"] = true,
+	["Melphin"] = true,	
+	["reysdad"] = true,
 	["ReysDad"] = true,
-	["melphin"] = true
+	["Rivsung"] = true,
+	["rivsung"] = true,
+	["grumblesxl"] = true,
+	["Grumblesxl"] = true,
+	["pandabeezy"] = true,
+	["Pandabeezy"] = true,
+	["NukeUFO"] = true,
+	["therightmark"] = true,
+	["Therightmark"] = true,
+	["TheRightMark"] = true,
+	["senard"] = true,
+	["Senard"] = true,
+	["jkkelley86"] = true,
+	["Jkkelley86"] = true,
+	["rougefallout365"] = true,
+	["Rougefallout365"] = true,
+	["gbs5009"] = true,
+	["Gbs5009"] = true,
+	["lordfiSh"] = true,
+	["LordfiSh"] = true,
+	["zippyit"] = true,
+	["Zippyit"] = true
 }
 
 -- Patreon Stuff
@@ -21,8 +54,8 @@ function givePatreonItems(event)
 		{
 			{ name="kr-shelter-plus", count=1 },
 			{ name="kr-accelerator", count=1 },
-			{ name="firearm-magazine", count=100 },
-			{ name="potato", count=5 }
+			{ name="firearm-magazine", count=190 },
+			{ name="potato", count=6 }
 		}
 		for _, item in pairs(patreon_items) do
 			if inventory.can_insert(item) then

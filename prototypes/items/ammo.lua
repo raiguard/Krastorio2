@@ -91,7 +91,7 @@ data:extend(
 			action =
 			{
 				type = "line",
-				range = 60,
+				range = 50,
 				width = 2,
 				source_effects =
 				{
@@ -104,7 +104,7 @@ data:extend(
 					target_effects =
 					{
 						type = "damage",
-						damage = { amount = 250, type="laser"}
+						damage = { amount = 500, type="laser"}
 					}
 				}
 			}

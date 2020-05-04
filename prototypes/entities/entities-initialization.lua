@@ -43,6 +43,8 @@ require(kr_entities_prototypes_path .. "buildings/steel-pump")
 require(kr_entities_prototypes_path .. "buildings/substation-mk2")
 require(kr_entities_prototypes_path .. "buildings/superior-inserters")
 require(kr_entities_prototypes_path .. "buildings/wind-turbine")
+require(kr_entities_prototypes_path .. "buildings/advanced-assembling-machine")
+require(kr_entities_prototypes_path .. "buildings/electric-mining-drills")
 -- -- Turrets
 require(kr_entities_prototypes_path .. "buildings/turrets/railgun-turret")
 require(kr_entities_prototypes_path .. "buildings/turrets/rocket-turret")

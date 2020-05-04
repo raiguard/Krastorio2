@@ -22,10 +22,10 @@ return
 		enabled = true,
 		ingredients =
 		{
-			{"iron-plate", 3},
-			{"iron-beam", 1},
+			{"iron-plate", 6},
+			{"iron-beam", 2},
 			{"iron-gear-wheel", 6},
-			{"copper-cable", 4}
+			{"copper-cable", 6}
 		},	
 		result = "kr-wind-turbine",
 		result_count = 1		

@@ -1,29 +1,31 @@
 local coke_value, coke_acceleration_multiplier, coke_top_speed_multiplier = nil, nil, nil
 local fuel_value, fuel_acceleration_multiplier, fuel_top_speed_multiplier = nil, nil, nil
 local bio_fuel_value, bio_fuel_acceleration_multiplier, bio_fuel_top_speed_multiplier = nil, nil, nil
-local advanced_fuel_value = nil
+local advanced_fuel_value, advanced_fuel_acceleration_multiplier, advanced_fuel_top_speed_multiplier = nil, nil, nil
 
 if krastorio.general.getSafeSettingValue("kr-rebalance-fuels") then
 	-- Coke
-	coke_value                   = "9MJ"
-	coke_acceleration_multiplier = 1.0
-	coke_top_speed_multiplier    = 1.0
+	coke_value                   = "10MJ"
+	coke_acceleration_multiplier = 0.9
+	coke_top_speed_multiplier    = 0.9
 	
 	-- Fuel
-	fuel_value                   = "10MJ"
+	fuel_value                   = "15MJ"
 	fuel_acceleration_multiplier = 1.0
 	fuel_top_speed_multiplier    = 1.0
 	
 	-- Bio fuel
-	bio_fuel_value                   = "10MJ"
+	bio_fuel_value                   = "15MJ"
 	bio_fuel_acceleration_multiplier = 0.8
 	bio_fuel_top_speed_multiplier    = 0.9
 	
 	-- Advanced fuel
-	advanced_fuel_value = "10MJ"
+	advanced_fuel_value                   = "15MJ"
+	advanced_fuel_acceleration_multiplier = 1.25
+	advanced_fuel_top_speed_multiplier    = 1.25
 else
 	-- Coke
-	coke_value                   = "9MJ"
+	coke_value                   = "10MJ"
 	coke_acceleration_multiplier = 1.1
 	coke_top_speed_multiplier    = 1.1
 	
@@ -37,8 +39,10 @@ else
 	bio_fuel_acceleration_multiplier = 1.2
 	bio_fuel_top_speed_multiplier    = 1.1
 	
-	advanced_fuel_value = "15MJ"
 	-- Advanced fuel
+	advanced_fuel_value                   = "15MJ"	
+	advanced_fuel_acceleration_multiplier = 1.5
+	advanced_fuel_top_speed_multiplier    = 1.5
 end
 
 data:extend(
@@ -151,83 +155,6 @@ data:extend(
 					}
 				}
 			}
-		},
-		stack_size = 50
-	},
-	{
-		type = "capsule",
-		name = "spoiled-potato",
-		icon = kr_icons_path .. "items/spoiled-potato.png",
-		rocket_launch_product = {"poop", 1},
-		icon_size = 64,
-		icon_mipmaps = 4,
-		subgroup = "other",
-		flags = {"hidden"},
-		capsule_action =
-		{
-			type = "use-on-self",
-			attack_parameters =
-			{
-				type = "projectile",
-				ammo_category = "capsule",
-				cooldown = 30,
-				range = 0,
-				ammo_type =
-				{
-					category = "capsule",
-					target_type = "position",
-					action =
-					{
-						type = "direct",
-						action_delivery =
-						{
-							type = "instant",
-							target_effects =
-							{
-								type = "damage",
-								damage = {type = "physical", amount = 50}
-							}
-						}
-					}
-				}
-			}
-		},
-		stack_size = 50
-	},
-	{
-		type = "capsule",
-		name = "poop",
-		icon = kr_icons_path .. "items/poop.png",
-		rocket_launch_product = {"kr-note-1", 1},
-		icon_size = 64, icon_mipmaps = 4,
-		subgroup = "other",
-		flags = {"hidden"},
-		capsule_action =
-		{
-			type = "throw",
-			attack_parameters =
-		{
-			type = "projectile",
-			ammo_category = "capsule",
-			cooldown = 30,
-			projectile_creation_distance = 0.6,
-			range = 25,
-			ammo_type =
-			{
-				category = "capsule",
-				target_type = "position",
-				action =
-				{
-					type = "direct",
-					action_delivery =
-					{
-						type = "projectile",
-						projectile = "poop-projectile",
-						starting_speed = 0.3
-					}
-				}
-			}
-		}
 		},
 		stack_size = 50
 	},
@@ -391,8 +318,8 @@ data:extend(
 		fuel_category = "vehicle-fuel",
 		fuel_value = advanced_fuel_value,
 		fuel_emissions_multiplier = 1.75,
-		fuel_acceleration_multiplier = 1.25,
-		fuel_top_speed_multiplier = 1.25,
+		fuel_acceleration_multiplier = advanced_fuel_acceleration_multiplier,
+		fuel_top_speed_multiplier = advanced_fuel_top_speed_multiplier,
 		subgroup = "raw-material",
 		order = "w03[advanced-fuel]",
 		stack_size = 200
@@ -653,7 +580,7 @@ data:extend(
 		icon_mipmaps = 4,
 		fuel_category = "fusion-fuel",
 		fuel_value = "10GJ",
-		--burnt_result = "empty-dt-fuel",
+		burnt_result = "empty-dt-fuel",
 		subgroup = "intermediate-product",
 		order = "r[uranium-processing]-b1[dt-fuel]-a2[dt-fuel]",
 		stack_size = 10

@@ -42,7 +42,14 @@ end
 
 function onBlueprint(event)
     local player = game.players[event.player_index]
-	if player and player.valid and player.cursor_stack.valid_for_read and player.cursor_stack.is_blueprint_setup() then
+	if 
+		player and 
+		player.valid and
+		player.cursor_stack and
+		player.cursor_stack.valid_for_read and
+		player.cursor_stack.is_blueprint and
+		player.cursor_stack.is_blueprint_setup() 
+	then
 		local blueprint_entities = player.cursor_stack.get_blueprint_entities()
 		if blueprint_entities and next(blueprint_entities) then
 			local have_an_offshore_pump = false
@@ -69,6 +76,7 @@ else
 		{ onBuiltAnEntity, "on_robot_built_entity", KRASTORIO_OFFSHORE_PUMP_EVENT_FILTER },
 		{ onBuiltAnEntity, "script_raised_built" },
 		{ onBuiltAnEntity, "script_raised_revive" },
-		{ onBlueprint, "on_player_setup_blueprint" }
+		{ onBlueprint, "on_player_setup_blueprint" },
+		{ onBlueprint, "on_player_configured_blueprint" }
 	}
 end

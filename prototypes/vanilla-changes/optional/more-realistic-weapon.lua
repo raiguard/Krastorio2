@@ -221,7 +221,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 		{
 			type = "recipe",
 			name = "firearm-magazine",
-			energy_required = 1,
+			energy_required = 0.5,
 			enabled = true,
 			ingredients =
 			{
@@ -347,7 +347,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 ----------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------- -- RIFLE STUFF -- -----------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------
-	data.raw.gun["submachine-gun"].attack_parameters.ammo_category = "rifle-ammo"
+	data.raw.gun["submachine-gun"].attack_parameters.ammo_category = "bullet"
 	data.raw.gun["submachine-gun"].attack_parameters.range = rifle_range
 	data.raw.gun["submachine-gun"].attack_parameters.min_range = k_rifle_min_range
 	data.raw.gun["submachine-gun"].attack_parameters.cooldown = 8
@@ -367,7 +367,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 			},
 			ammo_type =
 			{
-				category = "rifle-ammo",
+				category = "bullet",
 				cooldown_modifier = 0.8,
 				target_type = k_target_type,
 				action =
@@ -451,12 +451,12 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 		{
 			type = "recipe",
 			name = "rifle-magazine",
-			energy_required = 2,
+			energy_required = 1,
 			enabled = false,
 			ingredients =
 			{
 				{"coal", 2},
-				{"iron-plate", 2},
+				{"iron-plate", 1},
 				{"copper-plate", 1}
 			},
 			result = "rifle-magazine"	
@@ -477,7 +477,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 			},
 			ammo_type =
 			{
-				category = "rifle-ammo",
+				category = "bullet",
 				target_type = k_target_type,
 				action =
 				{
@@ -560,12 +560,12 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 		{
 			type = "recipe",
 			name = "armor-piercing-rifle-magazine",
-			energy_required = 3,
+			energy_required = 2,
 			enabled = false,
 			ingredients =
 			{
 				{"rifle-magazine", 1},
-				{"steel-plate", 4},
+				{"steel-plate", 2},
 			},
 			result = "armor-piercing-rifle-magazine"	
 		},
@@ -584,7 +584,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 			},
 			ammo_type =
 			{
-				category = "rifle-ammo",
+				category = "bullet",
 				target_type = k_target_type,
 				action =
 				{
@@ -671,12 +671,12 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 		{
 			type = "recipe",
 			name = "uranium-rifle-magazine",
-			energy_required = 4,
+			energy_required = 3,
 			enabled = false,
 			ingredients =
 			{
 				{"rifle-magazine", 1},
-				{"uranium-238", 4},
+				{"uranium-238", 2},
 			},
 			result = "uranium-rifle-magazine"
 		},
@@ -695,7 +695,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 			},
 			ammo_type =
 			{
-				category = "rifle-ammo",
+				category = "bullet",
 				target_type = k_target_type,
 				action =
 				{
@@ -782,12 +782,12 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 		{
 			type = "recipe",
 			name = "imersite-rifle-magazine",
-			energy_required = 5,
+			energy_required = 4,
 			enabled = false,
 			ingredients =
 			{
 				{"rifle-magazine", 1},
-				{"imersite-crystal", 4},
+				{"imersite-crystal", 2},
 			},
 			result = "imersite-rifle-magazine"
 		},
@@ -932,7 +932,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 									{
 										{
 											type = "damage",
-											damage = {amount = 45, type = "physical"}
+											damage = {amount = 75, type = "physical"}
 										},
 									}
 								}
@@ -966,13 +966,13 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 		{
 			type = "recipe",
 			name = "anti-material-rifle-magazine",
-			energy_required = 3,
+			energy_required = 2,
 			enabled = false,
 			ingredients =
 			{
-				{"coal", 4},
-				{"iron-plate", 3},
-				{"copper-plate", 2}
+				{"coal", 3},
+				{"iron-plate", 2},
+				{"copper-plate", 1}
 			},
 			result = "anti-material-rifle-magazine"
 		},
@@ -1056,7 +1056,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 									{
 										{
 											type = "damage",
-											damage = {amount = 60, type = "physical"}
+											damage = {amount = 100, type = "physical"}
 										},
 									}
 								}
@@ -1090,12 +1090,12 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 		{
 			type = "recipe",
 			name = "armor-piercing-anti-material-rifle-magazine",
-			energy_required = 4,
+			energy_required = 3,
 			enabled = false,
 			ingredients =
 			{
 				{"anti-material-rifle-magazine", 1},
-				{"steel-plate", 4}
+				{"steel-plate", 3}
 			},
 			result = "armor-piercing-anti-material-rifle-magazine"
 		},
@@ -1178,11 +1178,11 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 									{
 										{
 											type = "damage",
-											damage = {amount = 60, type = "physical"}
+											damage = {amount = 100, type = "physical"}
 										},
 										{
 											type = "damage",
-											damage = {amount = 20, type = "radioactive"}
+											damage = {amount = 50, type = "radioactive"}
 										},
 									}
 								}
@@ -1216,12 +1216,12 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 		{
 			type = "recipe",
 			name = "uranium-anti-material-rifle-magazine",
-			energy_required = 5,
+			energy_required = 4,
 			enabled = false,
 			ingredients =
 			{
 				{"anti-material-rifle-magazine", 1},
-				{"uranium-238", 4}
+				{"uranium-238", 3}
 			},
 			result = "uranium-anti-material-rifle-magazine"
 		},
@@ -1304,11 +1304,11 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 									{
 										{
 											type = "damage",
-											damage = {amount = 60, type = "physical"}
+											damage = {amount = 100, type = "physical"}
 										},
 										{
 											type = "damage",
-											damage = {amount = 20, type = "laser"}
+											damage = {amount = 50, type = "laser"}
 										},
 									}
 								}
@@ -1347,7 +1347,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 			ingredients =
 			{
 				{"anti-material-rifle-magazine", 1},
-				{"imersite-crystal", 4}
+				{"imersite-crystal", 3}
 			},
 			result = "imersite-anti-material-rifle-magazine"
 		},
@@ -1411,7 +1411,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 
 	--data.raw["ammo-turret"]["gun-turret"].localised_name={"kr-gun-turret"}
 	data.raw["ammo-turret"]["gun-turret"].attack_parameters.range = 25
-	data.raw["ammo-turret"]["gun-turret"].attack_parameters.ammo_category = "rifle-ammo"
+	data.raw["ammo-turret"]["gun-turret"].attack_parameters.ammo_category = "bullet"
 
 	data.raw["ammo"]["cannon-shell"].ammo_type.action.action_delivery.max_range = 50
 	data.raw["ammo"]["explosive-cannon-shell"].ammo_type.action.action_delivery.max_range = 50
@@ -1422,10 +1422,10 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 
 	data.raw.gun["vehicle-machine-gun"].attack_parameters.range = rifle_range
 	data.raw.gun["vehicle-machine-gun"].attack_parameters.min_range = 1.75
-	data.raw.gun["vehicle-machine-gun"].attack_parameters.ammo_category = "rifle-ammo"
+	data.raw.gun["vehicle-machine-gun"].attack_parameters.ammo_category = "bullet"
 	data.raw.gun["tank-machine-gun"].attack_parameters.range = rifle_range
 	data.raw.gun["tank-machine-gun"].attack_parameters.min_range = 2
-	data.raw.gun["tank-machine-gun"].attack_parameters.ammo_category = "rifle-ammo"
+	data.raw.gun["tank-machine-gun"].attack_parameters.ammo_category = "bullet"
 	data.raw.gun["tank-cannon"].attack_parameters.range = 50
 	data.raw.gun["rocket-launcher"].attack_parameters.range = 50
 
@@ -1481,12 +1481,5 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	krastorio.technologies.addUnlockRecipe("kr-military-5", "imersite-anti-material-rifle-magazine")
 
 	krastorio.technologies.addPrerequisite("turrets", "military")
-
-	-- Final fix
-	for _, gun in pairs(data.raw.gun) do
-		if gun.attack_parameters and gun.attack_parameters.ammo_category and gun.attack_parameters.ammo_category == "bullet" then
-			gun.attack_parameters.ammo_category = "rifle-ammo"
-		end
-	end
 
 end

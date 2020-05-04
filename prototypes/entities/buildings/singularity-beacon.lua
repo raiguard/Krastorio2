@@ -86,7 +86,7 @@ data:extend(
 		},
 		supply_area_distance = 2.0,
 		distribution_effectivity = 0.75,
-		open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.6 },
-		close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.6 }
+		open_sound = { filename = kr_sounds_mod .. "buildings/open.ogg", volume = 1 },
+		close_sound = { filename = kr_sounds_mod .. "buildings/close.ogg", volume = 1 },
     }
 })

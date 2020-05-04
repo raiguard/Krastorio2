@@ -9,10 +9,11 @@ data:extend(
 		icon = kr_entities_icons_path .. "substation-mk2.png",
 		icon_size = 64,
 		flags = {"placeable-neutral", "player-creation"},
-		minable = {mining_time = 0.1, result = "substation"},
+		minable = {mining_time = 0.1, result = "kr-substation-mk2"},
 		max_health = 250,
 		corpse = "substation-remnants",
 		dying_explosion = "substation-explosion",
+		fast_replaceable_group = "substation",
 		track_coverage_during_build_by_moving = true,
 		resistances =
 		{

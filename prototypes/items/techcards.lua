@@ -10,12 +10,6 @@ data:extend(
 		icon = kr_items_with_variations_icons_path .. "blank-tech-card/blank-tech-card-1.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
-		pictures =
-		{
-			{ size = 64, filename = kr_items_with_variations_icons_path .. "blank-tech-card/blank-tech-card-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_items_with_variations_icons_path .. "blank-tech-card/blank-tech-card-2.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_items_with_variations_icons_path .. "blank-tech-card/blank-tech-card-3.png", scale = 0.25, mipmap_count = 4 }
-		},
 		subgroup = "science-pack",
 		order = "a00[blank-tech-card]",
 		stack_size = 200
@@ -49,16 +43,6 @@ data:extend(
 		subgroup = "science-pack",
 		order = "a03[space-research-data]",
 		stack_size = 1000
-	},
-	{
-		type = "item",
-		name = "singularity-research-data",
-		icon =  kr_cards_icons_path  .. "singularity-research-data.png",
-		icon_size = 64,
-		icon_mipmaps = 4,
-		subgroup = "science-pack",
-		order = "a04[singularity-research-data]",
-		stack_size = 200
 	},
 
 -----------------------------------------------------------------------------------------------------------------

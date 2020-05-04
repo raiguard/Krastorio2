@@ -1,3 +1,6 @@
+local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
+local sounds      = require("__base__/prototypes/entity/demo-sounds")
+
 data:extend(
 {
 	{
@@ -52,6 +55,7 @@ data:extend(
 		collision_box = {{-1.45, -2.35}, {1.45, 2.35}},
 		selection_box = {{-1.45, -2.35}, {1.45, 2.35}},
 		drawing_box = {{-2, -2}, {2, 2}},
+		damaged_trigger_effect = hit_effects.entity(),
 		effectivity = 1,
 		braking_power = "12MW",
 		burner =
@@ -376,7 +380,7 @@ data:extend(
 			}
 		},
 		sound_minimum_speed = 0.15;
-		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{
 			sound =
@@ -396,8 +400,8 @@ data:extend(
 			},
 			match_speed_to_activity = true
 		},
-		open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
-		close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
+		open_sound = { filename = kr_sounds_mod .. "buildings/open.ogg", volume = 1 },
+		close_sound = { filename = kr_sounds_mod .. "buildings/close.ogg", volume = 1 },
 		rotation_speed = 0.0035,
 		tank_driving = true,
 		weight = 150000,
