@@ -38,6 +38,11 @@ function removeCreepFromTheSurface(surface)
 	{ 
 		name = global.CREEP_NAME
 	}
+	if #creeps < 1 then
+		ccm:unlistenCallBack("on_nth_tick", 2000+surface.index)
+		global.viruses.creep_virus_active[surface.index] = false		
+		return false
+	end
 
 	local creeps_count = #creeps
 	local tiles_to_replace = {}
@@ -180,6 +185,11 @@ function playerThrowAntiBiter(event)
 				{
 					force = "enemy"
 				}
+				if #enemy_entities < 1 then
+					ccm:unlistenCallBack("on_nth_tick", 1000+actual_player_surface.index)
+					global.viruses.biter_virus_active[actual_player_surface.index] = false		
+					return false
+				end
 				
 				local enemy_count = #enemy_entities
 				local enemy_for_cicle = round(enemy_count/deincreaserPerIteration(enemy_count))
@@ -201,7 +211,7 @@ function playerThrowAntiBiter(event)
 						table.remove(enemy_entities, choosen_index)
 					end
 					if entity_to_kill <= 0 then
-						ccm:unlistenCallBack("on_nth_tick", 1000)
+						ccm:unlistenCallBack("on_nth_tick", 1000+actual_player_surface.index)
 						global.viruses.biter_virus_active[actual_player_surface.index] = false
 					end
 				end
@@ -210,7 +220,7 @@ function playerThrowAntiBiter(event)
 					callback = slowlyKillSomeBiters,
 					event_name = "on_nth_tick",
 					filter = 10,
-					index = 1000
+					index = 1000+actual_player_surface.index
 				}) 
 				
 				game.forces["enemy"].kill_all_units()

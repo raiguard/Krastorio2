@@ -2,9 +2,10 @@
 Version: 0.9.15
 Date: XX.04.2020
   Features:
-    - Now use circuit connections on quarry drill.
+    - Now is possible use circuit connections on quarry drill to read patch informations.
   Fixes:
     - Fixed landfill icon changing instead of recipe icon.
+    - Fixed UPS drop using anti creep virus when there isn't creep on map (https://mods.factorio.com/mod/Krastorio2/discussion/5eaf2f90795d4c000d8501cd).
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.14
 Date: 30.04.2020
