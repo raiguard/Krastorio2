@@ -21,13 +21,6 @@ function deincreaserPerIteration(count)
 		return 600
 	end
 end
-
--- Retrive an initialized random generator
-local function getRandomGenerator()
-	local random_generator = game.create_random_generator()
-	random_generator.re_seed(666)
-	return random_generator
-end
 --------------------------------------------------------
 -- -- Functions
 
@@ -77,10 +70,7 @@ function removeCreepFromTheSurface(surface)
 	creeps_for_cicle = round(creeps_count/deincreaserPerIteration(creeps_count))
 	
 	-- If exist some creep
-	if creeps_count > 0 then		
-		-- Get a random generator
-		local random_generator = getRandomGenerator()
-		
+	if creeps_count > 0 then				
 		-- Function on 10th ticks (will automatically remove itselft from the list of callback when the works is finished)
 		local function slowlyRemoveCreep()			
 			if surface and surface.valid then
@@ -90,7 +80,7 @@ function removeCreepFromTheSurface(surface)
 				
 				-- Iterate the creep
 				while creep_to_remove_this_cicle > 0 do
-					choosen_index = random_generator(1, creeps_count) -- Select an index
+					choosen_index = math.random(1, creeps_count) -- Select an index
 					table.insert(tiles_to_replace_this_cicle, tiles_to_replace[choosen_index]) -- Move to the list to replace this round
 					creep_to_remove_this_cicle = creep_to_remove_this_cicle - 1 -- Reduce counter of this round
 					
@@ -194,14 +184,13 @@ function playerThrowAntiBiter(event)
 				local enemy_count = #enemy_entities
 				local enemy_for_cicle = round(enemy_count/deincreaserPerIteration(enemy_count))
 				local entity_to_kill = enemy_count/3
-				local random_generator = getRandomGenerator()
 				local function slowlyKillSomeBiters()
 					local entity_to_kill_this_cicle = math.min(entity_to_kill, round(enemy_for_cicle))
 					entity_to_kill = entity_to_kill - entity_to_kill_this_cicle
 					local entity = nil
 					local choosen_index = 0
 					while entity_to_kill_this_cicle > 0 do
-						choosen_index = random_generator(1, enemy_count)
+						choosen_index = math.random(1, enemy_count)
 						entity = enemy_entities[choosen_index] or false
 						if entity and entity.valid then
 							entity.die(player.force)
