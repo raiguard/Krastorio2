@@ -64,6 +64,22 @@ if mods["deadlock-beltboxes-loaders"] then
 		beltbox_technology = "deadlock-stacking-5"
 	})
 	krastorio.technologies.addPrerequisite("deadlock-stacking-5", "deadlock-stacking-4")
+	
+		--loader upgrades
+	local loader_tier_5 = krastorio.items.getItem("kr-superior-transport-belt-loader") or krastorio.items.getItem("kr-superior-loader") or "superior-transport-belt"
+	if data.raw["loader-1x1"][loader_tier_3.name] then
+		data.raw["loader-1x1"][loader_tier_3.name].next_upgrade = loader_tier_4.name
+	end
+	if data.raw["loader-1x1"][loader_tier_4.name] then
+		data.raw["loader-1x1"][loader_tier_4.name].next_upgrade = loader_tier_5.name
+	end
+	--beltbox upgrades
+	if data.raw.furnace["express-transport-belt-beltbox"] then
+		data.raw.furnace["express-transport-belt-beltbox"].next_upgrade = "kr-advanced-transport-belt-beltbox"
+	end
+	if data.raw.furnace["kr-advanced-transport-belt-beltbox"] then
+		data.raw.furnace["kr-advanced-transport-belt-beltbox"].next_upgrade = "kr-superior-transport-belt-beltbox"
+	end
 
 	krastorio.recipes.convertIngredient("express-transport-belt-loader", "iron-gear-wheel", "steel-gear-wheel")
 
