@@ -7,7 +7,7 @@ Date: 05.05.2020
   Changes:
     - Improved Schall Uranium Processing, uranium fuel cell recipe cost was too cheap for Krastorio 2.
     - Improved AAI vehicles compatibility, thanks to Bernd for the help.
-    - Improved "Deadlock's Stacking Beltboxes & Compact Loaders" mod compatibility, now is possible use upgrade planner all loader and beltbox (Pull Request - 55cc4cd) thanks to Arno Huisman.
+    - Improved "Deadlock's Stacking Beltboxes & Compact Loaders" mod compatibility, now is possible use upgrade planner on all loaders and beltboxes (Pull Request - 55cc4cd) thanks to Arno Huisman.
   Fixes:
     - Reduced (probably fixed) the possibility of wrong loader oriatation placing by robots (https://mods.factorio.com/mod/Krastorio2/discussion/5ea16474f48d48000d11f691).
     - Fixed wrong early robot battery upgrade prerequisites (Pull Request - ab62603), thank to Piotr Broda for the help.
