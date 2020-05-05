@@ -1,11 +1,15 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.15
-Date: XX.04.2020
+Date: 05.05.2020
   Features:
     - Now is possible use circuit connections on quarry drill to read patch informations.
-    - Improved Schall Uranium Processing, users notice that uranium fuel cell recipe cost was too cheap for Krastorio 2.
+    - Added minimal AAI programmable vehicles grid equipment compatibility, thanks to Bernd for the help. We still discourage to use equipment on vehicles with AAI programmable vehicles, due the know bugs. 
+  Changes:
+    - Improved Schall Uranium Processing, uranium fuel cell recipe cost was too cheap for Krastorio 2.
+    - Improved AAI vehicles compatibility, thanks to Bernd for the help.
+    - Improved "Deadlock's Stacking Beltboxes & Compact Loaders" mod compatibility, now is possible use upgrade planner all loader and beltbox (Pull Request - 55cc4cd) thanks to Arno Huisman.
   Fixes:
-    - Fixed wrong early robot battery upgrade prerequisites.
+    - Fixed wrong early robot battery upgrade prerequisites (Pull Request - ab62603), thank to Piotr Broda for the help.
     - Fixed landfill item icon changing instead of recipe icon.
     - Fixed UPS drop using anti creep virus when there isn't creep on map (https://mods.factorio.com/mod/Krastorio2/discussion/5eaf2f90795d4c000d8501cd).
     - Fixed desync in long loaded games when collecting creep (https://mods.factorio.com/mod/Krastorio2/discussion/5eac7b88e0fdb1000b1b70d0). 

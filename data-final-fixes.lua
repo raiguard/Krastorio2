@@ -87,8 +87,8 @@ require(kr_prototypes_path .. "vanilla-changes/optional/change-background")
 ---------------------------------------------------------------------------
 local scripts_path = "compatibility-scripts/data-final-fixes/"
 require(scripts_path .. "aai-industry")
-require(scripts_path .. "aai-vehicles-chaingunner")
-require(scripts_path .. "aai-vehicles-hauler")
+require(scripts_path .. "aai-vehicles")
+require(scripts_path .. "aai-programmable-vehicles")
 require(scripts_path .. "aircraft")
 -- Bobs (multiple scripts)
 require(scripts_path .. "bobs_mod")

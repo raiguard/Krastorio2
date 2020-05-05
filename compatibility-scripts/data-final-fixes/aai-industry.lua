@@ -16,6 +16,9 @@ if mods["aai-industry"] then
 	-- Removed Krastorio drill tech-card
 	krastorio.technologies.convertPrerequisiteFromAllTechnologies("kr-electric-mining-drill", "electric-mining")
 	data.raw.technology["kr-electric-mining-drill"] = nil
+	
+	-- Fuel prerequisite
+	krastorio.technologies.addPrerequisite("kr-fuel", "fuel-processing") 
 
 	krastorio.technologies.addUnlockRecipe("kr-basic-fluid-handling", "pipe")
 	krastorio.technologies.addUnlockRecipe("kr-basic-fluid-handling", "pipe-to-ground")

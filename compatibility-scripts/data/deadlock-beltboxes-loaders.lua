@@ -65,19 +65,19 @@ if mods["deadlock-beltboxes-loaders"] then
 	})
 	krastorio.technologies.addPrerequisite("deadlock-stacking-5", "deadlock-stacking-4")
 	
-		--loader upgrades
+	--Loader next upgrades
 	local loader_tier_5 = krastorio.items.getItem("kr-superior-transport-belt-loader") or krastorio.items.getItem("kr-superior-loader") or "superior-transport-belt"
-	if data.raw["loader-1x1"][loader_tier_3.name] then
+	if data.raw["loader-1x1"][loader_tier_3.name] and data.raw["loader-1x1"][loader_tier_4.name] then
 		data.raw["loader-1x1"][loader_tier_3.name].next_upgrade = loader_tier_4.name
 	end
-	if data.raw["loader-1x1"][loader_tier_4.name] then
+	if data.raw["loader-1x1"][loader_tier_4.name] and data.raw["loader-1x1"][loader_tier_5.name].next_upgrade then
 		data.raw["loader-1x1"][loader_tier_4.name].next_upgrade = loader_tier_5.name
 	end
-	--beltbox upgrades
-	if data.raw.furnace["express-transport-belt-beltbox"] then
+	--beltbox next upgrades
+	if data.raw.furnace["express-transport-belt-beltbox"] and data.raw.furnace["kr-advanced-transport-belt-beltbox"]  then
 		data.raw.furnace["express-transport-belt-beltbox"].next_upgrade = "kr-advanced-transport-belt-beltbox"
 	end
-	if data.raw.furnace["kr-advanced-transport-belt-beltbox"] then
+	if data.raw.furnace["kr-advanced-transport-belt-beltbox"] and data.raw.furnace["kr-superior-transport-belt-beltbox"] then
 		data.raw.furnace["kr-advanced-transport-belt-beltbox"].next_upgrade = "kr-superior-transport-belt-beltbox"
 	end
 
