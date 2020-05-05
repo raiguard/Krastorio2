@@ -9,8 +9,12 @@ if mods["aai-programmable-vehicles"] then
 	if mods["aai-vehicles-warden"] and data.raw["car"]["vehicle-warden-electro-bolter-gun"] then
 		data.raw["car"]["vehicle-warden-electro-bolter-gun"].equipment_grid = "kr-car-grid"
 	end
-	if mods["aai-vehicles-flame-tumbler"] and data.raw["car"]["vehicle-flame-tumbler-flame-tumbler-flamethrower"] and mods["Aircraft"] then
-		data.raw["car"]["vehicle-flame-tumbler-flame-tumbler-flamethrower"].equipment_grid = "kr-flying-fortress-grid" else data.raw["car"]["vehicle-flame-tumbler-flame-tumbler-flamethrower"].equipment_grid = "kr-car-grid"
+	if mods["aai-vehicles-flame-tumbler"] and data.raw["car"]["vehicle-flame-tumbler-flame-tumbler-flamethrower"] then
+		if mods["Aircraft"] then
+			data.raw["car"]["vehicle-flame-tumbler-flame-tumbler-flamethrower"].equipment_grid = "kr-flying-fortress-grid" 
+		else 
+			data.raw["car"]["vehicle-flame-tumbler-flame-tumbler-flamethrower"].equipment_grid = "kr-car-grid"
+		end
 	end
 	if mods["aai-vehicles-flame-tank"] and data.raw["car"]["vehicle-flame-tank-flame-tank-flamethrower"] then
 		data.raw["car"]["vehicle-flame-tank-flame-tank-flamethrower"].equipment_grid = "kr-tank-grid"
