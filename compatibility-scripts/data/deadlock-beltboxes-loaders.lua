@@ -70,10 +70,10 @@ if mods["deadlock-beltboxes-loaders"] then
 	if data.raw["loader-1x1"][loader_tier_3.name] and data.raw["loader-1x1"][loader_tier_4.name] then
 		data.raw["loader-1x1"][loader_tier_3.name].next_upgrade = loader_tier_4.name
 	end
-	if data.raw["loader-1x1"][loader_tier_4.name] and data.raw["loader-1x1"][loader_tier_5.name].next_upgrade then
+	if data.raw["loader-1x1"][loader_tier_4.name] and data.raw["loader-1x1"][loader_tier_5.name] then
 		data.raw["loader-1x1"][loader_tier_4.name].next_upgrade = loader_tier_5.name
 	end
-	--beltbox next upgrades
+	--Beltbox next upgrades
 	if data.raw.furnace["express-transport-belt-beltbox"] and data.raw.furnace["kr-advanced-transport-belt-beltbox"]  then
 		data.raw.furnace["express-transport-belt-beltbox"].next_upgrade = "kr-advanced-transport-belt-beltbox"
 	end
