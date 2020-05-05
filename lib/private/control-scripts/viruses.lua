@@ -175,7 +175,7 @@ function playerThrowAntiBiter(event)
 				{
 					force = "enemy"
 				}
-				if #enemy_entities < 1 then
+				if not enemy_entities or not next(enemy_entities) then
 					ccm:unlistenCallBack("on_nth_tick", 1000+actual_player_surface.index)
 					global.viruses.biter_virus_active[actual_player_surface.index] = false		
 					return false
