@@ -215,6 +215,7 @@ local function hasInventory(entity, entity_type)
 	if SNAP_TYPES[e_entity_type] then return false end
 	if 
 		e_entity_type == "container" or 
+		e_entity_type == "logistic-container" or 
 		e_entity_type == "assembling-machine" or 
 		e_entity_type == "furnace" or
 		e_entity_type == "rocket-silo" or
