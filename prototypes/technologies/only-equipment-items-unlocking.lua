@@ -47,7 +47,7 @@ data:extend(
 				recipe = "power-armor-mk4"
 			}
 		},
-		prerequisites = {"kr-power-armor-mk3", "kr-imersium-processing", "kr-singularity-tech-card"},
+		prerequisites = {"kr-power-armor-mk3", "kr-singularity-tech-card"},
 		unit = 		
 		{
 			count = 750,
@@ -448,8 +448,7 @@ data:extend(
 		prerequisites = 
 		{
 			"kr-personal-laser-defense-mk3-equipment",
-			"kr-singularity-tech-card",
-			"kr-energy-control-unit"
+			"kr-singularity-tech-card"
 		},		
 		unit = 
 		{

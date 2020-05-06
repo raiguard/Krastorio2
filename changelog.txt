@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.16
-Date: XX.05.2020
+Date: 06.05.2020
   Fixes:
-    - Fixed crash load using AAI programmable vehicles with Aircraft
+    - Fixed crash load using AAI programmable vehicles with Aircraft.
+    - Fixed wrong end game tech prerequisites.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.15
 Date: 05.05.2020

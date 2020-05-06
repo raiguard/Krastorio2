@@ -511,7 +511,7 @@ data:extend(
 				recipe = krastorio.recipes.changed_names["singularity-tech-card"] or "singularity-tech-card"
 			}
 		},
-		prerequisites = {"kr-advanced-tech-card", "kr-imersium-processing", "kr-energy-control-unit"},
+		prerequisites = {"kr-advanced-tech-card", "kr-matter-processing"},
 		unit =
 		{
 			count = 1250,
@@ -559,7 +559,7 @@ data:extend(
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "matter-cube.png",
 		icon_size = 128,
-		prerequisites = {"kr-matter-processing", "kr-singularity-tech-card"},
+		prerequisites = {"kr-singularity-tech-card"},
 		order = "g-f-z",
 		unit =
 		{

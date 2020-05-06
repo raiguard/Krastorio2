@@ -688,7 +688,7 @@ data:extend(
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "antimatter-reactor.png",
 		icon_size = 128,
-		prerequisites = {"kr-fusion-energy", "kr-matter-processing", "kr-singularity-tech-card"},
+		prerequisites = {"kr-fusion-energy", "kr-singularity-tech-card"},
 		effects =
 		{
 			{

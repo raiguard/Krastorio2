@@ -922,7 +922,7 @@ data:extend(
 				recipe = "kr-singularity-beacon"
 			}			
 		},
-		prerequisites = {"effect-transmission", "kr-imersium-processing", "kr-energy-control-unit", "kr-singularity-tech-card"},
+		prerequisites = {"effect-transmission", "kr-singularity-tech-card"},
 		unit =
 		{
 			count = 1000,
@@ -951,7 +951,7 @@ data:extend(
 				recipe = "kr-intergalactic-transceiver"
 			}
 		},
-		prerequisites = {"kr-imersium-processing", "kr-energy-control-unit", "kr-singularity-tech-card"},
+		prerequisites = {"kr-singularity-tech-card"},
 		unit =
 		{
 			count = 3000,
