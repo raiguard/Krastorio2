@@ -15,6 +15,13 @@ tiles_items =
 	["kr-black-reinforced-plate"] = "kr-black-reinforced-plate"
 }
 
+-- Krastorio 2 optional tiles
+if settings.startup["kr-kl-stuff"] and settings.startup["kr-kl-stuff"].value then
+	tiles_items["kr-white-reinforced-plate-l"] = "kr-white-reinforced-plate-l"
+	tiles_items["kr-black-reinforced-plate-l"] = "kr-black-reinforced-plate-l"
+end
+
+-- Compatibility exception for Dectorio
 if script.active_mods["Dectorio"] then
 	if settings.startup["dectorio-painted-concrete"] and settings.startup["dectorio-painted-concrete"].value then
 		local directions = 
@@ -43,10 +50,104 @@ if script.active_mods["Dectorio"] then
 		tiles_items["dect-concrete-grid"] = "dect-concrete-grid"
 	end
 end
-
-if settings.startup["kr-kl-stuff"] and settings.startup["kr-kl-stuff"].value then
-	tiles_items["kr-white-reinforced-plate-l"] = "kr-white-reinforced-plate-l"
-	tiles_items["kr-black-reinforced-plate-l"] = "kr-black-reinforced-plate-l"
+-- Compatibility exception for AsphaltRoads
+if script.active_mods["AsphaltRoads"] then	
+	-- Asphalt roads tiles divided in list for the option that enabled them
+	local asphalt_roads_tiles_per_options =
+	{
+		["AR-enable-basic-marking-tiles"] =
+		{
+			["Arci-asphalt"] = "Arci-asphalt",		
+			["Arci-asphalt-zebra-crossing-horizontal"] = "Arci-asphalt-zebra",
+			["Arci-asphalt-zebra-crossing-vertical"] = "Arci-asphalt-zebra",    
+			["Arci-asphalt-triangle-white-up"] = "Arci-asphalt-triangle-white",
+			["Arci-asphalt-triangle-white-left"] = "Arci-asphalt-triangle-white",
+			["Arci-asphalt-triangle-white-down"] = "Arci-asphalt-triangle-white",
+			["Arci-asphalt-triangle-white-right"] = "Arci-asphalt-triangle-white"
+		},
+		["AR-enable-colored-hazard-marking"] =
+		{
+			["Arci-asphalt-hazard-white-left"] = "Arci-asphalt-hazard-white",
+			["Arci-asphalt-hazard-white-right"] = "Arci-asphalt-hazard-white",
+			["Arci-asphalt-hazard-yellow-left"] = "Arci-asphalt-hazard-yellow",
+			["Arci-asphalt-hazard-yellow-right"] = "Arci-asphalt-hazard-yellow",
+			["Arci-asphalt-hazard-red-left"] = "Arci-asphalt-hazard-red",
+			["Arci-asphalt-hazard-red-right"] = "Arci-asphalt-hazard-red",
+			["Arci-asphalt-hazard-blue-left"] = "Arci-asphalt-hazard-blue",
+			["Arci-asphalt-hazard-blue-right"] = "Arci-asphalt-hazard-blue",
+			["Arci-asphalt-hazard-green-left"] = "Arci-asphalt-hazard-green",
+			["Arci-asphalt-hazard-green-right"] = "Arci-asphalt-hazard-green"
+		},
+		["AR-enable-white-single-lines"] =
+		{
+			["Arci-marking-white-straight-vertical"] = "Arci-marking-white-straight",    
+			["Arci-marking-white-straight-horizontal"] = "Arci-marking-white-straight", 
+			["Arci-marking-white-diagonal-right"] = "Arci-marking-white-diagonal",			 
+			["Arci-marking-white-diagonal-left"] = "Arci-marking-white-diagonal",
+			["Arci-marking-white-right-turn-left"] = "Arci-marking-white-right-turn",      
+			["Arci-marking-white-right-turn-down"] = "Arci-marking-white-right-turn",
+			["Arci-marking-white-right-turn-up"] = "Arci-marking-white-right-turn", 
+			["Arci-marking-white-right-turn-right"] = "Arci-marking-white-right-turn",
+			["Arci-marking-white-left-turn-left"] = "Arci-marking-white-left-turn",			      
+			["Arci-marking-white-left-turn-down"] = "Arci-marking-white-left-turn",			       
+			["Arci-marking-white-left-turn-up"] = "Arci-marking-white-left-turn",
+			["Arci-marking-white-left-turn-right"] = "Arci-marking-white-left-turn"		
+		},
+		["AR-enable-yellow-single-lines"] =
+		{
+			["Arci-marking-yellow-straight-vertical"] = "Arci-marking-yellow-straight",  
+			["Arci-marking-yellow-straight-horizontal"] = "Arci-marking-yellow-straight",
+			["Arci-marking-yellow-diagonal-right"] = "Arci-marking-yellow-diagonal",			
+			["Arci-marking-yellow-diagonal-left"] = "Arci-marking-yellow-diagonal",
+			["Arci-marking-yellow-left-turn-left"] = "Arci-marking-yellow-left-turn", 
+			["Arci-marking-yellow-left-turn-down"] = "Arci-marking-yellow-left-turn",	
+			["Arci-marking-yellow-left-turn-up"] = "Arci-marking-yellow-left-turn",    
+			["Arci-marking-yellow-left-turn-right"] = "Arci-marking-yellow-left-turn", 
+			["Arci-marking-yellow-right-turn-left"] = "Arci-marking-yellow-right-turn",			
+			["Arci-marking-yellow-right-turn-down"] = "Arci-marking-yellow-right-turn",        
+			["Arci-marking-yellow-right-turn-up"] = "Arci-marking-yellow-right-turn",                 
+			["Arci-marking-yellow-right-turn-right"] = "Arci-marking-yellow-right-turn"
+		},
+		["AR-enable-white-double-lines"] =
+		{
+			["Arci-marking-white-dl-straight-vertical"] = "Arci-marking-white-dl-straight",  			
+			["Arci-marking-white-dl-straight-horizontal"] = "Arci-marking-white-dl-straight",  
+			["Arci-marking-white-dl-diagonal-right"] = "Arci-marking-white-dl-diagonal",
+			["Arci-marking-white-dl-diagonal-left"] = "Arci-marking-white-dl-diagonal",    
+			["Arci-marking-white-dl-left-turn-left"] = "Arci-marking-white-dl-left-turn",
+			["Arci-marking-white-dl-left-turn-up"] = "Arci-marking-white-dl-left-turn",
+			["Arci-marking-white-dl-left-turn-right"] = "Arci-marking-white-dl-left-turn", 
+			["Arci-marking-white-dl-left-turn-down"] = "Arci-marking-white-dl-left-turn",
+			["Arci-marking-white-dl-right-turn-left"] = "Arci-marking-white-dl-right-turn",  
+			["Arci-marking-white-dl-right-turn-down"] = "Arci-marking-white-dl-right-turn",      
+			["Arci-marking-white-dl-right-turn-up"] = "Arci-marking-white-dl-right-turn",     
+			["Arci-marking-white-dl-right-turn-right"] = "Arci-marking-white-dl-right-turn"
+		},
+		["AR-enable-yellow-double-lines"] =
+		{
+			["Arci-marking-yellow-dl-straight-vertical"] = "Arci-marking-yellow-dl-straight", 			
+			["Arci-marking-yellow-dl-straight-horizontal"] = "Arci-marking-yellow-dl-straight",
+			["Arci-marking-yellow-dl-diagonal-right"] = "Arci-marking-yellow-dl-diagonal",
+			["Arci-marking-yellow-dl-diagonal-left"] = "Arci-marking-yellow-dl-diagonal",
+			["Arci-marking-yellow-dl-left-turn-left"] = "Arci-marking-yellow-dl-left-turn",			    
+			["Arci-marking-yellow-dl-left-turn-down"] = "Arci-marking-yellow-dl-left-turn",			      
+			["Arci-marking-yellow-dl-left-turn-up"] = "Arci-marking-yellow-dl-left-turn",
+			["Arci-marking-yellow-dl-left-turn-right"] = "Arci-marking-yellow-dl-left-turn",   
+			["Arci-marking-yellow-dl-right-turn-down"] = "Arci-marking-yellow-dl-right-turn",
+			["Arci-marking-yellow-dl-right-turn-up"] = "Arci-marking-yellow-dl-right-turn",
+			["Arci-marking-yellow-dl-right-turn-left"] = "Arci-marking-yellow-dl-right-turn", 			
+			["Arci-marking-yellow-dl-right-turn-right"] = "Arci-marking-yellow-dl-right-turn"
+		}
+	}	
+	
+	-- Iterate each list
+	for option_name, tiles in pairs(asphalt_roads_tiles_per_options) do
+		if settings.startup[option_name] and settings.startup[option_name].value then -- if the option is "true"
+			for tile_name, item_tile in pairs(tiles) do -- add each tiles
+				tiles_items[tile_name] = item_tile
+			end
+		end
+	end
 end
 
 local function onInitAndConf()

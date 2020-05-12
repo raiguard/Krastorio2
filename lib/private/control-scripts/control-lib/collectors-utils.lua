@@ -21,6 +21,14 @@ cu.not_valid_replacers =
 	["kr-white-reinforced-plate"] = true, 
 	["kr-black-reinforced-plate"] = true
 }
+
+-- Krastorio 2 optional tiles
+if settings.startup["kr-kl-stuff"] and settings.startup["kr-kl-stuff"].value then
+	cu.not_valid_replacers["kr-white-reinforced-plate-l"] = true
+	cu.not_valid_replacers["kr-black-reinforced-plate-l"] = true
+end
+
+-- Compatibility exception for Dectorio
 if script.active_mods["Dectorio"] then
 	if settings.startup["dectorio-painted-concrete"] and settings.startup["dectorio-painted-concrete"].value then
 		local directions = 
@@ -49,10 +57,104 @@ if script.active_mods["Dectorio"] then
 		cu.not_valid_replacers["dect-concrete-grid"] = true
 	end
 end
-
-if settings.startup["kr-kl-stuff"] and settings.startup["kr-kl-stuff"].value then
-	cu.not_valid_replacers["kr-white-reinforced-plate-l"] = true
-	cu.not_valid_replacers["kr-black-reinforced-plate-l"] = true
+-- Compatibility exception for AsphaltRoads
+if script.active_mods["AsphaltRoads"] then	
+	-- Asphalt roads tiles divided in list for the option that enabled them
+	local asphalt_roads_tiles_per_options =
+	{
+		["AR-enable-basic-marking-tiles"] =
+		{
+			"Arci-asphalt",		
+			"Arci-asphalt-zebra-crossing-horizontal",
+			"Arci-asphalt-zebra-crossing-vertical",    
+			"Arci-asphalt-triangle-white-up",
+			"Arci-asphalt-triangle-white-left",
+			"Arci-asphalt-triangle-white-down",
+			"Arci-asphalt-triangle-white-right"
+		},
+		["AR-enable-colored-hazard-marking"] =
+		{
+			"Arci-asphalt-hazard-white-left",
+			"Arci-asphalt-hazard-white-right",
+			"Arci-asphalt-hazard-yellow-left",
+			"Arci-asphalt-hazard-yellow-right",
+			"Arci-asphalt-hazard-red-left",
+			"Arci-asphalt-hazard-red-right",
+			"Arci-asphalt-hazard-blue-left",
+			"Arci-asphalt-hazard-blue-right",
+			"Arci-asphalt-hazard-green-left",
+			"Arci-asphalt-hazard-green-right"
+		},
+		["AR-enable-white-single-lines"] =
+		{
+			"Arci-marking-white-straight-vertical",    
+			"Arci-marking-white-diagonal-right",
+			"Arci-marking-white-straight-horizontal",  
+			"Arci-marking-white-diagonal-left",
+			"Arci-marking-white-right-turn-left",      
+			"Arci-marking-white-left-turn-left",
+			"Arci-marking-white-right-turn-down",      
+			"Arci-marking-white-left-turn-down",
+			"Arci-marking-white-right-turn-up",        
+			"Arci-marking-white-left-turn-up",
+			"Arci-marking-white-left-turn-right",      
+			"Arci-marking-white-right-turn-right"
+		},
+		["AR-enable-yellow-single-lines"] =
+		{
+			"Arci-marking-yellow-straight-vertical",  
+			"Arci-marking-yellow-diagonal-right",
+			"Arci-marking-yellow-straight-horizontal",
+			"Arci-marking-yellow-diagonal-left",
+			"Arci-marking-yellow-right-turn-left",    
+			"Arci-marking-yellow-left-turn-left",    
+			"Arci-marking-yellow-right-turn-down",        
+			"Arci-marking-yellow-left-turn-down",    
+			"Arci-marking-yellow-right-turn-up",          
+			"Arci-marking-yellow-left-turn-up",    
+			"Arci-marking-yellow-left-turn-right",        
+			"Arci-marking-yellow-right-turn-right"
+		},
+		["AR-enable-white-double-lines"] =
+		{
+			"Arci-marking-white-dl-straight-vertical",  
+			"Arci-marking-white-dl-diagonal-right",
+			"Arci-marking-white-dl-straight-horizontal",  
+			"Arci-marking-white-dl-diagonal-left",
+			"Arci-marking-white-dl-right-turn-left",      
+			"Arci-marking-white-dl-left-turn-left",
+			"Arci-marking-white-dl-right-turn-down",      
+			"Arci-marking-white-dl-left-turn-down",
+			"Arci-marking-white-dl-right-turn-up",        
+			"Arci-marking-white-dl-left-turn-up",
+			"Arci-marking-white-dl-left-turn-right",      
+			"Arci-marking-white-dl-right-turn-right"
+		},
+		["AR-enable-yellow-double-lines"] =
+		{
+			"Arci-marking-yellow-dl-straight-vertical",  
+			"Arci-marking-yellow-dl-diagonal-right",
+			"Arci-marking-yellow-dl-straight-horizontal",
+			"Arci-marking-yellow-dl-diagonal-left",
+			"Arci-marking-yellow-dl-right-turn-left",    
+			"Arci-marking-yellow-dl-left-turn-left",
+			"Arci-marking-yellow-dl-right-turn-down",    
+			"Arci-marking-yellow-dl-left-turn-down",
+			"Arci-marking-yellow-dl-right-turn-up",      
+			"Arci-marking-yellow-dl-left-turn-up",
+			"Arci-marking-yellow-dl-left-turn-right",    
+			"Arci-marking-yellow-dl-right-turn-right"
+		}
+	}	
+	
+	-- Iterate each list
+	for option_name, tiles in pairs(asphalt_roads_tiles_per_options) do
+		if settings.startup[option_name] and settings.startup[option_name].value then -- if the option is "true"
+			for _, tile in pairs(tiles) do -- add each tiles
+				cu.not_valid_replacers[tile] = true
+			end
+		end
+	end
 end
 
 -- Util function for calculate the round of number

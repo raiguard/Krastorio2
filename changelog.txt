@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.17
+Date: XX.05.2020
+  Changes:
+    - Compatibilized Asphalt Roads tiles to be minable with the jackhammer.
+  Fixes:
+    - Fixed compatibility issue with Asphalt Roads and Creep.
+---------------------------------------------------------------------------------------------------
 Version: 0.9.16
 Date: 06.05.2020
   Fixes:
