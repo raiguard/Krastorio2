@@ -2,8 +2,9 @@
 Version: 0.9.17
 Date: XX.05.2020
   Changes:
-    - (SE compatibility) Now is possible process Krastorio 2 intermediates in the space surface with SE
+    - (SE compatibility) Now is possible process Krastorio 2 intermediates in the space surface with SE.
     - Compatibilized Asphalt Roads tiles to be minable with the jackhammer.
+    - Nerfed Quartz matter value to avoid other matter conversions loop.
   Fixes:
     - Removed redundant recipes.
     - Removed not anymore useful files.

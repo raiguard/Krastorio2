@@ -386,7 +386,7 @@ function krastorio.matter_func.createStandardKrastorioMatterRecipes()
 	{
 		item_name = "quartz",
 		minimum_conversion_quantity = 10, 
-		matter_value = 2.33,
+		matter_value = 1.84,
 		energy_required = 1,
 		only_conversion = true,
 		unlocked_by_technology = "kr-matter-stone-processing"
