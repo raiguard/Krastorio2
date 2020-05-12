@@ -64,7 +64,7 @@ end
 --@ to_add_crafting_category
 function krastorio.entities.addCraftingCategory(category_name, entity_name, to_add_crafting_category)
 	local entity = krastorio.entities.getEntity(category_name, entity_name)
-	if entity and (entity.type == "assembling-machine" or entity.type == "furnace" or entity.type == "rocket-silo") then
+	if entity and (entity.type == "assembling-machine" or entity.type == "furnace" or entity.type == "rocket-silo") and data.raw["recipe-category"][to_add_crafting_category] then
 		if entity.crafting_categories then
 			table.insert(entity.crafting_categories, to_add_crafting_category)
 		else

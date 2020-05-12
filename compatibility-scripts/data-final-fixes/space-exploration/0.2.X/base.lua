@@ -697,6 +697,11 @@ if mods["space-exploration"] and krastorio.general.isVersionLesserEqualThan(mods
 		scaleCoreFragmentRecipe(item_name, multiplier[1], multiplier[2])
 	end
 	
+	-- Adding K2 recipe categories to some space machines
+	krastorio.entities.addCraftingCategory("assembling-machine", "se-space-mechanical-laboratory", "crushing")
+	krastorio.entities.addCraftingCategory("assembling-machine", "se-space-biochemical-laboratory", "electrolysis")
+	krastorio.entities.addCraftingCategory("assembling-machine", "se-space-decontamination-facility", "fluid-filtration")
+	
 -- -- Icons
 ---------------------------------------------------------------------------------------------
 	-- Science packs
