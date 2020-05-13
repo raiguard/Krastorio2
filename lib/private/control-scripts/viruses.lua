@@ -8,17 +8,17 @@ end
 -- Modifier to change the quantity of objects iterated for each round of the function, based on the total 
 function deincreaserPerIteration(count)
 	if count <= 1000 then
-		return 60
+		return 20
 	elseif count <= 5000 then
-		return 120
+		return 40
 	elseif count <= 10000 then
-		return 240
+		return 80
 	elseif count <= 20000 then
-		return 480
+		return 160
 	elseif count <= 30000 then
-		return 540
+		return 280
 	else
-		return 600
+		return 300
 	end
 end
 --------------------------------------------------------
@@ -42,15 +42,15 @@ function removeCreepFromTheSurface(surface)
 	local creeps_for_cicle = 0
 	
 	-- if is too much to iterate will do an instat big replace to reduce the long term ups consume
-	if creeps_count >= 40000 then 
+	if creeps_count >= 100000 then 
 		local pre_tiles_to_replace = {}
 		
-		-- Create a list of tiles to replace with a landfill
+		-- Create a list of tiles to fast-replace with a landfill
 		while creeps_count > 0 do
-			if (creeps_count % 10) == 0 then
-				table.insert(tiles_to_replace, {name = "landfill", position = creeps[creeps_count].position})
-			else
+			if (creeps_count % 4) == 0 then
 				table.insert(pre_tiles_to_replace, {name = "landfill", position = creeps[creeps_count].position})
+			else
+				table.insert(tiles_to_replace, {name = "landfill", position = creeps[creeps_count].position})
 			end
 			
 			creeps_count = creeps_count - 1
@@ -71,7 +71,7 @@ function removeCreepFromTheSurface(surface)
 	
 	-- If exist some creep
 	if creeps_count > 0 then				
-		-- Function on 10th ticks (will automatically remove itselft from the list of callback when the works is finished)
+		-- Function on 10th ticks (will automatically remove itselft from the list of callbacks when the works is finished)
 		local function slowlyRemoveCreep()			
 			if surface and surface.valid then
 				local creep_to_remove_this_cicle = math.min(creeps_count, creeps_for_cicle)
@@ -81,11 +81,14 @@ function removeCreepFromTheSurface(surface)
 				-- Iterate the creep
 				while creep_to_remove_this_cicle > 0 do
 					choosen_index = math.random(1, creeps_count) -- Select an index
+					
 					table.insert(tiles_to_replace_this_cicle, tiles_to_replace[choosen_index]) -- Move to the list to replace this round
 					creep_to_remove_this_cicle = creep_to_remove_this_cicle - 1 -- Reduce counter of this round
 					
+					tiles_to_replace[choosen_index] = tiles_to_replace[creeps_count] -- Overwrite taken tile with the the latest tile of the list 
+					tiles_to_replace[creeps_count] = nil										
+					
 					creeps_count = creeps_count - 1 -- Reduce global counter
-					table.remove(tiles_to_replace, choosen_index)
 				end
 				
 				-- Remove creeps
@@ -128,6 +131,12 @@ function playerThrowAntiCreep(event)
 			ccm:unlistenCallBack("on_biter_base_built", 1) 
 
 			-- Remove all generated creeps
+			if global.viruses == nil then
+				global.viruses = {}
+			end
+			if global.viruses.creep_virus_active == nil then
+				global.viruses.creep_virus_active = {}
+			end
 			global.viruses.creep_virus_active[actual_player_surface.index] = true -- Lock semaphore and sign surface to clean
 			
 			-- Reduce by 33% enemy evolution factor
@@ -195,9 +204,10 @@ function playerThrowAntiBiter(event)
 						if entity and entity.valid then
 							entity.die(player.force)
 						end
-						entity_to_kill_this_cicle = entity_to_kill_this_cicle - 1
-						enemy_count               = enemy_count - 1
-						table.remove(enemy_entities, choosen_index)
+						entity_to_kill_this_cicle     = entity_to_kill_this_cicle - 1
+						enemy_entities[choosen_index] = enemy_entities[enemy_count]
+						enemy_entities[enemy_count]   = nil
+						enemy_count                   = enemy_count - 1
 					end
 					if entity_to_kill <= 0 then
 						ccm:unlistenCallBack("on_nth_tick", 1000+actual_player_surface.index)

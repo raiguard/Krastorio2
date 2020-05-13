@@ -6,6 +6,7 @@ Date: XX.05.2020
     - Now other modders in their mods can set in a technology prototypes the field check_science_packs_incompatibilities = false to say to Krastorio 2 to not check if a technology have an incompatibible science packs(tech cards) combination with the tech cards tiers used by Krastorio 2 (Warning! Set this to false without be sure of the result can create deadlocks, because exist the possibility that doesn't exist a laboratory able to research that technology).
     - Added grid compatibility to Electric Train.
   Changes:
+    - Improved the viruses code, and now is more fast and use less UPS, thanks to hc_glyph.
     - (SE compatibility) Now is possible process Krastorio 2 intermediates in the space surface with SE.
     - Compatibilized Asphalt Roads tiles to be minable with the jackhammer.
     - Nerfed Quartz matter value to avoid other matter conversions loop.
