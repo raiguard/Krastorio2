@@ -13,7 +13,7 @@ data.raw.recipe["chemical-science-pack"]   = krastorio.science_pack_recipes[sett
 data.raw.recipe["production-science-pack"] = krastorio.science_pack_recipes[settings.startup["kr-production-science-pack-recipe"].value]["production-science-pack"]
 data.raw.recipe["utility-science-pack"]    = krastorio.science_pack_recipes[settings.startup["kr-utility-science-pack-recipe"].value]["utility-science-pack"] 
 
--- Check impossible ingredients
+-- Check and remove ingredients if the recipe is impossible
 local unlockable_items = krastorio.recipes.findNotUnlockableRecipes()
 
 krastorio.recipes.removeIngredients("automation-science-pack", unlockable_items)
@@ -22,6 +22,12 @@ krastorio.recipes.removeIngredients("military-science-pack", unlockable_items)
 krastorio.recipes.removeIngredients("production-science-pack", unlockable_items)
 krastorio.recipes.removeIngredients("utility-science-pack", unlockable_items)
 
+-- If K2 category exist use them
 krastorio.recipes.setCategoryIfExist("production-science-pack", "t2-tech-cards")
 krastorio.recipes.setCategoryIfExist("utility-science-pack", "t2-tech-cards")
 krastorio.recipes.setCategoryIfExist("space-science-pack", "t3-tech-cards")
+
+-- Remove useless prerequisite
+if not krastorio.recipes.hasIngredient("production-science-pack", "electric-furnace") then
+	krastorio.technologies.removePrerequisite("production-science-pack", "advanced-material-processing-2")
+end
