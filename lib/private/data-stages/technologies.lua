@@ -786,46 +786,48 @@ function krastorio.technologies.removeSciencePackIncompatibleWith(science_pack_n
 			incompatibilities_dictionary[science_pack_incompatible] = true
 		end
 		
-		for technology_name, technology in pairs(data.raw.technology) do			
-			local ingredients = technology.unit.ingredients				
-			if ingredients and #ingredients > 1 then	
-				local is_in = false
-				local ingredient_name = nil	
-				for i = 1, #ingredients do
-					ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])					
-					if science_pack_name == ingredient_name then
-						is_in = true
-						break
-					end	
-				end					
-				if is_in then
-					local wrong_one = 0
-					while wrong_one ~= -1 do
-						wrong_one = -1
+		for technology_name, technology in pairs(data.raw.technology) do		
+			if technology.check_science_packs_incompatibilities ~= false then
+				local ingredients = technology.unit.ingredients				
+				if ingredients and #ingredients > 1 then	
+					local is_in = false
+					local ingredient_name = nil	
+					for i = 1, #ingredients do
+						ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])					
+						if science_pack_name == ingredient_name then
+							is_in = true
+							break
+						end	
+					end					
+					if is_in then
+						local wrong_one = 0
+						while wrong_one ~= -1 do
+							wrong_one = -1
 
-						for i = 1, #ingredients do
-							ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])
-							if incompatibilities_dictionary[ingredient_name] then
-								wrong_one = i
-								break
-							end									
-						end
-						
-						if wrong_one ~= -1 then
-							if technology.prerequisites and #technology.prerequisites > 0 then
-								for j, prerequisite_name in pairs(technology.prerequisites) do
-									for _, value in pairs(ingredients[wrong_one]) do
-										if prerequisite_name == value then
-											table.remove(technology.prerequisites, j)
-											break
-										end
-									end								
-								end
+							for i = 1, #ingredients do
+								ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])
+								if incompatibilities_dictionary[ingredient_name] then
+									wrong_one = i
+									break
+								end									
 							end
-							table.remove(ingredients, wrong_one)								
-						end							
-					end
-				end					
+							
+							if wrong_one ~= -1 then
+								if technology.prerequisites and #technology.prerequisites > 0 then
+									for j, prerequisite_name in pairs(technology.prerequisites) do
+										for _, value in pairs(ingredients[wrong_one]) do
+											if prerequisite_name == value then
+												table.remove(technology.prerequisites, j)
+												break
+											end
+										end								
+									end
+								end
+								table.remove(ingredients, wrong_one)								
+							end							
+						end
+					end					
+				end	
 			end			
 		end
 	end	
@@ -843,32 +845,34 @@ function krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
 
 	-- enforce science packs in prerequisites (or in their prerequisites) for each technology
 	for technology_name, technology in pairs(data.raw.technology) do
-		local prerequisites     = technology.prerequisites
-		local ingredients       = technology.unit.ingredients
-		local science_pack_name = nil
-		local hold = false
-		if ingredients and #ingredients > 0 then				
-			for i = 1, #ingredients do
-				science_pack_name = krastorio.technologies.getIngredientName(ingredients[i])					
-				if science_techs[science_pack_name] then
-					hold = false
-					if prerequisites and #prerequisites > 0 then
-						for _, prerequisite in pairs(prerequisites) do
-							if prerequisite == science_pack_name or
-							   krastorio.technologies.hasIngredient(prerequisite, science_pack_name) or 
-							   krastorio.technologies.hasPrerequisite(prerequisite, science_pack_name) 
-							then
-								hold = true
-								break		
+		if technology.enforce_used_science_packs_in_prerequisites ~= false then
+			local prerequisites     = technology.prerequisites
+			local ingredients       = technology.unit.ingredients
+			local science_pack_name = nil
+			local hold = false
+			if ingredients and #ingredients > 0 then				
+				for i = 1, #ingredients do
+					science_pack_name = krastorio.technologies.getIngredientName(ingredients[i])					
+					if science_techs[science_pack_name] then
+						hold = false
+						if prerequisites and #prerequisites > 0 then
+							for _, prerequisite in pairs(prerequisites) do
+								if prerequisite == science_pack_name or
+								   krastorio.technologies.hasIngredient(prerequisite, science_pack_name) or 
+								   krastorio.technologies.hasPrerequisite(prerequisite, science_pack_name) 
+								then
+									hold = true
+									break		
+								end
 							end
 						end
-					end
-					if not hold then
-						krastorio.technologies.addPrerequisite(technology_name, science_techs[science_pack_name], true)
-					end					
+						if not hold then
+							krastorio.technologies.addPrerequisite(technology_name, science_techs[science_pack_name], true)
+						end					
+					end	
 				end	
 			end	
-		end		
+		end	
 	end
 end
 
