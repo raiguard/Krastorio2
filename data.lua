@@ -11,7 +11,6 @@ krastorio.stage         = "data"
 require("__Krastorio2__/lib/public/data-stages/paths")
 -- -- Global Krastorio 2 library initialization, utilities library (support for main library)
 require(kr_path .. "lib/private/data-stages/utils/krastorio_utils")
-require(kr_path .. "lib/private/data-stages/utils/vanilla_data_backups/recipes_backup_utils")
 -- -- Global Krastorio 2 library initialization, Krastorio 2 main library
 require(kr_path .. "lib/private/data-stages/entities")
 require(kr_path .. "lib/private/data-stages/equipments")
@@ -70,4 +69,5 @@ require(scripts_path .. "aircraft")
 require(scripts_path .. "early-electric-furnaces")
 require(scripts_path .. "deadlock-beltboxes-loaders")
 require(scripts_path .. "Squeak_Through")
+require(scripts_path .. "space-exploration")
 ---------------------------------------------------------------------------

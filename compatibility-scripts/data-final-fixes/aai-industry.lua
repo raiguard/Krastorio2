@@ -59,4 +59,6 @@ if mods["aai-industry"] then
 		data.raw.recipe["processed-fuel-advanced-fuel"] = nil
 	end
 
+	-- -- -- ENFORCE SCIENCE PACK PREREQUISITE COHERENCE, again.
+	krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
 end
