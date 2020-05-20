@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.18
 Date: XX.05.2020
+  Changes:
+    - Improved the nitric acid color.
   Fixes:
     - Fixed bug with the prototype option check_science_packs_incompatibilities.
 ---------------------------------------------------------------------------------------------------
