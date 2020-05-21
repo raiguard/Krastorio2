@@ -1,10 +1,12 @@
-function rocket_turret_sheet(inputs)
+local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
+
+function laser_artillery_turret_sheet(inputs)
 return
 {
 	layers =
 	{
 		{
-			filename = kr_entities_path .. "turrets/laser-turret-sheet.png",
+			filename = kr_entities_path .. "turrets/laser-artillery-turret-sheet.png",
 			width = 220,
 			height = 190,
 			line_length = inputs.frame_count or 8,
@@ -14,7 +16,7 @@ return
 			shift = {0, -0.7},
 			hr_version =
 			{
-				filename = kr_entities_path .. "turrets/hr-laser-turret-sheet.png",
+				filename = kr_entities_path .. "turrets/hr-laser-artillery-turret-sheet.png",
 				width = 440,
 				height = 380,
 				line_length = inputs.frame_count or 8,
@@ -24,11 +26,10 @@ return
 				shift = {0, -0.7},
 				scale = 0.5
 			}
-		},
-		
+		},		
 		{
 			flags = { "mask" },
-			filename = kr_entities_path .. "turrets/laser-turret-sheet-mask.png",
+			filename = kr_entities_path .. "turrets/laser-artillery-turret-sheet-mask.png",
 			width = 220,
 			height = 190,
 			line_length = inputs.frame_count or 8,
@@ -40,7 +41,7 @@ return
 			hr_version =
 			{
 				flags = { "mask" },
-				filename = kr_entities_path .. "turrets/hr-laser-turret-sheet-mask.png",
+				filename = kr_entities_path .. "turrets/hr-laser-artillery-turret-sheet-mask.png",
 				width = 440,
 				height = 380,
 				line_length = inputs.frame_count or 8,
@@ -51,10 +52,9 @@ return
 				apply_runtime_tint = true,
 				scale = 0.5
 			}
-		},
-		
+		},		
 		{
-			filename = kr_entities_path .. "turrets/laser-turret-sheet-shadow.png",
+			filename = kr_entities_path .. "turrets/laser-artillery-turret-sheet-shadow.png",
 			width = 230,
 			height = 190,
 			line_length = inputs.frame_count or 8,
@@ -65,7 +65,7 @@ return
 			draw_as_shadow = true,
 			hr_version =
 			{
-				filename = kr_entities_path .. "turrets/hr-laser-turret-sheet-shadow.png",
+				filename = kr_entities_path .. "turrets/hr-laser-artillery-turret-sheet-shadow.png",
 				width = 460,
 				height = 380,
 				line_length = inputs.frame_count or 8,
@@ -76,9 +76,7 @@ return
 				draw_as_shadow = true,
 				scale = 0.5
 			}
-		}
-		
-	
+		}	
 	}
 }
 end
@@ -88,13 +86,14 @@ data:extend(
 {  
 	{
 		type = "electric-turret",
-		name = "kr-laser-turret",
-		icon = kr_entities_icons_path .. "laser-turret.png",
+		name = "kr-laser-artillery-turret",
+		icon = kr_entities_icons_path .. "laser-artillery-turret.png",
 		icon_size = 64,
 		flags = {"placeable-player", "player-creation"},
-		minable = {mining_time = 1, result = "kr-laser-turret"},
+		minable = {mining_time = 1, result = "kr-laser-artillery-turret"},
 		max_health = 1000,
 		corpse = "big-remnants",
+		damaged_trigger_effect = hit_effects.entity(),
 		resistances = 
 		{
 			{type = "physical", percent = 50},
@@ -103,22 +102,6 @@ data:extend(
 		},
 		collision_box = {{-1.75, -1.75 }, {1.75, 1.75}},
 		selection_box = {{-2, -2 }, {2, 2}},
-		rotation_speed = 0.002,
-		--preparing_speed = 0.04,
-		--folding_speed = 0.04,
-		dying_explosion = "big-explosion",
-		inventory_size = 1,
-		automated_ammo_count = 10,
-		--attacking_speed = 0.5,
-		folded_animation = rocket_turret_sheet{direction_count = 8, line_length = 1},
-		energy_source =
-		{
-			type = "electric",
-			buffer_capacity = "70MJ",
-			input_flow_limit = "75MW",
-			drain = "5MW",
-			usage_priority = "primary-input"
-		},
 		
 		base_picture =
 		{
@@ -202,14 +185,28 @@ data:extend(
 		energy_glow_animation = laser_turret_shooting_glow(),
 		glow_light_intensity = 0.5, -- defaults to 0
 
+		rotation_speed = 0.002,
+		preparing_speed = 0.08,
+		folding_speed = 0.02,
+		dying_explosion = "big-explosion",
+		attacking_speed = 0.020,
+		folded_animation = laser_artillery_turret_sheet{direction_count = 8, line_length = 1},
+		energy_source =
+		{
+			type = "electric",
+			buffer_capacity = "70MJ",
+			input_flow_limit = "75MW",
+			drain = "5MW",
+			usage_priority = "primary-input"
+		},
 		attack_parameters =
 		{
 			type = "projectile",
 			cooldown = 60,
 			projectile_creation_distance = 3.9,
 			projectile_center = {0, 0.2},
-			range = 60,
-			min_range = 10,
+			range = 7 * 32, -- same of artillery
+			min_range = 32, -- same of artillery
 			ammo_type =
 			{
 				category = "laser-turret",
@@ -225,7 +222,7 @@ data:extend(
 						starting_speed = 1,
 						direction_deviation = 0.1,
 						range_deviation = 0.1,
-						max_range = 60,
+						max_range = 7 * 32, -- same of artillery
 						source_effects =
 						{
 							type = "create-explosion",
@@ -234,12 +231,31 @@ data:extend(
 					}
 				}
 			},
+			rotate_penalty = 10,
+			warmup = 27,
 			sound =
 			{
 				{
-					filename = kr_weapons_sounds_path .. "heavy-impulse-shot.ogg",
+					filename = kr_weapons_sounds_path .. "laser-artillery-turret-shot.ogg",
 					volume = 1
 				}
+			}
+		},
+		
+		starting_attack_sound =
+		{
+			{
+				filename = kr_weapons_sounds_path .. "laser-artillery-turret-starting_attack_sound.ogg",
+				volume = 1
+			}
+		},
+		
+		rotating_sound =
+		{
+			sound = 
+			{
+				filename = kr_buildings_sounds_path .. "turret-rotating.ogg",
+				volume = 1
 			}
 		},
 		
@@ -247,6 +263,6 @@ data:extend(
 		turret_base_has_direction = true,
 		open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
 		close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-		call_for_help_radius = 70
+		call_for_help_radius = 0
 	}
 })

@@ -1,3 +1,5 @@
+local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
+
 function rocket_turret_sheet(inputs)
 return
 {
@@ -95,6 +97,7 @@ data:extend(
 		minable = {mining_time = 1, result = "kr-rocket-turret"},
 		max_health = 1000,
 		corpse = "big-remnants",
+		damaged_trigger_effect = hit_effects.entity(),
 		resistances = 
 		{
 			{type = "physical", percent = 50},

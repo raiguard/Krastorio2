@@ -411,6 +411,9 @@ krastorio.recipes.replaceIngredient("express-splitter", "iron-gear-wheel", {"ste
 krastorio.recipes.removeIngredient("express-splitter", "lubricant")
 krastorio.recipes.replaceIngredient("express-splitter", "advanced-circuit", {"electronic-components", 4})
 
+-- Heat pipe
+krastorio.recipes.convertIngredient("heat-pipe", "steel-plate", "quartz")
+
 -- Turrets
 krastorio.recipes.addIngredient("laser-turret", {name = "quartz", amount = 5})
 krastorio.recipes.replaceIngredient("laser-turret", "steel-plate", {"steel-plate", 15})
@@ -463,7 +466,7 @@ data.raw.recipe["nuclear-reactor"].category = "crafting-with-fluid"
 krastorio.recipes.replaceIngredient("nuclear-reactor", "concrete", {"concrete", 500}) --it's not a mistake. it's for future rebalance
 krastorio.recipes.replaceIngredient("nuclear-reactor", "steel-plate", {"steel-plate", 200}) --it's not a mistake. it's for future rebalance
 krastorio.recipes.replaceIngredient("nuclear-reactor", "advanced-circuit", {"advanced-circuit", 200}) --it's not a mistake. it's for future rebalance
-krastorio.recipes.replaceIngredient("nuclear-reactor", "copper-plate", {"copper-plate", 200})
+krastorio.recipes.replaceIngredient("nuclear-reactor", "copper-plate", {"heat-pipe", 20})
 krastorio.recipes.addIngredient("nuclear-reactor", {"rare-metals", 200})
 
 -- -- Turbines

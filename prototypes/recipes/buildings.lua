@@ -932,6 +932,21 @@ return
     },
 	{
 		type = "recipe",
+		name = "kr-laser-artillery-turret",
+		enabled = false,
+		energy_required = 20,
+		ingredients =
+		{
+			{"energy-control-unit", 6},
+			{"steel-beam", 10},
+			{"rare-metals", 20},
+			{"ai-core", 10},
+			{"low-density-structure", 10}
+		},
+		result = "kr-laser-artillery-turret"
+    },
+	{
+		type = "recipe",
 		name = "kr-intergalactic-transceiver",
 		energy_required = 600,
 		enabled = false,

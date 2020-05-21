@@ -6,6 +6,9 @@ Date: XX.05.2020
   Changes:
     - Improved the nitric acid color.
     - All antimater explosions have been changed (now it's purple).
+    - All Krastorio 2 turrets now have hit effects when biters taste them.
+    - Heat pipe recipe now use quartz instead of steel plate. Because quartz in not used in many recipe this will improve the quartz situation.
+    - Now nuclear reactor recipe use heat pipes instead of copper plate.
   Fixes:
     - Fixed bug with the prototype option check_science_packs_incompatibilities.
 ---------------------------------------------------------------------------------------------------

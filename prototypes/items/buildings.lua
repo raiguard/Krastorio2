@@ -515,12 +515,12 @@ data:extend(
     },
     {
 		type = "item",
-		name = "kr-laser-turret",
-		icon = kr_entities_icons_path .. "laser-turret.png",
+		name = "kr-laser-artillery-turret",
+		icon = kr_entities_icons_path .. "laser-artillery-turret.png",
 		icon_size = 64,
 		subgroup = "vanilla-turrets",
-		order = "03b[big-laser-turret]",
-		place_result = "kr-laser-turret",
+		order = "b[turret]-e[artillery-turret]-a[laser-artillery-turret]",
+		place_result = "kr-laser-artillery-turret",
 		stack_size = 50
     },
 	-- -- --	

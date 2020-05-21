@@ -403,7 +403,7 @@ data:extend(
 				recipe = krastorio.recipes.changed_names["antimatter-railgun-shell"] or "antimatter-railgun-shell"
 			}
 		},
-		prerequisites = {"kr-railgun-turret", "kr-rocket-turret", "kr-singularity-tech-card"},
+		prerequisites = {"kr-railgun-turret", "kr-laser-artillery-turret", "kr-rocket-turret", "kr-singularity-tech-card"},
 		unit =
 		{
 			count = 2500,

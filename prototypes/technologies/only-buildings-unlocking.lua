@@ -911,6 +911,34 @@ data:extend(
     },
 	{
 		type = "technology",
+		name = "kr-laser-artillery-turret",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "laser-artillery-turret.png",
+		icon_size = 128,
+		prerequisites = {"kr-military-5", "kr-advanced-tech-card", "kr-railgun-turret", "kr-energy-control-unit"},
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-laser-artillery-turret"
+			}
+		},
+		order = "g-f-z",
+		unit =
+		{
+			count = 750,
+			ingredients = 
+			{
+				{"military-science-pack", 1},
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"advanced-tech-card", 1},
+			},
+			time = 60
+		}
+	},
+	{
+		type = "technology",
 		name = "kr-singularity-beacon",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "singularity-beacon.png",
