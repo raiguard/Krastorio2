@@ -333,7 +333,7 @@ data:extend(
         starting_frame_speed_deviation = 5
       }
     },
-	light = {intensity = 0.5, size = 10, color = {r=0.8, g=1.0, b=1}},
+	light = {intensity = 0.5, size = 10, color = {r=0.9, g=0.1, b=1}},
   },
   
   
@@ -526,6 +526,67 @@ data:extend(
     }
     },
    
+------------------------------------------------
+------------------------------------------------
+
+    {
+    type = "projectile",
+    name = "laser-projectile",
+    flags = {"not-on-map"},
+    -- collision_box = {{-0.3, -1.1}, {0.3, 1.1}},
+    acceleration = 0.5,
+    -- direction_only = true,
+    --piercing_damage = 500,
+    action =
+    {
+      type = "direct",
+      action_delivery =
+      {
+        type = "instant",
+        target_effects =
+        {
+          {
+            type = "damage",
+            damage = {amount = 500 , type = "laser"}
+          },
+          {
+            type = "damage",
+            damage = {amount = 250 , type = "explosion"}
+          },
+          {
+            type = "create-entity",
+            entity_name = "kr-laser-explosion"
+          }
+        }
+      }
+    },
+    final_action =
+    {
+      type = "direct",
+      action_delivery =
+      {
+        type = "instant",
+        target_effects =
+        {
+          {
+            type = "create-entity",
+            entity_name = "small-scorchmark",
+            check_buildability = true
+          }
+        }
+      }
+    },
+    animation =
+    {
+      filename = kr_entities_path .. "missiles/laser.png",
+      frame_count = 1,
+      width = 6,
+      height = 90,
+      priority = "high"
+    },
+	light = {intensity = 2, size = 20, color = {r=1, g=0.1, b=0.1}},
+    },
+
 ------------------------------------------------
 ------------------------------------------------
    
@@ -794,7 +855,7 @@ data:extend(
       height = 167,
       priority = "high"
     },
-	light = {intensity = 0.5, size = 10, color = {r=0.75, g=0.5, b=1}},
+	light = {intensity = 0.5, size = 10, color = {r=0.9, g=0.1, b=1}},
 	},
 	
 -----------------------------------------------------------------------------------------------------------------

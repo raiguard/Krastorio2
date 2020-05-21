@@ -48,6 +48,7 @@ require(kr_entities_prototypes_path .. "buildings/electric-mining-drills")
 -- -- Turrets
 require(kr_entities_prototypes_path .. "buildings/turrets/railgun-turret")
 require(kr_entities_prototypes_path .. "buildings/turrets/rocket-turret")
+require(kr_entities_prototypes_path .. "buildings/turrets/laser-turret")
 -- -- Laboratories
 require(kr_entities_prototypes_path .. "buildings/biusart-lab")
 require(kr_entities_prototypes_path .. "buildings/singularity-lab")

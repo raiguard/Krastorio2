@@ -25,7 +25,7 @@ data.raw.item["gun-turret"].order             			  = "01[gun-turret]"
 data.raw.item["flamethrower-turret"].subgroup			  = "vanilla-turrets"
 data.raw.item["flamethrower-turret"].order				  = "02[flamethrower-turret]"
 data.raw.item["laser-turret"].subgroup					  = "vanilla-turrets"
-data.raw.item["laser-turret"].order						  = "03[laser-turret]"
+data.raw.item["laser-turret"].order						  = "03a[laser-turret]"
 data.raw.item["artillery-turret"].subgroup				  = "vanilla-turrets"
 data.raw.item["artillery-turret"].order					  = "04[artillery-turret]"
 

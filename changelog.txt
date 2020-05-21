@@ -1,8 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.18
 Date: XX.05.2020
+  Features:
+    - Added new laser turret!
   Changes:
     - Improved the nitric acid color.
+    - All antimater explosions have been changed (now it's purple).
   Fixes:
     - Fixed bug with the prototype option check_science_packs_incompatibilities.
 ---------------------------------------------------------------------------------------------------

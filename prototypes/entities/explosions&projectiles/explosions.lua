@@ -1,5 +1,62 @@
 local kr_explosions_sprites_path = kr_entities_path .. "explosions/"
 
+laser_gunshot = function()
+  return
+  {
+    {
+      filename = kr_explosions_sprites_path .. "laser_gunshot.png",
+      priority = "extra-high",
+      width = 51,
+      height = 57,
+      frame_count = 2,
+      animation_speed = 1.5,
+      shift = {0, 0}
+    },
+    {
+      filename = kr_explosions_sprites_path .. "laser_gunshot.png",
+      priority = "extra-high",
+      width = 51,
+      height = 57,
+      x = 51 * 2,
+      frame_count = 2,
+      animation_speed = 1.5,
+      shift = {0, 0}
+    },
+    {
+      filename = kr_explosions_sprites_path .. "laser_gunshot.png",
+      priority = "extra-high",
+      width = 51,
+      height = 57,
+      x = 51 * 4,
+      frame_count = 3,
+      animation_speed = 1.5,
+      shift = {0, 0}
+    },
+    {
+      filename = kr_explosions_sprites_path .. "laser_gunshot.png",
+      priority = "extra-high",
+      width = 51,
+      height = 57,
+      x = 51 * 7,
+      frame_count = 3,
+      animation_speed = 1.5,
+      shift = {0, 0}
+    },
+    {
+      filename = kr_explosions_sprites_path .. "laser_gunshot.png",
+      priority = "extra-high",
+      width = 51,
+      height = 57,
+      x = 51 * 10,
+      frame_count = 3,
+      animation_speed = 1.5,
+      shift = {0, 0}
+    }
+  }
+end
+
+
+
 data:extend(
 {
 -----------------------------------------------------------------------------------------------------------------
@@ -36,15 +93,15 @@ data:extend(
 			{
 				filename = kr_explosions_sprites_path .. "matter-explosion.png",
 				flags = { "compressed" },
-				width = 197,
-				height = 245,
+				width = 400,
+				height = 400,
 				frame_count = 47,
-				line_length = 6,
+				line_length = 8,
 				shift = {0.1875, -0.75},
 				animation_speed = 0.5
 			}
 		},
-		light = {intensity = 1, size = 50, color = {r=0.0, g=0.2, b=1}},
+		light = {intensity = 1, size = 50, color = {r=0.9, g=0.1, b=1}},
 		sound =
 		{
 			aggregation =
@@ -97,15 +154,15 @@ data:extend(
 			{
 				filename = kr_explosions_sprites_path .. "big-matter-explosion.png",
 				flags = { "compressed" },
-				width = 394,
-				height = 490,
+				width = 800,
+				height = 800,
 				frame_count = 47,
-				line_length = 6,
+				line_length = 8,
 				shift = {0.1875, -0.75},
-				animation_speed = 0.35
+				animation_speed = 0.4
 			}
 		},
-		light = {intensity = 3, size = 100, color = {r=0, g=0.2, b=1}},
+		light = {intensity = 3, size = 100, color = {r=0.9, g=0.1, b=1}},
 		sound =
 		{
 			aggregation =
@@ -159,26 +216,14 @@ data:extend(
 				filename = kr_explosions_sprites_path .. "rail-matter-explosion.png",
 				flags = { "compressed" },
 				animation_speed = 0.5,
-				width = 324,
-				height = 416,
+				width = 600,
+				height = 800,
+				line_length = 6,
 				frame_count = 36,
 				shift = util.by_pixel(0, -48),
-				stripes =
-				{
-					{
-						filename = kr_explosions_sprites_path .. "rail-matter-explosion-1.png",
-						width_in_frames = 6,
-						height_in_frames = 3
-					},
-					{
-						filename = kr_explosions_sprites_path .. "rail-matter-explosion-2.png",
-						width_in_frames = 6,
-						height_in_frames = 3
-					}
-				}
 			}
 		},
-		light = {intensity = 1, size =80, color = {r=0, g=0.2, b=1.0}},
+		light = {intensity = 1, size =80, color = {r=0.9, g=0.1, b=1}},
 		sound =
 		{
 			aggregation =
@@ -220,7 +265,74 @@ data:extend(
 				}
 			}
 		}
-	}
+	},
+-----------------------------------------------------------------------------------------------------------------  
+	
+	{
+		type = "explosion",
+		name = "kr-laser-explosion-gunshot",
+		flags = {"not-on-map"},
+		subgroup = "explosions",
+		animations = laser_gunshot(),
+		rotate = true,
+		light = {intensity = 2, size = 15, color = {r=1.0, g=0.1, b=0.1}},
+		smoke = "smoke-fast",
+		smoke_count = 2,
+		smoke_slow_down_factor = 0.25
+	},
+	
+	{
+		type = "explosion",
+		name = "kr-laser-explosion",
+		icon = "__base__/graphics/item-group/effects.png",
+		icon_size = 64,
+		flags = {"not-on-map"},
+		subgroup = "explosions",
+		animations = 
+		{
+			filename = kr_explosions_sprites_path .. "laser-explosion.png",
+			flags = { "compressed" },
+			width = 300,
+			height = 300,
+			frame_count = 47,
+			line_length = 8,
+			shift = {0.1875, -0.75},
+			animation_speed = 0.55
+		},
+		light = {intensity = 1, size = 25, color = {r=1.0, g=0, b=0.1}},
+		sound =
+		{
+			aggregation =
+			{
+				max_count = 2,
+				remove = true
+			},
+			audible_distance_modifier = 1.95,
+			variations =
+			{
+				{
+					filename = "__base__/sound/fight/large-explosion-1.ogg",
+					volume = 0.75
+				},
+				{
+					filename = "__base__/sound/fight/large-explosion-2.ogg",
+					volume = 0.75
+				}
+			}
+		},
+	},
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

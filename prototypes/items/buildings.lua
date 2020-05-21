@@ -502,15 +502,25 @@ data:extend(
 		order = "a01[railgun-turret]",
 		place_result = "kr-railgun-turret",
 		stack_size = 50
-    },   
+    }, 
     {
 		type = "item",
 		name = "kr-rocket-turret",
 		icon = kr_entities_icons_path .. "rocket-turret.png",
 		icon_size = 64,
 		subgroup = "rocket-turret",
-		order = "a01[rocket-turret]",
+		order = "a02[rocket-turret]",
 		place_result = "kr-rocket-turret",
+		stack_size = 50
+    },
+    {
+		type = "item",
+		name = "kr-laser-turret",
+		icon = kr_entities_icons_path .. "laser-turret.png",
+		icon_size = 64,
+		subgroup = "vanilla-turrets",
+		order = "03b[big-laser-turret]",
+		place_result = "kr-laser-turret",
 		stack_size = 50
     },
 	-- -- --	
