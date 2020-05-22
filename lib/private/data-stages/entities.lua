@@ -91,6 +91,53 @@ function krastorio.entities.removeCraftingCategory(category_name, entity_name, t
 	return false
 end
 
+function krastorio.entities.getLabInputs(lab_name)
+	if data.raw["lab"][lab_name] then
+		if data.raw["lab"][lab_name].inputs == nil then
+			data.raw["lab"][lab_name].inputs = {}
+		end
+		
+		return data.raw["lab"][lab_name].inputs
+	end
+	return nil
+end
+
+function krastorio.entities.addLabInput(lab_name, input_name)
+	local inputs = krastorio.entities.getLabInputs(lab_name)
+	if inputs then
+		local finded = false
+		for _, input in pairs(inputs) do
+			if input_name == input then
+				finded = true
+				break
+			end
+		end
+		if not finded then
+			table.insert(inputs, input_name)
+			return true
+		end
+	end
+	return false
+end
+
+function krastorio.entities.removeLabInput(lab_name, input_name)
+	local inputs = krastorio.entities.getLabInputs(lab_name)
+	if inputs then
+		local finded = false
+		for i, input in pairs(inputs) do
+			if input_name == input then
+				finded = i
+				break
+			end
+		end
+		if finded then
+			table.remove(inputs, i, input_name)
+			return true
+		end
+	end
+	return false
+end
+
 -- This should be used in control,
 -- check if the entities is valid for be used.
 -- @entity, entity

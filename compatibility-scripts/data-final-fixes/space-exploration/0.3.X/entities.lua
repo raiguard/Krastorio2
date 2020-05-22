@@ -67,6 +67,11 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
 		krastorio.technologies.addUnlockRecipe("se-space-platform-scaffold", "kr-se-loader")
 	end
 	
+	-- -- Singularity laboratory fixes
+	-- Special collision
+	data.raw["lab"]["kr-singularity-lab"].collision_mask = data.raw["lab"]["se-space-science-lab"].collision_mask
+	krastorio.entities.addLabInput("kr-singularity-lab", "se-deep-space-science-pack")
+	
 	-- SPACE COLLISIONS
 	-- After SE have done his magic, because SE don't iterate all entity types,
 	-- to be sure that all entities have the right collision layer,
@@ -109,10 +114,6 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
 		["generator"] =
 		{
 			"kr-antimatter-reactor"
-		},
-		["lab"] =
-		{
-			"kr-singularity-lab"
 		},	
 		["mining-drill"] =
 		{

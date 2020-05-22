@@ -1,7 +1,9 @@
 if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mods["space-exploration"], "0.3.0") then
+
 	-- Remove glass from low desity structure
 	krastorio.recipes.removeIngredient("low-density-structure", "glass")
 	krastorio.recipes.replaceIngredient("low-density-structure", "steel-plate", {"steel-plate", 2})
+	
 	-- Removing rocket fuel from water recipe, is not necessary with the K2 atmopheric condenser (on every plant is possible craft the rocket fuel)
 	data.raw.recipe["se-rocket-fuel-from-water-copper"] = nil
 	krastorio.technologies.removeUnlockRecipeFromAllTechnologies("se-rocket-fuel-from-water-copper")
@@ -34,16 +36,24 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
 	
 	-- Adding new K2 recipe categories to some space machines to make users able to process the K2 intermediates in the space
 	krastorio.entities.addCraftingCategory("assembling-machine", "se-space-mechanical-laboratory", "crushing")
+	krastorio.entities.addCraftingCategory("assembling-machine", "se-pulveriser", "crushing")
 	krastorio.entities.addCraftingCategory("assembling-machine", "se-space-biochemical-laboratory", "electrolysis")
 	krastorio.entities.addCraftingCategory("assembling-machine", "se-space-decontamination-facility", "fluid-filtration")
 	
-	-- Merge the sand recipe
+	-- Merge the sand recipes
 	if data.raw.recipe["sand-from-stone"] then
 		data.raw.recipe["sand-from-stone"] = nil
 		data.raw.technology["sand-processing"] = nil
 		krastorio.technologies.convertPrerequisiteFromAllTechnologies("sand-processing", "kr-stone-processing")		
 		krastorio.technologies.removeUnlockRecipeFromAllTechnologies("sand-from-stone")
 		krastorio.modules.removeProductivityLimitation("sand-from-stone")
+	end
+	if data.raw.recipe["se-pulverised-sand"] then
+		data.raw.recipe["se-pulverised-sand"] = nil
+		data.raw.technology["sand-processing"] = nil
+		krastorio.technologies.convertPrerequisiteFromAllTechnologies("sand-processing", "kr-stone-processing")		
+		krastorio.technologies.removeUnlockRecipeFromAllTechnologies("se-pulverised-sand")
+		krastorio.modules.removeProductivityLimitation("se-pulverised-sand")
 	end
 
 	-- Merge the glass recipe
@@ -54,4 +64,6 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
 		krastorio.technologies.removeUnlockRecipeFromAllTechnologies("glass-from-sand")
 		krastorio.modules.removeProductivityLimitation("glass-from-sand")
 	end
+	-- Boost SE glass recipe
+	krastorio.recipes.replaceProduct("se-glass-vulcanite", "glass", {"glass", 16})
 end

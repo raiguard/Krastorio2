@@ -11,6 +11,7 @@ Date: XX.05.2020
     - Now nuclear reactor recipe use heat pipes instead of copper plate.
     - Now explosive turret rockets and shells have a new Explosive(T) damage and don't break walls.
   Fixes:
+    - Fixed problems with SE 0.3.X
     - Fixed bug with the prototype option check_science_packs_incompatibilities.
     - Fixed problem with ammo turret and target on the close range.
 ---------------------------------------------------------------------------------------------------

@@ -19,4 +19,11 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
 	data.raw.item["kr-superior-splitter"].subgroup = "splitter"
 	data.raw.item["kr-superior-transport-belt"].subgroup = "transport-belt"
 	data.raw.item["kr-superior-underground-belt"].subgroup = "underground-belt"
+	
+	-- Labs ordering
+	data.raw.item["biusart-lab"].subgroup = "lab"
+	data.raw.item["kr-singularity-lab"].subgroup = "lab"
+	
+	data.raw.item["se-space-science-lab"] = "g[lab]-g3[kr-singularity-lab]"
+	data.raw.item["kr-singularity-lab"] = "g[lab]-g4[kr-singularity-lab]"
 end
