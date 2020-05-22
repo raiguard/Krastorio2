@@ -24,6 +24,6 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
 	data.raw.item["biusart-lab"].subgroup = "lab"
 	data.raw.item["kr-singularity-lab"].subgroup = "lab"
 	
-	data.raw.item["se-space-science-lab"] = "g[lab]-g3[kr-singularity-lab]"
-	data.raw.item["kr-singularity-lab"] = "g[lab]-g4[kr-singularity-lab]"
+	data.raw.item["se-space-science-lab"].order = "g[lab]-g3[kr-singularity-lab]"
+	data.raw.item["kr-singularity-lab"].order = "g[lab]-g4[kr-singularity-lab]"
 end
