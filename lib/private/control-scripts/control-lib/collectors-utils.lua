@@ -70,12 +70,12 @@ if script.active_mods["AsphaltRoads"] then
 			"Arci-asphalt-triangle-white-up",
 			"Arci-asphalt-triangle-white-left",
 			"Arci-asphalt-triangle-white-down",
-			"Arci-asphalt-triangle-white-right"
+			"Arci-asphalt-triangle-white-right",
+			"Arci-asphalt-hazard-white-left",
+			"Arci-asphalt-hazard-white-right"
 		},
 		["AR-enable-colored-hazard-marking"] =
 		{
-			"Arci-asphalt-hazard-white-left",
-			"Arci-asphalt-hazard-white-right",
 			"Arci-asphalt-hazard-yellow-left",
 			"Arci-asphalt-hazard-yellow-right",
 			"Arci-asphalt-hazard-red-left",
