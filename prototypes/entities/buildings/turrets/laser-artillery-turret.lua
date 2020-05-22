@@ -191,29 +191,30 @@ data:extend(
 		dying_explosion = "big-explosion",
 		--attacking_speed = 0.020, -- its strongly reduce rate of fire
 		folded_animation = laser_artillery_turret_sheet{direction_count = 8, line_length = 1},
+		health_penality = true,
 		
 		energy_source =
 		{
 			type = "electric",
 			buffer_capacity = "100MJ",
-			input_flow_limit = "125MW",
-			drain = "25MW",
+			input_flow_limit = "150MW",
+			drain = "50MW",
 			usage_priority = "primary-input"
 		},
 		
 		attack_parameters =
 		{
 			type = "projectile",
-			cooldown = 60,
+			cooldown = 120,
 			projectile_creation_distance = 3.9,
 			projectile_center = {0, 0.2},
-			range = 100, -- artillery is 7 * 32 -- problem is that turret don't shoot on target that have range more than 100, so 100 is max. F*** game limitations. Again
-			min_range = 20, -- artillery is 32
+			range = 7 * 32, -- artillery is 7 * 32
+			min_range = 32, -- artillery is 32
 			ammo_type =
 			{
 				category = "laser-turret",
 				target_type = "entity",
-				energy_consumption = "50MJ",
+				energy_consumption = "100MJ",
 				action =
 				{
 					type = "direct",
@@ -221,7 +222,7 @@ data:extend(
 					{
 						type = "projectile",
 						projectile = "laser-projectile",
-						starting_speed = 1,
+						starting_speed = 5,
 						direction_deviation = 0.1,
 						range_deviation = 0.1,
 						max_range = 7 * 32, -- same of artillery

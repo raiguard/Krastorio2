@@ -533,9 +533,9 @@ data:extend(
     type = "projectile",
     name = "laser-projectile",
     flags = {"not-on-map"},
-    -- collision_box = {{-0.3, -1.1}, {0.3, 1.1}},
-    acceleration = 0.5,
-    -- direction_only = true,
+    --collision_box = {{-0.3, -1.1}, {0.3, 1.1}},
+    acceleration = 0,
+    --direction_only = true,
     --piercing_damage = 500,
     action =
     {
@@ -595,7 +595,7 @@ data:extend(
                 {
                   {
                     type = "damage",
-                    damage = {amount = 500, type = "kr-explosion"}
+                    damage = {amount = 250, type = "kr-explosion"}
                   },
                   {
                     type = "create-entity",
@@ -616,7 +616,7 @@ data:extend(
       height = 90,
       priority = "high"
     },
-	light = {intensity = 2, size = 20, color = {r=1, g=0.1, b=0.1}},
+	light = {intensity = 2, size = 15, color = {r=1, g=0.1, b=0.1}},
     },
 
 ------------------------------------------------

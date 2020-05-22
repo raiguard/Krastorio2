@@ -275,7 +275,7 @@ data:extend(
 		subgroup = "explosions",
 		animations = laser_gunshot(),
 		rotate = true,
-		light = {intensity = 2, size = 15, color = {r=1.0, g=0.1, b=0.1}},
+		light = {intensity = 1, size = 25, color = {r=1.0, g=0.1, b=0.1}},
 		smoke = "smoke-fast",
 		smoke_count = 2,
 		smoke_slow_down_factor = 0.25
@@ -299,7 +299,7 @@ data:extend(
 			shift = {0.1875, -0.75},
 			animation_speed = 0.55
 		},
-		light = {intensity = 1, size = 25, color = {r=1.0, g=0, b=0.1}},
+		light = {intensity = 0.75, size = 30, color = {r=1.0, g=0.1, b=0.1}},
 		sound =
 		{
 			aggregation =
@@ -320,18 +320,7 @@ data:extend(
 				}
 			}
 		},
-	},
-	
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
+	}
 	
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
