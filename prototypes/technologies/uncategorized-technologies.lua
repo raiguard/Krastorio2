@@ -458,12 +458,20 @@ data:extend(
 			},
 			{
 				type = "unlock-recipe",
+				recipe = "enriched-rare-metals"
+			},			
+			{
+				type = "unlock-recipe",
 				recipe = "enriched-iron-plate"
 			},
 			{
 				type = "unlock-recipe",
 				recipe = "enriched-copper-plate"
 			},
+			{
+				type = "unlock-recipe",
+				recipe = "rare-metals-2"
+			},			
 			{
 				type = "unlock-recipe",
 				recipe = "dirty-water-filtration-1"

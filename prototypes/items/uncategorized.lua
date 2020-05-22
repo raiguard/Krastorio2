@@ -349,7 +349,7 @@ data:extend(
 			{ size = 64, filename = kr_items_with_variations_icons_path .. "enriched-iron/enriched-iron-2.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-material",
-		order = "e05-a1[enriched-iron]",
+		order = "e05-a[enriched-ores]-a1[enriched-iron]",
 		stack_size = 200
     },	
 	{
@@ -365,9 +365,23 @@ data:extend(
 			{ size = 64, filename = kr_items_with_variations_icons_path .. "enriched-copper/enriched-copper-2.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-material",
-		order = "e05-a2[enriched-copper]",
+		order = "e05-a[enriched-ores]-a2[enriched-copper]",
 		stack_size = 200
     },
+	{
+		type = "item",
+		name = "enriched-rare-metals",
+		icon = kr_items_with_variations_icons_path .. "enriched-rare-metals/enriched-rare-metals.png",
+		icon_size = 64,
+		icon_mipmaps = 4,
+		pictures =
+		{
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "enriched-rare-metals/enriched-rare-metals.png", scale = 0.25, mipmap_count = 4 }
+		},
+		subgroup = "raw-material",
+		order = "e05-a[enriched-ores]-a3[enriched-rare-metals]",
+		stack_size = 200
+    },	
 	{
 		type = "item",
 		name = "lithium",

@@ -96,6 +96,23 @@ return
 		},
 		result = "copper-plate",
 		result_count = 5 
+    },	
+	{
+		type = "recipe",
+		name = "rare-metals-2",
+		category = "smelting",
+		subgroup = "raw-material",
+		energy_required = 16,
+		enabled = false,
+		always_show_made_in = true,
+		always_show_products = true,
+		allow_productivity = true,
+		ingredients = 
+		{
+			{"enriched-rare-metals", 5}
+		},
+		result = "rare-metals",
+		result_count = 5
     },
 	{
 		type = "recipe",

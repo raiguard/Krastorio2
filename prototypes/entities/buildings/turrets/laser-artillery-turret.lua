@@ -191,7 +191,6 @@ data:extend(
 		dying_explosion = "big-explosion",
 		--attacking_speed = 0.020, -- its strongly reduce rate of fire
 		folded_animation = laser_artillery_turret_sheet{direction_count = 8, line_length = 1},
-		health_penality = true,
 		
 		energy_source =
 		{
@@ -208,8 +207,8 @@ data:extend(
 			cooldown = 120,
 			projectile_creation_distance = 3.9,
 			projectile_center = {0, 0.2},
-			range = 7 * 32, -- artillery is 7 * 32
-			min_range = 32, -- artillery is 32
+			range = 7 * 32, -- same of artillery is 7 * 32
+			min_range = 32, -- same of artillery is 32
 			ammo_type =
 			{
 				category = "laser-turret",
@@ -234,8 +233,9 @@ data:extend(
 					}
 				}
 			},
-			rotate_penalty = 10,
-			--warmup = 27, -- its strongly reduce rate of fire
+			rotate_penalty = 200,
+			health_penalty = -10000,
+			--warmup = 27, -- its strongly reduce rate of fire, was used to sync the sounds of turret when shot
 			sound =
 			{
 				{

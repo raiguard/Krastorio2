@@ -337,6 +337,8 @@ data:extend(
 			projectile_center = {0, 0.15},
 			range = 50,
 			min_range = 20,
+			rotate_penalty = 20,
+			health_penalty = -100,
 			sound =
 			{
 				{
