@@ -380,46 +380,6 @@ data:extend(
     },
 	{
 		type = "technology",
-		name = "kr-antimatter-ammo",
-		mod = "Krastorio2",
-		icon = kr_technologies_icons_path .. "antimatter-ammo.png",
-		icon_size = 128,
-		effects =
-		{			
-			{
-				type = "unlock-recipe",
-				recipe = krastorio.recipes.changed_names["antimatter-turret-rocket"] or "antimatter-turret-rocket"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = krastorio.recipes.changed_names["antimatter-artillery-shell"] or "antimatter-artillery-shell"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = krastorio.recipes.changed_names["antimatter-rocket"] or "antimatter-rocket"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = krastorio.recipes.changed_names["antimatter-railgun-shell"] or "antimatter-railgun-shell"
-			}
-		},
-		prerequisites = {"kr-railgun-turret", "kr-laser-artillery-turret", "kr-rocket-turret", "kr-singularity-tech-card"},
-		unit =
-		{
-			count = 2500,
-			ingredients = 
-			{
-				{"kr-singularity-tech-card", 1},
-				{"kr-advanced-tech-card", 1},
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"matter-tech-card", 1}
-			},
-			time = 60
-		}
-    },
-	{
-		type = "technology",
 		name = "kr-advanced-tech-card",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "advanced-tech-card.png",
@@ -524,6 +484,47 @@ data:extend(
 				{"advanced-tech-card", 1}
 			},
 			time = 45
+		}
+    },
+	{
+		type = "technology",
+		name = "kr-antimatter-ammo",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "antimatter-ammo.png",
+		icon_size = 128,
+		effects =
+		{			
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["antimatter-turret-rocket"] or "antimatter-turret-rocket"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["antimatter-artillery-shell"] or "antimatter-artillery-shell"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["antimatter-rocket"] or "antimatter-rocket"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["antimatter-railgun-shell"] or "antimatter-railgun-shell"
+			}
+		},
+		prerequisites = {"kr-antimatter-reactor", "kr-laser-artillery-turret", "kr-rocket-turret"},
+		unit =
+		{
+			count = 2500,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"matter-tech-card", 1},
+				{"advanced-tech-card", 1},
+				{"singularity-tech-card", 1}
+			},
+			time = 60
 		}
     },
 	{

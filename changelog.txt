@@ -2,16 +2,18 @@
 Version: 0.9.18
 Date: XX.05.2020
   Features:
-    - Added new laser turret!
+    - Added new laser turret! (with new icons, sprites, antimation)
+    - Added enriched rare metals! (with new icons)
   Changes:
     - Improved the nitric acid color.
-    - All antimater explosions have been changed (now it's purple).
+    - All antimater explosions have been changed (now they are purple).
     - All Krastorio 2 turrets now have hit effects when biters taste them.
     - Heat pipe recipe now use quartz instead of steel plate. Because quartz isn't used in many recipes, this will make the material more used.
     - Now nuclear reactor recipe use heat pipes instead of copper plate.
-    - Now explosive turret rockets and shells have a new Explosive(T) damage and don't break walls.
-    - Now all Krastorio 2 turrets prefer biter units with more health to hit.
+    - Now explosive turret rockets and shells usa a different and new Explosive(T) damage type that don't break walls.
+    - Now all Krastorio 2 turrets prefer biter units with more health to hit first.
     - Updated German translation.
+    - Changed antimatter ammo tech to be more coherent with the tech tree structure.
   Fixes:
     - Fixed problems with SE 0.3.X
     - Fixed bug with the prototype option check_science_packs_incompatibilities.
