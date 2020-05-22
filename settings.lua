@@ -185,18 +185,18 @@ data:extend(
 		default_value = true,
 		order = "b07"
 	},
-	{
-		type = "bool-setting",
-		name = "kr-finite-oil",
-		setting_type = "startup",
-		default_value = true,
-		order = "b08"
-	},
  	{
  		type = "bool-setting",
 		name = "kr-more-realistic-weapon-auto-aim",
 		setting_type = "startup",
 		default_value = false,
+		order = "b08"
+	},
+	{
+		type = "bool-setting",
+		name = "kr-finite-oil",
+		setting_type = "startup",
+		default_value = true,
 		order = "b09"
 	},
 	{

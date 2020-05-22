@@ -9,8 +9,10 @@ Date: XX.05.2020
     - All Krastorio 2 turrets now have hit effects when biters taste them.
     - Heat pipe recipe now use quartz instead of steel plate. Because quartz in not used in many recipe this will improve the quartz situation.
     - Now nuclear reactor recipe use heat pipes instead of copper plate.
+    - Now explosive turret rockets and shells have a new Explosive(T) damage and don't break walls.
   Fixes:
     - Fixed bug with the prototype option check_science_packs_incompatibilities.
+    - Fixed problem with ammo turret and target on the close range.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.17
 Date: 14.05.2020

@@ -547,12 +547,12 @@ data:extend(
         {
           {
             type = "damage",
-            damage = {amount = 500 , type = "laser"}
+            damage = {amount = 1000 , type = "laser"}
           },
-          {
-            type = "damage",
-            damage = {amount = 250 , type = "explosion"}
-          },
+--          {
+--            type = "damage",
+--            damage = {amount = 500 , type = "explosion"}
+--          },
           {
             type = "create-entity",
             entity_name = "kr-laser-explosion"
@@ -568,10 +568,42 @@ data:extend(
         type = "instant",
         target_effects =
         {
+
+          {
+            type = "create-entity",
+            entity_name = "big-explosion"
+          },
+		  {
+			type = "show-explosion-on-chart",
+			scale = 1
+		  },
           {
             type = "create-entity",
             entity_name = "small-scorchmark",
             check_buildability = true
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              radius = 4,
+              action_delivery =
+              {
+                type = "instant",
+                target_effects =
+                {
+                  {
+                    type = "damage",
+                    damage = {amount = 500, type = "kr-explosion"}
+                  },
+                  {
+                    type = "create-entity",
+                    entity_name = "explosion"
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -710,7 +742,7 @@ data:extend(
                 {
                   {
                     type = "damage",
-                    damage = {amount = 2000, type = "explosion"}
+                    damage = {amount = 2000, type = "kr-explosion"}
                   },
                   {
                     type = "create-entity",
@@ -897,7 +929,7 @@ data:extend(
                 {
                   {
                     type = "damage",
-                    damage = {amount = 3000, type = "explosion"}
+                    damage = {amount = 3000, type = "kr-explosion"}
                   },
                   {
                     type = "create-entity",

@@ -213,6 +213,10 @@ data.raw.wall["stone-wall"].resistances =
 	percent = 80
   },
   {
+	type = "kr-explosion",
+	percent = 100
+  },
+  {
 	type = "radioactive",
 	percent = 100
   },

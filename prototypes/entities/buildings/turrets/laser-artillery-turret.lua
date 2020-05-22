@@ -189,29 +189,31 @@ data:extend(
 		preparing_speed = 0.08,
 		folding_speed = 0.02,
 		dying_explosion = "big-explosion",
-		attacking_speed = 0.020,
+		--attacking_speed = 0.020, -- its strongly reduce rate of fire
 		folded_animation = laser_artillery_turret_sheet{direction_count = 8, line_length = 1},
+		
 		energy_source =
 		{
 			type = "electric",
-			buffer_capacity = "70MJ",
-			input_flow_limit = "75MW",
-			drain = "5MW",
+			buffer_capacity = "100MJ",
+			input_flow_limit = "125MW",
+			drain = "25MW",
 			usage_priority = "primary-input"
 		},
+		
 		attack_parameters =
 		{
 			type = "projectile",
 			cooldown = 60,
 			projectile_creation_distance = 3.9,
 			projectile_center = {0, 0.2},
-			range = 7 * 32, -- same of artillery
-			min_range = 32, -- same of artillery
+			range = 100, -- artillery is 7 * 32 -- problem is that turret don't shoot on target that have range more than 100, so 100 is max. F*** game limitations. Again
+			min_range = 20, -- artillery is 32
 			ammo_type =
 			{
 				category = "laser-turret",
 				target_type = "entity",
-				energy_consumption = "35MJ",
+				energy_consumption = "50MJ",
 				action =
 				{
 					type = "direct",
@@ -232,7 +234,7 @@ data:extend(
 				}
 			},
 			rotate_penalty = 10,
-			warmup = 27,
+			--warmup = 27, -- its strongly reduce rate of fire
 			sound =
 			{
 				{
@@ -263,6 +265,6 @@ data:extend(
 		turret_base_has_direction = true,
 		open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
 		close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-		call_for_help_radius = 0
+		call_for_help_radius = 110
 	}
 })

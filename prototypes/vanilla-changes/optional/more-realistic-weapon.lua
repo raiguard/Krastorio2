@@ -9,11 +9,12 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	-- -- --
 
 	local bullets_collision_box = {{-0.5, -1}, {0.5, 1}}
-	local k_target_type = "position" -- "entity", "position" or "direction"
+	local k_target_type = "direction" -- "entity", "position" or "direction"
 	local k_d_radius = 0.5
 	local k_pistol_min_range = 0.5
 	local k_rifle_min_range = 0.5
 	local k_s_rifle_min_range = 1	
+	local turret_range = 0
 
 	if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon-auto-aim") then
 
@@ -26,6 +27,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 		k_pistol_min_range = 0.25
 		k_rifle_min_range = 0.25
 		k_s_rifle_min_range = 0.5
+		turret_range = 0
 		
 	end
 	
@@ -1412,6 +1414,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	--data.raw["ammo-turret"]["gun-turret"].localised_name={"kr-gun-turret"}
 	data.raw["ammo-turret"]["gun-turret"].attack_parameters.range = 25
 	data.raw["ammo-turret"]["gun-turret"].attack_parameters.ammo_category = "bullet"
+	data.raw["ammo-turret"]["gun-turret"].attack_parameters.min_range = turret_range
 
 	data.raw["ammo"]["cannon-shell"].ammo_type.action.action_delivery.max_range = 50
 	data.raw["ammo"]["explosive-cannon-shell"].ammo_type.action.action_delivery.max_range = 50
