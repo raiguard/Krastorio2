@@ -376,7 +376,9 @@ data:extend(
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_items_with_variations_icons_path .. "enriched-rare-metals/enriched-rare-metals.png", scale = 0.25, mipmap_count = 4 }
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "enriched-rare-metals/enriched-rare-metals.png",   scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "enriched-rare-metals/enriched-rare-metals-1.png", scale = 0.25, mipmap_count = 4 },
+			{ size = 64, filename = kr_items_with_variations_icons_path .. "enriched-rare-metals/enriched-rare-metals-2.png", scale = 0.25, mipmap_count = 4 }
 		},
 		subgroup = "raw-material",
 		order = "e05-a[enriched-ores]-a3[enriched-rare-metals]",
