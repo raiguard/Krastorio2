@@ -50,13 +50,32 @@ if mods["aai-industry"] then
 	
 	-- Fix for fuels
 	if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
-		data.raw.item["processed-fuel"].fuel_category = "vehicle-fuel"
-		data.raw.item["processed-fuel"].fuel_acceleration_multiplier = 0.9
-		data.raw.item["processed-fuel"].fuel_top_speed_multiplier = 0.9
-		data.raw.item["processed-fuel"].fuel_emissions_multiplier = 0.9
-		data.raw.recipe["processed-fuel-from-fuel"] = nil
-		data.raw.recipe["processed-fuel-from-bio-fuel"] = nil
-		data.raw.recipe["processed-fuel-advanced-fuel"] = nil
+		if data.raw.item["processed-fuel"] then 
+			data.raw.item["processed-fuel"].fuel_category = "vehicle-fuel"
+			data.raw.item["processed-fuel"].fuel_acceleration_multiplier = 0.9
+			data.raw.item["processed-fuel"].fuel_top_speed_multiplier = 0.9
+			data.raw.item["processed-fuel"].fuel_emissions_multiplier = 0.9
+		end
+		if data.raw.recipe["processed-fuel-from-fuel"] then
+			data.raw.recipe["processed-fuel-from-fuel"] = nil
+		end
+		if data.raw.recipe["processed-fuel-from-bio-fuel"] then
+			data.raw.recipe["processed-fuel-from-bio-fuel"] = nil
+		end
+		if data.raw.recipe["processed-fuel-advanced-fuel"] then
+			data.raw.recipe["processed-fuel-advanced-fuel"] = nil
+		end
+		-- Re-apply fuel category migrations
+		-- For locomotives
+		data.raw.locomotive["locomotive"].burner.fuel_category   = nil
+		data.raw.locomotive["locomotive"].burner.fuel_categories = {"chemical", "vehicle-fuel"}
+		-- For any cars
+		for _, car in pairs(data.raw.car) do
+			if car.burner then
+				car.burner.fuel_category = "vehicle-fuel"
+				car.burner.fuel_categories = nil
+			end			
+		end
 	end
 
 	-- -- -- ENFORCE SCIENCE PACK PREREQUISITE COHERENCE, again.

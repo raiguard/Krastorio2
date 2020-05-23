@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.18
-Date: XX.05.2020
+Date: 24.05.2020
   Features:
     - Added new laser turret! (with new icons, sprites, antimation)
     - Added enriched rare metals! (with new icons)
@@ -15,6 +15,7 @@ Date: XX.05.2020
     - Updated German translation.
     - Changed antimatter ammo tech to be more coherent with the tech tree structure.
   Fixes:
+    - Fixed incompatibility introduced by AAI Industry in the update 0.4.10
     - Fixed problems with SE 0.3.X
     - Fixed bug with the prototype option check_science_packs_incompatibilities.
     - Fixed problem with ammo turret and target on the close range.

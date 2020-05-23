@@ -676,3 +676,21 @@ function krastorio_utils.tables.sortedPairs(t, order)
         end
     end
 end
+
+function krastorio_utils.tables.containsKey(tbl, key)
+	-- iter pairs
+	for k, _ in pairs(tbl) do 
+		-- exit and return if found
+		if k == key then return true end 
+	end
+	return false
+end
+
+function krastorio_utils.tables.containsValue(tbl, value)
+	-- iter pairs
+	for _, v in pairs(tbl) do 
+		-- exit and return if found
+		if v == value then return true end 
+	end
+	return false
+end
