@@ -243,21 +243,11 @@ data:extend(
 					volume = 1
 				}
 			}
-		},
-		
+		},		
 		starting_attack_sound =
 		{
 			{
 				filename = kr_weapons_sounds_path .. "laser-artillery-turret-starting_attack_sound.ogg",
-				volume = 1
-			}
-		},
-		
-		rotating_sound =
-		{
-			sound = 
-			{
-				filename = kr_buildings_sounds_path .. "turret-rotating.ogg",
 				volume = 1
 			}
 		},
