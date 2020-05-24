@@ -58,12 +58,15 @@ if mods["aai-industry"] then
 		end
 		if data.raw.recipe["processed-fuel-from-fuel"] then
 			data.raw.recipe["processed-fuel-from-fuel"] = nil
+			krastorio.technologies.removeUnlockRecipeFromAllTechnologies("processed-fuel-from-fuel")
 		end
 		if data.raw.recipe["processed-fuel-from-bio-fuel"] then
 			data.raw.recipe["processed-fuel-from-bio-fuel"] = nil
+			krastorio.technologies.removeUnlockRecipeFromAllTechnologies("processed-fuel-from-bio-fuel")
 		end
 		if data.raw.recipe["processed-fuel-advanced-fuel"] then
 			data.raw.recipe["processed-fuel-advanced-fuel"] = nil
+			krastorio.technologies.removeUnlockRecipeFromAllTechnologies("processed-fuel-advanced-fuel")
 		end
 		-- Re-apply fuel category migrations
 		-- For locomotives
