@@ -138,5 +138,46 @@ return
 		subgroup = "raw-material",
 		order = "w012[dirty-water-filtration-2]"
 	},
+	{
+		type = "recipe",
+		name = "dirty-water-filtration-3",
+		category = "fluid-filtration",
+		icons =
+		{
+			{
+				icon      = data.raw.fluid["dirty-water"].icon,
+				icon_size = data.raw.fluid["dirty-water"].icon_size
+			},
+			{
+				icon      = data.raw.item["raw-rare-metals"].icon,
+				icon_size =	data.raw.item["raw-rare-metals"].icon_size,
+				scale = 0.20 * (data.raw.fluid["dirty-water"].icon_size/data.raw.item["raw-rare-metals"].icon_size),
+				shift = {0, 4}
+			}
+		},
+		icon_size = data.raw.fluid["dirty-water"].icon_size,
+		energy_required = 2,
+		enabled = false,
+		allow_as_intermediate = false,
+		always_show_made_in = true,
+		always_show_products = true,
+		ingredients =
+		{
+			{type = "fluid", name = "dirty-water", amount = 100, catalyst_amount = 100},
+		},
+		results =
+		{
+			{type = "fluid", name = "water", amount = 100, catalyst_amount = 100},
+			{type = "item",  name = "stone", probability = 0.30, amount = 1},
+			{type = "item",  name = "raw-rare-metals", probability = 0.10, amount = 1}
+		},
+		crafting_machine_tint =
+		{
+			primary = {r = 0.60, g = 0.20, b = 0, a = 0.6}, --dirty
+			secondary = {r = 0.64, g = 0.83, b = 0.93, a = 0.9} --clear
+		},
+		subgroup = "raw-material",
+		order = "w012[dirty-water-filtration-3]"
+	},
 	---
 }

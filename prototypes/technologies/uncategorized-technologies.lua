@@ -479,7 +479,11 @@ data:extend(
 			{
 				type = "unlock-recipe",
 				recipe = "dirty-water-filtration-2"
-			}			
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "dirty-water-filtration-3"
+			}
 		},
 		prerequisites = {"kr-advanced-chemistry"},
 		unit =
