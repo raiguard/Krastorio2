@@ -53,12 +53,6 @@ krastorio.icons.setItemIcon("steel-plate",                            kr_items_i
 -- Changing iron gear wheel
 krastorio.icons.setItemIcon("iron-gear-wheel",                        kr_items_icons_path .. "iron-gear-wheel.png", 64, 4)
 
--- Changing plastic bar
-krastorio.icons.setItemIcon("plastic-bar",                            kr_items_icons_path .. "plastic-bar.png", 64, 4)
-
--- Chaning copper cable
-krastorio.icons.setItemIcon("copper-cable",                           kr_items_icons_path .. "copper-cable.png", 64, 4)
-
 local light_oil_icon = nil
 if data.raw.fluid["light-oil"].icon == "__base__/graphics/icons/fluid/light-oil.png" then
 	light_oil_icon = kr_fluids_icons_path  .. "light-oil.png"
@@ -128,8 +122,6 @@ krastorio.icons.setItemIcon("substation",                             kr_entitie
 
 -----------------------------------------------------------------
 -- -- -- OTHER
-krastorio.icons.setItemIcon("red-wire",                               kr_items_icons_path .. "red-wire.png", 64, 4)
-krastorio.icons.setItemIcon("green-wire",                             kr_items_icons_path .. "green-wire.png", 64, 4)
 krastorio.icons.setItemIcon("atomic-bomb",                            kr_icons_path .. "ammo/atomic-bomb.png", 64, 4)
 krastorio.icons.setItemIcon("artillery-shell",                        kr_icons_path .. "ammo/artillery-shell.png", 64, 4)
 -- Landfill

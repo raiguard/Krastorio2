@@ -16,10 +16,6 @@ Thanks also to:
   for give permission to use his sprites the second tier laboratory from mod: 
   https://mods.factorio.com/mod/laborat  
 
-- Topaz Gigapixel and VetraNyx
-  for 2 HD icon of items taken from mod (0.0.4 - MIT):
-  https://mods.factorio.com/mod/HdProcessedMetal
-
 - Bilka and Gangsir
   for background (gears) icons of achievement images
   with explicit consent of external use,

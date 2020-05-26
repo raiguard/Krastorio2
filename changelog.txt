@@ -3,6 +3,8 @@ Version: 0.9.19
 Date: XX.05.2020
   Features:
     - Added rare metals filtration recipe.
+  Changes:
+    - Removed Krastorio 2 copper, red and green cable and plastic icons for use the new Factorio icons added in the version 0.18.27.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.18
 Date: 24.05.2020
