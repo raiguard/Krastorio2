@@ -169,15 +169,15 @@ return
 		{
 			{type = "fluid", name = "water", amount = 100, catalyst_amount = 100},
 			{type = "item",  name = "stone", probability = 0.30, amount = 1},
-			{type = "item",  name = "raw-rare-metals", probability = 0.10, amount = 1}
+			{type = "item",  name = "raw-rare-metals", probability = 0.05, amount = 1}
 		},
 		crafting_machine_tint =
 		{
 			primary = {r = 0.60, g = 0.20, b = 0, a = 0.6}, --dirty
-			secondary = {r = 0.64, g = 0.83, b = 0.93, a = 0.9} --clear
+			secondary = {r = 1.0, g = 0.843, b = 0.0, a = 0.9} --clear
 		},
 		subgroup = "raw-material",
-		order = "w012[dirty-water-filtration-3]"
+		order = "w013[dirty-water-filtration-3]"
 	},
 	---
 }
