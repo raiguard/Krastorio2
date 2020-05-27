@@ -442,8 +442,8 @@ objects_to_modify =
 {
 	["energy-shield-equipment"] = 
 	{
-		["energy-shield-equipment"]     = {"energy-shield-mk1-equipment.png", 32, 64, 64},
-		["energy-shield-mk2-equipment"] = {"energy-shield-mk2-equipment.png", 32, 64, 64}
+		["energy-shield-equipment"]     = {"energy-shield-mk1-equipment.png", 64, 64, 64, 1, 4},
+		["energy-shield-mk2-equipment"] = {"energy-shield-mk2-equipment.png", 64, 64, 64, 2, 4}
 	}
 }
 -- iterating...
