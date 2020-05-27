@@ -556,8 +556,8 @@ data:extend(
 		sprite =
 		{
 			filename = kr_universal_equipments_path .. "personal-submachine-laser-defense-mk1-equipment.png",
-			width = 90,
-			height = 90,
+			width = 64,
+			height = 64,
 			priority = "medium"
 		},
 		shape =
@@ -626,8 +626,8 @@ data:extend(
 		sprite =
 		{
 			filename = kr_universal_equipments_path .. "personal-submachine-laser-defense-mk2-equipment.png",
-			width = 90,
-			height = 90,
+			width = 64,
+			height = 64,
 			priority = "medium"
 		},
 		shape =
@@ -691,8 +691,8 @@ data:extend(
 		sprite =
 		{
 			filename = kr_universal_equipments_path .. "personal-submachine-laser-defense-mk3-equipment.png",
-			width = 90,
-			height = 90,
+			width = 64,
+			height = 64,
 			priority = "medium"
 		},
 		shape =
@@ -756,8 +756,8 @@ data:extend(
 		sprite =
 		{
 			filename = kr_universal_equipments_path .. "personal-submachine-laser-defense-mk4-equipment.png",
-			width = 90,
-			height = 90,
+			width = 64,
+			height = 64,
 			priority = "medium"
 		},
 		shape =
