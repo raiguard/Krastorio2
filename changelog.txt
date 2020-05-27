@@ -3,8 +3,10 @@ Version: 0.9.19
 Date: XX.05.2020
   Features:
     - Added rare metals filtration recipe.
+    - Now all filter inserters have all 4 filter slots.
   Changes:
     - Removed Krastorio 2 copper, red and green cable and plastic icons for use the new Factorio icons added in the version 0.18.27.
+    - Fixed inserters bug on updating a filter inserter to another with less filter slots (that is a vanilla bug but we fix it anyway https://mods.factorio.com/mod/Krastorio2/discussion/5ec2b2791bb6e4000f33e0db).
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.18
 Date: 24.05.2020
