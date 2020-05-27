@@ -401,7 +401,6 @@ data:extend(
 			{ icon = kr_universal_equipments_icons_path .. "energy-shield-mk3-equipment.png", icon_size = 64, mipmap_count = 4 },
 			{ icon = kr_equipments_tiers_icon_path .. "3.png", icon_size = 64}
 		},
-		icon_size = 32,
 		placed_as_equipment_result = "energy-shield-mk3-equipment",
 		subgroup = "equipment",
 		order = "b[shield]-c[energy-shield-equipment-mk3]",
@@ -419,7 +418,6 @@ data:extend(
 			{ icon = kr_universal_equipments_icons_path .. "energy-shield-mk4-equipment.png", icon_size = 64, mipmap_count = 4 },
 			{ icon = kr_equipments_tiers_icon_path .. "4.png", icon_size = 64}
 		},
-		icon_size = 32,
 		placed_as_equipment_result = "energy-shield-mk4-equipment",
 		subgroup = "equipment",
 		order = "b[shield]-c[energy-shield-equipment-mk4]",
