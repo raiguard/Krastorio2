@@ -97,6 +97,7 @@ require(kr_entities_prototypes_path .. "remnants/kr-medium-random-pipes-remnant"
 require(kr_entities_prototypes_path .. "remnants/kr-mineral-water-pumpjack-remnant")
 require(kr_entities_prototypes_path .. "remnants/matter-plant")
 require(kr_entities_prototypes_path .. "remnants/superior-inserter-remnant")
+require(kr_entities_prototypes_path .. "remnants/turret")
 -- -- Belts
 -- Advanced
 require(kr_entities_prototypes_path .. "remnants/transport-belts/advanced-transport-belt/advanced-splitter-remnant")

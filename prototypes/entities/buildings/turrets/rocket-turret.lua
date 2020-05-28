@@ -96,7 +96,7 @@ data:extend(
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "kr-rocket-turret"},
 		max_health = 1000,
-		corpse = "big-remnants",
+		corpse = "turret-remnant",
 		damaged_trigger_effect = hit_effects.entity(),
 		resistances = 
 		{
@@ -217,6 +217,23 @@ data:extend(
 				}
 			}
 		},
+		
+		water_reflection =
+		{
+			pictures =
+			{
+				filename = kr_entities_path .. "turrets/turrets-reflection.png",
+				priority = "extra-high",
+				width = 50,
+				height = 50,
+				shift = util.by_pixel(0, 40),
+				variation_count = 1,
+				scale = 5,
+			},
+			rotate = false,
+			orientation_to_variation = false
+		},
+		
 		shoot_in_prepare_state = false,
 		turret_base_has_direction = true,
 		open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
