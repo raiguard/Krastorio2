@@ -206,6 +206,23 @@ data:extend(
 				}
 			}
 		},
+		
+		water_reflection =
+		{
+			pictures =
+			{
+				filename = kr_entities_path .. "large-roboport/large-roboport-reflection.png",
+				priority = "extra-high",
+				width = 60,
+				height = 60,
+				shift = util.by_pixel(0, 40),
+				variation_count = 1,
+				scale = 5,
+			},
+			rotate = false,
+			orientation_to_variation = false
+		},
+		
 		circuit_wire_connection_point = circuit_connector_definitions["roboport"].points,
 		circuit_connector_sprites = circuit_connector_definitions["roboport"].sprites,
 		circuit_wire_max_distance = 20,

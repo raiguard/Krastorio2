@@ -166,6 +166,23 @@ data:extend(
 			usage_priority = "secondary-input",
 			emissions_per_minute = 5
 		},
+		
+		water_reflection =
+		{
+			pictures =
+			{
+				filename = kr_entities_path .. "fusion-reactor/fusion-reactor-reflection.png",
+				priority = "extra-high",
+				width = 110,
+				height = 110,
+				shift = util.by_pixel(0, 40),
+				variation_count = 1,
+				scale = 5,
+			},
+			rotate = false,
+			orientation_to_variation = false
+		},
+		
 		energy_usage = "483.4MW",
 		source_inventory_size = 0,
 		result_inventory_size = 1,

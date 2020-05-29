@@ -84,6 +84,23 @@ data:extend(
 			module_info_icon_shift = {0, 0.5},
 			module_info_multi_row_initial_height_modifier = -0.3
 		},
+		
+		water_reflection =
+		{
+			pictures =
+			{
+				filename = kr_entities_path .. "singularity-beacon/singularity-beacon-reflection.png",
+				priority = "extra-high",
+				width = 20,
+				height = 25,
+				shift = util.by_pixel(0, 40),
+				variation_count = 1,
+				scale = 5,
+			},
+			rotate = false,
+			orientation_to_variation = false
+		},
+		
 		supply_area_distance = 2.0,
 		distribution_effectivity = 0.75,
 		open_sound = { filename = kr_sounds_mod .. "buildings/open.ogg", volume = 1 },

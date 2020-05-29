@@ -210,6 +210,23 @@ data:extend(
 			usage_priority = "secondary-input",
 			emissions_per_minute = 50
 		},
+		
+		water_reflection =
+		{
+			pictures =
+			{
+				filename = kr_entities_path .. "matter-assembler/matter-assembler-reflection.png",
+				priority = "extra-high",
+				width = 46,
+				height = 46,
+				shift = util.by_pixel(0, 40),
+				variation_count = 1,
+				scale = 5,
+			},
+			rotate = false,
+			orientation_to_variation = false
+		},
+		
 		energy_usage = "48.39MW",
 		ingredient_count = 6,
 		module_specification = { module_slots = 4, module_info_icon_shift = {0, 1.8}, module_info_icon_scale = 0.6 },

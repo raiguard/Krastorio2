@@ -19,7 +19,7 @@ data:extend(
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "kr-small-roboport"},
 		max_health = 350,
-		corpse = "big-remnants",
+		corpse = "medium-remnants",
 		damaged_trigger_effect = hit_effects.entity(),
 		collision_box = {{-0.8, -0.8}, {0.8, 0.8}},
 		selection_box = {{-1, -1}, {1, 1}},
@@ -126,6 +126,23 @@ data:extend(
 			scale = 1.5,
 			animation_speed = 0.5
 		},
+		
+		water_reflection =
+		{
+			pictures =
+			{
+				filename = kr_entities_path .. "small-roboport/small-roboport-reflection.png",
+				priority = "extra-high",
+				width = 16,
+				height = 22,
+				shift = util.by_pixel(0, 40),
+				variation_count = 1,
+				scale = 5,
+			},
+			rotate = false,
+			orientation_to_variation = false
+		},
+		
 		vehicle_impact_sound = sounds.generic_impact,
 		recharging_light = {intensity = 0.4, size = 5, color = {r = 1.0, g = 1.0, b = 1.0}},
 		request_to_open_door_timeout = 15,

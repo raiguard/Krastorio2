@@ -190,6 +190,23 @@ data:extend(
 			fade_in_ticks = 10,
 			fade_out_ticks = 30
 		},
+		
+		water_reflection =
+		{
+			pictures =
+			{
+				filename = kr_entities_path .. "gas-power-station/gas-power-station-reflection.png",
+				priority = "extra-high",
+				width = 42,
+				height = 38,
+				shift = util.by_pixel(0, 40),
+				variation_count = 1,
+				scale = 5,
+			},
+			rotate = false,
+			orientation_to_variation = false
+		},
+		
 		audible_distance_modifier = 5,
 		min_perceived_performance = 0.25,
 		performance_to_sound_speedup = 0.5,

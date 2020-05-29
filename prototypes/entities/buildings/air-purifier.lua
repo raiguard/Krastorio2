@@ -87,6 +87,23 @@ data:extend(
 			usage_priority = "secondary-input",
 			emissions_per_minute = -100
 		},
+		
+		water_reflection =
+		{
+			pictures =
+			{
+				filename = kr_entities_path .. "air-purifier/air-purifier-reflection.png",
+				priority = "extra-high",
+				width = 20,
+				height = 25,
+				shift = util.by_pixel(0, 40),
+				variation_count = 1,
+				scale = 5,
+			},
+			rotate = false,
+			orientation_to_variation = false
+		},
+		
 		energy_usage = "75kW",
 		open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
 		close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 }

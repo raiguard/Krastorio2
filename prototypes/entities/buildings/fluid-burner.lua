@@ -260,6 +260,23 @@ data:extend(
 			usage_priority = "secondary-input",
 			emissions_per_minute = 5
 		},
+		
+		water_reflection =
+		{
+			pictures =
+			{
+				filename = kr_entities_path .. "fluid-burner/fluid-burner-reflection.png",
+				priority = "extra-high",
+				width = 20,
+				height = 30,
+				shift = util.by_pixel(0, 40),
+				variation_count = 1,
+				scale = 5,
+			},
+			rotate = false,
+			orientation_to_variation = false
+		},
+		
 		energy_usage = "0.1MW",
 		source_inventory_size = 1,
 		result_inventory_size = 1,

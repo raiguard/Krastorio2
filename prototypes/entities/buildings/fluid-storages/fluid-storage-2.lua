@@ -10,7 +10,7 @@ data:extend(
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "kr-fluid-storage-2"},
 		max_health = 2000,
-		corpse = "kr-big-random-pipes-remnant",
+		corpse = "kr-medium-random-pipes-remnant",
 		resistances = 
 		{
 			{type = "physical", percent = 50},
@@ -140,6 +140,23 @@ data:extend(
 			apparent_volume = 1.5,
 			max_sounds_per_type = 3
 		},
+		
+		water_reflection =
+		{
+			pictures =
+			{
+				filename = kr_entities_path .. "fluid-storages/fluid-storage-2/fluid-storage-2-reflection.png",
+				priority = "extra-high",
+				width = 52,
+				height = 48,
+				shift = util.by_pixel(0, 40),
+				variation_count = 1,
+				scale = 5,
+			},
+			rotate = false,
+			orientation_to_variation = false
+		},
+		
 		circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
 		circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
 		circuit_wire_max_distance = 20

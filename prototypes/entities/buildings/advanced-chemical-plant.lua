@@ -148,6 +148,23 @@ data:extend(
 			usage_priority = "secondary-input",
 			emissions_per_minute = 30
 		},
+		
+		water_reflection =
+		{
+			pictures =
+			{
+				filename = kr_entities_path .. "advanced-chemical-plant/advanced-chemical-plant-reflection.png",
+				priority = "extra-high",
+				width = 80,
+				height = 60,
+				shift = util.by_pixel(0, 40),
+				variation_count = 1,
+				scale = 5,
+			},
+			rotate = false,
+			orientation_to_variation = false
+		},
+		
 		energy_usage = "1.75MW",
 		ingredient_count = 6,
 		module_specification = { module_slots = 4, module_info_icon_shift = {0, 1.7}, module_info_icon_scale = 1 },

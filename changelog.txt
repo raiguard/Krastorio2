@@ -4,7 +4,7 @@ Date: XX.05.2020
   Features:
     - Added rare metals filtration recipe.
     - Now all filter inserters have all 4 filter slots.
-    - Added reflections for turrets.
+    - Added reflections for many K2 buildings.
     - Added remnants for turrets.
   Changes:
     - Removed Krastorio 2 copper, red and green cable and plastic icons for use the new Factorio icons added in the version 0.18.27.

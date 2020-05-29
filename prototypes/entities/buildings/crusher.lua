@@ -8,7 +8,7 @@ data:extend(
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {hardness = 1, mining_time = 1, result = "kr-crusher"},
 		max_health = 750,
-		corpse = "big-remnants",
+		corpse = "kr-big-random-pipes-remnant",
 		dying_explosion = "big-explosion",
 		resistances = 
 		{
@@ -93,6 +93,23 @@ data:extend(
 			usage_priority = "secondary-input",
 			emissions_per_minute = 20
 		},
+		
+		water_reflection =
+		{
+			pictures =
+			{
+				filename = kr_entities_path .. "crusher/crusher-reflection.png",
+				priority = "extra-high",
+				width = 80,
+				height = 60,
+				shift = util.by_pixel(0, 40),
+				variation_count = 1,
+				scale = 5,
+			},
+			rotate = false,
+			orientation_to_variation = false
+		},
+		
 		energy_usage = "225KW",
 		module_specification = { module_slots = 4, module_info_icon_shift = {0, 1.7}, module_info_icon_scale = 1 },
 		allowed_effects = {"consumption", "speed", "productivity", "pollution"},

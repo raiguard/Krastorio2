@@ -31,7 +31,7 @@ data:extend(
 		flags = {"placeable-neutral", "player-creation", "not-rotatable"},
 		minable = {mining_time = 0.25, result = "kr-wind-turbine"},
 		max_health = 200,
-		corpse = "small-remnants",
+		corpse = "medium-remnants",
 		resistances =
 		{
 			{
@@ -61,6 +61,23 @@ data:extend(
 			output_flow_limit = "20kW",
 			render_no_power_icon = false
 		},
+		
+		water_reflection =
+		{
+			pictures =
+			{
+				filename = kr_entities_path .. "wind-turbine/wind-turbine-reflection.png",
+				priority = "extra-high",
+				width = 20,
+				height = 25,
+				shift = util.by_pixel(0, 40),
+				variation_count = 1,
+				scale = 5,
+			},
+			rotate = false,
+			orientation_to_variation = false
+		},
+		
 		energy_production = "20kW",
 		energy_usage = "0kW",
 		animation =

@@ -247,6 +247,23 @@ data:extend(
 			fade_in_ticks = 10,
 			fade_out_ticks = 30
 		},
+		
+		water_reflection =
+		{
+			pictures =
+			{
+				filename = kr_entities_path .. "energy-storage/energy-storage-reflection.png",
+				priority = "extra-high",
+				width = 44,
+				height = 44,
+				shift = util.by_pixel(0, 40),
+				variation_count = 1,
+				scale = 5,
+			},
+			rotate = false,
+			orientation_to_variation = false
+		},
+		
 		circuit_wire_connection_point = circuit_connector_definitions["accumulator"].points,
 		circuit_connector_sprites = circuit_connector_definitions["accumulator"].sprites,
 		circuit_wire_max_distance = default_circuit_wire_max_distance,

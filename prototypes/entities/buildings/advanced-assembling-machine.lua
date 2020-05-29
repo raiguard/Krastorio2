@@ -337,6 +337,23 @@ data:extend(
 			usage_priority = "secondary-input",
 			emissions_per_minute = 5
 		},
+		
+		water_reflection =
+		{
+			pictures =
+			{
+				filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-reflection.png",
+				priority = "extra-high",
+				width = 70,
+				height = 50,
+				shift = util.by_pixel(0, 40),
+				variation_count = 1,
+				scale = 5,
+			},
+			rotate = false,
+			orientation_to_variation = false
+		},
+		
 		energy_usage = "0.925MW",
 		ingredient_count = 8,
 		module_specification = { module_slots = 4, module_info_icon_shift = {0, 1.7}, module_info_icon_scale = 1 },

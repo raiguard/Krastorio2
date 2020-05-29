@@ -169,6 +169,23 @@ data:extend(
 				}
 			}
 		},
+		
+		water_reflection =
+		{
+			pictures =
+			{
+				filename = kr_entities_path .. "fuel-refinery/fuel-refinery-reflection.png",
+				priority = "extra-high",
+				width = 44,
+				height = 44,
+				shift = util.by_pixel(0, 40),
+				variation_count = 1,
+				scale = 5,
+			},
+			rotate = false,
+			orientation_to_variation = false
+		},
+		
 		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{

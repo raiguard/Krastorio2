@@ -11,7 +11,7 @@ data:extend(
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "kr-electrolysis-plant"},
 		max_health = 500,
-		corpse = "kr-big-random-pipes-remnant",
+		corpse = "kr-medium-random-pipes-remnant",
 		dying_explosion = "big-explosion",
 		resistances = 
 		{
@@ -153,6 +153,23 @@ data:extend(
 			usage_priority = "secondary-input",
 			emissions_per_minute = 0.5
 		},
+		
+		water_reflection =
+		{
+			pictures =
+			{
+				filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant-reflection.png",
+				priority = "extra-high",
+				width = 42,
+				height = 38,
+				shift = util.by_pixel(0, 40),
+				variation_count = 1,
+				scale = 5,
+			},
+			rotate = false,
+			orientation_to_variation = false
+		},
+		
 		energy_usage = "0.375MW",
 		ingredient_count = 6,
 		module_specification = { module_slots = 2, module_info_icon_shift = {0, 1.2}, module_info_icon_scale = 1 },

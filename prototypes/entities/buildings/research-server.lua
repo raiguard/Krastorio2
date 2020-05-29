@@ -12,7 +12,7 @@ data:extend(
 		minable = {mining_time = 0.5, result = "kr-research-server"},
 		damaged_trigger_effect = hit_effects.entity(),
 		max_health = 250,
-		corpse = "kr-medium-random-pipes-remnant",
+		corpse = "medium-remnants",
 		resistances = 
 		{
 			{type = "physical", percent = 20},
@@ -109,6 +109,23 @@ data:extend(
 			usage_priority = "secondary-input",
 			emissions_per_minute = 0.5
 		},
+		
+		water_reflection =
+		{
+			pictures =
+			{
+				filename = kr_entities_path .. "research-server/research-server-reflection.png",
+				priority = "extra-high",
+				width = 40,
+				height = 40,
+				shift = util.by_pixel(0, 40),
+				variation_count = 1,
+				scale = 5,
+			},
+			rotate = false,
+			orientation_to_variation = false
+		},
+		
 		energy_usage = "250KW",
 		ingredient_count = 6,
 		module_specification = { module_slots = 2 },
