@@ -140,7 +140,7 @@ function playerThrowAntiCreep(event)
 			global.viruses.creep_virus_active[actual_player_surface.index] = true -- Lock semaphore and sign surface to clean
 			
 			-- Reduce by 33% enemy evolution factor
-			game.forces["enemy"].evolution_factor = game.forces["enemy"].evolution_factor * 0.66
+			game.forces["enemy"].evolution_factor = game.forces["enemy"].evolution_factor * 0.67
 		end
 	end
 end
@@ -214,18 +214,19 @@ function playerThrowAntiBiter(event)
 						global.viruses.biter_virus_active[actual_player_surface.index] = false
 					end
 				end
+
+				game.forces["enemy"].kill_all_units()
+				
+				-- Reduce by 33% enemy evolution factor
+				game.forces["enemy"].evolution_factor = game.forces["enemy"].evolution_factor * 0.67
+				
 				ccm:listenCallBack(
 				{
 					callback = slowlyKillSomeBiters,
 					event_name = "on_nth_tick",
 					filter = 10,
 					index = 1000+actual_player_surface.index
-				}) 
-				
-				game.forces["enemy"].kill_all_units()
-				
-				-- Reduce by 33% enemy evolution factor
-				game.forces["enemy"].evolution_factor = game.forces["enemy"].evolution_factor * 0.66
+				})
 			end
 		end	
 	end

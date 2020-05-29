@@ -54,7 +54,7 @@ local function changeRoboportEntity(old_entity, new_entity_name, player_index, t
 			end
 		end
 		-- Tooltip
-		global.krastorio.flying_texts.showOnSurfaceText
+		krastorio.flying_texts.showOnSurfaceText
 		{
 			entity       = new_entity,
 			position     = {new_entity.position.x, new_entity.position.y-1},
@@ -81,7 +81,7 @@ local function changeRoboportEntity(old_entity, new_entity_name, player_index, t
 		}
 	elseif old_entity.valid and old_entity.type == "roboport" then
 		-- Tooltip
-		global.krastorio.flying_texts.showOnSurfaceText
+		krastorio.flying_texts.showOnSurfaceText
 		{
 			entity       = old_entity,
 			position     = {old_entity.position.x, old_entity.position.y-1},

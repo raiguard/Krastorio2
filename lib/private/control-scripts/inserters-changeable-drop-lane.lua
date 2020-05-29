@@ -29,7 +29,7 @@ function changeInserterDropLane(event)
 		}
 		-- Tooltip
 		local tooltip_name = is_near and {"other.drop-near"} or {"other.drop-far"}
-		global.krastorio.flying_texts.showOnSurfaceText
+		krastorio.flying_texts.showOnSurfaceText
 		{
 			entity       = inserter,
 			position     = {inserter.position.x, inserter.position.y-1},

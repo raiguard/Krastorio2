@@ -1,6 +1,6 @@
-global.krastorio.flying_texts = {}
+krastorio.flying_texts = {}
 
-function global.krastorio.flying_texts.showOnSurfaceText(tag)
+function krastorio.flying_texts.showOnSurfaceText(tag)
 	-- Error handlers
 	if not tag then error("You shouldn't be creating a tag without any parameters.") end
 	if not tag.entity then error("No entity to follow for tag.") end

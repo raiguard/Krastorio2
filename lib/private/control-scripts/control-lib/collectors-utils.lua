@@ -184,7 +184,7 @@ function cu.isInRange(char_pos, tile_pos)
 end
 
 function cu.showDistanceErrorMessage(character)
-	global.krastorio.flying_texts.showOnSurfaceText
+	krastorio.flying_texts.showOnSurfaceText
 	{
 		entity = character,
 		text   = {"other.kr-collect-distant-error"},
@@ -193,7 +193,7 @@ function cu.showDistanceErrorMessage(character)
 end
 
 function cu.showInventoryFullErrorMessage(character)
-	global.krastorio.flying_texts.showOnSurfaceText
+	krastorio.flying_texts.showOnSurfaceText
 	{
 		entity = character,
 		text   = {"other.kr-player-inventory-full-error"},
@@ -202,7 +202,7 @@ function cu.showInventoryFullErrorMessage(character)
 end
 
 function cu.showCollectionBiomassCountMessage(character, percentage, num)
-	global.krastorio.flying_texts.showOnSurfaceText
+	krastorio.flying_texts.showOnSurfaceText
 	{
 		entity = character,
 		text   = {"other.kr-collect-message-with-icon-prob", tostring(num), tostring(percentage), {"item-name.biomass"}, "biomass"},
@@ -211,7 +211,7 @@ function cu.showCollectionBiomassCountMessage(character, percentage, num)
 end
 
 function cu.showCollectionCountMessage(character, num)
-	global.krastorio.flying_texts.showOnSurfaceText
+	krastorio.flying_texts.showOnSurfaceText
 	{
 		entity = character,
 		text   = {"other.kr-collect-message", tostring(num), "tiles"},
