@@ -14,6 +14,7 @@ Date: 29.05.2020
   Fixes:
     - Fixed inserters bug on updating a filter inserter to another with less filter slots (that is a vanilla bug but we fix it anyway https://mods.factorio.com/mod/Krastorio2/discussion/5ec2b2791bb6e4000f33e0db).
     - Fixed all bugs caused by Factorio in the update 0.18.28.
+    - Probably solved all problems related to this discussion (https://mods.factorio.com/mod/Krastorio2/discussion/5ec38f0f0863ce000c2add62). 
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.18
 Date: 24.05.2020
