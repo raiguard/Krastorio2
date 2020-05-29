@@ -118,6 +118,23 @@ data:extend(
 			{type = "fire", percent = 75},
 			{type = "impact", percent = 75}
 		},
+		
+		water_reflection =
+		{
+			pictures =
+			{
+				filename = kr_entities_path .. "shelter/shelter-reflection.png",
+				priority = "extra-high",
+				width = 60,
+				height = 50,
+				shift = util.by_pixel(0, 40),
+				variation_count = 1,
+				scale = 5,
+			},
+			rotate = false,
+			orientation_to_variation = false
+		},
+		
 		picture = shelter_animation,
 		inventory_size = 200,
 		scale_info_icons = kr_icons_size,
