@@ -127,7 +127,7 @@ local function onBuiltAnEntity(event)
 				for _, product in pairs(entity.prototype.mineable_properties.products) do
 					entity.last_user.insert{name=product.name or product[1], count=product.amount or product[2]}
 				end				
-				global.krastorio.flying_texts.showOnSurfaceText
+				krastorio.flying_texts.showOnSurfaceText
 				{
 					entity = entity,
 					text   = {"other.kr-shelter-error"},
