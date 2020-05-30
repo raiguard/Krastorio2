@@ -1,6 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.20
 Date: XX.05.2020
+  Changes:
+    - Updated patreon list.
+    - Improved some reflections.
   Fixes:
     - Fixed other bugs caused by Factorio in the update 0.18.28.
 ---------------------------------------------------------------------------------------------------
@@ -10,8 +13,7 @@ Date: 29.05.2020
     - Added rare metals filtration recipe.
     - Added reflections for many K2 buildings.
     - Added remnants for turrets.
-  Changes:
-    - Now all filter inserters have all 4 filter slots.
+Now all filter inserters have all 4 filter slots.
     - Removed Krastorio 2 copper, red and green cable and plastic icons for use the new Factorio icons added in the version 0.18.27.
     - Updated many equipments sprites.
     - Updated custom Krastorio 2 shield icons to a better resolution. 
