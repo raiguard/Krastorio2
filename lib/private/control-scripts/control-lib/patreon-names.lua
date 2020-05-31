@@ -13,7 +13,7 @@ patreons_list.high_supporters =
 	{"Josh Strunk", 15},
 	{"Andromeda Fallen", 10},
 	{"Andrew Deren", 10},
-	{"Aski Rawen", 10},
+	{"Aski_Raven", 10},
 	{"Austin", 10},
 	{"George Simpson", 10},
 	{"GeneralTank", 10},
@@ -32,7 +32,9 @@ patreons_list.high_supporters =
 	{"George Elliott-Hunter", 6},
 	{"Jan Dragsbæk", 6},
 	{"rcobbe", 6},
-	{"donut7163", 10}
+	{"donut7163", 10},
+	{"circk", 10},
+	{"dr.feelgood999", 10}
 }
 
 -- Patreon how donate 9 or less dollars
