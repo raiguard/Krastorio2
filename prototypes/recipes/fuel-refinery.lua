@@ -212,7 +212,7 @@ return
 			{ icon = kr_fluids_icons_path  .. "ammonia.png", icon_size = 64, scale = 0.26, shift = {8,-8}}
 		},
 		icon_size = 64,		
-		energy_required = 30,
+		energy_required = 16,
 		enabled = false,
 		allow_productivity = true,
 		always_show_made_in = true,
@@ -242,7 +242,7 @@ return
 			{ icon = kr_fluids_icons_path  .. "hydrogen-chloride.png", icon_size = 64, scale = 0.26, shift = {8,-8}}
 		},
 		icon_size = 64,		
-		energy_required = 30,
+		energy_required = 16,
 		enabled = false,
 		allow_productivity = true,
 		always_show_made_in = true,

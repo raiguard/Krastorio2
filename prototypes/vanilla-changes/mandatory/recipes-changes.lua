@@ -57,6 +57,8 @@ data.raw.recipe["rocket-fuel"].crafting_machine_tint =
 }
 data.raw.recipe["rocket-fuel"].always_show_products = true
 
+krastorio.recipes.setEnergyCost("rocket-fuel", 16)
+
 
 
 -- Apply automation core to the early game items

@@ -2,6 +2,7 @@
 Version: 0.9.20
 Date: XX.05.2020
   Changes:
+    - Changed in all rocket fuel recipes the crafting time, from 30 to 16.
     - Updated patreon list.
     - Improved some reflections.
   Fixes:
