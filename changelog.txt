@@ -7,6 +7,7 @@ Date: XX.05.2020
     - Improved some reflections.
   Fixes:
     - Fixed other bugs caused by Factorio in the update 0.18.28.
+    - Correct wrong Intergalactic transceiver description in the wiki. 
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.19
 Date: 29.05.2020
