@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.20
-Date: XX.05.2020
+Date: 06.06.2020
   Features:
     - Added French translation (thanks to all contributors on crowdin again).
   Changes:
@@ -11,8 +11,8 @@ Date: XX.05.2020
     - Added a basic angels compatibility.
   Fixes:
     - Fixed other bugs caused by Factorio in the update 0.18.28.
-    - Correct wrong Intergalactic transceiver description in the wiki. 
-    - Improved library.
+    - Correct wrong intergalactic transceiver description in the wiki. 
+    - Improved mod library.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.19
 Date: 29.05.2020
