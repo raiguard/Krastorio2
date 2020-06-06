@@ -1,12 +1,52 @@
+--- list of whilisted user
+local old_krastorio_patreons =
+{
+	["Krastor"] = true,
+	["Linver"] = true,
+	["Mkaito"] = true,
+	["Egdod"] = true,
+	["CvAmp"] = true,
+	["AndromedaFallen"] = true,
+	["AndrewSkier"] = true,
+	["Aski_Raven"] = true,
+	["Wassabee"] = true,
+	["Jonasrejman"] = true,
+	["JonasRejman"] = true,
+	["Melphin"] = true,
+	["Moonded"] = true,
+	["ReysDad"] = true,
+	["Rivsung"] = true,
+	["Grumblesxl"] = true,
+	["GrumblesXl"] = true,
+	["GrumblesXL"] = true,
+	["Pandabeezy"] = true,
+	["NukeUFO"] = true,
+	["Therightmark"] = true,
+	["TheRightMark"] = true,
+	["Senard"] = true,
+	["Jkkelley86"] = true,
+	["Rougefallout365"] = true,
+	["RougeFallout365"] = true,
+	["Gbs5009"] = true,
+	["GBS5009"] = true,
+	["GeneralTank"] = true,
+	["lordfiSh"] = true,
+	["LordfiSh"] = true,
+	["Zippyit"] = true
+}
+
 -- lists of patreons
 local patreons_list = require("__Krastorio2__/lib/private/control-scripts/control-lib/patreon-names")
 
 function isHighLevelPatreon(name)
+	if old_krastorio_patreons[name] or old_krastorio_patreons[string.lower(name)] then
+		return true
+	end
+
 	for i, supporter in pairs(patreons_list.getHighSupportersList()) do
 		if supporter[1] == name or string.lower(supporter[1]) == name then
 			if supporter[2] > 9 then
 				return true
-				break
 			end
 		end
 	end
