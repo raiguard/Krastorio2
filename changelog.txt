@@ -1,7 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.20
 Date: XX.05.2020
+  Features:
+    - Added French translation (thanks to all contributors on crowdin again).
   Changes:
+    - Updated many locales (eng and translations).
     - Changed in all rocket fuel recipes the crafting time, from 30 to 16.
     - Updated patreon list.
     - Improved some reflections.
@@ -17,7 +20,7 @@ Date: 29.05.2020
     - Added rare metals filtration recipe.
     - Added reflections for many K2 buildings.
     - Added remnants for turrets.
-Now all filter inserters have all 4 filter slots.
+    - Now all filter inserters have all 4 filter slots.
     - Removed Krastorio 2 copper, red and green cable and plastic icons for use the new Factorio icons added in the version 0.18.27.
     - Updated many equipments sprites.
     - Updated custom Krastorio 2 shield icons to a better resolution. 

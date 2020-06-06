@@ -86,6 +86,8 @@ require(kr_prototypes_path .. "vanilla-changes/optional/change-background")
 -- -- -- COMPATIBILITY INITIALIZATION (data final fixes stage)
 ---------------------------------------------------------------------------
 local scripts_path = "compatibility-scripts/data-final-fixes/"
+-- Angels (multiple scripts)
+require(scripts_path .. "angels")
 require(scripts_path .. "aai-industry")
 require(scripts_path .. "aai-vehicles")
 require(scripts_path .. "aai-programmable-vehicles")
