@@ -47,7 +47,8 @@ local function tryToGetPatreonItems(command)
 		if inventory.can_insert({ name="spoiled-potato", count=1 }) then
 			inventory.insert({ name="spoiled-potato", count=1 })
 		end
-		game.print({"other.kr-patreon-stuff-fail"})
+		local num = math.random(1, 3)
+		game.print({"other.kr-patreon-stuff-fail-"..tostring(num)})
 	end
 end
 -- Associate command to function
