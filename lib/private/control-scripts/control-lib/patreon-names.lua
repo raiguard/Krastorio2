@@ -34,7 +34,8 @@ patreons_list.high_supporters =
 	{"rcobbe", 6},
 	{"donut7163", 10},
 	{"circk", 10},
-	{"dr.feelgood999", 10}
+	{"dr.feelgood999", 10},
+	{"DarkStroker", 10}
 }
 
 -- Patreon how donate 9 or less dollars
