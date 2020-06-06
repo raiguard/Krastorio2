@@ -1,66 +1,21 @@
--- list of whilisted user
-krastorio_patreons =
-{
-	["Krastor"] = true,
-	["Linver"] = true,
-	["mkaito"] = true,
-	["Mkaito"] = true,
-	["egdod"] = true,
-	["Egdod"] = true,
-	["cvamp"] = true,
-	["Cvamp"] = true,
-	["CvAmp"] = true,
-	["AndromedaFallen"] = true,
-	["andromedafallen"] = true,
-	["andrewskier"] = true,
-	["AndrewSkier"] = true,
-	["aski_raven"] = true,
-	["Aski_Raven"] = true,
-	["wassabee"] = true,
-	["Wassabee"] = true,
-	["jonasrejman"] = true,
-	["Jonasrejman"] = true,
-	["JonasRejman"] = true,
-	["melphin"] = true,
-	["Melphin"] = true,
-	["moonded"] = true,
-	["Moonded"] = true,
-	["reysdad"] = true,
-	["ReysDad"] = true,
-	["Rivsung"] = true,
-	["rivsung"] = true,
-	["grumblesxl"] = true,
-	["Grumblesxl"] = true,
-	["GrumblesXl"] = true,
-	["GrumblesXL"] = true,
-	["pandabeezy"] = true,
-	["Pandabeezy"] = true,
-	["NukeUFO"] = true,
-	["therightmark"] = true,
-	["Therightmark"] = true,
-	["TheRightMark"] = true,
-	["senard"] = true,
-	["Senard"] = true,
-	["jkkelley86"] = true,
-	["Jkkelley86"] = true,
-	["rougefallout365"] = true,
-	["Rougefallout365"] = true,
-	["RougeFallout365"] = true,
-	["gbs5009"] = true,
-	["Gbs5009"] = true,
-	["GBS5009"] = true,
-	["generaltank"] = true,
-	["GeneralTank"] = true,
-	["lordfish"] = true,
-	["lordfiSh"] = true,
-	["LordfiSh"] = true,
-	["zippyit"] = true,
-	["Zippyit"] = true
-}
+-- lists of patreons
+local patreons_list = require("__Krastorio2__/lib/private/control-scripts/control-lib/patreon-names")
+
+function isHighLevelPatreon(name)
+	for i, supporter in pairs(patreons_list.getHighSupportersList()) do
+		if supporter[1] == name or string.lower(supporter[1]) == name then
+			if supporter[2] > 9 then
+				return true
+				break
+			end
+		end
+	end
+	return false
+end
 
 -- Patreon Stuff
 function givePatreonItems(event)
-	if krastorio_patreons[game.players[event.player_index].name] then
+	if isHighLevelPatreon(game.players[event.player_index].name) then
 		local inventory = game.players[event.player_index].get_main_inventory()
 		local patreon_items = 
 		{
@@ -81,7 +36,7 @@ end
 
 -- Commands
 local function tryToGetPatreonItems(command)
-	if krastorio_patreons[game.players[command.player_index].name] then
+	if isHighLevelPatreon(game.players[command.player_index].name) then
 		if global.patreon_item_given[game.players[command.player_index].name] then
 			game.print({"other.kr-patreon-stuff-error"})
 		else
