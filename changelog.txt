@@ -5,9 +5,11 @@ Date: XX.05.2020
     - Changed in all rocket fuel recipes the crafting time, from 30 to 16.
     - Updated patreon list.
     - Improved some reflections.
+    - Added a basic angels compatibility.
   Fixes:
     - Fixed other bugs caused by Factorio in the update 0.18.28.
     - Correct wrong Intergalactic transceiver description in the wiki. 
+    - Improved library.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.19
 Date: 29.05.2020

@@ -438,10 +438,14 @@ function krastorio.recipes.uniteDuplicateItems(items)
 	for i=1, count do items[i]=krastorio.recipes.getParsedItem(items[i]) end
 	deduplicated_items = {}
 	local united = false
+	local inner_item_name = nil
+	local inner_dedup_item_name = nil
 	for _, item in pairs(items) do
 		united = false
+		inner_item_name = krastorio.recipes.getIngredientName(item)
 		for j, dedup_item in pairs(deduplicated_items) do
-			if item.name == dedup_item.name then
+			inner_dedup_item_name = krastorio.recipes.getIngredientName(dedup_item)
+			if inner_item_name == inner_dedup_item_name then
 				merged_item = krastorio.recipes.mergeParsedItems(item, dedup_item)
 				deduplicated_items[j] = merged_item
 				united = true
@@ -523,19 +527,47 @@ function krastorio.recipes.addOrReplace(items, old_item_name, new_item)
 end
 
 function krastorio.recipes.convert(items, old_item_name, new_item_name)
-	for i, ingredient in pairs(items) do
-		for j, value in pairs(items[i]) do
-			if value == old_item_name then
-				items[i][j] = new_item_name
-				krastorio.recipes.uniteDuplicateItems(items)	
-				return true				
-			end
+	local inner_item_name = nil
+	for i, item in pairs(items) do
+		inner_item_name = krastorio.recipes.getIngredientName(item)
+		if inner_item_name == old_item_name then
+			krastorio.recipes.setIngredientName(item, new_item_name)
+			krastorio.recipes.uniteDuplicateItems(items)	
+			return true				
 		end
 	end
 	return false
 end
 
 -- -- INGREDIENTS
+
+-- @ ingredient
+function krastorio.recipes.setIngredientType(item, new_type)
+	item.type = new_type
+end
+
+-- @ ingredient
+function krastorio.recipes.setIngredientName(item, new_name)
+	if item.name then
+		item.name = new_name
+	else
+		item[1] = new_name
+	end
+end
+
+-- @ ingredient
+function krastorio.recipes.setIngredientAmount(item, new_amount)
+	if item.amount then
+		item.amount = new_amount
+	else
+		item[2] = new_amount
+	end
+end
+
+-- @ ingredient
+function krastorio.recipes.setIngredientCatalystAmount(item, new_catalyst_amount)
+	item.catalyst_amount = new_catalyst_amount
+end
 
 function krastorio.recipes.overrideIngredients(recipe_name, new_ingredients)
 	local ingredients = krastorio.recipes.getIngredients(recipe_name)
