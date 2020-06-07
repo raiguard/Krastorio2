@@ -58,7 +58,7 @@ local function onBuiltAnEntity(event)
 			global.intergalactic_transceivers[force_index] = entity
 		else
 			entity.last_user.insert{name="kr-intergalactic-transceiver", count=1}
-			global.krastorio.flying_texts.showOnSurfaceText
+			krastorio.flying_texts.showOnSurfaceText
 			{
 				entity = entity,
 				text   = {"other.kr-intergalactic-transceiver-error"},

@@ -3,6 +3,8 @@ Version: 0.9.21
 Date: 07.06.2020
   Changes:
     - Improved angels compatibility.
+  Fixes:
+    - Fixed other bugs caused by Factorio in the update 0.18.28.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.20
 Date: 06.06.2020

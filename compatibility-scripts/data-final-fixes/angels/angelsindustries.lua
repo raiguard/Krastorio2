@@ -34,4 +34,9 @@ if mods["angelsindustries"] then
 			end
 		end
 	end
+	
+	-- Removing not useful recipes
+	
+	data.raw.technology["angels-ghosting-angels-construction-robots"] = nil
+	data.raw.technology["angels-ghosting-construction-robots"]        = nil
 end
