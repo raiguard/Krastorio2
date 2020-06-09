@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.21
-Date: 07.06.2020
+Date: 09.06.2020
   Changes:
     - Now angels is playable with K2.
     - Improved SE compatibility (about medikit/first aid issue).
