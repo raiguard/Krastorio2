@@ -8,6 +8,7 @@ Date: 09.06.2020
     - Imrpoved icon of smelting iron/copper/rare metals recipes with a little top left ingredient icon for fast selection in the recipe menu.
   Fixes:
     - Fixed other bugs caused by Factorio in the update 0.18.28.
+    - Fixed compatibility issue with Lighted Electric Poles +, thanks to Karoschel (https://mods.factorio.com/mod/Krastorio2/discussion/5edcaafa035222000fb0c321).
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.20
 Date: 06.06.2020
