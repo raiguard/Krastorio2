@@ -51,6 +51,11 @@ return
 	{
 		type = "recipe",
 		name = "rare-metals",
+		icons =
+		{
+			{ icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png", icon_size = 64 },
+			{ icon = kr_items_with_variations_icons_path .. "raw-rare-metals/raw-rare-metals.png", icon_size = 64, scale = 0.22, shift = {-8, -8} }
+		},
 		category = "smelting",
 		subgroup = "raw-material",
 		energy_required = 16,
@@ -68,6 +73,11 @@ return
 	{
 		type = "recipe",
 		name = "enriched-iron-plate",
+		icons =
+		{
+			{ icon = kr_items_icons_path .. "iron-plate.png", icon_size = 64 },
+			{ icon = kr_items_with_variations_icons_path .. "enriched-iron/enriched-iron.png", icon_size = 64, scale = 0.22, shift = {-8, -8} }
+		},
 		category = "smelting",
 		energy_required = 16,
 		enabled = false,
@@ -79,11 +89,17 @@ return
 			{"enriched-iron", 5}
 		},
 		result = "iron-plate",
-		result_count = 5
+		result_count = 5,
+		order = "b[iron-plate]-b[enriched-iron-plate]"
     },	
 	{
 		type = "recipe",
 		name = "enriched-copper-plate",
+		icons =
+		{
+			{ icon = kr_items_icons_path .. "copper-plate.png", icon_size = 64 },
+			{ icon = kr_items_with_variations_icons_path .. "enriched-copper/enriched-copper.png", icon_size = 64, scale = 0.22, shift = {-8, -8} }
+		},
 		category = "smelting",
 		energy_required = 16,
 		enabled = false,
@@ -95,11 +111,17 @@ return
 			{"enriched-copper", 5}
 		},
 		result = "copper-plate",
-		result_count = 5 
+		result_count = 5,
+		order = "c[copper-plate]-b[enriched-copper-plate]"
     },	
 	{
 		type = "recipe",
 		name = "rare-metals-2",
+		icons =
+		{
+			{ icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png", icon_size = 64 },
+			{ icon = kr_items_with_variations_icons_path .. "enriched-rare-metals/enriched-rare-metals.png", icon_size = 64, scale = 0.22, shift = {-8, -8} }
+		},
 		category = "smelting",
 		subgroup = "raw-material",
 		energy_required = 16,
@@ -112,7 +134,8 @@ return
 			{"enriched-rare-metals", 5}
 		},
 		result = "rare-metals",
-		result_count = 5
+		result_count = 5,
+		order = "wO[rare-metals]-b[enriched-rare-metals]"
     },
 	{
 		type = "recipe",

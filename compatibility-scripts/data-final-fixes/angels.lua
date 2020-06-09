@@ -5,3 +5,5 @@ require("__Krastorio2__/compatibility-scripts/data-final-fixes/angels/angelsaddo
 require("__Krastorio2__/compatibility-scripts/data-final-fixes/angels/angelsaddons-petrotrain")
 require("__Krastorio2__/compatibility-scripts/data-final-fixes/angels/angelsaddons-smeltingtrain")
 require("__Krastorio2__/compatibility-scripts/data-final-fixes/angels/angelsaddons-cab")
+require("__Krastorio2__/compatibility-scripts/data-final-fixes/angels/angelsbioprocessing")
+require("__Krastorio2__/compatibility-scripts/data-final-fixes/angels/angelssmelting")

@@ -5,6 +5,7 @@ Date: 07.06.2020
     - Now angels is playable with K2.
     - Improved SE compatibility (about medikit/first aid issue).
     - Now the "Constant vehicles" options work on all vanilla and modded vehicle (of other mods too).
+    - Imrpoved icon of smelting iron/copper/rare metals recipes with a little top left ingredient icon for fast selection in the recipe menu.
   Fixes:
     - Fixed other bugs caused by Factorio in the update 0.18.28.
 ---------------------------------------------------------------------------------------------------

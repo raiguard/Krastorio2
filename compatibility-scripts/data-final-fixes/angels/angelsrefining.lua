@@ -124,5 +124,4 @@ if mods["angelsrefining"] then
 		data.raw.recipe["sand"].subgroup = "processing-crafting"
 	end
 	
-	
 end

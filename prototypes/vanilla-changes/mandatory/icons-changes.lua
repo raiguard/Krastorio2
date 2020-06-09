@@ -73,6 +73,33 @@ krastorio.icons.setRecipeIcons("rocket-fuel", rocket_fuel_icons)
 krastorio.icons.setRecipeIcon("heavy-oil-cracking", kr_recipes_icons_path .. "heavy-oil-cracking.png", 64, 4)
 krastorio.icons.setRecipeIcon("light-oil-cracking", kr_recipes_icons_path .. "light-oil-cracking.png", 64, 4)
 krastorio.icons.setRecipeIcon("coal-liquefaction", kr_recipes_icons_path .. "coal-liquefaction.png", 64, 4)
+
+local vanilla_iron_plate_recipe = krastorio.recipes.getRecipeFromName("iron-plate")
+if vanilla_iron_plate_recipe then
+	vanilla_iron_plate_recipe.icon = nil
+	vanilla_iron_plate_recipe.icon_size = 64
+	
+	local iron_ore = krastorio.items.getItem("iron-ore")
+	vanilla_iron_plate_recipe.icons =
+	{
+		{ icon = kr_items_icons_path .. "iron-plate.png", icon_size = 64 },
+		{ icon = iron_ore.icon, icon_size = iron_ore.icon_size, scale = 0.22, shift = {-8, -8} }
+	}
+end
+
+local vanilla_copper_plate_recipe = krastorio.recipes.getRecipeFromName("copper-plate")
+if vanilla_copper_plate_recipe then
+	vanilla_copper_plate_recipe.icon = nil
+	vanilla_copper_plate_recipe.icon_size = 64
+	
+	local copper_ore = krastorio.items.getItem("copper-ore")
+	vanilla_copper_plate_recipe.icons =
+	{
+		{ icon = kr_items_icons_path .. "copper-plate.png", icon_size = 64 },
+		{ icon = copper_ore.icon, icon_size = copper_ore.icon_size, scale = 0.22, shift = {-8, -8} }
+	}
+end
+
 -----------------------------------------------------------------
 -- -- Fluids
 krastorio.icons.setItemIcon("water",                                  kr_fluids_icons_path  .. "water.png")
