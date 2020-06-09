@@ -26,4 +26,8 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
 	
 	data.raw.item["se-space-science-lab"].order = "g[lab]-g3[kr-singularity-lab]"
 	data.raw.item["kr-singularity-lab"].order = "g[lab]-g4[kr-singularity-lab]"
+	
+	if data.raw.capsule["first-aid-kit"] then
+		data.raw.capsule["first-aid-kit"].capsule_action.attack_parameters.ammo_type.action.action_delivery.target_effects.damage = {type = "physical", amount = -50}
+	end
 end

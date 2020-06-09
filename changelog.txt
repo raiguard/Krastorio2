@@ -2,7 +2,8 @@
 Version: 0.9.21
 Date: 07.06.2020
   Changes:
-    - Improved angels compatibility.
+    - Now angels is playable with K2.
+    - Improved SE compatibility (about medikit/first aid issue).
     - Now the "Constant vehicles" options work on all vanilla and modded vehicle (of other mods too).
   Fixes:
     - Fixed other bugs caused by Factorio in the update 0.18.28.
