@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.22
+Date: 09.06.2020
+  Changes:
+    - Adapted electric mining drills sprites with the Factorio 0.18.31 update.
+    - Reduced the yield of imersite poweder by crushing it to reduce glitches with modules.
+---------------------------------------------------------------------------------------------------
 Version: 0.9.21
 Date: 09.06.2020
   Changes:

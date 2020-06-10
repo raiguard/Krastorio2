@@ -337,7 +337,7 @@ return
 		},
 		results = 
 		{
-			{"imersite-powder", 6}
+			{"imersite-powder", 3}
 		}
 	}
 }

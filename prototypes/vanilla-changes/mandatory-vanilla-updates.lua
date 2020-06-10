@@ -9,6 +9,7 @@ local modifications =
 	"apply-vanilla-technologies-tag",   -- Apply a special tag to all vanilla technologies to recognize them
 	-- Low priority
 	"entities-changes",                 -- Entities/prototypes definition modifications
+	"resprite-vanilla-mining-drill",    -- Override electric mining drill
 	"equipments-changes",               -- Add properties or modify stat of equipments and armors
 	"icons-changes",                    -- Modify aspect of vanilla items (like science pack icons..)
 	"improve-inserters",                -- Improve inserters, new functions	

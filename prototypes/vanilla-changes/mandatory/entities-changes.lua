@@ -179,9 +179,6 @@ data.raw["offshore-pump"]["offshore-pump"].pumping_speed = 20.8334
 -- Chemical plant
 --data.raw["assembling-machine"]["chemical-plant"].energy_source.emissions_per_minute = 2
 
--- E Drill
-data.raw["mining-drill"]["electric-mining-drill"].fast_replaceable_group = "electric-mining-drill"
-data.raw["mining-drill"]["electric-mining-drill"].next_upgrade = "kr-electric-mining-drill-mk2"
 
 -- Lab
 data.raw.lab["lab"].fast_replaceable_group = "lab"
