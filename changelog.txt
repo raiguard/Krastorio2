@@ -2,8 +2,12 @@
 Version: 0.9.22
 Date: 09.06.2020
   Changes:
-    - Adapted electric mining drills sprites with the Factorio 0.18.31 update.
-    - Reduced the yield of imersite poweder by crushing it to reduce glitches with modules.
+    - Adapted electric mining drills (vanilla, MK2, MK3) sprites with the Factorio 0.18.31 update, now the MK1 drill use the old sprites, the MK2 and MK3 use the new one. They "can" change again in future when we have more time to fix the sprites.
+    - Reduced the yield of imersite poweder by crushing imersite crystals to reduce infinity glitches with productivity modules.
+    - Removed specified version in the internal K2 folder name as feature of Factorio 0.18.31 update (Factorio 0.18.31 or higher will be mandatory from the 0.9.22).
+    - Improved angels compatibility, unified coke system and made some combustible fluids burnable in the gas power station.
+  Fixes:
+    - Fixed some (maybe all) angels compatibility crashes.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.21
 Date: 09.06.2020

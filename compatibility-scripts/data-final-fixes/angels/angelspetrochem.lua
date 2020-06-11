@@ -1,13 +1,26 @@
 if mods["angelspetrochem"] then
+	local function makeFluidBurnable(fluid_name, value, emission)
+		local fluid = krastorio.items.getItem(fluid_name)	
+		if fluid then
+			if not fluid.gas_temperature or fluid.gas_temperature < 30 then
+				fluid.gas_temperature = 30
+			end
+			fluid.fuel_value = value
+			fluid.fuel_category = "burnable-fluid-fuel"
+			fluid.fuel_emissions_multiplier = emission
+		end
+	end
+
 	-- Circular dependecy fix
 	krastorio.technologies.removePrerequisite("rocket-fuel", "angels-nitrogen-processing-4")
 	
 	-- Icon coherence fix
 	krastorio.icons.setItemIcon("sulfuric-acid", kr_fluids_icons_path  .. "sulfuric-acid.png")
 	
-	-- Unify redundant fluids	
+	-- Unify redundant fluids, and other ingredients
 	local to_convert =
 	{
+		-- Fluids
 		["gas-hydrogen"] = "hydrogen",
 		["gas-chlorine"] = "chlorine",
 		["gas-hydrogen-chlorine"] = "hydrogen-chlorine",
@@ -15,7 +28,10 @@ if mods["angelspetrochem"] then
 		["gas-nitrogen"] = "nitrogen",
 		["gas-ammonia"] = "ammonia",
 		["liquid-nitric-acid"] = "nitric-acid",
-		["liquid-heavy-water"] = "heavy-water"
+		["liquid-heavy-water"] = "heavy-water",
+		
+		-- Items
+		["solid-coke"] = "coke"
 	}
 	
 	for old_name, new_name in pairs(to_convert) do
@@ -26,7 +42,6 @@ if mods["angelspetrochem"] then
 			end
 		end
 	end
-	log(serpent.block(data.raw["recipe"]["angelsore5-crystal"]))
 	
 	-- Remove angel hydrogen-chlorine recipe
 	krastorio.technologies.removeUnlockRecipeFromAllTechnologies("gas-hydrogen-chlorine")
@@ -66,12 +81,24 @@ if mods["angelspetrochem"] then
 	if data.raw["assembling-machine"]["angels-air-filter-2"] then
 		table.insert(data.raw["assembling-machine"]["angels-air-filter-2"].crafting_categories, "atmosphere-condensation")
 	end
-	
-	
+		
 	-- Rocket fuel
 	krastorio.recipes.replaceIngredient("rocket-fuel-with-ammonia", "iron-plate", {"rocket-fuel-capsule", 10})
 	krastorio.recipes.addIngredient("rocket-fuel-with-ammonia", {"rocket-oxidizer-capsule", 10})
 	
 	krastorio.recipes.replaceIngredient("rocket-fuel-with-hydrogen-chlorine", "iron-plate", {"rocket-fuel-capsule", 10})
 	krastorio.recipes.addIngredient("rocket-fuel-with-hydrogen-chlorine", {"rocket-oxidizer-capsule", 10})
+	
+	-- Fixing coke ingredients
+	krastorio.recipes.addIngredient("solid-coke", {"wood", 4})
+	krastorio.recipes.addIngredient("solid-coke-sulfur", {"wood", 1})
+	
+	-- Make some angels fluids burnable in the gas power station
+	makeFluidBurnable("gas-methane", "775KJ", 1.3)
+	makeFluidBurnable("gas-methanol", "790KJ", 1.3)
+	makeFluidBurnable("gas-ethane", "850KJ", 1.3)
+	makeFluidBurnable("gas-ethane", "850KJ", 1.3)
+	makeFluidBurnable("gas-butane", "950KJ", 1.4)
+	makeFluidBurnable("gas-propene", "1000KJ", 1.4)
+	makeFluidBurnable("gas-benzene", "1000KJ", 1.4)
 end

@@ -18,8 +18,10 @@ if mods["angelsaddons-crawlertrain"] then
 	}
 	  
 	for _, grid_name in pairs(new_train_grids) do
-		removeEquipment(data.raw["equipment-grid"][grid_name].equipment_categories, "angels-basegame-movement")
-		table.insert(data.raw["equipment-grid"][grid_name].equipment_categories, "universal-equipment")
-		table.insert(data.raw["equipment-grid"][grid_name].equipment_categories, "vehicle-equipment")
+		if data.raw["equipment-grid"][grid_name] then
+			removeEquipment(data.raw["equipment-grid"][grid_name].equipment_categories, "angels-basegame-movement")
+			table.insert(data.raw["equipment-grid"][grid_name].equipment_categories, "universal-equipment")
+			table.insert(data.raw["equipment-grid"][grid_name].equipment_categories, "vehicle-equipment")
+		end
 	end
 end
