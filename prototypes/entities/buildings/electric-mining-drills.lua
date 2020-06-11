@@ -51,7 +51,7 @@ function electric_mining_drill_smoke()
 	return
 	{
 		priority = "high",
-		filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-smoke.png",
+		filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-smoke.png",
 		line_length = 6,
 		width = 24,
 		height = 38,
@@ -62,7 +62,7 @@ function electric_mining_drill_smoke()
 		hr_version =
 		{
 			priority = "high",
-			filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-smoke.png",
+			filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-smoke.png",
 			line_length = 6,
 			width = 48,
 			height = 72,
@@ -79,7 +79,7 @@ function electric_mining_drill_smoke_front()
 	return
 	{
 		priority = "high",
-		filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-smoke-front.png",
+		filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-smoke-front.png",
 		line_length = 6,
 		width = 76,
 		height = 68,
@@ -90,7 +90,7 @@ function electric_mining_drill_smoke_front()
 		hr_version =
 		{
 			priority = "high",
-			filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-smoke-front.png",
+			filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-smoke-front.png",
 			line_length = 6,
 			width = 148,
 			height = 132,
@@ -107,7 +107,7 @@ function electric_mining_drill_mk2_animation()
 	return
 	{
 		priority = "high",
-		filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill.png",
+		filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill.png",
 		line_length = 6,
 		width = 98,
 		height = 80,
@@ -119,7 +119,7 @@ function electric_mining_drill_mk2_animation()
 		hr_version =
 		{
 			priority = "high",
-			filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill.png",
+			filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill.png",
 			line_length = 6,
 			width = 194,
 			height = 154,
@@ -137,7 +137,7 @@ function electric_mining_drill_mk3_animation()
 	return
 	{
 		priority = "high",
-		filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill.png",
+		filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill.png",
 		line_length = 6,
 		width = 98,
 		height = 80,
@@ -149,7 +149,7 @@ function electric_mining_drill_mk3_animation()
 		hr_version =
 		{
 			priority = "high",
-			filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill.png",
+			filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill.png",
 			line_length = 6,
 			width = 194,
 			height = 154,
@@ -167,7 +167,7 @@ function electric_mining_drill_shadow_animation()
 	return
 	{
 		priority = "high",
-		filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-shadow.png",
+		filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-shadow.png",
 		line_length = 7,
 		width = 118,
 		height = 28,
@@ -179,7 +179,7 @@ function electric_mining_drill_shadow_animation()
 		hr_version =
 		{
 			priority = "high",
-			filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-shadow.png",
+			filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-shadow.png",
 			line_length = 7,
 			width = 232,
 			height = 50,
@@ -193,11 +193,11 @@ function electric_mining_drill_shadow_animation()
 	}
 end
 
-function electric_mining_drill_horizontal_animation()
+function electric_mining_drill_mk2_horizontal_animation()
 	return
 	{
 		priority = "high",
-		filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-horizontal.png",
+		filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-horizontal.png",
 		line_length = 6,
 		width = 54,
 		height = 92,
@@ -209,7 +209,37 @@ function electric_mining_drill_horizontal_animation()
 		hr_version =
 		{
 			priority = "high",
-			filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-horizontal.png",
+			filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-horizontal.png",
+			line_length = 6,
+			width = 104,
+			height = 178,
+			frame_count = 30,
+			animation_speed = electric_drill_animation_speed,
+			frame_sequence = electric_drill_animation_sequence,
+			direction_count = 1,
+			shift = util.by_pixel(-3, -27),
+			scale = 0.5,
+		}
+	}
+end
+
+function electric_mining_drill_mk3_horizontal_animation()
+	return
+	{
+		priority = "high",
+		filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-horizontal.png",
+		line_length = 6,
+		width = 54,
+		height = 92,
+		frame_count = 30,
+		animation_speed = electric_drill_animation_speed,
+		frame_sequence = electric_drill_animation_sequence,
+		direction_count = 1,
+		shift = util.by_pixel(-4, -28),
+		hr_version =
+		{
+			priority = "high",
+			filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-horizontal.png",
 			line_length = 6,
 			width = 104,
 			height = 178,
@@ -227,7 +257,7 @@ function electric_mining_drill_horizontal_front_animation()
 	return
 	{
 		priority = "high",
-		filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-horizontal-front.png",
+		filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-horizontal-front.png",
 		line_length = 6,
 		width = 28,
 		height = 66,
@@ -239,7 +269,7 @@ function electric_mining_drill_horizontal_front_animation()
 		hr_version =
 		{
 			priority = "high",
-			filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-horizontal-front.png",
+			filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-horizontal-front.png",
 			line_length = 6,
 			width = 54,
 			height = 136,
@@ -257,7 +287,7 @@ function electric_mining_drill_horizontal_shadow_animation()
 	return
 	{
 		priority = "high",
-		filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-horizontal-shadow.png",
+		filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-horizontal-shadow.png",
 		line_length = 7,
 		width = 118,
 		height = 68,
@@ -269,7 +299,7 @@ function electric_mining_drill_horizontal_shadow_animation()
 		hr_version =
 		{
 			priority = "high",
-			filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-horizontal-shadow.png",
+			filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-horizontal-shadow.png",
 			line_length = 7,
 			width = 236,
 			height = 138,
@@ -312,7 +342,7 @@ function electric_mining_drill_status_leds_working_visualisation()
 		draw_as_light = true,
 		north_animation =
 		{
-			filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-N-light.png",
+			filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-N-light.png",
 			width = 16,
 			height = 18,
 			blend_mode = led_blend_mode,
@@ -320,7 +350,7 @@ function electric_mining_drill_status_leds_working_visualisation()
 			shift = util.by_pixel(26, -70),
 			hr_version =
 			{
-				filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-light.png",
+				filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-N-light.png",
 				width = 30,
 				height = 32,
 				blend_mode = led_blend_mode,
@@ -331,7 +361,7 @@ function electric_mining_drill_status_leds_working_visualisation()
 		},
 		east_animation =
 		{
-			filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-E-light.png",
+			filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-E-light.png",
 			width = 18,
 			height = 16,
 			blend_mode = led_blend_mode,
@@ -339,7 +369,7 @@ function electric_mining_drill_status_leds_working_visualisation()
 			shift = util.by_pixel(40, -44),
 			hr_version =
 			{
-				filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-light.png",
+				filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-E-light.png",
 				width = 32,
 				height = 34,
 				blend_mode = led_blend_mode,
@@ -350,7 +380,7 @@ function electric_mining_drill_status_leds_working_visualisation()
 		},
 		south_animation =
 		{
-			filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-S-light.png",
+			filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-S-light.png",
 			width = 16,
 			height = 16,
 			blend_mode = led_blend_mode,
@@ -358,7 +388,7 @@ function electric_mining_drill_status_leds_working_visualisation()
 			shift = util.by_pixel(26, 10),
 			hr_version =
 			{
-				filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-light.png",
+				filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-S-light.png",
 				width = 32,
 				height = 30,
 				blend_mode = led_blend_mode,
@@ -369,7 +399,7 @@ function electric_mining_drill_status_leds_working_visualisation()
 		},
 		west_animation =
 		{
-			filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-W-light.png",
+			filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-W-light.png",
 			width = 16,
 			height = 16,
 			blend_mode = led_blend_mode,
@@ -377,7 +407,7 @@ function electric_mining_drill_status_leds_working_visualisation()
 			shift = util.by_pixel(-42, -44),
 			hr_version =
 			{
-				filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-light.png",
+				filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-W-light.png",
 				width = 32,
 				height = 34,
 				blend_mode = led_blend_mode,
@@ -849,7 +879,7 @@ data:extend(
 					{
 						layers =
 						{
-							electric_mining_drill_horizontal_animation(),
+							electric_mining_drill_mk2_horizontal_animation(),
 							electric_mining_drill_horizontal_shadow_animation()
 						}
 					},
@@ -865,7 +895,7 @@ data:extend(
 					{
 						layers =
 						{
-							electric_mining_drill_horizontal_animation(),
+							electric_mining_drill_mk2_horizontal_animation(),
 							electric_mining_drill_horizontal_shadow_animation()
 						}
 					},
@@ -1522,7 +1552,7 @@ data:extend(
 					{
 						layers =
 						{
-							electric_mining_drill_horizontal_animation(),
+							electric_mining_drill_mk2_horizontal_animation(),
 							electric_mining_drill_horizontal_shadow_animation()
 						}
 					},
@@ -1538,7 +1568,7 @@ data:extend(
 					{
 						layers =
 						{
-							electric_mining_drill_horizontal_animation(),
+							electric_mining_drill_mk2_horizontal_animation(),
 							electric_mining_drill_horizontal_shadow_animation()
 						}
 					},
@@ -2337,7 +2367,7 @@ data:extend(
 		},
 		radius_visualisation_picture =
 		{
-			filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png",
+			filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-radius-visualization.png",
 			width = 10,
 			height = 10
 		},
@@ -2471,7 +2501,7 @@ data:extend(
 						},
 						{
 							priority = "high",
-							filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-N-shadow.png",
+							filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-N-shadow.png",
 							line_length = 1,
 							width = 136,
 							height = 102,
@@ -2483,7 +2513,7 @@ data:extend(
 							hr_version =
 							{
 								priority = "high",
-								filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-N-shadow.png",
+								filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-N-shadow.png",
 								line_length = 1,
 								width = 274,
 								height = 206,
@@ -2553,7 +2583,7 @@ data:extend(
 						},
 						{
 							priority = "high",
-							filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-E-shadow.png",
+							filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-E-shadow.png",
 							line_length = 1,
 							width = 138,
 							height = 86,
@@ -2565,7 +2595,7 @@ data:extend(
 							hr_version =
 							{
 								priority = "high",
-								filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-E-shadow.png",
+								filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-E-shadow.png",
 								line_length = 1,
 								width = 276,
 								height = 170,
@@ -2611,7 +2641,7 @@ data:extend(
 						},
 						{
 							priority = "high",
-							filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-S-shadow.png",
+							filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-S-shadow.png",
 							line_length = 1,
 							width = 136,
 							height = 102,
@@ -2623,7 +2653,7 @@ data:extend(
 							hr_version =
 							{
 								priority = "high",
-								filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-S-shadow.png",
+								filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-S-shadow.png",
 								line_length = 1,
 								width = 274,
 								height = 204,
@@ -2693,7 +2723,7 @@ data:extend(
 						},
 						{
 							priority = "high",
-							filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-W-shadow.png",
+							filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-W-shadow.png",
 							line_length = 1,
 							width = 144,
 							height = 86,
@@ -2705,7 +2735,7 @@ data:extend(
 							hr_version =
 							{
 								priority = "high",
-								filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-W-shadow.png",
+								filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-W-shadow.png",
 								line_length = 1,
 								width = 282,
 								height = 170,
@@ -2763,7 +2793,7 @@ data:extend(
 						{
 							{
 								priority = "high",
-								filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-N-smoke.png",
+								filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-N-smoke.png",
 								line_length = 5,
 								width = 26,
 								height = 30,
@@ -2774,7 +2804,7 @@ data:extend(
 								hr_version =
 								{
 									priority = "high",
-									filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-N-smoke.png",
+									filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-N-smoke.png",
 									line_length = 5,
 									width = 46,
 									height = 58,
@@ -2808,7 +2838,7 @@ data:extend(
 					{
 						layers =
 						{
-							electric_mining_drill_horizontal_animation(),
+							electric_mining_drill_mk3_horizontal_animation(),
 							electric_mining_drill_horizontal_shadow_animation()
 						}
 					},
@@ -2824,7 +2854,7 @@ data:extend(
 					{
 						layers =
 						{
-							electric_mining_drill_horizontal_animation(),
+							electric_mining_drill_mk3_horizontal_animation(),
 							electric_mining_drill_horizontal_shadow_animation()
 						}
 					},
@@ -2855,7 +2885,7 @@ data:extend(
 						{
 							{
 								priority = "high",
-								filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-E-smoke.png",
+								filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-E-smoke.png",
 								line_length = 5,
 								width = 28,
 								height = 28,
@@ -2866,7 +2896,7 @@ data:extend(
 								hr_version =
 								{
 									priority = "high",
-									filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-E-smoke.png",
+									filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-E-smoke.png",
 									line_length = 5,
 									width = 52,
 									height = 56,
@@ -2885,7 +2915,7 @@ data:extend(
 						{
 							{
 								priority = "high",
-								filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-S-smoke.png",
+								filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-S-smoke.png",
 								line_length = 5,
 								width = 24,
 								height = 18,
@@ -2896,7 +2926,7 @@ data:extend(
 								hr_version =
 								{
 									priority = "high",
-									filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-S-smoke.png",
+									filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-S-smoke.png",
 									line_length = 5,
 									width = 48,
 									height = 36,
@@ -2915,7 +2945,7 @@ data:extend(
 						{
 							{
 								priority = "high",
-								filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-W-smoke.png",
+								filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-W-smoke.png",
 								line_length = 5,
 								width = 26,
 								height = 30,
@@ -2926,7 +2956,7 @@ data:extend(
 								hr_version =
 								{
 									priority = "high",
-									filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-W-smoke.png",
+									filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-W-smoke.png",
 									line_length = 5,
 									width = 46,
 									height = 54,
@@ -3144,7 +3174,7 @@ data:extend(
 						},
 						{
 							priority = "high",
-							filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-N-wet-shadow.png",
+							filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-N-wet-shadow.png",
 							line_length = 1,
 							width = 136,
 							height = 110,
@@ -3156,7 +3186,7 @@ data:extend(
 							hr_version =
 							{
 								priority = "high",
-								filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-N-wet-shadow.png",
+								filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-N-wet-shadow.png",
 								line_length = 1,
 								width = 276,
 								height = 222,
@@ -3226,7 +3256,7 @@ data:extend(
 						},
 						{
 							priority = "high",
-							filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-W-wet-shadow.png",
+							filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-W-wet-shadow.png",
 							line_length = 1,
 							width = 144,
 							height = 98,
@@ -3238,7 +3268,7 @@ data:extend(
 							hr_version =
 							{
 								priority = "high",
-								filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-W-wet-shadow.png",
+								filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-W-wet-shadow.png",
 								line_length = 1,
 								width = 284,
 								height = 194,
@@ -3284,7 +3314,7 @@ data:extend(
 						},
 						{
 							priority = "high",
-							filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-S-wet-shadow.png",
+							filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-S-wet-shadow.png",
 							line_length = 1,
 							width = 136,
 							height = 102,
@@ -3296,7 +3326,7 @@ data:extend(
 							hr_version =
 							{
 								priority = "high",
-								filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-S-wet-shadow.png",
+								filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-S-wet-shadow.png",
 								line_length = 1,
 								width = 276,
 								height = 204,
@@ -3366,7 +3396,7 @@ data:extend(
 						},
 						{
 							priority = "high",
-							filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-E-wet-shadow.png",
+							filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-E-wet-shadow.png",
 							line_length = 1,
 							width = 138,
 							height = 98,
@@ -3378,7 +3408,7 @@ data:extend(
 							hr_version =
 							{
 								priority = "high",
-								filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-E-wet-shadow.png",
+								filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-E-wet-shadow.png",
 								line_length = 1,
 								width = 276,
 								height = 194,
@@ -3436,7 +3466,7 @@ data:extend(
 						{
 							{
 								priority = "high",
-								filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-N-smoke.png",
+								filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-N-smoke.png",
 								line_length = 5,
 								width = 26,
 								height = 30,
@@ -3447,7 +3477,7 @@ data:extend(
 								hr_version =
 								{
 									priority = "high",
-									filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-N-smoke.png",
+									filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-N-smoke.png",
 									line_length = 5,
 									width = 46,
 									height = 58,
@@ -3481,7 +3511,7 @@ data:extend(
 					{
 						layers =
 						{
-							electric_mining_drill_horizontal_animation(),
+							electric_mining_drill_mk3_horizontal_animation(),
 							electric_mining_drill_horizontal_shadow_animation()
 						}
 					},
@@ -3497,7 +3527,7 @@ data:extend(
 					{
 						layers =
 						{
-							electric_mining_drill_horizontal_animation(),
+							electric_mining_drill_mk3_horizontal_animation(),
 							electric_mining_drill_horizontal_shadow_animation()
 						}
 					},
@@ -3524,7 +3554,7 @@ data:extend(
 						{
 							{
 								priority = "high",
-								filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-E-smoke.png",
+								filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-E-smoke.png",
 								line_length = 5,
 								width = 28,
 								height = 28,
@@ -3535,7 +3565,7 @@ data:extend(
 								hr_version =
 								{
 									priority = "high",
-									filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-E-smoke.png",
+									filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-E-smoke.png",
 									line_length = 5,
 									width = 52,
 									height = 56,
@@ -3554,7 +3584,7 @@ data:extend(
 						{
 							{
 								priority = "high",
-								filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-S-smoke.png",
+								filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-S-smoke.png",
 								line_length = 5,
 								width = 24,
 								height = 18,
@@ -3565,7 +3595,7 @@ data:extend(
 								hr_version =
 								{
 									priority = "high",
-									filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-S-smoke.png",
+									filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-S-smoke.png",
 									line_length = 5,
 									width = 48,
 									height = 36,
@@ -3584,7 +3614,7 @@ data:extend(
 						{
 							{
 								priority = "high",
-								filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-W-smoke.png",
+								filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-W-smoke.png",
 								line_length = 5,
 								width = 26,
 								height = 30,
@@ -3595,7 +3625,7 @@ data:extend(
 								hr_version =
 								{
 									priority = "high",
-									filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-W-smoke.png",
+									filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-W-smoke.png",
 									line_length = 5,
 									width = 46,
 									height = 54,
@@ -4296,7 +4326,7 @@ data:extend(
 		},
 		radius_visualisation_picture =
 		{
-			filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png",
+			filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-radius-visualization.png",
 			width = 10,
 			height = 10
 		},

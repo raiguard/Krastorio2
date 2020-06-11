@@ -4,6 +4,17 @@ require ("__base__/prototypes/entity/assemblerpipes")
 local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
 local sounds      = require("__base__/prototypes/entity/demo-sounds")
 
+circuit_connector_definitions["old-electric-mining-drill"] = circuit_connector_definitions.create
+(
+	universal_connector_template,
+	{
+		{ variation = 4, main_offset = util.by_pixel(-3.5, -55.5), shadow_offset = util.by_pixel(-2, -44.5), show_shadow = true },
+		{ variation = 2, main_offset = util.by_pixel(42, -12.5), shadow_offset = util.by_pixel(43.5, -0.5), show_shadow = true },
+		{ variation = 0, main_offset = util.by_pixel(4.5, 33), shadow_offset = util.by_pixel(8.5, 44.5), show_shadow = true },
+		{ variation = 6, main_offset = util.by_pixel(-41.5, -6.5), shadow_offset = util.by_pixel(-33.5, 5), show_shadow = true }
+	}
+)
+
 data:extend(
 {
 	{
@@ -879,8 +890,8 @@ data:extend(
 		fast_replaceable_group = "electric-mining-drill",
 		next_upgrade = "kr-electric-mining-drill-mk2",
 
-		circuit_wire_connection_points = circuit_connector_definitions["electric-mining-drill"].points,
-		circuit_connector_sprites = circuit_connector_definitions["electric-mining-drill"].sprites,
+		circuit_wire_connection_points = circuit_connector_definitions["old-electric-mining-drill"].points,
+		circuit_connector_sprites = circuit_connector_definitions["old-electric-mining-drill"].sprites,
 		circuit_wire_max_distance = default_circuit_wire_max_distance
 	}
 })
