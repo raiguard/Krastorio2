@@ -8,6 +8,7 @@ Date: 09.06.2020
     - Improved angels compatibility, unified coke system and made some combustible fluids burnable in the gas power station.
   Fixes:
     - Fixed some (maybe all) angels compatibility crashes.
+    - Reduced the fluid box capacity of some K2 building to match the recipe management changes in the Factorio 0.18.31 update.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.21
 Date: 09.06.2020
