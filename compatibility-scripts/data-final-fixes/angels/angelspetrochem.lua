@@ -31,14 +31,17 @@ if mods["angelspetrochem"] then
 		["liquid-heavy-water"] = "heavy-water",
 		
 		-- Items
-		["solid-coke"] = "coke"
+		["solid-coke"] = "coke",
+		["solid-sand"] = "sand"
 	}
 	
 	for old_name, new_name in pairs(to_convert) do
-		for recipe_name, _ in pairs(data.raw.recipe) do
-			if recipe_name:find("creative-mod_", 1, true) == nil then
-				krastorio.recipes.convertIngredient(recipe_name, old_name, new_name)
-				krastorio.recipes.convertProduct(recipe_name, old_name, new_name)
+		if krastorio.items.getItem(old_name) and krastorio.items.getItem(new_name) then
+			for recipe_name, _ in pairs(data.raw.recipe) do
+				if recipe_name:find("creative-mod_", 1, true) == nil then
+					krastorio.recipes.convertIngredient(recipe_name, old_name, new_name)
+					krastorio.recipes.convertProduct(recipe_name, old_name, new_name)
+				end
 			end
 		end
 	end
@@ -58,12 +61,13 @@ if mods["angelspetrochem"] then
 		krastorio.technologies.convertPrerequisiteFromAllTechnologies("chlorine-processing-3", "chlorine-processing-2", true)
 	end
 	
-	-- Remove other unseful recipes
+	-- Remove other unseful recipes and techs
 	data.raw.technology["resin-1"] = nil
 	data.raw.technology["resin-2"] = nil
 	data.raw.technology["resin-3"] = nil
 	
 	data.raw.technology["angel-flare-stack"] = nil
+	data.raw.technology["rubber"] = nil
 	
 	-- Change the air filters
 	krastorio.technologies.addPrerequisite("kr-advanced-chemistry", "angels-nitrogen-processing-1")

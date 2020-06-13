@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.23
+Date: XX.06.2020
+  Changes:
+    - Revert modification to the vanilla electric mining drill appearance.
+    - Improved angels compatibility, unified sand types.
+---------------------------------------------------------------------------------------------------
 Version: 0.9.22
 Date: 12.06.2020
   Changes:

@@ -33,6 +33,10 @@ data.raw["inserter"]["stack-inserter"].next_upgrade = "kr-superior-inserter"
 data.raw["inserter"]["filter-inserter"].next_upgrade = "stack-filter-inserter"
 data.raw["inserter"]["stack-filter-inserter"].next_upgrade = "kr-superior-filter-inserter"
 
--- long handed inserter
+-- Long handed inserter
 data.raw["inserter"]["long-handed-inserter"].fast_replaceable_group = "long-handed-inserter"
 data.raw["inserter"]["long-handed-inserter"].next_upgrade = "kr-superior-long-inserter"
+
+-- Electric mining drill (MK!)
+data.raw["mining-drill"]["electric-mining-drill"].fast_replaceable_group = "electric-mining-drill"
+data.raw["mining-drill"]["electric-mining-drill"].next_upgrade = "kr-electric-mining-drill-mk2"

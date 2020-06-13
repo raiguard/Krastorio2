@@ -46,8 +46,6 @@ if #data.raw.furnace == 0 then
 	data:extend({furnace})	
 end
 
-
-
 -- Boilers
 
 data.raw["boiler"]["boiler"].energy_source.emissions_per_minute = 20
