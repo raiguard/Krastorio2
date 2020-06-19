@@ -32,7 +32,8 @@ local old_krastorio_patreons =
 	["GeneralTank"] = true,
 	["lordfiSh"] = true,
 	["LordfiSh"] = true,
-	["Zippyit"] = true
+	["Zippyit"] = true,
+	["sollevix"] = true
 }
 
 -- lists of patreons
