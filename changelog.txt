@@ -4,6 +4,9 @@ Date: XX.06.2020
   Changes:
     - Revert modification to the vanilla electric mining drill appearance.
     - Improved angels compatibility, unified sand types.
+  Fixes:
+    - Fixed incompatibility with Squeak Through.
+    - Fixed missing integration patch in the added electric mining drills.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.22
 Date: 12.06.2020

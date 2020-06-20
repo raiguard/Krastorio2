@@ -2351,6 +2351,118 @@ data:extend(
 			}
 		},
 		
+		integration_patch =
+		{
+			north =
+			{
+				priority = "high",
+				filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-N-integration.png",
+				line_length = 1,
+				width = 116,
+				height = 118,
+				frame_count = 1,
+				animation_speed = electric_drill_animation_speed,
+				direction_count = 1,
+				shift = util.by_pixel(0, -2),
+				repeat_count = 5,
+				hr_version =
+				{
+					priority = "high",
+					filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-N-integration.png",
+					line_length = 1,
+					width = 230,
+					height = 236,
+					frame_count = 1,
+					animation_speed = electric_drill_animation_speed,
+					direction_count = 1,
+					shift = util.by_pixel(0, -2),
+					repeat_count = 5,
+					scale = 0.5,
+				}
+			},
+			east =
+			{
+				priority = "high",
+				filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-E-integration.png",
+				line_length = 1,
+				width = 120,
+				height = 104,
+				frame_count = 1,
+				animation_speed = electric_drill_animation_speed,
+				direction_count = 1,
+				shift = util.by_pixel(2, 4),
+				repeat_count = 5,
+				hr_version =
+				{
+					priority = "high",
+					filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-E-integration.png",
+					line_length = 1,
+					width = 238,
+					height = 204,
+					frame_count = 1,
+					animation_speed = electric_drill_animation_speed,
+					direction_count = 1,
+					shift = util.by_pixel(2, 5),
+					repeat_count = 5,
+					scale = 0.5,
+				}
+			},
+			south =
+			{
+				priority = "high",
+				filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-S-integration.png",
+				line_length = 1,
+				width = 112,
+				height = 114,
+				frame_count = 1,
+				animation_speed = electric_drill_animation_speed,
+				direction_count = 1,
+				shift = util.by_pixel(0, -2),
+				repeat_count = 5,
+				hr_version =
+				{
+					priority = "high",
+					filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-S-integration.png",
+					line_length = 1,
+					width = 224,
+					height = 228,
+					frame_count = 1,
+					animation_speed = electric_drill_animation_speed,
+					direction_count = 1,
+					shift = util.by_pixel(0, -2),
+					repeat_count = 5,
+					scale = 0.5,
+				}
+			},
+			west =
+			{
+				priority = "high",
+				filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-W-integration.png",
+				line_length = 1,
+				width = 116,
+				height = 104,
+				frame_count = 1,
+				animation_speed = electric_drill_animation_speed,
+				direction_count = 1,
+				shift = util.by_pixel(-2, 4),
+				repeat_count = 5,
+				hr_version =
+				{
+					priority = "high",
+					filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-W-integration.png",
+					line_length = 1,
+					width = 234,
+					height = 202,
+					frame_count = 1,
+					animation_speed = electric_drill_animation_speed,
+					direction_count = 1,
+					shift = util.by_pixel(-3, 5),
+					repeat_count = 5,
+					scale = 0.5,
+				}
+			}
+		},
+		
 		mining_speed = 0.75,
 		energy_source =
 		{
@@ -4306,6 +4418,118 @@ data:extend(
 					east_position = {1.5, -1.5},
 					south_position = {1, 0.5},
 					west_position = {-1.5, -1.5},
+				}
+			}
+		},
+		
+		integration_patch =
+		{
+			north =
+			{
+				priority = "high",
+				filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-N-integration.png",
+				line_length = 1,
+				width = 116,
+				height = 118,
+				frame_count = 1,
+				animation_speed = electric_drill_animation_speed,
+				direction_count = 1,
+				shift = util.by_pixel(0, -2),
+				repeat_count = 5,
+				hr_version =
+				{
+					priority = "high",
+					filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-N-integration.png",
+					line_length = 1,
+					width = 230,
+					height = 236,
+					frame_count = 1,
+					animation_speed = electric_drill_animation_speed,
+					direction_count = 1,
+					shift = util.by_pixel(0, -2),
+					repeat_count = 5,
+					scale = 0.5,
+				}
+			},
+			east =
+			{
+				priority = "high",
+				filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-E-integration.png",
+				line_length = 1,
+				width = 120,
+				height = 104,
+				frame_count = 1,
+				animation_speed = electric_drill_animation_speed,
+				direction_count = 1,
+				shift = util.by_pixel(2, 4),
+				repeat_count = 5,
+				hr_version =
+				{
+					priority = "high",
+					filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-E-integration.png",
+					line_length = 1,
+					width = 238,
+					height = 204,
+					frame_count = 1,
+					animation_speed = electric_drill_animation_speed,
+					direction_count = 1,
+					shift = util.by_pixel(2, 5),
+					repeat_count = 5,
+					scale = 0.5,
+				}
+			},
+			south =
+			{
+				priority = "high",
+				filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-S-integration.png",
+				line_length = 1,
+				width = 112,
+				height = 114,
+				frame_count = 1,
+				animation_speed = electric_drill_animation_speed,
+				direction_count = 1,
+				shift = util.by_pixel(0, -2),
+				repeat_count = 5,
+				hr_version =
+				{
+					priority = "high",
+					filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-S-integration.png",
+					line_length = 1,
+					width = 224,
+					height = 228,
+					frame_count = 1,
+					animation_speed = electric_drill_animation_speed,
+					direction_count = 1,
+					shift = util.by_pixel(0, -2),
+					repeat_count = 5,
+					scale = 0.5,
+				}
+			},
+			west =
+			{
+				priority = "high",
+				filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-W-integration.png",
+				line_length = 1,
+				width = 116,
+				height = 104,
+				frame_count = 1,
+				animation_speed = electric_drill_animation_speed,
+				direction_count = 1,
+				shift = util.by_pixel(-2, 4),
+				repeat_count = 5,
+				hr_version =
+				{
+					priority = "high",
+					filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-W-integration.png",
+					line_length = 1,
+					width = 234,
+					height = 202,
+					frame_count = 1,
+					animation_speed = electric_drill_animation_speed,
+					direction_count = 1,
+					shift = util.by_pixel(-3, 5),
+					repeat_count = 5,
+					scale = 0.5,
 				}
 			}
 		},
