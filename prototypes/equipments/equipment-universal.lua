@@ -141,7 +141,18 @@ data:extend(
 			fuel_categories = {"chemical", "vehicle-fuel"},
 			effectivity = 2,
 			fuel_inventory_size = 2,
-			burnt_inventory_size = 1
+			burnt_inventory_size = 1,
+			smoke =
+            {
+                {
+                    name = "smoke",
+                    deviation = {-0.25, -0.25},
+                    frequency = 1,
+                    position = {0, 0.5},
+                    height = 1.25,
+                    starting_frame_deviation = 60
+                }
+            }
 		},
 		energy_source =
 		{
@@ -173,7 +184,18 @@ data:extend(
 			fuel_categories = {"chemical", "vehicle-fuel"},
 			effectivity = 2,
 			fuel_inventory_size = 2,
-			burnt_inventory_size = 1
+			burnt_inventory_size = 1,
+			smoke =
+            {
+                {
+                    name = "smoke",
+                    deviation = {-0.25, -0.25},
+                    frequency = 1,
+                    position = {0, 0.5},
+                    height = 1.25,
+                    starting_frame_deviation = 60
+                }
+            }
 		},
 		energy_source =
 		{

@@ -4,6 +4,7 @@ Date: XX.06.2020
   Changes:
     - Revert modification to the vanilla electric mining drill appearance.
     - Improved angels compatibility, unified sand types.
+    - Added a small smoke effect when the portable burner generators are working. 
   Fixes:
     - Fixed incompatibility with Squeak Through.
     - Fixed missing integration patch in the added electric mining drills.
