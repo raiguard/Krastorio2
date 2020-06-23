@@ -26,9 +26,11 @@ if mods["angelsrefining"] then
 	}
 	
 	for _, recipe_name in pairs(iron_recipes) do
-		data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "iron-plate.png"
-		data.raw.recipe[recipe_name].icons[2].icon_size = 32
-		data.raw.recipe[recipe_name].icon_size = 64
+		if data.raw.recipe[recipe_name] then
+			data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "iron-plate.png"
+			data.raw.recipe[recipe_name].icons[2].icon_size = 32
+			data.raw.recipe[recipe_name].icon_size = 64
+		end
 	end
 	
 	data.raw.recipe["enriched-iron-plate"].icons =
@@ -49,9 +51,11 @@ if mods["angelsrefining"] then
 	}
 	
 	for _, recipe_name in pairs(iron_recipes) do
-		data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "copper-plate.png"
-		data.raw.recipe[recipe_name].icons[2].icon_size = 32
-		data.raw.recipe[recipe_name].icon_size = 64
+		if data.raw.recipe[recipe_name] then
+			data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "copper-plate.png"
+			data.raw.recipe[recipe_name].icons[2].icon_size = 32
+			data.raw.recipe[recipe_name].icon_size = 64
+		end
 	end
 	
 	data.raw.recipe["enriched-copper-plate"].icons =
@@ -68,16 +72,17 @@ if mods["angelsrefining"] then
 	}
 	
 	for _, recipe_name in pairs(iron_recipes) do
-		data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "steel-plate.png"
-		data.raw.recipe[recipe_name].icons[2].icon_size = 32
-		data.raw.recipe[recipe_name].icon_size = 64
+		if data.raw.recipe[recipe_name] then
+			data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "steel-plate.png"
+			data.raw.recipe[recipe_name].icons[2].icon_size = 32
+			data.raw.recipe[recipe_name].icon_size = 64
+		end
 	end
 	
 	-- Add crush stone to sand recipe variation
 	local stone_item =         krastorio.items.getItem("stone")	
 	local crushed_stone_item = krastorio.items.getItem("stone-crushed")	
 	local sand_item =          krastorio.items.getItem("sand")	
-	
 	
 	krastorio.recipes.addWithOverrideSafeNewRecipe
 	(

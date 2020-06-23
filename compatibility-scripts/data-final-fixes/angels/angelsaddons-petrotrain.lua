@@ -8,6 +8,13 @@ if mods["angelsaddons-petrotrain"] then
 		end
 	end
 	
+	local function changeLocomotiveBurnerCategory(locomotive_name)
+		if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") and data.raw.locomotive[locomotive_name] and data.raw.locomotive[locomotive_name].burner then
+			data.raw.locomotive[locomotive_name].burner.fuel_category   = nil
+			data.raw.locomotive[locomotive_name].burner.fuel_categories = {"chemical", "vehicle-fuel"}
+		end
+	end
+	
 	local new_train_grids =
 	{
 		"angels-petro-locomotive",	  
@@ -22,4 +29,7 @@ if mods["angelsaddons-petrotrain"] then
 			table.insert(data.raw["equipment-grid"][grid_name].equipment_categories, "vehicle-equipment")
 		end
 	end
+	
+	changeLocomotiveBurnerCategory("petro-locomotive-1")
+	
 end

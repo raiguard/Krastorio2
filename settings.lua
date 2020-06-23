@@ -4,11 +4,11 @@ data:extend(
 {
 	-- Mod config (Setting order "aNUMBER")
 	{
-		type = "int-setting",
+		type = "string-setting",
 		name = "kr-stack-size",
 		setting_type = "startup",
-		default_value = 200,
-        allowed_values = {50, 100, 200, 400},
+		default_value = "200",
+        allowed_values = {"No changes", "50", "100", "200", "400"},
 		order = "a1"
 	},
 	{
@@ -16,7 +16,7 @@ data:extend(
 		name = "kr-long-hands",
 		setting_type = "startup",
 		default_value = 1,
-        allowed_values = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+        allowed_values = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
 		order = "a2"
 	},
 	{

@@ -362,7 +362,7 @@ local function onBuiltAnEntity(event)
 end
 -----------------------------------------------------------------------------
 -- -- -- ADDING CALLBACKS
-if settings.startup["kr-loaders"] and settings.startup["kr-loaders"].value then
+if (not settings.startup["loaders-snap"] or settings.startup["loaders-snap"].value == "Krastorio2") and (settings.startup["kr-loaders"] and settings.startup["kr-loaders"].value) then
 	return
 	{ 
 		-- -- Actions

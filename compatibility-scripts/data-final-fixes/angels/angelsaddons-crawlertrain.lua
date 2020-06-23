@@ -7,6 +7,13 @@ if mods["angelsaddons-crawlertrain"] then
 			end
 		end
 	end
+	
+	local function changeLocomotiveBurnerCategory(locomotive_name)
+		if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") and data.raw.locomotive[locomotive_name] and data.raw.locomotive[locomotive_name].burner then
+			data.raw.locomotive[locomotive_name].burner.fuel_category   = nil
+			data.raw.locomotive[locomotive_name].burner.fuel_categories = {"chemical", "vehicle-fuel"}
+		end
+	end
 
 	local new_train_grids =
 	{
@@ -24,4 +31,15 @@ if mods["angelsaddons-crawlertrain"] then
 			table.insert(data.raw["equipment-grid"][grid_name].equipment_categories, "vehicle-equipment")
 		end
 	end
+	
+	local new_locomotive_names =
+	{
+		"crawler-locomotive",
+		"crawler-locomotive-wagon"
+	}
+	
+	for _, locomotive_name in pairs(new_locomotive_names) do
+		changeLocomotiveBurnerCategory(locomotive_name)
+	end
+	
 end

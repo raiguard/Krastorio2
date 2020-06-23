@@ -33,6 +33,10 @@ local function onBuiltAnEntity(event)
 			raise_built               = false
 		}
 		
+		if game.active_mods["WaterAsAResource"] then
+			remote.call("WaaR","build", new_entity, true)
+		end
+		
 		-- Set in the new entity the health of the destroyed entity
 		if with_damage > 0 then
 			new_entity.damage(with_damage, game.forces.neutral)

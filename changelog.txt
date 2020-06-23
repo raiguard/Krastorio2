@@ -1,11 +1,16 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.23
-Date: XX.06.2020
+Date: 23.06.2020
   Changes:
-    - Revert modification to the vanilla electric mining drill appearance.
-    - Improved angels compatibility, unified sand types.
+    - Revert modification to the vanilla electric mining drill appearance, still missing recoloring of new drills sprites and icons, will be added in the future updates.
     - Added a small smoke effect when the portable burner generators are working. 
+    - Now in the mod options is possible set to leave the stack size of all items as vanilla.
+    - Added compatibility to Water As A Resource, thanks to TreefrogGreaken collaboration.
+    - Added compatibility to Thaui load snap mod, thanks to Thaui collaboration.
+    - Improved angels compatibility, unified sand types.
+    - Added compatibility for Krastorio 2 fuels to angel's trains.
   Fixes:
+    - Fixed some crash with angel refinering.
     - Fixed incompatibility with Squeak Through.
     - Fixed missing integration patch in the added electric mining drills.
 ---------------------------------------------------------------------------------------------------
