@@ -1,5 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.23
+Date: 15.07.2020
+  Changes:
+    - Adjusted drill colors.
+  Fixes:
+    - Fix null error in K2 library on function getParsedItem(item).
+---------------------------------------------------------------------------------------------------
+Version: 0.9.23
 Date: 23.06.2020
   Changes:
     - Revert modification to the vanilla electric mining drill appearance, still missing recoloring of new drills sprites and icons, will be added in the future updates.

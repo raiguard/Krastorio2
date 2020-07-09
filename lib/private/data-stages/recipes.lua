@@ -354,6 +354,10 @@ end
 
 -- return a copy
 function krastorio.recipes.getParsedItem(item)
+	if type(item)~="table" then
+		return item
+	end
+	
 	local parsed_item = {}
 	if item.type then -- already well parsed
 		parsed_item = krastorio_utils.tables.fullCopy(item)
