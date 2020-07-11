@@ -106,6 +106,7 @@ if mods["deadlock-beltboxes-loaders"] then
 			"lithium-sulfur-battery",
 			"enriched-copper",
 			"enriched-iron",
+			"enriched-rare-metals",
 			"fuel",
 			"bio-fuel",
 			"fertilizer",

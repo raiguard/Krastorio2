@@ -3,6 +3,7 @@ Version: 0.9.23
 Date: 15.07.2020
   Changes:
     - Adjusted drill colors.
+    - Improved "Deadlock's Stacking Beltboxes & Compact Loaders" mod compatibility, now is possible stack enriched rare metals.
   Fixes:
     - Fix null error in K2 library on function getParsedItem(item).
 ---------------------------------------------------------------------------------------------------
