@@ -118,4 +118,47 @@ if mods ["angelssmelting"] then
 	krastorio.technologies.addUnlockRecipe("kr-enriched-ores", krastorio.recipes.changed_names["enriched-iron-processing"] or "enriched-iron-processing")
 	krastorio.technologies.addUnlockRecipe("kr-enriched-ores", krastorio.recipes.changed_names["enriched-copper-processing"] or "enriched-copper-processing")
 	
+	-- Icons
+
+	-- Coppers
+	local iron_recipes =
+	{
+		"angelsore3-crushed-smelting",
+		"angels-copper-pebbles-smelting",
+		"angels-copper-nugget-smelting",
+		"copper-plate",
+		"angels-plate-copper",
+		"angels-roll-copper-converting"
+	}
+	
+	for _, recipe_name in pairs(iron_recipes) do
+		if data.raw.recipe[recipe_name] then
+			data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "copper-plate.png"
+			data.raw.recipe[recipe_name].icons[2].icon_size = 32
+			data.raw.recipe[recipe_name].icon_size = 64
+		end
+	end
+	
+	data.raw.recipe["enriched-copper-plate"].icons =
+	{
+		{icon = kr_items_icons_path .. "copper-plate.png", icon_size = 64},
+		{icon = kr_items_with_variations_icons_path .. "enriched-copper/enriched-copper.png", icon_size = 64, scale = 0.2, shift = {-10, -10}}
+	}
+	
+	-- Irons
+	local iron_recipes =
+	{
+		"steel-plate",
+		"angels-plate-steel",
+		"angels-roll-steel-converting"
+	}
+	
+	for _, recipe_name in pairs(iron_recipes) do
+		if data.raw.recipe[recipe_name] then
+			data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "steel-plate.png"
+			data.raw.recipe[recipe_name].icons[2].icon_size = 32
+			data.raw.recipe[recipe_name].icon_size = 64
+		end
+	end
+	
 end
