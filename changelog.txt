@@ -1,9 +1,10 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.9.23
+Version: 0.9.99
 Date: 15.07.2020
   Changes:
     - Adjusted drill colors.
     - Improved "Deadlock's Stacking Beltboxes & Compact Loaders" mod compatibility, now is possible stack enriched rare metals.
+    - Improved sprites for pipes.
   Fixes:
     - Fix null error in K2 library on function getParsedItem(item).
     - Fix angel compatibility fixes placed in the wrong file.
