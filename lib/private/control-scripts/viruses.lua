@@ -32,7 +32,7 @@ function removeCreepFromTheSurface(surface)
 		name = global.CREEP_NAME
 	}
 	if #creeps < 1 then
-		ccm:unlistenCallBack("on_nth_tick", 2000+surface.index)
+		ccm:unlistenCallBack("on_nth_tick", 2000+surface.index, 10)
 		global.viruses.creep_virus_active[surface.index] = false		
 		return false
 	end
@@ -95,13 +95,13 @@ function removeCreepFromTheSurface(surface)
 				if surface.valid then
 					surface.set_tiles(tiles_to_replace_this_cicle)
 				else
-					ccm:unlistenCallBack("on_nth_tick", 2000+surface.index) -- Remove callback from be executed each tick
+					ccm:unlistenCallBack("on_nth_tick", 2000+surface.index, 10) -- Remove callback from be executed each tick
 					global.viruses.creep_virus_active[surface.index] = nil -- Release semaphore
 				end
 				
 				-- If all creeps is removed un-register the function
 				if creeps_count <= 0 then
-					ccm:unlistenCallBack("on_nth_tick", 2000+surface.index) -- Remove callback from be executed each tick
+					ccm:unlistenCallBack("on_nth_tick", 2000+surface.index, 10) -- Remove callback from be executed each tick
 					global.viruses.creep_virus_active[surface.index] = nil -- Release semaphore
 				end
 			end
@@ -185,7 +185,7 @@ function playerThrowAntiBiter(event)
 					force = "enemy"
 				}
 				if not enemy_entities or not next(enemy_entities) then
-					ccm:unlistenCallBack("on_nth_tick", 1000+actual_player_surface.index)
+					ccm:unlistenCallBack("on_nth_tick", 1000+actual_player_surface.index, 10)
 					global.viruses.biter_virus_active[actual_player_surface.index] = false		
 					return false
 				end
@@ -210,7 +210,7 @@ function playerThrowAntiBiter(event)
 						enemy_count                   = enemy_count - 1
 					end
 					if entity_to_kill <= 0 then
-						ccm:unlistenCallBack("on_nth_tick", 1000+actual_player_surface.index)
+						ccm:unlistenCallBack("on_nth_tick", 1000+actual_player_surface.index, 10)
 						global.viruses.biter_virus_active[actual_player_surface.index] = false
 					end
 				end
