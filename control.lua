@@ -12,6 +12,8 @@ require(control_lib_path)
 local scripts =
 {
 	-- -- KRASTORIO 2 SCRIPTS
+	-- Wireless script
+	require(control_scripts_path .. "wireless-charger"),
 	-- Bonus items
 	require(control_scripts_path .. "bonus-items"),
 	-- Patreon

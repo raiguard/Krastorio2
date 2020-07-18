@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.99
-Date: 15.07.2020
+Date: 20.07.2020
+  Features:
+    - Added a new (animated) building to recharge equipments energy wireless! This will introduce a building, one equipment and some technology upgrades.
   Changes:
     - Adjusted drill colors.
     - Improved "Deadlock's Stacking Beltboxes & Compact Loaders" mod compatibility, now is possible stack enriched rare metals.

@@ -55,6 +55,143 @@ data:extend(
 			time = 60
 		},
 	},
+	{
+		type = "technology",
+		name = "kr-tesla-coil",
+		mod = "Krastorio2",
+		icon_size = 128,
+		icon = kr_technologies_icons_path .. "tesla-coil.png",
+		upgrade = false,
+		effects = 
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-tesla-coil"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "energy-absorber"
+			}
+		},
+		prerequisites = {"battery-equipment", "power-armor"},
+		unit = 		
+		{
+			count = 500,
+			ingredients = 
+			{
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1}	
+			},
+			time = 60
+		}
+	},
+	{
+		type = "technology",
+		name = "kr-tesla-coil-upgrade-mk1",
+		mod = "Krastorio2",
+		icons = 
+		{
+			{ icon = kr_technologies_icons_path .. "tesla-coil.png", icon_size = 128 },
+			{ icon = kr_technologies_icons_path .. "/overlays/" .. "tesla-coil-upgrade-1.png", icon_size = 128 },
+		},
+		icon_size = 128,
+		upgrade = false,
+		effects = {},
+		prerequisites = {"kr-tesla-coil"},
+		unit = 		
+		{
+			count = 750,
+			ingredients = 
+			{
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1}	
+			},
+			time = 60
+		}
+	},
+	{
+		type = "technology",
+		name = "kr-tesla-coil-upgrade-mk2",
+		mod = "Krastorio2",
+		icons = 
+		{
+			{ icon = kr_technologies_icons_path .. "tesla-coil.png", icon_size = 128 },
+			{ icon = kr_technologies_icons_path .. "/overlays/" .. "tesla-coil-upgrade-2.png", icon_size = 128 },
+		},
+		icon_size = 128,
+		upgrade = false,
+		effects = {},
+		prerequisites = {"kr-tesla-coil-upgrade-mk1"},
+		unit = 		
+		{
+			count = 800,
+			ingredients = 
+			{
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},	
+				{"production-science-pack", 1}
+			},
+			time = 60
+		}
+	},
+	{
+		type = "technology",
+		name = "kr-tesla-coil-upgrade-mk3",
+		mod = "Krastorio2",		
+		icons = 
+		{
+			{ icon = kr_technologies_icons_path .. "tesla-coil.png", icon_size = 128 },
+			{ icon = kr_technologies_icons_path .. "/overlays/" .. "tesla-coil-upgrade-3.png", icon_size = 128 },
+		},
+		icon_size = 128,
+		upgrade = false,
+		effects = {},
+		prerequisites = {"kr-tesla-coil-upgrade-mk2"},
+		unit = 		
+		{
+			count = 900,
+			ingredients = 
+			{
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},	
+				{"production-science-pack", 1},	
+				{"utility-science-pack", 1}
+			},
+			time = 60
+		}
+	},
+	{
+		type = "technology",
+		name = "kr-tesla-coil-upgrade-mk4",
+		mod = "Krastorio2",		
+		icons = 
+		{
+			{ icon = kr_technologies_icons_path .. "tesla-coil.png", icon_size = 128 },
+			{ icon = kr_technologies_icons_path .. "/overlays/" .. "tesla-coil-upgrade-4.png", icon_size = 128 },
+		},
+		icon_size = 128,
+		upgrade = false,
+		effects = {},
+		prerequisites = {"kr-tesla-coil-upgrade-mk3"},
+		unit = 		
+		{
+			count = 1000,
+			ingredients = 
+			{
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},	
+				{"production-science-pack", 1},	
+				{"utility-science-pack", 1},
+				{"advanced-tech-card", 1}
+			},
+			time = 60
+		}
+	},
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------BUILDINGS AND PROCESS RECIPES-------------------------------------
 -----------------------------------------------------------------------------------------------------------------

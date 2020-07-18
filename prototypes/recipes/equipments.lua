@@ -240,6 +240,19 @@ return
 		},
 		result = "antimatter-reactor-equipment"
 	},
+	{
+		type = "recipe",
+		name = "energy-absorber",
+		energy_required = 3,
+		enabled = false,
+		ingredients =
+		{
+			{"copper-plate" , 6},
+			{"copper-cable", 12},	
+			{"battery", 6}			
+		},
+		result = "energy-absorber"	
+	},
 	-- -- SOLAR PANELS (GENERATORS)
 	{
 		type = "recipe",

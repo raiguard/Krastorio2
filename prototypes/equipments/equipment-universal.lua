@@ -294,6 +294,34 @@ data:extend(
 		power = "5.0MW", -- 50kW * 16 * 5 * 1
 		categories = {"universal-equipment"},
 	},
+	-- energy absorber
+	{
+		type = "battery-equipment",
+		name = "energy-absorber",
+		sprite =
+		{
+			filename = kr_universal_equipments_path .. "energy-absorber.png",
+			width = 128,
+			height = 128,
+			scale = 0.55,
+			priority = "medium"
+		},
+		shape =
+		{
+			width = 2,
+			height = 2,
+			type = "full"
+		},
+		energy_source =
+		{
+			type = "electric",
+			buffer_capacity = "18MJ",
+			input_flow_limit = "0kW",
+			output_flow_limit = "6MW",
+			usage_priority = "primary-output"
+		},
+		categories = {"universal-equipment"}
+	},
 ----------------------------------------------------------------------------------------------------
 	-- SOLAR PANELS (GENERATORS)
 	-- big-solar-panel-equipment

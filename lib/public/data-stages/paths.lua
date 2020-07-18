@@ -84,6 +84,7 @@ kr_buildings_sounds_path               = kr_sounds_mod .. "buildings/"
 kr_tiles_sounds_path                   = kr_sounds_mod .. "tiles/"
 kr_vehicles_sounds_path                = kr_sounds_mod .. "vehicles/"
 kr_weapons_sounds_path                 = kr_sounds_mod .. "weapons/"
+kr_others_sounds_path                  = kr_sounds_mod .. "others/"
 -----------------------------------------------------------------------------------------------------------------
 -- -- COMPATIBILITY SCRIPTS PATHS
 -----------------------------------------------------------------------------------------------------------------

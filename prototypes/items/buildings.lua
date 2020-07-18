@@ -54,6 +54,16 @@ data:extend(
 		place_result = "kr-advanced-assembling-machine",
 		stack_size = 50
     },
+	{
+		type = "item",
+		name = "kr-tesla-coil",
+		icon = kr_entities_icons_path .. "tesla-coil.png",
+		icon_size = 64,
+		subgroup = "energy-pipe-distribution",
+		order = "z-a[energy]-f2[tesla-coil]",
+		place_result = "kr-tesla-coil",
+		stack_size = 50
+	},
 	-- -- --
 	-- Electric mining drills
 	-- -- --

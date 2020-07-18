@@ -155,6 +155,19 @@ return
 		},
 		result = "kr-gas-power-station"
     },
+	{
+		type = "recipe",
+		name = "kr-tesla-coil",
+		energy_required = 20,
+		enabled = false,
+		ingredients =
+		{
+			{"steel-beam" , 20},
+			{"electronic-circuit", 20},
+			{"copper-cable", 100}			
+		},
+		result = "kr-tesla-coil"		
+    },
 	-- -- --
 	-- NEW LABORATORIES
 	-- -- --
