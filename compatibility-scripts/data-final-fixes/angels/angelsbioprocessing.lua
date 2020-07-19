@@ -32,4 +32,25 @@ if mods ["angelsbioprocessing"] then
 
 	krastorio.technologies.addResearchUnitIngredient("bio-temperate-farm", "token-bio", 1, true)
 	
+	-- Recipes
+	local to_convert =
+	{
+		-- Fluids
+		["gas-methanol"] = "biomethanol",
+		
+		-- Items
+		["solid-fertilizer"] = "fertilizer"
+	}
+	
+	for old_name, new_name in pairs(to_convert) do
+		if krastorio.items.getItem(old_name) and krastorio.items.getItem(new_name) then
+			for recipe_name, _ in pairs(data.raw.recipe) do
+				if recipe_name:find("creative-mod_", 1, true) == nil then
+					krastorio.recipes.convertIngredient(recipe_name, old_name, new_name)
+					krastorio.recipes.convertProduct(recipe_name, old_name, new_name)
+				end
+			end
+		end
+	end
+	
 end

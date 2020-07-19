@@ -8,6 +8,7 @@ Date: 20.07.2020
     - Improved "Deadlock's Stacking Beltboxes & Compact Loaders" mod compatibility, now is possible stack enriched rare metals.
     - Improved sprites for pipes.
     - Refactored Krastorio 2 events handler.
+    - Improved angels compatibility, unified fertilizer and biomethanol.
   Fixes:
     - Improved Krastorio 2 to avoid multiplayer desync.
     - Fix null error in K2 library on function getParsedItem(item).
