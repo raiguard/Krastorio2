@@ -103,11 +103,13 @@ require(scripts_path .. "ElectricTrain")
 require(scripts_path .. "FoodIndustry")
 require(scripts_path .. "Hovercrafts")
 require(scripts_path .. "LightedPolesPlus")
+require(scripts_path .. "Nuclear Fuel")
 -- Pyanodons (multiple scripts)
 require(scripts_path .. "Pyanodon")
 require(scripts_path .. "realistic-electric-trains")
 require(scripts_path .. "space-exploration")
 require(scripts_path .. "vtk-armor-plating")
+require(scripts_path .. "RealisticReactors-utilities")
 require(scripts_path .. "mod-assertions")
 ---------------------------------------------------------------------------
 -- Add new fuels to entities

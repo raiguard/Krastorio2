@@ -8,6 +8,69 @@ if not remote.interfaces["kr-radioactivity"] then
 				error("Value for 'set_no_radioactivity' must be a boolean.")
 			end
 			global.radioactivity_enabled = not bool
+		end,
+		add_radioactive_entity = 
+		function(entity_name)
+			if type(entity_name) ~= "string" then 
+				error("Value for 'entity_name' must be a string.")
+			end
+			
+			if not global.krastorio.radioactive_entities then
+				global.krastorio.radioactive_entities = {}
+			end
+			table.insert(global.krastorio.radioactive_entities, entity_name)
+		end,
+		remove_radioactive_entity = 
+		function(entity_name)
+			if type(entity_name) ~= "string" then 
+				error("Value for 'entity_name' must be a string.")
+			end
+			
+			if global.krastorio.radioactive_entities then
+				for i, name in pairs(global.krastorio.radioactive_entities) do
+					if entity_name == name then
+						table.remove(global.krastorio.radioactive_entities, i)
+						break
+					end
+				end
+			end
+		end,
+		add_radioactive_item = 
+		function(item_name)
+			if type(item_name) ~= "string" then 
+				error("Value for 'item_name' must be a string.")
+			end
+			
+			if not global.krastorio.radioactive_items then
+				global.krastorio.radioactive_items = {}
+			end
+			table.insert(global.krastorio.radioactive_items, item_name)
+		end,
+		remove_radioactive_item = 
+		function(item_name)
+			if type(item_name) ~= "string" then 
+				error("Value for 'item_name' must be a string.")
+			end
+			
+			if global.krastorio.radioactive_items then
+				for i, name in pairs(global.krastorio.radioactive_items) do
+					if item_name == name then
+						table.remove(global.krastorio.radioactive_items, i)
+						break
+					end
+				end
+			end
+		end,
+		set_radioactive_area_offset =
+		function(radius)
+			if type(radius) ~= "number" then 
+				error("Value for 'radius' must be a number.")
+			end
+			if type(radius) < 1 then 
+				error("Value for 'radius' must be greater of zero.")
+			end
+				
+			global.krastorio.radioactive_area_offset = radius
 		end
 	})
 end
@@ -56,6 +119,12 @@ function setupKRRadioactivityGlobalVariables()
 		"nuclear-fuel",
 		"used-up-uranium-fuel-cell"
 	}
+	
+	if game.active_mods["Nuclear Fuel"] then
+		table.insert(global.krastorio.radioactive_items, "plutonium")
+		table.insert(global.krastorio.radioactive_items, "breeder-fuel-cell")
+		table.insert(global.krastorio.radioactive_items, "used-up-breeder-fuel-cell")
+	end
 	
 	global.krastorio.radioactive_area_offset = 6
 end

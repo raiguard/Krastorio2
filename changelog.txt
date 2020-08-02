@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 16.08.2020
+  Features:
+    - Mod is out of beta! From now there will be no more feature updates or balance chaning, only bugfixes.
+---------------------------------------------------------------------------------------------------
 Version: 0.9.99
-Date: 20.07.2020
+Date: 19.07.2020
   Features:
     - Added a new (animated) building to recharge equipments energy wireless! This will introduce a building, one equipment and some technology upgrades.
   Changes:
