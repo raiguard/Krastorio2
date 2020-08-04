@@ -52,6 +52,9 @@ if mods["Nuclear Fuel"] then
 	-- Update NF nuclear fuel from Pu to produce more rocket fuel since Pu is harder to produce.
 	krastorio.recipes.multiplyIngredient("nuclear-fuel-pu", "rocket-fuel", 4)
 	krastorio.recipes.multiplyProduct("nuclear-fuel-pu", "nuclear-fuel", 4)
+	
+    -- Update atomic bomb from Pu recipe to include heavy rocket as K2 does for the normal recipe
+    krastorio.recipes.addIngredient("atomic-bomb-pu", {"heavy-rocket", 1})
 
 	------------------------------------------------------------------------------------
 	-- -- STACK SIZES
