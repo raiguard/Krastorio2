@@ -1,6 +1,6 @@
--- Compatibility for RealisticReactors-utilities provided by Aristine-02/08/2020
+-- Compatibility for RealisticReactors-utilities provided by Aristine-06/08/2020-v1
 
-if mods["RealisticReactors-utilities"] then
+if mods["RealisticReactors"] then
  
 	data.raw.recipe["realistic-reactor"].energy_required = 120
 	data.raw.recipe["realistic-reactor"].category = "crafting-with-fluid"
