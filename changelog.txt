@@ -3,6 +3,10 @@ Version: 1.0.0
 Date: 16.08.2020
   Features:
     - Mod is out of beta! From now there will be no more feature updates or balance chaning, only bugfixes.
+  Fixes:
+    - Improved library access to technologies to avoid crash when another mod define technologies that use no science pack to be researched. 
+    - Fixed that draw lightnings can crash the game when try to charge an entity while is changing surface.
+    - Now players should be able to insert the charging equipment into the grid of character of another player. 
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.99
 Date: 19.07.2020

@@ -146,21 +146,33 @@ end
 local function addMonitoredGrid(grid, entity, player_index)
 	inizializeGlobalWirelessDictionary()
 	
-	if entity.grid and grid == entity.grid then
-		-- if player entity is already under monitoring
-		if player_index ~= nil and global.players_wireless_grids[player_index] ~= nil then
-			removeMonitoredGrid(global.players_wireless_grids[player_index], player_index)
-		end
-		
-		local index = table_size(global.wireless_grids) + 1
-		global.wireless_grids[index] = {grid, entity, nil}
-		if player_index ~= nil then
-			global.players_wireless_grids[player_index] = index
-		end
-		if entity.type == "character" then
-			for _, player in pairs(game.players) do
-				if player.character and player.character == entity then
-					global.players_wireless_grids[player.index] = index
+	if entity.grid then
+		if grid == entity.grid then
+			-- if player entity is already under monitoring
+			if player_index ~= nil and global.players_wireless_grids[player_index] ~= nil then
+				removeMonitoredGrid(global.players_wireless_grids[player_index], player_index)
+			end
+			
+			local index = table_size(global.wireless_grids) + 1
+			global.wireless_grids[index] = {grid, entity, nil}
+			if player_index ~= nil then
+				global.players_wireless_grids[player_index] = index
+			end
+			if entity.type == "character" then
+				for _, player in pairs(game.players) do
+					if player.character and player.character == entity then
+						global.players_wireless_grids[player.index] = index
+						break
+					end
+				end
+			end
+		elseif entity.type == "character" then
+			if haveOneTriggerEquip(entity.grid) then
+				for _, player in pairs(game.players) do
+					if player.character and player.character == entity then
+						addMonitoredGrid(entity.grid, entity, player.index)
+						break
+					end
 				end
 			end
 		end
@@ -308,7 +320,7 @@ local function charge(event)
 			then
 				powered = false
 				for _, entity in pairs(matched) do
-					if entity and entity.valid and entity.energy >= global.wireless_charge_ratio*6 then
+					if entity and entity.valid and entity.surface == grid_entity.surface and entity.energy >= global.wireless_charge_ratio*6 then
 						powered = true
 						-- Calculate energy can must be inserted in the equipment, between max available and available space
 						needed_energy = math.min(receiver_equiment.max_energy - receiver_equiment.energy, global.wireless_charge_ratio)

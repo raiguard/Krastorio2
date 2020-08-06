@@ -467,7 +467,10 @@ function krastorio.technologies.removeResearchUnitIngredient(technology_name, sc
 	local technology        = krastorio.technologies.getTechnologyFromName(technology_name)
 	if technology then
 		local prerequisites = technology.prerequisites
-		local ingredients   = technology.unit.ingredients
+		local ingredients   = false
+		if technology.unit and technology.unit.ingredients then
+			ingredients     = technology.unit.ingredients					
+		end	
 		
 		if ingredients and #ingredients > 0 then	
 			-- prerequisites
@@ -517,6 +520,12 @@ function krastorio.technologies.addResearchUnitIngredient(technology_name, scien
 			end
 		end
 		-- add ingredient
+		if not technology.unit then
+			technology.unit = {}
+		end
+		if not technology.unit.ingredients then
+			technology.unit.ingredients = {}
+		end
 		for _, ingredient in pairs(technology.unit.ingredients) do
 			local ingredient_name = krastorio.technologies.getIngredientName(ingredient)
 			if ingredient_name == science_pack_name then
@@ -564,6 +573,9 @@ function krastorio.technologies.overrideResearchUnitIngredient(technology_name, 
 			end
 		end
 		-- add ingredient
+		if not technology.unit then
+			technology.unit = {}
+		end
 		technology.unit.ingredients = ingredients	
 		return true
 	end
@@ -571,10 +583,13 @@ function krastorio.technologies.overrideResearchUnitIngredient(technology_name, 
 end
 
 function krastorio.technologies.convertResearchUnitIngredient(technology_name, old_science_pack_name, new_science_pack_name)
-	local technology  = krastorio.technologies.getTechnologyFromName(technology_name)
+	local technology    = krastorio.technologies.getTechnologyFromName(technology_name)
 	local prerequisites = technology.prerequisites
-	local ingredients = technology.unit.ingredients
-	local converted   = false
+	local ingredients   = false
+	if technology.unit and technology.unit.ingredients then
+		ingredients     = technology.unit.ingredients					
+	end	
+	local converted     = false
 	
 	if technology and next(technology) ~= nil and ingredients and next(ingredients) ~= nil then				
 		-- convert ingredient	
@@ -623,6 +638,9 @@ function krastorio.technologies.setMaxLevelInfinite(technology_name)
 	if technology and next(technology) ~= nil then
 		technology.max_level = "infinite"
 		technology.upgrade = true
+		if not technology.unit then
+			technology.unit = {}
+		end
 		if not technology.unit.count_formula then
 			technology.unit.count_formula = "2^(L-6)*1000"
 		end
@@ -634,6 +652,9 @@ end
 function krastorio.technologies.setResearchUnitCount(technology_name, count)
 	local technology = krastorio.technologies.getTechnologyFromName(technology_name)
 	if technology and next(technology) ~= nil then
+		if not technology.unit then
+			technology.unit = {}
+		end
 		technology.unit.count = count
 	end
 end
@@ -713,7 +734,11 @@ function krastorio.technologies.sanitizeUnitsOfAllTechnologiesInPacks(science_pa
 			for technology_name, technology in pairs(data.raw.technology) do
 				if technology.check_science_packs_incompatibilities ~= false then
 					local is_in = false
-					local ingredients = technology.unit.ingredients				
+					local ingredients = false
+					if technology.unit and technology.unit.ingredients then
+						ingredients = technology.unit.ingredients					
+					end
+					
 					if ingredients and next(ingredients) ~= nil then				
 						for i = 1, #ingredients do
 							local ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])
@@ -789,7 +814,11 @@ function krastorio.technologies.removeSciencePackIncompatibleWith(science_pack_n
 		
 		for technology_name, technology in pairs(data.raw.technology) do		
 			if technology.check_science_packs_incompatibilities ~= false then
-				local ingredients = technology.unit.ingredients				
+				local ingredients = false
+				if technology.unit and technology.unit.ingredients then
+					ingredients = technology.unit.ingredients					
+				end		
+	
 				if ingredients and #ingredients > 1 then	
 					local is_in = false
 					local ingredient_name = nil	
@@ -848,7 +877,10 @@ function krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
 	for technology_name, technology in pairs(data.raw.technology) do
 		if technology.enforce_used_science_packs_in_prerequisites ~= false then
 			local prerequisites     = technology.prerequisites
-			local ingredients       = technology.unit.ingredients
+			local ingredients = false
+			if technology.unit and technology.unit.ingredients then
+				ingredients = technology.unit.ingredients					
+			end
 			local science_pack_name = nil
 			local hold = false
 			if ingredients and #ingredients > 0 then				
@@ -875,15 +907,6 @@ function krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
 			end	
 		end	
 	end
-end
-
--- Return the name of all technologies that isn't unlockable.
--- Because technologies is a graph composed by nodes dependent on others,
--- this function with recursively test if a technology is enabled and its prerequisites
--- is an enabled path(the root technology must be enabled for enable the path and all intermediate node).
--- To reduce the huge amout of recusive calls this function will use memoization technique.
-function krastorio.recipes.findNotUnlockableTechnologies()
-	-- TODO
 end
 
 -- -- ENABLE/DISABLE
