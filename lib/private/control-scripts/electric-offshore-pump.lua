@@ -17,6 +17,7 @@ local function onBuiltAnEntity(event)
 		local force              = old_entity.force
 		local direction          = old_entity.direction
 		local surface            = old_entity.surface
+		local player             = old_entity.last_user
 		
 		if old_entity and old_entity.valid then
 			old_entity.destroy()
@@ -28,7 +29,7 @@ local function onBuiltAnEntity(event)
 			position                  = pos,
 			direction                 = direction,
 			force                     = force,
-			player                    = player_index,
+			player                    = player,
 			create_build_effect_smoke = false,
 			raise_built               = false
 		}
