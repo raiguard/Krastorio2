@@ -119,3 +119,11 @@ data.raw["assembling-machine"]["steel-furnace"].energy_source.fuel_categories = 
 data.raw["boiler"]["boiler"].energy_source.fuel_categories = {"chemical", "vehicle-fuel"}
 data.raw["inserter"]["burner-inserter"].energy_source.fuel_categories = {"chemical", "vehicle-fuel"}
 data.raw["mining-drill"]["burner-mining-drill"].energy_source.fuel_categories = {"chemical", "vehicle-fuel"}
+
+---------------------------------------------------------------------------
+-- -- -- FIXES
+---------------------------------------------------------------------------
+
+if krastorio.general.getSafeSettingValue("kr-fix-laser-artillery-turret") then
+data.raw["electric-turret"]["kr-laser-artillery-turret"].starting_attack_sound = nil
+end

@@ -4,7 +4,7 @@ data:extend(
 		type = "corpse",
 		name = "matter-plant-remnant",
 		icon = kr_entities_icons_path .. "matter-plant.png",
-		icon_size = 64,
+		icon_size = 128,
 		flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},
 		selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
 		tile_width = 9,

@@ -4,7 +4,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 
 	local pistol_range = 22
 	local rifle_range = 30
-	local sniper_range = 60
+	local sniper_range = 70
 
 	-- -- --
 
@@ -934,7 +934,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 									{
 										{
 											type = "damage",
-											damage = {amount = 75, type = "physical"}
+											damage = {amount = 80, type = "physical"}
 										},
 									}
 								}
@@ -1058,7 +1058,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 									{
 										{
 											type = "damage",
-											damage = {amount = 100, type = "physical"}
+											damage = {amount = 125, type = "physical"}
 										},
 									}
 								}
@@ -1180,11 +1180,11 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 									{
 										{
 											type = "damage",
-											damage = {amount = 100, type = "physical"}
+											damage = {amount = 125, type = "physical"}
 										},
 										{
 											type = "damage",
-											damage = {amount = 50, type = "radioactive"}
+											damage = {amount = 75, type = "radioactive"}
 										},
 									}
 								}
@@ -1306,11 +1306,15 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 									{
 										{
 											type = "damage",
-											damage = {amount = 100, type = "physical"}
+											damage = {amount = 125, type = "physical"}
 										},
 										{
 											type = "damage",
 											damage = {amount = 50, type = "laser"}
+										},
+										{
+											type = "damage",
+											damage = {amount = 25, type = "radioactive"}
 										},
 									}
 								}

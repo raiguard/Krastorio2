@@ -3,7 +3,7 @@ data:extend(
 	{
 		type = "corpse",
 		name = "turret-remnant",
-		icon = kr_entities_icons_path .. "matter-plant.png",
+		icon = kr_entities_icons_path .. "railgun-turret.png",
 		icon_size = 64,
 		flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},
 		selection_box = {{-4.5, -4.5}, {4.5, 4.5}},

@@ -4,7 +4,7 @@ data:extend(
 		type = "corpse",
 		name = "kr-big-random-pipes-remnant",
 		icon = kr_entities_icons_path .. "remnants-icon.png",
-		icon_size = 32,
+		icon_size = 64,
 		flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},
 		selection_box = {{-4, -4}, {4, 4}},
 		tile_width = 3,

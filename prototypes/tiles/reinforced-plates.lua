@@ -413,7 +413,7 @@ data:extend(
 
     walking_sound = refined_concrete_sounds,
     
-    map_color={r=25, g=25, b=25},
+    map_color={r=40, g=40, b=40},
     pollution_absorption_per_second = 0,
     vehicle_friction_modifier = 0.75
   },
@@ -585,7 +585,7 @@ data:extend(
 
     walking_sound = refined_concrete_sounds,
     
-    map_color={r=160, g=160, b=160},
+    map_color={r=110, g=110, b=110},
     pollution_absorption_per_second = 0,
     vehicle_friction_modifier = 0.75
   }

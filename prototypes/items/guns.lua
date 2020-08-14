@@ -116,7 +116,7 @@ data:extend(
 		{
 			type = "projectile",
 			ammo_category = "bullet",
-			damage_modifier = 4,
+			damage_modifier = 5,
 			cooldown = 7.5,
 			movement_slow_down_factor = 0.1,
 			shell_particle =

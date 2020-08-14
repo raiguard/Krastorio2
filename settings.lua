@@ -56,6 +56,14 @@ data:extend(
 		default_value = true,
 		order = "a7"
 	},
+	{
+		type = "bool-setting",
+		name = "kr-fix-laser-artillery-turret",
+		setting_type = "startup",
+		default_value = false,
+		order = "zzz"
+	},
+	
 	-- S - Science (Setting order "sNUMBER")
 	{
         type = "string-setting",
