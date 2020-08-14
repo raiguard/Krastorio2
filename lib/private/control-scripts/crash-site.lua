@@ -28,12 +28,9 @@ local entities_to_place =
 	"kr-crash-site-chest-2",
 	"kr-crash-site-chest-2",
 	"kr-mineable-wreckage",
-	--"kr-big-ship-wreck-1",
 	"kr-mineable-wreckage",
-	"kr-big-ship-wreck-2",
 	"kr-crash-site-assembling-machine-2-repaired",
 	"kr-mineable-wreckage",
-	"kr-big-ship-wreck-3",
 	"kr-mineable-wreckage"
 }
 

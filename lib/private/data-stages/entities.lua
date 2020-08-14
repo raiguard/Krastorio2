@@ -190,3 +190,11 @@ function krastorio.entities.addFuelCategory(category_name, entity_name, fuel_cat
 		end
 	end
 end
+
+function krastorio.entities.overrideMiningResult(category_name, entity_name, mining_result)
+	local entity = krastorio.entities.getEntity(category_name, entity_name)
+
+	if entity and type(entity) == "table" then
+		entity.minable = mining_result
+	end
+end

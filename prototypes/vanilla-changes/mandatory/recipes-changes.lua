@@ -515,6 +515,8 @@ krastorio.recipes.replaceIngredient("cargo-wagon", "steel-plate", {"steel-beam",
 krastorio.recipes.removeIngredient("red-wire", "electronic-circuit")
 krastorio.recipes.removeIngredient("green-wire", "electronic-circuit")
 
+krastorio.recipes.convertIngredient("spidertron", "raw-fish", "ai-core")
+
 --------------------------------------------------------------------
 -- -- -- NUCLEAR
 --------------------------------------------------------------------

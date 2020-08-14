@@ -7,12 +7,13 @@ local small_minable_ship_residues =
 	mining_time = 2,
 	results = 
 	{
-		{ type = "item", name = "iron-plate", amount_min = 1, amount_max = 2, probability = 0.75 },
-		{ type = "item", name = "copper-cable", amount_min = 0, amount_max = 2, probability = 0.50 },
-		{ type = "item", name = "iron-gear-wheel", amount_min = 0, amount_max = 2, probability = 0.50},
-		{ type = "item", name = "electronic-circuit", amount_min = 0, amount_max = 2, probability = 0.25},
+		{ type = "item", name = "iron-plate", amount_min = 1, amount_max = 2, probability = 0.70 },
+		{ type = "item", name = "copper-cable", amount_min = 0, amount_max = 2, probability = 0.40 },
+		{ type = "item", name = "iron-gear-wheel", amount_min = 0, amount_max = 2, probability = 0.40},
+		{ type = "item", name = "electronic-circuit", amount_min = 0, amount_max = 2, probability = 0.20},
 		{ type = "item", name = "kr-sentinel", amount_min = 0, amount_max = 2, probability = 0.10}
-	}
+	},
+	mining_particle = "shell-particle"
 }
 
 local big_minable_ship_residues = 
@@ -25,7 +26,8 @@ local big_minable_ship_residues =
 		{ type = "item", name = "iron-gear-wheel", amount_min = 3, amount_max = 5, probability = 0.75},
 		{ type = "item", name = "electronic-circuit", amount_min = 2, amount_max = 3, probability = 0.75},
 		{ type = "item", name = "kr-sentinel", amount_min = 1, amount_max = 2, probability = 0.50}
-	}
+	},
+	mining_particle = "shell-particle"
 }
 
 -- Lab
@@ -126,35 +128,6 @@ crash_site_chest_2_entity.localised_description = {"entity-description.kr-crash-
 crash_site_chest_2_entity.minable = small_minable_ship_residues
 crash_site_chest_2_entity.inventory_size = 5
 data:extend({crash_site_chest_2_item, crash_site_chest_2_entity})
-
--- Ship wreck
-local big_ship_wreck_1_entity = util.table.deepcopy(data.raw["container"]["big-ship-wreck-1"])
-big_ship_wreck_1_entity.name = "kr-big-ship-wreck-1"
-big_ship_wreck_1_entity.flags = crash_site_flags
-big_ship_wreck_1_entity.localised_name = {"entity-name.big-ship-wreck-1"}
-big_ship_wreck_1_entity.localised_description = {"entity-description.big-ship-wreck-1"}
-big_ship_wreck_1_entity.type = "simple-entity"
-big_ship_wreck_1_entity.minable = big_minable_ship_residues
-data:extend({big_ship_wreck_1_entity})
-
-local big_ship_wreck_2_entity = util.table.deepcopy(data.raw["container"]["big-ship-wreck-2"])
-big_ship_wreck_2_entity.name = "kr-big-ship-wreck-2"
-big_ship_wreck_2_entity.flags = crash_site_flags
-big_ship_wreck_2_entity.localised_name = {"entity-name.big-ship-wreck-2"}
-big_ship_wreck_2_entity.localised_description = {"entity-description.big-ship-wreck-2"}
-big_ship_wreck_2_entity.type = "simple-entity"
-big_ship_wreck_2_entity.minable = big_minable_ship_residues
-data:extend({big_ship_wreck_2_entity})
-
-local big_ship_wreck_3_entity = util.table.deepcopy(data.raw["container"]["big-ship-wreck-3"])
-big_ship_wreck_3_entity.name = "kr-big-ship-wreck-3"
-big_ship_wreck_3_entity.flags = crash_site_flags
-big_ship_wreck_3_entity.localised_name = {"entity-name.big-ship-wreck-3"}
-big_ship_wreck_3_entity.localised_description = {"entity-description.big-ship-wreck-3"}
-big_ship_wreck_3_entity.type = "simple-entity"
-big_ship_wreck_3_entity.minable = big_minable_ship_residues
-data:extend({big_ship_wreck_3_entity})
-
 
 -- Mineable wreckage
 local mineable_wreckage_entity = util.table.deepcopy(data.raw["simple-entity"]["mineable-wreckage"])

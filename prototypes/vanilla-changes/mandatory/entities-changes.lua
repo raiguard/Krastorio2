@@ -189,77 +189,117 @@ data.raw["solar-panel"]["solar-panel"].fast_replaceable_group = "solar-panel"
 -- Radar
 data.raw.radar["radar"].fast_replaceable_group = "radar"
 
--- Wall&gate
+-- Wall&gate resistances
 data.raw.wall["stone-wall"].resistances =
 {
-  {
-	type = "physical",
-	decrease = 3,
-	percent = 20
-  },
-  {
-	type = "impact",
-	decrease = 45,
-	percent = 60
-  },
-  {
-	type = "explosion",
-	decrease = 50,
-	percent = 80
-  },
-  {
-	type = "kr-explosion",
-	percent = 100
-  },
-  {
-	type = "radioactive",
-	percent = 100
-  },
-  {
-	type = "fire",
-	percent = 100
-  },
-  {
-	type = "acid",
-	percent = 80
-  },
-  {
-	type = "laser",
-	percent = 70
-  }
+	{
+		type = "physical",
+		decrease = 3,
+		percent = 20
+	},
+	{
+		type = "impact",
+		decrease = 45,
+		percent = 60
+	},
+	{
+		type = "explosion",
+		decrease = 50,
+		percent = 80
+	},
+	{
+		type = "kr-explosion",
+		percent = 100
+	},
+	{
+		type = "radioactive",
+		percent = 100
+	},
+	{
+		type = "fire",
+		percent = 100
+	},
+	{
+		type = "acid",
+		percent = 80
+	},
+	{
+		type = "laser",
+		percent = 70
+	}
 }
 data.raw.gate["gate"].resistances =
 {
-  {
-	type = "physical",
-	decrease = 3,
-	percent = 20
-  },
-  {
-	type = "impact",
-	decrease = 45,
-	percent = 60
-  },
-  {
-	type = "explosion",
-	decrease = 50,
-	percent = 80
-  },
-  {
-	type = "radioactive",
-	percent = 100
-  },
-  {
-	type = "fire",
-	percent = 100
-  },
-  {
-	type = "acid",
-	percent = 80
-  },
-  {
-	type = "laser",
-	percent = 70
-  }
+	{
+		type = "physical",
+		decrease = 3,
+		percent = 20
+	},
+	{
+		type = "impact",
+		decrease = 45,
+		percent = 60
+	},
+	{
+		type = "explosion",
+		decrease = 50,
+		percent = 80
+	},
+	{
+		type = "radioactive",
+		percent = 100
+	},
+	{
+		type = "fire",
+		percent = 100
+	},
+	{
+		type = "acid",
+		percent = 80
+	},
+	{
+		type = "laser",
+		percent = 70
+	}
 }
 
+-- Spaceship drops
+-- Minable random drops
+local small_minable_ship_residues = 
+{
+	mining_time = 2,
+	results = 
+	{
+		{ type = "item", name = "iron-plate", amount_min = 1, amount_max = 3, probability = 0.70 },
+		{ type = "item", name = "copper-cable", amount_min = 0, amount_max = 3, probability = 0.55 },
+		{ type = "item", name = "iron-gear-wheel", amount_min = 0, amount_max = 3, probability = 0.55},
+		{ type = "item", name = "electronic-circuit", amount_min = 0, amount_max = 3, probability = 0.20},
+		{ type = "item", name = "kr-sentinel", amount_min = 0, amount_max = 3, probability = 0.10}
+	},
+	mining_particle = "shell-particle"
+}
+
+krastorio.entities.overrideMiningResult("container", "crash-site-spaceship-wreck-medium-1", small_minable_ship_residues)
+krastorio.entities.overrideMiningResult("container", "crash-site-spaceship-wreck-medium-2", small_minable_ship_residues)
+krastorio.entities.overrideMiningResult("container", "crash-site-spaceship-wreck-medium-3", small_minable_ship_residues)
+
+krastorio.entities.overrideMiningResult("simple-entity-with-owner", "crash-site-spaceship-wreck-small-1", small_minable_ship_residues)
+krastorio.entities.overrideMiningResult("simple-entity-with-owner", "crash-site-spaceship-wreck-small-2", small_minable_ship_residues)
+krastorio.entities.overrideMiningResult("simple-entity-with-owner", "crash-site-spaceship-wreck-small-3", small_minable_ship_residues)
+krastorio.entities.overrideMiningResult("simple-entity-with-owner", "crash-site-spaceship-wreck-small-4", small_minable_ship_residues)
+krastorio.entities.overrideMiningResult("simple-entity-with-owner", "crash-site-spaceship-wreck-small-5", small_minable_ship_residues)
+krastorio.entities.overrideMiningResult("simple-entity-with-owner", "crash-site-spaceship-wreck-small-6", small_minable_ship_residues)
+
+local crash_ship_residues = 
+{
+	mining_time = 10,
+	results = 
+	{
+		{ type = "item", name = "iron-plate", amount_min = 75, amount_max = 200},
+		{ type = "item", name = "copper-cable", amount_min = 75, amount_max = 200},
+		{ type = "item", name = "kr-sentinel", amount_min = 1, amount_max = 3}
+	},
+	mining_particle = "shell-particle"
+}
+
+krastorio.entities.overrideMiningResult("container", "crash-site-spaceship", crash_ship_residues)

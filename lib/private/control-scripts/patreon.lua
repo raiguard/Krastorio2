@@ -115,6 +115,6 @@ return
 	{ onInitAndConf, "on_init" },
 	{ onInitAndConf, "on_configuration_changed" },
 	-- On new game
-	{ givePatreonItems, "on_player_created" }
+	{ givePatreonItems, "on_cutscene_cancelled" }
 }
 	
