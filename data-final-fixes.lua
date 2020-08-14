@@ -112,18 +112,12 @@ require(scripts_path .. "vtk-armor-plating")
 require(scripts_path .. "RealisticReactors")
 require(scripts_path .. "mod-assertions")
 ---------------------------------------------------------------------------
+-- -- -- POST ALL FIXES
+---------------------------------------------------------------------------
 -- Add new fuels to entities
 
-data.raw["assembling-machine"]["stone-furnace"].energy_source.fuel_categories = {"chemical", "vehicle-fuel"}
-data.raw["assembling-machine"]["steel-furnace"].energy_source.fuel_categories = {"chemical", "vehicle-fuel"}
-data.raw["boiler"]["boiler"].energy_source.fuel_categories = {"chemical", "vehicle-fuel"}
-data.raw["inserter"]["burner-inserter"].energy_source.fuel_categories = {"chemical", "vehicle-fuel"}
-data.raw["mining-drill"]["burner-mining-drill"].energy_source.fuel_categories = {"chemical", "vehicle-fuel"}
-
----------------------------------------------------------------------------
--- -- -- FIXES
----------------------------------------------------------------------------
-
-if krastorio.general.getSafeSettingValue("kr-fix-laser-artillery-turret") then
-data.raw["electric-turret"]["kr-laser-artillery-turret"].starting_attack_sound = nil
-end
+krastorio.entities.addFuelCategory("assembling-machine", "stone-furnace", "vehicle-fuel")
+krastorio.entities.addFuelCategory("assembling-machine", "steel-furnace", "vehicle-fuel")
+krastorio.entities.addFuelCategory("boiler", "boiler", "vehicle-fuel")
+krastorio.entities.addFuelCategory("inserter", "burner-inserter", "vehicle-fuel")
+krastorio.entities.addFuelCategory("mining-drill", "burner-mining-drill", "vehicle-fuel")

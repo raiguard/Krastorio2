@@ -275,3 +275,8 @@ data:extend(
 		call_for_help_radius = 110
 	}
 })
+
+-- Sound fixes if needed 
+if krastorio.general.getSafeSettingValue("kr-fix-laser-artillery-turret") then
+	data.raw["electric-turret"]["kr-laser-artillery-turret"].starting_attack_sound = nil
+end

@@ -155,3 +155,38 @@ function krastorio.entities.entityHasFluidbox(entity)
 		return fluidbox and #fluidbox > 0
 	end
 end
+
+function krastorio.entities.removeFuelCategory(category_name, entity_name, fuel_category)
+	local entity = krastorio.entities.getEntity(category_name, entity_name)
+	
+	if entity and type(entity) == "table" then
+		if entity.energy_source and entity.energy_source.type == "burner" then
+			if entity.energy_source.fuel_category and entity.energy_source.fuel_category == fuel_category then
+				entity.energy_source.fuel_category = nil
+			else
+				for i, f_c in pairs(entity.energy_source.fuel_categories) do
+					if f_c == fuel_category then
+						table.remove(entity.energy_source.fuel_categories, i)
+						break
+					end
+				end
+			end
+		end
+	end
+end
+
+function krastorio.entities.addFuelCategory(category_name, entity_name, fuel_category)
+	local entity = krastorio.entities.getEntity(category_name, entity_name)
+
+	if entity and type(entity) == "table" then
+		if entity.energy_source and entity.energy_source.type == "burner" then
+			if entity.energy_source.fuel_category then
+				local fuel_categories = {entity.energy_source.fuel_category, fuel_category}
+				entity.energy_source.fuel_category = nil
+				entity.energy_source.fuel_categories = fuel_categories
+			else
+				table.insert(entity.energy_source.fuel_categories, fuel_category)
+			end
+		end
+	end
+end
