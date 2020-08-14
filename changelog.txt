@@ -3,6 +3,7 @@ Version: 1.0.0
 Date: 15.08.2020
   Features:
     - Mod is out of beta! From now there will be no more feature updates or balance changing, only bugfixes.
+    - Completed Italian localization.
   Changes:
     - Slightly adjusted reinforced plates map colors.
     - Increased Sniper rifle range from 60 to 70
