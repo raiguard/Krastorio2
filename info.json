@@ -8,7 +8,7 @@
 	"factorio_version": "1.0",
 	"dependencies":
 	[
-		"base >= 0.18.31",		
+		"base >= 1.0.0",		
 		"(?) aai-industry >= 0.3.17",	
 		"(?) aai-vehicles-chaingunner >= 0.5.2",
 		"(?) Aircraft >= 1.6.6",		
