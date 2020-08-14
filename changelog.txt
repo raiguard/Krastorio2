@@ -8,7 +8,7 @@ Date: 15.08.2020
     - Added partial Dutch translation, thanks to all who contributed!
     - Added almost completed Spanish translation, thanks to all who contributed!
   Changes:
-    - Almost updated all translation. 
+    - Almost updated all translations. 
     - Slightly adjusted reinforced plates map colors.
     - Increased Sniper rifle range from 60 to 70
     - Increased Sniper rifle damage. A bit.
