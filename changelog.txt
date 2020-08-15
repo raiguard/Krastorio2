@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 15.08.2020
+  Fixes:
+    - Now inserter max pickup and drop distance can't anymore be shared from one inserter to another of another type.
+    - Fixed out of box wiki text shown.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 15.08.2020
   Features:

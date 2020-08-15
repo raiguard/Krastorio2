@@ -57,6 +57,39 @@ function changeInserterDropLane(event)
 	end
 end
 
+local function onPreEntitySettingsPasted(event)
+	local destination = event.destination 
+
+	if destination and destination.valid then
+		if destination.type == "inserter" then
+			global.setting_pasted_inserter_dp_positions =
+			{
+				pickup_position = destination.pickup_position,
+				drop_position   = destination.drop_position
+			}
+		end
+	end
+end
+
+local function onEntitySettingsPasted(event)
+	local source      = event.source 
+	local destination = event.destination 
+
+	if source and destination and source.valid and destination.valid then
+		if source.type == "inserter" and (source.type == destination.type) then
+			if 
+				(source.prototype.inserter_pickup_position[1] ~= destination.prototype.inserter_pickup_position[1]) or
+				(source.prototype.inserter_pickup_position[2] ~= destination.prototype.inserter_pickup_position[2]) or
+				(source.prototype.inserter_drop_position[1]   ~= destination.prototype.inserter_drop_position[1])   or
+				(source.prototype.inserter_drop_position[2]   ~= destination.prototype.inserter_drop_position[2])
+			then
+				destination.pickup_position = global.setting_pasted_inserter_dp_positions.pickup_position
+				destination.drop_position   = global.setting_pasted_inserter_dp_positions.drop_position
+			end
+		end
+	end
+end
+
 -- Adding inserters changeable drop lane callback
 
 -- Normal way
@@ -65,6 +98,11 @@ end
 if script.active_mods["bobinserters"] then
 	return {}
 else
-	return { callback = changeInserterDropLane, event_name = "kr-inserter-change-lane" }
+	return 
+	{ 
+		{ changeInserterDropLane, "kr-inserter-change-lane"},
+		{ onPreEntitySettingsPasted, "on_pre_entity_settings_pasted"},
+		{ onEntitySettingsPasted, "on_entity_settings_pasted"}
+	}
 end
 -----------------------------------------------------------------------------

@@ -1,7 +1,13 @@
 local patreons_list = require("__Krastorio2__/lib/private/control-scripts/control-lib/patreon-names")
 local text_patreons_list = ""
+local line_counter = 0
 for _, supporter_name in pairs(patreons_list.getOverallSupportersList()) do
-	text_patreons_list = text_patreons_list .. supporter_name .. ", "
+	line_counter = line_counter +1
+	if line_counter == 5 then	
+		text_patreons_list = text_patreons_list .. supporter_name .. ",\n"
+	else
+		text_patreons_list = text_patreons_list .. supporter_name .. ", "
+	end
 end
 text_patreons_list = text_patreons_list:sub(1, -2) .. "."
 
