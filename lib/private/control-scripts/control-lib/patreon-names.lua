@@ -3,9 +3,6 @@ local patreons_list = {}
 -- Top Supporters
 patreons_list.high_supporters =
 {
-	{"AstaZora"},
-	{"BiusArt"},
-	{"Bilka"},
 	{"Chris Höppner"},
 	{"Brayden McLean"},
 	{"bob"},

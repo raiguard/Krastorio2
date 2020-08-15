@@ -13,7 +13,7 @@ data:extend(
 		max_health = 2000,
 		damaged_trigger_effect = hit_effects.entity(),
 		corpse = "matter-plant-remnant",
-		dying_explosion = "big-matter-explosion",
+		dying_explosion = "medium-matter-explosion",
 		resistances = 
 		{
 			{type = "physical",percent = 60},

@@ -12,7 +12,7 @@ data:extend(
 		minable = {mining_time = 0.5, result = "kr-singularity-beacon"},
 		max_health = 300,
 		corpse = "medium-remnants",
-		dying_explosion = "medium-explosion",
+		dying_explosion = "matter-explosion",
 		collision_box = {{-0.75, -0.75}, {0.75, 0.75}},
 		selection_box = {{-0.9, -0.9}, {0.9, 0.9}},		
 		damaged_trigger_effect = hit_effects.entity(),

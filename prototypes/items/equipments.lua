@@ -59,10 +59,10 @@ data:extend(
 		name = "additional-engine",
 		icons =
 		{
-			{ icon = kr_vehicle_equipments_icons_path .. "additional-engine.png", icon_size = 32 },
-			{ icon = kr_equipments_tiers_icon_path .. "1.png", icon_size = 64, scale = 0.5 }
+			{ icon = kr_vehicle_equipments_icons_path .. "additional-engine.png", icon_size = 64 },
+			{ icon = kr_equipments_tiers_icon_path .. "1.png", icon_size = 64 }
 		},
-		icon_size = 32,
+		icon_size = 64,
 		placed_as_equipment_result = "additional-engine",
 		subgroup = "vehicle-motor",
 		order = "e[additional-engines]-e1[advanced-additional-engine]",
@@ -73,10 +73,10 @@ data:extend(
 		name = "advanced-additional-engine",
 		icons =
 		{
-			{ icon = kr_vehicle_equipments_icons_path .. "advanced-additional-engine.png", icon_size = 32 },
-			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64, scale = 0.5 }
+			{ icon = kr_vehicle_equipments_icons_path .. "advanced-additional-engine.png", icon_size = 64 },
+			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
 		},
-		icon_size = 32,
+		icon_size = 64,
 		placed_as_equipment_result = "advanced-additional-engine",
 		subgroup = "vehicle-motor",
 		order = "e[additional-engines]-e2[advanced-additional-engine]",
@@ -87,7 +87,7 @@ data:extend(
 		type = "item",
 		name = "vehicle-roboport",
 		icon = kr_vehicle_equipments_icons_path .. "vehicle-roboport.png",
-		icon_size = 32,
+		icon_size = 64,
 		placed_as_equipment_result = "vehicle-roboport",
 		subgroup = "vehicle-motor",
 		order = "e[additional-engines]-f1[vehicle-roboport]",
@@ -165,10 +165,10 @@ data:extend(
 		name = "small-portable-generator",
 		icons = 
 		{
-			{ icon = kr_universal_equipments_icons_path .. "small-portable-generator.png", icon_size = 32 },
-			{ icon = kr_equipments_tiers_icon_path .. "1.png", icon_size = 64, scale = 0.5 }
+			{ icon = kr_universal_equipments_icons_path .. "small-portable-generator.png", icon_size = 64 },
+			{ icon = kr_equipments_tiers_icon_path .. "1.png", icon_size = 64 }
 		},
-		icon_size = 32,
+		icon_size = 64,
 		placed_as_equipment_result = "small-portable-generator",
 		subgroup = "equipment",
 		order = "a2[energy-source]-a2[small-portable-generator]",
@@ -180,10 +180,10 @@ data:extend(
 		name = "portable-generator",
 		icons = 
 		{
-			{ icon = kr_universal_equipments_icons_path .. "portable-generator.png", icon_size = 32 },
-			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64, scale = 0.5 }
+			{ icon = kr_universal_equipments_icons_path .. "portable-generator.png", icon_size = 64 },
+			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
 		},
-		icon_size = 32,
+		icon_size = 64,
 		placed_as_equipment_result = "portable-generator",
 		subgroup = "equipment",
 		order = "a2[energy-source]-a3[k-generator]",
@@ -247,10 +247,10 @@ data:extend(
 		name = "big-solar-panel-equipment",
 		icons =
 		{
-			{ icon = kr_universal_equipments_icons_path .. "big-solar-panel-equipment.png", icon_size = 32 },
+			{ icon = kr_universal_equipments_icons_path .. "big-solar-panel-equipment.png", icon_size = 64 },
 			{ icon = kr_equipments_tiers_icon_path .. "1.png", icon_size = 64 }
 		},
-		icon_size = 32,
+		icon_size = 64,
 		placed_as_equipment_result = "big-solar-panel-equipment",
 		subgroup = "equipment",
 		order = "a[energy-source]-a3[big-solar-panel-equipment]",
@@ -262,10 +262,10 @@ data:extend(
 		name = "imersite-solar-panel-equipment",
 		icons =
 		{
-			{ icon = kr_universal_equipments_icons_path .. "imersite-solar-panel-equipment.png", icon_size = 32 },
+			{ icon = kr_universal_equipments_icons_path .. "imersite-solar-panel-equipment.png", icon_size = 64 },
 			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
 		},
-		icon_size = 32,
+		icon_size = 64,
 		placed_as_equipment_result = "imersite-solar-panel-equipment",
 		subgroup = "equipment",
 		order = "a[energy-source]-a4[imersite-solar-panel-equipment]",
@@ -278,10 +278,10 @@ data:extend(
 		name = "big-imersite-solar-panel-equipment",
 		icons =
 		{
-			{ icon = kr_universal_equipments_icons_path .. "big-imersite-solar-panel-equipment.png", icon_size = 32 },
+			{ icon = kr_universal_equipments_icons_path .. "big-imersite-solar-panel-equipment.png", icon_size = 64 },
 			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
 		},
-		icon_size = 32,
+		icon_size = 64,
 		placed_as_equipment_result = "big-imersite-solar-panel-equipment",
 		subgroup = "equipment",
 		order = "a[energy-source]-a5[imersite-solar-panel-equipment]",

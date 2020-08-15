@@ -12,6 +12,7 @@ data:extend(
 		minable = {mining_time = 0.5, result = "kr-stabilizer-charging-station"},
 		max_health = 200,
 		damaged_trigger_effect = hit_effects.entity(),
+		dying_explosion = "small-matter-explosion",
 		corpse = "medium-remnants",
 		resistances = 
 		{

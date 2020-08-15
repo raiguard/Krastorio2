@@ -3,18 +3,22 @@ Version: 1.0.0
 Date: 15.08.2020
   Features:
     - Mod is out of beta! From now there will be no more feature updates or balance changing, only bugfixes.
+    - Some new explosions.
     - Completed Italian translation.
     - Added completed Czech translation, thanks to all who contributed!
     - Added partial Dutch translation, thanks to all who contributed!
     - Added almost completed Spanish translation, thanks to all who contributed!
   Changes:
+    - Some equipment icons have been updated.
     - Almost updated all translations. 
     - Slightly adjusted reinforced plates map colors.
-    - Increased Sniper rifle range from 60 to 70
+    - Increased Sniper rifle range from 60 to 70.
     - Increased Sniper rifle damage. A bit.
     - Changed spidertron recipe to use AI core instead of raw fish. 
     - Changed spidertron fuel usage, now require Deuterium-Tritium cell/fuel for moving actions.
-    - Adjusted crash site minable results to match the Factorio 1.0 crash site in free to play. 
+    - Adjusted crash site minable results to match the Factorio 1.0 crash site in free to play.
+    - Now nuclear and antimatter ammo have 35 and 50 explosion radius.
+    - Many minor changes that do not affect to gameplay or recipes.
   Fixes:
     - Fixed some equipment icon order.
     - Fixed that spidertron can't use Krastorio 2 equipments.

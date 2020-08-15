@@ -13,7 +13,7 @@ data:extend(
 		max_health = 5000,
 		damaged_trigger_effect = hit_effects.entity(),
 		corpse = "kr-antimatter-reactor-remnant",
-		dying_explosion = "big-matter-explosion",
+		dying_explosion = "matter-explosion-s",
 		effectivity = 5,
 		resistances = 
 		{

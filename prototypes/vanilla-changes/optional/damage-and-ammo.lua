@@ -34,7 +34,17 @@ local nuke_shockwave_starting_speed_deviation = 0.075
 	data.raw.gun["tank-cannon"].attack_parameters.cooldown = 120
 	data.raw.gun["rocket-launcher"].attack_parameters.cooldown = 60
 	data.raw.gun["pistol"].attack_parameters.cooldown = 20
-
+	
+	data.raw.gun["spidertron-rocket-launcher-1"].attack_parameters.cooldown = 90
+	data.raw.gun["spidertron-rocket-launcher-1"].attack_parameters.range = 40
+	data.raw.gun["spidertron-rocket-launcher-2"].attack_parameters.cooldown = 90
+	data.raw.gun["spidertron-rocket-launcher-2"].attack_parameters.range = 40
+	data.raw.gun["spidertron-rocket-launcher-3"].attack_parameters.cooldown = 90
+	data.raw.gun["spidertron-rocket-launcher-3"].attack_parameters.range = 40
+	data.raw.gun["spidertron-rocket-launcher-4"].attack_parameters.cooldown = 90
+	data.raw.gun["spidertron-rocket-launcher-4"].attack_parameters.range = 40
+	
+	
 	-- Gun turret
 	data.raw["ammo-turret"]["gun-turret"].attack_parameters.cooldown = 10
 	data.raw["ammo-turret"]["gun-turret"].attack_parameters.call_for_help_radius = 25
@@ -258,7 +268,7 @@ local nuke_shockwave_starting_speed_deviation = 0.075
           }
         }
 
-
+	data.raw.ammo["atomic-bomb"].ammo_type.range_modifier = 3
 	data.raw["projectile"]["atomic-rocket"].acceleration = 0.01
 	data.raw["projectile"]["atomic-rocket"].light = {intensity = 0.45, size = 9, color = {r=0.5, g=1, b=0.75}}
 	data.raw["projectile"]["atomic-rocket"].action.action_delivery.target_effects =
@@ -373,7 +383,7 @@ local nuke_shockwave_starting_speed_deviation = 0.075
               target_entities = false,
               trigger_from_target = true,
               repeat_count = 1000,
-              radius = 50,
+              radius = 35,
               action_delivery =
               {
                 type = "projectile",
@@ -392,7 +402,7 @@ local nuke_shockwave_starting_speed_deviation = 0.075
               target_entities = false,
               trigger_from_target = true,
               repeat_count = 1000,
-              radius = 26,
+              radius = 33,
               action_delivery =
               {
                 type = "projectile",
@@ -449,7 +459,7 @@ local nuke_shockwave_starting_speed_deviation = 0.075
               target_entities = false,
               trigger_from_target = true,
               repeat_count = 750,
-              radius = 40,
+              radius = 38,
               action_delivery =
               {
                 type = "projectile",
