@@ -237,7 +237,7 @@ data:extend(
 		icon_size = 64,
 		placed_as_equipment_result = "energy-absorber",
 		subgroup = "equipment",
-		order = "a2[energy-source]-a3[energy-absorber]",
+		order = "a1[energy-source]-a1[energy-absorber]",
 		stack_size = 10
 	},
 	-- -- SOLAR PANELS (GENERATORS)

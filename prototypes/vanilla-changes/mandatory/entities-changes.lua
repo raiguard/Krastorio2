@@ -303,3 +303,17 @@ local crash_ship_residues =
 }
 
 krastorio.entities.overrideMiningResult("container", "crash-site-spaceship", crash_ship_residues)
+
+-- Spidertron fuel usage
+data.raw["spider-vehicle"]["spidertron"].energy_source =
+{
+	type = "burner",
+	emissions_per_minute = 0,
+	effectivity = 1,
+	render_no_power_icon = false,
+	render_no_network_icon = false,
+	fuel_inventory_size = 1,
+	burnt_inventory_size = 1,
+	fuel_category = "fusion-fuel"
+}
+data.raw["spider-vehicle"]["spidertron"].movement_energy_consumption = "3MW"

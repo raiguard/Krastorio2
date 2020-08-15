@@ -339,6 +339,13 @@ data.raw.item["battery-mk2-equipment"].subgroup = "equipment"
 
 -- Equipments categories
 table.insert(data.raw["active-defense-equipment"]["discharge-defense-equipment"].categories, "universal-equipment")
+-- Order
+data.raw["active-defense-equipment"]["discharge-defense-equipment"].order = "f[active-defense-equipment]-a[discharge-defense-equipment]"
+data.raw.item["discharge-defense-equipment"].subgroup = "equipment"
+data.raw.item["discharge-defense-equipment"].order = "f[active-defense-equipment]-a[discharge-defense-equipment]"
+-- Order for remote item
+data.raw.capsule["discharge-defense-remote"].subgroup = "equipment"
+data.raw.capsule["discharge-defense-remote"].order = "f[active-defense-equipment]-b[discharge-defense-remote]"
 
 -----------------------------------------------------------------------------------------------------------------
 -- -- Fusion reactor
@@ -439,6 +446,10 @@ data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].attack_
 
 data.raw.item["personal-laser-defense-equipment"].localised_name = {"item-name.personal-sniper-laser-defense-mk1-equipment"}
 data.raw.item["personal-laser-defense-equipment"].localised_description = {"item-description.personal-sniper-laser-defense-mk1-equipment"}
+data.raw.item["personal-laser-defense-equipment"].subgroup = "equipment"
+data.raw.item["personal-laser-defense-equipment"].order = "d[active-defense]-b1[personal-laser-defense-mk1-equipment]"
+
+
 data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].localised_name = {"equipment-name.personal-sniper-laser-defense-mk1-equipment"}
 data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].localised_description = {"equipment-description.personal-sniper-laser-defense-mk1-equipment"}
 
@@ -467,11 +478,17 @@ data.raw.item["energy-shield-equipment"].localised_name = {"equipment-name.shiel
 data.raw.item["energy-shield-equipment"].localised_description = {"equipment-description.shield-generator-mk1"}
 data.raw["energy-shield-equipment"]["energy-shield-equipment"].localised_name = {"equipment-name.shield-generator-mk1"}
 data.raw["energy-shield-equipment"]["energy-shield-equipment"].localised_description = {"equipment-description.shield-generator-mk1"}
+data.raw["energy-shield-equipment"]["energy-shield-equipment"].order = "b[shield]-a[energy-shield-equipment-mk1]"
+data.raw.item["energy-shield-equipment"].subgroup = "equipment"
+data.raw.item["energy-shield-equipment"].order = "b[shield]-a[energy-shield-equipment-mk1]"
 
 data.raw.item["energy-shield-mk2-equipment"].localised_name = {"equipment-name.shield-generator-mk2"}
 data.raw.item["energy-shield-mk2-equipment"].localised_description = {"equipment-description.shield-generator-mk2"}
 data.raw["energy-shield-equipment"]["energy-shield-mk2-equipment"].localised_name = {"equipment-name.shield-generator-mk2"}
 data.raw["energy-shield-equipment"]["energy-shield-mk2-equipment"].localised_description = {"equipment-description.shield-generator-mk2"}
+data.raw["energy-shield-equipment"]["energy-shield-mk2-equipment"].order = "b[shield]-b[energy-shield-equipment-mk2]"
+data.raw.item["energy-shield-mk2-equipment"].subgroup = "equipment"
+data.raw.item["energy-shield-mk2-equipment"].order = "b[shield]-b[energy-shield-equipment-mk2]"
 
 -----------------------------------------------------------------------------------------------------------------
 -- -- Solar pannel

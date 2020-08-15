@@ -13,8 +13,10 @@ Date: 15.08.2020
     - Increased Sniper rifle range from 60 to 70
     - Increased Sniper rifle damage. A bit.
     - Changed spidertron recipe to use AI core instead of raw fish. 
+    - Changed spidertron fuel usage, now require Deuterium-Tritium cell/fuel for moving actions.
     - Adjusted crash site minable results to match the Factorio 1.0 crash site in free to play. 
   Fixes:
+    - Fixed some equipment icon order.
     - Fixed that spidertron can't use Krastorio 2 equipments.
     - Fixed startup crash in free play mode (the only meant mode to play with K2) about the fact that in the 1.0 character didn't exist before end the cutscene.
     - Improved library access to technologies to avoid crash when another mod define technologies that use no science pack to be researched. 
