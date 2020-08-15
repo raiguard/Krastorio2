@@ -4,7 +4,7 @@ local function createThanksList()
 	list = ""
 	for i, supporter in pairs(patreons_list.getHighSupportersList()) do
 		list = list .. "[font=heading-2]" .. 
-		       supporter[1] ..  
+		       supporter ..  
 			   " [/font], "
 	end
 	return list
@@ -27,12 +27,8 @@ local function thanksOnPlayerJoin(event)
 end
 
 -- With control-callbacks-merger
-if #patreons_list.getHighSupportersList() > 0 then
-	return
-	{
-		-- -- Bootstrap
-		{ thanksOnPlayerJoin, "on_player_created" }    
-	}
-else
-	return {}
-end
+return
+{
+	-- -- Bootstrap
+	{ thanksOnPlayerJoin, "on_player_created" }    
+}

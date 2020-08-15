@@ -1,55 +1,75 @@
 --- list of whilisted user
 local krastorio_high_patreons =
 {
-	["Krastor"] = true,
-	["Linver"] = true,
-	
-	["AstaZora"] = true,
-	["BiusArt"] = true,
-	["Bilka"] = true,
-	["Mkaito"] = true,
-	["Dmitrii"] = true,
-	["Egdod"] = true,
-	["Cvamp"] = true,
+	-- Mod Developers
+	["krastor"] = true,
+	["linver"] = true,
+	-- Factorio Developers
+	["bilka"] = true,
+	["kovarex"] = true,
+	["slpwnd"] = true,
+	["glex"] = true,
+	["twinsen"] = true,
+	["posila"] = true,
+	["oxyd"] = true,
+	["rseding"] = true,
+	["v453000"] = true,
+	["klonan"] = true,
+	["wheybags"] = true,
+	["zopa"] = true,
+	-- Patreons
+	["astazora"] = true,
+	["biusart"] = true,	
+	["mkaito"] = true,
+	["dmitrii"] = true,
+	["egdod"] = true,
+	["cvamp"] = true,
 	["dr.feelgood999"] = true,
-	["Andromedafallen"] = true,
-	["Andrewskier"] = true,
+	["darkstroker"] = true,
+	["andromedafallen"] = true,
+	["andrewskier"] = true,
 	["aski_raven"] = true,
-	["Wassabee"] = true,
-	["Jonasrejman"] = true,
-	["Melphin"] = true,
-	["Moonded"] = true,
-	["ReysDad"] = true,
-	["Rivsung"] = true,
-	["Grumblesxl"] = true,
-	["Pandabeezy"] = true,
-	["NukeUFO"] = true,
-	["Therightmark"] = true,
-	["Senard"] = true,
-	["Jkkelley86"] = true,
-	["Rougefallout365"] = true,
+	["wassabee"] = true,
+	["jonasrejman"] = true,
+	["melphin"] = true,
+	["moonded"] = true,
+	["reysdad"] = true,
+	["rivsung"] = true,
+	["grumblesxl"] = true,
+	["pandabeezy"] = true,
+	["nukeufo"] = true,
+	["therightmark"] = true,
+	["senard"] = true,
+	["jkkelley86"] = true,
+	["rougefallout365"] = true,
 	["gbs5009"] = true,
-	["Vladhc"] = true,
+	["vladhc"] = true,
 	["tobi"] = true,
 	["tobivollebregt"] = true,
 	["max.perry"] = true,
-	["DjNaphthalin"] = true,
-	["Circk"] = true,
+	["djnaphthalin"] = true,
+	["circk"] = true,
 	["dusk88"] = true,
-	["GeneralTank"] = true,
-	["LordfiSh"] = true,
-	["Zippyit"] = true,
+	["generaltank"] = true,
+	["lordfish"] = true,
+	["zippyit"] = true,
 	["sollevix"] = true,
-	["Tobi"] = true
+	["tobi"] = true
 }
 
 -- lists of patreons
 local patreons_list = require("__Krastorio2__/lib/private/control-scripts/control-lib/patreon-names")
 
 function isHighLevelPatreon(name)
-	if krastorio_high_patreons[name] or krastorio_high_patreons[string.lower(name)] then
+	if krastorio_high_patreons[string.lower(name)] then
 		return true
 	end
+	for i, supporter in pairs(patreons_list.getHighSupportersList()) do
+		if supporter == name or string.lower(supporter) == name then
+			return true
+		end
+	end
+
 	return false
 end
 
