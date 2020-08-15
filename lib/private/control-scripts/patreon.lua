@@ -1,78 +1,54 @@
 --- list of whilisted user
-local old_krastorio_patreons =
+local krastorio_high_patreons =
 {
 	["Krastor"] = true,
 	["Linver"] = true,
+	
+	["AstaZora"] = true,
+	["BiusArt"] = true,
+	["Bilka"] = true,
 	["Mkaito"] = true,
+	["Dmitrii"] = true,
 	["Egdod"] = true,
 	["Cvamp"] = true,
-	["CvAmp"] = true,
 	["dr.feelgood999"] = true,
-	["dr.Feelgood999"] = true,
-	["dr.FeelGood999"] = true,
-	["Dr.FeelGood999"] = true,
 	["Andromedafallen"] = true,
-	["AndromedaFallen"] = true,
 	["Andrewskier"] = true,
-	["AndrewSkier"] = true,
 	["aski_raven"] = true,
-	["Aski_Raven"] = true,
 	["Wassabee"] = true,
 	["Jonasrejman"] = true,
-	["JonasRejman"] = true,
-	["JonasRejman"] = true,
 	["Melphin"] = true,
 	["Moonded"] = true,
 	["ReysDad"] = true,
 	["Rivsung"] = true,
 	["Grumblesxl"] = true,
-	["GrumblesXL"] = true,
 	["Pandabeezy"] = true,
-	["PandaBeezy"] = true,	
 	["NukeUFO"] = true,
 	["Therightmark"] = true,
-	["TheRightMark"] = true,
 	["Senard"] = true,
 	["Jkkelley86"] = true,
 	["Rougefallout365"] = true,
-	["RougeFallout365"] = true,
 	["gbs5009"] = true,
-	["Gbs5009"] = true,
-	["GBS5009"] = true,
 	["Vladhc"] = true,
-	["VladHc"] = true,
-	["VladHC"] = true,
 	["tobi"] = true,
-	["Tobi"] = true,
 	["tobivollebregt"] = true,
 	["max.perry"] = true,
 	["DjNaphthalin"] = true,
 	["Circk"] = true,
 	["dusk88"] = true,
-	
-	
-	
 	["GeneralTank"] = true,
 	["LordfiSh"] = true,
-	["Lordfish"] = true,
 	["Zippyit"] = true,
-	["sollevix"] = true
+	["sollevix"] = true,
+	["Tobi"] = true
 }
 
 -- lists of patreons
 local patreons_list = require("__Krastorio2__/lib/private/control-scripts/control-lib/patreon-names")
 
 function isHighLevelPatreon(name)
-	if old_krastorio_patreons[name] or old_krastorio_patreons[string.lower(name)] then
+	if krastorio_high_patreons[name] or krastorio_high_patreons[string.lower(name)] then
 		return true
-	end
-
-	for i, supporter in pairs(patreons_list.getHighSupportersList()) do
-		if supporter[1] == name or string.lower(supporter[1]) == name then
-			if supporter[2] > 9 then
-				return true
-			end
-		end
 	end
 	return false
 end

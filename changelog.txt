@@ -1,9 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 15.08.2020
+  Fixes:
+    - Fixed crash due removing of explicit funds given from patreon list. 
+---------------------------------------------------------------------------------------------------
 Version: 1.0.1
 Date: 15.08.2020
   Fixes:
-    - Now inserter max pickup and drop distance can't anymore be shared from one inserter to another of another type.
-    - Fixed out of box wiki text shown.
+    - Now inserter pickup and drop distances can't anymore be shared from one inserter type to another (with longer/lesser, max/min, pickup/drop distance).
+    - Fixed some strings that were out of wiki box.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 15.08.2020
