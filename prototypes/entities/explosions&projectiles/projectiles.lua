@@ -1,6 +1,99 @@
 local particle_animations = require("__base__/prototypes/particle/demo-particle-animations")
 local sounds              = require("__base__/prototypes/entity/demo-sounds")
 
+
+local explosion_animations = require("__base__.prototypes.entity.demo-explosion-animations")
+local smoke_animations = require("__base__.prototypes.entity.demo-smoke-animations")
+local smoke_animations = require("__base__.prototypes.entity.demo-smoke-animations")
+local sounds = require("__base__.prototypes.entity.demo-sounds")
+
+local max_nuke_shockwave_movement_distance_deviation = 2
+
+local max_nuke_shockwave_movement_distance = 19 + max_nuke_shockwave_movement_distance_deviation / 6
+
+local nuke_shockwave_starting_speed_deviation = 0.075
+
+
+
+
+
+explosion_animations.matter_explosion = function()
+  return
+  {
+    width = 316,
+    height = 360,
+    frame_count = 100,
+    priority = "very-low",
+    flags = {"linear-magnification"},
+    shift = util.by_pixel(1, -123), --shift = util.by_pixel(1, -63), shifted by 60 due to scaling and centering
+    animation_speed = 0.5 * 0.75,
+    scale = 2,
+    dice_y = 5,
+    stripes =
+    {
+      {
+      filename = kr_explosions_sprites_path .. "matter-explosion-1.png",
+      width_in_frames = 5,
+      height_in_frames = 5,
+      },
+      {
+      filename = kr_explosions_sprites_path .. "matter-explosion-2.png",
+      width_in_frames = 5,
+      height_in_frames = 5,
+      },
+      {
+      filename = kr_explosions_sprites_path .. "matter-explosion-3.png",
+      width_in_frames = 5,
+      height_in_frames = 5,
+      },
+      {
+      filename = kr_explosions_sprites_path .. "matter-explosion-4.png",
+      width_in_frames = 5,
+      height_in_frames = 5,
+      }
+    },
+    hr_version =
+    {
+      width = 628,
+      height = 720,
+      frame_count = 100,
+      priority = "very-low",
+      flags = {"linear-magnification"},
+      shift = util.by_pixel(0.5, -122.5), --shift = util.by_pixel(0.5, -62.5), shifted by 60 due to scaling and centering
+      animation_speed = 0.5 * 0.75,
+      scale = 1,
+      dice_y = 5,
+      stripes =
+      {
+        {
+        filename = kr_explosions_sprites_path .. "hr-matter-explosion-1.png",
+        width_in_frames = 5,
+        height_in_frames = 5,
+        },
+        {
+        filename = kr_explosions_sprites_path .. "hr-matter-explosion-2.png",
+        width_in_frames = 5,
+        height_in_frames = 5,
+        },
+        {
+        filename = kr_explosions_sprites_path .. "hr-matter-explosion-3.png",
+        width_in_frames = 5,
+        height_in_frames = 5,
+        },
+        {
+        filename = kr_explosions_sprites_path .. "hr-matter-explosion-4.png",
+        width_in_frames = 5,
+        height_in_frames = 5,
+        }
+      }
+    }
+  }
+end
+
+
+
+
+
 local smoke_fast_animation = function(opts)
   local opts = opts or {}
   return
@@ -251,34 +344,95 @@ data:extend(
       {
         type = "instant",
         target_effects =
+		
+		
+		
+		
+		
         {
           {
-              repeat_count = 250,
-              type = "create-trivial-smoke",
-              smoke_name = "nuclear-smoke",
-              offset_deviation = {{-1, -1}, {1, 1}},
-              starting_frame = 3,
-              starting_frame_deviation = 5,
-              starting_frame_speed = 0,
-              starting_frame_speed_deviation = 5,
-              speed_from_center = 1
+            type = "set-tile",
+            tile_name = "nuclear-ground",
+            radius = 12,
+            apply_projection = true,
+            tile_collision_mask = { "water-tile" },
+          },
+          {
+            type = "destroy-cliffs",
+            radius = 9,
+            explosion = "explosion"
           },
           {
             type = "create-entity",
-            entity_name = "big-matter-explosion"
+            entity_name = "matter-explosion"
+          },
+          {
+            type = "camera-effect",
+            effect = "screen-burn",
+            duration = 60,
+            ease_in_duration = 5,
+            ease_out_duration = 60,
+            delay = 0,
+            strength = 6,
+            full_strength_max_distance = 200,
+            max_distance = 800
+          },
+          {
+            type = "play-sound",
+            sound = sounds.nuclear_explosion(0.9),
+            play_on_target_position = false,
+            -- min_distance = 200,
+            max_distance = 1000,
+            -- volume_modifier = 1,
+            audible_distance_modifier = 3
+          },
+          {
+            type = "play-sound",
+            sound = sounds.nuclear_explosion_aftershock(0.4),
+            play_on_target_position = false,
+            -- min_distance = 200,
+            max_distance = 1000,
+            -- volume_modifier = 1,
+            audible_distance_modifier = 3
           },
           {
             type = "damage",
-            damage = {amount = 5000, type = "explosion"}
+            damage = {amount = 1500, type = "explosion"}
           },
+          {
+            type = "damage",
+            damage = {amount = 1500, type = "radioactive"}
+          },
+		  {
+			type = "show-explosion-on-chart",
+			scale = 3
+		  },
           {
             type = "create-entity",
-            entity_name = "small-scorchmark",
-            check_buildability = true
+            entity_name = "huge-scorchmark",
+            check_buildability = true,
           },
           {
-            type = "show-explosion-on-chart",
-            scale = 7
+            type = "invoke-tile-trigger",
+            repeat_count = 1,
+          },
+          {
+            type = "destroy-decoratives",
+            include_soft_decoratives = true, -- soft decoratives are decoratives with grows_through_rail_path = true
+            include_decals = true,
+            invoke_decorative_trigger = true,
+            decoratives_with_trigger_only = false, -- if true, destroys only decoratives that have trigger_effect set
+            radius = 15 -- large radius for demostrative purposes
+          },
+          {
+            type = "create-decorative",
+            decorative = "nuclear-ground-patch",
+            spawn_min_radius = 11.5,
+            spawn_max_radius = 12.5,
+            spawn_min = 30,
+            spawn_max = 40,
+            apply_projection = true,
+            spread_evenly = true
           },
           {
             type = "nested-result",
@@ -287,17 +441,147 @@ data:extend(
               type = "area",
               target_entities = false,
               trigger_from_target = true,
-              repeat_count = 2000,
-              radius = 75,
+              repeat_count = 1000,
+              radius = 8,
               action_delivery =
               {
                 type = "projectile",
-                projectile = "matter-wave",
-                starting_speed = 0.5
+                projectile = "atomic-bomb-ground-zero-projectile",
+                starting_speed = 0.6 * 0.8,
+                starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+              }
+            }
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              target_entities = false,
+              trigger_from_target = true,
+              repeat_count = 1000,
+              radius = 50,
+              action_delivery =
+              {
+                type = "projectile",
+                projectile = "atomic-bomb-wave",
+                starting_speed = 0.5 * 0.7,
+                starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+              }
+            }
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              show_in_tooltip = false,
+              target_entities = false,
+              trigger_from_target = true,
+              repeat_count = 1000,
+              radius = 26,
+              action_delivery =
+              {
+                type = "projectile",
+                projectile = "atomic-bomb-wave-spawns-cluster-nuke-explosion",
+                starting_speed = 0.5 * 0.7,
+                starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+              }
+            }
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              show_in_tooltip = false,
+              target_entities = false,
+              trigger_from_target = true,
+              repeat_count = 700,
+              radius = 4,
+              action_delivery =
+              {
+                type = "projectile",
+                projectile = "atomic-bomb-wave-spawns-fire-smoke-explosion",
+                starting_speed = 0.5 * 0.65,
+                starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+              }
+            }
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              show_in_tooltip = false,
+              target_entities = false,
+              trigger_from_target = true,
+              repeat_count = 1000,
+              radius = 8,
+              action_delivery =
+              {
+                type = "projectile",
+                projectile = "atomic-bomb-wave-spawns-nuke-shockwave-explosion",
+                starting_speed = 0.5 * 0.65,
+                starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+              }
+            }
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              show_in_tooltip = false,
+              target_entities = false,
+              trigger_from_target = true,
+              repeat_count = 750,
+              radius = 40,
+              action_delivery =
+              {
+                type = "projectile",
+                projectile = "atomic-bomb-wave-spawns-nuclear-smoke",
+                starting_speed = 0.55 * 0.65,
+                starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+              }
+            }
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              show_in_tooltip = false,
+              target_entities = false,
+              trigger_from_target = true,
+              repeat_count = 10,
+              radius = 8,
+              action_delivery =
+              {
+                type = "instant",
+                target_effects =
+                {
+                  {
+                    type = "create-entity",
+                    entity_name = "nuclear-smouldering-smoke-source",
+                    tile_collision_mask = { "water-tile" }
+                  }
+                }
               }
             }
           }
         }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
       }
     },
     animation =
@@ -998,36 +1282,88 @@ data:extend(
         target_effects =
         {
           {
-              repeat_count = 50,
-              type = "create-trivial-smoke",
-              smoke_name = "nuclear-smoke",
-              offset_deviation = {{-1, -1}, {1, 1}},
-              starting_frame = 3,
-              starting_frame_deviation = 5,
-              starting_frame_speed = 0,
-              starting_frame_speed_deviation = 5,
-              speed_from_center = 0.5
+            type = "set-tile",
+            tile_name = "nuclear-ground",
+            radius = 12,
+            apply_projection = true,
+            tile_collision_mask = { "water-tile" },
+          },
+          {
+            type = "destroy-cliffs",
+            radius = 9,
+            explosion = "explosion"
           },
           {
             type = "create-entity",
-            entity_name = "big-explosion"
+            entity_name = "nuke-explosion"
+          },
+          {
+            type = "camera-effect",
+            effect = "screen-burn",
+            duration = 60,
+            ease_in_duration = 5,
+            ease_out_duration = 60,
+            delay = 0,
+            strength = 6,
+            full_strength_max_distance = 200,
+            max_distance = 800
+          },
+          {
+            type = "play-sound",
+            sound = sounds.nuclear_explosion(0.9),
+            play_on_target_position = false,
+            -- min_distance = 200,
+            max_distance = 1000,
+            -- volume_modifier = 1,
+            audible_distance_modifier = 3
+          },
+          {
+            type = "play-sound",
+            sound = sounds.nuclear_explosion_aftershock(0.4),
+            play_on_target_position = false,
+            -- min_distance = 200,
+            max_distance = 1000,
+            -- volume_modifier = 1,
+            audible_distance_modifier = 3
           },
           {
             type = "damage",
-            damage = {amount = 1500, type = "explosion"}
+            damage = {amount = 800, type = "explosion"}
           },
           {
             type = "damage",
-            damage = {amount = 1500, type = "radioactive"}
+            damage = {amount = 800, type = "radioactive"}
           },
+		  {
+			type = "show-explosion-on-chart",
+			scale = 2
+		  },
           {
             type = "create-entity",
-            entity_name = "small-scorchmark",
-            check_buildability = true
+            entity_name = "huge-scorchmark",
+            check_buildability = true,
           },
           {
-            type = "show-explosion-on-chart",
-            scale = 2
+            type = "invoke-tile-trigger",
+            repeat_count = 1,
+          },
+          {
+            type = "destroy-decoratives",
+            include_soft_decoratives = true, -- soft decoratives are decoratives with grows_through_rail_path = true
+            include_decals = true,
+            invoke_decorative_trigger = true,
+            decoratives_with_trigger_only = false, -- if true, destroys only decoratives that have trigger_effect set
+            radius = 15 -- large radius for demostrative purposes
+          },
+          {
+            type = "create-decorative",
+            decorative = "nuclear-ground-patch",
+            spawn_min_radius = 11.5,
+            spawn_max_radius = 12.5,
+            spawn_min = 30,
+            spawn_max = 40,
+            apply_projection = true,
+            spread_evenly = true
           },
           {
             type = "nested-result",
@@ -1036,13 +1372,132 @@ data:extend(
               type = "area",
               target_entities = false,
               trigger_from_target = true,
-              repeat_count = 500,
+              repeat_count = 900,
+              radius = 6,
+              action_delivery =
+              {
+                type = "projectile",
+                projectile = "atomic-bomb-ground-zero-projectile",
+                starting_speed = 0.6 * 0.8,
+                starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+              }
+            }
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              target_entities = false,
+              trigger_from_target = true,
+              repeat_count = 750,
               radius = 20,
               action_delivery =
               {
                 type = "projectile",
                 projectile = "atomic-bomb-wave",
-                starting_speed = 0.25
+                starting_speed = 0.5 * 0.7,
+                starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+              }
+            }
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              show_in_tooltip = false,
+              target_entities = false,
+              trigger_from_target = true,
+              repeat_count = 750,
+              radius = 18,
+              action_delivery =
+              {
+                type = "projectile",
+                projectile = "atomic-bomb-wave-spawns-cluster-nuke-explosion",
+                starting_speed = 0.5 * 0.7,
+                starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+              }
+            }
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              show_in_tooltip = false,
+              target_entities = false,
+              trigger_from_target = true,
+              repeat_count = 650,
+              radius = 4,
+              action_delivery =
+              {
+                type = "projectile",
+                projectile = "atomic-bomb-wave-spawns-fire-smoke-explosion",
+                starting_speed = 0.5 * 0.65,
+                starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+              }
+            }
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              show_in_tooltip = false,
+              target_entities = false,
+              trigger_from_target = true,
+              repeat_count = 900,
+              radius = 6,
+              action_delivery =
+              {
+                type = "projectile",
+                projectile = "atomic-bomb-wave-spawns-nuke-shockwave-explosion",
+                starting_speed = 0.5 * 0.65,
+                starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+              }
+            }
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              show_in_tooltip = false,
+              target_entities = false,
+              trigger_from_target = true,
+              repeat_count = 250,
+              radius = 18,
+              action_delivery =
+              {
+                type = "projectile",
+                projectile = "atomic-bomb-wave-spawns-nuclear-smoke",
+                starting_speed = 0.55 * 0.65,
+                starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+              }
+            }
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              show_in_tooltip = false,
+              target_entities = false,
+              trigger_from_target = true,
+              repeat_count = 10,
+              radius = 8,
+              action_delivery =
+              {
+                type = "instant",
+                target_effects =
+                {
+                  {
+                    type = "create-entity",
+                    entity_name = "nuclear-smouldering-smoke-source",
+                    tile_collision_mask = { "water-tile" }
+                  }
+                }
               }
             }
           }
@@ -1201,36 +1656,88 @@ data:extend(
         target_effects =
         {
           {
-              repeat_count = 100,
-              type = "create-trivial-smoke",
-              smoke_name = "nuclear-smoke",
-              offset_deviation = {{-1, -1}, {1, 1}},
-              starting_frame = 3,
-              starting_frame_deviation = 5,
-              starting_frame_speed = 0,
-              starting_frame_speed_deviation = 5,
-              speed_from_center = 0.5
+            type = "set-tile",
+            tile_name = "nuclear-ground",
+            radius = 12,
+            apply_projection = true,
+            tile_collision_mask = { "water-tile" },
+          },
+          {
+            type = "destroy-cliffs",
+            radius = 9,
+            explosion = "explosion"
           },
           {
             type = "create-entity",
-            entity_name = "explosion"
+            entity_name = "nuke-explosion"
+          },
+          {
+            type = "camera-effect",
+            effect = "screen-burn",
+            duration = 60,
+            ease_in_duration = 5,
+            ease_out_duration = 60,
+            delay = 0,
+            strength = 6,
+            full_strength_max_distance = 200,
+            max_distance = 800
+          },
+          {
+            type = "play-sound",
+            sound = sounds.nuclear_explosion(0.9),
+            play_on_target_position = false,
+            -- min_distance = 200,
+            max_distance = 1000,
+            -- volume_modifier = 1,
+            audible_distance_modifier = 3
+          },
+          {
+            type = "play-sound",
+            sound = sounds.nuclear_explosion_aftershock(0.4),
+            play_on_target_position = false,
+            -- min_distance = 200,
+            max_distance = 1000,
+            -- volume_modifier = 1,
+            audible_distance_modifier = 3
           },
           {
             type = "damage",
-            damage = {amount = 750, type = "explosion"}
+            damage = {amount = 1000, type = "explosion"}
           },
           {
             type = "damage",
-            damage = {amount = 750, type = "radioactive"}
+            damage = {amount = 1000, type = "radioactive"}
           },
+		  {
+			type = "show-explosion-on-chart",
+			scale = 3
+		  },
           {
             type = "create-entity",
-            entity_name = "big-scorchmark",
-            check_buildability = true
+            entity_name = "huge-scorchmark",
+            check_buildability = true,
           },
           {
-            type = "show-explosion-on-chart",
-            scale = 2
+            type = "invoke-tile-trigger",
+            repeat_count = 1,
+          },
+          {
+            type = "destroy-decoratives",
+            include_soft_decoratives = true, -- soft decoratives are decoratives with grows_through_rail_path = true
+            include_decals = true,
+            invoke_decorative_trigger = true,
+            decoratives_with_trigger_only = false, -- if true, destroys only decoratives that have trigger_effect set
+            radius = 15 -- large radius for demostrative purposes
+          },
+          {
+            type = "create-decorative",
+            decorative = "nuclear-ground-patch",
+            spawn_min_radius = 11.5,
+            spawn_max_radius = 12.5,
+            spawn_min = 30,
+            spawn_max = 40,
+            apply_projection = true,
+            spread_evenly = true
           },
           {
             type = "nested-result",
@@ -1239,13 +1746,132 @@ data:extend(
               type = "area",
               target_entities = false,
               trigger_from_target = true,
-              repeat_count = 750,
-              radius = 16,
+              repeat_count = 1000,
+              radius = 7,
+              action_delivery =
+              {
+                type = "projectile",
+                projectile = "atomic-bomb-ground-zero-projectile",
+                starting_speed = 0.6 * 0.8,
+                starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+              }
+            }
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              target_entities = false,
+              trigger_from_target = true,
+              repeat_count = 1000,
+              radius = 35,
               action_delivery =
               {
                 type = "projectile",
                 projectile = "atomic-bomb-wave",
-                starting_speed = 0.5
+                starting_speed = 0.5 * 0.7,
+                starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+              }
+            }
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              show_in_tooltip = false,
+              target_entities = false,
+              trigger_from_target = true,
+              repeat_count = 1000,
+              radius = 26,
+              action_delivery =
+              {
+                type = "projectile",
+                projectile = "atomic-bomb-wave-spawns-cluster-nuke-explosion",
+                starting_speed = 0.5 * 0.7,
+                starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+              }
+            }
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              show_in_tooltip = false,
+              target_entities = false,
+              trigger_from_target = true,
+              repeat_count = 700,
+              radius = 4,
+              action_delivery =
+              {
+                type = "projectile",
+                projectile = "atomic-bomb-wave-spawns-fire-smoke-explosion",
+                starting_speed = 0.5 * 0.65,
+                starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+              }
+            }
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              show_in_tooltip = false,
+              target_entities = false,
+              trigger_from_target = true,
+              repeat_count = 1000,
+              radius = 8,
+              action_delivery =
+              {
+                type = "projectile",
+                projectile = "atomic-bomb-wave-spawns-nuke-shockwave-explosion",
+                starting_speed = 0.5 * 0.65,
+                starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+              }
+            }
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              show_in_tooltip = false,
+              target_entities = false,
+              trigger_from_target = true,
+              repeat_count = 300,
+              radius = 26,
+              action_delivery =
+              {
+                type = "projectile",
+                projectile = "atomic-bomb-wave-spawns-nuclear-smoke",
+                starting_speed = 0.55 * 0.65,
+                starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+              }
+            }
+          },
+          {
+            type = "nested-result",
+            action =
+            {
+              type = "area",
+              show_in_tooltip = false,
+              target_entities = false,
+              trigger_from_target = true,
+              repeat_count = 10,
+              radius = 8,
+              action_delivery =
+              {
+                type = "instant",
+                target_effects =
+                {
+                  {
+                    type = "create-entity",
+                    entity_name = "nuclear-smouldering-smoke-source",
+                    tile_collision_mask = { "water-tile" }
+                  }
+                }
               }
             }
           }

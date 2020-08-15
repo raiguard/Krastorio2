@@ -28,7 +28,7 @@ end
 if settings.startup["kr-bonus-items"] and settings.startup["kr-bonus-items"].value then
 	return
 	{
-		{ giveBonusItems, "on_player_created" }
+		{ giveBonusItems, "on_cutscene_cancelled" }
 	}
 else
 	return {}

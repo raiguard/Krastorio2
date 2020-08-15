@@ -90,15 +90,72 @@ data:extend(
 		flags = {"not-on-map"},
 		animations =
 		{
+			width = 316,
+			height = 360,
+			frame_count = 100,
+			priority = "very-low",
+			flags = {"linear-magnification"},
+			shift = util.by_pixel(1, -123), --shift = util.by_pixel(1, -63), shifted by 60 due to scaling and centering
+			animation_speed = 0.5 * 0.75,
+			scale = 2,
+			dice_y = 5,
+			stripes =
 			{
-				filename = kr_explosions_sprites_path .. "matter-explosion.png",
-				flags = { "compressed" },
-				width = 400,
-				height = 400,
-				frame_count = 47,
-				line_length = 8,
-				shift = {0.1875, -0.75},
-				animation_speed = 0.5
+				{
+					filename = kr_explosions_sprites_path .. "matter-explosion-1.png",
+					width_in_frames = 5,
+					height_in_frames = 5,
+				},
+				{
+					filename = kr_explosions_sprites_path .. "matter-explosion-2.png",
+					width_in_frames = 5,
+					height_in_frames = 5,
+				},
+				{
+					filename = kr_explosions_sprites_path .. "matter-explosion-3.png",
+					width_in_frames = 5,
+					height_in_frames = 5,
+				},
+				{
+					filename = kr_explosions_sprites_path .. "matter-explosion-4.png",
+					width_in_frames = 5,
+					height_in_frames = 5,
+				}
+			},
+			hr_version =
+			{
+				width = 628,
+				height = 720,
+				frame_count = 100,
+				priority = "very-low",
+				flags = {"linear-magnification"},
+				shift = util.by_pixel(0.5, -122.5), --shift = util.by_pixel(0.5, -62.5), shifted by 60 due to scaling and centering
+				animation_speed = 0.5 * 0.75,
+				scale = 1,
+				dice_y = 5,
+				stripes =
+				{
+					{
+						filename = kr_explosions_sprites_path .. "hr-matter-explosion-1.png",
+						width_in_frames = 5,
+						height_in_frames = 5,
+					},
+					{
+						filename = kr_explosions_sprites_path .. "hr-matter-explosion-2.png",
+						width_in_frames = 5,
+						height_in_frames = 5,
+					},
+					{
+						filename = kr_explosions_sprites_path .. "hr-matter-explosion-3.png",
+						width_in_frames = 5,
+						height_in_frames = 5,
+					},
+					{
+						filename = kr_explosions_sprites_path .. "hr-matter-explosion-4.png",
+						width_in_frames = 5,
+						height_in_frames = 5,
+					}
+				}
 			}
 		},
 		light = {intensity = 1, size = 50, color = {r=0.9, g=0.1, b=1}},

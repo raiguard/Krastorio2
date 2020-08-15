@@ -3,9 +3,9 @@ local patreons_list = require("__Krastorio2__/lib/private/control-scripts/contro
 local function createThanksList()
 	list = ""
 	for i, supporter in pairs(patreons_list.getHighSupportersList()) do
-		list = list .. "[font=default-large-semibold]" .. 
+		list = list .. "[font=heading-2]" .. 
 		       supporter[1] ..  
-			   " with " .. "[color=green]$" .. supporter[2] .. "[/color]" .. " for month [/font], "
+			   " [/font], "
 	end
 	return list
 end
@@ -13,10 +13,10 @@ end
 local function thanksOnPlayerJoin(event)	
 	game.players[event.player_index].print
 	(
-		"[font=heading-1]Welcome back to Krastorio![/font] [img=virtual-signal/kr-krastorio]\n" ..
-		"[font=heading-2]This mod is developing thanks to our subscribers!\nAnd we would like to thank these people who supported us on Patreon more than other:[/font]\n" ..
+		"[font=default-large-bold]Welcome back to Krastorio![/font] [img=virtual-signal/kr-krastorio]\n" ..
+		"[font=heading-1]This mod is developing thanks to our community!\nAll this thanks to the support and kind words of many people from all over the world! Thank you! We also want to give special thanks to Factorio devs and people who have been especially active in supporting us:[/font]\n\n" ..
 		createThanksList() .. 
-		"\n[font=heading-2]and thanks to all others that support us, thank you all![/font]\n\n",
+		"\n\n[font=heading-1]and thanks to all others that support us, thank you all![/font]\n\n",
 		{1.0, 1.0, 0.2, 1.0}
 	)
 	game.players[event.player_index].print
