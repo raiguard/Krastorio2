@@ -317,3 +317,55 @@ data.raw["spider-vehicle"]["spidertron"].energy_source =
 	fuel_category = "fusion-fuel"
 }
 data.raw["spider-vehicle"]["spidertron"].movement_energy_consumption = "3MW"
+data.raw["corpse"]["spidertron-remnants"].animation = make_rotated_animation_variations_from_sheet (1,
+{
+	layers =
+	{
+		{
+			filename = kr_entities_path .. "remnants/spidertron/spidertron-remnants.png",
+			line_length = 1,
+			width = 224,
+			height = 224,
+			frame_count = 1,
+			variation_count = 1,
+			axially_symmetrical = false,
+			direction_count = 1,
+			shift = util.by_pixel(0, 0),
+			hr_version =
+			{
+				filename = kr_entities_path .. "remnants/spidertron/hr-spidertron-remnants.png",
+				line_length = 1,
+				width = 448,
+				height = 448,
+				frame_count = 1,
+				variation_count = 1,
+				axially_symmetrical = false,
+				direction_count = 1,
+				shift = util.by_pixel(0, 0),
+				scale = 0.5
+			}
+		},
+		{
+			priority = "low",
+			filename = "__base__/graphics/entity/spidertron/remnants/mask/spidertron-remnants-mask.png",
+			width = 184,
+			height = 176,
+			frame_count = 1,
+			apply_runtime_tint = true,
+			direction_count = 1,
+			shift = util.by_pixel(9, 1),
+			hr_version =
+			{
+				priority = "low",
+				filename = "__base__/graphics/entity/spidertron/remnants/mask/hr-spidertron-remnants-mask.png",
+				width = 366,
+				height = 350,
+				frame_count = 1,
+				apply_runtime_tint = true,
+				direction_count = 1,
+				shift = util.by_pixel(9, 1),
+				scale = 0.5
+			}
+		}
+	}
+})

@@ -4,6 +4,7 @@ Date: 17.08.2020
     - Now is displayed the missing fuel icon when the spidertron haven't any fuel to move.
     - Now Krastorio 2 intro message will be printed after the cutscene.
     - Now Krastorio 2 crash site entities are fire resistant to avoid that they will blow up in the cutscene.
+    - Changed spidertron corpse to have an AI core on instead of a fish. 
   Fixes:
     - Fixed that Krastorio 2 crash-site entities can be positioned under vanilla crash-site entities, because vanilla crash-site positioning script didn't check if is placing entities over existing one.
     - Re-added some patreons removed from patreon list. 
