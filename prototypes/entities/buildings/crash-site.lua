@@ -41,6 +41,12 @@ crash_site_lab_repaired_entity.name = "kr-crash-site-lab-repaired"
 crash_site_lab_repaired_entity.flags = crash_site_flags
 crash_site_lab_repaired_entity.localised_name = {"entity-name.kr-damaged-ship-research-computer"}
 crash_site_lab_repaired_entity.localised_description = {"entity-description.kr-crash-site-building"}
+crash_site_lab_repaired_entity.resistances =
+{
+	{type = "fire", percent = 100},
+	{type = "impact",percent = 60},
+	{type = "physical",percent = 50}
+}
 crash_site_lab_repaired_entity.inputs = { "basic-tech-card" }
 crash_site_lab_repaired_entity.minable = big_minable_ship_residues
 crash_site_lab_repaired_entity.has_backer_name = false
@@ -57,6 +63,12 @@ crash_site_assembling_machine_1_repaired_entity.name = "kr-crash-site-assembling
 crash_site_assembling_machine_1_repaired_entity.flags = crash_site_flags
 crash_site_assembling_machine_1_repaired_entity.localised_name = {"entity-name.kr-damaged-ship-assembler"}
 crash_site_assembling_machine_1_repaired_entity.localised_description = {"entity-description.kr-crash-site-building"}
+crash_site_assembling_machine_1_repaired_entity.resistances =
+{
+	{type = "fire", percent = 100},
+	{type = "impact",percent = 60},
+	{type = "physical",percent = 50}
+}
 crash_site_assembling_machine_1_repaired_entity.minable = big_minable_ship_residues
 crash_site_assembling_machine_1_repaired_entity.crafting_speed = 0.5
 crash_site_assembling_machine_1_repaired_entity.has_backer_name = false
@@ -72,6 +84,12 @@ crash_site_assembling_machine_2_repaired_entity.name = "kr-crash-site-assembling
 crash_site_assembling_machine_2_repaired_entity.flags = crash_site_flags
 crash_site_assembling_machine_2_repaired_entity.localised_name = {"entity-name.kr-damaged-ship-assembler"}
 crash_site_assembling_machine_2_repaired_entity.localised_description = {"entity-description.kr-crash-site-building"}
+crash_site_assembling_machine_2_repaired_entity.resistances =
+{
+	{type = "fire", percent = 100},
+	{type = "impact",percent = 60},
+	{type = "physical",percent = 50}
+}
 crash_site_assembling_machine_2_repaired_entity.minable = big_minable_ship_residues
 crash_site_assembling_machine_2_repaired_entity.crafting_speed = 0.25
 crash_site_assembling_machine_2_repaired_entity.has_backer_name = false
@@ -88,6 +106,12 @@ crash_site_generator_entity.name = "kr-crash-site-generator"
 crash_site_generator_entity.flags = crash_site_flags
 crash_site_generator_entity.localised_name = {"entity-name.kr-damaged-ship-reactor"}
 crash_site_generator_entity.localised_description = {"entity-description.kr-crash-site-building"}
+crash_site_generator_entity.resistances =
+{
+	{type = "fire", percent = 100},
+	{type = "impact",percent = 60},
+	{type = "physical",percent = 50}
+}
 crash_site_generator_entity.energy_source =
 {
   type = "electric",
@@ -111,6 +135,12 @@ crash_site_chest_1_entity.name = "kr-crash-site-chest-1"
 crash_site_chest_1_entity.flags = crash_site_flags
 crash_site_chest_1_entity.localised_name = {"entity-name.crash-site-chest-1"}
 crash_site_chest_1_entity.localised_description = {"entity-description.kr-crash-site-building"}
+crash_site_chest_1_entity.resistances =
+{
+	{type = "fire", percent = 100},
+	{type = "impact",percent = 60},
+	{type = "physical",percent = 50}
+}
 crash_site_chest_1_entity.minable = small_minable_ship_residues
 crash_site_chest_1_entity.inventory_size = 5
 data:extend({crash_site_chest_1_item, crash_site_chest_1_entity})
@@ -125,6 +155,12 @@ crash_site_chest_2_entity.name = "kr-crash-site-chest-2"
 crash_site_chest_2_entity.flags = crash_site_flags
 crash_site_chest_2_entity.localised_name = {"entity-name.crash-site-chest-2"}
 crash_site_chest_2_entity.localised_description = {"entity-description.kr-crash-site-building"}
+crash_site_chest_2_entity.resistances =
+{
+	{type = "fire", percent = 100},
+	{type = "impact",percent = 60},
+	{type = "physical",percent = 50}
+}
 crash_site_chest_2_entity.minable = small_minable_ship_residues
 crash_site_chest_2_entity.inventory_size = 5
 data:extend({crash_site_chest_2_item, crash_site_chest_2_entity})
@@ -134,5 +170,11 @@ local mineable_wreckage_entity = util.table.deepcopy(data.raw["simple-entity"]["
 mineable_wreckage_entity.name = "kr-mineable-wreckage"
 mineable_wreckage_entity.flags = crash_site_flags
 mineable_wreckage_entity.localised_description = {"entity-description.mineable-wreckage"}
+mineable_wreckage_entity.resistances =
+{
+	{type = "fire", percent = 100},
+	{type = "impact",percent = 60},
+	{type = "physical",percent = 50}
+}
 mineable_wreckage_entity.minable = small_minable_ship_residues
 data:extend({mineable_wreckage_entity})

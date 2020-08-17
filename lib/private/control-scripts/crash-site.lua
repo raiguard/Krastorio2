@@ -1,5 +1,5 @@
 random_generator = nil
-crash_site_enabled = true
+global.crash_site_enabled = true
 local start_items =
 {
 	"iron-plate",
@@ -42,7 +42,7 @@ if not remote.interfaces["kr-crash-site"] then
 			if type(bool) ~= "boolean" then 
 				error("Value for 'set_crash_site' must be a boolean.")
 			end
-			crash_site_enabled = bool
+			global.crash_site_enabled = bool
 		end,
 		add_crash_site_item = 
 		function(item_name)
@@ -73,10 +73,14 @@ local function randomizePosition(start_position, range)
 	return {x = start_position.x - x_modifier, y = start_position.y - y_modifier}
 end
 
-local function createCrashSite()
-	if not crash_site_enabled then
+local function createCrashSite(event)
+	if global.crash_site_enabled == nil then
+		global.crash_site_enabled = true
+	end	
+	if event.player_index > 1 or global.k2_crash_site_created or not global.crash_site_enabled then
 		return false
 	end
+	global.k2_crash_site_created = true
 
 	local surface = game.surfaces[1]
 	local player_force = game.forces[1]
@@ -139,5 +143,5 @@ end
 return
 {
 	-- -- Bootstrap
-	{ createCrashSite, "on_init" }    
+	{ createCrashSite, "on_player_created" }    
 }

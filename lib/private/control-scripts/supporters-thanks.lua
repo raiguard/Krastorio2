@@ -30,5 +30,5 @@ end
 return
 {
 	-- -- Bootstrap
-	{ thanksOnPlayerJoin, "on_player_created" }    
+	{ thanksOnPlayerJoin, "on_cutscene_cancelled" }    
 }

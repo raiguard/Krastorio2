@@ -54,7 +54,8 @@ local krastorio_high_patreons =
 	["lordfish"] = true,
 	["zippyit"] = true,
 	["sollevix"] = true,
-	["tobi"] = true
+	["tobi"] = true,
+	["quezler"] = true
 }
 
 -- lists of patreons
@@ -65,7 +66,7 @@ function isHighLevelPatreon(name)
 		return true
 	end
 	for i, supporter in pairs(patreons_list.getHighSupportersList()) do
-		if supporter == name or string.lower(supporter) == name then
+		if string.lower(supporter) == string.lower(name) then
 			return true
 		end
 	end
