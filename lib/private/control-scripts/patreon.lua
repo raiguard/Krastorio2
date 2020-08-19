@@ -92,7 +92,7 @@ function givePatreonItems(event)
 			end
 		end
 		global.patreon_item_given[player.name] = true
-		game.print({"other.kr-patreon-stuff-success"})
+		player.print({"other.kr-patreon-stuff-success"})
 	end
 end
 
@@ -102,7 +102,7 @@ local function tryToGetPatreonItems(command)
 	if player then
 		if isHighLevelPatreon(player.name) then
 			if global.patreon_item_given[player.name] then
-				game.print({"other.kr-patreon-stuff-error"})
+				player.print({"other.kr-patreon-stuff-error"})
 			else
 				givePatreonItems(command)
 			end
@@ -112,7 +112,7 @@ local function tryToGetPatreonItems(command)
 				inventory.insert({ name="spoiled-potato", count=1 })
 			end
 			local num = math.random(1, 3)
-			game.print({"other.kr-patreon-stuff-fail-"..tostring(num)})
+			player.print({"other.kr-patreon-stuff-fail-"..tostring(num)})
 		end
 	end
 end
