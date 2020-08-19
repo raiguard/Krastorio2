@@ -76,8 +76,9 @@ end
 
 -- Patreon Stuff
 function givePatreonItems(event)
-	if isHighLevelPatreon(game.players[event.player_index].name) then
-		local inventory = game.players[event.player_index].get_main_inventory()
+	local player = game.players[event.player_index]
+	if player and player.character ~= nil and isHighLevelPatreon(player.name) then
+		local inventory = player.get_main_inventory()
 		local patreon_items = 
 		{
 			{ name="kr-shelter-plus", count=1 },
@@ -90,29 +91,32 @@ function givePatreonItems(event)
 				inventory.insert(item)
 			end
 		end
-		global.patreon_item_given[game.players[event.player_index].name] = true
+		global.patreon_item_given[player.name] = true
 		game.print({"other.kr-patreon-stuff-success"})
 	end
 end
 
 -- Commands
 local function tryToGetPatreonItems(command)
-	if isHighLevelPatreon(game.players[command.player_index].name) then
-		if global.patreon_item_given[game.players[command.player_index].name] then
-			game.print({"other.kr-patreon-stuff-error"})
-		else
-			givePatreonItems(command)
+	local player = game.players[command.player_index]
+	if player then
+		if isHighLevelPatreon(player.name) then
+			if global.patreon_item_given[player.name] then
+				game.print({"other.kr-patreon-stuff-error"})
+			else
+				givePatreonItems(command)
+			end
+		elseif player.character ~= nil then
+			local inventory = player.get_main_inventory()
+			if inventory.can_insert({ name="spoiled-potato", count=1 }) then
+				inventory.insert({ name="spoiled-potato", count=1 })
+			end
+			local num = math.random(1, 3)
+			game.print({"other.kr-patreon-stuff-fail-"..tostring(num)})
 		end
-	else
-		local inventory = game.players[command.player_index].get_main_inventory()
-		if inventory.can_insert({ name="spoiled-potato", count=1 }) then
-			inventory.insert({ name="spoiled-potato", count=1 })
-		end
-		local num = math.random(1, 3)
-		game.print({"other.kr-patreon-stuff-fail-"..tostring(num)})
 	end
 end
--- Associate command to function
+-- Associate function to command
 if not commands.commands["kr-patreon-stuff"] then
 	commands.add_command("kr-patreon-stuff", {"other.kr-patreon-stuff-help"}, tryToGetPatreonItems)
 end
@@ -135,6 +139,7 @@ return
 	{ onInitAndConf, "on_init" },
 	{ onInitAndConf, "on_configuration_changed" },
 	-- On new game
-	{ givePatreonItems, "on_cutscene_cancelled" }
+	{ givePatreonItems, "on_cutscene_cancelled" },
+	{ givePatreonItems, "on_player_created" }
 }
 	

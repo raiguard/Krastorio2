@@ -1,3 +1,9 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: ??.08.2020
+  Fixes:
+    - Fixed that bonus items was not given if a new player join the game after the cutscene (unfortunatelly is fixed only for new games).
+---------------------------------------------------------------------------------------------------
 Version: 1.0.3
 Date: 17.08.2020
   Changes:
