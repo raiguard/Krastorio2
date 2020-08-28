@@ -11,15 +11,15 @@ data:extend(
     },
 	-- New vehicle equipment category
 	{
-		type = "item-subgroup",
+		type  = "item-subgroup",
 		group = "combat",
-		name = "vehicle-equipment",
+		name  = "vehicle-equipment",
 		order = "e-e3"		
     },
 	{
-		type = "item-subgroup",
+		type  = "item-subgroup",
 		group = "combat",
-		name = "vehicle-motor",
+		name  = "vehicle-motor",
 		order = "e-e4"		
     },
 	-- -- Group
@@ -49,5 +49,9 @@ data:extend(
 	{
 		type = "equipment-category",
 		name = "aircraft-equipment"
-	}
+	},	
+	{
+		type = "equipment-category",
+		name = "spidertron-only"
+    }
 })

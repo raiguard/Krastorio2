@@ -196,6 +196,10 @@ data:extend(
 	}
 })
 
+if krastorio.general.getSafeSettingValue("kr-spidertron-exoskeleton") then
+	table.insert(data.raw["equipment-grid"]["kr-spidertron-equipment-grid"].equipment_categories, "spidertron-only")
+end
+
 -- -- General vehicles grids compatibility, modify grid and integrate it
 applyAndIntegrateEquipmentCategories("car", "car", "kr-car-grid")
 applyAndIntegrateEquipmentCategories("car", "tank", "kr-tank-grid")
@@ -583,6 +587,7 @@ data.raw.item["night-vision-equipment"].order     = "f[night-vision]-a1[night-vi
 -----------------------------------------------------------------------------------------------------------------
 
 data.raw["movement-bonus-equipment"]["exoskeleton-equipment"].movement_bonus = 0.2
+data.raw["movement-bonus-equipment"]["exoskeleton-equipment"].categories = {"armor", "spidertron-only"}
 
 -- -- Items visual(icon, sprites)/modifcation
 objects_to_modify =

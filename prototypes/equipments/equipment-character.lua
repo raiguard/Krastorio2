@@ -132,7 +132,7 @@ data:extend(
 	{		
 		type = "movement-bonus-equipment",
 		name = "advanced-exoskeleton-equipment",
-		categories = {"armor"},
+		categories = {"armor", "spidertron-only"},
 		energy_consumption = "300kW",
 		energy_source =
 		{
@@ -158,7 +158,7 @@ data:extend(
 	{		
 		type = "movement-bonus-equipment",
 		name = "superior-exoskeleton-equipment",
-		categories = {"armor"},
+		categories = {"armor", "spidertron-only"},
 		energy_consumption = "400kW",
 		energy_source =
 		{

@@ -1,8 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.4
-Date: ??.08.2020
+Date: 28.08.2020
+  Changes:
+    - Added an option to allow exoskeletons into spidertron equipment grids (disabled by default).
   Fixes:
     - Fixed that bonus items was not given if a new player join the game after the cutscene (unfortunatelly is fixed only for new games).
+    - Fixed explot with coal filtering recipe, reducing the given coal from 10 to 8. 
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.3
 Date: 17.08.2020
