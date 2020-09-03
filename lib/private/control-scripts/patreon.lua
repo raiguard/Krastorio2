@@ -55,7 +55,8 @@ local krastorio_high_patreons =
 	["zippyit"] = true,
 	["sollevix"] = true,
 	["tobi"] = true,
-	["quezler"] = true
+	["quezler"] = true,
+	["antt1995"] = true
 }
 
 -- lists of patreons

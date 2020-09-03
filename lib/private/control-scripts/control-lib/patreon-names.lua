@@ -94,6 +94,7 @@ patreons_list.low_supporters =
 	"Showwin",
 	"Wolfgang Weber",
 	"webchip",
+	"antt1995",
 	"Влад"
 }
 
