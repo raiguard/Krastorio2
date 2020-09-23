@@ -190,10 +190,7 @@ styles["kr-wiki-description-label"] =
 	parent = "label",
 	font = "default",
 	rich_text_setting = "enabled",
-	single_line = false,
-	vertically_stretchable = "on",
-	horizontally_stretchable = "off",
-	width = 500
+	single_line = false
 }
 
 styles["kr-wiki-image-flow"] =

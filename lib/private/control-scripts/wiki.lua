@@ -160,6 +160,9 @@ function changeWikiDescription(event)
 					addTextToDescrptionGUIPane(wiki_info_pane, element.text or element[2], element_localized, texts_count)
 				end
 			end
+			-- Add hard-fix text to scroll panes
+			texts_count = texts_count + 1
+			addTextToDescrptionGUIPane(wiki_info_pane, " ", false, texts_count)
 		end		
 	end
 end

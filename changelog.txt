@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.5
-Date: XX.09.2020
+Date: 29.09.2020
   Fixes:
-    - Fixed some icons for personal turrets.
+    - Fixed that personal sniper laser defense icons and personal submachine laser defense was swapped.
+    - Fixed that some strings/texts at the end of the wiki window, was not visible.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.4
 Date: 28.08.2020
