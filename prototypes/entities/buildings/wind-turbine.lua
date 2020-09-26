@@ -87,23 +87,23 @@ data:extend(
 				{
 					filename = kr_entities_path .. "wind-turbine/wind-turbine.png",
 					priority = "high",
-					width = 75,
-					height = 110,
+					width = 98,
+					height = 143,
 					frame_count = 30,
 					line_length = 6,
 					animation_speed = 0.8,
-					shift = {0, -0.9},
+					shift = {0, -1.2},
 					hr_version =
 					{
 						filename = kr_entities_path .. "wind-turbine/hr-wind-turbine.png",
 						priority = "medium",
-						width = 150,
-						height = 220,
+						width = 196,
+						height = 286,
 						scale = 0.5,
 						frame_count = 30,
 						line_length = 6,
 						animation_speed = 0.8,
-						shift = {0, -0.9}
+						shift = {0, -1.2}
 					}
 				},
 				{
@@ -113,21 +113,22 @@ data:extend(
 					height = 50,
 					frame_count = 30,
 					line_length = 6,
+					scale = 1.3,
 					animation_speed = 0.5,
 					draw_as_shadow = true,
-					shift = {0.95, 0.1},
+					shift = {1.15, 0.05},
 					hr_version =
 					{
 						filename = kr_entities_path .. "wind-turbine/hr-wind-turbine-shadow.png",
 						priority = "medium",
 						width = 242,
 						height = 100,
-						scale = 0.5,
+						scale = 0.65,
 						frame_count = 30,
 						line_length = 6,
 						animation_speed = 0.5,
 						draw_as_shadow = true,
-						shift = {0.95, 0.1}
+						shift = {1.15, 0.05}
 					}
 				}
 			}

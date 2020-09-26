@@ -3,6 +3,8 @@ Version: 1.0.6
 Date: XX.09.2020
   Fixes:
     - Fixed "atomic-bomb-wave". Now the wave have an explosion damage. Plus added more powerful "antimatter-bomb-wave".
+  Changes:
+    - Sprites for Wind Turbine have been re-rendered.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.5
 Date: 26.09.2020
