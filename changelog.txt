@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+Date: XX.09.2020
+  Fixes:
+    - Fixed "atomic-bomb-wave". Now the wave have an explosion damage. Plus added more powerful "antimatter-bomb-wave".
+---------------------------------------------------------------------------------------------------
 Version: 1.0.5
-Date: 29.09.2020
+Date: 26.09.2020
   Fixes:
     - Fixed that personal sniper laser defense icons and personal submachine laser defense was swapped.
     - Fixed that some strings/texts at the end of the wiki window, was not visible.

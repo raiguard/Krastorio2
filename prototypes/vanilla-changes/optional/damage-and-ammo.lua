@@ -513,9 +513,26 @@ local nuke_shockwave_starting_speed_deviation = 0.075
             upper_distance_threshold = 35,
             lower_damage_modifier = 1,
             upper_damage_modifier = 0.1,
-            damage = {amount = 400, type = "explosion"},
-			damage = {amount = 100, type = "radioactive"}
-          }
+            damage = {amount = 100, type = "explosion"}
+		  },
+          {
+            type = "damage",
+            vaporize = false,
+            lower_distance_threshold = 0,
+            upper_distance_threshold = 35,
+            lower_damage_modifier = 1,
+            upper_damage_modifier = 0.25,
+            damage = {amount = 100, type = "radioactive"}
+		  },
+          {
+            type = "damage",
+            vaporize = false,
+            lower_distance_threshold = 0,
+            upper_distance_threshold = 35,
+            lower_damage_modifier = 1,
+            upper_damage_modifier = 0.1,
+            damage = {amount = 100, type = "kr-explosion"}
+		  }	
         }
       }
     }
