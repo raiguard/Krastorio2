@@ -59,16 +59,16 @@ require(kr_entities_prototypes_path .. "buildings/small-roboport")
 require(kr_entities_prototypes_path .. "buildings/large-roboport")
 -- -- Conteiners
 -- Mediums
+require(kr_entities_prototypes_path .. "buildings/containers/medium-containers/medium-container")
 require(kr_entities_prototypes_path .. "buildings/containers/medium-containers/medium-active-provider-container")
 require(kr_entities_prototypes_path .. "buildings/containers/medium-containers/medium-buffer-container")
-require(kr_entities_prototypes_path .. "buildings/containers/medium-containers/medium-container")
 require(kr_entities_prototypes_path .. "buildings/containers/medium-containers/medium-passive-provider-container")
 require(kr_entities_prototypes_path .. "buildings/containers/medium-containers/medium-requester-container")
 require(kr_entities_prototypes_path .. "buildings/containers/medium-containers/medium-storage-container")
 -- Big
+require(kr_entities_prototypes_path .. "buildings/containers/big-containers/big-container")
 require(kr_entities_prototypes_path .. "buildings/containers/big-containers/big-active-provider-container")
 require(kr_entities_prototypes_path .. "buildings/containers/big-containers/big-buffer-container")
-require(kr_entities_prototypes_path .. "buildings/containers/big-containers/big-container")
 require(kr_entities_prototypes_path .. "buildings/containers/big-containers/big-passive-provider-container")
 require(kr_entities_prototypes_path .. "buildings/containers/big-containers/big-requester-container")
 require(kr_entities_prototypes_path .. "buildings/containers/big-containers/big-storage-container")

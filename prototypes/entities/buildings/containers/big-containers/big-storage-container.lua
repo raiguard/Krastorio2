@@ -19,7 +19,7 @@ data:extend(
 		name = "kr-big-storage-container",
 		icon = _icon_path .. "big-storage-container.png",
 		icon_size = 64,
-		flags = {"placeable-player", "player-creation"},
+		flags = {"placeable-player", "player-creation", "not-rotatable"},
 		minable = {mining_time = 1, result = "kr-big-storage-container"},
 		max_health = 1500,
 		logistic_slots_count = 1,
@@ -78,8 +78,8 @@ data:extend(
 			orientation_to_variation = false
 		},
 		
-		circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-		circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+		circuit_wire_connection_point = circuit_connector_definitions["kr-big-container"].points,
+		circuit_connector_sprites = circuit_connector_definitions["kr-big-container"].sprites,
 		circuit_wire_max_distance = 20,
 		open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
 		close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 }

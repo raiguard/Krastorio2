@@ -19,7 +19,7 @@ data:extend(
 		name = "kr-medium-storage-container",
 		icon = _icon_path .. "medium-storage-container.png",
 		icon_size = 64,
-		flags = {"placeable-player", "player-creation"},
+		flags = {"placeable-player", "player-creation", "not-rotatable"},
 		minable = {mining_time = 0.5, result = "kr-medium-storage-container"},
 		max_health = 500,
 		logistic_slots_count = 1,

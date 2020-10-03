@@ -4,8 +4,16 @@ local sounds      = require("__base__/prototypes/entity/demo-sounds")
 local kr_icons_size = false
 
 if krastorio.general.getSafeSettingValue("kr-large-icons") then
-kr_icons_size = true
+	kr_icons_size = true
 end
+
+circuit_connector_definitions["kr-big-container"] = circuit_connector_definitions.create
+(
+	universal_connector_template,
+	{
+		{ variation = 26, main_offset = util.by_pixel(0.5, -2.6), shadow_offset = util.by_pixel(3.5, 0), show_shadow = true }
+	}
+)
 
 local _medium_containers = "containers/big-containers/"
 local _specific = "big-container/"
@@ -19,7 +27,7 @@ data:extend(
 		name = "kr-big-container",
 		icon = _icon_path .. "big-container.png",
 		icon_size = 64,
-		flags = {"placeable-player", "player-creation"},
+		flags = {"placeable-player", "player-creation", "not-rotatable"},
 		minable = {mining_time = 1, result = "kr-big-container"},
 		max_health = 1500,
 		corpse = "kr-big-random-pipes-remnant",
@@ -72,8 +80,8 @@ data:extend(
 			orientation_to_variation = false
 		},
 		
-		circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-		circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+		circuit_wire_connection_point = circuit_connector_definitions["kr-big-container"].points,
+		circuit_connector_sprites = circuit_connector_definitions["kr-big-container"].sprites,
 		circuit_wire_max_distance = 20,
 		open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
 		close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 }

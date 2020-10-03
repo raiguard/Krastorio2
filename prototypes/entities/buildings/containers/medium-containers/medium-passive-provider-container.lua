@@ -19,7 +19,7 @@ data:extend(
 		name = "kr-medium-passive-provider-container",
 		icon = _icon_path .. "medium-passive-provider-container.png",
 		icon_size = 64,
-		flags = {"placeable-player", "player-creation"},
+		flags = {"placeable-player", "player-creation", "not-rotatable"},
 		minable = {mining_time = 0.5, result = "kr-medium-passive-provider-container"},
 		max_health = 500,
 		corpse = "big-remnants",

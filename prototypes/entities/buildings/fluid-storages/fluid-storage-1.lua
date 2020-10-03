@@ -7,7 +7,7 @@ data:extend(
 		name = "kr-fluid-storage-1",
 		icon = kr_entities_icons_path .. "fluid-storages/fluid-storage-1.png",
 		icon_size = 64,
-		flags = {"placeable-player", "player-creation"},
+		flags = {"placeable-player", "player-creation", "not-rotatable"},
 		minable = {mining_time = 0.5, result = "kr-fluid-storage-1"},
 		max_health = 750,
 		corpse = "big-remnants",
@@ -17,7 +17,7 @@ data:extend(
 			{type = "fire", percent = 75},
 			{type = "impact", percent = 50}
 		},
-		collision_box = {{-1.35, -1.35}, {1.35, 1.35}},
+		collision_box = {{-1.25, -1.25}, {1.25, 1.25}},
 		selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 		fluid_box =
 		{

@@ -3,6 +3,9 @@
 -- Satellite
 data.raw.item["satellite"].rocket_launch_product = {"space-research-data", 1000}
 
+-- Space science pack description
+data.raw.tool["space-science-pack"].localised_description = {"item-description.optimization-tech-card"}
+
 -----------------------------------------------------------------
 
 -- Fish

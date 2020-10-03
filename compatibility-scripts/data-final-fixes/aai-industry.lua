@@ -83,4 +83,9 @@ if mods["aai-industry"] then
 
 	-- -- -- ENFORCE SCIENCE PACK PREREQUISITE COHERENCE, again.
 	krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
+	
+	-- External compatibility call
+	if k2_aai_industry_compatibility then
+		k2_aai_industry_compatibility()
+	end
 end
