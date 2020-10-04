@@ -1,4 +1,5 @@
 -- Init global vars
+local util = require("__core__/lualib/util")
 require("__Krastorio2__/lib/private/control-scripts/control-lib/control-lib-initialization")
 
 ------------------------------------------------------------------------------------
@@ -72,8 +73,12 @@ local function saveLastOpenInformations(event)
 	if not global.player_last_open_entity[event.player_index] then
 		global.player_last_open_entity[event.player_index] = {nil, nil}
 	end
-		
-	if event.gui_type == 3 and game.players[event.player_index] and game.players[event.player_index].character then
+
+	if 
+		(event.gui_type == 3 or event.gui_type == 5) and 
+		game.players[event.player_index] and 
+		game.players[event.player_index].character 
+	then
 		global.player_last_open_entity[event.player_index] = game.players[event.player_index].character
 	elseif event.gui_type == 1 and event.entity then
 		global.player_last_open_entity[event.player_index] = event.entity
@@ -126,9 +131,8 @@ end
 -- this function will automatically manage removing and readding/override, player monitored entity
 local function removeMonitoredGrid(index, player_index)
 	inizializeGlobalWirelessDictionary()
-	
-	global.wireless_grids[index] = nil	
-	
+
+	-- Remove from player grid indexing if the grid is from an armor
 	if player_index ~= nil then
 		global.players_wireless_grids[player_index] = nil
 	else
@@ -139,13 +143,53 @@ local function removeMonitoredGrid(index, player_index)
 			end
 		end
 	end
+	
+	local old_index = table_size(global.wireless_grids)
+	if old_index < 2 or old_index == index then
+		-- Simply empty the table
+		global.wireless_grids[index] = nil	
+	elseif global.wireless_grids[old_index] ~= nil then
+		-- Move the tail over the element to be removed
+		global.wireless_grids[index] = util.copy(global.wireless_grids[old_index])
+		global.wireless_grids[old_index] = nil
+		
+		-- Update the players grid indexing if necessary
+		for player_index, entity_index in pairs(global.players_wireless_grids) do
+			if entity_index == old_index then
+				global.players_wireless_grids[player_index] = index
+				break
+			end
+		end
+	else 
+		-- Find the latest element if the table is not well indexed
+		local i, _ = next(global.wireless_grids, nil)
+		while i do
+			old_index = i
+			i, _ = next(global.wireless_grids, i)
+		end
+		
+		if old_index ~= index then
+			-- Move the tail over the element to be removed
+			global.wireless_grids[index] = util.copy(global.wireless_grids[old_index])
+			
+			-- Update the players grid indexing if necessary
+			for player_index, entity_index in pairs(global.players_wireless_grids) do
+				if entity_index == old_index then
+					global.players_wireless_grids[player_index] = index
+					break
+				end
+			end
+		end
+		
+		global.wireless_grids[old_index] = nil
+	end
 end
 
 -- Add a new monitored grid associated to an entity
 -- this function will automatically manage removing and readding/override, player monitored entity
 local function addMonitoredGrid(grid, entity, player_index)
 	inizializeGlobalWirelessDictionary()
-	
+
 	if entity.grid then
 		if grid == entity.grid then
 			-- if player entity is already under monitoring
@@ -436,6 +480,26 @@ local function onResearchFinished(event)
 	end
 end
 
+-- Fix for previous versions
+local function tidyUpIndexes()
+	local count = 1
+	local tidy_up_table = {}	
+	local i, group = next(global.wireless_grids, nil)
+	
+	while i do		
+		tidy_up_table[count] = util.copy(group)
+		-- Update the players grid indexing if necessary
+		for player_index, entity_index in pairs(global.players_wireless_grids) do
+			if entity_index == i then
+				global.players_wireless_grids[player_index] = count
+				break
+			end
+		end	
+		count = count + 1
+		i, group = next(global.wireless_grids, i)
+	end
+end
+
 ------------------------------------------------------------------------------------
 return
 { 
@@ -443,6 +507,7 @@ return
 	-- For setup variables
 	{ onInitAndConf, "on_init" },
 	{ onInitAndConf, "on_configuration_changed" },
+	{ tidyUpIndexes, "on_configuration_changed" },
 	-- -- Actions
 	-- Equip
 	{ saveLastOpenInformations, "on_gui_opened" },
