@@ -1,8 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.7
-Date: XX.10.2020
+Date: 08.10.2020
   Fixes:
-    - Fixed that some antennas will not change the equipment cause bad index management.
+    - Fixed that some antennas will not charge the equipment grid cause bad index management.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.6
 Date: 03.10.2020
