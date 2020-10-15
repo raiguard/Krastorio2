@@ -714,7 +714,7 @@ data:extend(
 				recipe = "kr-energy-storage"
 			}
 		},
-		prerequisites = {"kr-matter-tech-card", "kr-energy-control-unit"},
+		prerequisites = {"electric-energy-accumulators", "kr-matter-tech-card", "kr-energy-control-unit"},
 		unit =
 		{
 			count = 350,

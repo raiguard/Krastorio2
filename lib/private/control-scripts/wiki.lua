@@ -168,16 +168,45 @@ function changeWikiDescription(event)
 end
 
 function createWiki(event)	
-	local player_gui_center = game.players[event.player_index].gui.center
+	local player_gui_screen = game.players[event.player_index].gui.screen
+	player_gui_screen.clear()
 	
 	-- Window
-	local wiki_frame = krastorio.gui.addFrame(player_gui_center, 
+	local wiki_frame = krastorio.gui.addFrame(player_gui_screen, 
 	{
 		name      = w_prefix.."main-frame", 
-		caption   = {"gui.wiki-name"},
 		direction = "vertical", 
 		style     = "kr-wiki-window"
 	})
+	local wiki_title_table = krastorio.gui.addTable(wiki_frame, 
+	{
+		name                  = w_prefix.."title-table",
+		direction             = "horizontal",
+		column_count          = 3,
+		draw_horizontal_lines = false,
+		style                 = "kr-title-table"
+	})
+	-- Frame title
+	krastorio.gui.addLabel(wiki_title_table, 
+	{
+		name    = w_prefix.."title-label", 
+		caption = {"gui.wiki-name"},
+		style   = "kr-title-label"
+	})	
+	-- Draggable separatator
+	krastorio.gui.addEmptyWidget(wiki_title_table, 
+	{
+		name        = w_prefix.."title-draggable-space", 
+		drag_target = wiki_frame,
+		style       = "kr-title-draggable-space"
+	})	
+	-- Top left close button 
+	krastorio.gui.addSpriteButton(wiki_title_table,
+	{
+		name   = w_prefix.."close-button",
+		sprite = "utility/close_white",
+		style  = "kr-top-right-close-button"
+	})		
 	-- Main Window Container 
 	local wiki_main_flow = krastorio.gui.addFlow(wiki_frame, 
 	{
@@ -186,25 +215,27 @@ function createWiki(event)
 		style     = "kr-wiki-window-flow"
 	})
 	-- Back button section
+	--[[ OLD CLOSE BUTTON
 	local back_button_flow = krastorio.gui.addFlow(wiki_frame, 
 	{
 		name      = w_prefix.."back-button-flow",
 		direction = "horizontal",
 		style     = "kr-wiki-back-button-flow"
-	})
+	})	
 	local inner_back_button_flow = krastorio.gui.addFlow(back_button_flow, 
 	{
 		name      = w_prefix.."inner-back-button-flow",
 		direction = "horizontal",
 		style     = "horizontal_flow"
 	})	
-	-- Back button
+	-- Bottom left close button	
 	krastorio.gui.addBackButton(inner_back_button_flow, 
 	{
-		name    = w_prefix.."close", 
+		name    = w_prefix.."close-button-2", 
 		caption = {"gui.close-wiki"},
 		style   = "kr-wiki-back-button"
 	})
+	--]]
 	--Filler
 	krastorio.gui.addElement
 	(
@@ -257,7 +288,14 @@ function createWiki(event)
 	local info_label = krastorio.gui.addDescription(wiki_info_pane, {name=w_prefix.."info", caption={"gui.info-description"}})	
 	
 	-- Add window frame to main player opened wiki
-	game.players[event.player_index].opened =	wiki_frame
+	game.players[event.player_index].opened = wiki_frame
+	-- Call to center the frame when the size will not change anymore (at the end of the function)
+	wiki_frame.force_auto_center()
+	
+	-- GUI Callbacks
+	krastorio.gui.addClickElementEvent(w_prefix.."toggle-wiki", "toggleWiki")	
+	krastorio.gui.addClickElementEvent(w_prefix.."close-button", "closeWiki")	
+	krastorio.gui.addSelectElementEvent(w_prefix.."topics-list", "changeWikiDescription")
 end
 
 function toggleWiki(event)
@@ -321,11 +359,12 @@ function onConfigurationChanged(event)
 	end
 end
 
--- Callbacks
+-- GUI Callbacks
 krastorio.gui.addClickElementEvent(w_prefix.."toggle-wiki", "toggleWiki")	
-krastorio.gui.addClickElementEvent(w_prefix.."close", "closeWiki")		
+krastorio.gui.addClickElementEvent(w_prefix.."close-button", "closeWiki")	
 krastorio.gui.addSelectElementEvent(w_prefix.."topics-list", "changeWikiDescription")
 
+-- Callbacks
 if script.active_mods["Booktorio"] then
 	krastorio_thread =
 	{

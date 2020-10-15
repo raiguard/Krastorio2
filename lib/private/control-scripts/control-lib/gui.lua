@@ -88,7 +88,7 @@ function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others
 		element.tooltip = others.tooltip or tooltip
 		element.enabled = others.enabled
 		element.ignored_by_interaction = others.ignored_by_interaction
-		element.style = others.style
+		element.style   = others.style
 		
 		-- Button
 		if element.type == "button" then
@@ -225,7 +225,7 @@ function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others
 			element.force = others.force
 			element.zoom = others.zoom
 		end
-		
+			
 		-- Tab
 		if element.type == "tab" then
 			element.badge_text = others.badge_text
@@ -244,6 +244,11 @@ function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others
 		-- add the element		
 		element = parent.add(element)
 		krastorio.gui.setElementByName(element.player_index, element)
+		
+		-- Empty widget special property
+		if element.type == "empty-widget" and others.drag_target then
+			element.drag_target = others.drag_target
+		end
 		
 		return element
 		
@@ -363,6 +368,24 @@ function krastorio.gui.addSprite(parent, name, sprite, others)
 	others.sprite = others.sprite or sprite
 	others.style = others.style or nil
 	return krastorio.gui.addElement(parent, "sprite", name, nil, nil, others)
+end
+
+-- Empty widget
+function krastorio.gui.addEmptyWidget(parent, name, drag_target, others)
+	others = krastorio.gui.getOthersTable(name, nil, nil, others)
+	others.drag_target = others.drag_target or drag_target
+	others.style = others.style or nil
+	return krastorio.gui.addElement(parent, "empty-widget", name, nil, nil, others)
+end
+
+-- Camera
+function krastorio.gui.addCamera(parent, name, position, surface_index, zoom, others)
+	others = krastorio.gui.getOthersTable(name, nil, nil, others)
+	others.position = others.position or position
+	others.surface_index = others.surface_index or surface_index
+	others.zoom = others.zoom or zoom
+	others.style = others.style or nil
+	return krastorio.gui.addElement(parent, "camera", name, nil, nil, others)
 end
 
 -------------------------------------------------------------

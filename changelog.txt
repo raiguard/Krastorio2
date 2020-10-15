@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 07.11.2020
+  Info:
+    - ANNIVERSARY UPDATE!!! Thank you all, all followed us, all supported us all that enjoyed our mod! To celebrate one year of life, from the first alpha release, we have add one new feature.
+  Features:
+    - ???
+  Fixes:
+    - Fixed that option to allow exoskeletons into spidertron equipment grids, was not available.
+    - Added electric energy accumulators as prerequisite to energy storages.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.7
 Date: 08.10.2020
   Fixes:
