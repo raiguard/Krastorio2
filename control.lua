@@ -73,10 +73,14 @@ for _, script in pairs(scripts) do
 end
 
 -- GUI events
-local ce = krastorio.gui.getCollectiveClickEventsCallback()
+local ce  = krastorio.gui.getCollectiveClickEventsCallback()
 ccm:addCallBack({ce, "on_gui_click"})
-local se = krastorio.gui.getCollectiveSelectEventsCallback()
+local se  = krastorio.gui.getCollectiveSelectEventsCallback()
 ccm:addCallBack({se, "on_gui_selection_state_changed"})
+local ce2 = krastorio.gui.getCollectiveConfirmedEventsCallback()
+ccm:addCallBack({ce2, "on_gui_confirmed"})
+local te  = krastorio.gui.getCollectiveTextEventsCallback()
+ccm:addCallBack({te, "on_gui_text_changed"})
 
 -- Active merged callbacks
 ccm:activeCallbacks()

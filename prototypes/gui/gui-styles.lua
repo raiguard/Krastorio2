@@ -7,35 +7,60 @@ cyan_button_glow_color = {194, 234, 252, 128}
 
 styles["kr-title-table"] = 
 {
-	type = "table_style",
-	padding = 2,
+	type                     = "table_style",
+	maximal_height           = 40,
+	padding                  = 2,
 	horizontally_stretchable = "on",
-	column_alignments = 
+	vertical_stretchable     = "off",
+	horizontal_spacing       = 6,
+	vertical_spacing         = 1,
+	column_alignments        = 
 	{
-		{ column = 1, alignment = "left"},
+		{ column = 1, alignment = "right"},
 		{ column = 2, alignment = "center"},
-		{ column = 3, alignment = "right"},
-		{ column = 4, alignment = "right"},
-		{ column = 5, alignment = "right"},
-		{ column = 6, alignment = "right"},
-		{ column = 7, alignment = "right"}
+		{ column = 3, alignment = "left"},
+		{ column = 4, alignment = "left"},
+		{ column = 5, alignment = "left"},
+		{ column = 6, alignment = "left"},
+		{ column = 7, alignment = "left"},
+		{ column = 8, alignment = "left"},
+		{ column = 9, alignment = "left"}
 	}
 }
 
 styles["kr-title-label"] =
 {
-	type       = "label_style",
-	parent     = "frame_title",
-	font       = "default-large-bold",
-	font_color = bold_font_color
+	type                 = "label_style",
+	parent               = "frame_title",
+	height               = 24,
+	padding              = 0,
+	vertical_stretchable = "off",
+	font                 = "default-large-bold",
+	rich_text_setting    = "enabled",
+	font_color           = bold_font_color
+}
+
+-- Teleporters label
+styles["kr-title-edit-textbox"] =
+{
+	type                 = "textbox_style",
+	parent               = "textbox",
+	width                = 160,
+	height               = 24,
+	padding              = 0,
+	vertical_stretchable = "off",
+	font                 = "default-large-semibold",
+	rich_text_setting    = "enabled",
+	single_line          = true
 }
 
 styles["kr-title-draggable-space"] =
 {
-	type = "empty_widget_style",
-	parent = "draggable_space",
-	height = 24,
-	horizontally_stretchable = "on"
+	type                     = "empty_widget_style",
+	parent                   = "draggable_space",
+	height                   = 24,
+	horizontally_stretchable = "on",
+	horizontally_squashable  = "on"
 }
 
 styles["kr-top-right-button"] = 
@@ -44,6 +69,35 @@ styles["kr-top-right-button"] =
 	parent             = "frame_button",
 	size               = 24,
 	left_click_sound   = {{ filename = "__core__/sound/gui-tool-button.ogg", volume = 1 }}
+}
+
+styles["kr-top-right-confirm-button"] = 
+{
+	type               = "button_style",
+	parent             = "frame_button",
+	size               = 24,
+	left_click_sound   = {{ filename = "__core__/sound/gui-tool-button.ogg", volume = 1 }},
+	default_graphical_set =
+	{
+		base = {position = {68, 17}, corner_size = 8},
+		shadow = default_shadow
+	},
+	hovered_graphical_set =
+	{
+		base = {position = {102, 17}, corner_size = 8},
+		shadow = default_shadow,
+		glow = default_glow(cyan_button_glow_color, 0.5)
+	},
+	clicked_graphical_set =
+	{
+		base = {position = {120, 17}, corner_size = 8},
+		shadow = default_shadow
+	},
+	disabled_graphical_set =
+	{
+		base = {position = {86, 17}, corner_size = 8},
+		shadow = default_shadow
+	}
 }
 
 styles["kr-top-right-rename-button"] = 
@@ -410,18 +464,18 @@ styles["kr-pt-tps-table"] =
 	vertically_stretchable   = "on",
 	minimal_width            = 490, 
 	minimal_height           = 334,
-	horizontal_spacing       = 12,
-	vertical_spacing         = 12,
+	horizontal_spacing       = 1,
+	vertical_spacing         = 1,
 	background_graphical_set =
 	{
 		position = {282, 17},
 		corner_size = 8,
-		overall_tiling_vertical_size = 164,
+		overall_tiling_vertical_size = 165,
 		overall_tiling_vertical_spacing = 0,
-		overall_tiling_vertical_padding = 0,
-		overall_tiling_horizontal_size = 164,
+		overall_tiling_vertical_padding = 1,
+		overall_tiling_horizontal_size = 165,
 		overall_tiling_horizontal_spacing = 0,
-		overall_tiling_horizontal_padding = 0
+		overall_tiling_horizontal_padding = 1
 	}
 }
 
@@ -465,7 +519,8 @@ styles["kr-pt-tp-button"] =
 	{
 		{ filename = "__core__/sound/gui-click.ogg" }
 	},
-	draw_shadow_under_picture = true
+	draw_shadow_under_picture = true,
+	padding = 0
 }
 
 -- Teleporters flow
@@ -474,12 +529,10 @@ styles["kr-pt-tp-flow"] =
 	type                   = "vertical_flow_style",
     vertical_align         = "center",
 	horizontal_align       = "center",
-	horizontal_stretchable = "off",
-	vertically_stretchable = "off",
+	horizontal_stretchable = "on",
+	vertically_stretchable = "on",
 	natural_width          = 161,
-	natural_height         = 161,
-    padding                = 2,
-	margin                 = 2
+	natural_height         = 161
 }
 
 -- Teleporters label

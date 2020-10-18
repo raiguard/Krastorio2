@@ -9,6 +9,12 @@ end
 if not global.krastorio.gui.select_events then
 	global.krastorio.gui.select_events = {}
 end
+if not global.krastorio.gui.confirmed_events then
+	global.krastorio.gui.confirmed_events = {}
+end
+if not global.krastorio.gui.text_events then
+	global.krastorio.gui.text_events = {}
+end
 
 if not krastorio then
 	krastorio = {}
@@ -246,8 +252,13 @@ function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others
 		krastorio.gui.setElementByName(element.player_index, element)
 		
 		-- Empty widget special property
-		if element.type == "empty-widget" and others.drag_target then
+		if element.type == "empty-widget" and others.drag_target ~= nil then
 			element.drag_target = others.drag_target
+		end
+		
+		-- Visiblity property
+		if others.visible ~= nil then
+			element.visible = others.visible
 		end
 		
 		return element
@@ -327,6 +338,13 @@ function krastorio.gui.addDescription(parent, name, caption, tooltip, others)
 	return krastorio.gui.addElement(parent, "label", name, caption, tooltip, others)
 end
 
+function krastorio.gui.addTextField(parent, name, text, tooltip, others)
+	others = krastorio.gui.getOthersTable(name, caption, tooltip, others)
+	others.style = others.style or "textbox" 
+	others.text = text or others.text or others.caption or ""
+	return krastorio.gui.addElement(parent, "textfield", name, text, tooltip, others)
+end
+
 -- -- Buttons
 
 function krastorio.gui.addTextButton(parent, name, caption, tooltip, others)
@@ -392,11 +410,18 @@ end
 -- -- Events
 -------------------------------------------------------------
 
+-- -- Clicks
 function krastorio.gui.addClickElementEvent(element_name, callback_name)
 	if type(callback_name) == "string" then 
 		if type(element_name) == "table" then
 			element_name = element_name.name
 		end 
+		if not global.krastorio.gui then
+			global.krastorio.gui = {}
+		end
+		if not global.krastorio.gui.click_events then
+			global.krastorio.gui.click_events = {}
+		end
 		global.krastorio.gui.click_events[element_name] = callback_name
 	end
 end
@@ -405,19 +430,28 @@ function krastorio.gui.getCollectiveClickEventsCallback()
 	return 
 	function(...)
 		local called_element_name = krastorio.gui.getElementNameFromEvent(...)
-		for element_name, callback in pairs(global.krastorio.gui.click_events) do
-			if called_element_name == element_name then 
-				_ENV[callback](...)
+		if global.krastorio.gui.click_events then
+			for element_name, callback in pairs(global.krastorio.gui.click_events) do
+				if called_element_name == element_name then 
+					_ENV[callback](...)
+				end
 			end
 		end
 	end
 end
 
+-- -- Selects
 function krastorio.gui.addSelectElementEvent(element_name, callback_name)
 	if type(callback_name) == "string" then
 		if type(element_name) == "table" then
 			element_name = element_name.name
 		end 
+		if not global.krastorio.gui then
+			global.krastorio.gui = {}
+		end
+		if not global.krastorio.gui.select_events then
+			global.krastorio.gui.select_events = {}
+		end
 		global.krastorio.gui.select_events[element_name] = callback_name
 	end
 end
@@ -426,9 +460,71 @@ function krastorio.gui.getCollectiveSelectEventsCallback()
 	return 
 	function(...)
 		local called_element_name = krastorio.gui.getElementNameFromEvent(...)
-		for element_name, callback in pairs(global.krastorio.gui.select_events) do
-			if called_element_name == element_name then 
-				_ENV[callback](...)
+		if global.krastorio.gui.select_events then
+			for element_name, callback in pairs(global.krastorio.gui.select_events) do
+				if called_element_name == element_name then 
+					_ENV[callback](...)
+				end
+			end
+		end
+	end
+end
+
+-- -- Confirms (enter pressing in the textfield)
+function krastorio.gui.addConfirmedElementEvent(element_name, callback_name)
+	if type(callback_name) == "string" then 
+		if type(element_name) == "table" then
+			element_name = element_name.name
+		end 
+		if not global.krastorio.gui then
+			global.krastorio.gui = {}
+		end
+		if not global.krastorio.gui.confirmed_events then
+			global.krastorio.gui.confirmed_events = {}
+		end
+		global.krastorio.gui.confirmed_events[element_name] = callback_name
+	end
+end
+
+function krastorio.gui.getCollectiveConfirmedEventsCallback()
+	return 
+	function(...)
+		local called_element_name = krastorio.gui.getElementNameFromEvent(...)
+		if global.krastorio.gui.confirmed_events then
+			for element_name, callback in pairs(global.krastorio.gui.confirmed_events) do
+				if called_element_name == element_name then 
+					_ENV[callback](...)
+				end
+			end
+		end
+	end
+end
+
+-- Text
+function krastorio.gui.addTextElementEvent(element_name, callback_name)
+	if type(callback_name) == "string" then 
+		if type(element_name) == "table" then
+			element_name = element_name.name
+		end 
+		if not global.krastorio.gui then
+			global.krastorio.gui = {}
+		end
+		if not global.krastorio.gui.text_events then
+			global.krastorio.gui.text_events = {}
+		end
+		global.krastorio.gui.text_events[element_name] = callback_name
+	end
+end
+
+function krastorio.gui.getCollectiveTextEventsCallback()
+	return 
+	function(...)
+		local called_element_name = krastorio.gui.getElementNameFromEvent(...)
+		if global.krastorio.gui.text_events then
+			for element_name, callback in pairs(global.krastorio.gui.text_events) do
+				if called_element_name == element_name then 
+					_ENV[callback](...)
+				end
 			end
 		end
 	end

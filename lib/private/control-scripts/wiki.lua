@@ -359,11 +359,6 @@ function onConfigurationChanged(event)
 	end
 end
 
--- GUI Callbacks
-krastorio.gui.addClickElementEvent(w_prefix.."toggle-wiki", "toggleWiki")	
-krastorio.gui.addClickElementEvent(w_prefix.."close-button", "closeWiki")	
-krastorio.gui.addSelectElementEvent(w_prefix.."topics-list", "changeWikiDescription")
-
 -- Callbacks
 if script.active_mods["Booktorio"] then
 	krastorio_thread =
