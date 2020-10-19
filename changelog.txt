@@ -8,6 +8,7 @@ Date: 07.11.2020
   Fixes:
     - Fixed that option to allow exoskeletons into spidertron equipment grids, was not available.
     - Added electric energy accumulators as prerequisite to energy storages.
+    - Fixed possible incompatibilities with other mods caused from use of pointed tables in recipe prototypes definitions. 
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.7
 Date: 08.10.2020

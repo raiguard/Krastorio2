@@ -581,7 +581,7 @@ function krastorio.recipes.overrideIngredients(recipe_name, new_ingredients)
 		-- expensive ingredients		
 		local expensive_ingredients = krastorio.recipes.getExpensiveIngredients(recipe_name)
 		if next(expensive_ingredients) ~= nil then
-			krastorio_utils.tables.replace(expensive_ingredients, new_ingredients)
+			krastorio_utils.tables.replace(expensive_ingredients, table.deepcopy(new_ingredients))
 		end
 		return true
 	end
@@ -1111,13 +1111,13 @@ function krastorio.recipes.overrideProducts(recipe_name, new_products, new_expen
 			recipe.normal.result_count    = nil
 		else
 			recipe.result                 = nil
-			recipe.results                = new_products
+			recipe.results                = table.deepcopy(new_products)
 			recipe.result_count           = nil		
 		end
 		-- expensive ingredients			
 		if recipe.expensive then		
 			recipe.expensive.result       = nil
-			recipe.expensive.results      = new_expensive_products or new_products
+			recipe.expensive.results      = new_expensive_products or table.deepcopy(new_products)
 			recipe.expensive.result_count = nil
 		end
 		return true
