@@ -5,6 +5,8 @@ Date: 07.11.2020
     - ANNIVERSARY UPDATE!!! Thank you all, all followed us, all supported us all that enjoyed our mod! To celebrate one year of life, from the first alpha release, we have add one new feature.
   Features:
     - ???
+  Changes:
+    - Added some descriptions to some entities for compatibility purposes (in particular for SE).
   Fixes:
     - Fixed that option to allow exoskeletons into spidertron equipment grids, was not available.
     - Added electric energy accumulators as prerequisite to energy storages.
