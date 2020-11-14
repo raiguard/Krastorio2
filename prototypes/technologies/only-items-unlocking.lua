@@ -540,7 +540,7 @@ data:extend(
 				recipe = "kr-advanced-tank"
 			}
 		},
-		prerequisites = {"tanks", "kr-imersium-processing", "kr-advanced-tech-card", "kr-railgun-turret"},
+		prerequisites = {"tank", "kr-imersium-processing", "kr-advanced-tech-card", "kr-railgun-turret"},
 		unit =
 		{
 			count = 750,

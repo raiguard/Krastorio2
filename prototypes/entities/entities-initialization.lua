@@ -6,6 +6,14 @@ require(kr_entities_prototypes_path .. "buildings/pipe-covers/steel-pipecovers")
 ---------------------------------------------------------------------------------------
 -- -- -- BUILDINGS
 ---------------------------------------------------------------------------------------
+-- Crash site
+require(kr_entities_prototypes_path .. "buildings/crash-site/crash-site-assembling-machine-1")
+require(kr_entities_prototypes_path .. "buildings/crash-site/crash-site-assembling-machine-2")
+require(kr_entities_prototypes_path .. "buildings/crash-site/crash-site-chest-1")
+require(kr_entities_prototypes_path .. "buildings/crash-site/crash-site-chest-2")
+require(kr_entities_prototypes_path .. "buildings/crash-site/crash-site-generator")
+require(kr_entities_prototypes_path .. "buildings/crash-site/crash-site-lab")
+require(kr_entities_prototypes_path .. "buildings/crash-site/mineable-wreckage")
 -- -- Generals
 require(kr_entities_prototypes_path .. "buildings/advanced-chemical-plant")
 require(kr_entities_prototypes_path .. "buildings/advanced-furnace")

@@ -10,7 +10,7 @@ krastorio.technologies.addPrerequisite("automation", "kr-automation-core")
 krastorio.technologies.addPrerequisite("automation", "automation-science-pack")
 krastorio.technologies.addPrerequisite("logistics", "automation-science-pack")
 krastorio.technologies.addPrerequisite("stone-walls", "military")
-krastorio.technologies.addPrerequisite("turrets", "automation-science-pack")
+krastorio.technologies.addPrerequisite("gun-turret", "automation-science-pack")
 krastorio.technologies.addPrerequisite("fast-inserter", "electronics")
 krastorio.technologies.addPrerequisite("heavy-armor", "light-armor")
 krastorio.technologies.addPrerequisite("optics", "kr-stone-processing")
@@ -62,7 +62,7 @@ krastorio.technologies.removePrerequisite("effectivity-module-2", "advanced-elec
 --------------------------------------------------------------------
 
 -- Conversions 
-krastorio.technologies.convertResearchUnitIngredient("stone-walls", "automation-science-pack", "basic-tech-card")
+krastorio.technologies.convertResearchUnitIngredient("stone-wall", "automation-science-pack", "basic-tech-card")
 krastorio.technologies.convertResearchUnitIngredient("military", "automation-science-pack", "basic-tech-card")
 
 -- Addings
@@ -197,7 +197,7 @@ data.raw.technology["utility-science-pack"].unit.count = 250
 data.raw.technology["military-4"].unit.count = 350	
 data.raw.technology["discharge-defense-equipment"].unit.count = 300
 data.raw.technology["uranium-ammo"].unit.count = 300
-data.raw.technology["combat-robotics-3"].unit.count = 350
+data.raw.technology["destroyer"].unit.count = 350
 data.raw.technology["artillery"].unit.count = 1000
 data.raw.technology["laser"].unit.count = 200
 
@@ -227,9 +227,9 @@ data.raw.technology["artillery-shell-speed-1"].max_level = 2
 
 -- --
 
-krastorio.technologies.removePrerequisite("gates", "military-2")
-krastorio.technologies.addPrerequisite("gates", "electronics")
-krastorio.technologies.removeResearchUnitIngredient("gates", "logistic-science-pack")
+krastorio.technologies.removePrerequisite("gate", "military-2")
+krastorio.technologies.addPrerequisite("gate", "electronics")
+krastorio.technologies.removeResearchUnitIngredient("gate", "logistic-science-pack")
 --------------
 -- miscellaneous
 

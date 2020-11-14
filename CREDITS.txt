@@ -26,3 +26,6 @@ Thanks also to:
   "nyoko - Flowing Into The Darkness" - Creative Commons license (CC BY 3.0).
   Music promoted by BreakingCopyright: https://youtu.be/x74grrke9qE, Genre: Dark Ambient,
   nyoko contact: https://soundcloud.com/redowthered
+  
+- Wube
+  Some icons and sprites are imported from the previous version of Factorio.
