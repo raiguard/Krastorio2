@@ -141,7 +141,7 @@ krastorio.technologies.removeUnlockRecipe("oil-processing", "chemical-plant")
 
 
 krastorio.technologies.removeUnlockRecipe("kovarex-enrichment-process", "nuclear-fuel")
-data.raw.technology["kovarex-enrichment-process"].unit.count = 500
+krastorio.technologies.setResearchUnitCount("kovarex-enrichment-process", 500)
 
 --------------------------------------------------------------------
 -- Loaders
@@ -182,24 +182,24 @@ end
 --------------
 -- rocket
 
-data.raw.technology["space-science-pack"].unit.count = 1000
-data.raw.technology["rocket-control-unit"].unit.count = 500
+krastorio.technologies.setResearchUnitCount("space-science-pack", 1000)
+krastorio.technologies.setResearchUnitCount("rocket-control-unit", 500)
 	
 --------------
 -- science packs
 	
-data.raw.technology["production-science-pack"].unit.count = 250
-data.raw.technology["utility-science-pack"].unit.count = 250
+krastorio.technologies.setResearchUnitCount("production-science-pack", 250)
+krastorio.technologies.setResearchUnitCount("utility-science-pack", 250)
 	
 --------------
 -- military
 
-data.raw.technology["military-4"].unit.count = 350	
-data.raw.technology["discharge-defense-equipment"].unit.count = 300
-data.raw.technology["uranium-ammo"].unit.count = 300
-data.raw.technology["destroyer"].unit.count = 350
-data.raw.technology["artillery"].unit.count = 1000
-data.raw.technology["laser"].unit.count = 200
+krastorio.technologies.setResearchUnitCount("military-4", 350)
+krastorio.technologies.setResearchUnitCount("discharge-defense-equipment", 300)
+krastorio.technologies.setResearchUnitCount("uranium-ammo", 300)
+krastorio.technologies.setResearchUnitCount("destroyer", 350)
+krastorio.technologies.setResearchUnitCount("artillery", 1000)
+krastorio.technologies.setResearchUnitCount("laser", 200)
 
 --------------
 -- Solar energy
@@ -233,32 +233,31 @@ krastorio.technologies.removeResearchUnitIngredient("gate", "logistic-science-pa
 --------------
 -- miscellaneous
 
-data.raw.technology["logistic-system"].unit.count = 250
-data.raw.technology["coal-liquefaction"].unit.count = 150	
-data.raw.technology["automation-3"].unit.count = 350		
-data.raw.technology["effect-transmission"].unit.count = 500
-data.raw.technology["low-density-structure"].unit.count = 500
+krastorio.technologies.setResearchUnitCount("logistic-system", 250)
+krastorio.technologies.setResearchUnitCount("coal-liquefaction", 150)	
+krastorio.technologies.setResearchUnitCount("automation-3", 350	)
+krastorio.technologies.setResearchUnitCount("effect-transmission", 500)
+krastorio.technologies.setResearchUnitCount("low-density-structure", 500)
 
 --------------
 -- nuclear
 
-data.raw.technology["uranium-processing"].unit.count = 750
-data.raw.technology["nuclear-power"].unit.count = 500
-data.raw.technology["nuclear-fuel-reprocessing"].unit.count = 250
+krastorio.technologies.setResearchUnitCount("uranium-processing", 750)
+krastorio.technologies.setResearchUnitCount("nuclear-power", 500)
+krastorio.technologies.setResearchUnitCount("nuclear-fuel-reprocessing", 250)
 krastorio.technologies.removePrerequisite("atomic-bomb", "military-4")
 krastorio.technologies.addPrerequisite("atomic-bomb", "kr-military-5")
 krastorio.technologies.addUnlockRecipe("atomic-bomb", "nuclear-artillery-shell")
-data.raw.technology["atomic-bomb"].unit.count = 1500
+krastorio.technologies.setResearchUnitCount("atomic-bomb", 1500)
 
 --------------
 -- stats
 
-data.raw.technology["fusion-reactor-equipment"].unit.count = 350
+krastorio.technologies.setResearchUnitCount("fusion-reactor-equipment", 350)
 
-data.raw.technology["mining-productivity-3"].unit.count = 500	
+krastorio.technologies.setResearchUnitCount("mining-productivity-3", 500)
 data.raw.technology["mining-productivity-4"].unit.count_formula = "(L^2)*200"
 data.raw.technology["mining-productivity-4"].max_level = 10
-
 
 data.raw.technology["follower-robot-count-7"].unit.count_formula = "((L-6)^2)*5000"
 data.raw.technology["follower-robot-count-7"].max_level = nil

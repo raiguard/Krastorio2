@@ -1,3 +1,6 @@
+local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
+local sounds      = require("__base__/prototypes/entity/demo-sounds")
+
 data:extend(
 {   
 	{
@@ -6,7 +9,7 @@ data:extend(
 		localised_name = {"entity-name.kr-damaged-ship-research-computer"},
 		localised_description = {"entity-description.kr-crash-site-building"},
 		has_backer_name = false,
-		icon = "__base__/graphics/icons/crash-site-lab-repaired.png",
+		icon = kr_crash_site_icons_path .. "crash-site-lab-repaired.png",
 		icon_size = 64, icon_mipmaps = 4,
 		flags = {"placeable-player", "player-creation", "hidden", "not-rotatable"},
 		map_color = {r = 0, g = 0.365, b = 0.58, a = 1},
@@ -32,6 +35,7 @@ data:extend(
 			mining_particle = "shell-particle"
 		},
 		dying_explosion = "medium-explosion",
+		damaged_trigger_effect = hit_effects.entity(),
 		collision_box = {{-2.2, -1.2}, {2.2, 1.2}},
 		selection_box = {{-2.5, -1.5}, {2.5, 1.5}},
 		entity_info_icon_shift = util.by_pixel(32, 0),
@@ -198,4 +202,4 @@ data:extend(
 		researching_speed = 1,
 		inputs = { "basic-tech-card" }
 	}
-}
+})

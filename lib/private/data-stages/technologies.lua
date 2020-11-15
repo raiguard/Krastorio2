@@ -584,9 +584,9 @@ end
 
 function krastorio.technologies.convertResearchUnitIngredient(technology_name, old_science_pack_name, new_science_pack_name)
 	local technology    = krastorio.technologies.getTechnologyFromName(technology_name)
-	local prerequisites = technology.prerequisites
+	local prerequisites = (technology and technology.prerequisites) or false
 	local ingredients   = false
-	if technology.unit and technology.unit.ingredients then
+	if technology and technology.unit and technology.unit.ingredients then
 		ingredients     = technology.unit.ingredients					
 	end	
 	local converted     = false
