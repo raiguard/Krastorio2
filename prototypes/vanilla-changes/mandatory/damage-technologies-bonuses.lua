@@ -698,7 +698,7 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 
 ------------------------------------------------
 
-	data.raw["technology"]["laser-turret-speed-1"].effects =
+	data.raw["technology"]["laser-shooting-speed-1"].effects =
     {
       {
         type = "gun-speed",
@@ -706,7 +706,7 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
         modifier = 0.2
       }
     }
-	data.raw["technology"]["laser-turret-speed-2"].effects =
+	data.raw["technology"]["laser-shooting-speed-2"].effects =
     {
       {
         type = "gun-speed",
@@ -714,7 +714,7 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
         modifier = 0.2
       }
     }
-	data.raw["technology"]["laser-turret-speed-3"].effects =
+	data.raw["technology"]["laser-shooting-speed-3"].effects =
     {
       {
         type = "gun-speed",
@@ -722,7 +722,7 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
         modifier = 0.15
       }
     }
-	data.raw["technology"]["laser-turret-speed-4"].effects =
+	data.raw["technology"]["laser-shooting-speed-4"].effects =
     {
       {
         type = "gun-speed",
@@ -730,7 +730,7 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
         modifier = 0.15
       }
     }
-	data.raw["technology"]["laser-turret-speed-5"].effects =
+	data.raw["technology"]["laser-shooting-speed-5"].effects =
     {
       {
         type = "gun-speed",
@@ -738,7 +738,7 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
         modifier = 0.1
       }
     }
-	data.raw["technology"]["laser-turret-speed-6"].effects =
+	data.raw["technology"]["laser-shooting-speed-6"].effects =
     {
       {
         type = "gun-speed",
@@ -746,7 +746,7 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
         modifier = 0.1
       }
     }
-	data.raw["technology"]["laser-turret-speed-7"].effects =
+	data.raw["technology"]["laser-shooting-speed-7"].effects =
     {
       {
         type = "gun-speed",

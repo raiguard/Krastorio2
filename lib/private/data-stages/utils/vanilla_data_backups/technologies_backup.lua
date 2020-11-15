@@ -272,7 +272,7 @@ krastorio_utils.technologies_backup =
 	  order = "d-e-f",
 	  prerequisites = {
 		"military-4",
-		"tanks"
+		"tank"
 	  },
 	  type = "technology",
 	  unit = {
@@ -1822,7 +1822,7 @@ krastorio_utils.technologies_backup =
 		time = 30
 	  }
 	},
-	["combat-robotics"] = {
+	["defender"] = {
 	  effects = {
 		{
 		  recipe = "defender-capsule",
@@ -1833,9 +1833,9 @@ krastorio_utils.technologies_backup =
 		  type = "maximum-following-robots-count"
 		}
 	  },
-	  icon = "__base__/graphics/technology/combat-robotics.png",
+	  icon = "__base__/graphics/technology/defender.png",
 	  icon_size = 128,
-	  name = "combat-robotics",
+	  name = "defender",
 	  order = "e-p-a",
 	  prerequisites = {
 		"military-science-pack"
@@ -1860,19 +1860,19 @@ krastorio_utils.technologies_backup =
 		time = 30
 	  }
 	},
-	["combat-robotics-2"] = {
+	["distractor"] = {
 	  effects = {
 		{
 		  recipe = "distractor-capsule",
 		  type = "unlock-recipe"
 		}
 	  },
-	  icon = "__base__/graphics/technology/combat-robotics.png",
+	  icon = "__base__/graphics/technology/distractor.png",
 	  icon_size = 128,
-	  name = "combat-robotics-2",
+	  name = "distractor",
 	  order = "e-p-b-a",
 	  prerequisites = {
-		"combat-robotics",
+		"defender",
 		"military-3"
 	  },
 	  type = "technology",
@@ -1899,20 +1899,20 @@ krastorio_utils.technologies_backup =
 		time = 30
 	  }
 	},
-	["combat-robotics-3"] = {
+	["destroyer"] = {
 	  effects = {
 		{
 		  recipe = "destroyer-capsule",
 		  type = "unlock-recipe"
 		}
 	  },
-	  icon = "__base__/graphics/technology/combat-robotics.png",
+	  icon = "__base__/graphics/technology/destroyer.png",
 	  icon_size = 128,
-	  name = "combat-robotics-3",
+	  name = "destroyer",
 	  order = "e-p-b-b",
 	  prerequisites = {
 		"military-4",
-		"combat-robotics-2",
+		"distractor",
 		"speed-module"
 	  },
 	  type = "technology",
@@ -2182,7 +2182,7 @@ krastorio_utils.technologies_backup =
 	  name = "discharge-defense-equipment",
 	  order = "g-o",
 	  prerequisites = {
-		"laser-turrets",
+		"laser-turret",
 		"military-3",
 		"power-armor",
 		"solar-panel-equipment"
@@ -3656,19 +3656,19 @@ krastorio_utils.technologies_backup =
 		time = 30
 	  }
 	},
-	gates = {
+	gate = {
 	  effects = {
 		{
 		  recipe = "gate",
 		  type = "unlock-recipe"
 		}
 	  },
-	  icon = "__base__/graphics/technology/gates.png",
+	  icon = "__base__/graphics/technology/gate.png",
 	  icon_size = 128,
-	  name = "gates",
+	  name = "gate",
 	  order = "a-l-a",
 	  prerequisites = {
-		"stone-walls",
+		"stone-wall",
 		"military-2"
 	  },
 	  type = "technology",
@@ -4155,7 +4155,7 @@ krastorio_utils.technologies_backup =
 		time = 30
 	  }
 	},
-	["laser-turret-speed-1"] = {
+	["laser-shooting-speed-1"] = {
 	  effects = {
 		{
 		  ammo_category = "laser-turret",
@@ -4163,12 +4163,12 @@ krastorio_utils.technologies_backup =
 		  type = "gun-speed"
 		}
 	  },
-	  icon = "__base__/graphics/technology/laser-turret-speed.png",
+	  icon = "__base__/graphics/technology/laser-shooting-speed.png",
 	  icon_size = 128,
-	  name = "laser-turret-speed-1",
+	  name = "laser-shooting-speed-1",
 	  order = "e-n-h",
 	  prerequisites = {
-		"laser-turrets"
+		"laser-turret"
 	  },
 	  type = "technology",
 	  unit = {
@@ -4191,7 +4191,7 @@ krastorio_utils.technologies_backup =
 	  },
 	  upgrade = true
 	},
-	["laser-turret-speed-2"] = {
+	["laser-shooting-speed-2"] = {
 	  effects = {
 		{
 		  ammo_category = "laser-turret",
@@ -4199,12 +4199,12 @@ krastorio_utils.technologies_backup =
 		  type = "gun-speed"
 		}
 	  },
-	  icon = "__base__/graphics/technology/laser-turret-speed.png",
+	  icon = "__base__/graphics/technology/laser-shooting-speed.png",
 	  icon_size = 128,
-	  name = "laser-turret-speed-2",
+	  name = "laser-shooting-speed-2",
 	  order = "e-n-i",
 	  prerequisites = {
-		"laser-turret-speed-1"
+		"laser-shooting-speed-1"
 	  },
 	  type = "technology",
 	  unit = {
@@ -4227,7 +4227,7 @@ krastorio_utils.technologies_backup =
 	  },
 	  upgrade = true
 	},
-	["laser-turret-speed-3"] = {
+	["laser-shooting-speed-3"] = {
 	  effects = {
 		{
 		  ammo_category = "laser-turret",
@@ -4235,12 +4235,12 @@ krastorio_utils.technologies_backup =
 		  type = "gun-speed"
 		}
 	  },
-	  icon = "__base__/graphics/technology/laser-turret-speed.png",
+	  icon = "__base__/graphics/technology/laser-shooting-speed.png",
 	  icon_size = 128,
-	  name = "laser-turret-speed-3",
+	  name = "laser-shooting-speed-3",
 	  order = "e-n-j",
 	  prerequisites = {
-		"laser-turret-speed-2"
+		"laser-shooting-speed-2"
 	  },
 	  type = "technology",
 	  unit = {
@@ -4267,7 +4267,7 @@ krastorio_utils.technologies_backup =
 	  },
 	  upgrade = true
 	},
-	["laser-turret-speed-4"] = {
+	["laser-shooting-speed-4"] = {
 	  effects = {
 		{
 		  ammo_category = "laser-turret",
@@ -4275,12 +4275,12 @@ krastorio_utils.technologies_backup =
 		  type = "gun-speed"
 		}
 	  },
-	  icon = "__base__/graphics/technology/laser-turret-speed.png",
+	  icon = "__base__/graphics/technology/laser-shooting-speed.png",
 	  icon_size = 128,
-	  name = "laser-turret-speed-4",
+	  name = "laser-shooting-speed-4",
 	  order = "e-n-k",
 	  prerequisites = {
-		"laser-turret-speed-3"
+		"laser-shooting-speed-3"
 	  },
 	  type = "technology",
 	  unit = {
@@ -4307,7 +4307,7 @@ krastorio_utils.technologies_backup =
 	  },
 	  upgrade = true
 	},
-	["laser-turret-speed-5"] = {
+	["laser-shooting-speed-5"] = {
 	  effects = {
 		{
 		  ammo_category = "laser-turret",
@@ -4315,12 +4315,12 @@ krastorio_utils.technologies_backup =
 		  type = "gun-speed"
 		}
 	  },
-	  icon = "__base__/graphics/technology/laser-turret-speed.png",
+	  icon = "__base__/graphics/technology/laser-shooting-speed.png",
 	  icon_size = 128,
-	  name = "laser-turret-speed-5",
+	  name = "laser-shooting-speed-5",
 	  order = "e-n-l",
 	  prerequisites = {
-		"laser-turret-speed-4"
+		"laser-shooting-speed-4"
 	  },
 	  type = "technology",
 	  unit = {
@@ -4351,7 +4351,7 @@ krastorio_utils.technologies_backup =
 	  },
 	  upgrade = true
 	},
-	["laser-turret-speed-6"] = {
+	["laser-shooting-speed-6"] = {
 	  effects = {
 		{
 		  ammo_category = "laser-turret",
@@ -4359,12 +4359,12 @@ krastorio_utils.technologies_backup =
 		  type = "gun-speed"
 		}
 	  },
-	  icon = "__base__/graphics/technology/laser-turret-speed.png",
+	  icon = "__base__/graphics/technology/laser-shooting-speed.png",
 	  icon_size = 128,
-	  name = "laser-turret-speed-6",
+	  name = "laser-shooting-speed-6",
 	  order = "e-n-m",
 	  prerequisites = {
-		"laser-turret-speed-5"
+		"laser-shooting-speed-5"
 	  },
 	  type = "technology",
 	  unit = {
@@ -4395,7 +4395,7 @@ krastorio_utils.technologies_backup =
 	  },
 	  upgrade = true
 	},
-	["laser-turret-speed-7"] = {
+	["laser-shooting-speed-7"] = {
 	  effects = {
 		{
 		  ammo_category = "laser-turret",
@@ -4403,12 +4403,12 @@ krastorio_utils.technologies_backup =
 		  type = "gun-speed"
 		}
 	  },
-	  icon = "__base__/graphics/technology/laser-turret-speed.png",
+	  icon = "__base__/graphics/technology/laser-shooting-speed.png",
 	  icon_size = 128,
-	  name = "laser-turret-speed-7",
+	  name = "laser-shooting-speed-7",
 	  order = "e-n-n",
 	  prerequisites = {
-		"laser-turret-speed-6"
+		"laser-shooting-speed-6"
 	  },
 	  type = "technology",
 	  unit = {
@@ -4439,19 +4439,19 @@ krastorio_utils.technologies_backup =
 	  },
 	  upgrade = true
 	},
-	["laser-turrets"] = {
+	["laser-turret"] = {
 	  effects = {
 		{
 		  recipe = "laser-turret",
 		  type = "unlock-recipe"
 		}
 	  },
-	  icon = "__base__/graphics/technology/laser-turrets.png",
+	  icon = "__base__/graphics/technology/laser-turret.png",
 	  icon_size = 128,
-	  name = "laser-turrets",
+	  name = "laser-turret",
 	  order = "a-j-b",
 	  prerequisites = {
-		"turrets",
+		"gun-turret",
 		"laser",
 		"military-science-pack"
 	  },
@@ -4947,7 +4947,7 @@ krastorio_utils.technologies_backup =
 	  order = "c-a",
 	  prerequisites = {
 		"military-2",
-		"stone-walls"
+		"stone-wall"
 	  },
 	  type = "technology",
 	  unit = {
@@ -5413,7 +5413,7 @@ krastorio_utils.technologies_backup =
 	  name = "personal-laser-defense-equipment",
 	  order = "g-m",
 	  prerequisites = {
-		"laser-turrets",
+		"laser-turret",
 		"military-3",
 		"low-density-structure",
 		"power-armor",
@@ -7290,16 +7290,16 @@ krastorio_utils.technologies_backup =
 		time = 5
 	  }
 	},
-	["stone-walls"] = {
+	["stone-wall"] = {
 	  effects = {
 		{
 		  recipe = "stone-wall",
 		  type = "unlock-recipe"
 		}
 	  },
-	  icon = "__base__/graphics/technology/stone-walls.png",
+	  icon = "__base__/graphics/technology/stone-wall.png",
 	  icon_size = 128,
-	  name = "stone-walls",
+	  name = "stone-wall",
 	  order = "a-k-a",
 	  type = "technology",
 	  unit = {
@@ -7692,7 +7692,7 @@ krastorio_utils.technologies_backup =
 		time = 30
 	  }
 	},
-	tanks = {
+	tank = {
 	  effects = {
 		{
 		  recipe = "tank",
@@ -7707,9 +7707,9 @@ krastorio_utils.technologies_backup =
 		  type = "unlock-recipe"
 		}
 	  },
-	  icon = "__base__/graphics/technology/tanks.png",
+	  icon = "__base__/graphics/technology/tank.png",
 	  icon_size = 128,
-	  name = "tanks",
+	  name = "tank",
 	  order = "e-c-c",
 	  prerequisites = {
 		"automobilism",
@@ -7770,16 +7770,16 @@ krastorio_utils.technologies_backup =
 		time = 30
 	  }
 	},
-	turrets = {
+	turret = {
 	  effects = {
 		{
 		  recipe = "gun-turret",
 		  type = "unlock-recipe"
 		}
 	  },
-	  icon = "__base__/graphics/technology/turrets.png",
+	  icon = "__base__/graphics/technology/turret.png",
 	  icon_size = 128,
-	  name = "turrets",
+	  name = "gun-turret",
 	  order = "a-j-a",
 	  type = "technology",
 	  unit = {
@@ -7815,7 +7815,7 @@ krastorio_utils.technologies_backup =
 	  prerequisites = {
 		"uranium-processing",
 		"military-4",
-		"tanks"
+		"tank"
 	  },
 	  type = "technology",
 	  unit = {

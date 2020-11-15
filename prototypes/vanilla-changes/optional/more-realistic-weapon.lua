@@ -1487,6 +1487,6 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 	krastorio.technologies.addUnlockRecipe("kr-military-5", "imersite-rifle-magazine")
 	krastorio.technologies.addUnlockRecipe("kr-military-5", "imersite-anti-material-rifle-magazine")
 
-	krastorio.technologies.addPrerequisite("turrets", "military")
+	krastorio.technologies.addPrerequisite("gun-turret", "military")
 
 end
