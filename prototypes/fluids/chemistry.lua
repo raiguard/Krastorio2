@@ -12,6 +12,7 @@ data:extend(
 		gas_temperature = 25,
 		icon = kr_fluids_icons_path  .. "hydrogen.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		order = "ya01[hydrogen]"
     },
 	-- Chlorine
@@ -26,6 +27,7 @@ data:extend(
 		gas_temperature = 25,
 		icon = kr_fluids_icons_path  .. "chlorine.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		order = "ya02[chlorine]"
     },
 	-- Oxygen
@@ -40,6 +42,7 @@ data:extend(
 		gas_temperature = 25,
 		icon = kr_fluids_icons_path  .. "oxygen.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		order = "ya03[oxygen]"
     },
 	-- Nitrogen
@@ -54,6 +57,7 @@ data:extend(
 		gas_temperature = 25,
 		icon = kr_fluids_icons_path  .. "nitrogen.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		order = "ya04[nitrogen]"
     },
 	-- Ammonia
@@ -68,6 +72,7 @@ data:extend(
 		gas_temperature = 25,
 		icon = kr_fluids_icons_path  .. "ammonia.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		order = "ya05[ammonia]"
     },
 	-- Nitric acid
@@ -82,6 +87,7 @@ data:extend(
 		gas_temperature = 25,
 		icon = kr_fluids_icons_path  .. "nitric-acid.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		order = "ya06[nitric-acid]"
     },
 	-- Hydrogen chloride
@@ -96,6 +102,7 @@ data:extend(
 		gas_temperature = 25,
 		icon = kr_fluids_icons_path  .. "hydrogen-chloride.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		order = "ya07[hydrogen-chloride]"
     },		
 	-- Biomethanol
@@ -113,6 +120,7 @@ data:extend(
 		fuel_emissions_multiplier = 0.8,
 		icon = kr_fluids_icons_path  .. "biomethanol.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		order = "ya08[biomethanol]"
     },
 	-- Heavy water
@@ -126,6 +134,7 @@ data:extend(
 		flow_color = {r=0.5, g=0.9, b=0.6},
 		icon = kr_fluids_icons_path  .. "heavy-water.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		order = "ya09[heavy-water]"
     }
 })

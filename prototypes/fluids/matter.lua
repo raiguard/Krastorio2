@@ -10,6 +10,7 @@ data:extend(
 		flow_color = {r=1, g=1, b=1},
 		icon =  kr_fluids_icons_path  .. "matter.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		order = "ym00[k-matter]"
     }
 })

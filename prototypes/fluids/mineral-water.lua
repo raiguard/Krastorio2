@@ -10,6 +10,7 @@ data:extend(
 		flow_color = {r=0.5, g=0.5, b=0.75},
 		icon =  kr_fluids_icons_path  .. "mineral-water.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		order = "ya01[mineral-water]"
     }
 })

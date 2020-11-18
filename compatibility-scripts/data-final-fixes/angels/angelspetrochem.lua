@@ -15,7 +15,7 @@ if mods["angelspetrochem"] then
 	krastorio.technologies.removePrerequisite("rocket-fuel", "angels-nitrogen-processing-4")
 	
 	-- Icon coherence fix
-	krastorio.icons.setItemIcon("sulfuric-acid", kr_fluids_icons_path  .. "sulfuric-acid.png")
+	krastorio.icons.setItemIcon("sulfuric-acid", kr_fluids_icons_path  .. "sulfuric-acid.png", 64, 4)
 	
 	-- Unify redundant fluids, and other ingredients
 	local to_convert =

@@ -102,14 +102,14 @@ end
 
 -----------------------------------------------------------------
 -- -- Fluids
-krastorio.icons.setItemIcon("water",                                  kr_fluids_icons_path  .. "water.png")
-krastorio.icons.setItemIcon("steam",                                  kr_fluids_icons_path  .. "steam.png")
-krastorio.icons.setItemIcon("sulfuric-acid",                          kr_fluids_icons_path  .. "sulfuric-acid.png")
-krastorio.icons.setItemIcon("crude-oil",                              kr_fluids_icons_path  .. "oil.png")
-krastorio.icons.setItemIcon("light-oil",                              kr_fluids_icons_path  .. "light-oil.png")
-krastorio.icons.setItemIcon("heavy-oil",                              kr_fluids_icons_path  .. "heavy-oil.png")
-krastorio.icons.setItemIcon("lubricant",                              kr_fluids_icons_path  .. "lubricant.png")
-krastorio.icons.setItemIcon("petroleum-gas",                          kr_fluids_icons_path  .. "petroleum-gas.png")
+krastorio.icons.setItemIcon("water",                                  kr_fluids_icons_path  .. "water.png", 64, 4)
+krastorio.icons.setItemIcon("steam",                                  kr_fluids_icons_path  .. "steam.png", 64, 4)
+krastorio.icons.setItemIcon("sulfuric-acid",                          kr_fluids_icons_path  .. "sulfuric-acid.png", 64, 4)
+krastorio.icons.setItemIcon("crude-oil",                              kr_fluids_icons_path  .. "oil.png", 64, 4)
+krastorio.icons.setItemIcon("light-oil",                              kr_fluids_icons_path  .. "light-oil.png", 64, 4)
+krastorio.icons.setItemIcon("heavy-oil",                              kr_fluids_icons_path  .. "heavy-oil.png", 64, 4)
+krastorio.icons.setItemIcon("lubricant",                              kr_fluids_icons_path  .. "lubricant.png", 64, 4)
+krastorio.icons.setItemIcon("petroleum-gas",                          kr_fluids_icons_path  .. "petroleum-gas.png", 64, 4)
 -----------------------------------------------------------------
 -- -- -- TECHNOLOGIES
 

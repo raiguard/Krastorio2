@@ -1,4 +1,4 @@
-if mods["angelsaddons-smeltingtrain"] then
+if mods["angelsaddons-smeltingtrain"] or mods["angelsaddons-mobility"] then
 	local function removeEquipment(equipments, equipment_name)
 		for index, inner_equipment_name in pairs(equipments) do
 			if inner_equipment_name == equipment_name then

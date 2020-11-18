@@ -1,13 +1,15 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.1.0
-Date: 07.11.2020
-  Info:
-    - ANNIVERSARY UPDATE!!! Thank you all, all followed us, all supported us all that enjoyed our mod! To celebrate one year of life, from the first alpha release, we have add one new feature.
+Version: 1.0.8
+Date: XX.11.2020
   Features:
-    - ???
+    - Updated chemical fluid icons to the latest vanilla style (thanks to GeneralEcchi).
   Changes:
     - Added some descriptions to some entities for compatibility purposes (in particular for SE).
+    - Improved wiki GUI.
   Fixes:
+    - Some fixes some crash error with Factorio 1.1.
+    - Fixed a possible internal library crash error in a null prerequisites pointer in technology definitions.
+    - Now angels trains are supported with the merged mod too (Angel's Addons - Mass Transit/angelsaddons-mobility).
     - Fixed that option to allow exoskeletons into spidertron equipment grids, was not available.
     - Added electric energy accumulators as prerequisite to energy storages.
     - Fixed possible incompatibilities with other mods caused from use of pointed tables in recipe prototypes definitions. 

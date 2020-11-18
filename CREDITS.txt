@@ -27,5 +27,8 @@ Thanks also to:
   Music promoted by BreakingCopyright: https://youtu.be/x74grrke9qE, Genre: Dark Ambient,
   nyoko contact: https://soundcloud.com/redowthered
   
+- GeneralEcchi 
+  for provide the fluid icons.
+  
 - Wube
   Some icons and sprites are imported from the previous version of Factorio.
