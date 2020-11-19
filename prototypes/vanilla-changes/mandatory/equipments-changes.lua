@@ -284,6 +284,51 @@ objects_to_modify =
 		["personal-laser-defense-equipment"] = {"personal-laser-defense-mk1-equipment.png", 64, 64, 64, 1}
 	}
 }
+if data.raw.item["battery-equipment"] then
+	data.raw.item["battery-equipment"].pictures =
+	{
+		layers =
+		{
+			{
+				size = 64,
+				filename = kr_universal_equipments_icons_path .. "battery-mk1-equipment.png",
+				scale = 0.25,
+				mipmap_count = 4
+			},
+			{
+				draw_as_light = true,
+				flags = {"light"},
+				size = 64,
+				filename = kr_universal_equipments_icons_path .. "battery-equipment-light.png",
+				scale = 0.25,
+				mipmap_count = 4
+			}
+		}
+	}
+end
+if data.raw.item["battery-mk2-equipment"] then
+	data.raw.item["battery-equipment"].pictures =
+	{
+		layers =
+		{
+			{
+				size = 64,
+				filename = kr_universal_equipments_icons_path .. "battery-mk2-equipment.png",
+				scale = 0.25,
+				mipmap_count = 4
+			},
+			{
+				draw_as_light = true,
+				flags = {"light"},
+				size = 64,
+				filename = kr_universal_equipments_icons_path .. "battery-equipment-light.png",
+				scale = 0.25,
+				mipmap_count = 4
+			}
+		}
+	}
+end
+
 
 -- iterating...
 updateVanillaEquipmentGraphics(objects_to_modify, kr_universal_equipments_icons_path, kr_universal_equipments_path)
@@ -363,6 +408,29 @@ objects_to_modify =
 		["fusion-reactor-equipment"] = {"fusion-reactor-equipment.png", 64, 128, 128, 2}
 	}
 }
+if data.raw.item["fusion-reactor-equipment"] then
+	data.raw.item["fusion-reactor-equipment"].pictures =
+	{
+		layers =
+		{
+			{
+				size = 64,
+				filename = kr_universal_equipments_icons_path .. "fusion-reactor-equipment.png",
+				scale = 0.25,
+				mipmap_count = 4
+			},
+			{
+				draw_as_light = true,
+				flags = {"light"},
+				size = 64,
+				filename = kr_universal_equipments_icons_path .. "fusion-reactor-equipment-light.png",
+				scale = 0.25,
+				mipmap_count = 4
+			}
+		}
+	}
+end
+
 -- iterating...
 updateVanillaEquipmentGraphics(objects_to_modify, kr_universal_equipments_icons_path, kr_universal_equipments_path)
 

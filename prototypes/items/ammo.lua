@@ -9,6 +9,26 @@ data:extend(
 		icon = kr_ammo_icons_path .. "imersite-rounds-magazine.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_ammo_icons_path .. "imersite-rounds-magazine.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_ammo_icons_path .. "imersite-rounds-magazine-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		ammo_type =
 		{
 			category = "bullet",
@@ -49,6 +69,26 @@ data:extend(
 		icon = kr_ammo_icons_path .. "antimatter-artillery-shell.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_ammo_icons_path .. "antimatter-artillery-shell.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_ammo_icons_path .. "antimatter-artillery-shell-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		ammo_type =
 		{
 			category = "artillery-shell",
@@ -83,6 +123,26 @@ data:extend(
 		icon = kr_ammo_icons_path .. "impulse-rifle-ammo.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_ammo_icons_path .. "impulse-rifle-ammo.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_ammo_icons_path .. "impulse-rifle-ammo-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		ammo_type =
 		{
 			category = "impulse-rifle",
@@ -156,6 +216,26 @@ data:extend(
 		icon = kr_ammo_icons_path .. "antimatter-rocket.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_ammo_icons_path .. "antimatter-rocket.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_ammo_icons_path .. "antimatter-rocket-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		ammo_type =
 		{
 			range_modifier = 3,
@@ -264,6 +344,26 @@ data:extend(
 		icon = kr_ammo_icons_path .. "antimatter-railgun-shell.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_ammo_icons_path .. "antimatter-railgun-shell.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_ammo_icons_path .. "antimatter-railgun-shell-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		ammo_type =
 		{
 			category = "railgun-shell",
@@ -336,6 +436,26 @@ data:extend(
 		icon = kr_ammo_icons_path .. "nuclear-rocket-for-turret.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_ammo_icons_path .. "nuclear-rocket-for-turret.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_ammo_icons_path .. "nuclear-rocket-for-turret-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		ammo_type =
 		{
 			category = "missiles-for-turrets",
@@ -372,6 +492,26 @@ data:extend(
 		icon = kr_ammo_icons_path .. "antimatter-rocket-for-turret.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_ammo_icons_path .. "antimatter-rocket-for-turret.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_ammo_icons_path .. "antimatter-rocket-for-turret-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		ammo_type =
 		{
 			category = "missiles-for-turrets",
@@ -406,6 +546,26 @@ data:extend(
 		icon = kr_ammo_icons_path .. "nuclear-artillery-shell.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_ammo_icons_path .. "nuclear-artillery-shell.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_ammo_icons_path .. "nuclear-artillery-shell-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		ammo_type =
 		{
 			category = "artillery-shell",

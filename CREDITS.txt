@@ -28,7 +28,8 @@ Thanks also to:
   nyoko contact: https://soundcloud.com/redowthered
   
 - GeneralEcchi 
-  for provide the fluid icons.
+  for provide the fancy fluid icons, for help in the generation of light sprites,
+  and for render almost all light icons.
   
 - Wube
   Some icons and sprites are imported from the previous version of Factorio.

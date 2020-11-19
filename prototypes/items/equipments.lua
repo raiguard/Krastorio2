@@ -107,6 +107,26 @@ data:extend(
 			{ icon = kr_equipments_tiers_icon_path .. "3.png", icon_size = 64 }
 		},
 		icon_size = 64,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_universal_equipments_icons_path .. "battery-mk3-equipment.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_universal_equipments_icons_path .. "battery-equipment-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		placed_as_equipment_result = "battery-mk3-equipment",
 		subgroup = "equipment",
 		order = "b3[battery]-b5[battery-equipment]",
@@ -123,6 +143,26 @@ data:extend(
 			{ icon = kr_equipments_tiers_icon_path .. "1.png", icon_size = 64}
 		},
 		icon_size = 64,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_universal_equipments_icons_path .. "big-battery-equipment.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_universal_equipments_icons_path .. "big-battery-equipment-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		placed_as_equipment_result = "big-battery-equipment",
 		subgroup = "equipment",
 		order = "b1[battery]-b2[battery-equipment]",
@@ -138,6 +178,26 @@ data:extend(
 			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
 		},
 		icon_size = 64,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_universal_equipments_icons_path .. "big-battery-mk2-equipment.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_universal_equipments_icons_path .. "big-battery-equipment-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		placed_as_equipment_result = "big-battery-mk2-equipment",
 		subgroup = "equipment",
 		order = "b2[battery]-b4[battery-equipment]",
@@ -153,6 +213,26 @@ data:extend(
 			{ icon = kr_equipments_tiers_icon_path .. "3.png", icon_size = 64 }
 		},
 		icon_size = 64,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_universal_equipments_icons_path .. "big-battery-mk3-equipment.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_universal_equipments_icons_path .. "big-battery-equipment-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		placed_as_equipment_result = "big-battery-mk3-equipment",
 		subgroup = "equipment",
 		order = "b3[battery]-b6[battery-equipment]",
@@ -199,6 +279,26 @@ data:extend(
 			{ icon = kr_equipments_tiers_icon_path .. "1.png", icon_size = 64 }
 		},
 		icon_size = 64,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_universal_equipments_icons_path .. "nuclear-reactor-equipment.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_universal_equipments_icons_path .. "nuclear-reactor-equipment-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		placed_as_equipment_result = "nuclear-reactor-equipment",
 		subgroup = "equipment",
 		order = "a2[energy-source]-a4[nuclear-reactor-equipment]",
@@ -214,6 +314,26 @@ data:extend(
 			{ icon = kr_equipments_tiers_icon_path .. "3.png", icon_size = 64 }
 		},
 		icon_size = 64,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_universal_equipments_icons_path .. "antimatter-reactor-equipment.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_universal_equipments_icons_path .. "antimatter-reactor-equipment-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		placed_as_equipment_result = "antimatter-reactor-equipment",
 		subgroup = "equipment",
 		order = "a2[energy-source]-a6[antimatter-reactor-equipment]",

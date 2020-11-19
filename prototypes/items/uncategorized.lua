@@ -282,6 +282,26 @@ data:extend(
 		icon = kr_items_icons_path .. "imersium-plate.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_items_icons_path .. "imersium-plate.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_items_icons_path .. "imersium-plate-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		subgroup = "raw-material",
 		order = "e00-a2[imersium-plate]",
 		stack_size = 200
@@ -292,6 +312,26 @@ data:extend(
 		icon = kr_items_icons_path .. "imersium-gear-wheel.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_items_icons_path .. "imersium-gear-wheel.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_items_icons_path .. "imersium-gear-wheel-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		subgroup = "intermediate-product",
 		order = "d-a3[imersium-gear-wheel]",
 		stack_size = 200
@@ -302,6 +342,26 @@ data:extend(
 		icon = kr_items_icons_path .. "imersium-beam.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_items_icons_path .. "imersium-beam.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_items_icons_path .. "imersium-beam-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		subgroup = "intermediate-product",
 		order = "c-a3[imersium-beam]",
 		stack_size = 200
@@ -423,9 +483,69 @@ data:extend(
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder-2.png", scale = 0.25, mipmap_count = 4 }
+			{
+				layers =
+				{
+					{
+						size = 64,
+						filename = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder.png",
+						scale = 0.25,
+						mipmap_count = 4
+					},
+					{
+						draw_as_light = true,
+						flags = {"light"},
+						blend_mode = "additive",
+						tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
+						size = 64,
+						filename = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder-light.png",
+						scale = 0.25,
+						mipmap_count = 4
+					}
+				}
+			},
+			{
+				layers =
+				{
+					{
+						size = 64,
+						filename = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder-1.png",
+						scale = 0.25,
+						mipmap_count = 4
+					},
+					{
+						draw_as_light = true,
+						flags = {"light"},
+						blend_mode = "additive",
+						tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
+						size = 64,
+						filename = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder-1-light.png",
+						scale = 0.25,
+						mipmap_count = 4
+					}
+				}
+			},
+			{
+				layers =
+				{
+					{
+						size = 64,
+						filename = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder-2.png",
+						scale = 0.25,
+						mipmap_count = 4
+					},
+					{
+						draw_as_light = true,
+						flags = {"light"},
+						blend_mode = "additive",
+						tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
+						size = 64,
+						filename = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder-2-light.png",
+						scale = 0.25,
+						mipmap_count = 4
+					}
+				}
+			}
 		},
 		subgroup = "raw-material",
 		order = "q01[imersite-powder]",
@@ -439,11 +559,111 @@ data:extend(
 		icon_mipmaps = 4,
 		pictures =
 		{
-			{ size = 64, filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal.png",   scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-1.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-2.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-3.png", scale = 0.25, mipmap_count = 4 },
-			{ size = 64, filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-4.png", scale = 0.25, mipmap_count = 4 }
+			{
+				layers =
+				{
+					{
+						size = 64,
+						filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal.png",
+						scale = 0.25,
+						mipmap_count = 4
+					},
+					{
+						draw_as_light = true,
+						flags = {"light"},
+						blend_mode = "additive",
+						tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
+						size = 64,
+						filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-light.png",
+						scale = 0.25,
+						mipmap_count = 4
+					}
+				}
+			},
+			{
+				layers =
+				{
+					{
+						size = 64,
+						filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-1.png",
+						scale = 0.25,
+						mipmap_count = 4
+					},
+					{
+						draw_as_light = true,
+						flags = {"light"},
+						blend_mode = "additive",
+						tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
+						size = 64,
+						filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-1-light.png",
+						scale = 0.25,
+						mipmap_count = 4
+					}
+				}
+			},
+			{
+				layers =
+				{
+					{
+						size = 64,
+						filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-2.png",
+						scale = 0.25,
+						mipmap_count = 4
+					},
+					{
+						draw_as_light = true,
+						flags = {"light"},
+						blend_mode = "additive",
+						tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
+						size = 64,
+						filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-2-light.png",
+						scale = 0.25,
+						mipmap_count = 4
+					}
+				}
+			},
+			{
+				layers =
+				{
+					{
+						size = 64,
+						filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-3.png",
+						scale = 0.25,
+						mipmap_count = 4
+					},
+					{
+						draw_as_light = true,
+						flags = {"light"},
+						blend_mode = "additive",
+						tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
+						size = 64,
+						filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-3-light.png",
+						scale = 0.25,
+						mipmap_count = 4
+					}
+				}
+			},
+			{
+				layers =
+				{
+					{
+						size = 64,
+						filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-4.png",
+						scale = 0.25,
+						mipmap_count = 4
+					},
+					{
+						draw_as_light = true,
+						flags = {"light"},
+						blend_mode = "additive",
+						tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
+						size = 64,
+						filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-4-light.png",
+						scale = 0.25,
+						mipmap_count = 4
+					}
+				}
+			}		
 		},
 		subgroup = "intermediate-product",
 		order = "q03[imersite-crystal]",
@@ -455,6 +675,26 @@ data:extend(
 		icon = kr_items_icons_path .. "lithium-sulfur-battery.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_items_icons_path .. "lithium-sulfur-battery.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_items_icons_path .. "lithium-sulfur-battery-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		subgroup = "raw-material",
 		order = "i2[lithium-sulfur-battery]",
 		stack_size = 200
@@ -465,6 +705,26 @@ data:extend(
 		icon = kr_items_icons_path .. "ai-core.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_items_icons_path .. "ai-core.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_items_icons_path .. "ai-core-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		subgroup = "intermediate-product",
 		order = "h1[ai-core]",
 		stack_size = 200
@@ -495,6 +755,26 @@ data:extend(
 		icon = kr_items_icons_path .. "tritium.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_items_icons_path .. "tritium.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_items_icons_path .. "tritium-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		subgroup = "raw-material",
 		order = "s[tritium]",
 		stack_size = 200
@@ -515,6 +795,26 @@ data:extend(
 		icon = kr_items_icons_path .. "dt-fuel.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_items_icons_path .. "dt-fuel.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_items_icons_path .. "dt-fuel-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		fuel_category = "fusion-fuel",
 		fuel_value = "10GJ",
 		burnt_result = "empty-dt-fuel",
@@ -529,6 +829,26 @@ data:extend(
 		icon = kr_items_icons_path .. "energy-control-unit.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_items_icons_path .. "energy-control-unit.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_items_icons_path .. "energy-control-unit-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		subgroup = "intermediate-product",
 		order = "j1[energy-control-unit]",
 		stack_size = 100
@@ -550,6 +870,26 @@ data:extend(
 		icon = kr_items_icons_path .. "charged-matter-stabilizer.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_items_icons_path .. "charged-matter-stabilizer.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_items_icons_path .. "charged-matter-stabilizer-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		subgroup = "intermediate-product",
 		order = "w1[matter-stabilizers]-a2[charged-matter-stabilizer]",
 		stack_size = 100
@@ -580,6 +920,26 @@ data:extend(
 		icon = kr_items_icons_path .. "charged-antimatter-fuel-cell.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_items_icons_path .. "charged-antimatter-fuel-cell.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_items_icons_path .. "charged-antimatter-fuel-cell-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		fuel_category = "antimatter-fuel",
 		fuel_value = "300GJ",
 		burnt_result = "empty-antimatter-fuel-cell",

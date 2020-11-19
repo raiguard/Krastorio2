@@ -65,10 +65,30 @@ data:extend(
 		type = "tool",
 		name = "matter-tech-card",
 		localised_description = {"item-description.science-pack"},
-		icon =  kr_cards_icons_path  .. "matter-tech-card.png",
+		icon = kr_cards_icons_path  .. "matter-tech-card.png",
 		stack_size = 200,
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_cards_icons_path  .. "matter-tech-card.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_cards_icons_path  .. "matter-tech-card-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		subgroup = "science-pack",
 		order = "b09[matter-tech-card]",
 		durability = 1,
@@ -79,10 +99,30 @@ data:extend(
 		type = "tool",
 		name = "advanced-tech-card",
 		localised_description = {"item-description.science-pack"},
-		icon =  kr_cards_icons_path  .. "advanced-tech-card.png",
+		icon = kr_cards_icons_path  .. "advanced-tech-card.png",
 		stack_size = 200,
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_cards_icons_path  .. "advanced-tech-card.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_cards_icons_path  .. "advanced-tech-card-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		subgroup = "science-pack",
 		order = "b10[advanced-tech-card]",
 		durability = 1,
@@ -93,10 +133,30 @@ data:extend(
 		type = "tool",
 		name = "singularity-tech-card",
 		localised_description = {"item-description.science-pack"},
-		icon =  kr_cards_icons_path  .. "singularity-tech-card.png",
+		icon = kr_cards_icons_path  .. "singularity-tech-card.png",
 		stack_size = 200,
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_cards_icons_path  .. "singularity-tech-card.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_cards_icons_path  .. "singularity-tech-card-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		subgroup = "science-pack",
 		order = "b11[singularity-tech-card]",
 		durability = 1,

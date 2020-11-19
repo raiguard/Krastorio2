@@ -9,6 +9,26 @@ data:extend(
 		icon = kr_capsules_icons_path .. "creep-virus.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_capsules_icons_path .. "creep-virus.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_capsules_icons_path .. "creep-virus-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		capsule_action =
 		{
 		  type = "throw",
@@ -46,6 +66,26 @@ data:extend(
 		icon = kr_capsules_icons_path .. "biter-virus.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_capsules_icons_path .. "biter-virus.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_capsules_icons_path .. "biter-virus-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
 		capsule_action =
 		{
 		  type = "throw",

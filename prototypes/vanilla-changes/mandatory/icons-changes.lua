@@ -4,36 +4,190 @@
 
 -- Automation science pack
 krastorio.icons.setItemIcon("automation-science-pack",                kr_cards_icons_path .. "automation-tech-card.png", 64, 4)
-data.raw.tool["automation-science-pack"].order = "b02[automation-tech-card]"
+if data.raw.tool["automation-science-pack"] then
+	data.raw.tool["automation-science-pack"].order = "b02[automation-tech-card]"
+	data.raw.tool["automation-science-pack"].pictures =
+	{
+		layers =
+		{
+			{
+				size = 64,
+				filename = kr_cards_icons_path .. "automation-tech-card.png",
+				scale = 0.25,
+				mipmap_count = 4
+			},
+			{
+				draw_as_light = true,
+				flags = {"light"},
+				size = 64,
+				filename = kr_cards_icons_path .. "automation-tech-card-light.png",
+				scale = 0.25,
+				mipmap_count = 4
+			}
+		}
+	}
+end
 
 -- Logistic science pack
 krastorio.icons.setItemIcon("logistic-science-pack",                  kr_cards_icons_path .. "logistic-tech-card.png", 64, 4)
-data.raw.tool["logistic-science-pack"].order = "b03[logistic-tech-card]"
+if data.raw.tool["automation-science-pack"] then
+	data.raw.tool["logistic-science-pack"].order = "b03[logistic-tech-card]"
+	data.raw.tool["logistic-science-pack"].pictures =
+	{
+		layers =
+		{
+			{
+				size = 64,
+				filename = kr_cards_icons_path .. "logistic-tech-card.png",
+				scale = 0.25,
+				mipmap_count = 4
+			},
+			{
+				draw_as_light = true,
+				flags = {"light"},
+				size = 64,
+				filename = kr_cards_icons_path .. "logistic-tech-card-light.png",
+				scale = 0.25,
+				mipmap_count = 4
+			}
+		}
+	}
+end
 krastorio.icons.setTechnologyIcon("logistic-science-pack",            kr_technologies_icons_path .. "logistic-tech-card.png")
 
 -- Military science pack
 krastorio.icons.setItemIcon("military-science-pack",                  kr_cards_icons_path .. "military-tech-card.png", 64, 4)
-data.raw.tool["military-science-pack"].order = "b04[military-tech-card]"
+if data.raw.tool["military-science-pack"] then
+	data.raw.tool["military-science-pack"].order = "b04[military-tech-card]"
+	data.raw.tool["military-science-pack"].pictures =
+	{
+		layers =
+		{
+			{
+				size = 64,
+				filename = kr_cards_icons_path .. "military-tech-card.png",
+				scale = 0.25,
+				mipmap_count = 4
+			},
+			{
+				draw_as_light = true,
+				flags = {"light"},
+				size = 64,
+				filename = kr_cards_icons_path .. "military-tech-card-light.png",
+				scale = 0.25,
+				mipmap_count = 4
+			}
+		}
+	}
+end
 krastorio.icons.setTechnologyIcon("military-science-pack",            kr_technologies_icons_path .. "military-tech-card.png")
 
 -- Chemical science pack
 krastorio.icons.setItemIcon("chemical-science-pack",                  kr_cards_icons_path .. "chemical-tech-card.png", 64, 4)
-data.raw.tool["chemical-science-pack"].order = "b05[chemical-tech-card]"
+if data.raw.tool["chemical-science-pack"] then
+	data.raw.tool["chemical-science-pack"].order = "b05[chemical-tech-card]"
+	data.raw.tool["chemical-science-pack"].pictures =
+	{
+		layers =
+		{
+			{
+				size = 64,
+				filename = kr_cards_icons_path .. "chemical-tech-card.png",
+				scale = 0.25,
+				mipmap_count = 4
+			},
+			{
+				draw_as_light = true,
+				flags = {"light"},
+				size = 64,
+				filename = kr_cards_icons_path .. "chemical-tech-card-light.png",
+				scale = 0.25,
+				mipmap_count = 4
+			}
+		}
+	}
+end
 krastorio.icons.setTechnologyIcon("chemical-science-pack",            kr_technologies_icons_path .. "chemical-tech-card.png")
 
 -- Production science pack
 krastorio.icons.setItemIcon("production-science-pack",                kr_cards_icons_path .. "production-tech-card.png", 64, 4)
-data.raw.tool["production-science-pack"].order = "b06[production-tech-card]"
+if data.raw.tool["production-science-pack"] then
+	data.raw.tool["production-science-pack"].order = "b06[production-tech-card]"
+	data.raw.tool["production-science-pack"].pictures =
+	{
+		layers =
+		{
+			{
+				size = 64,
+				filename = kr_cards_icons_path .. "production-tech-card.png",
+				scale = 0.25,
+				mipmap_count = 4
+			},
+			{
+				draw_as_light = true,
+				flags = {"light"},
+				size = 64,
+				filename = kr_cards_icons_path .. "production-tech-card-light.png",
+				scale = 0.25,
+				mipmap_count = 4
+			}
+		}
+	}
+end
 krastorio.icons.setTechnologyIcon("production-science-pack",          kr_technologies_icons_path .. "production-tech-card.png")
 
 -- Utility science pack
 krastorio.icons.setItemIcon("utility-science-pack",                   kr_cards_icons_path .. "utility-tech-card.png", 64, 4)
-data.raw.tool["utility-science-pack"].order = "b07[utility-tech-card]"
+if data.raw.tool["utility-science-pack"] then
+	data.raw.tool["utility-science-pack"].order = "b07[utility-tech-card]"
+	data.raw.tool["utility-science-pack"].pictures =
+	{
+		layers =
+		{
+			{
+				size = 64,
+				filename = kr_cards_icons_path .. "utility-tech-card.png",
+				scale = 0.25,
+				mipmap_count = 4
+			},
+			{
+				draw_as_light = true,
+				flags = {"light"},
+				size = 64,
+				filename = kr_cards_icons_path .. "utility-tech-card-light.png",
+				scale = 0.25,
+				mipmap_count = 4
+			}
+		}
+	}
+end
 krastorio.icons.setTechnologyIcon("utility-science-pack",             kr_technologies_icons_path .. "utility-tech-card.png")
 
 -- Space science pack
 krastorio.icons.setItemIcon("space-science-pack",                     kr_cards_icons_path .. "optimization-tech-card.png", 64, 4)
-data.raw.tool["space-science-pack"].order = "b08[optimization-tech-card]"
+if data.raw.tool["space-science-pack"] then
+	data.raw.tool["space-science-pack"].order = "b08[optimization-tech-card]"
+	data.raw.tool["space-science-pack"].pictures =
+	{
+		layers =
+		{
+			{
+				size = 64,
+				filename = kr_cards_icons_path .. "optimization-tech-card.png",
+				scale = 0.25,
+				mipmap_count = 4
+			},
+			{
+				draw_as_light = true,
+				flags = {"light"},
+				size = 64,
+				filename = kr_cards_icons_path .. "optimization-tech-card-light.png",
+				scale = 0.25,
+				mipmap_count = 4
+			}
+		}
+	}
+end
 krastorio.icons.setTechnologyIcon("space-science-pack",               kr_technologies_icons_path .. "optimization-tech-card.png")
 
 -- Other
@@ -149,7 +303,29 @@ krastorio.icons.setItemIcon("substation",                             kr_entitie
 
 -----------------------------------------------------------------
 -- -- -- OTHER
-krastorio.icons.setItemIcon("atomic-bomb",                            kr_icons_path .. "ammo/atomic-bomb.png", 64, 4)
+krastorio.icons.setItemIcon("atomic-bomb",                            kr_ammo_icons_path .. "atomic-bomb.png", 64, 4)
+if data.raw.ammo["atomic-bomb"] then
+	data.raw.ammo["atomic-bomb"].pictures =
+	{
+		layers =
+		{
+			{
+				size = 64,
+				filename = kr_ammo_icons_path .. "atomic-bomb.png",
+				scale = 0.25,
+				mipmap_count = 4
+			},
+			{
+				draw_as_light = true,
+				flags = {"light"},
+				size = 64,
+				filename = kr_ammo_icons_path .. "atomic-bomb-light.png",
+				scale = 0.25,
+				mipmap_count = 4
+			}
+		}
+	}
+end
 krastorio.icons.setItemIcon("artillery-shell",                        kr_icons_path .. "ammo/artillery-shell.png", 64, 4)
 -- Landfill
 local landfill = krastorio.recipes.getRecipeFromName("landfill") or false	
