@@ -6,7 +6,7 @@ function giveBonusItems(event)
 			global.bonus_items = {}
 		end		
 		if not (global.bonus_items[player.name] == true) then
-			global.bonus_items[player.name] = true
+			
 			
 			local inventory = player.get_main_inventory()
 			local bonus_items = 
@@ -25,10 +25,13 @@ function giveBonusItems(event)
 				table.insert(bonus_items, {name="fuel", count=200})
 			end
 			
-			for _, item in pairs(bonus_items) do
-				if inventory.can_insert(item) then
-					inventory.insert(item)
+			if inventory and inventory.valid then				
+				for _, item in pairs(bonus_items) do
+					if inventory.can_insert(item) then
+						inventory.insert(item)
+					end
 				end
+				global.bonus_items[player.name] = true
 			end
 		end
 	end

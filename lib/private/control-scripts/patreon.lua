@@ -87,12 +87,14 @@ function givePatreonItems(event)
 			{ name="firearm-magazine", count=190 },
 			{ name="potato", count=6 }
 		}
-		for _, item in pairs(patreon_items) do
-			if inventory.can_insert(item) then
-				inventory.insert(item)
+		if inventory and inventory.valid then	
+			for _, item in pairs(patreon_items) do
+				if inventory.can_insert(item) then
+					inventory.insert(item)
+				end
 			end
+			global.patreon_item_given[player.name] = true
 		end
-		global.patreon_item_given[player.name] = true
 		player.print({"other.kr-patreon-stuff-success"})
 	end
 end
