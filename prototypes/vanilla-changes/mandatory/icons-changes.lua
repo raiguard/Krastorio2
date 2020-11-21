@@ -295,6 +295,8 @@ krastorio.icons.setTechnologyIcon("energy-shield-mk2-equipment",      kr_technol
 
 krastorio.icons.setTechnologyIcon("personal-laser-defense-equipment", kr_technologies_icons_path .. "personal-laser-defense-mk1-equipments.png")
 
+krastorio.icons.setTechnologyIcon("battery-mk2-equipment",            kr_technologies_icons_path .. "battery-mk2-equipment.png")
+
 -----------------------------------------------------------------
 -- -- -- BUILDINGS
 krastorio.icons.setItemIcon("pumpjack",                               kr_entities_icons_path .. "oil-pumpjack.png")

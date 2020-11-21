@@ -1,5 +1,5 @@
 require("__Krastorio2__/lib/private/control-scripts/control-lib/control-lib-initialization")
-require("__core__/lualib/mod-gui")
+local mod_gui = require("__core__/lualib/mod-gui")
 
 -- Global prefix
 local w_prefix = "kr-wiki-"
@@ -329,7 +329,10 @@ function initializeWiki(event)
 		sprite  = "kr-open-gui",
 		style   = "kr-wiki-icon-button"
 	})
-
+	
+	krastorio.gui.addClickElementEvent(w_prefix.."toggle-wiki", "toggleWiki")	
+	krastorio.gui.addClickElementEvent(w_prefix.."close-button", "closeWiki")	
+	krastorio.gui.addSelectElementEvent(w_prefix.."topics-list", "changeWikiDescription")
 end
 
 function addremoveWikiButton(event)

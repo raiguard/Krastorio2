@@ -82,6 +82,35 @@ data:extend(
 		working_visualisations =
 		{			
 			{
+				draw_as_light = true,
+				fadeout = true,
+				effect = "flicker",
+				constant_speed = true,
+				animation =
+				{
+					filename = kr_entities_path .. "advanced-furnace/advanced-furnace-anim-light.png",
+					priority = "high",
+					width = 240,
+					height = 240,
+					shift = {0, -0.1},
+					repeat_count = 28,
+					frame_count = 1,
+					animation_speed = 0.8,
+					hr_version =
+					{
+						filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-anim-light.png",
+						priority = "high",
+						width = 480,
+						height = 480,
+						shift = {0, -0.1},
+						repeat_count = 28,
+						frame_count = 1,
+						animation_speed = 0.8,
+						scale = 0.5
+					}
+				}
+			},
+			{
 				constant_speed = true,
 				animation =
 				{
@@ -92,7 +121,7 @@ data:extend(
 					shift = {0, -0.1},
 					frame_count = 28,
 					line_length = 4,
-					animation_speed=0.8,
+					animation_speed = 0.8,
 					hr_version =
 					{
 						filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-anim.png",
@@ -102,7 +131,7 @@ data:extend(
 						shift = {0, -0.1},
 						frame_count = 28,
 						line_length = 4,
-						animation_speed=0.8,
+						animation_speed = 0.8,
 						scale = 0.5
 					}
 				}

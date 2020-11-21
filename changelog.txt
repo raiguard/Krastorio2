@@ -8,6 +8,8 @@ Date: XX.11.2020
     - Incorporate vanilla crash entities in the mod because was removed in Factorio 1.1.
     - Added some descriptions to some entities for compatibility purposes (in particular for SE).
     - Improved wiki GUI (style and close button).
+    - Reduced a bit the volume of antimater reactor while working.
+    - Improved technology icons of personal battery MK2 and MK3.
   Fixes:
     - Some fixes some crash error with Factorio 1.1.
     - Fixed a possible internal library crash error in a prerequisites pointer is null in technology definitions.
