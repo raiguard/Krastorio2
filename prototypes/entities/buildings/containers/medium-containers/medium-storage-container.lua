@@ -1,10 +1,10 @@
-local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
-local sounds      = require("__base__/prototypes/entity/demo-sounds")
+local hit_effects = require("__base__/prototypes/entity/hit-effects")
+local sounds      = require("__base__/prototypes/entity/sounds")
 
 local kr_icons_size = false
 
 if krastorio.general.getSafeSettingValue("kr-large-icons") then
-kr_icons_size = true
+	kr_icons_size = true
 end
 
 local _medium_containers = "containers/medium-containers/"
@@ -23,6 +23,7 @@ data:extend(
 		minable = {mining_time = 0.5, result = "kr-medium-storage-container"},
 		max_health = 500,
 		logistic_slots_count = 1,
+		max_logistic_slots = 1,
 		corpse = "big-remnants",
 		collision_box = {{-0.8, -0.8}, {0.8, 0.8}},
 		selection_box = {{-1, -1}, {1, 1}},

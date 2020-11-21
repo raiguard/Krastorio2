@@ -1,5 +1,5 @@
-local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
-local sounds      = require("__base__/prototypes/entity/demo-sounds")
+local hit_effects = require("__base__/prototypes/entity/hit-effects")
+local sounds      = require("__base__/prototypes/entity/sounds")
 local variations_util = require(kr_public_lib .. "create-roboport-states")
 
 data:extend(

@@ -1,4 +1,4 @@
-local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
+local hit_effects = require("__base__/prototypes/entity/hit-effects")
 
 function laser_artillery_turret_sheet(inputs)
 return
@@ -211,7 +211,7 @@ data:extend(
 			min_range = 32, -- same of artillery is 32
 			ammo_type =
 			{
-				category = "laser-turret",
+				category = "laser",
 				target_type = "entity",
 				energy_consumption = "100MJ",
 				action =

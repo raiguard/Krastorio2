@@ -1,5 +1,5 @@
-local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
-local sounds      = require("__base__/prototypes/entity/demo-sounds")
+local hit_effects = require("__base__/prototypes/entity/hit-effects")
+local sounds      = require("__base__/prototypes/entity/sounds")
 
 data:extend(
 {   
@@ -41,7 +41,27 @@ data:extend(
 		entity_info_icon_shift = util.by_pixel(32, 0),
 		light = {intensity = 0.9, size = 12, color = {r = 1.0, g = 1.0, b = 1.0}, shift = {1.5, 0.5}},
 		integration_patch_render_layer = "decals",
-		integration_patch = hr_crash_site_lab_ground(),
+		integration_patch = 
+		{
+			filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-ground.png",
+			priority = crash_site_sprite_priority,
+			width = 352,
+			height = 170,
+			shift = util.by_pixel(-48, 12),
+			frame_count = 1,
+			line_length = 1,
+			hr_version =
+			{
+				filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-ground.png",
+				priority = crash_site_sprite_priority,
+				width = 700,
+				height = 344,
+				shift = util.by_pixel(-49, 11),
+				frame_count = 1,
+				line_length = 1,
+				scale = 0.5
+			}
+		},
 		on_animation =
 		{
 			layers =
@@ -138,7 +158,7 @@ data:extend(
 					shift = util.by_pixel(-18, 14),
 					hr_version =
 					{
-						filename = kr_crash_site_sprites_path .. "crash-site-lab/hr-crash-site-lab-repaired.png",
+						filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-repaired.png",
 						priority = crash_site_sprite_priority,
 						width = 488,
 						height = 252,

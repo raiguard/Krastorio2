@@ -1,5 +1,5 @@
-local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
-local sounds      = require("__base__/prototypes/entity/demo-sounds")
+local hit_effects = require("__base__/prototypes/entity/hit-effects")
+local sounds      = require("__base__/prototypes/entity/sounds")
 
 local kr_icons_size = false
 
@@ -23,6 +23,7 @@ data:extend(
 		minable = {mining_time = 1, result = "kr-big-storage-container"},
 		max_health = 1500,
 		logistic_slots_count = 1,
+		max_logistic_slots = 1,
 		corpse = "kr-big-random-pipes-remnant",
 		collision_box = {{-2.75, -2.75}, {2.75, 2.75}},
 		selection_box = {{-3, -3}, {3, 3}},

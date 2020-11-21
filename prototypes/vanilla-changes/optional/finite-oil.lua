@@ -1,6 +1,7 @@
 -- -- -- Finite oil
 
 if krastorio.general.getSafeSettingValue("kr-finite-oil") then
+	local resource_autoplace = require("__core__/lualib/resource-autoplace")
 
 	data.raw["mining-drill"]["pumpjack"].energy_usage = "100kW"
 	data.raw["mining-drill"]["pumpjack"].mining_speed = 2

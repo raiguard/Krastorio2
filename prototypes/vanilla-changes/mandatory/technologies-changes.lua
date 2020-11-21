@@ -738,22 +738,12 @@ data:extend(
 		type = "technology",
 		name = "energy-weapons-damage-11",
 		icon_size = 128,
-		icon = "__base__/graphics/technology/energy-weapons-damage-3.png",
+		icon = "__base__/graphics/technology/energy-weapons-damage.png",
 		effects =
 		{
 			{
 				type = "ammo-damage",
-				ammo_category = "laser-turret",
-				modifier = 0.1
-			},
-			{
-				type = "ammo-damage",
-				ammo_category = "combat-robot-laser",
-				modifier = 0.1
-			},
-			{
-				type = "ammo-damage",
-				ammo_category = "combat-robot-beam",
+				ammo_category = "laser",
 				modifier = 0.1
 			}
 		},
@@ -779,22 +769,12 @@ data:extend(
 		type = "technology",
 		name = "energy-weapons-damage-16",
 		icon_size = 128,
-		icon = "__base__/graphics/technology/energy-weapons-damage-3.png",
+		icon = "__base__/graphics/technology/energy-weapons-damage.png",
 		effects =
 		{
 			{
 				type = "ammo-damage",
-				ammo_category = "laser-turret",
-				modifier = 0.1
-			},
-			{
-				type = "ammo-damage",
-				ammo_category = "combat-robot-laser",
-				modifier = 0.1
-			},
-			{
-				type = "ammo-damage",
-				ammo_category = "combat-robot-beam",
+				ammo_category = "laser",
 				modifier = 0.1
 			}
 		},

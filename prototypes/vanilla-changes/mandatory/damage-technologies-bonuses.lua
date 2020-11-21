@@ -432,17 +432,7 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       {
         type = "ammo-damage",
-        ammo_category = "laser-turret",
-        modifier = 0.25
-      },
-      {
-        type = "ammo-damage",
-        ammo_category = "combat-robot-laser",
-        modifier = 0.25
-      },
-      {
-        type = "ammo-damage",
-        ammo_category = "combat-robot-beam",
+        ammo_category = "laser",
         modifier = 0.25
       }
     }
@@ -450,17 +440,7 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       {
         type = "ammo-damage",
-        ammo_category = "laser-turret",
-        modifier = 0.25
-      },
-      {
-        type = "ammo-damage",
-        ammo_category = "combat-robot-laser",
-        modifier = 0.25
-      },
-      {
-        type = "ammo-damage",
-        ammo_category = "combat-robot-beam",
+        ammo_category = "laser",
         modifier = 0.25
       }
     }
@@ -468,17 +448,7 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       {
         type = "ammo-damage",
-        ammo_category = "laser-turret",
-        modifier = 0.25
-      },
-      {
-        type = "ammo-damage",
-        ammo_category = "combat-robot-laser",
-        modifier = 0.25
-      },
-      {
-        type = "ammo-damage",
-        ammo_category = "combat-robot-beam",
+        ammo_category = "laser",
         modifier = 0.25
       }
     }
@@ -486,17 +456,7 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       {
         type = "ammo-damage",
-        ammo_category = "laser-turret",
-        modifier = 0.35
-      },
-      {
-        type = "ammo-damage",
-        ammo_category = "combat-robot-laser",
-        modifier = 0.35
-      },
-      {
-        type = "ammo-damage",
-        ammo_category = "combat-robot-beam",
+        ammo_category = "laser",
         modifier = 0.35
       }
     }
@@ -504,17 +464,7 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       {
         type = "ammo-damage",
-        ammo_category = "laser-turret",
-        modifier = 0.35
-      },
-      {
-        type = "ammo-damage",
-        ammo_category = "combat-robot-laser",
-        modifier = 0.35
-      },
-      {
-        type = "ammo-damage",
-        ammo_category = "combat-robot-beam",
+        ammo_category = "laser",
         modifier = 0.35
       }
     }
@@ -522,17 +472,7 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       {
         type = "ammo-damage",
-        ammo_category = "laser-turret",
-        modifier = 0.35
-      },
-      {
-        type = "ammo-damage",
-        ammo_category = "combat-robot-laser",
-        modifier = 0.35
-      },
-      {
-        type = "ammo-damage",
-        ammo_category = "combat-robot-beam",
+        ammo_category = "laser",
         modifier = 0.35
       }
     }
@@ -540,17 +480,7 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       {
         type = "ammo-damage",
-        ammo_category = "laser-turret",
-        modifier = 0.1
-      },
-      {
-        type = "ammo-damage",
-        ammo_category = "combat-robot-laser",
-        modifier = 0.1
-      },
-      {
-        type = "ammo-damage",
-        ammo_category = "combat-robot-beam",
+        ammo_category = "laser",
         modifier = 0.1
       }
     }
@@ -702,7 +632,7 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       {
         type = "gun-speed",
-        ammo_category = "laser-turret",
+        ammo_category = "laser",
         modifier = 0.2
       }
     }
@@ -710,7 +640,7 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       {
         type = "gun-speed",
-        ammo_category = "laser-turret",
+        ammo_category = "laser",
         modifier = 0.2
       }
     }
@@ -718,7 +648,7 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       {
         type = "gun-speed",
-        ammo_category = "laser-turret",
+        ammo_category = "laser",
         modifier = 0.15
       }
     }
@@ -726,7 +656,7 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       {
         type = "gun-speed",
-        ammo_category = "laser-turret",
+        ammo_category = "laser",
         modifier = 0.15
       }
     }
@@ -734,7 +664,7 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       {
         type = "gun-speed",
-        ammo_category = "laser-turret",
+        ammo_category = "laser",
         modifier = 0.1
       }
     }
@@ -742,7 +672,7 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       {
         type = "gun-speed",
-        ammo_category = "laser-turret",
+        ammo_category = "laser",
         modifier = 0.1
       }
     }
@@ -750,7 +680,7 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       {
         type = "gun-speed",
-        ammo_category = "laser-turret",
+        ammo_category = "laser",
         modifier = 0.1
       }
     }

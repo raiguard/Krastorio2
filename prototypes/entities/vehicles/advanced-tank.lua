@@ -1,6 +1,6 @@
-local hit_effects       = require("__base__/prototypes/entity/demo-hit-effects")
-local sounds            = require("__base__/prototypes/entity/demo-sounds")
-local movement_triggers = require("__base__/prototypes/entity/demo-movement-triggers")
+local hit_effects       = require("__base__/prototypes/entity/hit-effects")
+local sounds            = require("__base__/prototypes/entity/sounds")
+local movement_triggers = require("__base__/prototypes/entity/movement-triggers")
 
 movement_triggers.kr_advanced_tank =
 {

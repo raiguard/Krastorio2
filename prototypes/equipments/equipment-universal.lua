@@ -416,7 +416,7 @@ data:extend(
 			range = 32.5,
 			ammo_type = 
 			{
-				category = "laser-turret",
+				category = "laser",
 				energy_consumption = "4MJ",
 				action = 
 				{
@@ -482,7 +482,7 @@ data:extend(
 			range = 35,
 			ammo_type = 
 			{
-				category = "laser-turret",
+				category = "laser",
 				energy_consumption = "6MJ",
 				action = 
 				{
@@ -548,7 +548,7 @@ data:extend(
 			range = 37.5,
 			ammo_type = 
 			{
-				category = "laser-turret",
+				category = "laser",
 				energy_consumption = "8MJ",
 				action = 
 				{
@@ -638,7 +638,7 @@ data:extend(
 			},
 			ammo_type =
 			{
-				category = "laser-turret",
+				category = "laser",
 				energy_consumption = "0.2MJ",
 				action =
 				{
@@ -703,7 +703,7 @@ data:extend(
 			projectile_creation_distance = 0.5,
 			ammo_type =
 			{
-				category = "laser-turret",
+				category = "laser",
 				energy_consumption = "0.35MJ",
 				action =
 				{
@@ -768,7 +768,7 @@ data:extend(
 			projectile_creation_distance = 0.5,
 			ammo_type =
 			{
-				category = "laser-turret",
+				category = "laser",
 				energy_consumption = "0.5MJ",
 				action =
 				{
@@ -833,7 +833,7 @@ data:extend(
 			projectile_creation_distance = 0.5,
 			ammo_type =
 			{
-				category = "laser-turret",
+				category = "laser",
 				energy_consumption = "0.75MJ",
 				action =
 				{

@@ -1,4 +1,4 @@
-local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
+local hit_effects = require("__base__/prototypes/entity/hit-effects")
 
 function rocket_turret_sheet(inputs)
 return

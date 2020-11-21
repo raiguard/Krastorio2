@@ -487,7 +487,7 @@ data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].attack_
 	range = 30,
 	ammo_type =
 	{
-		category = "laser-turret",
+		category = "laser",
 		energy_consumption = "3MJ",
 		action =
 		{

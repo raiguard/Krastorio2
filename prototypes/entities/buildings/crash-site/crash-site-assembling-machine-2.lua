@@ -1,5 +1,5 @@
-local hit_effects = require("__base__/prototypes/entity/demo-hit-effects")
-local sounds      = require("__base__/prototypes/entity/demo-sounds")
+local hit_effects = require("__base__/prototypes/entity/hit-effects")
+local sounds      = require("__base__/prototypes/entity/sounds")
 
 data:extend(
 {   
@@ -40,7 +40,27 @@ data:extend(
 		selection_box = {{-1, -1.5}, {1, 1.5}},
 		alert_icon_shift = util.by_pixel(-3, -12),
 		integration_patch_render_layer = "decals",
-		integration_patch = hr_crash_site_assembling_machine_2_ground(),
+		integration_patch = 
+		{
+			filename = kr_crash_site_sprites_path .. "assembling-machine/crash-site-assembling-machine-2-ground.png",
+			priority = crash_site_sprite_priority,
+			width = 146,
+			height = 106,
+			shift = util.by_pixel(-8, -4),
+			frame_count = 1,
+			line_length = 1,
+			hr_version =
+			{
+				filename = kr_crash_site_sprites_path .. "assembling-machine/hr-crash-site-assembling-machine-2-ground.png",
+				priority = crash_site_sprite_priority,
+				width = 290,
+				height = 238,
+				shift = util.by_pixel(-8, -10),
+				frame_count = 1,
+				line_length = 1,
+				scale = 0.5
+			}
+		},
 		animation =
 		{
 			layers =

@@ -2402,7 +2402,7 @@ krastorio_utils.technologies_backup =
 		  type = "unlock-recipe"
 		}
 	  },
-	  icon = "__base__/graphics/technology/electric-energy-distribution.png",
+	  icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
 	  icon_size = 128,
 	  name = "electric-energy-distribution-1",
 	  order = "c-e-b",
@@ -2434,7 +2434,7 @@ krastorio_utils.technologies_backup =
 		  type = "unlock-recipe"
 		}
 	  },
-	  icon = "__base__/graphics/technology/electric-energy-distribution.png",
+	  icon = "__base__/graphics/technology/electric-energy-distribution-2.png",
 	  icon_size = 128,
 	  name = "electric-energy-distribution-2",
 	  order = "c-e-c",
@@ -2645,12 +2645,12 @@ krastorio_utils.technologies_backup =
 	["energy-weapons-damage-1"] = {
 	  effects = {
 		{
-		  ammo_category = "laser-turret",
+		  ammo_category = "laser",
 		  modifier = 0.2,
 		  type = "ammo-damage"
 		}
 	  },
-	  icon = "__base__/graphics/technology/energy-weapons-damage-1.png",
+	  icon = "__base__/graphics/technology/energy-weapons-damage.png",
 	  icon_size = 128,
 	  name = "energy-weapons-damage-1",
 	  order = "e-j-a",
@@ -2682,12 +2682,12 @@ krastorio_utils.technologies_backup =
 	["energy-weapons-damage-2"] = {
 	  effects = {
 		{
-		  ammo_category = "laser-turret",
+		  ammo_category = "laser",
 		  modifier = 0.2,
 		  type = "ammo-damage"
 		}
 	  },
-	  icon = "__base__/graphics/technology/energy-weapons-damage-1.png",
+	  icon = "__base__/graphics/technology/energy-weapons-damage.png",
 	  icon_size = 128,
 	  name = "energy-weapons-damage-2",
 	  order = "e-l-b",
@@ -2718,12 +2718,12 @@ krastorio_utils.technologies_backup =
 	["energy-weapons-damage-3"] = {
 	  effects = {
 		{
-		  ammo_category = "laser-turret",
+		  ammo_category = "laser",
 		  modifier = 0.3,
 		  type = "ammo-damage"
 		}
 	  },
-	  icon = "__base__/graphics/technology/energy-weapons-damage-1.png",
+	  icon = "__base__/graphics/technology/energy-weapons-damage.png",
 	  icon_size = 128,
 	  name = "energy-weapons-damage-3",
 	  order = "e-l-c",
@@ -2754,17 +2754,12 @@ krastorio_utils.technologies_backup =
 	["energy-weapons-damage-4"] = {
 	  effects = {
 		{
-		  ammo_category = "laser-turret",
+		  ammo_category = "laser",
 		  modifier = 0.4,
-		  type = "ammo-damage"
-		},
-		{
-		  ammo_category = "combat-robot-laser",
-		  modifier = 0.2,
 		  type = "ammo-damage"
 		}
 	  },
-	  icon = "__base__/graphics/technology/energy-weapons-damage-2.png",
+	  icon = "__base__/graphics/technology/energy-weapons-damage.png",
 	  icon_size = 128,
 	  name = "energy-weapons-damage-4",
 	  order = "e-l-d",
@@ -2799,22 +2794,12 @@ krastorio_utils.technologies_backup =
 	["energy-weapons-damage-5"] = {
 	  effects = {
 		{
-		  ammo_category = "laser-turret",
+		  ammo_category = "laser",
 		  modifier = 0.5,
-		  type = "ammo-damage"
-		},
-		{
-		  ammo_category = "combat-robot-laser",
-		  modifier = 0.4,
-		  type = "ammo-damage"
-		},
-		{
-		  ammo_category = "combat-robot-beam",
-		  modifier = 0.4,
 		  type = "ammo-damage"
 		}
 	  },
-	  icon = "__base__/graphics/technology/energy-weapons-damage-3.png",
+	  icon = "__base__/graphics/technology/energy-weapons-damage.png",
 	  icon_size = 128,
 	  name = "energy-weapons-damage-5",
 	  order = "e-l-e",
@@ -2853,22 +2838,12 @@ krastorio_utils.technologies_backup =
 	["energy-weapons-damage-6"] = {
 	  effects = {
 		{
-		  ammo_category = "laser-turret",
+		  ammo_category = "laser",
 		  modifier = 0.7,
-		  type = "ammo-damage"
-		},
-		{
-		  ammo_category = "combat-robot-laser",
-		  modifier = 0.4,
-		  type = "ammo-damage"
-		},
-		{
-		  ammo_category = "combat-robot-beam",
-		  modifier = 0.6,
 		  type = "ammo-damage"
 		}
 	  },
-	  icon = "__base__/graphics/technology/energy-weapons-damage-3.png",
+	  icon = "__base__/graphics/technology/energy-weapons-damage.png",
 	  icon_size = 128,
 	  name = "energy-weapons-damage-6",
 	  order = "e-l-f",
@@ -2907,22 +2882,12 @@ krastorio_utils.technologies_backup =
 	["energy-weapons-damage-7"] = {
 	  effects = {
 		{
-		  ammo_category = "laser-turret",
+		  ammo_category = "laser",
 		  modifier = 0.7,
-		  type = "ammo-damage"
-		},
-		{
-		  ammo_category = "combat-robot-laser",
-		  modifier = 0.3,
-		  type = "ammo-damage"
-		},
-		{
-		  ammo_category = "combat-robot-beam",
-		  modifier = 0.3,
 		  type = "ammo-damage"
 		}
 	  },
-	  icon = "__base__/graphics/technology/energy-weapons-damage-3.png",
+	  icon = "__base__/graphics/technology/energy-weapons-damage.png",
 	  icon_size = 128,
 	  max_level = "infinite",
 	  name = "energy-weapons-damage-7",
@@ -4158,7 +4123,7 @@ krastorio_utils.technologies_backup =
 	["laser-shooting-speed-1"] = {
 	  effects = {
 		{
-		  ammo_category = "laser-turret",
+		  ammo_category = "laser",
 		  modifier = 0.1,
 		  type = "gun-speed"
 		}
@@ -4194,7 +4159,7 @@ krastorio_utils.technologies_backup =
 	["laser-shooting-speed-2"] = {
 	  effects = {
 		{
-		  ammo_category = "laser-turret",
+		  ammo_category = "laser",
 		  modifier = 0.2,
 		  type = "gun-speed"
 		}
@@ -4230,7 +4195,7 @@ krastorio_utils.technologies_backup =
 	["laser-shooting-speed-3"] = {
 	  effects = {
 		{
-		  ammo_category = "laser-turret",
+		  ammo_category = "laser",
 		  modifier = 0.3,
 		  type = "gun-speed"
 		}
@@ -4270,7 +4235,7 @@ krastorio_utils.technologies_backup =
 	["laser-shooting-speed-4"] = {
 	  effects = {
 		{
-		  ammo_category = "laser-turret",
+		  ammo_category = "laser",
 		  modifier = 0.3,
 		  type = "gun-speed"
 		}
@@ -4310,7 +4275,7 @@ krastorio_utils.technologies_backup =
 	["laser-shooting-speed-5"] = {
 	  effects = {
 		{
-		  ammo_category = "laser-turret",
+		  ammo_category = "laser",
 		  modifier = 0.4,
 		  type = "gun-speed"
 		}
@@ -4354,7 +4319,7 @@ krastorio_utils.technologies_backup =
 	["laser-shooting-speed-6"] = {
 	  effects = {
 		{
-		  ammo_category = "laser-turret",
+		  ammo_category = "laser",
 		  modifier = 0.4,
 		  type = "gun-speed"
 		}
@@ -4398,7 +4363,7 @@ krastorio_utils.technologies_backup =
 	["laser-shooting-speed-7"] = {
 	  effects = {
 		{
-		  ammo_category = "laser-turret",
+		  ammo_category = "laser",
 		  modifier = 0.5,
 		  type = "gun-speed"
 		}

@@ -23,7 +23,7 @@ data.raw["construction-robot"]["construction-robot"].max_health = 50
 data.raw["construction-robot"]["construction-robot"].max_payload_size = 2
 --------------------------------------
 
-local sounds = require("__base__.prototypes.entity.demo-sounds")
+local sounds = require("__base__/prototypes/entity/sounds")
 
 -- -- Robot capsule
 --------------------------------------
@@ -73,7 +73,7 @@ data.raw["combat-robot"]["distractor"].time_to_live = 60 * 120
 data.raw["combat-robot"]["distractor"].attack_parameters =
 {
   type = "beam",
-  ammo_category = "combat-robot-laser",
+  ammo_category = "laser",
   cooldown = 20,
   damage_modifier = 2,
   projectile_center = {0, 0},
@@ -82,7 +82,7 @@ data.raw["combat-robot"]["distractor"].attack_parameters =
   sound = make_laser_sounds(),
   ammo_type =
   {
-	category = "combat-robot-laser",
+	category = "laser",
 	action =
 	{
 	  type = "direct",
@@ -103,13 +103,13 @@ data.raw["combat-robot"]["destroyer"].time_to_live = 60 * 180
 data.raw["combat-robot"]["destroyer"].attack_parameters =
 {
   type = "beam",
-  ammo_category = "combat-robot-beam",
+  ammo_category = "laser",
   cooldown = 20,
   damage_modifier = 2,
   range = 25,
   ammo_type =
   {
-	category = "combat-robot-beam",
+	category = "laser",
 	action =
 	{
 	  type = "direct",
