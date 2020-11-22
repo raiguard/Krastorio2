@@ -39,7 +39,13 @@ data:extend(
 		collision_box = {{-2.2, -1.2}, {2.2, 1.2}},
 		selection_box = {{-2.5, -1.5}, {2.5, 1.5}},
 		entity_info_icon_shift = util.by_pixel(32, 0),
-		light = {intensity = 0.9, size = 12, color = {r = 1.0, g = 1.0, b = 1.0}, shift = {1.5, 0.5}},
+		light = 
+		{
+			intensity = 0.34, 
+			size = 3, 
+			color = {r = 0.196, g = 0.658, b = 0.650}, 
+			shift = {1.5, 0.5}
+		},
 		integration_patch_render_layer = "decals",
 		integration_patch = 
 		{
@@ -99,6 +105,7 @@ data:extend(
 					line_length = 6,
 					animation_speed = 1 / 3,
 					shift = util.by_pixel(36, -20),
+					draw_as_glow = true,
 					blend_mode = "additive",
 					hr_version =
 					{
@@ -110,6 +117,33 @@ data:extend(
 						line_length = 6,
 						animation_speed = 1 / 3,
 						shift = util.by_pixel(37, -20),
+						draw_as_glow = true,
+						blend_mode = "additive",
+						scale = 0.5
+					}
+				},
+				{
+					filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-repaired-beams-light.png",
+					priority = crash_site_sprite_priority,
+					width = 68,
+					height = 50,
+					frame_count = 24,
+					line_length = 6,
+					animation_speed = 1 / 3,
+					shift = util.by_pixel(36, -20),
+					draw_as_light = true,
+					blend_mode = "additive",
+					hr_version =
+					{
+						filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-repaired-beams-light.png",
+						priority = crash_site_sprite_priority,
+						width = 130,
+						height = 100,
+						frame_count = 24,
+						line_length = 6,
+						animation_speed = 1 / 3,
+						shift = util.by_pixel(37, -20),
+						draw_as_light = true,
 						blend_mode = "additive",
 						scale = 0.5
 					}

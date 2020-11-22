@@ -27,6 +27,25 @@ data:extend(
 			layers =
 			{
 				{
+					
+					filename = kr_entities_path .. "advanced-solar-panel/advanced-solar-panel-light.png",
+					priority = "high",
+					width = 140,
+					height = 140,
+					shift = {0.1, 0.1},
+					draw_as_light = true,
+					hr_version =
+					{
+						filename = kr_entities_path .. "advanced-solar-panel/hr-advanced-solar-panel-light.png",
+						priority = "high",
+						width = 280,
+						height = 280,
+						shift = {0.1, 0.1},
+						draw_as_light = true,
+						scale = 0.5
+					}
+				},
+				{
 					filename = kr_entities_path .. "advanced-solar-panel/advanced-solar-panel.png",
 					priority = "high",
 					width = 140,

@@ -28,50 +28,50 @@ data:extend(
 			layers = 
 			{
 				{
-				filename = kr_entities_path .. "quantum-computer/quantum-computer.png",
-				priority = "high",
-				width = 200,
-				height = 210,
-				shift = {0, -0.2},
-				frame_count = 48,
-				line_length = 8,
-				animation_speed = 0.25,
-				hr_version =
-				{
-					filename = kr_entities_path .. "quantum-computer/hr-quantum-computer.png",
+					filename = kr_entities_path .. "quantum-computer/quantum-computer.png",
 					priority = "high",
-					width = 400,
-					height = 420,
+					width = 200,
+					height = 210,
 					shift = {0, -0.2},
 					frame_count = 48,
 					line_length = 8,
 					animation_speed = 0.25,
-					scale = 0.5
-				}
+					hr_version =
+					{
+						filename = kr_entities_path .. "quantum-computer/hr-quantum-computer.png",
+						priority = "high",
+						width = 400,
+						height = 420,
+						shift = {0, -0.2},
+						frame_count = 48,
+						line_length = 8,
+						animation_speed = 0.25,
+						scale = 0.5
+					}
 				},
 				{
-				filename = kr_entities_path .. "quantum-computer/quantum-computer-sh.png",
-				priority = "high",
-				width = 201,
-				height = 181,
-				shift = {0.19, 0.315},
-				frame_count = 1,
-				repeat_count = 48,
-				draw_as_shadow = true,
-				animation_speed = 0.25,
-				hr_version =
-				{
-					filename = kr_entities_path .. "quantum-computer/hr-quantum-computer-sh.png",
-					priority = "high",
-					width = 402,
-					height = 362,
+					filename = kr_entities_path .. "quantum-computer/quantum-computer-sh.png",
+					priority = "medium",
+					width = 201,
+					height = 181,
 					shift = {0.19, 0.315},
 					frame_count = 1,
 					repeat_count = 48,
 					draw_as_shadow = true,
 					animation_speed = 0.25,
-					scale = 0.5
-				}
+					hr_version =
+					{
+						filename = kr_entities_path .. "quantum-computer/hr-quantum-computer-sh.png",
+						priority = "medium",
+						width = 402,
+						height = 362,
+						shift = {0.19, 0.315},
+						frame_count = 1,
+						repeat_count = 48,
+						draw_as_shadow = true,
+						animation_speed = 0.25,
+						scale = 0.5
+					}
 				}
 			}
 		},
@@ -87,10 +87,63 @@ data:extend(
 		working_visualisations =
 		{
 			{
+				draw_as_light = true,
+				animation =
+				{
+					filename = kr_entities_path .. "quantum-computer/quantum-computer-light.png",
+					priority = "extra-high",
+					width = 200,
+					height = 210,
+					shift = {0, -0.2},
+					frame_count = 48,
+					line_length = 8,
+					animation_speed = 0.25,
+					hr_version =
+					{
+						filename = kr_entities_path .. "quantum-computer/hr-quantum-computer-light.png",
+						priority = "extra-high",
+						width = 400,
+						height = 420,
+						shift = {0, -0.2},
+						frame_count = 48,
+						line_length = 8,
+						animation_speed = 0.25,
+						scale = 0.5
+					}
+				}
+			},
+			{
+				draw_as_glow = true,
+				blend_mode = "additive-soft",
+				animation =
+				{
+					filename = kr_entities_path .. "quantum-computer/quantum-computer-glow.png",
+					priority = "extra-high",
+					width = 200,
+					height = 210,
+					shift = {0, -0.2},
+					frame_count = 48,
+					line_length = 8,
+					animation_speed = 0.25,
+					hr_version =
+					{
+						filename = kr_entities_path .. "quantum-computer/hr-quantum-computer-glow.png",
+						priority = "extra-high",
+						width = 400,
+						height = 420,
+						shift = {0, -0.2},
+						frame_count = 48,
+						line_length = 8,
+						animation_speed = 0.25,
+						scale = 0.5
+					}
+				}
+			},
+			{
 				light =
 				{
-					intensity = 1,
-					size = 20,
+					intensity = 0.85,
+					size = 5,
 					shift = {0.0, 0.0},
 					color = {r=0.35, g=0.75, b=1}
 				}

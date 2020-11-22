@@ -70,30 +70,30 @@ data:extend(
 		},
 		stages_effect =
 		{
-		  sheet =
-		  {
-			filename = kr_resources_sprites_path .. "imersite/imersite-rift-glow.png",
-			priority = "extra-high",
-			width = 250,
-			height = 250,
-			frame_count = 6,
-			variation_count = 1,
-			blend_mode = "additive",
-			flags = {"light"},
-			scale = 0.8,
-			hr_version =
-			{
-				filename = kr_resources_sprites_path .. "imersite/hr-imersite-rift-glow.png",
-				priority = "extra-high",
-				width = 500,
-				height = 500,
-				frame_count = 6,
-				variation_count = 1,
-				scale = 0.4,
-			  blend_mode = "additive",
-			  flags = {"light"}
+			sheets =
+			{			
+				{
+					filename = kr_resources_sprites_path .. "imersite/imersite-rift-glow.png",
+					priority = "extra-high",
+					width = 250,
+					height = 250,
+					frame_count = 6,
+					variation_count = 1,
+					draw_as_glow = true,
+					scale = 0.8,
+					hr_version =
+					{
+						filename = kr_resources_sprites_path .. "imersite/hr-imersite-rift-glow.png",
+						priority = "extra-high",
+						width = 500,
+						height = 500,
+						frame_count = 6,
+						variation_count = 1,
+						scale = 0.4,
+						draw_as_glow = true
+					}
+				}
 			}
-		  }
 		},
 		effect_animation_period = 5,
 		effect_animation_period_deviation = 1,
@@ -101,6 +101,7 @@ data:extend(
 		min_effect_alpha = 0.2,
 		max_effect_alpha = 0.3,
 		map_color = {r=1, g=0.5, b=1},
+		mining_visualisation_tint = {r=0.792, g=0.050, b=0.858},
 		map_grid = false
 	},	
 	{

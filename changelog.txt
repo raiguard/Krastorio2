@@ -3,16 +3,17 @@ Version: 1.0.8
 Date: XX.11.2020
   Features:
     - Updated chemical fluid icons to the latest vanilla style (thanks to GeneralEcchi).
-    - Added light icons to exploit the new light feature of Factorio 1.1 (almost 50 new light icons)(thanks to GeneralEcchi here too).
+    - Added light effects to icons and buildings to exploit the new light feature of Factorio 1.1 (almost 50+ new light icons and 20+ sprite animation effects)(thanks to GeneralEcchi here a bit too).
+    - Added an new option to enable/disable new menu simulations added in Factorio 1.1 (the menu simulations will be disabled by default).
   Changes:
-    - Incorporate vanilla crash entities in the mod because was removed in Factorio 1.1.
+    - Incorporate vanilla crash entities in the mod because was removed in Factorio 1.1 (and created properly light effects).
     - Added some descriptions to some entities for compatibility purposes (in particular for SE).
     - Improved wiki GUI (style and close button).
     - Reduced a bit the volume of antimater reactor while working.
     - Improved technology icons of personal battery MK2 and MK3.
   Fixes:
-    - Some fixes some crash error with Factorio 1.1.
-    - Fixed a possible internal library crash error in a prerequisites pointer is null in technology definitions.
+    - Fixe MANY crash errors with Factorio 1.1.
+    - Fixed a possible internal library crash error in a prerequisites pointer if setted null in technology definitions.
     - Now angels trains are supported with the merged mod too (Angel's Addons - Mass Transit/angelsaddons-mobility).
     - Fixed option to allow exoskeletons into spidertron equipment grids, was not available.
     - Added electric energy accumulators as prerequisite to energy storages.

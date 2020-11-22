@@ -85,6 +85,57 @@ data:extend(
 		},
 		working_visualisations =
 		{
+			{	
+				animation =
+				{
+					filename = kr_entities_path .. "fusion-reactor/fusion-reactor-animation-glow.png",
+					line_length = 6,
+					width = 313,
+					height = 344,
+					frame_count = 12,
+					animation_speed = 0.75,
+					shift = {2.18, -2.358},
+					draw_as_glow = true,	
+					blend_mode = "additive",
+					hr_version =
+					{
+						filename = kr_entities_path .. "fusion-reactor/hr-fusion-reactor-animation-glow.png",
+						line_length = 6,
+						width = 626,
+						height = 688,
+						frame_count = 12,
+						animation_speed = 0.75,
+						scale = 0.5,
+						shift = {2.18, -2.358},
+						draw_as_glow = true,	
+						blend_mode = "additive"
+					}
+				}
+			},
+			{
+				draw_as_light = true,	
+				animation =
+				{
+					filename = kr_entities_path .. "fusion-reactor/fusion-reactor-animation-light.png",
+					line_length = 6,
+					width = 313,
+					height = 344,
+					frame_count = 12,
+					animation_speed = 0.75,
+					shift = {2.18, -2.358},
+					hr_version =
+					{
+						filename = kr_entities_path .. "fusion-reactor/hr-fusion-reactor-animation-light.png",
+						line_length = 6,
+						width = 626,
+						height = 688,
+						frame_count = 12,
+						animation_speed = 0.75,
+						scale = 0.5,
+						shift = {2.18, -2.358}
+					}
+				}
+			},
 			{
 				animation =
 				{
@@ -137,13 +188,12 @@ data:extend(
 			{
 				light =
 				{
-					intensity = 0.35,
-					size = 30,
+					intensity = 0.25,
+					size = 2,
 					shift = {0, 0},
 					color = {r=0.95, g=0.75, b=0.5}
 				}
 			}
-
 		},
 		crafting_categories = {"nuclear-fusion"},
 		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },

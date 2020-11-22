@@ -112,6 +112,64 @@ data:extend(
 		working_visualisations =
 		{
 			{
+				draw_as_light = true,
+				blend_mode = "additive-soft",
+				animation =
+				{
+					filename = kr_entities_path .. "matter-plant/matter-plant-working-light.png",
+					priority = "high",
+					scale = scale,
+					width = 231,
+					height = 250,
+					frame_count = 30,
+					line_length = 6,
+					shift = {-0.1, -0.2},
+					animation_speed=0.75,
+					hr_version =
+					{
+						filename = kr_entities_path .. "matter-plant/hr-matter-plant-working-light.png",
+						priority = "high",
+						scale = scale,
+						width = 462,
+						height = 500,
+						frame_count = 30,
+						line_length = 6,
+						shift = {-0.1, -0.2},
+						scale = 0.5,
+						animation_speed=0.75
+					}
+				}
+			},
+			{
+				draw_as_glow = true,
+				blend_mode = "additive-soft",
+				animation =
+				{
+					filename = kr_entities_path .. "matter-plant/matter-plant-working-glow.png",
+					priority = "high",
+					scale = scale,
+					width = 231,
+					height = 250,
+					frame_count = 30,
+					line_length = 6,
+					shift = {-0.1, -0.2},
+					animation_speed=0.75,
+					hr_version =
+					{
+						filename = kr_entities_path .. "matter-plant/hr-matter-plant-working-glow.png",
+						priority = "high",
+						scale = scale,
+						width = 462,
+						height = 500,
+						frame_count = 30,
+						line_length = 6,
+						shift = {-0.1, -0.2},
+						scale = 0.5,
+						animation_speed=0.75
+					}
+				}
+			},
+			{
 				animation =
 				{
 					filename = kr_entities_path .. "matter-plant/matter-plant-working.png",
@@ -134,15 +192,8 @@ data:extend(
 						scale = 0.5,
 						animation_speed=0.75
 					}
-				},
-				light =
-				{
-					intensity = 1.5,
-					size = 20,
-					shift = {2.0, 0.0},
-					color = {r=0.35, g=0.5, b=1}
 				}
-			},
+			}			
 		},
 		crafting_categories = {"matter-conversion"},
 		scale_entity_info_icon = true,

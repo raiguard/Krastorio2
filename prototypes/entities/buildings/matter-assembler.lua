@@ -66,129 +66,158 @@ data:extend(
 			layers =
 			{
 				{
-				filename = kr_entities_path .. "matter-assembler/matter-assembler.png",
-				priority = "high",
-				width = 236,
-				height = 244,
-				frame_count = 1,
-				shift = {0, -0.15},
-				hr_version =
-				{
-					filename = kr_entities_path .. "matter-assembler/hr-matter-assembler.png",
+					filename = kr_entities_path .. "matter-assembler/matter-assembler.png",
 					priority = "high",
-					scale = scale,
-					width = 473,
-					height = 489,
+					width = 236,
+					height = 244,
 					frame_count = 1,
-					scale = 0.5,
 					shift = {0, -0.15},
-				}
+					hr_version =
+					{
+						filename = kr_entities_path .. "matter-assembler/hr-matter-assembler.png",
+						priority = "high",
+						scale = scale,
+						width = 473,
+						height = 489,
+						frame_count = 1,
+						scale = 0.5,
+						shift = {0, -0.15},
+					}
 				},
 				{
-				filename = kr_entities_path .. "matter-assembler/matter-assembler-sh.png",
-				priority = "high",
-				width = 254,
-				height = 223,
-				frame_count = 1,
-				shift = {0.38, 0.22},
-				draw_as_shadow = true,
-				hr_version =
-				{
-					filename = kr_entities_path .. "matter-assembler/hr-matter-assembler-sh.png",
-					priority = "high",
-					width = 508,
-					height = 446,
+					filename = kr_entities_path .. "matter-assembler/matter-assembler-sh.png",
+					priority = "medium",
+					width = 254,
+					height = 223,
 					frame_count = 1,
-					scale = 0.5,
 					shift = {0.38, 0.22},
 					draw_as_shadow = true,
+					hr_version =
+					{
+						filename = kr_entities_path .. "matter-assembler/hr-matter-assembler-sh.png",
+						priority = "medium",
+						width = 508,
+						height = 446,
+						frame_count = 1,
+						scale = 0.5,
+						shift = {0.38, 0.22},
+						draw_as_shadow = true,
+					}
 				}
-				},
 			}
 		},		
 		working_visualisations =
 		{
+			{
+				draw_as_light = true,
+				animation =
+				{
+					filename = kr_entities_path .. "matter-assembler/matter-assembler-working-glow-light.png",
+					priority = "high",
+					width = 72,
+					height = 55,
+					frame_count = 30,
+					line_length = 6,
+					animation_speed = 0.75,
+					shift = {0, -0.23},
+					hr_version =
+					{
+						filename = kr_entities_path .. "matter-assembler/hr-matter-assembler-working-glow-light.png",
+						priority = "high",
+						width = 144,
+						height = 110,
+						frame_count = 30,
+						line_length = 6,
+						scale = 0.5,
+						animation_speed = 0.75,
+						shift = {0, -0.23}
+					}
+				}
+			},
+			{
+				draw_as_glow = true,
+				blend_mode = "additive",
+				animation =
+				{
+					filename = kr_entities_path .. "matter-assembler/matter-assembler-working-glow.png",
+					priority = "high",
+					width = 72,
+					height = 55,
+					frame_count = 30,
+					line_length = 6,
+					animation_speed = 0.75,
+					shift = {0, -0.23},
+					hr_version =
+					{
+						filename = kr_entities_path .. "matter-assembler/hr-matter-assembler-working-glow.png",
+						priority = "high",
+						width = 144,
+						height = 110,
+						frame_count = 30,
+						line_length = 6,
+						scale = 0.5,
+						animation_speed = 0.75,
+						shift = {0, -0.23}
+					}
+				}
+			},
 			{
 				animation =
 				{
 					layers =
 					{
 						{
-						filename = kr_entities_path .. "matter-assembler/matter-assembler-working.png",
-						priority = "high",
-						width = 236,
-						height = 244,
-						frame_count = 30,
-						line_length = 6,
-						animation_speed = 0.75,
-						shift = {0, -0.15},
-						hr_version =
-						{
-							filename = kr_entities_path .. "matter-assembler/hr-matter-assembler-working.png",
+							filename = kr_entities_path .. "matter-assembler/matter-assembler-working-light.png",
 							priority = "high",
-							width = 473,
-							height = 489,
+							width = 236,
+							height = 244,
 							frame_count = 30,
 							line_length = 6,
-							scale = 0.5,
 							animation_speed = 0.75,
-							shift = {0, -0.15}
-						}
+							shift = {0, -0.15},
+							draw_as_light = true,
+							hr_version =
+							{
+								filename = kr_entities_path .. "matter-assembler/hr-matter-assembler-working-light.png",
+								priority = "high",
+								width = 473,
+								height = 489,
+								frame_count = 30,
+								line_length = 6,
+								scale = 0.5,
+								animation_speed = 0.75,
+								shift = {0, -0.15},
+								draw_as_light = true
+							}
 						},
 						{
-						filename = kr_entities_path .. "matter-assembler/matter-assembler-working-glow.png",
-						priority = "high",
-						width = 72,
-						height = 55,
-						frame_count = 30,
-						line_length = 6,
-						blend_mode = "additive-soft",
-						animation_speed = 0.75,
-						shift = {0, -0.23},
-						hr_version =
-						{
-							filename = kr_entities_path .. "matter-assembler/hr-matter-assembler-working-glow.png",
+							filename = kr_entities_path .. "matter-assembler/matter-assembler-working.png",
 							priority = "high",
-							width = 144,
-							height = 110,
+							width = 236,
+							height = 244,
 							frame_count = 30,
 							line_length = 6,
-							scale = 0.5,
-							blend_mode = "additive-soft",
 							animation_speed = 0.75,
-							shift = {0, -0.23}
+							shift = {0, -0.15},
+							hr_version =
+							{
+								filename = kr_entities_path .. "matter-assembler/hr-matter-assembler-working.png",
+								priority = "high",
+								width = 473,
+								height = 489,
+								frame_count = 30,
+								line_length = 6,
+								scale = 0.5,
+								animation_speed = 0.75,
+								shift = {0, -0.15}
+							}
 						}
-						},
-						{
-						filename = kr_entities_path .. "matter-assembler/matter-assembler-working-glow.png",
-						priority = "high",
-						width = 72,
-						height = 55,
-						frame_count = 30,
-						line_length = 6,
-						blend_mode = "additive-soft",
-						animation_speed = 0.75,
-						shift = {0, -0.28},
-						hr_version =
-						{
-							filename = kr_entities_path .. "matter-assembler/hr-matter-assembler-working-glow.png",
-							priority = "high",
-							width = 144,
-							height = 110,
-							frame_count = 30,
-							line_length = 6,
-							scale = 0.5,
-							blend_mode = "additive-soft",
-							animation_speed = 0.75,
-							shift = {0, -0.28}
-						}
-						},
 					}
 				},
 				light =
 				{
-					intensity = 1.5,
-					size = 16,
+					intensity = 0.80,
+					size = 6,
 					shift = {0, -0.15},
 					color = {r=0.35, g=0.5, b=1}
 				}

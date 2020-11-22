@@ -33,23 +33,52 @@ data:extend(
 		},
 		animation =
 		{
-			filename = kr_entities_path .. "singularity-beacon/singularity-beacon-w.png",
-			width = 48,
-			height = 54,
-			frame_count = 10,
-			line_length = 5,
-			shift = util.by_pixel(0, -11.5),
-			animation_speed = 0.5,
-			hr_version =
+			layers =
 			{
-				filename = kr_entities_path .. "singularity-beacon/hr-singularity-beacon-w.png",
-				width = 190,
-				height = 214,
-				frame_count = 10,
-				line_length = 5,
-				shift = util.by_pixel(0, -11.5),
-				scale = 0.25,
-				animation_speed = 0.5
+				{
+					filename = kr_entities_path .. "singularity-beacon/singularity-beacon-w-light.png",
+					width = 48,
+					height = 54,
+					frame_count = 10,
+					line_length = 5,
+					shift = util.by_pixel(0, -11.5),
+					draw_as_light = true,
+					flags = {"light"},
+					animation_speed = 0.5,
+					hr_version =
+					{
+						filename = kr_entities_path .. "singularity-beacon/hr-singularity-beacon-w-light.png",
+						width = 190,
+						height = 214,
+						frame_count = 10,
+						line_length = 5,
+						shift = util.by_pixel(0, -11.5),
+						draw_as_light = true,
+						flags = {"light"},
+						scale = 0.25,
+						animation_speed = 0.5
+					}
+				},
+				{
+					filename = kr_entities_path .. "singularity-beacon/singularity-beacon-w.png",
+					width = 48,
+					height = 54,
+					frame_count = 10,
+					line_length = 5,
+					shift = util.by_pixel(0, -11.5),
+					animation_speed = 0.5,
+					hr_version =
+					{
+						filename = kr_entities_path .. "singularity-beacon/hr-singularity-beacon-w.png",
+						width = 190,
+						height = 214,
+						frame_count = 10,
+						line_length = 5,
+						shift = util.by_pixel(0, -11.5),
+						scale = 0.25,
+						animation_speed = 0.5
+					}
+				}
 			}
 		},
 		animation_shadow =

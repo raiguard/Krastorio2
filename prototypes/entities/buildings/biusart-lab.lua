@@ -12,31 +12,38 @@ data:extend({
 		dying_explosion = "medium-explosion",
 		collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
 		selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-		light = {intensity = 1.2, size = 10, color = {r = 255, g = 255, b = 255}},
+		light = 
+		{
+			intensity = 0.8, 
+			size = 4, 
+			color = {r = 255, g = 255, b = 255}
+		},
 		on_animation =
 		{
 			layers = 
 			{
-				{
-					filename = kr_entities_path .. "biusart-lab/biusart-lab-anim.png",
+				{					
+					filename = kr_entities_path .. "biusart-lab/biusart-lab-anim-light.png",
 					width = 75,
 					height = 75,
 					frame_count = 29,
 					line_length = 10,
 					animation_speed = 1 / 3,
 					shift = {0,-0.05},
+					draw_as_light = true,
 					scale = 2*0.64,
 					hr_version =
 					{
-						filename = kr_entities_path .. "biusart-lab/hr-biusart-lab-anim.png",
+						filename = kr_entities_path .. "biusart-lab/hr-biusart-lab-anim-light.png",
 						width = 150,
 						height = 150,
 						frame_count = 29,
 						line_length = 10,
 						animation_speed = 1 / 3,
 						shift = {0,-0.05},
+						draw_as_light = true,
 						scale = 0.64
-					},
+					}
 				},
 				{
 					filename = kr_entities_path .. "biusart-lab/biusart-lab-anim.png",
@@ -57,7 +64,7 @@ data:extend({
 						animation_speed = 1 / 3,
 						shift = {0,-0.05},
 						scale = 0.64
-					},
+					}
 				},
 				{
 					filename = kr_entities_path .. "biusart-lab/biusart-lab-anim.png",
@@ -78,7 +85,28 @@ data:extend({
 						animation_speed = 1 / 3,
 						shift = {0,-0.05},
 						scale = 0.64
-					},
+					}
+				},
+				{
+					filename = kr_entities_path .. "biusart-lab/biusart-lab-anim.png",
+					width = 75,
+					height = 75,
+					frame_count = 29,
+					line_length = 10,
+					animation_speed = 1 / 3,
+					shift = {0,-0.05},
+					scale = 2*0.64,
+					hr_version =
+					{
+						filename = kr_entities_path .. "biusart-lab/hr-biusart-lab-anim.png",
+						width = 150,
+						height = 150,
+						frame_count = 29,
+						line_length = 10,
+						animation_speed = 1 / 3,
+						shift = {0,-0.05},
+						scale = 0.64
+					}
 				},
 				{
 					filename = kr_entities_path .. "biusart-lab/biusart-lab-light-anim.png",
@@ -101,7 +129,7 @@ data:extend({
 						shift = {0,-0.05},
 						scale = 0.64,
 						blend_mode = "additive-soft",
-					},
+					}
 				},
 				{
 					filename = kr_entities_path .. "biusart-lab/biusart-lab-light-anim.png",
@@ -111,6 +139,7 @@ data:extend({
 					line_length = 10,
 					animation_speed = 1 / 3,
 					shift = {0,-0.05},
+					draw_as_light = true,
 					scale = 2*0.64,
 					blend_mode = "additive-soft",
 					hr_version =
@@ -122,9 +151,10 @@ data:extend({
 						line_length = 10,
 						animation_speed = 1 / 3,
 						shift = {0,-0.05},
+						draw_as_light = true,
 						scale = 0.64,
 						blend_mode = "additive-soft",
-					},
+					}
 				},
 				{
 					filename = kr_entities_path .. "biusart-lab/biusart-lab-shadow.png",
@@ -149,7 +179,7 @@ data:extend({
 						shift = {0,-0.20},
 						scale = 0.75,
 						draw_as_shadow = true,
-					},
+					}
 				},
 				{
 					filename = kr_entities_path .. "biusart-lab/biusart-lab-ao.png",
@@ -170,7 +200,7 @@ data:extend({
 						animation_speed = 1 / 3,
 						shift = {0,-0.05},
 						scale = 0.50,
-					},
+					}
 				}
 			}
 		},

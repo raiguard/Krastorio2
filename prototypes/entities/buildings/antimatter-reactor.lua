@@ -46,10 +46,11 @@ data:extend(
 			emissions_per_minute = 200,
 			light_flicker = 
 			{
-				intensity = 1.5, 
-				minimum_light_size = 2, 
-				size = 18,
-				shift = {0.0, 0.0},
+				minimum_intensity = 0.01, 
+				maximum_intensity = 0.50,
+				derivation_change_frequency = 0.02,
+				derivation_change_deviation	= 0.02,
+				minimum_light_size = 1, 
 				color = {r=0.459, g=0.031, b=0.447}
 			}
 		},		
@@ -59,34 +60,8 @@ data:extend(
 			layers =
 			{
 				{
-					filename = kr_entities_path .. "antimatter-reactor/antimatter-reactor-light.png",
-					frame_count = 1,
-					width = 330,
-					height = 353,
-					shift = {0, -0.5},
-					frame_count = 1,
-					repeat_count = 30,
-					animation_speed=0.9,
-					scale = 0.96,
-					draw_as_light = true,
-					fadeout = true,
-					hr_version =
-					{
-						filename = kr_entities_path .. "antimatter-reactor/hr-antimatter-reactor-light.png",
-						frame_count = 1,
-						width = 660,
-						height = 706,
-						shift = {0, -0.5},
-						frame_count = 1,
-						repeat_count = 30,
-						animation_speed=0.9,
-						scale = 0.48,
-						draw_as_light = true,
-						fadeout = true,
-					}
-				},
-				{
 					filename = kr_entities_path .. "antimatter-reactor/antimatter-reactor.png",
+					priority = "high",
 					frame_count = 6,
 					scale = scale,
 					width = 330,
@@ -99,6 +74,7 @@ data:extend(
 					hr_version =
 					{
 						filename = kr_entities_path .. "antimatter-reactor/hr-antimatter-reactor.png",
+						priority = "high",
 						frame_count = 6,
 						scale = scale,
 						width = 660,
@@ -133,6 +109,64 @@ data:extend(
 						animation_speed=0.9,
 						scale = 0.48,
 						draw_as_shadow = true
+					}
+				},
+				{
+					filename = kr_entities_path .. "antimatter-reactor/antimatter-reactor-glow.png",
+					priority = "high",
+					frame_count = 1,
+					width = 330,
+					height = 353,
+					shift = {0, -0.5},
+					frame_count = 1,
+					repeat_count = 30,
+					animation_speed=0.9,
+					scale = 0.96,
+					blend_mode = "additive",
+					draw_as_light = true,
+					hr_version =
+					{
+						filename = kr_entities_path .. "antimatter-reactor/hr-antimatter-reactor-glow.png",
+						priority = "high",
+						frame_count = 1,
+						width = 660,
+						height = 706,
+						shift = {0, -0.5},
+						frame_count = 1,
+						repeat_count = 30,
+						animation_speed=0.9,
+						scale = 0.48,
+						blend_mode = "additive",
+						draw_as_light = true
+					}
+				},
+				{
+					filename = kr_entities_path .. "antimatter-reactor/antimatter-reactor-light.png",
+					priority = "high",
+					frame_count = 1,
+					width = 330,
+					height = 353,
+					shift = {0, -0.5},
+					frame_count = 1,
+					repeat_count = 30,
+					animation_speed=0.9,
+					scale = 0.96,
+					draw_as_light = true,
+					fadeout = true,
+					hr_version =
+					{
+						filename = kr_entities_path .. "antimatter-reactor/hr-antimatter-reactor-light.png",
+						priority = "high",
+						frame_count = 1,
+						width = 660,
+						height = 706,
+						shift = {0, -0.5},
+						frame_count = 1,
+						repeat_count = 30,
+						animation_speed=0.9,
+						scale = 0.48,
+						draw_as_light = true,
+						fadeout = true,
 					}
 				}
 			}

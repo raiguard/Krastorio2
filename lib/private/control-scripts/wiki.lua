@@ -287,11 +287,11 @@ function createWiki(event)
 	
 	local info_label = krastorio.gui.addDescription(wiki_info_pane, {name=w_prefix.."info", caption={"gui.info-description"}})	
 	
-	-- Add window frame to main player opened wiki
-	game.players[event.player_index].opened = wiki_frame
 	-- Call to center the frame when the size will not change anymore (at the end of the function)
 	wiki_frame.force_auto_center()
-	
+	-- Add window frame to main player opened wiki
+	game.players[event.player_index].opened = wiki_frame
+		
 	-- GUI Callbacks
 	krastorio.gui.addClickElementEvent(w_prefix.."toggle-wiki", "toggleWiki")	
 	krastorio.gui.addClickElementEvent(w_prefix.."close-button", "closeWiki")	

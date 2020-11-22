@@ -42,7 +42,7 @@ local tesla_coil_electric_beam_sound =
 }
 
 -- Beam config vars
-local light_tint           = nil
+local light_tint           = {r=0, g=0.917, b=1}
 local beam_blend_mode      = "additive-soft"
 local beam_non_light_flags = { "trilinear-filtering" }
 
@@ -95,6 +95,33 @@ data:extend(
 		{
 			layers =
 			{
+				{
+					filename = kr_entities_path .. "tesla-coil/tesla-coil-animation-light.png",
+					priority = "high",
+					width = 97,
+					height = 116,
+					frame_count = 60,
+					line_length = 10,
+					animation_speed = 0.000003,
+					run_mode = "forward",
+					draw_as_light = true,
+					blend_mode = "additive-soft",
+					hr_version =
+					{
+						filename = kr_entities_path .. "tesla-coil/hr-tesla-coil-animation-light.png",
+						priority = "high",
+						width = 194,
+						height = 232,
+						scale = 0.5,
+						frame_count = 60,
+						line_length = 10,
+						animation_speed = 0.000003,
+						run_mode = "forward",
+						shift = {0, -0.75},
+						draw_as_light = true,
+						blend_mode = "additive-soft"
+					}
+				},
 				{
 					filename = kr_entities_path .. "tesla-coil/tesla-coil-animation.png",
 					priority = "high",

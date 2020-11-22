@@ -93,38 +93,91 @@ data:extend(
 		base_patch = empty_sprite,
 		base_animation =
 		{
-			filename = kr_entities_path .. "small-roboport/small-roboport-animation.png",
-			priority = "medium",
-			width = 55,
-			height = 40,
-			scale = 0.5,
-			frame_count = 8,
-			shift = {0, -0.92},
-			animation_speed = 0.1,
-			hr_version =
+			layers =
 			{
-				filename = kr_entities_path .. "small-roboport/hr-small-roboport-animation.png",
-				priority = "medium",
-				width = 110,
-				height = 80,
-				scale = scale,
-				scale = 0.25,
-				frame_count = 8,
-				shift = {0, -0.92},
-				animation_speed = 0.1
+				{
+					filename = kr_entities_path .. "small-roboport/small-roboport-animation.png",
+					priority = "high",
+					width = 55,
+					height = 40,
+					scale = 0.5,
+					frame_count = 8,
+					shift = {0, -0.92},
+					draw_as_glow = true,
+					animation_speed = 0.1,
+					hr_version =
+					{
+						filename = kr_entities_path .. "small-roboport/hr-small-roboport-animation.png",
+						priority = "high",
+						width = 110,
+						height = 80,
+						scale = scale,
+						scale = 0.25,
+						frame_count = 8,
+						shift = {0, -0.92},
+						draw_as_glow = true,
+						animation_speed = 0.1
+					}
+				},
+				{
+					filename = kr_entities_path .. "small-roboport/small-roboport-animation-light.png",
+					priority = "high",
+					width = 55,
+					height = 40,
+					scale = 0.5,
+					frame_count = 8,
+					shift = {0, -0.92},
+					draw_as_light = true,
+					animation_speed = 0.1,
+					hr_version =
+					{
+						filename = kr_entities_path .. "small-roboport/hr-small-roboport-animation-light.png",
+						priority = "high",
+						width = 110,
+						height = 80,
+						scale = scale,
+						scale = 0.25,
+						frame_count = 8,
+						shift = {0, -0.92},
+						draw_as_light = true,
+						animation_speed = 0.1
+					}
+				}
 			}
 		},
 		door_animation_up = empty_sprite,
 		door_animation_down = empty_sprite,
 		recharging_animation =
 		{
-			filename = kr_entities_path .. "small-roboport/small-roboport-recharging.png",
-			priority = "high",
-			width = 37,
-			height = 35,
-			frame_count = 16,
-			scale = 1.5,
-			animation_speed = 0.5
+			layers =
+			{
+				{
+					filename = kr_entities_path .. "small-roboport/small-roboport-recharging.png",
+					priority = "high",
+					width = 37,
+					height = 35,
+					frame_count = 16,
+					scale = 1.5,
+					draw_as_glow = true,
+					animation_speed = 0.5
+				},
+				{
+					filename = kr_entities_path .. "small-roboport/small-roboport-recharging-light.png",
+					priority = "high",
+					width = 37,
+					height = 35,
+					frame_count = 16,
+					scale = 1.5,
+					draw_as_light = true,
+					animation_speed = 0.5
+				}
+			}
+		},
+		recharging_light = 
+		{
+			intensity = 0.2, 
+			size = 1, 
+			color = {r = 0.196, g = 0.658, b = 0.650}
 		},
 		
 		water_reflection =
@@ -144,7 +197,6 @@ data:extend(
 		},
 		
 		vehicle_impact_sound = sounds.generic_impact,
-		recharging_light = {intensity = 0.4, size = 5, color = {r = 1.0, g = 1.0, b = 1.0}},
 		request_to_open_door_timeout = 15,
 		spawn_and_station_height = 0.33
 	}

@@ -131,6 +131,7 @@ data:extend(
 					animation_speed = 0.03,
 					scale = 1.1,
 					shift = {0, -0.4},
+					draw_as_glow = true,
 					hr_version =
 					{
 						filename = kr_entities_path .. "energy-storage/hr-energy-storage-charge.png",
@@ -141,6 +142,30 @@ data:extend(
 						line_length = 2,
 						animation_speed = 0.03,
 						shift = {0, -0.4},
+						draw_as_glow = true
+					}
+				},
+				{
+					filename = kr_entities_path .. "energy-storage/energy-storage-light.png",
+					width = 190,
+					height = 190,
+					frame_count = 1,
+					repeat_count = 2,
+					animation_speed = 0.06,
+					scale = 1.1,
+					shift = {0, -0.4},
+					draw_as_light = true,
+					hr_version =
+					{
+						filename = kr_entities_path .. "energy-storage/hr-energy-storage-light.png",
+						width = 380,
+						height = 380,
+						scale = 0.55,
+						frame_count = 1,
+						repeat_count = 2,
+						animation_speed = 0.06,
+						shift = {0, -0.4},
+						draw_as_light = true
 					}
 				}
 			}
@@ -202,6 +227,7 @@ data:extend(
 					animation_speed = 0.06,
 					scale = 1.1,
 					shift = {0, -0.4},
+					draw_as_glow = true,
 					hr_version =
 					{
 						filename = kr_entities_path .. "energy-storage/hr-energy-storage-discharge.png",
@@ -212,24 +238,50 @@ data:extend(
 						line_length = 2,
 						animation_speed = 0.06,
 						shift = {0, -0.4},
+						draw_as_glow = true
+					}
+				},
+				{
+					filename = kr_entities_path .. "energy-storage/energy-storage-light.png",
+					width = 190,
+					height = 190,
+					frame_count = 1,
+					repeat_count = 2,
+					animation_speed = 0.06,
+					scale = 1.1,
+					shift = {0, -0.4},
+					draw_as_light = true,
+					hr_version =
+					{
+						filename = kr_entities_path .. "energy-storage/hr-energy-storage-light.png",
+						width = 380,
+						height = 380,
+						scale = 0.55,
+						frame_count = 1,
+						repeat_count = 2,
+						animation_speed = 0.06,
+						shift = {0, -0.4},
+						draw_as_light = true
 					}
 				}
 			}
 		},		
 		charge_cooldown = 5,
 		discharge_cooldown = 5,
+		--[[
 		charge_light =
 		{
-			intensity = 1,
-			size = 12,
+			intensity = 0.5,
+			size = 1,
 			color = {r=0.25, g=1, b=0.5}
 		},
 		discharge_light =
 		{
-			intensity = 1.25,
-			size = 12,
+			intensity = 0.75,
+			size = 1,
 			color = {r=1, g=0.75, b=0.25}
 		},
+		--]]
 		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{
@@ -241,9 +293,9 @@ data:extend(
 			idle_sound =
 			{
 				filename = "__base__/sound/accumulator-idle.ogg",
-				volume = 1
+				volume = 0.8
 			},
-			max_sounds_per_type = 3,
+			max_sounds_per_type = 2,
 			fade_in_ticks = 10,
 			fade_out_ticks = 30
 		},

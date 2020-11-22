@@ -73,7 +73,7 @@ data:extend(
 					frame_count = 20,
 					line_length = 5,
 					shift = util.by_pixel(-4, -10),
-					animation_speed = crash_site_assembling_machine_2_animation_speed,
+					animation_speed = 2,
 					hr_version =
 					{
 						filename = kr_crash_site_sprites_path .. "assembling-machine/hr-crash-site-assembling-machine-2-repaired.png",
@@ -83,7 +83,7 @@ data:extend(
 						frame_count = 20,
 						line_length = 5,
 						shift = util.by_pixel(-4, -11),
-						animation_speed = crash_site_assembling_machine_2_animation_speed,
+						animation_speed = 2,
 						scale = 0.5
 					}
 				},
@@ -96,7 +96,7 @@ data:extend(
 					line_length = 5,
 					draw_as_shadow = true,
 					shift = util.by_pixel(2, -8),
-					animation_speed = crash_site_assembling_machine_2_animation_speed,
+					animation_speed = 2,
 					hr_version =
 					{
 						filename = kr_crash_site_sprites_path .. "assembling-machine/hr-crash-site-assembling-machine-2-repaired-shadow.png",
@@ -107,7 +107,7 @@ data:extend(
 						line_length = 5,
 						draw_as_shadow = true,
 						shift = util.by_pixel(3, -9),
-						animation_speed = crash_site_assembling_machine_2_animation_speed,
+						animation_speed = 2,
 						scale = 0.5
 					}
 				}
@@ -125,8 +125,9 @@ data:extend(
 					frame_count = 20,
 					line_length = 5,
 					shift = util.by_pixel(-8, -6),
+					draw_as_glow = true,
 					blend_mode = "additive",
-					animation_speed = crash_site_assembling_machine_2_animation_speed,
+					animation_speed = 2,
 					hr_version =
 					{
 						filename = kr_crash_site_sprites_path .. "assembling-machine/hr-crash-site-assembling-machine-2-repaired-light.png",
@@ -136,8 +137,9 @@ data:extend(
 						frame_count = 20,
 						line_length = 5,
 						shift = util.by_pixel(-7, -4),
+						draw_as_glow = true,
 						blend_mode = "additive",
-						animation_speed = crash_site_assembling_machine_2_animation_speed,
+						animation_speed = 2,
 						scale = 0.5
 					}
 				}

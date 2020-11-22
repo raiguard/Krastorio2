@@ -73,16 +73,45 @@ data:extend(
 						animation_speed = 0.9,
 						scale = 0.5
 					}
-				},
-			},
+				}
+			}
 		},		
 		working_visualisations =
 		{
 			{
+				animation =
+				{
+					filename = kr_entities_path .. "research-server/research-server-light.png",
+					priority = "extra-high",
+					scale = scale,
+					width = 128,
+					height = 128,
+					shift = {0., -0.2},
+					draw_as_light = true,
+					frame_count = 60,
+					line_length = 15,
+					animation_speed = 0.9,
+					hr_version =
+					{
+						filename = kr_entities_path .. "research-server/hr-research-server-light.png",
+						priority = "extra-high",
+						scale = scale,
+						width = 256,
+						height = 256,
+						shift = {0., -0.2},
+						draw_as_light = true,
+						frame_count = 60,
+						line_length = 15,
+						animation_speed = 0.9,
+						scale = 0.5
+					}
+				}
+			},
+			{
 				light =
 				{
-					intensity = 0.5,
-					size = 6,
+					intensity = 0.25,
+					size = 1,
 					shift = {0.0, 0.0},
 					color = {r=0.1, g=0.5, b=1}
 				}

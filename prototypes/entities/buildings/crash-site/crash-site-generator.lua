@@ -47,7 +47,13 @@ data:extend(
 		},
 		energy_production = "240kW",
 		energy_usage = "0kW",
-		light = {intensity = 0.75, size = 6, color = {r = 1.0, g = 1.0, b = 1.0}, shift = {64/64, -140/64}},
+		light = 
+		{
+			intensity = 0.24, 
+			size = 1, 
+			color = {r = 0.196, g = 0.658, b = 0.650}, 
+			shift = {64/64, -140/64}
+		},
 		continuous_animation = true,
 		integration_patch_render_layer = "decals",
 		integration_patch =
@@ -108,6 +114,7 @@ data:extend(
 					line_length = 4,
 					repeat_count = 5,
 					shift = util.by_pixel(24, -30),
+					draw_as_glow = true,
 					animation_speed = crash_site_generator_animation_speed,
 					hr_version = 
 					{
@@ -120,6 +127,33 @@ data:extend(
 						repeat_count = 5,
 						animation_speed = crash_site_generator_animation_speed,
 						shift = util.by_pixel(-8, -30),
+						draw_as_glow = true,
+						scale = 0.5
+					}
+				},
+				{
+					filename = kr_crash_site_sprites_path .. "generator/crash-site-generator-beams-light.png",
+					priority = crash_site_sprite_priority,
+					width = 48,
+					height= 116,
+					frame_count = 16,
+					line_length = 4,
+					repeat_count = 5,
+					shift = util.by_pixel(24, -30),
+					draw_as_light = true,
+					animation_speed = crash_site_generator_animation_speed,
+					hr_version = 
+					{
+						filename = kr_crash_site_sprites_path .. "generator/hr-crash-site-generator-beams-light.png",
+						priority = crash_site_sprite_priority,
+						width = 224,
+						height= 232,
+						frame_count = 16,
+						line_length = 4,
+						repeat_count = 5,
+						animation_speed = crash_site_generator_animation_speed,
+						shift = util.by_pixel(-8, -30),
+						draw_as_light = true,
 						scale = 0.5
 					}
 				},

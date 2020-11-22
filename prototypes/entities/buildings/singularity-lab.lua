@@ -72,6 +72,78 @@ data:extend(
 			layers =
 			{
 				{
+					filename = kr_entities_path .. "singularity-lab/singularity-lab-glow-light.png",
+					priority = "high",
+					width = 77,
+					height = 59,
+					shift = {0,-0.8},
+					frame_count = 60,
+					line_length = 6,
+					animation_speed = 0.85,
+					draw_as_light = true,
+					hr_version =
+					{
+						filename = kr_entities_path .. "singularity-lab/hr-singularity-lab-glow-light.png",
+						priority = "high",
+						scale = 0.5,
+						width = 153,
+						height = 117,
+						shift = {0,-0.8},
+						frame_count = 60,
+						line_length = 6,
+						scale = 0.5,
+						animation_speed = 0.85,
+						draw_as_light = true
+					}
+				},
+				{
+					filename = kr_entities_path .. "singularity-lab/singularity-lab-glow.png",
+					priority = "high",
+					width = 77,
+					height = 59,
+					shift = {0,-0.8},
+					frame_count = 60,
+					line_length = 6,
+					animation_speed=0.85,
+					blend_mode = "additive",
+					hr_version =
+					{
+						filename = kr_entities_path .. "singularity-lab/hr-singularity-lab-glow.png",
+						priority = "high",
+						scale = 0.5,
+						width = 153,
+						height = 117,
+						shift = {0,-0.8},
+						frame_count = 60,
+						line_length = 6,
+						scale = 0.5,
+						animation_speed=0.85,
+						blend_mode = "additive"
+					}
+				},
+				{					
+					filename = kr_entities_path .. "singularity-lab/singularity-lab-light.png",
+					priority = "high",
+					width = 260,
+					height = 250,
+					shift = {0.0, -0.1},
+					draw_as_light = true,
+					frame_count = 1,
+					repeat_count = 60,
+					hr_version =
+					{
+						filename = kr_entities_path .. "singularity-lab/hr-singularity-lab-light.png",
+						priority = "high",
+						width = 520,
+						height = 500,
+						shift = {0.0, -0.1},
+						draw_as_light = true,
+						frame_count = 1,
+						repeat_count = 60,
+						scale = 0.5
+					}
+				},
+				{
 					filename = kr_entities_path .. "singularity-lab/singularity-lab-working.png",
 					width = 260,
 					height = 250,
@@ -93,31 +165,8 @@ data:extend(
 					}
 				},
 				{
-					filename = kr_entities_path .. "singularity-lab/singularity-lab-glow.png",
-					width = 77,
-					height = 59,
-					shift = {0,-0.8},
-					frame_count = 60,
-					line_length = 6,
-					animation_speed=0.85,
-					blend_mode = "additive-soft",
-					hr_version =
-					{
-						filename = kr_entities_path .. "singularity-lab/hr-singularity-lab-glow.png",
-						scale = 0.5,
-						width = 153,
-						height = 117,
-						shift = {0,-0.8},
-						frame_count = 60,
-						line_length = 6,
-						scale = 0.5,
-						animation_speed=0.85,
-						blend_mode = "additive-soft"
-					}
-				},
-				{
 					filename = kr_entities_path .. "singularity-lab/singularity-lab-sh.png",
-					priority = "high",
+					priority = "medium",
 					width = 274,
 					height = 241,
 					shift = {0.22, 0.18},
@@ -127,7 +176,7 @@ data:extend(
 					hr_version =
 					{
 						filename = kr_entities_path .. "singularity-lab/hr-singularity-lab-sh.png",
-						priority = "high",
+						priority = "medium",
 						width = 548,
 						height = 482,
 						shift = {0.22, 0.18},
@@ -142,17 +191,11 @@ data:extend(
 		light =
 		{
 			{
-				intensity = 1,
-				size = 25,
-				shift = {0.0, 0.0},
-				color = {r=0.35, g=0.75, b=1}
-			},
-			{
-				intensity = 1.5,
-				size = 10,
-				shift = {0.0, 0.0},
-				color = {r=0.35, g=0.75, b=1}
-			},
+				intensity = 0.95,
+				size = 5,
+				shift = {0.0, -0.6},
+				color = {r=0, g=0.917, b=1}
+			}
 		},
 		researching_speed = 1,
 		inputs = {},

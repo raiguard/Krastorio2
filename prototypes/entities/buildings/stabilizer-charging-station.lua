@@ -26,62 +26,79 @@ data:extend(
 			layers =
 			{
 				{
-				filename = kr_entities_path .. "stabilizer-charging-station/stabilizer-charging-station.png",
-				priority = "high",
-				width = 85,
-				height = 85,
-				frame_count = 80,
-				line_length = 10,
-				animation_speed = 0.4,
-				scale = 0.8,
-				hr_version =
-				{
-					filename = kr_entities_path .. "stabilizer-charging-station/hr-stabilizer-charging-station.png",
+					filename = kr_entities_path .. "stabilizer-charging-station/stabilizer-charging-station.png",
 					priority = "high",
-					width = 170,
-					height = 170,
+					width = 85,
+					height = 85,
 					frame_count = 80,
 					line_length = 10,
 					animation_speed = 0.4,
-					scale = 0.4
-				}
+					scale = 0.8,
+					hr_version =
+					{
+						filename = kr_entities_path .. "stabilizer-charging-station/hr-stabilizer-charging-station.png",
+						priority = "high",
+						width = 170,
+						height = 170,
+						frame_count = 80,
+						line_length = 10,
+						animation_speed = 0.4,
+						scale = 0.4
+					}
 				},
 				{
-				filename = kr_entities_path .. "stabilizer-charging-station/stabilizer-charging-station-sh.png",
-				priority = "high",
-				width = 85,
-				height = 72,
-				frame_count = 80,
-				line_length = 8,
-				animation_speed = 0.4,
-				shift = {0.23, 0.262},
-				draw_as_shadow = true,
-				scale = 0.9,
-				hr_version =
-				{
-					filename = kr_entities_path .. "stabilizer-charging-station/hr-stabilizer-charging-station-sh.png",
+					filename = kr_entities_path .. "stabilizer-charging-station/stabilizer-charging-station-sh.png",
 					priority = "high",
-					width = 170,
-					height = 144,
+					width = 85,
+					height = 72,
 					frame_count = 80,
 					line_length = 8,
 					animation_speed = 0.4,
 					shift = {0.23, 0.262},
 					draw_as_shadow = true,
-					scale = 0.4
-				}
+					scale = 0.9,
+					hr_version =
+					{
+						filename = kr_entities_path .. "stabilizer-charging-station/hr-stabilizer-charging-station-sh.png",
+						priority = "high",
+						width = 170,
+						height = 144,
+						frame_count = 80,
+						line_length = 8,
+						animation_speed = 0.4,
+						shift = {0.23, 0.262},
+						draw_as_shadow = true,
+						scale = 0.4
+					}
 				}
 			}
 		},		
 		working_visualisations =
 		{
 			{
-				light =
+				animation =
 				{
-					intensity = 1.1,
-					size = 6,
-					shift = {0.0, 0.3},
-					color = {r=0.1, g=0.5, b=1}
+					filename = kr_entities_path .. "stabilizer-charging-station/stabilizer-charging-station-light.png",
+					priority = "high",
+					width = 85,
+					height = 85,
+					frame_count = 80,
+					line_length = 10,
+					animation_speed = 0.4,
+					scale = 0.8,
+					draw_as_light = true,
+					hr_version =
+					{
+						filename = kr_entities_path .. "stabilizer-charging-station/hr-stabilizer-charging-station-light.png",
+						priority = "high",
+						width = 170,
+						height = 170,
+						frame_count = 80,
+						line_length = 10,
+						animation_speed = 0.4,
+						scale = 0.4,
+						draw_as_light = true
+					}
 				}
 			}
 		},		

@@ -123,12 +123,19 @@ data:extend(
 		order = "u01"
 	},
 	{
+		type = "bool-setting",
+		name = "kr-re-enable-menu-simulations",
+		setting_type = "startup",
+		default_value = false,
+		order = "u02"
+	},
+	{
         type = "string-setting",
         name = "kr-main-menu-background",
         setting_type = "startup",
         default_value = "Krastorio Chan",
         allowed_values = {"Factorio", "Krastorio Legacy", "Krastorio 2", "Krastorio CyberSkull", "Krastorio Chan", "Krastorio THE FACTORY MUST GROW", "Krastorio Explorer", "Factorio Alternative 1", "Factorio Alternative 2", "Factorio Alternative 3", "Factorio Alternative 4"},
-		order = "u02"
+		order = "u03"
     },
 	{
 		type = "bool-setting",
@@ -136,7 +143,7 @@ data:extend(
 		setting_type = "startup",
 		default_value = true,
 		order = "u03"
-	},
+	}
 })
 
 -- -- VANILLA CHANGES SETTINGS

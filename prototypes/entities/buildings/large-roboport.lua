@@ -50,34 +50,34 @@ data:extend(
 			layers =
 			{
 				{
-				filename = kr_entities_path .. "large-roboport/large-roboport.png",
-				width = 280,
-				height = 280,
-				shift = {0, -0.22},
-				hr_version =
-				{
-					filename = kr_entities_path .. "large-roboport/hr-large-roboport.png",
-					width = 560,
-					height = 560,
+					filename = kr_entities_path .. "large-roboport/large-roboport.png",
+					width = 280,
+					height = 280,
 					shift = {0, -0.22},
-					scale = 0.5
-				}
+					hr_version =
+					{
+						filename = kr_entities_path .. "large-roboport/hr-large-roboport.png",
+						width = 560,
+						height = 560,
+						shift = {0, -0.22},
+						scale = 0.5
+					}
 				},
 				{
-				filename = kr_entities_path .. "large-roboport/large-roboport-sh.png",
-				width = 313,
-				height = 213,
-				shift = {1.1, 0.89},
-				draw_as_shadow = true,
-				hr_version =
-				{
-					filename = kr_entities_path .. "large-roboport/hr-large-roboport-sh.png",
-					width = 626,
-					height = 426,
+					filename = kr_entities_path .. "large-roboport/large-roboport-sh.png",
+					width = 313,
+					height = 213,
 					shift = {1.1, 0.89},
 					draw_as_shadow = true,
-					scale = 0.5
-				}
+					hr_version =
+					{
+						filename = kr_entities_path .. "large-roboport/hr-large-roboport-sh.png",
+						width = 626,
+						height = 426,
+						shift = {1.1, 0.89},
+						draw_as_shadow = true,
+						scale = 0.5
+					}
 				},
 			}
 		},
@@ -98,25 +98,56 @@ data:extend(
 		},
 		base_animation =
 		{
-			filename = kr_entities_path .. "large-roboport/large-roboport-animation.png",
-			priority = "medium",
-			width = 175,
-			height = 143,
-			line_length = 6,
-			frame_count = 12,
-			shift = {0, -1.05},
-			animation_speed = 0.1,
-			hr_version =
+			layers = 
 			{
-				filename = kr_entities_path .. "large-roboport/hr-large-roboport-animation.png",
-				priority = "medium",
-				width = 350,
-				height = 286,
-				scale = 0.5,
-				line_length = 6,
-				frame_count = 12,
-				shift = {0, -1.05},
-				animation_speed = 0.1
+				{
+					filename = kr_entities_path .. "large-roboport/large-roboport-animation.png",
+					priority = "medium",
+					width = 175,
+					height = 143,
+					line_length = 6,
+					frame_count = 12,
+					shift = {0, -1.05},
+					draw_as_glow = true,
+					animation_speed = 0.1,
+					hr_version =
+					{
+						filename = kr_entities_path .. "large-roboport/hr-large-roboport-animation.png",
+						priority = "medium",
+						width = 350,
+						height = 286,
+						scale = 0.5,
+						line_length = 6,
+						frame_count = 12,
+						shift = {0, -1.05},
+						draw_as_glow = true,
+						animation_speed = 0.1
+					}
+				},
+				{
+					filename = kr_entities_path .. "large-roboport/large-roboport-animation-light.png",
+					priority = "high",
+					width = 175,
+					height = 143,
+					line_length = 6,
+					frame_count = 12,
+					shift = {0, -1.05},
+					draw_as_light = true,
+					animation_speed = 0.1,
+					hr_version =
+					{
+						filename = kr_entities_path .. "large-roboport/hr-large-roboport-animation-light.png",
+						priority = "high",
+						width = 350,
+						height = 286,
+						scale = 0.5,
+						line_length = 6,
+						frame_count = 12,
+						shift = {0, -1.05},
+						draw_as_light = true,
+						animation_speed = 0.1
+					}
+				}
 			}
 		},
 		door_animation_up =
@@ -159,13 +190,29 @@ data:extend(
 		},
 		recharging_animation =
 		{
-			filename = kr_entities_path .. "large-roboport/large-roboport-recharging.png",
-			priority = "high",
-			width = 37,
-			height = 35,
-			frame_count = 16,
-			scale = 1.5,
-			animation_speed = 0.5
+			layers = 
+			{
+				{
+					filename = kr_entities_path .. "large-roboport/large-roboport-recharging.png",
+					priority = "high",
+					width = 37,
+					height = 35,
+					frame_count = 16,
+					scale = 1.5,
+					draw_as_glow = true,
+					animation_speed = 0.5
+				},
+				{
+					filename = kr_entities_path .. "large-roboport/large-roboport-recharging-light.png",
+					priority = "high",
+					width = 37,
+					height = 35,
+					frame_count = 16,
+					scale = 1.5,
+					draw_as_light = true,
+					animation_speed = 0.5
+				}
+			}
 		},
 		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
@@ -175,7 +222,12 @@ data:extend(
 			audible_distance_modifier = 0.5,
 			probability = 1 / (5 * 60) -- average pause between the sound is 5 seconds
 		},
-		recharging_light = {intensity = 0.4, size = 6, color = {r = 1.0, g = 1.0, b = 1.0}},
+		recharging_light = 
+		{
+			intensity = 0.2, 
+			size = 1, 
+			color = {r = 0.196, g = 0.658, b = 0.650}
+		},
 		request_to_open_door_timeout = 15,
 		spawn_and_station_height = 0,
 		draw_logistic_radius_visualization = true,

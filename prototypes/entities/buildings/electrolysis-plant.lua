@@ -112,8 +112,10 @@ data:extend(
 					height = 190,
 					frame_count = 12,
 					line_length = 6,
-					animation_speed = 0.5,
+					animation_speed = 0.4,
 					shift = {0, 0},
+					blend_mode = "additive",
+					draw_as_glow = true,
 					hr_version =
 					{
 						filename = kr_entities_path .. "electrolysis-plant/hr-electrolysis-plant-work.png",
@@ -122,11 +124,39 @@ data:extend(
 						scale = 0.5,
 						frame_count = 12,
 						line_length = 6,
-						animation_speed = 0.5,
-						shift = {0, 0}
+						animation_speed = 0.4,
+						shift = {0, 0},
+						blend_mode = "additive",
+						draw_as_glow = true
 					}
 				}
 			},
+			{
+				apply_recipe_tint = "primary",
+				animation =
+				{
+					filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant-work-light.png",
+					width = 190,
+					height = 190,
+					frame_count = 12,
+					line_length = 6,
+					animation_speed = 0.4,
+					shift = {0, 0},
+					draw_as_light = true,
+					hr_version =
+					{
+						filename = kr_entities_path .. "electrolysis-plant/hr-electrolysis-plant-work-light.png",
+						width = 380,
+						height = 380,
+						scale = 0.5,
+						frame_count = 12,
+						line_length = 6,
+						animation_speed = 0.4,
+						shift = {0, 0},
+						draw_as_light = true
+					}
+				}
+			}
 		},
 		crafting_categories = { "electrolysis" },
 		scale_entity_info_icon = true,

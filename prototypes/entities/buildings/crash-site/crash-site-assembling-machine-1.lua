@@ -1,5 +1,6 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds      = require("__base__/prototypes/entity/sounds")
+local kr_crash_site_assembling_machine_1_repaired_animation_speed = 4/5
 
 data:extend(
 {   
@@ -73,7 +74,7 @@ data:extend(
 					frame_count = 20,
 					line_length = 5,
 					shift = util.by_pixel(-12, 2),
-					animation_speed = 2,
+					animation_speed = kr_crash_site_assembling_machine_1_repaired_animation_speed,
 					hr_version =
 					{
 						filename = kr_crash_site_sprites_path .. "assembling-machine/hr-crash-site-assembling-machine-1-repaired.png",
@@ -83,7 +84,7 @@ data:extend(
 						frame_count = 20,
 						line_length = 5,
 						shift = util.by_pixel(-12, 3),
-						animation_speed = 2,
+						animation_speed = kr_crash_site_assembling_machine_1_repaired_animation_speed,
 						scale = 0.5
 					}
 				},
@@ -96,7 +97,7 @@ data:extend(
 					line_length = 5,
 					draw_as_shadow = true,
 					shift = util.by_pixel(4, 6),
-					animation_speed = 2,
+					animation_speed = kr_crash_site_assembling_machine_1_repaired_animation_speed,
 					hr_version =
 					{
 						filename = kr_crash_site_sprites_path .. "assembling-machine/hr-crash-site-assembling-machine-1-repaired-shadow.png",
@@ -107,7 +108,7 @@ data:extend(
 						line_length = 5,
 						draw_as_shadow = true,
 						shift = util.by_pixel(4, 6),
-						animation_speed = 2,
+						animation_speed = kr_crash_site_assembling_machine_1_repaired_animation_speed,
 						scale = 0.5
 					}
 				}
@@ -125,8 +126,9 @@ data:extend(
 					frame_count = 20,
 					line_length = 5,
 					shift = util.by_pixel(10, -10),
+					draw_as_glow = true,
 					blend_mode = "additive",
-					animation_speed = 2,
+					animation_speed = kr_crash_site_assembling_machine_1_repaired_animation_speed,
 					hr_version =
 					{
 						filename = kr_crash_site_sprites_path .. "assembling-machine/hr-crash-site-assembling-machine-1-repaired-light.png",
@@ -136,8 +138,9 @@ data:extend(
 						frame_count = 20,
 						line_length = 5,
 						shift = util.by_pixel(12, -8),
+						draw_as_glow = true,
 						blend_mode = "additive",
-						animation_speed = 2,
+						animation_speed = kr_crash_site_assembling_machine_1_repaired_animation_speed,
 						scale = 0.5
 					}
 				}
