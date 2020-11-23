@@ -18,7 +18,7 @@ Date: 23.11.2020
     - Reduced a bit the volume of antimater reactor while working.
     - Improved technology icons of personal battery MK2 and MK3.
   Fixes:
-    - Fixe MANY crash errors with Factorio 1.1
+    - Fixed MANY crash errors with Factorio 1.1
     - Fixed a possible internal library crash error in a prerequisites pointer if setted null in technology definitions.
     - Now angels trains are supported with the merged mod too (Angel's Addons - Mass Transit/angelsaddons-mobility).
     - Fixed option to allow exoskeletons into spidertron equipment grids, was not available.
