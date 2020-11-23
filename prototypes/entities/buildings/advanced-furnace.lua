@@ -171,9 +171,9 @@ data:extend(
 				constant_speed = true,
 				light =
 				{
-					intensity = 0.60,
-					size = 3.5,
-					shift = {1.5, 2},
+					intensity = 0.65,
+					size = 4,
+					shift = {1.29, 2},
 					color = {r=1, g=0.35, b=0.2}
 				}
 			}

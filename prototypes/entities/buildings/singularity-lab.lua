@@ -150,7 +150,7 @@ data:extend(
 					shift = {0.0, -0.1},
 					frame_count = 60,
 					line_length = 10,
-					animation_speed=0.85,
+					animation_speed = 0.85,
 					hr_version =
 					{
 						filename = kr_entities_path .. "singularity-lab/hr-singularity-lab-working.png",
