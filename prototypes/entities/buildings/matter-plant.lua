@@ -143,6 +143,7 @@ data:extend(
 			{
 				draw_as_glow = true,
 				blend_mode = "additive-soft",
+				synced_fadeout = true,
 				animation =
 				{
 					filename = kr_entities_path .. "matter-plant/matter-plant-working-glow.png",

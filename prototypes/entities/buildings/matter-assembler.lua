@@ -137,6 +137,7 @@ data:extend(
 			{
 				draw_as_glow = true,
 				blend_mode = "additive",
+				synced_fadeout = true,
 				animation =
 				{
 					filename = kr_entities_path .. "matter-assembler/matter-assembler-working-glow.png",

@@ -94,7 +94,6 @@ data:extend(
 					line_length = 4,
 					animation_speed = 0.8,
 					draw_as_light = true,
-					fadeout = true,
 					hr_version =
 					{
 						filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-anim-light.png",
@@ -106,7 +105,6 @@ data:extend(
 						line_length = 4,
 						animation_speed = 0.8,
 						draw_as_light = true,
-						fadeout = true,
 						scale = 0.5
 					}
 				}
@@ -124,6 +122,7 @@ data:extend(
 					line_length = 4,
 					animation_speed = 0.8,
 					draw_as_glow = true,
+					fadeout = true,
 					blend_mode = "additive",
 					hr_version =
 					{
@@ -136,6 +135,7 @@ data:extend(
 						line_length = 4,
 						animation_speed = 0.8,
 						draw_as_glow = true,
+						fadeout = true,
 						blend_mode = "additive",
 						scale = 0.5
 					}
@@ -166,19 +166,17 @@ data:extend(
 						scale = 0.5
 					}
 				}
-			}
-			--[[
+			},
 			{
 				constant_speed = true,
 				light =
 				{
-					intensity = 0.5,
-					size = 18,
-					shift = {0.0, 0.0},
+					intensity = 0.60,
+					size = 3.5,
+					shift = {1.5, 2},
 					color = {r=1, g=0.35, b=0.2}
 				}
 			}
-			--]]
 		},
 		crafting_categories = {"smelting", "advanced-smelting"},
 		scale_entity_info_icon = true,
