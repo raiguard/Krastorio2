@@ -6,6 +6,7 @@ laser_gunshot = function()
     {
       filename = kr_explosions_sprites_path .. "laser_gunshot.png",
       priority = "extra-high",
+	  draw_as_glow = true,
       width = 51,
       height = 57,
       frame_count = 2,
@@ -15,6 +16,7 @@ laser_gunshot = function()
     {
       filename = kr_explosions_sprites_path .. "laser_gunshot.png",
       priority = "extra-high",
+	  draw_as_glow = true,
       width = 51,
       height = 57,
       x = 51 * 2,
@@ -25,6 +27,7 @@ laser_gunshot = function()
     {
       filename = kr_explosions_sprites_path .. "laser_gunshot.png",
       priority = "extra-high",
+	  draw_as_glow = true,
       width = 51,
       height = 57,
       x = 51 * 4,
@@ -35,6 +38,7 @@ laser_gunshot = function()
     {
       filename = kr_explosions_sprites_path .. "laser_gunshot.png",
       priority = "extra-high",
+	  draw_as_glow = true,
       width = 51,
       height = 57,
       x = 51 * 7,
@@ -45,6 +49,7 @@ laser_gunshot = function()
     {
       filename = kr_explosions_sprites_path .. "laser_gunshot.png",
       priority = "extra-high",
+	  draw_as_glow = true,
       width = 51,
       height = 57,
       x = 51 * 10,
@@ -73,12 +78,12 @@ data:extend(
 			{
 				filename = kr_explosions_sprites_path .. "impulse-rifle-beam.png",
 				priority = "extra-high",
+				draw_as_glow = true,
 				width = 62,
 				height = 1,
 				frame_count = 6
 			}
 		},
-		light = {intensity = 1, size = 10, color = {r = 1.0, g = 1.0, b = 1.0}},
 		smoke = "smoke-fast",
 		smoke_count = 2,
 		smoke_slow_down_factor = 1
@@ -140,8 +145,7 @@ data:extend(
 				scale = 1.5,
 			  }
 			}
-		},
-		light = {intensity = 1, size = 30, color = {r=1, g=0.1, b=0.8}},
+		}
     },
 	
 -----------------------------------------------------------------------------------------------------------------
@@ -189,6 +193,7 @@ data:extend(
 			priority = "very-low",
 			flags = {"linear-magnification"},
 			shift = util.by_pixel(1, -123), --shift = util.by_pixel(1, -63), shifted by 60 due to scaling and centering
+			draw_as_glow = true,
 			animation_speed = 0.5 * 0.75,
 			scale = 3,
 			dice_y = 5,
@@ -223,6 +228,7 @@ data:extend(
 				priority = "very-low",
 				flags = {"linear-magnification"},
 				shift = util.by_pixel(0.5, -122.5), --shift = util.by_pixel(0.5, -62.5), shifted by 60 due to scaling and centering
+				draw_as_glow = true,
 				animation_speed = 0.5 * 0.75,
 				scale = 1.5,
 				dice_y = 5,
@@ -251,7 +257,6 @@ data:extend(
 				}
 			}
 		},
-		light = {intensity = 1, size = 50, color = {r=0.9, g=0.1, b=1}},
 		sound =
 		{
 			aggregation =
@@ -309,6 +314,7 @@ data:extend(
 			priority = "very-low",
 			flags = {"linear-magnification"},
 			shift = util.by_pixel(1, -123), --shift = util.by_pixel(1, -63), shifted by 60 due to scaling and centering
+			draw_as_glow = true,
 			animation_speed = 0.5 * 0.75,
 			scale = 2,
 			dice_y = 5,
@@ -343,6 +349,7 @@ data:extend(
 				priority = "very-low",
 				flags = {"linear-magnification"},
 				shift = util.by_pixel(0.5, -122.5), --shift = util.by_pixel(0.5, -62.5), shifted by 60 due to scaling and centering
+				draw_as_glow = true,
 				animation_speed = 0.5 * 0.75,
 				scale = 1,
 				dice_y = 5,
@@ -371,7 +378,6 @@ data:extend(
 				}
 			}
 		},
-		light = {intensity = 1, size = 50, color = {r=0.9, g=0.1, b=1}},
 		sound =
 		{
 			aggregation =
@@ -430,10 +436,10 @@ data:extend(
 				frame_count = 47,
 				line_length = 8,
 				shift = {0.1875, -0.75},
-				animation_speed = 0.5
+				animation_speed = 0.5,
+				draw_as_glow = true
 			}
 		},
-		light = {intensity = 1, size = 50, color = {r=0.9, g=0.1, b=1}},
 		sound =
 		{
 			aggregation =
@@ -492,10 +498,10 @@ data:extend(
 				frame_count = 47,
 				line_length = 8,
 				shift = {0.1875, -0.75},
-				animation_speed = 0.4
+				animation_speed = 0.4,
+				draw_as_glow = true
 			}
 		},
-		light = {intensity = 3, size = 100, color = {r=0.9, g=0.1, b=1}},
 		sound =
 		{
 			aggregation =
@@ -555,9 +561,9 @@ data:extend(
 				line_length = 6,
 				frame_count = 36,
 				shift = util.by_pixel(0, -48),
+				draw_as_glow = true
 			}
 		},
-		light = {intensity = 1, size =80, color = {r=0.9, g=0.1, b=1}},
 		sound =
 		{
 			aggregation =
@@ -610,7 +616,6 @@ data:extend(
 		subgroup = "explosions",
 		animations = laser_gunshot(),
 		rotate = true,
-		light = {intensity = 1, size = 25, color = {r=1.0, g=0.1, b=0.1}},
 		smoke = "smoke-fast",
 		smoke_count = 2,
 		smoke_slow_down_factor = 0.25
@@ -632,9 +637,9 @@ data:extend(
 			frame_count = 47,
 			line_length = 8,
 			shift = {0.1875, -0.75},
+			draw_as_glow = true,
 			animation_speed = 0.55
 		},
-		light = {intensity = 0.75, size = 30, color = {r=1.0, g=0.1, b=0.1}},
 		sound =
 		{
 			aggregation =
