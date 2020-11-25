@@ -22,30 +22,6 @@ for _, furnace_name in pairs(vanilla_furnaces) do
 	transferFromFurnacesToAssemblers(furnace_name)
 end
 
--- Because Factorio won't start if not exist at least one prototype of assemblers and furnaces
-if #data.raw.furnace == 0 then
-	local _, first_assembler = next(data.raw["assembling-machine"])
-	local furnace = krastorio_utils.tables.fullCopy(first_assembler)
-	furnace.type = "furnace"
-	furnace.name = "anti-crash-furnace"
-	furnace.flags = {"hidden"}
-	furnace.gui_mode = "none"
-	furnace.group = "other"
-	furnace.source_inventory_size = 1
-	furnace.result_inventory_size = 1
-	data:extend({
-	{
-		type = "item",
-		name = "anti-crash-furnace",
-		flags = {"hidden"},
-		icon = "__base__/graphics/icons/stone-furnace.png",
-		icon_size = 64,
-		place_result = "anti-crash-furnace",
-		stack_size = 1
-	}})
-	data:extend({furnace})	
-end
-
 -- Boilers
 
 data.raw["boiler"]["boiler"].energy_source.emissions_per_minute = 20

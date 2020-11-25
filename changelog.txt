@@ -1,7 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.10
 Date: XX.11.2020
+  Changes:
+    - Removed convenience entity anti-crash-furnace.
   Fixes:
+    - Fixed that Krastorio 2 library don't knows how are defined layers in Factorio 1.1
     - Fixed wrong size definition of vanilla technologies upgrade due to the fact that the icon size was doubled in Factorio 1.1
     - Added light layer to nucler locomotive.
 ---------------------------------------------------------------------------------------------------

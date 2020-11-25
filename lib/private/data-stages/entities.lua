@@ -1,4 +1,5 @@
 krastorio.entities = {}
+local collision_mask_util = require("__core__/lualib/collision-mask-util")
 
 -- -- -- TO DO
 
@@ -47,12 +48,18 @@ end
 --@ to_add_mask_name
 function krastorio.entities.addCollisionMaskOnEntity(category_name, entity_name, to_add_mask_name)
 	local entity = krastorio.entities.getEntity(category_name, entity_name)
-	if entity then
-		local no_err, collision_mask = pcall(function() return entity.collision_mask end)
-		if no_err and collision_mask ~= nil then
+	if entity and to_add_mask_name ~= nil then
+		local collision_mask = collision_mask_util.get_mask(entity) or {"item-layer", "object-layer", "player-layer", "water-tile"}
+		local miss = true
+		for _, mask_name in pairs(collision_mask) do
+			if mask_name == to_add_mask_name then
+				miss = false
+				break
+			end
+		end
+		if miss then
 			table.insert(collision_mask, to_add_mask_name)
-		else
-			data.raw[category_name][entity_name].collision_mask = {"item-layer", "object-layer", "player-layer", "water-tile", to_add_mask_name}
+			entity.collision_mask = collision_mask
 		end
 		return true
 	end
