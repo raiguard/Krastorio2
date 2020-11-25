@@ -58,4 +58,6 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
 	krastorio.technologies.removePrerequisite("fusion-reactor-equipment", "se-rtg-equipment-2")
 	krastorio.technologies.removePrerequisite("fusion-reactor-equipment", "se-deep-space-science-pack")
 	---------------------------------------------------------------------------------------------------------------
+	
+	data.raw.technology["se-rocket-fuel-from-water"] = nil
 end
