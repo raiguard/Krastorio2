@@ -276,7 +276,8 @@ data:extend(
 	{
 		type = "technology",
 		name = "mining-productivity-11",
-		icon_size = 128,
+		icon_size = 256,
+		icon_mipmaps = 4,
 		icon = "__base__/graphics/technology/mining-productivity.png",
 		effects =
 		{
@@ -306,7 +307,8 @@ data:extend(
 	{
 		type = "technology",
 		name = "mining-productivity-16",
-		icon_size = 128,
+		icon_size = 256,
+		icon_mipmaps = 4,
 		icon = "__base__/graphics/technology/mining-productivity.png",
 		effects =
 		{
@@ -340,7 +342,8 @@ data:extend(
 	{
 		type = "technology",
 		name = "worker-robots-speed-7",
-		icon_size = 128,
+		icon_size = 256,
+		icon_mipmaps = 4,
 		icon = "__base__/graphics/technology/worker-robots-speed.png",
 		effects =
 		{
@@ -371,7 +374,8 @@ data:extend(
 	{
 		type = "technology",
 		name = "worker-robots-speed-9",
-		icon_size = 128,
+		icon_size = 256,
+		icon_mipmaps = 4,
 		icon = "__base__/graphics/technology/worker-robots-speed.png",
 		effects =
 		{
@@ -405,7 +409,8 @@ data:extend(
 	{
 		type = "technology",
 		name = "follower-robot-count-8",
-		icon_size = 128,
+		icon_size = 256,
+		icon_mipmaps = 4,
 		icon = "__base__/graphics/technology/follower-robots.png",
 		effects =
 		{
@@ -435,7 +440,8 @@ data:extend(
 	{
 		type = "technology",
 		name = "follower-robot-count-9",
-		icon_size = 128,
+		icon_size = 256,
+		icon_mipmaps = 4,
 		icon = "__base__/graphics/technology/follower-robots.png",
 		effects =
 		{
@@ -469,7 +475,8 @@ data:extend(
 	{
 		type = "technology",
 		name = "physical-projectile-damage-11",
-		icon_size = 128,
+		icon_size = 256,
+		icon_mipmaps = 4,
 		icon = "__base__/graphics/technology/physical-projectile-damage-2.png",
 		effects =
 		{
@@ -515,7 +522,8 @@ data:extend(
 	{
 		type = "technology",
 		name = "physical-projectile-damage-16",
-		icon_size = 128,
+		icon_size = 256,
+		icon_mipmaps = 4,
 		icon = "__base__/graphics/technology/physical-projectile-damage-2.png",
 		effects =
 		{
@@ -565,7 +573,8 @@ data:extend(
 	{
 		type = "technology",
 		name = "stronger-explosives-11",
-		icon_size = 128,
+		icon_size = 256,
+		icon_mipmaps = 4,
 		icon = "__base__/graphics/technology/stronger-explosives-3.png",
 		effects =
 		{
@@ -611,7 +620,8 @@ data:extend(
 	{
 		type = "technology",
 		name = "stronger-explosives-16",
-		icon_size = 128,
+		icon_size = 256,
+		icon_mipmaps = 4,
 		icon = "__base__/graphics/technology/stronger-explosives-3.png",
 		effects =
 		{
@@ -661,7 +671,8 @@ data:extend(
 	{
 		type = "technology",
 		name = "refined-flammables-11",
-		icon_size = 128,
+		icon_size = 256,
+		icon_mipmaps = 4,
 		icon = "__base__/graphics/technology/refined-flammables.png",
 		effects =
 		{
@@ -697,7 +708,8 @@ data:extend(
 	{
 		type = "technology",
 		name = "refined-flammables-16",
-		icon_size = 128,
+		icon_size = 256,
+		icon_mipmaps = 4,
 		icon = "__base__/graphics/technology/refined-flammables.png",
 		effects =
 		{
@@ -737,7 +749,8 @@ data:extend(
 	{
 		type = "technology",
 		name = "energy-weapons-damage-11",
-		icon_size = 128,
+		icon_size = 256,
+		icon_mipmaps = 4,
 		icon = "__base__/graphics/technology/energy-weapons-damage.png",
 		effects =
 		{
@@ -768,7 +781,8 @@ data:extend(
 	{
 		type = "technology",
 		name = "energy-weapons-damage-16",
-		icon_size = 128,
+		icon_size = 256,
+		icon_mipmaps = 4,
 		icon = "__base__/graphics/technology/energy-weapons-damage.png",
 		effects =
 		{
@@ -803,7 +817,8 @@ data:extend(
 	{
 		type = "technology",
 		name = "artillery-shell-range-3",
-		icon_size = 128,
+		icon_size = 256,
+		icon_mipmaps = 4,
 		icon = "__base__/graphics/technology/artillery-range.png",
 		effects =
 		{
@@ -833,7 +848,8 @@ data:extend(
 	{
 		type = "technology",
 		name = "artillery-shell-range-5",
-		icon_size = 128,
+		icon_size = 256,
+		icon_mipmaps = 4,
 		icon = "__base__/graphics/technology/artillery-range.png",
 		effects =
 		{
@@ -867,7 +883,8 @@ data:extend(
 	{
 		type = "technology",
 		name = "artillery-shell-speed-3",
-		icon_size = 128,
+		icon_size = 256,
+		icon_mipmaps = 4,
 		icon = "__base__/graphics/technology/artillery-speed.png",
 		effects =
 		{
@@ -898,7 +915,8 @@ data:extend(
 	{
 		type = "technology",
 		name = "artillery-shell-speed-5",
-		icon_size = 128,
+		icon_size = 256,
+		icon_mipmaps = 4,
 		icon = "__base__/graphics/technology/artillery-speed.png",
 		effects =
 		{
@@ -927,6 +945,4 @@ data:extend(
 		upgrade = true,
 		order = "c-k-f-z"
 	}
-	
-}
-)
+})

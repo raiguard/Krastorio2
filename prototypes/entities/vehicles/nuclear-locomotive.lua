@@ -128,8 +128,8 @@ data:extend(
 				},
 				shift = {-0.6, -16},
 				size = 2,
-				intensity = 0.75,
-				color = {r = 0.9, g = 1.0, b = 0.9}
+				intensity = 0.8,
+				color = nuclear_smoke_color
 			},
 			{
 				type = "oriented",
@@ -145,8 +145,8 @@ data:extend(
 				},
 				shift = {0.6, -16},
 				size = 2,
-				intensity = 0.6,
-				color = {r = 1.0, g = 0.9, b = 0.9}
+				intensity = 0.8,
+				color = nuclear_smoke_color
 			}
 		},
 		back_light = rolling_stock_back_light(),
@@ -294,6 +294,96 @@ data:extend(
 				}
 			}
 		},
+		front_light_pictures =
+		{
+			layers =
+			{
+				{
+					priority = "very-low",
+					blend_mode = "additive",
+					draw_as_light = true,
+					tint = nuclear_smoke_color,
+					width = 230,
+					height = 212,
+					direction_count = 256,
+					allow_low_quality_rotation = true,
+					filenames =
+					{
+						"__base__/graphics/entity/diesel-locomotive/diesel-locomotive-light-front-01.png",
+						"__base__/graphics/entity/diesel-locomotive/diesel-locomotive-light-front-02.png",
+						"__base__/graphics/entity/diesel-locomotive/diesel-locomotive-light-front-03.png",
+						"__base__/graphics/entity/diesel-locomotive/diesel-locomotive-light-front-04.png"
+					},
+					line_length = 8,
+					lines_per_file = 8,
+					shift = util.by_pixel(0, -26),
+					hr_version =
+					{
+						priority = "very-low",
+						blend_mode = "additive",
+						draw_as_light = true,
+						tint = nuclear_smoke_color,
+						width = 458,
+						height = 420,
+						direction_count = 256,
+						allow_low_quality_rotation = true,
+						filenames =
+						{
+						  "__base__/graphics/entity/diesel-locomotive/hr-diesel-locomotive-light-front-01.png",
+						  "__base__/graphics/entity/diesel-locomotive/hr-diesel-locomotive-light-front-02.png",
+						  "__base__/graphics/entity/diesel-locomotive/hr-diesel-locomotive-light-front-03.png",
+						  "__base__/graphics/entity/diesel-locomotive/hr-diesel-locomotive-light-front-04.png"
+						},
+						line_length = 8,
+						lines_per_file = 8,
+						shift = util.by_pixel(0, -25),
+						scale = 0.5
+					}
+				},
+				{
+					priority = "very-low",
+					blend_mode = "additive",
+					draw_as_light = true,
+					tint = nuclear_smoke_color,
+					width = 124,
+					height = 108,
+					direction_count = 256,
+					allow_low_quality_rotation = true,
+					filenames =
+					{
+						"__base__/graphics/entity/diesel-locomotive/diesel-locomotive-light-top-01.png",
+						"__base__/graphics/entity/diesel-locomotive/diesel-locomotive-light-top-02.png",
+						"__base__/graphics/entity/diesel-locomotive/diesel-locomotive-light-top-03.png",
+						"__base__/graphics/entity/diesel-locomotive/diesel-locomotive-light-top-04.png"
+					},
+					line_length = 8,
+					lines_per_file = 8,
+					shift = util.by_pixel(2, -42),
+					hr_version =
+					{
+						priority = "very-low",
+						blend_mode = "additive",
+						draw_as_light = true,
+						tint = nuclear_smoke_color,
+						width = 258,
+						height = 220,
+						direction_count = 256,
+						allow_low_quality_rotation = true,
+						filenames =
+						{
+							"__base__/graphics/entity/diesel-locomotive/hr-diesel-locomotive-light-top-01.png",
+							"__base__/graphics/entity/diesel-locomotive/hr-diesel-locomotive-light-top-02.png",
+							"__base__/graphics/entity/diesel-locomotive/hr-diesel-locomotive-light-top-03.png",
+							"__base__/graphics/entity/diesel-locomotive/hr-diesel-locomotive-light-top-04.png"
+						},
+						line_length = 8,
+						lines_per_file = 8,
+						shift = util.by_pixel(-1, -41),
+						scale = 0.5
+					}
+				}
+			}
+		},
 		minimap_representation =
 		{
 			filename = kr_entities_path .. "nuclear-locomotive/nuclear-locomotive-minimap-representation.png",
@@ -336,14 +426,49 @@ data:extend(
 				offset_deviation = {{0.3, -2.7}, {0.75, 2.7}}
 			},
 			{
-			type = "play-sound",
-			sound =
-			{
+				type = "play-sound",
+				sound =
 				{
-					filename = "__base__/sound/train-breaks.ogg",
-					volume = 0.6
+					{
+						filename = "__base__/sound/train-breaks.ogg",
+						volume = 0.6
 					}
 				}
+			}
+		},
+		stop_trigger =
+		{
+			-- left side
+			{
+				type = "create-trivial-smoke",
+				repeat_count = 125,
+				smoke_name = "smoke-train-stop",
+				initial_height = 0,
+				-- smoke goes to the left
+				speed = {-0.03, 0},
+				speed_multiplier = 0.75,
+				speed_multiplier_deviation = 1.1,
+				offset_deviation = {{-0.75, -2.7}, {-0.3, 2.7}}
+			},
+			-- right side
+			{
+				type = "create-trivial-smoke",
+				repeat_count = 125,
+				smoke_name = "smoke-train-stop",
+				initial_height = 0,
+				-- smoke goes to the right
+				speed = {0.03, 0},
+				speed_multiplier = 0.75,
+				speed_multiplier_deviation = 1.1,
+				offset_deviation = {{0.3, -2.7}, {0.75, 2.7}}
+			},
+			{
+				type = "play-sound",
+				sound = sounds.train_brakes
+			},
+			{
+				type = "play-sound",
+				sound = sounds.train_brake_screech
 			}
 		},
 		drive_over_tie_trigger = drive_over_tie(),

@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.10
+Date: XX.11.2020
+  Fixes:
+    - Fixed wrong size definition of vanilla technologies upgrade due to the fact that the icon size was doubled in Factorio 1.1
+    - Added light layer to nucler locomotive.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.9
 Date: 23.11.2020
   Fixes:
