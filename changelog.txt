@@ -6,6 +6,9 @@ Date: XX.11.2020
   Changes:
     - Removed convenience entity anti-crash-furnace.
     - Updated Italian translation.
+    - Updated French translation from Crowdin (Thanks to all contributors).
+    - Updated Czech translation from Crowdin (Thanks to all contributors).
+    - Updated Russian translation from Crowdin (Thanks to all contributors).
   Fixes:
     - Fixed SE compatibility, about that rocket fuel from water recipe was remove but not the technology (that was empty).
     - Fixed that Krastorio 2 library don't knows how are defined layers in Factorio 1.1
