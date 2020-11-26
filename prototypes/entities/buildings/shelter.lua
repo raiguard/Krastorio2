@@ -19,6 +19,31 @@ local shelter_animation =
 	layers =
 	{
 		{
+			filename = kr_entities_path .. "shelter/shelter-light.png",
+			priority = "high",
+			width = 256,
+			height = 256,
+			scale = 0.9,
+			shift = {-0.05, 0},
+			draw_as_light = true,
+			frame_count = 6,
+			line_length = 3,
+			animation_speed = 0.5,
+			hr_version =
+			{
+				filename = kr_entities_path .. "shelter/hr-shelter-light.png",
+				priority = "high",
+				width = 512,
+				height = 512,
+				scale = 0.45,
+				shift = {-0.05, 0},
+				draw_as_light = true,
+				frame_count = 6,
+				line_length = 3,
+				animation_speed = 0.5
+			}
+		},
+		{
 			filename = kr_entities_path .. "shelter/shelter.png",
 			priority = "high",
 			width = 256,
@@ -140,9 +165,10 @@ data:extend(
 		scale_info_icons = kr_icons_size,
 		open_sound = { filename = kr_sounds_mod .. "buildings/open.ogg", volume = 1 },
 		close_sound = { filename = kr_sounds_mod .. "buildings/close.ogg", volume = 1 },
-		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },		
-	},
-	-- Shelter light
+		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 }	
+	}
+	-- Shelter light (Deprecated)
+	--[[
 	{
 		type = "lamp",
 		name = "kr-shelter-light",
@@ -176,4 +202,5 @@ data:extend(
 		picture_off = empty_sprite,
 		picture_on  = empty_sprite
 	}
+	--]]
 })

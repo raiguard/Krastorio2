@@ -91,6 +91,7 @@ local function onBuiltAnEntity(event)
 						position = entity.position,
 						create_build_effect_smoke = false
 					}
+					--[[ (Deprecated)
 					local light = entity.surface.create_entity
 					{
 						type     = "lamp",
@@ -100,7 +101,8 @@ local function onBuiltAnEntity(event)
 						position = entity.position,
 						create_build_effect_smoke = false
 					}
-					global.spawn_points[surface][force] = {entity, light}
+					--]]
+					global.spawn_points[surface][force] = {entity} -- {entity, light}
 				else
 					-- create shelter plus light
 					entity.surface.create_entity
@@ -112,6 +114,7 @@ local function onBuiltAnEntity(event)
 						position = entity.position,
 						create_build_effect_smoke = false
 					}
+					--[[ (Deprecated)
 					local light = entity.surface.create_entity
 					{
 						type     = "lamp",
@@ -121,7 +124,8 @@ local function onBuiltAnEntity(event)
 						position = entity.position,
 						create_build_effect_smoke = false
 					}
-					global.spawn_points[surface][force] = {entity, light}			
+					--]]
+					global.spawn_points[surface][force] = {entity}-- {entity, light}
 				end
 			else -- exist another shelter 
 				for _, product in pairs(entity.prototype.mineable_properties.products) do
@@ -155,9 +159,9 @@ local function onRemovingAnEntity(event)
 				else
 					entity.force.set_spawn_position({0, 0}, surface)
 				end
-				-- Remove entities
+				-- Remove entities (for compatibility)
 				for _, entity in pairs(global.spawn_points[surface][force]) do 
-					if entity.valid then
+					if entity and entity.valid then
 						entity.destroy()
 					end
 				end
