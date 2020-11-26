@@ -163,6 +163,17 @@ return
 		}
 	},
 	{
+		name  = "gui.wireless-charger-with-icon",
+		topic =
+		{
+			{type = "title", title = "gui.wireless-charger" },
+			{type = "image", spritename = "kr-tesla-coil"},
+			{type = "text",  text = "gui.wireless-charger-description-1"},
+			{type = "image", spritename = "kr-energy-absorber-preview"},
+			{type = "text",  text = "gui.wireless-charger-description-2"}
+		}
+	},
+	{
 		name  = "gui.kr-commands-with-icon",
 		topic =
 		{

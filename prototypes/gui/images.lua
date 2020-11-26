@@ -136,5 +136,19 @@ data:extend(
 		filename = kr_graphic_mod_path .. "gui/previews/crusher-preview.png",
 		width    = 232,
 		height   = 236
-	}	
+	},	
+	{
+		type     = "sprite",
+		name     = "kr-tesla-coil",
+		filename = kr_graphic_mod_path .. "gui/previews/tesla-coil.png",
+		width    = 194,
+		height   = 232
+	},
+	{
+		type     = "sprite",
+		name     = "kr-energy-absorber-preview",
+		filename = kr_universal_equipments_path .. "energy-absorber.png",
+		width    = 128,
+		height   = 128
+	}
 })

@@ -1,8 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.10
 Date: XX.11.2020
+  Features:
+    - Added wireless charge description in the wiki.
   Changes:
     - Removed convenience entity anti-crash-furnace.
+    - Updated Italian translation.
   Fixes:
     - Fixed SE compatibility, about that rocket fuel from water recipe was remove but not the technology (that was empty).
     - Fixed that Krastorio 2 library don't knows how are defined layers in Factorio 1.1
