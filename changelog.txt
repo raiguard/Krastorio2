@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.10
-Date: XX.11.2020
+Date: 26.11.2020
   Features:
     - Added wireless charge description in the wiki.
     - Added light layer to nucler locomotive.
