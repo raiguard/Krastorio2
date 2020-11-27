@@ -2,6 +2,13 @@
 Version: 1.0.10
 Date: 26.11.2020
   Features:
+    - Added support to tip and tricks of Factorio 1.1 (thanks to Katalliaan)
+  Changes:
+    - Improved guy images sizes.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.10
+Date: 26.11.2020
+  Features:
     - Added wireless charge description in the wiki.
     - Added light layer to nucler locomotive.
     - Added light to shelters.

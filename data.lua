@@ -39,6 +39,8 @@ require(kr_equipments_prototypes_path .. "equipments-initialization")
 require(kr_fluids_prototypes_path .. "fluids-initialization")
 -- -- GUI specifications
 require(kr_gui_path .. "gui-initialization")
+-- -- Adding new tips and tricks
+require(kr_gui_path .. "tips-and-tricks-initialization")
 -- -- Adding new items
 require(kr_items_prototypes_path .. "items-initialization")
 -- -- Adding new particles

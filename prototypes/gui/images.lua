@@ -6,9 +6,8 @@ data:extend(
 		type     = "sprite",
 		name     = "about-k2-preview",		
 		filename = kr_graphic_mod_path .. "gui/previews/about-k2-preview.png",
-		width    = 700,
-		height   = 105,
-		scale    = 0.70
+		width    = 490,
+		height   = 74
 	},
 	-- New metals
 	---
@@ -16,9 +15,8 @@ data:extend(
 		type     = "sprite",
 		name     = "new-metals-preview",		
 		filename = kr_graphic_mod_path .. "gui/previews/new-metals-preview.png",
-		width    = 700,
-		height   = 300,
-		scale    = 0.70
+		width    = 490,
+		height   = 210
 	},
 	-- Air purification
 	---
@@ -35,8 +33,7 @@ data:extend(
 		name     = "air-purifier-preview-2",
 		filename = kr_recipes_icons_path .. "restore-used-pollution-filter.png",
 		width    = 128,
-		height   = 128,
-		scale    = 1
+		height   = 128
 	},
 	---
 	-- Creep
@@ -45,9 +42,8 @@ data:extend(
 		type     = "sprite",
 		name     = "kr-creep-preview-1",
 		filename = kr_graphic_mod_path .. "gui/previews/creep-preview.png",
-		width    = 700,
-		height   = 518,
-		scale    = 0.70
+		width    = 490,
+		height   = 363
 	},
 	{
 		type     = "sprite",
@@ -70,9 +66,8 @@ data:extend(
 		type     = "sprite",
 		name     = "kr-new-gun-play-preview",
 		filename = kr_graphic_mod_path .. "gui/previews/new-gun-play-preview.png",
-		width    = 700,
-		height   = 327,
-		scale    = 0.70
+		width    = 490,
+		height   = 229
 	},
 	-- Fusion
 	---
@@ -95,17 +90,15 @@ data:extend(
 		type     = "sprite",
 		name     = "kr-intergalactic-transceiver-preview",
 		filename = kr_graphic_mod_path .. "gui/previews/intergalactic-transceiver-preview.png",
-		width    = 700,
-		height   = 485,
-		scale    = 0.70
+		width    = 490,
+		height   = 487
 	},
 	{
 		type     = "sprite",
 		name     = "kr-inserters-hotkey-preview",
 		filename = kr_graphic_mod_path .. "gui/previews/inserters-hotkey-preview.png",
-		width    = 700,
-		height   = 244,
-		scale    = 0.70
+		width    = 490,
+		height   = 171
 	},
 	{
 		type     = "sprite",
@@ -118,17 +111,15 @@ data:extend(
 		type     = "sprite",
 		name     = "roboports-hotkey-preview",
 		filename = kr_graphic_mod_path .. "gui/previews/roboports-hotkey-preview.png",
-		width    = 700,
-		height   = 250,
-		scale    = 0.70
+		width    = 490,
+		height   = 175
 	},
 	{
 		type     = "sprite",
 		name     = "kr-shelter-preview",
 		filename = kr_graphic_mod_path .. "gui/previews/shelter-preview.png",
-		width    = 584,
-		height   = 379,
-		scale    = 0.80
+		width    = 408,
+		height   = 265
 	},
 	{
 		type     = "sprite",
@@ -139,8 +130,8 @@ data:extend(
 	},	
 	{
 		type     = "sprite",
-		name     = "kr-tesla-coil",
-		filename = kr_graphic_mod_path .. "gui/previews/tesla-coil.png",
+		name     = "kr-tesla-coil-preview",
+		filename = kr_graphic_mod_path .. "gui/previews/tesla-coil-preview.png",
 		width    = 194,
 		height   = 232
 	},
