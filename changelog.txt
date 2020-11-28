@@ -2,12 +2,14 @@
 Version: 1.0.11
 Date: XX.11.2020
   Features:
-    - Added support to tip and tricks of Factorio 1.1 (thanks to Katalliaan)
+    - Added support to tip and tricks of Factorio 1.1 (thanks to Katalliaan to help me understand how the prototype work and to speedup the files production). However K2 MiniWiki will not be disabled, because the vanilla implementation of tip & tricks interface doesn't seems very stable with different monitor resolutions, use the MiniWiki in case of problems.
+    - Added pre-scaled GUIs images to improve tip & tricks showing.
+    - Added a custom alert when player is taking radioactive damage.
   Changes:
     - Improved GUIs images sizes.
   Fixes:
     - Fixed that fluidbox size of matter plant and assembler was not updated (from 10k to 2k) with the bio-lab and greenhouse many updates ago.
-    - Completed the migration property 'logistic_slots_count' to 'max_logistic_slots' of logistic-container of K2. Also removed some unused strings.
+    - Completed the property migration of 'logistic_slots_count' to 'max_logistic_slots' in all logistic containers of K2. Also removed some unused strings.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.10
 Date: 26.11.2020

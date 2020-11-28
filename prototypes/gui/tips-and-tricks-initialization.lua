@@ -12,7 +12,7 @@ data:extend(
 		order = "a",
 		starting_status = "unlocked",
 		is_title = true,
-		image = kr_graphic_mod_path .. "gui/previews/about-k2-preview.png"
+		image = kr_graphic_mod_path .. "gui/tip&tricks/about-k2-tip&tricks.png"
 	},
 	{
 		type = "tips-and-tricks-item",
@@ -37,7 +37,7 @@ data:extend(
 		},
 		category = "kr-about-k2",
 		indent = 1,
-		image = kr_graphic_mod_path .. "gui/previews/shelter-preview.png"
+		image = kr_graphic_mod_path .. "gui/tip&tricks/shelter-tip&tricks.png"
 	},
 	{
 		type = "tips-and-tricks-item",
@@ -59,7 +59,7 @@ data:extend(
 		},
 		category = "kr-about-k2",
 		indent = 1,
-		image = kr_graphic_mod_path .. "gui/previews/new-gun-play-preview.png"
+		image = kr_graphic_mod_path .. "gui/tip&tricks/new-gun-play-tip&tricks.png"
 	},
 	{
 		type = "tips-and-tricks-item",
@@ -68,7 +68,7 @@ data:extend(
 		starting_status = "unlocked",
 		category = "kr-about-k2",
 		indent = 1,
-		image = kr_graphic_mod_path .. "gui/previews/new-metals-preview.png"
+		image = kr_graphic_mod_path .. "gui/tip&tricks/new-metals-tip&tricks.png"
 	},
 	{
 		type = "tips-and-tricks-item",
@@ -81,7 +81,7 @@ data:extend(
 		},
 		category = "kr-about-k2",
 		indent = 1,
-		image = kr_graphic_mod_path .. "gui/previews/creep-preview.png"
+		image = kr_graphic_mod_path .. "gui/tip&tricks/creep-tip&tricks.png"
 	},
 	{
 		type = "tips-and-tricks-item",
@@ -94,7 +94,7 @@ data:extend(
 		},
 		category = "kr-about-k2",
 		indent = 1,
-		image = kr_graphic_mod_path .. "gui/previews/fuels-preview.png"
+		image = kr_graphic_mod_path .. "gui/tip&tricks/fuels-tip&tricks.png"
 	},
 	{
 		type = "tips-and-tricks-item",
@@ -106,7 +106,8 @@ data:extend(
 			technology = "kr-air-purification"
 		},
 		category = "kr-about-k2",
-		indent = 1
+		indent = 1,
+		image = kr_graphic_mod_path .. "gui/tip&tricks/air-purifier-tip&tricks.png"
 	},
 	{
 		type = "tips-and-tricks-item",
@@ -131,7 +132,7 @@ data:extend(
 		},
 		category = "kr-about-k2",
 		indent = 1,
-		image = kr_graphic_mod_path .. "gui/previews/inserters-preview.png"
+		image = kr_graphic_mod_path .. "gui/tip&tricks/inserters-hotkey-tip&tricks.png"
 	},
 	{
 		type = "tips-and-tricks-item",
@@ -161,7 +162,7 @@ data:extend(
 		},
 		category = "kr-about-k2",
 		indent = 1,
-		image = kr_graphic_mod_path .. "gui/previews/roboports-hotkey-preview.png"
+		image = kr_graphic_mod_path .. "gui/tip&tricks/roboports-hotkey-tip&tricks.png"
 	},
 	{
 		type = "tips-and-tricks-item",
@@ -174,7 +175,7 @@ data:extend(
 		},
 		category = "kr-about-k2",
 		indent = 1,
-		image = kr_graphic_mod_path .. "gui/previews/fusion-reactor-preview.png"
+		image = kr_graphic_mod_path .. "gui/tip&tricks/fusion-reactor-tip&tricks.png"
 	},
 	{
 		type = "tips-and-tricks-item",
@@ -187,6 +188,7 @@ data:extend(
 		},
 		category = "kr-about-k2",
 		indent = 1,
+		image = kr_graphic_mod_path .. "gui/tip&tricks/matter-tip&tricks.png"
 	},
 	{
 		type = "tips-and-tricks-item",
@@ -199,7 +201,7 @@ data:extend(
 		},
 		category = "kr-about-k2",
 		indent = 1,
-		image = kr_graphic_mod_path .. "gui/previews/intergalactic-transceiver-preview.png"
+		image = kr_graphic_mod_path .. "gui/tip&tricks/intergalactic-transceiver-tip&tricks.png"
 	},
 	{
 		type = "tips-and-tricks-item",
@@ -220,7 +222,7 @@ data:extend(
 		},
 		category = "kr-about-k2",
 		indent = 1,
-		image = kr_graphic_mod_path .. "gui/previews/crusher-preview.png"
+		image = kr_graphic_mod_path .. "gui/tip&tricks/crusher-tip&tricks.png"
 	},
 	{
 		type = "tips-and-tricks-item",
@@ -233,7 +235,7 @@ data:extend(
 		},
 		category = "kr-about-k2",
 		indent = 1,
-		image = kr_graphic_mod_path .. "gui/previews/tesla-coil-preview.png"
+		image = kr_graphic_mod_path .. "gui/tip&tricks/tesla-coil-tip&tricks.png"
 	},
 	{
 		type = "tips-and-tricks-item",
