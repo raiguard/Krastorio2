@@ -8,7 +8,7 @@ data:extend(
 		name = "kr-antimatter-reactor",		
 		icon = kr_entities_icons_path .. "antimatter-reactor.png",
 		icon_size = 128,
-		flags = {"placeable-neutral", "player-creation"},
+		flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
 		minable = {mining_time = 2, result = "kr-antimatter-reactor"},
 		max_health = 5000,
 		damaged_trigger_effect = hit_effects.entity(),
@@ -62,7 +62,6 @@ data:extend(
 				{
 					filename = kr_entities_path .. "antimatter-reactor/antimatter-reactor-light.png",
 					priority = "high",
-					frame_count = 1,
 					width = 330,
 					height = 353,
 					shift = {0, -0.5},
@@ -76,7 +75,6 @@ data:extend(
 					{
 						filename = kr_entities_path .. "antimatter-reactor/hr-antimatter-reactor-light.png",
 						priority = "high",
-						frame_count = 1,
 						width = 660,
 						height = 706,
 						shift = {0, -0.5},
@@ -91,7 +89,6 @@ data:extend(
 				{
 					filename = kr_entities_path .. "antimatter-reactor/antimatter-reactor-glow.png",
 					priority = "high",
-					frame_count = 1,
 					width = 330,
 					height = 353,
 					shift = {0, -0.5},
@@ -106,7 +103,6 @@ data:extend(
 					{
 						filename = kr_entities_path .. "antimatter-reactor/hr-antimatter-reactor-glow.png",
 						priority = "high",
-						frame_count = 1,
 						width = 660,
 						height = 706,
 						shift = {0, -0.5},
@@ -122,7 +118,6 @@ data:extend(
 				{
 					filename = kr_entities_path .. "antimatter-reactor/antimatter-reactor.png",
 					priority = "high",
-					frame_count = 6,
 					scale = scale,
 					width = 330,
 					height = 353,
@@ -135,7 +130,6 @@ data:extend(
 					{
 						filename = kr_entities_path .. "antimatter-reactor/hr-antimatter-reactor.png",
 						priority = "high",
-						frame_count = 6,
 						scale = scale,
 						width = 660,
 						height = 706,
@@ -148,7 +142,6 @@ data:extend(
 				},
 				{
 					filename = kr_entities_path .. "antimatter-reactor/antimatter-reactor-sh.png",
-					frame_count = 1,
 					width = 362,
 					height = 315,
 					shift = {0.57, 0.27},
@@ -160,7 +153,6 @@ data:extend(
 					hr_version =
 					{
 						filename = kr_entities_path .. "antimatter-reactor/hr-antimatter-reactor-sh.png",
-						frame_count = 1,
 						width = 724,
 						height = 630,
 						shift = {0.57, 0.27},

@@ -5,7 +5,7 @@ data:extend(
 		name = "kr-fusion-reactor",
 		icon = kr_entities_icons_path .. "fusion-reactor.png",
 		icon_size = 64,
-		flags = {"placeable-neutral", "placeable-player", "player-creation"},
+		flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
 		minable = {hardness = 1, mining_time = 3, result = "kr-fusion-reactor"},
 		max_health = 7500,
 		corpse = "kr-fusion-reactor-remnant",
@@ -47,7 +47,6 @@ data:extend(
 					filename = kr_entities_path .. "fusion-reactor/fusion-reactor.png",
 					width = 550,
 					height = 550,
-					frame_count = 1,
 					shift = {1.01, 0},
 					hr_version =
 					{
@@ -55,28 +54,25 @@ data:extend(
 						width = 1100,
 						height = 1100,
 						scale = 0.5,
-						frame_count = 1,
 						shift = {1.01, 0}
 					}
 				},
 				{
 					filename = kr_entities_path .. "fusion-reactor/fusion-reactor-shadow.png",
-					priority = "high",
+					priority = "medium",
 					scale = scale,
 					width = 550,
 					height = 550,
 					shift = {1.01, 0},
-					frame_count = 1,
 					draw_as_shadow = true,
 					hr_version =
 					{
 						filename = kr_entities_path .. "fusion-reactor/hr-fusion-reactor-shadow.png",
-						priority = "high",
+						priority = "medium",
 						scale = scale,
 						width = 1100,
 						height = 1100,
 						shift = {1.01, 0},
-						frame_count = 1,
 						draw_as_shadow = true,
 						scale = 0.5
 					}
@@ -85,10 +81,45 @@ data:extend(
 		},
 		working_visualisations =
 		{
+			{
+				animation =
+				{
+					filename = kr_entities_path .. "fusion-reactor/fusion-reactor-steam.png",
+					priority = "extra-high",
+					line_length = 10,
+					width = 40,
+					height = 81,
+					frame_count = 60,
+					animation_speed = 0.5,
+					scale = 0.75,
+					shift = {-4.25, -5.35},
+					blend_mode = "additive",
+					flags = {"smoke"},
+					fadeout = true
+				}
+			},
+			{
+				animation =
+				{
+					filename = kr_entities_path .. "fusion-reactor/fusion-reactor-steam.png",
+					priority = "extra-high",
+					line_length = 10, 
+					width = 40,
+					height = 81,
+					frame_count = 60,
+					animation_speed = 0.5,
+					scale = 0.5,
+					shift = {-5.25, -1.35},
+					blend_mode = "additive",
+					flags = {"smoke"},
+					fadeout = true
+				}
+			},
 			{	
 				animation =
 				{
 					filename = kr_entities_path .. "fusion-reactor/fusion-reactor-animation-glow.png",
+					priority = "high",
 					line_length = 6,
 					width = 313,
 					height = 344,
@@ -100,6 +131,7 @@ data:extend(
 					hr_version =
 					{
 						filename = kr_entities_path .. "fusion-reactor/hr-fusion-reactor-animation-glow.png",
+						priority = "high",
 						line_length = 6,
 						width = 626,
 						height = 688,
@@ -139,6 +171,35 @@ data:extend(
 			{
 				animation =
 				{
+					filename = kr_entities_path .. "fusion-reactor/fusion-reactor-light.png",
+					priority = "high",
+					width = 550,
+					height = 550,
+					line_length = 1,
+					frame_count = 1,
+					repeat_count = 12, 
+					shift = {1.01, 0},	
+					draw_as_light = true,	
+					blend_mode = "additive-soft",
+					hr_version =
+					{
+						filename = kr_entities_path .. "fusion-reactor/hr-fusion-reactor-light.png",
+						priority = "high",
+						width = 1100,
+						height = 1100,
+						scale = 0.5,
+						line_length = 1,
+						frame_count = 1,
+						repeat_count = 12, 
+						shift = {1.01, 0},
+						draw_as_light = true,	
+						blend_mode = "additive-soft"
+					}
+				}
+			},
+			{
+				animation =
+				{
 					filename = kr_entities_path .. "fusion-reactor/fusion-reactor-animation.png",
 					line_length = 6,
 					width = 313,
@@ -157,32 +218,6 @@ data:extend(
 						scale = 0.5,
 						shift = {2.18, -2.358}
 					}
-				}
-			},
-			{
-				animation =
-				{
-					filename = kr_entities_path .. "fusion-reactor/fusion-reactor-steam.png",
-					line_length = 10,
-					width = 40,
-					height = 81,
-					frame_count = 60,
-					animation_speed = 0.5,
-					scale = 0.75,
-					shift = {-4.25, -5.35}
-				}
-			},
-			{
-				animation =
-				{
-					filename = kr_entities_path .. "fusion-reactor/fusion-reactor-steam.png",
-					line_length = 10,
-					width = 40,
-					height = 81,
-					frame_count = 60,
-					animation_speed = 0.5,
-					scale = 0.5,
-					shift = {-5.25, -1.35}
 				}
 			},
 			{
