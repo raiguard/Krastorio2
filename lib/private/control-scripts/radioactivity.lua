@@ -160,7 +160,7 @@ local function radioactivity()
 			end
 			if character and character.valid then			
 				local position = character.position
-				local taken_damage = false
+				--local taken_damage = false
 				-- Entities damages
 				if player.surface.count_entities_filtered
 				{
@@ -173,7 +173,7 @@ local function radioactivity()
 				} > 0 
 				then
 					doRadioactiveDamage(player)		
-					taken_damage = true
+					--taken_damage = true
 				end
 				
 				-- -- Items damages	
@@ -183,7 +183,7 @@ local function radioactivity()
 					for _, item_name in pairs(global.krastorio.radioactive_items) do
 						if cursor_stack == item_name then
 							doRadioactiveDamage(player)
-							taken_damage = true
+							--taken_damage = true
 							break
 						end
 					end
@@ -195,7 +195,7 @@ local function radioactivity()
 					for _, item_name in pairs(global.krastorio.radioactive_items) do
 						if inventory.get_item_count(item_name) > 0 then
 							doRadioactiveDamage(player)
-							taken_damage = true
+							--taken_damage = true
 							break
 						end
 					end
@@ -207,15 +207,15 @@ local function radioactivity()
 					for _, item_name in pairs(global.krastorio.radioactive_items) do
 						if trash_inventory.get_item_count(item_name) > 0 then
 							doRadioactiveDamage(player)
-							taken_damage = true
+							--taken_damage = true
 							break
 						end
 					end
 				end	
 				-------------------
-				if taken_damage == false then
-					player.remove_alert{entity=character, icon={type="virtual", name="kr-nuclear-2"}, message={"other.kr-taking-radioactive-damage"}}				
-				end
+				--if taken_damage == false then
+					--player.remove_alert{entity=character, icon={type="virtual", name="kr-nuclear-2"}, message={"other.kr-taking-radioactive-damage"}}				
+				--end
 			end
 		end
 		global.krastorio.radioactivity_lock = true
