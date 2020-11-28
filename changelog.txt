@@ -7,6 +7,7 @@ Date: XX.11.2020
     - Added a custom alert when player is taking radioactive damage.
   Changes:
     - Improved GUIs images sizes.
+    - Removed old mining upgrade tech icons.
   Fixes:
     - Fixed that fluidbox size of matter plant and assembler was not updated (from 10k to 2k) with the bio-lab and greenhouse many updates ago.
     - Completed the property migration of 'logistic_slots_count' to 'max_logistic_slots' in all logistic containers of K2. Also removed some unused strings.

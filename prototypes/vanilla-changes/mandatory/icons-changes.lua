@@ -277,11 +277,6 @@ krastorio.icons.setTechnologyIcon("logistics-3",                      kr_technol
 
 krastorio.icons.setTechnologyIcon("oil-processing",                   kr_technologies_icons_path .. "oil-gathering.png")
 
-krastorio.icons.setTechnologyIcon("mining-productivity-1",            kr_technologies_icons_path .. "mining-productivity-1.png")
-krastorio.icons.setTechnologyIcon("mining-productivity-2",            kr_technologies_icons_path .. "mining-productivity-2.png")
-krastorio.icons.setTechnologyIcon("mining-productivity-3",            kr_technologies_icons_path .. "mining-productivity-3.png")
-krastorio.icons.setTechnologyIcon("mining-productivity-4",            kr_technologies_icons_path .. "mining-productivity-4.png")
-
 if krastorio.icons.setTechnologyIcon("steel-axe",                     kr_technologies_icons_path .. "steel-pickaxe.png") then
 	data.raw.technology["steel-axe"].icon_mipmaps = nil
 end
