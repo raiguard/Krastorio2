@@ -27,7 +27,7 @@ data:extend(
 				production_type = "input",
 				pipe_picture = kr_pipe_path,
 				pipe_covers = pipecoverspictures(),	
-				base_area = 100,
+				base_area = 10,
 				base_level = -1,
 				pipe_connections = {{ type="input-output", position = {0, -4} }}
 			},
@@ -36,7 +36,7 @@ data:extend(
 				production_type = "output",
 				pipe_picture = kr_pipe_path,
 				pipe_covers = pipecoverspictures(),	
-				base_area = 100,
+				base_area = 10,
 				base_level = 1,
 				pipe_connections = {{ type="input-output", position = {-4, 0} }}
 			},
@@ -44,7 +44,7 @@ data:extend(
 				production_type = "output",
 				pipe_picture = kr_pipe_path,
 				pipe_covers = pipecoverspictures(),	
-				base_area = 100,
+				base_area = 10,
 				base_level = 1,
 				pipe_connections = {{ type="input-output", position = {4, 0} }}
 			},
@@ -52,7 +52,7 @@ data:extend(
 				production_type = "output",
 				pipe_picture = kr_pipe_path,
 				pipe_covers = pipecoverspictures(),	
-				base_area = 1000,
+				base_area = 10,
 				base_level = 1,
 				pipe_connections = {{ type="input-output", position = {0, 4} }}
 			},

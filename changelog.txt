@@ -1,10 +1,13 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.0.10
-Date: 26.11.2020
+Version: 1.0.11
+Date: XX.11.2020
   Features:
     - Added support to tip and tricks of Factorio 1.1 (thanks to Katalliaan)
   Changes:
-    - Improved guy images sizes.
+    - Improved GUIs images sizes.
+  Fixes:
+    - Fixed that fluidbox size of matter plant and assembler was not updated (from 10k to 2k) with the bio-lab and greenhouse many updates ago.
+    - Completed the migration property 'logistic_slots_count' to 'max_logistic_slots' of logistic-container of K2. Also removed some unused strings.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.10
 Date: 26.11.2020

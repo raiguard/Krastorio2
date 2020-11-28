@@ -22,7 +22,6 @@ data:extend(
 		flags = {"placeable-player", "player-creation", "not-rotatable"},
 		minable = {mining_time = 0.5, result = "kr-medium-storage-container"},
 		max_health = 500,
-		logistic_slots_count = 1,
 		max_logistic_slots = 1,
 		corpse = "big-remnants",
 		collision_box = {{-0.8, -0.8}, {0.8, 0.8}},

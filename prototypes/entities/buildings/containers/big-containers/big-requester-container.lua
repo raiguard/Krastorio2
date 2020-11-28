@@ -21,7 +21,7 @@ data:extend(
 		icon_size = 64,
 		flags = {"placeable-player", "player-creation", "not-rotatable"},
 		minable = {mining_time = 1, result = "kr-big-requester-container"},
-		logistic_slots_count = 30,
+		max_logistic_slots = 30,
 		max_health = 1500,
 		corpse = "kr-big-random-pipes-remnant",
 		collision_box = {{-2.75, -2.75}, {2.75, 2.75}},
