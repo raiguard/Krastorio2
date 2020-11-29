@@ -112,6 +112,11 @@ local function checkVictory()
 						else -- Reduce by 20%
 							it.energy = it.energy - (it.energy * 2 / 10)
 							global.intergalactic_transceivers_energy_status[force_index] = it.energy
+							for _, player in pairs(game.connected_players) do
+								if player.force == it.force then
+									player.add_custom_alert(it, {type="virtual", name="kr-battery_low"}, {"other.kr-intergalactic-transceiver-discharging"}, true)
+								end
+							end
 						end
 					else -- Not building in use so update the latest value
 						global.intergalactic_transceivers_energy_status[force_index] = it.energy
