@@ -153,7 +153,7 @@ data:extend(
 				type = "line",
 				range = 50,
 				width = 2,
-				source_effects =
+				range_effects =
 				{
 					type = "create-explosion",
 					entity_name = "impulse-rifle-beam"

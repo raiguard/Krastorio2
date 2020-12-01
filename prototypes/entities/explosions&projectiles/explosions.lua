@@ -70,7 +70,8 @@ data:extend(
     {
 		type = "explosion",
 		name = "impulse-rifle-beam",
-		flags = {"not-on-map"},
+		flags = {"not-on-map", "hidden"},
+		subgroup = "explosions",
 		rotate = true,
 		beam = true,
 		animations =
@@ -81,7 +82,8 @@ data:extend(
 				draw_as_glow = true,
 				width = 62,
 				height = 1,
-				frame_count = 6
+				frame_count = 6,
+				line_length = 6
 			}
 		},
 		smoke = "smoke-fast",

@@ -2,7 +2,8 @@
 Version: 1.0.12
 Date: XX.11.2020
   Fixes:
-    - Fixed that the radioactive damage script crash if kill the player character.
+    - Fixed that the radioactive damage script crash if kill a player character entity.
+    - Fixed that impulse rifle animation was broken due the Factorio 1.1 definition modifications.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.11
 Date: 30.11.2020
