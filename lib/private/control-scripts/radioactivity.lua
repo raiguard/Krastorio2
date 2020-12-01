@@ -145,7 +145,9 @@ function doRadioactiveDamage(player)
 			end
 		end
 		character.damage(base_damage, "enemy", "radioactive")
-		player.add_custom_alert(character, {type="virtual", name="kr-nuclear-2"}, {"other.kr-taking-radioactive-damage"}, false)
+		if player.valid and character.valid then
+			player.add_custom_alert(character, {type="virtual", name="kr-nuclear-2"}, {"other.kr-taking-radioactive-damage"}, false)
+		end
 	end
 end
 
