@@ -169,7 +169,6 @@ end
 
 function createWiki(event)	
 	local player_gui_screen = game.players[event.player_index].gui.screen
-	player_gui_screen.clear()
 	
 	-- Window
 	local wiki_frame = krastorio.gui.addFrame(player_gui_screen, 
