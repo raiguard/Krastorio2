@@ -4,6 +4,7 @@ local sounds      = require("__base__/prototypes/entity/sounds")
 local advanced_furnace_sound =
 {	
 	filename = kr_buildings_sounds_path .. "advanced-furnace.ogg",
+	volume = 0.50,
 	aggregation =
 	{
 		max_count = 2,

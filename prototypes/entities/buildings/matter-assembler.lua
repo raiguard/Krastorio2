@@ -229,9 +229,13 @@ data:extend(
 		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{
-			sound = { filename = kr_buildings_sounds_path .. "matter-assembler.ogg" },
+			sound = 
+			{ 
+				filename = kr_buildings_sounds_path .. "matter-assembler.ogg",
+				volume = 0.60
+			},
 			idle_sound = { filename = "__base__/sound/idle1.ogg" },
-			apparent_volume = 1.5
+			apparent_volume = 0.75
 		},
 		crafting_speed = 1.0,
 		energy_source =

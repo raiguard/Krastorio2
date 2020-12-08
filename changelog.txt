@@ -1,11 +1,28 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.13
-Date: XX.12.2020
+Date: 08.12.2020
   Features:
-    - Added new creep footstep sounds (increased sound variation from 3 to 8). 
+    - Added new creep footstep sounds (increased sound variation from 3 to 8, thanks to GeneralEcchi). 
+    - Added a new option that doubles the cost of ingredients for all recipes and technologies in expensive mode, even of other mods, for how wants a new challenge (disabled by default).
+    - Added 3 new sounds for the advanced tank impulse rifle (thanks to GeneralEcchi).
+    - Added new custom sounds for electric mining mining drill mk2 and mk3 (thanks to GeneralEcchi).
+    - Added Vietnamese translation from Crowdin (almost complete, thanks to all contributors).
+  Changes:
+    - Improved advanced furnace sound (improved sound loop, thanks to GeneralEcchi).
+    - Improved matter assembler sound (improved quality, thanks to GeneralEcchi).
+    - Improved impulse rifle sounds (improved quality, thanks to GeneralEcchi).
+    - Improved bio lab sound (turn down low-frequency sounds and improved quality, thanks to GeneralEcchi).
+    - Reduced of 17% singularity lab volume.
+    - Updated Italian translation.
+    - Updated French translation from Crowdin (Thanks to all contributors).
+    - Updated Czech translation from Crowdin (Thanks to all contributors).
+    - Updated Russian translation from Crowdin (Thanks to all contributors).
+    - Updated Chinese Simplified translation from Crowdin (Thanks to all contributors).
+    - Updated Chinese Traditional translation from Crowdin (Thanks to all contributors).
   Fixes:
     - Fixed some English locale strings.
     - Fixed that K2 MiniWiki could corrupt the GUIs of other mods.
+    - Fixed previous changelog date, as usual...
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.12
 Date: 02.12.2020

@@ -205,11 +205,11 @@ data:extend(
 			sound =
 			{
 				filename = kr_buildings_sounds_path .. "singularity-lab.ogg",
-				volume = 1.5
+				volume = 1.25
 			},
 			idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 1 },
 			max_sounds_per_type = 6,
-			apparent_volume = 1.5,
+			apparent_volume = 1.25,
 		},
 		audible_distance_modifier = 25,
 		energy_source =

@@ -58,6 +58,13 @@ data:extend(
 	},
 	{
 		type = "bool-setting",
+		name = "kr-impossible-more-than-difficult",
+		setting_type = "startup",
+		default_value = false,
+		order = "a8"
+	},	
+	{
+		type = "bool-setting",
 		name = "kr-fix-laser-artillery-turret",
 		setting_type = "startup",
 		default_value = false,

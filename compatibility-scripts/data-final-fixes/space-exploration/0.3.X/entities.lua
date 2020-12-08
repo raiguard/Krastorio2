@@ -143,6 +143,10 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
 			"kr-superior-long-inserter",
 			"kr-superior-filter-inserter",
 			"kr-superior-long-filter-inserter"
+		},
+		["electric-energy-interface"] =
+		{
+			"kr-tesla-coil"
 		}
 	}
 	

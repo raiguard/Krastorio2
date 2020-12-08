@@ -461,7 +461,7 @@ data:extend(
 		{
 			sound =
 			{
-				filename = "__base__/sound/electric-mining-drill.ogg",
+				filename = kr_buildings_sounds_path .. "electric-mining-drill-mk2.ogg", 
 				volume = 0.8
 			},
 			audible_distance_modifier = 0.5,
@@ -2532,7 +2532,7 @@ data:extend(
 		{
 			sound =
 			{
-				filename = "__base__/sound/electric-mining-drill.ogg",
+				filename = kr_buildings_sounds_path .. "electric-mining-drill-mk3.ogg", 
 				volume = 0.8
 			},
 			audible_distance_modifier = 0.5,

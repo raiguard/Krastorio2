@@ -4,7 +4,7 @@ local sounds      = require("__base__/prototypes/entity/sounds")
 local greenhouse_working_sound =
 {
 	filename = kr_buildings_sounds_path .. "bio-lab.ogg",
-	volume = 1.25,
+	volume = 0.75,
 	idle_sound = { filename = "__base__/sound/idle1.ogg" },
 	aggregation =
 	{

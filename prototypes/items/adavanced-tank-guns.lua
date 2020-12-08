@@ -1,3 +1,28 @@
+local impulse_rifle_shot_sound =
+{
+	variations =
+	{
+		{
+			filename = kr_weapons_sounds_path .. "heavy-impulse-shot-1.ogg",
+			volume = 0.85
+		},
+		{
+			filename = kr_weapons_sounds_path .. "heavy-impulse-shot-2.ogg",
+			volume = 0.85
+		},
+		{
+			filename = kr_weapons_sounds_path .. "heavy-impulse-shot-3.ogg",
+			volume = 0.85
+		}
+	},
+	aggregation =
+	{
+		max_count = 2,
+		remove = false,
+		count_already_playing = true
+	}
+}
+
 data:extend(
 {
 -----------------------------------------------------------------------------------------------------------------
@@ -61,13 +86,7 @@ data:extend(
 			projectile_creation_distance = 1.75,
 			projectile_center = {-0.5, 0.25},
 			range = 60,
-			sound =
-			{
-				{
-					filename = kr_weapons_sounds_path .. "heavy-impulse-shot.ogg",
-					volume = 1.0
-				}
-			}
+			sound = impulse_rifle_shot_sound
 		},
 		stack_size = 1
 	},
