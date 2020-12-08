@@ -82,6 +82,8 @@ require(kr_prototypes_path .. "vanilla-changes/optional/peaceful-mode")
 require(kr_prototypes_path .. "vanilla-changes/optional/rebalance-vehicles&fuels-final-fixes")
 -- Change the background with the selected one
 require(kr_prototypes_path .. "vanilla-changes/optional/change-background")
+-- Increase the difficult of hardmode
+require(kr_prototypes_path .. "vanilla-changes/optional/impossible-more-than-difficult")
 ---------------------------------------------------------------------------
 -- -- -- COMPATIBILITY INITIALIZATION (data final fixes stage)
 ---------------------------------------------------------------------------
@@ -115,7 +117,6 @@ require(scripts_path .. "mod-assertions")
 -- -- -- POST ALL FIXES
 ---------------------------------------------------------------------------
 -- Add new fuels to entities
-
 krastorio.entities.addFuelCategory("assembling-machine", "stone-furnace", "vehicle-fuel")
 krastorio.entities.addFuelCategory("assembling-machine", "steel-furnace", "vehicle-fuel")
 krastorio.entities.addFuelCategory("boiler", "boiler", "vehicle-fuel")

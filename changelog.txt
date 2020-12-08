@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.13
 Date: XX.12.2020
+  Features:
+    - Added new creep footstep sounds (increased sound variation from 3 to 8). 
   Fixes:
     - Fixed some English locale strings.
     - Fixed that K2 MiniWiki could corrupt the GUIs of other mods.

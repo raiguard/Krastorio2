@@ -14,17 +14,38 @@ local creep_walking_sound =
 	variations =
 	{
 		{
-			filename = kr_tiles_sounds_path .. "creep-walk-01.ogg",
+			filename = kr_tiles_sounds_path .. "creep-walk-1.ogg",
 			volume = 0.75
 		},
 		{
-			filename = kr_tiles_sounds_path .. "creep-walk-02.ogg",
+			filename = kr_tiles_sounds_path .. "creep-walk-2.ogg",
 			volume = 0.75
 		},
 		{
-			filename = kr_tiles_sounds_path .. "creep-walk-03.ogg",
+			filename = kr_tiles_sounds_path .. "creep-walk-3.ogg",
 			volume = 0.75
+		},
+		{
+			filename = kr_tiles_sounds_path .. "creep-walk-4.ogg",
+			volume = 0.80
+		},
+		{
+			filename = kr_tiles_sounds_path .. "creep-walk-5.ogg",
+			volume = 0.75
+		},
+		{
+			filename = kr_tiles_sounds_path .. "creep-walk-6.ogg",
+			volume = 0.80
+		},
+		{
+			filename = kr_tiles_sounds_path .. "creep-walk-7.ogg",
+			volume = 0.75
+		},
+		{
+			filename = kr_tiles_sounds_path .. "creep-walk-8.ogg",
+			volume = 0.80
 		}
+		
 	},
 	aggregation =
 	{

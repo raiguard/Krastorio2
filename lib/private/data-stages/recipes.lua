@@ -787,6 +787,22 @@ end
 --
 
 -- @ recipe_name
+-- @ ingredient_name
+-- @ multiplier
+function krastorio.recipes.multiplyExpensiveIngredient(recipe_name, ingredient_name, multiplier)
+	local multiply = false
+	-- expensive
+	local expensive_ingredients = krastorio.recipes.getExpensiveIngredients(recipe_name)
+	if next(expensive_ingredients) ~= nil then
+		local multiply_expensive = krastorio.recipes.multiply(expensive_ingredients, ingredient_name, multiplier)
+		multiply = true
+	end
+	return multiply
+end
+
+--
+
+-- @ recipe_name
 -- @ ingredient_names
 -- @ multiplier
 function krastorio.recipes.multiplyIngredients(recipe_name, ingredient_names, multiplier)
@@ -797,6 +813,40 @@ function krastorio.recipes.multiplyIngredients(recipe_name, ingredient_names, mu
 		multiply_all = multiply_all and multiply
 	end
 	return multiply_all
+end
+
+--
+
+-- @ recipe_name
+-- @ ingredient_names
+-- @ multiplier
+function krastorio.recipes.multiplyExpensiveIngredients(recipe_name, ingredient_names, multiplier)
+	local multiply_all = true
+	local multiply = false
+	for _, ingredient_name in pairs(ingredient_names) do
+		multiply = krastorio.recipes.multiplyExpensiveIngredient(recipe_name, ingredient_name, multiplier)
+		multiply_all = multiply_all and multiply
+	end
+	return multiply_all
+end
+
+--
+
+-- @ recipe_name
+-- @ ingredient_names
+-- @ multiplier
+function krastorio.recipes.multiplyAllExpensiveIngredients(recipe_name, multiplier, expensive_ingredients)
+	local expensive_ingredients = expensive_ingredients or krastorio.recipes.getExpensiveIngredients(recipe_name)
+	if expensive_ingredients and next(expensive_ingredients) ~= nil then
+		for i, ingredient in pairs(expensive_ingredients) do
+			if ingredient.amount then
+				expensive_ingredients[i].amount = ingredient.amount * multiplier
+			else
+				expensive_ingredients[i][2] = ingredient[2] * multiplier
+			end				
+		end
+	end
+	return true
 end
 
 --
