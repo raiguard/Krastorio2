@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.14
+Date: 09.12.2020
+  Changes:
+    - Updated Japanese translation from Crowdin (Thanks to all contributors).
+  Fixes:
+    - Fixed that fusion reactor was not rotable (hotfix).
+---------------------------------------------------------------------------------------------------
 Version: 1.0.13
 Date: 08.12.2020
   Features:

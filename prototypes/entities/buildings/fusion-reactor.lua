@@ -5,7 +5,7 @@ data:extend(
 		name = "kr-fusion-reactor",
 		icon = kr_entities_icons_path .. "fusion-reactor.png",
 		icon_size = 64,
-		flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
+		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {hardness = 1, mining_time = 3, result = "kr-fusion-reactor"},
 		max_health = 7500,
 		corpse = "kr-fusion-reactor-remnant",
