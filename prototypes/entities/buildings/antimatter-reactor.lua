@@ -171,7 +171,7 @@ data:extend(
 			{
 				{	
 					filename = kr_buildings_sounds_path .. "antimatter-reactor.ogg",
-					volume = 1.45
+					volume = 1.25
 				}
 			}
 		},

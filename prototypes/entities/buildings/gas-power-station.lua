@@ -171,11 +171,11 @@ data:extend(
 				{
 					{
 						filename = kr_buildings_sounds_path .. "gas-power-station-1.ogg",
-						volume = 0.9
+						volume = 0.8
 					},
 					{
 						filename = kr_buildings_sounds_path .. "gas-power-station-2.ogg",
-						volume = 0.8
+						volume = 0.75
 					}
 				},
 				aggregation =

@@ -1,7 +1,7 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds      = require("__base__/prototypes/entity/sounds")
 
-local greenhouse_working_sound =
+local bio_lab_working_sound =
 {
 	filename = kr_buildings_sounds_path .. "bio-lab.ogg",
 	volume = 0.75,
@@ -134,7 +134,7 @@ data:extend(
 		crafting_categories = {"bioprocessing"},
 		scale_entity_info_icon = true,
 		vehicle_impact_sound = sounds.generic_impact,
-        working_sound = greenhouse_working_sound,
+        working_sound = bio_lab_working_sound,
 		crafting_speed = 1,
 		return_ingredients_on_change = true,
 		energy_source =

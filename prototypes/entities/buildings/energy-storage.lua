@@ -288,7 +288,7 @@ data:extend(
 			sound =
 			{
 				filename = kr_buildings_sounds_path .. "energy-storage-working.ogg",
-				volume = 1
+				volume = 0.9
 			},
 			idle_sound =
 			{

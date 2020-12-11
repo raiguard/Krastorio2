@@ -6,6 +6,7 @@ Date: XX.12.2020
     - Added 2 new sounds for the advanced tank anti-materiel rifle (thanks to GeneralEcchi).
   Changes:
     - Removed light from bio lab, was not anymore coherent with the new light system.
+    - Reduced the volume of sounds of almost all buildings by 5-10% (depends on the type of sound).
   Fixes:
     - Fixed translation errors in the Italian translation.
     - Removed unused sounds.

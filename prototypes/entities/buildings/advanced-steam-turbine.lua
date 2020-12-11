@@ -153,7 +153,7 @@ data:extend(
 			sound =
 			{
 				filename = kr_buildings_sounds_path .. "advanced-steam-turbine.ogg",
-				volume = 1.5
+				volume = 1.2
 			},
 			match_speed_to_activity = true
 		},

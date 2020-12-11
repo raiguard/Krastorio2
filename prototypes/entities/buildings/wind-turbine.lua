@@ -6,11 +6,11 @@ local wind_turbine_persistent_sound =
 	{
 		{
 			filename = kr_buildings_sounds_path .. "wind-turbine-rotating.ogg",
-			volume = 0.6
+			volume = 0.55
 		},
 		{
 			filename = kr_buildings_sounds_path .. "wind-turbine-rotating-2.ogg",
-			volume = 0.4
+			volume = 0.38
 		}
 	},
 	aggregation =

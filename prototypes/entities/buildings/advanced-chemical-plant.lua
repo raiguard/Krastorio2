@@ -139,7 +139,7 @@ data:extend(
 		{
 			sound = { filename = kr_buildings_sounds_path .. "advanced-chemical-plant.ogg" },
 			idle_sound = { filename = "__base__/sound/idle1.ogg" },
-			apparent_volume = 1.5
+			apparent_volume = 1.1
 		},
 		crafting_speed = 8,
 		energy_source =

@@ -237,7 +237,7 @@ data:extend(
 			sound =
 			{
 				filename = kr_buildings_sounds_path .. "fusion-reactor.ogg",
-				volume = 1.5,	
+				volume = 1.25,	
 				audible_distance_modifier = 10
 			},
 			idle_sound = { filename = "__base__/sound/idle1.ogg" },

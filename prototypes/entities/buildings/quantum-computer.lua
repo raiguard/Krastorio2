@@ -156,7 +156,11 @@ data:extend(
 		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{
-			sound      = { filename = kr_buildings_sounds_path .. "quantum-computer.ogg" },
+			sound      = 
+			{ 
+				filename = kr_buildings_sounds_path .. "quantum-computer.ogg",
+				volume = 1.25
+			},
 			idle_sound = { filename = "__base__/sound/idle1.ogg" },
 			apparent_volume = 1.5
 		}

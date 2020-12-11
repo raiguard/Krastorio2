@@ -139,7 +139,11 @@ data:extend(
 		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{			
-			sound = { filename = kr_buildings_sounds_path .. "quarry-drill.ogg" },
+			sound = 
+			{ 
+				filename = kr_buildings_sounds_path .. "quarry-drill.ogg",
+				volume = 0.9
+			},
 			idle_sound = { filename = "__base__/sound/idle1.ogg" },
 			max_sounds_per_type = 2
 		},

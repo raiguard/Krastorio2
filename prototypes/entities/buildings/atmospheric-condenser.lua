@@ -98,7 +98,7 @@ data:extend(
 			sound = 
 			{
 				filename = kr_buildings_sounds_path .. "atmospheric-condenser.ogg",
-				volume = 1.5
+				volume = 1.2
 			},
 			idle_sound =
 			{
