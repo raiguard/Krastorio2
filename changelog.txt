@@ -1,10 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.15
+Date: XX.12.2020
+  Features:
+    - Added a light mask on greenhouse while it is working.
+    - Added 2 new sounds for the advanced tank anti-materiel rifle (thanks to GeneralEcchi).
+  Changes:
+    - Removed light from bio lab, was not anymore coherent with the new light system.
+  Fixes:
+    - Fixed translation errors in the Italian translation.
+    - Removed unused sounds.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.14
 Date: 09.12.2020
   Changes:
     - Updated Japanese translation from Crowdin (Thanks to all contributors).
   Fixes:
-    - Fixed that fusion reactor was not rotable (hotfix).
+    - Fixed that fusion reactor was not rotable anymore (hotfix).
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.13
 Date: 08.12.2020

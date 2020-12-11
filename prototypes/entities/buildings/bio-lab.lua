@@ -128,13 +128,6 @@ data:extend(
 						scale = 0.5,
 						animation_speed = 0.35,
 					}
-				},
-				light =
-				{
-					intensity = 0.5,
-					size = 15,
-					shift = {0.0, 0.0},
-					color = {r=1, g=0.5, b=0.6}
 				}
 			}
 		},

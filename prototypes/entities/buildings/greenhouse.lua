@@ -101,6 +101,30 @@ data:extend(
 		working_visualisations =
 		{
 			{
+				draw_as_light = true,
+				animation =
+				{
+					filename = kr_entities_path .. "greenhouse/greenhouse-light.png",
+					scale = scale,
+					width = 256,
+					height = 256,
+					frame_count = 1,
+					repeat_count = 10,
+					animation_speed=0.35,
+					hr_version =
+					{
+						filename = kr_entities_path .. "greenhouse/hr-greenhouse-light.png",
+						scale = scale,
+						width = 512,
+						height = 512,
+						frame_count = 1,
+						repeat_count = 10,
+						scale = 0.5,
+						animation_speed = 0.35,
+					}
+				}
+			},
+			{
 				animation =
 				{
 					filename = kr_entities_path .. "greenhouse/greenhouse-working.png",
@@ -121,13 +145,6 @@ data:extend(
 						scale = 0.5,
 						animation_speed = 0.35,
 					}
-				},
-				light =
-				{
-					intensity = 0.75,
-					size = 15,
-					shift = {0.0, 0.0},
-					color = {r=0.7, g=1, b=0.7}
 				}
 			}
 		},

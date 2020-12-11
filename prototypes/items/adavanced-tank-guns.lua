@@ -1,4 +1,4 @@
-local impulse_rifle_shot_sound =
+local heavy_impulse_rifle_shot_sound =
 {
 	variations =
 	{
@@ -12,6 +12,27 @@ local impulse_rifle_shot_sound =
 		},
 		{
 			filename = kr_weapons_sounds_path .. "heavy-impulse-shot-3.ogg",
+			volume = 0.85
+		}
+	},
+	aggregation =
+	{
+		max_count = 2,
+		remove = false,
+		count_already_playing = true
+	}
+}
+
+local advanced_tank_anti_material_rifle_shot_sound =
+{
+	variations =
+	{
+		{
+			filename = kr_weapons_sounds_path .. "advanced-tank-anti-material-rifle-1.ogg",
+			volume = 0.85
+		},
+		{
+			filename = kr_weapons_sounds_path .. "advanced-tank-anti-material-rifle-2.ogg",
 			volume = 0.85
 		}
 	},
@@ -57,13 +78,7 @@ data:extend(
 			projectile_center = {0.5, 0.25},
 			projectile_creation_distance = 1.75,
 			range = 30,
-			sound =
-			{
-				{
-				  filename = "__base__/sound/fight/tank-cannon.ogg",
-				  volume = 0.9
-				}
-			}
+			sound = advanced_tank_anti_material_rifle_shot_sound
 		},
 		stack_size = 1
 	},
@@ -86,7 +101,7 @@ data:extend(
 			projectile_creation_distance = 1.75,
 			projectile_center = {-0.5, 0.25},
 			range = 60,
-			sound = impulse_rifle_shot_sound
+			sound = heavy_impulse_rifle_shot_sound
 		},
 		stack_size = 1
 	},
