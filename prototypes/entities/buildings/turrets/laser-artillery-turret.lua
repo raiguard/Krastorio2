@@ -248,7 +248,13 @@ data:extend(
 		{
 			{
 				filename = kr_weapons_sounds_path .. "laser-artillery-turret-starting_attack_sound.ogg",
-				volume = 1
+				volume = 0.40,
+				audible_distance_modifier = 0.5,
+				aggregation =
+				{
+					count_already_playing  = true,
+					max_count = 3
+				}
 			}
 		},
 		

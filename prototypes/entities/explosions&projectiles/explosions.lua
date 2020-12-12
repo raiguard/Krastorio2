@@ -1,67 +1,5 @@
 local kr_explosions_sprites_path = kr_entities_path .. "explosions/"
 
-laser_gunshot = function()
-  return
-  {
-    {
-      filename = kr_explosions_sprites_path .. "laser_gunshot.png",
-      priority = "extra-high",
-	  draw_as_glow = true,
-      width = 51,
-      height = 57,
-      frame_count = 2,
-      animation_speed = 1.5,
-      shift = {0, 0}
-    },
-    {
-      filename = kr_explosions_sprites_path .. "laser_gunshot.png",
-      priority = "extra-high",
-	  draw_as_glow = true,
-      width = 51,
-      height = 57,
-      x = 51 * 2,
-      frame_count = 2,
-      animation_speed = 1.5,
-      shift = {0, 0}
-    },
-    {
-      filename = kr_explosions_sprites_path .. "laser_gunshot.png",
-      priority = "extra-high",
-	  draw_as_glow = true,
-      width = 51,
-      height = 57,
-      x = 51 * 4,
-      frame_count = 3,
-      animation_speed = 1.5,
-      shift = {0, 0}
-    },
-    {
-      filename = kr_explosions_sprites_path .. "laser_gunshot.png",
-      priority = "extra-high",
-	  draw_as_glow = true,
-      width = 51,
-      height = 57,
-      x = 51 * 7,
-      frame_count = 3,
-      animation_speed = 1.5,
-      shift = {0, 0}
-    },
-    {
-      filename = kr_explosions_sprites_path .. "laser_gunshot.png",
-      priority = "extra-high",
-	  draw_as_glow = true,
-      width = 51,
-      height = 57,
-      x = 51 * 10,
-      frame_count = 3,
-      animation_speed = 1.5,
-      shift = {0, 0}
-    }
-  }
-end
-
-
-
 data:extend(
 {
 
@@ -612,13 +550,68 @@ data:extend(
 -----------------------------------------------------------------------------------------------------------------  
 	
 	{
+		type = "trivial-smoke",
+		name = "kr-laser-explosion-gunshot-smoke-fast",
+		animation = 
+		{
+			filename = "__base__/graphics/entity/smoke-fast/smoke-fast.png",
+			priority = "high",
+			blend_mode = "additive-soft",
+			width = 50,
+			height = 50,
+			frame_count = 16,
+			animation_speed = 16 / 60,
+			duration = 600,
+			fade_in_duration = 0,
+			fade_away_duration = 600,
+			spread_duration = 600,
+			start_scale = 0.20,
+			end_scale = 1.0,
+			tint = {r = 0.65, g = 0.0, b = 0.0, a = 0.9}
+		},
+		duration = 60,
+		fade_away_duration = 60
+	},
+	{
 		type = "explosion",
 		name = "kr-laser-explosion-gunshot",
 		flags = {"not-on-map"},
 		subgroup = "explosions",
-		animations = laser_gunshot(),
+		animations = 
+		{
+			{
+				filename = kr_explosions_sprites_path .. "laser_gunshot.png",
+				priority = "extra-high",
+				draw_as_glow = true,
+				width = 51,
+				height = 57,
+				frame_count = 2,
+				animation_speed = 1.3,
+				shift = {0, 0}
+			},
+			{
+				filename = kr_explosions_sprites_path .. "laser_gunshot.png",
+				priority = "high",
+				draw_as_glow = true,
+				blend_mode = "additive",
+				width = 51,
+				height = 57,
+				frame_count = 2,
+				animation_speed = 1.3,
+				shift = {0, 0}
+			},
+			{
+				filename = kr_explosions_sprites_path .. "laser_gunshot.png",
+				priority = "medium",
+				width = 51,
+				height = 57,
+				frame_count = 2,
+				animation_speed = 1.3,
+				shift = {0, 0}
+			}
+		},
 		rotate = true,
-		smoke = "smoke-fast",
+		smoke = "kr-laser-explosion-gunshot-smoke-fast",
 		smoke_count = 2,
 		smoke_slow_down_factor = 0.25
 	},
