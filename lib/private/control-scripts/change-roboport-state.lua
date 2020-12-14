@@ -53,6 +53,18 @@ local function changeRoboportEntity(old_entity, new_entity_name, player_index, t
 				new_entity.insert({name=item, count=quantity})
 			end
 		end
+		-- Set old circuit network (if connected)
+		if network then
+			for c, tbl in pairs(network) do 
+				new_entity.connect_neighbour
+				{
+					target_entity     = tbl.target_entity,
+					wire              = tbl.wire,
+					source_circuit_id = tbl.source_circuit_id,
+					target_circuit_id = tbl.target_circuit_id
+				} 
+			end
+		end
 		-- Tooltip
 		krastorio.flying_texts.showOnSurfaceText
 		{
