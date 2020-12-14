@@ -68,6 +68,15 @@ data:extend(
 		order = "zzd2"
 	},
 	
+	-- Crash site
+	
+	{
+		type = "item-subgroup",
+		name = "crash-site",
+		group = "other",
+		order = "zz"
+	}, 
+	
 	-- Nothing
 	{
 		type = "item-subgroup",
