@@ -20,15 +20,34 @@ data:extend(
 		affected_by_wind = true,
 		animation =
 		{
-			width = 152,
-			height = 120,
-			line_length = 5,
-			frame_count = 60,
-			shift = {-0.53125, -0.4375},
-			priority = "high",
-			animation_speed = 0.25,
-			filename = "__base__/graphics/entity/smoke/smoke.png", --kr_entities_path .. "nuclear-locomotive/smoke.png",
-			flags = { "smoke" }
+			layers =
+			{
+				{
+					filename = "__base__/graphics/entity/smoke/smoke.png", --kr_entities_path .. "nuclear-locomotive/smoke.png",
+					width = 152,
+					height = 120,
+					line_length = 5,
+					frame_count = 60,
+					shift = {-0.53125, -0.4375},
+					priority = "high",
+					animation_speed = 0.25,
+					draw_as_glow = true,
+					blend_mode = "additive-soft",
+					tint = nuclear_smoke_color,			
+					flags = { "smoke" }
+				},
+				{
+					filename = "__base__/graphics/entity/smoke/smoke.png", --kr_entities_path .. "nuclear-locomotive/smoke.png",
+					width = 152,
+					height = 120,
+					line_length = 5,
+					frame_count = 60,
+					shift = {-0.53125, -0.4375},
+					priority = "high",
+					animation_speed = 0.25,	
+					flags = { "smoke" }
+				}
+			}
 		}
 	},
 	-- Entity

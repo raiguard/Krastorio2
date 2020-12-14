@@ -1,14 +1,16 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.15
-Date: XX.12.2020
+Date: 14.12.2020
   Features:
     - Added a light mask on greenhouse while it is working.
+    - Added a green glow mask on nuclear locomotive smoke.
     - Added 2 new sounds for the advanced tank anti-materiel rifle (thanks to GeneralEcchi).
+    - Added (as requested) 2 new interface functions for modders: remote.interfaces["kr-crash-site"].remove_crash_site_item(item_name) and remote.interfaces["kr-crash-site"].remove_crash_site_entity(entity_name).
   Changes:
-    - Removed light from bio lab, was not anymore coherent with the new light system.
-    - Reduced the volume of sounds of almost all buildings by 5-10% (depends on the type of sound).
+    - Removed light effect from bio lab, was not anymore coherent with the new light system.
+    - Reduced the volume of sounds of almost all buildings by 5-15% (depends on the type of sound).
   Fixes:
-    - Fixed translation errors in the Italian translation.
+    - Fixed translation errors in the Italian locales.
     - Removed unused sounds.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.14
