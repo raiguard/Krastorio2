@@ -39,21 +39,21 @@ if not remote.interfaces["kr-crash-site"] then
 		crash_site_enabled = 
 		function(bool)
 			if type(bool) ~= "boolean" then 
-				error("Value for 'set_crash_site' must be a boolean.")
+				error("Value for 'crash_site_enabled' must be a boolean.")
 			end
 			global.crash_site_enabled = bool
 		end,
 		add_crash_site_item = 
 		function(item_name)
-			if type(bool) ~= "string" then 
+			if type(item_name) ~= "string" then 
 				error("Value for 'add_crash_site_item' must be a string.")
 			end
 			table.insert(start_items, item_name)
 		end,
 		remove_crash_site_item = 
 		function(item_name)
-			if type(bool) ~= "string" then 
-				error("Value for 'add_crash_site_item' must be a string.")
+			if type(item_name) ~= "string" then 
+				error("Value for 'remove_crash_site_item' must be a string.")
 			end
 			local finded = true
 			while finded do
@@ -69,15 +69,15 @@ if not remote.interfaces["kr-crash-site"] then
 		end,
 		add_crash_site_entity = 
 		function(entity_name)
-			if type(bool) ~= "string" then 
+			if type(entity_name) ~= "string" then 
 				error("Value for 'add_crash_site_entity' must be a string.")
 			end
 			table.insert(entities_to_place, entity_name)
 		end,
 		remove_crash_site_entity = 
 		function(entity_name)
-			if type(bool) ~= "string" then 
-				error("Value for 'add_crash_site_entity' must be a string.")
+			if type(entity_name) ~= "string" then 
+				error("Value for 'remove_crash_site_entity' must be a string.")
 			end
 			local finded = true
 			while finded do

@@ -3,6 +3,7 @@ Version: 1.0.17
 Date: XX.12.2020
   Fixes:
     - Fixed that shifting roboport modes remove circuit connections.
+    - Fixed crash-site interface for modders.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.16
 Date: 14.12.2020
