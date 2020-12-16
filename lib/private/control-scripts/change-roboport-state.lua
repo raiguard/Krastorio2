@@ -19,6 +19,25 @@ local function changeRoboportEntity(old_entity, new_entity_name, player_index, t
 		local inventory_robot    = old_entity.get_inventory(defines.inventory.roboport_robot).get_contents()
 		local inventory_material = old_entity.get_inventory(defines.inventory.roboport_material).get_contents()
 		
+		-- Circuit network conditions
+		local control_behavior                     = old_entity.get_control_behavior()
+		local control_behavior_was_present         = false
+		local read_logistics                       = nil
+		local read_robot_stats                     = nil
+		local available_logistic_output_signal     = nil
+		local total_logistic_output_signal         = nil
+		local available_construction_output_signal = nil
+		local total_construction_output_signal     = nil
+		if control_behavior ~= nil then
+			control_behavior_was_present         = true
+			read_robot_stats                     = control_behavior.read_robot_stats
+			read_logistics                       = control_behavior.read_logistics
+			available_logistic_output_signal     = control_behavior.available_logistic_output_signal
+			total_logistic_output_signal         = control_behavior.total_logistic_output_signal
+			available_construction_output_signal = control_behavior.available_construction_output_signal
+			total_construction_output_signal     = control_behavior.total_construction_output_signal
+		end
+		
 		if old_entity and old_entity.valid then
 			old_entity.destroy()
 		end
@@ -64,6 +83,16 @@ local function changeRoboportEntity(old_entity, new_entity_name, player_index, t
 					target_circuit_id = tbl.target_circuit_id
 				} 
 			end
+		end
+		-- Set old network conditions
+		if control_behavior_was_present ~= nil then
+			control_behavior                                      = new_entity.get_or_create_control_behavior()
+			control_behavior.read_robot_stats                     = read_robot_stats
+			control_behavior.read_logistics                       = read_logistics
+			control_behavior.available_logistic_output_signal     = available_logistic_output_signal
+			control_behavior.total_logistic_output_signal         = total_logistic_output_signal
+			control_behavior.available_construction_output_signal = available_construction_output_signal
+			control_behavior.total_construction_output_signal     = total_construction_output_signal
 		end
 		-- Tooltip
 		krastorio.flying_texts.showOnSurfaceText
