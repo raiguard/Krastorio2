@@ -89,10 +89,18 @@ local function changeRoboportEntity(old_entity, new_entity_name, player_index, t
 			control_behavior                                      = new_entity.get_or_create_control_behavior()
 			control_behavior.read_robot_stats                     = read_robot_stats
 			control_behavior.read_logistics                       = read_logistics
-			control_behavior.available_logistic_output_signal     = available_logistic_output_signal
-			control_behavior.total_logistic_output_signal         = total_logistic_output_signal
-			control_behavior.available_construction_output_signal = available_construction_output_signal
-			control_behavior.total_construction_output_signal     = total_construction_output_signal
+			if available_logistic_output_signal then
+				control_behavior.available_logistic_output_signal     = available_logistic_output_signal
+			end
+			if total_logistic_output_signal then
+				control_behavior.total_logistic_output_signal         = total_logistic_output_signal
+			end
+			if available_construction_output_signal then
+				control_behavior.available_construction_output_signal = available_construction_output_signal
+			end
+			if total_construction_output_signal then
+				control_behavior.total_construction_output_signal     = total_construction_output_signal
+			end
 		end
 		-- Tooltip
 		krastorio.flying_texts.showOnSurfaceText

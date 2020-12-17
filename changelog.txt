@@ -1,4 +1,8 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.18
+Date: 17.12.2020
+    - Fixed that shift mode of a roboport not attached to circuit network will make the script crash.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.17
 Date: 17.12.2020
   Features:
@@ -8,7 +12,7 @@ Date: 17.12.2020
     - (SE compatibility) Changed (K2) space loader recipe to be more consistent with the actual space transport belt recipe.
     - (SE compatibility) Changed space platform scaffold technology prerequisites to be more consistent with K2 prerequisites and recipes.
   Fixes:
-    - Fixed that some K2 equipment sprites was removed was replaced by high resolution vanilla version of Factorio 1.1.
+    - Fixed that some K2 equipment sprites was removed and replaced by high resolution vanilla version of Factorio 1.1.
     - Fixed that shifting roboport modes remove circuit connections and conditions from the roboport.
     - Fixed crash-site interface functions arguments evaluation (for modders).
 ---------------------------------------------------------------------------------------------------
