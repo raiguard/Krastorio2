@@ -1,9 +1,16 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.17
-Date: XX.12.2020
+Date: 17.12.2020
+  Features:
+    - Added high resolution equipment sprites automatically generated using a deep learning technique.
+  Changes:
+    - Removed the possibility to use productivity effect on decomposition recipes of crusher, to avoid glitches that create infinite materials (if productivity modules will be installed in the entity, they will be ignored). On stone and raw imersite crushing recipes still possible use productivity effect.
+    - (SE compatibility) Changed (K2) space loader recipe to be more consistent with the actual space transport belt recipe.
+    - (SE compatibility) Changed space platform scaffold technology prerequisites to be more consistent with K2 prerequisites and recipes.
   Fixes:
-    - Fixed that shifting roboport modes remove circuit connections and conditions.
-    - Fixed crash-site interface for modders.
+    - Fixed that some K2 equipment sprites was removed was replaced by high resolution vanilla version of Factorio 1.1.
+    - Fixed that shifting roboport modes remove circuit connections and conditions from the roboport.
+    - Fixed crash-site interface functions arguments evaluation (for modders).
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.16
 Date: 14.12.2020

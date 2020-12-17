@@ -59,7 +59,6 @@ return
 		always_show_products = true,
 		energy_required = 1,
 		enabled = true,
-		allow_productivity = true,
 		ingredients =
 		{
 			{"inserter", 1}
@@ -79,7 +78,6 @@ return
 		always_show_products = true,
 		energy_required = 1,
 		enabled = true,
-		allow_productivity = true,
 		ingredients =
 		{
 			{"fast-inserter", 1}
@@ -99,7 +97,6 @@ return
 		always_show_products = true,
 		energy_required = 1,
 		enabled = true,
-		allow_productivity = true,
 		ingredients =
 		{
 			{"long-handed-inserter", 1}
@@ -119,7 +116,6 @@ return
 		always_show_products = true,
 		energy_required = 1,
 		enabled = true,
-		allow_productivity = true,
 		ingredients =
 		{
 			{"burner-inserter", 1}
@@ -143,7 +139,6 @@ return
 		always_show_products = true,
 		energy_required = 1,
 		enabled = true,
-		allow_productivity = true,
 		ingredients =
 		{
 			{"stack-inserter", 1}
@@ -170,7 +165,6 @@ return
 		always_show_products = true,
 		energy_required = 1,
 		enabled = true,
-		allow_productivity = true,
 		ingredients =
 		{
 			{"stack-filter-inserter", 1}
@@ -193,7 +187,6 @@ return
 		always_show_products = true,
 		energy_required = 1,
 		enabled = true,
-		allow_productivity = true,
 		ingredients =
 		{
 			{"filter-inserter", 1}
@@ -217,7 +210,6 @@ return
 		always_show_products = true,
 		energy_required = 1,
 		enabled = true,
-		allow_productivity = true,
 		ingredients =
 		{
 			{"kr-superior-inserter", 1}
@@ -246,7 +238,6 @@ return
 		always_show_products = true,
 		energy_required = 1,
 		enabled = true,
-		allow_productivity = true,
 		ingredients =
 		{
 			{"kr-superior-long-inserter", 1}
@@ -274,7 +265,6 @@ return
 		always_show_products = true,
 		energy_required = 1,
 		enabled = true,
-		allow_productivity = true,
 		ingredients =
 		{
 			{"kr-superior-filter-inserter", 1}
@@ -302,7 +292,6 @@ return
 		always_show_products = true,
 		energy_required = 1,
 		enabled = true,
-		allow_productivity = true,
 		ingredients =
 		{
 			{"kr-superior-long-filter-inserter", 1}
@@ -330,7 +319,6 @@ return
 		always_show_products = true,
 		energy_required = 1,
 		enabled = true,
-		allow_productivity = true,
 		ingredients =
 		{
 			{"imersite-crystal", 1}

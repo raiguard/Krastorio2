@@ -18,7 +18,15 @@ data:extend(
 			filename = kr_universal_equipments_path .. "battery-mk3-equipment.png",
 			width = 32,
 			height = 64,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-battery-mk3-equipment.png",		
+				width    = 64,
+				height   = 128,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{
@@ -45,7 +53,15 @@ data:extend(
 			filename = kr_universal_equipments_path .. "big-battery-equipment.png",
 			width = 64,
 			height = 64,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-big-battery-equipment.png",		
+				width    = 128,
+				height   = 128,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{
@@ -72,7 +88,15 @@ data:extend(
 			filename = kr_universal_equipments_path .. "big-battery-mk2-equipment.png",
 			width = 64,
 			height = 64,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-big-battery-mk2-equipment.png",		
+				width    = 128,
+				height   = 128,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{
@@ -99,7 +123,15 @@ data:extend(
 			filename = kr_universal_equipments_path .. "big-battery-mk3-equipment.png",
 			width = 64,
 			height = 64,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-big-battery-mk3-equipment.png",		
+				width    = 128,
+				height   = 128,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{
@@ -128,7 +160,15 @@ data:extend(
 			filename = kr_universal_equipments_path .. "small-portable-generator.png",
 			width = 64,
 			height = 64,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-small-portable-generator.png",		
+				width    = 128,
+				height   = 128,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{
@@ -171,7 +211,15 @@ data:extend(
 			filename = kr_universal_equipments_path .. "portable-generator.png",
 			width = 128,
 			height = 128,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-portable-generator.png",		
+				width    = 256,
+				height   = 256,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{
@@ -214,7 +262,15 @@ data:extend(
 			filename = kr_universal_equipments_path .. "nuclear-reactor-equipment.png",
 			width = 128,
 			height = 128,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-nuclear-reactor-equipment.png",		
+				width    = 256,
+				height   = 256,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{
@@ -246,7 +302,15 @@ data:extend(
 			filename = kr_universal_equipments_path .. "antimatter-reactor-equipment.png",
 			width = 128,
 			height = 128,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-antimatter-reactor-equipment.png",		
+				width    = 256,
+				height   = 256,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{
@@ -278,7 +342,15 @@ data:extend(
 			filename = kr_universal_equipments_path .. "cyber-potato-equipment.png",
 			width = 128,
 			height = 128,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-cyber-potato-equipment.png",		
+				width    = 256,
+				height   = 256,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{
@@ -304,7 +376,15 @@ data:extend(
 			width = 128,
 			height = 128,
 			scale = 0.55,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-energy-absorber.png",		
+				width    = 256,
+				height   = 256,
+				priority = "medium",
+				scale    = 0.275
+			}
 		},
 		shape =
 		{
@@ -333,7 +413,15 @@ data:extend(
 			filename = kr_universal_equipments_path .. "big-solar-panel-equipment.png",
 			width = 64,
 			height = 64,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-big-solar-panel-equipment.png",		
+				width    = 128,
+				height   = 128,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{
@@ -358,7 +446,15 @@ data:extend(
 			filename = kr_universal_equipments_path .. "imersite-solar-panel-equipment.png",
 			width = 32,
 			height = 32,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-imersite-solar-panel-equipment.png",		
+				width    = 64,
+				height   = 64,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{
@@ -383,7 +479,15 @@ data:extend(
 			filename = kr_universal_equipments_path .. "big-imersite-solar-panel-equipment.png",
 			width = 64,
 			height = 64,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-big-imersite-solar-panel-equipment.png",		
+				width    = 128,
+				height   = 128,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{
@@ -463,8 +567,16 @@ data:extend(
 		{
 			filename = kr_universal_equipments_path .. "personal-laser-defense-mk2-equipment.png",
 			height = 64,
-			priority = "medium",
-			width = 64
+			width = 64,
+			priority = "medium",			
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-personal-laser-defense-mk2-equipment.png",		
+				width    = 128,
+				height   = 128,
+				priority = "medium",
+				scale    = 0.5
+			}
 		}	
 	},
 	-- personal-laser-defense-mk3-equipment
@@ -529,8 +641,16 @@ data:extend(
 		{
 			filename = kr_universal_equipments_path .. "personal-laser-defense-mk3-equipment.png",
 			height = 64,
-			priority = "medium",
-			width = 64
+			width = 64,	
+			priority = "medium",					
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-personal-laser-defense-mk3-equipment.png",		
+				width    = 128,
+				height   = 128,
+				priority = "medium",
+				scale    = 0.5
+			}
 		}	
 	},
 	-- personal-laser-defense-mk4-equipment
@@ -595,8 +715,16 @@ data:extend(
 		{
 			filename = kr_universal_equipments_path .. "personal-laser-defense-mk4-equipment.png",
 			height = 64,
+			width = 64,	
 			priority = "medium",
-			width = 64
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-personal-laser-defense-mk4-equipment.png",		
+				width    = 128,
+				height   = 128,
+				priority = "medium",
+				scale    = 0.5
+			}
 		}	
 	},
 	-- personal-submachine-laser-defense-mk1-equipment
@@ -608,7 +736,15 @@ data:extend(
 			filename = kr_universal_equipments_path .. "personal-submachine-laser-defense-mk1-equipment.png",
 			width = 64,
 			height = 64,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-personal-submachine-laser-defense-mk1-equipment.png",		
+				width    = 128,
+				height   = 128,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{
@@ -678,7 +814,15 @@ data:extend(
 			filename = kr_universal_equipments_path .. "personal-submachine-laser-defense-mk2-equipment.png",
 			width = 64,
 			height = 64,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-personal-submachine-laser-defense-mk2-equipment.png",		
+				width    = 128,
+				height   = 128,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{
@@ -743,7 +887,15 @@ data:extend(
 			filename = kr_universal_equipments_path .. "personal-submachine-laser-defense-mk3-equipment.png",
 			width = 64,
 			height = 64,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-personal-submachine-laser-defense-mk3-equipment.png",		
+				width    = 128,
+				height   = 128,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{
@@ -808,7 +960,15 @@ data:extend(
 			filename = kr_universal_equipments_path .. "personal-submachine-laser-defense-mk4-equipment.png",
 			width = 64,
 			height = 64,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-personal-submachine-laser-defense-mk4-equipment.png",		
+				width    = 128,
+				height   = 128,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{
@@ -867,7 +1027,15 @@ data:extend(
 			filename = kr_universal_equipments_path .. "energy-shield-mk3-equipment.png",
 			width = 64,
 			height = 64,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-energy-shield-mk3-equipment.png",		
+				width    = 128,
+				height   = 128,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{
@@ -897,7 +1065,15 @@ data:extend(
 			filename = kr_universal_equipments_path .. "energy-shield-mk4-equipment.png",
 			width = 64,
 			height = 64,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_universal_equipments_path .. "hr-energy-shield-mk4-equipment.png",		
+				width    = 128,
+				height   = 128,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{

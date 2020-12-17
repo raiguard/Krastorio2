@@ -151,7 +151,15 @@ data:extend(
 			filename = kr_character_equipments_path .. "advanced-exoskeleton-equipment.png",		
 			width = 64,
 			height = 128,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_character_equipments_path .. "hr-advanced-exoskeleton-equipment.png",		
+				width    = 128,
+				height   = 256,
+				priority = "medium",
+				scale    = 0.5
+			}
 		}
     },
 -----------------------------------------------------------------------------------------------------------------
@@ -177,7 +185,15 @@ data:extend(
 			filename = kr_character_equipments_path .. "superior-exoskeleton-equipment.png",		
 			width = 64,
 			height = 128,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_character_equipments_path .. "hr-superior-exoskeleton-equipment.png",		
+				width    = 128,
+				height   = 256,
+				priority = "medium",
+				scale    = 0.5
+			}
 		}
     },
 -----------------------------------------------------------------------------------------------------------------
@@ -190,7 +206,15 @@ data:extend(
 			filename = kr_character_equipments_path .. "imersite-night-vision-equipment.png",
 			width = 64,
 			height = 64,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_character_equipments_path .. "hr-imersite-night-vision-equipment.png",		
+				width    = 128,
+				height   = 128,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{

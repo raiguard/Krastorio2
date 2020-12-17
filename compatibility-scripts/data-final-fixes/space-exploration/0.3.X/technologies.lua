@@ -1,5 +1,11 @@
 if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mods["space-exploration"], "0.3.0") then
 
+	-- Add prerequisites to platform scaffold
+	---------------------------------------------------------------------------------------------------------------
+	krastorio.technologies.addPrerequisite("se-space-platform-scaffold", "logistics-2")
+	krastorio.technologies.addPrerequisite("se-space-platform-scaffold", "kr-steel-fluid-handling")
+	---------------------------------------------------------------------------------------------------------------
+
 	-- Avoid overprequisites with the personal batteries
 	---------------------------------------------------------------------------------------------------------------
 	krastorio.technologies.addResearchUnitIngredient("battery-mk2-equipment", "automation-science-pack")

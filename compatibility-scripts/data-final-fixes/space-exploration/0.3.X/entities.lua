@@ -58,8 +58,9 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
 				name = "kr-se-loader",
 				ingredients = 
 				{
-					{"kr-express-loader", 1},
-					{"rare-metals", 10}
+					{"steel-gear-wheel", 10},
+					{"kr-fast-loader", 2},
+					{"se-space-transport-belt", 1}					
 				},
 				subgroup = "belt"
 			}					

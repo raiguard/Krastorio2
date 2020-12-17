@@ -11,7 +11,15 @@ data:extend(
 			filename = kr_vehicle_equipments_path .. "additional-engine.png",
 			width = 128,
 			height = 128,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_vehicle_equipments_path .. "hr-additional-engine.png",		
+				width    = 256,
+				height   = 256,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{
@@ -37,7 +45,15 @@ data:extend(
 			filename = kr_vehicle_equipments_path .. "advanced-additional-engine.png",
 			width = 128,
 			height = 128,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_vehicle_equipments_path .. "hr-advanced-additional-engine.png",		
+				width    = 256,
+				height   = 256,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{
@@ -65,7 +81,15 @@ data:extend(
 			filename = kr_vehicle_equipments_path .. "vehicle-roboport.png",
 			width = 128,
 			height = 128,
-			priority = "medium"
+			priority = "medium",
+			hr_version =
+			{
+				filename = kr_vehicle_equipments_path .. "hr-vehicle-roboport.png",		
+				width    = 256,
+				height   = 256,
+				priority = "medium",
+				scale    = 0.5
+			}
 		},
 		shape =
 		{

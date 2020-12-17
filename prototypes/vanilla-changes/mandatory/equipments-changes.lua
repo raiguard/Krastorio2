@@ -42,8 +42,8 @@ function updateVanillaEquipmentGraphics(_objects_to_modify, icons_path, sprites_
 		for item_name, item in pairs(items) do
 			if data.raw.item[item_name] then
 				if not item[5] then -- tier
-					data.raw.item[item_name].icon      = icons_path .. item[1] -- icon name
-					data.raw.item[item_name].icon_size = item[2] -- icon size
+					data.raw.item[item_name].icon         = icons_path .. item[1] -- icon name
+					data.raw.item[item_name].icon_size    = item[2] -- icon size
 					data.raw.item[item_name].icon_mipmaps = item[6]
 				else
 					data.raw.item[item_name].icon      = nil
@@ -55,9 +55,21 @@ function updateVanillaEquipmentGraphics(_objects_to_modify, icons_path, sprites_
 					data.raw.item[item_name].icon_size = item[2] -- icon size
 				end				
 				if data.raw[category_name][item_name] then
-					data.raw[category_name][item_name].sprite.filename = sprites_path .. item[1]
-					data.raw[category_name][item_name].sprite.width    = item[3]
-					data.raw[category_name][item_name].sprite.height   = item[4]
+					data.raw[category_name][item_name].sprite =
+					{
+						filename   = sprites_path .. item[1],
+						priority   = "medium",
+						width      = item[3],
+						height     = item[4],
+						hr_version =
+						{
+							filename = sprites_path .. "hr-" .. item[1],
+							priority = "medium",
+							width    = item[3] * 2,
+							height   = item[4] * 2,
+							scale    = 0.5
+						}
+					}
 				end
 			end
 		end
