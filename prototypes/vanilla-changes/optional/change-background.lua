@@ -1,10 +1,10 @@
+-- Change background with the selected one
+local backgrounds_util = require(kr_public_lib .. "main-menu-backgrounds-util")
+
 if krastorio.general.getSafeSettingValue("kr-re-enable-menu-simulations") ~= true then
 	-- Deactive menu simulations
 	data.raw["utility-constants"]["default"].main_menu_simulations = nil
 	
-	-- Change background with the selected one
-	local backgrounds_util = require(kr_public_lib .. "main-menu-backgrounds-util")
-
 	backgrounds_util.addBackgroundImage("Factorio",                        "__core__/graphics/background-image.jpg")
 	backgrounds_util.addBackgroundImage("Krastorio Legacy",       		   kr_backgrounds_icons_path .. "krastorio-legacy.jpg")
 	backgrounds_util.addBackgroundImage("Krastorio 2",            		   kr_backgrounds_icons_path .. "krastorio-2.jpg")
