@@ -1,6 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.19
+Date: XX.12.2020
+  Fixes:
+    - Moved a conditional require in the code which could cause desync. 
+---------------------------------------------------------------------------------------------------
 Version: 1.0.18
 Date: 17.12.2020
+  Fixes:
     - Fixed that shift mode of a roboport not attached to circuit network will make the script crash.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.17
