@@ -23,6 +23,31 @@ end
 
 -- Compatibility exception for Dectorio
 if script.active_mods["Dectorio"] then
+	-- WOOD TILE
+	if settings.startup["dectorio-wood"] and settings.startup["dectorio-wood"].value then
+		tiles_items["dect-wood-floor"] = "dect-wood-floor"
+	end
+	
+	-- NORMAL CONCRETES
+	if settings.startup["dectorio-concrete"] and settings.startup["dectorio-concrete"].value then
+		tiles_items["dect-concrete-grid"] = "dect-concrete-grid"
+	end
+	
+	-- GRAVELS
+	if settings.startup["dectorio-gravel"] and settings.startup["dectorio-gravel"].value then
+		local gravel_variants = 
+		{
+			"stone",
+			"iron-ore",
+			"copper-ore",
+			"coal"
+		}
+		for _, variant_name in pairs(gravel_variants) do
+			tiles_items["dect-" .. variant_name .. "-gravel"] = "dect-" .. variant_name .. "-gravel"
+		end
+	end
+
+	-- PAINTED CONCRETES
 	if settings.startup["dectorio-painted-concrete"] and settings.startup["dectorio-painted-concrete"].value then
 		local directions = 
 		{
@@ -46,8 +71,24 @@ if script.active_mods["Dectorio"] then
 			end
 		end
 	end
-	if settings.startup["dectorio-concrete"] and settings.startup["dectorio-concrete"].value then
-		tiles_items["dect-concrete-grid"] = "dect-concrete-grid"
+	
+	-- BASE COLORED CONCRETES
+	local base_colors = 
+	{
+		"red",
+		"green",
+		"blue",
+		"orange",
+		"yellow",
+		"pink",
+		"purple",
+		"black",
+		"brown",
+		"cyan",
+		"acid"
+	}
+	for _, color_name in pairs(base_colors) do	
+		tiles_items[color_name .. "-refined-concrete"] = "dect-" .. color_name .. "-refined-concrete"
 	end
 end
 -- Compatibility exception for AsphaltRoads

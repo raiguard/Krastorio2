@@ -1,8 +1,13 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.19
 Date: XX.12.2020
+  Changes:
+    - Updated Dectorio compatibility, included not previously managed tiles.
   Fixes:
-    - Moved a conditional require in the code which could cause desync. 
+    - Moved a conditional require in the code which could cause desyncs. 
+    - Included a Dectorio config file (for avoid desyncs), because compatibility caused a conditional require (the licence and credits of the file/code was explicited in the file folder). 
+    - Fixed that removing creep tiles, using viruses, destroying resources on creep tiles.
+    - Fixed changelog of 1.0.18.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.18
 Date: 17.12.2020

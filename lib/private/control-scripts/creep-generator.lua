@@ -232,7 +232,7 @@ function spawnCreep(nest_surface, nest_position)
 	end
 	
 	if nest_surface.valid then
-		nest_surface.set_tiles(creeps)
+		nest_surface.set_tiles(creeps, true, false, false, false)
 	end
 end
 -----------------------------------------------------------------------------

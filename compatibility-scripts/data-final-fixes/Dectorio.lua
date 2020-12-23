@@ -1,8 +1,36 @@
+local DECT = require("compatibility-scripts/data-final-fixes/Dectorio/config")
+
 if mods["Dectorio"] then
-	DECT = require("__Dectorio__/config")
 	local tile_filters = data.raw["selection-tool"]["kr-jackhammer"].tile_filters
 	local alt_tile_filters = data.raw["selection-tool"]["kr-jackhammer"].alt_tile_filters
 	
+	-- WOOD TILE
+	if DECT.ENABLED["wood-floor"] then
+		if data.raw.tile["dect-wood-floor"] then
+			table.insert(tile_filters, "dect-wood-floor")
+			table.insert(alt_tile_filters, "dect-wood-floor")
+		end
+	end
+	
+	-- NORMAL CONCRETES
+	if DECT.ENABLED["concrete"] then
+		if data.raw.tile["dect-concrete-grid"] then
+			table.insert(tile_filters, "dect-concrete-grid")
+			table.insert(alt_tile_filters, "dect-concrete-grid")
+		end
+	end
+	
+	-- GRAVELS
+	if DECT.ENABLED["gravel"] then
+		for _, variant in pairs(DECT.CONFIG.GRAVEL_VARIANTS) do
+			if data.raw.tile["dect-" .. variant.name .. "-gravel"] then
+				table.insert(tile_filters, "dect-" .. variant.name .. "-gravel")
+				table.insert(alt_tile_filters, "dect-" .. variant.name .. "-gravel")
+			end
+		end
+	end
+	
+	-- PAINTED CONCRETES
 	if DECT.ENABLED["painted-concrete"] then
 		local directions = 
 		{
@@ -22,17 +50,14 @@ if mods["Dectorio"] then
 			end
 		end
 	end
-	if DECT.ENABLED["concrete"] then
-		if data.raw.tile["dect-concrete-grid"] then
-			table.insert(tile_filters, "dect-concrete-grid")
-			table.insert(alt_tile_filters, "dect-concrete-grid")
-		end
+	
+	-- BASE COLORED CONCRETES
+	for _, color in pairs(DECT.CONFIG.BASE_COLORS) do		
+		table.insert(tile_filters, color.name .. "-refined-concrete")
+		table.insert(alt_tile_filters, color.name .. "-refined-concrete")
 	end
-end
 
-if mods["Dectorio"] then
-
-local d_stack_size = krastorio.general.getSafeSettingValue("dectorio-flooring-stack-size")
+	local d_stack_size = krastorio.general.getSafeSettingValue("dectorio-flooring-stack-size")
 
 	data.raw.item["landfill"].stack_size = d_stack_size
 	data.raw.item["stone-brick"].stack_size = d_stack_size

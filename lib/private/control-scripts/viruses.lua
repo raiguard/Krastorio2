@@ -17,8 +17,12 @@ function deincreaserPerIteration(count)
 		return 160
 	elseif count <= 30000 then
 		return 280
-	else
+	elseif count <= 40000 then
 		return 300
+	elseif count <= 50000 then
+		return 400
+	else
+		return 800
 	end
 end
 --------------------------------------------------------
