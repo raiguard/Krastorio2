@@ -108,10 +108,14 @@ if mods["IndustrialRevolution"] then
 	-- Electronic components
 	krastorio.recipes.convertIngredientFromAllRecipes("electronic-components", "gold-gate")	
 	
-	-- lithium-sulfur-battery
+	-- Lithium sulfur battery
 	krastorio.recipes.replaceIngredient("lithium-sulfur-battery", "lithium", {type = "item", name = "lithium", amount = 2})
 	krastorio.recipes.replaceIngredient("lithium-sulfur-battery", "copper-plate", {type = "item", name = "bronze-plate-special", amount = 2})
 	krastorio.recipes.replaceIngredient("lithium-sulfur-battery", "sulfuric-acid", {type = "fluid", name = "sulfuric-acid", amount = 40})
+	
+	-- Rocket fuel
+	krastorio.recipes.removeIngredient("rocket-fuel", "petroleum-gas")	
+	krastorio.recipes.removeIngredient("rocket-fuel", "iron-stick")	
 
 	-- Adding recipe for rare-metals
 	data:extend(
