@@ -152,16 +152,24 @@ local function createCrashSite(event)
 						item_count_3 = math.random(5, 50)
 						item_count_4 = math.random(5, 50)
 						
+						-- First insert mandatory items
+						if not insert_one_shelter then
+							created_entity.get_inventory(defines.inventory.chest).insert({name = "kr-shelter", count = 1})
+							-- Compatibility
+							if game.active_mods["IndustrialRevolution"] then
+								created_entity.get_inventory(defines.inventory.chest).insert({name = "medium-electric-pole", count = 10})		
+							else
+								created_entity.get_inventory(defines.inventory.chest).insert({name = "wood", count = 100})							
+							end
+							
+							insert_one_shelter = true
+						end
+						
+						-- Then randoms
 						created_entity.get_inventory(defines.inventory.chest).insert({name = item_name, count = item_count})
 						created_entity.get_inventory(defines.inventory.chest).insert({name = item_name_2, count = item_count_2})
 						created_entity.get_inventory(defines.inventory.chest).insert({name = item_name_3, count = item_count_3})
 						created_entity.get_inventory(defines.inventory.chest).insert({name = item_name_4, count = item_count_4})
-						
-						if not insert_one_shelter then
-							created_entity.get_inventory(defines.inventory.chest).insert({name = "kr-shelter", count = 1})
-							created_entity.get_inventory(defines.inventory.chest).insert({name = "wood", count = 100})
-							insert_one_shelter = true
-						end
 					end
 					break
 				else 

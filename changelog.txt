@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.19
 Date: XX.12.2020
+  Features:
+    - Added partial compatibility to Industrial Revolution 2 (please don't ask to mod authors to fix this further, we will decide to continue it if we have time).
   Changes:
     - Updated Dectorio compatibility, included not previously managed tiles.
   Fixes:
@@ -8,6 +10,7 @@ Date: XX.12.2020
     - Included a Dectorio config file (for avoid desyncs), because compatibility caused a conditional require (the licence and credits of the file/code was explicited in the file folder). 
     - Fixed that removing creep tiles, using viruses, destroying resources on creep tiles.
     - Fixed changelog of 1.0.18.
+    - Fixed that in the starting items of the crash site, there was a low probability to not have one shelter.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.18
 Date: 17.12.2020

@@ -1,5 +1,6 @@
 local science_pack_recipe = require("__Krastorio2__/lib/public/data-stages/science-pack-recipe")
 
+-- THIS RECIPES ARE ENFORCED TO BE COMPATIBLE 
 if mods["IndustrialRevolution"] then
 
 	-- Automation science pack
@@ -15,8 +16,8 @@ if mods["IndustrialRevolution"] then
 			energy_required = 4,
 			ingredients = 
 			{
-				{"copper-plate", 1},
-				{"tin-gear-wheel", 2}
+				{"blank-tech-card", 5},
+				{"automation-core", 1}
 			},
 			result = "automation-science-pack",
 			result_count = 1			
@@ -35,8 +36,8 @@ if mods["IndustrialRevolution"] then
 			energy_required = 4,
 			ingredients =
 			{
-				{"bronze-tube", 2},
-				{"glass-ingot",	2}
+				{"glass", 2},
+				{"bronze-plate-heavy", 2}
 			},
 			result = "logistic-science-pack",
 			result_count = 1			
@@ -55,10 +56,9 @@ if mods["IndustrialRevolution"] then
 			energy_required = 6,
 			ingredients = 
 			{
-				{"iron-magazine", 1},
-				{"copper-cartridge", 1},
-				{"carbon-powder", 3},
-				{"sand", 6}
+				{"gold-gate", 1},
+				{"biters-research-data", 1},
+				{"blank-tech-card", 5}
 			},
 			result = "military-science-pack",
 			result_count = 1			
@@ -77,10 +77,9 @@ if mods["IndustrialRevolution"] then
 			energy_required = 8,
 			ingredients = 
 			{
-				{"plastic-bar",	2},
-				{"solid-fuel",	1},
-				{"iron-gravel",	5},
-				{"copper-gravel", 5}
+				{"electronic-circuit", 2},
+				{"concrete", 5},
+				{"iron-beam", 3}
 			},			
 			result = "chemical-science-pack",
 			result_count = 1			
@@ -100,9 +99,8 @@ if mods["IndustrialRevolution"] then
 			ingredients =
 			{
 				{"advanced-circuit", 2},
-				{"concrete", 20},
-				{"steel-chassis-large", 1},
-				{"titanium-plate-heavy", 1}
+				{"electric-engine-unit", 2},
+				{"solid-fuel", 2}
 			},			
 			result = "production-science-pack",
 			result_count = 1			
@@ -121,10 +119,9 @@ if mods["IndustrialRevolution"] then
 			energy_required = 8,
 			ingredients = 
 			{
-				{"processing-unit",	1},
-				{"low-density-structure", 1},
-				{"battery", 2},
-				{"steel-ring", 1}
+				{"processing-unit",	2},
+				{"low-density-structure", 2},
+				{"chromium-piston", 2}
 			},			
 			result = "utility-science-pack",
 			result_count = 1			
