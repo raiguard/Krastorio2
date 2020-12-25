@@ -130,9 +130,49 @@ if mods["IndustrialRevolution"] then
 	krastorio.recipes.replaceIngredient("lithium-sulfur-battery", "copper-plate", {type = "item", name = "bronze-plate-special", amount = 2})
 	krastorio.recipes.replaceIngredient("lithium-sulfur-battery", "sulfuric-acid", {type = "fluid", name = "sulfuric-acid", amount = 40})
 	
+	-- Fluid burner
+	krastorio.recipes.addIngredient("kr-fluid-burner", {"iron-motor", 1})
+	
+	-- Fuel refinery
+	krastorio.recipes.replaceIngredient("kr-fuel-refinery", "steel-beam", {"iron-frame-large", 1})
+	
+	-- atmospheric-condenser
+	krastorio.recipes.replaceIngredient("kr-atmospheric-condenser", "steel-beam", {"iron-frame-large", 1})
+	krastorio.recipes.replaceIngredient("kr-atmospheric-condenser", "electronic-circuit", {"iron-motor", 4})
+	
+	-- electrolysis-plant
+	krastorio.recipes.replaceIngredient("kr-electrolysis-plant", "steel-beam", {"iron-frame-large", 1})
+	
+	-- filtration-plant
+	krastorio.recipes.replaceIngredient("kr-filtration-plant", "steel-beam", {"iron-frame-large", 1})
+	
 	-- Rocket fuel
 	krastorio.recipes.removeIngredient("rocket-fuel", "petroleum-gas")	
 	krastorio.recipes.removeIngredient("rocket-fuel", "iron-stick")	
+
+	-- Research server
+	krastorio.recipes.replaceIngredient("kr-research-server", "steel-beam", {"steel-frame-large", 1})
+
+	-- Quantum computer
+	krastorio.recipes.replaceIngredient("kr-quantum-computer", "processing-unit", {"computer-mk3", 8})
+	krastorio.recipes.replaceIngredient("kr-quantum-computer", "copper-plate", {"cupronickel-plate", 8})
+
+	-- Fusion reactor
+	krastorio.recipes.replaceIngredient("kr-fusion-reactor", "rare-metals", {"computer-mk3", 8})	
+	krastorio.recipes.replaceIngredient("kr-fusion-reactor", "processing-unit", {"laser", 8})
+	krastorio.recipes.convertIngredient("kr-fusion-reactor", "steel-plate", "lead-plate-special")
+
+	-- Antimatter reactor
+	krastorio.recipes.replaceIngredient("kr-antimatter-reactor", "rare-metals", {"computer-mk3", 16})	
+	krastorio.recipes.convertIngredient("kr-antimatter-reactor", "steel-plate", "lead-plate-special")
+
+	-- Advanced furnace
+	krastorio.recipes.replaceIngredient("kr-advanced-furnace", "gold-gate", {"computer-mk3", 2})	
+	krastorio.recipes.convertIngredient("kr-advanced-furnace", "copper-plate", "invar-plate-special")
+	krastorio.recipes.replaceIngredient("kr-advanced-furnace", "steel-beam", {"stainless-frame-large", 2})
+	
+	-- Advanced chemical plant
+	krastorio.recipes.replaceIngredient("kr-advanced-chemical-plant", "gold-gate", {"computer-mk3", 2})		
 
 	-- Adding recipe for rare-metals conversion
 	data:extend(
@@ -442,35 +482,72 @@ if mods["IndustrialRevolution"] then
 	krastorio.technologies.addUnlockRecipe("kr-lithium-sulfur-battery", "charged-lithium-sulfur-battery")
 	
 	-- -- Matter recipes for IR2
-	-- Tellurium
 	local new_minerals =
 	{
-		"chromium",
-		"lead",
-		"nickel",
-		"tellurium"
+		{ "tin", 5, 7.5 },
+		{ "gold", 8, 14 },
+		{ "chromium", 10, 14 },
+		{ "lead", 10, 14 },
+		{ "nickel", 10, 14 },
+		{ "tellurium", 10, 14 }
 	}
 	local new_pure_conversion  = nil
 	local new_ingot_conversion = nil
+	local sub_name             = nil
+	local pure_conv_val        = nil
+	local ingot_conv_val       = nil
 	
-	for _, name in pairs(new_minerals) do
+	for _, item_prop in pairs(new_minerals) do
+		sub_name       = item_prop[1]  
+		pure_conv_val  = item_prop[2]
+		ingot_conv_val = item_prop[3]
+	
+		data:extend(
+		{
+			{
+				type = "technology",
+				name = "kr-matter-"..sub_name.."-processing",
+				mod = "Krastorio2",
+				icons = 
+				{
+					{ icon = kr_technologies_icons_path .. "backgrounds/matter.png", icon_size = 128 },
+					{ icon = "__IndustrialRevolution__/graphics/icons/64/"..sub_name.."-pure.png", icon_size = 64 }
+				},
+				icon_size = 128,
+				effects = {},
+				prerequisites = {"kr-matter-processing"},
+				order = "g-e-e",
+				unit =
+				{
+					count = 350,
+					ingredients = 
+					{
+						{"production-science-pack", 1},
+						{"utility-science-pack", 1},
+						{"matter-tech-card", 1}				
+					},
+					time = 45
+				}
+			}
+		})
+		
 		new_pure_conversion =
 		{
-			item_name = name.."-pure",
+			item_name = sub_name.."-pure",
 			minimum_conversion_quantity = 10, 
-			matter_value = 10,
+			matter_value = pure_conv_val,
 			energy_required = 1,
-			unlocked_by_technology = "kr-matter-rare-metals-processing"
+			unlocked_by_technology = "kr-matter-"..sub_name.."-processing"
 		}	
 		new_ingot_conversion =
 		{
-			item_name = name.."-ingot",
+			item_name = sub_name.."-ingot",
 			minimum_conversion_quantity = 10, 
-			matter_value = 14,
+			matter_value = ingot_conv_val,
 			energy_required = 2,
 			only_deconversion = true,
 			need_stabilizer = true,
-			unlocked_by_technology = "kr-matter-rare-metals-processing"
+			unlocked_by_technology = "kr-matter-"..sub_name.."-processing"
 		}
 	
 		krastorio.matter_func.createMatterRecipe(new_pure_conversion)
