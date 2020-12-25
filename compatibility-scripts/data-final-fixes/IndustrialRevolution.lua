@@ -1,7 +1,7 @@
 if mods["IndustrialRevolution"] then
 	-----------------------------------------------------------------------------------------------------------------------
 	-- -- TECHNOLOGIES
-	
+	-----------------------------------------------------------------------------------------------------------------------
 	
 	krastorio.technologies.addPrerequisite("ir2-electronics-2", "kr-silicon-processing")
 	
@@ -16,6 +16,8 @@ if mods["IndustrialRevolution"] then
 	krastorio.technologies.removePrerequisite("utility-science-pack", "rocket-fuel")
 	
 	krastorio.technologies.convertPrerequisite("kr-fluids-chemistry", "kr-basic-fluid-handling", "fluid-handling", true)
+	
+	krastorio.technologies.convertPrerequisite("kr-steel-fluid-tanks", "kr-steel-fluid-handling", "ir2-barrelling", false)
 	
 	-- -- Fix technologies that must be under iron age
 	-- Greenhouse
@@ -58,6 +60,8 @@ if mods["IndustrialRevolution"] then
 	data.raw.technology["kr-electric-mining-drill-mk3"] = nil	
 	
 	data.raw.technology["ir2-nuclear-fuel"] = nil
+	
+	data.raw.technology["kr-steel-fluid-handling"] = nil
 	
 	-----------------------------------------------------------------------------------------------------------------------
 	-- -- Recipes
@@ -107,6 +111,19 @@ if mods["IndustrialRevolution"] then
 	
 	-- Electronic components
 	krastorio.recipes.convertIngredientFromAllRecipes("electronic-components", "gold-gate")	
+	krastorio.recipes.convertIngredient("energy-control-unit", "gold-gate", "tellurium-gate")
+	
+	-- Processor unit
+	krastorio.recipes.removeIngredient("processing-unit", "rare-metals")
+	
+	-- AI-core
+	krastorio.recipes.addIngredient("ai-core", {"tellurium-gate", 2})
+	
+	-- Steel pipes from K2 to IR2
+	krastorio.recipes.convertIngredientFromAllRecipes("kr-steel-pipe", "steel-pipe")	
+	
+	-- Fluid tanks
+	krastorio.recipes.convertIngredient("rail", "steel-beam", "iron-beam")
 	
 	-- Lithium sulfur battery
 	krastorio.recipes.replaceIngredient("lithium-sulfur-battery", "lithium", {type = "item", name = "lithium", amount = 2})
@@ -117,9 +134,10 @@ if mods["IndustrialRevolution"] then
 	krastorio.recipes.removeIngredient("rocket-fuel", "petroleum-gas")	
 	krastorio.recipes.removeIngredient("rocket-fuel", "iron-stick")	
 
-	-- Adding recipe for rare-metals
+	-- Adding recipe for rare-metals conversion
 	data:extend(
 	{
+		-- Gold
 		{
 			type = "recipe",
 			name = "gold-ingot-2",
@@ -156,39 +174,7 @@ if mods["IndustrialRevolution"] then
 			subgroup = "raw-material",
 			order = "e03[enriched-copper]"
 		},
-		{
-			type = "recipe",
-			name = "tellurium-pure-2",
-			icons =
-			{
-				{ icon = "__IndustrialRevolution__/graphics/icons/64/tellurium-pure.png", icon_size = 64 },
-				{ icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png", icon_size = 64, scale = 0.22, shift = {-8, -8} }
-			},
-			icon_size = 64,
-			category = "washing",
-			energy_required = 3,
-			enabled = false,
-			always_show_made_in = true,
-			always_show_products = true,
-			allow_productivity = true,
-			ingredients =
-			{
-				{type = "fluid", name = "sulfuric-acid", amount = 10},
-				{type = "item", name = "rare-metals", amount = 5, catalyst_amount = 10}
-			},
-			results =
-			{ 
-				{type = "item", name = "tellurium-pure", amount = 10, catalyst_amount = 10},
-				{type = "fluid", name = "dirty-water", amount = 40}
-			},
-			main_product = "tellurium-pure",
-			crafting_machine_tint =
-			{
-				primary = {r = 0.3843, g = 0.2431, b = 0.7098, a = 0.000}
-			},
-			subgroup = "raw-material",
-			order = "e04[enriched-copper]"
-		},
+		-- Chromium
 		{
 			type = "recipe",
 			name = "chromium-pure-2",
@@ -211,7 +197,7 @@ if mods["IndustrialRevolution"] then
 			},
 			results =
 			{ 
-				{type = "item", name = "chromium-pure", amount = 10, catalyst_amount = 10},
+				{type = "item", name = "chromium-pure", amount = 5, catalyst_amount = 5},
 				{type = "fluid", name = "dirty-water", amount = 40}
 			},
 			main_product = "chromium-pure",
@@ -222,6 +208,7 @@ if mods["IndustrialRevolution"] then
 			subgroup = "raw-material",
 			order = "e05[enriched-copper]"
 		},
+		-- Lead
 		{
 			type = "recipe",
 			name = "lead-pure-2",
@@ -244,7 +231,7 @@ if mods["IndustrialRevolution"] then
 			},
 			results =
 			{ 
-				{type = "item", name = "lead-pure", amount = 10, catalyst_amount = 10},
+				{type = "item", name = "lead-pure", amount = 5, catalyst_amount = 5},
 				{type = "fluid", name = "dirty-water", amount = 40}
 			},
 			main_product = "lead-pure",
@@ -255,6 +242,7 @@ if mods["IndustrialRevolution"] then
 			subgroup = "raw-material",
 			order = "e06[enriched-copper]"
 		},
+		-- Nickel
 		{
 			type = "recipe",
 			name = "nickel-pure-2",
@@ -277,7 +265,7 @@ if mods["IndustrialRevolution"] then
 			},
 			results =
 			{ 
-				{type = "item", name = "nickel-pure", amount = 10, catalyst_amount = 10},
+				{type = "item", name = "nickel-pure", amount = 5, catalyst_amount = 5},
 				{type = "fluid", name = "dirty-water", amount = 40}
 			},
 			main_product = "nickel-pure",
@@ -287,14 +275,66 @@ if mods["IndustrialRevolution"] then
 			},
 			subgroup = "raw-material",
 			order = "e06[enriched-copper]"
-		}
-		
+		},
+		-- Tellurium
+		{
+			type = "recipe",
+			name = "tellurium-pure-2",
+			icons =
+			{
+				{ icon = "__IndustrialRevolution__/graphics/icons/64/tellurium-pure.png", icon_size = 64 },
+				{ icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png", icon_size = 64, scale = 0.22, shift = {-8, -8} }
+			},
+			icon_size = 64,
+			category = "washing",
+			energy_required = 3,
+			enabled = false,
+			always_show_made_in = true,
+			always_show_products = true,
+			allow_productivity = true,
+			ingredients =
+			{
+				{type = "fluid", name = "sulfuric-acid", amount = 20},
+				{type = "item", name = "rare-metals", amount = 5, catalyst_amount = 10}
+			},
+			results =
+			{ 
+				{type = "item", name = "tellurium-pure", amount = 5, catalyst_amount = 5},
+				{type = "fluid", name = "dirty-water", amount = 40}
+			},
+			main_product = "tellurium-pure",
+			crafting_machine_tint =
+			{
+				primary = {r = 0.3843, g = 0.2431, b = 0.7098, a = 0.000}
+			},
+			subgroup = "raw-material",
+			order = "e04[enriched-copper]"
+		}		
 	})
 	krastorio.technologies.addUnlockRecipe("ir2-washing-1", "gold-ingot-2")
 	krastorio.technologies.addUnlockRecipe("ir2-washing-1", "tellurium-pure-2")
 	krastorio.technologies.addUnlockRecipe("ir2-washing-1", "chromium-pure-2")
 	krastorio.technologies.addUnlockRecipe("ir2-washing-1", "lead-pure-2")
 	krastorio.technologies.addUnlockRecipe("ir2-washing-1", "nickel-pure-2")
+	
+	-- Modify enrichement recipes to be balanced
+	krastorio.recipes.replaceIngredient("enriched-copper-plate", "enriched-copper", {"enriched-copper", 4})
+	krastorio.recipes.replaceProduct("enriched-copper-plate", "copper-plate", {"copper-ingot", 12})
+	data.raw.recipe["enriched-copper-plate"].main_product = "copper-ingot"
+	data.raw.recipe["enriched-copper-plate"].icons =
+	{
+		{ icon = "__IndustrialRevolution__/graphics/icons/64/copper-ingot.png", icon_size = 64 },
+		{ icon = kr_items_with_variations_icons_path .. "enriched-copper/enriched-copper.png", icon_size = 64, scale = 0.22, shift = {-8, -8} }
+	}
+	
+	krastorio.recipes.replaceIngredient("enriched-iron-plate", "enriched-iron", {"enriched-iron", 4})
+	krastorio.recipes.replaceProduct("enriched-iron-plate", "iron-plate", {"iron-ingot", 12})
+	data.raw.recipe["enriched-iron-plate"].main_product = "iron-ingot"
+	data.raw.recipe["enriched-iron-plate"].icons =
+	{
+		{ icon = "__IndustrialRevolution__/graphics/icons/64/iron-ingot.png", icon_size = 64 },
+		{ icon = kr_items_with_variations_icons_path .. "enriched-iron/enriched-iron.png", icon_size = 64, scale = 0.22, shift = {-8, -8} }
+	}
 	
 	-----------------------------------------------------------------------------------------------------------------------
 	-- -- ENTITIES
@@ -400,6 +440,66 @@ if mods["IndustrialRevolution"] then
 		}
 	})
 	krastorio.technologies.addUnlockRecipe("kr-lithium-sulfur-battery", "charged-lithium-sulfur-battery")
+	
+	-- -- Matter recipes for IR2
+	-- Tellurium
+	local new_minerals =
+	{
+		"chromium",
+		"lead",
+		"nickel",
+		"tellurium"
+	}
+	local new_pure_conversion  = nil
+	local new_ingot_conversion = nil
+	
+	for _, name in pairs(new_minerals) do
+		new_pure_conversion =
+		{
+			item_name = name.."-pure",
+			minimum_conversion_quantity = 10, 
+			matter_value = 10,
+			energy_required = 1,
+			unlocked_by_technology = "kr-matter-rare-metals-processing"
+		}	
+		new_ingot_conversion =
+		{
+			item_name = name.."-ingot",
+			minimum_conversion_quantity = 10, 
+			matter_value = 14,
+			energy_required = 2,
+			only_deconversion = true,
+			need_stabilizer = true,
+			unlocked_by_technology = "kr-matter-rare-metals-processing"
+		}
+	
+		krastorio.matter_func.createMatterRecipe(new_pure_conversion)
+		krastorio.matter_func.createMatterRecipe(new_ingot_conversion)
+	end
 
+	-- -- Re-do the overmodule fix
+	-- For each recipe that is in smelting
+	-- multiply by 5 the recipe stat for avoid overmodule bug effect
+	for name, recipe in pairs(data.raw.recipe) do	
+		if 
+			recipe.category and 
+			(recipe.category == "smelting" or recipe.category == "smelting-1" or recipe.category == "smelting-2" or recipe.category == "smelting-3") and 
+			krastorio.recipes.normalEnergyRequired(name) < 6.4
+		then 
+			if not recipe.energy_required then
+				krastorio.recipes.setEnergyCost(name, 3.2)
+			end
+			krastorio.recipes.multiplyRecipeStat(name, 5)
+		end
+	end
+	
+	-- Equipemnt categories
+	table.insert(data.raw["generator-equipment"]["burner-generator-equipment"].categories, "universal-equipment")
+	table.insert(data.raw["generator-equipment"]["iron-burner-generator-equipment"].categories, "universal-equipment")
+	table.insert(data.raw["roboport-equipment"]["copper-roboport-equipment"].categories, "universal-equipment")
+	table.insert(data.raw["generator-equipment"]["battery-discharge-equipment"].categories, "universal-equipment")
+	-- Equipemnt adjustment
+	data.raw["generator-equipment"]["small-portable-generator"].power = "270kW"
+	
 	-----------------------------------------------------------------------------------------------------------------------	
 end
