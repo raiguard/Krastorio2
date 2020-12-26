@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.19
-Date: XX.12.2020
+Date: 26.12.2020
   Features:
     - Added compatibility to Industrial Revolution 2 (please don't ask to mod authors to fix this further, we will decide to continue it if we have time).
   Changes:
