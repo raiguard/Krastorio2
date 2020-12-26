@@ -388,6 +388,10 @@ if mods["IndustrialRevolution"] then
 	
 	-- Fix different collision boxes
 	data.raw["mining-drill"]["electric-mining-drill"].next_upgrade = nil
+
+	-- Roboport
+	local variations_util = require(kr_public_lib .. "create-roboport-states")
+	variations_util.createRoboportVariations("robotower")
 	
 	-- Add basic science to copper lab	
 	table.insert(data.raw.lab["copper-lab"].inputs, "basic-tech-card")
