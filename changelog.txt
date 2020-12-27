@@ -6,11 +6,12 @@ Date: XX.12.2020
   Changes:
     - Updated Dectorio compatibility, included not previously managed tiles.
   Fixes:
-    - Moved a conditional require in the code which could cause desyncs. 
-    - Included a Dectorio config file (for avoid desyncs), because compatibility caused a conditional require (the licence and credits of the file/code was explicited in the file folder). 
+    - Moved a conditional require in the code which could cause desyncs.
+    - Included a Dectorio config file (for avoid desyncs), because compatibility caused a conditional require (the licence and credits of the file/code was explicited in the file folder).
     - Fixed that removing creep tiles, using viruses, destroying resources on creep tiles.
     - Fixed changelog of 1.0.18.
     - Fixed that in the starting items of the crash site, there was a low probability to not have one shelter.
+    - Fixed that the spawn creep remote interface would ignore whether or not a creep virus had been thrown
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.18
 Date: 17.12.2020
@@ -59,7 +60,7 @@ Date: 09.12.2020
 Version: 1.0.13
 Date: 08.12.2020
   Features:
-    - Added new creep footstep sounds (increased sound variation from 3 to 8, thanks to GeneralEcchi). 
+    - Added new creep footstep sounds (increased sound variation from 3 to 8, thanks to GeneralEcchi).
     - Added a new option that doubles the cost of ingredients for all recipes and technologies in expensive mode, even of other mods, for how wants a new challenge (disabled by default).
     - Added 3 new sounds for the advanced tank impulse rifle (thanks to GeneralEcchi).
     - Added new custom sounds for electric mining mining drill mk2 and mk3 (thanks to GeneralEcchi).
@@ -145,7 +146,7 @@ Date: 23.11.2020
     - Now angels trains are supported with the merged mod too (Angel's Addons - Mass Transit/angelsaddons-mobility).
     - Fixed option to allow exoskeletons into spidertron equipment grids, was not available.
     - Added electric energy accumulators as prerequisite to energy storages.
-    - Fixed possible incompatibilities with other mods caused from use of pointed tables in recipe prototypes definitions. 
+    - Fixed possible incompatibilities with other mods caused from use of pointed tables in recipe prototypes definitions.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.7
 Date: 08.10.2020
@@ -175,7 +176,7 @@ Date: 28.08.2020
     - Added an option to allow exoskeletons into spidertron equipment grids (disabled by default).
   Fixes:
     - Fixed that bonus items was not given if a new player join the game after the cutscene (unfortunatelly is fixed only for new games).
-    - Fixed explot with coal filtering recipe, reducing the given coal from 10 to 8. 
+    - Fixed explot with coal filtering recipe, reducing the given coal from 10 to 8.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.3
 Date: 17.08.2020
@@ -183,15 +184,15 @@ Date: 17.08.2020
     - Now is displayed the missing fuel icon when the spidertron haven't any fuel to move.
     - Now Krastorio 2 intro message will be printed after the cutscene.
     - Now Krastorio 2 crash site entities are fire resistant to avoid that they will blow up in the cutscene.
-    - Changed spidertron corpse to have an AI core on instead of a fish. 
+    - Changed spidertron corpse to have an AI core on instead of a fish.
   Fixes:
     - Fixed that Krastorio 2 crash-site entities can be positioned under vanilla crash-site entities, because vanilla crash-site positioning script didn't check if is placing entities over existing one.
-    - Re-added some patreons removed from patreon list. 
+    - Re-added some patreons removed from patreon list.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.2
 Date: 15.08.2020
   Fixes:
-    - Fixed crash due removing of explicit funds given from patreon list. 
+    - Fixed crash due removing of explicit funds given from patreon list.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
 Date: 15.08.2020
@@ -210,11 +211,11 @@ Date: 15.08.2020
     - Added almost completed Spanish translation, thanks to all who contributed!
   Changes:
     - Some equipment icons have been updated.
-    - Almost updated all translations. 
+    - Almost updated all translations.
     - Slightly adjusted reinforced plates map colors.
     - Increased Sniper rifle range from 60 to 70.
     - Increased Sniper rifle damage. A bit.
-    - Changed spidertron recipe to use AI core instead of raw fish. 
+    - Changed spidertron recipe to use AI core instead of raw fish.
     - Changed spidertron fuel usage, now require Deuterium-Tritium cell/fuel for moving actions.
     - Adjusted crash site minable results to match the Factorio 1.0 crash site in free to play.
     - Now nuclear and antimatter ammo have 35 and 50 explosion radius.
@@ -223,9 +224,9 @@ Date: 15.08.2020
     - Fixed some equipment icon order.
     - Fixed that spidertron can't use Krastorio 2 equipments.
     - Fixed startup crash in free play mode (the only meant mode to play with K2) about the fact that in the 1.0 character didn't exist before end the cutscene.
-    - Improved library access to technologies to avoid crash when another mod define technologies that use no science pack to be researched. 
+    - Improved library access to technologies to avoid crash when another mod define technologies that use no science pack to be researched.
     - Fixed that draw lightnings can crash the game when try to charge an entity while is changing surface.
-    - Now players should be able to insert the charging equipment into the grid of character of another player. 
+    - Now players should be able to insert the charging equipment into the grid of character of another player.
     - Added new option (in game settings) for laser artillery turret sound glitch "fix".
     - Some small fixes.
 ---------------------------------------------------------------------------------------------------
@@ -248,7 +249,7 @@ Version: 0.9.23
 Date: 23.06.2020
   Changes:
     - Revert modification to the vanilla electric mining drill appearance, still missing recoloring of new drills sprites and icons, will be added in the future updates.
-    - Added a small smoke effect when the portable burner generators are working. 
+    - Added a small smoke effect when the portable burner generators are working.
     - Now in the mod options is possible set to leave the stack size of all items as vanilla.
     - Added compatibility to Water As A Resource, thanks to TreefrogGreaken collaboration.
     - Added compatibility to Thaui load snap mod, thanks to Thaui collaboration.
@@ -293,7 +294,7 @@ Date: 06.06.2020
     - Added a basic angels compatibility.
   Fixes:
     - Fixed other bugs caused by Factorio in the update 0.18.28.
-    - Correct wrong intergalactic transceiver description in the wiki. 
+    - Correct wrong intergalactic transceiver description in the wiki.
     - Improved mod library.
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.19
@@ -305,12 +306,12 @@ Date: 29.05.2020
     - Now all filter inserters have all 4 filter slots.
     - Removed Krastorio 2 copper, red and green cable and plastic icons for use the new Factorio icons added in the version 0.18.27.
     - Updated many equipments sprites.
-    - Updated custom Krastorio 2 shield icons to a better resolution. 
+    - Updated custom Krastorio 2 shield icons to a better resolution.
     - Updated some icons.
   Fixes:
     - Fixed inserters bug on updating a filter inserter to another with less filter slots (that is a vanilla bug but we fix it anyway https://mods.factorio.com/mod/Krastorio2/discussion/5ec2b2791bb6e4000f33e0db).
     - Fixed all bugs caused by Factorio in the update 0.18.28.
-    - Probably solved all problems related to this discussion (https://mods.factorio.com/mod/Krastorio2/discussion/5ec38f0f0863ce000c2add62). 
+    - Probably solved all problems related to this discussion (https://mods.factorio.com/mod/Krastorio2/discussion/5ec38f0f0863ce000c2add62).
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.18
 Date: 24.05.2020
@@ -363,7 +364,7 @@ Version: 0.9.15
 Date: 05.05.2020
   Features:
     - Now is possible use circuit connections on quarry drill to read patch informations.
-    - Added minimal AAI programmable vehicles grid equipment compatibility, thanks to Bernd for the help. We still discourage to use equipment on vehicles with AAI programmable vehicles, due the know bugs. 
+    - Added minimal AAI programmable vehicles grid equipment compatibility, thanks to Bernd for the help. We still discourage to use equipment on vehicles with AAI programmable vehicles, due the know bugs.
   Changes:
     - Improved Schall Uranium Processing, uranium fuel cell recipe cost was too cheap for Krastorio 2.
     - Improved AAI vehicles compatibility, thanks to Bernd for the help.
@@ -373,7 +374,7 @@ Date: 05.05.2020
     - Fixed wrong early robot battery upgrade prerequisites (Pull Request - ab62603), thank to Piotr Broda for the help.
     - Fixed landfill item icon changing instead of recipe icon.
     - Fixed UPS drop using anti creep virus when there isn't creep on map (https://mods.factorio.com/mod/Krastorio2/discussion/5eaf2f90795d4c000d8501cd).
-    - Fixed desync in long loaded games when collecting creep (https://mods.factorio.com/mod/Krastorio2/discussion/5eac7b88e0fdb1000b1b70d0). 
+    - Fixed desync in long loaded games when collecting creep (https://mods.factorio.com/mod/Krastorio2/discussion/5eac7b88e0fdb1000b1b70d0).
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.14
 Date: 30.04.2020
@@ -390,7 +391,7 @@ Date: 30.04.2020
 Version: 0.9.13
 Date: 27.04.2020
   Features:
-    - Now in the matter API of the mod, is possible specify a different (optional) value for converting the item into matter. 
+    - Now in the matter API of the mod, is possible specify a different (optional) value for converting the item into matter.
   Changes:
     - Changed research server working sound.
     - Changed impulse rifle sound.
@@ -475,7 +476,7 @@ Date: 13.04.2020
     - Basic tech card have been removed from all recipes with "military-science-pack" and "chemical-science-pack".
     - Now magazines are cheaper a bit.
     - Now splitters and belts are cheaper too.
-    - Reduced hives HP by twice, because its too hard destroy it it the early game stage (Still harder than vanilla). 
+    - Reduced hives HP by twice, because its too hard destroy it it the early game stage (Still harder than vanilla).
     - Reduced creep size.
     - Updated compatibility with Advanced Furnaces(Load-Furn) mod.
     - Many minor changes.
@@ -745,7 +746,7 @@ Date: 10.03.2020
     - Now in paceful mode can be crafted fertilizer and first aid kit.
   Fixes:
     - Now collector tools are safe from lost collected tiles if the inventory is full (will drop the rest on the ground).
-    - Fixed that was possible place offshore pump anywhere with blueprints. 
+    - Fixed that was possible place offshore pump anywhere with blueprints.
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.2
 Date: 09.03.2020
@@ -959,7 +960,7 @@ Date: 28.02.2020
   Fixes:
     - Fixed SE unlockable Radar.
     - Fixed that armors mk3 mk4 have the same grid of mk2.
-    - Fixed some option doesn't hidden unlockable items.	
+    - Fixed some option doesn't hidden unlockable items.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.4
 Date: 28.02.2020
@@ -987,12 +988,12 @@ Date: 27.02.2020
     - Added wiki closing via E or Esc key.
   Changes:
     - Boosted greenhouse wood recipe from 180s to 60s.
-    - Changed steel recipe from 5 iron 5 coke to 10 iron 2 coke. 
-    - Changed coke fuel value from 8 to 10.	
+    - Changed steel recipe from 5 iron 5 coke to 10 iron 2 coke.
+    - Changed coke fuel value from 8 to 10.
     - Changed fast inserter automation core ingredient with a electric circuit.
   Fixes:
     - Fixed some SE compatibility.
-    - Fixed that shelter disapper after be hit.	
+    - Fixed that shelter disapper after be hit.
     - Fixed that radioactivity damage script do only one cicle.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.2

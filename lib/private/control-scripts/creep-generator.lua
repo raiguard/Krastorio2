@@ -3,26 +3,28 @@
 if not remote.interfaces["kr-creep"] then
 	remote.add_interface("kr-creep",
 	{
-		set_creep_on_chunk_generated = 
+		set_creep_on_chunk_generated =
 		function(bool)
-			if type(bool) ~= "boolean" then 
+			if type(bool) ~= "boolean" then
 				error("Value for 'creep_on_chunk_generated' must be a boolean.")
 			end
 			global.creep_on_chunk_generated = bool
 		end,
-		set_creep_on_biter_base_built = 
+		set_creep_on_biter_base_built =
 		function(bool)
-			if type(bool) ~= "boolean" then 
+			if type(bool) ~= "boolean" then
 				error("Value for 'creep_on_biter_base_built' must be a boolean.")
 			end
 			global.creep_on_biter_base_built = bool
 		end,
-		spawn_creep_at_position = 
+		spawn_creep_at_position =
 		function(surface, position)
-			if type(surface) ~= "table" or type(position) ~= "table" or not surface.valid then 
+			if type(surface) ~= "table" or type(position) ~= "table" or not surface.valid then
 				error("The surface or the position are invalid.")
 			end
-			table.insert(global.creeps_to_generate, {surface = surface, position = position})	
+			if global.creep_on_remote_interface then
+				table.insert(global.creeps_to_generate, {surface = surface, position = position})
+			end
 		end
 	})
 end
@@ -81,7 +83,7 @@ end
 -- Factorio 0.17.79
 function isFarEnough(position)
 	local delta_nest_pos = {x = global.last_nest_position.x - position.x, y = global.last_nest_position.y - position.y}
-	local vector_length = math.sqrt(delta_nest_pos.x*delta_nest_pos.x + delta_nest_pos.y*delta_nest_pos.y)	
+	local vector_length = math.sqrt(delta_nest_pos.x*delta_nest_pos.x + delta_nest_pos.y*delta_nest_pos.y)
 	return vector_length > global.MIN_CREEP_DISTANCE
 end
 
@@ -95,18 +97,18 @@ function pushCreepToGenerate(event)
 			global.last_nest_position = nest.position -- set new last nest finded
 			table.insert(global.creeps_to_generate, {name = nest.name, surface = nest.surface, position = nest.position})
 		end
-	else		
+	else
 		local nests = event.surface.find_entities_filtered
-		{ 
+		{
 			type = "unit-spawner",
-			area = event.area, 
+			area = event.area,
 			force = "enemy"
 		}
-		
-		for _, nest in pairs(nests) do	
-			table.insert(global.creeps_to_generate, {name = nest.name, surface = event.surface, position = nest.position})	
-		end		
-	end	
+
+		for _, nest in pairs(nests) do
+			table.insert(global.creeps_to_generate, {name = nest.name, surface = event.surface, position = nest.position})
+		end
+	end
 end
 
 local function creepOnChunkGenerated(event)
@@ -124,14 +126,14 @@ end
 -- Take and generate one section of creep to generate from the possible in the stack
 -- @event, on_tick
 function continueCreepGeneration(event)
-	if #global.creeps_to_generate > 0 then --and event.tick % 10 == 0 then 
+	if #global.creeps_to_generate > 0 then --and event.tick % 10 == 0 then
 		-- Choose one index to calculate
 		local i = global.creep_index
 		global.creep_index = global.creep_index + 1
 		if global.creep_index > #global.creeps_to_generate then
 			global.creep_index = 1
-		end		
-		
+		end
+
 		-- If no one have calculate it then generate the creep
 		local creep = global.creeps_to_generate[i] or false
 		if creep then
@@ -142,7 +144,7 @@ function continueCreepGeneration(event)
 				continueCreepGeneration(event)
 			end
 		end
-	end	
+	end
 end
 
 -- Return a pseudo-random(in succession) creep size data from the precalculated.
@@ -160,57 +162,57 @@ end
 -- Generate creep in the specified position
 -- @nest_surface, of nest
 -- @nest_position, of nest
-function spawnCreep(nest_surface, nest_position)	
+function spawnCreep(nest_surface, nest_position)
 	local creep_size = getNextCreepSize()
 	local creeps = {}
-	
+
 	local start_x = nest_position.x - creep_size.half_max_x
-	local start_y = nest_position.y - creep_size.half_max_y	
-	local x  = 
+	local start_y = nest_position.y - creep_size.half_max_y
+	local x  =
 	{
 		max  = start_x + creep_size.max_x, -- right most x
 		min  = start_x                     -- left most x
 	}
 	x.rad    = math.floor(x.max - x.min)/2 -- radius
-	local y  = 
+	local y  =
 	{
 		max  = start_y + creep_size.max_y, -- bottom y
 		min  = start_y                     -- top y
 	}
 	y.rad = (y.max - y.min)/2
 	local thetha = 0
-	local thetha_points = {} -- ellipse draw points 	
+	local thetha_points = {} -- ellipse draw points
 	local xP, yP = nil
 	while thetha <= 360 do
 		xP = math.floor(nest_position.x + x.rad * math.cos(thetha)) -- calculate x point
 		yP = math.floor(nest_position.y + y.rad * math.sin(thetha)) -- calculate y point
 
 		-- bottom left ellipse points
-		for xIP = xP, nest_position.x do 
+		for xIP = xP, nest_position.x do
 			thetha_points[xIP] = thetha_points[xIP] or {} -- countine existing x-axis or create new one
-			for yIP = yP, nest_position.y do 				
+			for yIP = yP, nest_position.y do
 				thetha_points[xIP][yIP] = true -- mark point on y axis along x axis
 			end
-		end	
+		end
 		-- bottom right ellipse points
-		for xIP = xP, nest_position.x do  	
+		for xIP = xP, nest_position.x do
 			thetha_points[xIP] = thetha_points[xIP] or {}
-			for yIP = nest_position.y, yP do 	
+			for yIP = nest_position.y, yP do
 				thetha_points[xIP][yIP] = true
 			end
-		end	
+		end
 
 		-- upper right ellipse points
-		for xIP = nest_position.x, xP do 
+		for xIP = nest_position.x, xP do
 			thetha_points[xIP] = thetha_points[xIP] or {}
-			for yIP = nest_position.y, yP do 				
+			for yIP = nest_position.y, yP do
 				thetha_points[xIP][yIP] = true
 			end
 		end
 		-- upper right ellipse points
-		for xIP = nest_position.x, xP do 
+		for xIP = nest_position.x, xP do
 			thetha_points[xIP] = thetha_points[xIP] or {}
-			for yIP = yP, nest_position.y do 	
+			for yIP = yP, nest_position.y do
 				thetha_points[xIP][yIP] = true
 			end
 		end
@@ -227,10 +229,10 @@ function spawnCreep(nest_surface, nest_position)
 					name = global.CREEP_NAME,
 					position = { x, y }
 				}
-			)			
+			)
 		end
 	end
-	
+
 	if nest_surface.valid then
 		nest_surface.set_tiles(creeps, true, false, false, false)
 	end
@@ -249,8 +251,8 @@ local creep_callbacks =
 {
 	-- -- Bootstrap
 	-- For setup variables
-	{ onInitAndConf, "on_init" },   
-	{ onConfChange, "on_configuration_changed" }    
+	{ onInitAndConf, "on_init" },
+	{ onConfChange, "on_configuration_changed" }
 }
 
 	-- -- Actions
@@ -262,9 +264,9 @@ if global.creep_on_biter_base_built ~= false then
 	-- For generate creep when a biter migrate
 	table.insert(creep_callbacks, { creepOnBiterBaseBuilt, "on_biter_base_built", nil, 1 })
 end
-if global.creep_on_chunk_generated ~= false or global.creep_on_biter_base_built ~= false then	
+if global.creep_on_chunk_generated ~= false or global.creep_on_biter_base_built ~= false then
 	-- Creep generation processed slowly
-	table.insert(creep_callbacks, { continueCreepGeneration, "on_nth_tick", 10 })     
+	table.insert(creep_callbacks, { continueCreepGeneration, "on_nth_tick", 10 })
 end
 
 return creep_callbacks
