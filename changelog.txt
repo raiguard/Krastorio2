@@ -1,3 +1,10 @@
+Version: 1.0.20
+Date: XX.12.2020
+  Changes:
+    - Updated a bit Industrial Revolution 2 (roboport mode support and furnaces can all have a selectable recipe).
+  Fixes:
+    - Fixed that the spawn creep remote interface would ignore whether or not a creep virus had been thrown.
+    - Fixed advanced beacons showing the "not buildable in space" tooltip with Space Exploration, despite being buildable in space.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.19
 Date: 26.12.2020
@@ -11,8 +18,6 @@ Date: 26.12.2020
     - Fixed that removing creep tiles, using viruses, destroying resources on creep tiles.
     - Fixed changelog of 1.0.18.
     - Fixed that in the starting items of the crash site, there was a low probability to not have one shelter.
-    - Fixed that the spawn creep remote interface would ignore whether or not a creep virus had been thrown
-    - Fixed advanced beacons showing the "not buildable in space" tooltip with Space Exploration, despite being buildable in space
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.18
 Date: 17.12.2020

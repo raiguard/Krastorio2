@@ -389,9 +389,20 @@ if mods["IndustrialRevolution"] then
 	-- Fix different collision boxes
 	data.raw["mining-drill"]["electric-mining-drill"].next_upgrade = nil
 
-	-- Roboport
+	-- Roboport (changeble mode)
 	local variations_util = require(kr_public_lib .. "create-roboport-states")
 	variations_util.createRoboportVariations("robotower")
+	
+	-- Bronze furnace(selectable recipe)
+	local furnace_name = "bronze-furnace"
+	if data.raw.furnace[furnace_name] then
+		local furnace = krastorio_utils.tables.fullCopy(data.raw.furnace[furnace_name])
+		furnace.type = "assembling-machine"
+		furnace.source_inventory_size = 2
+		furnace.energy_usage = "350kW"
+		data.raw.furnace[furnace_name] = nil
+		data:extend({furnace})
+	end
 	
 	-- Add basic science to copper lab	
 	table.insert(data.raw.lab["copper-lab"].inputs, "basic-tech-card")
