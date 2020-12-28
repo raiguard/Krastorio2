@@ -48,6 +48,8 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
 
 	se_allow_in_space["kr-se-loader"]                         = true
 
+	se_allow_in_space["kr-tesla-coil"]                        = true
+
 	-- Adding space collisions (Disabling some Krastorio 2 entities in space),
 	-- this is a BLACKLIST, all entities in this table CAN'T(NOT) be placed in the space.
 	local krastorio_entities_to_add =
