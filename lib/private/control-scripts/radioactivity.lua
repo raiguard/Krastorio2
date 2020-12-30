@@ -139,9 +139,12 @@ function doRadioactiveDamage(player)
 			position        = character.position,
 			volume_modifier = 0.5
 		}
-		if character.grid and character.grid.valid then
-			if character.grid.shield > 0 then
-				base_damage = base_damage + (character.grid.max_shield*0.08)
+		if character.grid and character.grid.valid and character.grid.shield > 0 then
+			local max_shield_perc = character.grid.max_shield * 0.08
+			if max_shield_perc >= base_damage then
+				base_damage = base_damage + max_shield_perc
+			else
+				base_damage = base_damage * 2
 			end
 		end		
 		character.damage(base_damage, "enemy", "radioactive")

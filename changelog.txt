@@ -5,6 +5,7 @@ Date: XX.12.2020
   Fixes:
     - Fixed that the spawn creep remote interface would ignore whether or not a creep virus had been thrown.
     - Fixed advanced beacons showing the "not buildable in space" tooltip with Space Exploration, despite being buildable in space.
+    - Fixed MK1 shield took too few radioactive damage (because on shield are done in percentage, and MK1 shield received less damage than the hitpoint recharging rate).
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.19
 Date: 26.12.2020
