@@ -149,6 +149,7 @@ if mods["IndustrialRevolution"] then
 	-- Rocket fuel
 	krastorio.recipes.removeIngredient("rocket-fuel", "petroleum-gas")	
 	krastorio.recipes.removeIngredient("rocket-fuel", "iron-stick")	
+	krastorio.recipes.removeIngredient("rocket-fuel", "iron-powder")	
 
 	-- Research server
 	krastorio.recipes.replaceIngredient("kr-research-server", "steel-beam", {"steel-frame-large", 1})
