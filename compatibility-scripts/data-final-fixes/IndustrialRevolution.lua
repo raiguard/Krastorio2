@@ -63,6 +63,41 @@ if mods["IndustrialRevolution"] then
 	
 	data.raw.technology["kr-steel-fluid-handling"] = nil
 	
+	
+	
+	data:extend(
+	{	
+		{
+			type = "technology",
+			name = "kr-wind-turbine",
+			localised_name  = {"item-name.kr-wind-turbine"},
+			localised_description = {"item-description.kr-wind-turbine"},
+			mod = "Krastorio2",
+			icon = kr_technologies_icons_path .. "wind-turbine.png",
+			icon_size = 256, 
+			icon_mipmaps = 4,
+			effects =
+			{
+				{
+					type = "unlock-recipe",
+					recipe = "kr-wind-turbine"
+				}
+			},
+			prerequisites = {"ir2-steam-power"},
+			unit =
+			{
+				count = 50,
+				ingredients = 
+				{
+					{"basic-tech-card", 1},
+					{"automation-science-pack", 1},
+					{"logistic-science-pack", 1}
+				},
+				time = 30
+			}
+		}
+	})
+	
 	-----------------------------------------------------------------------------------------------------------------------
 	-- -- Recipes
 	-----------------------------------------------------------------------------------------------------------------------
@@ -79,6 +114,7 @@ if mods["IndustrialRevolution"] then
 	-- -- Automation core
 	--Disable copper motor
 	krastorio.recipes.disable("copper-motor")
+	krastorio.recipes.disable("kr-wind-turbine")
 	
 	krastorio.recipes.convertIngredientFromAllRecipes("copper-motor", "automation-core")		
 	krastorio.recipes.convertIngredient("automation-core", "iron-gear-wheel", "copper-gear-wheel")
@@ -184,8 +220,9 @@ if mods["IndustrialRevolution"] then
 			name = "gold-ingot-2",
 			icons =
 			{
-				{ icon = "__IndustrialRevolution__/graphics/icons/64/gold-ingot.png", icon_size = 64 },
-				{ icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png", icon_size = 64, scale = 0.22, shift = {-8, -8} }
+				{ icon = "__IndustrialRevolution__/graphics/icons/64/washing-background.png", icon_size = 64, mipmap_count = 4 },
+				{ icon = "__IndustrialRevolution__/graphics/icons/64/gold-ingot.png", icon_size = 64, mipmap_count = 4 },
+				{ icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png", icon_size = 64, scale = 0.22, shift = {-8, -8}, mipmap_count = 4 }
 			},
 			icon_size = 64,
 			category = "washing",
@@ -212,8 +249,8 @@ if mods["IndustrialRevolution"] then
 				tertiary = {r = 0.430, g = 0.305, b = 0.2, a = 0.000}, 
 				quaternary = {r = 0.970, g = 0.501, b = 0.000, a = 0.900}
 			},
-			subgroup = "raw-material",
-			order = "e03[enriched-copper]"
+			subgroup = "pure",
+			order = "e-c-j-b-a"
 		},
 		-- Chromium
 		{
@@ -221,8 +258,9 @@ if mods["IndustrialRevolution"] then
 			name = "chromium-pure-2",
 			icons =
 			{
-				{ icon = "__IndustrialRevolution__/graphics/icons/64/chromium-pure.png", icon_size = 64 },
-				{ icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png", icon_size = 64, scale = 0.22, shift = {-8, -8} }
+				{ icon = "__IndustrialRevolution__/graphics/icons/64/washing-background.png", icon_size = 64, mipmap_count = 4 },
+				{ icon = "__IndustrialRevolution__/graphics/icons/64/chromium-pure.png", icon_size = 64, mipmap_count = 4 },
+				{ icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png", icon_size = 64, scale = 0.22, shift = {-8, -8}, mipmap_count = 4 }
 			},
 			icon_size = 64,
 			category = "washing",
@@ -246,8 +284,8 @@ if mods["IndustrialRevolution"] then
 			{
 				primary = {r = 0.80, g = 0.2784, b = 0.2941, a = 0.000},
 			},
-			subgroup = "raw-material",
-			order = "e05[enriched-copper]"
+			subgroup = "pure",
+			order = "e-c-j-b-b"
 		},
 		-- Lead
 		{
@@ -255,8 +293,9 @@ if mods["IndustrialRevolution"] then
 			name = "lead-pure-2",
 			icons =
 			{
-				{ icon = "__IndustrialRevolution__/graphics/icons/64/lead-pure.png", icon_size = 64 },
-				{ icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png", icon_size = 64, scale = 0.22, shift = {-8, -8} }
+				{ icon = "__IndustrialRevolution__/graphics/icons/64/washing-background.png", icon_size = 64, mipmap_count = 4 },
+				{ icon = "__IndustrialRevolution__/graphics/icons/64/lead-pure.png", icon_size = 64, mipmap_count = 4 },
+				{ icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png", icon_size = 64, scale = 0.22, shift = {-8, -8}, mipmap_count = 4 }
 			},
 			icon_size = 64,
 			category = "washing",
@@ -280,8 +319,8 @@ if mods["IndustrialRevolution"] then
 			{
 				primary = {r = 0.3, g = 0.3, b = 0.3, a = 0.000},
 			},
-			subgroup = "raw-material",
-			order = "e06[enriched-copper]"
+			subgroup = "pure",
+			order = "e-c-j-b-c"
 		},
 		-- Nickel
 		{
@@ -289,8 +328,9 @@ if mods["IndustrialRevolution"] then
 			name = "nickel-pure-2",
 			icons =
 			{
-				{ icon = "__IndustrialRevolution__/graphics/icons/64/nickel-pure.png", icon_size = 64 },
-				{ icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png", icon_size = 64, scale = 0.22, shift = {-8, -8} }
+				{ icon = "__IndustrialRevolution__/graphics/icons/64/washing-background.png", icon_size = 64, mipmap_count = 4 },
+				{ icon = "__IndustrialRevolution__/graphics/icons/64/nickel-pure.png", icon_size = 64, mipmap_count = 4 },
+				{ icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png", icon_size = 64, scale = 0.22, shift = {-8, -8}, mipmap_count = 4 }
 			},
 			icon_size = 64,
 			category = "washing",
@@ -314,8 +354,8 @@ if mods["IndustrialRevolution"] then
 			{
 				primary = {r = 0.3, g = 0.3, b = 0.3, a = 0.000},
 			},
-			subgroup = "raw-material",
-			order = "e06[enriched-copper]"
+			subgroup = "pure",
+			order = "e-c-j-b-d"
 		},
 		-- Tellurium
 		{
@@ -323,8 +363,9 @@ if mods["IndustrialRevolution"] then
 			name = "tellurium-pure-2",
 			icons =
 			{
-				{ icon = "__IndustrialRevolution__/graphics/icons/64/tellurium-pure.png", icon_size = 64 },
-				{ icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png", icon_size = 64, scale = 0.22, shift = {-8, -8} }
+				{ icon = "__IndustrialRevolution__/graphics/icons/64/washing-background.png", icon_size = 64, mipmap_count = 4 },
+				{ icon = "__IndustrialRevolution__/graphics/icons/64/tellurium-pure.png", icon_size = 64, mipmap_count = 4 },
+				{ icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png", icon_size = 64, scale = 0.22, shift = {-8, -8}, mipmap_count = 4 }
 			},
 			icon_size = 64,
 			category = "washing",
@@ -348,8 +389,8 @@ if mods["IndustrialRevolution"] then
 			{
 				primary = {r = 0.3843, g = 0.2431, b = 0.7098, a = 0.000}
 			},
-			subgroup = "raw-material",
-			order = "e04[enriched-copper]"
+			subgroup = "pure",
+			order = "e-c-j-b-e"
 		}		
 	})
 	krastorio.technologies.addUnlockRecipe("ir2-washing-1", "gold-ingot-2")

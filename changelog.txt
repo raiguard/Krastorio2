@@ -2,7 +2,8 @@ Version: 1.0.20
 Date: XX.12.2020
   Changes:
     - Added compatibility to Tral's Robot Tree Farm (Thanks to MarcusTral).
-    - Updated a bit Industrial Revolution 2 (roboport mode support and furnaces can all have a selectable recipe).
+    - Updated a bit Industrial Revolution 2 (roboport mode support and furnaces can all have a selectable recipe, wind turbine not available from the beginning, and other recipe fixes).
+    - Added compatibility to Mine Liquid Ores.
   Fixes:
     - Fixed that the spawn creep remote interface would ignore whether or not a creep virus had been thrown.
     - Fixed advanced beacons showing the "not buildable in space" tooltip with Space Exploration, despite being buildable in space.
