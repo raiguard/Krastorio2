@@ -81,11 +81,14 @@ function removeCreepFromTheSurface(surface)
 				local creep_to_remove_this_cicle = math.min(creeps_count, creeps_for_cicle)
 				local tiles_to_replace_this_cicle = {}
 				local choosen_index = 0
+				local real_tile_name = "landfill"
 
 				-- Iterate the creep
 				while creep_to_remove_this_cicle > 0 do
 					choosen_index = math.random(1, creeps_count) -- Select an index
 
+					real_tile_name = surface.get_hidden_tile(tiles_to_replace[choosen_index].position)
+					tiles_to_replace[choosen_index].name = real_tile_name or tiles_to_replace[choosen_index].name
 					table.insert(tiles_to_replace_this_cicle, tiles_to_replace[choosen_index]) -- Move to the list to replace this round
 					creep_to_remove_this_cicle = creep_to_remove_this_cicle - 1 -- Reduce counter of this round
 
