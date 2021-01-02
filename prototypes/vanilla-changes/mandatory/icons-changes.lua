@@ -53,7 +53,7 @@ if data.raw.tool["automation-science-pack"] then
 		}
 	}
 end
-krastorio.icons.setTechnologyIcon("logistic-science-pack",            kr_technologies_icons_path .. "logistic-tech-card.png")
+krastorio.icons.setTechnologyIcon("logistic-science-pack",            kr_technologies_icons_path .. "logistic-tech-card.png", 256, 4)
 
 -- Military science pack
 krastorio.icons.setItemIcon("military-science-pack",                  kr_cards_icons_path .. "military-tech-card.png", 64, 4)
@@ -80,7 +80,7 @@ if data.raw.tool["military-science-pack"] then
 		}
 	}
 end
-krastorio.icons.setTechnologyIcon("military-science-pack",            kr_technologies_icons_path .. "military-tech-card.png")
+krastorio.icons.setTechnologyIcon("military-science-pack",            kr_technologies_icons_path .. "military-tech-card.png", 256, 4)
 
 -- Chemical science pack
 krastorio.icons.setItemIcon("chemical-science-pack",                  kr_cards_icons_path .. "chemical-tech-card.png", 64, 4)
@@ -107,7 +107,7 @@ if data.raw.tool["chemical-science-pack"] then
 		}
 	}
 end
-krastorio.icons.setTechnologyIcon("chemical-science-pack",            kr_technologies_icons_path .. "chemical-tech-card.png")
+krastorio.icons.setTechnologyIcon("chemical-science-pack",            kr_technologies_icons_path .. "chemical-tech-card.png", 256, 4)
 
 -- Production science pack
 krastorio.icons.setItemIcon("production-science-pack",                kr_cards_icons_path .. "production-tech-card.png", 64, 4)
@@ -134,7 +134,7 @@ if data.raw.tool["production-science-pack"] then
 		}
 	}
 end
-krastorio.icons.setTechnologyIcon("production-science-pack",          kr_technologies_icons_path .. "production-tech-card.png")
+krastorio.icons.setTechnologyIcon("production-science-pack",          kr_technologies_icons_path .. "production-tech-card.png", 256, 4)
 
 -- Utility science pack
 krastorio.icons.setItemIcon("utility-science-pack",                   kr_cards_icons_path .. "utility-tech-card.png", 64, 4)
@@ -161,7 +161,7 @@ if data.raw.tool["utility-science-pack"] then
 		}
 	}
 end
-krastorio.icons.setTechnologyIcon("utility-science-pack",             kr_technologies_icons_path .. "utility-tech-card.png")
+krastorio.icons.setTechnologyIcon("utility-science-pack",             kr_technologies_icons_path .. "utility-tech-card.png", 256, 4)
 
 -- Space science pack
 krastorio.icons.setItemIcon("space-science-pack",                     kr_cards_icons_path .. "optimization-tech-card.png", 64, 4)
@@ -188,7 +188,7 @@ if data.raw.tool["space-science-pack"] then
 		}
 	}
 end
-krastorio.icons.setTechnologyIcon("space-science-pack",               kr_technologies_icons_path .. "optimization-tech-card.png")
+krastorio.icons.setTechnologyIcon("space-science-pack",               kr_technologies_icons_path .. "optimization-tech-card.png", 256, 4)
 
 -- Other
 
@@ -267,30 +267,28 @@ krastorio.icons.setItemIcon("petroleum-gas",                          kr_fluids_
 -----------------------------------------------------------------
 -- -- -- TECHNOLOGIES
 
-krastorio.icons.setTechnologyIcon("steel-processing",                 kr_technologies_icons_path .. "steel-processing.png")
-krastorio.icons.setTechnologyIcon("coal-liquefaction",                kr_technologies_icons_path .. "coal-liquefaction.png")
+krastorio.icons.setTechnologyIcon("steel-processing",                 kr_technologies_icons_path .. "steel-processing.png", 256, 4)
+krastorio.icons.setTechnologyIcon("coal-liquefaction",                kr_technologies_icons_path .. "coal-liquefaction.png", 256, 4)
 
 -- Logistics
-krastorio.icons.setTechnologyIcon("logistics",                        kr_technologies_icons_path .. "logistics-1.png")
-krastorio.icons.setTechnologyIcon("logistics-2",                      kr_technologies_icons_path .. "logistics-2.png")
-krastorio.icons.setTechnologyIcon("logistics-3",                      kr_technologies_icons_path .. "logistics-3.png")
+krastorio.icons.setTechnologyIcon("logistics",                        kr_technologies_icons_path .. "logistics-1.png", 256, 4)
+krastorio.icons.setTechnologyIcon("logistics-2",                      kr_technologies_icons_path .. "logistics-2.png", 256, 4)
+krastorio.icons.setTechnologyIcon("logistics-3",                      kr_technologies_icons_path .. "logistics-3.png", 256, 4)
 
-krastorio.icons.setTechnologyIcon("oil-processing",                   kr_technologies_icons_path .. "oil-gathering.png")
+krastorio.icons.setTechnologyIcon("oil-processing",                   kr_technologies_icons_path .. "oil-gathering.png", 256, 4)
 
-if krastorio.icons.setTechnologyIcon("steel-axe",                     kr_technologies_icons_path .. "steel-pickaxe.png") then
-	data.raw.technology["steel-axe"].icon_mipmaps = nil
-end
+krastorio.icons.setTechnologyIcon("steel-axe",                        kr_technologies_icons_path .. "steel-pickaxe.png", 256, 4)
 
 -- Equipments
-krastorio.icons.setTechnologyIcon("heavy-armor",                      kr_technologies_icons_path .. "heavy-armor.png")
+krastorio.icons.setTechnologyIcon("heavy-armor",                      kr_technologies_icons_path .. "heavy-armor.png", 256, 4)
 
-krastorio.icons.setTechnologyIcon("night-vision-equipment",           kr_technologies_icons_path .. "night-vision-equipment.png")
-krastorio.icons.setTechnologyIcon("energy-shield-equipment",          kr_technologies_icons_path .. "energy-shield-mk1-equipment.png")
-krastorio.icons.setTechnologyIcon("energy-shield-mk2-equipment",      kr_technologies_icons_path .. "energy-shield-mk2-equipment.png")
+krastorio.icons.setTechnologyIcon("night-vision-equipment",           kr_technologies_icons_path .. "night-vision-equipment.png", 256, 4)
+krastorio.icons.setTechnologyIcon("energy-shield-equipment",          kr_technologies_icons_path .. "energy-shield-mk1-equipment.png", 256, 4)
+krastorio.icons.setTechnologyIcon("energy-shield-mk2-equipment",      kr_technologies_icons_path .. "energy-shield-mk2-equipment.png", 256, 4)
 
-krastorio.icons.setTechnologyIcon("personal-laser-defense-equipment", kr_technologies_icons_path .. "personal-laser-defense-mk1-equipments.png")
+krastorio.icons.setTechnologyIcon("personal-laser-defense-equipment", kr_technologies_icons_path .. "personal-laser-defense-mk1-equipments.png", 256, 4)
 
-krastorio.icons.setTechnologyIcon("battery-mk2-equipment",            kr_technologies_icons_path .. "battery-mk2-equipment.png")
+krastorio.icons.setTechnologyIcon("battery-mk2-equipment",            kr_technologies_icons_path .. "battery-mk2-equipment.png", 256, 4)
 
 -----------------------------------------------------------------
 -- -- -- BUILDINGS

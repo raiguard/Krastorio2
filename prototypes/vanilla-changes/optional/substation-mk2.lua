@@ -22,7 +22,8 @@ if krastorio.general.getSafeSettingValue("kr-substation-mk2") then
 		{
 			type = "technology",
 			name = "electric-energy-distribution-3",
-			icon_size = 128,
+			icon_size = 256, 
+			icon_mipmaps = 4,
 			icon = kr_technologies_icons_path .. "electric-energy-distribution.png",
 			effects =
 			{

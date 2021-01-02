@@ -7,7 +7,8 @@ data:extend(
 		type = "technology",
 		name = "kr-iron-pickaxe",
 		mod = "Krastorio2",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		icon = kr_technologies_icons_path .. "iron-pickaxe.png",
 		effects =
 		{
@@ -32,7 +33,8 @@ data:extend(
 		type = "technology",
 		name = "kr-advanced-pickaxe",
 		mod = "Krastorio2",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		icon = kr_technologies_icons_path .. "imersium-pickaxe.png",
 		effects =
 		{
@@ -59,7 +61,8 @@ data:extend(
 		type = "technology",
 		name = "kr-tesla-coil",
 		mod = "Krastorio2",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		icon = kr_technologies_icons_path .. "tesla-coil.png",
 		upgrade = false,
 		effects = 
@@ -92,10 +95,11 @@ data:extend(
 		mod = "Krastorio2",
 		icons = 
 		{
-			{ icon = kr_technologies_icons_path .. "tesla-coil.png", icon_size = 128 },
-			{ icon = kr_technologies_icons_path .. "/overlays/" .. "tesla-coil-upgrade-1.png", icon_size = 128 },
+			{ icon = kr_technologies_icons_path .. "tesla-coil.png", icon_size = 256, icon_mipmaps = 4 },
+			{ icon = kr_technologies_icons_path .. "/overlays/" .. "tesla-coil-upgrade-1.png", icon_size = 256, icon_mipmaps = 4 },
 		},
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		upgrade = false,
 		effects = {},
 		prerequisites = {"kr-tesla-coil"},
@@ -117,10 +121,11 @@ data:extend(
 		mod = "Krastorio2",
 		icons = 
 		{
-			{ icon = kr_technologies_icons_path .. "tesla-coil.png", icon_size = 128 },
-			{ icon = kr_technologies_icons_path .. "/overlays/" .. "tesla-coil-upgrade-2.png", icon_size = 128 },
+			{ icon = kr_technologies_icons_path .. "tesla-coil.png", icon_size = 256, icon_mipmaps = 4 },
+			{ icon = kr_technologies_icons_path .. "/overlays/" .. "tesla-coil-upgrade-2.png", icon_size = 256, icon_mipmaps = 4 },
 		},
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		upgrade = false,
 		effects = {},
 		prerequisites = {"kr-tesla-coil-upgrade-mk1"},
@@ -143,10 +148,11 @@ data:extend(
 		mod = "Krastorio2",		
 		icons = 
 		{
-			{ icon = kr_technologies_icons_path .. "tesla-coil.png", icon_size = 128 },
-			{ icon = kr_technologies_icons_path .. "/overlays/" .. "tesla-coil-upgrade-3.png", icon_size = 128 },
+			{ icon = kr_technologies_icons_path .. "tesla-coil.png", icon_size = 256, icon_mipmaps = 4 },
+			{ icon = kr_technologies_icons_path .. "/overlays/" .. "tesla-coil-upgrade-3.png", icon_size = 256, icon_mipmaps = 4 },
 		},
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		upgrade = false,
 		effects = {},
 		prerequisites = {"kr-tesla-coil-upgrade-mk2"},
@@ -170,10 +176,11 @@ data:extend(
 		mod = "Krastorio2",		
 		icons = 
 		{
-			{ icon = kr_technologies_icons_path .. "tesla-coil.png", icon_size = 128 },
-			{ icon = kr_technologies_icons_path .. "/overlays/" .. "tesla-coil-upgrade-4.png", icon_size = 128 },
+			{ icon = kr_technologies_icons_path .. "tesla-coil.png", icon_size = 256, icon_mipmaps = 4 },
+			{ icon = kr_technologies_icons_path .. "/overlays/" .. "tesla-coil-upgrade-4.png", icon_size = 256, icon_mipmaps = 4 },
 		},
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		upgrade = false,
 		effects = {},
 		prerequisites = {"kr-tesla-coil-upgrade-mk3"},
@@ -200,7 +207,8 @@ data:extend(
 		name = "kr-greenhouse",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "greenhouse.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -228,7 +236,8 @@ data:extend(
 		name = "kr-fluids-chemistry",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "fluids-chemistry.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -265,7 +274,8 @@ data:extend(
 		name = "kr-fluid-excess-handling",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "fluid-burner.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -291,7 +301,8 @@ data:extend(
 		name = "kr-atmosphere-condensation",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "atmospheric-condenser.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -333,7 +344,8 @@ data:extend(
 		name = "kr-air-purification",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "air-purifier.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -372,7 +384,8 @@ data:extend(
 		name = "kr-fusion-energy",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "fusion-energy.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -423,7 +436,8 @@ data:extend(
 		name = "kr-fuel",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "fuel-refinery.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -460,7 +474,8 @@ data:extend(
         name = "kr-silicon-processing",
 		mod = "Krastorio2",
         icon = kr_technologies_icons_path .. "silicon-processing.png",
-        icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
         effects =
         {
             {
@@ -491,7 +506,8 @@ data:extend(
         name = "kr-advanced-chemistry",
 		mod = "Krastorio2",
         icon = kr_technologies_icons_path .. "advanced-chemistry.png",
-        icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
         effects =
         {
 			{
@@ -538,7 +554,8 @@ data:extend(
 		name = "kr-bio-processing",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "bio-lab.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -582,7 +599,8 @@ data:extend(
 		name = "kr-enriched-ores",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "enriched-ores.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -640,7 +658,8 @@ data:extend(
 		name = "kr-lithium-processing",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "lithium-processing.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -670,7 +689,8 @@ data:extend(
 		name = "kr-quarry-minerals-extraction",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "quarry-drill.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -706,7 +726,8 @@ data:extend(
 		name = "kr-automation",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "advanced-assembling-machine.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -765,7 +786,8 @@ data:extend(
 		name = "kr-railgun-turret",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "railgun-turret.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		prerequisites = {"military-4", "utility-science-pack"},
 		effects =
 		{
@@ -800,7 +822,8 @@ data:extend(
 		name = "kr-rocket-turret",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "rocket-turret.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		prerequisites = {"kr-military-5", "kr-advanced-tech-card", "kr-railgun-turret", "atomic-bomb"},
 		effects =
 		{
@@ -836,7 +859,8 @@ data:extend(
 		name = "kr-antimatter-reactor",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "antimatter-reactor.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		prerequisites = {"kr-fusion-energy", "kr-singularity-tech-card"},
 		effects =
 		{
@@ -876,7 +900,8 @@ data:extend(
 		type = "technology",
 		name = "kr-robot-battery",
 		icon = kr_technologies_icons_path .. "robot-battery.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -901,7 +926,8 @@ data:extend(
 		type = "technology",
 		name = "kr-robot-battery-plus",
 		icon = kr_technologies_icons_path .. "robot-battery-plus.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -922,7 +948,7 @@ data:extend(
 			},
 			time = 45
 		}
-	},
+	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

@@ -8,7 +8,8 @@ data:extend(
 		name = "kr-basic-fluid-handling",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "basic-fluid-handling.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -40,7 +41,8 @@ data:extend(
 		name = "kr-steam-engine",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "steam-engine.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -68,7 +70,8 @@ data:extend(
 		name = "kr-decorations",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "decorations.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -132,7 +135,8 @@ data:extend(
 		name = "kr-crusher",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "crusher.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -156,7 +160,8 @@ data:extend(
 		name = "kr-containers",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "containers.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -188,7 +193,8 @@ data:extend(
 		name = "kr-shelter",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "shelter.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -213,7 +219,8 @@ data:extend(
 		name = "kr-electric-mining-drill",
 		mod = "Krastorio2",		
 		icon = kr_technologies_icons_path .. "electric-mining-drill.png",
-		icon_size = 128,		
+		icon_size = 256, 
+		icon_mipmaps = 4,	
 		effects =
 		{
 			{
@@ -238,7 +245,8 @@ data:extend(
 		name = "kr-mineral-water-gathering",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "mineral-water-gathering.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		prerequisites = {"fluid-handling", "kr-fluids-chemistry"},
 		effects =
 		{
@@ -268,7 +276,8 @@ data:extend(
 		name = "kr-sentinel",	
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "sentinel.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		prerequisites = {"optics", "kr-stone-processing"},
 		effects =
 		{
@@ -293,7 +302,8 @@ data:extend(
 		name = "kr-radar",	
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "radar.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		prerequisites = {"kr-sentinel", "electronics", "steel-processing"},
 		effects =
 		{
@@ -319,7 +329,8 @@ data:extend(
 		name = "kr-steel-fluid-handling",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "steel-fluid-handling.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -353,7 +364,8 @@ data:extend(
 		name = "kr-steel-fluid-tanks",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "steel-fluid-tanks.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -383,7 +395,8 @@ data:extend(
 		name = "kr-gas-power-station",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "gas-power-station.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -414,7 +427,8 @@ data:extend(
 		localised_name = {"technology-name.kr-logistic-containers-1"},
 		localised_description = {"technology-description.kr-logistic-containers-1"},
 		icon = kr_technologies_icons_path .. "logistic-containers-1.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -452,7 +466,8 @@ data:extend(
 		name = "kr-advanced-lab",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "biusart-lab.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		prerequisites = {"advanced-electronics"},
 		effects =
 		{
@@ -479,7 +494,8 @@ data:extend(
 		name = "kr-research-server",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "research-server.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		prerequisites = {"advanced-electronics"},
 		effects =
 		{
@@ -505,7 +521,8 @@ data:extend(
 		name = "kr-electric-mining-drill-mk2",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "electric-mining-drill-mk2.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -534,7 +551,8 @@ data:extend(
 		name = "kr-advanced-solar-panel",
 		mod  = "Krastorio2",
 		icon = kr_technologies_icons_path .. "advanced-solar-panel.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		prerequisites = {"solar-energy", "kr-quarry-minerals-extraction"},
 		effects =
 		{
@@ -566,7 +584,8 @@ data:extend(
 		localised_name = {"technology-name.kr-logistic-containers-2"},
 		localised_description = {"technology-description.kr-logistic-containers-2"},
 		icon = kr_technologies_icons_path .. "logistic-containers-2.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -614,7 +633,8 @@ data:extend(
 		name = "kr-quantum-computer",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "quantum-computer.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -642,7 +662,8 @@ data:extend(
 		name = "kr-singularity-lab",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "singularity-lab.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -670,7 +691,8 @@ data:extend(
 		name = "kr-logistic-4",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "logistics-4.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -706,7 +728,8 @@ data:extend(
 		name = "kr-energy-storage",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "energy-storage.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{			
 			{
@@ -732,7 +755,8 @@ data:extend(
 		name = "kr-superior-inserters",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "superior-inserters.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -770,7 +794,8 @@ data:extend(
 		name = "kr-electric-mining-drill-mk3",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "electric-mining-drill-mk3.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -796,7 +821,8 @@ data:extend(
 		name = "kr-logistic-5",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "logistics-5.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -830,7 +856,8 @@ data:extend(
 		name = "kr-advanced-furnace",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "advanced-furnace.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -857,7 +884,8 @@ data:extend(
 		name = "kr-advanced-roboports",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "advanced-roboports.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -887,7 +915,8 @@ data:extend(
 		name = "kr-advanced-chemical-plant",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "advanced-chemical-plant.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -914,7 +943,8 @@ data:extend(
 		name = "kr-laser-artillery-turret",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "laser-artillery-turret.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		prerequisites = {"kr-military-5", "kr-advanced-tech-card", "kr-railgun-turret", "kr-energy-control-unit"},
 		effects =
 		{
@@ -942,7 +972,8 @@ data:extend(
 		name = "kr-singularity-beacon",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "singularity-beacon.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -971,7 +1002,8 @@ data:extend(
 		name = "kr-intergalactic-transceiver",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "intergalactic-transceiver.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{

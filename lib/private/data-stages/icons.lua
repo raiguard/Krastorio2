@@ -233,13 +233,13 @@ end
 
 -- @ _technology_name
 -- @ _icon_path
-function krastorio.icons.setTechnologyIcon(_technology_name, _icon_path, _icon_size)
+function krastorio.icons.setTechnologyIcon(_technology_name, _icon_path, _icon_size, _icon_mipmaps)
 	if krastorio.technologies.exist(_technology_name) then
-		if data.raw.technology[_technology_name].icons then
-			data.raw.technology[_technology_name].icons = nil
-		end	
-		data.raw.technology[_technology_name].icon = _icon_path
-		data.raw.technology[_technology_name].icon_size = _icon_size or 128
+		data.raw.technology[_technology_name].icon         = _icon_path
+		data.raw.technology[_technology_name].icons        = nil
+		
+		data.raw.technology[_technology_name].icon_size    = _icon_size or 128
+		data.raw.technology[_technology_name].icon_mipmaps = _icon_mipmaps or nil
 		
 		return true
 	end
@@ -248,13 +248,13 @@ end
 
 -- @ _technology_name
 -- @ _icons
-function krastorio.icons.setTechnologyIcons(_technology_name, _icons)
+function krastorio.icons.setTechnologyIcons(_technology_name, _icons, _icon_size, _icon_mipmaps)
 	if krastorio.technologies.exist(_technology_name) then
-		if data.raw.technology[_technology_name].icon or data.raw.technology[_technology_name].icon_size then
-			data.raw.technology[_technology_name].icon = nil
-			data.raw.technology[_technology_name].icon_size = nil		
-		end	
-		data.raw.technology[_technology_name].icons = _icons
+		data.raw.technology[_technology_name].icons        = _icons
+		data.raw.technology[_technology_name].icon         = nil
+		
+		data.raw.technology[_technology_name].icon_size    = _icon_size or nil			
+		data.raw.technology[_technology_name].icon_mipmaps = _icon_mipmaps or nil	
 		
 		return true
 	end

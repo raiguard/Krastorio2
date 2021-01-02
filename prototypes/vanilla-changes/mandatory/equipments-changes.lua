@@ -446,14 +446,17 @@ end
 -- iterating...
 updateVanillaEquipmentGraphics(objects_to_modify, kr_universal_equipments_icons_path, kr_universal_equipments_path)
 
-if data.raw.technology["fusion-reactor-equipment"] then
-	data.raw.technology["fusion-reactor-equipment"].icon = nil
-	data.raw.technology["fusion-reactor-equipment"].icons = 
+krastorio.icons.setTechnologyIcons
+(
+	"fusion-reactor-equipment", 
 	{
-		{ icon = kr_technologies_icons_path .. "fusion-reactor-equipment.png", icon_size = 128 },
-		{ icon = kr_technologies_icons_path .. "overlays/equipment-overlay.png", icon_size = 128 }
-	}
-end
+		{ icon = kr_technologies_icons_path .. "fusion-reactor-equipment.png", icon_size = 256, icon_mipmaps = 4 },
+		{ icon = kr_technologies_icons_path .. "overlays/equipment-overlay.png", icon_size = 256, icon_mipmaps = 4 }
+	}, 
+	256, 
+	4
+)
+
 
 -- Equipments categories
 table.insert(data.raw["generator-equipment"]["fusion-reactor-equipment"].categories, "universal-equipment")

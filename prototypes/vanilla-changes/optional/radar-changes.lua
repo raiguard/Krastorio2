@@ -213,7 +213,8 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
 			type = "technology",
 			name = "advanced-radar",	
 			icon = kr_technologies_icons_path .. "advanced-radar.png",
-			icon_size = 128,
+			icon_size = 256, 
+			icon_mipmaps = 4,
 			prerequisites = {"kr-radar", "advanced-electronics"},
 			effects =
 			{

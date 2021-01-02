@@ -8,7 +8,8 @@ data:extend(
 		name = "kr-automation-core",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "automation-core.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -32,7 +33,8 @@ data:extend(
 		name = "light-armor",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "light-armor.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -56,7 +58,8 @@ data:extend(
 		name = "automation-science-pack", -- DON'T CHANGE THIS NAME (is needed for the enforce algorithm)
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "automation-tech-card.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -80,7 +83,8 @@ data:extend(
 		name = "kr-stone-processing",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "stone-processing.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -111,7 +115,8 @@ data:extend(
 		name = "kr-bio-fuel",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "bio-fuel.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -137,7 +142,8 @@ data:extend(
 		name = "kr-reinforced-plates",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "reinforced-plates.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -167,7 +173,8 @@ data:extend(
 		name = "kr-advanced-fuel",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "advanced-fuel.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -195,7 +202,8 @@ data:extend(
 		name = "kr-lithium-sulfur-battery",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "lithium-sulfur-battery.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -221,7 +229,8 @@ data:extend(
 		name = "kr-military-5",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "military-5.png",
-		icon_size = 128,		
+		icon_size = 256, 
+		icon_mipmaps = 4,	
 		effects =
 		{
 			{
@@ -266,7 +275,8 @@ data:extend(
 		name = "kr-ai-core",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "ai-core.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -294,7 +304,8 @@ data:extend(
 		name = "kr-matter-tech-card",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "matter-tech-card.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{			
 			{
@@ -323,7 +334,8 @@ data:extend(
 		name = "kr-energy-control-unit",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "energy-control-unit.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{			
 			{
@@ -349,7 +361,8 @@ data:extend(
 		name = "kr-imersium-processing",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "imersium-processing.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{			
 			{
@@ -383,7 +396,8 @@ data:extend(
 		name = "kr-advanced-tech-card",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "advanced-tech-card.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -409,7 +423,8 @@ data:extend(
 		name = "kr-creep-virus",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "creep-virus.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -436,7 +451,8 @@ data:extend(
 		name = "kr-biter-virus",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "biter-virus.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -463,7 +479,8 @@ data:extend(
 		name = "kr-singularity-tech-card",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "singularity-tech-card.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -491,7 +508,8 @@ data:extend(
 		name = "kr-antimatter-ammo",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "antimatter-ammo.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{			
 			{
@@ -532,7 +550,8 @@ data:extend(
 		name = "kr-advanced-tank",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "advanced-tank.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		effects =
 		{			
 			{
@@ -559,7 +578,8 @@ data:extend(
 		name = "kr-matter-cube",
 		mod = "Krastorio2",
 		icon = kr_technologies_icons_path .. "matter-cube.png",
-		icon_size = 128,
+		icon_size = 256, 
+		icon_mipmaps = 4,
 		prerequisites = {"kr-singularity-tech-card"},
 		order = "g-f-z",
 		unit =
