@@ -84,7 +84,7 @@ function removeCreepFromTheSurface(surface)
 				local real_tile_name = "landfill"
 
 				-- Iterate the creep
-				while creep_to_remove_this_cicle > 0 do
+				while creep_to_remove_this_cicle > 0 and surface.valid do
 					choosen_index = math.random(1, creeps_count) -- Select an index
 
 					real_tile_name = surface.get_hidden_tile(tiles_to_replace[choosen_index].position)
