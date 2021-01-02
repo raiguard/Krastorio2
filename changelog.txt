@@ -1,10 +1,10 @@
 Version: 1.0.20
-Date: XX.01.2021
+Date: 03.01.2021
   Features:
     - Changed/added high resolution technologies icons to match Factorio 1.1 standard, produced using a deep learning technique and some rescaling (thanks to hugogs for help with some icons).
   Changes:
     - Added compatibility to Tral's Robot Tree Farm (Thanks to MarcusTral).
-    - Updated Industrial Revolution 2 compatibility. Roboport mode support, bronze furnace have a selectable recipe, wind turbine not available from the beginning, and other recipe fixes.
+    - Updated Industrial Revolution 2 compatibility. Robotower roboport mode support, bronze furnace have a selectable recipe, wind turbine not available from the beginning, added crushed rare metals (thanks to General Ecchi for provide the icons), added support to smelting crafting to IR2 intermediates, and other recipe fixes.
     - Added compatibility to Mine Liquid Ores.
   Fixes:
     - Fixed that the creep virus replaced tile behind the creep with landfill tile instead of the real tile, while removing the creep.

@@ -597,10 +597,9 @@ if not mods["aai-industry"] then
 		usage_priority = "secondary-input",
 		drain = "1kW"
 	}
-	electric_offshore_pump.crafting_categories = {"kr-electric-offshore-pump-crafting_categories"}
+	electric_offshore_pump.crafting_categories = {"kr-electric-offshore-pump"}
 	electric_offshore_pump.animation = electric_offshore_pump_animation
 	electric_offshore_pump.working_visualisations = electric_offshore_pump_working_visualisations
-	-- electric_offshore_pump.match_animation_speed_to_activity = true
 	electric_offshore_pump.placeable_by = {item = "offshore-pump", count = 1}
 	electric_offshore_pump.fixed_recipe = "kr-drain-water"
 	electric_offshore_pump.ingredient_count = 1
@@ -631,13 +630,13 @@ if not mods["aai-industry"] then
 		-- Crafting category
 		{
 		   type = "recipe-category",
-		   name = "kr-electric-offshore-pump-crafting_categories"
+		   name = "kr-electric-offshore-pump"
 		},
 		-- Recipe
 		{
 			type = "recipe",
 			name = "kr-drain-water",
-			category = "kr-electric-offshore-pump-crafting_categories",
+			category = "kr-electric-offshore-pump",
 			energy_required = 1,
 			enabled = true,
 			hidden = true,

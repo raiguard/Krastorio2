@@ -47,6 +47,8 @@ if mods["IndustrialRevolution"] then
 	
 	-- Remove unlock
 	krastorio.technologies.removeUnlockRecipe("kr-stone-processing", "glass-2")
+	-- Add unlock
+	krastorio.technologies.addUnlockRecipe("ir2-furnaces-2", "rare-metals")
 	
 	-- Removing technologies
 	
@@ -115,6 +117,7 @@ if mods["IndustrialRevolution"] then
 	--Disable copper motor
 	krastorio.recipes.disable("copper-motor")
 	krastorio.recipes.disable("kr-wind-turbine")
+	krastorio.recipes.disable("rare-metals")
 	
 	krastorio.recipes.convertIngredientFromAllRecipes("copper-motor", "automation-core")		
 	krastorio.recipes.convertIngredient("automation-core", "iron-gear-wheel", "copper-gear-wheel")
@@ -226,7 +229,7 @@ if mods["IndustrialRevolution"] then
 			},
 			icon_size = 64,
 			category = "washing",
-			energy_required = 3,
+			energy_required = 8,
 			enabled = false,
 			always_show_made_in = true,
 			always_show_products = true,
@@ -234,7 +237,7 @@ if mods["IndustrialRevolution"] then
 			ingredients =
 			{
 				{type = "fluid", name = "sulfuric-acid", amount = 10},
-				{type = "item", name = "rare-metals", amount = 5, catalyst_amount = 10}
+				{type = "item", name = "crushed-rare-metals", amount = 5, catalyst_amount = 10}
 			},
 			results =
 			{ 
@@ -264,7 +267,7 @@ if mods["IndustrialRevolution"] then
 			},
 			icon_size = 64,
 			category = "washing",
-			energy_required = 3,
+			energy_required = 8,
 			enabled = false,
 			always_show_made_in = true,
 			always_show_products = true,
@@ -272,7 +275,7 @@ if mods["IndustrialRevolution"] then
 			ingredients =
 			{
 				{type = "fluid", name = "sulfuric-acid", amount = 20},
-				{type = "item", name = "rare-metals", amount = 5, catalyst_amount = 10}
+				{type = "item", name = "crushed-rare-metals", amount = 5, catalyst_amount = 10}
 			},
 			results =
 			{ 
@@ -299,7 +302,7 @@ if mods["IndustrialRevolution"] then
 			},
 			icon_size = 64,
 			category = "washing",
-			energy_required = 3,
+			energy_required = 8,
 			enabled = false,
 			always_show_made_in = true,
 			always_show_products = true,
@@ -307,7 +310,7 @@ if mods["IndustrialRevolution"] then
 			ingredients =
 			{
 				{type = "fluid", name = "sulfuric-acid", amount = 20},
-				{type = "item", name = "rare-metals", amount = 5, catalyst_amount = 10}
+				{type = "item", name = "crushed-rare-metals", amount = 5, catalyst_amount = 10}
 			},
 			results =
 			{ 
@@ -334,7 +337,7 @@ if mods["IndustrialRevolution"] then
 			},
 			icon_size = 64,
 			category = "washing",
-			energy_required = 3,
+			energy_required = 8,
 			enabled = false,
 			always_show_made_in = true,
 			always_show_products = true,
@@ -342,7 +345,7 @@ if mods["IndustrialRevolution"] then
 			ingredients =
 			{
 				{type = "fluid", name = "sulfuric-acid", amount = 20},
-				{type = "item", name = "rare-metals", amount = 5, catalyst_amount = 10}
+				{type = "item", name = "crushed-rare-metals", amount = 5, catalyst_amount = 10}
 			},
 			results =
 			{ 
@@ -369,7 +372,7 @@ if mods["IndustrialRevolution"] then
 			},
 			icon_size = 64,
 			category = "washing",
-			energy_required = 3,
+			energy_required = 8,
 			enabled = false,
 			always_show_made_in = true,
 			always_show_products = true,
@@ -377,7 +380,7 @@ if mods["IndustrialRevolution"] then
 			ingredients =
 			{
 				{type = "fluid", name = "sulfuric-acid", amount = 20},
-				{type = "item", name = "rare-metals", amount = 5, catalyst_amount = 10}
+				{type = "item", name = "crushed-rare-metals", amount = 5, catalyst_amount = 10}
 			},
 			results =
 			{ 
@@ -475,7 +478,7 @@ if mods["IndustrialRevolution"] then
 		{
 			type = "item",
 			name = "charged-lithium-sulfur-battery",
-			icon = "__Krastorio2__/graphics/compatibility/IndustrialRevolution/charged-lithium-sulfur-battery.png",	
+			icon = kr_graphic_mod_path .. "compatibility/IndustrialRevolution/charged-lithium-sulfur-battery.png",	
 			icon_size = 64,
 			icon_mipmaps = 4,
 			pictures =
@@ -484,7 +487,7 @@ if mods["IndustrialRevolution"] then
 				{
 					{
 						size = 64,
-						filename = "__Krastorio2__/graphics/compatibility/IndustrialRevolution/charged-lithium-sulfur-battery.png",
+						filename = kr_graphic_mod_path .. "compatibility/IndustrialRevolution/charged-lithium-sulfur-battery.png",
 						scale = 0.25,
 						mipmap_count = 4
 					},
@@ -567,10 +570,11 @@ if mods["IndustrialRevolution"] then
 				mod = "Krastorio2",
 				icons = 
 				{
-					{ icon = kr_technologies_icons_path .. "backgrounds/matter.png", icon_size = 128 },
-					{ icon = "__IndustrialRevolution__/graphics/icons/64/"..sub_name.."-pure.png", icon_size = 64 }
+					{ icon = kr_technologies_icons_path .. "backgrounds/matter.png", icon_size = 256, icon_mipmaps = 4 },
+					{ icon = "__IndustrialRevolution__/graphics/icons/64/"..sub_name.."-pure.png", icon_size = 64, scale = 2, icon_mipmaps = 4 }
 				},
-				icon_size = 128,
+				icon_size = 256,
+				icon_mipmaps = 4,
 				effects = {},
 				prerequisites = {"kr-matter-processing"},
 				order = "g-e-e",
@@ -626,6 +630,156 @@ if mods["IndustrialRevolution"] then
 			krastorio.recipes.multiplyRecipeStat(name, 5)
 		end
 	end
+	
+	-- Crushed rare metals
+	data:extend
+	({
+		{
+			type = "item",
+			name = "crushed-rare-metals",
+			icon = kr_graphic_mod_path .. "compatibility/IndustrialRevolution/crushed-rare-metals.png",
+			icon_size = 64,
+			icon_mipmaps = 4,
+			pictures =
+			{
+				{ filename = kr_graphic_mod_path .. "compatibility/IndustrialRevolution/crushed-rare-metals.png", size = 64, scale = 0.25, mipmap_count = 4 },
+				{ filename = kr_graphic_mod_path .. "compatibility/IndustrialRevolution/crushed-rare-metals-1.png", size = 64, scale = 0.25, mipmap_count = 4 }
+			},
+			subgroup = "raw-material",
+			order = "x[raw-rare-metals]",
+			stack_size = 200
+		},
+		{
+			type = "recipe",
+			name = "crushed-rare-metals",
+			category = "grinding-2",
+			icon = kr_graphic_mod_path .. "compatibility/IndustrialRevolution/crushed-rare-metals.png",
+			icon_size = 64,
+			icon_mipmaps = 4,
+			always_show_products = true,
+			enabled = false,
+			ingredients = { {"raw-rare-metals", 1} },
+			main_product = "crushed-rare-metals",
+			result = "crushed-rare-metals",
+			result_count = 1.5,
+			energy_required = 1.6,
+			order = "b-i2",
+			subgroup = "crushed"
+		}
+	})
+	krastorio.technologies.addUnlockRecipe("ir2-grinding-2", "crushed-rare-metals")
+	krastorio.modules.addProductivityLimitation("crushed-rare-metals", true)
+	
+	-- Smelting crafting fix
+	local materials =
+	{
+		"tin",
+		"copper",
+		"iron",
+		"bronze",
+		"gold",
+		"steel",
+		"stainless",
+		"chromium",
+		"tellurium",
+		"invar",
+		"cupronickel"
+	}
+	
+	local intermediates =
+	{
+		"-plate",
+		"-plate-heavy",
+		"-plate-special",
+		"-beam",
+		"-cable",
+		"-gear-wheel",
+		"-rod",
+		"-foil",
+		"-rivet",
+		"-piston"
+	}
+	
+	local item_name       = nil
+	local original_recipe = nil
+	local ingredients     = nil
+	local sub_ingredients = nil
+	local done            = nil
+	
+	for _, material in pairs(materials) do
+		for _, intermediate in pairs(intermediates) do
+			item_name = material .. intermediate
+			original_recipe = krastorio.recipes.getRecipeFromName(item_name)
+			if original_recipe then
+				local original_recipe                     = krastorio_utils.tables.fullCopy(original_recipe)
+				original_recipe.name                      = "kr-s-c-" .. item_name
+				original_recipe.main_product              = item_name
+				original_recipe.category                  = "smelting-crafting"	
+				original_recipe.subgroup                  = "smelting-crafting"
+				original_recipe.energy_required           = original_recipe.energy_required * 4
+				original_recipe.allow_productivity        = true
+				original_recipe.hide_from_player_crafting = true
+				original_recipe.always_show_made_in       = true
+				original_recipe.always_show_products      = true
+				data:extend({original_recipe})
+				
+				ingredients = krastorio.recipes.getIngredients("kr-s-c-" .. item_name)
+				if ingredients and next(ingredients) ~= nil then
+					done = false
+					while not done do
+						done = true
+						for _, ingredient in pairs(ingredients) do
+							if ingredient and ingredient.name then
+								if not 
+									( 
+										string.find(ingredient.name, "ore") or
+										string.find(ingredient.name, "pure") or
+										string.find(ingredient.name, "mix") or 
+										string.find(ingredient.name, "coke") or
+										ingredient.type == "fluid"
+									) 
+								then
+									done = false
+									sub_ingredients = krastorio.recipes.getIngredients(ingredient.name)
+									for i, sub_ingredient in pairs(sub_ingredients) do
+										krastorio.recipes.addIngredient("kr-s-c-" .. item_name, sub_ingredient)
+									end
+									krastorio.recipes.removeIngredient("kr-s-c-" .. item_name, ingredient.name)
+								end	
+							end							
+						end
+					end
+				end				
+
+				krastorio.technologies.addUnlockRecipe("kr-automation", "kr-s-c-" .. item_name)
+				krastorio.modules.addProductivityLimitation("kr-s-c-" .. item_name, true)
+			end
+		end
+	end
+	
+	-- special fix
+	data:extend
+	({
+		{
+			type = "recipe",
+			name = "kr-s-c-iron-stick",
+			category = "smelting-crafting",		
+			subgroup = "smelting-crafting",
+			energy_required = 1.6,
+			enabled = false,
+			allow_productivity = true,
+			hide_from_player_crafting = true,
+			always_show_made_in = true,
+			always_show_products = true,
+			ingredients = 
+			{
+				{"iron-ore", 1}
+			},
+			result = "iron-stick",
+			result_count = 2
+		}
+	})
+	
 	
 	-- Equipemnt categories
 	table.insert(data.raw["generator-equipment"]["burner-generator-equipment"].categories, "universal-equipment")
