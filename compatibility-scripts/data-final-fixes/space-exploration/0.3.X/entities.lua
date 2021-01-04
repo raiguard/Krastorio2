@@ -40,7 +40,7 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
 				icon = kr_se_graphic_path .. "kr-se-loader.png",
 				icon_size = 32,
 				order = "d[loader]-a5[se-loader]",
-				subgroup = "belt"
+				subgroup = "belt",
 			},
 			createKrastorioLoader
 			{
@@ -51,7 +51,8 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
 				icon = kr_se_graphic_path .. "kr-se-loader.png",
 				icon_size = 32,
 				tint = kr_color_lib.convert(240, 240, 240, 125),
-				apply_rust = false
+				apply_rust = false,
+				se_allow_in_space = true
 			},
 			kr_loader_recipe
 			{

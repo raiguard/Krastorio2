@@ -1,3 +1,8 @@
+Version: 1.0.22
+Date: ??????????
+  Fixes:
+    - Fixed many K2 entities being unbuidable in space
+---------------------------------------------------------------------------------------------------
 Version: 1.0.21
 Date: 04.01.2021
   Fixes:

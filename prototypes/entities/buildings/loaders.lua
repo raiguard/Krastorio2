@@ -3,7 +3,7 @@ local color = require(kr_path .. "lib/private/data-stages/colorRGB")
 if krastorio.general.getSafeSettingValue("kr-loaders") then
 
 	-- Variable utils
-	local loader_names = 
+	local loader_names =
 	{
 		[1] = "kr-loader",
 		[2] = "kr-fast-loader",
@@ -63,7 +63,7 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 			}
 		end
 
-		return 
+		return
 		{
 			type = "loader-1x1",
 			name = name,
@@ -86,19 +86,21 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 			drawing_box = {{-0.4, -0.4}, {0.4, 0.4}},
 			animation_speed_coefficient = 32,
 			container_distance = 0.75, --Default: 1.5
-			-- belt_distance = 0.0, --Default1x1: 0.0  --Default2x1: 0.5 
+			-- belt_distance = 0.0, --Default1x1: 0.0  --Default2x1: 0.5
 			belt_length = 0.20, -- Default: 0.5
 			structure_render_layer = "object",
-			-- structure_render_layer = "transport-belt-circuit-connector", --Default:"lower-object" 
+			-- structure_render_layer = "transport-belt-circuit-connector", --Default:"lower-object"
 			belt_animation_set = belt_animation_set,
 			fast_replaceable_group = "transport-belt",
 			next_upgrade = upgrade,
 			speed = speed,
+			-- for space exploration compatibility
+			se_allow_in_space = data.se_allow_in_space,
 			structure =
 			{
 				direction_in =
 				{
-					sheets = 
+					sheets =
 					{
 						{
 							filename = kr_entities_path .. "loader/kr-loader.png",
@@ -143,7 +145,7 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 				},
 				direction_out =
 				{
-					sheets = 
+					sheets =
 					{
 						{
 							filename = kr_entities_path .. "loader/kr-loader.png",
@@ -183,11 +185,11 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 					}
 				}
 			},
-			order = order		
+			order = order
 		}
 	end
 
-	local entities = 
+	local entities =
 	{
 		createKrastorioLoader
 		{
@@ -207,7 +209,7 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 		},
 		createKrastorioLoader
 		{
-			name = loader_names[3], 
+			name = loader_names[3],
 			speed =	data.raw["transport-belt"]["express-transport-belt"].speed,
 			upgrade = loader_names[4],
 			belt_animation_set = data.raw["transport-belt"]["express-transport-belt"].belt_animation_set,
@@ -216,19 +218,19 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 		createKrastorioLoader
 		{
 			name = loader_names[4],
-			upgrade = loader_names[5],			
+			upgrade = loader_names[5],
 			speed =	data.raw["transport-belt"]["kr-advanced-transport-belt"].speed,
 			belt_animation_set = data.raw["transport-belt"]["kr-advanced-transport-belt"].belt_animation_set,
 			tint = color.convert(76, 232, 48)
 		},
 		createKrastorioLoader
 		{
-			name = loader_names[5],			
+			name = loader_names[5],
 			speed =	data.raw["transport-belt"]["kr-superior-transport-belt"].speed,
 			belt_animation_set = data.raw["transport-belt"]["kr-superior-transport-belt"].belt_animation_set,
 			tint = color.convert(151, 34, 191)
 		}
 	}
 	data:extend(entities)
-	
+
 end

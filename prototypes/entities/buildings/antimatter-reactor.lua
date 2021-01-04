@@ -2,10 +2,10 @@ local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds      = require("__base__/prototypes/entity/sounds")
 
 data:extend(
-{   
+{
 	{
 		type = "burner-generator",
-		name = "kr-antimatter-reactor",		
+		name = "kr-antimatter-reactor",
 		icon = kr_entities_icons_path .. "antimatter-reactor.png",
 		icon_size = 128,
 		flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
@@ -15,27 +15,27 @@ data:extend(
 		corpse = "kr-antimatter-reactor-remnant",
 		dying_explosion = "matter-explosion-s",
 		effectivity = 5,
-		resistances = 
+		resistances =
 		{
 			{type = "physical", percent = 60},
 			{type = "fire", percent = 90},
 			{type = "impact", percent = 90}
-		},		
+		},
 		collision_box = {{-4.75, -4.75}, {4.75, 4.75}},
 		selection_box = {{-4.95, -4.95}, {4.95, 4.95}},
 		fluid_box =
-		{		
+		{
 			production_type = "input",
 			base_area = 1,
 			base_level = -1,
-			pipe_connections = {{ type="input", position = {5, 0} }}	
+			pipe_connections = {{ type="input", position = {5, 0} }}
 		},
 		energy_source =
 		{
 			type = "electric",
 			render_no_power_icon = false,
 			usage_priority = "secondary-output"
-		},		
+		},
 		burner =
 		{
 			type = "burner",
@@ -44,18 +44,18 @@ data:extend(
 			burnt_inventory_size = 1,
 			effectivity = 1,
 			emissions_per_minute = 200,
-			light_flicker = 
+			light_flicker =
 			{
-				minimum_intensity = 0.01, 
+				minimum_intensity = 0.01,
 				maximum_intensity = 0.50,
 				derivation_change_frequency = 0.02,
 				derivation_change_deviation	= 0.02,
-				minimum_light_size = 1, 
+				minimum_light_size = 1,
 				color = {r=0.459, g=0.031, b=0.447}
 			}
-		},		
+		},
 		vehicle_impact_sound = sounds.generic_impact,
-		animation = 
+		animation =
 		{
 			layers =
 			{
@@ -165,11 +165,11 @@ data:extend(
 				}
 			}
 		},
-		working_sound = 
+		working_sound =
 		{
-			sound = 
+			sound =
 			{
-				{	
+				{
 					filename = kr_buildings_sounds_path .. "antimatter-reactor.ogg",
 					volume = 1.25
 				}
