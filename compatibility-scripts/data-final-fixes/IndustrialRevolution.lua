@@ -1,3 +1,5 @@
+local variations_util = require(kr_public_lib .. "create-roboport-states")
+
 if mods["IndustrialRevolution"] then
 	-----------------------------------------------------------------------------------------------------------------------
 	-- -- TECHNOLOGIES
@@ -435,7 +437,6 @@ if mods["IndustrialRevolution"] then
 	data.raw["mining-drill"]["electric-mining-drill"].next_upgrade = nil
 
 	-- Roboport (changeble mode)
-	local variations_util = require(kr_public_lib .. "create-roboport-states")
 	variations_util.createRoboportVariations("robotower")
 	
 	-- Bronze furnace(selectable recipe)

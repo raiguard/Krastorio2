@@ -1,3 +1,8 @@
+Version: 1.0.21
+Date: 04.01.2021
+  Fixes:
+    - Solved another conditional require, that may can cause desyncs.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.20
 Date: 03.01.2021
   Features:

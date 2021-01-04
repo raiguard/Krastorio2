@@ -1,16 +1,13 @@
+local sounds = require("__base__/prototypes/entity/sounds")
+
 -- -- Rebalance all damage done by player weapons (Turrets, ammo...)
 if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
 
-local explosion_animations = require("__base__/prototypes/entity/explosion-animations")
-local smoke_animations = require("__base__/prototypes/entity/smoke-animations")
-local smoke_animations = require("__base__/prototypes/entity/smoke-animations")
-local sounds = require("__base__/prototypes/entity/sounds")
+	local max_nuke_shockwave_movement_distance_deviation = 2
 
-local max_nuke_shockwave_movement_distance_deviation = 2
+	local max_nuke_shockwave_movement_distance = 19 + max_nuke_shockwave_movement_distance_deviation / 6
 
-local max_nuke_shockwave_movement_distance = 19 + max_nuke_shockwave_movement_distance_deviation / 6
-
-local nuke_shockwave_starting_speed_deviation = 0.075
+	local nuke_shockwave_starting_speed_deviation = 0.075
 
 	-----------------------------------------------------------------------------
 	-- -- -- Turrets
