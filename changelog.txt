@@ -1,7 +1,10 @@
 Version: 1.0.22
-Date: ??????????
+Date: 06.01.2021
+  Changes:
+    - Cross-compatibility IR2 and angels trains.
+    - Cross-comaptibility with IR2 and Tral's Robot Tree Farm (Thanks to MarcusTral).
   Fixes:
-    - Fixed many K2 entities being unbuidable in space
+    - Fixed compatibility with SE, many K2 entities being unbuidable in space.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.21
 Date: 04.01.2021
