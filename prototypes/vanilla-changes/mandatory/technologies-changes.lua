@@ -429,6 +429,13 @@ data:extend(
 		},
 		icon_size = 256,
 		icon_mipmaps = 4,
+		effects =
+		{
+			{
+				type = "worker-robot-speed",
+				modifier = 0.375
+			}
+		},
 		prerequisites = {"worker-robots-speed-7", "kr-singularity-tech-card"},
 		unit =
 		{

@@ -5,6 +5,7 @@ Date: 06.01.2021
     - Cross-comaptibility with IR2 and Tral's Robot Tree Farm (Thanks to MarcusTral).
   Fixes:
     - Fixed compatibility with SE, many K2 entities being unbuidable in space.
+    - Fixed Worker robot speed upgrade from level 9 lost the bonus effect (from the 1.0.17). 
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.21
 Date: 04.01.2021
