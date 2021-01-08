@@ -10,6 +10,7 @@ data:extend(
 		icon_size = 64,
 		flags = {"placeable-neutral"},
 		order="a-b-a",
+		subgroup = "raw-resource",
 		tree_removal_probability = 0,
 		tree_removal_max_distance = 0,
 		minable =

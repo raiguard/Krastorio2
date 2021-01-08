@@ -11,6 +11,7 @@ data:extend(
 		icon_size = 64,
 		flags = {"placeable-neutral"},
 		order="a-b-a",
+		subgroup = "raw-resource",
 		infinite = false,
 		highlight = true,
 		minimum = 50,

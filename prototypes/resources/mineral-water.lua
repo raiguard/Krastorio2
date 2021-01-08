@@ -10,6 +10,7 @@ data:extend(
 		icon_size = 64,
 		flags = {"placeable-neutral"},
 		category = "basic-fluid",
+		subgroup = "raw-resource",
 		order = "a-b-a",
 		infinite = false,
 		map_grid = false,

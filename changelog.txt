@@ -3,6 +3,7 @@ Version: 1.0.23
 Date: XX.XX.2021
   Changes:
     - Now with AAI industry (same for IR2) installed will be given some medium power poles to connect the crash site machines (in one of the chests on the ground).
+    - Moved mineral water and rare metals resource icons in the selectable menu (of icons) in the same tab other vanilla resources. 
   Fixes:
     - Burner inserter was uncraftable with IR2.
     - Fixed missing locale definition in K2 throwable items. 
