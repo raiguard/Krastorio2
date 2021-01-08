@@ -52,6 +52,7 @@ if mods["IndustrialRevolution"] then
 	-- Add unlock
 	krastorio.technologies.addUnlockRecipe("ir2-furnaces-2", "rare-metals")
 	krastorio.technologies.addUnlockRecipe("kr-automation-core", "burner-inserter")
+	krastorio.technologies.addUnlockRecipe("kr-automation-core", "inserter-parts")
 	
 	-- Removing technologies
 	
@@ -122,6 +123,7 @@ if mods["IndustrialRevolution"] then
 	krastorio.recipes.disable("kr-wind-turbine")
 	krastorio.recipes.disable("rare-metals")
 	krastorio.recipes.disable("burner-inserter")
+	krastorio.recipes.disable("inserter-parts")
 	
 	krastorio.recipes.convertIngredientFromAllRecipes("copper-motor", "automation-core")		
 	krastorio.recipes.convertIngredient("automation-core", "iron-gear-wheel", "copper-gear-wheel")

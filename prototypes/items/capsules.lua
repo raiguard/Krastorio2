@@ -1,3 +1,5 @@
+local sounds = require("__base__/prototypes/entity/sounds")
+
 data:extend(
 {
 -----------------------------------------------------------------------------------------------------------------
@@ -31,30 +33,47 @@ data:extend(
 		},
 		capsule_action =
 		{
-		  type = "throw",
-		  attack_parameters =
-		  {
-			type = "projectile",
-			ammo_category = "capsule",
-			cooldown = 60,
-			projectile_creation_distance = 0.6,
-			range = 25,
-			ammo_type =
+			type = "throw",
+			attack_parameters =
 			{
-			  category = "capsule",
-			  target_type = "position",
-			  action =
-			  {
-				type = "direct",
-				action_delivery =
+				type = "projectile",
+				activation_type = "throw",
+				ammo_category = "capsule",
+				cooldown = 60,
+				projectile_creation_distance = 0.6,
+				range = 25,
+				ammo_type =
 				{
-				  type = "projectile",
-				  projectile = "virus-capsule",
-				  starting_speed = 0.3
+					category = "capsule",
+					target_type = "position",
+					action =
+					{
+						{
+							type = "direct",
+							action_delivery =
+							{
+								type = "projectile",
+								projectile = "virus-capsule",
+								starting_speed = 0.3
+							}
+						},
+						{
+							type = "direct",
+							action_delivery =
+							{
+								type = "instant",
+								target_effects =
+								{
+									{
+										type = "play-sound",
+										sound = sounds.throw_projectile
+									}
+								}
+							}
+						}
+					}
 				}
-			  }
 			}
-		  }
 		},
 		subgroup = "capsule",
 		order = "c[poison-capsule]",
@@ -88,30 +107,47 @@ data:extend(
 		},
 		capsule_action =
 		{
-		  type = "throw",
-		  attack_parameters =
-		  {
-			type = "projectile",
-			ammo_category = "capsule",
-			cooldown = 60,
-			projectile_creation_distance = 0.6,
-			range = 25,
-			ammo_type =
+			type = "throw",
+			attack_parameters =
 			{
-			  category = "capsule",
-			  target_type = "position",
-			  action =
-			  {
-				type = "direct",
-				action_delivery =
+				type = "projectile",
+				activation_type = "throw",
+				ammo_category = "capsule",
+				cooldown = 60,
+				projectile_creation_distance = 0.6,
+				range = 25,
+				ammo_type =
 				{
-				  type = "projectile",
-				  projectile = "virus-capsule",
-				  starting_speed = 0.3
+					category = "capsule",
+					target_type = "position",
+					action =
+					{
+						{
+							type = "direct",
+							action_delivery =
+							{
+								type = "projectile",
+								projectile = "virus-capsule",
+								starting_speed = 0.3
+							}
+						},					
+						{
+							type = "direct",
+							action_delivery =
+							{
+								type = "instant",
+								target_effects =
+								{
+									{
+										type = "play-sound",
+										sound = sounds.throw_projectile
+									}
+								}
+							}
+						}
+					}
 				}
-			  }
 			}
-		  }
 		},
 		subgroup = "capsule",
 		order = "c[poison-capsule]",
@@ -132,6 +168,7 @@ data:extend(
 			attack_parameters =
 			{
 				type = "projectile",
+				activation_type = "throw",
 				ammo_category = "capsule",
 				cooldown = 30,
 				range = 0,
@@ -171,6 +208,7 @@ data:extend(
 			attack_parameters =
 		{
 			type = "projectile",
+			activation_type = "throw",
 			ammo_category = "capsule",
 			cooldown = 30,
 			projectile_creation_distance = 0.6,
@@ -181,12 +219,28 @@ data:extend(
 				target_type = "position",
 				action =
 				{
-					type = "direct",
-					action_delivery =
 					{
-						type = "projectile",
-						projectile = "poop-projectile",
-						starting_speed = 0.3
+						type = "direct",
+						action_delivery =
+						{
+							type = "projectile",
+							projectile = "poop-projectile",
+							starting_speed = 0.3
+						}
+					},					
+					{
+						type = "direct",
+						action_delivery =
+						{
+							type = "instant",
+							target_effects =
+							{
+								{
+									type = "play-sound",
+									sound = sounds.throw_projectile
+								}
+							}
+						}
 					}
 				}
 			}

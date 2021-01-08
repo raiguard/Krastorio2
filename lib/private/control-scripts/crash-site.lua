@@ -156,7 +156,7 @@ local function createCrashSite(event)
 						if not insert_one_shelter then
 							created_entity.get_inventory(defines.inventory.chest).insert({name = "kr-shelter", count = 1})
 							-- Compatibility
-							if game.active_mods["IndustrialRevolution"] then
+							if game.active_mods["IndustrialRevolution"] or game.active_mods["aai-industry"] then
 								created_entity.get_inventory(defines.inventory.chest).insert({name = "medium-electric-pole", count = 10})		
 							else
 								created_entity.get_inventory(defines.inventory.chest).insert({name = "wood", count = 100})							
