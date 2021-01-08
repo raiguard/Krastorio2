@@ -234,8 +234,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
 				},
 				time = 60
 			}
-		},
-		
+		}
 	})
 
 end

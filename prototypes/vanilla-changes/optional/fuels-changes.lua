@@ -2,7 +2,6 @@
 -- 
 if krastorio.general.getSafeSettingValue("kr-rebalance-fuels") then
 
-
 	---------------------	
 	-- -- Wood
 		data.raw.item["wood"].fuel_category = "chemical"
