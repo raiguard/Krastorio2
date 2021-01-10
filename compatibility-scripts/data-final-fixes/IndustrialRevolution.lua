@@ -142,6 +142,14 @@ if mods["IndustrialRevolution"] then
 	krastorio.recipes.replaceIngredient("pipe-inserter", "tin-rod", {"inserter-parts", 1})
 	krastorio.recipes.replaceIngredient("long-handed-pipe-inserter", "tin-rod", {"inserter-parts", 1})	
 	
+	-- Loaders
+	krastorio.recipes.replaceIngredient("kr-loader", "iron-beam", {"copper-frame-small", 1})
+	krastorio.recipes.replaceIngredient("kr-fast-loader", "kr-loader", {"iron-frame-small", 1})
+	krastorio.recipes.replaceIngredient("kr-express-loader", "kr-fast-loader", {"steel-frame-small", 1})
+	krastorio.recipes.replaceIngredient("kr-se-loader", "kr-fast-loader", {"steel-frame-small", 1})
+	krastorio.recipes.replaceIngredient("kr-advanced-loader", "kr-express-loader", {"stainless-frame-small", 1})
+	krastorio.recipes.replaceIngredient("kr-superior-loader", "kr-advanced-loader",{"stainless-frame-small", 1})
+	
 	-- Labs
 	krastorio.recipes.convertIngredient("kr-singularity-lab", "steel-plate", "imersium-plate")
 	krastorio.recipes.replaceIngredient("kr-singularity-lab", "biusart-lab", {"quantum-lab", 2})
@@ -441,7 +449,20 @@ if mods["IndustrialRevolution"] then
 	
 	-- Fix different collision boxes
 	data.raw["mining-drill"]["electric-mining-drill"].next_upgrade = nil
-
+	
+	-- Smelting recipes
+	if data.raw["assembling-machine"]["kr-advanced-furnace"] then
+		if data.raw["recipe-category"]["smelting-1"] then
+			table.insert(data.raw["assembling-machine"]["kr-advanced-furnace"].crafting_categories, "smelting-1")
+		end
+		if data.raw["recipe-category"]["smelting-1"] then
+			table.insert(data.raw["assembling-machine"]["kr-advanced-furnace"].crafting_categories, "smelting-2")
+		end
+		if data.raw["recipe-category"]["smelting-1"] then
+			table.insert(data.raw["assembling-machine"]["kr-advanced-furnace"].crafting_categories, "smelting-3")
+		end
+	end
+	
 	-- Roboport (changeble mode)
 	variations_util.createRoboportVariations("robotower")
 	
