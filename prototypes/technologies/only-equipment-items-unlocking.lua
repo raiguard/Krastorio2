@@ -161,7 +161,12 @@ data:extend(
 		icons =
 		{
 			{ icon = kr_technologies_icons_path .. "advanced-additional-engine.png", icon_size = 256, icon_mipmaps = 4 },
-			{ icon = kr_technologies_icons_path .. "overlays/equipment-overlay.png", icon_size = 256, icon_mipmaps = 4 }
+			{
+				icon = "__core__/graphics/icons/technology/constants/constant-equipment.png",
+				icon_size = 128,
+				icon_mipmaps = 3,
+				shift = {100, 100}
+			}
 		},
 		icon_size = 256, 
 		icon_mipmaps = 4,
@@ -198,7 +203,12 @@ data:extend(
 		icons = 
 		{
 			{ icon = kr_technologies_icons_path .. "portable-generator.png", icon_size = 256, icon_mipmaps = 4 },
-			{ icon = kr_technologies_icons_path .. "overlays/equipment-overlay.png", icon_size = 256, icon_mipmaps = 4 }
+			{
+				icon = "__core__/graphics/icons/technology/constants/constant-equipment.png",
+				icon_size = 128,
+				icon_mipmaps = 3,
+				shift = {100, 100}
+			}
 		},
 		icon_size = 256, 
 		icon_mipmaps = 4,
@@ -230,7 +240,12 @@ data:extend(
 		icons = 
 		{
 			{ icon = kr_technologies_icons_path .. "nuclear-reactor-equipment.png", icon_size = 256, icon_mipmaps = 4 },
-			{ icon = kr_technologies_icons_path .. "overlays/equipment-overlay.png", icon_size = 256, icon_mipmaps = 4 }
+			{
+				icon = "__core__/graphics/icons/technology/constants/constant-equipment.png",
+				icon_size = 128,
+				icon_mipmaps = 3,
+				shift = {100, 100}
+			}
 		},
 		icon_size = 256, 
 		icon_mipmaps = 4,
@@ -262,7 +277,12 @@ data:extend(
 		icons = 
 		{
 			{ icon = kr_technologies_icons_path .. "antimatter-reactor-equipment.png", icon_size = 256, icon_mipmaps = 4 },
-			{ icon = kr_technologies_icons_path .. "overlays/equipment-overlay.png", icon_size = 256, icon_mipmaps = 4 }
+			{
+				icon = "__core__/graphics/icons/technology/constants/constant-equipment.png",
+				icon_size = 128,
+				icon_mipmaps = 3,
+				shift = {100, 100}
+			}
 		},
 		icon_size = 256, 
 		icon_mipmaps = 4,

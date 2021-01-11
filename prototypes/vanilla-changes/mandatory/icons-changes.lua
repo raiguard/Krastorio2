@@ -190,8 +190,8 @@ if data.raw.tool["space-science-pack"] then
 end
 krastorio.icons.setTechnologyIcon("space-science-pack",               kr_technologies_icons_path .. "optimization-tech-card.png", 256, 4)
 
--- Other
-
+-----------------------------------------------------------------
+-- Items
 -----------------------------------------------------------------
 -- -- Chaning intermediate products icons
 
@@ -220,10 +220,9 @@ local rocket_fuel_icons =
 }
 krastorio.icons.setRecipeIcons("rocket-fuel", rocket_fuel_icons)
 
---krastorio.icons.addOverlayIcons(krastorio.recipes.getRecipeFromName("rocket-fuel"), krastorio.icons.getIconsForOverlay(krastorio.items.getItem("light-oil")), 64, 0.28, {-4, 8})	
-
 -----------------------------------------------------------------
 -- -- Recipes
+-----------------------------------------------------------------
 krastorio.icons.setRecipeIcon("heavy-oil-cracking", kr_recipes_icons_path .. "heavy-oil-cracking.png", 64, 4)
 krastorio.icons.setRecipeIcon("light-oil-cracking", kr_recipes_icons_path .. "light-oil-cracking.png", 64, 4)
 krastorio.icons.setRecipeIcon("coal-liquefaction", kr_recipes_icons_path .. "coal-liquefaction.png", 64, 4)
@@ -277,7 +276,23 @@ krastorio.icons.setTechnologyIcon("logistics-3",                      kr_technol
 
 krastorio.icons.setTechnologyIcon("oil-processing",                   kr_technologies_icons_path .. "oil-gathering.png", 256, 4)
 
-krastorio.icons.setTechnologyIcon("steel-axe",                        kr_technologies_icons_path .. "steel-pickaxe.png", 256, 4)
+krastorio.icons.setTechnologyIcons
+(
+	"steel-axe",
+	{
+		{
+			icon = kr_technologies_icons_path .. "steel-pickaxe.png", icon_size = 256, icon_mipmaps = 4
+		},
+		{
+			icon = "__core__/graphics/icons/technology/constants/constant-mining.png",
+			icon_size = 128,
+			icon_mipmaps = 3,
+			shift = {100, 100}
+		}
+	}, 
+	256, 
+	4
+)
 
 -- Equipments
 krastorio.icons.setTechnologyIcon("heavy-armor",                      kr_technologies_icons_path .. "heavy-armor.png", 256, 4)
@@ -294,10 +309,12 @@ krastorio.icons.setTechnologyIcon("battery-mk2-equipment",            kr_technol
 -- -- -- BUILDINGS
 krastorio.icons.setItemIcon("pumpjack",                               kr_entities_icons_path .. "oil-pumpjack.png")
 krastorio.icons.setItemIcon("substation",                             kr_entities_icons_path .. "substation.png")
+krastorio.icons.setItemIcon("electric-mining-drill",                  kr_entities_icons_path .. "electric-mining-drill.png")
 -----------------------------------------------------------------
 
 -----------------------------------------------------------------
 -- -- -- OTHER
+-----------------------------------------------------------------
 krastorio.icons.setItemIcon("atomic-bomb",                            kr_ammo_icons_path .. "atomic-bomb.png", 64, 4)
 if data.raw.ammo["atomic-bomb"] then
 	data.raw.ammo["atomic-bomb"].pictures =

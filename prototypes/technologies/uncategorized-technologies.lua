@@ -9,7 +9,18 @@ data:extend(
 		mod = "Krastorio2",
 		icon_size = 256, 
 		icon_mipmaps = 4,
-		icon = kr_technologies_icons_path .. "iron-pickaxe.png",
+		icons =
+		{
+			{
+				icon = kr_technologies_icons_path .. "iron-pickaxe.png", icon_size = 256, icon_mipmaps = 4
+			},
+			{
+				icon = "__core__/graphics/icons/technology/constants/constant-mining.png",
+				icon_size = 128,
+				icon_mipmaps = 3,
+				shift = {100, 100}
+			}
+		},
 		effects =
 		{
 			{
@@ -35,7 +46,18 @@ data:extend(
 		mod = "Krastorio2",
 		icon_size = 256, 
 		icon_mipmaps = 4,
-		icon = kr_technologies_icons_path .. "imersium-pickaxe.png",
+		icons =
+		{
+			{
+				icon = kr_technologies_icons_path .. "imersium-pickaxe.png", icon_size = 256, icon_mipmaps = 4
+			},
+			{
+				icon = "__core__/graphics/icons/technology/constants/constant-mining.png",
+				icon_size = 128,
+				icon_mipmaps = 3,
+				shift = {100, 100}
+			}
+		},
 		effects =
 		{
 			{
