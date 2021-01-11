@@ -137,6 +137,24 @@ if mods["IndustrialRevolution"] then
 	-- Inserters
 	krastorio.recipes.convertIngredient("inserter", "automation-core", "iron-motor")
 	krastorio.recipes.convertIngredient("long-handed-inserter", "automation-core", "iron-motor")
+	krastorio.recipes.replaceIngredient("filter-inserter", "inserter-parts", {"fast-inserter", 1})
+	krastorio.recipes.replaceIngredient("filter-inserter", "steel-plate", {"sensor", 1})
+	krastorio.recipes.removeIngredient("filter-inserter", "electronic-circuit")
+	
+	krastorio.recipes.replaceIngredient("stack-filter-inserter", "inserter-parts", {"stack-inserter", 1})
+	krastorio.recipes.replaceIngredient("stack-filter-inserter", "steel-plate", {"sensor", 1})
+	krastorio.recipes.removeIngredient("stack-filter-inserter", "advanced-circuit")
+	krastorio.recipes.removeIngredient("stack-filter-inserter", "steel-gear-wheel")
+	
+	krastorio.recipes.replaceIngredient("kr-superior-filter-inserter", "inserter-parts", {"kr-superior-inserter", 1})
+	krastorio.recipes.replaceIngredient("kr-superior-filter-inserter", "processing-unit", {"sensor", 1})
+	krastorio.recipes.removeIngredient("kr-superior-filter-inserter", "imersium-plate")
+	krastorio.recipes.removeIngredient("kr-superior-filter-inserter", "imersium-gear-wheel")
+	
+	krastorio.recipes.replaceIngredient("kr-superior-long-filter-inserter", "inserter-parts", {"kr-superior-long-inserter", 1})
+	krastorio.recipes.replaceIngredient("kr-superior-long-filter-inserter", "processing-unit", {"sensor", 1})
+	krastorio.recipes.removeIngredient("kr-superior-long-filter-inserter", "imersium-plate")
+	krastorio.recipes.removeIngredient("kr-superior-long-filter-inserter", "imersium-gear-wheel")
 	
 	-- Deadlock inserters
 	krastorio.recipes.replaceIngredient("pipe-inserter", "tin-rod", {"inserter-parts", 1})
@@ -455,10 +473,10 @@ if mods["IndustrialRevolution"] then
 		if data.raw["recipe-category"]["smelting-1"] then
 			table.insert(data.raw["assembling-machine"]["kr-advanced-furnace"].crafting_categories, "smelting-1")
 		end
-		if data.raw["recipe-category"]["smelting-1"] then
+		if data.raw["recipe-category"]["smelting-2"] then
 			table.insert(data.raw["assembling-machine"]["kr-advanced-furnace"].crafting_categories, "smelting-2")
 		end
-		if data.raw["recipe-category"]["smelting-1"] then
+		if data.raw["recipe-category"]["smelting-3"] then
 			table.insert(data.raw["assembling-machine"]["kr-advanced-furnace"].crafting_categories, "smelting-3")
 		end
 	end
@@ -491,6 +509,9 @@ if mods["IndustrialRevolution"] then
 	
 	-- Locomotive
 	data.raw.locomotive["locomotive"].burner.fuel_categories = {"chemical", "vehicle-fuel", "battery"}
+	data.raw.locomotive["locomotive"].burner.fuel_category = nil
+	data.raw.car["monowheel"].burner.fuel_categories = {"chemical", "vehicle-fuel", "battery"}
+	data.raw.car["monowheel"].burner.fuel_category = nil
 	
 	-----------------------------------------------------------------------------------------------------------------------
 	-- -- OTHERS
