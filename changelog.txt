@@ -1,15 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.24
+Date: ??????????
+  Fixes:
+    - Fixed new smart belt dragging feature not working with K2 belts
+---------------------------------------------------------------------------------------------------
 Version: 1.0.23
 Date: 11.01.2021
   Changes:
     - Now with AAI industry (same for IR2) installed will be given some medium power poles to connect the crash site machines (in one of the chests on the ground).
-    - Moved mineral water and rare metals resource icons in the selectable menu (of icons) in the same tab other vanilla resources. 
+    - Moved mineral water and rare metals resource icons in the selectable menu (of icons) in the same tab other vanilla resources.
   Fixes:
     - Fixed not coherent electric mining drill MK1 icon.
     - Fixed some technology overlay.
     - Maybe solved other desyncs problems.
     - Burner inserter was uncraftable with IR2.
-    - Fixed missing locale definition in K2 throwable items. 
+    - Fixed missing locale definition in K2 throwable items.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.22
 Date: 06.01.2021
@@ -18,7 +23,7 @@ Date: 06.01.2021
     - Cross-comaptibility with IR2 and Tral's Robot Tree Farm (Thanks to MarcusTral).
   Fixes:
     - Fixed compatibility with SE, many K2 entities being unbuidable in space.
-    - Fixed Worker robot speed upgrade from level 9 lost the bonus effect (from the 1.0.17). 
+    - Fixed Worker robot speed upgrade from level 9 lost the bonus effect (from the 1.0.17).
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.21
 Date: 04.01.2021
