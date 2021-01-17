@@ -429,8 +429,48 @@ data:extend(
 		animation = nil,
 		shadow = nil
 	},
-
-
+	
+	{
+		type = "projectile",
+		name = "beacon-wave",
+		flags = {"not-on-map"},
+		acceleration = 0,
+		speed_modifier = { 1.0, 0.707 },
+		action =
+		{
+			{
+				type = "area",
+				radius = 2,
+				ignore_collision_condition = true,
+				action_delivery =
+				{
+					type = "instant",
+					target_effects =
+					{
+						type = "damage",
+						vaporize = false,
+						lower_distance_threshold = 0,
+						upper_distance_threshold = 100,
+						lower_damage_modifier = 1,
+						upper_damage_modifier = 0.25,
+						damage = {amount = 5, type = "radioactive"}
+					},
+					{
+						type = "damage",
+						vaporize = false,
+						lower_distance_threshold = 0,
+						upper_distance_threshold = 100,
+						lower_damage_modifier = 1,
+						upper_damage_modifier = 0.1,
+						damage = {amount = 5, type = "kr-explosion"}
+					}	
+				}
+			}
+		},
+		animation = nil,
+		shadow = nil
+	},	
+	
 	{
 		type = "projectile",
 		name = "antimatter-rocket-projectile",
@@ -781,6 +821,193 @@ data:extend(
 		},
 		light = {intensity = 0.5, size = 10, color = {r=0.9, g=0.1, b=1}},
 	},
+  
+---------------
+  
+	{
+		type = "projectile",
+		name = "beacon-projectile",
+		--flags = {"not-on-map"},
+		reveal_map = true,
+		map_color = {r=1, g=0, b=0.8},
+		acceleration = 0.01,
+		action =
+			{
+				type = "direct",
+				action_delivery =
+				{
+					type = "instant",
+					target_effects =
+					{
+						{
+							type = "create-entity",
+							entity_name = "matter-explosion"
+						},
+						{
+							type = "camera-effect",
+							effect = "screen-burn",
+							duration = 250,
+							ease_in_duration = 25,
+							ease_out_duration = 150,
+							delay = 10,
+							strength = 8,
+							full_strength_max_distance = 20000,
+							max_distance = 50000
+						},
+						{
+							type = "play-sound",
+							sound = sounds.nuclear_explosion(0.9),
+							play_on_target_position = false,
+							-- min_distance = 200,
+							max_distance = 50000,
+							-- volume_modifier = 1,
+							audible_distance_modifier = 5
+						},
+						{
+							type = "play-sound",
+							sound = sounds.nuclear_explosion_aftershock(0.4),
+							play_on_target_position = false,
+							-- min_distance = 200,
+							max_distance = 50000,
+							-- volume_modifier = 1,
+							audible_distance_modifier = 5
+						},
+						{
+							type = "show-explosion-on-chart",
+							scale = 200
+						},
+						{
+							type = "invoke-tile-trigger",
+							repeat_count = 1,
+						},
+						{
+							type = "destroy-decoratives",
+							include_soft_decoratives = true, -- soft decoratives are decoratives with grows_through_rail_path = true
+							include_decals = true,
+							invoke_decorative_trigger = true,
+							decoratives_with_trigger_only = false, -- if true, destroys only decoratives that have trigger_effect set
+							radius = 22 -- large radius for demostrative purposes
+						},
+						{
+							type = "nested-result",
+							action =
+							{
+								type = "area",
+								target_entities = false,
+								trigger_from_target = true,
+								repeat_count = 5000,
+								radius = 200,
+								action_delivery =
+								{
+									type = "projectile",
+									projectile = "atomic-bomb-ground-zero-projectile",
+									starting_speed = 0.9 * 0.9,
+									starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+								}
+							}
+						},
+						{
+							type = "nested-result",
+							action =
+							{
+								type = "area",
+								target_entities = false,
+								trigger_from_target = true,
+								repeat_count = 10000,
+								radius = 100,
+								action_delivery =
+								{
+									type = "projectile",
+									projectile = "beacon-wave",
+									starting_speed = 0.75 * 0.8,
+									starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+								}
+							}
+						},
+						{
+							type = "nested-result",
+							action =
+							{
+								type = "area",
+								show_in_tooltip = false,
+								target_entities = false,
+								trigger_from_target = true,
+								repeat_count = 7500,
+								radius = 100,
+								action_delivery =
+								{
+									type = "projectile",
+									projectile = "antimatter-bomb-wave-spawns-matter-smoke",
+									starting_speed = 0.6 * 0.78,
+									starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+								}
+							}
+						},
+						{
+							type = "nested-result",
+							action =
+							{
+								type = "area",
+								show_in_tooltip = false,
+								target_entities = false,
+								trigger_from_target = true,
+								repeat_count = 3500,
+								radius = 100,
+								action_delivery =
+								{
+									type = "instant",
+									target_effects =
+									{
+										{
+											type = "create-entity",
+											entity_name = "nuclear-smouldering-smoke-source",
+											tile_collision_mask = { "water-tile" }
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+		animation =
+		{
+			filename = "__base__/graphics/entity/rocket/rocket.png",
+			frame_count = 8,
+			line_length = 8,
+			width = 9,
+			height = 35,
+			shift = {0, 0},
+			priority = "high"
+		},
+		shadow =
+		{
+			filename = "__base__/graphics/entity/rocket/rocket-shadow.png",
+			frame_count = 1,
+			width = 7,
+			height = 24,
+			priority = "high",
+			shift = {0, 0}
+		},
+		smoke =
+		{
+			{
+				name = "smoke-fast",
+				deviation = {0.15, 0.15},
+				frequency = 1,
+				position = {0, 1},
+				slow_down_factor = 1,
+				starting_frame = 3,
+				starting_frame_deviation = 5,
+				starting_frame_speed = 0,
+				starting_frame_speed_deviation = 5
+			}
+		},
+		light = {intensity = 0.5, size = 10, color = {r=0.9, g=0.1, b=1}},
+	},
+  
+  
+  
   
 -----------------------------------------------------------------------------------------------------------------
    

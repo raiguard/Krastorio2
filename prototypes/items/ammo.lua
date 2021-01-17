@@ -266,6 +266,62 @@ data:extend(
 		stack_size = 10
 	},
 -----------------------------------------------------------------------------------------------------------------
+	{
+		type = "ammo",
+		name = "beacon-test-rocket",
+		icon = kr_ammo_icons_path .. "antimatter-rocket.png",
+		icon_size = 64,
+		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_ammo_icons_path .. "antimatter-rocket.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_ammo_icons_path .. "antimatter-rocket-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},
+		ammo_type =
+		{
+			range_modifier = 3,
+			cooldown_modifier = 3,
+			target_type = "position",
+			category = "heavy-rocket",
+			action =
+			{
+				type = "direct",
+				action_delivery =
+				{
+					type = "projectile",
+					projectile = "beacon-projectile",
+					starting_speed = 0,
+					direction_deviation = 0.1,
+					range_deviation = 0.1,
+					--max_range = 100,
+					source_effects =
+					{
+						type = "create-explosion",
+						entity_name = "explosion-gunshot"
+					}
+				}
+			}
+		},
+		subgroup = "ammo",
+		order = "d[rocket-launcher]-d[antimatter-rocket]",
+		stack_size = 10
+	},
+-----------------------------------------------------------------------------------------------------------------
     {
 		type = "ammo",
 		name = "basic-railgun-shell",
