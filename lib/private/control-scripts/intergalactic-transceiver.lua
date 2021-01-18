@@ -1,3 +1,5 @@
+local check_it_interval, check_victory_interval = 120, 360 -- 2, 6 seconds
+
 -- Filter for building events
 local KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER =
 {
@@ -81,15 +83,40 @@ local function onRemovingAnEntity(event)
 	end
 end
 
--- Test if a team have with every 2 seconds (120 tick)
+-- Test if a team have with every 4 seconds (120 tick)
 local function checkVictory()	
+	-- Check if someone win
+	if global.win_next_check then
+		if not (global.krastorio_victory_disabled or global.game_won) then -- If disabled from other mods or if already winned
+			global.game_won = true
+			game.set_game_state{game_finished = true, player_won = true, can_continue = true, victorious_force = game.forces[global.win_next_check]}
+		end
+		global.win_next_check = nil
+	end
+end
+
+-- Test if a team have with every 2 seconds (120 tick)
+local function checkITs()		
 	-- Check for each team
     for force_index, it in pairs(global.intergalactic_transceivers) do
 		if it.valid and it.name == "kr-intergalactic-transceiver" then
 			if it.energy == it.prototype.electric_energy_source_prototype.buffer_capacity then -- Win!
-				if not (global.krastorio_victory_disabled or global.game_won) then -- If disabled from other mods or if already winned
-					global.game_won = true
-					game.set_game_state{game_finished = true, player_won = true, can_continue = true, victorious_force = game.forces[force_index]}
+				if global.game_won ~= true then
+					it.surface.create_entity
+					{
+						type      = "projectile",
+						name      = "beacon-projectile",
+						force     = it.force,
+						player    = it.last_user,
+						position  = it.position,
+						speed     = 0,
+						max_range = 100,
+						target    = it,
+						create_build_effect_smoke = false
+					}
+					if not global.win_next_check then
+						global.win_next_check = force_index
+					end
 				end
 				it.surface.create_entity
 				{
@@ -141,5 +168,6 @@ return
 	{ onRemovingAnEntity, "on_player_mined_entity", KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER },
 	{ onRemovingAnEntity, "on_robot_mined_entity", KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER },
 	{ onRemovingAnEntity, "on_entity_died", KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER },
-	{ checkVictory, "on_nth_tick", 120 }    
+	{ checkITs, "on_nth_tick", check_it_interval },
+	{ checkVictory, "on_nth_tick", check_victory_interval }	
 }
