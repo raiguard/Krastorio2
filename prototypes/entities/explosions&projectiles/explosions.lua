@@ -248,74 +248,16 @@ data:extend(
 		flags = {"not-on-map"},
 		animations =
 		{
-			width = 316,
-			height = 360,
-			frame_count = 100,
-			priority = "very-low",
-			flags = {"linear-magnification"},
-			shift = util.by_pixel(1, -123), --shift = util.by_pixel(1, -63), shifted by 60 due to scaling and centering
-			draw_as_glow = true,
-			animation_speed = 0.5 * 0.75,
-			scale = 3,
-			dice_y = 5,
-			stripes =
 			{
-				{
-					filename = kr_explosions_sprites_path .. "matter-explosion-1.png",
-					width_in_frames = 5,
-					height_in_frames = 5,
-				},
-				{
-					filename = kr_explosions_sprites_path .. "matter-explosion-2.png",
-					width_in_frames = 5,
-					height_in_frames = 5,
-				},
-				{
-					filename = kr_explosions_sprites_path .. "matter-explosion-3.png",
-					width_in_frames = 5,
-					height_in_frames = 5,
-				},
-				{
-					filename = kr_explosions_sprites_path .. "matter-explosion-4.png",
-					width_in_frames = 5,
-					height_in_frames = 5,
-				}
-			},
-			hr_version =
-			{
-				width = 628,
-				height = 720,
-				frame_count = 100,
-				priority = "very-low",
-				flags = {"linear-magnification"},
-				shift = util.by_pixel(0.5, -122.5), --shift = util.by_pixel(0.5, -62.5), shifted by 60 due to scaling and centering
-				draw_as_glow = true,
-				animation_speed = 0.5 * 0.75,
-				scale = 1.5,
-				dice_y = 5,
-				stripes =
-				{
-					{
-						filename = kr_explosions_sprites_path .. "hr-matter-explosion-1.png",
-						width_in_frames = 5,
-						height_in_frames = 5,
-					},
-					{
-						filename = kr_explosions_sprites_path .. "hr-matter-explosion-2.png",
-						width_in_frames = 5,
-						height_in_frames = 5,
-					},
-					{
-						filename = kr_explosions_sprites_path .. "hr-matter-explosion-3.png",
-						width_in_frames = 5,
-						height_in_frames = 5,
-					},
-					{
-						filename = kr_explosions_sprites_path .. "hr-matter-explosion-4.png",
-						width_in_frames = 5,
-						height_in_frames = 5,
-					}
-				}
+				filename = kr_explosions_sprites_path .. "beacon-explosion.png",
+				animation_speed = 0.25,
+				scale = 0.75,
+				width = 932,
+				height = 1200,
+				line_length = 4,
+				frame_count = 8,
+				shift = util.by_pixel(0, -180),
+				draw_as_glow = true
 			}
 		},
 		sound =
@@ -328,11 +270,11 @@ data:extend(
 			variations =
 			{
 				{
-					filename = "__base__/sound/fight/large-explosion-1.ogg",
+					filename = kr_weapons_sounds_path .. "joke-rs.ogg",
 					volume = 1.0
 				},
 				{
-					filename = "__base__/sound/fight/large-explosion-2.ogg",
+					filename = kr_weapons_sounds_path .. "joke-rs.ogg",
 					volume = 1.0
 				}
 			}
