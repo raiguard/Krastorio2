@@ -1,4 +1,4 @@
-local check_it_interval, check_victory_interval = 120, 360 -- 2, 6 seconds
+local check_it_interval = 120 -- 2 seconds
 
 -- Filter for building events
 local KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER =
@@ -83,25 +83,58 @@ local function onRemovingAnEntity(event)
 	end
 end
 
--- Test if a team have with every 4 seconds (120 tick)
+local function onCutsceneWaypointReached(event)
+	if event.waypoint_index == 2 then
+		global.k2_win_cutscene_active = nil
+	end
+end
+
+-- Test if a team have with every 2 seconds (120 tick)
 local function checkVictory()	
 	-- Check if someone win
-	if global.win_next_check then
+	if global.win_next_check and not global.k2_win_cutscene_active then
 		if not (global.krastorio_victory_disabled or global.game_won) then -- If disabled from other mods or if already winned
 			global.game_won = true
 			game.set_game_state{game_finished = true, player_won = true, can_continue = true, victorious_force = game.forces[global.win_next_check]}
 		end
 		global.win_next_check = nil
 	end
-end
-
--- Test if a team have with every 2 seconds (120 tick)
-local function checkITs()		
+	
 	-- Check for each team
     for force_index, it in pairs(global.intergalactic_transceivers) do
 		if it.valid and it.name == "kr-intergalactic-transceiver" then
 			if it.energy == it.prototype.electric_energy_source_prototype.buffer_capacity then -- Win!
+				-- Won cutscene
 				if global.game_won ~= true then
+					-- Cutscenes for each player of force
+					for _, player in pairs(game.connected_players) do
+						if player.valid and player.force == it.force then
+							player.set_controller
+							{
+								type = defines.controllers.cutscene,
+								waypoints =
+								{
+									{
+										position = it.position,
+										transition_time = 300,
+										zoom            = 0.8,
+										time_to_wait    = 0
+									},
+									{
+										position = it.position,
+										transition_time = 1,
+										time_to_wait    = 1
+									}
+								},
+								start_position = it.position,
+								start_zoom = 1.4,
+								chart_mode_cutoff = 0.8,
+								final_transition_time = 302
+							}
+						end
+					end
+					global.k2_win_cutscene_active = true
+					-- Victory explosion/wave projectile
 					it.surface.create_entity
 					{
 						type      = "projectile",
@@ -114,10 +147,12 @@ local function checkITs()
 						target    = it,
 						create_build_effect_smoke = false
 					}
+					-- Won flag to trigger after the cutscene in a separate event
 					if not global.win_next_check then
 						global.win_next_check = force_index
 					end
 				end
+				-- Change intergalactic transceiver entity into activated version
 				it.surface.create_entity
 				{
 					type     = "electric-energy-interface",
@@ -127,6 +162,7 @@ local function checkITs()
 					position = it.position,
 					create_build_effect_smoke = false
 				}
+				-- Remove the old entity
 				it.destroy()
 			else -- Energy drain			
 				if not global.intergalactic_transceivers_energy_status[force_index] then -- Initialize
@@ -139,14 +175,21 @@ local function checkITs()
 						else -- Reduce by 20%
 							it.energy = it.energy - (it.energy * 2 / 10)
 							global.intergalactic_transceivers_energy_status[force_index] = it.energy
+							-- Adding alert that the intergalactic transceiver is discharging
 							for _, player in pairs(game.connected_players) do
-								if player.force == it.force then
+								if player.valid and player.force == it.force then
 									player.add_custom_alert(it, {type="virtual", name="kr-battery_low"}, {"other.kr-intergalactic-transceiver-discharging"}, true)
 								end
 							end
 						end
 					else -- Not building in use so update the latest value
 						global.intergalactic_transceivers_energy_status[force_index] = it.energy
+						-- If present, remove alert about that the intergalactic transceiver is discharging
+						for _, player in pairs(game.connected_players) do
+							if player.valid and player.force == it.force then
+								player.remove_alert{icon={type="virtual", name="kr-battery_low"}, message={"other.kr-intergalactic-transceiver-discharging"}}	
+							end
+						end
 					end
 				end
 			end
@@ -168,6 +211,6 @@ return
 	{ onRemovingAnEntity, "on_player_mined_entity", KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER },
 	{ onRemovingAnEntity, "on_robot_mined_entity", KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER },
 	{ onRemovingAnEntity, "on_entity_died", KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER },
-	{ checkITs, "on_nth_tick", check_it_interval },
-	{ checkVictory, "on_nth_tick", check_victory_interval }	
+	{ checkVictory, "on_nth_tick", check_it_interval },
+	{ onCutsceneWaypointReached, "on_cutscene_waypoint_reached" } 
 }
