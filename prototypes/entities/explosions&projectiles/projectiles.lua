@@ -841,7 +841,15 @@ data:extend(
 					{
 						{
 							type = "create-entity",
-							entity_name = "matter-explosion"
+							entity_name = "beacon-matter-explosion"
+						},
+						{
+							type = "create-entity",
+							entity_name = "beacon-matter-explosion"
+						},
+						{
+							type = "create-entity",
+							entity_name = "small-matter-explosion"
 						},
 						{
 							type = "camera-effect",
@@ -856,7 +864,25 @@ data:extend(
 						},
 						{
 							type = "play-sound",
-							sound = sounds.nuclear_explosion(0.9),
+									sound =
+									{
+										aggregation =
+										{
+											max_count = 1,
+											remove = true
+										},
+										variations =
+										{
+											{
+												filename = kr_weapons_sounds_path .. "joke-rs.ogg",
+												volume = 2
+											},
+											{
+												filename = kr_weapons_sounds_path .. "joke-rs.ogg",
+												volume = 2
+											}
+										}
+									},
 							play_on_target_position = false,
 							-- min_distance = 200,
 							max_distance = 50000,
@@ -895,7 +921,25 @@ data:extend(
 								type = "area",
 								target_entities = false,
 								trigger_from_target = true,
-								repeat_count = 5000,
+								repeat_count = 3000,
+								radius = 100,
+								action_delivery =
+								{
+									type = "projectile",
+									projectile = "atomic-bomb-ground-zero-projectile",
+									starting_speed = 0.9 * 0.9,
+									starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+								}
+							}
+						},
+						{
+							type = "nested-result",
+							action =
+							{
+								type = "area",
+								target_entities = false,
+								trigger_from_target = true,
+								repeat_count = 3000,
 								radius = 200,
 								action_delivery =
 								{
@@ -913,8 +957,44 @@ data:extend(
 								type = "area",
 								target_entities = false,
 								trigger_from_target = true,
-								repeat_count = 10000,
+								repeat_count = 3000,
+								radius = 250,
+								action_delivery =
+								{
+									type = "projectile",
+									projectile = "atomic-bomb-ground-zero-projectile",
+									starting_speed = 0.9 * 0.9,
+									starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+								}
+							}
+						},
+						{
+							type = "nested-result",
+							action =
+							{
+								type = "area",
+								target_entities = false,
+								trigger_from_target = true,
+								repeat_count = 7500,
 								radius = 100,
+								action_delivery =
+								{
+									type = "projectile",
+									projectile = "beacon-wave",
+									starting_speed = 0.75 * 1.2,
+									starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+								}
+							}
+						},
+						{
+							type = "nested-result",
+							action =
+							{
+								type = "area",
+								target_entities = false,
+								trigger_from_target = true,
+								repeat_count = 2500,
+								radius = 75,
 								action_delivery =
 								{
 									type = "projectile",
@@ -932,8 +1012,8 @@ data:extend(
 								show_in_tooltip = false,
 								target_entities = false,
 								trigger_from_target = true,
-								repeat_count = 7500,
-								radius = 100,
+								repeat_count = 2000,
+								radius = 250,
 								action_delivery =
 								{
 									type = "projectile",
@@ -951,8 +1031,94 @@ data:extend(
 								show_in_tooltip = false,
 								target_entities = false,
 								trigger_from_target = true,
-								repeat_count = 3500,
+								repeat_count = 7500,
+								radius = 125,
+								action_delivery =
+								{
+									type = "projectile",
+									projectile = "antimatter-bomb-wave-spawns-matter-smoke",
+									starting_speed = 0.6 * 0.78,
+									starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+								}
+							}
+						},
+						{
+							type = "nested-result",
+							action =
+							{
+								type = "area",
+								show_in_tooltip = false,
+								target_entities = false,
+								trigger_from_target = true,
+								repeat_count = 2500,
+								radius = 50,
+								action_delivery =
+								{
+									type = "projectile",
+									projectile = "antimatter-bomb-wave-spawns-matter-smoke",
+									starting_speed = 0.5 * 0.75,
+									starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+								}
+							}
+						},	
+						{
+							type = "nested-result",
+							action =
+							{
+								type = "area",
+								show_in_tooltip = false,
+								target_entities = false,
+								trigger_from_target = true,
+								repeat_count = 350,
+								radius = 50,
+								action_delivery =
+								{
+									type = "instant",
+									target_effects =
+									{
+										{
+											type = "create-entity",
+											entity_name = "nuclear-smouldering-smoke-source",
+											tile_collision_mask = { "water-tile" }
+										}
+									}
+								}
+							}
+						},
+						{
+							type = "nested-result",
+							action =
+							{
+								type = "area",
+								show_in_tooltip = false,
+								target_entities = false,
+								trigger_from_target = true,
+								repeat_count = 2000,
 								radius = 100,
+								action_delivery =
+								{
+									type = "instant",
+									target_effects =
+									{
+										{
+											type = "create-entity",
+											entity_name = "nuclear-smouldering-smoke-source",
+											tile_collision_mask = { "water-tile" }
+										}
+									}
+								}
+							}
+						},
+						{
+							type = "nested-result",
+							action =
+							{
+								type = "area",
+								show_in_tooltip = false,
+								target_entities = false,
+								trigger_from_target = true,
+								repeat_count = 3000,
+								radius = 200,
 								action_delivery =
 								{
 									type = "instant",
@@ -972,36 +1138,21 @@ data:extend(
 			},
 		animation =
 		{
-			filename = "__base__/graphics/entity/rocket/rocket.png",
-			frame_count = 8,
-			line_length = 8,
-			width = 9,
-			height = 35,
+			filename = kr_entities_path .. "empty.png",
+			frame_count = 1,
+			width = 1,
+			height = 1,
 			shift = {0, 0},
-			priority = "high"
+			priority = "low"
 		},
 		shadow =
 		{
-			filename = "__base__/graphics/entity/rocket/rocket-shadow.png",
+			filename = kr_entities_path .. "empty.png",
 			frame_count = 1,
-			width = 7,
-			height = 24,
-			priority = "high",
-			shift = {0, 0}
-		},
-		smoke =
-		{
-			{
-				name = "smoke-fast",
-				deviation = {0.15, 0.15},
-				frequency = 1,
-				position = {0, 1},
-				slow_down_factor = 1,
-				starting_frame = 3,
-				starting_frame_deviation = 5,
-				starting_frame_speed = 0,
-				starting_frame_speed_deviation = 5
-			}
+			width = 1,
+			height = 1,
+			shift = {0, 0},
+			priority = "low"
 		},
 		light = {intensity = 0.5, size = 10, color = {r=0.9, g=0.1, b=1}},
 	},
