@@ -973,6 +973,14 @@ return
 			{"concrete", 750}
 		},
 		result = "kr-intergalactic-transceiver"		
+	},
+	{
+		type = "recipe",
+		name = "kr-planetary-teleporter",
+		energy_required = 20,
+		enabled = false,
+		ingredients = {},
+		result = "kr-planetary-teleporter"
 	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

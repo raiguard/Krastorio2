@@ -818,8 +818,19 @@ data:extend(
 		order = "h4[superior-long-filter-inserter]",
 		place_result = "kr-superior-long-filter-inserter",
 		stack_size = 50
-	}
+	},
 	-- -- --
+	{
+		type = "item",
+		name = "kr-planetary-teleporter",
+		icon = kr_entities_icons_path .. "kr-planetary-teleporter.png",
+		icon_size = 64, 
+		icon_mipmaps = 4,
+		subgroup = "energy-pipe-distribution",
+		order = "z-z-b[kr-planetary-teleporter]",
+		place_result = "kr-planetary-teleporter",
+		stack_size = 50
+	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
