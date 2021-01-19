@@ -31,10 +31,10 @@ function krastorio.gui.getOthersTable(name, caption, tooltip, others)
 	if type(name) == "table" then
 		others = name
 		name = others.name
-	elseif type(caption) == "table" then 
+	elseif type(caption) == "table" then
 		others = caption
 		caption = others.caption
-	elseif type(tooltip) == "table" then 
+	elseif type(tooltip) == "table" then
 		others = tooltip
 		tooltip = others.tooltip
 	elseif not others then
@@ -44,7 +44,7 @@ function krastorio.gui.getOthersTable(name, caption, tooltip, others)
 end
 
 function krastorio.gui.getElementNameFromEvent(event)
-	return event.element.name
+	return event.element.valid and event.element.name
 end
 
 -------------------------------------------------------------
@@ -84,8 +84,8 @@ end
 -- -- General
 
 function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others)
-	if parent and parent.valid then	
-	
+	if parent and parent.valid then
+
 		-- construct the element
 		local element = {}
 		element.type    = others.type or e_type
@@ -95,12 +95,12 @@ function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others
 		element.enabled = others.enabled
 		element.ignored_by_interaction = others.ignored_by_interaction
 		element.style   = others.style
-		
+
 		-- Button
 		if element.type == "button" then
-			element.mouse_button_filter = others.mouse_button_filter 
+			element.mouse_button_filter = others.mouse_button_filter
 		end
-		
+
 		-- Sprite button
 		if element.type == "sprite-button" then
 			element.sprite = others.sprite
@@ -110,87 +110,87 @@ function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others
 			element.show_percent_for_small_numbers = others.show_percent_for_small_numbers
 			element.mouse_button_filter = others.mouse_button_filter
 		end
-		
+
 		-- Flow
 		if element.type == "flow" then
-			element.direction  = others.direction 
+			element.direction  = others.direction
 		end
-		
+
 		-- Frame
 		if element.type == "frame" then
-			element.direction = others.direction 
+			element.direction = others.direction
 		end
-		
+
 		-- Table
 		if element.type == "table" then
-			element.column_count = others.column_count 
+			element.column_count = others.column_count
 			element.draw_vertical_lines = others.draw_vertical_lines
 			element.draw_horizontal_lines = others.draw_horizontal_lines
 			element.draw_horizontal_line_after_headers = others.draw_horizontal_line_after_headers
 			element.vertical_centering = others.vertical_centering
 		end
-		
+
 		-- Textfield
 		if element.type == "textfield" then
-			element.text = others.text 
-			element.numeric = others.numeric 
-			element.allow_decimal = others.allow_decimal 
-			element.allow_negative = others.allow_negative 
-			element.is_password = others.is_password 
-			element.lose_focus_on_confirm = others.lose_focus_on_confirm 
+			element.text = others.text
+			element.numeric = others.numeric
+			element.allow_decimal = others.allow_decimal
+			element.allow_negative = others.allow_negative
+			element.is_password = others.is_password
+			element.lose_focus_on_confirm = others.lose_focus_on_confirm
 			element.clear_and_focus_on_right_click = others.clear_and_focus_on_right_click
 		end
-		
+
 		-- Progressbar
 		if element.type == "progressbar" then
 			element.value = others.value or 0
 		end
-		
+
 		-- Checkbox
 		if element.type == "checkbox" then
 			element.state = others.state or false
 		end
-		
+
 		-- Radiobutton
 		if element.type == "radiobutton" then
 			element.value = others.value
 		end
-		
+
 		-- Sprite
 		if element.type == "sprite" then
 			element.sprite = others.sprite
 		end
-		
+
 		-- Scroll pane
 		if element.type == "scroll-pane" then
 			element.horizontal_scroll_policy = others.horizontal_scroll_policy
 			element.vertical_scroll_policy = others.vertical_scroll_policy
 		end
-		
+
 		-- Drop down
 		if element.type == "drop-down" then
 			element.items = others.items
 			element.selected_index = others.selected_index
 		end
-		
+
 		-- Line
 		if element.type == "line" then
 			element.direction = others.direction
 		end
-		
+
 		-- List box
 		if element.type == "list-box" then
 			element.items = others.items
 			element.selected_index = others.selected_index
 		end
-		
+
 		-- Camera
 		if element.type == "camera" then
 			element.position = others.position
 			element.surface_index = others.surface_index
 			element.zoom = others.zoom
 		end
-		
+
 		-- Choose elem button
 		if element.type == "choose-elem-button" then
 			element.elem_type = others.elem_type
@@ -206,13 +206,13 @@ function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others
 			element.equipment = others.equipment
 			element.technology = others.technology
 		end
-		
+
 		-- Text box
 		if element.type == "text-box" then
 			element.text = others.text
 			element.clear_and_focus_on_right_click = others.clear_and_focus_on_right_click
 		end
-		
+
 		-- Slider
 		if element.type == "slider" then
 			element.minimum_value = others.minimum_value
@@ -222,7 +222,7 @@ function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others
 			element.discrete_slider = others.discrete_slider
 			element.discrete_values = others.discrete_values
 		end
-		
+
 		-- Minimap
 		if element.type == "minimap" then
 			element.position = others.position
@@ -231,12 +231,12 @@ function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others
 			element.force = others.force
 			element.zoom = others.zoom
 		end
-			
+
 		-- Tab
 		if element.type == "tab" then
 			element.badge_text = others.badge_text
 		end
-		
+
 		-- Switch
 		if element.type == "switch" then
 			element.switch_state = others.switch_state
@@ -245,24 +245,24 @@ function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others
 			element.left_label_tooltip = others.left_label_tooltip
 			element.right_label_caption = others.right_label_caption
 			element.right_label_tooltip = others.right_label_tooltip
-		end		
-		
-		-- add the element		
+		end
+
+		-- add the element
 		element = parent.add(element)
 		krastorio.gui.setElementByName(element.player_index, element)
-		
+
 		-- Empty widget special property
 		if element.type == "empty-widget" and others.drag_target ~= nil then
 			element.drag_target = others.drag_target
 		end
-		
+
 		-- Visiblity property
 		if others.visible ~= nil then
 			element.visible = others.visible
 		end
-		
+
 		return element
-		
+
 	end
 	return nil
 end
@@ -340,7 +340,7 @@ end
 
 function krastorio.gui.addTextField(parent, name, text, tooltip, others)
 	others = krastorio.gui.getOthersTable(name, caption, tooltip, others)
-	others.style = others.style or "textbox" 
+	others.style = others.style or "textbox"
 	others.text = text or others.text or others.caption or ""
 	return krastorio.gui.addElement(parent, "textfield", name, text, tooltip, others)
 end
@@ -412,10 +412,10 @@ end
 
 -- -- Clicks
 function krastorio.gui.addClickElementEvent(element_name, callback_name)
-	if type(callback_name) == "string" then 
+	if type(callback_name) == "string" then
 		if type(element_name) == "table" then
 			element_name = element_name.name
-		end 
+		end
 		if not global.krastorio.gui then
 			global.krastorio.gui = {}
 		end
@@ -427,12 +427,12 @@ function krastorio.gui.addClickElementEvent(element_name, callback_name)
 end
 
 function krastorio.gui.getCollectiveClickEventsCallback()
-	return 
+	return
 	function(...)
 		local called_element_name = krastorio.gui.getElementNameFromEvent(...)
 		if global.krastorio.gui.click_events then
 			for element_name, callback in pairs(global.krastorio.gui.click_events) do
-				if called_element_name == element_name then 
+				if called_element_name == element_name then
 					_ENV[callback](...)
 				end
 			end
@@ -445,7 +445,7 @@ function krastorio.gui.addSelectElementEvent(element_name, callback_name)
 	if type(callback_name) == "string" then
 		if type(element_name) == "table" then
 			element_name = element_name.name
-		end 
+		end
 		if not global.krastorio.gui then
 			global.krastorio.gui = {}
 		end
@@ -457,12 +457,12 @@ function krastorio.gui.addSelectElementEvent(element_name, callback_name)
 end
 
 function krastorio.gui.getCollectiveSelectEventsCallback()
-	return 
+	return
 	function(...)
 		local called_element_name = krastorio.gui.getElementNameFromEvent(...)
 		if global.krastorio.gui.select_events then
 			for element_name, callback in pairs(global.krastorio.gui.select_events) do
-				if called_element_name == element_name then 
+				if called_element_name == element_name then
 					_ENV[callback](...)
 				end
 			end
@@ -472,10 +472,10 @@ end
 
 -- -- Confirms (enter pressing in the textfield)
 function krastorio.gui.addConfirmedElementEvent(element_name, callback_name)
-	if type(callback_name) == "string" then 
+	if type(callback_name) == "string" then
 		if type(element_name) == "table" then
 			element_name = element_name.name
-		end 
+		end
 		if not global.krastorio.gui then
 			global.krastorio.gui = {}
 		end
@@ -487,12 +487,12 @@ function krastorio.gui.addConfirmedElementEvent(element_name, callback_name)
 end
 
 function krastorio.gui.getCollectiveConfirmedEventsCallback()
-	return 
+	return
 	function(...)
 		local called_element_name = krastorio.gui.getElementNameFromEvent(...)
 		if global.krastorio.gui.confirmed_events then
 			for element_name, callback in pairs(global.krastorio.gui.confirmed_events) do
-				if called_element_name == element_name then 
+				if called_element_name == element_name then
 					_ENV[callback](...)
 				end
 			end
@@ -502,10 +502,10 @@ end
 
 -- Text
 function krastorio.gui.addTextElementEvent(element_name, callback_name)
-	if type(callback_name) == "string" then 
+	if type(callback_name) == "string" then
 		if type(element_name) == "table" then
 			element_name = element_name.name
-		end 
+		end
 		if not global.krastorio.gui then
 			global.krastorio.gui = {}
 		end
@@ -517,12 +517,12 @@ function krastorio.gui.addTextElementEvent(element_name, callback_name)
 end
 
 function krastorio.gui.getCollectiveTextEventsCallback()
-	return 
+	return
 	function(...)
 		local called_element_name = krastorio.gui.getElementNameFromEvent(...)
 		if global.krastorio.gui.text_events then
 			for element_name, callback in pairs(global.krastorio.gui.text_events) do
-				if called_element_name == element_name then 
+				if called_element_name == element_name then
 					_ENV[callback](...)
 				end
 			end

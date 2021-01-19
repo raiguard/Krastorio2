@@ -5,7 +5,7 @@ local styles = data.raw["gui-style"]["default"]
 orange_button_glow_color = {241, 168, 57, 128}
 cyan_button_glow_color = {194, 234, 252, 128}
 
-styles["kr-title-table"] = 
+styles["kr-title-table"] =
 {
 	type                     = "table_style",
 	maximal_height           = 40,
@@ -14,7 +14,7 @@ styles["kr-title-table"] =
 	vertical_stretchable     = "off",
 	horizontal_spacing       = 6,
 	vertical_spacing         = 1,
-	column_alignments        = 
+	column_alignments        =
 	{
 		{ column = 1, alignment = "right"},
 		{ column = 2, alignment = "center"},
@@ -63,7 +63,7 @@ styles["kr-title-draggable-space"] =
 	horizontally_squashable  = "on"
 }
 
-styles["kr-top-right-button"] = 
+styles["kr-top-right-button"] =
 {
 	type               = "button_style",
 	parent             = "frame_button",
@@ -71,7 +71,7 @@ styles["kr-top-right-button"] =
 	left_click_sound   = {{ filename = "__core__/sound/gui-tool-button.ogg", volume = 1 }}
 }
 
-styles["kr-top-right-confirm-button"] = 
+styles["kr-top-right-confirm-button"] =
 {
 	type               = "button_style",
 	parent             = "frame_button",
@@ -100,7 +100,7 @@ styles["kr-top-right-confirm-button"] =
 	}
 }
 
-styles["kr-top-right-rename-button"] = 
+styles["kr-top-right-rename-button"] =
 {
 	type               = "button_style",
 	parent             = "frame_button",
@@ -129,7 +129,7 @@ styles["kr-top-right-rename-button"] =
 	}
 }
 
-styles["kr-top-right-search-button"] = 
+styles["kr-top-right-search-button"] =
 {
 	type               = "button_style",
 	parent             = "frame_button",
@@ -142,7 +142,7 @@ styles["kr-top-right-search-button"] =
 	},
 	hovered_graphical_set =
 	{
-		base = {position = {353, 0}, corner_size = 8},		
+		base = {position = {353, 0}, corner_size = 8},
 		shadow = default_shadow,
 		glow = default_glow(orange_button_glow_color, 0.5)
 	},
@@ -158,7 +158,7 @@ styles["kr-top-right-search-button"] =
 	}
 }
 
-styles["kr-top-right-close-button"] = 
+styles["kr-top-right-close-button"] =
 {
 	type               = "button_style",
 	parent             = "frame_button",
@@ -193,18 +193,18 @@ styles["kr-top-right-close-button"] =
 styles["kr-wiki-window"] =
 {
 	type           = "frame_style",
-	width          = 760, 
+	width          = 760,
 	height         = 600,
 	top_padding    = 4,
 	bottom_padding = 4,
-	right_padding  = 8,	
+	right_padding  = 8,
 	graphical_set  =
 	{
 		filename = "__core__/graphics/gui-new.png",
 		position = {0, 0},
 		opacity = 0.95,
         background_blur = true,
-		corner_size = 8 	
+		corner_size = 8
 	},
 	use_header_filler = false,
 	drag_by_title     = false,
@@ -223,7 +223,7 @@ styles["kr-wiki-window-flow"] =
 	natural_width = 740,
 	graphical_set =
 	{
-		base = 
+		base =
 		{
 			filename = "__core__/graphics/gui-new.png",
 			position = {12, 0},
@@ -272,12 +272,12 @@ styles["kr-wiki-description-flow"] =
 	vertical_scrollbar_style = { type = "vertical_scrollbar_style" },
 	width   = 525,
 	padding = 4,
-	graphical_set = 
+	graphical_set =
 	{
-		base = 
+		base =
 		{
-			position = {0, 0}, 
-			corner_size = 8, 
+			position = {0, 0},
+			corner_size = 8,
 			draw_type = "outer"
 		},
 		shadow = default_inner_shadow
@@ -393,169 +393,53 @@ styles["kr-wiki-image-flow"] =
 
 -- -- PLANETARY TELEPORTER
 
--- Windows frame
-styles["kr-pt-window"] =
-{
-	type           = "frame_style",
-	width          = 580, 
-	height         = 340,
-	top_padding    = 4,
-	bottom_padding = 4,
-	right_padding  = 8,	
-	vertical_flow_style =
-	{
-		type                   = "vertical_flow_style",
-		vertical_align         = "center",
-		horizontal_align       = "center",
-		horizontal_stretchable = "on",
-		vertically_stretchable = "on"
-	},
-	graphical_set  =
-	{
-		filename        = "__core__/graphics/gui-new.png",
-		position        = {0, 0},
-		opacity         = 0.95,
-        background_blur = true,
-		corner_size     = 8 	
-	},
-	use_header_filler = false,
-	drag_by_title     = false,
-	header_background =
-	{
-		center = {x = 8, y = 8, width = 1, height = 1}
-	}
-}
-
--- Scrollpane where put table of possible teleporters
-styles["kr-pt-tps-scroll-pane"] =
-{
-	type = "scroll_pane_style",
-	horizontal_stretchable   = "on",
-	vertically_stretchable   = "on",
-	vertical_flow_style = 
-	{
-		type                   = "vertical_flow_style",
-		vertical_align         = "center",
-		horizontal_align       = "center",
-		horizontal_stretchable = "on",
-		vertically_stretchable = "on"
-	},
-	vertical_scrollbar_style = { type = "vertical_scrollbar_style" },
-	padding = 4,
-	graphical_set = 
-	{
-		base = 
-		{
-			position = {0, 0}, 
-			corner_size = 8, 
-			draw_type = "outer"
-		},
-		shadow = default_inner_shadow
-	},
-    background_graphical_set = {},
-    extra_padding_when_activated = 4
-}
-
-styles["kr-pt-tps-table"] =
-{
-	type                     = "table_style",
-	parent                   = "table",
-	horizontal_stretchable   = "on",
-	vertically_stretchable   = "on",
-	minimal_width            = 490, 
-	minimal_height           = 334,
-	horizontal_spacing       = 1,
-	vertical_spacing         = 1,
-	background_graphical_set =
-	{
+styles.kr_planetary_teleporter_destinations_frame = {
+	type = "frame_style",
+	parent = "deep_frame_in_shallow_frame",
+	width = 600,
+	minimal_height = 480,
+	background_graphical_set = {
 		position = {282, 17},
 		corner_size = 8,
-		overall_tiling_vertical_size = 165,
-		overall_tiling_vertical_spacing = 0,
-		overall_tiling_vertical_padding = 1,
-		overall_tiling_horizontal_size = 165,
-		overall_tiling_horizontal_spacing = 0,
-		overall_tiling_horizontal_padding = 1
+		overall_tiling_vertical_size = 240 - 12,
+		overall_tiling_vertical_spacing = 12,
+		overall_tiling_vertical_padding = 6,
+		overall_tiling_horizontal_size = 200 - 12,
+		overall_tiling_horizontal_spacing = 12,
+		overall_tiling_horizontal_padding = 6
 	}
 }
 
-styles["kr-pt-tp-button"] =
-{
+
+styles.kr_planetary_teleporter_destinations_scroll_pane = {
+	type = "scroll_pane_style",
+	parent = "filter_scroll_pane",
+	bottom_margin = 12,
+	bottom_padding = 0,
+	extra_bottom_padding_when_activated = 0,
+	graphical_set = {
+		base = {position = {85, 0}, corner_size = 8, draw_type = "outer"},
+		shadow = default_inner_shadow
+	}
+}
+
+styles.kr_planetary_teleporter_destination_minimap = {
+	type = "minimap_style",
+	width = 176,
+	height = 176
+}
+
+styles.kr_planetary_teleporter_destination_name_button = {
+	type = "button_style",
+	parent = "train_status_button",
+	width = 176
+}
+
+-- TODO: make transparent
+styles.kr_planetary_teleporter_destination_minimap_button = {
 	type = "button_style",
 	parent = "button",
-	horizontal_align = "center",
-	vertical_align = "center",
-	natural_width  = 165,
-	natural_height = 165,
-	default_graphical_set =
-	{
-		base = {position = {312, 744}, corner_size = 8, opacity = 0.5},
-		shadow = offset_by_2_default_glow(default_dirt_color, 0.5),
-	},
-	hovered_graphical_set =
-    {
-		base = {position = {34, 17}, corner_size = 2, draw_type = "inner", opacity = 0.5},
-        shadow = default_dirt,
-        glow = default_glow(default_glow_color, 0.5)
-	},
-	clicked_graphical_set =
-	{
-		base   = {position = {51, 17}, corner_size = 2, draw_type = "inner", opacity = 0.5},
-        shadow = default_dirt
-	},
-	selected_graphical_set =
-	{
-		base   = {position = {225, 17}, corner_size = 2, draw_type = "inner", opacity = 0.5},
-		shadow = default_dirt
-	},
-	selected_hovered_graphical_set =
-	{
-		base   = {position = {369, 17}, corner_size = 2, draw_type = "inner", opacity = 0.5},
-		shadow = default_dirt
-	},
-	strikethrough_color = {0.5, 0.5, 0.5},
-	pie_progress_color = {1, 1, 1},
-	left_click_sound =
-	{
-		{ filename = "__core__/sound/gui-click.ogg" }
-	},
-	draw_shadow_under_picture = true,
-	padding = 0
-}
-
--- Teleporters flow
-styles["kr-pt-tp-flow"] =
-{
-	type                   = "vertical_flow_style",
-    vertical_align         = "center",
-	horizontal_align       = "center",
-	horizontal_stretchable = "on",
-	vertically_stretchable = "on",
-	natural_width          = 161,
-	natural_height         = 161
-}
-
--- Teleporters label
-styles["kr-pt-tp-label"] =
-{
-	type              = "label_style",
-	parent            = "label",
-	natural_height    = 40,
-	font              = "default-large-semibold",
-	rich_text_setting = "enabled",
-	single_line       = false
-}
-
--- Teleporters camera
-styles["kr-pt-tp-camera"] =
-{
-	type           = "camera_style",
-	parent         = "camera",	
-	natural_width  = 115,
-	natural_height = 115,
-	default_graphical_set =
-	{
-		base = {position = {312, 744}, corner_size = 8, opacity = 0.5},
-		shadow = offset_by_2_default_glow(default_dirt_color, 0.5),
-	}
+	graphical_set = {},
+	hovered_graphical_set = styles.button.selected_hovered_graphical_set,
+	clicked_graphical_set = styles.button.selected_clicked_graphical_set
 }
