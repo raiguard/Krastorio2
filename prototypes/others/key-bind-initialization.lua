@@ -12,5 +12,11 @@ data:extend(
 		name = "kr-change-roboport-state",
 		key_sequence = "SHIFT + M",
 		consuming = "game-only"
+	},
+	{
+		type = "custom-input",
+		name = "kr-focus-search",
+		key_sequence = "",
+		linked_game_control = "focus-search"
 	}
 })

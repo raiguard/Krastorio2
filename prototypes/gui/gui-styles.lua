@@ -417,6 +417,7 @@ styles.kr_planetary_teleporter_destinations_scroll_pane = {
 	bottom_margin = 12,
 	bottom_padding = 0,
 	extra_bottom_padding_when_activated = 0,
+	height = 480,
 	graphical_set = {
 		base = {position = {85, 0}, corner_size = 8, draw_type = "outer"},
 		shadow = default_inner_shadow
@@ -425,21 +426,30 @@ styles.kr_planetary_teleporter_destinations_scroll_pane = {
 
 styles.kr_planetary_teleporter_destination_minimap = {
 	type = "minimap_style",
-	width = 176,
-	height = 176
+	size = 176
+}
+
+styles.kr_planetary_teleporter_destination_minimap_button = {
+	type = "button_style",
+	parent = "button",
+	size = 176,
+	default_graphical_set = {},
+	hovered_graphical_set = {
+		base = {position = {81, 80}, size = 1, opacity = 0.7},
+	},
+	clicked_graphical_set = {position = {70, 146}, size = 1, opacity = 0.7},
 }
 
 styles.kr_planetary_teleporter_destination_name_button = {
 	type = "button_style",
 	parent = "train_status_button",
-	width = 176
+	width = 176,
+	disabled_font_color = styles.list_box_item.default_font_color,
+	disabled_graphical_set = styles.list_box_item.default_graphical_set
 }
 
--- TODO: make transparent
-styles.kr_planetary_teleporter_destination_minimap_button = {
-	type = "button_style",
-	parent = "button",
-	graphical_set = {},
-	hovered_graphical_set = styles.button.selected_hovered_graphical_set,
-	clicked_graphical_set = styles.button.selected_clicked_graphical_set
+styles.kr_subheader_bold_label = {
+	type = "label_style",
+	parent = "subheader_caption_label",
+	font_color = default_font_color
 }
