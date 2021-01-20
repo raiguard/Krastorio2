@@ -21,6 +21,13 @@ if mods["IndustrialRevolution"] then
 	
 	krastorio.technologies.convertPrerequisite("kr-steel-fluid-tanks", "kr-steel-fluid-handling", "ir2-barrelling", false)
 	
+	krastorio.technologies.removePrerequisite("stone-wall", "military")
+	krastorio.technologies.removePrerequisite("light-armor", "military")
+	krastorio.technologies.addPrerequisite("ir2-steambot", "light-armor")
+	krastorio.technologies.addResearchUnitIngredient("light-armor", "automation-science-pack", 1)
+	krastorio.technologies.removeResearchUnitIngredient("light-armor", "logistic-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("heavy-armor", "logistic-science-pack", 1)
+	
 	-- -- Fix technologies that must be under iron age
 	-- Greenhouse
 	krastorio.technologies.addPrerequisite("kr-greenhouse", "ir2-iron-milestone")
@@ -32,6 +39,26 @@ if mods["IndustrialRevolution"] then
 	krastorio.technologies.addResearchUnitIngredient("kr-crusher", "logistic-science-pack", 1)
 	krastorio.technologies.addResearchUnitIngredient("kr-stone-processing", "automation-science-pack", 1)
 	krastorio.technologies.addResearchUnitIngredient("kr-stone-processing", "logistic-science-pack", 1)	
+	
+	krastorio.technologies.addResearchUnitIngredient("fluid-handling", "logistic-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("kr-fluids-chemistry", "logistic-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("kr-fluids-chemistry", "chemical-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("oil-processing", "logistic-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("plastics", "logistic-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("kr-containers", "chemical-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("kr-radar", "chemical-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("logistic-2", "logistic-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("logistic-2", "chemical-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("kr-silicon-processing", "chemical-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("kr-fluid-excess-handling", "chemical-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("automobilism", "chemical-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("advanced-radar", "chemical-science-pack", 1)
+	
+	krastorio.technologies.removeResearchUnitIngredient("kr-fluids-chemistry", "basic-tech-card")
+	krastorio.technologies.removeResearchUnitIngredient("kr-fluid-excess-handling", "basic-tech-card")
+	krastorio.technologies.removeResearchUnitIngredient("automobilism", "basic-tech-card")
+	krastorio.technologies.removeResearchUnitIngredient("advanced-radar", "basic-tech-card")
+	krastorio.technologies.removeResearchUnitIngredient("kr-silicon-processing", "basic-tech-card")
 	
 	-- lithium-sulfur-battery
 	krastorio.technologies.addPrerequisite("kr-lithium-sulfur-battery", "production-science-pack")
@@ -49,6 +76,8 @@ if mods["IndustrialRevolution"] then
 	
 	-- Remove unlock
 	krastorio.technologies.removeUnlockRecipe("kr-stone-processing", "glass-2")
+	krastorio.technologies.removeUnlockRecipe("logistics", "inserter")
+	krastorio.technologies.removeUnlockRecipe("logistics", "long-handed-inserter")
 	-- Add unlock
 	krastorio.technologies.addUnlockRecipe("ir2-furnaces-2", "rare-metals")
 	krastorio.technologies.addUnlockRecipe("kr-automation-core", "burner-inserter")
@@ -517,6 +546,101 @@ if mods["IndustrialRevolution"] then
 	-- -- OTHERS
 	-----------------------------------------------------------------------------------------------------------------------	
 	
+	-- Fix uranium magazine bug
+	data:extend
+	({
+		{
+			type = "ammo",
+			name = "uranium-rounds-magazine",
+			icon = "__base__/graphics/icons/uranium-rounds-magazine.png",
+			icon_size = 64, icon_mipmaps = 4,
+			pictures =
+			{
+				layers =
+				{
+					{
+						size = 64,
+						filename = "__base__/graphics/icons/uranium-rounds-magazine.png",
+						scale = 0.25,
+						mipmap_count = 4
+					},
+					{
+						draw_as_light = true,
+						flags = {"light"},
+						size = 64,
+						filename = "__base__/graphics/icons/uranium-rounds-magazine-light.png",
+						scale = 0.25,
+						mipmap_count = 4
+					}
+				}
+			},
+			ammo_type =
+			{
+				category = "bullet",
+				action =
+				{
+					type = "direct",
+					action_delivery =
+					{
+						type = "instant",
+						source_effects =
+						{
+							type = "create-explosion",
+							entity_name = "explosion-gunshot"
+						},
+						target_effects =
+						{
+							{
+								type = "create-entity",
+								entity_name = "explosion-hit",
+								offsets = {{0, 1}},
+								offset_deviation = {{-0.5, -0.5}, {0.5, 0.5}}
+							},
+							{
+								type = "damage",
+								damage = { amount = 24, type = "physical"}
+							}
+						}
+					}
+				}
+			},
+			magazine_size = 10,
+			subgroup = "ammo",
+			order = "a[basic-clips]-c[uranium-rounds-magazine]",
+			stack_size = 200
+		}
+	})
+	
+	-- -- Rebalance all damage done by player weapons (Turrets, ammo...)
+	if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
+		data.raw["ammo"]["uranium-rounds-magazine"].ammo_type.action.action_delivery =
+		{
+			type = "instant",
+			source_effects =
+			{
+				type = "create-explosion",
+				entity_name = "explosion-gunshot"
+			},
+			target_effects =
+			{
+				{
+					type = "create-entity",
+					entity_name = "explosion-hit",
+					offsets = {{0, 1}},
+					offset_deviation = {{-0.5, -0.5}, {0.5, 0.5}}
+				},
+				{
+					type = "damage",
+					damage = { amount = 9, type = "physical"}
+				},
+				{
+					type = "damage",
+					damage = { amount = 9, type = "radioactive"}
+				}
+			}
+		}
+	end
+	
 	-- Removing tip and trick not usable
 	data.raw["tips-and-tricks-item"]["kr-air-purifier"] = nil
 	
@@ -838,5 +962,79 @@ if mods["IndustrialRevolution"] then
 	-- Equipemnt adjustment
 	data.raw["generator-equipment"]["small-portable-generator"].power = "270kW"
 	
+	-- Stack sizes
+	local kr_stack_size_value = krastorio.general.getSafeSettingValue("kr-stack-size")
+
+	if kr_stack_size_value and kr_stack_size_value ~= "No changes" then 
+		data.raw.item["bronze-plate"].stack_size = kr_stack_size_value
+
+		data.raw.item["tin-ore"].stack_size = kr_stack_size_value
+		data.raw.item["tin-plate"].stack_size = kr_stack_size_value
+
+		data.raw.item["copper-gear-wheel"].stack_size = kr_stack_size_value
+		data.raw.item["tin-gear-wheel"].stack_size = kr_stack_size_value
+
+		data.raw.item["gold-ore"].stack_size = kr_stack_size_value
+
+		data.raw.item["lead-plate"].stack_size = kr_stack_size_value
+		data.raw.item["invar-plate"].stack_size = kr_stack_size_value
+		data.raw.item["cupronickel-plate"].stack_size = kr_stack_size_value
+		data.raw.item["stainless-plate"].stack_size = kr_stack_size_value
+		data.raw.item["chromium-plate"].stack_size = kr_stack_size_value
+
+		data.raw.item["gravel"].stack_size = kr_stack_size_value
+		data.raw.item["copper-crushed"].stack_size = kr_stack_size_value
+		data.raw.item["tin-crushed"].stack_size = kr_stack_size_value
+		data.raw.item["iron-crushed"].stack_size = kr_stack_size_value
+		data.raw.item["gold-crushed"].stack_size = kr_stack_size_value
+
+		data.raw.item["rubber-wood"].stack_size = kr_stack_size_value
+		data.raw.item["wood-chips"].stack_size = kr_stack_size_value
+
+		data.raw.item["copper-pure"].stack_size = kr_stack_size_value
+		data.raw.item["tin-pure"].stack_size = kr_stack_size_value
+		data.raw.item["iron-pure"].stack_size = kr_stack_size_value
+		data.raw.item["gold-pure"].stack_size = kr_stack_size_value
+		data.raw.item["nickel-pure"].stack_size = kr_stack_size_value
+		data.raw.item["chromium-pure"].stack_size = kr_stack_size_value
+		data.raw.item["lead-pure"].stack_size = kr_stack_size_value
+		data.raw.item["tellurium-pure"].stack_size = kr_stack_size_value
+
+		data.raw.item["silica"].stack_size = kr_stack_size_value
+		data.raw.item["carbon-powder"].stack_size = kr_stack_size_value
+		data.raw.item["iron-powder"].stack_size = kr_stack_size_value
+		data.raw.item["ruby-powder"].stack_size = kr_stack_size_value
+		data.raw.item["sapphire-powder"].stack_size = kr_stack_size_value
+		data.raw.item["diamond-powder"].stack_size = kr_stack_size_value
+
+		data.raw.item["silicon-mix"].stack_size = kr_stack_size_value
+		data.raw.item["bronze-mix"].stack_size = kr_stack_size_value
+		data.raw.item["glass-mix"].stack_size = kr_stack_size_value
+		data.raw.item["gunpowder"].stack_size = kr_stack_size_value
+		data.raw.item["steel-mix"].stack_size = kr_stack_size_value
+		data.raw.item["invar-mix"].stack_size = kr_stack_size_value
+		data.raw.item["cupronickel-mix"].stack_size = kr_stack_size_value
+		data.raw.item["chromium-mix"].stack_size = kr_stack_size_value
+		data.raw.item["stainless-mix"].stack_size = kr_stack_size_value
+
+		data.raw.item["plastiglass"].stack_size = kr_stack_size_value
+
+		data.raw.item["copper-scrap"].stack_size = kr_stack_size_value
+		data.raw.item["tin-scrap"].stack_size = kr_stack_size_value
+		data.raw.item["bronze-scrap"].stack_size = kr_stack_size_value
+		data.raw.item["glass-scrap"].stack_size = kr_stack_size_value
+		data.raw.item["iron-scrap"].stack_size = kr_stack_size_value
+		data.raw.item["gold-scrap"].stack_size = kr_stack_size_value
+		data.raw.item["lead-scrap"].stack_size = kr_stack_size_value
+		data.raw.item["steel-scrap"].stack_size = kr_stack_size_value
+		data.raw.item["invar-scrap"].stack_size = kr_stack_size_value
+		data.raw.item["cupronickel-scrap"].stack_size = kr_stack_size_value
+		data.raw.item["stainless-scrap"].stack_size = kr_stack_size_value
+
+		data.raw.item["wood-beam"].stack_size = kr_stack_size_value
+		data.raw.item["copper-beam"].stack_size = kr_stack_size_value
+		data.raw.item["stainless-beam"].stack_size = kr_stack_size_value
+	end
+
 	-----------------------------------------------------------------------------------------------------------------------	
 end

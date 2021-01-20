@@ -220,6 +220,10 @@ local rocket_fuel_icons =
 }
 krastorio.icons.setRecipeIcons("rocket-fuel", rocket_fuel_icons)
 
+krastorio.icons.setItemIcon("electronic-circuit",                     kr_items_icons_path .. "electronic-circuit.png", 64, 4)
+krastorio.icons.setItemIcon("advanced-circuit",                       kr_items_icons_path .. "advanced-circuit.png", 64, 4)
+krastorio.icons.setItemIcon("processing-unit",                        kr_items_icons_path .. "processing-unit.png", 64, 4)
+
 -----------------------------------------------------------------
 -- -- Recipes
 -----------------------------------------------------------------

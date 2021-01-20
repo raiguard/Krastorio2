@@ -304,7 +304,7 @@ data:extend(
 				action_delivery =
 				{
 					type = "projectile",
-					projectile = "beacon-projectile",
+					projectile = "intergalactic-transceiver-wave",
 					starting_speed = 0,
 					direction_deviation = 0.1,
 					range_deviation = 0.1,

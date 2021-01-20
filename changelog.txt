@@ -1,8 +1,18 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.0.24
-Date: ??????????
+Version: 1.1.0
+Date: XX.0X.2021
+  Info:
+    - 1.1 is out! This is the last update of the mod (from Krastor and Linver), from now we think to leave all to Raiguard, and say thanks to all for the nice experience.
+  Features:
+    - Added win cutscene when the intergalactic transceiver become fully charged (only the first time).
+  Balancing:
+    - 
+  Changes:
+    - Changed a bit the circuit icons wire color (visually improve the material with the tier).
   Fixes:
-    - Fixed new smart belt dragging feature not working with K2 belts
+    - Fixed IR2 compatibility.
+    - Fixed new smart belt dragging feature not working with K2 belts.
+    - Fixed wrong wiki icon size of air purification and matter after the technology icons update.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.23
 Date: 11.01.2021
@@ -246,8 +256,9 @@ Date: 15.08.2020
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 15.08.2020
-  Features:
+  Info:
     - Mod is out of beta! From now there will be no more feature updates or balance changing, only bugfixes.
+  Features:
     - Some new explosions.
     - Completed Italian translation.
     - Added completed Czech translation, thanks to all who contributed!

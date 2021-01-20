@@ -24,8 +24,8 @@ data:extend(
 		type     = "sprite",
 		name     = "air-purifier-preview-1",		
 		filename = kr_technologies_icons_path .. "air-purifier.png",
-		width    = 128,
-		height   = 128,
+		width    = 256,
+		height   = 256,
 		scale    = 1.5
 	},
 	{
@@ -104,8 +104,8 @@ data:extend(
 		type     = "sprite",
 		name     = "kr-matter-preview",
 		filename = kr_technologies_icons_path .. "backgrounds/matter.png",
-		width    = 128,
-		height   = 128
+		width    = 256,
+		height   = 256
 	},
 	{
 		type     = "sprite",

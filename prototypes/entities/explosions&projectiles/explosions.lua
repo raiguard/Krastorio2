@@ -270,12 +270,8 @@ data:extend(
 			variations =
 			{
 				{
-					filename = kr_weapons_sounds_path .. "joke-rs.ogg",
-					volume = 1.0
-				},
-				{
-					filename = kr_weapons_sounds_path .. "joke-rs.ogg",
-					volume = 1.0
+					filename = "__Krastorio2__/sounds/others/intergalactic-transceiver-win-wave.ogg",
+					volume = 0.8
 				}
 			}
 		},
