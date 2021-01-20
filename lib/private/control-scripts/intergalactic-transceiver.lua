@@ -96,6 +96,17 @@ local function checkVictory()
 		if not (global.krastorio_victory_disabled or global.game_won) then -- If disabled from other mods or if already winned
 			global.game_won = true
 			game.set_game_state{game_finished = true, player_won = true, can_continue = true, victorious_force = game.forces[global.win_next_check]}
+			
+			for _, player in pairs(game.connected_players) do
+				if player.valid and player.force.index == global.win_next_check then
+					-- Joke
+					player.play_sound
+					{
+						path            = "kr-win-joke-voice",
+						volume_modifier = 1.0
+					}
+				end
+			end
 		end
 		global.win_next_check = nil
 	end
@@ -133,12 +144,19 @@ local function checkVictory()
 							}
 						end
 					end
-					global.k2_win_cutscene_active = true
+					global.k2_win_cutscene_active = true					
+					-- Explosion sound
+					--game.play_sound
+					--{
+					--	path            = "kr-intergalactic-transceiver-win-wave",
+					--	position        = it.position,
+					--	volume_modifier = 1.0
+					--}
 					-- Victory explosion/wave projectile
 					it.surface.create_entity
 					{
 						type      = "projectile",
-						name      = "beacon-projectile",
+						name      = "intergalactic-transceiver-wave",
 						force     = it.force,
 						player    = it.last_user,
 						position  = it.position,
