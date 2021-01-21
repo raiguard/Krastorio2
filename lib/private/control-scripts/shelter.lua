@@ -137,7 +137,12 @@ local function onBuiltAnEntity(event)
 					text   = {"other.kr-shelter-error"},
 					color  = {1, 0, 0}
 				}
-				entity.destroy()
+				game.players[event.player_index].play_sound
+				{
+					path            = "cannot-build",
+					volume_modifier = 1.0
+				}
+				entity.destroy()				
 			end
 		end
 	end

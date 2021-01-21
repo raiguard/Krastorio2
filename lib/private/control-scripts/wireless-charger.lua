@@ -412,6 +412,11 @@ local function onBuiltAnEntity(event)
 					text   = {"other.kr-another-tesla-coil-in-range"},
 					color  = {1, 0, 0}
 				}
+				game.players[event.player_index].play_sound
+				{
+					path            = "cannot-build",
+					volume_modifier = 1.0
+				}
 				entity.destroy()	
 			end
 		elseif entity.grid and haveOneTriggerEquip(entity.grid) then
