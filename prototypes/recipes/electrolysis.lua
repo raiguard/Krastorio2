@@ -17,9 +17,9 @@ return
 			{ type = "fluid", name = "water", amount = 40, catalyst_amount = 40 }
 		},
 		results =
-		{
-			{ type = "fluid", name = "chlorine", amount = 20 },
-			{ type = "fluid", name = "hydrogen", amount = 30 }
+		{			
+			{ type = "fluid", name = "hydrogen", amount = 30 },
+			{ type = "fluid", name = "chlorine", amount = 20 }
 		},
 		crafting_machine_tint =
 		{

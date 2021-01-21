@@ -59,7 +59,8 @@ data.raw.recipe["rocket-fuel"].always_show_products = true
 
 krastorio.recipes.setEnergyCost("rocket-fuel", 16)
 
-
+-- Slowdown capsule
+krastorio.recipes.removeIngredient("slowdown-capsule", "electronic-circuit")
 
 -- Apply automation core to the early game items
 krastorio.recipes.overrideIngredients
@@ -398,18 +399,18 @@ krastorio.recipes.replaceIngredient("fast-transport-belt", "iron-gear-wheel", {"
 krastorio.recipes.replaceIngredient("fast-underground-belt", "iron-gear-wheel", {"fast-transport-belt", 10})
 
 -- Fast splitter (Red tier 2)
-krastorio.recipes.replaceIngredient("fast-splitter", "iron-gear-wheel", {"iron-gear-wheel", 8})
+krastorio.recipes.replaceIngredient("fast-splitter", "iron-gear-wheel", {"iron-gear-wheel", 4})
 krastorio.recipes.replaceIngredient("fast-splitter", "electronic-circuit", {"electronic-circuit", 2})
 
 -- Express belt (Red tier 3)
-krastorio.recipes.replaceIngredient("express-transport-belt", "iron-gear-wheel", {"steel-gear-wheel", 6})
+krastorio.recipes.replaceIngredient("express-transport-belt", "iron-gear-wheel", {"steel-gear-wheel", 4})
 
 -- Express underground belt (Red tier 3)
 krastorio.recipes.replaceIngredient("express-underground-belt", "iron-gear-wheel", {"express-transport-belt", 20})
 krastorio.recipes.removeIngredient("express-underground-belt", "lubricant")
 
 -- Express splitter (Red tier 3)
-krastorio.recipes.replaceIngredient("express-splitter", "iron-gear-wheel", {"steel-gear-wheel", 8})
+krastorio.recipes.replaceIngredient("express-splitter", "iron-gear-wheel", {"steel-gear-wheel", 4})
 krastorio.recipes.removeIngredient("express-splitter", "lubricant")
 krastorio.recipes.replaceIngredient("express-splitter", "advanced-circuit", {"electronic-components", 4})
 

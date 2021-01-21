@@ -85,7 +85,7 @@ data:extend(
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions_per_minute = -100
+			emissions_per_minute = -75
 		},
 		
 		water_reflection =

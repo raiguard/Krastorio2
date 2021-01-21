@@ -461,6 +461,13 @@ function krastorio.technologies.addUnlockRecipes(technology_name, recipe_names)
 	return krastorio.technologies.addEffects(technology_name, recipes_to_effects)
 end
 
+function krastorio.technologies.moveUnlockRecipe(from_technology_name, to_technology_name, recipe_name, add_anyway)
+	local removed = krastorio.technologies.removeUnlockRecipe(from_technology_name, recipe_name)
+	if removed or add_anyway then
+		krastorio.technologies.addUnlockRecipe(to_technology_name, recipe_name)
+	end
+end
+
 -- -- RESEARCH UNIT INGREDIENTS(research_unit_ingredients)
 
 function krastorio.technologies.removeResearchUnitIngredient(technology_name, science_pack_name)	

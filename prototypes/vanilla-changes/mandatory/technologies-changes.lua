@@ -133,6 +133,9 @@ krastorio.technologies.addUnlockRecipe("space-science-pack", "space-science-pack
 -- Jackhammer
 krastorio.technologies.addUnlockRecipe(krastorio.technologies.getTechnologyThatUnlockRecipe("concrete").name, "kr-jackhammer")
 
+-- Slow capsule
+krastorio.technologies.moveUnlockRecipe("military-3", "military", "slowdown-capsule", true)
+
 -- Removings
 
 -- Moving inserters unlocking in early game

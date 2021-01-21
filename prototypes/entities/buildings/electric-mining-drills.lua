@@ -2471,7 +2471,7 @@ data:extend(
 			usage_priority = "secondary-input"
 		},
 		energy_usage = "125kW",
-		resource_searching_radius = 2.49,
+		resource_searching_radius = 3.49,
 		vector_to_place_result = {0, -1.85},
 		module_specification =
 		{
@@ -4542,7 +4542,7 @@ data:extend(
 			usage_priority = "secondary-input"
 		},
 		energy_usage = "150kW",
-		resource_searching_radius = 2.49,
+		resource_searching_radius = 4.49,
 		vector_to_place_result = {0, -1.85},
 		module_specification =
 		{

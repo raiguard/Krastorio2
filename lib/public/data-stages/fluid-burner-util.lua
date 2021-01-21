@@ -29,6 +29,26 @@ if not krastorio.fluid_burner_util.fluid_products then
 	}
 end
 
+-- Emissions of burn recipes (singleton table)
+if not krastorio.fluid_burner_util.fluid_emissions_multiplier then
+	krastorio.fluid_burner_util.fluid_emissions_multiplier = 
+	{
+		["crude-oil"] = 9.0,
+		["heavy-oil"] = 4.0,
+		["light-oil"] = 3.0,		
+		["petroleum-gas"] = 2.0,
+		["lubricant"] = 4.0,
+		["steam"] = 0.0,
+		["water"] = 0.0,
+		["dirty-water"] = 6.0,
+		["chlorine"] = 2.0,	
+		["hydrogen"] = 0.0,	
+		["hydrogen-chloride"] = 2.0,	
+		["ammonia"] = 0.0,	
+		["nitrogen"] = 2.0
+	}
+end
+
 -- -- -- PUBLIC
 -- Notes:
 --[[
@@ -69,6 +89,24 @@ function krastorio.fluid_burner_util.addBurnFluidProduct(fluid_name, products)
 	if products and #products > 1 then
 		krastorio.fluid_burner_util.fluid_products[fluid_name] = products
 	end
+end
+function krastorio.fluid_burner_util.setBurnFluidProduct(fluid_name, products)
+	krastorio.fluid_burner_util.addBurnFluidProduct(fluid_name, products)
+end
+
+--[[
+	With this funcion, is possible assign a emissions_multiplier generated from
+	burn a specific fluid in Krastorio fluid burner.
+	
+	Can also be used to change exising values.
+]]--
+function krastorio.fluid_burner_util.addBurnFluidEmissionsMultiplier(fluid_name, emissions_multiplier)
+	if fluid_name and emissions_multiplier then
+		krastorio.fluid_burner_util.fluid_emissions_multiplier[fluid_name] = emissions_multiplier
+	end
+end
+function krastorio.fluid_burner_util.setBurnFluidEmissionsMultiplier(fluid_name, emissions_multiplier)
+	krastorio.fluid_burner_util.addBurnFluidEmissionsMultiplier(fluid_name, emissions_multiplier)
 end
 
 --[[
@@ -146,6 +184,11 @@ function krastorio.fluid_burner_util.generateBurnFluidsRecipe(fluid_name)
 					{"fluid-name." .. fluid.name}, 
 					{"item-name." .. krastorio.items.getItemName(krastorio.fluid_burner_util.fluid_products[fluid.name][1])}
 				}
+			end
+			
+			-- if have a special emissions multiplier 
+			if krastorio.fluid_burner_util.fluid_emissions_multiplier[fluid.name] then
+				recipe.emissions_multiplier = krastorio.fluid_burner_util.fluid_emissions_multiplier[fluid.name]
 			end
 	
 			data:extend({recipe})
