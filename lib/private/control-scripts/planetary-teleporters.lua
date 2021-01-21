@@ -43,7 +43,7 @@ local status_images = {
 local function update_fully_charged(refs, state)
 	local fully_charged = state.fully_charged
 	for _, destination_frame in ipairs(refs.destinations_table.children) do
-		destination_frame.ignored_by_interaction = not fully_charged
+		destination_frame.children[1].ignored_by_interaction = not fully_charged
 	end
 	if fully_charged then
 		refs.name_label.style = "subheader_caption_label"
