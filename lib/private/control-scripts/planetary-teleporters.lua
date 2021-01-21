@@ -200,12 +200,17 @@ local function handle_gui_action(msg, e)
 		}
 	elseif msg.action == "toggle_search" then
 		local textfield = refs.search_textfield
+		local search_button = refs.search_button
 		if textfield.visible then
+			search_button.style = "frame_action_button"
+			search_button.sprite = "utility/search_white"
 			textfield.visible = false
 			textfield.text = ""
 			state.search_query = ""
 			update_destinations_table(refs, state)
 		else
+			search_button.style = "kr_selected_frame_action_button"
+			search_button.sprite = "utility/search_black"
 			textfield.visible = true
 			textfield.focus()
 		end
@@ -274,7 +279,7 @@ local function create_gui(player, entity)
 					{type = "empty-widget", style = "kr-title-draggable-space", ignored_by_interaction = true},
 					{
 						type = "textfield",
-						style_mods = {top_margin = -3, right_margin = 8},
+						style_mods = {top_margin = -3, right_margin = 4},
 						visible = false,
 						ref = {"search_textfield"},
 						actions = {
@@ -284,11 +289,11 @@ local function create_gui(player, entity)
 					{
 						type = "sprite-button",
 						style = "frame_action_button",
-						style_mods = {right_margin = 4},
 						sprite = "utility/search_white",
 						hovered_sprite = "utility/search_black",
 						clicked_sprite = "utility/search_black",
 						tooltip = {"gui.kr-planetary-teleporter-search-tooltip"},
+						ref = {"search_button"},
 						actions = {
 							on_click = {gui = "planetary_teleporter", action = "toggle_search"}
 						}
@@ -296,6 +301,7 @@ local function create_gui(player, entity)
 					{
 						type = "sprite-button",
 						style = "frame_action_button",
+						style_mods = {left_margin = 4},
 						sprite = "utility/close_white",
 						hovered_sprite = "utility/close_black",
 						clicked_sprite = "utility/close_black",
