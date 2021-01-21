@@ -81,7 +81,7 @@ local function update_gui_statuses()
 end
 
 local function get_distance(pos1, pos2)
-  return math.sqrt((pos1.x - pos2.x) ^ 2 + (pos1.y - pos2.y) ^ 2)
+	return math.sqrt((pos1.x - pos2.x) ^ 2 + (pos1.y - pos2.y) ^ 2)
 end
 
 local function update_destinations_table(refs, state)
@@ -417,10 +417,12 @@ end
 local function on_entity_built(e)
 	local entity = e.created_entity
 	if entity and entity.valid and entity.name == pt_entity_name then
+		-- if revived from a blueprint and it has a name, get it from the tags
+		local name = e.tags and e.tags.kr_planetary_teleporter_name or nil
 		global.planetary_teleporters[entity.unit_number] = {
 			entity = entity,
 			force = entity.force,
-			name = nil, -- has no value by default
+			name = name,
 			position = entity.position,
 			surface = entity.surface
 		}
@@ -480,6 +482,34 @@ local function on_string_translated(e)
 	end
 end
 
+local function on_player_setup_blueprint(e)
+	local player = game.get_player(e.player_index)
+
+	-- get blueprint
+	local bp = player.blueprint_to_setup
+	if not bp or not bp.valid_for_read then
+		bp = player.cursor_stack
+	end
+
+	-- get blueprint entities and mapping
+	local entities = bp.get_blueprint_entities()
+	if not entities then return end
+	local mapping = e.mapping.get()
+
+	-- find any planetary teleporters in this blueprint
+	for i, bp_entity in ipairs(entities) do
+		if bp_entity.name == pt_entity_name then
+			local entity = mapping[i]
+			if entity and entity.valid then
+				local name = global.planetary_teleporters[entity.unit_number].name
+				if name then
+					bp.set_blueprint_entity_tag(i, "kr_planetary_teleporter_name", name)
+				end
+			end
+		end
+	end
+end
+
 return {
 	-- bootstrap
 	{init_global_data, "on_init"},
@@ -505,5 +535,7 @@ return {
 	-- player
 	{on_player_created, "on_player_created"},
 	{on_player_removed, "on_player_removed"},
-	{on_string_translated, "on_string_translated"}
+	{on_string_translated, "on_string_translated"},
+	-- blueprint
+	{on_player_setup_blueprint, "on_player_setup_blueprint"}
 }
