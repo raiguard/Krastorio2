@@ -35,20 +35,6 @@ data:extend(
 	-- -- Scripts
 	{
 		type     = "sound",
-		name     = "cannot-build",
-		category = "alert",
-		filename = "__core__/sound/cannot-build.ogg",
-		volume   = 1.0,
-		audible_distance_modifier = 1.0,
-		aggregation =
-		{
-			max_count             = 10,
-			remove                = true,
-			count_already_playing = true
-		}
-	},
-	{
-		type     = "sound",
 		name     = "kr-radioactive",
 		category = "alert",
 		filename = "__Krastorio2__/sounds/others/radioactivity.ogg",

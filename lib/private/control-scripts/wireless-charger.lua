@@ -414,7 +414,7 @@ local function onBuiltAnEntity(event)
 				}
 				game.players[event.player_index].play_sound
 				{
-					path            = "cannot-build",
+					path            = "utility/cannot_build",
 					volume_modifier = 1.0
 				}
 				entity.destroy()	
