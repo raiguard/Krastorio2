@@ -830,9 +830,9 @@ return
 		{
 			{"imersium-beam", 20},
 			{"steel-beam", 80},
-			{"rare-metals", 80},
+			{"rare-metals", 40},
 			{"copper-plate", 60},
-			{"electronic-components", 20},
+			{"productivity-module-3", 2},
 			{"energy-control-unit", 10}
 		},
 		result = "kr-advanced-furnace"
@@ -860,9 +860,9 @@ return
 		{
 			{"processing-unit", 20},
 			{"imersium-beam", 20},
-			{"rare-metals", 80},
+			{"rare-metals", 40},
 			{"imersium-gear-wheel", 20},
-			{"electronic-components", 40},
+			{"productivity-module-3", 2},
 			{"kr-steel-pipe", 10}
 		},
 		result = "kr-advanced-chemical-plant"

@@ -789,7 +789,7 @@ data:extend(
 				recipe = krastorio.recipes.changed_names["kr-s-c-imersium-beam"] or "kr-s-c-imersium-beam"
 			}
 		},
-		prerequisites = {"automation-3", "kr-imersium-processing", "kr-energy-control-unit", "kr-advanced-tech-card"},
+		prerequisites = {"automation-3", "productivity-module-3", "kr-imersium-processing", "kr-energy-control-unit", "kr-advanced-tech-card"},
 		unit =
 		{
 			count = 500,

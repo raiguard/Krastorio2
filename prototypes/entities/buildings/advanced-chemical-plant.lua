@@ -141,7 +141,8 @@ data:extend(
 			idle_sound = { filename = "__base__/sound/idle1.ogg" },
 			apparent_volume = 1.1
 		},
-		crafting_speed = 8,
+		crafting_speed = 6,
+		base_productivity = 0.25,
 		energy_source =
 		{
 			type = "electric",

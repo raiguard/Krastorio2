@@ -330,7 +330,8 @@ data:extend(
 			fade_out_ticks = 30
 		},
 		idle_sound = { filename = "__base__/sound/idle1.ogg" },
-		crafting_speed = 5,
+		crafting_speed = 4,
+		base_productivity = 0.20,
 		energy_source =
 		{
 			type = "electric",

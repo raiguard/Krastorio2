@@ -184,7 +184,8 @@ data:extend(
 		vehicle_impact_sound = sounds.generic_impact,
 		working_sound = advanced_furnace_sound,
 		idle_sound = { filename = "__base__/sound/idle1.ogg" },
-		crafting_speed = 12,
+		crafting_speed = 8,
+		base_productivity = 0.25,
 		energy_source =
 		{
 			type = "electric",

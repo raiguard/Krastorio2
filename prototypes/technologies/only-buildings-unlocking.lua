@@ -865,7 +865,7 @@ data:extend(
 				recipe = "kr-advanced-furnace"
 			}
 		},
-		prerequisites = {"kr-imersium-processing", "kr-energy-control-unit", "kr-advanced-tech-card"},
+		prerequisites = {"productivity-module-3", "kr-imersium-processing", "kr-energy-control-unit", "kr-advanced-tech-card"},
 		unit =
 		{
 			count = 500,
@@ -924,7 +924,7 @@ data:extend(
 				recipe = "kr-advanced-chemical-plant"
 			}		
 		},
-		prerequisites = {"kr-imersium-processing", "kr-advanced-tech-card"},
+		prerequisites = {"productivity-module-3", "kr-imersium-processing", "kr-advanced-tech-card"},
 		unit =
 		{
 			count = 500,
