@@ -845,9 +845,11 @@ return
 		ingredients =
 		{
 			{"imersium-beam", 4},
+			{"steel-beam", 8},
 			{"assembling-machine-3", 2},
 			{"electric-furnace", 2},			
-			{"ai-core", 2}
+			{"ai-core", 2},
+			{"productivity-module-3", 2}
 		},
 		result = "kr-advanced-assembling-machine"
     },

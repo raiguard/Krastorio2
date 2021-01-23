@@ -18,7 +18,7 @@ local modifications =
 	"recipes-changes",                  -- All modification to vanilla recipes	
 	"renaming-vanillas",                -- Localization changes to vanilla objects
 	"resources-changes",                -- Resources changes
-	"smelting-overmodule-fix",          -- Multiply smelting recipes stat for fix overmodule bug
+	"overmodule-fix",                   -- Multiply smelting recipes stat for fix overmodule bug
 	"spawner-changes",                  -- Modify spawners sprite	
 	"vanilla-lab-changes",              -- Modify stat and accepted science packs of vanilla lab
 	"fluids-changes",                   -- Add some new properties to vanilla fluids
