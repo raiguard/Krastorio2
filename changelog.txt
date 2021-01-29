@@ -8,7 +8,7 @@ Date: XX.0X.2021
   Balancing:
     - Air purifier base pullution absorbing power was nerfed from -100 to -75.
     - Now fluid burning recipes (when a liquid is dispersed into the atmosphere) have different emission multipliers (also was added an interface for other modders to use this feature if wanted).
-    - Reduced (re-balanced) the belt material cost in various recipes. 
+    - Reduced (re-balanced) the belt material cost in various recipes.
     - Moved slow capsule from military 3 to military 1.
     - Increased mining area (resource searching radius) of electric mining drills MK2 (7x7) and MK3 (9x9).
     - Now advanced assembler, chemical plant and furnace have a passive productivity (20/25/25%) and less crafting speed(4/6/8), to reduce the glitch effect of the base game engine that exceeded 60 recipe completed per second the game will calculate wrongly the produced products. Advanced chemical plant and furnace recipes now require productivity modules.
@@ -18,6 +18,7 @@ Date: XX.0X.2021
     - Added "cannot build" sound to K2 scripts when exist an integration with player building placing.
     - Changed a bit the circuit icons wire color (visually improve the material with the tier).
     - Swapped fluid port of products of water electrolysis (remember that ratios are not 1:1).
+    - Rocket turret can now face corners
   Fixes:
     - Fixed IR2 compatibility.
     - Fixed new smart belt dragging feature not working with K2 belts.

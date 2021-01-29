@@ -27,7 +27,7 @@ return
 				scale = 0.5
 			}
 		},
-		
+
 		{
 			flags = { "mask" },
 			filename = kr_entities_path .. "turrets/rocket-turret-sheet-mask.png",
@@ -54,7 +54,7 @@ return
 				scale = 0.5
 			}
 		},
-		
+
 		{
 			filename = kr_entities_path .. "turrets/rocket-turret-sheet-shadow.png",
 			width = 220,
@@ -79,26 +79,26 @@ return
 				scale = 0.5
 			}
 		}
-		
-	
+
+
 	}
 }
 end
 
 
 data:extend(
-{  
+{
 	{
 		type = "ammo-turret",
 		name = "kr-rocket-turret",
 		icon = kr_entities_icons_path .. "rocket-turret.png",
 		icon_size = 64,
-		flags = {"placeable-player", "player-creation"},
+		flags = {"placeable-player", "player-creation", "building-direction-8-way"},
 		minable = {mining_time = 1, result = "kr-rocket-turret"},
 		max_health = 1000,
 		corpse = "turret-remnant",
 		damaged_trigger_effect = hit_effects.entity(),
-		resistances = 
+		resistances =
 		{
 			{type = "physical", percent = 50},
 			{type = "fire", percent = 75},
@@ -143,7 +143,7 @@ data:extend(
 						shift = {0, -0.8},
 						scale = 0.5
 					}
-				},	
+				},
 				{
 					filename = kr_entities_path .. "turrets/kr-turret-base-mask.png",
 					flags = { "mask", "low-object" },
@@ -217,7 +217,7 @@ data:extend(
 				}
 			}
 		},
-		
+
 		water_reflection =
 		{
 			pictures =
@@ -233,7 +233,7 @@ data:extend(
 			rotate = false,
 			orientation_to_variation = false
 		},
-		
+
 		shoot_in_prepare_state = false,
 		turret_base_has_direction = true,
 		open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
