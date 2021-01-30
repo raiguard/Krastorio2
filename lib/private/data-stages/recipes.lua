@@ -1638,10 +1638,6 @@ function krastorio.recipes.multiplyRecipeStat(recipe_name, multiplier, only_ingr
 	local recipe = krastorio.recipes.getRecipeFromName(recipe_name)
 
 	if recipe then
-		if recipe_name == "se-holmium-powder" then
-			log(serpent.block(recipe))
-		end
-
 		-- ingredients
 		local ingredients = krastorio.recipes.getIngredients(recipe_name)
 		if next(ingredients) ~= nil then
