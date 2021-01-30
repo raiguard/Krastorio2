@@ -1,5 +1,3 @@
-require("__Krastorio2__/lib/private/control-scripts/control-lib/control-lib-initialization")
-
 local gui = require("__Krastorio2__/lib/private/control-scripts/control-lib/flib/gui-beta")
 
 local pt_built_entity_filters = {{filter = "name", name = "kr-planetary-teleporter"}}
