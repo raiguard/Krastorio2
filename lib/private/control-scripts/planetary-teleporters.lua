@@ -188,6 +188,17 @@ local function handle_gui_action(msg, e)
 	local state = gui_data.state
 
 	if msg.action == "close" then
+		-- if escape was pressed and search is open, close search instead of closing the window
+		if e.element.type ~= "sprite-button" and refs.search_textfield.visible then
+			refs.search_button.style = "frame_action_button"
+			refs.search_button.sprite = "utility/search_white"
+			refs.search_textfield.visible = false
+			refs.search_textfield.text = ""
+			state.search_query = ""
+			update_destinations_table(refs, state)
+			player.opened = refs.window
+			return
+		end
 		if player.opened == refs.window then
 			player.opened = nil
 		end
