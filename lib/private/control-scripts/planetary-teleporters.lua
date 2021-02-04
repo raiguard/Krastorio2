@@ -285,7 +285,12 @@ local function create_gui(player, entity)
 						caption = {"entity-name.kr-planetary-teleporter"},
 						ignored_by_interaction = true
 					},
-					{type = "empty-widget", style = "kr-title-draggable-space", ignored_by_interaction = true},
+					{
+						type = "empty-widget",
+						style = "draggable_space",
+						style_mods = {height = 24, horizontally_stretchable = true, left_margin = 6, right_margin = 6},
+						ignored_by_interaction = true
+					},
 					{
 						type = "textfield",
 						style_mods = {top_margin = -3, right_margin = 4},
