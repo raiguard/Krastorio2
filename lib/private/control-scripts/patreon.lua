@@ -4,6 +4,7 @@ local krastorio_high_patreons =
 	-- Mod Developers
 	["krastor"] = true,
 	["linver"] = true,
+	["Raiguard"] = true,
 	-- Factorio Developers
 	["bilka"] = true,
 	["kovarex"] = true,
@@ -19,7 +20,7 @@ local krastorio_high_patreons =
 	["zopa"] = true,
 	-- Patreons
 	["astazora"] = true,
-	["biusart"] = true,	
+	["biusart"] = true,
 	["mkaito"] = true,
 	["dmitrii"] = true,
 	["egdod"] = true,
@@ -80,14 +81,14 @@ function givePatreonItems(event)
 	local player = game.players[event.player_index]
 	if player and player.character ~= nil and isHighLevelPatreon(player.name) then
 		local inventory = player.get_main_inventory()
-		local patreon_items = 
+		local patreon_items =
 		{
 			{ name="kr-shelter-plus", count=1 },
 			{ name="kr-accelerator", count=1 },
 			{ name="firearm-magazine", count=190 },
 			{ name="potato", count=6 }
 		}
-		if inventory and inventory.valid then	
+		if inventory and inventory.valid then
 			for _, item in pairs(patreon_items) do
 				if inventory.can_insert(item) then
 					inventory.insert(item)
@@ -145,4 +146,4 @@ return
 	{ givePatreonItems, "on_cutscene_cancelled" },
 	{ givePatreonItems, "on_player_created" }
 }
-	
+
