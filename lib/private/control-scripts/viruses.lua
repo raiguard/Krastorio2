@@ -29,22 +29,18 @@ end
 -- -- Functions
 
 function onInitAndConfigChanged()
-	-- create global tables if they don't exist
-	if global.viruses == nil then
-		global.viruses = {}
-	end
-	if global.viruses.biter_virus_active == nil then
-		global.viruses.biter_virus_active = {}
-	end
-	if global.viruses.creep_virus_active == nil then
-		global.viruses.creep_virus_active = {}
-	end
+	-- reset viruses table when mod configuration changes
+	-- this is a brute-force way of doing it, but my hand is forced by the weird ControlCallBackManager system
+	global.viruses = {
+		biter_viruses = {},
+		creep_viruses = {}
+	}
 end
 
 -- Function to remove definitively creep
 function playerThrowAntiCreep(event)
 	if event.item.name == "kr-creep-virus" then
-		local creep_viruses = global.viruses.creep_virus_active
+		local creep_viruses = global.viruses.creep_viruses
 
 		-- remove all generated creep on this surface
 		local player = game.players[event.player_index]
@@ -75,7 +71,7 @@ function playerThrowAntiCreep(event)
 end
 
 function removeCreep()
-	local creep_viruses = global.viruses.creep_virus_active
+	local creep_viruses = global.viruses.creep_viruses
 	for surface_index, data in pairs(creep_viruses) do
 		local surface = data.surface
 		if surface and surface.valid then
@@ -111,7 +107,7 @@ function playerThrowAntiBiter(event)
 		local surface = player.surface
 		local surface_index = surface.index
 
-		local biter_viruses = global.viruses.biter_virus_active
+		local biter_viruses = global.viruses.biter_viruses
 		if not biter_viruses[surface_index] then
 			-- reduce evolution factor
 			local enemy = game.forces.enemy
@@ -134,7 +130,7 @@ function playerThrowAntiBiter(event)
 end
 
 function killEnemyEntities()
-	local biter_viruses = global.viruses.biter_virus_active
+	local biter_viruses = global.viruses.biter_viruses
 	for surface_index, data in pairs(biter_viruses) do
 		local entities = data.entities
 		local entities_killed = data.entities_killed
