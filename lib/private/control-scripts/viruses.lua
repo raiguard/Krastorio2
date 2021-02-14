@@ -6,7 +6,7 @@ function round(num)
 end
 
 -- Modifier to change the quantity of objects iterated for each round of the function, based on the total
-function getCreepCountToRemove(count)
+function get_count_to_remove(count)
 	if count <= 1000 then
 		return 20
 	elseif count <= 5000 then
@@ -33,6 +33,9 @@ function onInitAndConfigChanged()
 	if global.viruses == nil then
 		global.viruses = {}
 	end
+	if global.viruses.biter_virus_active == nil then
+		global.viruses.biter_virus_active = {}
+	end
 	if global.viruses.creep_virus_active == nil then
 		global.viruses.creep_virus_active = {}
 	end
@@ -41,14 +44,6 @@ end
 -- Function to remove definitively creep
 function playerThrowAntiCreep(event)
 	if event.item.name == "kr-creep-virus" then
-		-- disable creep generation
-		global.creep_on_chunk_generated = false
-		global.creep_on_biter_base_built = false
-		global.creep_on_remote_interface = false
-		ccm:unlistenCallBack("on_chunk_generated", 1)
-		ccm:unlistenCallBack("on_biter_base_built", 1)
-		ccm:unlistenCallBack("on_nth_tick", 1, 10)
-
 		local creep_viruses = global.viruses.creep_virus_active
 
 		-- remove all generated creep on this surface
@@ -56,6 +51,15 @@ function playerThrowAntiCreep(event)
 		local surface = player.surface
 		local surface_index = surface.index
 		if not creep_viruses[surface_index] then
+			-- disable creep generation
+			global.creep_on_chunk_generated = false
+			global.creep_on_biter_base_built = false
+			global.creep_on_remote_interface = false
+			ccm:unlistenCallBack("on_chunk_generated", 1)
+			ccm:unlistenCallBack("on_biter_base_built", 1)
+			ccm:unlistenCallBack("on_nth_tick", 1, 10)
+
+			-- begin creep removal
 			local creep_tiles = surface.find_tiles_filtered{name = "kr-creep"}
 			creep_viruses[surface_index] = {
 				surface = surface,
@@ -70,7 +74,7 @@ function playerThrowAntiCreep(event)
 	end
 end
 
-function removeCreep()
+function remove_creep()
 	local creep_viruses = global.viruses.creep_virus_active
 	for surface_index, data in pairs(creep_viruses) do
 		local surface = data.surface
@@ -78,7 +82,7 @@ function removeCreep()
 			local creeps = data.tiles
 			local len = data.tiles_len
 			local tiles_to_replace = {}
-			for i = 1, getCreepCountToRemove(len) do
+			for i = 1, get_count_to_remove(len) do
 				if len == 0 then
 					creep_viruses[surface_index] = nil
 					break
@@ -104,66 +108,64 @@ end
 function playerThrowAntiBiter(event)
 	if event.item and event.item.name == "kr-biter-virus" then
 		local player = game.players[event.player_index]
-		if player and player.valid and player.character and player.character.valid then
-			local actual_player_surface = player.character.surface
-			if global.viruses == nil then
-				global.viruses = {}
-			end
-			if global.viruses.biter_virus_active == nil then
-				global.viruses.biter_virus_active = {}
-			end
-			if global.viruses.biter_virus_active[actual_player_surface.index] ~= true then
-				global.viruses.biter_virus_active[actual_player_surface.index] = true
+		local surface = player.surface
+		local surface_index = surface.index
 
-				local enemy_entities = actual_player_surface.find_entities_filtered
-				{
-					force = "enemy"
+		local biter_viruses = global.viruses.biter_virus_active
+		if not biter_viruses[surface_index] then
+			-- reduce evolution factor
+			local enemy = game.forces.enemy
+			enemy.evolution_factor = enemy.evolution_factor * 0.67
+
+			-- begin gradual enemy killoff
+			local enemy_entities = surface.find_entities_filtered{force = "enemy"}
+			local len = #enemy_entities
+			if len > 0 then
+				biter_viruses[surface_index] = {
+					entities = enemy_entities,
+					entities_killed = 0,
+					entities_len = len,
+					entities_to_kill = len / 2.5,
+					force = player.force
 				}
-				if not enemy_entities or not next(enemy_entities) then
-					ccm:unlistenCallBack("on_nth_tick", 1000+actual_player_surface.index, 10)
-					global.viruses.biter_virus_active[actual_player_surface.index] = false
-					return false
-				end
-
-				local enemy_count = #enemy_entities
-				local enemy_for_cicle = round(enemy_count/getCreepCountToRemove(enemy_count))
-				local entity_to_kill = enemy_count/3
-				local function slowlyKillSomeBiters()
-					local entity_to_kill_this_cicle = math.min(entity_to_kill, round(enemy_for_cicle))
-					entity_to_kill = entity_to_kill - entity_to_kill_this_cicle
-					local entity = nil
-					local choosen_index = 0
-					while entity_to_kill_this_cicle > 0 do
-						choosen_index = math.random(1, enemy_count)
-						entity = enemy_entities[choosen_index] or false
-						if entity and entity.valid then
-							entity.die(player.force)
-						end
-						entity_to_kill_this_cicle     = entity_to_kill_this_cicle - 1
-						enemy_entities[choosen_index] = enemy_entities[enemy_count]
-						enemy_entities[enemy_count]   = nil
-						enemy_count                   = enemy_count - 1
-					end
-					if entity_to_kill <= 0 then
-						ccm:unlistenCallBack("on_nth_tick", 1000+actual_player_surface.index, 10)
-						global.viruses.biter_virus_active[actual_player_surface.index] = false
-					end
-				end
-
-				game.forces["enemy"].kill_all_units()
-
-				-- Reduce by 33% enemy evolution factor
-				game.forces["enemy"].evolution_factor = game.forces["enemy"].evolution_factor * 0.67
-
-				ccm:listenCallBack(
-				{
-					callback = slowlyKillSomeBiters,
-					event_name = "on_nth_tick",
-					filter = 10,
-					index = 1000+actual_player_surface.index
-				})
 			end
 		end
+	end
+end
+
+function kill_enemy_entities()
+	local biter_viruses = global.viruses.biter_virus_active
+	for surface_index, data in pairs(biter_viruses) do
+		local entities = data.entities
+		local entities_killed = data.entities_killed
+		local entities_to_kill = data.entities_to_kill
+		local force = data.force
+		local len = data.entities_len
+
+		-- kill some entities
+		for _ = 1, len / get_count_to_remove(len) do
+			if entities_killed >= entities_to_kill then
+				biter_viruses[surface_index] = nil
+				break
+			end
+
+			local i = math.random(1, len)
+			local entity = entities[i]
+			if entity and entity.valid then
+				entity.die(force)
+
+				-- move the element at the end to the gap
+				-- this has a O(1) performance impact, while `table.remove()` has an O(n) impact
+				entities[i] = entities[len]
+				entities[len] = nil
+
+				entities_killed = entities_killed + 1
+				len = len - 1
+			end
+		end
+
+		data.entities_killed = entities_killed
+		data.tiles_len = len
 	end
 end
 
@@ -173,5 +175,6 @@ return
 	{ onInitAndConfigChanged, "on_configuration_changed"},
 	{ playerThrowAntiCreep, "on_player_used_capsule" },
 	{ playerThrowAntiBiter, "on_player_used_capsule" },
-	{ removeCreep, "on_nth_tick", 10 }
+	{ remove_creep, "on_nth_tick", 10 },
+	{ kill_enemy_entities, "on_nth_tick", 10 },
 }
