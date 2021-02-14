@@ -74,7 +74,7 @@ function playerThrowAntiCreep(event)
 	end
 end
 
-function remove_creep()
+function removeCreep()
 	local creep_viruses = global.viruses.creep_virus_active
 	for surface_index, data in pairs(creep_viruses) do
 		local surface = data.surface
@@ -133,7 +133,7 @@ function playerThrowAntiBiter(event)
 	end
 end
 
-function kill_enemy_entities()
+function killEnemyEntities()
 	local biter_viruses = global.viruses.biter_virus_active
 	for surface_index, data in pairs(biter_viruses) do
 		local entities = data.entities
@@ -175,6 +175,6 @@ return
 	{ onInitAndConfigChanged, "on_configuration_changed"},
 	{ playerThrowAntiCreep, "on_player_used_capsule" },
 	{ playerThrowAntiBiter, "on_player_used_capsule" },
-	{ remove_creep, "on_nth_tick", 10 },
-	{ kill_enemy_entities, "on_nth_tick", 10 },
+	{ removeCreep, "on_nth_tick", 10 },
+	{ killEnemyEntities, "on_nth_tick", 10 },
 }
