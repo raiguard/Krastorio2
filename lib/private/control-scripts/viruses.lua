@@ -6,7 +6,7 @@ function round(num)
 end
 
 -- Modifier to change the quantity of objects iterated for each round of the function, based on the total
-function deincreaserPerIteration(count)
+function getCreepCountToRemove(count)
 	if count <= 1000 then
 		return 20
 	elseif count <= 5000 then
@@ -56,9 +56,11 @@ function playerThrowAntiCreep(event)
 		local surface = player.surface
 		local surface_index = surface.index
 		if not creep_viruses[surface_index] then
+			local creep_tiles = surface.find_tiles_filtered{name = "kr-creep"}
 			creep_viruses[surface_index] = {
-				iterator = surface.get_chunks(),
-				surface = surface
+				surface = surface,
+				tiles = creep_tiles,
+				tiles_len = #creep_tiles
 			}
 		end
 
@@ -73,21 +75,24 @@ function removeCreep()
 	for surface_index, data in pairs(creep_viruses) do
 		local surface = data.surface
 		if surface and surface.valid then
-			local iterator = data.iterator
+			local creeps = data.tiles
+			local len = data.tiles_len
 			local tiles_to_replace = {}
-			local i = 0
-			for _ = 1, 30 do
-				local chunk = iterator()
-				if chunk then
-					for _, tile in pairs(surface.find_tiles_filtered{name = "kr-creep", area = chunk.area}) do
-						i = i + 1
-						tiles_to_replace[i] = {name = tile.hidden_tile or "landfill", position = tile.position}
-					end
-				else
+			for i = 1, getCreepCountToRemove(len) do
+				if len == 0 then
 					creep_viruses[surface_index] = nil
 					break
 				end
+				local j = math.random(1, len)
+				local tile = creeps[j]
+				tiles_to_replace[i] = {name = tile.hidden_tile or "landfill", position = tile.position}
+				-- move the element at the end to the gap
+				-- this has a O(1) performance impact, while `table.remove()` has an O(n) impact
+				creeps[j] = creeps[len]
+				creeps[len] = nil
+				len = len - 1
 			end
+			data.tiles_len = len
 			surface.set_tiles(tiles_to_replace)
 		else
 			creep_viruses[surface_index] = nil
@@ -121,7 +126,7 @@ function playerThrowAntiBiter(event)
 				end
 
 				local enemy_count = #enemy_entities
-				local enemy_for_cicle = round(enemy_count/deincreaserPerIteration(enemy_count))
+				local enemy_for_cicle = round(enemy_count/getCreepCountToRemove(enemy_count))
 				local entity_to_kill = enemy_count/3
 				local function slowlyKillSomeBiters()
 					local entity_to_kill_this_cicle = math.min(entity_to_kill, round(enemy_for_cicle))
