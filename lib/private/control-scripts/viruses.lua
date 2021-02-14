@@ -2,7 +2,7 @@
 -- Utils
 -- Function for calculate the round of number
 function round(num)
-    return (num + 0.5 - (num + 0.5) % 1.0)
+	return (num + 0.5 - (num + 0.5) % 1.0)
 end
 
 -- Modifier to change the quantity of objects iterated for each round of the function, based on the total
@@ -28,149 +28,69 @@ end
 --------------------------------------------------------
 -- -- Functions
 
--- Remove all creep tiles for the indicated surface
-function removeCreepFromTheSurface(surface)
-	-- Find all creep
-	local creeps = surface.find_tiles_filtered
-	{
-		name = global.CREEP_NAME
-	}
-	if #creeps < 1 then
-		ccm:unlistenCallBack("on_nth_tick", 2000+surface.index, 10)
-		global.viruses.creep_virus_active[surface.index] = false
-		return false
-	end
-
-	local creeps_count = #creeps
-	local tiles_to_replace = {}
-	local creeps_for_cicle = 0
-
-	-- if is too much to iterate will do an instat big replace to reduce the long term ups consume
-	if creeps_count >= 100000 then
-		local pre_tiles_to_replace = {}
-
-		-- Create a list of tiles to fast-replace with a landfill
-		while creeps_count > 0 do
-			if (creeps_count % 4) == 0 then
-				table.insert(pre_tiles_to_replace, {name = "landfill", position = creeps[creeps_count].position})
-			else
-				table.insert(tiles_to_replace, {name = "landfill", position = creeps[creeps_count].position})
-			end
-
-			creeps_count = creeps_count - 1
-		end
-
-		if surface.valid then
-			surface.set_tiles(pre_tiles_to_replace)
-		end
-	else
-		-- Create a list of tiles to replace with a landfill
-		for _, creep in pairs(creeps) do
-			table.insert(tiles_to_replace, {name = "landfill", position = creep.position})
-		end
-	end
-
-	creeps_count = #tiles_to_replace
-	creeps_for_cicle = round(creeps_count/deincreaserPerIteration(creeps_count))
-
-	-- If exist some creep
-	if creeps_count > 0 then
-		-- Function on 10th ticks (will automatically remove itselft from the list of callbacks when the works is finished)
-		local function slowlyRemoveCreep()
-			if surface and surface.valid then
-				local creep_to_remove_this_cicle = math.min(creeps_count, creeps_for_cicle)
-				local tiles_to_replace_this_cicle = {}
-				local choosen_index = 0
-				local real_tile_name = "landfill"
-
-				-- Iterate the creep
-				while creep_to_remove_this_cicle > 0 and surface.valid do
-					choosen_index = math.random(1, creeps_count) -- Select an index
-
-					real_tile_name = surface.get_hidden_tile(tiles_to_replace[choosen_index].position)
-					tiles_to_replace[choosen_index].name = real_tile_name or tiles_to_replace[choosen_index].name
-					table.insert(tiles_to_replace_this_cicle, tiles_to_replace[choosen_index]) -- Move to the list to replace this round
-					creep_to_remove_this_cicle = creep_to_remove_this_cicle - 1 -- Reduce counter of this round
-
-					tiles_to_replace[choosen_index] = tiles_to_replace[creeps_count] -- Overwrite taken tile with the the latest tile of the list
-					tiles_to_replace[creeps_count] = nil
-
-					creeps_count = creeps_count - 1 -- Reduce global counter
-				end
-
-				-- Remove creeps
-				if surface.valid then
-					surface.set_tiles(tiles_to_replace_this_cicle)
-				else
-					ccm:unlistenCallBack("on_nth_tick", 2000+surface.index, 10) -- Remove callback from be executed each tick
-					global.viruses.creep_virus_active[surface.index] = nil -- Release semaphore
-				end
-
-				-- If all creeps is removed un-register the function
-				if creeps_count <= 0 then
-					ccm:unlistenCallBack("on_nth_tick", 2000+surface.index, 10) -- Remove callback from be executed each tick
-					global.viruses.creep_virus_active[surface.index] = nil -- Release semaphore
-				end
-			end
-		end
-
-		-- register function
-		ccm:listenCallBack(
-		{
-			callback = slowlyRemoveCreep,
-			event_name = "on_nth_tick",
-			filter = 10,
-			index = 2000+surface.index
-		})
-	end
-end
-
--- Function to remove definitively creep
-function playerThrowAntiCreep(event)
-	if event.item and event.item.name == "kr-creep-virus" then
-		local player = game.players[event.player_index]
-		-- TODO: make work in editor
-		if player and player.valid and player.character and player.character.valid then
-			local actual_player_surface = player.character.surface
-			-- Disable/Permanenlty creep generation (from all surfaces)
-			global.creep_on_chunk_generated  = false
-			global.creep_on_biter_base_built = false
-			global.creep_on_remote_interface = false -- prevent other mods from generating creep
-			ccm:unlistenCallBack("on_chunk_generated", 1)
-			ccm:unlistenCallBack("on_biter_base_built", 1)
-			ccm:unlistenCallBack("on_nth_tick", 1, 10)
-
-			-- Remove all generated creeps
-			if global.viruses == nil then
-				global.viruses = {}
-			end
-			if global.viruses.creep_virus_active == nil then
-				global.viruses.creep_virus_active = {}
-			end
-			global.viruses.creep_virus_active[actual_player_surface.index] = true -- Lock semaphore and sign surface to clean
-
-			-- Reduce by 33% enemy evolution factor
-			game.forces["enemy"].evolution_factor = game.forces["enemy"].evolution_factor * 0.67
-		end
-	end
-end
-
-function checkIfCreepMustBeRemoved()
+function onInitAndConfigChanged()
+	-- create global tables if they don't exist
 	if global.viruses == nil then
 		global.viruses = {}
 	end
 	if global.viruses.creep_virus_active == nil then
 		global.viruses.creep_virus_active = {}
 	end
-	-- Active creep degeneration if the player throw a capsule in that surface
-	if global.viruses.creep_virus_active and #global.viruses.creep_virus_active > 0 then
-		for surface_index, lock in pairs(global.viruses.creep_virus_active) do
-			if lock == true and not ccm:existCallBack("on_nth_tick", 2000+surface_index) then
-				local surface = game.surfaces[surface_index]
-				if surface and surface.valid then
-					removeCreepFromTheSurface(surface)
+end
+
+-- Function to remove definitively creep
+function playerThrowAntiCreep(event)
+	if event.item.name == "kr-creep-virus" then
+		-- disable creep generation
+		global.creep_on_chunk_generated = false
+		global.creep_on_biter_base_built = false
+		global.creep_on_remote_interface = false
+		ccm:unlistenCallBack("on_chunk_generated", 1)
+		ccm:unlistenCallBack("on_biter_base_built", 1)
+		ccm:unlistenCallBack("on_nth_tick", 1, 10)
+
+		local creep_viruses = global.viruses.creep_virus_active
+
+		-- remove all generated creep on this surface
+		local player = game.players[event.player_index]
+		local surface = player.surface
+		local surface_index = surface.index
+		if not creep_viruses[surface_index] then
+			creep_viruses[surface_index] = {
+				iterator = surface.get_chunks(),
+				surface = surface
+			}
+		end
+
+		-- reduce enemy evolution factor by 33%
+		local enemy = game.forces.enemy
+		enemy.evolution_factor = enemy.evolution_factor * 0.67
+	end
+end
+
+function removeCreep()
+	local creep_viruses = global.viruses.creep_virus_active
+	for surface_index, data in pairs(creep_viruses) do
+		local surface = data.surface
+		if surface and surface.valid then
+			local iterator = data.iterator
+			local tiles_to_replace = {}
+			local i = 0
+			for _ = 1, 30 do
+				local chunk = iterator()
+				if chunk then
+					for _, tile in pairs(surface.find_tiles_filtered{name = "kr-creep", area = chunk.area}) do
+						i = i + 1
+						tiles_to_replace[i] = {name = tile.hidden_tile or "landfill", position = tile.position}
+					end
+				else
+					creep_viruses[surface_index] = nil
+					break
 				end
 			end
+			surface.set_tiles(tiles_to_replace)
+		else
+			creep_viruses[surface_index] = nil
 		end
 	end
 end
@@ -244,7 +164,9 @@ end
 
 return
 {
+	{ onInitAndConfigChanged, "on_init"},
+	{ onInitAndConfigChanged, "on_configuration_changed"},
 	{ playerThrowAntiCreep, "on_player_used_capsule" },
 	{ playerThrowAntiBiter, "on_player_used_capsule" },
-	{ checkIfCreepMustBeRemoved, "on_nth_tick", 60 }
+	{ removeCreep, "on_nth_tick", 10 }
 }
