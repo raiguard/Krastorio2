@@ -13,16 +13,21 @@ Date: XX.0X.2021
     - Increased mining area (resource searching radius) of electric mining drills MK2 (7x7) and MK3 (9x9).
     - Now advanced assembler, chemical plant and furnace have a passive productivity (20/25/25%) and less crafting speed(4/6/8), to reduce the glitch effect of the base game engine that exceeded 60 recipe completed per second the game will calculate wrongly the produced products. Advanced chemical plant and furnace recipes now require productivity modules.
     - Changed advanced assembling machine recipe.
+    - Biter virus no longer insta-kills all units when thrown
+    - Slightly buffed biter virus gradual kill count
   Changes:
     - Now all chemistry and intermediate product recipes have crafting time minimum of 2.0 seconds. The radios are not changed! Ingredients, products required and produced are the same, this need only to fix a glitch of base game engine, that when a recipe is done more than 60 time per second the game output a wrong products count (this is not a mod bug is a limitation of the base game engine, don't ask to improve this, can't be improved by modders!).
     - Added "cannot build" sound to K2 scripts when exist an integration with player building placing.
     - Changed a bit the circuit icons wire color (visually improve the material with the tier).
     - Swapped fluid port of products of water electrolysis (remember that ratios are not 1:1).
     - Rocket turret can now face corners
-  Fixes:
+  Optimizations:
+    - Significant performance improvements to the biter and creep viruses
+  Bugfixes:
     - Fixed IR2 compatibility.
     - Fixed new smart belt dragging feature not working with K2 belts.
     - Fixed wrong wiki icon size of air purification and matter after the technology icons update.
+    - Fixed the creep virus leaving landfill behind
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.23
 Date: 11.01.2021

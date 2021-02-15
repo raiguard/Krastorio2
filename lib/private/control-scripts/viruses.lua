@@ -6,7 +6,7 @@ function round(num)
 end
 
 -- Modifier to change the quantity of objects iterated for each round of the function, based on the total
-function get_count_to_remove(count)
+function getRemovalModifier(count)
 	if count <= 1000 then
 		return 20
 	elseif count <= 5000 then
@@ -57,10 +57,12 @@ function playerThrowAntiCreep(event)
 
 			-- begin creep removal
 			local creep_tiles = surface.find_tiles_filtered{name = "kr-creep"}
+			local num_creeps = #creep_tiles
 			creep_viruses[surface_index] = {
+				amount_per_iteration = math.floor(num_creeps / getRemovalModifier(num_creeps)),
 				surface = surface,
 				tiles = creep_tiles,
-				tiles_len = #creep_tiles
+				tiles_len = num_creeps
 			}
 		end
 
@@ -78,19 +80,21 @@ function removeCreep()
 			local creeps = data.tiles
 			local len = data.tiles_len
 			local tiles_to_replace = {}
-			for i = 1, get_count_to_remove(len) do
+			for i = 1, data.amount_per_iteration do
 				if len == 0 then
 					creep_viruses[surface_index] = nil
 					break
 				end
 				local j = math.random(1, len)
 				local tile = creeps[j]
-				tiles_to_replace[i] = {name = tile.hidden_tile or "landfill", position = tile.position}
-				-- move the element at the end to the gap
-				-- this has a O(1) performance impact, while `table.remove()` has an O(n) impact
-				creeps[j] = creeps[len]
-				creeps[len] = nil
-				len = len - 1
+				if tile and tile.valid then
+					tiles_to_replace[i] = {name = tile.hidden_tile or "landfill", position = tile.position}
+					-- move the element at the end to the gap
+					-- this has a O(1) performance impact, while `table.remove()` has an O(n) impact
+					creeps[j] = creeps[len]
+					creeps[len] = nil
+					len = len - 1
+				end
 			end
 			data.tiles_len = len
 			surface.set_tiles(tiles_to_replace)
@@ -118,6 +122,7 @@ function playerThrowAntiBiter(event)
 			local len = #enemy_entities
 			if len > 0 then
 				biter_viruses[surface_index] = {
+					amount_per_iteration = math.floor(len / getRemovalModifier(len)),
 					entities = enemy_entities,
 					entities_killed = 0,
 					entities_len = len,
@@ -139,7 +144,7 @@ function killEnemyEntities()
 		local len = data.entities_len
 
 		-- kill some entities
-		for _ = 1, len / get_count_to_remove(len) do
+		for _ = 1, data.amount_per_iteration do
 			if entities_killed >= entities_to_kill then
 				biter_viruses[surface_index] = nil
 				break
