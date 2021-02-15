@@ -1,4 +1,4 @@
-local gui = require("__Krastorio2__/lib/private/control-scripts/control-lib/flib/gui-beta")
+local gui = require("__flib__.gui-beta")
 
 local pt_built_entity_filters = {{filter = "name", name = "kr-planetary-teleporter"}}
 local pt_entity_name = "kr-planetary-teleporter"
