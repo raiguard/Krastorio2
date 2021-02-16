@@ -1,13 +1,6 @@
 require("__Krastorio2__/lib/private/control-scripts/control-lib/control-lib-initialization")
 
-local flib_prefix = nil
-if script.active_mods["flib"] then
-	flib_prefix = "__flib__."
-else
-	flib_prefix = fixed_flib_path
-end
-
-local gui = require(flib_prefix .. "gui-beta")
+local gui = require("__Krastorio2__/lib/private/control-scripts/control-lib/flib/gui-beta")
 
 local pt_built_entity_filters = {{filter = "name", name = "kr-planetary-teleporter"}}
 local pt_entity_name = "kr-planetary-teleporter"

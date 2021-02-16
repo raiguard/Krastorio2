@@ -1,4 +1,4 @@
---- Functions for maniuplating areas.
+--- Functions for manipulating areas.
 -- **NOTE:** All functions assume that `BoundingBox` and `Position` objects contain named keys - `x` and `y` for
 -- `Position`, and `left_top` and `right_bottom` for `BoundingBox`. Attempting to use these functions with the
 -- shorthand forms of these objects will result in a crash.
@@ -96,7 +96,8 @@ end
 
 --- Find the distance between a point and the nearest edge of the given area.
 -- @tparam Concepts.BoundingBox self The area to check against.
--- @treturn double The distance to the nearest edge of the area.
+-- @tparam Concepts.Position position The position to check.
+-- @treturn double The distance to the nearest edge of the area from the given position.
 function flib_area.distance_to_nearest_edge(self, position)
   local x_distance = math.min(math.abs(self.left_top.x - position.x), math.abs(self.right_bottom.x - position.x))
   local y_distance = math.min(math.abs(self.left_top.y - position.y), math.abs(self.right_bottom.y - position.y))
@@ -309,4 +310,5 @@ function flib_area.width(self)
 end
 
 return flib_area
+
 

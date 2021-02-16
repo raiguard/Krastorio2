@@ -1,3 +1,0 @@
-This folder contains graphical file of Flib,
-so the licence of this folder reference to the file:
-Krastorio2\lib\private\control-scripts\control-lib\flib\LICENSE
