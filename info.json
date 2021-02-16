@@ -9,7 +9,6 @@
 	"dependencies":
 	[
 		"base >= 1.1.21",
-		"? flib >= 0.7.0",
 		"(?) aai-industry >= 0.3.17",
 		"(?) aai-vehicles-chaingunner >= 0.5.2",
 		"(?) Aircraft >= 1.6.6",
