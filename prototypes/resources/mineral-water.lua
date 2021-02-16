@@ -8,6 +8,7 @@ data:extend(
 		name = "mineral-water",
 		icon = kr_resources_icons_path .. "mineral-water.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral"},
 		category = "basic-fluid",
 		subgroup = "raw-resource",

@@ -1,24 +1,7 @@
 -- -- -- Setting compatibility scripts for science pack
+local compatibility_scripts_su = "compatibility-scripts/settings-updates/"
 ----------
-require("compatibility-scripts/settings-updates/" .. "science-pack-variations")
-require("compatibility-scripts/settings-updates/" .. "loaders-snap")
-if mods["IndustrialRevolution"] then
-	data.raw["string-setting"]["kr-automation-science-pack-recipe"].default_value = "Industrial Revolution"
-    data.raw["string-setting"]["kr-automation-science-pack-recipe"].allowed_values = {"Industrial Revolution"}
-	
-	data.raw["string-setting"]["kr-logistic-science-pack-recipe"].default_value = "Industrial Revolution"
-	data.raw["string-setting"]["kr-logistic-science-pack-recipe"].allowed_values = {"Industrial Revolution"}
-	
-	data.raw["string-setting"]["kr-military-science-pack-recipe"].default_value = "Industrial Revolution"
-	data.raw["string-setting"]["kr-military-science-pack-recipe"].allowed_values = {"Industrial Revolution"}
-	
-	data.raw["string-setting"]["kr-chemical-science-pack-recipe"].default_value = "Industrial Revolution"
-	data.raw["string-setting"]["kr-chemical-science-pack-recipe"].allowed_values = {"Industrial Revolution"}
-	
-	data.raw["string-setting"]["kr-production-science-pack-recipe"].default_value = "Industrial Revolution"
-	data.raw["string-setting"]["kr-production-science-pack-recipe"].allowed_values = {"Industrial Revolution"}
-	
-	data.raw["string-setting"]["kr-utility-science-pack-recipe"].default_value = "Industrial Revolution"
-	data.raw["string-setting"]["kr-utility-science-pack-recipe"].allowed_values = {"Industrial Revolution"}
-end
+require(compatibility_scripts_su .. "science-pack-variations")
+require(compatibility_scripts_su .. "loaders-snap")
+require(compatibility_scripts_su .. "IndustrialRevolution2-part1")
 ----------

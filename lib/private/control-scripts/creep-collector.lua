@@ -1,7 +1,14 @@
 require("__Krastorio2__/lib/private/control-scripts/control-lib/control-lib-initialization")
 
-local area = require("__flib__.area")
-local misc = require("__flib__.misc")
+local flib_prefix = nil
+if script.active_mods["flib"] then
+	flib_prefix = "__flib__."
+else	
+	flib_prefix = fixed_flib_path
+end
+
+local area = require(flib_prefix .. "area")
+local misc = require(flib_prefix .. "misc")
 
 local function onInitAndConf()
 	initializeCreepCollectorConstats()

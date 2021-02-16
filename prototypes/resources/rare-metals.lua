@@ -8,6 +8,7 @@ data:extend(
 		name = "rare-metals",
 		icon = kr_resources_icons_path .. "rare-metals.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral"},
 		order="a-b-a",
 		subgroup = "raw-resource",

@@ -512,16 +512,17 @@ if mods["IndustrialRevolution"] then
 	
 	-- Roboport (changeble mode)
 	variations_util.createRoboportVariations("robotower")
-	
-	-- Bronze furnace(selectable recipe)
-	local furnace_name = "bronze-furnace"
-	if data.raw.furnace[furnace_name] then
-		local furnace = krastorio_utils.tables.fullCopy(data.raw.furnace[furnace_name])
-		furnace.type = "assembling-machine"
-		furnace.source_inventory_size = 2
-		furnace.energy_usage = "350kW"
-		data.raw.furnace[furnace_name] = nil
-		data:extend({furnace})
+		
+	-- Steel washer and Bronze furnace(selectable recipe)
+	for _, furnace_name in pairs{"bronze-furnace", "steel-washer"} do
+		if data.raw.furnace[furnace_name] then
+			local furnace = krastorio_utils.tables.fullCopy(data.raw.furnace[furnace_name])
+			furnace.type = "assembling-machine"
+			furnace.source_inventory_size = 2
+			furnace.energy_usage = "250kW"
+			data.raw.furnace[furnace_name] = nil
+			data:extend({furnace})
+		end
 	end
 	
 	-- Add basic science to copper lab	
