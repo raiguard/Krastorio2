@@ -16,7 +16,7 @@ Date: XX.0X.2021
     - Biter virus no longer insta-kills all units when thrown
     - Slightly buffed biter virus gradual kill count
   Changes:
-    - Now all chemistry and intermediate product recipes have crafting time minimum of 2.0 seconds. The radios are not changed! Ingredients, products required and produced are the same, this need only to fix a glitch of base game engine, that when a recipe is done more than 60 time per second the game output a wrong products count (this is not a mod bug is a limitation of the base game engine, don't ask to improve this, can't be improved by modders!).
+    - Now all chemistry and intermediate product recipes have crafting time minimum of 2.0 seconds. The ratios are not changed! Ingredients, products required and produced are the same, this need only to fix a glitch of base game engine, that when a recipe is done more than 60 time per second the game output a wrong products count (this is not a mod bug is a limitation of the base game engine, don't ask to improve this, can't be improved by modders!).
     - Added "cannot build" sound to K2 scripts when exist an integration with player building placing.
     - Changed a bit the circuit icons wire color (visually improve the material with the tier).
     - Swapped fluid port of products of water electrolysis (remember that ratios are not 1:1).
