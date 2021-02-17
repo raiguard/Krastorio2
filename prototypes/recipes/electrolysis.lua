@@ -11,15 +11,15 @@ return
 		enabled = false,
 		always_show_made_in = true,
 		always_show_products = true,
-		ingredients = 
+		ingredients =
 		{
 			{ type = "item", name = "sand", amount = 10 },
 			{ type = "fluid", name = "water", amount = 40, catalyst_amount = 40 }
 		},
 		results =
-		{			
-			{ type = "fluid", name = "hydrogen", amount = 30 },
-			{ type = "fluid", name = "chlorine", amount = 20 }
+		{
+			{ type = "fluid", name = "chlorine", amount = 20 },
+			{ type = "fluid", name = "hydrogen", amount = 30 }
 		},
 		crafting_machine_tint =
 		{
@@ -38,7 +38,7 @@ return
 		enabled = false,
 		always_show_made_in = true,
 		always_show_products = true,
-		ingredients = 
+		ingredients =
 		{
 			{ type = "fluid", name = "water", amount = 50, catalyst_amount = 50 }
 		},
@@ -91,18 +91,18 @@ return
 		always_show_made_in = true,
 		always_show_products = true,
 		allow_productivity = true,
-		ingredients = 
+		ingredients =
 		{
 			{ type = "fluid", name = "water", amount = 500, catalyst_amount = 500}
 		},
 		crafting_machine_tint =
 		{
-			primary = {r = 0.405, g = 0.402, b = 1.000, a = 1.000}, 
-			secondary = {r = 0.391, g = 0.720, b = 1.000, a = 0.900}, 
-			tertiary = {r = 1.000, g = 1.000, b = 1.000, a = 0.500}, 
-			quaternary = {r = 1.000, g = 1.000, b = 1.000, a = 0.300} 
+			primary = {r = 0.405, g = 0.402, b = 1.000, a = 1.000},
+			secondary = {r = 0.391, g = 0.720, b = 1.000, a = 0.900},
+			tertiary = {r = 1.000, g = 1.000, b = 1.000, a = 0.500},
+			quaternary = {r = 1.000, g = 1.000, b = 1.000, a = 0.300}
 		},
-		results = 
+		results =
 		{
 			{ type = "fluid", name = "heavy-water", amount = 20}
 		},
