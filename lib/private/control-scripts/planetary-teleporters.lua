@@ -280,7 +280,7 @@ local function create_gui(player, entity)
 			},
 			children = {
 				-- titlebar
-				{type = "flow", ref = {"titlebar_flow"}, children = {
+				{type = "flow", style_mods = {horizontal_spacing = 8}, ref = {"titlebar_flow"}, children = {
 					{
 						type = "label",
 						style = "frame_title",
@@ -289,13 +289,13 @@ local function create_gui(player, entity)
 					},
 					{
 						type = "empty-widget",
-						style = "draggable_space",
-						style_mods = {height = 24, horizontally_stretchable = true, left_margin = 6, right_margin = 6},
+						style = "draggable_space_header",
+						style_mods = {height = 24, horizontally_stretchable = true, right_margin = 4},
 						ignored_by_interaction = true
 					},
 					{
 						type = "textfield",
-						style_mods = {top_margin = -3, right_margin = 4},
+						style_mods = {top_margin = -3},
 						visible = false,
 						ref = {"search_textfield"},
 						actions = {
@@ -317,7 +317,6 @@ local function create_gui(player, entity)
 					{
 						type = "sprite-button",
 						style = "frame_action_button",
-						style_mods = {left_margin = 4},
 						sprite = "utility/close_white",
 						hovered_sprite = "utility/close_black",
 						clicked_sprite = "utility/close_black",
