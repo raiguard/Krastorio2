@@ -39,7 +39,7 @@ krastorio.technologies.addPrerequisite("utility-science-pack", "kr-research-serv
 krastorio.technologies.addPrerequisite("utility-science-pack", "rocket-fuel")
 krastorio.technologies.addPrerequisite("space-science-pack", "kr-singularity-lab")
 
--- Modules 
+-- Modules
 krastorio.technologies.addPrerequisite("speed-module-3", "advanced-electronics-2")
 krastorio.technologies.addPrerequisite("productivity-module-3", "advanced-electronics-2")
 krastorio.technologies.addPrerequisite("effectivity-module-3", "advanced-electronics-2")
@@ -61,7 +61,7 @@ krastorio.technologies.removePrerequisite("effectivity-module-2", "advanced-elec
 -- -- Research unit ingredients
 --------------------------------------------------------------------
 
--- Conversions 
+-- Conversions
 krastorio.technologies.convertResearchUnitIngredient("stone-wall", "automation-science-pack", "basic-tech-card")
 krastorio.technologies.convertResearchUnitIngredient("military", "automation-science-pack", "basic-tech-card")
 
@@ -111,8 +111,14 @@ krastorio.technologies.addUnlockRecipe("battery-equipment", "small-portable-gene
 
 krastorio.technologies.addUnlockRecipe("battery-mk2-equipment", "big-battery-mk2-equipment")
 
-krastorio.technologies.addUnlockRecipe(krastorio.technologies.getTechnologyThatUnlockRecipe("personal-roboport-equipment").name, "vehicle-roboport")
-krastorio.technologies.addUnlockRecipe(krastorio.technologies.getTechnologyThatUnlockRecipe("electric-engine-unit").name, "additional-engine")
+local personal_roboport_tech = krastorio.technologies.getTechnologyThatUnlockRecipe("personal-roboport-equipment")
+if personal_roboport_tech then
+	krastorio.technologies.addUnlockRecipe(personal_roboport_tech.name, "vehicle-roboport")
+end
+local electric_engine_unit_tech = krastorio.technologies.getTechnologyThatUnlockRecipe("personal-roboport-equipment")
+if electric_engine_unit_tech then
+	krastorio.technologies.addUnlockRecipe(electric_engine_unit_tech.name, "additional-engine")
+end
 
 krastorio.technologies.addUnlockRecipe("personal-laser-defense-equipment", "personal-submachine-laser-defense-mk1-equipment")
 
@@ -131,7 +137,10 @@ krastorio.technologies.addUnlockRecipe("military-science-pack", "kr-creep-collec
 krastorio.technologies.addUnlockRecipe("space-science-pack", "space-science-pack")
 
 -- Jackhammer
-krastorio.technologies.addUnlockRecipe(krastorio.technologies.getTechnologyThatUnlockRecipe("concrete").name, "kr-jackhammer")
+local jackhammer_tech = krastorio.technologies.getTechnologyThatUnlockRecipe("concrete")
+if jackhammer_tech then
+	krastorio.technologies.addUnlockRecipe(jackhammer_tech.name, "kr-jackhammer")
+end
 
 -- Slow capsule
 krastorio.technologies.moveUnlockRecipe("military-3", "military", "slowdown-capsule", true)
@@ -168,7 +177,7 @@ krastorio_utils.log.enableLogs()
 
 -- Remove basic tech card to all technologies of T2 tier
 for technology_name, technology in pairs(data.raw.technology) do
-	if 
+	if
 		krastorio.technologies.hasIngredient(technology_name, "military-science-pack") or
 		krastorio.technologies.hasIngredient(technology_name, "chemical-science-pack") or
 		krastorio.technologies.hasIngredient(technology_name, "production-science-pack") or
@@ -187,13 +196,13 @@ end
 
 krastorio.technologies.setResearchUnitCount("space-science-pack", 1000)
 krastorio.technologies.setResearchUnitCount("rocket-control-unit", 500)
-	
+
 --------------
 -- science packs
-	
+
 krastorio.technologies.setResearchUnitCount("production-science-pack", 250)
 krastorio.technologies.setResearchUnitCount("utility-science-pack", 250)
-	
+
 --------------
 -- military
 
@@ -213,7 +222,7 @@ krastorio.technologies.addPrerequisite("solar-energy", "kr-silicon-processing")
 data.raw.technology["physical-projectile-damage-7"].unit.count_formula = "((L-6)^2)*3000"
 data.raw.technology["physical-projectile-damage-7"].max_level = 10
 
-data.raw.technology["stronger-explosives-7"].unit.count_formula = "((L-6)^2)*3000"	
+data.raw.technology["stronger-explosives-7"].unit.count_formula = "((L-6)^2)*3000"
 data.raw.technology["stronger-explosives-7"].max_level = 10
 
 data.raw.technology["refined-flammables-7"].unit.count_formula = "((L-6)^2)*3000"
@@ -237,7 +246,7 @@ krastorio.technologies.removeResearchUnitIngredient("gate", "logistic-science-pa
 -- miscellaneous
 
 krastorio.technologies.setResearchUnitCount("logistic-system", 250)
-krastorio.technologies.setResearchUnitCount("coal-liquefaction", 150)	
+krastorio.technologies.setResearchUnitCount("coal-liquefaction", 150)
 krastorio.technologies.setResearchUnitCount("automation-3", 350	)
 krastorio.technologies.setResearchUnitCount("effect-transmission", 500)
 krastorio.technologies.setResearchUnitCount("low-density-structure", 500)
@@ -278,12 +287,12 @@ data:extend(
 
 	{
 		type = "technology",
-		name = "mining-productivity-11",		
+		name = "mining-productivity-11",
 		icons =
 		{
 			{
 				icon = "__base__/graphics/technology/mining-productivity.png",
-				icon_size = 256, 
+				icon_size = 256,
 				icon_mipmaps = 4
 			},
 			{
@@ -294,7 +303,7 @@ data:extend(
 			}
 		},
 		icon_size = 256,
-		icon_mipmaps = 4,	
+		icon_mipmaps = 4,
 		effects =
 		{
 			{
@@ -327,7 +336,7 @@ data:extend(
 		{
 			{
 				icon = "__base__/graphics/technology/mining-productivity.png",
-				icon_size = 256, 
+				icon_size = 256,
 				icon_mipmaps = 4
 			},
 			{
@@ -365,9 +374,9 @@ data:extend(
 		upgrade = true,
 		order = "c-k-f-z"
 	},
-	
+
 -- -- -- -- -- -- --
-	
+
 	{
 		type = "technology",
 		name = "worker-robots-speed-7",
@@ -375,7 +384,7 @@ data:extend(
 		{
 			{
 				icon = "__base__/graphics/technology/worker-robots-speed.png",
-				icon_size = 256, 
+				icon_size = 256,
 				icon_mipmaps = 4
 			},
 			{
@@ -412,7 +421,7 @@ data:extend(
 		upgrade = true,
 		order = "c-k-f-w"
 	},
-	
+
 	{
 		type = "technology",
 		name = "worker-robots-speed-9",
@@ -420,7 +429,7 @@ data:extend(
 		{
 			{
 				icon = "__base__/graphics/technology/worker-robots-speed.png",
-				icon_size = 256, 
+				icon_size = 256,
 				icon_mipmaps = 4
 			},
 			{
@@ -458,9 +467,9 @@ data:extend(
 		upgrade = true,
 		order = "c-k-f-z"
 	},
-	
+
 -- -- -- -- -- -- --
-	
+
 	{
 		type = "technology",
 		name = "follower-robot-count-8",
@@ -468,7 +477,7 @@ data:extend(
 		{
 			{
 				icon = "__base__/graphics/technology/follower-robots.png",
-				icon_size = 256, 
+				icon_size = 256,
 				icon_mipmaps = 4
 			},
 			{
@@ -504,7 +513,7 @@ data:extend(
 		upgrade = true,
 		order = "c-k-f-w"
 	},
-	
+
 	{
 		type = "technology",
 		name = "follower-robot-count-9",
@@ -512,7 +521,7 @@ data:extend(
 		{
 			{
 				icon = "__base__/graphics/technology/follower-robots.png",
-				icon_size = 256, 
+				icon_size = 256,
 				icon_mipmaps = 4
 			},
 			{
@@ -550,17 +559,17 @@ data:extend(
 		upgrade = true,
 		order = "c-k-f-z"
 	},
-	
+
 -- -- -- -- -- -- --
-	
+
 	{
 		type = "technology",
 		name = "physical-projectile-damage-11",
-		icons = 
+		icons =
 		{
 			{
 				icon = "__base__/graphics/technology/physical-projectile-damage-2.png",
-				icon_size = 256, 
+				icon_size = 256,
 				icon_mipmaps = 4
 			},
 			{
@@ -616,11 +625,11 @@ data:extend(
 	{
 		type = "technology",
 		name = "physical-projectile-damage-16",
-		icons = 
+		icons =
 		{
 			{
 				icon = "__base__/graphics/technology/physical-projectile-damage-2.png",
-				icon_size = 256, 
+				icon_size = 256,
 				icon_mipmaps = 4
 			},
 			{
@@ -673,18 +682,18 @@ data:extend(
 		max_level = 18,
 		upgrade = true,
 		order = "c-k-f-z"
-	},	
-	
+	},
+
 -- -- -- -- -- -- --
-	
+
 	{
 		type = "technology",
 		name = "stronger-explosives-11",
-		icons = 
+		icons =
 		{
 			{
 				icon = "__base__/graphics/technology/stronger-explosives-3.png",
-				icon_size = 256, 
+				icon_size = 256,
 				icon_mipmaps = 4
 			},
 			{
@@ -693,7 +702,7 @@ data:extend(
 				icon_mipmaps = 3,
 				shift = {100, 100}
 			}
-		},		
+		},
 		icon_size = 256,
 		icon_mipmaps = 4,
 		effects =
@@ -740,11 +749,11 @@ data:extend(
 	{
 		type = "technology",
 		name = "stronger-explosives-16",
-		icons = 
+		icons =
 		{
 			{
 				icon = "__base__/graphics/technology/stronger-explosives-3.png",
-				icon_size = 256, 
+				icon_size = 256,
 				icon_mipmaps = 4
 			},
 			{
@@ -753,7 +762,7 @@ data:extend(
 				icon_mipmaps = 3,
 				shift = {100, 100}
 			}
-		},		
+		},
 		icon_size = 256,
 		icon_mipmaps = 4,
 		effects =
@@ -797,18 +806,18 @@ data:extend(
 		max_level = 18,
 		upgrade = true,
 		order = "c-k-f-z"
-	},	
-	
+	},
+
 -- -- -- -- -- -- --
-	
+
 	{
 		type = "technology",
 		name = "refined-flammables-11",
-		icons = 
+		icons =
 		{
 			{
 				icon = "__base__/graphics/technology/refined-flammables.png",
-				icon_size = 256, 
+				icon_size = 256,
 				icon_mipmaps = 4
 			},
 			{
@@ -817,7 +826,7 @@ data:extend(
 				icon_mipmaps = 3,
 				shift = {100, 100}
 			}
-		},		
+		},
 		icon_size = 256,
 		icon_mipmaps = 4,
 		effects =
@@ -854,11 +863,11 @@ data:extend(
 	{
 		type = "technology",
 		name = "refined-flammables-16",
-		icons = 
+		icons =
 		{
 			{
 				icon = "__base__/graphics/technology/refined-flammables.png",
-				icon_size = 256, 
+				icon_size = 256,
 				icon_mipmaps = 4
 			},
 			{
@@ -867,7 +876,7 @@ data:extend(
 				icon_mipmaps = 3,
 				shift = {100, 100}
 			}
-		},		
+		},
 		icon_size = 256,
 		icon_mipmaps = 4,
 		effects =
@@ -901,18 +910,18 @@ data:extend(
 		max_level = 18,
 		upgrade = true,
 		order = "c-k-f-z"
-	},		
-	
+	},
+
 -- -- -- -- -- -- --
-	
+
 	{
 		type = "technology",
 		name = "energy-weapons-damage-11",
-		icons = 
+		icons =
 		{
 			{
 				icon = "__base__/graphics/technology/energy-weapons-damage.png",
-				icon_size = 256, 
+				icon_size = 256,
 				icon_mipmaps = 4
 			},
 			{
@@ -921,7 +930,7 @@ data:extend(
 				icon_mipmaps = 3,
 				shift = {100, 100}
 			}
-		},		
+		},
 		icon_size = 256,
 		icon_mipmaps = 4,
 		effects =
@@ -953,11 +962,11 @@ data:extend(
 	{
 		type = "technology",
 		name = "energy-weapons-damage-16",
-		icons = 
+		icons =
 		{
 			{
 				icon = "__base__/graphics/technology/energy-weapons-damage.png",
-				icon_size = 256, 
+				icon_size = 256,
 				icon_mipmaps = 4
 			},
 			{
@@ -966,7 +975,7 @@ data:extend(
 				icon_mipmaps = 3,
 				shift = {100, 100}
 			}
-		},		
+		},
 		icon_size = 256,
 		icon_mipmaps = 4,
 		effects =
@@ -996,17 +1005,17 @@ data:extend(
 		upgrade = true,
 		order = "c-k-f-z"
 	},
-	
+
 -- -- -- -- -- -- --
-	
+
 	{
 		type = "technology",
 		name = "artillery-shell-range-3",
-		icons = 
+		icons =
 		{
 			{
 				icon = "__base__/graphics/technology/artillery-range.png",
-				icon_size = 256, 
+				icon_size = 256,
 				icon_mipmaps = 4
 			},
 			{
@@ -1015,7 +1024,7 @@ data:extend(
 				icon_mipmaps = 3,
 				shift = {100, 100}
 			}
-		},		
+		},
 		icon_size = 256,
 		icon_mipmaps = 4,
 		effects =
@@ -1046,11 +1055,11 @@ data:extend(
 	{
 		type = "technology",
 		name = "artillery-shell-range-5",
-		icons = 
+		icons =
 		{
 			{
 				icon = "__base__/graphics/technology/artillery-range.png",
-				icon_size = 256, 
+				icon_size = 256,
 				icon_mipmaps = 4
 			},
 			{
@@ -1059,7 +1068,7 @@ data:extend(
 				icon_mipmaps = 3,
 				shift = {100, 100}
 			}
-		},		
+		},
 		icon_size = 256,
 		icon_mipmaps = 4,
 		effects =
@@ -1088,9 +1097,9 @@ data:extend(
 		upgrade = true,
 		order = "c-k-f-z"
 	},
-	
+
 -- -- -- -- -- -- --
-	
+
 	{
 		type = "technology",
 		name = "artillery-shell-speed-3",
@@ -1098,7 +1107,7 @@ data:extend(
 		{
 			{
 				icon = "__base__/graphics/technology/artillery-speed.png",
-				icon_size = 256, 
+				icon_size = 256,
 				icon_mipmaps = 4
 			},
 			{
@@ -1143,7 +1152,7 @@ data:extend(
 		{
 			{
 				icon = "__base__/graphics/technology/artillery-speed.png",
-				icon_size = 256, 
+				icon_size = 256,
 				icon_mipmaps = 4
 			},
 			{

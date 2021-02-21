@@ -25,9 +25,10 @@ Date: XX.0X.2021
     - Significant performance improvements to the biter and creep viruses
   Bugfixes:
     - Fixed IR2 compatibility.
+    - Fixed a crash on load with Angels' mods
     - Fixed new smart belt dragging feature not working with K2 belts.
-    - Fixed wrong wiki icon size of air purification and matter after the technology icons update.
     - Fixed the creep virus leaving landfill behind
+    - Fixed wrong wiki icon size of air purification and matter after the technology icons update.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.23
 Date: 11.01.2021
