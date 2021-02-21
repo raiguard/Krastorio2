@@ -21,6 +21,7 @@ Date: XX.0X.2021
     - Changed a bit the circuit icons wire color (visually improve the material with the tier).
     - Rocket turret can now face corners
   Optimizations:
+    - Significant performance improvements to prototype loading in the data stage
     - Significant performance improvements to the biter and creep viruses
   Bugfixes:
     - Fixed IR2 compatibility.

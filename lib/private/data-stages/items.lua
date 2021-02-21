@@ -8,14 +8,11 @@ function krastorio.items.exist(item_name)
 	return krastorio.items.getItem(item_name) ~= nil
 end
 
-function krastorio.items.getItem(item_name)	
+function krastorio.items.getItem(item_name)
 	if type(item_name) == "string" then
 		for _, type_name in pairs(krastorio.items.item_types) do
-			for name, item in pairs(data.raw[type_name]) do
-				if name == item_name then 
-					return item
-				end
-			end
+			local item = data.raw[type_name][item_name]
+			if item then return item end
 		end
 	end
 	return nil

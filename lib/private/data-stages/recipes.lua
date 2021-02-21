@@ -301,14 +301,7 @@ end
 -- @ recipe_name
 -- return a recipe or nil
 function krastorio.recipes.getRecipeFromName(recipe_name)
-	if type(recipe_name) == "string" then
-		for name, recipe in pairs(data.raw.recipe) do
-			if name == recipe_name then
-				return recipe
-			end
-		end
-	end
-	return nil
+	return data.raw.recipe[recipe_name]
 end
 
 -- @ recipe_name
@@ -316,8 +309,6 @@ end
 function krastorio.recipes.isRecipeVanilla(recipe_name)
 	return krastorio_utils.recipes_backup_utils.isRecipeVanilla(recipe_name)
 end
-
---
 
 -- @ recipe_name
 -- return a string
@@ -655,12 +646,12 @@ end
 -- @ ingredient_name
 -- return a boolean
 function krastorio.recipes.removeIngredientWithPrerequisite(recipe_name, ingredient_name)
-	krastorio.technologies.removePrerequisite
-	(
-		krastorio.technologies.getTechnologyThatUnlockRecipe(recipe_name).name,
-		krastorio.technologies.getTechnologyThatUnlockRecipe(ingredient_name).name
-	)
-	return krastorio.recipes.removeIngredient(recipe_name, ingredient_name)
+	local recipe_tech = krastorio.technologies.getTechnologyThatUnlockRecipe(recipe_name)
+	local ingredient_tech = krastorio.technologies.getTechnologyThatUnlockRecipe(ingredient_name)
+	if recipe_tech and ingredient_tech then
+		krastorio.technologies.removePrerequisite(recipe_tech.name, ingredient_tech.name)
+		return krastorio.recipes.removeIngredient(recipe_name, ingredient_name)
+	end
 end
 
 --
