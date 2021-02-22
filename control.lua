@@ -1,4 +1,4 @@
--- Path 
+-- Path
 local control_scripts_path               = "__Krastorio2__/lib/private/control-scripts/"
 local control_compatibility_scripts_path = "__Krastorio2__/compatibility-scripts/control/"
 local control_lib_path                   = control_scripts_path .. "control-lib/control-lib-initialization"
@@ -17,12 +17,12 @@ local scripts =
 	-- Bonus items
 	require(control_scripts_path .. "bonus-items"),
 	-- Patreon
-	require(control_scripts_path .. "patreon"),	
+	require(control_scripts_path .. "patreon"),
 	-- Generate creep under biter nests
 	require(control_scripts_path .. "creep-generator"),
 	-- Factory tile collector
 	require(control_scripts_path .. "jackhammer"),
-	-- Adding inserters changeable drop lane 
+	-- Adding inserters changeable drop lane
 	require(control_scripts_path .. "inserters-changeable-drop-lane"),
 	-- Adding change roboport state
 	require(control_scripts_path .. "change-roboport-state"),
@@ -47,7 +47,7 @@ local scripts =
 	-- Creep collector
 	require(control_scripts_path .. "creep-collector"),
 	-- for future updates...
-	require(control_scripts_path .. "planetary-teleporters"),
+	require(control_scripts_path .. "planetary-teleporter"),
 	-- Electric offshore pump
 	require(control_scripts_path .. "electric-offshore-pump"),
 	-- Viruses

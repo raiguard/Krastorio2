@@ -47,10 +47,12 @@ local function update_fully_charged(refs, state)
 	end
 	if fully_charged then
 		refs.name_label.style = "subheader_caption_label"
+		refs.name_label.style.maximal_width = 370
 		refs.toolbar.style = "subheader_frame"
 		refs.toolbar.low_power_label.visible = false
 	else
 		refs.name_label.style = "kr_subheader_bold_label"
+		refs.name_label.style.maximal_width = 370
 		refs.toolbar.style = "negative_subheader_frame"
 		refs.toolbar.low_power_label.visible = true
 	end
@@ -328,41 +330,47 @@ local function create_gui(player, entity)
 				-- content frame
 				{type = "frame", style = "inside_shallow_frame", direction = "vertical", children = {
 					-- toolbar
-					{type = "frame", style = "subheader_frame", ref = {"toolbar"}, children = {
-						{
-							type = "label",
-							style = "subheader_caption_label",
-							caption = entity_data.name or global.planetary_teleporter_unnamed_translations[player.index],
-							ref = {"name_label"}
-						},
-						{
-							type = "textfield",
-							visible = false,
-							ref = {"name_textfield"},
-							actions = {
-								on_confirmed = {gui = "planetary_teleporter", action = "toggle_rename"},
-								on_text_changed = {gui = "planetary_teleporter", action = "update_name"}
+					{
+						type = "frame",
+						style = "subheader_frame",
+						ref = {"toolbar"},
+						children = {
+							{
+								type = "label",
+								style = "subheader_caption_label",
+								style_mods = {maximal_width = 370},
+								caption = entity_data.name or global.planetary_teleporter_unnamed_translations[player.index],
+								ref = {"name_label"}
+							},
+							{
+								type = "textfield",
+								visible = false,
+								ref = {"name_textfield"},
+								actions = {
+									on_confirmed = {gui = "planetary_teleporter", action = "toggle_rename"},
+									on_text_changed = {gui = "planetary_teleporter", action = "update_name"}
+								}
+							},
+							{
+								type = "sprite-button",
+								style = "mini_button_aligned_to_text_vertically_when_centered",
+								sprite = "utility/rename_icon_small_black",
+								tooltip = {"gui.kr-planetary-teleporter-rename-tooltip"},
+								actions = {
+									on_click = {gui = "planetary_teleporter", action = "toggle_rename"}
+								}
+							},
+							{type = "empty-widget", style_mods = {horizontally_stretchable = true}},
+							{
+								type = "label",
+								name = "low_power_label",
+								style = "bold_label",
+								style_mods = {right_padding = 8},
+								visible = false,
+								caption = {"", "[img=utility/warning_white] ", {"gui.kr-planetary-teleporter-low-power"}}
 							}
-						},
-						{
-							type = "sprite-button",
-							style = "mini_button_aligned_to_text_vertically_when_centered",
-							sprite = "utility/rename_icon_small_black",
-							tooltip = {"gui.kr-planetary-teleporter-rename-tooltip"},
-							actions = {
-								on_click = {gui = "planetary_teleporter", action = "toggle_rename"}
-							}
-						},
-						{type = "empty-widget", style_mods = {horizontally_stretchable = true}},
-						{
-							type = "label",
-							name = "low_power_label",
-							style = "bold_label",
-							style_mods = {right_padding = 8},
-							visible = false,
-							caption = {"", "[img=utility/warning_white] ", {"gui.kr-planetary-teleporter-low-power"}}
 						}
-					}},
+					},
 					{type = "flow", style_mods = {padding = 12, vertical_spacing = 8}, direction = "vertical", children = {
 						-- entity status line
 						{type = "flow", style = "status_flow", style_mods = {vertical_align = "center"}, children = {
