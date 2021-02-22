@@ -15,8 +15,8 @@ return
 			{"glass", 20},
 			{"automation-core", 2}
 		},
-		result = "kr-greenhouse"		
-    },	
+		result = "kr-greenhouse"
+  },
 	{
 		type = "recipe",
 		name = "kr-bio-lab",
@@ -29,8 +29,8 @@ return
 			{"glass", 20},
 			{"electronic-circuit", 2}
 		},
-		result = "kr-bio-lab"		
-    },	
+		result = "kr-bio-lab"
+  },
 	{
 		type = "recipe",
 		name = "kr-crusher",
@@ -44,7 +44,7 @@ return
 			{"automation-core", 2}
 		},
 		result = "kr-crusher"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-electric-mining-drill-mk2",
@@ -57,7 +57,7 @@ return
 			{"rare-metals", 4}
 		},
 		result = "kr-electric-mining-drill-mk2"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-electric-mining-drill-mk3",
@@ -70,7 +70,7 @@ return
 			{"imersite-crystal", 4}
 		},
 		result = "kr-electric-mining-drill-mk3"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-shelter",
@@ -84,7 +84,7 @@ return
 			{"coal", 50}
 		},
 		result = "kr-shelter"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-mineral-water-pumpjack",
@@ -95,10 +95,10 @@ return
 			{"automation-core", 2},
 			{"steel-gear-wheel", 5},
 			{"steel-beam", 5},
-			{"pipe", 5}			
+			{"pipe", 5}
 		},
 		result = "kr-mineral-water-pumpjack"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-air-purifier",
@@ -112,7 +112,7 @@ return
 			{"engine-unit", 1}
 		},
 		result = "kr-air-purifier"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-sentinel",
@@ -126,7 +126,7 @@ return
 			{"automation-core", 1}
 		},
 		result = "kr-sentinel"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-fuel-refinery",
@@ -140,7 +140,7 @@ return
 			{"pipe", 5}
 		},
 		result = "kr-fuel-refinery"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-gas-power-station",
@@ -154,7 +154,7 @@ return
 			{"pipe", 4}
 		},
 		result = "kr-gas-power-station"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-tesla-coil",
@@ -164,10 +164,10 @@ return
 		{
 			{"steel-beam" , 20},
 			{"electronic-circuit", 20},
-			{"copper-cable", 100}			
+			{"copper-cable", 100}
 		},
-		result = "kr-tesla-coil"		
-    },
+		result = "kr-tesla-coil"
+  },
 	-- -- --
 	-- NEW LABORATORIES
 	-- -- --
@@ -184,7 +184,7 @@ return
 			{"copper-cable", 10}
 		},
 		result = "biusart-lab"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-singularity-lab",
@@ -200,7 +200,7 @@ return
 			{"processing-unit", 100}
 		},
 		result = "kr-singularity-lab"
-    },
+  },
 	-- -- --
 	-- Research servers
 	-- -- --
@@ -216,7 +216,7 @@ return
 			{"electronic-components", 50}
 		},
 		result = "kr-research-server"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-quantum-computer",
@@ -232,181 +232,7 @@ return
 			{"processing-unit", 100}
 		},
 		result = "kr-quantum-computer"
-    },
-	-- -- --
-	-- MEDIUM CONTEINERS
-	-- -- --
-	{
-		type = "recipe",
-		name = "kr-medium-active-provider-container",
-		energy_required = 1,
-		enabled = false,
-		ingredients =
-		{
-			{"kr-medium-container", 1},
-			{"advanced-circuit", 5},
-		},
-		subgroup = "kr-logistics-2",
-		order = "a[medium-active-provider-container]",
-		result = "kr-medium-active-provider-container"
-    },
-	{
-		type = "recipe",
-		name = "kr-medium-buffer-container",
-		energy_required = 1,
-		enabled = false,
-		ingredients =
-		{
-			{"kr-medium-container", 1},
-			{"advanced-circuit", 5}
-		},
-		subgroup = "kr-logistics-2",
-		order = "b[medium-buffer-container]",
-		result = "kr-medium-buffer-container"
-    },
-	{
-		type = "recipe",
-		name = "kr-medium-container",
-		energy_required = 2,
-		enabled = false,
-		ingredients =
-		{
-			{"steel-chest", 4},
-			{"steel-beam", 2}
-		},
-		subgroup = "storage",
-		order = "a[items]-d[medium-container]",
-		result = "kr-medium-container"
-    },
-	{
-		type = "recipe",
-		name = "kr-medium-passive-provider-container",
-		energy_required = 1,
-		enabled = false,
-		ingredients =
-		{
-			{"kr-medium-container", 1},
-			{"advanced-circuit", 5}
-		},
-		subgroup = "kr-logistics-2",
-		order = "c[medium-passive-provider-container]",
-		result = "kr-medium-passive-provider-container"
 	},
-	{
-		type = "recipe",
-		name = "kr-medium-requester-container",
-		energy_required = 1,
-		enabled = false,
-		ingredients =
-		{
-			{"kr-medium-container", 1},
-			{"advanced-circuit", 5}
-		},
-		subgroup = "kr-logistics-2",
-		order = "d[medium-requester-container]",
-		result = "kr-medium-requester-container"
-    },
-	{
-		type = "recipe",
-		name = "kr-medium-storage-container",
-		energy_required = 1,
-		enabled = false,
-		ingredients =
-		{
-			{"kr-medium-container", 1},
-			{"advanced-circuit", 5}
-		},
-		subgroup = "kr-logistics-2",
-		order = "e[medium-storage-container]",
-		result = "kr-medium-storage-container"
-    },	
-	-- -- --
-	-- BIG CONTEINERS
-	-- -- --
-	{
-		type = "recipe",
-		name = "kr-big-active-provider-container",
-		energy_required = 1,
-		enabled = false,
-		ingredients =
-		{
-			{"kr-big-container", 1},
-			{"advanced-circuit", 5}
-		},
-		subgroup = "kr-logistics-3",
-		order = "a[big-active-provider-container]",
-		result = "kr-big-active-provider-container"
-    },
-	{
-		type = "recipe",
-		name = "kr-big-buffer-container",
-		energy_required = 1,
-		enabled = false,
-		ingredients =
-		{
-			{"kr-big-container", 1},
-			{"advanced-circuit", 5}
-		},
-		subgroup = "kr-logistics-3",
-		order = "b[big-buffer-container]",
-		result = "kr-big-buffer-container"
-    },	
-	{
-		type = "recipe",
-		name = "kr-big-container",
-		energy_required = 5,
-		enabled = false,
-		ingredients =
-		{
-			{"kr-medium-container", 4},
-			{"steel-beam", 10}
-		},
-		subgroup = "storage",
-		order = "a[items]-dz[big-container]",
-		result = "kr-big-container"
-    },
-	{
-		type = "recipe",
-		name = "kr-big-passive-provider-container",
-		energy_required = 1,
-		enabled = false,
-		ingredients =
-		{
-			{"kr-big-container", 1},
-			{"advanced-circuit", 5}
-		},
-		subgroup = "kr-logistics-3",
-		order = "c[big-passive-provider-container]",
-		result = "kr-big-passive-provider-container"
-    },
-	{
-		type = "recipe",
-		name = "kr-big-requester-container",
-		energy_required = 1,
-		enabled = false,
-		ingredients =
-		{
-			{"kr-big-container", 1},
-			{"advanced-circuit", 5}
-		},
-		subgroup = "kr-logistics-3",
-		order = "d[big-requester-container]",
-		result = "kr-big-requester-container"
-    },	
-	{
-		type = "recipe",
-		name = "kr-big-storage-container",
-		energy_required = 1,
-		enabled = false,
-		ingredients =
-		{
-			{"kr-big-container", 1},
-			{"advanced-circuit", 5}
-		},
-		subgroup = "kr-logistics-3",
-		order = "e[big-storage-container]",
-		result = "kr-big-storage-container"
-    },	
 	-- -- --
 	-- FLUID STORAGES
 	-- -- --
@@ -422,7 +248,7 @@ return
 			{"kr-steel-pipe", 4}
 		},
 		result = "kr-fluid-storage-1"
-    },	
+  },
 	{
 		type = "recipe",
 		name = "kr-fluid-storage-2",
@@ -435,7 +261,7 @@ return
 			{"kr-steel-pipe", 12}
 		},
 		result = "kr-fluid-storage-2"
-    },	
+  },
 	-- -- --
 	{
 		type = "recipe",
@@ -443,7 +269,7 @@ return
 		normal =
 		{
 			enabled = false,
-			ingredients = 
+			ingredients =
 			{
 				{"steel-plate", 1}
 			},
@@ -452,13 +278,13 @@ return
 		expensive =
 		{
 			enabled = false,
-			ingredients = 
+			ingredients =
 			{
 				{"steel-plate", 2}
 			},
 			result = "kr-steel-pipe"
-		}		
-	},  
+		}
+	},
 	{
 		type = "recipe",
 		name = "kr-steel-pipe-to-ground",
@@ -467,7 +293,7 @@ return
 		{
 			{"kr-steel-pipe", 15},
 			{"steel-plate", 5}
-		},		
+		},
 		result = "kr-steel-pipe-to-ground",
 		result_count = 2
 	},
@@ -498,7 +324,7 @@ return
 			{"glass", 10},
 		},
 		result = "kr-electrolysis-plant"
-    },	
+  },
 	{
 		type = "recipe",
 		name = "kr-filtration-plant",
@@ -512,7 +338,7 @@ return
 			{"engine-unit", 4}
 		},
 		result = "kr-filtration-plant"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-atmospheric-condenser",
@@ -522,11 +348,11 @@ return
 		{
 			{"steel-beam", 10},
 			{"steel-gear-wheel", 10},
-			{"electronic-circuit", 4},			
+			{"electronic-circuit", 4},
 			{"engine-unit", 2}
 		},
 		result = "kr-atmospheric-condenser"
-    },	
+  },
 	{
 		type = "recipe",
 		name = "kr-fluid-burner",
@@ -539,13 +365,13 @@ return
 			{"electronic-circuit", 3}
 		},
 		result = "kr-fluid-burner"
-    },		
+  },
 	{
 		type = "recipe",
 		name = "kr-quarry-drill",
 		energy_required = 60,
 		enabled = false,
-		ingredients = 
+		ingredients =
 		{
 			{"steel-beam", 50},
 			{"steel-plate", 50},
@@ -554,14 +380,14 @@ return
 			{"processing-unit", 20}
 		},
 		result = "kr-quarry-drill"
-	},	
+	},
 	{
 		type = "recipe",
 		name = "kr-advanced-solar-panel",
 		category = "crafting-with-fluid",
 		energy_required = 10,
 		enabled = false,
-		ingredients = 
+		ingredients =
 		{
 			{"solar-panel", 1},
 			{"imersite-crystal", 5},
@@ -569,13 +395,13 @@ return
 			{type = "fluid", name = "nitric-acid", amount = 25}
 		},
 		result = "kr-advanced-solar-panel"
-	},			
+	},
 	{
 		type = "recipe",
 		name = "kr-fusion-reactor",
 		energy_required = 200,
 		enabled = false,
-		ingredients = 
+		ingredients =
 		{
 			{"concrete", 500},
 			{"copper-plate", 500},
@@ -585,7 +411,7 @@ return
 			{"processing-unit", 100}
 		},
 		result = "kr-fusion-reactor"
-	},	
+	},
 	{
 		type = "recipe",
 		name = "kr-advanced-steam-turbine",
@@ -595,23 +421,23 @@ return
 		{
 			{"steam-turbine", 2},
 			{"steel-gear-wheel", 10},
-			{"steel-beam", 10},	
+			{"steel-beam", 10},
 			{"rare-metals", 60},
-			{"electric-engine-unit", 10}					
+			{"electric-engine-unit", 10}
 		},
 		result = "kr-advanced-steam-turbine"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-energy-storage",
 		energy_required = 30,
 		enabled = false,
-		ingredients = 
+		ingredients =
 		{
 			{"steel-beam", 10},
 			{"processing-unit", 10},
 			{"rare-metals", 50},
-			{"energy-control-unit", 50}	
+			{"energy-control-unit", 50}
 		},
 		result = "kr-energy-storage"
 	},
@@ -623,12 +449,12 @@ return
 		ingredients =
 		{
 			{"imersium-beam", 10},
-			{"kr-steel-pipe", 10},		
-			{"energy-control-unit", 10},				
-			{"ai-core", 5}					
+			{"kr-steel-pipe", 10},
+			{"energy-control-unit", 10},
+			{"ai-core", 5}
 		},
 		result = "kr-matter-plant"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-matter-assembler",
@@ -637,12 +463,12 @@ return
 		ingredients =
 		{
 			{"imersium-beam", 4},
-			{"kr-steel-pipe", 4},		
-			{"energy-control-unit", 10},			
-			{"ai-core", 3}					
+			{"kr-steel-pipe", 4},
+			{"energy-control-unit", 10},
+			{"ai-core", 3}
 		},
 		result = "kr-matter-assembler"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-stabilizer-charging-station",
@@ -650,12 +476,12 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"imersium-beam", 4},	
-			{"energy-control-unit", 20},			
-			{"processing-unit", 1}					
+			{"imersium-beam", 4},
+			{"energy-control-unit", 20},
+			{"processing-unit", 1}
 		},
 		result = "kr-stabilizer-charging-station"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-antimatter-reactor",
@@ -664,14 +490,14 @@ return
 		ingredients =
 		{
 			{"ai-core", 50},
-			{"energy-control-unit", 50},		
+			{"energy-control-unit", 50},
 			{"imersium-beam", 100},
 			{"imersium-plate", 350},
 			{"rare-metals", 350},
 			{"steel-plate", 350}
 		},
 		result = "kr-antimatter-reactor"
-    },
+  },
 	---
 	-- Belts
 	---
@@ -685,11 +511,11 @@ return
 		ingredients =
 		{
 			{"express-splitter", 1},
-			{"steel-gear-wheel", 4},	
+			{"steel-gear-wheel", 4},
 			{"advanced-circuit", 1}
 		},
 		result = "kr-advanced-splitter"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-advanced-transport-belt",
@@ -698,12 +524,12 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"express-transport-belt", 1},	
+			{"express-transport-belt", 1},
 			{"steel-gear-wheel", 4},
 			{"rare-metals", 1},
 		},
 		result = "kr-advanced-transport-belt"
-    },	
+  },
 	{
 		type = "recipe",
 		name = "kr-advanced-underground-belt",
@@ -712,12 +538,12 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"express-underground-belt", 2},	
-			{"kr-advanced-transport-belt", 30},	
+			{"express-underground-belt", 2},
+			{"kr-advanced-transport-belt", 30},
 		},
 		result = "kr-advanced-underground-belt",
 		result_count = 2
-    },
+  },
 	-- Superior
 	{
 		type = "recipe",
@@ -729,10 +555,10 @@ return
 		{
 			{"kr-advanced-splitter", 1},
 			{"imersium-gear-wheel", 4},
-			{"processing-unit", 1}			
+			{"processing-unit", 1}
 		},
 		result = "kr-superior-splitter"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-superior-transport-belt",
@@ -741,12 +567,12 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"kr-advanced-transport-belt", 1},	
+			{"kr-advanced-transport-belt", 1},
 			{"imersium-gear-wheel", 4},
-			{"low-density-structure", 1},	
+			{"low-density-structure", 1},
 		},
 		result = "kr-superior-transport-belt"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-superior-underground-belt",
@@ -755,12 +581,12 @@ return
 		enabled = false,
 		ingredients =
 		{
-			{"kr-advanced-underground-belt", 2},	
-			{"kr-superior-transport-belt", 40},			
+			{"kr-advanced-underground-belt", 2},
+			{"kr-superior-transport-belt", 40},
 		},
 		result = "kr-superior-underground-belt",
 		result_count = 2
-    },	
+  },
 	-- -- --
 	-- Superior inserters
 	-- -- --
@@ -777,7 +603,7 @@ return
 			{"processing-unit", 1}
 		},
 		result = "kr-superior-inserter"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-superior-long-inserter",
@@ -791,7 +617,7 @@ return
 			{"processing-unit", 1}
 		},
 		result = "kr-superior-long-inserter"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-superior-filter-inserter",
@@ -805,7 +631,7 @@ return
 			{"processing-unit", 2}
 		},
 		result = "kr-superior-filter-inserter"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-superior-long-filter-inserter",
@@ -819,7 +645,7 @@ return
 			{"processing-unit", 2}
 		},
 		result = "kr-superior-long-filter-inserter"
-    },
+  },
 	-- -- --
 	{
 		type = "recipe",
@@ -836,7 +662,7 @@ return
 			{"energy-control-unit", 10}
 		},
 		result = "kr-advanced-furnace"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-advanced-assembling-machine",
@@ -847,12 +673,12 @@ return
 			{"imersium-beam", 4},
 			{"steel-beam", 8},
 			{"assembling-machine-3", 2},
-			{"electric-furnace", 2},			
+			{"electric-furnace", 2},
 			{"ai-core", 2},
 			{"productivity-module-3", 2}
 		},
 		result = "kr-advanced-assembling-machine"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-advanced-chemical-plant",
@@ -868,7 +694,7 @@ return
 			{"kr-steel-pipe", 10}
 		},
 		result = "kr-advanced-chemical-plant"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-large-roboport",
@@ -884,7 +710,7 @@ return
 			{"roboport", 1}
 		},
 		result = "kr-large-roboport"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-small-roboport",
@@ -900,7 +726,7 @@ return
 		},
 		result = "kr-small-roboport",
 		result_count = 2
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-singularity-beacon",
@@ -911,9 +737,9 @@ return
 			{"beacon", 1},
 			{"ai-core", 10},
 			{"processing-unit", 20},
-			{"energy-control-unit", 10}			
+			{"energy-control-unit", 10}
 		},
-		result = "kr-singularity-beacon"		
+		result = "kr-singularity-beacon"
 	},
 	{
 		type = "recipe",
@@ -929,8 +755,8 @@ return
 			{"low-density-structure", 10}
 		},
 		result = "kr-railgun-turret"
-    },  
-    {
+  },
+  {
 		type = "recipe",
 		name = "kr-rocket-turret",
 		enabled = false,
@@ -944,7 +770,7 @@ return
 			{"low-density-structure", 10}
 		},
 		result = "kr-rocket-turret"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-laser-artillery-turret",
@@ -959,7 +785,7 @@ return
 			{"low-density-structure", 10}
 		},
 		result = "kr-laser-artillery-turret"
-    },
+  },
 	{
 		type = "recipe",
 		name = "kr-intergalactic-transceiver",
@@ -974,7 +800,7 @@ return
 			{"ai-core", 300},
 			{"concrete", 750}
 		},
-		result = "kr-intergalactic-transceiver"		
+		result = "kr-intergalactic-transceiver"
 	},
 	{
 		type = "recipe",

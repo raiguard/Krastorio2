@@ -4,30 +4,30 @@ if mods["IndustrialRevolution"] then
 	-----------------------------------------------------------------------------------------------------------------------
 	-- -- TECHNOLOGIES
 	-----------------------------------------------------------------------------------------------------------------------
-	
+
 	krastorio.technologies.addPrerequisite("ir2-electronics-2", "kr-silicon-processing")
-	
+
 	-- Prerequisite duplicated
 	krastorio.technologies.removePrerequisite("gate", "ir2-electronics-1")
-	
+
 	-- Overriding
 	krastorio.technologies.removePrerequisite("logistic-science-pack", "ir2-electronics-1")
 	krastorio.technologies.removePrerequisite("fluid-handling", "kr-basic-fluid-handling")
 	krastorio.technologies.removePrerequisite("nuclear-power", "kr-steam-engine")
 	krastorio.technologies.removePrerequisite("production-science-pack", "uranium-processing")
 	krastorio.technologies.removePrerequisite("utility-science-pack", "rocket-fuel")
-	
+
 	krastorio.technologies.convertPrerequisite("kr-fluids-chemistry", "kr-basic-fluid-handling", "fluid-handling", true)
-	
+
 	krastorio.technologies.convertPrerequisite("kr-steel-fluid-tanks", "kr-steel-fluid-handling", "ir2-barrelling", false)
-	
+
 	krastorio.technologies.removePrerequisite("stone-wall", "military")
 	krastorio.technologies.removePrerequisite("light-armor", "military")
 	krastorio.technologies.addPrerequisite("ir2-steambot", "light-armor")
 	krastorio.technologies.addResearchUnitIngredient("light-armor", "automation-science-pack", 1)
 	krastorio.technologies.removeResearchUnitIngredient("light-armor", "logistic-science-pack", 1)
 	krastorio.technologies.addResearchUnitIngredient("heavy-armor", "logistic-science-pack", 1)
-	
+
 	-- -- Fix technologies that must be under iron age
 	-- Greenhouse
 	krastorio.technologies.addPrerequisite("kr-greenhouse", "ir2-iron-milestone")
@@ -38,14 +38,16 @@ if mods["IndustrialRevolution"] then
 	krastorio.technologies.addResearchUnitIngredient("kr-crusher", "automation-science-pack", 1)
 	krastorio.technologies.addResearchUnitIngredient("kr-crusher", "logistic-science-pack", 1)
 	krastorio.technologies.addResearchUnitIngredient("kr-stone-processing", "automation-science-pack", 1)
-	krastorio.technologies.addResearchUnitIngredient("kr-stone-processing", "logistic-science-pack", 1)	
-	
+	krastorio.technologies.addResearchUnitIngredient("kr-stone-processing", "logistic-science-pack", 1)
+
 	krastorio.technologies.addResearchUnitIngredient("fluid-handling", "logistic-science-pack", 1)
 	krastorio.technologies.addResearchUnitIngredient("kr-fluids-chemistry", "logistic-science-pack", 1)
 	krastorio.technologies.addResearchUnitIngredient("kr-fluids-chemistry", "chemical-science-pack", 1)
 	krastorio.technologies.addResearchUnitIngredient("oil-processing", "logistic-science-pack", 1)
 	krastorio.technologies.addResearchUnitIngredient("plastics", "logistic-science-pack", 1)
-	krastorio.technologies.addResearchUnitIngredient("kr-containers", "chemical-science-pack", 1)
+	if krastorio.general.getSafeSettingValue("kr-containers") then
+		krastorio.technologies.addResearchUnitIngredient("kr-containers", "chemical-science-pack", 1)
+	end
 	krastorio.technologies.addResearchUnitIngredient("kr-radar", "chemical-science-pack", 1)
 	krastorio.technologies.addResearchUnitIngredient("logistic-2", "logistic-science-pack", 1)
 	krastorio.technologies.addResearchUnitIngredient("logistic-2", "chemical-science-pack", 1)
@@ -53,27 +55,27 @@ if mods["IndustrialRevolution"] then
 	krastorio.technologies.addResearchUnitIngredient("kr-fluid-excess-handling", "chemical-science-pack", 1)
 	krastorio.technologies.addResearchUnitIngredient("automobilism", "chemical-science-pack", 1)
 	krastorio.technologies.addResearchUnitIngredient("advanced-radar", "chemical-science-pack", 1)
-	
+
 	krastorio.technologies.removeResearchUnitIngredient("kr-fluids-chemistry", "basic-tech-card")
 	krastorio.technologies.removeResearchUnitIngredient("kr-fluid-excess-handling", "basic-tech-card")
 	krastorio.technologies.removeResearchUnitIngredient("automobilism", "basic-tech-card")
 	krastorio.technologies.removeResearchUnitIngredient("advanced-radar", "basic-tech-card")
 	krastorio.technologies.removeResearchUnitIngredient("kr-silicon-processing", "basic-tech-card")
-	
+
 	-- lithium-sulfur-battery
 	krastorio.technologies.addPrerequisite("kr-lithium-sulfur-battery", "production-science-pack")
-	krastorio.technologies.addResearchUnitIngredient("kr-lithium-sulfur-battery", "production-science-pack", 1)	
-	
-	-- Fix lab utility		
+	krastorio.technologies.addResearchUnitIngredient("kr-lithium-sulfur-battery", "production-science-pack", 1)
+
+	-- Fix lab utility
 	krastorio.technologies.convertPrerequisiteFromAllTechnologies("kr-singularity-lab", "kr-quantum-computer", true)
 	data.raw.technology["kr-singularity-lab"].prerequisites = {"kr-imersium-processing"}
 	data.raw.technology["kr-advanced-tech-card"].prerequisites = {"kr-singularity-lab"}
 	krastorio.technologies.addResearchUnitIngredient("kr-singularity-lab", "space-science-pack", 1, true)
 	krastorio.technologies.addResearchUnitIngredient("kr-singularity-lab", "matter-tech-card", 1, true)
-	
+
 	krastorio.technologies.addResearchUnitIngredient("military", "automation-science-pack", 1)
-	krastorio.technologies.addResearchUnitIngredient("engine", "logistic-science-pack", 1)	
-	
+	krastorio.technologies.addResearchUnitIngredient("engine", "logistic-science-pack", 1)
+
 	-- Remove unlock
 	krastorio.technologies.removeUnlockRecipe("kr-stone-processing", "glass-2")
 	krastorio.technologies.removeUnlockRecipe("logistics", "inserter")
@@ -82,26 +84,26 @@ if mods["IndustrialRevolution"] then
 	krastorio.technologies.addUnlockRecipe("ir2-furnaces-2", "rare-metals")
 	krastorio.technologies.addUnlockRecipe("kr-automation-core", "burner-inserter")
 	krastorio.technologies.addUnlockRecipe("kr-automation-core", "inserter-parts")
-	
+
 	-- Removing technologies
-	
+
 	data.raw.technology["kr-basic-fluid-handling"] = nil
 	data.raw.technology["kr-steam-engine"] = nil
-	
+
 	data.raw.technology["kr-air-purification"] = nil
-	
+
 	data.raw.technology["kr-electric-mining-drill"] = nil
 	data.raw.technology["kr-electric-mining-drill-mk2"] = nil
-	data.raw.technology["kr-electric-mining-drill-mk3"] = nil	
-	
+	data.raw.technology["kr-electric-mining-drill-mk3"] = nil
+
 	data.raw.technology["ir2-nuclear-fuel"] = nil
-	
+
 	data.raw.technology["kr-steel-fluid-handling"] = nil
-	
-	
-	
+
+
+
 	data:extend(
-	{	
+	{
 		{
 			type = "technology",
 			name = "kr-wind-turbine",
@@ -109,7 +111,7 @@ if mods["IndustrialRevolution"] then
 			localised_description = {"item-description.kr-wind-turbine"},
 			mod = "Krastorio2",
 			icon = kr_technologies_icons_path .. "wind-turbine.png",
-			icon_size = 256, 
+			icon_size = 256,
 			icon_mipmaps = 4,
 			effects =
 			{
@@ -122,7 +124,7 @@ if mods["IndustrialRevolution"] then
 			unit =
 			{
 				count = 50,
-				ingredients = 
+				ingredients =
 				{
 					{"basic-tech-card", 1},
 					{"automation-science-pack", 1},
@@ -132,7 +134,7 @@ if mods["IndustrialRevolution"] then
 			}
 		}
 	})
-	
+
 	-----------------------------------------------------------------------------------------------------------------------
 	-- -- Recipes
 	-----------------------------------------------------------------------------------------------------------------------
@@ -145,7 +147,7 @@ if mods["IndustrialRevolution"] then
 
 	-- Basic tech card
 	krastorio.recipes.convertIngredient("basic-tech-card", "copper-cable", "copper-gear-wheel")
-	
+
 	-- -- Automation core
 	--Disable copper motor
 	krastorio.recipes.disable("copper-motor")
@@ -153,11 +155,11 @@ if mods["IndustrialRevolution"] then
 	krastorio.recipes.disable("rare-metals")
 	krastorio.recipes.disable("burner-inserter")
 	krastorio.recipes.disable("inserter-parts")
-	
-	krastorio.recipes.convertIngredientFromAllRecipes("copper-motor", "automation-core")		
+
+	krastorio.recipes.convertIngredientFromAllRecipes("copper-motor", "automation-core")
 	krastorio.recipes.convertIngredient("automation-core", "iron-gear-wheel", "copper-gear-wheel")
 	krastorio.recipes.convertIngredient("automation-core", "iron-stick", "copper-rod")
-	
+
 	-- Inserter parts
 	krastorio.recipes.convertIngredient("inserter-parts", "iron-gear-wheel", "tin-gear-wheel")
 	krastorio.recipes.convertIngredient("inserter-parts", "iron-stick", "tin-rod")
@@ -169,26 +171,26 @@ if mods["IndustrialRevolution"] then
 	krastorio.recipes.replaceIngredient("filter-inserter", "inserter-parts", {"fast-inserter", 1})
 	krastorio.recipes.replaceIngredient("filter-inserter", "steel-plate", {"sensor", 1})
 	krastorio.recipes.removeIngredient("filter-inserter", "electronic-circuit")
-	
+
 	krastorio.recipes.replaceIngredient("stack-filter-inserter", "inserter-parts", {"stack-inserter", 1})
 	krastorio.recipes.replaceIngredient("stack-filter-inserter", "steel-plate", {"sensor", 1})
 	krastorio.recipes.removeIngredient("stack-filter-inserter", "advanced-circuit")
 	krastorio.recipes.removeIngredient("stack-filter-inserter", "steel-gear-wheel")
-	
+
 	krastorio.recipes.replaceIngredient("kr-superior-filter-inserter", "inserter-parts", {"kr-superior-inserter", 1})
 	krastorio.recipes.replaceIngredient("kr-superior-filter-inserter", "processing-unit", {"sensor", 1})
 	krastorio.recipes.removeIngredient("kr-superior-filter-inserter", "imersium-plate")
 	krastorio.recipes.removeIngredient("kr-superior-filter-inserter", "imersium-gear-wheel")
-	
+
 	krastorio.recipes.replaceIngredient("kr-superior-long-filter-inserter", "inserter-parts", {"kr-superior-long-inserter", 1})
 	krastorio.recipes.replaceIngredient("kr-superior-long-filter-inserter", "processing-unit", {"sensor", 1})
 	krastorio.recipes.removeIngredient("kr-superior-long-filter-inserter", "imersium-plate")
 	krastorio.recipes.removeIngredient("kr-superior-long-filter-inserter", "imersium-gear-wheel")
-	
+
 	-- Deadlock inserters
 	krastorio.recipes.replaceIngredient("pipe-inserter", "tin-rod", {"inserter-parts", 1})
-	krastorio.recipes.replaceIngredient("long-handed-pipe-inserter", "tin-rod", {"inserter-parts", 1})	
-	
+	krastorio.recipes.replaceIngredient("long-handed-pipe-inserter", "tin-rod", {"inserter-parts", 1})
+
 	-- Loaders
 	krastorio.recipes.replaceIngredient("kr-loader", "iron-beam", {"copper-frame-small", 1})
 	krastorio.recipes.replaceIngredient("kr-fast-loader", "kr-loader", {"iron-frame-small", 1})
@@ -196,62 +198,62 @@ if mods["IndustrialRevolution"] then
 	krastorio.recipes.replaceIngredient("kr-se-loader", "kr-fast-loader", {"steel-frame-small", 1})
 	krastorio.recipes.replaceIngredient("kr-advanced-loader", "kr-express-loader", {"stainless-frame-small", 1})
 	krastorio.recipes.replaceIngredient("kr-superior-loader", "kr-advanced-loader",{"stainless-frame-small", 1})
-	
+
 	-- Labs
 	krastorio.recipes.convertIngredient("kr-singularity-lab", "steel-plate", "imersium-plate")
 	krastorio.recipes.replaceIngredient("kr-singularity-lab", "biusart-lab", {"quantum-lab", 2})
-	
+
 	-- Black tech card
 	krastorio.recipes.convertIngredient("blank-tech-card", "iron-plate", "tin-plate")
 	krastorio.recipes.convertIngredient("blank-tech-card", "copper-cable", "copper-rod")
-	
+
 	-- Rail
 	krastorio.recipes.convertIngredient("rail", "steel-beam", "iron-beam")
-	
+
 	-- Disable unseful recipes
 	krastorio.recipes.disable("iron-beam-2")
-	
+
 	-- Electronic components
-	krastorio.recipes.convertIngredientFromAllRecipes("electronic-components", "gold-gate")	
+	krastorio.recipes.convertIngredientFromAllRecipes("electronic-components", "gold-gate")
 	krastorio.recipes.convertIngredient("energy-control-unit", "gold-gate", "tellurium-gate")
-	
+
 	-- Processor unit
 	krastorio.recipes.removeIngredient("processing-unit", "rare-metals")
-	
+
 	-- AI-core
 	krastorio.recipes.addIngredient("ai-core", {"tellurium-gate", 2})
-	
+
 	-- Steel pipes from K2 to IR2
-	krastorio.recipes.convertIngredientFromAllRecipes("kr-steel-pipe", "steel-pipe")	
-	
+	krastorio.recipes.convertIngredientFromAllRecipes("kr-steel-pipe", "steel-pipe")
+
 	-- Fluid tanks
 	krastorio.recipes.convertIngredient("rail", "steel-beam", "iron-beam")
-	
+
 	-- Lithium sulfur battery
 	krastorio.recipes.replaceIngredient("lithium-sulfur-battery", "lithium", {type = "item", name = "lithium", amount = 2})
 	krastorio.recipes.replaceIngredient("lithium-sulfur-battery", "copper-plate", {type = "item", name = "bronze-plate-special", amount = 2})
 	krastorio.recipes.replaceIngredient("lithium-sulfur-battery", "sulfuric-acid", {type = "fluid", name = "sulfuric-acid", amount = 40})
-	
+
 	-- Fluid burner
 	krastorio.recipes.addIngredient("kr-fluid-burner", {"iron-motor", 1})
-	
+
 	-- Fuel refinery
 	krastorio.recipes.replaceIngredient("kr-fuel-refinery", "steel-beam", {"iron-frame-large", 1})
-	
+
 	-- atmospheric-condenser
 	krastorio.recipes.replaceIngredient("kr-atmospheric-condenser", "steel-beam", {"iron-frame-large", 1})
 	krastorio.recipes.replaceIngredient("kr-atmospheric-condenser", "electronic-circuit", {"iron-motor", 4})
-	
+
 	-- electrolysis-plant
 	krastorio.recipes.replaceIngredient("kr-electrolysis-plant", "steel-beam", {"iron-frame-large", 1})
-	
+
 	-- filtration-plant
 	krastorio.recipes.replaceIngredient("kr-filtration-plant", "steel-beam", {"iron-frame-large", 1})
-	
+
 	-- Rocket fuel
-	krastorio.recipes.removeIngredient("rocket-fuel", "petroleum-gas")	
-	krastorio.recipes.removeIngredient("rocket-fuel", "iron-stick")	
-	krastorio.recipes.removeIngredient("rocket-fuel", "iron-powder")	
+	krastorio.recipes.removeIngredient("rocket-fuel", "petroleum-gas")
+	krastorio.recipes.removeIngredient("rocket-fuel", "iron-stick")
+	krastorio.recipes.removeIngredient("rocket-fuel", "iron-powder")
 
 	-- Research server
 	krastorio.recipes.replaceIngredient("kr-research-server", "steel-beam", {"steel-frame-large", 1})
@@ -261,21 +263,21 @@ if mods["IndustrialRevolution"] then
 	krastorio.recipes.replaceIngredient("kr-quantum-computer", "copper-plate", {"cupronickel-plate", 8})
 
 	-- Fusion reactor
-	krastorio.recipes.replaceIngredient("kr-fusion-reactor", "rare-metals", {"computer-mk3", 8})	
+	krastorio.recipes.replaceIngredient("kr-fusion-reactor", "rare-metals", {"computer-mk3", 8})
 	krastorio.recipes.replaceIngredient("kr-fusion-reactor", "processing-unit", {"laser", 8})
 	krastorio.recipes.convertIngredient("kr-fusion-reactor", "steel-plate", "lead-plate-special")
 
 	-- Antimatter reactor
-	krastorio.recipes.replaceIngredient("kr-antimatter-reactor", "rare-metals", {"computer-mk3", 16})	
+	krastorio.recipes.replaceIngredient("kr-antimatter-reactor", "rare-metals", {"computer-mk3", 16})
 	krastorio.recipes.convertIngredient("kr-antimatter-reactor", "steel-plate", "lead-plate-special")
 
 	-- Advanced furnace
-	krastorio.recipes.replaceIngredient("kr-advanced-furnace", "gold-gate", {"computer-mk3", 2})	
+	krastorio.recipes.replaceIngredient("kr-advanced-furnace", "gold-gate", {"computer-mk3", 2})
 	krastorio.recipes.convertIngredient("kr-advanced-furnace", "copper-plate", "invar-plate-special")
 	krastorio.recipes.replaceIngredient("kr-advanced-furnace", "steel-beam", {"stainless-frame-large", 2})
-	
+
 	-- Advanced chemical plant
-	krastorio.recipes.replaceIngredient("kr-advanced-chemical-plant", "gold-gate", {"computer-mk3", 2})		
+	krastorio.recipes.replaceIngredient("kr-advanced-chemical-plant", "gold-gate", {"computer-mk3", 2})
 
 	-- Adding recipe for rare-metals conversion
 	data:extend(
@@ -303,7 +305,7 @@ if mods["IndustrialRevolution"] then
 				{type = "item", name = "crushed-rare-metals", amount = 5, catalyst_amount = 10}
 			},
 			results =
-			{ 
+			{
 				{type = "item", name = "gold-ingot", amount = 10, catalyst_amount = 10},
 				{type = "fluid", name = "dirty-water", amount = 20}
 			},
@@ -312,7 +314,7 @@ if mods["IndustrialRevolution"] then
 			{
 				primary = {r = 0.314, g = 0.6863, b = 0.2157, a = 0.000},
 				secondary = {r = 0.200, g = 0.680, b = 0.300, a = 0.357},
-				tertiary = {r = 0.430, g = 0.305, b = 0.2, a = 0.000}, 
+				tertiary = {r = 0.430, g = 0.305, b = 0.2, a = 0.000},
 				quaternary = {r = 0.970, g = 0.501, b = 0.000, a = 0.900}
 			},
 			subgroup = "pure",
@@ -341,7 +343,7 @@ if mods["IndustrialRevolution"] then
 				{type = "item", name = "crushed-rare-metals", amount = 5, catalyst_amount = 10}
 			},
 			results =
-			{ 
+			{
 				{type = "item", name = "chromium-pure", amount = 5, catalyst_amount = 5},
 				{type = "fluid", name = "dirty-water", amount = 40}
 			},
@@ -376,7 +378,7 @@ if mods["IndustrialRevolution"] then
 				{type = "item", name = "crushed-rare-metals", amount = 5, catalyst_amount = 10}
 			},
 			results =
-			{ 
+			{
 				{type = "item", name = "lead-pure", amount = 5, catalyst_amount = 5},
 				{type = "fluid", name = "dirty-water", amount = 40}
 			},
@@ -411,7 +413,7 @@ if mods["IndustrialRevolution"] then
 				{type = "item", name = "crushed-rare-metals", amount = 5, catalyst_amount = 10}
 			},
 			results =
-			{ 
+			{
 				{type = "item", name = "nickel-pure", amount = 5, catalyst_amount = 5},
 				{type = "fluid", name = "dirty-water", amount = 40}
 			},
@@ -446,7 +448,7 @@ if mods["IndustrialRevolution"] then
 				{type = "item", name = "crushed-rare-metals", amount = 5, catalyst_amount = 10}
 			},
 			results =
-			{ 
+			{
 				{type = "item", name = "tellurium-pure", amount = 5, catalyst_amount = 5},
 				{type = "fluid", name = "dirty-water", amount = 40}
 			},
@@ -457,14 +459,14 @@ if mods["IndustrialRevolution"] then
 			},
 			subgroup = "pure",
 			order = "e-c-j-b-e"
-		}		
+		}
 	})
 	krastorio.technologies.addUnlockRecipe("ir2-washing-1", "gold-ingot-2")
 	krastorio.technologies.addUnlockRecipe("ir2-washing-1", "tellurium-pure-2")
 	krastorio.technologies.addUnlockRecipe("ir2-washing-1", "chromium-pure-2")
 	krastorio.technologies.addUnlockRecipe("ir2-washing-1", "lead-pure-2")
 	krastorio.technologies.addUnlockRecipe("ir2-washing-1", "nickel-pure-2")
-	
+
 	-- Modify enrichement recipes to be balanced
 	krastorio.recipes.replaceIngredient("enriched-copper-plate", "enriched-copper", {"enriched-copper", 4})
 	krastorio.recipes.replaceProduct("enriched-copper-plate", "copper-plate", {"copper-ingot", 12})
@@ -474,7 +476,7 @@ if mods["IndustrialRevolution"] then
 		{ icon = "__IndustrialRevolution__/graphics/icons/64/copper-ingot.png", icon_size = 64 },
 		{ icon = kr_items_with_variations_icons_path .. "enriched-copper/enriched-copper.png", icon_size = 64, scale = 0.22, shift = {-8, -8} }
 	}
-	
+
 	krastorio.recipes.replaceIngredient("enriched-iron-plate", "enriched-iron", {"enriched-iron", 4})
 	krastorio.recipes.replaceProduct("enriched-iron-plate", "iron-plate", {"iron-ingot", 12})
 	data.raw.recipe["enriched-iron-plate"].main_product = "iron-ingot"
@@ -483,7 +485,7 @@ if mods["IndustrialRevolution"] then
 		{ icon = "__IndustrialRevolution__/graphics/icons/64/iron-ingot.png", icon_size = 64 },
 		{ icon = kr_items_with_variations_icons_path .. "enriched-iron/enriched-iron.png", icon_size = 64, scale = 0.22, shift = {-8, -8} }
 	}
-	
+
 	-----------------------------------------------------------------------------------------------------------------------
 	-- -- ENTITIES
 	-----------------------------------------------------------------------------------------------------------------------
@@ -491,12 +493,12 @@ if mods["IndustrialRevolution"] then
 	-- -- Fast replecable group next upgrades
 	-- Inserters
 	data.raw.inserter["long-handed-inserter"].fast_replaceable_group        = "long-handed-inserter"
-	data.raw.inserter["long-handed-inserter"].next_upgrade                  = "kr-superior-long-inserter"	
+	data.raw.inserter["long-handed-inserter"].next_upgrade                  = "kr-superior-long-inserter"
 	data.raw.inserter["kr-superior-filter-inserter"].fast_replaceable_group = "filter-inserter"
-	
+
 	-- Fix different collision boxes
 	data.raw["mining-drill"]["electric-mining-drill"].next_upgrade = nil
-	
+
 	-- Smelting recipes
 	if data.raw["assembling-machine"]["kr-advanced-furnace"] then
 		if data.raw["recipe-category"]["smelting-1"] then
@@ -509,10 +511,10 @@ if mods["IndustrialRevolution"] then
 			table.insert(data.raw["assembling-machine"]["kr-advanced-furnace"].crafting_categories, "smelting-3")
 		end
 	end
-	
+
 	-- Roboport (changeble mode)
 	variations_util.createRoboportVariations("robotower")
-		
+
 	-- Steel washer and Bronze furnace(selectable recipe)
 	for _, furnace_name in pairs{"bronze-furnace", "steel-washer"} do
 		if data.raw.furnace[furnace_name] then
@@ -524,29 +526,29 @@ if mods["IndustrialRevolution"] then
 			data:extend({furnace})
 		end
 	end
-	
-	-- Add basic science to copper lab	
+
+	-- Add basic science to copper lab
 	table.insert(data.raw.lab["copper-lab"].inputs, "basic-tech-card")
-	-- Add sciences to quantum lab	
+	-- Add sciences to quantum lab
 	table.insert(data.raw.lab["quantum-lab"].inputs, "production-science-pack")
 	table.insert(data.raw.lab["quantum-lab"].inputs, "utility-science-pack")
 	table.insert(data.raw.lab["quantum-lab"].inputs, "space-science-pack")
 	table.insert(data.raw.lab["quantum-lab"].inputs, "matter-tech-card")
-	
+
 	-- Solar panel rebalancing
 	data.raw["solar-panel"]["solar-array"].production = "200kW"
 	data.raw["solar-panel"]["kr-advanced-solar-panel"].production = "300kW"
-	
+
 	-- Locomotive
 	data.raw.locomotive["locomotive"].burner.fuel_categories = {"chemical", "vehicle-fuel", "battery"}
 	data.raw.locomotive["locomotive"].burner.fuel_category = nil
 	data.raw.car["monowheel"].burner.fuel_categories = {"chemical", "vehicle-fuel", "battery"}
 	data.raw.car["monowheel"].burner.fuel_category = nil
-	
+
 	-----------------------------------------------------------------------------------------------------------------------
 	-- -- OTHERS
-	-----------------------------------------------------------------------------------------------------------------------	
-	
+	-----------------------------------------------------------------------------------------------------------------------
+
 	-- Fix uranium magazine bug
 	data:extend
 	({
@@ -611,7 +613,7 @@ if mods["IndustrialRevolution"] then
 			stack_size = 200
 		}
 	})
-	
+
 	-- -- Rebalance all damage done by player weapons (Turrets, ammo...)
 	if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
 		data.raw["ammo"]["uranium-rounds-magazine"].ammo_type.action.action_delivery =
@@ -641,10 +643,10 @@ if mods["IndustrialRevolution"] then
 			}
 		}
 	end
-	
+
 	-- Removing tip and trick not usable
 	data.raw["tips-and-tricks-item"]["kr-air-purifier"] = nil
-	
+
 	-- Chargable battery
 	data:extend
 	({
@@ -652,7 +654,7 @@ if mods["IndustrialRevolution"] then
 		{
 			type = "item",
 			name = "charged-lithium-sulfur-battery",
-			icon = kr_graphic_mod_path .. "compatibility/IndustrialRevolution/charged-lithium-sulfur-battery.png",	
+			icon = kr_graphic_mod_path .. "compatibility/IndustrialRevolution/charged-lithium-sulfur-battery.png",
 			icon_size = 64,
 			icon_mipmaps = 4,
 			pictures =
@@ -676,18 +678,18 @@ if mods["IndustrialRevolution"] then
 				}
 			},
 			subgroup = "raw-material",
-			order = "i2[lithium-sulfur-battery]",		
-			
+			order = "i2[lithium-sulfur-battery]",
+
 			burnt_result = "lithium-sulfur-battery",
 			fuel_acceleration_multiplier = 1.3,
 			fuel_category = "battery",
 			fuel_emissions_multiplier = 0.05,
 			fuel_glow_color = {0.314, 0.6863, 0.2157, 1},
 			fuel_value = "40MJ",
-			stack_size = 50				
+			stack_size = 50
 		},
 		-- recipe
-		{	    
+		{
 			type = "recipe",
 			name = "charged-lithium-sulfur-battery",
 			allow_as_intermediate = false,
@@ -700,13 +702,13 @@ if mods["IndustrialRevolution"] then
 			enabled = false,
 			energy_required = 40,
 			hide_from_stats = true,
-			ingredients = 
+			ingredients =
 			{
 				{"lithium-sulfur-battery", 1}
 			},
 			order = "h[z-imersite-battery]",
 			overload_multiplier = 50,
-			results = 
+			results =
 			{
 				{type = "item", name = "charged-lithium-sulfur-battery", amount = 1,	probability = 0.99}
 			},
@@ -714,7 +716,7 @@ if mods["IndustrialRevolution"] then
 		}
 	})
 	krastorio.technologies.addUnlockRecipe("kr-lithium-sulfur-battery", "charged-lithium-sulfur-battery")
-	
+
 	-- -- Matter recipes for IR2
 	local new_minerals =
 	{
@@ -730,19 +732,19 @@ if mods["IndustrialRevolution"] then
 	local sub_name             = nil
 	local pure_conv_val        = nil
 	local ingot_conv_val       = nil
-	
+
 	for _, item_prop in pairs(new_minerals) do
-		sub_name       = item_prop[1]  
+		sub_name       = item_prop[1]
 		pure_conv_val  = item_prop[2]
 		ingot_conv_val = item_prop[3]
-	
+
 		data:extend(
 		{
 			{
 				type = "technology",
 				name = "kr-matter-"..sub_name.."-processing",
 				mod = "Krastorio2",
-				icons = 
+				icons =
 				{
 					{ icon = kr_technologies_icons_path .. "backgrounds/matter.png", icon_size = 256, icon_mipmaps = 4 },
 					{ icon = "__IndustrialRevolution__/graphics/icons/64/"..sub_name.."-pure.png", icon_size = 64, scale = 2, icon_mipmaps = 4 }
@@ -755,36 +757,36 @@ if mods["IndustrialRevolution"] then
 				unit =
 				{
 					count = 350,
-					ingredients = 
+					ingredients =
 					{
 						{"production-science-pack", 1},
 						{"utility-science-pack", 1},
-						{"matter-tech-card", 1}				
+						{"matter-tech-card", 1}
 					},
 					time = 45
 				}
 			}
 		})
-		
+
 		new_pure_conversion =
 		{
 			item_name = sub_name.."-pure",
-			minimum_conversion_quantity = 10, 
+			minimum_conversion_quantity = 10,
 			matter_value = pure_conv_val,
 			energy_required = 1,
 			unlocked_by_technology = "kr-matter-"..sub_name.."-processing"
-		}	
+		}
 		new_ingot_conversion =
 		{
 			item_name = sub_name.."-ingot",
-			minimum_conversion_quantity = 10, 
+			minimum_conversion_quantity = 10,
 			matter_value = ingot_conv_val,
 			energy_required = 2,
 			only_deconversion = true,
 			need_stabilizer = true,
 			unlocked_by_technology = "kr-matter-"..sub_name.."-processing"
 		}
-	
+
 		krastorio.matter_func.createMatterRecipe(new_pure_conversion)
 		krastorio.matter_func.createMatterRecipe(new_ingot_conversion)
 	end
@@ -792,19 +794,19 @@ if mods["IndustrialRevolution"] then
 	-- -- Re-do the overmodule fix
 	-- For each recipe that is in smelting
 	-- multiply by 5 the recipe stat for avoid overmodule bug effect
-	for name, recipe in pairs(data.raw.recipe) do	
-		if 
-			recipe.category and 
-			(recipe.category == "smelting" or recipe.category == "smelting-1" or recipe.category == "smelting-2" or recipe.category == "smelting-3") and 
+	for name, recipe in pairs(data.raw.recipe) do
+		if
+			recipe.category and
+			(recipe.category == "smelting" or recipe.category == "smelting-1" or recipe.category == "smelting-2" or recipe.category == "smelting-3") and
 			krastorio.recipes.normalEnergyRequired(name) < 6.4
-		then 
+		then
 			if not recipe.energy_required then
 				krastorio.recipes.setEnergyCost(name, 3.2)
 			end
 			krastorio.recipes.multiplyRecipeStat(name, 5)
 		end
 	end
-	
+
 	-- Crushed rare metals
 	data:extend
 	({
@@ -843,7 +845,7 @@ if mods["IndustrialRevolution"] then
 	})
 	krastorio.technologies.addUnlockRecipe("ir2-grinding-2", "crushed-rare-metals")
 	krastorio.modules.addProductivityLimitation("crushed-rare-metals", true)
-	
+
 	-- Smelting crafting fix
 	local materials =
 	{
@@ -859,7 +861,7 @@ if mods["IndustrialRevolution"] then
 		"invar",
 		"cupronickel"
 	}
-	
+
 	local intermediates =
 	{
 		"-plate",
@@ -873,13 +875,13 @@ if mods["IndustrialRevolution"] then
 		"-rivet",
 		"-piston"
 	}
-	
+
 	local item_name       = nil
 	local original_recipe = nil
 	local ingredients     = nil
 	local sub_ingredients = nil
 	local done            = nil
-	
+
 	for _, material in pairs(materials) do
 		for _, intermediate in pairs(intermediates) do
 			item_name = material .. intermediate
@@ -888,7 +890,7 @@ if mods["IndustrialRevolution"] then
 				local original_recipe                     = krastorio_utils.tables.fullCopy(original_recipe)
 				original_recipe.name                      = "kr-s-c-" .. item_name
 				original_recipe.main_product              = item_name
-				original_recipe.category                  = "smelting-crafting"	
+				original_recipe.category                  = "smelting-crafting"
 				original_recipe.subgroup                  = "smelting-crafting"
 				original_recipe.energy_required           = original_recipe.energy_required * 4
 				original_recipe.allow_productivity        = true
@@ -896,7 +898,7 @@ if mods["IndustrialRevolution"] then
 				original_recipe.always_show_made_in       = true
 				original_recipe.always_show_products      = true
 				data:extend({original_recipe})
-				
+
 				ingredients = krastorio.recipes.getIngredients("kr-s-c-" .. item_name)
 				if ingredients and next(ingredients) ~= nil then
 					done = false
@@ -904,14 +906,14 @@ if mods["IndustrialRevolution"] then
 						done = true
 						for _, ingredient in pairs(ingredients) do
 							if ingredient and ingredient.name then
-								if not 
-									( 
+								if not
+									(
 										string.find(ingredient.name, "ore") or
 										string.find(ingredient.name, "pure") or
-										string.find(ingredient.name, "mix") or 
+										string.find(ingredient.name, "mix") or
 										string.find(ingredient.name, "coke") or
 										ingredient.type == "fluid"
-									) 
+									)
 								then
 									done = false
 									sub_ingredients = krastorio.recipes.getIngredients(ingredient.name)
@@ -919,25 +921,25 @@ if mods["IndustrialRevolution"] then
 										krastorio.recipes.addIngredient("kr-s-c-" .. item_name, sub_ingredient)
 									end
 									krastorio.recipes.removeIngredient("kr-s-c-" .. item_name, ingredient.name)
-								end	
-							end							
+								end
+							end
 						end
 					end
-				end				
+				end
 
 				krastorio.technologies.addUnlockRecipe("kr-automation", "kr-s-c-" .. item_name)
 				krastorio.modules.addProductivityLimitation("kr-s-c-" .. item_name, true)
 			end
 		end
 	end
-	
+
 	-- special fix
 	data:extend
 	({
 		{
 			type = "recipe",
 			name = "kr-s-c-iron-stick",
-			category = "smelting-crafting",		
+			category = "smelting-crafting",
 			subgroup = "smelting-crafting",
 			energy_required = 1.6,
 			enabled = false,
@@ -945,7 +947,7 @@ if mods["IndustrialRevolution"] then
 			hide_from_player_crafting = true,
 			always_show_made_in = true,
 			always_show_products = true,
-			ingredients = 
+			ingredients =
 			{
 				{"iron-ore", 1}
 			},
@@ -953,8 +955,8 @@ if mods["IndustrialRevolution"] then
 			result_count = 2
 		}
 	})
-	
-	
+
+
 	-- Equipemnt categories
 	table.insert(data.raw["generator-equipment"]["burner-generator-equipment"].categories, "universal-equipment")
 	table.insert(data.raw["generator-equipment"]["iron-burner-generator-equipment"].categories, "universal-equipment")
@@ -962,11 +964,11 @@ if mods["IndustrialRevolution"] then
 	table.insert(data.raw["generator-equipment"]["battery-discharge-equipment"].categories, "universal-equipment")
 	-- Equipemnt adjustment
 	data.raw["generator-equipment"]["small-portable-generator"].power = "270kW"
-	
+
 	-- Stack sizes
 	local kr_stack_size_value = krastorio.general.getSafeSettingValue("kr-stack-size")
 
-	if kr_stack_size_value and kr_stack_size_value ~= "No changes" then 
+	if kr_stack_size_value and kr_stack_size_value ~= "No changes" then
 		data.raw.item["bronze-plate"].stack_size = kr_stack_size_value
 
 		data.raw.item["tin-ore"].stack_size = kr_stack_size_value
@@ -1037,5 +1039,5 @@ if mods["IndustrialRevolution"] then
 		data.raw.item["stainless-beam"].stack_size = kr_stack_size_value
 	end
 
-	-----------------------------------------------------------------------------------------------------------------------	
+	-----------------------------------------------------------------------------------------------------------------------
 end

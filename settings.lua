@@ -58,11 +58,18 @@ data:extend(
 	},
 	{
 		type = "bool-setting",
+		name = "kr-containers",
+		setting_type = "startup",
+		default_value = true,
+		order = "a8"
+	},
+	{
+		type = "bool-setting",
 		name = "kr-impossible-more-than-difficult",
 		setting_type = "startup",
 		default_value = false,
-		order = "a8"
-	},	
+		order = "a9"
+	},
 	{
 		type = "bool-setting",
 		name = "kr-fix-laser-artillery-turret",
@@ -70,7 +77,7 @@ data:extend(
 		default_value = false,
 		order = "zzz"
 	},
-	
+
 	-- S - Science (Setting order "sNUMBER")
 	{
         type = "string-setting",

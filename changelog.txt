@@ -4,6 +4,7 @@ Date: XX.0X.2021
   Info:
     - 1.1 is out! This is the last update of the mod (from Krastor and Linver), from now we think to leave all to Raiguard, and say thanks to all for the nice experience.
   Features:
+    - Added startup setting to disable K2 containers
     - Added win cutscene when the intergalactic transceiver become fully charged (only the first time).
   Balancing:
     - Air purifier base pullution absorbing power was nerfed from -100 to -75.
