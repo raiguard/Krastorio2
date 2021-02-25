@@ -2,7 +2,7 @@ local resource_autoplace = require("__core__/lualib/resource-autoplace")
 
 -- Adding imersite
 data:extend(
-{	
+{
 	{
 		type = "resource",
 		name = "imersite",
@@ -73,7 +73,7 @@ data:extend(
 		stages_effect =
 		{
 			sheets =
-			{			
+			{
 				{
 					filename = kr_resources_sprites_path .. "imersite/imersite-rift-glow.png",
 					priority = "extra-high",
@@ -105,10 +105,11 @@ data:extend(
 		map_color = {r=1, g=0.5, b=1},
 		mining_visualisation_tint = {r=0.792, g=0.050, b=0.858},
 		map_grid = false
-	},	
+	},
 	{
 		type = "autoplace-control",
 		name = "imersite",
+		localised_name = {"", "[entity=imersite] ", {"autoplace-control-names.imersite"}},
 		richness = true,
 		order = "b-k",
 		category = "resource"

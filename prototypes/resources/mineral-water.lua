@@ -2,7 +2,7 @@ local resource_autoplace = require("__core__/lualib/resource-autoplace")
 
 -- Adding mineral water
 data:extend(
-{	
+{
 	{
 		type = "resource",
 		name = "mineral-water",
@@ -46,7 +46,7 @@ data:extend(
 			base_spots_per_km2 = 0.5,
 			random_probability = 1/50,
 			random_spot_size_minimum = 1,
-			random_spot_size_maximum = 1, 
+			random_spot_size_maximum = 1,
 			additional_richness = 50000,
 			has_starting_area_placement = false,
 			regular_rq_factor_multiplier = 1
@@ -69,6 +69,7 @@ data:extend(
 	{
 		type = "autoplace-control",
 		name = "mineral-water",
+		localised_name = {"", "[entity=mineral-water] ", {"autoplace-control-names.mineral-water"}},
 		order = "k-b",
 		richness = true,
 		category = "resource"

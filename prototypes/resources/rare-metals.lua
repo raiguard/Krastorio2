@@ -2,7 +2,7 @@ local resource_autoplace = require("__core__/lualib/resource-autoplace")
 
 -- Adding rare metals
 data:extend(
-{	
+{
 	{
 		type = "resource",
 		name = "rare-metals",
@@ -98,6 +98,7 @@ data:extend(
 	{
 		type = "autoplace-control",
 		name = "rare-metals",
+		localised_name = {"", "[entity=rare-metals] ", {"autoplace-control-names.rare-metals"}},
 		order = "k-a",
 		richness = true,
 		category = "resource"
