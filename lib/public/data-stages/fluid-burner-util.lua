@@ -38,6 +38,7 @@ if not krastorio.fluid_burner_util.fluid_emissions_multiplier then
 		["light-oil"] = 3.0,
 		["petroleum-gas"] = 2.0,
 		["lubricant"] = 4.0,
+		["oxygen"] = 0.0,
 		["steam"] = 0.0,
 		["water"] = 0.0,
 		["dirty-water"] = 6.0,

@@ -4,8 +4,9 @@ Date: XX.0X.2021
   Info:
     - 1.1 is out! This is the last update of the mod (from Krastor and Linver), from now we think to leave all to Raiguard, and say thanks to all for the nice experience.
   Features:
-    - Added startup setting to disable K2 containers
+    - Added startup setting to disable K2 containers.
     - Added win cutscene when the intergalactic transceiver become fully charged (only the first time).
+    - Reduced the graphic files size of +/-9% with a lossless method.
   Balancing:
     - Air purifier base pullution absorbing power was nerfed from -100 to -75.
     - Now fluid burning recipes (when a liquid is dispersed into the atmosphere) have different emission multipliers (also was added an interface for other modders to use this feature if wanted).
@@ -14,22 +15,22 @@ Date: XX.0X.2021
     - Increased mining area (resource searching radius) of electric mining drills MK2 (7x7) and MK3 (9x9).
     - Now advanced assembler, chemical plant and furnace have a passive productivity (20/25/25%) and less crafting speed(4/6/8), to reduce the glitch effect of the base game engine that exceeded 60 recipe completed per second the game will calculate wrongly the produced products. Advanced chemical plant and furnace recipes now require productivity modules.
     - Changed advanced assembling machine recipe.
-    - Biter virus no longer insta-kills all units when thrown
-    - Slightly buffed biter virus gradual kill count
+    - Biter virus no longer insta-kills all units when thrown.
+    - Slightly buffed biter virus gradual kill count.
   Changes:
     - Now all chemistry and intermediate product recipes have crafting time minimum of 2.0 seconds. The ratios are not changed! Ingredients, products required and produced are the same, this need only to fix a glitch of base game engine, that when a recipe is done more than 60 time per second the game output a wrong products count (this is not a mod bug is a limitation of the base game engine, don't ask to improve this, can't be improved by modders!).
     - Added "cannot build" sound to K2 scripts when exist an integration with player building placing.
     - Changed a bit the circuit icons wire color (visually improve the material with the tier).
-    - Rocket turret can now face corners
-    - Updated resource names on the map generator screen to include icons
+    - Rocket turret can now face corners.
+    - Updated resource names on the map generator screen to include icons.
   Optimizations:
-    - Significant performance improvements to prototype loading in the data stage
-    - Significant performance improvements to the biter and creep viruses
+    - Significant performance improvements to prototype loading in the data stage.
+    - Significant performance improvements to the biter and creep viruses.
   Bugfixes:
     - Fixed IR2 compatibility.
-    - Fixed a crash on load with Angels' mods
+    - Fixed a crash on load with Angels' mods.
     - Fixed new smart belt dragging feature not working with K2 belts.
-    - Fixed the creep virus leaving landfill behind
+    - Fixed the creep virus leaving landfill behind.
     - Fixed wrong wiki icon size of air purification and matter after the technology icons update.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.23
