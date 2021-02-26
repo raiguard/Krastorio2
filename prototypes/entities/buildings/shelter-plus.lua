@@ -220,9 +220,10 @@ data:extend(
 		open_sound = { filename = kr_sounds_mod .. "buildings/open.ogg", volume = 1 },
 		close_sound = { filename = kr_sounds_mod .. "buildings/close.ogg", volume = 1 },
 		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 }	
-	}
-	-- Shelter light (Deprecated)
-	--[[
+	},
+	
+	-- Shelter light
+
 	{
 		type = "lamp",
 		name = "kr-shelter-plus-light",
@@ -256,5 +257,5 @@ data:extend(
 		picture_off = empty_sprite,
 		picture_on  = empty_sprite
 	}
-	--]]
+
 })

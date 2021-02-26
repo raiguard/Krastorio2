@@ -91,7 +91,7 @@ local function onBuiltAnEntity(event)
 						position = entity.position,
 						create_build_effect_smoke = false
 					}
-					--[[ (Deprecated)
+
 					local light = entity.surface.create_entity
 					{
 						type     = "lamp",
@@ -101,7 +101,7 @@ local function onBuiltAnEntity(event)
 						position = entity.position,
 						create_build_effect_smoke = false
 					}
-					--]]
+
 					global.spawn_points[surface][force] = {entity} -- {entity, light}
 				else
 					-- create shelter plus light
@@ -114,7 +114,7 @@ local function onBuiltAnEntity(event)
 						position = entity.position,
 						create_build_effect_smoke = false
 					}
-					--[[ (Deprecated)
+
 					local light = entity.surface.create_entity
 					{
 						type     = "lamp",
@@ -124,7 +124,7 @@ local function onBuiltAnEntity(event)
 						position = entity.position,
 						create_build_effect_smoke = false
 					}
-					--]]
+
 					global.spawn_points[surface][force] = {entity}-- {entity, light}
 				end
 			else -- exist another shelter 
