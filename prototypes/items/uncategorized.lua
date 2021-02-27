@@ -736,7 +736,7 @@ data:extend(
 		icon_size = 64,
 		icon_mipmaps = 4,				
 		subgroup = "intermediate-product",
-		order = "06[pollution-filter]",
+		order = "06-a[pollution-filter]",
 		stack_size = 50
 	},
 	{
@@ -746,7 +746,27 @@ data:extend(
 		icon_size = 64,
 		icon_mipmaps = 4,				
 		subgroup = "intermediate-product",
-		order = "07[used-pollution-filter]",
+		order = "07-a[used-pollution-filter]",
+		stack_size = 50
+	},
+	{
+		type = "item",
+		name = "improved-pollution-filter",
+		icon = kr_items_icons_path .. "improved-pollution-filter.png",
+		icon_size = 64,
+		icon_mipmaps = 4,				
+		subgroup = "intermediate-product",
+		order = "06-b[improved-pollution-filter]",
+		stack_size = 50
+	},
+	{
+		type = "item",
+		name = "used-improved-pollution-filter",
+		icon = kr_items_icons_path .. "used-improved-pollution-filter.png",
+		icon_size = 64,
+		icon_mipmaps = 4,				
+		subgroup = "intermediate-product",
+		order = "07-b[used-improved-pollution-filter]",
 		stack_size = 50
 	},
 	{
