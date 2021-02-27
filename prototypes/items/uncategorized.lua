@@ -736,7 +736,7 @@ data:extend(
 		icon_size = 64,
 		icon_mipmaps = 4,				
 		subgroup = "intermediate-product",
-		order = "06-a[pollution-filter]",
+		order = "w2-a1[pollution-filter]",
 		stack_size = 50
 	},
 	{
@@ -746,7 +746,7 @@ data:extend(
 		icon_size = 64,
 		icon_mipmaps = 4,				
 		subgroup = "intermediate-product",
-		order = "07-a[used-pollution-filter]",
+		order = "w2-a2[used-pollution-filter]",
 		stack_size = 50
 	},
 	{
@@ -756,7 +756,7 @@ data:extend(
 		icon_size = 64,
 		icon_mipmaps = 4,				
 		subgroup = "intermediate-product",
-		order = "06-b[improved-pollution-filter]",
+		order = "w2-b1[improved-pollution-filter]",
 		stack_size = 50
 	},
 	{
@@ -766,7 +766,7 @@ data:extend(
 		icon_size = 64,
 		icon_mipmaps = 4,				
 		subgroup = "intermediate-product",
-		order = "07-b[used-improved-pollution-filter]",
+		order = "w2-b2[used-improved-pollution-filter]",
 		stack_size = 50
 	},
 	{

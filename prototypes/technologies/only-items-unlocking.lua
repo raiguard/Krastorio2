@@ -167,7 +167,7 @@ data:extend(
 			},
 			time = 30
 		}
-    },
+    },	
 	{
 		type = "technology",
 		name = "kr-advanced-fuel",
@@ -329,6 +329,41 @@ data:extend(
 			time = 60
 		}
     },
+	{
+		type = "technology",
+		name = "kr-improved-pollution-filter",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "improved-pollution-filter.png",
+		icon_size = 256, 
+		icon_mipmaps = 4,
+		effects =
+		{			
+			{
+				type = "unlock-recipe",
+				recipe = krastorio.recipes.changed_names["improved-pollution-filter"] or "improved-pollution-filter"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "kr-air-cleaning-2"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "restore-used-improved-pollution-filter"
+			}			
+		},
+		prerequisites = {"kr-matter-tech-card", "kr-air-purification"},
+		unit =
+		{
+			count = 200,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"matter-tech-card", 1}
+			},
+			time = 30
+		}
+    },	
 	{
 		type = "technology",
 		name = "kr-energy-control-unit",
