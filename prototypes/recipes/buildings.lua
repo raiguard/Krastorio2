@@ -16,7 +16,7 @@ return
 			{"automation-core", 2}
 		},
 		result = "kr-greenhouse"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-bio-lab",
@@ -30,7 +30,7 @@ return
 			{"electronic-circuit", 2}
 		},
 		result = "kr-bio-lab"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-crusher",
@@ -44,7 +44,7 @@ return
 			{"automation-core", 2}
 		},
 		result = "kr-crusher"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-electric-mining-drill-mk2",
@@ -57,7 +57,7 @@ return
 			{"rare-metals", 4}
 		},
 		result = "kr-electric-mining-drill-mk2"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-electric-mining-drill-mk3",
@@ -70,7 +70,7 @@ return
 			{"imersite-crystal", 4}
 		},
 		result = "kr-electric-mining-drill-mk3"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-shelter",
@@ -84,7 +84,7 @@ return
 			{"coal", 50}
 		},
 		result = "kr-shelter"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-mineral-water-pumpjack",
@@ -98,7 +98,7 @@ return
 			{"pipe", 5}
 		},
 		result = "kr-mineral-water-pumpjack"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-air-purifier",
@@ -112,7 +112,7 @@ return
 			{"engine-unit", 1}
 		},
 		result = "kr-air-purifier"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-sentinel",
@@ -126,7 +126,7 @@ return
 			{"automation-core", 1}
 		},
 		result = "kr-sentinel"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-fuel-refinery",
@@ -140,7 +140,7 @@ return
 			{"pipe", 5}
 		},
 		result = "kr-fuel-refinery"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-gas-power-station",
@@ -154,7 +154,7 @@ return
 			{"pipe", 4}
 		},
 		result = "kr-gas-power-station"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-tesla-coil",
@@ -167,7 +167,7 @@ return
 			{"copper-cable", 100}
 		},
 		result = "kr-tesla-coil"
-  },
+	},
 	-- -- --
 	-- NEW LABORATORIES
 	-- -- --
@@ -184,7 +184,7 @@ return
 			{"copper-cable", 10}
 		},
 		result = "biusart-lab"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-singularity-lab",
@@ -200,7 +200,7 @@ return
 			{"processing-unit", 100}
 		},
 		result = "kr-singularity-lab"
-  },
+	},
 	-- -- --
 	-- Research servers
 	-- -- --
@@ -216,7 +216,7 @@ return
 			{"electronic-components", 50}
 		},
 		result = "kr-research-server"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-quantum-computer",
@@ -248,7 +248,7 @@ return
 			{"kr-steel-pipe", 4}
 		},
 		result = "kr-fluid-storage-1"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-fluid-storage-2",
@@ -261,7 +261,7 @@ return
 			{"kr-steel-pipe", 12}
 		},
 		result = "kr-fluid-storage-2"
-  },
+	},
 	-- -- --
 	{
 		type = "recipe",
@@ -324,7 +324,7 @@ return
 			{"glass", 10},
 		},
 		result = "kr-electrolysis-plant"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-filtration-plant",
@@ -338,7 +338,7 @@ return
 			{"engine-unit", 4}
 		},
 		result = "kr-filtration-plant"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-atmospheric-condenser",
@@ -352,7 +352,7 @@ return
 			{"engine-unit", 2}
 		},
 		result = "kr-atmospheric-condenser"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-fluid-burner",
@@ -365,7 +365,7 @@ return
 			{"electronic-circuit", 3}
 		},
 		result = "kr-fluid-burner"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-quarry-drill",
@@ -426,7 +426,7 @@ return
 			{"electric-engine-unit", 10}
 		},
 		result = "kr-advanced-steam-turbine"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-energy-storage",
@@ -454,7 +454,7 @@ return
 			{"ai-core", 5}
 		},
 		result = "kr-matter-plant"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-matter-assembler",
@@ -468,7 +468,7 @@ return
 			{"ai-core", 3}
 		},
 		result = "kr-matter-assembler"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-stabilizer-charging-station",
@@ -481,7 +481,7 @@ return
 			{"processing-unit", 1}
 		},
 		result = "kr-stabilizer-charging-station"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-antimatter-reactor",
@@ -497,7 +497,7 @@ return
 			{"steel-plate", 350}
 		},
 		result = "kr-antimatter-reactor"
-  },
+	},
 	---
 	-- Belts
 	---
@@ -515,7 +515,7 @@ return
 			{"advanced-circuit", 1}
 		},
 		result = "kr-advanced-splitter"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-advanced-transport-belt",
@@ -529,7 +529,7 @@ return
 			{"rare-metals", 1},
 		},
 		result = "kr-advanced-transport-belt"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-advanced-underground-belt",
@@ -543,7 +543,7 @@ return
 		},
 		result = "kr-advanced-underground-belt",
 		result_count = 2
-  },
+	},
 	-- Superior
 	{
 		type = "recipe",
@@ -558,7 +558,7 @@ return
 			{"processing-unit", 1}
 		},
 		result = "kr-superior-splitter"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-superior-transport-belt",
@@ -572,7 +572,7 @@ return
 			{"low-density-structure", 1},
 		},
 		result = "kr-superior-transport-belt"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-superior-underground-belt",
@@ -586,7 +586,7 @@ return
 		},
 		result = "kr-superior-underground-belt",
 		result_count = 2
-  },
+	},
 	-- -- --
 	-- Superior inserters
 	-- -- --
@@ -603,7 +603,7 @@ return
 			{"processing-unit", 1}
 		},
 		result = "kr-superior-inserter"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-superior-long-inserter",
@@ -617,7 +617,7 @@ return
 			{"processing-unit", 1}
 		},
 		result = "kr-superior-long-inserter"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-superior-filter-inserter",
@@ -631,7 +631,7 @@ return
 			{"processing-unit", 2}
 		},
 		result = "kr-superior-filter-inserter"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-superior-long-filter-inserter",
@@ -645,7 +645,7 @@ return
 			{"processing-unit", 2}
 		},
 		result = "kr-superior-long-filter-inserter"
-  },
+	},
 	-- -- --
 	{
 		type = "recipe",
@@ -662,7 +662,7 @@ return
 			{"energy-control-unit", 10}
 		},
 		result = "kr-advanced-furnace"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-advanced-assembling-machine",
@@ -678,7 +678,7 @@ return
 			{"productivity-module-3", 2}
 		},
 		result = "kr-advanced-assembling-machine"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-advanced-chemical-plant",
@@ -694,7 +694,7 @@ return
 			{"kr-steel-pipe", 10}
 		},
 		result = "kr-advanced-chemical-plant"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-large-roboport",
@@ -710,7 +710,7 @@ return
 			{"roboport", 1}
 		},
 		result = "kr-large-roboport"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-small-roboport",
@@ -726,7 +726,7 @@ return
 		},
 		result = "kr-small-roboport",
 		result_count = 2
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-singularity-beacon",
@@ -755,8 +755,8 @@ return
 			{"low-density-structure", 10}
 		},
 		result = "kr-railgun-turret"
-  },
-  {
+	},
+	{
 		type = "recipe",
 		name = "kr-rocket-turret",
 		enabled = false,
@@ -770,7 +770,7 @@ return
 			{"low-density-structure", 10}
 		},
 		result = "kr-rocket-turret"
-  },
+	},
 	{
 		type = "recipe",
 		name = "kr-laser-artillery-turret",
@@ -785,7 +785,21 @@ return
 			{"low-density-structure", 10}
 		},
 		result = "kr-laser-artillery-turret"
-  },
+	},
+	{
+		type = "recipe",
+		name = "kr-planetary-teleporter",
+		energy_required = 20,
+		enabled = false,
+		ingredients = 
+		{
+			{"imersium-beam", 10},
+			{"imersite-crystal", 4},
+			{"ai-core", 4},
+			{"energy-control-unit", 8}
+		},
+		result = "kr-planetary-teleporter"
+	},
 	{
 		type = "recipe",
 		name = "kr-intergalactic-transceiver",
@@ -801,14 +815,6 @@ return
 			{"concrete", 750}
 		},
 		result = "kr-intergalactic-transceiver"
-	},
-	{
-		type = "recipe",
-		name = "kr-planetary-teleporter",
-		energy_required = 20,
-		enabled = false,
-		ingredients = {},
-		result = "kr-planetary-teleporter"
 	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

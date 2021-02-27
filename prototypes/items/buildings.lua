@@ -697,8 +697,8 @@ data:extend(
 	{
 		type = "item",
 		name = "kr-planetary-teleporter",
-		icon = kr_entities_icons_path .. "kr-planetary-teleporter.png",
-		icon_size = 64,
+		icon = kr_entities_icons_path .. "planetary-teleporter.png",
+		icon_size = 256,
 		icon_mipmaps = 4,
 		subgroup = "energy-pipe-distribution",
 		order = "z-z-b[kr-planetary-teleporter]",
