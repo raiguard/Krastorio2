@@ -200,7 +200,7 @@ local function handle_gui_action(msg, e)
 
 	if msg.action == "close" then
 		-- if escape was pressed and search is open, close search instead of closing the window
-		if e.element.type ~= "sprite-button" and refs.search_textfield.visible then
+		if e.element and e.element.type ~= "sprite-button" and refs.search_textfield.visible then
 			refs.search_button.style = "frame_action_button"
 			refs.search_button.sprite = "utility/search_white"
 			refs.search_textfield.visible = false
