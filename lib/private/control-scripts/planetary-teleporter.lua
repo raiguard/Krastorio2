@@ -322,6 +322,7 @@ local function create_gui(player, entity)
 						sprite = "utility/close_white",
 						hovered_sprite = "utility/close_black",
 						clicked_sprite = "utility/close_black",
+						tooltip = {"gui.close-instruction"},
 						actions = {
 							on_click = {gui = "planetary_teleporter", action = "close"}
 						}
