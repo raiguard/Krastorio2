@@ -29,7 +29,12 @@ end
 
 local status_labels = {}
 for label, i in pairs(defines.entity_status) do
-	status_labels[i] = string.gsub(label, "_", "-")
+	-- replace "normal" with "fully charged" to circumvent an inconsistent bug in the base game
+	if label == "normal" then
+		status_labels[i] = "fully-charged"
+	else
+		status_labels[i] = string.gsub(label, "_", "-")
+	end
 end
 
 local status_images = {
@@ -72,9 +77,11 @@ local function update_gui_statuses()
 		end
 		refs.status_image.sprite = "utility/"..(status_images[status] or "status_working")
 
+		-- workaround for a base game issue where the accumulator won't actually charge all the way sometimes
+		local fully_charged = status == defines.entity_status.fully_charged or status == defines.entity_status.normal
 		if
-			(status == defines.entity_status.fully_charged and not state.fully_charged)
-			or (status ~= defines.entity_status.fully_charged and state.fully_charged)
+			(fully_charged and not state.fully_charged)
+			or (not fully_charged and state.fully_charged)
 		then
 			state.fully_charged = not state.fully_charged
 			update_fully_charged(refs, state)
