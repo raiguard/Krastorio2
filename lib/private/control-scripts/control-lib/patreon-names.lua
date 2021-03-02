@@ -3,7 +3,7 @@ local patreons_list = {}
 -- Top Supporters
 patreons_list.high_supporters =
 {
-	"Chris Höppner",
+	"mkaito",
 	"Brayden McLean",
 	"bob",
 	"James Kelley",
@@ -112,11 +112,11 @@ function patreons_list.getOverallSupportersList()
 	for _, name in pairs(patreons_list.high_supporters) do
 		table.insert(overall_list, name)
 	end
-	
+
 	for _, name in pairs(patreons_list.low_supporters) do
 		table.insert(overall_list, name)
 	end
-	
+
 	return overall_list
 end
 
