@@ -51,7 +51,7 @@ end
 -- end)
 function flib_gui.read_action(event_data)
   local elem = event_data.element
-  if not elem then return end
+  if not elem or not elem.valid then return end
 
   local mod_tags = elem.tags[mod_name]
   if not mod_tags then return end
