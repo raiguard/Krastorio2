@@ -91,6 +91,7 @@ if mods["IndustrialRevolution"] then
 	data.raw.technology["kr-steam-engine"] = nil
 
 	data.raw.technology["kr-air-purification"] = nil
+	data.raw.technology["kr-improved-pollution-filter"] = nil
 
 	data.raw.technology["kr-electric-mining-drill"] = nil
 	data.raw.technology["kr-electric-mining-drill-mk2"] = nil
