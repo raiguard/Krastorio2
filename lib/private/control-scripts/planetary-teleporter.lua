@@ -10,8 +10,9 @@ local function teleport_player(player, from, to)
 	from.energy = 0
 	-- teleport player
 	local position = to.position
-	position.y = position.y + 2
-	player.teleport(to.surface.find_non_colliding_position("character", position, 30, 1), to.surface)
+	position.y = position.y + 1.1
+	-- player.teleport(to.surface.find_non_colliding_position("character", position, 30, 1), to.surface)
+	player.teleport(position, to.surface)
 	-- play sounds
 	from.surface.play_sound{
 		path = "kr-planetary-teleporter-effect-sound",
@@ -126,7 +127,7 @@ local function update_destinations_table(refs, state)
 								style = "kr_planetary_teleporter_destination_minimap",
 								chart_player_index = player_index,
 								force = force_name,
-								zoom = 1.5,
+								zoom = 1,
 								children = {
 									{
 										type = "button",
