@@ -6,7 +6,7 @@ local planetary_teleporter_animation =
 	layers =
 	{
 		{
-			filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-base.png",
+			filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-base-combined.png",
 			width = 400,
 			height = 475,
 			scale = 0.5,
@@ -25,7 +25,7 @@ local planetary_teleporter_animation =
 			-- }
 		},
 		{
-			filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-further-towers.png",
+			filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-forward-towers.png",
 			width = 400,
 			height = 475,
 			scale = 0.5,
@@ -43,30 +43,30 @@ local planetary_teleporter_animation =
 			-- 	animation_speed = 0.5
 			-- }
 		},
-		-- {
-		-- 	filename = kr_entities_path .. "planetary-teleporter/planetary-teleporter-shadow.png",
-		-- 	priority = "low",
-		-- 	width = 266,
-		-- 	height = 146,
-		-- 	frame_count = 1,
-		-- 	repeat_count = 12,
-		-- 	draw_as_shadow = true,
-		-- 	animation_speed = 0.5,
-		-- 	shift = {1.9, 1.2},
-		-- 	hr_version =
-		-- 	{
-		-- 		filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter-shadow.png",
-		-- 		priority = "low",
-		-- 		width = 531,
-		-- 		height = 292,
-		-- 		scale = 0.5,
-		-- 		frame_count = 1,
-		-- 		repeat_count = 12,
-		-- 		draw_as_shadow = true,
-		-- 		animation_speed = 0.5,
-		-- 		shift = {1.9, 1.2}
-		-- 	}
-		-- },
+		{
+			filename = kr_entities_path .. "planetary-teleporter/planetary-teleporter-shadow.png",
+			priority = "low",
+			width = 266,
+			height = 146,
+			frame_count = 1,
+			repeat_count = 12,
+			draw_as_shadow = true,
+			animation_speed = 0.5,
+			shift = {1.9, 1.2},
+			hr_version =
+			{
+				filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter-shadow.png",
+				priority = "low",
+				width = 531,
+				height = 292,
+				scale = 0.5,
+				frame_count = 1,
+				repeat_count = 12,
+				draw_as_shadow = true,
+				animation_speed = 0.5,
+				shift = {1.9, 1.2}
+			}
+		},
 		-- {
 		-- 	filename = kr_entities_path .. "planetary-teleporter/planetary-teleporter-light.png",
 		-- 	priority = "high",
@@ -119,8 +119,8 @@ data:extend(
 		energy_source =
 		{
 			type = "electric",
-			buffer_capacity = "200MJ",
-			input_flow_limit = "40MW",
+			buffer_capacity = "400MJ",
+			input_flow_limit = "20MW",
 			usage_priority = "tertiary",
 			output_flow_limit = "0W"
 		},
