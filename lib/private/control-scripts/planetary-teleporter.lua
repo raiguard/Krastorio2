@@ -5,6 +5,7 @@ local gui = require("__Krastorio2__/lib/private/control-scripts/control-lib/flib
 local pt_built_entity_filters = {{filter = "name", name = "kr-planetary-teleporter"}}
 local pt_entity_name = "kr-planetary-teleporter"
 
+-- TODO: cutscene and relative positioning
 local function teleport_player(player, from, to)
 	-- discharge source entity
 	from.energy = 0
@@ -452,13 +453,40 @@ local function init_global_data()
 	end
 end
 
+local collision_entity_offsets = {
+	{x = 0, y = 0},
+	{x = -2, y = 2},
+	{x = 2, y = 2}
+}
+
+local function create_entities(base_entity)
+	local entities = {
+		base = base_entity
+	}
+	local surface = base_entity.surface
+	local position = base_entity.position
+	for i, offset in ipairs(collision_entity_offsets) do
+		entities["collision_"..i] = surface.create_entity{
+			name = "kr-planetary-teleporter-collision-"..i,
+			position = {x = position.x + offset.x, y = position.y + offset.y},
+			create_build_effect_smoke = false
+		}
+	end
+	entities.front_layer = surface.create_entity{
+		name = "kr-planetary-teleporter-front-layer",
+		position = position,
+		create_build_effect_smoke = false
+	}
+	return entities
+end
+
 local function on_entity_built(e)
 	local entity = e.created_entity
 	if entity and entity.valid and entity.name == pt_entity_name then
 		-- if revived from a blueprint and it has a name, get it from the tags
 		local name = e.tags and e.tags.kr_planetary_teleporter_name or nil
 		global.planetary_teleporters[entity.unit_number] = {
-			entity = entity,
+			entities = create_entities(entity),
 			force = entity.force,
 			name = name,
 			position = entity.position,
@@ -470,8 +498,17 @@ end
 local function on_entity_destroyed(e)
 	local entity = e.entity
 	if entity and entity.valid then
+		local unit_number = entity.unit_number
+		local data = global.planetary_teleporters[unit_number]
+		-- destroy other entities
+		-- TODO: handle edge case of deletion during a teleportation - perhaps the character should die?
+		for _, entity_to_destroy in pairs(data.entities) do
+			if entity_to_destroy.valid then
+				entity_to_destroy.destroy()
+			end
+		end
 		-- remove from list
-		global.planetary_teleporters[entity.unit_number] = nil
+		global.planetary_teleporters[unit_number] = nil
 		-- close any open GUIs
 		for _, gui_data in pairs(global.planetary_teleporter_guis) do
 			if gui_data.state.entity.unit_number == entity.unit_number then
