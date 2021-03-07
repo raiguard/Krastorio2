@@ -7,8 +7,9 @@ local pt_entity_name = "kr-planetary-teleporter"
 
 -- TODO: cutscene and relative positioning
 local function teleport_player(player, from, to)
-	-- discharge source entity
+	-- discharge both entities
 	from.energy = 0
+	to.energy = 0
 	-- teleport player
 	local position = to.position
 	position.y = position.y + 1.1
@@ -109,6 +110,7 @@ local function update_destinations_table(refs, state)
 	local unnamed_str = global.planetary_teleporter_unnamed_translations[player_index]
 
 	local i = 0
+	local shown_teleporters = {}
 	for destination_number, data in pairs(global.planetary_teleporters) do
 		local name = data.name or unnamed_str
 		if
@@ -118,13 +120,15 @@ local function update_destinations_table(refs, state)
 			and (query == "" or string.find(string.lower(name), query, 1, true))
 		then
 			i = i + 1
+			shown_teleporters[i] = destination_number
 			local destination_frame = children[i]
 			if not destination_frame then
 				local destination_refs = gui.build(destinations_table, {
 					{type = "frame", style = "train_with_minimap_frame", direction = "vertical", ref = {"frame"}, children = {
-						{type = "frame", style = "deep_frame_in_shallow_frame", children = {
+						{type = "frame", name = "minimap_frame", style = "deep_frame_in_shallow_frame", children = {
 							{
 								type = "minimap",
+								name = "minimap",
 								style = "kr_planetary_teleporter_destination_minimap",
 								chart_player_index = player_index,
 								force = force_name,
@@ -132,6 +136,7 @@ local function update_destinations_table(refs, state)
 								children = {
 									{
 										type = "button",
+										name = "minimap_button",
 										style = "kr_planetary_teleporter_destination_minimap_button",
 										tooltip = {"gui.kr-planetary-teleporter-teleport-tooltip"},
 										actions = {
@@ -141,6 +146,7 @@ local function update_destinations_table(refs, state)
 								}
 							}
 						}},
+						{type = "progressbar", name = "bar", style = "kr_planetary_teleporter_destination_charge_bar"},
 						{type = "frame", style = "deep_frame_in_shallow_frame", children = {
 							{
 								type = "button",
@@ -156,6 +162,13 @@ local function update_destinations_table(refs, state)
 
 			local distance = math.ceil(get_distance(position, data.position))
 			local name_and_distance = {"gui.kr-planetary-teleporter-name-and-distance", data.name or unnamed_str, distance}
+			local entity = data.entities.base
+			local charge_value = entity.energy / entity.prototype.electric_energy_source_prototype.buffer_capacity
+			-- TODO: remove `normal` when the bug is fixed
+			local entity_status = entity.status
+			local fully_charged = (
+				entity_status == defines.entity_status.fully_charged or entity_status == defines.entity_status.normal
+			)
 
 			gui.update(
 				destination_frame,
@@ -166,12 +179,19 @@ local function update_destinations_table(refs, state)
 								position = data.position
 							},
 							children = {
-								{cb = function(elem)
-									gui.update_tags(elem, {number = destination_number})
-								end},
+								{
+									cb = function(elem)
+										gui.update_tags(elem, {number = destination_number})
+									end,
+									elem_mods = {
+										enabled = fully_charged,
+										tooltip = {"gui.kr-planetary-teleporter-"..(fully_charged and "teleport-tooltip" or "low-power")}
+									}
+								},
 							}
 						}
 					}},
+					{elem_mods = {value = charge_value}},
 					{children = {
 						{elem_mods = {
 							caption = name_and_distance,
@@ -191,6 +211,46 @@ local function update_destinations_table(refs, state)
 		refs.no_destinations_frame.visible = false
 	else
 		refs.no_destinations_frame.visible = true
+	end
+
+	state.shown_teleporters = shown_teleporters
+end
+
+local function update_all_destination_tables()
+	for _, gui_data in pairs(global.planetary_teleporter_guis) do
+		update_destinations_table(gui_data.refs, gui_data.state)
+	end
+end
+
+local function update_all_destination_availability()
+	for _, gui_data in pairs(global.planetary_teleporter_guis) do
+		local refs = gui_data.refs
+		local state = gui_data.state
+
+		local teleporters = global.planetary_teleporters
+
+		local destinations_table = refs.destinations_table
+		local children = destinations_table.children
+
+		-- the generic update function is too slow - only update the bars and buttons
+		for i, unit_number in pairs(state.shown_teleporters) do
+			local teleporter_data = teleporters[unit_number]
+			local entity = teleporter_data.entities.base
+			local charge_value = entity.energy / entity.prototype.electric_energy_source_prototype.buffer_capacity
+			-- TODO: remove `normal` when the bug is fixed
+			local entity_status = entity.status
+			local fully_charged = (
+				entity_status == defines.entity_status.fully_charged or entity_status == defines.entity_status.normal
+			)
+
+			-- TODO: don't use gui.update?
+			local parent = children[i]
+			local bar = parent.bar
+			bar.value = charge_value
+			local button = parent.minimap_frame.minimap.minimap_button
+			button.enabled = fully_charged
+			button.tooltip = {"gui.kr-planetary-teleporter-"..(fully_charged and "teleport-tooltip" or "low-power")}
+		end
 	end
 end
 
@@ -259,7 +319,7 @@ local function handle_gui_action(msg, e)
 		local destination_number = gui.get_tags(e.element).number
 		local destination_info = global.planetary_teleporters[destination_number]
 		if destination_info then
-			local destination_entity = global.planetary_teleporters[destination_number].entity
+			local destination_entity = global.planetary_teleporters[destination_number].entities.base
 			local source_entity = state.entity
 			-- close GUI
 			refs.window.destroy()
@@ -426,7 +486,8 @@ local function create_gui(player, entity)
 			entity_data = entity_data,
 			fully_charged = entity.status == defines.entity_status.fully_charged,
 			player = player,
-			search_query = ""
+			search_query = "",
+			shown_teleporters = {}
 		}
 	}
 
@@ -492,6 +553,7 @@ local function on_entity_built(e)
 			position = entity.position,
 			surface = entity.surface
 		}
+		update_all_destination_tables()
 	end
 end
 
@@ -511,10 +573,13 @@ local function on_entity_destroyed(e)
 		global.planetary_teleporters[unit_number] = nil
 		-- close any open GUIs
 		for _, gui_data in pairs(global.planetary_teleporter_guis) do
-			if gui_data.state.entity.unit_number == entity.unit_number then
+			local other_entity = gui_data.state.entity
+			if other_entity.valid and other_entity.unit_number == unit_number then
 				handle_gui_action({action = "close"}, {player_index = gui_data.state.player.index})
 			end
 		end
+		-- update destinations
+		update_all_destination_tables()
 	end
 end
 
@@ -607,6 +672,7 @@ return {
 	{on_gui_event, "on_gui_text_changed"},
 	{on_gui_opened, "on_gui_opened"},
 	{update_gui_statuses, "on_tick"},
+	{update_all_destination_availability, "on_nth_tick", 10},
 	-- player
 	{on_player_created, "on_player_created"},
 	{on_player_removed, "on_player_removed"},
