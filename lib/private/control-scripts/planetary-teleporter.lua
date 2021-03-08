@@ -32,12 +32,7 @@ end
 
 local status_labels = {}
 for label, i in pairs(defines.entity_status) do
-	-- replace "normal" with "fully charged" to circumvent an inconsistent bug in the base game
-	if label == "normal" then
-		status_labels[i] = "fully-charged"
-	else
-		status_labels[i] = string.gsub(label, "_", "-")
-	end
+	status_labels[i] = string.gsub(label, "_", "-")
 end
 
 local status_images = {
@@ -72,16 +67,22 @@ local function update_gui_statuses()
 		local state = gui_data.state
 		local entity = state.entity
 		local status = entity.status
+		local percent_full = math.ceil(
+			(entity.energy / entity.prototype.electric_energy_source_prototype.buffer_capacity) * 100
+		)
+		-- workaround for a base game issue where the accumulator won't actually charge all the way sometimes
+		local fully_charged = status == defines.entity_status.fully_charged or percent_full == 100
+
 		if status == defines.entity_status.charging or status == defines.entity_status.discharging then
-			local percent_full = (entity.energy / entity.prototype.electric_energy_source_prototype.buffer_capacity) * 100
 			refs.status_label.caption = {"", {"entity-status."..status_labels[status]}, " - "..math.floor(percent_full).."%"}
+		-- workaround pt. 2
+		elseif fully_charged then
+			refs.status_label.caption = {"entity-status.fully-charged"}
 		else
 			refs.status_label.caption = {"entity-status."..status_labels[status]}
 		end
 		refs.status_image.sprite = "utility/"..(status_images[status] or "status_working")
 
-		-- workaround for a base game issue where the accumulator won't actually charge all the way sometimes
-		local fully_charged = status == defines.entity_status.fully_charged or status == defines.entity_status.normal
 		if
 			(fully_charged and not state.fully_charged)
 			or (not fully_charged and state.fully_charged)
@@ -163,12 +164,9 @@ local function update_destinations_table(refs, state)
 			local distance = math.ceil(get_distance(position, data.position))
 			local name_and_distance = {"gui.kr-planetary-teleporter-name-and-distance", data.name or unnamed_str, distance}
 			local entity = data.entities.base
-			local charge_value = entity.energy / entity.prototype.electric_energy_source_prototype.buffer_capacity
-			-- TODO: remove `normal` when the bug is fixed
-			local entity_status = entity.status
-			local fully_charged = (
-				entity_status == defines.entity_status.fully_charged or entity_status == defines.entity_status.normal
-			)
+			local capacity = entity.prototype.electric_energy_source_prototype.buffer_capacity
+			local charge_value = math.ceil((entity.energy / capacity) * 100) / 100
+			local fully_charged = charge_value == 1
 
 			gui.update(
 				destination_frame,
@@ -559,7 +557,7 @@ end
 
 local function on_entity_destroyed(e)
 	local entity = e.entity
-	if entity and entity.valid then
+	if entity and entity.valid and entity.name == pt_entity_name then
 		local unit_number = entity.unit_number
 		local data = global.planetary_teleporters[unit_number]
 		-- destroy other entities
