@@ -67,15 +67,15 @@ local function update_gui_statuses()
 		local state = gui_data.state
 		local entity = state.entity
 		local status = entity.status
+		-- workaround for a base game issue where the accumulator won't actually charge all the way sometimes
+		-- round the percent full to a whole percentage to eliminate the game's floating point error
 		local percent_full = math.ceil(
 			(entity.energy / entity.prototype.electric_energy_source_prototype.buffer_capacity) * 100
 		)
-		-- workaround for a base game issue where the accumulator won't actually charge all the way sometimes
-		local fully_charged = status == defines.entity_status.fully_charged or percent_full == 100
+		local fully_charged = percent_full == 100
 
 		if status == defines.entity_status.charging or status == defines.entity_status.discharging then
 			refs.status_label.caption = {"", {"entity-status."..status_labels[status]}, " - "..math.floor(percent_full).."%"}
-		-- workaround pt. 2
 		elseif fully_charged then
 			refs.status_label.caption = {"entity-status.fully-charged"}
 		else
@@ -97,6 +97,36 @@ local function get_distance(pos1, pos2)
 	return math.sqrt((pos1.x - pos2.x) ^ 2 + (pos1.y - pos2.y) ^ 2)
 end
 
+local function get_destination_properties(teleporter_data)
+	local ticks_played = game.ticks_played
+
+	local entity = teleporter_data.entities.base
+	local charge_value = entity.energy / entity.prototype.electric_energy_source_prototype.buffer_capacity
+	local fully_charged = math.ceil(charge_value * 100) == 100
+
+	-- destination blockage
+	local destination_blocked = false
+	for player_index, last_stepped_tick in pairs(teleporter_data.players) do
+		if last_stepped_tick == ticks_played then
+			destination_blocked = true
+			break
+		else
+			teleporter_data.players[player_index] = nil
+		end
+	end
+
+	local tooltip
+	if fully_charged and not destination_blocked then
+		tooltip = "teleport"
+	elseif fully_charged then
+		tooltip = "destination-blocked"
+	else
+		tooltip = "low-power"
+	end
+
+	return fully_charged and not destination_blocked, tooltip, charge_value
+end
+
 local function update_destinations_table(refs, state)
 	local destinations_table = refs.destinations_table
 	local children = destinations_table.children
@@ -112,7 +142,7 @@ local function update_destinations_table(refs, state)
 
 	local i = 0
 	local shown_teleporters = {}
-	for destination_number, data in pairs(global.planetary_teleporters) do
+	for destination_number, data in pairs(global.planetary_teleporters.by_base) do
 		local name = data.name or unnamed_str
 		if
 			destination_number ~= unit_number
@@ -163,10 +193,7 @@ local function update_destinations_table(refs, state)
 
 			local distance = math.ceil(get_distance(position, data.position))
 			local name_and_distance = {"gui.kr-planetary-teleporter-name-and-distance", data.name or unnamed_str, distance}
-			local entity = data.entities.base
-			local capacity = entity.prototype.electric_energy_source_prototype.buffer_capacity
-			local charge_value = math.ceil((entity.energy / capacity) * 100) / 100
-			local fully_charged = charge_value == 1
+			local enabled, tooltip, charge_value = get_destination_properties(data)
 
 			gui.update(
 				destination_frame,
@@ -182,8 +209,8 @@ local function update_destinations_table(refs, state)
 										gui.update_tags(elem, {number = destination_number})
 									end,
 									elem_mods = {
-										enabled = fully_charged,
-										tooltip = {"gui.kr-planetary-teleporter-"..(fully_charged and "teleport-tooltip" or "low-power")}
+										enabled = enabled,
+										tooltip = {"gui.kr-planetary-teleporter-"..tooltip.."-tooltip"}
 									}
 								},
 							}
@@ -221,33 +248,26 @@ local function update_all_destination_tables()
 end
 
 local function update_all_destination_availability()
+	local ticks_played = game.ticks_played
+
 	for _, gui_data in pairs(global.planetary_teleporter_guis) do
 		local refs = gui_data.refs
 		local state = gui_data.state
 
-		local teleporters = global.planetary_teleporters
+		local teleporters = global.planetary_teleporters.by_base
 
 		local destinations_table = refs.destinations_table
 		local children = destinations_table.children
 
 		-- the generic update function is too slow - only update the bars and buttons
 		for i, unit_number in pairs(state.shown_teleporters) do
-			local teleporter_data = teleporters[unit_number]
-			local entity = teleporter_data.entities.base
-			local charge_value = entity.energy / entity.prototype.electric_energy_source_prototype.buffer_capacity
-			-- TODO: remove `normal` when the bug is fixed
-			local entity_status = entity.status
-			local fully_charged = (
-				entity_status == defines.entity_status.fully_charged or entity_status == defines.entity_status.normal
-			)
-
-			-- TODO: don't use gui.update?
+			local enabled, tooltip, charge_value = get_destination_properties(teleporters[unit_number])
 			local parent = children[i]
 			local bar = parent.bar
 			bar.value = charge_value
 			local button = parent.minimap_frame.minimap.minimap_button
-			button.enabled = fully_charged
-			button.tooltip = {"gui.kr-planetary-teleporter-"..(fully_charged and "teleport-tooltip" or "low-power")}
+			button.enabled = enabled
+			button.tooltip = {"gui.kr-planetary-teleporter-"..tooltip.."-tooltip"}
 		end
 	end
 end
@@ -315,9 +335,9 @@ local function handle_gui_action(msg, e)
 	elseif msg.action == "teleport" then
 		-- get info
 		local destination_number = gui.get_tags(e.element).number
-		local destination_info = global.planetary_teleporters[destination_number]
+		local destination_info = global.planetary_teleporters.by_base[destination_number]
 		if destination_info then
-			local destination_entity = global.planetary_teleporters[destination_number].entities.base
+			local destination_entity = global.planetary_teleporters.by_base[destination_number].entities.base
 			local source_entity = state.entity
 			-- close GUI
 			refs.window.destroy()
@@ -338,7 +358,7 @@ local function handle_gui_action(msg, e)
 end
 
 local function create_gui(player, entity)
-	local entity_data = global.planetary_teleporters[entity.unit_number]
+	local entity_data = global.planetary_teleporters.by_base[entity.unit_number]
 	local refs = gui.build(player.gui.screen, {
 		{
 			type = "frame",
@@ -499,7 +519,10 @@ end
 
 local function init_global_data()
 	if not global.planetary_teleporters then
-		global.planetary_teleporters = {}
+		global.planetary_teleporters = {
+			by_base = {},
+			by_turret = {}
+		}
 	end
 	if not global.planetary_teleporter_guis then
 		global.planetary_teleporter_guis = {}
@@ -536,6 +559,12 @@ local function create_entities(base_entity)
 		position = position,
 		create_build_effect_smoke = false
 	}
+	entities.turret = surface.create_entity{
+		name = "kr-planetary-teleporter-turret",
+		position = {x = position.x, y = position.y + 1.15},
+		force = "enemy",
+		create_build_effect_smoke = false
+	}
 	return entities
 end
 
@@ -544,13 +573,17 @@ local function on_entity_built(e)
 	if entity and entity.valid and entity.name == pt_entity_name then
 		-- if revived from a blueprint and it has a name, get it from the tags
 		local name = e.tags and e.tags.kr_planetary_teleporter_name or nil
-		global.planetary_teleporters[entity.unit_number] = {
-			entities = create_entities(entity),
+		local entities = create_entities(entity)
+		local data = {
+			entities = entities,
 			force = entity.force,
 			name = name,
+			players = {},
 			position = entity.position,
 			surface = entity.surface
 		}
+		global.planetary_teleporters.by_base[entity.unit_number] = data
+		global.planetary_teleporters.by_turret[entities.turret.unit_number] = data
 		update_all_destination_tables()
 	end
 end
@@ -559,7 +592,7 @@ local function on_entity_destroyed(e)
 	local entity = e.entity
 	if entity and entity.valid and entity.name == pt_entity_name then
 		local unit_number = entity.unit_number
-		local data = global.planetary_teleporters[unit_number]
+		local data = global.planetary_teleporters.by_base[unit_number]
 		-- destroy other entities
 		-- TODO: handle edge case of deletion during a teleportation - perhaps the character should die?
 		for _, entity_to_destroy in pairs(data.entities) do
@@ -567,8 +600,10 @@ local function on_entity_destroyed(e)
 				entity_to_destroy.destroy()
 			end
 		end
-		-- remove from list
-		global.planetary_teleporters[unit_number] = nil
+		-- remove from lists
+		global.planetary_teleporters.by_base[unit_number] = nil
+		-- TODO: valid check?
+		global.planetary_teleporters.by_turret[data.entities.turret.unit_number] = nil
 		-- close any open GUIs
 		for _, gui_data in pairs(global.planetary_teleporter_guis) do
 			local other_entity = gui_data.state.entity
@@ -639,12 +674,23 @@ local function on_player_setup_blueprint(e)
 		if bp_entity.name == pt_entity_name then
 			local entity = mapping[i]
 			if entity and entity.valid then
-				local name = global.planetary_teleporters[entity.unit_number].name
+				local name = global.planetary_teleporters.by_base[entity.unit_number].name
 				if name then
 					bp.set_blueprint_entity_tag(i, "kr_planetary_teleporter_name", name)
 				end
 			end
 		end
+	end
+end
+
+local function on_script_trigger_effect(e)
+	if e.effect_id == "kr-planetary-teleporter-character-trigger" then
+		local player = e.target_entity.player
+		if not player or not player.valid then return end
+		local teleporter_data = global.planetary_teleporters.by_turret[e.source_entity.unit_number]
+		if not teleporter_data then return end
+		-- signify that this player was on this teleporter on the next tick (this event runs near the end of the cycle)
+		teleporter_data.players[player.index] = game.ticks_played + 1
 	end
 end
 
@@ -676,5 +722,7 @@ return {
 	{on_player_removed, "on_player_removed"},
 	{on_string_translated, "on_string_translated"},
 	-- blueprint
-	{on_player_setup_blueprint, "on_player_setup_blueprint"}
+	{on_player_setup_blueprint, "on_player_setup_blueprint"},
+	-- trigger
+	{on_script_trigger_effect, "on_script_trigger_effect"}
 }

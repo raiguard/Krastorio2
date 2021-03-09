@@ -156,17 +156,30 @@ local function collision_entity(collision_box)
 		name = "kr-planetary-teleporter-collision-"..collision_index,
 		flags = {"not-on-map", "not-selectable-in-game", "placeable-off-grid"},
 		collision_box = collision_box,
-		-- TODO: don't use flib!
-		picture = {filename = "__flib__/graphics/empty.png", size = 1},
+		picture = {filename = "__core__/graphics/empty.png", size = 1},
 		collision_mask = {"player-layer"}
 	}
 end
 
--- dummy collision entities
+local function empty_animation()
+	return {
+		filename = "__core__/graphics/empty.png",
+		width = 1,
+		height = 1,
+		line_length = 1,
+		frame_count = 1,
+		shift = {0, 0},
+		animation_speed = 1,
+		direction_count = 1
+	}
+end
+
 data:extend{
+	-- dummy collision entities
 	collision_entity{{-1.5, -1}, {1.5, 0.4}},
 	collision_entity{{-0.8, -1}, {1.4, 1.2}},
 	collision_entity{{-1.4, -1}, {0.8, 1.2}},
+	-- overlay
 	{
 		type = "simple-entity",
 		name = "kr-planetary-teleporter-front-layer",
@@ -192,8 +205,71 @@ data:extend{
 			-- 	animation_speed = 0.5
 			-- }
 		}
+	},
+	-- collision detection
+	{
+		type = "trigger-target-type",
+		name = "character"
+	},
+	{
+		type = "turret",
+		name = "kr-planetary-teleporter-turret",
+		collision_mask = {},
+		call_for_help_radius = 0,
+		folded_animation = {
+			north = empty_animation(),
+			east = empty_animation(),
+			south = empty_animation(),
+			west = empty_animation()
+		},
+		flags = {"not-on-map", "not-selectable-in-game", "placeable-off-grid"},
+		attack_parameters = {
+			type = "projectile",
+			range = 0.75,
+			cooldown = 1,
+			ammo_type = {
+				category = "melee",
+				target_type = "position",
+				energy_consumption = "1J",
+				action = {
+					type = "direct",
+					action_delivery = {
+						type = "instant",
+						source_effects = {
+							{
+								type = "nested-result",
+								affects_target = true,
+								action = {
+									type = "area",
+									radius = 0.75,
+									collision_mode = "distance-from-center",
+									ignore_collision_condition = true,
+									trigger_target_mask = {"character"},
+									action_delivery = {
+										type = "instant",
+										target_effects = {
+											{
+												type = "script",
+												effect_id = "kr-planetary-teleporter-character-trigger"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
+
+for _, character in pairs(data.raw["character"]) do
+	local mask = character.trigger_target_mask or {}
+	character.trigger_target_mask = mask
+
+	mask[#mask + 1] = "character"
+end
 
 -- charge_animation =
 -- {
