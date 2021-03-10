@@ -248,8 +248,6 @@ local function update_all_destination_tables()
 end
 
 local function update_all_destination_availability()
-	local ticks_played = game.ticks_played
-
 	for _, gui_data in pairs(global.planetary_teleporter_guis) do
 		local refs = gui_data.refs
 		local state = gui_data.state
