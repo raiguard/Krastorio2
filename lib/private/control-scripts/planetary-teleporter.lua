@@ -98,22 +98,12 @@ local function get_distance(pos1, pos2)
 end
 
 local function get_destination_properties(teleporter_data)
-	local ticks_played = game.ticks_played
-
 	local entity = teleporter_data.entities.base
 	local charge_value = entity.energy / entity.prototype.electric_energy_source_prototype.buffer_capacity
 	local fully_charged = math.ceil(charge_value * 100) == 100
 
 	-- destination blockage
-	local destination_blocked = false
-	for player_index, last_stepped_tick in pairs(teleporter_data.players) do
-		if last_stepped_tick == ticks_played then
-			destination_blocked = true
-			break
-		else
-			teleporter_data.players[player_index] = nil
-		end
-	end
+	local destination_blocked = global.planetary_teleporter_players[teleporter_data.turret_unit_number] and true or false
 
 	local tooltip
 	if fully_charged and not destination_blocked then
@@ -146,7 +136,7 @@ local function update_destinations_table(refs, state)
 
 	local i = 0
 	local shown_teleporters = {}
-	for destination_number, data in pairs(global.planetary_teleporters.by_base) do
+	for destination_number, data in pairs(global.planetary_teleporters) do
 		local name = data.name or unnamed_str
 		if
 			destination_number ~= unit_number
@@ -216,7 +206,7 @@ local function update_destinations_table(refs, state)
 										enabled = destination_properties.enabled,
 										tooltip = {"gui.kr-planetary-teleporter-"..destination_properties.tooltip.."-tooltip"}
 									}
-								},
+								}
 							}
 						}
 					}},
@@ -252,32 +242,37 @@ local function update_all_destination_tables()
 end
 
 local function update_all_destination_availability()
-	local teleporters = global.planetary_teleporters.by_base
+	if game.tick % 10 == 0 then
+		local teleporters = global.planetary_teleporters
 
-	-- assemble availability data
-	local properties = {}
-	for unit_number, teleporter_data in pairs(teleporters) do
-		properties[unit_number] = get_destination_properties(teleporter_data)
-	end
+		-- assemble availability data
+		local properties = {}
+		for unit_number, teleporter_data in pairs(teleporters) do
+			properties[unit_number] = get_destination_properties(teleporter_data)
+		end
 
-	for _, gui_data in pairs(global.planetary_teleporter_guis) do
-		local refs = gui_data.refs
-		local state = gui_data.state
+		for _, gui_data in pairs(global.planetary_teleporter_guis) do
+			local refs = gui_data.refs
+			local state = gui_data.state
 
-		local destinations_table = refs.destinations_table
-		local children = destinations_table.children
+			local destinations_table = refs.destinations_table
+			local children = destinations_table.children
 
-		-- the generic update function is too slow - only update the bars and buttons
-		for i, unit_number in pairs(state.shown_teleporters) do
-			local destination_properties = properties[unit_number]
-			local parent = children[i]
-			local bar = parent.bar
-			bar.value = destination_properties.charge_value
-			local button = parent.minimap_frame.minimap.minimap_button
-			button.enabled = destination_properties.enabled
-			button.tooltip = {"gui.kr-planetary-teleporter-"..destination_properties.tooltip.."-tooltip"}
+			-- the generic update function is too slow - only update the bars and buttons
+			for i, unit_number in pairs(state.shown_teleporters) do
+				local destination_properties = properties[unit_number]
+				local parent = children[i]
+				local bar = parent.bar
+				bar.value = destination_properties.charge_value
+				local button = parent.minimap_frame.minimap.minimap_button
+				button.enabled = destination_properties.enabled
+				button.tooltip = {"gui.kr-planetary-teleporter-"..destination_properties.tooltip.."-tooltip"}
+			end
 		end
 	end
+
+	-- reset for the next round of player detection
+	global.planetary_teleporter_players = {}
 end
 
 local function handle_gui_action(msg, e)
@@ -343,9 +338,9 @@ local function handle_gui_action(msg, e)
 	elseif msg.action == "teleport" then
 		-- get info
 		local destination_number = gui.get_tags(e.element).number
-		local destination_info = global.planetary_teleporters.by_base[destination_number]
+		local destination_info = global.planetary_teleporters[destination_number]
 		if destination_info then
-			local destination_entity = global.planetary_teleporters.by_base[destination_number].entities.base
+			local destination_entity = global.planetary_teleporters[destination_number].entities.base
 			local source_entity = state.entity
 			-- close GUI
 			refs.window.destroy()
@@ -366,7 +361,7 @@ local function handle_gui_action(msg, e)
 end
 
 local function create_gui(player, entity)
-	local entity_data = global.planetary_teleporters.by_base[entity.unit_number]
+	local entity_data = global.planetary_teleporters[entity.unit_number]
 	local refs = gui.build(player.gui.screen, {
 		{
 			type = "frame",
@@ -527,13 +522,13 @@ end
 
 local function init_global_data()
 	if not global.planetary_teleporters then
-		global.planetary_teleporters = {
-			by_base = {},
-			by_turret = {}
-		}
+		global.planetary_teleporters = {}
 	end
 	if not global.planetary_teleporter_guis then
 		global.planetary_teleporter_guis = {}
+	end
+	if not global.planetary_teleporter_players then
+		global.planetary_teleporter_players = {}
 	end
 	if not global.planetary_teleporter_unnamed_translations then
 		global.planetary_teleporter_unnamed_translations = {}
@@ -591,12 +586,11 @@ local function on_entity_built(e)
 			entities = entities,
 			force = entity.force,
 			name = name,
-			players = {},
 			position = entity.position,
-			surface = entity.surface
+			surface = entity.surface,
+			turret_unit_number = entities.turret.unit_number
 		}
-		global.planetary_teleporters.by_base[entity.unit_number] = data
-		global.planetary_teleporters.by_turret[entities.turret.unit_number] = data
+		global.planetary_teleporters[entity.unit_number] = data
 		update_all_destination_tables()
 	end
 end
@@ -605,19 +599,17 @@ local function on_entity_destroyed(e)
 	local entity = e.entity
 	if entity and entity.valid and entity.name == pt_entity_name then
 		local unit_number = entity.unit_number
-		local data = global.planetary_teleporters.by_base[unit_number]
+		local data = global.planetary_teleporters[unit_number]
 		-- destroy other entities
 		-- TODO: handle edge case of deletion during a teleportation - perhaps the character should die?
-		local turret_unit_number = data.entities.turret.unit_number
 		for _, entity_to_destroy in pairs(data.entities) do
 			if entity_to_destroy.valid then
 				entity_to_destroy.destroy()
 			end
 		end
 		-- remove from lists
-		global.planetary_teleporters.by_base[unit_number] = nil
+		global.planetary_teleporters[unit_number] = nil
 		-- TODO: valid check?
-		global.planetary_teleporters.by_turret[turret_unit_number] = nil
 		-- close any open GUIs
 		for _, gui_data in pairs(global.planetary_teleporter_guis) do
 			local other_entity = gui_data.state.entity
@@ -688,7 +680,7 @@ local function on_player_setup_blueprint(e)
 		if bp_entity.name == pt_entity_name then
 			local entity = mapping[i]
 			if entity and entity.valid then
-				local name = global.planetary_teleporters.by_base[entity.unit_number].name
+				local name = global.planetary_teleporters[entity.unit_number].name
 				if name then
 					bp.set_blueprint_entity_tag(i, "kr_planetary_teleporter_name", name)
 				end
@@ -699,12 +691,19 @@ end
 
 local function on_script_trigger_effect(e)
 	if e.effect_id == "kr-planetary-teleporter-character-trigger" then
+		if not e.source_entity.valid or not e.target_entity.valid then return end
+
 		local player = e.target_entity.player
 		if not player or not player.valid then return end
-		local teleporter_data = global.planetary_teleporters.by_turret[e.source_entity.unit_number]
-		if not teleporter_data then return end
-		-- signify that this player was on this teleporter on the next tick (this event runs near the end of the cycle)
-		teleporter_data.players[player.index] = game.ticks_played + 1
+		local player_index = player.index
+
+		local turret_unit_number = e.source_entity.unit_number
+		local players = global.planetary_teleporter_players[turret_unit_number]
+		if players then
+			players[player_index] = true
+		else
+			global.planetary_teleporter_players[turret_unit_number] = {[player_index] = true}
+		end
 	end
 end
 
@@ -730,7 +729,7 @@ return {
 	{on_gui_event, "on_gui_text_changed"},
 	{on_gui_opened, "on_gui_opened"},
 	{update_gui_statuses, "on_tick"},
-	{update_all_destination_availability, "on_nth_tick", 10},
+	{update_all_destination_availability, "on_tick"},
 	-- player
 	{on_player_created, "on_player_created"},
 	{on_player_removed, "on_player_removed"},
