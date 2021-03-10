@@ -120,7 +120,8 @@ end
 local function get_destination_properties(teleporter_data)
 	local entity = teleporter_data.entities.base
 	local charge_value = entity.energy / entity.prototype.electric_energy_source_prototype.buffer_capacity
-	local fully_charged = math.ceil(charge_value * 100) == 100
+	local charge_percent = math.ceil(charge_value * 100)
+	local fully_charged = charge_percent == 100
 
 	-- destination blockage
 	local destination_blocked = global.planetary_teleporter_players[teleporter_data.turret_unit_number] and true or false
@@ -137,6 +138,7 @@ local function get_destination_properties(teleporter_data)
 	return {
 		enabled = fully_charged and not destination_blocked,
 		tooltip = tooltip,
+		charge_percent = charge_percent,
 		charge_value = charge_value
 	}
 end
@@ -230,7 +232,10 @@ local function update_destinations_table(refs, state)
 							}
 						}
 					}},
-					{elem_mods = {value = destination_properties.charge_value}},
+					{elem_mods = {
+						tooltip = destination_properties.charge_percent.."%",
+						value = destination_properties.charge_value}
+					},
 					{children = {
 						{elem_mods = {
 							caption = name_and_distance,
@@ -284,6 +289,7 @@ local function update_all_destination_availability()
 				local parent = children[i]
 				local bar = parent.bar
 				bar.value = destination_properties.charge_value
+				bar.tooltip = destination_properties.charge_percent.."%"
 				local button = parent.minimap_frame.minimap.minimap_button
 				button.enabled = destination_properties.enabled
 				button.tooltip = {"gui.kr-planetary-teleporter-"..destination_properties.tooltip.."-tooltip"}
