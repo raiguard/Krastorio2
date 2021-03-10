@@ -124,7 +124,11 @@ local function get_destination_properties(teleporter_data)
 		tooltip = "low-power"
 	end
 
-	return fully_charged and not destination_blocked, tooltip, charge_value
+	return {
+		enabled = fully_charged and not destination_blocked,
+		tooltip = tooltip,
+		charge_value = charge_value
+	}
 end
 
 local function update_destinations_table(refs, state)
@@ -193,7 +197,7 @@ local function update_destinations_table(refs, state)
 
 			local distance = math.ceil(get_distance(position, data.position))
 			local name_and_distance = {"gui.kr-planetary-teleporter-name-and-distance", data.name or unnamed_str, distance}
-			local enabled, tooltip, charge_value = get_destination_properties(data)
+			local destination_properties = get_destination_properties(data)
 
 			gui.update(
 				destination_frame,
@@ -209,14 +213,14 @@ local function update_destinations_table(refs, state)
 										gui.update_tags(elem, {number = destination_number})
 									end,
 									elem_mods = {
-										enabled = enabled,
-										tooltip = {"gui.kr-planetary-teleporter-"..tooltip.."-tooltip"}
+										enabled = destination_properties.enabled,
+										tooltip = {"gui.kr-planetary-teleporter-"..destination_properties.tooltip.."-tooltip"}
 									}
 								},
 							}
 						}
 					}},
-					{elem_mods = {value = charge_value}},
+					{elem_mods = {value = destination_properties.charge_value}},
 					{children = {
 						{elem_mods = {
 							caption = name_and_distance,
@@ -248,24 +252,30 @@ local function update_all_destination_tables()
 end
 
 local function update_all_destination_availability()
+	local teleporters = global.planetary_teleporters.by_base
+
+	-- assemble availability data
+	local properties = {}
+	for unit_number, teleporter_data in pairs(teleporters) do
+		properties[unit_number] = get_destination_properties(teleporter_data)
+	end
+
 	for _, gui_data in pairs(global.planetary_teleporter_guis) do
 		local refs = gui_data.refs
 		local state = gui_data.state
-
-		local teleporters = global.planetary_teleporters.by_base
 
 		local destinations_table = refs.destinations_table
 		local children = destinations_table.children
 
 		-- the generic update function is too slow - only update the bars and buttons
 		for i, unit_number in pairs(state.shown_teleporters) do
-			local enabled, tooltip, charge_value = get_destination_properties(teleporters[unit_number])
+			local destination_properties = properties[unit_number]
 			local parent = children[i]
 			local bar = parent.bar
-			bar.value = charge_value
+			bar.value = destination_properties.charge_value
 			local button = parent.minimap_frame.minimap.minimap_button
-			button.enabled = enabled
-			button.tooltip = {"gui.kr-planetary-teleporter-"..tooltip.."-tooltip"}
+			button.enabled = destination_properties.enabled
+			button.tooltip = {"gui.kr-planetary-teleporter-"..destination_properties.tooltip.."-tooltip"}
 		end
 	end
 end
@@ -563,6 +573,11 @@ local function create_entities(base_entity)
 		force = "enemy",
 		create_build_effect_smoke = false
 	}
+	for name, entity in pairs(entities) do
+		if name ~= "base" then
+			entity.destructible = false
+		end
+	end
 	return entities
 end
 
@@ -593,6 +608,7 @@ local function on_entity_destroyed(e)
 		local data = global.planetary_teleporters.by_base[unit_number]
 		-- destroy other entities
 		-- TODO: handle edge case of deletion during a teleportation - perhaps the character should die?
+		local turret_unit_number = data.entities.turret.unit_number
 		for _, entity_to_destroy in pairs(data.entities) do
 			if entity_to_destroy.valid then
 				entity_to_destroy.destroy()
@@ -601,7 +617,7 @@ local function on_entity_destroyed(e)
 		-- remove from lists
 		global.planetary_teleporters.by_base[unit_number] = nil
 		-- TODO: valid check?
-		global.planetary_teleporters.by_turret[data.entities.turret.unit_number] = nil
+		global.planetary_teleporters.by_turret[turret_unit_number] = nil
 		-- close any open GUIs
 		for _, gui_data in pairs(global.planetary_teleporter_guis) do
 			local other_entity = gui_data.state.entity
