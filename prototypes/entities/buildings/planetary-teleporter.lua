@@ -99,6 +99,7 @@ data:extend(
 		name = "kr-planetary-teleporter",
 		icon = kr_entities_icons_path .. "planetary-teleporter.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral","placeable-player", "player-creation", "not-rotatable"},
 		map_color = {r=0.337, g=0.011, b=0.184},
 		max_health = 20000,

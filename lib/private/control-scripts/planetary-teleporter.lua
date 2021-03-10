@@ -13,7 +13,6 @@ local function teleport_player(player, from, to)
 	-- teleport player
 	local position = to.position
 	position.y = position.y + 1.1
-	-- player.teleport(to.surface.find_non_colliding_position("character", position, 30, 1), to.surface)
 	player.teleport(position, to.surface)
 	-- play sounds
 	from.surface.play_sound{
