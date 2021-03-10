@@ -44,25 +44,37 @@ local status_images = {
 }
 
 local function update_fully_charged(refs, state)
-	local fully_charged = state.fully_charged
+	local active_warning = state.active_warning
+
+	-- destination buttons
+	local enabled = active_warning and true or false
 	for _, destination_frame in ipairs(refs.destinations_table.children) do
-		destination_frame.children[1].ignored_by_interaction = not fully_charged
+		destination_frame.minimap_frame.minimap.ignored_by_interaction = enabled
 	end
-	if fully_charged then
-		refs.name_label.style = "subheader_caption_label"
-		refs.name_label.style.maximal_width = 370
-		refs.toolbar.style = "subheader_frame"
-		refs.toolbar.low_power_label.visible = false
-	else
+
+	-- subheader
+	if active_warning then
 		refs.name_label.style = "kr_subheader_bold_label"
 		refs.name_label.style.maximal_width = 370
 		refs.toolbar.style = "negative_subheader_frame"
-		refs.toolbar.low_power_label.visible = true
+
+		local warning_label = refs.toolbar.warning_label
+		warning_label.visible = true
+		warning_label.caption = {
+			"",
+			"[img=utility/warning_white] ",
+			{"gui.kr-planetary-teleporter-warning-"..active_warning}
+		}
+	else
+		refs.name_label.style = "subheader_caption_label"
+		refs.name_label.style.maximal_width = 370
+		refs.toolbar.style = "subheader_frame"
+		refs.toolbar.warning_label.visible = false
 	end
 end
 
 local function update_gui_statuses()
-	for _, gui_data in pairs(global.planetary_teleporter_guis) do
+	for player_index, gui_data in pairs(global.planetary_teleporter_guis) do
 		local refs = gui_data.refs
 		local state = gui_data.state
 		local entity = state.entity
@@ -83,11 +95,20 @@ local function update_gui_statuses()
 		end
 		refs.status_image.sprite = "utility/"..(status_images[status] or "status_working")
 
-		if
-			(fully_charged and not state.fully_charged)
-			or (not fully_charged and state.fully_charged)
-		then
-			state.fully_charged = not state.fully_charged
+
+		-- warning
+		local warning = false
+		local players = global.planetary_teleporter_players[state.entity_data.turret_unit_number] or {}
+		if not players[player_index] then
+			warning = "not_on_teleporter"
+		elseif table_size(players) > 1 then
+			warning = "too_many_players"
+		elseif not fully_charged then
+			warning = "low_power"
+		end
+
+		if state.active_warning ~= warning then
+			state.active_warning = warning
 			update_fully_charged(refs, state)
 		end
 	end
@@ -454,11 +475,10 @@ local function create_gui(player, entity)
 							{type = "empty-widget", style_mods = {horizontally_stretchable = true}},
 							{
 								type = "label",
-								name = "low_power_label",
+								name = "warning_label",
 								style = "bold_label",
 								style_mods = {right_padding = 8},
-								visible = false,
-								caption = {"", "[img=utility/warning_white] ", {"gui.kr-planetary-teleporter-low-power"}}
+								visible = false
 							}
 						}
 					},
@@ -503,9 +523,9 @@ local function create_gui(player, entity)
 	local gui_data = {
 		refs = refs,
 		state = {
+			active_warning = false,
 			entity = entity,
 			entity_data = entity_data,
-			fully_charged = entity.status == defines.entity_status.fully_charged,
 			player = player,
 			search_query = "",
 			shown_teleporters = {}
@@ -656,7 +676,7 @@ end
 local function on_string_translated(e)
 	local localised_string = e.localised_string
 	if type(localised_string) == "table" and localised_string[1] == "gui.kr-planetary-teleporter-unnamed" then
-		-- sometimes the translation might fail - in that case, use the english
+		-- sometimes the translation might fail - in that case, fall back on the english
 		global.planetary_teleporter_unnamed_translations[e.player_index] = e.translated and e.result or "<Unnamed>"
 	end
 end
