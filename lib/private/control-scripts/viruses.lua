@@ -1,12 +1,8 @@
 --------------------------------------------------------
 -- Utils
--- Function for calculate the round of number
-function round(num)
-	return (num + 0.5 - (num + 0.5) % 1.0)
-end
 
 -- Modifier to change the quantity of objects iterated for each round of the function, based on the total
-function getRemovalModifier(count)
+local function getRemovalModifier(count)
 	if count <= 1000 then
 		return 20
 	elseif count <= 5000 then
@@ -28,7 +24,7 @@ end
 --------------------------------------------------------
 -- -- Functions
 
-function onInitAndConfigChanged()
+local function onInitAndConfigChanged()
 	-- reset viruses table when mod configuration changes
 	-- this is a brute-force way of doing it, but my hand is forced by the weird ControlCallBackManager system
 	global.viruses = {
@@ -38,7 +34,7 @@ function onInitAndConfigChanged()
 end
 
 -- Function to remove definitively creep
-function playerThrowAntiCreep(event)
+local function playerThrowAntiCreep(event)
 	if event.item.name == "kr-creep-virus" then
 		local creep_viruses = global.viruses.creep_viruses
 
@@ -72,7 +68,7 @@ function playerThrowAntiCreep(event)
 	end
 end
 
-function removeCreep()
+local function removeCreep()
 	local creep_viruses = global.viruses.creep_viruses
 	for surface_index, data in pairs(creep_viruses) do
 		local surface = data.surface
@@ -105,7 +101,7 @@ function removeCreep()
 end
 
 -- Function to remove biters the 33% of biters on the surface where the capsule is throwed
-function playerThrowAntiBiter(event)
+local function playerThrowAntiBiter(event)
 	if event.item and event.item.name == "kr-biter-virus" then
 		local player = game.players[event.player_index]
 		local surface = player.surface
@@ -134,7 +130,7 @@ function playerThrowAntiBiter(event)
 	end
 end
 
-function killEnemyEntities()
+local function killEnemyEntities()
 	local biter_viruses = global.viruses.biter_viruses
 	for surface_index, data in pairs(biter_viruses) do
 		local entities = data.entities
@@ -172,10 +168,10 @@ end
 
 return
 {
-	{ onInitAndConfigChanged, "on_init"},
-	{ onInitAndConfigChanged, "on_configuration_changed"},
-	{ playerThrowAntiCreep, "on_player_used_capsule" },
-	{ playerThrowAntiBiter, "on_player_used_capsule" },
-	{ removeCreep, "on_nth_tick", 10 },
-	{ killEnemyEntities, "on_nth_tick", 10 },
+	{onInitAndConfigChanged, "on_init"},
+	{onInitAndConfigChanged, "on_configuration_changed"},
+	{playerThrowAntiCreep, "on_player_used_capsule"},
+	{playerThrowAntiBiter, "on_player_used_capsule"},
+	{removeCreep, "on_nth_tick", 10},
+	{killEnemyEntities, "on_nth_tick", 10},
 }
