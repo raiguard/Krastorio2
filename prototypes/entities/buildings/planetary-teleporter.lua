@@ -10,8 +10,8 @@ local planetary_teleporter_animation =
 			width = 400,
 			height = 475,
 			scale = 0.5,
-			frame_count = 12,
-			line_length = 4,
+			frame_count = 20,
+			line_length = 5,
 			animation_speed = 0.5,
 			-- hr_version =
 			-- {
@@ -19,8 +19,8 @@ local planetary_teleporter_animation =
 			-- 	width = 400,
 			-- 	height = 475,
 			-- 	scale = 0.5,
-			-- 	frame_count = 12,
-			-- 	line_length = 4,
+			-- 	frame_count = 20,
+			-- 	line_length = 5,
 			-- 	animation_speed = 0.5
 			-- }
 		},
@@ -29,8 +29,8 @@ local planetary_teleporter_animation =
 			width = 400,
 			height = 475,
 			scale = 0.5,
-			frame_count = 12,
-			line_length = 4,
+			frame_count = 20,
+			line_length = 5,
 			animation_speed = 0.5,
 			-- hr_version =
 			-- {
@@ -38,8 +38,8 @@ local planetary_teleporter_animation =
 			-- 	width = 400,
 			-- 	height = 475,
 			-- 	scale = 0.5,
-			-- 	frame_count = 12,
-			-- 	line_length = 4,
+			-- 	frame_count = 20,
+			-- 	line_length = 5,
 			-- 	animation_speed = 0.5
 			-- }
 		},
@@ -49,7 +49,7 @@ local planetary_teleporter_animation =
 			width = 266,
 			height = 146,
 			frame_count = 1,
-			repeat_count = 12,
+			repeat_count = 20,
 			draw_as_shadow = true,
 			animation_speed = 0.5,
 			shift = {1.9, 1.2},
@@ -61,7 +61,7 @@ local planetary_teleporter_animation =
 				height = 292,
 				scale = 0.5,
 				frame_count = 1,
-				repeat_count = 12,
+				repeat_count = 20,
 				draw_as_shadow = true,
 				animation_speed = 0.5,
 				shift = {1.9, 1.2}
@@ -72,8 +72,8 @@ local planetary_teleporter_animation =
 		-- 	priority = "high",
 		-- 	width = 200,
 		-- 	height = 237,
-		-- 	frame_count = 12,
-		-- 	line_length = 4,
+		-- 	frame_count = 20,
+		-- 	line_length = 5,
 		-- 	animation_speed = 0.5,
 		-- 	draw_as_light = true,
 		-- 	hr_version =
@@ -83,8 +83,8 @@ local planetary_teleporter_animation =
 		-- 		width = 400,
 		-- 		height = 475,
 		-- 		scale = 0.5,
-		-- 		frame_count = 12,
-		-- 		line_length = 4,
+		-- 		frame_count = 20,
+		-- 		line_length = 5,
 		-- 		animation_speed = 0.5,
 		-- 		draw_as_light = true
 		-- 	}
@@ -126,6 +126,7 @@ data:extend(
 			output_flow_limit = "0W"
 		},
 		picture = planetary_teleporter_animation,
+		charge_animation = planetary_teleporter_animation,
 		charge_cooldown = 10,
 		discharge_cooldown = 10,
 		vehicle_impact_sound = sounds.generic_impact,
@@ -192,8 +193,8 @@ data:extend{
 			width = 400,
 			height = 475,
 			scale = 0.5,
-			frame_count = 12,
-			line_length = 4,
+			frame_count = 20,
+			line_length = 5,
 			animation_speed = 0.5,
 			-- hr_version =
 			-- {
@@ -201,8 +202,8 @@ data:extend{
 			-- 	width = 400,
 			-- 	height = 475,
 			-- 	scale = 0.5,
-			-- 	frame_count = 12,
-			-- 	line_length = 4,
+			-- 	frame_count = 20,
+			-- 	line_length = 5,
 			-- 	animation_speed = 0.5
 			-- }
 		}
@@ -280,8 +281,8 @@ end
 -- 			filename = kr_entities_path .. "planetary-teleporter/planetary-teleporter.png",
 -- 			width = 200,
 -- 			height = 237.5,
--- 			frame_count = 12,
--- 			line_length = 4,
+-- 			frame_count = 20,
+-- 			line_length = 5,
 -- 			animation_speed = 0.5,
 -- 			hr_version =
 -- 			{
@@ -289,8 +290,8 @@ end
 -- 				width = 400,
 -- 				height = 475,
 -- 				scale = 0.5,
--- 				frame_count = 12,
--- 				line_length = 4,
+-- 				frame_count = 20,
+-- 				line_length = 5,
 -- 				animation_speed = 0.5
 -- 			}
 -- 		},
@@ -300,7 +301,7 @@ end
 -- 			width = 266,
 -- 			height = 146,
 -- 			frame_count = 1,
--- 			repeat_count = 12,
+-- 			repeat_count = 20,
 -- 			draw_as_shadow = true,
 -- 			animation_speed = 0.5,
 -- 			shift = {1.9, 1.2},
@@ -312,7 +313,7 @@ end
 -- 				height = 292,
 -- 				scale = 0.5,
 -- 				frame_count = 1,
--- 				repeat_count = 12,
+-- 				repeat_count = 20,
 -- 				draw_as_shadow = true,
 -- 				animation_speed = 0.5,
 -- 				shift = {1.9, 1.2}
@@ -323,8 +324,8 @@ end
 -- 			priority = "high",
 -- 			width = 200,
 -- 			height = 237,
--- 			frame_count = 12,
--- 			line_length = 4,
+-- 			frame_count = 20,
+-- 			line_length = 5,
 -- 			animation_speed = 0.5,
 -- 			draw_as_light = true,
 -- 			hr_version =
@@ -334,8 +335,8 @@ end
 -- 				width = 400,
 -- 				height = 475,
 -- 				scale = 0.5,
--- 				frame_count = 12,
--- 				line_length = 4,
+-- 				frame_count = 20,
+-- 				line_length = 5,
 -- 				animation_speed = 0.5,
 -- 				draw_as_glow = true
 -- 			}
@@ -346,7 +347,7 @@ end
 -- 			width = 200,
 -- 			height = 238,
 -- 			frame_count = 1,
--- 			repeat_count = 12,
+-- 			repeat_count = 20,
 -- 			animation_speed = 0.5,
 -- 			draw_as_light = true,
 -- 			hr_version =
@@ -357,7 +358,7 @@ end
 -- 				height = 475,
 -- 				scale = 0.5,
 -- 				frame_count = 1,
--- 				repeat_count = 12,
+-- 				repeat_count = 20,
 -- 				animation_speed = 0.5,
 -- 				draw_as_glow = true
 -- 			}
