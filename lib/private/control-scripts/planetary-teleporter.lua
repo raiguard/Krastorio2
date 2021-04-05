@@ -94,7 +94,6 @@ local function update_gui_statuses()
 		end
 		refs.status_image.sprite = "utility/"..(status_images[status] or "status_working")
 
-
 		-- warning
 		local warning = false
 		local players = global.planetary_teleporter_players[state.entity_data.turret_unit_number] or {}

@@ -6,6 +6,28 @@ local planetary_teleporter_animation =
 	layers =
 	{
 		{
+			filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-forward-towers-light.png",
+			priority = "extra-high",
+			width = 400,
+			height = 475,
+			scale = 0.5,
+			variation_count = 1,
+			frame_count = 20,
+			line_length = 5,
+			animation_speed = 0.5,
+			-- hr_version =
+			-- {
+			-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
+			-- 	width = 400,
+			-- 	height = 475,
+			-- 	scale = 0.5,
+			-- 	frame_count = 20,
+			-- 	line_length = 5,
+			-- 	animation_speed = 0.5
+			-- }
+		},
+		--LIGHT MAKS MISSING
+		{
 			filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-base-combined.png",
 			width = 400,
 			height = 475,
@@ -25,47 +47,29 @@ local planetary_teleporter_animation =
 			-- }
 		},
 		{
-			filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-forward-towers.png",
-			width = 400,
-			height = 475,
-			scale = 0.5,
-			frame_count = 20,
-			line_length = 5,
-			animation_speed = 0.5,
-			-- hr_version =
-			-- {
-			-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
-			-- 	width = 400,
-			-- 	height = 475,
-			-- 	scale = 0.5,
-			-- 	frame_count = 20,
-			-- 	line_length = 5,
-			-- 	animation_speed = 0.5
-			-- }
-		},
-		{
-			filename = kr_entities_path .. "planetary-teleporter/planetary-teleporter-shadow.png",
+			filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter-shadow.png",
 			priority = "low",
-			width = 266,
-			height = 146,
+			width = 531,
+			height = 292,
+			scale = 0.5,
 			frame_count = 1,
 			repeat_count = 20,
 			draw_as_shadow = true,
 			animation_speed = 0.5,
 			shift = {1.9, 1.2},
-			hr_version =
-			{
-				filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter-shadow.png",
-				priority = "low",
-				width = 531,
-				height = 292,
-				scale = 0.5,
-				frame_count = 1,
-				repeat_count = 20,
-				draw_as_shadow = true,
-				animation_speed = 0.5,
-				shift = {1.9, 1.2}
-			}
+			--hr_version =
+			--{
+			--	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter-shadow.png",
+			--	priority = "low",
+			--	width = 531,
+			--	height = 292,
+			--	scale = 0.5,
+			--	frame_count = 1,
+			--	repeat_count = 20,
+			--	draw_as_shadow = true,
+			--	animation_speed = 0.5,
+			--	shift = {1.9, 1.2}
+			--}
 		},
 		-- {
 		-- 	filename = kr_entities_path .. "planetary-teleporter/planetary-teleporter-light.png",
@@ -188,24 +192,30 @@ data:extend{
 		flags = {"not-on-map", "not-selectable-in-game"},
 		collision_mask = {},
 		render_layer = "higher-object-above",
-		picture = {
-			filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-forward-towers.png",
-			width = 400,
-			height = 475,
-			scale = 0.5,
-			frame_count = 20,
-			line_length = 5,
-			animation_speed = 0.5,
-			-- hr_version =
-			-- {
-			-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
-			-- 	width = 400,
-			-- 	height = 475,
-			-- 	scale = 0.5,
-			-- 	frame_count = 20,
-			-- 	line_length = 5,
-			-- 	animation_speed = 0.5
-			-- }
+		picture = 
+		{
+			layers =
+			{
+				{
+					filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-forward-towers.png",
+					width = 400,
+					height = 475,
+					scale = 0.5,
+					frame_count = 1,
+					line_length = 1,
+					animation_speed = 0.5,
+					-- hr_version =
+					-- {
+					-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
+					-- 	width = 400,
+					-- 	height = 475,
+					-- 	scale = 0.5,
+					-- 	frame_count = 20,
+					-- 	line_length = 5,
+					-- 	animation_speed = 0.5
+					-- }
+				}
+			}
 		}
 	},
 	-- collision detection
@@ -216,6 +226,9 @@ data:extend{
 	{
 		type = "turret",
 		name = "kr-planetary-teleporter-turret",
+		icon = kr_entities_icons_path .. "planetary-teleporter.png",
+		icon_size = 64,
+		icon_mipmaps = 4,
 		collision_mask = {},
 		call_for_help_radius = 0,
 		folded_animation = {
