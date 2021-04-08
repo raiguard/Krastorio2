@@ -11,7 +11,6 @@ local planetary_teleporter_animation =
 			width = 400,
 			height = 475,
 			scale = 0.5,
-			variation_count = 1,
 			frame_count = 20,
 			line_length = 5,
 			animation_speed = 0.5,
@@ -35,6 +34,28 @@ local planetary_teleporter_animation =
 			frame_count = 20,
 			line_length = 5,
 			animation_speed = 0.5,
+			-- hr_version =
+			-- {
+			-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
+			-- 	width = 400,
+			-- 	height = 475,
+			-- 	scale = 0.5,
+			-- 	frame_count = 20,
+			-- 	line_length = 5,
+			-- 	animation_speed = 0.5
+			-- }
+		},
+		{
+			filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-base-combined-glow.png",
+			width = 400,
+			height = 475,
+			scale = 0.5,
+			frame_count = 20,
+			line_length = 5,
+			animation_speed = 0.5,
+			draw_as_glow = true,
+			fadeout = true,
+			blend_mode = "additive",
 			-- hr_version =
 			-- {
 			-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
