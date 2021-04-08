@@ -5,68 +5,7 @@ local planetary_teleporter_animation =
 {
 	layers =
 	{
-		{
-			filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-forward-towers-light.png",
-			priority = "extra-high",
-			width = 400,
-			height = 475,
-			scale = 0.5,
-			frame_count = 20,
-			line_length = 5,
-			animation_speed = 0.5,
-			-- hr_version =
-			-- {
-			-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
-			-- 	width = 400,
-			-- 	height = 475,
-			-- 	scale = 0.5,
-			-- 	frame_count = 20,
-			-- 	line_length = 5,
-			-- 	animation_speed = 0.5
-			-- }
-		},
-		--LIGHT MAKS MISSING
-		{
-			filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-base-combined.png",
-			width = 400,
-			height = 475,
-			scale = 0.5,
-			frame_count = 20,
-			line_length = 5,
-			animation_speed = 0.5,
-			-- hr_version =
-			-- {
-			-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
-			-- 	width = 400,
-			-- 	height = 475,
-			-- 	scale = 0.5,
-			-- 	frame_count = 20,
-			-- 	line_length = 5,
-			-- 	animation_speed = 0.5
-			-- }
-		},
-		{
-			filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-base-combined-glow.png",
-			width = 400,
-			height = 475,
-			scale = 0.5,
-			frame_count = 20,
-			line_length = 5,
-			animation_speed = 0.5,
-			draw_as_glow = true,
-			fadeout = true,
-			blend_mode = "additive",
-			-- hr_version =
-			-- {
-			-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
-			-- 	width = 400,
-			-- 	height = 475,
-			-- 	scale = 0.5,
-			-- 	frame_count = 20,
-			-- 	line_length = 5,
-			-- 	animation_speed = 0.5
-			-- }
-		},
+		--SHADOW
 		{
 			filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter-shadow.png",
 			priority = "low",
@@ -92,28 +31,112 @@ local planetary_teleporter_animation =
 			--	shift = {1.9, 1.2}
 			--}
 		},
-		-- {
-		-- 	filename = kr_entities_path .. "planetary-teleporter/planetary-teleporter-light.png",
-		-- 	priority = "high",
-		-- 	width = 200,
-		-- 	height = 237,
-		-- 	frame_count = 20,
-		-- 	line_length = 5,
-		-- 	animation_speed = 0.5,
-		-- 	draw_as_light = true,
-		-- 	hr_version =
-		-- 	{
-		-- 		filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter-light.png",
-		-- 		priority = "high",
-		-- 		width = 400,
-		-- 		height = 475,
-		-- 		scale = 0.5,
-		-- 		frame_count = 20,
-		-- 		line_length = 5,
-		-- 		animation_speed = 0.5,
-		-- 		draw_as_light = true
-		-- 	}
-		-- }
+		--BUILDING
+		{
+			filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-base-combined.png",
+			priority = "medium",
+			width = 400,
+			height = 475,
+			scale = 0.5,
+			frame_count = 20,
+			line_length = 5,
+			animation_speed = 0.5,
+			-- hr_version =
+			-- {
+			-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
+			-- 	width = 400,
+			-- 	height = 475,
+			-- 	scale = 0.5,
+			-- 	frame_count = 20,
+			-- 	line_length = 5,
+			-- 	animation_speed = 0.5
+			-- }
+		},
+		{
+			filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-under-forward-towers.png",
+			priority = "medium",
+			width = 400,
+			height = 475,
+			scale = 0.5,
+			repeat_count = 20,
+			animation_speed = 0.5,
+			-- hr_version =
+			-- {
+			-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
+			-- 	width = 400,
+			-- 	height = 475,
+			--	scale = 0.5
+			-- }
+		},
+		-- GLOWS
+		{
+			filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-base-combined-glow.png",
+			priority = "high",
+			width = 400,
+			height = 475,
+			scale = 0.5,
+			frame_count = 20,
+			line_length = 5,
+			animation_speed = 0.5,
+			draw_as_glow = true,
+			fadeout = true,
+			blend_mode = "additive-soft",
+			-- hr_version =
+			-- {
+			-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
+			-- 	width = 400,
+			-- 	height = 475,
+			-- 	scale = 0.5,
+			-- 	frame_count = 20,
+			-- 	line_length = 5,
+			-- 	animation_speed = 0.5
+			-- }
+		},
+		-- LIGHTS
+		{
+			filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-base-combined-glow.png",
+			priority = "extra-high",
+			width = 400,
+			height = 475,
+			scale = 0.5,
+			frame_count = 20,
+			line_length = 5,
+			animation_speed = 0.5,
+			draw_as_light = true,
+			blend_mode = "additive-soft",			
+		 	-- hr_version =
+			-- 	{
+			-- 		filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter-light.png",
+			-- 		priority = "high",
+			-- 		width = 400,
+			-- 		height = 475,
+			-- 		scale = 0.5,
+			-- 		frame_count = 20,
+			-- 		line_length = 5,
+			-- 		animation_speed = 0.5,
+			-- 		draw_as_light = true
+			-- 	}
+		},
+		{
+			filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-forward-towers-light.png",
+			priority = "extra-high",
+			width = 400,
+			height = 475,
+			scale = 0.5,
+			frame_count = 20,
+			line_length = 5,
+			animation_speed = 0.5,
+			-- hr_version =
+			-- {
+			-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
+			-- 	width = 400,
+			-- 	height = 475,
+			-- 	scale = 0.5,
+			-- 	frame_count = 20,
+			-- 	line_length = 5,
+			-- 	animation_speed = 0.5
+			-- }
+		}
 	}
 }
 
@@ -222,18 +245,12 @@ data:extend{
 					width = 400,
 					height = 475,
 					scale = 0.5,
-					frame_count = 1,
-					line_length = 1,
-					animation_speed = 0.5,
 					-- hr_version =
 					-- {
 					-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
 					-- 	width = 400,
 					-- 	height = 475,
-					-- 	scale = 0.5,
-					-- 	frame_count = 20,
-					-- 	line_length = 5,
-					-- 	animation_speed = 0.5
+					-- 	scale = 0.5
 					-- }
 				}
 			}
