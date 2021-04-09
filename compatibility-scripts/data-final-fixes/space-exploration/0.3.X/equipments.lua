@@ -5,8 +5,6 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
 	data.raw.armor["se-thruster-suit-3"].equipment_grid = "mk3-armor-grid"
 	data.raw.armor["se-thruster-suit-4"].equipment_grid = "mk4-armor-grid"
 	
-
-	
 	-- Fix property of SE shields
 	-- Energy shield mk5
 	data.raw["energy-shield-equipment"]["energy-shield-mk5-equipment"].categories = {"armor"}
@@ -35,9 +33,11 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
 	data.raw.item["se-rtg-equipment"].subgroup  = "equipment"
 	data.raw.item["se-rtg-equipment"].order     = "a2[energy-source]-a41[portable-nuclear-core]"
 	data.raw["generator-equipment"]["se-rtg-equipment"].power = "800kW"
+	table.insert(data.raw["generator-equipment"]["se-rtg-equipment"].categories, "universal-equipment")
 	
 	-- Portable RTG 2
 	data.raw.item["se-rtg-equipment-2"].subgroup  = "equipment"
 	data.raw.item["se-rtg-equipment-2"].order     = "a2[energy-source]-a42[portable-nuclear-core]"	
 	data.raw["generator-equipment"]["se-rtg-equipment-2"].power = "1200kW"
+	table.insert(data.raw["generator-equipment"]["se-rtg-equipment-2"].categories, "universal-equipment")
 end
