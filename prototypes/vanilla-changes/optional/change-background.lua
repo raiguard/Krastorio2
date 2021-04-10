@@ -23,4 +23,51 @@ if krastorio.general.getSafeSettingValue("kr-re-enable-menu-simulations") ~= tru
 	else
 		data.raw["utility-constants"]["default"].main_menu_background_image_location = "__core__/graphics/background-image.jpg"
 	end
+else
+	-- Remove base Factorio menu simulations (leave modded in)
+	if data.raw["utility-constants"]["default"].main_menu_simulations ~= nil then
+		data.raw["utility-constants"]["default"].main_menu_simulations.forest_fire = nil
+		data.raw["utility-constants"]["default"].main_menu_simulations.solar_power_construction = nil
+		data.raw["utility-constants"]["default"].main_menu_simulations.lab = nil
+		data.raw["utility-constants"]["default"].main_menu_simulations.burner_city = nil
+		data.raw["utility-constants"]["default"].main_menu_simulations.mining_defense = nil
+		data.raw["utility-constants"]["default"].main_menu_simulations.biter_base_steamrolled = nil
+		data.raw["utility-constants"]["default"].main_menu_simulations.biter_base_spidertron = nil
+		data.raw["utility-constants"]["default"].main_menu_simulations.biter_base_artillery = nil
+		data.raw["utility-constants"]["default"].main_menu_simulations.biter_base_player_attack = nil
+		data.raw["utility-constants"]["default"].main_menu_simulations.biter_base_laser_defense = nil
+		data.raw["utility-constants"]["default"].main_menu_simulations.artillery = nil
+		data.raw["utility-constants"]["default"].main_menu_simulations.train_junction = nil
+		data.raw["utility-constants"]["default"].main_menu_simulations.oil_pumpjacks = nil
+		data.raw["utility-constants"]["default"].main_menu_simulations.oil_refinery = nil
+		data.raw["utility-constants"]["default"].main_menu_simulations.early_smelting = nil
+		data.raw["utility-constants"]["default"].main_menu_simulations.train_station = nil
+		data.raw["utility-constants"]["default"].main_menu_simulations.logistic_robots = nil
+		data.raw["utility-constants"]["default"].main_menu_simulations.nuclear_power = nil
+		data.raw["utility-constants"]["default"].main_menu_simulations.chase_player = nil
+		data.raw["utility-constants"]["default"].main_menu_simulations.big_defense = nil
+		data.raw["utility-constants"]["default"].main_menu_simulations.brutal_defeat = nil
+		data.raw["utility-constants"]["default"].main_menu_simulations.spider_ponds = nil
+	else
+		data.raw["utility-constants"]["default"].main_menu_simulations = {}
+	end
+	
+	-- Add new Krastorio 2 menu simulation
+	data.raw["utility-constants"]["default"].main_menu_simulations.kr_menu_simulation =
+	{
+		checkboard = false,
+		save = "__Krastorio2__/menu-simulations/menu-simulation-kr-mixed-crafting.zip",
+		length = 60 * 60,
+		init =
+		[[
+			game.camera_zoom = 1
+			game.tick_paused = false
+			game.surfaces.nauvis.daytime = 0.5
+		]],
+		update =
+		[[
+		]]
+	}
+	-- local logo = game.surfaces.nauvis.find_entities_filtered{name = "factorio-logo-11tiles", limit = 1}[1]
+	-- game.camera_position = {logo.position.x, logo.position.y+9.75}
 end
