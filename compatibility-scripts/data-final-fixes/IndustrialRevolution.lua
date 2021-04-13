@@ -101,7 +101,7 @@ if mods["IndustrialRevolution"] then
 
 	data.raw.technology["kr-steel-fluid-handling"] = nil
 
-
+	krastorio.technologies.disable("ir2-transmat", false)
 
 	data:extend(
 	{
