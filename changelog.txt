@@ -6,9 +6,8 @@ Date: XX.04.2021
   Features:
     - Added startup setting to disable K2 containers.
     - Added win cutscene when the intergalactic transceiver become fully charged (only the first time).
-    - Reduced the graphic files size of +/-9% with a new lossless method.
-    - New graphics for intergalactic transceiver.
-    - Added Teleporter (a new endgame building).
+	- Added a teleporter building (a new endgame building, planned from 03/2020, sorry guys for take so long)!
+    - Added new graphics for Intergalactic Transceiver! Now have a different animation before being charged.
   Balancing:
     - Air purifier base pullution absorbing power was nerfed from -100 to -75.
     - Now fluid burning recipes (when a liquid is dispersed into the atmosphere) have different emission multipliers. Also was added an interface for other modders to use this feature if wanted in compatibility.
@@ -26,10 +25,11 @@ Date: XX.04.2021
     - Rocket turret can now face corners.
     - Updated resource names on the map generator screen to include icons.
     - Now with SE RTG equipments can be used in all grids (not only in the character armor).
-    - Now with IR2 is no longer possible unlock the transmat tech, due the conflit with the planetary teleporter of K2. We choise our teleport because gets end game more rich and we don't use shortcuts for the teleport transitions, that with a small possibility can be trigger in the same moment of the K2 end game shortcut. All previous entity constructed\build in existing saves will remain unchanged, items crafted will remain usable too.
+    - Now with IR2 is no longer possible unlock the transmat tech, due the conflit with the planetary teleporter of K2. We choise our teleport because gets end game more rich and we don't use cutscenes for the teleport transitions, that with a small possibility can be trigger in the same moment of the K2 end game cutscene is playing. All previous entity constructed\build in existing saves will remain unchanged, items crafted will remain usable too.
   Optimizations:
     - Significant performance improvements to prototype loading in the data stage.
     - Significant performance improvements to the biter and creep viruses.
+	- Reduced the graphic files size of +/-9% with a new lossless method.
   Bugfixes:
     - Fixed IR2 compatibility.
     - Fixed a crash on load with Angels' mods.
