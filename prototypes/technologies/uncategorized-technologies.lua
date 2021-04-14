@@ -970,6 +970,40 @@ data:extend(
 			},
 			time = 45
 		}
+	},
+	{
+		type = "technology",
+		name = "kr-planetary-teleporter",
+		mod = "Krastorio2",
+		icon = kr_technologies_icons_path .. "planetary-teleporter.png",
+		icon_size = 256,
+		icon_mipmaps = 4,
+		effects = 
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "kr-planetary-teleporter"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "gps-satellite"
+			}
+		},
+		prerequisites = {"effect-transmission", "kr-singularity-tech-card"},
+		unit = 
+		{
+			count = 500,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"space-science-pack", 1},
+				{"matter-tech-card", 1},
+				{"advanced-tech-card", 1},
+				{"singularity-tech-card", 1}
+			},
+			time = 60
+		}
 	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------

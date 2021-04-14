@@ -519,5 +519,18 @@ return
 			{"uranium-235", 10}
 		},
 		result = "nuclear-artillery-shell"
-	}
+	},
+	{
+		type = "recipe",
+		name = "gps-satellite",
+		enabled = false,
+		energy_required = 5,
+		ingredients =
+		{
+			{"satellite", 1},
+			{"rocket-control-unit", 1},
+			{"ai-core", 4}
+		},
+		result = "gps-satellite"
+	}	
 }

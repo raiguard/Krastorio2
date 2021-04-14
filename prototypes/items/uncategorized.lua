@@ -985,4 +985,25 @@ data:extend(
 		order = "e01[ei-inserter-parts]",
 		stack_size = 200
     },
+	{
+		type = "item",
+		name = "gps-satellite",
+		rocket_launch_product = {"teleportation-gps-module", 1},
+		icon_size = 64,
+		icon_mipmaps = 4,
+		icon = kr_items_icons_path .. "gps-satellite.png",
+		subgroup = "intermediate-product",
+		order = "u01[a1-gps-satellite]",
+		stack_size = 1
+	},
+	{
+		type = "item",
+		name = "teleportation-gps-module",
+		icon_size = 64,
+		icon_mipmaps = 4,		
+		icon = kr_items_icons_path .. "teleportation-gps-module.png",
+		subgroup = "intermediate-product",
+		order = "u01[a2-teleportation-gps-module]",
+		stack_size = 10
+	}
 })

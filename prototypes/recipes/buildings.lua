@@ -795,8 +795,8 @@ return
 		{
 			{"imersium-beam", 10},
 			{"imersite-crystal", 4},
-			{"ai-core", 4},
-			{"energy-control-unit", 8}
+			{"energy-control-unit", 8},
+			{"teleportation-gps-module", 1}
 		},
 		result = "kr-planetary-teleporter"
 	},
