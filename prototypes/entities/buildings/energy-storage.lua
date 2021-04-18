@@ -8,6 +8,7 @@ data:extend(
 		name = "kr-energy-storage",
 		icon = kr_entities_icons_path .. "energy-storage.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral","placeable-player", "player-creation", "not-rotatable"},
 		minable = {mining_time = 1, result = "kr-energy-storage"},
 		max_health = 750,

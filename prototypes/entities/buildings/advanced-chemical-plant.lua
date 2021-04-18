@@ -8,6 +8,7 @@ data:extend(
 		name = "kr-advanced-chemical-plant",		
 		icon = kr_entities_icons_path .. "advanced-chemical-plant.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "kr-advanced-chemical-plant"},
 		max_health = 1500,

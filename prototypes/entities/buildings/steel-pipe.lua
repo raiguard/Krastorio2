@@ -5,6 +5,7 @@ data:extend(
 		name = "kr-steel-pipe",
 		icon = kr_entities_icons_path .. "steel-pipe.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-build-while-moving"},
 		minable = {mining_time = 0.1, result = "kr-steel-pipe"},
 		max_health = 200,

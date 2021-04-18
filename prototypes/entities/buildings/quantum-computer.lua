@@ -8,6 +8,7 @@ data:extend(
 		name = "kr-quantum-computer",
 		icon = kr_entities_icons_path .. "quantum-computer.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "kr-quantum-computer"},
 		damaged_trigger_effect = hit_effects.entity(),

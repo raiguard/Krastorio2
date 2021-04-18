@@ -8,6 +8,7 @@ data:extend(
 		name = "kr-fuel-refinery",
 		icon = kr_entities_icons_path .. "fuel-refinery.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {hardness = 0.5, mining_time = 0.5, result = "kr-fuel-refinery"},
 		max_health = 300,

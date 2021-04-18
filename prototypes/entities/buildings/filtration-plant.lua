@@ -8,6 +8,7 @@ data:extend(
 		name = "kr-filtration-plant",		
 		icon = kr_entities_icons_path .. "filtration-plant.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "kr-filtration-plant"},
 		max_health = 1000,

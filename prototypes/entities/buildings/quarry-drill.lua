@@ -18,6 +18,7 @@ data:extend(
 		name = "kr-quarry-drill",
 		icon = kr_entities_icons_path .. "quarry-drill.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 1, result = "kr-quarry-drill"},
 		damaged_trigger_effect = hit_effects.entity(),

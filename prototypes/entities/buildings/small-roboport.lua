@@ -16,6 +16,7 @@ data:extend(
 		name = "kr-small-roboport",
 		icon = kr_entities_icons_path .. "small-roboport.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "kr-small-roboport"},
 		max_health = 350,

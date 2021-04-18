@@ -8,6 +8,7 @@ data:extend(
 		name = "kr-research-server",		
 		icon =  kr_entities_icons_path .. "research-server.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "kr-research-server"},
 		damaged_trigger_effect = hit_effects.entity(),

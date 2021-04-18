@@ -28,6 +28,7 @@ data:extend(
 		name = "kr-wind-turbine",
 		icon =  kr_entities_icons_path .. "wind-turbine.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral", "player-creation", "not-rotatable"},
 		minable = {mining_time = 0.25, result = "kr-wind-turbine"},
 		max_health = 200,

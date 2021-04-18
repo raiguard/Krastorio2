@@ -5,6 +5,7 @@ data:extend(
 		name = "kr-steel-pump",
 		icon = kr_entities_icons_path .. "steel-pump.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 0.2, result = "kr-steel-pump"},
 		max_health = 180,

@@ -8,6 +8,7 @@ data:extend(
 		name = "kr-substation-mk2",
 		icon = kr_entities_icons_path .. "substation-mk2.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 0.1, result = "kr-substation-mk2"},
 		max_health = 250,

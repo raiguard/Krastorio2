@@ -5,6 +5,7 @@ data:extend(
 		name = "kr-advanced-steam-turbine",
 		icon = kr_entities_icons_path .. "advanced-steam-turbine.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 1, result = "kr-advanced-steam-turbine"},
 		max_health = 900,

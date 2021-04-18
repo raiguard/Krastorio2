@@ -8,6 +8,7 @@ data:extend(
 		name = "kr-singularity-lab",
 		icon = kr_entities_icons_path .. "singularity-lab.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 2, result = "kr-singularity-lab"},
 		max_health = 2000,

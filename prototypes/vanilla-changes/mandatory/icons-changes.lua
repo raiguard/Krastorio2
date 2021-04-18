@@ -311,7 +311,7 @@ krastorio.icons.setTechnologyIcon("battery-mk2-equipment",            kr_technol
 
 -----------------------------------------------------------------
 -- -- -- BUILDINGS
-krastorio.icons.setItemIcon("pumpjack",                               kr_entities_icons_path .. "oil-pumpjack.png")
+krastorio.icons.setItemIcon("pumpjack",                               kr_entities_icons_path .. "oil-pumpjack.png", 64, 4)
 krastorio.icons.setItemIcon("substation",                             kr_entities_icons_path .. "substation.png")
 krastorio.icons.setItemIcon("electric-mining-drill",                  kr_entities_icons_path .. "electric-mining-drill.png")
 -----------------------------------------------------------------

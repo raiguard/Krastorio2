@@ -5,6 +5,7 @@ data:extend(
 		name = "kr-fluid-burner",
 		icon = kr_entities_icons_path .. "fluid-burner.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "kr-fluid-burner"},
 		max_health = 250,

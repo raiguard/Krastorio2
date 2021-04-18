@@ -4,6 +4,7 @@ data:extend({
 		name = "biusart-lab",
 		icon = kr_entities_icons_path .. "biusart-lab.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 0.2, result = "biusart-lab"},
 		max_health = 150,

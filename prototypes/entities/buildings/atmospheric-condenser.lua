@@ -8,6 +8,7 @@ data:extend(
 		name = "kr-atmospheric-condenser",		
 		icon = kr_entities_icons_path .. "atmospheric-condenser.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "kr-atmospheric-condenser"},
 		max_health = 500,

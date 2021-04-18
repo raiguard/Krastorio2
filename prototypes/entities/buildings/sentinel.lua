@@ -8,6 +8,7 @@ data:extend(
 		name = "kr-sentinel",
 		icon = kr_entities_icons_path .. "sentinel.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 0.1, result = "kr-sentinel"},
 		damaged_trigger_effect = hit_effects.entity(),

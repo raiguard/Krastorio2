@@ -8,6 +8,7 @@ data:extend(
 		name = "kr-advanced-solar-panel",
 		icon = kr_entities_icons_path .. "advanced-solar-panel.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 0.5, result = "kr-advanced-solar-panel"},
 		max_health = 300,
