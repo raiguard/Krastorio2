@@ -332,6 +332,7 @@ data:extend(
 		icon = kr_entities_icons_path .. "fluid-storages/fluid-storage-1.png",
 		stack_size = 50,
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "storage",
 		order = "b[fluid]-bb2[storage-tank-2]",
 		place_result = "kr-fluid-storage-1"
@@ -342,6 +343,7 @@ data:extend(
 		icon = kr_entities_icons_path .. "fluid-storages/fluid-storage-2.png",
 		stack_size = 50,
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "storage",
 		order = "b[fluid]-c[storage-tank-3]",
 		place_result = "kr-fluid-storage-2"
@@ -454,6 +456,7 @@ data:extend(
 		name = "kr-antimatter-reactor",
 		icon = kr_entities_icons_path .. "antimatter-reactor.png",
 		icon_size = 128,
+		icon_mipmaps = 4,
 		subgroup = "energy",
 		order = "z-h[antimatter-reactor]-c[antimatter-reactor]",
 		place_result = "kr-antimatter-reactor",
@@ -464,6 +467,7 @@ data:extend(
 		name = "kr-advanced-furnace",
 		icon = kr_entities_icons_path .. "advanced-furnace.png",
 		icon_size = 128,
+		icon_mipmaps = 4,
 		subgroup = "smelting-machine",
 		order = "c[electric-furnace]-f[advanced-furnace]",
 		place_result = "kr-advanced-furnace",
@@ -520,6 +524,7 @@ data:extend(
 		name = "kr-matter-plant",
 		icon = kr_entities_icons_path .. "matter-plant.png",
 		icon_size = 128,
+		icon_mipmaps = 4,
 		subgroup = "production-machine",
 		order = "i[matter]-a[matter-plant]",
 		place_result = "kr-matter-plant",
@@ -530,6 +535,7 @@ data:extend(
 		name = "kr-matter-assembler",
 		icon = kr_entities_icons_path .. "matter-assembler.png",
 		icon_size = 128,
+		icon_mipmaps = 4,
 		subgroup = "production-machine",
 		order = "i[matter]-b[matter-assembler]",
 		place_result = "kr-matter-assembler",
@@ -540,6 +546,7 @@ data:extend(
 		name = "kr-stabilizer-charging-station",
 		icon = kr_entities_icons_path .. "stabilizer-charging-station.png",
 		icon_size = 128,
+		icon_mipmaps = 4,
 		subgroup = "production-machine",
 		order = "i[matter]-c[stabilizer-charging-station]",
 		place_result = "kr-stabilizer-charging-station",
@@ -691,6 +698,7 @@ data:extend(
 		name = "kr-superior-inserter",
 		icon = kr_entities_icons_path .. "inserters/superior-inserter.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "inserter",
 		order = "h1[superior-inserter]",
 		place_result = "kr-superior-inserter",
@@ -701,6 +709,7 @@ data:extend(
 		name = "kr-superior-long-inserter",
 		icon = kr_entities_icons_path .. "inserters/superior-long-inserter.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "inserter",
 		order = "h2[superior-long-inserter]",
 		place_result = "kr-superior-long-inserter",
@@ -711,6 +720,7 @@ data:extend(
 		name = "kr-superior-filter-inserter",
 		icon = kr_entities_icons_path .. "inserters/superior-filter-inserter.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "inserter",
 		order = "h3[superior-filter-inserter]",
 		place_result = "kr-superior-filter-inserter",
@@ -721,6 +731,7 @@ data:extend(
 		name = "kr-superior-long-filter-inserter",
 		icon = kr_entities_icons_path .. "inserters/superior-long-filter-inserter.png",
 		icon_size = 64,
+		icon_mipmaps = 4,
 		subgroup = "inserter",
 		order = "h4[superior-long-filter-inserter]",
 		place_result = "kr-superior-long-filter-inserter",
@@ -754,6 +765,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
 			icon = kr_entities_icons_path .. "containers/medium-containers/" .. "medium-active-provider-container.png",
 			stack_size = 50,
 			icon_size = 64,
+			icon_mipmaps = 4,
 			subgroup = "kr-logistics-2",
 			order = "a[medium-active-provider-container]",
 			place_result = "kr-medium-active-provider-container"
@@ -764,6 +776,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
 			icon = kr_entities_icons_path .. "containers/medium-containers/" .. "medium-buffer-container.png",
 			stack_size = 50,
 			icon_size = 64,
+			icon_mipmaps = 4,
 			subgroup = "kr-logistics-2",
 			order = "b[medium-buffer-container]",
 			place_result = "kr-medium-buffer-container"
@@ -774,6 +787,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
 			icon = kr_entities_icons_path .. "containers/medium-containers/" .. "medium-container.png",
 			stack_size = 50,
 			icon_size = 64,
+			icon_mipmaps = 4,
 			subgroup = "storage",
 			order = "a[items]-d[medium-container]",
 			place_result = "kr-medium-container"
@@ -784,6 +798,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
 			icon = kr_entities_icons_path .. "containers/medium-containers/" .. "medium-passive-provider-container.png",
 			stack_size = 50,
 			icon_size = 64,
+			icon_mipmaps = 4,
 			subgroup = "kr-logistics-2",
 			order = "c[medium-passive-provider-container]",
 			place_result = "kr-medium-passive-provider-container"
@@ -794,6 +809,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
 			icon = kr_entities_icons_path .. "containers/medium-containers/" .. "medium-requester-container.png",
 			stack_size = 50,
 			icon_size = 64,
+			icon_mipmaps = 4,
 			subgroup = "kr-logistics-2",
 			order = "d[medium-requester-container]",
 			place_result = "kr-medium-requester-container"
@@ -804,6 +820,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
 			icon = kr_entities_icons_path .. "containers/medium-containers/" .. "medium-storage-container.png",
 			stack_size = 50,
 			icon_size = 64,
+			icon_mipmaps = 4,
 			subgroup = "kr-logistics-2",
 			order = "e[medium-storage-container]",
 			place_result = "kr-medium-storage-container"
@@ -817,6 +834,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
 			icon = kr_entities_icons_path .. "containers/big-containers/" .. "big-active-provider-container.png",
 			stack_size = 50,
 			icon_size = 64,
+			icon_mipmaps = 4,
 			subgroup = "kr-logistics-3",
 			order = "a[big-active-provider-container]",
 			place_result = "kr-big-active-provider-container"
@@ -827,6 +845,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
 			icon = kr_entities_icons_path .. "containers/big-containers/" .. "big-buffer-container.png",
 			stack_size = 50,
 			icon_size = 64,
+			icon_mipmaps = 4,
 			subgroup = "kr-logistics-3",
 			order = "b[big-buffer-container]",
 			place_result = "kr-big-buffer-container"
@@ -837,6 +856,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
 			icon = kr_entities_icons_path .. "containers/big-containers/" .. "big-container.png",
 			stack_size = 50,
 			icon_size = 64,
+			icon_mipmaps = 4,
 			subgroup = "storage",
 			order = "a[items]-dz[big-container]",
 			place_result = "kr-big-container"
@@ -847,6 +867,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
 			icon = kr_entities_icons_path .. "containers/big-containers/" .. "big-passive-provider-container.png",
 			stack_size = 50,
 			icon_size = 64,
+			icon_mipmaps = 4,
 			subgroup = "kr-logistics-3",
 			order = "c[big-passive-provider-container]",
 			place_result = "kr-big-passive-provider-container"
@@ -857,6 +878,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
 			icon = kr_entities_icons_path .. "containers/big-containers/" .. "big-requester-container.png",
 			stack_size = 50,
 			icon_size = 64,
+			icon_mipmaps = 4,
 			subgroup = "kr-logistics-3",
 			order = "d[big-requester-container]",
 			place_result = "kr-big-requester-container"
@@ -867,6 +889,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
 			icon = kr_entities_icons_path .. "containers/big-containers/" .. "big-storage-container.png",
 			stack_size = 50,
 			icon_size = 64,
+			icon_mipmaps = 4,
 			subgroup = "kr-logistics-3",
 			order = "e[big-storage-container]",
 			place_result = "kr-big-storage-container"

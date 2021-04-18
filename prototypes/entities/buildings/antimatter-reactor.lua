@@ -8,6 +8,7 @@ data:extend(
 		name = "kr-antimatter-reactor",
 		icon = kr_entities_icons_path .. "antimatter-reactor.png",
 		icon_size = 128,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
 		minable = {mining_time = 2, result = "kr-antimatter-reactor"},
 		max_health = 5000,

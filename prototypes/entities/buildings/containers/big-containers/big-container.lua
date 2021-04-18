@@ -27,6 +27,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
 			name = "kr-big-container",
 			icon = _icon_path .. "big-container.png",
 			icon_size = 64,
+			icon_mipmaps = 4,
 			flags = {"placeable-player", "player-creation", "not-rotatable"},
 			minable = {mining_time = 1, result = "kr-big-container"},
 			max_health = 1500,

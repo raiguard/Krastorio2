@@ -8,6 +8,7 @@ data:extend(
 		name = "kr-matter-assembler",		
 		icon = kr_entities_icons_path .. "matter-assembler.png",
 		icon_size = 128,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "kr-matter-assembler"},
 		max_health = 2000,

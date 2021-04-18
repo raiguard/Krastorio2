@@ -8,6 +8,7 @@ data:extend(
 		name = "kr-stabilizer-charging-station",
 		icon = kr_entities_icons_path .. "stabilizer-charging-station.png",
 		icon_size = 128,		
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "kr-stabilizer-charging-station"},
 		max_health = 200,

@@ -20,6 +20,7 @@ data:extend(
 		name = "kr-advanced-furnace",
 		icon = kr_entities_icons_path .. "advanced-furnace.png",
 		icon_size = 128,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "kr-advanced-furnace"},
 		max_health = 2000,

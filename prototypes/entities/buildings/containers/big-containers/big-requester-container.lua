@@ -19,6 +19,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
 			name = "kr-big-requester-container",
 			icon = _icon_path .. "big-requester-container.png",
 			icon_size = 64,
+			icon_mipmaps = 4,
 			flags = {"placeable-player", "player-creation", "not-rotatable"},
 			minable = {mining_time = 1, result = "kr-big-requester-container"},
 			max_logistic_slots = 30,

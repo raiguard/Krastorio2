@@ -19,6 +19,7 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 		local speed = data.speed
 		local icon = data.icon or kr_entities_icons_path .. "loaders/" .. name .. ".png"
 		local icon_size = data.icon_size or 64
+		local icon_mipmaps = data.icon_mipmaps or 4
 		local belt_animation_set = data.belt_animation_set
 		local order = data.order
 		local upgrade = data.upgrade or nil
@@ -69,6 +70,7 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 			name = name,
 			icon = icon,
 			icon_size = icon_size,
+			icon_mipmaps = icon_mipmaps,
 			flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-build-while-moving"},
 			minable = {mining_time = 0.25, result = name},
 			max_health = 300,

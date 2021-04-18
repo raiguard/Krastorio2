@@ -8,6 +8,7 @@ data:extend(
 		name = "kr-matter-plant",		
 		icon = kr_entities_icons_path .. "matter-plant.png",
 		icon_size = 128,
+		icon_mipmaps = 4,
 		flags = {"placeable-neutral","placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "kr-matter-plant"},
 		max_health = 2000,
