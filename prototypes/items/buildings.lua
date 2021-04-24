@@ -893,6 +893,17 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
 			subgroup = "kr-logistics-3",
 			order = "e[big-storage-container]",
 			place_result = "kr-big-storage-container"
+		},
+		{
+			type = "item",
+			name = "kr-logo",
+			icon = kr_entities_icons_path .. "k-logo.png",
+			stack_size = 50,
+			icon_size = 64,
+			icon_mipmaps = 4,
+			subgroup = "energy",
+			order = "d[solar-panel]-e[kr-logo]",
+			place_result = "kr-logo"
 		}
 	}
 end

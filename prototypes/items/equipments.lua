@@ -343,6 +343,7 @@ data:extend(
 	{
 		type = "item",
 		name = "cyber-potato-equipment",
+		rocket_launch_product = {"spoiled-potato", 1},
 		icon = kr_universal_equipments_icons_path .. "cyber-potato-equipment.png",
 		icon_size = 64,
 		placed_as_equipment_result = "cyber-potato-equipment",

@@ -822,7 +822,35 @@ data:extend(
 				},
 				time = 60
 			}
+		},
+		{
+			type = "technology",
+			name = "kr-logo",
+			mod = "Krastorio2",
+			icon = kr_technologies_icons_path .. "k-logo.png",
+			icon_size = 256,
+			icon_mipmaps = 4,
+			effects = {
+				{
+					type = "unlock-recipe",
+					recipe = "kr-logo"
+				}
+			},
+			prerequisites = {"kr-intergalactic-transceiver"},
+			unit = {
+				count = 666000,
+				ingredients = {
+					{"production-science-pack", 1},
+					{"utility-science-pack", 1},
+					{"space-science-pack", 1},
+					{"matter-tech-card", 1},
+					{"advanced-tech-card", 1},
+					{"singularity-tech-card", 1}
+				},
+				time = 60
+			}
 		}
+
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
