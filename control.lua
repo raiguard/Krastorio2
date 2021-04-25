@@ -53,7 +53,10 @@ local scripts =
 	-- Viruses
 	require(control_scripts_path .. "viruses"),
 	-- -- REMOTE INTERFACES
+	-- Debug-restore
 	require(control_scripts_path .. "reset-krastorio-global-data"),
+	-- Logo spawn script
+	require(control_scripts_path .. "spawn-kr-logo"),
 	-- -- COMPATIBILITY
 	-- DiscoScience
 	require(control_compatibility_scripts_path .. "DiscoScience"),
