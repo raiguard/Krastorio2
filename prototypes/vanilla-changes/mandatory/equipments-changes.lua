@@ -1,8 +1,8 @@
 -- -- -- VANILLA EQUIPMENTS MODIFICATION
 
------------------------------------------------------------------------------------------------------------------ 
------------------------------------------------------------------------------------------------------------------ 
------------------------------------------------------------------------------------------------------------------ 
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 
 -- -- Utils Function
 
@@ -53,7 +53,7 @@ function updateVanillaEquipmentGraphics(_objects_to_modify, icons_path, sprites_
 						{ icon = kr_equipments_tiers_icon_path .. tostring(item[5]) .. ".png", icon_size = 64} -- , scale = item[2]/64
 					}
 					data.raw.item[item_name].icon_size = item[2] -- icon size
-				end				
+				end
 				if data.raw[category_name][item_name] then
 					data.raw[category_name][item_name].sprite =
 					{
@@ -81,8 +81,8 @@ end
 -- @vehicle_type, prototype type of vehicle
 -- @vehicle_name, name of vehicle
 -- @equipment_grid_name, name of the new grid to apply
-local function applyAndIntegrateEquipmentCategories(vehicle_type, vehicle_name, equipment_grid_name)	
-	if data.raw[vehicle_type][vehicle_name] then 
+local function applyAndIntegrateEquipmentCategories(vehicle_type, vehicle_name, equipment_grid_name)
+	if data.raw[vehicle_type][vehicle_name] then
 		if
 		   data.raw[vehicle_type][vehicle_name].equipment_grid and
 		   data.raw["equipment-grid"][data.raw[vehicle_type][vehicle_name].equipment_grid]
@@ -90,22 +90,22 @@ local function applyAndIntegrateEquipmentCategories(vehicle_type, vehicle_name, 
 			local equipment_categories_set = {}
 			for _, equipment_category in pairs(data.raw["equipment-grid"][equipment_grid_name].equipment_categories) do
 				equipment_categories_set[equipment_category] = true
-			end	
-		
+			end
+
 			for _, equipment_category in pairs(data.raw["equipment-grid"][data.raw[vehicle_type][vehicle_name].equipment_grid].equipment_categories) do
 				if equipment_category ~= "armor" and not equipment_categories_set[equipment_category] then
 					table.insert(data.raw["equipment-grid"][equipment_grid_name].equipment_categories, equipment_category)
 				end
-			end	
+			end
 		end
-		
+
 		data.raw[vehicle_type][vehicle_name].equipment_grid = equipment_grid_name
 	end
 end
 
------------------------------------------------------------------------------------------------------------------ 
------------------------------------------------------------------------------------------------------------------ 
------------------------------------------------------------------------------------------------------------------ 
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 
 -- -- -- ARMORS
 addRadioactiveResistance("modular-armor", 2, 15)
@@ -148,14 +148,14 @@ krastorio.recipes.removeIngredient("power-armor", "steel-plate")
 krastorio.recipes.addOrReplaceIngredient("power-armor-mk2", "power-armor", {"power-armor", 1})
 krastorio.recipes.removeIngredient("power-armor-mk2", "processing-unit")
 
------------------------------------------------------------------------------------------------------------------ 
------------------------------------------------------------------------------------------------------------------ 
------------------------------------------------------------------------------------------------------------------ 
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 
 -- -- -- VEHICLES
 -- -- Creating new equipment vehicle grids and add it
 data:extend(
-{	
+{
 -----------------------------------------------------------------------------------------------------------------
 	-- Car
 	{
@@ -166,7 +166,7 @@ data:extend(
 		equipment_categories = {"universal-equipment", "robot-interaction-equipment", "vehicle-robot-interaction-equipment", "vehicle-equipment", "vehicle-motor"}
 	},
 -----------------------------------------------------------------------------------------------------------------
-	-- Tanks	
+	-- Tanks
 	{
 		type = "equipment-grid",
 		name = "kr-tank-grid",
@@ -181,7 +181,7 @@ data:extend(
 		height = 15,
 		equipment_categories = {"universal-equipment", "robot-interaction-equipment", "vehicle-robot-interaction-equipment", "vehicle-equipment", "vehicle-motor"}
 	},
------------------------------------------------------------------------------------------------------------------  
+-----------------------------------------------------------------------------------------------------------------
 	-- Train
 	{
 		type = "equipment-grid",
@@ -197,7 +197,7 @@ data:extend(
 		height = 16,
 		equipment_categories = {"universal-equipment", "vehicle-equipment", "robot-interaction-equipment", "vehicle-robot-interaction-equipment"}
 	},
------------------------------------------------------------------------------------------------------------------  
+-----------------------------------------------------------------------------------------------------------------
 	-- spidertron
 	{
 		type = "equipment-grid",
@@ -225,15 +225,15 @@ end
 applyAndIntegrateEquipmentCategories("fluid-wagon", "fluid-wagon", "kr-wagons-grid")
 applyAndIntegrateEquipmentCategories("artillery-wagon", "artillery-wagon", "kr-wagons-grid")
 
------------------------------------------------------------------------------------------------------------------ 
------------------------------------------------------------------------------------------------------------------ 
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 
 -- -- -- ITEMS(EQUIPMENTS)
 local objects_to_modify = nil
-	
+
 -----------------------------------------------------------------------------------------------------------------
--- -- Personal roboports 
+-- -- Personal roboports
 -----------------------------------------------------------------------------------------------------------------
 
 -- -- Items visual(icon, sprites)/modifcation
@@ -291,7 +291,7 @@ objects_to_modify =
 		["battery-equipment"]     = {"battery-mk1-equipment.png", 64, 32, 64, 1},
 		["battery-mk2-equipment"] = {"battery-mk2-equipment.png", 64, 32, 64, 2}
 	},
-	["active-defense-equipment"] = 
+	["active-defense-equipment"] =
 	{
 		["personal-laser-defense-equipment"] = {"personal-laser-defense-mk1-equipment.png", 64, 64, 64, 1}
 	}
@@ -366,7 +366,7 @@ data.raw["battery-equipment"]["battery-mk2-equipment"].energy_source =
 	input_flow_limit = "0.5MW",
 	output_flow_limit = "1MW",
 	usage_priority = "tertiary"
-}   
+}
 
 -- Recipe
 krastorio.recipes.overrideIngredients
@@ -388,7 +388,7 @@ krastorio.recipes.overrideIngredients
 	}
 )
 
--- subgroup 
+-- subgroup
 data.raw.item["battery-equipment"].order = "b1[battery]-b1[battery-equipment]"
 data.raw.item["battery-equipment"].subgroup = "equipment"
 data.raw.item["battery-mk2-equipment"].order = "b2[battery]-b3[battery-equipment]"
@@ -414,7 +414,7 @@ data.raw.capsule["discharge-defense-remote"].order = "f[active-defense-equipment
 
 -- -- Items visual(icon, sprites)/modifcation
 objects_to_modify =
-{		
+{
 	["generator-equipment"] =
 	{
 		["fusion-reactor-equipment"] = {"fusion-reactor-equipment.png", 64, 128, 128, 2}
@@ -448,12 +448,12 @@ updateVanillaEquipmentGraphics(objects_to_modify, kr_universal_equipments_icons_
 
 krastorio.icons.setTechnologyIcons
 (
-	"fusion-reactor-equipment", 
+	"fusion-reactor-equipment",
 	{
 		{ icon = kr_technologies_icons_path .. "fusion-reactor-equipment.png", icon_size = 256, icon_mipmaps = 4 },
 		{ icon = kr_technologies_icons_path .. "overlays/equipment-overlay.png", icon_size = 256, icon_mipmaps = 4 }
-	}, 
-	256, 
+	},
+	256,
 	4
 )
 
@@ -472,7 +472,7 @@ data.raw["generator-equipment"]["fusion-reactor-equipment"].burner =
 -- -- Energy generated by equipment:
 -- Equipment energy generated is balanced on this formula:
 -- power = 50kW * grid_cells_occupied * tier_multiplier * big_version_multiplier
--- (solar panel is useless, and with this formula will be boosted)		
+-- (solar panel is useless, and with this formula will be boosted)
 data.raw["generator-equipment"]["fusion-reactor-equipment"].power = "3.2MW" -- 50kW * 16 * 4 * 1
 data.raw.item["fusion-reactor-equipment"].order = "a2[energy-source]-a5[portable-nuclear-core]"
 data.raw.item["fusion-reactor-equipment"].subgroup = "equipment"
@@ -531,8 +531,8 @@ data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].attack_
 	}
 }
 
-data.raw.item["personal-laser-defense-equipment"].localised_name = {"item-name.personal-sniper-laser-defense-mk1-equipment"}
-data.raw.item["personal-laser-defense-equipment"].localised_description = {"item-description.personal-sniper-laser-defense-mk1-equipment"}
+data.raw.item["personal-laser-defense-equipment"].localised_name = {"equipment-name.personal-sniper-laser-defense-mk1-equipment"}
+data.raw.item["personal-laser-defense-equipment"].localised_description = {"equipment-description.personal-sniper-laser-defense-mk1-equipment"}
 data.raw.item["personal-laser-defense-equipment"].subgroup = "equipment"
 data.raw.item["personal-laser-defense-equipment"].order = "d[active-defense]-b1[personal-laser-defense-mk1-equipment]"
 
@@ -547,7 +547,7 @@ data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].localis
 -- -- Items visual(icon, sprites)/modifcation
 objects_to_modify =
 {
-	["energy-shield-equipment"] = 
+	["energy-shield-equipment"] =
 	{
 		["energy-shield-equipment"]     = {"energy-shield-mk1-equipment.png", 64, 64, 64, 1, 4},
 		["energy-shield-mk2-equipment"] = {"energy-shield-mk2-equipment.png", 64, 64, 64, 2, 4}
@@ -644,7 +644,7 @@ data.raw["night-vision-equipment"]["night-vision-equipment"].light_params =
 	maximum = 0.8
 }
 data.raw["night-vision-equipment"]["night-vision-equipment"].darkness_to_turn_on = 0.5
-data.raw["night-vision-equipment"]["night-vision-equipment"].shape =    
+data.raw["night-vision-equipment"]["night-vision-equipment"].shape =
 {
 	width = 1,
 	height = 1,
@@ -653,11 +653,11 @@ data.raw["night-vision-equipment"]["night-vision-equipment"].shape =
 
 krastorio.recipes.overrideIngredients
 (
-	"night-vision-equipment", 
+	"night-vision-equipment",
 	{
 		{"advanced-circuit", 2},
-		{"iron-plate", 1}, 
-		{"plastic-bar", 1}, 
+		{"iron-plate", 1},
+		{"plastic-bar", 1},
 		{"glass", 1}
 	}
 )
@@ -675,7 +675,7 @@ data.raw["movement-bonus-equipment"]["exoskeleton-equipment"].categories = {"arm
 -- -- Items visual(icon, sprites)/modifcation
 objects_to_modify =
 {
-	["movement-bonus-equipment"] = 
+	["movement-bonus-equipment"] =
 	{
 		["exoskeleton-equipment"] = {"exoskeleton-equipment.png", 64, 64, 128, 1}
 	}

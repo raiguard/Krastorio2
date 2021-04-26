@@ -2,9 +2,9 @@ data:extend(
 {
 -----------------------------------------------------------------------------------------------------------------
 --------------------------------------------------CHARACTER EQUIPMENTS-------------------------------------------
------------------------------------------------------------------------------------------------------------------ 
+-----------------------------------------------------------------------------------------------------------------
 	-- -- Exoskeletons
-	{	
+	{
 		type = "item",
 		name = "advanced-exoskeleton-equipment",
 		icons =
@@ -13,13 +13,13 @@ data:extend(
 			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
 		},
 		icon_size = 64,
-		placed_as_equipment_result = "advanced-exoskeleton-equipment",		
+		placed_as_equipment_result = "advanced-exoskeleton-equipment",
 		subgroup = "character-equipment",
 		order = "e[exoskeleton]-a2[advanced-exoskeleton-equipment]",
 		stack_size = 20,
 		default_request_amount = 1
-    },
-	{	
+  },
+	{
 		type = "item",
 		name = "superior-exoskeleton-equipment",
 		icons =
@@ -28,12 +28,12 @@ data:extend(
 			{ icon = kr_equipments_tiers_icon_path .. "3.png", icon_size = 64 }
 		},
 		icon_size = 64,
-		placed_as_equipment_result = "superior-exoskeleton-equipment",		
+		placed_as_equipment_result = "superior-exoskeleton-equipment",
 		subgroup = "character-equipment",
 		order = "e[exoskeleton]-a3[superior-exoskeleton-equipment]",
 		stack_size = 20,
 		default_request_amount = 1
-    },
+  },
 	-- -- Night visor
 	{
 		type = "item",
@@ -42,21 +42,22 @@ data:extend(
 		{
 			{ icon = kr_character_equipments_icons_path .. "imersite-night-vision-equipment.png", icon_size = 64 },
 			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
-		},	
+		},
 		icon_size = 64,
 		placed_as_equipment_result = "imersite-night-vision-equipment",
 		subgroup = "character-equipment",
 		order = "f[night-vision]-b[imersite-night-vision-equipment]",
 		stack_size = 10,
 		default_request_amount = 1
-	},	
+	},
 -----------------------------------------------------------------------------------------------------------------
 --------------------------------------------------VEHICLES EQUIPMENTS--------------------------------------------
------------------------------------------------------------------------------------------------------------------ 
+-----------------------------------------------------------------------------------------------------------------
 	-- MOTORS
 	{
 		type = "item",
 		name = "additional-engine",
+		localised_description = {"equipment-description.additional-engine"},
 		icons =
 		{
 			{ icon = kr_vehicle_equipments_icons_path .. "additional-engine.png", icon_size = 64 },
@@ -71,6 +72,7 @@ data:extend(
 	{
 		type = "item",
 		name = "advanced-additional-engine",
+		localised_description = {"equipment-description.advanced-additional-engine"},
 		icons =
 		{
 			{ icon = kr_vehicle_equipments_icons_path .. "advanced-additional-engine.png", icon_size = 64 },
@@ -95,7 +97,7 @@ data:extend(
 	},
 -----------------------------------------------------------------------------------------------------------------
 --------------------------------------------------UNIVERSAL EQUIPMENTS-------------------------------------------
------------------------------------------------------------------------------------------------------------------ 
+-----------------------------------------------------------------------------------------------------------------
 	-- -- BATTERIES
 	-- battery-mk3-equipment
 	{
@@ -137,7 +139,7 @@ data:extend(
 	{
 		type = "item",
 		name = "big-battery-equipment",
-		icons = 
+		icons =
 		{
 			{ icon = kr_universal_equipments_icons_path .. "big-battery-equipment.png", icon_size = 64},
 			{ icon = kr_equipments_tiers_icon_path .. "1.png", icon_size = 64}
@@ -172,8 +174,8 @@ data:extend(
 	{
 		type = "item",
 		name = "big-battery-mk2-equipment",
-		icons = 
-		{ 
+		icons =
+		{
 			{ icon = kr_universal_equipments_icons_path .. "big-battery-mk2-equipment.png", icon_size = 64 },
 			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
 		},
@@ -208,7 +210,7 @@ data:extend(
 		type = "item",
 		name = "big-battery-mk3-equipment",
 		icons =
-		{		
+		{
 			{ icon = kr_universal_equipments_icons_path .. "big-battery-mk3-equipment.png", icon_size = 64 },
 			{ icon = kr_equipments_tiers_icon_path .. "3.png", icon_size = 64 }
 		},
@@ -243,7 +245,7 @@ data:extend(
 	{
 		type = "item",
 		name = "small-portable-generator",
-		icons = 
+		icons =
 		{
 			{ icon = kr_universal_equipments_icons_path .. "small-portable-generator.png", icon_size = 64 },
 			{ icon = kr_equipments_tiers_icon_path .. "1.png", icon_size = 64 }
@@ -258,7 +260,7 @@ data:extend(
 	{
 		type = "item",
 		name = "portable-generator",
-		icons = 
+		icons =
 		{
 			{ icon = kr_universal_equipments_icons_path .. "portable-generator.png", icon_size = 64 },
 			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
@@ -273,7 +275,7 @@ data:extend(
 	{
 		type = "item",
 		name = "nuclear-reactor-equipment",
-		icons = 
+		icons =
 		{
 			{ icon = kr_universal_equipments_icons_path .. "nuclear-reactor-equipment.png", icon_size = 64 },
 			{ icon = kr_equipments_tiers_icon_path .. "1.png", icon_size = 64 }
@@ -308,7 +310,7 @@ data:extend(
 	{
 		type = "item",
 		name = "antimatter-reactor-equipment",
-		icons = 
+		icons =
 		{
 			{ icon = kr_universal_equipments_icons_path .. "antimatter-reactor-equipment.png", icon_size = 64 },
 			{ icon = kr_equipments_tiers_icon_path .. "3.png", icon_size = 64 }
@@ -343,6 +345,7 @@ data:extend(
 	{
 		type = "item",
 		name = "cyber-potato-equipment",
+		localised_description = {"equipment-description.cyber-potato-equipment"},
 		rocket_launch_product = {"spoiled-potato", 1},
 		icon = kr_universal_equipments_icons_path .. "cyber-potato-equipment.png",
 		icon_size = 64,
@@ -354,6 +357,7 @@ data:extend(
 	{
 		type = "item",
 		name = "energy-absorber",
+		localised_description = {"equipment-description.energy-absorber"},
 		icon = kr_universal_equipments_icons_path .. "energy-absorber.png",
 		icon_size = 64,
 		placed_as_equipment_result = "energy-absorber",
@@ -413,14 +417,12 @@ data:extend(
 	{
 		type = "item",
 		name = "personal-laser-defense-mk2-equipment",
-		localised_name = {"item-name.personal-sniper-laser-defense-mk2-equipment"},
-		localised_description = {"item-description.personal-sniper-laser-defense-mk2-equipment"},
-		icons = 
+		icons =
 		{
 			{ icon = kr_universal_equipments_icons_path .. "personal-laser-defense-mk2-equipment.png", icon_size = 64 },
 			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
 		},
-		icon_size = 64,		
+		icon_size = 64,
 		order = "d[active-defense]-b2[personal-laser-defense-mk2-equipment]",
 		placed_as_equipment_result = "personal-laser-defense-mk2-equipment",
 		stack_size = 20,
@@ -430,14 +432,12 @@ data:extend(
 	{
 		type = "item",
 		name = "personal-laser-defense-mk3-equipment",
-		localised_name = {"item-name.personal-sniper-laser-defense-mk3-equipment"},
-		localised_description = {"item-description.personal-sniper-laser-defense-mk3-equipment"},
-		icons = 
+		icons =
 		{
 			{ icon = kr_universal_equipments_icons_path .. "personal-laser-defense-mk3-equipment.png", icon_size = 64 },
 			{ icon = kr_equipments_tiers_icon_path .. "3.png", icon_size = 64 }
 		},
-		icon_size = 64,		
+		icon_size = 64,
 		order = "d[active-defense]-b3[personal-laser-defense-mk3-equipment]",
 		placed_as_equipment_result = "personal-laser-defense-mk3-equipment",
 		stack_size = 20,
@@ -447,14 +447,12 @@ data:extend(
 	{
 		type = "item",
 		name = "personal-laser-defense-mk4-equipment",
-		localised_name = {"item-name.personal-sniper-laser-defense-mk4-equipment"},
-		localised_description = {"item-description.personal-sniper-laser-defense-mk4-equipment"},
-		icons = 
+		icons =
 		{
 			{ icon = kr_universal_equipments_icons_path .. "personal-laser-defense-mk4-equipment.png", icon_size = 64 },
 			{ icon = kr_equipments_tiers_icon_path .. "4.png", icon_size = 64 }
 		},
-		icon_size = 64,		
+		icon_size = 64,
 		order = "d[active-defense]-b4[personal-laser-defense-mk4-equipment]",
 		placed_as_equipment_result = "personal-laser-defense-mk4-equipment",
 		stack_size = 20,
@@ -464,7 +462,7 @@ data:extend(
 	{
 		type = "item",
 		name = "personal-submachine-laser-defense-mk1-equipment",
-		icons = 
+		icons =
 		{
 			{ icon = kr_universal_equipments_icons_path .. "personal-submachine-laser-defense-mk1-equipment.png" },
 			{ icon = kr_equipments_tiers_icon_path .. "1.png", icon_size = 64 }
@@ -479,7 +477,7 @@ data:extend(
 	{
 		type = "item",
 		name = "personal-submachine-laser-defense-mk2-equipment",
-		icons = 
+		icons =
 		{
 			{ icon = kr_universal_equipments_icons_path .. "personal-submachine-laser-defense-mk2-equipment.png" },
 			{ icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 }
@@ -494,7 +492,7 @@ data:extend(
 	{
 		type = "item",
 		name = "personal-submachine-laser-defense-mk3-equipment",
-		icons = 
+		icons =
 		{
 			{ icon = kr_universal_equipments_icons_path .. "personal-submachine-laser-defense-mk3-equipment.png" },
 			{ icon = kr_equipments_tiers_icon_path .. "3.png", icon_size = 64 }
@@ -509,7 +507,7 @@ data:extend(
 	{
 		type = "item",
 		name = "personal-submachine-laser-defense-mk4-equipment",
-		icons = 
+		icons =
 		{
 			{ icon = kr_universal_equipments_icons_path .. "personal-submachine-laser-defense-mk4-equipment.png" },
 			{ icon = kr_equipments_tiers_icon_path .. "4.png", icon_size = 64}
@@ -526,8 +524,8 @@ data:extend(
 		type = "item",
 		name = "energy-shield-mk3-equipment",
 		localised_name = {"equipment-name.shield-generator-mk3"},
-		localised_description = {"equipment-description.shield-generator-mk3"},	
-		icons = 
+		localised_description = {"equipment-description.shield-generator-mk3"},
+		icons =
 		{
 			{ icon = kr_universal_equipments_icons_path .. "energy-shield-mk3-equipment.png", icon_size = 64, mipmap_count = 4 },
 			{ icon = kr_equipments_tiers_icon_path .. "3.png", icon_size = 64}
@@ -544,7 +542,7 @@ data:extend(
 		name = "energy-shield-mk4-equipment",
 		localised_name = {"equipment-name.shield-generator-mk4"},
 		localised_description = {"equipment-description.shield-generator-mk4"},
-		icons = 
+		icons =
 		{
 			{ icon = kr_universal_equipments_icons_path .. "energy-shield-mk4-equipment.png", icon_size = 64, mipmap_count = 4 },
 			{ icon = kr_equipments_tiers_icon_path .. "4.png", icon_size = 64}
@@ -557,5 +555,5 @@ data:extend(
 	}
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------ 
+-----------------------------------------------------------------------------------------------------------------
 })
