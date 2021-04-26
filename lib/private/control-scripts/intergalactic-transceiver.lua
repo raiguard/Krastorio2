@@ -6,12 +6,12 @@ local KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER =
 	-- intergalactic-transceiver entity name
 	{
 		filter = "name",
-				name   = "kr-intergalactic-transceiver"
-		},
+		name   = "kr-intergalactic-transceiver"
+	},
 	{
 		filter = "name",
-				name   = "kr-activated-intergalactic-transceiver"
-		}
+		name   = "kr-activated-intergalactic-transceiver"
+	}
 }
 
 if not remote.interfaces["kr-intergalactic-transceiver"] then
@@ -215,16 +215,16 @@ local function checkVictory()
 				end
 			end
 		end
-		end
+	end
 end
 
 return
 {
-	-- -- Bootstrap
+	-- Bootstrap
 	-- For setup variables
 	{ onInitAndConf, "on_init" },
 	{ onInitAndConf, "on_configuration_changed" },
-	-- -- Actions
+	-- Actions
 	{ onBuiltAnEntity, "on_built_entity", KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER },
 	{ onBuiltAnEntity, "on_robot_built_entity", KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER },
 	{ onBuiltAnEntity, "script_raised_built" },
