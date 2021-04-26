@@ -5,11 +5,11 @@ local KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER =
 {
 	-- intergalactic-transceiver entity name
 	{
-		filter = "name", 
+		filter = "name",
         name   = "kr-intergalactic-transceiver"
     },
 	{
-		filter = "name", 
+		filter = "name",
         name   = "kr-activated-intergalactic-transceiver"
     }
 }
@@ -17,21 +17,21 @@ local KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER =
 if not remote.interfaces["kr-intergalactic-transceiver"] then
 	remote.add_interface("kr-intergalactic-transceiver",
 	{
-		set_no_victory = 
+		set_no_victory =
 		function(bool)
-			if type(bool) ~= "boolean" then 
+			if type(bool) ~= "boolean" then
 				error("Value for 'set_no_victory' must be a boolean.")
 			end
 			global.krastorio_victory_disabled = bool
 		end,
 		charge_it =
 		function(force_index)
-			if type(force_index) ~= "number" then 
+			if type(force_index) ~= "number" then
 				error("Value for 'force_index' must be a integer.")
 			end
 			if global.intergalactic_transceivers[force_index] then
 				global.intergalactic_transceivers[force_index].energy = global.intergalactic_transceivers[force_index].prototype.electric_energy_source_prototype.buffer_capacity
-			end			
+			end
 		end
 	})
 end
@@ -78,7 +78,7 @@ end
 
 -- @event, on_player_mined_entity or on_robot_mined_entity or on_entity_died
 local function onRemovingAnEntity(event)
-	local entity = event.entity	
+	local entity = event.entity
 	if entity and entity.valid and (entity.name == "kr-intergalactic-transceiver" or entity.name == "kr-activated-intergalactic-transceiver") then
 		local force_index = entity.force.index
 		if global.intergalactic_transceivers[force_index] then
@@ -95,36 +95,34 @@ local function onCutsceneWaypointReached(event)
 end
 
 -- Test if a team have with every 2 seconds (120 tick)
-local function checkVictory()	
+local function checkVictory()
 	-- Check if someone win
 	if global.win_next_check and not global.k2_win_cutscene_active then
 		if not (global.krastorio_victory_disabled or global.game_won) then -- If disabled from other mods or if already winned
 			global.game_won = true
-			game.set_game_state{game_finished = true, player_won = true, can_continue = true, victorious_force = game.forces[global.win_next_check]}
-			
-			for _, player in pairs(game.connected_players) do
-				if player.valid and player.force.index == global.win_next_check then
-					-- Joke
-					player.play_sound
-					{
-						path            = "kr-win-joke-voice",
-						volume_modifier = 1.0
-					}
-				end
-			end
+			local winning_force = game.forces[global.win_next_check]
+			game.set_game_state{game_finished = true, player_won = true, can_continue = true, victorious_force = winning_force}
+			-- Unlock logo technology
+      winning_force.technologies["kr-logo"].enabled = true
+			-- Joke
+			winning_force.play_sound
+			{
+				path = "kr-win-joke-voice",
+				volume_modifier = 1.0
+			}
 		end
 		global.win_next_check = nil
 	end
-	
+
 	-- Check for each team
-    for force_index, it in pairs(global.intergalactic_transceivers) do
+  for force_index, it in pairs(global.intergalactic_transceivers) do
 		if it.valid and it.name == "kr-intergalactic-transceiver" then
 			if it.energy == it.prototype.electric_energy_source_prototype.buffer_capacity then -- Win!
 				-- Won cutscene
 				if global.game_won ~= true then
 					-- Cutscenes for each player of force
-					for _, player in pairs(game.connected_players) do
-						if player.valid and player.force == it.force then
+					for _, player in pairs(game.forces[force_index].connected_players) do
+						if player.valid then
 							player.set_controller
 							{
 								type = defines.controllers.cutscene,
@@ -149,7 +147,7 @@ local function checkVictory()
 							}
 						end
 					end
-					global.k2_win_cutscene_active = true					
+					global.k2_win_cutscene_active = true
 					-- Explosion sound
 					--game.play_sound
 					--{
@@ -187,7 +185,7 @@ local function checkVictory()
 				}
 				-- Remove the old entity
 				it.destroy()
-			else -- Energy drain			
+			else -- Energy drain
 				if not global.intergalactic_transceivers_energy_status[force_index] then -- Initialize
 					global.intergalactic_transceivers_energy_status[force_index] = it.energy
 				else -- Exist entity
@@ -210,7 +208,7 @@ local function checkVictory()
 						-- If present, remove alert about that the intergalactic transceiver is discharging
 						for _, player in pairs(game.connected_players) do
 							if player.valid and player.force == it.force then
-								player.remove_alert{icon={type="virtual", name="kr-battery_low"}, message={"other.kr-intergalactic-transceiver-discharging"}}	
+								player.remove_alert{icon={type="virtual", name="kr-battery_low"}, message={"other.kr-intergalactic-transceiver-discharging"}}
 							end
 						end
 					end
@@ -221,19 +219,19 @@ local function checkVictory()
 end
 
 return
-{ 
+{
 	-- -- Bootstrap
 	-- For setup variables
 	{ onInitAndConf, "on_init" },
-	{ onInitAndConf, "on_configuration_changed" },	
-	-- -- Actions		
+	{ onInitAndConf, "on_configuration_changed" },
+	-- -- Actions
 	{ onBuiltAnEntity, "on_built_entity", KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER },
 	{ onBuiltAnEntity, "on_robot_built_entity", KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER },
 	{ onBuiltAnEntity, "script_raised_built" },
-	{ onBuiltAnEntity, "script_raised_revive" },		
+	{ onBuiltAnEntity, "script_raised_revive" },
 	{ onRemovingAnEntity, "on_player_mined_entity", KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER },
 	{ onRemovingAnEntity, "on_robot_mined_entity", KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER },
 	{ onRemovingAnEntity, "on_entity_died", KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER },
 	{ checkVictory, "on_nth_tick", check_it_interval },
-	{ onCutsceneWaypointReached, "on_cutscene_waypoint_reached" } 
+	{ onCutsceneWaypointReached, "on_cutscene_waypoint_reached" }
 }
