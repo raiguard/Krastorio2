@@ -3,6 +3,7 @@ data:extend(
 	{
 		type = "corpse",
 		name = "matter-plant-remnant",
+		localised_name = {"remnant-name", {"entity-name.kr-matter-plant"}},
 		icon = kr_entities_icons_path .. "matter-plant.png",
 		icon_size = 128,
 		flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},

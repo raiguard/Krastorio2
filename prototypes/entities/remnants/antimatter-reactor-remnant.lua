@@ -1,8 +1,9 @@
 data:extend(
-{  
+{
 	{
 		type = "corpse",
 		name = "kr-antimatter-reactor-remnant",
+		localised_name = {"remnant-name", {"entity-name.kr-antimatter-reactor"}},
 		icon = kr_entities_icons_path .. "antimatter-reactor.png",
 		icon_size = 128,
 		flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},

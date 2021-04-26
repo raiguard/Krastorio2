@@ -3,6 +3,7 @@ data:extend(
 	{
 		type = "corpse",
 		name = "kr-fusion-reactor-remnant",
+		localised_name = {"remnant-name", {"entity-name.kr-fusion-reactor"}},
 		icon = kr_entities_icons_path .. "fusion-reactor.png",
 		icon_size = 64,
 		flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},

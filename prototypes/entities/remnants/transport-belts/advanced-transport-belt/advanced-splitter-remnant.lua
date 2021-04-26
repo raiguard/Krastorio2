@@ -1,8 +1,9 @@
 data:extend(
-{ 
+{
 	{
 		type = "corpse",
 		name = "kr-advanced-splitter-remnant",
+		localised_name = {"remnant-name", {"entity-name.kr-advanced-splitter"}},
 		icon = kr_entities_icons_path .. "transport-belts/advanced-transport-belt/advanced-splitter.png",
 		icon_size = 64,
 		flags = {"placeable-neutral", "not-on-map"},

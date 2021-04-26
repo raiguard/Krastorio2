@@ -3,6 +3,7 @@ data:extend(
 	{
 		type = "corpse",
 		name = "kr-mineral-water-pumpjack-remnant",
+		localised_name = {"remnant-name", {"entity-name.kr-mineral-water-pumpjack"}},
 		icon =  kr_entities_icons_path .. "mineral-water-pumpjack.png",
 		icon_size = 64,
 		flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},

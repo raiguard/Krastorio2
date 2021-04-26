@@ -1,8 +1,9 @@
 data:extend(
-{ 
+{
 	{
 		type = "corpse",
 		name = "kr-superior-underground-belt-remnant",
+		localised_name = {"remnant-name", {"entity-name.kr-superior-underground-belt"}},
 		icon = kr_entities_icons_path .. "transport-belts/superior-transport-belt/superior-underground-belt.png",
 		icon_size = 64,
 		flags = {"placeable-neutral", "not-on-map", "building-direction-8-way"},
@@ -40,5 +41,5 @@ data:extend(
 				scale = 0.5
 			}
 		}
-	}	
+	}
 })

@@ -3,6 +3,7 @@ data:extend(
 	{
 		type = "corpse",
 		name = "kr-superior-inserter-remnants",
+		localised_name = {"remnant-name", {"entity-name.kr-superior-inserter"}},
 		icon = kr_entities_icons_path .. "inserters/superior-inserter.png",
 		icon_size = 64,
 		flags = {"placeable-neutral", "not-on-map"},
