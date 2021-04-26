@@ -6,12 +6,12 @@ local KRASTORIO_INTERGALACTIC_TRANSCEIVER_EVENT_FILTER =
 	-- intergalactic-transceiver entity name
 	{
 		filter = "name",
-        name   = "kr-intergalactic-transceiver"
-    },
+				name   = "kr-intergalactic-transceiver"
+		},
 	{
 		filter = "name",
-        name   = "kr-activated-intergalactic-transceiver"
-    }
+				name   = "kr-activated-intergalactic-transceiver"
+		}
 }
 
 if not remote.interfaces["kr-intergalactic-transceiver"] then
@@ -103,7 +103,7 @@ local function checkVictory()
 			local winning_force = game.forces[global.win_next_check]
 			game.set_game_state{game_finished = true, player_won = true, can_continue = true, victorious_force = winning_force}
 			-- Unlock logo technology
-      winning_force.technologies["kr-logo"].enabled = true
+			winning_force.technologies["kr-logo"].enabled = true
 			-- Joke
 			winning_force.play_sound
 			{
@@ -115,7 +115,7 @@ local function checkVictory()
 	end
 
 	-- Check for each team
-  for force_index, it in pairs(global.intergalactic_transceivers) do
+	for force_index, it in pairs(global.intergalactic_transceivers) do
 		if it.valid and it.name == "kr-intergalactic-transceiver" then
 			if it.energy == it.prototype.electric_energy_source_prototype.buffer_capacity then -- Win!
 				-- Won cutscene
@@ -215,7 +215,7 @@ local function checkVictory()
 				end
 			end
 		end
-    end
+		end
 end
 
 return
