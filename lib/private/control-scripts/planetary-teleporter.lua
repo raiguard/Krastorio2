@@ -673,8 +673,10 @@ local function on_player_created(e)
 end
 
 local function on_player_removed(e)
-	global.planetary_teleporter_unnamed_translations[e.player_index] = nil
-	global.planetary_teleporter_guis[e.player_index] = nil
+	if global.planetary_teleporter_unnamed_translations then
+		global.planetary_teleporter_unnamed_translations[e.player_index] = nil
+		global.planetary_teleporter_guis[e.player_index] = nil
+	end
 end
 
 local function on_string_translated(e)
