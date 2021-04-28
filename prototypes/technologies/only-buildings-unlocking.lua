@@ -827,6 +827,7 @@ data:extend(
 			type = "technology",
 			name = "kr-logo",
 			mod = "Krastorio2",
+			enabled = false,
 			icon = kr_technologies_icons_path .. "k-logo.png",
 			icon_size = 256,
 			icon_mipmaps = 4,

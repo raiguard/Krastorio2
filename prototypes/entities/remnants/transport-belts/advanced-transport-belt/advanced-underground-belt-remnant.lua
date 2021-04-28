@@ -1,8 +1,9 @@
 data:extend(
-{ 
+{
 	{
 		type = "corpse",
 		name = "kr-advanced-underground-belt-remnant",
+		localised_name = {"remnant-name", {"entity-name.kr-advanced-underground-belt"}},
 		icon = kr_entities_icons_path .. "transport-belts/advanced-transport-belt/advanced-underground-belt.png",
 		icon_size = 64,
 		flags = {"placeable-neutral", "not-on-map", "building-direction-8-way"},

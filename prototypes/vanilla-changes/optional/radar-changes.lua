@@ -10,12 +10,13 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
 	data.raw["radar"]["radar"].next_upgrade = "advanced-radar"
 
 	data:extend(
-	{  
+	{
 		-- Remaint entity
 
 		{
 			type = "corpse",
 			name = "advanced-radar-remnants",
+			localised_name = {"remnant-name", {"entity-name.advanced-radar"}},
 			icon = kr_entities_icons_path .. "remnants-icon.png",
 			icon_size = 32,
 			flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},
@@ -28,7 +29,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
 			time_before_removed = 60 * 60 * 20, -- 20 minutes
 			final_render_layer = "remnants",
 			remove_on_tile_placement = false,
-			animation = 
+			animation =
 			make_rotated_animation_variations_from_sheet
 			(
 				1,
@@ -58,9 +59,9 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
 				}
 			)
 		},
-		
+
 		-- Item
-		
+
 		{
 			type = "item",
 			name = "advanced-radar",
@@ -72,9 +73,9 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
 			place_result = "advanced-radar",
 			stack_size = 50,
 		},
-		
+
 		-- Entity
-		
+
 		{
 			type = "radar",
 			name = "advanced-radar",
@@ -193,7 +194,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
 		},
 		radius_minimap_visualisation_color = { r = 0.059, g = 0.092, b = 0.235, a = 0.275 },
 		rotation_speed = 0.01
-		},	
+		},
 		{
 			type = "recipe",
 			name = "kr-advanced-radar",
@@ -208,14 +209,14 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
 			},
 			result = "advanced-radar"
 		},
-		
+
 		-- Tech
-		
+
 		{
 			type = "technology",
-			name = "advanced-radar",	
+			name = "advanced-radar",
 			icon = kr_technologies_icons_path .. "advanced-radar.png",
-			icon_size = 256, 
+			icon_size = 256,
 			icon_mipmaps = 4,
 			prerequisites = {"kr-radar", "advanced-electronics"},
 			effects =
@@ -228,7 +229,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
 			unit =
 			{
 				count = 200,
-				ingredients = 
+				ingredients =
 				{
 					{"basic-tech-card", 1},
 					{"automation-science-pack", 1},

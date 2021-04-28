@@ -6,11 +6,11 @@ Date: XX.04.2021
   Features:
     - Added startup setting to disable K2 containers.
     - Added win cutscene when the intergalactic transceiver become fully charged (only the first time).
-	- Added a teleporter building (a new endgame building, planned from 03/2020, sorry guys for take so long)!
+    - Added a teleporter building (a new endgame building, planned from 03/2020, sorry guys for take so long)!
     - Added new graphics for Intergalactic Transceiver! Now have a different animation before being charged.
     - Added new icons!
     - Added new Krastorio 2 logo entity.
-    - Added one new Krastorio 2 menu simulation. Now if the option of re-enabled menu simulations is active, Krastorio 2 will show his own menus simulation. 
+    - Added one new Krastorio 2 menu simulation. Now if the option of re-enabled menu simulations is active, Krastorio 2 will show his own menus simulation.
     - All building icons now are 4-mip.
   Balancing:
     - Air purifier base pullution absorbing power was nerfed from -100 to -75.
@@ -33,7 +33,7 @@ Date: XX.04.2021
   Optimizations:
     - Significant performance improvements to prototype loading in the data stage.
     - Significant performance improvements to the biter and creep viruses.
-	- Reduced the graphic files size of +/-9% with a new lossless method.
+    - Reduced the graphic files size of +/-9% with a new lossless method.
   Bugfixes:
     - Fixed IR2 compatibility.
     - Fixed a crash on load with Angels' mods.

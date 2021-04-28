@@ -3,6 +3,7 @@ data:extend(
 	{
 		type = "corpse",
 		name = "kr-advanced-tank-remnant",
+		localised_name = {"remnant-name", {"entity-name.kr-advanced-tank"}},
 		icon = kr_vehicles_icons_path .. "advanced-tank.png",
 		icon_size = 64,
 		flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},

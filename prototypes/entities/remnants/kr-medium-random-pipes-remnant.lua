@@ -15,7 +15,7 @@ data:extend(
 		time_before_removed = 60 * 60 * 20, -- 20 minutes
 		final_render_layer = "remnants",
 		remove_on_tile_placement = false,
-		animation = 
+		animation =
 		make_rotated_animation_variations_from_sheet
 		(
 			1,
