@@ -220,14 +220,14 @@ data:extend(
 		energy_source =
 		{
 			type = "electric",
-			buffer_capacity = "666MJ",
+			buffer_capacity = "666J",
 			usage_priority = "primary-output",
 			input_flow_limit = "0kW",
-			output_flow_limit = "666MW",
+			output_flow_limit = "666W",
 			render_no_power_icon = false,
 			render_no_network_icon = false
 		},
-		energy_production = "666MW"
+		energy_production = "666W"
 	}
 }
 )
