@@ -15,7 +15,7 @@ data:extend(
 		max_health = 3500,
 		corpse = "kr-big-random-pipes-remnant",
 		damaged_trigger_effect = hit_effects.entity(),
-		collision_box = {{-3.75, -3.75}, {3.75, 3.75}},
+		collision_box = {{-3.75, -3.38}, {3.99, 3.75}},
 		selection_box = {{-4, -4}, {4, 4}},
 		resistances = 
 		{
