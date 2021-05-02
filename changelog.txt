@@ -24,6 +24,7 @@ Date: XX.04.2021
     - Slightly buffed biter virus gradual kill count.
     - Now all chemistry and intermediate product recipes have crafting time minimum of 2.0 seconds. The ratios are not changed! Ingredients, products required and produced are the same, this need only to fix a glitch of base game engine, that when a recipe is done more than 60 time per second the game output a wrong products count (this is not a mod bug is a limitation of the base game engine, don't ask to improve this, can't be improved by modders!).
   Changes:
+    - Changed large roboport collision and selection box to be square sized (8x8 instead of 7x8), and shifted a bit on y axis.
     - Added "cannot build" sound to K2 scripts when exist an integration with player building placing.
     - Changed a bit the circuit icons wire color (visually improve the material with the tier).
     - Rocket turret can now face corners.

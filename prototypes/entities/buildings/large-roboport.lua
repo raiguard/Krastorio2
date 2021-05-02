@@ -15,8 +15,8 @@ data:extend(
 		max_health = 3500,
 		corpse = "kr-big-random-pipes-remnant",
 		damaged_trigger_effect = hit_effects.entity(),
-		collision_box = {{-3.75, -3.25}, {3.75, 3.25}},
-		selection_box = {{-4, -3.5}, {4, 3.5}},
+		collision_box = {{-3.75, -3.75}, {3.75, 3.75}},
+		selection_box = {{-4, -4}, {4, 4}},
 		resistances = 
 		{
 			{type = "physical",percent = 60},
@@ -43,8 +43,8 @@ data:extend(
 		stationing_offset = {0, 0},
 		charging_offsets =
 		{
-			{-0.5, -3.6}, {-1.7, -3.3}, {-2.5, -2.7}, {-3.1, -1.9}, {-3.4, -0.9}, {0.5, -3.6}, {1.7, -3.3}, {2.5, -2.7}, {3.1, -1.9}, {3.4, -0.9},
-			{0.5, 2.8}, {1.7, 2.5}, {2.5, 1.9}, {3.1, 1.2}, {3.4, 0.1},           {-0.5, 2.8}, {-1.7, 2.5}, {-2.5, 1.9}, {-3.1, 1.2}, {-3.4, 0.1}
+			{-0.5, -3.3}, {-1.7, -3.0}, {-2.5, -2.4}, {-3.1, -1.6}, {-3.4, -0.6}, {0.5, -3.3}, {1.7, -3.0}, {2.5, -2.4}, {3.1, -1.6}, {3.4, -0.6},
+			{0.5, 3.1},   {1.7, 2.8},   {2.5, 2.2},   {3.1, 1.5},   {3.4, 0.4},   {-0.5, 3.1}, {-1.7, 2.8}, {-2.5, 2.2}, {-3.1, 1.5}, {-3.4, 0.4}
 		},
 		base =
 		{
@@ -54,13 +54,13 @@ data:extend(
 					filename = kr_entities_path .. "large-roboport/large-roboport.png",
 					width = 280,
 					height = 280,
-					shift = {0, -0.22},
+					shift = {0, 0.08},
 					hr_version =
 					{
 						filename = kr_entities_path .. "large-roboport/hr-large-roboport.png",
 						width = 560,
 						height = 560,
-						shift = {0, -0.22},
+						shift = {0, 0.08},
 						scale = 0.5
 					}
 				},
@@ -68,14 +68,14 @@ data:extend(
 					filename = kr_entities_path .. "large-roboport/large-roboport-sh.png",
 					width = 313,
 					height = 213,
-					shift = {1.1, 0.89},
+					shift = {1.1, 1.19},
 					draw_as_shadow = true,
 					hr_version =
 					{
 						filename = kr_entities_path .. "large-roboport/hr-large-roboport-sh.png",
 						width = 626,
 						height = 426,
-						shift = {1.1, 0.89},
+						shift = {1.1, 1.19},
 						draw_as_shadow = true,
 						scale = 0.5
 					}
@@ -87,13 +87,13 @@ data:extend(
 			filename = kr_entities_path .. "large-roboport/large-roboport-patch.png",
 			width = 68,
 			height = 56,
-			shift = {0, -0.02},
+			shift = {0, 0.28},
 			hr_version =
 			{
 				filename = kr_entities_path .. "large-roboport/hr-large-roboport-patch.png",
 				width = 138,
 				height = 112,
-				shift = {0, -0.02},
+				shift = {0, 0.28},
 				scale = 0.5
 			}
 		},
@@ -108,7 +108,7 @@ data:extend(
 					height = 143,
 					line_length = 6,
 					frame_count = 12,
-					shift = {0, -1.05},
+					shift = {0, -0.75},
 					draw_as_glow = true,
 					animation_speed = 0.1,
 					hr_version =
@@ -120,7 +120,7 @@ data:extend(
 						scale = 0.5,
 						line_length = 6,
 						frame_count = 12,
-						shift = {0, -1.05},
+						shift = {0, -0.75},
 						draw_as_glow = true,
 						animation_speed = 0.1
 					}
@@ -132,7 +132,7 @@ data:extend(
 					height = 143,
 					line_length = 6,
 					frame_count = 12,
-					shift = {0, -1.05},
+					shift = {0, -0.75},
 					draw_as_light = true,
 					animation_speed = 0.1,
 					hr_version =
@@ -144,7 +144,7 @@ data:extend(
 						scale = 0.5,
 						line_length = 6,
 						frame_count = 12,
-						shift = {0, -1.05},
+						shift = {0, -0.75},
 						draw_as_light = true,
 						animation_speed = 0.1
 					}
@@ -158,7 +158,7 @@ data:extend(
 			width = 49,
 			height = 18,
 			frame_count = 16,
-			shift = {0, -1.15},
+			shift = {0, -0.85},
 			hr_version =
 			{
 				filename = kr_entities_path .. "large-roboport/hr-large-roboport-door-up.png",
@@ -167,7 +167,7 @@ data:extend(
 				height = 38,
 				scale = 0.5,
 				frame_count = 16,
-				shift = {0, -1.16}
+				shift = {0, -0.86}
 			}
 		},
 		door_animation_down =
@@ -177,7 +177,7 @@ data:extend(
 			width = 49,
 			height = 18,
 			frame_count = 16,
-			shift = {0, -0.59},
+			shift = {0, -0.29},
 			hr_version =
 			{
 				filename = kr_entities_path .. "large-roboport/hr-large-roboport-door-down.png",
@@ -186,7 +186,7 @@ data:extend(
 				height = 36,
 				scale = 0.5,
 				frame_count = 16,
-				shift = {0, -0.585}
+				shift = {0, -0.285}
 			}
 		},
 		recharging_animation =
@@ -268,7 +268,7 @@ data:extend(
 				priority = "extra-high",
 				width = 60,
 				height = 60,
-				shift = util.by_pixel(0, 40),
+				shift = util.by_pixel(0, 70),
 				variation_count = 1,
 				scale = 5,
 			},
