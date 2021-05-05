@@ -31,6 +31,7 @@ Date: XX.04.2021
     - Updated resource names on the map generator screen to include icons.
     - Now with SE RTG equipments can be used in all grids (not only in the character armor).
     - Now with IR2 is no longer possible unlock the transmat tech, due the conflit with the planetary teleporter of K2. We choise our teleport because gets end game more rich and we don't use cutscenes for the teleport transitions, that with a small possibility can be trigger in the same moment of the K2 end game cutscene is playing. All previous entity constructed\build in existing saves will remain unchanged, items crafted will remain usable too.
+    - The air purifier doesn't show anymore the recipe icon while is working.
   Optimizations:
     - Significant performance improvements to prototype loading in the data stage.
     - Significant performance improvements to the biter and creep viruses.

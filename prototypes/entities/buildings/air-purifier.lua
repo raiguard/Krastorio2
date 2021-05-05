@@ -73,6 +73,7 @@ data:extend(
 			}
 		},
 		crafting_categories = {"air-purification"},
+		show_recipe_icon = false,
 		vehicle_impact_sound = sounds.generic_impact,
 		working_sound =
 		{
