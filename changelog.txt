@@ -2,43 +2,44 @@
 Version: 1.1.0
 Date: XX.04.2021
   Info:
-    - 1.1 is out! This is the last update of the mod (from Krastor and Linver), from now we think to leave all to Raiguard, and say thanks to all for the nice experience.
+    - 1.1 is out! This is the last update of the mod (from Krastor and Linver), from now we think to leave all to Raiguard, and we want to thank everyone for the modding experience.
   Features:
     - Added startup setting to disable K2 containers.
-    - Added win cutscene when the intergalactic transceiver become fully charged (only the first time).
+    - Added win cutscene when the intergalactic transceiver become fully charged (only the first time for the team that win).
     - Added a teleporter building (a new endgame building, planned from 03/2020, sorry guys for take so long)!
     - Added new graphics for Intergalactic Transceiver! Now have a different animation before being charged.
     - Added new icons!
     - Added new Krastorio 2 logo entity.
-    - Added one new Krastorio 2 menu simulation. Now if the option of re-enabled menu simulations is active, Krastorio 2 will show his own menus simulation.
+    - Added one new Krastorio 2 menu simulation. Now if the option of re-enabled menu simulations is active, Krastorio 2 will show his own menu simulation.
     - All building icons now are 4-mip.
   Balancing:
     - Air purifier base pullution absorbing power was nerfed from -100 to -75.
+    - A second tier of air filter was added for balance early-mid and early-end game, the second tier will improve the pollution filtered from -75 to -150 (2x).
     - Now fluid burning recipes (when a liquid is dispersed into the atmosphere) have different emission multipliers. Also was added an interface for other modders to use this feature if wanted in compatibility.
     - Reduced (re-balanced) the belt material cost in various recipes.
-    - Moved slow capsule from military 3 to military 1.
+    - Moved slow capsule recipe unlock from military 3 to military 1 (in technologies).
     - Increased mining area (resource searching radius) of electric mining drills MK2 (7x7) and MK3 (9x9).
-    - Now advanced assembler, chemical plant and furnace have a passive productivity (20/25/25%) and less crafting speed(4/6/8), to reduce the glitch effect of the base game engine that exceeded 60 recipe completed per second the game will calculate wrongly the produced products. Advanced chemical plant and furnace recipes now require productivity modules.
+    - Now advanced assembler, advanced chemical plant and advanced furnace have a passive productivity (20/25/25%) and less crafting speed(4/6/8), to reduce the glitch effect of the base game engine, that when the game exceeded 60 recipe completed per second, will calculate wrongly the produced products. Advanced chemical plant and advanced furnace recipes now require productivity modules.
+    - Now all chemistry and intermediate product recipes have crafting time minimum of 2.0 seconds. The ratios are not changed! Ingredients, products required and produced are the same, this need only to fix a glitch of base game engine, that when a recipe is done more than 60 time per second the game engine output a wrong products count (this is not a mod bug is a limitation of the base game engine, don't ask to improve this, can't be improved by modders!).
     - Changed advanced assembling machine recipe.
     - Biter virus no longer insta-kills all units when thrown.
     - Slightly buffed biter virus gradual kill count.
-    - Now all chemistry and intermediate product recipes have crafting time minimum of 2.0 seconds. The ratios are not changed! Ingredients, products required and produced are the same, this need only to fix a glitch of base game engine, that when a recipe is done more than 60 time per second the game output a wrong products count (this is not a mod bug is a limitation of the base game engine, don't ask to improve this, can't be improved by modders!).
   Changes:
     - Changed large roboport collision and selection box to be square sized (8x8 instead of 7x8), and shifted a bit on y axis.
     - Added "cannot build" sound to K2 scripts when exist an integration with player building placing.
     - Changed a bit the circuit icons wire color (visually improve the material with the tier).
-    - Rocket turret can now face corners.
+    - Rocket turret can now face corners (it can be positioned in eight directions instead of four).
     - Updated resource names on the map generator screen to include icons.
-    - Now with SE RTG equipments can be used in all grids (not only in the character armor).
-    - Now with IR2 is no longer possible unlock the transmat tech, due the conflit with the planetary teleporter of K2. We choise our teleport because gets end game more rich and we don't use cutscenes for the teleport transitions, that with a small possibility can be trigger in the same moment of the K2 end game cutscene is playing. All previous entity constructed\build in existing saves will remain unchanged, items crafted will remain usable too.
-    - The air purifier and fusion reactor doesn't show anymore the recipe icon while is working.
+    - Now with SE, RTG equipments can be used in all grids (not only in the character armor).
+    - Now with IR2, is no longer possible unlock the transmat tech, due the conflit with the planetary teleporter of K2. We choise our teleport because gets end game more rich and we don't use cutscenes for the teleport transitions, that with a small possibility can be trigger in the same moment of the K2 end game cutscene is playing. All previous entity constructed\build in existing saves will remain unchanged, items crafted will remain usable too.
+    - The air purifier and fusion reactor no longer show the recipe icon while they are working.
   Optimizations:
     - Significant performance improvements to prototype loading in the data stage.
     - Significant performance improvements to the biter and creep viruses.
-    - Reduced the graphic files size of +/-9% with a new lossless method.
+    - Reduced the graphic files size of +/-9% in a lossless way.
   Bugfixes:
-    - Fixed IR2 compatibility.
-    - Fixed a crash on load with Angels' mods.
+    - Fixed IR2 compatibility (multiple fixes, recipe ingredients, unlockable things).
+    - Fixed a crash on load with Angel's mods.
     - Fixed new smart belt dragging feature not working with K2 belts.
     - Fixed the creep virus leaving landfill behind.
     - Fixed wrong wiki icon size of air purification and matter after the technology icons update.
