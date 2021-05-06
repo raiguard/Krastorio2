@@ -12,6 +12,7 @@ data:extend(
 		corpse = "kr-fusion-reactor-remnant",
 		dying_explosion = "medium-explosion",
 		fixed_recipe = "kr-fusion",
+		show_recipe_icon = false,
 		resistances = 
 		{
 			{type = "physical",percent = 60},
