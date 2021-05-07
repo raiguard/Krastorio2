@@ -989,9 +989,29 @@ data:extend(
 		type = "item",
 		name = "gps-satellite",
 		rocket_launch_product = {"teleportation-gps-module", 1},
+		icon = kr_items_icons_path .. "gps-satellite.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
-		icon = kr_items_icons_path .. "gps-satellite.png",
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_items_icons_path .. "gps-satellite.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_items_icons_path .. "gps-satellite-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},		
 		subgroup = "intermediate-product",
 		order = "u01[a1-gps-satellite]",
 		stack_size = 1
@@ -999,9 +1019,29 @@ data:extend(
 	{
 		type = "item",
 		name = "teleportation-gps-module",
-		icon_size = 64,
-		icon_mipmaps = 4,		
 		icon = kr_items_icons_path .. "teleportation-gps-module.png",
+		icon_size = 64,
+		icon_mipmaps = 4,
+		pictures =
+		{
+			layers =
+			{
+				{
+					size = 64,
+					filename = kr_items_icons_path .. "teleportation-gps-module.png",
+					scale = 0.25,
+					mipmap_count = 4
+				},
+				{
+					draw_as_light = true,
+					flags = {"light"},
+					size = 64,
+					filename = kr_items_icons_path .. "teleportation-gps-module-light.png",
+					scale = 0.25,
+					mipmap_count = 4
+				}
+			}
+		},	
 		subgroup = "intermediate-product",
 		order = "u01[a2-teleportation-gps-module]",
 		stack_size = 10
