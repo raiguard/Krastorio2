@@ -35,6 +35,7 @@ Date: XX.04.2021
   Compatibility:
     - Industrial Revolution 2:
       - Disabled transmat technology in favor of the Planetary Teleporter.
+      - Many, many improvements across the board.
     - Space Exploration:
       - RTG equipment can be placed in all equipment grids, not only the character grid.
   Optimizations:
