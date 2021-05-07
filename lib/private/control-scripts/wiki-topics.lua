@@ -174,6 +174,16 @@ return
 		}
 	},
 	{
+		name  = "gui.planetary-teleporter-with-icon",
+		topic =
+		{
+			{type = "title", title = "gui.planetary-teleporter" },
+			{type = "image", spritename = "planetary-teleporter-preview-1"},
+			{type = "text",  text = "gui.planetary-teleporter-description-1"},
+			{type = "text",  text = "gui.planetary-teleporter-description-2"}
+		}
+	},
+	{
 		name  = "gui.kr-commands-with-icon",
 		topic =
 		{

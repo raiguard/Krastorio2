@@ -239,6 +239,19 @@ data:extend(
 	},
 	{
 		type = "tips-and-tricks-item",
+		name = "kr-planetary-teleporter",
+		order = "l",
+		trigger = 
+		{
+			type = "research",
+			technology = "kr-planetary-teleporter"
+		},
+		category = "kr-about-k2",
+		indent = 1,
+		image = kr_graphic_mod_path .. "gui/tip&tricks/planetary-teleporter-tip&tricks.png"
+	},
+	{
+		type = "tips-and-tricks-item",
 		name = "kr-commands",
 		order = "o",
 		starting_status = "unlocked",

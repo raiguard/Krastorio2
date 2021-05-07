@@ -141,5 +141,17 @@ data:extend(
 		filename = kr_universal_equipments_path .. "energy-absorber.png",
 		width    = 128,
 		height   = 128
+	},
+	---
+	-- Planetary teleporter
+	---
+	{
+		type     = "sprite",
+		name     = "planetary-teleporter-preview-1",
+		filename = kr_technologies_icons_path .. "planetary-teleporter.png",
+		width    = 256,
+		height   = 256,
+		scale    = 1.5
 	}
+	---
 })
