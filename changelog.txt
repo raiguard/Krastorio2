@@ -38,6 +38,7 @@ Date: XX.04.2021
     - Significant performance improvements to the biter and creep viruses.
     - Reduced the graphic files size of +/-9% in a lossless way.
   Bugfixes:
+    - Proofreaded english localization.
     - Fixed IR2 compatibility (multiple fixes, recipe ingredients, unlockable things).
     - Fixed a crash on load with Angel's mods.
     - Fixed new smart belt dragging feature not working with K2 belts.
