@@ -3,7 +3,7 @@ local text_patreons_list = ""
 local line_counter = 0
 for _, supporter_name in pairs(patreons_list.getOverallSupportersList()) do
 	line_counter = line_counter +1
-	if line_counter == 5 then	
+	if line_counter == 5 then
 		text_patreons_list = text_patreons_list .. supporter_name .. ",\n"
 		line_counter = 0
 	else
@@ -21,7 +21,7 @@ text_patreons_list = text_patreons_list:sub(1, -2) .. "."
 	{
 		{type = "title", title = localized_string_name },
 		{type = "image", spritename = image_name},
-		{type = "text", text = localized_string_name}	
+		{type = "text", text = localized_string_name}
 	}
 }
 ]]
@@ -29,186 +29,174 @@ text_patreons_list = text_patreons_list:sub(1, -2) .. "."
 return
 {
 	{
-		name  = "gui.about-k2-with-icon",
+		name  = "tips-and-tricks-item-name.kr-about-k2",
 		topic =
 		{
-			{type = "image", spritename = "about-k2-preview"},		
-			{type = "text",  text = "gui.about-k2-description-1"},
-			{type = "text",  text = "gui.about-k2-description-2"},
-			{type = "text",  text = "gui.about-k2-description-3"},
-			{type = "text",  text = text_patreons_list, localized = false}
+			{type = "image", spritename = "about-k2-preview"},
+			{type = "text",  text = "tips-and-tricks-item-description.kr-about-k2"},
 		}
 	},
 	{
-		name  = "gui.shelter-with-icon",
+		name  = "tips-and-tricks-item-name.kr-shelter",
 		topic =
 		{
-			{type = "title", title = "gui.shelter"},
-			{type = "image", spritename = "kr-shelter-preview"},		
-			{type = "text",  text = "gui.shelter-description-1"}
+			{type = "title", title = "tips-and-tricks-item-name.kr-shelter"},
+			{type = "image", spritename = "kr-shelter-preview"},
+			{type = "text",  text = "tips-and-tricks-item-description.kr-shelter"}
 		}
 	},
 	{
-		name  = "gui.new-gun-play-with-icon",
+		name  = "tips-and-tricks-item-name.kr-new-gun-play",
 		topic =
 		{
-			{type = "title", title = "gui.new-gun-play" },
-			{type = "image", spritename = "kr-new-gun-play-preview"},		
-			{type = "text",  text = "gui.new-gun-play-description-1"}
+			{type = "title", title = "tips-and-tricks-item-name.kr-new-gun-play" },
+			{type = "image", spritename = "kr-new-gun-play-preview"},
+			{type = "text",  text = "tips-and-tricks-item-description.kr-new-gun-play"}
 		}
 	},
 	{
-		name  = "gui.new-metals-with-icon",
+		name  = "tips-and-tricks-item-name.kr-new-metals",
 		topic =
 		{
-			{type = "title", title = "gui.new-metals" },
-			{type = "image", spritename = "new-metals-preview"},		
-			{type = "text",  text = "gui.rare-metals-description-1"},
-			{type = "text",  text = "gui.rare-metals-description-2"}
+			{type = "title", title = "tips-and-tricks-item-name.kr-new-metals"},
+			{type = "image", spritename = "new-metals-preview"},
+			{type = "text",  text = "tips-and-tricks-item-description.kr-new-metals"},
 		}
 	},
 	{
-		name  = "gui.creep-with-icon",
+		name  = "tips-and-tricks-item-name.kr-creep",
 		topic =
 		{
-			{type = "title", title = "gui.creep" },
-			{type = "image", spritename = "kr-creep-preview-1"},		
-			{type = "text",  text = "gui.creep-description-1"},
+			{type = "title", title = "tips-and-tricks-item-name.kr-creep" },
+			{type = "image", spritename = "kr-creep-preview-1"},
 			{type = "image", spritename = "kr-creep-preview-2"},
-			{type = "text",  text = "gui.creep-description-2"}
+			{type = "text",  text = "tips-and-tricks-item-description.kr-creep"}
 		}
 	},
 	{
-		name  = "gui.fuels-with-icon",
+		name  = "tips-and-tricks-item-name.kr-fuels",
 		topic =
 		{
-			{type = "title", title = "gui.fuels" },
-			{type = "image", spritename = "kr-fuels-preview"},		
-			{type = "text",  text = "gui.fuels-description-1"}
+			{type = "title", title = "tips-and-tricks-item-name.kr-fuels" },
+			{type = "image", spritename = "kr-fuels-preview"},
+			{type = "text",  text = "tips-and-tricks-item-description.kr-fuels"}
 		}
 	},
 	{
-		name  = "gui.air-purifier-with-icon",
+		name  = "tips-and-tricks-item-name.kr-air-purifier",
 		topic =
 		{
-			{type = "title", title = "gui.air-purifier" },
-			{type = "image", spritename = "air-purifier-preview-1"},		
-			{type = "text",  text = "gui.air-purifier-description-1"},
-			{type = "image", spritename = "air-purifier-preview-2"},		
-			{type = "text",  text = "gui.air-purifier-description-2"}
+			{type = "title", title = "tips-and-tricks-item-name.kr-air-purifier" },
+			{type = "image", spritename = "air-purifier-preview-1"},
+			{type = "image", spritename = "air-purifier-preview-2"},
+			{type = "text",  text = "tips-and-tricks-item-description.kr-air-purifier"}
 		}
 	},
 	{
-		name  = "gui.inserters-hotkey-with-icon",
+		name  = "tips-and-tricks-item-name.kr-inserters-krastorio-hotkey",
 		topic =
 		{
-			{type = "title", title = "gui.inserters-hotkey" },
-			{type = "image", spritename = "kr-inserters-hotkey-preview"},		
-			{type = "text",  text = "gui.inserters-krastorio-hotkey-description-1"}
+			{type = "title", title = "tips-and-tricks-item-name.kr-inserters-krastorio-hotkey" },
+			{type = "image", spritename = "kr-inserters-hotkey-preview"},
+			{type = "text",  text = "tips-and-tricks-item-description.kr-inserters-krastorio-hotkey"}
 		}
 	},
 	{
-		name  = "gui.roboports-hotkey-with-icon",
+		name  = "tips-and-tricks-item-name.kr-roboports-hotkey",
 		topic =
 		{
-			{type = "title", title = "gui.roboports-hotkey" },
-			{type = "image", spritename = "roboports-hotkey-preview"},		
-			{type = "text",  text = "gui.roboports-krastorio-hotkey-description-1"}
+			{type = "title", title = "tips-and-tricks-item-name.kr-roboports-hotkey"},
+			{type = "image", spritename = "roboports-hotkey-preview"},
+			{type = "text",  text = "tips-and-tricks-item-description.kr-roboports-hotkey"}
 		}
 	},
 	{
-		name  = "gui.fusion-reactor-with-icon",
+		name  = "tips-and-tricks-item-name.kr-fusion-reactor",
 		topic =
 		{
-			{type = "title", title = "gui.fusion-reactor" },
-			{type = "image", spritename = "kr-fusion-reactor-preview"},		
-			{type = "text",  text = "gui.fusion-reactor-description-1"},
-			{type = "image", spritename = "kr-advanced-steam-turbine-preview"},		
-			{type = "text",  text = "gui.fusion-reactor-description-2"}
+			{type = "title", title = "tips-and-tricks-item-name.kr-fusion-reactor"},
+			{type = "image", spritename = "kr-fusion-reactor-preview"},
+			{type = "image", spritename = "kr-advanced-steam-turbine-preview"},
+			{type = "text",  text = "tips-and-tricks-item-description.kr-fusion-reactor"},
 		}
 	},
 	{
-		name  = "gui.matter-of-matter-with-icon",
+		name  = "tips-and-tricks-item-name.kr-matter-of-matter",
 		topic =
 		{
-			{type = "title", title = "gui.matter-of-matter" },
-			{type = "image", spritename = "kr-matter-preview"},		
-			{type = "text",  text = "gui.matter-of-matter-description-1"}
+			{type = "title", title = "tips-and-tricks-item-name.kr-matter-of-matter"},
+			{type = "image", spritename = "kr-matter-preview"},
+			{type = "text",  text = "tips-and-tricks-item-description.kr-matter-of-matter"}
 		}
 	},
 	{
-		name  = "gui.intergalactic-transceiver-with-icon",
+		name  = "tips-and-tricks-item-name.kr-intergalactic-transceiver",
 		topic =
 		{
-			{type = "title", title = "gui.intergalactic-transceiver" },
-			{type = "image", spritename = "kr-intergalactic-transceiver-preview"},		
-			{type = "text",  text = "gui.intergalactic-transceiver-description-1"}
+			{type = "title", title = "tips-and-tricks-item-name.kr-intergalactic-transceiver"},
+			{type = "image", spritename = "kr-intergalactic-transceiver-preview"},
+			{type = "text",  text = "tips-and-tricks-item-description.kr-intergalactic-transceiver"}
 		}
 	},
 	{
-		name  = "gui.radiation-with-icon",
+		name  = "tips-and-tricks-item-name.kr-radiation",
 		topic =
 		{
-			{type = "title", title = "gui.radiation" },
-			{type = "text",  text = "gui.radiation-description-1"}
+			{type = "title", title = "tips-and-tricks-item-name.kr-radiation"},
+			{type = "text",  text = "tips-and-tricks-item-description.kr-radiation"}
 		}
 	},
 	{
-		name  = "gui.crusher-with-icon",
+		name  = "tips-and-tricks-item-name.kr-crusher",
 		topic =
 		{
-			{type = "title", title = "gui.crusher" },
+			{type = "title", title = "tips-and-tricks-item-name.kr-crusher"},
 			{type = "image", spritename = "kr-crusher-preview"},
-			{type = "text",  text = "gui.crusher-description-1"}
+			{type = "text",  text = "tips-and-tricks-item-description.kr-crusher"}
 		}
 	},
 	{
-		name  = "gui.wireless-charger-with-icon",
+		name  = "tips-and-tricks-item-name.kr-wireless-charger",
 		topic =
 		{
-			{type = "title", title = "gui.wireless-charger" },
+			{type = "title", title = "tips-and-tricks-item-name.kr-crusher"},
 			{type = "image", spritename = "kr-tesla-coil-preview"},
-			{type = "text",  text = "gui.wireless-charger-description-1"},
 			{type = "image", spritename = "kr-energy-absorber-preview"},
-			{type = "text",  text = "gui.wireless-charger-description-2"}
+			{type = "text",  text = "tips-and-tricks-item-description.kr-crusher"},
 		}
 	},
 	{
-		name  = "gui.planetary-teleporter-with-icon",
+		name  = "tips-and-tricks-item-name.kr-planetary-teleporter",
 		topic =
 		{
-			{type = "title", title = "gui.planetary-teleporter" },
+			{type = "title", title = "tips-and-tricks-item-name.kr-planetary-teleporter"},
 			{type = "image", spritename = "planetary-teleporter-preview-1"},
-			{type = "text",  text = "gui.planetary-teleporter-description-1"},
 			{type = "image", spritename = "planetary-teleporter-preview-2"},
-			{type = "text",  text = "gui.planetary-teleporter-description-2"}
+			{type = "text",  text = "tips-and-tricks-item-description.kr-planetary-teleporter"},
 		}
 	},
 	{
-		name  = "gui.kr-commands-with-icon",
+		name  = "tips-and-tricks-item-name.kr-commands",
 		topic =
 		{
-			{type = "title", title = "gui.kr-commands" },
-			{type = "text",  text = "gui.kr-commands-description-1"}
+			{type = "title", title = "tips-and-tricks-item-name.kr-commands"},
+			{type = "text",  text = "tips-and-tricks-item-description.kr-commands"}
 		}
 	},
 	{
-		name  = "gui.kr-achievements-with-icon",
+		name  = "tips-and-tricks-item-name.kr-achievements",
 		topic =
 		{
-			{type = "title", title = "gui.kr-achievements" },
-			{type = "text",  text = "gui.kr-achievements-description-1"}
+			{type = "title", title = "tips-and-tricks-item-name.kr-achievements"},
+			{type = "text",  text = "tips-and-tricks-item-description.kr-achievements"}
 		}
 	},
 	{
-		name  = "gui.faq-with-icon",
+		name  = "tips-and-tricks-item-name.kr-faq",
 		topic =
 		{
-			{type = "title", title = "gui.faq" },
-			{type = "text",  text = "gui.faq-description-1"},
-			{type = "text",  text = "gui.faq-description-2"},
-			{type = "text",  text = "gui.faq-description-3"},
-			{type = "text",  text = "gui.faq-description-4"}
+			{type = "title", title = "tips-and-tricks-item-name.kr-faq"},
+			{type = "text",  text = "tips-and-tricks-item-description.kr-faq"},
 		}
 	}
 }

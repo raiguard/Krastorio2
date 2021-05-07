@@ -203,7 +203,7 @@ styles["kr-wiki-window"] =
 		filename = "__core__/graphics/gui-new.png",
 		position = {0, 0},
 		opacity = 0.95,
-        background_blur = true,
+		background_blur = true,
 		corner_size = 8
 	},
 	use_header_filler = false,
@@ -218,7 +218,7 @@ styles["kr-wiki-window"] =
 styles["kr-wiki-window-flow"] =
 {
 	type = "horizontal_flow_style",
-    padding = 2,
+	padding = 2,
 	maximal_width = 760,
 	natural_width = 740,
 	graphical_set =
@@ -239,7 +239,7 @@ styles["kr-wiki-left-window-flow"] =
 {
 	type = "vertical_flow_style",
 	vertically_stretchable = "on",
-    padding = 1,
+	padding = 1,
 	width = 200,
 	graphical_set =
 	{
@@ -260,7 +260,7 @@ styles["kr-wiki-right-window-flow"] =
 	natural_height = 350,
 	vertically_stretchable   = "on",
 	horizontally_stretchable = "on",
-    padding = 1
+	padding = 1
 }
 
 -- Box where put description
@@ -282,17 +282,17 @@ styles["kr-wiki-description-flow"] =
 		},
 		shadow = default_inner_shadow
 	},
-    background_graphical_set = {},
-    extra_padding_when_activated = 4
+		background_graphical_set = {},
+		extra_padding_when_activated = 4
 }
 
 styles["kr-wiki-back-button-flow"] =
 {
 	type = "horizontal_flow_style",
-    horizontal_align = "left",
+	horizontal_align = "left",
 	natural_width = 740,
 	vertically_stretchable = "off",
-    padding = 2,
+	padding = 2,
 	margin = 2
 }
 
@@ -322,15 +322,15 @@ styles["kr-wiki-icon-button"] =
 	stretch_image_to_widget_size = true,
 	default_graphical_set = base_icon_button_grahphical_set,
 	hovered_graphical_set =
-    {
+	{
 		base = {position = {34, 17}, corner_size = 2, draw_type = "outer", opacity = 0.5},
-        shadow = default_dirt,
-        glow = default_glow(default_glow_color, 0.5)
+    shadow = default_dirt,
+    glow = default_glow(default_glow_color, 0.5)
 	},
 	clicked_graphical_set =
 	{
 		base   = {position = {51, 17}, corner_size = 2, draw_type = "outer", opacity = 0.5},
-        shadow = default_dirt
+    shadow = default_dirt
 	},
 	selected_graphical_set =
 	{
@@ -367,11 +367,12 @@ styles["kr-wiki-back-button"] =
 styles["kr-title-flow"] =
 {
 	type = "horizontal_flow_style",
-    horizontal_align = "center",
+	horizontal_align = "center",
 	vertically_stretchable = "off",
 	natural_width = 500,
-    padding = 1,
-	margin = 1
+	padding = 1,
+	margin = 1,
+	rich_text_setting = "enabled"
 }
 -- Description labels
 styles["kr-wiki-description-label"] =
@@ -386,7 +387,7 @@ styles["kr-wiki-description-label"] =
 styles["kr-wiki-image-flow"] =
 {
 	type = "horizontal_flow_style",
-    horizontal_align = "center",
+	horizontal_align = "center",
 	natural_width = 500,
 	vertically_stretchable = "off"
 }
@@ -398,18 +399,18 @@ styles.kr_selected_frame_action_button = {
 	parent = "frame_action_button",
 	default_font_color = button_hovered_font_color,
 	default_graphical_set = {
-			base = {position = {225, 17}, corner_size = 8},
-			shadow = {position = {440, 24}, corner_size = 8, draw_type = "outer"},
+		base = {position = {225, 17}, corner_size = 8},
+		shadow = {position = {440, 24}, corner_size = 8, draw_type = "outer"},
 	},
 	hovered_font_color = button_hovered_font_color,
 	hovered_graphical_set = {
-			base = {position = {369, 17}, corner_size = 8},
-			shadow = {position = {440, 24}, corner_size = 8, draw_type = "outer"},
+		base = {position = {369, 17}, corner_size = 8},
+		shadow = {position = {440, 24}, corner_size = 8, draw_type = "outer"},
 	},
 	clicked_font_color = button_hovered_font_color,
 	clicked_graphical_set = {
-			base = {position = {352, 17}, corner_size = 8},
-			shadow = {position = {440, 24}, corner_size = 8, draw_type = "outer"},
+		base = {position = {352, 17}, corner_size = 8},
+		shadow = {position = {440, 24}, corner_size = 8, draw_type = "outer"},
 	}
 }
 
