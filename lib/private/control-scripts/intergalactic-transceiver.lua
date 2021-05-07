@@ -122,7 +122,7 @@ local function checkVictory()
 				if global.game_won ~= true then
 					-- Cutscenes for each player of force
 					for _, player in pairs(game.forces[force_index].connected_players) do
-						if player.valid then
+						if player.valid and player.controller_type ~= defines.controllers.editor then
 							player.set_controller
 							{
 								type = defines.controllers.cutscene,
