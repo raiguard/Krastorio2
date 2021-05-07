@@ -152,6 +152,13 @@ data:extend(
 		width    = 256,
 		height   = 256,
 		scale    = 1.5
-	}
+	},
+	{
+		type     = "sprite",
+		name     = "planetary-teleporter-preview-2",
+		filename = kr_graphic_mod_path .. "gui/previews/planetary-teleporter-preview-2.png",
+		width    = 256,
+		height   = 128
+	}	
 	---
 })
