@@ -4,7 +4,7 @@ local krastorio_high_patreons =
   -- Mod Developers
   ["krastor"] = true,
   ["linver"] = true,
-  ["Raiguard"] = true,
+  ["raiguard"] = true,
   -- Factorio Developers
   ["bilka"] = true,
   ["kovarex"] = true,
