@@ -277,6 +277,7 @@ data:extend{
         }
       }
     },
+    -- FIXME: This doesn't appear to work
     -- Squeak through compatibility
     squeak_behaviour = false
   },
