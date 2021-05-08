@@ -17,19 +17,6 @@ local planetary_teleporter_animation =
 			draw_as_shadow = true,
 			animation_speed = 0.5,
 			shift = {1.9, 1.2},
-			--hr_version =
-			--{
-			--	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter-shadow.png",
-			--	priority = "low",
-			--	width = 531,
-			--	height = 292,
-			--	scale = 0.5,
-			--	frame_count = 1,
-			--	repeat_count = 20,
-			--	draw_as_shadow = true,
-			--	animation_speed = 0.5,
-			--	shift = {1.9, 1.2}
-			--}
 		},
 		--BUILDING
 		{
@@ -41,16 +28,6 @@ local planetary_teleporter_animation =
 			frame_count = 20,
 			line_length = 5,
 			animation_speed = 0.5,
-			-- hr_version =
-			-- {
-			-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
-			-- 	width = 400,
-			-- 	height = 475,
-			-- 	scale = 0.5,
-			-- 	frame_count = 20,
-			-- 	line_length = 5,
-			-- 	animation_speed = 0.5
-			-- }
 		},
 		{
 			filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-under-forward-towers.png",
@@ -60,13 +37,6 @@ local planetary_teleporter_animation =
 			scale = 0.5,
 			repeat_count = 20,
 			animation_speed = 0.5,
-			-- hr_version =
-			-- {
-			-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
-			-- 	width = 400,
-			-- 	height = 475,
-			--	scale = 0.5
-			-- }
 		},
 		-- GLOWS
 		{
@@ -81,16 +51,6 @@ local planetary_teleporter_animation =
 			draw_as_glow = true,
 			fadeout = true,
 			blend_mode = "additive-soft",
-			-- hr_version =
-			-- {
-			-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
-			-- 	width = 400,
-			-- 	height = 475,
-			-- 	scale = 0.5,
-			-- 	frame_count = 20,
-			-- 	line_length = 5,
-			-- 	animation_speed = 0.5
-			-- }
 		},
 		-- LIGHTS
 		{
@@ -103,19 +63,7 @@ local planetary_teleporter_animation =
 			line_length = 5,
 			animation_speed = 0.5,
 			draw_as_light = true,
-			blend_mode = "additive-soft",			
-		 	-- hr_version =
-			-- 	{
-			-- 		filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter-light.png",
-			-- 		priority = "high",
-			-- 		width = 400,
-			-- 		height = 475,
-			-- 		scale = 0.5,
-			-- 		frame_count = 20,
-			-- 		line_length = 5,
-			-- 		animation_speed = 0.5,
-			-- 		draw_as_light = true
-			-- 	}
+			blend_mode = "additive-soft",
 		},
 		{
 			filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-forward-towers-light.png",
@@ -126,16 +74,6 @@ local planetary_teleporter_animation =
 			frame_count = 20,
 			line_length = 5,
 			animation_speed = 0.5,
-			-- hr_version =
-			-- {
-			-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
-			-- 	width = 400,
-			-- 	height = 475,
-			-- 	scale = 0.5,
-			-- 	frame_count = 20,
-			-- 	line_length = 5,
-			-- 	animation_speed = 0.5
-			-- }
 		}
 	}
 }
@@ -155,20 +93,7 @@ local planetary_teleporter_animation_red =
 			repeat_count = 20,
 			draw_as_shadow = true,
 			animation_speed = 0.5,
-			shift = {1.9, 1.2},
-			--hr_version =
-			--{
-			--	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter-shadow.png",
-			--	priority = "low",
-			--	width = 531,
-			--	height = 292,
-			--	scale = 0.5,
-			--	frame_count = 1,
-			--	repeat_count = 20,
-			--	draw_as_shadow = true,
-			--	animation_speed = 0.5,
-			--	shift = {1.9, 1.2}
-			--}
+			shift = {1.9, 1.2}
 		},
 		--BUILDING
 		{
@@ -179,17 +104,7 @@ local planetary_teleporter_animation_red =
 			scale = 0.5,
 			frame_count = 20,
 			line_length = 5,
-			animation_speed = 0.5,
-			-- hr_version =
-			-- {
-			-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
-			-- 	width = 400,
-			-- 	height = 475,
-			-- 	scale = 0.5,
-			-- 	frame_count = 20,
-			-- 	line_length = 5,
-			-- 	animation_speed = 0.5
-			-- }
+			animation_speed = 0.5
 		},
 		{
 			filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-under-forward-towers.png",
@@ -198,14 +113,7 @@ local planetary_teleporter_animation_red =
 			height = 475,
 			scale = 0.5,
 			repeat_count = 20,
-			animation_speed = 0.5,
-			-- hr_version =
-			-- {
-			-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
-			-- 	width = 400,
-			-- 	height = 475,
-			--	scale = 0.5
-			-- }
+			animation_speed = 0.5
 		},
 		-- TINT
 		{
@@ -219,17 +127,7 @@ local planetary_teleporter_animation_red =
 			line_length = 5,
 			animation_speed = 0.5,
 			apply_runtime_tint = true,
-			tint = {r=1, g=0, b=0, a=1},
-			-- hr_version =
-			-- {
-			-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
-			-- 	width = 400,
-			-- 	height = 475,
-			-- 	scale = 0.5,
-			-- 	frame_count = 20,
-			-- 	line_length = 5,
-			-- 	animation_speed = 0.5
-			-- }
+			tint = {r=1, g=0, b=0, a=1}
 		},
 		-- GLOWS
 		{
@@ -243,17 +141,7 @@ local planetary_teleporter_animation_red =
 			animation_speed = 0.5,
 			draw_as_glow = true,
 			fadeout = true,
-			blend_mode = "additive-soft",
-			-- hr_version =
-			-- {
-			-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
-			-- 	width = 400,
-			-- 	height = 475,
-			-- 	scale = 0.5,
-			-- 	frame_count = 20,
-			-- 	line_length = 5,
-			-- 	animation_speed = 0.5
-			-- }
+			blend_mode = "additive-soft"
 		},
 		-- LIGHTS
 		{
@@ -266,19 +154,7 @@ local planetary_teleporter_animation_red =
 			line_length = 5,
 			animation_speed = 0.5,
 			draw_as_light = true,
-			blend_mode = "additive-soft",			
-		 	-- hr_version =
-			-- 	{
-			-- 		filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter-light.png",
-			-- 		priority = "high",
-			-- 		width = 400,
-			-- 		height = 475,
-			-- 		scale = 0.5,
-			-- 		frame_count = 20,
-			-- 		line_length = 5,
-			-- 		animation_speed = 0.5,
-			-- 		draw_as_light = true
-			-- 	}
+			blend_mode = "additive-soft"
 		},
 		{
 			filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-forward-towers-light.png",
@@ -288,17 +164,7 @@ local planetary_teleporter_animation_red =
 			scale = 0.5,
 			frame_count = 20,
 			line_length = 5,
-			animation_speed = 0.5,
-			-- hr_version =
-			-- {
-			-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
-			-- 	width = 400,
-			-- 	height = 475,
-			-- 	scale = 0.5,
-			-- 	frame_count = 20,
-			-- 	line_length = 5,
-			-- 	animation_speed = 0.5
-			-- }
+			animation_speed = 0.5
 		}
 	}
 }
@@ -370,7 +236,9 @@ local function collision_entity(collision_box)
 		flags = {"not-on-map", "not-selectable-in-game", "placeable-off-grid"},
 		collision_box = collision_box,
 		picture = {filename = "__core__/graphics/empty.png", size = 1},
-		collision_mask = {"player-layer"}
+		collision_mask = {"player-layer"},
+		-- Squeak through compatibility
+		squeak_behaviour = false
 	}
 end
 
@@ -399,25 +267,18 @@ data:extend{
 		flags = {"not-on-map", "not-selectable-in-game"},
 		collision_mask = {},
 		render_layer = "higher-object-above",
-		picture = 
-		{
-			layers =
-			{
+		picture = {
+			layers = {
 				{
 					filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-forward-towers.png",
 					width = 400,
 					height = 475,
-					scale = 0.5,
-					-- hr_version =
-					-- {
-					-- 	filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
-					-- 	width = 400,
-					-- 	height = 475,
-					-- 	scale = 0.5
-					-- }
+					scale = 0.5
 				}
 			}
-		}
+		},
+		-- Squeak through compatibility
+		squeak_behaviour = false
 	},
 	-- collision detection
 	{
@@ -486,97 +347,3 @@ for _, character in pairs(data.raw["character"]) do
 
 	mask[#mask + 1] = "character"
 end
-
--- charge_animation =
--- {
--- 	layers =
--- 	{
--- 		{
--- 			filename = kr_entities_path .. "planetary-teleporter/planetary-teleporter.png",
--- 			width = 200,
--- 			height = 237.5,
--- 			frame_count = 20,
--- 			line_length = 5,
--- 			animation_speed = 0.5,
--- 			hr_version =
--- 			{
--- 				filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter.png",
--- 				width = 400,
--- 				height = 475,
--- 				scale = 0.5,
--- 				frame_count = 20,
--- 				line_length = 5,
--- 				animation_speed = 0.5
--- 			}
--- 		},
--- 		{
--- 			filename = kr_entities_path .. "planetary-teleporter/planetary-teleporter-shadow.png",
--- 			priority = "low",
--- 			width = 266,
--- 			height = 146,
--- 			frame_count = 1,
--- 			repeat_count = 20,
--- 			draw_as_shadow = true,
--- 			animation_speed = 0.5,
--- 			shift = {1.9, 1.2},
--- 			hr_version =
--- 			{
--- 				filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter-shadow.png",
--- 				priority = "low",
--- 				width = 531,
--- 				height = 292,
--- 				scale = 0.5,
--- 				frame_count = 1,
--- 				repeat_count = 20,
--- 				draw_as_shadow = true,
--- 				animation_speed = 0.5,
--- 				shift = {1.9, 1.2}
--- 			}
--- 		},
--- 		{
--- 			filename = kr_entities_path .. "planetary-teleporter/planetary-teleporter-light.png",
--- 			priority = "high",
--- 			width = 200,
--- 			height = 237,
--- 			frame_count = 20,
--- 			line_length = 5,
--- 			animation_speed = 0.5,
--- 			draw_as_light = true,
--- 			hr_version =
--- 			{
--- 				filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter-light.png",
--- 				priority = "high",
--- 				width = 400,
--- 				height = 475,
--- 				scale = 0.5,
--- 				frame_count = 20,
--- 				line_length = 5,
--- 				animation_speed = 0.5,
--- 				draw_as_glow = true
--- 			}
--- 		},
--- 		{
--- 			filename = kr_entities_path .. "planetary-teleporter/planetary-teleporter-charging.png",
--- 			priority = "high",
--- 			width = 200,
--- 			height = 238,
--- 			frame_count = 1,
--- 			repeat_count = 20,
--- 			animation_speed = 0.5,
--- 			draw_as_light = true,
--- 			hr_version =
--- 			{
--- 				filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter-charging.png",
--- 				priority = "high",
--- 				width = 400,
--- 				height = 475,
--- 				scale = 0.5,
--- 				frame_count = 1,
--- 				repeat_count = 20,
--- 				animation_speed = 0.5,
--- 				draw_as_glow = true
--- 			}
--- 		}
--- 	}
--- },
--- discharge_animation = planetary_teleporter_animation,
