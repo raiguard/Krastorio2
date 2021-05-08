@@ -624,6 +624,8 @@ local function on_entity_destroyed(e)
 	if entity and entity.valid and entity.name == pt_entity_name then
 		local unit_number = entity.unit_number
 		local data = global.planetary_teleporters[unit_number]
+		-- In case the entity was destroyed immediately (AAI Vehicles)
+		if not data then return end
 		-- destroy other entities
 		-- TODO: handle edge case of deletion during a teleportation - perhaps the character should die?
 		for _, entity_to_destroy in pairs(data.entities) do

@@ -3,6 +3,7 @@ Version: 1.1.1
 Date: ????
   Bugfixes:
     - Fixed a crash when disabling K2 containers
+	- Fixed a crash when placing a teleporter near enemy turrets or other teleporters with AAI Vehicles enabled
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.0
 Date: 08.05.2021
