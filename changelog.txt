@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.0
-Date: XX.04.2021
+Date: 08.05.2021
   Info:
     - 1.1 is out! This is the last update of the mod (from Krastor and Linver), from now we will leave the mod to raiguard, and we want to thank everyone for the modding experience.
   Features:
