@@ -45,7 +45,7 @@ if the technology isn't empty return true, false otherwise
 ---------------------------------------------------------------------------------------------
 krastorio.technologies.getTechnologyFromName(technology_name)
 
-Return the technology (the whole table) called with the name given in the argument, 
+Return the technology (the whole table) called with the name given in the argument,
 if the technology doesn't exist, return nil
 
 ---------------------------------------------------------------------------------------------
@@ -53,7 +53,7 @@ if the technology doesn't exist, return nil
 ---------------------------------------------------------------------------------------------
 krastorio.technologies.removePrerequisite(technology_name, prerequisite_name_to_remove)
 
-Remove the prerequisite given in the arguments from the technology with that name if in the 
+Remove the prerequisite given in the arguments from the technology with that name if in the
 prerequisite is present in technology prerequisites, and if technology exist.
 Return true (boolean) if prerequisite_name_to_remove has been removed, false otherwise.
 ---------------------------------------------------------------------------------------------
@@ -61,7 +61,7 @@ Return true (boolean) if prerequisite_name_to_remove has been removed, false oth
 krastorio.technologies.removePrerequisites(technology_name, prerequisite_names_to_remove)
 
 For each string in prerequisite_names_to_remove (that must be a table)
-Remove the prerequisite given in the arguments from the technology with that name if in the 
+Remove the prerequisite given in the arguments from the technology with that name if in the
 prerequisite is present in technology prerequisites, and if technology exist.
 Return true (boolean) if prerequisite_name_to_remove has been removed, false otherwise.
 ---------------------------------------------------------------------------------------------
@@ -89,20 +89,20 @@ added prerequisite create a circular dependency, in that case will be not added
 ---------------------------------------------------------------------------------------------
 krastorio.technologies.convertPrerequisite(technology_name, old_prerequisite_name, new_prerequisite_name)
 
-Convert one prerequisite to another technology, only if technology_name refer an existing 
+Convert one prerequisite to another technology, only if technology_name refer an existing
 technology and if the old prerequisite is required from that technology
 ---------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------
 krastorio.technologies.convertPrerequisiteFromAllTechnologies(old_prerequisite_name, new_prerequisite_name)
 
-Call convertPrerequisite(technology_name, old_prerequisite_name, new_prerequisite_name) 
+Call convertPrerequisite(technology_name, old_prerequisite_name, new_prerequisite_name)
 on all loaded technologies and return te count of conversion
 ---------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------
 krastorio.technologies.removeEffect(technology_name, to_remove_effect)
 
-Remove the effect given in the arguments from the technology with that name if in the 
+Remove the effect given in the arguments from the technology with that name if in the
 effect is present in technology effects, and if technology exist.
 Return true (boolean) if to_remove_effect has been removed, false otherwise.
 
@@ -112,7 +112,7 @@ Will return the result of the operation (boolean)
 krastorio.technologies.removeEffects(technology_name, to_remove_effects)
 
 For each effect entry in to_remove_effects (that must be a table of effects)
-Remove the effect given in the arguments from the technology with that name if in the 
+Remove the effect given in the arguments from the technology with that name if in the
 effect is present in technology effects, and if technology exist.
 Return true (boolean) if to_remove_effect has been removed, false otherwise.
 
@@ -196,9 +196,9 @@ Will return the result of the operation (counter -> integer)
 ---------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------
-krastorio.technologies.removeResearchUnitIngredient(technology_name, science_pack_name)	
+krastorio.technologies.removeResearchUnitIngredient(technology_name, science_pack_name)
 
-Remove the science pack given in the arguments from the technology with that name if in the 
+Remove the science pack given in the arguments from the technology with that name if in the
 science pack is present in technology research unit ingredients, and if technology exist.
 Also, will remove that science pack from the prerequisites of technology
 Return true (boolean) if the science pack has been removed, false otherwise.
@@ -235,7 +235,7 @@ when skip the checking
 ---------------------------------------------------------------------------------------------
 krastorio.technologies.addSciencePackCollection(science_pack_collection_name, science_pack_collection)
 
-Given a table that rappresent a collection of new science packs 
+Given a table that rappresent a collection of new science packs
 belonging one mod, will add it to this library for be computed in future.
 @ science_pack_collection_name, the name of the collection
 @ science_pack_collection, the table that contains all science pack names

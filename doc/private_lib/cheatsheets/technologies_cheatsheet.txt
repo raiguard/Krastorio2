@@ -29,7 +29,7 @@ krastorio.technologies.addUnlockRecipe(technology_name, recipe_name)
 krastorio.technologies.addUnlockRecipes(technology_name, recipe_names)
 krastorio.technologies.removeUnlockRecipeFromAllTechnologies(recipe_name)
 
-krastorio.technologies.removeResearchUnitIngredient(technology_name, science_pack_name)	
+krastorio.technologies.removeResearchUnitIngredient(technology_name, science_pack_name)
 krastorio.technologies.addResearchUnitIngredient(technology_name, science_pack_name, count)
 krastorio.technologies.convertResearchUnitIngredient(technology_name, old_science_pack_name, new_science_pack_name)
 

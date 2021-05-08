@@ -6,7 +6,7 @@ GENERAL BEHAVIOURS
 - All "AddorReplace" procedure in an inventory mean that given an item, if exist,
   the quantity will be replaced, if not exist will be created a new entry.
 
-- All "Convert" procedure in an inventory will change the name of an item leaving the 
+- All "Convert" procedure in an inventory will change the name of an item leaving the
   quantity unchanged unlike "Replace" procedure.
 
 ---------------------------------------------------------------------------------------------
@@ -19,7 +19,7 @@ true if the value isn't empty false otherwise
 ---------------------------------------------------------------------------------------------
 krastorio.recipes.getRecipeFromName(recipe_name)
 
-Return the the recipe (the whole table) called with the name given in the argument, 
+Return the the recipe (the whole table) called with the name given in the argument,
 if the recipe doesn't exist, return nil
 
 ---------------------------------------------------------------------------------------------
@@ -146,7 +146,7 @@ all items that have the same name
 ---------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------
-krastorio.recipes.remove(items, item_name)	
+krastorio.recipes.remove(items, item_name)
 
 If exist, will remove from the given inventory the first item that have the given name.
 
@@ -415,6 +415,6 @@ krastorio.recipes.removeRecipeFromGroup(recipe_name, group_name)
 krastorio.recipes.setRecipeEnergyCost(recipe_name, energy_cost, expensive_cost)
 krastorio.recipes.setRecipeResultCount(recipe_name, result_count)
 krastorio.recipes.restoreRecipeToVanilla(recipe_name)
-krastorio.recipes.uniteDuplicateItemsOfRecipe(recipe_name)	
+krastorio.recipes.uniteDuplicateItemsOfRecipe(recipe_name)
 krastorio.recipes.enable(recipe_name)
 krastorio.recipes.disable(recipe_name)

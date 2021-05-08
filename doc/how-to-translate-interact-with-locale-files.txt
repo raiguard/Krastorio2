@@ -2,9 +2,9 @@ This is a guide about how translate/interact with Factorio locale files.
 
 ------------------------------------------------------------------------
 First part - File format
-Factorio format the locale files with ini format: 
+Factorio format the locale files with ini format:
 https://en.wikipedia.org/wiki/INI_file
-Each language is divided 
+Each language is divided
 
 So all texts/strings are divided in a categories (incapsulated square brackets) in two  and identified by a name, for example all items have two category:
 [item-name]
@@ -12,21 +12,21 @@ So all texts/strings are divided in a categories (incapsulated square brackets) 
 
 As you can guess one is for names one is of descriptions, the result is something like:
 [item-name]
-	iron-plate=iron plate
-	copper-plate=Copper plate
+    iron-plate=iron plate
+    copper-plate=Copper plate
 [item-description]
-	iron-plate=A plate produced by iron ore
-	copper-plate=A plate produced by copper ore
+    iron-plate=A plate produced by iron ore
+    copper-plate=A plate produced by copper ore
 
 Each item string must have the name (internal name for Factorio not for users) of the object followed by a equal and without spaces the string:
-	a=texts/strings
+    a=texts/strings
 
 The spaces or tab before "a" will be ignored.
 
 CAN EXIST ONLY ONE ENTRY FOR CATEGORY, THIS:
 [item-name]
-	a=texts1/strings1
-	a=texts2/strings2
+    a=texts1/strings1
+    a=texts2/strings2
 WILL MAKE FACTORIO CRASH!
 
 Here there's the link to the official localization guide:
@@ -44,32 +44,32 @@ They are special sub-strings that must be leaved untouched, except for plural_fo
 
 __1__ is a place for insert words via code:
 [other]
-	counter=I have count __1__ potato.
+    counter=I have count __1__ potato.
 Later in code:
-	game.print({"other.counter", 4})
+    game.print({"other.counter", 4})
 Will print
 ...
-	I have count 4 potato!
+    I have count 4 potato!
 ...
 Also:
 [other]
-	counter=I have count __1__ __plural_for_parameter_1_{1=potato|rest=potatoes}__.	
+    counter=I have count __1__ __plural_for_parameter_1_{1=potato|rest=potatoes}__.
 Later in code:
-	game.print({"other.counter", 1})
-	game.print({"other.counter", 4})
+    game.print({"other.counter", 1})
+    game.print({"other.counter", 4})
 Will print
 ...
-	I have count 1 potato!
-	I have count 4 potatoes!
-...	
+    I have count 1 potato!
+    I have count 4 potatoes!
+...
 
 Instead __ITEM__a__ __CONTROL__b__ (__CONTROL__ is for hotkeys only) is fixed replacer, will place in that part of the localized string associeted with that like:
 [item-name]
-	iron-ore=Raw iron ore 
-	iron-plate=Iron plate
-	copper-plate=Copper plate
+    iron-ore=Raw iron ore
+    iron-plate=Iron plate
+    copper-plate=Copper plate
 [item-description]
-	iron-plate=A plate produced by __ITEM__iron-ore__
+    iron-plate=A plate produced by __ITEM__iron-ore__
 
 ... later in game...
 A plate produced by Raw iron ore
@@ -77,7 +77,7 @@ A plate produced by Raw iron ore
 Here too can be found information about:
 https://wiki.factorio.com/Tutorial:Localisatio
 ------------------------------------------------------------------------
-Third part - Rich text 
+Third part - Rich text
 
 In some strings can be found some "tags" different from built-in parameters, because factorio support some of rich text metatag, used in the strings to add some information that can't be done otherwise, like bold text part, text color...
 
