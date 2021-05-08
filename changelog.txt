@@ -11,16 +11,16 @@ Date: XX.04.2021
     - Added mipmaps for all building sprites.
     - Added new graphics for Intergalactic Transceiver! It now has a different animation when charging.
     - Added new icons!
-    - Added Planetary Teleporter (we've had this planned since March 2020, sorry it took so long!)
+    - Added Planetary Teleporter (we've had this planned since March 2020, sorry it took so long!). New building comes with the K2 wiki and tip&tricks topic and two new items.
   Balancing:
-    - Added a second tier of pollution filter that scrubs pollution at -150 ppm (2x as good as tier 1)
+    - Nerfed air purifier from -100 ppm to -75 ppm.
+    - Added a second tier of pollution filter that scrubs pollution at -150 ppm (2x as good as tier 1).
     - Advanced assembler, advanced chemical plant, and advanced furnace now have passive productivity (20/25/25% respectively). This is to avoid the game engine limitation of 1 recipe per tick.
     - Advanced assembler, advanced chemical plant and advanced furnace recipes now require productivity modules.
     - Biter virus no longer insta-kills all units when thrown.
     - Fluid burning recipes have different emission multipliers. Also added a compatibility interface for other mods to use this feature.
     - Increased crafting time of all intermediate and chemical recipes to a minimum of 2 seconds, and increased ingredient and product counts to compensate. Ratios are unchanged! This is another measure to avoid the 1 recipe/tick limitation.
     - Increased mining radius of electric mining drills MK2 and MK3.
-    - Nerfed air purifier from -100 ppm to -75 ppm
     - Re-balanced (and generally reduced) the cost of endgame belts, undergrounds, and splitters.
     - Slightly buffed biter virus gradual kill count.
     - Slowdown capsule is now unlocked in military 1 (instead of military 3).
