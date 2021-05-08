@@ -2,7 +2,7 @@ local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds      = require("__base__/prototypes/entity/sounds")
 
 local advanced_furnace_sound =
-{	
+{
 	filename = kr_buildings_sounds_path .. "advanced-furnace.ogg",
 	volume = 0.50,
 	aggregation =
@@ -14,7 +14,7 @@ local advanced_furnace_sound =
 }
 
 data:extend(
-{   
+{
 	{
 		type = "assembling-machine",
 		name = "kr-advanced-furnace",
@@ -26,7 +26,7 @@ data:extend(
 		max_health = 2000,
 		corpse = "kr-big-random-pipes-remnant",
 		dying_explosion = "big-explosion",
-		resistances = 
+		resistances =
 		{
 			{type = "physical", percent = 50},
 			{type = "fire", percent = 95},
@@ -82,7 +82,7 @@ data:extend(
 			}
 		},
 		working_visualisations =
-		{			
+		{
 			{
 				constant_speed = true,
 				animation =
@@ -185,15 +185,16 @@ data:extend(
 		vehicle_impact_sound = sounds.generic_impact,
 		working_sound = advanced_furnace_sound,
 		idle_sound = { filename = "__base__/sound/idle1.ogg" },
-		crafting_speed = 8,
-		base_productivity = 0.25,
+		-- FIXME: The base_productivity completely misbalances recipes that aren't supposed to take prod modules
+		crafting_speed = 12,
+		-- base_productivity = 0.25,
 		energy_source =
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
 			emissions_per_minute = 6
 		},
-		
+
 		water_reflection =
 		{
 			pictures =
@@ -209,7 +210,7 @@ data:extend(
 			rotate = false,
 			orientation_to_variation = false
 		},
-		
+
 		energy_usage = "2MW",
 		ingredient_count = 6,
 		module_specification = { module_slots = 4, module_info_icon_shift = {0, 1.7}, module_info_icon_scale = 1 },

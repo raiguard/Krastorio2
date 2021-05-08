@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.1
 Date: ????
+  Balancing:
+    - Reverted advanced machines having passive productivity, as it allowed for various broken loops on recipes that usually don't support productivity modules
   Bugfixes:
     - Fixed a crash when disabling K2 containers
     - Fixed a crash when placing a teleporter near enemy turrets or other teleporters with AAI Vehicles enabled

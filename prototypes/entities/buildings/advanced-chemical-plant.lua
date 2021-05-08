@@ -2,10 +2,10 @@ local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds      = require("__base__/prototypes/entity/sounds")
 
 data:extend(
-{  
+{
 	{
 		type = "assembling-machine",
-		name = "kr-advanced-chemical-plant",		
+		name = "kr-advanced-chemical-plant",
 		icon = kr_entities_icons_path .. "advanced-chemical-plant.png",
 		icon_size = 64,
 		icon_mipmaps = 4,
@@ -15,7 +15,7 @@ data:extend(
 		corpse = "kr-big-random-pipes-remnant",
 		dying_explosion = "big-explosion",
 		damaged_trigger_effect = hit_effects.entity(),
-		resistances = 
+		resistances =
 		{
 			{type = "physical",percent = 50},
 			{type = "fire",percent = 70},
@@ -30,7 +30,7 @@ data:extend(
 				base_area = 20,
 				base_level = -1,
 				pipe_connections = {{ type="input", position = {2, -4} }}
-			},		
+			},
 			{
 				production_type = "input",
 				pipe_covers = pipecoverspictures(),
@@ -38,7 +38,7 @@ data:extend(
 				base_area = 20,
 				base_level = -1,
 				pipe_connections = {{ type="input", position = {0, -4} }}
-			},	
+			},
 			{
 				production_type = "input",
 				pipe_covers = pipecoverspictures(),
@@ -46,7 +46,7 @@ data:extend(
 				base_area = 20,
 				base_level = -1,
 				pipe_connections = {{ type="input", position = {-2, -4} }}
-			},				
+			},
 			{
 				production_type = "output",
 				pipe_covers = pipecoverspictures(),
@@ -71,7 +71,7 @@ data:extend(
 				base_level = 1,
 				pipe_connections = {{ type="output", position = {-2, 4} }}
 			},
-			
+
 			off_when_no_fluid_recipe = false
 		},
 		collision_box = {{-3.25, -3.25}, {3.25, 3.25}},
@@ -132,7 +132,7 @@ data:extend(
 					}
 					},
 			}
-		},	  
+		},
 		crafting_categories = {"chemistry"},
 		scale_entity_info_icon = true,
 		vehicle_impact_sound = sounds.generic_impact,
@@ -142,15 +142,16 @@ data:extend(
 			idle_sound = { filename = "__base__/sound/idle1.ogg" },
 			apparent_volume = 1.1
 		},
-		crafting_speed = 6,
-		base_productivity = 0.25,
+		-- FIXME: The base_productivity completely misbalances recipes that aren't supposed to take prod modules
+		crafting_speed = 8,
+		-- base_productivity = 0.25,
 		energy_source =
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
 			emissions_per_minute = 30
 		},
-		
+
 		water_reflection =
 		{
 			pictures =
@@ -166,7 +167,7 @@ data:extend(
 			rotate = false,
 			orientation_to_variation = false
 		},
-		
+
 		energy_usage = "1.75MW",
 		ingredient_count = 6,
 		module_specification = { module_slots = 4, module_info_icon_shift = {0, 1.7}, module_info_icon_scale = 1 },
