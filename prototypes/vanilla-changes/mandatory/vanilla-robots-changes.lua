@@ -40,31 +40,31 @@ data.raw["combat-robot"]["defender"].attack_parameters =
   sound = sounds.light_gunshot,
   ammo_type =
   {
-	category = "bullet",
-	action =
-	{
-	  type = "direct",
-	  action_delivery =
-	  {
-		type = "instant",
-		source_effects =
-		{
-		  type = "create-explosion",
-		  entity_name = "explosion-gunshot-small"
-		},
-		target_effects =
-		{
-		  {
-			type = "create-entity",
-			entity_name = "explosion-hit"
-		  },
-		  {
-			type = "damage",
-			damage = { amount = 8 , type = "physical"}
-		  }
-		}
-	  }
-	}
+  category = "bullet",
+  action =
+  {
+    type = "direct",
+    action_delivery =
+    {
+    type = "instant",
+    source_effects =
+    {
+      type = "create-explosion",
+      entity_name = "explosion-gunshot-small"
+    },
+    target_effects =
+    {
+      {
+      type = "create-entity",
+      entity_name = "explosion-hit"
+      },
+      {
+      type = "damage",
+      damage = { amount = 8 , type = "physical"}
+      }
+    }
+    }
+  }
   }
 }
 
@@ -82,19 +82,19 @@ data.raw["combat-robot"]["distractor"].attack_parameters =
   sound = make_laser_sounds(),
   ammo_type =
   {
-	category = "laser",
-	action =
-	{
-	  type = "direct",
-	  action_delivery =
-	  {
-		type = "beam",
-		beam = "laser-beam",
-		max_length = 20,
-		duration = 20,
-		--starting_speed = 0.3
-	  }
-	}
+  category = "laser",
+  action =
+  {
+    type = "direct",
+    action_delivery =
+    {
+    type = "beam",
+    beam = "laser-beam",
+    max_length = 20,
+    duration = 20,
+    --starting_speed = 0.3
+    }
+  }
   }
 }
    
@@ -109,19 +109,19 @@ data.raw["combat-robot"]["destroyer"].attack_parameters =
   range = 25,
   ammo_type =
   {
-	category = "laser",
-	action =
-	{
-	  type = "direct",
-	  action_delivery =
-	  {
-		type = "beam",
-		beam = "electric-beam",
-		max_length = 25,
-		duration = 20,
-		source_offset = {0.15, -0.5}
-	  }
-	}
+  category = "laser",
+  action =
+  {
+    type = "direct",
+    action_delivery =
+    {
+    type = "beam",
+    beam = "electric-beam",
+    max_length = 25,
+    duration = 20,
+    source_offset = {0.15, -0.5}
+    }
+  }
   }
 }
 --------------------------------------

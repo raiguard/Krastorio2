@@ -42,46 +42,46 @@ data.raw.item["uranium-fuel-cell"].fuel_value = "50GJ" --  = 200s in reactor
 -- meltdown addition
 data.raw["reactor"]["nuclear-reactor"].meltdown_action.action_delivery.target_effects =
 {
-	{
-		repeat_count = 200,
-		type = "create-trivial-smoke",
-		smoke_name = "nuclear-smoke",
-		offset_deviation = {{-1, -1}, {1, 1}},
-		starting_frame = 3,
-		starting_frame_deviation = 5,
-		starting_frame_speed = 0,
-		starting_frame_speed_deviation = 5,
-		speed_from_center = 0.5
-	},
-	{
-		type = "create-entity",
-		entity_name = "big-explosion"
-	},
-	{
-		type = "damage",
-		damage = {amount = 500, type = "explosion"}
-	},
-	{
-		type = "create-entity",
-		entity_name = "small-scorchmark",
-		check_buildability = true
-	},
-	{
-		type = "nested-result",
-		action =
-		{
-			type = "area",
-			target_entities = false,
-			trigger_from_target = true,
-			repeat_count = 3000,
-			radius = 128,
-			action_delivery =
-			{
-				type = "projectile",
-				projectile = "atomic-bomb-wave",
-				starting_speed = 0.35
-			}
-		}
-	}
-}		
-	
+  {
+    repeat_count = 200,
+    type = "create-trivial-smoke",
+    smoke_name = "nuclear-smoke",
+    offset_deviation = {{-1, -1}, {1, 1}},
+    starting_frame = 3,
+    starting_frame_deviation = 5,
+    starting_frame_speed = 0,
+    starting_frame_speed_deviation = 5,
+    speed_from_center = 0.5
+  },
+  {
+    type = "create-entity",
+    entity_name = "big-explosion"
+  },
+  {
+    type = "damage",
+    damage = {amount = 500, type = "explosion"}
+  },
+  {
+    type = "create-entity",
+    entity_name = "small-scorchmark",
+    check_buildability = true
+  },
+  {
+    type = "nested-result",
+    action =
+    {
+      type = "area",
+      target_entities = false,
+      trigger_from_target = true,
+      repeat_count = 3000,
+      radius = 128,
+      action_delivery =
+      {
+        type = "projectile",
+        projectile = "atomic-bomb-wave",
+        starting_speed = 0.35
+      }
+    }
+  }
+}   
+  

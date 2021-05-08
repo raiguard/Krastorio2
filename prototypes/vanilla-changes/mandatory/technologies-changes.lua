@@ -113,11 +113,11 @@ krastorio.technologies.addUnlockRecipe("battery-mk2-equipment", "big-battery-mk2
 
 local personal_roboport_tech = krastorio.technologies.getTechnologyThatUnlockRecipe("personal-roboport-equipment")
 if personal_roboport_tech then
-	krastorio.technologies.addUnlockRecipe(personal_roboport_tech.name, "vehicle-roboport")
+  krastorio.technologies.addUnlockRecipe(personal_roboport_tech.name, "vehicle-roboport")
 end
 local electric_engine_unit_tech = krastorio.technologies.getTechnologyThatUnlockRecipe("personal-roboport-equipment")
 if electric_engine_unit_tech then
-	krastorio.technologies.addUnlockRecipe(electric_engine_unit_tech.name, "additional-engine")
+  krastorio.technologies.addUnlockRecipe(electric_engine_unit_tech.name, "additional-engine")
 end
 
 krastorio.technologies.addUnlockRecipe("personal-laser-defense-equipment", "personal-submachine-laser-defense-mk1-equipment")
@@ -139,7 +139,7 @@ krastorio.technologies.addUnlockRecipe("space-science-pack", "space-science-pack
 -- Jackhammer
 local jackhammer_tech = krastorio.technologies.getTechnologyThatUnlockRecipe("concrete")
 if jackhammer_tech then
-	krastorio.technologies.addUnlockRecipe(jackhammer_tech.name, "kr-jackhammer")
+  krastorio.technologies.addUnlockRecipe(jackhammer_tech.name, "kr-jackhammer")
 end
 
 -- Slow capsule
@@ -158,9 +158,9 @@ krastorio.technologies.setResearchUnitCount("kovarex-enrichment-process", 500)
 --------------------------------------------------------------------
 -- Loaders
 if krastorio.general.getSafeSettingValue("kr-loaders") then
-	krastorio.technologies.addUnlockRecipe("logistics", "kr-loader")
-	krastorio.technologies.addUnlockRecipe("logistics-2", "kr-fast-loader")
-	krastorio.technologies.addUnlockRecipe("logistics-3", "kr-express-loader")
+  krastorio.technologies.addUnlockRecipe("logistics", "kr-loader")
+  krastorio.technologies.addUnlockRecipe("logistics-2", "kr-fast-loader")
+  krastorio.technologies.addUnlockRecipe("logistics-3", "kr-express-loader")
 end
 --------------------------------------------------------------------
 
@@ -169,24 +169,24 @@ end
 -- Apply basic tech card to all technologies with automation science pack (T1 tier)
 krastorio_utils.log.disableLogs()
 for technology_name, technology in pairs(data.raw.technology) do
-	if krastorio.technologies.hasIngredient(technology_name, "automation-science-pack") then
-		krastorio.technologies.addResearchUnitIngredient(technology_name, "basic-tech-card")
-	end
+  if krastorio.technologies.hasIngredient(technology_name, "automation-science-pack") then
+    krastorio.technologies.addResearchUnitIngredient(technology_name, "basic-tech-card")
+  end
 end
 krastorio_utils.log.enableLogs()
 
 -- Remove basic tech card to all technologies of T2 tier
 for technology_name, technology in pairs(data.raw.technology) do
-	if
-		krastorio.technologies.hasIngredient(technology_name, "military-science-pack") or
-		krastorio.technologies.hasIngredient(technology_name, "chemical-science-pack") or
-		krastorio.technologies.hasIngredient(technology_name, "production-science-pack") or
-		krastorio.technologies.hasIngredient(technology_name, "utility-science-pack") or
-		krastorio.technologies.hasIngredient(technology_name, "space-science-pack") or
-		krastorio.technologies.hasIngredient(technology_name, "matter-tech-card")
-	then
-		krastorio.technologies.removeResearchUnitIngredient(technology_name, "basic-tech-card")
-	end
+  if
+    krastorio.technologies.hasIngredient(technology_name, "military-science-pack") or
+    krastorio.technologies.hasIngredient(technology_name, "chemical-science-pack") or
+    krastorio.technologies.hasIngredient(technology_name, "production-science-pack") or
+    krastorio.technologies.hasIngredient(technology_name, "utility-science-pack") or
+    krastorio.technologies.hasIngredient(technology_name, "space-science-pack") or
+    krastorio.technologies.hasIngredient(technology_name, "matter-tech-card")
+  then
+    krastorio.technologies.removeResearchUnitIngredient(technology_name, "basic-tech-card")
+  end
 end
 
 --------------------------------------------------------------------
@@ -247,7 +247,7 @@ krastorio.technologies.removeResearchUnitIngredient("gate", "logistic-science-pa
 
 krastorio.technologies.setResearchUnitCount("logistic-system", 250)
 krastorio.technologies.setResearchUnitCount("coal-liquefaction", 150)
-krastorio.technologies.setResearchUnitCount("automation-3", 350	)
+krastorio.technologies.setResearchUnitCount("automation-3", 350 )
 krastorio.technologies.setResearchUnitCount("effect-transmission", 500)
 krastorio.technologies.setResearchUnitCount("low-density-structure", 500)
 
@@ -285,910 +285,910 @@ data:extend(
 
 -- -- -- -- -- -- --
 
-	{
-		type = "technology",
-		name = "mining-productivity-11",
-		icons =
-		{
-			{
-				icon = "__base__/graphics/technology/mining-productivity.png",
-				icon_size = 256,
-				icon_mipmaps = 4
-			},
-			{
-				icon = "__core__/graphics/icons/technology/constants/constant-mining-productivity.png",
-				icon_size = 128,
-				icon_mipmaps = 3,
-				shift = {100, 100}
-			}
-		},
-		icon_size = 256,
-		icon_mipmaps = 4,
-		effects =
-		{
-			{
-				type = "mining-drill-productivity-bonus",
-				modifier = 0.1
-			}
-		},
-		prerequisites = {"mining-productivity-4", "kr-advanced-tech-card"},
-		unit =
-		{
-			count_formula = "(L^2)*200",
-			ingredients =
-			{
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
-				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1}
-			},
-			time = 60
-		},
-		max_level = 15,
-		upgrade = true,
-		order = "c-k-f-w"
-	},
-	{
-		type = "technology",
-		name = "mining-productivity-16",
-		icons =
-		{
-			{
-				icon = "__base__/graphics/technology/mining-productivity.png",
-				icon_size = 256,
-				icon_mipmaps = 4
-			},
-			{
-				icon = "__core__/graphics/icons/technology/constants/constant-mining-productivity.png",
-				icon_size = 128,
-				icon_mipmaps = 3,
-				shift = {100, 100}
-			}
-		},
-		icon_size = 256,
-		icon_mipmaps = 4,
-		effects =
-		{
-			{
-				type = "mining-drill-productivity-bonus",
-				modifier = 0.1
-			}
-		},
-		prerequisites = {"mining-productivity-11", "kr-singularity-tech-card"},
-		unit =
-		{
-			count_formula = "(L^2)*200",
-			ingredients =
-			{
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
-				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1},
-				{"singularity-tech-card", 1}
-			},
-			time = 60
-		},
-		max_level = 100,
-		upgrade = true,
-		order = "c-k-f-z"
-	},
+  {
+    type = "technology",
+    name = "mining-productivity-11",
+    icons =
+    {
+      {
+        icon = "__base__/graphics/technology/mining-productivity.png",
+        icon_size = 256,
+        icon_mipmaps = 4
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-mining-productivity.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = {100, 100}
+      }
+    },
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects =
+    {
+      {
+        type = "mining-drill-productivity-bonus",
+        modifier = 0.1
+      }
+    },
+    prerequisites = {"mining-productivity-4", "kr-advanced-tech-card"},
+    unit =
+    {
+      count_formula = "(L^2)*200",
+      ingredients =
+      {
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"matter-tech-card", 1},
+        {"advanced-tech-card", 1}
+      },
+      time = 60
+    },
+    max_level = 15,
+    upgrade = true,
+    order = "c-k-f-w"
+  },
+  {
+    type = "technology",
+    name = "mining-productivity-16",
+    icons =
+    {
+      {
+        icon = "__base__/graphics/technology/mining-productivity.png",
+        icon_size = 256,
+        icon_mipmaps = 4
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-mining-productivity.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = {100, 100}
+      }
+    },
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects =
+    {
+      {
+        type = "mining-drill-productivity-bonus",
+        modifier = 0.1
+      }
+    },
+    prerequisites = {"mining-productivity-11", "kr-singularity-tech-card"},
+    unit =
+    {
+      count_formula = "(L^2)*200",
+      ingredients =
+      {
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"matter-tech-card", 1},
+        {"advanced-tech-card", 1},
+        {"singularity-tech-card", 1}
+      },
+      time = 60
+    },
+    max_level = 100,
+    upgrade = true,
+    order = "c-k-f-z"
+  },
 
 -- -- -- -- -- -- --
 
-	{
-		type = "technology",
-		name = "worker-robots-speed-7",
-		icons =
-		{
-			{
-				icon = "__base__/graphics/technology/worker-robots-speed.png",
-				icon_size = 256,
-				icon_mipmaps = 4
-			},
-			{
-				icon = "__core__/graphics/icons/technology/constants/constant-movement-speed.png",
-				icon_size = 128,
-				icon_mipmaps = 3,
-				shift = {100, 100}
-			}
-		},
-		icon_size = 256,
-		icon_mipmaps = 4,
-		effects =
-		{
-			{
-				type = "worker-robot-speed",
-				modifier = 0.60
-			}
-		},
-		prerequisites = {"worker-robots-speed-6", "kr-advanced-tech-card"},
-		unit =
-		{
-			count_formula = "((L-6)^2)*5000",
-			ingredients =
-			{
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
-				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1}
-			},
-			time = 60
-		},
-		max_level = 8,
-		upgrade = true,
-		order = "c-k-f-w"
-	},
+  {
+    type = "technology",
+    name = "worker-robots-speed-7",
+    icons =
+    {
+      {
+        icon = "__base__/graphics/technology/worker-robots-speed.png",
+        icon_size = 256,
+        icon_mipmaps = 4
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-movement-speed.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = {100, 100}
+      }
+    },
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects =
+    {
+      {
+        type = "worker-robot-speed",
+        modifier = 0.60
+      }
+    },
+    prerequisites = {"worker-robots-speed-6", "kr-advanced-tech-card"},
+    unit =
+    {
+      count_formula = "((L-6)^2)*5000",
+      ingredients =
+      {
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"matter-tech-card", 1},
+        {"advanced-tech-card", 1}
+      },
+      time = 60
+    },
+    max_level = 8,
+    upgrade = true,
+    order = "c-k-f-w"
+  },
 
-	{
-		type = "technology",
-		name = "worker-robots-speed-9",
-		icons =
-		{
-			{
-				icon = "__base__/graphics/technology/worker-robots-speed.png",
-				icon_size = 256,
-				icon_mipmaps = 4
-			},
-			{
-				icon = "__core__/graphics/icons/technology/constants/constant-movement-speed.png",
-				icon_size = 128,
-				icon_mipmaps = 3,
-				shift = {100, 100}
-			}
-		},
-		icon_size = 256,
-		icon_mipmaps = 4,
-		effects =
-		{
-			{
-				type = "worker-robot-speed",
-				modifier = 0.375
-			}
-		},
-		prerequisites = {"worker-robots-speed-7", "kr-singularity-tech-card"},
-		unit =
-		{
-			count_formula = "((L-8)^2)*5000",
-			ingredients =
-			{
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
-				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1},
-				{"singularity-tech-card", 1}
-			},
-			time = 60
-		},
-		max_level = 10,
-		upgrade = true,
-		order = "c-k-f-z"
-	},
-
--- -- -- -- -- -- --
-
-	{
-		type = "technology",
-		name = "follower-robot-count-8",
-		icons =
-		{
-			{
-				icon = "__base__/graphics/technology/follower-robots.png",
-				icon_size = 256,
-				icon_mipmaps = 4
-			},
-			{
-				icon = "__core__/graphics/icons/technology/constants/constant-count.png",
-				icon_size = 128,
-				icon_mipmaps = 3,
-				shift = {100, 100}
-			}
-		},
-		icon_size = 256,
-		icon_mipmaps = 4,
-		effects =
-		{
-			{
-				type = "maximum-following-robots-count",
-				modifier = 15
-			}
-		},
-		prerequisites = {"follower-robot-count-7", "kr-advanced-tech-card"},
-		unit =
-		{
-			count_formula = "((L-7)^2)*5000",
-			ingredients =
-			{
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
-				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1}
-			},
-			time = 60
-		},
-		upgrade = true,
-		order = "c-k-f-w"
-	},
-
-	{
-		type = "technology",
-		name = "follower-robot-count-9",
-		icons =
-		{
-			{
-				icon = "__base__/graphics/technology/follower-robots.png",
-				icon_size = 256,
-				icon_mipmaps = 4
-			},
-			{
-				icon = "__core__/graphics/icons/technology/constants/constant-count.png",
-				icon_size = 128,
-				icon_mipmaps = 3,
-				shift = {100, 100}
-			}
-		},
-		icon_size = 256,
-		icon_mipmaps = 4,
-		effects =
-		{
-			{
-				type = "maximum-following-robots-count",
-				modifier = 15
-			}
-		},
-		prerequisites = {"follower-robot-count-8", "kr-singularity-tech-card"},
-		unit =
-		{
-			count_formula = "((L-8)^2)*5000",
-			ingredients =
-			{
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
-				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1},
-				{"singularity-tech-card", 1}
-			},
-			time = 60
-		},
-		max_level = 10,
-		upgrade = true,
-		order = "c-k-f-z"
-	},
+  {
+    type = "technology",
+    name = "worker-robots-speed-9",
+    icons =
+    {
+      {
+        icon = "__base__/graphics/technology/worker-robots-speed.png",
+        icon_size = 256,
+        icon_mipmaps = 4
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-movement-speed.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = {100, 100}
+      }
+    },
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects =
+    {
+      {
+        type = "worker-robot-speed",
+        modifier = 0.375
+      }
+    },
+    prerequisites = {"worker-robots-speed-7", "kr-singularity-tech-card"},
+    unit =
+    {
+      count_formula = "((L-8)^2)*5000",
+      ingredients =
+      {
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"matter-tech-card", 1},
+        {"advanced-tech-card", 1},
+        {"singularity-tech-card", 1}
+      },
+      time = 60
+    },
+    max_level = 10,
+    upgrade = true,
+    order = "c-k-f-z"
+  },
 
 -- -- -- -- -- -- --
 
-	{
-		type = "technology",
-		name = "physical-projectile-damage-11",
-		icons =
-		{
-			{
-				icon = "__base__/graphics/technology/physical-projectile-damage-2.png",
-				icon_size = 256,
-				icon_mipmaps = 4
-			},
-			{
-				icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
-				icon_size = 128,
-				icon_mipmaps = 3,
-				shift = {100, 100}
-			}
-		},
-		icon_size = 256,
-		icon_mipmaps = 4,
-		effects =
-		{
-			{
-				type = "ammo-damage",
-				ammo_category = "bullet",
-				modifier = 0.1
-			},
-			{
-				type = "turret-attack",
-				turret_id = "gun-turret",
-				modifier = 0.1
-			},
-			{
-				type = "ammo-damage",
-				ammo_category = "shotgun-shell",
-				modifier = 0.1
-			},
-			{
-				type = "ammo-damage",
-				ammo_category = "cannon-shell",
-				modifier = 0.1
-			}
-		},
-		prerequisites = {"physical-projectile-damage-7", "kr-advanced-tech-card"},
-		unit =
-		{
-			count_formula = "((L-10)^2)*3000",
-			ingredients =
-			{
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
-				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1}
-			},
-			time = 60
-		},
-		max_level = 15,
-		upgrade = true,
-		order = "c-k-f-w"
-	},
-	{
-		type = "technology",
-		name = "physical-projectile-damage-16",
-		icons =
-		{
-			{
-				icon = "__base__/graphics/technology/physical-projectile-damage-2.png",
-				icon_size = 256,
-				icon_mipmaps = 4
-			},
-			{
-				icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
-				icon_size = 128,
-				icon_mipmaps = 3,
-				shift = {100, 100}
-			}
-		},
-		icon_size = 256,
-		icon_mipmaps = 4,
-		effects =
-		{
-			{
-				type = "ammo-damage",
-				ammo_category = "bullet",
-				modifier = 0.1
-			},
-			{
-				type = "turret-attack",
-				turret_id = "gun-turret",
-				modifier = 0.1
-			},
-			{
-				type = "ammo-damage",
-				ammo_category = "shotgun-shell",
-				modifier = 0.1
-			},
-			{
-				type = "ammo-damage",
-				ammo_category = "cannon-shell",
-				modifier = 0.1
-			}
-		},
-		prerequisites = {"physical-projectile-damage-11", "kr-singularity-tech-card"},
-		unit =
-		{
-			count_formula = "((L-15)^2)*3000",
-			ingredients =
-			{
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
-				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1},
-				{"singularity-tech-card", 1}
-			},
-			time = 60
-		},
-		max_level = 18,
-		upgrade = true,
-		order = "c-k-f-z"
-	},
+  {
+    type = "technology",
+    name = "follower-robot-count-8",
+    icons =
+    {
+      {
+        icon = "__base__/graphics/technology/follower-robots.png",
+        icon_size = 256,
+        icon_mipmaps = 4
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-count.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = {100, 100}
+      }
+    },
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects =
+    {
+      {
+        type = "maximum-following-robots-count",
+        modifier = 15
+      }
+    },
+    prerequisites = {"follower-robot-count-7", "kr-advanced-tech-card"},
+    unit =
+    {
+      count_formula = "((L-7)^2)*5000",
+      ingredients =
+      {
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"matter-tech-card", 1},
+        {"advanced-tech-card", 1}
+      },
+      time = 60
+    },
+    upgrade = true,
+    order = "c-k-f-w"
+  },
+
+  {
+    type = "technology",
+    name = "follower-robot-count-9",
+    icons =
+    {
+      {
+        icon = "__base__/graphics/technology/follower-robots.png",
+        icon_size = 256,
+        icon_mipmaps = 4
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-count.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = {100, 100}
+      }
+    },
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects =
+    {
+      {
+        type = "maximum-following-robots-count",
+        modifier = 15
+      }
+    },
+    prerequisites = {"follower-robot-count-8", "kr-singularity-tech-card"},
+    unit =
+    {
+      count_formula = "((L-8)^2)*5000",
+      ingredients =
+      {
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"matter-tech-card", 1},
+        {"advanced-tech-card", 1},
+        {"singularity-tech-card", 1}
+      },
+      time = 60
+    },
+    max_level = 10,
+    upgrade = true,
+    order = "c-k-f-z"
+  },
 
 -- -- -- -- -- -- --
 
-	{
-		type = "technology",
-		name = "stronger-explosives-11",
-		icons =
-		{
-			{
-				icon = "__base__/graphics/technology/stronger-explosives-3.png",
-				icon_size = 256,
-				icon_mipmaps = 4
-			},
-			{
-				icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
-				icon_size = 128,
-				icon_mipmaps = 3,
-				shift = {100, 100}
-			}
-		},
-		icon_size = 256,
-		icon_mipmaps = 4,
-		effects =
-		{
-			{
-				type = "ammo-damage",
-				ammo_category = "rocket",
-				modifier = 0.1
-			},
-			{
-				type = "ammo-damage",
-				ammo_category = "grenade",
-				modifier = 0.1
-			},
-			{
-				type = "ammo-damage",
-				ammo_category = "artillery-shell",
-				modifier = 0.1
-			},
-			{
-				type = "ammo-damage",
-				ammo_category = "landmine",
-				modifier = 0.1
-			}
-		},
-		prerequisites = {"stronger-explosives-7", "kr-advanced-tech-card"},
-		unit =
-		{
-			count_formula = "((L-10)^2)*3000",
-			ingredients =
-			{
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
-				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1}
-			},
-			time = 60
-		},
-		max_level = 15,
-		upgrade = true,
-		order = "c-k-f-w"
-	},
-	{
-		type = "technology",
-		name = "stronger-explosives-16",
-		icons =
-		{
-			{
-				icon = "__base__/graphics/technology/stronger-explosives-3.png",
-				icon_size = 256,
-				icon_mipmaps = 4
-			},
-			{
-				icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
-				icon_size = 128,
-				icon_mipmaps = 3,
-				shift = {100, 100}
-			}
-		},
-		icon_size = 256,
-		icon_mipmaps = 4,
-		effects =
-		{
-			{
-				type = "ammo-damage",
-				ammo_category = "rocket",
-				modifier = 0.1
-			},
-			{
-				type = "ammo-damage",
-				ammo_category = "grenade",
-				modifier = 0.1
-			},
-			{
-				type = "ammo-damage",
-				ammo_category = "artillery-shell",
-				modifier = 0.1
-			},
-			{
-				type = "ammo-damage",
-				ammo_category = "landmine",
-				modifier = 0.1
-			}
-		},
-		prerequisites = {"stronger-explosives-11", "kr-singularity-tech-card"},
-		unit =
-		{
-			count_formula = "((L-15)^2)*3000",
-			ingredients =
-			{
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
-				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1},
-				{"singularity-tech-card", 1}
-			},
-			time = 60
-		},
-		max_level = 18,
-		upgrade = true,
-		order = "c-k-f-z"
-	},
+  {
+    type = "technology",
+    name = "physical-projectile-damage-11",
+    icons =
+    {
+      {
+        icon = "__base__/graphics/technology/physical-projectile-damage-2.png",
+        icon_size = 256,
+        icon_mipmaps = 4
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = {100, 100}
+      }
+    },
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects =
+    {
+      {
+        type = "ammo-damage",
+        ammo_category = "bullet",
+        modifier = 0.1
+      },
+      {
+        type = "turret-attack",
+        turret_id = "gun-turret",
+        modifier = 0.1
+      },
+      {
+        type = "ammo-damage",
+        ammo_category = "shotgun-shell",
+        modifier = 0.1
+      },
+      {
+        type = "ammo-damage",
+        ammo_category = "cannon-shell",
+        modifier = 0.1
+      }
+    },
+    prerequisites = {"physical-projectile-damage-7", "kr-advanced-tech-card"},
+    unit =
+    {
+      count_formula = "((L-10)^2)*3000",
+      ingredients =
+      {
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"matter-tech-card", 1},
+        {"advanced-tech-card", 1}
+      },
+      time = 60
+    },
+    max_level = 15,
+    upgrade = true,
+    order = "c-k-f-w"
+  },
+  {
+    type = "technology",
+    name = "physical-projectile-damage-16",
+    icons =
+    {
+      {
+        icon = "__base__/graphics/technology/physical-projectile-damage-2.png",
+        icon_size = 256,
+        icon_mipmaps = 4
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = {100, 100}
+      }
+    },
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects =
+    {
+      {
+        type = "ammo-damage",
+        ammo_category = "bullet",
+        modifier = 0.1
+      },
+      {
+        type = "turret-attack",
+        turret_id = "gun-turret",
+        modifier = 0.1
+      },
+      {
+        type = "ammo-damage",
+        ammo_category = "shotgun-shell",
+        modifier = 0.1
+      },
+      {
+        type = "ammo-damage",
+        ammo_category = "cannon-shell",
+        modifier = 0.1
+      }
+    },
+    prerequisites = {"physical-projectile-damage-11", "kr-singularity-tech-card"},
+    unit =
+    {
+      count_formula = "((L-15)^2)*3000",
+      ingredients =
+      {
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"matter-tech-card", 1},
+        {"advanced-tech-card", 1},
+        {"singularity-tech-card", 1}
+      },
+      time = 60
+    },
+    max_level = 18,
+    upgrade = true,
+    order = "c-k-f-z"
+  },
 
 -- -- -- -- -- -- --
 
-	{
-		type = "technology",
-		name = "refined-flammables-11",
-		icons =
-		{
-			{
-				icon = "__base__/graphics/technology/refined-flammables.png",
-				icon_size = 256,
-				icon_mipmaps = 4
-			},
-			{
-				icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
-				icon_size = 128,
-				icon_mipmaps = 3,
-				shift = {100, 100}
-			}
-		},
-		icon_size = 256,
-		icon_mipmaps = 4,
-		effects =
-		{
-			{
-				type = "ammo-damage",
-				ammo_category = "flamethrower",
-				modifier = 0.1
-			},
-			{
-				type = "turret-attack",
-				turret_id = "flamethrower-turret",
-				modifier = 0.1
-			}
-		},
-		prerequisites = {"refined-flammables-7", "kr-advanced-tech-card"},
-		unit =
-		{
-			count_formula = "((L-10)^2)*3000",
-			ingredients =
-			{
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
-				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1}
-			},
-			time = 60
-		},
-		max_level = 15,
-		upgrade = true,
-		order = "c-k-f-w"
-	},
-	{
-		type = "technology",
-		name = "refined-flammables-16",
-		icons =
-		{
-			{
-				icon = "__base__/graphics/technology/refined-flammables.png",
-				icon_size = 256,
-				icon_mipmaps = 4
-			},
-			{
-				icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
-				icon_size = 128,
-				icon_mipmaps = 3,
-				shift = {100, 100}
-			}
-		},
-		icon_size = 256,
-		icon_mipmaps = 4,
-		effects =
-		{
-			{
-				type = "ammo-damage",
-				ammo_category = "flamethrower",
-				modifier = 0.1
-			},
-			{
-				type = "turret-attack",
-				turret_id = "flamethrower-turret",
-				modifier = 0.1
-			}
-		},
-		prerequisites = {"refined-flammables-11", "kr-singularity-tech-card"},
-		unit =
-		{
-			count_formula = "((L-15)^2)*3000",
-			ingredients =
-			{
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
-				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1},
-				{"singularity-tech-card", 1}
-			},
-			time = 60
-		},
-		max_level = 18,
-		upgrade = true,
-		order = "c-k-f-z"
-	},
+  {
+    type = "technology",
+    name = "stronger-explosives-11",
+    icons =
+    {
+      {
+        icon = "__base__/graphics/technology/stronger-explosives-3.png",
+        icon_size = 256,
+        icon_mipmaps = 4
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = {100, 100}
+      }
+    },
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects =
+    {
+      {
+        type = "ammo-damage",
+        ammo_category = "rocket",
+        modifier = 0.1
+      },
+      {
+        type = "ammo-damage",
+        ammo_category = "grenade",
+        modifier = 0.1
+      },
+      {
+        type = "ammo-damage",
+        ammo_category = "artillery-shell",
+        modifier = 0.1
+      },
+      {
+        type = "ammo-damage",
+        ammo_category = "landmine",
+        modifier = 0.1
+      }
+    },
+    prerequisites = {"stronger-explosives-7", "kr-advanced-tech-card"},
+    unit =
+    {
+      count_formula = "((L-10)^2)*3000",
+      ingredients =
+      {
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"matter-tech-card", 1},
+        {"advanced-tech-card", 1}
+      },
+      time = 60
+    },
+    max_level = 15,
+    upgrade = true,
+    order = "c-k-f-w"
+  },
+  {
+    type = "technology",
+    name = "stronger-explosives-16",
+    icons =
+    {
+      {
+        icon = "__base__/graphics/technology/stronger-explosives-3.png",
+        icon_size = 256,
+        icon_mipmaps = 4
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = {100, 100}
+      }
+    },
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects =
+    {
+      {
+        type = "ammo-damage",
+        ammo_category = "rocket",
+        modifier = 0.1
+      },
+      {
+        type = "ammo-damage",
+        ammo_category = "grenade",
+        modifier = 0.1
+      },
+      {
+        type = "ammo-damage",
+        ammo_category = "artillery-shell",
+        modifier = 0.1
+      },
+      {
+        type = "ammo-damage",
+        ammo_category = "landmine",
+        modifier = 0.1
+      }
+    },
+    prerequisites = {"stronger-explosives-11", "kr-singularity-tech-card"},
+    unit =
+    {
+      count_formula = "((L-15)^2)*3000",
+      ingredients =
+      {
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"matter-tech-card", 1},
+        {"advanced-tech-card", 1},
+        {"singularity-tech-card", 1}
+      },
+      time = 60
+    },
+    max_level = 18,
+    upgrade = true,
+    order = "c-k-f-z"
+  },
 
 -- -- -- -- -- -- --
 
-	{
-		type = "technology",
-		name = "energy-weapons-damage-11",
-		icons =
-		{
-			{
-				icon = "__base__/graphics/technology/energy-weapons-damage.png",
-				icon_size = 256,
-				icon_mipmaps = 4
-			},
-			{
-				icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
-				icon_size = 128,
-				icon_mipmaps = 3,
-				shift = {100, 100}
-			}
-		},
-		icon_size = 256,
-		icon_mipmaps = 4,
-		effects =
-		{
-			{
-				type = "ammo-damage",
-				ammo_category = "laser",
-				modifier = 0.1
-			}
-		},
-		prerequisites = {"energy-weapons-damage-7", "kr-advanced-tech-card"},
-		unit =
-		{
-			count_formula = "((L-10)^2)*3000",
-			ingredients =
-			{
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
-				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1}
-			},
-			time = 60
-		},
-		max_level = 15,
-		upgrade = true,
-		order = "c-k-f-w"
-	},
-	{
-		type = "technology",
-		name = "energy-weapons-damage-16",
-		icons =
-		{
-			{
-				icon = "__base__/graphics/technology/energy-weapons-damage.png",
-				icon_size = 256,
-				icon_mipmaps = 4
-			},
-			{
-				icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
-				icon_size = 128,
-				icon_mipmaps = 3,
-				shift = {100, 100}
-			}
-		},
-		icon_size = 256,
-		icon_mipmaps = 4,
-		effects =
-		{
-			{
-				type = "ammo-damage",
-				ammo_category = "laser",
-				modifier = 0.1
-			}
-		},
-		prerequisites = {"energy-weapons-damage-11", "kr-singularity-tech-card"},
-		unit =
-		{
-			count_formula = "((L-15)^2)*3000",
-			ingredients =
-			{
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
-				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1},
-				{"singularity-tech-card", 1}
-			},
-			time = 60
-		},
-		max_level = 18,
-		upgrade = true,
-		order = "c-k-f-z"
-	},
+  {
+    type = "technology",
+    name = "refined-flammables-11",
+    icons =
+    {
+      {
+        icon = "__base__/graphics/technology/refined-flammables.png",
+        icon_size = 256,
+        icon_mipmaps = 4
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = {100, 100}
+      }
+    },
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects =
+    {
+      {
+        type = "ammo-damage",
+        ammo_category = "flamethrower",
+        modifier = 0.1
+      },
+      {
+        type = "turret-attack",
+        turret_id = "flamethrower-turret",
+        modifier = 0.1
+      }
+    },
+    prerequisites = {"refined-flammables-7", "kr-advanced-tech-card"},
+    unit =
+    {
+      count_formula = "((L-10)^2)*3000",
+      ingredients =
+      {
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"matter-tech-card", 1},
+        {"advanced-tech-card", 1}
+      },
+      time = 60
+    },
+    max_level = 15,
+    upgrade = true,
+    order = "c-k-f-w"
+  },
+  {
+    type = "technology",
+    name = "refined-flammables-16",
+    icons =
+    {
+      {
+        icon = "__base__/graphics/technology/refined-flammables.png",
+        icon_size = 256,
+        icon_mipmaps = 4
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = {100, 100}
+      }
+    },
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects =
+    {
+      {
+        type = "ammo-damage",
+        ammo_category = "flamethrower",
+        modifier = 0.1
+      },
+      {
+        type = "turret-attack",
+        turret_id = "flamethrower-turret",
+        modifier = 0.1
+      }
+    },
+    prerequisites = {"refined-flammables-11", "kr-singularity-tech-card"},
+    unit =
+    {
+      count_formula = "((L-15)^2)*3000",
+      ingredients =
+      {
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"matter-tech-card", 1},
+        {"advanced-tech-card", 1},
+        {"singularity-tech-card", 1}
+      },
+      time = 60
+    },
+    max_level = 18,
+    upgrade = true,
+    order = "c-k-f-z"
+  },
 
 -- -- -- -- -- -- --
 
-	{
-		type = "technology",
-		name = "artillery-shell-range-3",
-		icons =
-		{
-			{
-				icon = "__base__/graphics/technology/artillery-range.png",
-				icon_size = 256,
-				icon_mipmaps = 4
-			},
-			{
-				icon = "__core__/graphics/icons/technology/constants/constant-range.png",
-				icon_size = 128,
-				icon_mipmaps = 3,
-				shift = {100, 100}
-			}
-		},
-		icon_size = 256,
-		icon_mipmaps = 4,
-		effects =
-		{
-			{
-				type = "artillery-range",
-				modifier = 0.3
-			}
-		},
-		prerequisites = {"artillery-shell-range-1", "kr-advanced-tech-card"},
-		unit =
-		{
-			count_formula = "((L-2)^2)*3500",
-			ingredients =
-			{
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
-				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1}
-			},
-			time = 60
-		},
-		max_level = 4,
-		upgrade = true,
-		order = "c-k-f-w"
-	},
-	{
-		type = "technology",
-		name = "artillery-shell-range-5",
-		icons =
-		{
-			{
-				icon = "__base__/graphics/technology/artillery-range.png",
-				icon_size = 256,
-				icon_mipmaps = 4
-			},
-			{
-				icon = "__core__/graphics/icons/technology/constants/constant-range.png",
-				icon_size = 128,
-				icon_mipmaps = 3,
-				shift = {100, 100}
-			}
-		},
-		icon_size = 256,
-		icon_mipmaps = 4,
-		effects =
-		{
-			{
-			type = "artillery-range",
-			modifier = 0.2
-			}
-		},
-		prerequisites = {"artillery-shell-range-3", "kr-singularity-tech-card"},
-		unit =
-		{
-			count_formula = "((L-4)^2)*3500",
-			ingredients =
-			{
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
-				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1},
-				{"singularity-tech-card", 1}
-			},
-			time = 60
-		},
-		max_level = 7,
-		upgrade = true,
-		order = "c-k-f-z"
-	},
+  {
+    type = "technology",
+    name = "energy-weapons-damage-11",
+    icons =
+    {
+      {
+        icon = "__base__/graphics/technology/energy-weapons-damage.png",
+        icon_size = 256,
+        icon_mipmaps = 4
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = {100, 100}
+      }
+    },
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects =
+    {
+      {
+        type = "ammo-damage",
+        ammo_category = "laser",
+        modifier = 0.1
+      }
+    },
+    prerequisites = {"energy-weapons-damage-7", "kr-advanced-tech-card"},
+    unit =
+    {
+      count_formula = "((L-10)^2)*3000",
+      ingredients =
+      {
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"matter-tech-card", 1},
+        {"advanced-tech-card", 1}
+      },
+      time = 60
+    },
+    max_level = 15,
+    upgrade = true,
+    order = "c-k-f-w"
+  },
+  {
+    type = "technology",
+    name = "energy-weapons-damage-16",
+    icons =
+    {
+      {
+        icon = "__base__/graphics/technology/energy-weapons-damage.png",
+        icon_size = 256,
+        icon_mipmaps = 4
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = {100, 100}
+      }
+    },
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects =
+    {
+      {
+        type = "ammo-damage",
+        ammo_category = "laser",
+        modifier = 0.1
+      }
+    },
+    prerequisites = {"energy-weapons-damage-11", "kr-singularity-tech-card"},
+    unit =
+    {
+      count_formula = "((L-15)^2)*3000",
+      ingredients =
+      {
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"matter-tech-card", 1},
+        {"advanced-tech-card", 1},
+        {"singularity-tech-card", 1}
+      },
+      time = 60
+    },
+    max_level = 18,
+    upgrade = true,
+    order = "c-k-f-z"
+  },
 
 -- -- -- -- -- -- --
 
-	{
-		type = "technology",
-		name = "artillery-shell-speed-3",
-		icons =
-		{
-			{
-				icon = "__base__/graphics/technology/artillery-speed.png",
-				icon_size = 256,
-				icon_mipmaps = 4
-			},
-			{
-				icon = "__core__/graphics/icons/technology/constants/constant-speed.png",
-				icon_size = 128,
-				icon_mipmaps = 3,
-				shift = {100, 100}
-			}
-		},
-		icon_size = 256,
-		icon_mipmaps = 4,
-		effects =
-		{
-			{
-				type = "gun-speed",
-				ammo_category = "artillery-shell",
-				modifier = 0.1
-			}
-		},
-		prerequisites = {"artillery-shell-speed-1", "kr-advanced-tech-card"},
-		unit =
-		{
-			count_formula = "((L-2)^2)*3500",
-			ingredients =
-			{
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
-				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1}
-			},
-			time = 60
-		},
-		max_level = 4,
-		upgrade = true,
-		order = "c-k-f-w"
-	},
-	{
-		type = "technology",
-		name = "artillery-shell-speed-5",
-		icons =
-		{
-			{
-				icon = "__base__/graphics/technology/artillery-speed.png",
-				icon_size = 256,
-				icon_mipmaps = 4
-			},
-			{
-				icon = "__core__/graphics/icons/technology/constants/constant-speed.png",
-				icon_size = 128,
-				icon_mipmaps = 3,
-				shift = {100, 100}
-			}
-		},
-		icon_size = 256,
-		icon_mipmaps = 4,
-		effects =
-		{
-			{
-				type = "gun-speed",
-				ammo_category = "artillery-shell",
-				modifier = 0.1
-			}
-		},
-		prerequisites = {"artillery-shell-speed-3", "kr-singularity-tech-card"},
-		unit =
-		{
-			count_formula = "((L-4)^2)*3500",
-			ingredients =
-			{
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"space-science-pack", 1},
-				{"matter-tech-card", 1},
-				{"advanced-tech-card", 1},
-				{"singularity-tech-card", 1}
-			},
-			time = 60
-		},
-		max_level = 7,
-		upgrade = true,
-		order = "c-k-f-z"
-	}
+  {
+    type = "technology",
+    name = "artillery-shell-range-3",
+    icons =
+    {
+      {
+        icon = "__base__/graphics/technology/artillery-range.png",
+        icon_size = 256,
+        icon_mipmaps = 4
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-range.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = {100, 100}
+      }
+    },
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects =
+    {
+      {
+        type = "artillery-range",
+        modifier = 0.3
+      }
+    },
+    prerequisites = {"artillery-shell-range-1", "kr-advanced-tech-card"},
+    unit =
+    {
+      count_formula = "((L-2)^2)*3500",
+      ingredients =
+      {
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"matter-tech-card", 1},
+        {"advanced-tech-card", 1}
+      },
+      time = 60
+    },
+    max_level = 4,
+    upgrade = true,
+    order = "c-k-f-w"
+  },
+  {
+    type = "technology",
+    name = "artillery-shell-range-5",
+    icons =
+    {
+      {
+        icon = "__base__/graphics/technology/artillery-range.png",
+        icon_size = 256,
+        icon_mipmaps = 4
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-range.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = {100, 100}
+      }
+    },
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects =
+    {
+      {
+      type = "artillery-range",
+      modifier = 0.2
+      }
+    },
+    prerequisites = {"artillery-shell-range-3", "kr-singularity-tech-card"},
+    unit =
+    {
+      count_formula = "((L-4)^2)*3500",
+      ingredients =
+      {
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"matter-tech-card", 1},
+        {"advanced-tech-card", 1},
+        {"singularity-tech-card", 1}
+      },
+      time = 60
+    },
+    max_level = 7,
+    upgrade = true,
+    order = "c-k-f-z"
+  },
+
+-- -- -- -- -- -- --
+
+  {
+    type = "technology",
+    name = "artillery-shell-speed-3",
+    icons =
+    {
+      {
+        icon = "__base__/graphics/technology/artillery-speed.png",
+        icon_size = 256,
+        icon_mipmaps = 4
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-speed.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = {100, 100}
+      }
+    },
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects =
+    {
+      {
+        type = "gun-speed",
+        ammo_category = "artillery-shell",
+        modifier = 0.1
+      }
+    },
+    prerequisites = {"artillery-shell-speed-1", "kr-advanced-tech-card"},
+    unit =
+    {
+      count_formula = "((L-2)^2)*3500",
+      ingredients =
+      {
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"matter-tech-card", 1},
+        {"advanced-tech-card", 1}
+      },
+      time = 60
+    },
+    max_level = 4,
+    upgrade = true,
+    order = "c-k-f-w"
+  },
+  {
+    type = "technology",
+    name = "artillery-shell-speed-5",
+    icons =
+    {
+      {
+        icon = "__base__/graphics/technology/artillery-speed.png",
+        icon_size = 256,
+        icon_mipmaps = 4
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-speed.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = {100, 100}
+      }
+    },
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects =
+    {
+      {
+        type = "gun-speed",
+        ammo_category = "artillery-shell",
+        modifier = 0.1
+      }
+    },
+    prerequisites = {"artillery-shell-speed-3", "kr-singularity-tech-card"},
+    unit =
+    {
+      count_formula = "((L-4)^2)*3500",
+      ingredients =
+      {
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"matter-tech-card", 1},
+        {"advanced-tech-card", 1},
+        {"singularity-tech-card", 1}
+      },
+      time = 60
+    },
+    max_level = 7,
+    upgrade = true,
+    order = "c-k-f-z"
+  }
 })

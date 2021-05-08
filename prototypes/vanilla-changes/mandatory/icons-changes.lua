@@ -5,188 +5,188 @@
 -- Automation science pack
 krastorio.icons.setItemIcon("automation-science-pack",                kr_cards_icons_path .. "automation-tech-card.png", 64, 4)
 if data.raw.tool["automation-science-pack"] then
-	data.raw.tool["automation-science-pack"].order = "b02[automation-tech-card]"
-	data.raw.tool["automation-science-pack"].pictures =
-	{
-		layers =
-		{
-			{
-				size = 64,
-				filename = kr_cards_icons_path .. "automation-tech-card.png",
-				scale = 0.25,
-				mipmap_count = 4
-			},
-			{
-				draw_as_light = true,
-				flags = {"light"},
-				size = 64,
-				filename = kr_cards_icons_path .. "automation-tech-card-light.png",
-				scale = 0.25,
-				mipmap_count = 4
-			}
-		}
-	}
+  data.raw.tool["automation-science-pack"].order = "b02[automation-tech-card]"
+  data.raw.tool["automation-science-pack"].pictures =
+  {
+    layers =
+    {
+      {
+        size = 64,
+        filename = kr_cards_icons_path .. "automation-tech-card.png",
+        scale = 0.25,
+        mipmap_count = 4
+      },
+      {
+        draw_as_light = true,
+        flags = {"light"},
+        size = 64,
+        filename = kr_cards_icons_path .. "automation-tech-card-light.png",
+        scale = 0.25,
+        mipmap_count = 4
+      }
+    }
+  }
 end
 
 -- Logistic science pack
 krastorio.icons.setItemIcon("logistic-science-pack",                  kr_cards_icons_path .. "logistic-tech-card.png", 64, 4)
 if data.raw.tool["automation-science-pack"] then
-	data.raw.tool["logistic-science-pack"].order = "b03[logistic-tech-card]"
-	data.raw.tool["logistic-science-pack"].pictures =
-	{
-		layers =
-		{
-			{
-				size = 64,
-				filename = kr_cards_icons_path .. "logistic-tech-card.png",
-				scale = 0.25,
-				mipmap_count = 4
-			},
-			{
-				draw_as_light = true,
-				flags = {"light"},
-				size = 64,
-				filename = kr_cards_icons_path .. "logistic-tech-card-light.png",
-				scale = 0.25,
-				mipmap_count = 4
-			}
-		}
-	}
+  data.raw.tool["logistic-science-pack"].order = "b03[logistic-tech-card]"
+  data.raw.tool["logistic-science-pack"].pictures =
+  {
+    layers =
+    {
+      {
+        size = 64,
+        filename = kr_cards_icons_path .. "logistic-tech-card.png",
+        scale = 0.25,
+        mipmap_count = 4
+      },
+      {
+        draw_as_light = true,
+        flags = {"light"},
+        size = 64,
+        filename = kr_cards_icons_path .. "logistic-tech-card-light.png",
+        scale = 0.25,
+        mipmap_count = 4
+      }
+    }
+  }
 end
 krastorio.icons.setTechnologyIcon("logistic-science-pack",            kr_technologies_icons_path .. "logistic-tech-card.png", 256, 4)
 
 -- Military science pack
 krastorio.icons.setItemIcon("military-science-pack",                  kr_cards_icons_path .. "military-tech-card.png", 64, 4)
 if data.raw.tool["military-science-pack"] then
-	data.raw.tool["military-science-pack"].order = "b04[military-tech-card]"
-	data.raw.tool["military-science-pack"].pictures =
-	{
-		layers =
-		{
-			{
-				size = 64,
-				filename = kr_cards_icons_path .. "military-tech-card.png",
-				scale = 0.25,
-				mipmap_count = 4
-			},
-			{
-				draw_as_light = true,
-				flags = {"light"},
-				size = 64,
-				filename = kr_cards_icons_path .. "military-tech-card-light.png",
-				scale = 0.25,
-				mipmap_count = 4
-			}
-		}
-	}
+  data.raw.tool["military-science-pack"].order = "b04[military-tech-card]"
+  data.raw.tool["military-science-pack"].pictures =
+  {
+    layers =
+    {
+      {
+        size = 64,
+        filename = kr_cards_icons_path .. "military-tech-card.png",
+        scale = 0.25,
+        mipmap_count = 4
+      },
+      {
+        draw_as_light = true,
+        flags = {"light"},
+        size = 64,
+        filename = kr_cards_icons_path .. "military-tech-card-light.png",
+        scale = 0.25,
+        mipmap_count = 4
+      }
+    }
+  }
 end
 krastorio.icons.setTechnologyIcon("military-science-pack",            kr_technologies_icons_path .. "military-tech-card.png", 256, 4)
 
 -- Chemical science pack
 krastorio.icons.setItemIcon("chemical-science-pack",                  kr_cards_icons_path .. "chemical-tech-card.png", 64, 4)
 if data.raw.tool["chemical-science-pack"] then
-	data.raw.tool["chemical-science-pack"].order = "b05[chemical-tech-card]"
-	data.raw.tool["chemical-science-pack"].pictures =
-	{
-		layers =
-		{
-			{
-				size = 64,
-				filename = kr_cards_icons_path .. "chemical-tech-card.png",
-				scale = 0.25,
-				mipmap_count = 4
-			},
-			{
-				draw_as_light = true,
-				flags = {"light"},
-				size = 64,
-				filename = kr_cards_icons_path .. "chemical-tech-card-light.png",
-				scale = 0.25,
-				mipmap_count = 4
-			}
-		}
-	}
+  data.raw.tool["chemical-science-pack"].order = "b05[chemical-tech-card]"
+  data.raw.tool["chemical-science-pack"].pictures =
+  {
+    layers =
+    {
+      {
+        size = 64,
+        filename = kr_cards_icons_path .. "chemical-tech-card.png",
+        scale = 0.25,
+        mipmap_count = 4
+      },
+      {
+        draw_as_light = true,
+        flags = {"light"},
+        size = 64,
+        filename = kr_cards_icons_path .. "chemical-tech-card-light.png",
+        scale = 0.25,
+        mipmap_count = 4
+      }
+    }
+  }
 end
 krastorio.icons.setTechnologyIcon("chemical-science-pack",            kr_technologies_icons_path .. "chemical-tech-card.png", 256, 4)
 
 -- Production science pack
 krastorio.icons.setItemIcon("production-science-pack",                kr_cards_icons_path .. "production-tech-card.png", 64, 4)
 if data.raw.tool["production-science-pack"] then
-	data.raw.tool["production-science-pack"].order = "b06[production-tech-card]"
-	data.raw.tool["production-science-pack"].pictures =
-	{
-		layers =
-		{
-			{
-				size = 64,
-				filename = kr_cards_icons_path .. "production-tech-card.png",
-				scale = 0.25,
-				mipmap_count = 4
-			},
-			{
-				draw_as_light = true,
-				flags = {"light"},
-				size = 64,
-				filename = kr_cards_icons_path .. "production-tech-card-light.png",
-				scale = 0.25,
-				mipmap_count = 4
-			}
-		}
-	}
+  data.raw.tool["production-science-pack"].order = "b06[production-tech-card]"
+  data.raw.tool["production-science-pack"].pictures =
+  {
+    layers =
+    {
+      {
+        size = 64,
+        filename = kr_cards_icons_path .. "production-tech-card.png",
+        scale = 0.25,
+        mipmap_count = 4
+      },
+      {
+        draw_as_light = true,
+        flags = {"light"},
+        size = 64,
+        filename = kr_cards_icons_path .. "production-tech-card-light.png",
+        scale = 0.25,
+        mipmap_count = 4
+      }
+    }
+  }
 end
 krastorio.icons.setTechnologyIcon("production-science-pack",          kr_technologies_icons_path .. "production-tech-card.png", 256, 4)
 
 -- Utility science pack
 krastorio.icons.setItemIcon("utility-science-pack",                   kr_cards_icons_path .. "utility-tech-card.png", 64, 4)
 if data.raw.tool["utility-science-pack"] then
-	data.raw.tool["utility-science-pack"].order = "b07[utility-tech-card]"
-	data.raw.tool["utility-science-pack"].pictures =
-	{
-		layers =
-		{
-			{
-				size = 64,
-				filename = kr_cards_icons_path .. "utility-tech-card.png",
-				scale = 0.25,
-				mipmap_count = 4
-			},
-			{
-				draw_as_light = true,
-				flags = {"light"},
-				size = 64,
-				filename = kr_cards_icons_path .. "utility-tech-card-light.png",
-				scale = 0.25,
-				mipmap_count = 4
-			}
-		}
-	}
+  data.raw.tool["utility-science-pack"].order = "b07[utility-tech-card]"
+  data.raw.tool["utility-science-pack"].pictures =
+  {
+    layers =
+    {
+      {
+        size = 64,
+        filename = kr_cards_icons_path .. "utility-tech-card.png",
+        scale = 0.25,
+        mipmap_count = 4
+      },
+      {
+        draw_as_light = true,
+        flags = {"light"},
+        size = 64,
+        filename = kr_cards_icons_path .. "utility-tech-card-light.png",
+        scale = 0.25,
+        mipmap_count = 4
+      }
+    }
+  }
 end
 krastorio.icons.setTechnologyIcon("utility-science-pack",             kr_technologies_icons_path .. "utility-tech-card.png", 256, 4)
 
 -- Space science pack
 krastorio.icons.setItemIcon("space-science-pack",                     kr_cards_icons_path .. "optimization-tech-card.png", 64, 4)
 if data.raw.tool["space-science-pack"] then
-	data.raw.tool["space-science-pack"].order = "b08[optimization-tech-card]"
-	data.raw.tool["space-science-pack"].pictures =
-	{
-		layers =
-		{
-			{
-				size = 64,
-				filename = kr_cards_icons_path .. "optimization-tech-card.png",
-				scale = 0.25,
-				mipmap_count = 4
-			},
-			{
-				draw_as_light = true,
-				flags = {"light"},
-				size = 64,
-				filename = kr_cards_icons_path .. "optimization-tech-card-light.png",
-				scale = 0.25,
-				mipmap_count = 4
-			}
-		}
-	}
+  data.raw.tool["space-science-pack"].order = "b08[optimization-tech-card]"
+  data.raw.tool["space-science-pack"].pictures =
+  {
+    layers =
+    {
+      {
+        size = 64,
+        filename = kr_cards_icons_path .. "optimization-tech-card.png",
+        scale = 0.25,
+        mipmap_count = 4
+      },
+      {
+        draw_as_light = true,
+        flags = {"light"},
+        size = 64,
+        filename = kr_cards_icons_path .. "optimization-tech-card-light.png",
+        scale = 0.25,
+        mipmap_count = 4
+      }
+    }
+  }
 end
 krastorio.icons.setTechnologyIcon("space-science-pack",               kr_technologies_icons_path .. "optimization-tech-card.png", 256, 4)
 
@@ -209,14 +209,14 @@ krastorio.icons.setItemIcon("iron-gear-wheel",                        kr_items_i
 
 local light_oil_icon = nil
 if data.raw.fluid["light-oil"].icon == "__base__/graphics/icons/fluid/light-oil.png" then
-	light_oil_icon = kr_fluids_icons_path  .. "light-oil.png"
+  light_oil_icon = kr_fluids_icons_path  .. "light-oil.png"
 else
-	light_oil_icon = data.raw.fluid["light-oil"].icon
+  light_oil_icon = data.raw.fluid["light-oil"].icon
 end
 local rocket_fuel_icons = 
 {
-	{ icon = kr_recipes_icons_path .. "rocket-fuel.png", icon_size = 64 },
-	{ icon = light_oil_icon, icon_size = data.raw.fluid["light-oil"].icon_size or 64, scale = 0.26, shift = {8,-8}}
+  { icon = kr_recipes_icons_path .. "rocket-fuel.png", icon_size = 64 },
+  { icon = light_oil_icon, icon_size = data.raw.fluid["light-oil"].icon_size or 64, scale = 0.26, shift = {8,-8}}
 }
 krastorio.icons.setRecipeIcons("rocket-fuel", rocket_fuel_icons)
 
@@ -233,28 +233,28 @@ krastorio.icons.setRecipeIcon("coal-liquefaction", kr_recipes_icons_path .. "coa
 
 local vanilla_iron_plate_recipe = krastorio.recipes.getRecipeFromName("iron-plate")
 if vanilla_iron_plate_recipe then
-	vanilla_iron_plate_recipe.icon = nil
-	vanilla_iron_plate_recipe.icon_size = 64
-	
-	local iron_ore = krastorio.items.getItem("iron-ore")
-	vanilla_iron_plate_recipe.icons =
-	{
-		{ icon = kr_items_icons_path .. "iron-plate.png", icon_size = 64 },
-		{ icon = iron_ore.icon, icon_size = iron_ore.icon_size, scale = 0.22, shift = {-8, -8} }
-	}
+  vanilla_iron_plate_recipe.icon = nil
+  vanilla_iron_plate_recipe.icon_size = 64
+  
+  local iron_ore = krastorio.items.getItem("iron-ore")
+  vanilla_iron_plate_recipe.icons =
+  {
+    { icon = kr_items_icons_path .. "iron-plate.png", icon_size = 64 },
+    { icon = iron_ore.icon, icon_size = iron_ore.icon_size, scale = 0.22, shift = {-8, -8} }
+  }
 end
 
 local vanilla_copper_plate_recipe = krastorio.recipes.getRecipeFromName("copper-plate")
 if vanilla_copper_plate_recipe then
-	vanilla_copper_plate_recipe.icon = nil
-	vanilla_copper_plate_recipe.icon_size = 64
-	
-	local copper_ore = krastorio.items.getItem("copper-ore")
-	vanilla_copper_plate_recipe.icons =
-	{
-		{ icon = kr_items_icons_path .. "copper-plate.png", icon_size = 64 },
-		{ icon = copper_ore.icon, icon_size = copper_ore.icon_size, scale = 0.22, shift = {-8, -8} }
-	}
+  vanilla_copper_plate_recipe.icon = nil
+  vanilla_copper_plate_recipe.icon_size = 64
+  
+  local copper_ore = krastorio.items.getItem("copper-ore")
+  vanilla_copper_plate_recipe.icons =
+  {
+    { icon = kr_items_icons_path .. "copper-plate.png", icon_size = 64 },
+    { icon = copper_ore.icon, icon_size = copper_ore.icon_size, scale = 0.22, shift = {-8, -8} }
+  }
 end
 
 -----------------------------------------------------------------
@@ -282,20 +282,20 @@ krastorio.icons.setTechnologyIcon("oil-processing",                   kr_technol
 
 krastorio.icons.setTechnologyIcons
 (
-	"steel-axe",
-	{
-		{
-			icon = kr_technologies_icons_path .. "steel-pickaxe.png", icon_size = 256, icon_mipmaps = 4
-		},
-		{
-			icon = "__core__/graphics/icons/technology/constants/constant-mining.png",
-			icon_size = 128,
-			icon_mipmaps = 3,
-			shift = {100, 100}
-		}
-	}, 
-	256, 
-	4
+  "steel-axe",
+  {
+    {
+      icon = kr_technologies_icons_path .. "steel-pickaxe.png", icon_size = 256, icon_mipmaps = 4
+    },
+    {
+      icon = "__core__/graphics/icons/technology/constants/constant-mining.png",
+      icon_size = 128,
+      icon_mipmaps = 3,
+      shift = {100, 100}
+    }
+  }, 
+  256, 
+  4
 )
 
 -- Equipments
@@ -321,32 +321,32 @@ krastorio.icons.setItemIcon("electric-mining-drill",                  kr_entitie
 -----------------------------------------------------------------
 krastorio.icons.setItemIcon("atomic-bomb",                            kr_ammo_icons_path .. "atomic-bomb.png", 64, 4)
 if data.raw.ammo["atomic-bomb"] then
-	data.raw.ammo["atomic-bomb"].pictures =
-	{
-		layers =
-		{
-			{
-				size = 64,
-				filename = kr_ammo_icons_path .. "atomic-bomb.png",
-				scale = 0.25,
-				mipmap_count = 4
-			},
-			{
-				draw_as_light = true,
-				flags = {"light"},
-				size = 64,
-				filename = kr_ammo_icons_path .. "atomic-bomb-light.png",
-				scale = 0.25,
-				mipmap_count = 4
-			}
-		}
-	}
+  data.raw.ammo["atomic-bomb"].pictures =
+  {
+    layers =
+    {
+      {
+        size = 64,
+        filename = kr_ammo_icons_path .. "atomic-bomb.png",
+        scale = 0.25,
+        mipmap_count = 4
+      },
+      {
+        draw_as_light = true,
+        flags = {"light"},
+        size = 64,
+        filename = kr_ammo_icons_path .. "atomic-bomb-light.png",
+        scale = 0.25,
+        mipmap_count = 4
+      }
+    }
+  }
 end
 krastorio.icons.setItemIcon("artillery-shell",                        kr_icons_path .. "ammo/artillery-shell.png", 64, 4)
 -- Landfill
-local landfill = krastorio.recipes.getRecipeFromName("landfill") or false	
-local stone    = krastorio.items.getItem("stone")	
+local landfill = krastorio.recipes.getRecipeFromName("landfill") or false 
+local stone    = krastorio.items.getItem("stone") 
 if landfill and stone then
-	krastorio.icons.addOverlayIcons(landfill, {{icon=stone.icon,  icon_size=stone.icon_size}}, landfill.icon_size, 0.26, {8,-8})
+  krastorio.icons.addOverlayIcons(landfill, {{icon=stone.icon,  icon_size=stone.icon_size}}, landfill.icon_size, 0.26, {8,-8})
 end
 -----------------------------------------------------------------

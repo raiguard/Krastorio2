@@ -3,63 +3,63 @@ local sounds = require("__base__/prototypes/entity/sounds")
 -- -- Rebalance all damage done by player weapons (Turrets, ammo...)
 if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
 
-	local max_nuke_shockwave_movement_distance_deviation = 2
+  local max_nuke_shockwave_movement_distance_deviation = 2
 
-	local max_nuke_shockwave_movement_distance = 19 + max_nuke_shockwave_movement_distance_deviation / 6
+  local max_nuke_shockwave_movement_distance = 19 + max_nuke_shockwave_movement_distance_deviation / 6
 
-	local nuke_shockwave_starting_speed_deviation = 0.075
+  local nuke_shockwave_starting_speed_deviation = 0.075
 
-	-----------------------------------------------------------------------------
-	-- -- -- Turrets
-	-----------------------------------------------------------------------------
+  -----------------------------------------------------------------------------
+  -- -- -- Turrets
+  -----------------------------------------------------------------------------
 
-	-- Artillery wagon gun
-	data.raw["artillery-turret"]["artillery-turret"].turn_after_shooting_cooldown = 120
-	data.raw["artillery-turret"]["artillery-turret"].manual_range_modifier = 5
+  -- Artillery wagon gun
+  data.raw["artillery-turret"]["artillery-turret"].turn_after_shooting_cooldown = 120
+  data.raw["artillery-turret"]["artillery-turret"].manual_range_modifier = 5
    
-	data.raw["artillery-wagon"]["artillery-wagon"].turn_after_shooting_cooldown = 120
-	data.raw["artillery-wagon"]["artillery-wagon"].manual_range_modifier = 3.5
+  data.raw["artillery-wagon"]["artillery-wagon"].turn_after_shooting_cooldown = 120
+  data.raw["artillery-wagon"]["artillery-wagon"].manual_range_modifier = 3.5
 
-	data.raw.gun["artillery-wagon-cannon"].attack_parameters.min_range = 3 * 32
-	data.raw.gun["artillery-wagon-cannon"].attack_parameters.cooldown = 300
+  data.raw.gun["artillery-wagon-cannon"].attack_parameters.min_range = 3 * 32
+  data.raw.gun["artillery-wagon-cannon"].attack_parameters.cooldown = 300
 
-	-- Vehicles guns
-	data.raw.gun["vehicle-machine-gun"].attack_parameters.cooldown = 8
-	data.raw.gun["vehicle-machine-gun"].attack_parameters.damage_modifier = 1.25
-	data.raw.gun["tank-machine-gun"].attack_parameters.cooldown = 8
-	data.raw.gun["tank-machine-gun"].attack_parameters.damage_modifier = 1.25
-	data.raw.gun["tank-cannon"].attack_parameters.cooldown = 120
-	data.raw.gun["rocket-launcher"].attack_parameters.cooldown = 60
-	data.raw.gun["pistol"].attack_parameters.cooldown = 20
-	
-	data.raw.gun["spidertron-rocket-launcher-1"].attack_parameters.cooldown = 90
-	data.raw.gun["spidertron-rocket-launcher-1"].attack_parameters.range = 40
-	data.raw.gun["spidertron-rocket-launcher-2"].attack_parameters.cooldown = 90
-	data.raw.gun["spidertron-rocket-launcher-2"].attack_parameters.range = 40
-	data.raw.gun["spidertron-rocket-launcher-3"].attack_parameters.cooldown = 90
-	data.raw.gun["spidertron-rocket-launcher-3"].attack_parameters.range = 40
-	data.raw.gun["spidertron-rocket-launcher-4"].attack_parameters.cooldown = 90
-	data.raw.gun["spidertron-rocket-launcher-4"].attack_parameters.range = 40
-	
-	
-	-- Gun turret
-	data.raw["ammo-turret"]["gun-turret"].attack_parameters.cooldown = 10
-	data.raw["ammo-turret"]["gun-turret"].attack_parameters.call_for_help_radius = 25
-	data.raw["ammo-turret"]["gun-turret"].max_health = 500
+  -- Vehicles guns
+  data.raw.gun["vehicle-machine-gun"].attack_parameters.cooldown = 8
+  data.raw.gun["vehicle-machine-gun"].attack_parameters.damage_modifier = 1.25
+  data.raw.gun["tank-machine-gun"].attack_parameters.cooldown = 8
+  data.raw.gun["tank-machine-gun"].attack_parameters.damage_modifier = 1.25
+  data.raw.gun["tank-cannon"].attack_parameters.cooldown = 120
+  data.raw.gun["rocket-launcher"].attack_parameters.cooldown = 60
+  data.raw.gun["pistol"].attack_parameters.cooldown = 20
+  
+  data.raw.gun["spidertron-rocket-launcher-1"].attack_parameters.cooldown = 90
+  data.raw.gun["spidertron-rocket-launcher-1"].attack_parameters.range = 40
+  data.raw.gun["spidertron-rocket-launcher-2"].attack_parameters.cooldown = 90
+  data.raw.gun["spidertron-rocket-launcher-2"].attack_parameters.range = 40
+  data.raw.gun["spidertron-rocket-launcher-3"].attack_parameters.cooldown = 90
+  data.raw.gun["spidertron-rocket-launcher-3"].attack_parameters.range = 40
+  data.raw.gun["spidertron-rocket-launcher-4"].attack_parameters.cooldown = 90
+  data.raw.gun["spidertron-rocket-launcher-4"].attack_parameters.range = 40
+  
+  
+  -- Gun turret
+  data.raw["ammo-turret"]["gun-turret"].attack_parameters.cooldown = 10
+  data.raw["ammo-turret"]["gun-turret"].attack_parameters.call_for_help_radius = 25
+  data.raw["ammo-turret"]["gun-turret"].max_health = 500
 
-	-- Laser turret
-	data.raw["electric-turret"]["laser-turret"].max_health = 500 -- nerf /2
-	data.raw["electric-turret"]["laser-turret"].call_for_help_radius = 35 -- nerf -5
-	data.raw["electric-turret"]["laser-turret"].energy_source = -- nerf x2
-	{
-		type = "electric",
-		buffer_capacity = "2000kJ",
-		input_flow_limit = "4000kW",
-		drain = "100kW",
-		usage_priority = "primary-input"
+  -- Laser turret
+  data.raw["electric-turret"]["laser-turret"].max_health = 500 -- nerf /2
+  data.raw["electric-turret"]["laser-turret"].call_for_help_radius = 35 -- nerf -5
+  data.raw["electric-turret"]["laser-turret"].energy_source = -- nerf x2
+  {
+    type = "electric",
+    buffer_capacity = "2000kJ",
+    input_flow_limit = "4000kW",
+    drain = "100kW",
+    usage_priority = "primary-input"
     }
 
-	data.raw["electric-turret"]["laser-turret"].attack_parameters =
+  data.raw["electric-turret"]["laser-turret"].attack_parameters =
     {
       type = "beam",
       cooldown = 30,
@@ -86,142 +86,142 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
       }
     }
 
-	data.raw.recipe["gun-turret"].energy_required = 10
-	data.raw.recipe["flamethrower-turret"].energy_required = 20
-	data.raw.recipe["laser-turret"].energy_required = 30
-	data.raw.recipe["artillery-turret"].energy_required = 60
+  data.raw.recipe["gun-turret"].energy_required = 10
+  data.raw.recipe["flamethrower-turret"].energy_required = 20
+  data.raw.recipe["laser-turret"].energy_required = 30
+  data.raw.recipe["artillery-turret"].energy_required = 60
    
-	-----------------------------------------------------------------------------
-	-- -- -- Projectile
-	-----------------------------------------------------------------------------
+  -----------------------------------------------------------------------------
+  -- -- -- Projectile
+  -----------------------------------------------------------------------------
 
-	-- Projectile accelerations
-	data.raw.projectile["cannon-projectile"].acceleration = 0.1
-	data.raw.projectile["cannon-projectile"].light = {intensity = 0.45, size = 8, color = {r=0.8, g=0.8, b=0.8}}
-	data.raw.projectile["explosive-cannon-projectile"].acceleration = 0.1
-	data.raw.projectile["explosive-cannon-projectile"].light = {intensity = 0.45, size = 8, color = {r=1.0, g=0.75, b=0.75}}
-	data.raw.projectile["uranium-cannon-projectile"].acceleration = 0.1
-	data.raw.projectile["uranium-cannon-projectile"].light = {intensity = 0.45, size = 8, color = {r=0.5, g=0.75, b=0.75}}
-	data.raw.projectile["explosive-uranium-cannon-projectile"].acceleration = 0.1
-	data.raw.projectile["explosive-uranium-cannon-projectile"].light = {intensity = 0.45, size = 8, color = {r=0.5, g=1.0, b=0.75}}
+  -- Projectile accelerations
+  data.raw.projectile["cannon-projectile"].acceleration = 0.1
+  data.raw.projectile["cannon-projectile"].light = {intensity = 0.45, size = 8, color = {r=0.8, g=0.8, b=0.8}}
+  data.raw.projectile["explosive-cannon-projectile"].acceleration = 0.1
+  data.raw.projectile["explosive-cannon-projectile"].light = {intensity = 0.45, size = 8, color = {r=1.0, g=0.75, b=0.75}}
+  data.raw.projectile["uranium-cannon-projectile"].acceleration = 0.1
+  data.raw.projectile["uranium-cannon-projectile"].light = {intensity = 0.45, size = 8, color = {r=0.5, g=0.75, b=0.75}}
+  data.raw.projectile["explosive-uranium-cannon-projectile"].acceleration = 0.1
+  data.raw.projectile["explosive-uranium-cannon-projectile"].light = {intensity = 0.45, size = 8, color = {r=0.5, g=1.0, b=0.75}}
     
-	-- Grenade (normal)
-	data.raw["projectile"]["grenade"].action =
+  -- Grenade (normal)
+  data.raw["projectile"]["grenade"].action =
     {
-		{
-			type = "direct",
-			action_delivery =
-			{
-				type = "instant",
-				target_effects =
-				{
-					{
-						type = "create-entity",
-						entity_name = "medium-explosion"
-					},
-					{
-						type = "show-explosion-on-chart",
-						scale = 0.5
-					},
-					{
-						type = "create-entity",
-						entity_name = "small-scorchmark",
-						check_buildability = true
-					}
-				}
-			}
-		},
-		{
-			type = "area",
-			radius = 6.5,
-			action_delivery =
-			{
-				type = "instant",
-				target_effects =
-				{
-					{
-						type = "damage",
-						damage = {amount = 100, type = "explosion"}
-					},
-					{
-						type = "create-entity",
-						entity_name = "explosion"
-					}
-				}
-			}
-		}
+    {
+      type = "direct",
+      action_delivery =
+      {
+        type = "instant",
+        target_effects =
+        {
+          {
+            type = "create-entity",
+            entity_name = "medium-explosion"
+          },
+          {
+            type = "show-explosion-on-chart",
+            scale = 0.5
+          },
+          {
+            type = "create-entity",
+            entity_name = "small-scorchmark",
+            check_buildability = true
+          }
+        }
+      }
+    },
+    {
+      type = "area",
+      radius = 6.5,
+      action_delivery =
+      {
+        type = "instant",
+        target_effects =
+        {
+          {
+            type = "damage",
+            damage = {amount = 100, type = "explosion"}
+          },
+          {
+            type = "create-entity",
+            entity_name = "explosion"
+          }
+        }
+      }
+    }
     }
 
-	-- Artillery projectile
-	data.raw["artillery-projectile"]["artillery-projectile"].action.action_delivery.target_effects =
-	{
-		{
-			type = "nested-result",
-			action =
-			{
-				type = "area",
-				radius = 8.0,
-				action_delivery =
-				{
-					type = "instant",
-					target_effects =
-					{
-						{
-							type = "damage",
-							damage = {amount = 1000 , type = "physical"}
-						},
-						{
-							type = "damage",
-							damage = {amount = 1000 , type = "explosion"}
-						}
-					}
-				}
-			}
-		},
-		{
-			type = "create-trivial-smoke",
-			smoke_name = "artillery-smoke",
-			initial_height = 0,
-			speed_from_center = 0.05,
-			speed_from_center_deviation = 0.005,
-			offset_deviation = {{-4, -4}, {4, 4}},
-			max_radius = 5,
-			repeat_count = 4 * 4 * 15
-		},
-		{
-			type = "create-entity",
-			entity_name = "big-artillery-explosion"
-		},
-		{
-			type = "show-explosion-on-chart",
-			scale = 1
-		}
-	}
+  -- Artillery projectile
+  data.raw["artillery-projectile"]["artillery-projectile"].action.action_delivery.target_effects =
+  {
+    {
+      type = "nested-result",
+      action =
+      {
+        type = "area",
+        radius = 8.0,
+        action_delivery =
+        {
+          type = "instant",
+          target_effects =
+          {
+            {
+              type = "damage",
+              damage = {amount = 1000 , type = "physical"}
+            },
+            {
+              type = "damage",
+              damage = {amount = 1000 , type = "explosion"}
+            }
+          }
+        }
+      }
+    },
+    {
+      type = "create-trivial-smoke",
+      smoke_name = "artillery-smoke",
+      initial_height = 0,
+      speed_from_center = 0.05,
+      speed_from_center_deviation = 0.005,
+      offset_deviation = {{-4, -4}, {4, 4}},
+      max_radius = 5,
+      repeat_count = 4 * 4 * 15
+    },
+    {
+      type = "create-entity",
+      entity_name = "big-artillery-explosion"
+    },
+    {
+      type = "show-explosion-on-chart",
+      scale = 1
+    }
+  }
 
-	-- Rocket
-	data.raw["projectile"]["rocket"].acceleration = 0.05
-	data.raw["projectile"]["rocket"].light = {intensity = 0.45, size = 8, color = {r=0.8, g=0.8, b=0.8}}
-	data.raw["projectile"]["rocket"].action.action_delivery.target_effects =
-	{
-		{
-			type = "create-entity",
-			entity_name = "explosion"
-		},
-		{
-			type = "damage",
-			damage = {amount = 300, type = "explosion"}
-		},
-		{
-			type = "create-entity",
-			entity_name = "small-scorchmark",
-			check_buildability = true
-		}
-	}
-	
-	-- Explosive rocket
-	data.raw["projectile"]["explosive-rocket"].acceleration = 0.05
-	data.raw["projectile"]["explosive-rocket"].light = {intensity = 0.45, size = 8, color = {r=1, g=0.75, b=0.8}}
-	data.raw["projectile"]["explosive-rocket"].action.action_delivery.target_effects =
+  -- Rocket
+  data.raw["projectile"]["rocket"].acceleration = 0.05
+  data.raw["projectile"]["rocket"].light = {intensity = 0.45, size = 8, color = {r=0.8, g=0.8, b=0.8}}
+  data.raw["projectile"]["rocket"].action.action_delivery.target_effects =
+  {
+    {
+      type = "create-entity",
+      entity_name = "explosion"
+    },
+    {
+      type = "damage",
+      damage = {amount = 300, type = "explosion"}
+    },
+    {
+      type = "create-entity",
+      entity_name = "small-scorchmark",
+      check_buildability = true
+    }
+  }
+  
+  -- Explosive rocket
+  data.raw["projectile"]["explosive-rocket"].acceleration = 0.05
+  data.raw["projectile"]["explosive-rocket"].light = {intensity = 0.45, size = 8, color = {r=1, g=0.75, b=0.8}}
+  data.raw["projectile"]["explosive-rocket"].action.action_delivery.target_effects =
         {
           {
             type = "create-entity",
@@ -231,10 +231,10 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
             type = "damage",
             damage = {amount = 75, type = "explosion"}
           },
-		  {
-			type = "show-explosion-on-chart",
-			scale = 0.5
-		  },
+      {
+      type = "show-explosion-on-chart",
+      scale = 0.5
+      },
           {
             type = "create-entity",
             entity_name = "small-scorchmark",
@@ -265,10 +265,10 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
           }
         }
 
-	data.raw.ammo["atomic-bomb"].ammo_type.range_modifier = 3
-	data.raw["projectile"]["atomic-rocket"].acceleration = 0.01
-	data.raw["projectile"]["atomic-rocket"].light = {intensity = 0.45, size = 9, color = {r=0.5, g=1, b=0.75}}
-	data.raw["projectile"]["atomic-rocket"].action.action_delivery.target_effects =
+  data.raw.ammo["atomic-bomb"].ammo_type.range_modifier = 3
+  data.raw["projectile"]["atomic-rocket"].acceleration = 0.01
+  data.raw["projectile"]["atomic-rocket"].light = {intensity = 0.45, size = 9, color = {r=0.5, g=1, b=0.75}}
+  data.raw["projectile"]["atomic-rocket"].action.action_delivery.target_effects =
         {
           {
             type = "set-tile",
@@ -323,10 +323,10 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
             type = "damage",
             damage = {amount = 1500, type = "radioactive"}
           },
-		  {
-			type = "show-explosion-on-chart",
-			scale = 3
-		  },
+      {
+      type = "show-explosion-on-chart",
+      scale = 3
+      },
           {
             type = "create-entity",
             entity_name = "huge-scorchmark",
@@ -491,9 +491,9 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
             }
           }
         }
-	
-	
-	data.raw["projectile"]["atomic-bomb-wave"].action = 
+  
+  
+  data.raw["projectile"]["atomic-bomb-wave"].action = 
     {
       {
         type = "area",
@@ -511,7 +511,7 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
             lower_damage_modifier = 1,
             upper_damage_modifier = 0.1,
             damage = {amount = 100, type = "explosion"}
-		  },
+      },
           {
             type = "damage",
             vaporize = false,
@@ -520,7 +520,7 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
             lower_damage_modifier = 1,
             upper_damage_modifier = 0.25,
             damage = {amount = 100, type = "radioactive"}
-		  },
+      },
           {
             type = "damage",
             vaporize = false,
@@ -529,107 +529,107 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
             lower_damage_modifier = 1,
             upper_damage_modifier = 0.1,
             damage = {amount = 100, type = "kr-explosion"}
-		  }	
+      } 
         }
       }
     }
 
-	-----------------------------------------------------------------------------
-	-- -- -- AMMO
-	
-	data.raw.ammo["atomic-bomb"].ammo_type.category = "heavy-rocket"
-	data.raw.ammo["atomic-bomb"].ammo_type.range_modifier = 1
-	data.raw.ammo["atomic-bomb"].ammo_type.cooldown_modifier = 3
-	
+  -----------------------------------------------------------------------------
+  -- -- -- AMMO
+  
+  data.raw.ammo["atomic-bomb"].ammo_type.category = "heavy-rocket"
+  data.raw.ammo["atomic-bomb"].ammo_type.range_modifier = 1
+  data.raw.ammo["atomic-bomb"].ammo_type.cooldown_modifier = 3
+  
 
-	-- Firearm magazine (normal ammo)
-	data.raw["ammo"]["firearm-magazine"].ammo_type.action =
-	{
-		type = "direct",
-		action_delivery =
-		{
-			{
-				type = "instant",
-				source_effects =
-				{
-					{
-						type = "create-explosion",
-						entity_name = "explosion-gunshot"
-					}
-				},
-				target_effects =
-				{
-					{
-						type = "create-entity",
-						entity_name = "explosion-hit",
-						offsets = {{0, 1}},
-						offset_deviation = {{-0.5, -0.5}, {0.5, 0.5}}
-					},
-					{
-						type = "damage",
-						damage = { amount = 8 , type = "physical"}
-					}
-				}
-			}
-		}
-	}
+  -- Firearm magazine (normal ammo)
+  data.raw["ammo"]["firearm-magazine"].ammo_type.action =
+  {
+    type = "direct",
+    action_delivery =
+    {
+      {
+        type = "instant",
+        source_effects =
+        {
+          {
+            type = "create-explosion",
+            entity_name = "explosion-gunshot"
+          }
+        },
+        target_effects =
+        {
+          {
+            type = "create-entity",
+            entity_name = "explosion-hit",
+            offsets = {{0, 1}},
+            offset_deviation = {{-0.5, -0.5}, {0.5, 0.5}}
+          },
+          {
+            type = "damage",
+            damage = { amount = 8 , type = "physical"}
+          }
+        }
+      }
+    }
+  }
 
-	-- Piercing rounds magazine
-	data.raw["ammo"]["piercing-rounds-magazine"].ammo_type.action.action_delivery =
-	{
-		type = "instant",
-		source_effects =
-		{
-			type = "create-explosion",
-			entity_name = "explosion-gunshot"
-		},
-		target_effects =
-		{
-			{
-				type = "create-entity",
-				entity_name = "explosion-hit",
-				offsets = {{0, 1}},
-				offset_deviation = {{-0.5, -0.5}, {0.5, 0.5}}
-			},
-			{
-				type = "damage",
-				damage = { amount = 12, type = "physical"}
-			}
-		}
-	}
-	
-	-- Uranium rounds magazine
-	data.raw["ammo"]["uranium-rounds-magazine"].ammo_type.action.action_delivery =
-	{
-		type = "instant",
-		source_effects =
-		{
-			type = "create-explosion",
-			entity_name = "explosion-gunshot"
-		},
-		target_effects =
-		{
-			{
-				type = "create-entity",
-				entity_name = "explosion-hit",
-				offsets = {{0, 1}},
-				offset_deviation = {{-0.5, -0.5}, {0.5, 0.5}}
-			},
-			{
-				type = "damage",
-				damage = { amount = 9, type = "physical"}
-			},
-			{
-				type = "damage",
-				damage = { amount = 9, type = "radioactive"}
-			}
-		}
-	}
+  -- Piercing rounds magazine
+  data.raw["ammo"]["piercing-rounds-magazine"].ammo_type.action.action_delivery =
+  {
+    type = "instant",
+    source_effects =
+    {
+      type = "create-explosion",
+      entity_name = "explosion-gunshot"
+    },
+    target_effects =
+    {
+      {
+        type = "create-entity",
+        entity_name = "explosion-hit",
+        offsets = {{0, 1}},
+        offset_deviation = {{-0.5, -0.5}, {0.5, 0.5}}
+      },
+      {
+        type = "damage",
+        damage = { amount = 12, type = "physical"}
+      }
+    }
+  }
+  
+  -- Uranium rounds magazine
+  data.raw["ammo"]["uranium-rounds-magazine"].ammo_type.action.action_delivery =
+  {
+    type = "instant",
+    source_effects =
+    {
+      type = "create-explosion",
+      entity_name = "explosion-gunshot"
+    },
+    target_effects =
+    {
+      {
+        type = "create-entity",
+        entity_name = "explosion-hit",
+        offsets = {{0, 1}},
+        offset_deviation = {{-0.5, -0.5}, {0.5, 0.5}}
+      },
+      {
+        type = "damage",
+        damage = { amount = 9, type = "physical"}
+      },
+      {
+        type = "damage",
+        damage = { amount = 9, type = "radioactive"}
+      }
+    }
+  }
 
-	data.raw["ammo"]["cannon-shell"].ammo_type.action.action_delivery.max_range = 50
-	data.raw["ammo"]["explosive-cannon-shell"].ammo_type.action.action_delivery.max_range = 50
-	data.raw["ammo"]["uranium-cannon-shell"].ammo_type.action.action_delivery.max_range = 50
-	data.raw["ammo"]["explosive-uranium-cannon-shell"].ammo_type.action.action_delivery.max_range = 50
-	-----------------------------------------------------------------------------
+  data.raw["ammo"]["cannon-shell"].ammo_type.action.action_delivery.max_range = 50
+  data.raw["ammo"]["explosive-cannon-shell"].ammo_type.action.action_delivery.max_range = 50
+  data.raw["ammo"]["uranium-cannon-shell"].ammo_type.action.action_delivery.max_range = 50
+  data.raw["ammo"]["explosive-uranium-cannon-shell"].ammo_type.action.action_delivery.max_range = 50
+  -----------------------------------------------------------------------------
    
 end

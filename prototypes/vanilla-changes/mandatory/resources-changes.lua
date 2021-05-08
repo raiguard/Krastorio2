@@ -1,11 +1,11 @@
 function increaseBaseDensity(resource, multiplier)
-	if data.raw["resource"][resource] then 
-		if data.raw["resource"][resource].autoplace.base_density then
-			data.raw["resource"][resource].autoplace.base_density = data.raw["resource"][resource].autoplace.base_density * multiplier
-		else
-			data.raw["resource"][resource].autoplace.base_density = multiplier
-		end
-	end
+  if data.raw["resource"][resource] then 
+    if data.raw["resource"][resource].autoplace.base_density then
+      data.raw["resource"][resource].autoplace.base_density = data.raw["resource"][resource].autoplace.base_density * multiplier
+    else
+      data.raw["resource"][resource].autoplace.base_density = multiplier
+    end
+  end
 end
 
 -----------------------------------------------------------------

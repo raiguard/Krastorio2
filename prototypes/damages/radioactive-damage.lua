@@ -1,7 +1,7 @@
 data:extend(
 {
-	{
-		type = "damage-type",
-		name = "radioactive"
-	}
+  {
+    type = "damage-type",
+    name = "radioactive"
+  }
 })

@@ -364,65 +364,65 @@ end
 
 data.raw.pipe["pipe"].pictures = kr_pipepictures()
 data.raw["pipe-to-ground"]["pipe-to-ground"].pictures =
-	{
-		up =
-		{
-			filename = kr_entities_path .. "iron-pipe/pipe-to-ground-up.png",
-			priority = "high",
-			width = 64,
-			height = 64, --, shift = {0.10, -0.04}
-			hr_version =
-			{
-				filename = kr_entities_path .. "iron-pipe/hr-pipe-to-ground-up.png",
-				priority = "extra-high",
-				width = 128,
-				height = 128,
-				scale = 0.5
-			}
-		},
-		down =
-		{
-			filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-down.png",
-			priority = "high",
-			width = 64,
-			height = 64, --, shift = {0.05, 0}
-			hr_version =
-			{
-				filename = "__base__/graphics/entity/pipe-to-ground/hr-pipe-to-ground-down.png",
-				priority = "extra-high",
-				width = 128,
-				height = 128,
-				scale = 0.5
-			}
-		},
-		left =
-		{
-			filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-left.png",
-			priority = "high",
-			width = 64,
-			height = 64, --, shift = {-0.12, 0.1}
-			hr_version =
-			{
-				filename = "__base__/graphics/entity/pipe-to-ground/hr-pipe-to-ground-left.png",
-				priority = "extra-high",
-				width = 128,
-				height = 128,
-				scale = 0.5
-			}
-		},
-		right =
-		{
-			filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-right.png",
-			priority = "high",
-			width = 64,
-			height = 64, --, shift = {0.1, 0.1}
-			hr_version =
-			{
-				filename = "__base__/graphics/entity/pipe-to-ground/hr-pipe-to-ground-right.png",
-				priority = "extra-high",
-				width = 128,
-				height = 128,
-				scale = 0.5
-			}
-		}
-	}
+  {
+    up =
+    {
+      filename = kr_entities_path .. "iron-pipe/pipe-to-ground-up.png",
+      priority = "high",
+      width = 64,
+      height = 64, --, shift = {0.10, -0.04}
+      hr_version =
+      {
+        filename = kr_entities_path .. "iron-pipe/hr-pipe-to-ground-up.png",
+        priority = "extra-high",
+        width = 128,
+        height = 128,
+        scale = 0.5
+      }
+    },
+    down =
+    {
+      filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-down.png",
+      priority = "high",
+      width = 64,
+      height = 64, --, shift = {0.05, 0}
+      hr_version =
+      {
+        filename = "__base__/graphics/entity/pipe-to-ground/hr-pipe-to-ground-down.png",
+        priority = "extra-high",
+        width = 128,
+        height = 128,
+        scale = 0.5
+      }
+    },
+    left =
+    {
+      filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-left.png",
+      priority = "high",
+      width = 64,
+      height = 64, --, shift = {-0.12, 0.1}
+      hr_version =
+      {
+        filename = "__base__/graphics/entity/pipe-to-ground/hr-pipe-to-ground-left.png",
+        priority = "extra-high",
+        width = 128,
+        height = 128,
+        scale = 0.5
+      }
+    },
+    right =
+    {
+      filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-right.png",
+      priority = "high",
+      width = 64,
+      height = 64, --, shift = {0.1, 0.1}
+      hr_version =
+      {
+        filename = "__base__/graphics/entity/pipe-to-ground/hr-pipe-to-ground-right.png",
+        priority = "extra-high",
+        width = 128,
+        height = 128,
+        scale = 0.5
+      }
+    }
+  }

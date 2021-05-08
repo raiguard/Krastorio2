@@ -234,9 +234,9 @@ end
 
 -- Override table tblA with tblB
 function krastorio_utils.tables.replace(tblA, tblB)
-	local count = #tblA
-	for i=1, count do tblA[i]=nil end
-	krastorio_utils.tables.merge(tblA, krastorio_utils.tables.fullCopy(tblB), false, false)
+  local count = #tblA
+  for i=1, count do tblA[i]=nil end
+  krastorio_utils.tables.merge(tblA, krastorio_utils.tables.fullCopy(tblB), false, false)
 end
 
 --- Merges two tables, values from first get overwritten by the second.
@@ -678,19 +678,19 @@ function krastorio_utils.tables.sortedPairs(t, order)
 end
 
 function krastorio_utils.tables.containsKey(tbl, key)
-	-- iter pairs
-	for k, _ in pairs(tbl) do 
-		-- exit and return if found
-		if k == key then return true end 
-	end
-	return false
+  -- iter pairs
+  for k, _ in pairs(tbl) do 
+    -- exit and return if found
+    if k == key then return true end 
+  end
+  return false
 end
 
 function krastorio_utils.tables.containsValue(tbl, value)
-	-- iter pairs
-	for _, v in pairs(tbl) do 
-		-- exit and return if found
-		if v == value then return true end 
-	end
-	return false
+  -- iter pairs
+  for _, v in pairs(tbl) do 
+    -- exit and return if found
+    if v == value then return true end 
+  end
+  return false
 end

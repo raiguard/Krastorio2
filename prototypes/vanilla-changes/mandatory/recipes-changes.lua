@@ -12,12 +12,12 @@ krastorio.recipes.disable("light-armor")
 
 -- Hide barrel crafting from player menu
 for fluid_name, _ in pairs(data.raw.fluid) do
-	if krastorio.recipes.exist("empty-"..fluid_name.."-barrel") then
-		data.raw.recipe["empty-"..fluid_name.."-barrel"].hide_from_player_crafting = true
-	end
-	if krastorio.recipes.exist("fill-"..fluid_name.."-barrel") then
-		data.raw.recipe["fill-"..fluid_name.."-barrel"].hide_from_player_crafting = true
-	end
+  if krastorio.recipes.exist("empty-"..fluid_name.."-barrel") then
+    data.raw.recipe["empty-"..fluid_name.."-barrel"].hide_from_player_crafting = true
+  end
+  if krastorio.recipes.exist("fill-"..fluid_name.."-barrel") then
+    data.raw.recipe["fill-"..fluid_name.."-barrel"].hide_from_player_crafting = true
+  end
 end
 
 --------------------------------------------------------------------
@@ -34,11 +34,11 @@ krastorio.recipes.replaceIngredient("copper-plate", "copper-ore", {"copper-ore",
 -- rail
 krastorio.recipes.overrideIngredients
 (
-	"rail", 
-	{
-		{"steel-beam", 1},
-		{"stone", 2}
-	}
+  "rail", 
+  {
+    {"steel-beam", 1},
+    {"stone", 2}
+  }
 )
 
 -- Rocket fuel category
@@ -50,10 +50,10 @@ krastorio.recipes.addIngredient("rocket-fuel", {type="fluid", name="oxygen", amo
 
 data.raw.recipe["rocket-fuel"].crafting_machine_tint =
 {
-	primary = {r = 0.692, g = 0.800, b = 0.550, a = 0.100}, 
-	secondary = {r = 0.581, g = 0.817, b = 0.670, a = 0.250}, 
-	tertiary = {r = 0.554, g = 0.417, b = 0.529, a = 0.500}, 
-	quaternary = {r = 0.462, g = 0.607, b = 0.839, a = 0.900} 
+  primary = {r = 0.692, g = 0.800, b = 0.550, a = 0.100}, 
+  secondary = {r = 0.581, g = 0.817, b = 0.670, a = 0.250}, 
+  tertiary = {r = 0.554, g = 0.417, b = 0.529, a = 0.500}, 
+  quaternary = {r = 0.462, g = 0.607, b = 0.839, a = 0.900} 
 }
 data.raw.recipe["rocket-fuel"].always_show_products = true
 
@@ -65,84 +65,84 @@ krastorio.recipes.removeIngredient("slowdown-capsule", "electronic-circuit")
 -- Apply automation core to the early game items
 krastorio.recipes.overrideIngredients
 (
-	"burner-inserter", 
-	{
-		{"inserter-parts", 1},
-		{"iron-plate", 1}
-	}
+  "burner-inserter", 
+  {
+    {"inserter-parts", 1},
+    {"iron-plate", 1}
+  }
 )
 krastorio.recipes.overrideIngredients
 (
-	"inserter", 
-	{
-		{"inserter-parts", 1},
-		{"automation-core", 1}
-	}
+  "inserter", 
+  {
+    {"inserter-parts", 1},
+    {"automation-core", 1}
+  }
 )
 krastorio.recipes.overrideIngredients
 (
-	"long-handed-inserter", 
-	{
-		{"inserter-parts", 1},
-		{"automation-core", 1},
-		{"iron-stick", 2}
-	}
+  "long-handed-inserter", 
+  {
+    {"inserter-parts", 1},
+    {"automation-core", 1},
+    {"iron-stick", 2}
+  }
 )
 krastorio.recipes.overrideIngredients
 (
-	"fast-inserter", 
-	{
-		{"inserter-parts", 1},
-		{"electronic-circuit", 2},
-		{"steel-plate", 1}
-	}
+  "fast-inserter", 
+  {
+    {"inserter-parts", 1},
+    {"electronic-circuit", 2},
+    {"steel-plate", 1}
+  }
 )
 krastorio.recipes.overrideIngredients
 (
-	"filter-inserter", 
-	{
-		{"inserter-parts", 1},
-		{"electronic-circuit", 4},
-		{"steel-plate", 1}
-	}
+  "filter-inserter", 
+  {
+    {"inserter-parts", 1},
+    {"electronic-circuit", 4},
+    {"steel-plate", 1}
+  }
 )
 krastorio.recipes.overrideIngredients
 (
-	"stack-inserter", 
-	{
-		{"inserter-parts", 1},
-		{"advanced-circuit", 2},
-		{"steel-plate", 1},
-		{"steel-gear-wheel", 2}
-	}
+  "stack-inserter", 
+  {
+    {"inserter-parts", 1},
+    {"advanced-circuit", 2},
+    {"steel-plate", 1},
+    {"steel-gear-wheel", 2}
+  }
 )
 krastorio.recipes.overrideIngredients
 (
-	"stack-filter-inserter", 
-	{
-		{"inserter-parts", 1},
-		{"advanced-circuit", 4},
-		{"steel-plate", 1},
-		{"steel-gear-wheel", 2}
-	}
+  "stack-filter-inserter", 
+  {
+    {"inserter-parts", 1},
+    {"advanced-circuit", 4},
+    {"steel-plate", 1},
+    {"steel-gear-wheel", 2}
+  }
 )
 
 
 -- Chaning steel recipes
 krastorio.recipes.overrideIngredients
 (
-	"steel-plate", 
-	{
-		{"iron-plate", 10},
-		{"coke", 2}
-	}
+  "steel-plate", 
+  {
+    {"iron-plate", 10},
+    {"coke", 2}
+  }
 )
 krastorio.recipes.overrideProducts
 (
-	"steel-plate", 
-	{
-		{"steel-plate", 5}
-	}
+  "steel-plate", 
+  {
+    {"steel-plate", 5}
+  }
 )
 krastorio.recipes.setEnergyCost("steel-plate", 16)
 
@@ -153,7 +153,7 @@ krastorio.recipes.convertIngredient("engine-unit", "steel-plate", "iron-plate")
 
 -- Bricks
 if krastorio.recipes.exist("stone-brick") then
-	data.raw.recipe["stone-brick"].subgroup = "raw-material"
+  data.raw.recipe["stone-brick"].subgroup = "raw-material"
 end
 krastorio.recipes.replaceIngredient("refined-concrete", "steel-plate", {"iron-beam", 5})
 krastorio.recipes.removeIngredient("refined-concrete", "iron-stick")
@@ -200,36 +200,36 @@ krastorio.recipes.replaceIngredient("low-density-structure", "copper-plate", {"c
 -- Speed module 1
 krastorio.recipes.setEnergyCost("speed-module", 15)
 krastorio.recipes.overrideIngredients
-(	
-	"speed-module", 
-	{
-		{"electronic-circuit", 5},
-		{"electronic-components", 10}
-	}
+( 
+  "speed-module", 
+  {
+    {"electronic-circuit", 5},
+    {"electronic-components", 10}
+  }
 )
 
 -- Speed module 2
 krastorio.recipes.setEnergyCost("speed-module-2", 15)
 krastorio.recipes.overrideIngredients
-(	
-	"speed-module-2", 
-	{
-		{"advanced-circuit", 5},
-		{"electronic-circuit", 5},
-		{"speed-module", 5}
-	}
+( 
+  "speed-module-2", 
+  {
+    {"advanced-circuit", 5},
+    {"electronic-circuit", 5},
+    {"speed-module", 5}
+  }
 )
 
 -- Speed module 3
 krastorio.recipes.setEnergyCost("speed-module-3", 15)
 krastorio.recipes.overrideIngredients
-(	
-	"speed-module-3", 
-	{
-		{"processing-unit", 5},
-		{"advanced-circuit", 5},
-		{"speed-module-2", 5}
-	}
+( 
+  "speed-module-3", 
+  {
+    {"processing-unit", 5},
+    {"advanced-circuit", 5},
+    {"speed-module-2", 5}
+  }
 )
 
 -- Ammos
@@ -238,77 +238,77 @@ krastorio.recipes.convertIngredient("flamethrower-ammo", "steel-plate", "iron-pl
 ------------------------------------------------
 -- -- Productivity modules
 
--- Productivity module 1	
+-- Productivity module 1  
 krastorio.recipes.setEnergyCost("productivity-module", 15)
 krastorio.recipes.overrideIngredients
-(	
-	"productivity-module", 
-	{
-		{"electronic-circuit", 5},
-		{"electronic-components", 10}
-	}
+( 
+  "productivity-module", 
+  {
+    {"electronic-circuit", 5},
+    {"electronic-components", 10}
+  }
 )
 
--- Productivity module 2	
+-- Productivity module 2  
 krastorio.recipes.setEnergyCost("productivity-module-2", 15)
 krastorio.recipes.overrideIngredients
-(	
-	"productivity-module-2", 
-	{
-		{"advanced-circuit", 5},
-		{"electronic-circuit", 5},
-		{"productivity-module", 5}
-	}
-)	
-	
--- Productivity module 3	
+( 
+  "productivity-module-2", 
+  {
+    {"advanced-circuit", 5},
+    {"electronic-circuit", 5},
+    {"productivity-module", 5}
+  }
+) 
+  
+-- Productivity module 3  
 krastorio.recipes.setEnergyCost("productivity-module-3", 15)
 krastorio.recipes.overrideIngredients
-(	
-	"productivity-module-3", 
-	{
-		{"processing-unit", 5},
-		{"advanced-circuit", 5},
-		{"productivity-module-2", 5}
-	}
+( 
+  "productivity-module-3", 
+  {
+    {"processing-unit", 5},
+    {"advanced-circuit", 5},
+    {"productivity-module-2", 5}
+  }
 )
-	
+  
 ------------------------------------------------
 -- -- Effectivity modules
 
 -- Effectivity module 1
 krastorio.recipes.setEnergyCost("effectivity-module", 15)
 krastorio.recipes.overrideIngredients
-(	
-	"effectivity-module", 
-	{
-		{"electronic-circuit", 5},
-		{"electronic-components", 10}
-	}
+( 
+  "effectivity-module", 
+  {
+    {"electronic-circuit", 5},
+    {"electronic-components", 10}
+  }
 )
-	
+  
 -- Effectivity module 2
 krastorio.recipes.setEnergyCost("effectivity-module-2", 15)
 krastorio.recipes.overrideIngredients
-(	
-	"effectivity-module-2", 
-	{
-		{"advanced-circuit", 5},
-		{"electronic-circuit", 5},
-		{"effectivity-module", 5}
-	}
+( 
+  "effectivity-module-2", 
+  {
+    {"advanced-circuit", 5},
+    {"electronic-circuit", 5},
+    {"effectivity-module", 5}
+  }
 )
 
 -- Effectivity module 3
 krastorio.recipes.setEnergyCost("effectivity-module-3", 15)
 krastorio.recipes.overrideIngredients
-(	
-	"effectivity-module-3", 
-	{
-		{"processing-unit", 5},
-		{"advanced-circuit", 5},
-		{"effectivity-module-2", 5}
-	}
+( 
+  "effectivity-module-3", 
+  {
+    {"processing-unit", 5},
+    {"advanced-circuit", 5},
+    {"effectivity-module-2", 5}
+  }
 )
 
 --------------------------------------------------------------------
@@ -317,46 +317,46 @@ krastorio.recipes.overrideIngredients
 
 -- Convert all electronic-circuit of early game in automation-core
 local function hasEarlyGameIngredients(ingredients)
-	local basic, automation = false, false
-	local ingredient_name = nil
-	for i = 1, #ingredients do
-		ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])
-		if ingredient_name == "basic-tech-card" then
-			if #ingredients == 1 then
-				return true
-			else
-				basic = true
-			end
-		end
-		if ingredient_name == "automation-science-pack" then
-			if #ingredients == 1 then
-				return true
-			else
-				automation = true
-			end
-		end
-	end
-	if #ingredients == 2 and basic and automation then
-		return true
-	else
-		return false
-	end
+  local basic, automation = false, false
+  local ingredient_name = nil
+  for i = 1, #ingredients do
+    ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])
+    if ingredient_name == "basic-tech-card" then
+      if #ingredients == 1 then
+        return true
+      else
+        basic = true
+      end
+    end
+    if ingredient_name == "automation-science-pack" then
+      if #ingredients == 1 then
+        return true
+      else
+        automation = true
+      end
+    end
+  end
+  if #ingredients == 2 and basic and automation then
+    return true
+  else
+    return false
+  end
 end
 for name, technology in pairs(data.raw.technology) do
-	local count = nil
-	if (technology.enabled == true or technology.enabled == nil) and technology.effects then
-		if technology.unit and technology.unit.ingredients and hasEarlyGameIngredients(technology.unit.ingredients) then
-			for _, effect in pairs(technology.effects) do
-				if effect.type == "unlock-recipe" then
-					count = krastorio.recipes.countIngredient(effect.recipe, "electronic-circuit")
-					if count > 0 then
-						krastorio.recipes.replaceIngredient(effect.recipe, "electronic-circuit", {"automation-core", math.ceil(count/2)})
-					end
-				end
-			end
-		end
-	end
-end	
+  local count = nil
+  if (technology.enabled == true or technology.enabled == nil) and technology.effects then
+    if technology.unit and technology.unit.ingredients and hasEarlyGameIngredients(technology.unit.ingredients) then
+      for _, effect in pairs(technology.effects) do
+        if effect.type == "unlock-recipe" then
+          count = krastorio.recipes.countIngredient(effect.recipe, "electronic-circuit")
+          if count > 0 then
+            krastorio.recipes.replaceIngredient(effect.recipe, "electronic-circuit", {"automation-core", math.ceil(count/2)})
+          end
+        end
+      end
+    end
+  end
+end 
 
 -- Exceptions
 krastorio.recipes.convertIngredient("fast-inserter", "automation-core", "electronic-circuit")
@@ -523,44 +523,44 @@ krastorio.recipes.replaceIngredient("spidertron", "fusion-reactor-equipment", {"
 -- -- -- NUCLEAR
 --------------------------------------------------------------------
 
-	-- Add stone and iron as waste
+  -- Add stone and iron as waste
 krastorio.recipes.setEnergyCost("uranium-processing", 15)
 --krastorio.recipes.replaceIngredient("uranium-processing", "uranium-ore", {"uranium-ore", 15})
 krastorio.recipes.addOrReplaceProducts
-(	
-	"uranium-processing", 	
-	{
-		"uranium-235",
-		"uranium-238",
-		"iron-ore",
-		"stone"
-	}, 	
-	{
-		{
-			name = "uranium-235",
-			probability = 0.007,
-			amount = 1
-		},
-		{
-			name = "uranium-238",
-			probability = 0.993,
-			amount = 1
-		},
-		{
-			name = "iron-ore",
-			probability = 0.25,
-			amount = 1
-		},
-		{
-			name = "stone",
-			probability = 0.5,
-			amount = 1
-		}
-	}
+( 
+  "uranium-processing",   
+  {
+    "uranium-235",
+    "uranium-238",
+    "iron-ore",
+    "stone"
+  },  
+  {
+    {
+      name = "uranium-235",
+      probability = 0.007,
+      amount = 1
+    },
+    {
+      name = "uranium-238",
+      probability = 0.993,
+      amount = 1
+    },
+    {
+      name = "iron-ore",
+      probability = 0.25,
+      amount = 1
+    },
+    {
+      name = "stone",
+      probability = 0.5,
+      amount = 1
+    }
+  }
 )
 
 -- Increase uranium usage and ad stone as waste
-	
+  
 krastorio.recipes.replaceIngredient("kovarex-enrichment-process", "uranium-235", {name = "uranium-235", amount = 30})
 krastorio.recipes.replaceIngredient("kovarex-enrichment-process", "uranium-238", {name = "uranium-238", amount = 3})
 krastorio.recipes.setEnergyCost("kovarex-enrichment-process", 60)
@@ -583,7 +583,7 @@ krastorio.recipes.addProduct("nuclear-fuel-reprocessing", {type="item", name="tr
 krastorio.recipes.addIngredient("atomic-bomb", {"heavy-rocket", 1})
 krastorio.recipes.replaceIngredient("atomic-bomb", "uranium-235", {"uranium-235", 20})
 krastorio.recipes.setEnergyCost("atomic-bomb", 10)
-	
+  
 krastorio.recipes.replaceIngredient("pistol", "iron-plate", {"iron-plate", 2})
 krastorio.recipes.replaceIngredient("pistol", "copper-plate", {"copper-plate", 1})
 

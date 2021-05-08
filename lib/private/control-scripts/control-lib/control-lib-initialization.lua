@@ -1,6 +1,6 @@
 -- Load lib functions
 if not krastorio then
-	krastorio = {}
+  krastorio = {}
 end
 require("script-initialization-status") -- Priority 1
 require("flying-texts") -- Priority 2

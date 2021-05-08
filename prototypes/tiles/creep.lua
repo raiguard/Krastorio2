@@ -1,58 +1,58 @@
 -- Sounds
 local collect_creep_sound =
 {
-	filename = kr_tiles_sounds_path .. "creep-deconstruction.ogg",
-	aggregation =
-	{
-		max_count = 1,
-		remove = false,
-		count_already_playing = true
-	}
+  filename = kr_tiles_sounds_path .. "creep-deconstruction.ogg",
+  aggregation =
+  {
+    max_count = 1,
+    remove = false,
+    count_already_playing = true
+  }
 }
 local creep_walking_sound =
 {
-	variations =
-	{
-		{
-			filename = kr_tiles_sounds_path .. "creep-walk-1.ogg",
-			volume = 0.75
-		},
-		{
-			filename = kr_tiles_sounds_path .. "creep-walk-2.ogg",
-			volume = 0.75
-		},
-		{
-			filename = kr_tiles_sounds_path .. "creep-walk-3.ogg",
-			volume = 0.75
-		},
-		{
-			filename = kr_tiles_sounds_path .. "creep-walk-4.ogg",
-			volume = 0.80
-		},
-		{
-			filename = kr_tiles_sounds_path .. "creep-walk-5.ogg",
-			volume = 0.75
-		},
-		{
-			filename = kr_tiles_sounds_path .. "creep-walk-6.ogg",
-			volume = 0.80
-		},
-		{
-			filename = kr_tiles_sounds_path .. "creep-walk-7.ogg",
-			volume = 0.75
-		},
-		{
-			filename = kr_tiles_sounds_path .. "creep-walk-8.ogg",
-			volume = 0.80
-		}
-		
-	},
-	aggregation =
-	{
-		max_count = 6,
-		remove = false,
-		count_already_playing = true
-	}
+  variations =
+  {
+    {
+      filename = kr_tiles_sounds_path .. "creep-walk-1.ogg",
+      volume = 0.75
+    },
+    {
+      filename = kr_tiles_sounds_path .. "creep-walk-2.ogg",
+      volume = 0.75
+    },
+    {
+      filename = kr_tiles_sounds_path .. "creep-walk-3.ogg",
+      volume = 0.75
+    },
+    {
+      filename = kr_tiles_sounds_path .. "creep-walk-4.ogg",
+      volume = 0.80
+    },
+    {
+      filename = kr_tiles_sounds_path .. "creep-walk-5.ogg",
+      volume = 0.75
+    },
+    {
+      filename = kr_tiles_sounds_path .. "creep-walk-6.ogg",
+      volume = 0.80
+    },
+    {
+      filename = kr_tiles_sounds_path .. "creep-walk-7.ogg",
+      volume = 0.75
+    },
+    {
+      filename = kr_tiles_sounds_path .. "creep-walk-8.ogg",
+      volume = 0.80
+    }
+    
+  },
+  aggregation =
+  {
+    max_count = 6,
+    remove = false,
+    count_already_playing = true
+  }
 }
 
 -- Sprites
@@ -228,37 +228,37 @@ local creep_transitions_between_transitions =
 
 data:extend(
 {
-	{	
-		type = "tile",
-		name = "kr-creep",
-		order = "b-a-a",
-		needs_correction = false,
-		can_be_part_of_blueprint = true,		
-		collision_mask = { "ghost-layer", "ground-tile", "floor-layer", "not-colliding-with-itself" },
-		minable = {mining_time = 15, result = "biomass", probability = 0.35, amount = 1},
-		walking_speed_modifier = 0.35,
-		layer = 200,
-		transition_overlay_layer_offset = 3,
-		decorative_removal_probability = 0.35,
-		variants = tile_variations_template
-		(
-			kr_tiles_path .. "creep/creep.png", "__base__/graphics/terrain/masks/transition-1.png",
-			kr_tiles_path .. "creep/hr-creep.png", "__base__/graphics/terrain/masks/hr-transition-1.png",
-			{
-				max_size = 4,
-				[1] = { weights =                  {0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05 }, },
-				[2] = { probability = 1, weights = {0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05 }, },
-				[4] = { probability = 1, weights = {0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05 }, },
-			}
-		),		
-		map_color={r=80, g=60, b=65},
-		pollution_absorption_per_second = 0.005,
-		vehicle_friction_modifier = 175,
-		
-		mined_sound = collect_creep_sound,
-		walking_sound = creep_walking_sound,
-		
-		transitions = creep_transitions,
-		transitions_between_transitions = creep_transitions_between_transitions		
-	}
+  { 
+    type = "tile",
+    name = "kr-creep",
+    order = "b-a-a",
+    needs_correction = false,
+    can_be_part_of_blueprint = true,    
+    collision_mask = { "ghost-layer", "ground-tile", "floor-layer", "not-colliding-with-itself" },
+    minable = {mining_time = 15, result = "biomass", probability = 0.35, amount = 1},
+    walking_speed_modifier = 0.35,
+    layer = 200,
+    transition_overlay_layer_offset = 3,
+    decorative_removal_probability = 0.35,
+    variants = tile_variations_template
+    (
+      kr_tiles_path .. "creep/creep.png", "__base__/graphics/terrain/masks/transition-1.png",
+      kr_tiles_path .. "creep/hr-creep.png", "__base__/graphics/terrain/masks/hr-transition-1.png",
+      {
+        max_size = 4,
+        [1] = { weights =                  {0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05 }, },
+        [2] = { probability = 1, weights = {0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05 }, },
+        [4] = { probability = 1, weights = {0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05 }, },
+      }
+    ),    
+    map_color={r=80, g=60, b=65},
+    pollution_absorption_per_second = 0.005,
+    vehicle_friction_modifier = 175,
+    
+    mined_sound = collect_creep_sound,
+    walking_sound = creep_walking_sound,
+    
+    transitions = creep_transitions,
+    transitions_between_transitions = creep_transitions_between_transitions   
+  }
 })

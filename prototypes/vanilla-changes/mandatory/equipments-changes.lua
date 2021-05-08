@@ -11,18 +11,18 @@
 -- @decrease, decrease value
 -- @percent, percent value
 function addRadioactiveResistance(armor_name, decrease, percent)
-	local armor = data.raw["armor"][armor_name]
-	if armor then
-		if not armor.resistances then
-			armor.resistances = {}
-		end
-		table.insert(armor.resistances,
-		{
-			["type"]     = "radioactive",
-			["decrease"] = decrease,
-			["percent"]  = percent
-		})
-	end
+  local armor = data.raw["armor"][armor_name]
+  if armor then
+    if not armor.resistances then
+      armor.resistances = {}
+    end
+    table.insert(armor.resistances,
+    {
+      ["type"]     = "radioactive",
+      ["decrease"] = decrease,
+      ["percent"]  = percent
+    })
+  end
 end
 
 -- Update a icon and sprites a given table (dictionary),
@@ -38,42 +38,42 @@ end
 -- @icons_path, path where is the new icons of this objects
 -- @sprites_path, path where is the new sprites of this objects
 function updateVanillaEquipmentGraphics(_objects_to_modify, icons_path, sprites_path)
-	for category_name, items in pairs(_objects_to_modify) do
-		for item_name, item in pairs(items) do
-			if data.raw.item[item_name] then
-				if not item[5] then -- tier
-					data.raw.item[item_name].icon         = icons_path .. item[1] -- icon name
-					data.raw.item[item_name].icon_size    = item[2] -- icon size
-					data.raw.item[item_name].icon_mipmaps = item[6]
-				else
-					data.raw.item[item_name].icon      = nil
-					data.raw.item[item_name].icons     =
-					{
-						{ icon = icons_path .. item[1], icon_size = item[2], icon_mipmaps = item[6] },
-						{ icon = kr_equipments_tiers_icon_path .. tostring(item[5]) .. ".png", icon_size = 64} -- , scale = item[2]/64
-					}
-					data.raw.item[item_name].icon_size = item[2] -- icon size
-				end
-				if data.raw[category_name][item_name] then
-					data.raw[category_name][item_name].sprite =
-					{
-						filename   = sprites_path .. item[1],
-						priority   = "medium",
-						width      = item[3],
-						height     = item[4],
-						hr_version =
-						{
-							filename = sprites_path .. "hr-" .. item[1],
-							priority = "medium",
-							width    = item[3] * 2,
-							height   = item[4] * 2,
-							scale    = 0.5
-						}
-					}
-				end
-			end
-		end
-	end
+  for category_name, items in pairs(_objects_to_modify) do
+    for item_name, item in pairs(items) do
+      if data.raw.item[item_name] then
+        if not item[5] then -- tier
+          data.raw.item[item_name].icon         = icons_path .. item[1] -- icon name
+          data.raw.item[item_name].icon_size    = item[2] -- icon size
+          data.raw.item[item_name].icon_mipmaps = item[6]
+        else
+          data.raw.item[item_name].icon      = nil
+          data.raw.item[item_name].icons     =
+          {
+            { icon = icons_path .. item[1], icon_size = item[2], icon_mipmaps = item[6] },
+            { icon = kr_equipments_tiers_icon_path .. tostring(item[5]) .. ".png", icon_size = 64} -- , scale = item[2]/64
+          }
+          data.raw.item[item_name].icon_size = item[2] -- icon size
+        end
+        if data.raw[category_name][item_name] then
+          data.raw[category_name][item_name].sprite =
+          {
+            filename   = sprites_path .. item[1],
+            priority   = "medium",
+            width      = item[3],
+            height     = item[4],
+            hr_version =
+            {
+              filename = sprites_path .. "hr-" .. item[1],
+              priority = "medium",
+              width    = item[3] * 2,
+              height   = item[4] * 2,
+              scale    = 0.5
+            }
+          }
+        end
+      end
+    end
+  end
 end
 
 -- Update grid of specified vehicle, will integrate with the grid the equipment categories of old grid
@@ -82,25 +82,25 @@ end
 -- @vehicle_name, name of vehicle
 -- @equipment_grid_name, name of the new grid to apply
 local function applyAndIntegrateEquipmentCategories(vehicle_type, vehicle_name, equipment_grid_name)
-	if data.raw[vehicle_type][vehicle_name] then
-		if
-		   data.raw[vehicle_type][vehicle_name].equipment_grid and
-		   data.raw["equipment-grid"][data.raw[vehicle_type][vehicle_name].equipment_grid]
-		then
-			local equipment_categories_set = {}
-			for _, equipment_category in pairs(data.raw["equipment-grid"][equipment_grid_name].equipment_categories) do
-				equipment_categories_set[equipment_category] = true
-			end
+  if data.raw[vehicle_type][vehicle_name] then
+    if
+       data.raw[vehicle_type][vehicle_name].equipment_grid and
+       data.raw["equipment-grid"][data.raw[vehicle_type][vehicle_name].equipment_grid]
+    then
+      local equipment_categories_set = {}
+      for _, equipment_category in pairs(data.raw["equipment-grid"][equipment_grid_name].equipment_categories) do
+        equipment_categories_set[equipment_category] = true
+      end
 
-			for _, equipment_category in pairs(data.raw["equipment-grid"][data.raw[vehicle_type][vehicle_name].equipment_grid].equipment_categories) do
-				if equipment_category ~= "armor" and not equipment_categories_set[equipment_category] then
-					table.insert(data.raw["equipment-grid"][equipment_grid_name].equipment_categories, equipment_category)
-				end
-			end
-		end
+      for _, equipment_category in pairs(data.raw["equipment-grid"][data.raw[vehicle_type][vehicle_name].equipment_grid].equipment_categories) do
+        if equipment_category ~= "armor" and not equipment_categories_set[equipment_category] then
+          table.insert(data.raw["equipment-grid"][equipment_grid_name].equipment_categories, equipment_category)
+        end
+      end
+    end
 
-		data.raw[vehicle_type][vehicle_name].equipment_grid = equipment_grid_name
-	end
+    data.raw[vehicle_type][vehicle_name].equipment_grid = equipment_grid_name
+  end
 end
 
 -----------------------------------------------------------------------------------------------------------------
@@ -157,59 +157,59 @@ krastorio.recipes.removeIngredient("power-armor-mk2", "processing-unit")
 data:extend(
 {
 -----------------------------------------------------------------------------------------------------------------
-	-- Car
-	{
-		type = "equipment-grid",
-		name = "kr-car-grid",
-		width = 6,
-		height = 6,
-		equipment_categories = {"universal-equipment", "robot-interaction-equipment", "vehicle-robot-interaction-equipment", "vehicle-equipment", "vehicle-motor"}
-	},
+  -- Car
+  {
+    type = "equipment-grid",
+    name = "kr-car-grid",
+    width = 6,
+    height = 6,
+    equipment_categories = {"universal-equipment", "robot-interaction-equipment", "vehicle-robot-interaction-equipment", "vehicle-equipment", "vehicle-motor"}
+  },
 -----------------------------------------------------------------------------------------------------------------
-	-- Tanks
-	{
-		type = "equipment-grid",
-		name = "kr-tank-grid",
-		width = 6,
-		height = 11,
-		equipment_categories = {"universal-equipment", "robot-interaction-equipment", "vehicle-robot-interaction-equipment", "vehicle-equipment", "vehicle-motor"}
-	},
-	{
-		type = "equipment-grid",
-		name = "kr-tank-grid-2",
-		width = 12,
-		height = 15,
-		equipment_categories = {"universal-equipment", "robot-interaction-equipment", "vehicle-robot-interaction-equipment", "vehicle-equipment", "vehicle-motor"}
-	},
+  -- Tanks
+  {
+    type = "equipment-grid",
+    name = "kr-tank-grid",
+    width = 6,
+    height = 11,
+    equipment_categories = {"universal-equipment", "robot-interaction-equipment", "vehicle-robot-interaction-equipment", "vehicle-equipment", "vehicle-motor"}
+  },
+  {
+    type = "equipment-grid",
+    name = "kr-tank-grid-2",
+    width = 12,
+    height = 15,
+    equipment_categories = {"universal-equipment", "robot-interaction-equipment", "vehicle-robot-interaction-equipment", "vehicle-equipment", "vehicle-motor"}
+  },
 -----------------------------------------------------------------------------------------------------------------
-	-- Train
-	{
-		type = "equipment-grid",
-		name = "kr-locomotive-grid",
-		width = 12,
-		height = 12,
-		equipment_categories = {"universal-equipment", "vehicle-equipment", "vehicle-motor"}
-	},
-	{
-		type = "equipment-grid",
-		name = "kr-wagons-grid",
-		width = 6,
-		height = 16,
-		equipment_categories = {"universal-equipment", "vehicle-equipment", "robot-interaction-equipment", "vehicle-robot-interaction-equipment"}
-	},
+  -- Train
+  {
+    type = "equipment-grid",
+    name = "kr-locomotive-grid",
+    width = 12,
+    height = 12,
+    equipment_categories = {"universal-equipment", "vehicle-equipment", "vehicle-motor"}
+  },
+  {
+    type = "equipment-grid",
+    name = "kr-wagons-grid",
+    width = 6,
+    height = 16,
+    equipment_categories = {"universal-equipment", "vehicle-equipment", "robot-interaction-equipment", "vehicle-robot-interaction-equipment"}
+  },
 -----------------------------------------------------------------------------------------------------------------
-	-- spidertron
-	{
-		type = "equipment-grid",
-		name = "kr-spidertron-equipment-grid",
-		width = 10,
-		height = 6,
-		equipment_categories = {"universal-equipment", "robot-interaction-equipment", "vehicle-robot-interaction-equipment", "vehicle-equipment", "vehicle-motor"}
-	}
+  -- spidertron
+  {
+    type = "equipment-grid",
+    name = "kr-spidertron-equipment-grid",
+    width = 10,
+    height = 6,
+    equipment_categories = {"universal-equipment", "robot-interaction-equipment", "vehicle-robot-interaction-equipment", "vehicle-equipment", "vehicle-motor"}
+  }
 })
 
 if krastorio.general.getSafeSettingValue("kr-spidertron-exoskeleton") then
-	table.insert(data.raw["equipment-grid"]["kr-spidertron-equipment-grid"].equipment_categories, "spidertron-only")
+  table.insert(data.raw["equipment-grid"]["kr-spidertron-equipment-grid"].equipment_categories, "spidertron-only")
 end
 
 -- -- General vehicles grids compatibility, modify grid and integrate it
@@ -220,7 +220,7 @@ applyAndIntegrateEquipmentCategories("locomotive", "nuclear-locomotive", "kr-loc
 applyAndIntegrateEquipmentCategories("cargo-wagon", "cargo-wagon", "kr-wagons-grid")
 applyAndIntegrateEquipmentCategories("spider-vehicle", "spidertron", "kr-spidertron-equipment-grid")
 if data.raw["cargo-wagon"]["cargo-wagon"] then
-	data.raw["cargo-wagon"]["cargo-wagon"].allow_robot_dispatch_in_automatic_mode = true
+  data.raw["cargo-wagon"]["cargo-wagon"].allow_robot_dispatch_in_automatic_mode = true
 end
 applyAndIntegrateEquipmentCategories("fluid-wagon", "fluid-wagon", "kr-wagons-grid")
 applyAndIntegrateEquipmentCategories("artillery-wagon", "artillery-wagon", "kr-wagons-grid")
@@ -239,11 +239,11 @@ local objects_to_modify = nil
 -- -- Items visual(icon, sprites)/modifcation
 objects_to_modify =
 {
-	["roboport-equipment"] =
-	{
-		["personal-roboport-equipment"]     = {"personal-roboport-equipment.png", 64, 64, 64, 1, 4},
-		["personal-roboport-mk2-equipment"] = {"personal-roboport-mk2-equipment.png", 64, 64, 64, 2, 4}
-	}
+  ["roboport-equipment"] =
+  {
+    ["personal-roboport-equipment"]     = {"personal-roboport-equipment.png", 64, 64, 64, 1, 4},
+    ["personal-roboport-mk2-equipment"] = {"personal-roboport-mk2-equipment.png", 64, 64, 64, 2, 4}
+  }
 }
 
 -- iterating...
@@ -251,22 +251,22 @@ updateVanillaEquipmentGraphics(objects_to_modify, kr_universal_equipments_icons_
 
 -- Personal roboports (both vanilla)
 if data.raw["roboport-equipment"]["personal-roboport-equipment"] then
-	data.raw["roboport-equipment"]["personal-roboport-equipment"].robot_limit = 20
-	data.raw["roboport-equipment"]["personal-roboport-equipment"].construction_radius = 15
-	data.raw["roboport-equipment"]["personal-roboport-equipment"].categories = {"robot-interaction-equipment"}
+  data.raw["roboport-equipment"]["personal-roboport-equipment"].robot_limit = 20
+  data.raw["roboport-equipment"]["personal-roboport-equipment"].construction_radius = 15
+  data.raw["roboport-equipment"]["personal-roboport-equipment"].categories = {"robot-interaction-equipment"}
 end
 
 if data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"] then
-	data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].robot_limit = 30
-	data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].energy_source =
+  data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].robot_limit = 30
+  data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].energy_source =
     {
-		type = "electric",
-		buffer_capacity = "50MJ",
-		input_flow_limit = "5000KW",
-		usage_priority = "secondary-input"
+    type = "electric",
+    buffer_capacity = "50MJ",
+    input_flow_limit = "5000KW",
+    usage_priority = "secondary-input"
     }
     data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].charging_energy = "2000kW"
-	data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].categories = {"robot-interaction-equipment"}
+  data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].categories = {"robot-interaction-equipment"}
 end
 
 -- Personal roboport equipment (recipe)
@@ -286,59 +286,59 @@ krastorio.recipes.replaceIngredient("personal-roboport-mk2-equipment", "processi
 -- -- Items visual(icon, sprites)/modifcation
 objects_to_modify =
 {
-	["battery-equipment"] =
-	{
-		["battery-equipment"]     = {"battery-mk1-equipment.png", 64, 32, 64, 1},
-		["battery-mk2-equipment"] = {"battery-mk2-equipment.png", 64, 32, 64, 2}
-	},
-	["active-defense-equipment"] =
-	{
-		["personal-laser-defense-equipment"] = {"personal-laser-defense-mk1-equipment.png", 64, 64, 64, 1}
-	}
+  ["battery-equipment"] =
+  {
+    ["battery-equipment"]     = {"battery-mk1-equipment.png", 64, 32, 64, 1},
+    ["battery-mk2-equipment"] = {"battery-mk2-equipment.png", 64, 32, 64, 2}
+  },
+  ["active-defense-equipment"] =
+  {
+    ["personal-laser-defense-equipment"] = {"personal-laser-defense-mk1-equipment.png", 64, 64, 64, 1}
+  }
 }
 if data.raw.item["battery-equipment"] then
-	data.raw.item["battery-equipment"].pictures =
-	{
-		layers =
-		{
-			{
-				size = 64,
-				filename = kr_universal_equipments_icons_path .. "battery-mk1-equipment.png",
-				scale = 0.25,
-				mipmap_count = 4
-			},
-			{
-				draw_as_light = true,
-				flags = {"light"},
-				size = 64,
-				filename = kr_universal_equipments_icons_path .. "battery-equipment-light.png",
-				scale = 0.25,
-				mipmap_count = 4
-			}
-		}
-	}
+  data.raw.item["battery-equipment"].pictures =
+  {
+    layers =
+    {
+      {
+        size = 64,
+        filename = kr_universal_equipments_icons_path .. "battery-mk1-equipment.png",
+        scale = 0.25,
+        mipmap_count = 4
+      },
+      {
+        draw_as_light = true,
+        flags = {"light"},
+        size = 64,
+        filename = kr_universal_equipments_icons_path .. "battery-equipment-light.png",
+        scale = 0.25,
+        mipmap_count = 4
+      }
+    }
+  }
 end
 if data.raw.item["battery-mk2-equipment"] then
-	data.raw.item["battery-equipment"].pictures =
-	{
-		layers =
-		{
-			{
-				size = 64,
-				filename = kr_universal_equipments_icons_path .. "battery-mk2-equipment.png",
-				scale = 0.25,
-				mipmap_count = 4
-			},
-			{
-				draw_as_light = true,
-				flags = {"light"},
-				size = 64,
-				filename = kr_universal_equipments_icons_path .. "battery-equipment-light.png",
-				scale = 0.25,
-				mipmap_count = 4
-			}
-		}
-	}
+  data.raw.item["battery-equipment"].pictures =
+  {
+    layers =
+    {
+      {
+        size = 64,
+        filename = kr_universal_equipments_icons_path .. "battery-mk2-equipment.png",
+        scale = 0.25,
+        mipmap_count = 4
+      },
+      {
+        draw_as_light = true,
+        flags = {"light"},
+        size = 64,
+        filename = kr_universal_equipments_icons_path .. "battery-equipment-light.png",
+        scale = 0.25,
+        mipmap_count = 4
+      }
+    }
+  }
 end
 
 
@@ -353,39 +353,39 @@ table.insert(data.raw["battery-equipment"]["battery-mk2-equipment"].categories, 
 -- Energies
 data.raw["battery-equipment"]["battery-equipment"].energy_source =
 {
-	type = "electric",
-	buffer_capacity = "10MJ",
-	input_flow_limit = "0.25MW",
-	output_flow_limit = "0.5MW",
-	usage_priority = "tertiary"
+  type = "electric",
+  buffer_capacity = "10MJ",
+  input_flow_limit = "0.25MW",
+  output_flow_limit = "0.5MW",
+  usage_priority = "tertiary"
 }
 data.raw["battery-equipment"]["battery-mk2-equipment"].energy_source =
 {
-	type = "electric",
-	buffer_capacity = "25MJ",
-	input_flow_limit = "0.5MW",
-	output_flow_limit = "1MW",
-	usage_priority = "tertiary"
+  type = "electric",
+  buffer_capacity = "25MJ",
+  input_flow_limit = "0.5MW",
+  output_flow_limit = "1MW",
+  usage_priority = "tertiary"
 }
 
 -- Recipe
 krastorio.recipes.overrideIngredients
 (
-	"battery-equipment",
-	{
-		{"battery", 2},
-		{"iron-plate", 2},
-		{"electronic-circuit", 1}
-	}
+  "battery-equipment",
+  {
+    {"battery", 2},
+    {"iron-plate", 2},
+    {"electronic-circuit", 1}
+  }
 )
 krastorio.recipes.overrideIngredients
 (
-	"battery-mk2-equipment",
-	{
-		{"battery-equipment", 2},
-		{"steel-plate", 2},
-		{"advanced-circuit", 1}
-	}
+  "battery-mk2-equipment",
+  {
+    {"battery-equipment", 2},
+    {"steel-plate", 2},
+    {"advanced-circuit", 1}
+  }
 )
 
 -- subgroup
@@ -415,32 +415,32 @@ data.raw.capsule["discharge-defense-remote"].order = "f[active-defense-equipment
 -- -- Items visual(icon, sprites)/modifcation
 objects_to_modify =
 {
-	["generator-equipment"] =
-	{
-		["fusion-reactor-equipment"] = {"fusion-reactor-equipment.png", 64, 128, 128, 2}
-	}
+  ["generator-equipment"] =
+  {
+    ["fusion-reactor-equipment"] = {"fusion-reactor-equipment.png", 64, 128, 128, 2}
+  }
 }
 if data.raw.item["fusion-reactor-equipment"] then
-	data.raw.item["fusion-reactor-equipment"].pictures =
-	{
-		layers =
-		{
-			{
-				size = 64,
-				filename = kr_universal_equipments_icons_path .. "fusion-reactor-equipment.png",
-				scale = 0.25,
-				mipmap_count = 4
-			},
-			{
-				draw_as_light = true,
-				flags = {"light"},
-				size = 64,
-				filename = kr_universal_equipments_icons_path .. "fusion-reactor-equipment-light.png",
-				scale = 0.25,
-				mipmap_count = 4
-			}
-		}
-	}
+  data.raw.item["fusion-reactor-equipment"].pictures =
+  {
+    layers =
+    {
+      {
+        size = 64,
+        filename = kr_universal_equipments_icons_path .. "fusion-reactor-equipment.png",
+        scale = 0.25,
+        mipmap_count = 4
+      },
+      {
+        draw_as_light = true,
+        flags = {"light"},
+        size = 64,
+        filename = kr_universal_equipments_icons_path .. "fusion-reactor-equipment-light.png",
+        scale = 0.25,
+        mipmap_count = 4
+      }
+    }
+  }
 end
 
 -- iterating...
@@ -448,13 +448,13 @@ updateVanillaEquipmentGraphics(objects_to_modify, kr_universal_equipments_icons_
 
 krastorio.icons.setTechnologyIcons
 (
-	"fusion-reactor-equipment",
-	{
-		{ icon = kr_technologies_icons_path .. "fusion-reactor-equipment.png", icon_size = 256, icon_mipmaps = 4 },
-		{ icon = kr_technologies_icons_path .. "overlays/equipment-overlay.png", icon_size = 256, icon_mipmaps = 4 }
-	},
-	256,
-	4
+  "fusion-reactor-equipment",
+  {
+    { icon = kr_technologies_icons_path .. "fusion-reactor-equipment.png", icon_size = 256, icon_mipmaps = 4 },
+    { icon = kr_technologies_icons_path .. "overlays/equipment-overlay.png", icon_size = 256, icon_mipmaps = 4 }
+  },
+  256,
+  4
 )
 
 
@@ -463,10 +463,10 @@ table.insert(data.raw["generator-equipment"]["fusion-reactor-equipment"].categor
 
 data.raw["generator-equipment"]["fusion-reactor-equipment"].burner =
 {
-	fuel_category = "fusion-fuel",
-	effectivity = 2,
-	fuel_inventory_size = 1,
-	burnt_inventory_size = 1
+  fuel_category = "fusion-fuel",
+  effectivity = 2,
+  fuel_inventory_size = 1,
+  burnt_inventory_size = 1
 }
 
 -- -- Energy generated by equipment:
@@ -495,40 +495,40 @@ data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].energy_
 data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].energy_source.input_flow_limit = "2MW"
 data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].attack_parameters =
 {
-	type = "beam",
-	cooldown = 80,
-	damage_modifier = 15,
-	projectile_center = {0, 0},
-	range = 30,
-	ammo_type =
-	{
-		category = "laser",
-		energy_consumption = "3MJ",
-		action =
-		{
-			type = "direct",
-			action_delivery =
-			{
-				{
-					type = "instant",
-					target_effects =
-					{
-						{
-							type = "create-entity",
-							entity_name = "explosion-hit"
-						}
-					}
-				},
-				{
-					type = "beam",
-					beam = "laser-beam",
-					max_length = 35,
-					duration = 40,
-					source_offset = {0, -1.31439}
-				}
-			}
-		}
-	}
+  type = "beam",
+  cooldown = 80,
+  damage_modifier = 15,
+  projectile_center = {0, 0},
+  range = 30,
+  ammo_type =
+  {
+    category = "laser",
+    energy_consumption = "3MJ",
+    action =
+    {
+      type = "direct",
+      action_delivery =
+      {
+        {
+          type = "instant",
+          target_effects =
+          {
+            {
+              type = "create-entity",
+              entity_name = "explosion-hit"
+            }
+          }
+        },
+        {
+          type = "beam",
+          beam = "laser-beam",
+          max_length = 35,
+          duration = 40,
+          source_offset = {0, -1.31439}
+        }
+      }
+    }
+  }
 }
 
 data.raw.item["personal-laser-defense-equipment"].localised_name = {"equipment-name.personal-sniper-laser-defense-mk1-equipment"}
@@ -547,11 +547,11 @@ data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].localis
 -- -- Items visual(icon, sprites)/modifcation
 objects_to_modify =
 {
-	["energy-shield-equipment"] =
-	{
-		["energy-shield-equipment"]     = {"energy-shield-mk1-equipment.png", 64, 64, 64, 1, 4},
-		["energy-shield-mk2-equipment"] = {"energy-shield-mk2-equipment.png", 64, 64, 64, 2, 4}
-	}
+  ["energy-shield-equipment"] =
+  {
+    ["energy-shield-equipment"]     = {"energy-shield-mk1-equipment.png", 64, 64, 64, 1, 4},
+    ["energy-shield-mk2-equipment"] = {"energy-shield-mk2-equipment.png", 64, 64, 64, 2, 4}
+  }
 }
 -- iterating...
 updateVanillaEquipmentGraphics(objects_to_modify, kr_universal_equipments_icons_path, kr_universal_equipments_path)
@@ -584,10 +584,10 @@ data.raw.item["energy-shield-mk2-equipment"].order = "b[shield]-b[energy-shield-
 -- -- Items visual(icon, sprites)/modifcation
 objects_to_modify =
 {
-	["solar-panel-equipment"] =
-	{
-		["solar-panel-equipment"]     = {"solar-panel-equipment.png", 64, 32, 32, 1, 4}
-	}
+  ["solar-panel-equipment"] =
+  {
+    ["solar-panel-equipment"]     = {"solar-panel-equipment.png", 64, 32, 32, 1, 4}
+  }
 }
 
 -- iterating...
@@ -617,10 +617,10 @@ table.insert(data.raw["belt-immunity-equipment"]["belt-immunity-equipment"].cate
 -- -- Items visual(icon, sprites)/modifcation
 objects_to_modify =
 {
-	["night-vision-equipment"] =
-	{
-		["night-vision-equipment"] = {"night-vision-equipment.png", 64, 64, 64, 1}
-	}
+  ["night-vision-equipment"] =
+  {
+    ["night-vision-equipment"] = {"night-vision-equipment.png", 64, 64, 64, 1}
+  }
 }
 
 data.raw["night-vision-equipment"]["night-vision-equipment"].color_lookup = {{0.75, "__Krastorio2__/graphics/others/nightvision-1.png"}}
@@ -631,35 +631,35 @@ updateVanillaEquipmentGraphics(objects_to_modify, kr_character_equipments_icons_
 data.raw["night-vision-equipment"]["night-vision-equipment"].tint = {r = 0.1, g = 0.255, b = 1, a = 0.255}
 data.raw["night-vision-equipment"]["night-vision-equipment"].desaturation_params =
 {
-	smoothstep_min = 0.1,
-	smoothstep_max = 0.7,
-	minimum = 0.35,
-	maximum = 0.9
+  smoothstep_min = 0.1,
+  smoothstep_max = 0.7,
+  minimum = 0.35,
+  maximum = 0.9
 }
 data.raw["night-vision-equipment"]["night-vision-equipment"].light_params =
 {
-	smoothstep_min = 0.1,
-	smoothstep_max = 0.7,
-	minimum = 0.35,
-	maximum = 0.8
+  smoothstep_min = 0.1,
+  smoothstep_max = 0.7,
+  minimum = 0.35,
+  maximum = 0.8
 }
 data.raw["night-vision-equipment"]["night-vision-equipment"].darkness_to_turn_on = 0.5
 data.raw["night-vision-equipment"]["night-vision-equipment"].shape =
 {
-	width = 1,
-	height = 1,
-	type = "full"
+  width = 1,
+  height = 1,
+  type = "full"
 }
 
 krastorio.recipes.overrideIngredients
 (
-	"night-vision-equipment",
-	{
-		{"advanced-circuit", 2},
-		{"iron-plate", 1},
-		{"plastic-bar", 1},
-		{"glass", 1}
-	}
+  "night-vision-equipment",
+  {
+    {"advanced-circuit", 2},
+    {"iron-plate", 1},
+    {"plastic-bar", 1},
+    {"glass", 1}
+  }
 )
 
 data.raw.item["night-vision-equipment"].subgroup  = "character-equipment"
@@ -675,10 +675,10 @@ data.raw["movement-bonus-equipment"]["exoskeleton-equipment"].categories = {"arm
 -- -- Items visual(icon, sprites)/modifcation
 objects_to_modify =
 {
-	["movement-bonus-equipment"] =
-	{
-		["exoskeleton-equipment"] = {"exoskeleton-equipment.png", 64, 64, 128, 1}
-	}
+  ["movement-bonus-equipment"] =
+  {
+    ["exoskeleton-equipment"] = {"exoskeleton-equipment.png", 64, 64, 128, 1}
+  }
 }
 
 -- iterating...

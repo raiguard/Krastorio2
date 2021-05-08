@@ -29,5 +29,5 @@ krastorio.recipes.setCategoryIfExist("space-science-pack", "t3-tech-cards")
 
 -- Remove useless prerequisite
 if not krastorio.recipes.hasIngredient("production-science-pack", "electric-furnace") then
-	krastorio.technologies.removePrerequisite("production-science-pack", "advanced-material-processing-2")
+  krastorio.technologies.removePrerequisite("production-science-pack", "advanced-material-processing-2")
 end
