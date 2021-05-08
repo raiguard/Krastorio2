@@ -43,5 +43,8 @@
     "! bobvehicleequipment >= 0.17.0",
     "! custom_power_armor_fix >= 0.10.0",
     "! laborat >= 0.1.0"
-  ]
+  ],
+  "package": {
+    "ignore": [".git", ".vscode", ".kakrc"]
+  }
 }
