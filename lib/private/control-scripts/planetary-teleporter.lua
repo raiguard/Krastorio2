@@ -7,14 +7,14 @@ local pt_entity_name = "kr-planetary-teleporter"
 
 -- TODO: cutscene and relative positioning
 local function teleport_player(player, from, to)
-	-- discharge both entities
+	-- Discharge both entities
 	from.energy = 0
 	to.energy = 0
-	-- teleport player
+	-- Teleport player
 	local position = to.position
 	position.y = position.y + 1.1
 	player.teleport(position, to.surface)
-	-- play sounds
+	-- Play sounds
 	from.surface.play_sound{
 		path = "kr-planetary-teleporter-effect-sound",
 		position = from.position,
@@ -45,13 +45,13 @@ local status_images = {
 local function update_fully_charged(refs, state)
 	local active_warning = state.active_warning
 
-	-- destination buttons
+	-- Destination buttons
 	local enabled = active_warning and true or false
 	for _, destination_frame in ipairs(refs.destinations_table.children) do
 		destination_frame.minimap_frame.minimap.ignored_by_interaction = enabled
 	end
 
-	-- subheader
+	-- Subheader
 	if active_warning then
 		refs.name_label.style = "kr_subheader_bold_label"
 		refs.name_label.style.maximal_width = 370
@@ -78,8 +78,8 @@ local function update_gui_statuses()
 		local state = gui_data.state
 		local entity = state.entity
 		local status = entity.status
-		-- workaround for a base game issue where the accumulator won't actually charge all the way sometimes
-		-- round the percent full to a whole percentage to eliminate the game's floating point error
+		-- Workaround for a base game issue where the accumulator won't actually charge all the way sometimes
+		-- Round the percent full to a whole percentage to eliminate the game's floating point error
 		local percent_full = math.ceil(
 			(entity.energy / entity.prototype.electric_energy_source_prototype.buffer_capacity) * 100
 		)
@@ -94,7 +94,7 @@ local function update_gui_statuses()
 		end
 		refs.status_image.sprite = "utility/"..(status_images[status] or "status_working")
 
-		-- warning
+		-- Warning
 		local warning = false
 		local players = global.planetary_teleporter_players[state.entity_data.turret_unit_number] or {}
 		if not players[player_index] then
@@ -122,7 +122,7 @@ local function get_destination_properties(teleporter_data)
 	local charge_percent = math.ceil(charge_value * 100)
 	local fully_charged = charge_percent == 100
 
-	-- destination blockage
+	-- Destination blockage
 	local destination_blocked = global.planetary_teleporter_players[teleporter_data.turret_unit_number] and true or false
 
 	local tooltip
@@ -269,7 +269,7 @@ local function update_all_destination_availability()
 	if game.tick % 10 == 0 then
 		local teleporters = global.planetary_teleporters
 
-		-- assemble availability data
+		-- Assemble availability data
 		local properties = {}
 		for unit_number, teleporter_data in pairs(teleporters) do
 			properties[unit_number] = get_destination_properties(teleporter_data)
@@ -282,7 +282,7 @@ local function update_all_destination_availability()
 			local destinations_table = refs.destinations_table
 			local children = destinations_table.children
 
-			-- the generic update function is too slow - only update the bars and buttons
+			-- The generic update function is too slow - only update the bars and buttons
 			for i, unit_number in pairs(state.shown_teleporters) do
 				local destination_properties = properties[unit_number]
 				local parent = children[i]
@@ -296,7 +296,7 @@ local function update_all_destination_availability()
 		end
 	end
 
-	-- reset for the next round of player detection
+	-- Reset for the next round of player detection
 	global.planetary_teleporter_players = {}
 end
 
@@ -307,7 +307,7 @@ local function handle_gui_action(msg, e)
 	local state = gui_data.state
 
 	if msg.action == "close" then
-		-- if escape was pressed and search is open, close search instead of closing the window
+		-- If escape was pressed and search is open, close search instead of closing the window
 		if e.element and e.element.type ~= "sprite-button" and refs.search_textfield.visible then
 			refs.search_button.style = "frame_action_button"
 			refs.search_button.sprite = "utility/search_white"
@@ -361,16 +361,16 @@ local function handle_gui_action(msg, e)
 	elseif msg.action == "update_name" then
 		state.entity_data.name = e.text ~= "" and e.text or nil
 	elseif msg.action == "teleport" then
-		-- get info
+		-- Get info
 		local destination_number = gui.get_tags(e.element).number
 		local destination_info = global.planetary_teleporters[destination_number]
 		if destination_info then
 			local destination_entity = global.planetary_teleporters[destination_number].entities.base
 			local source_entity = state.entity
-			-- close GUI
+			-- Close GUI
 			refs.window.destroy()
 			global.planetary_teleporter_guis[e.player_index] = nil
-			-- teleport player
+			-- Teleport player
 			teleport_player(player, source_entity, destination_entity)
 		else
 			player.create_local_flying_text{
@@ -396,7 +396,7 @@ local function create_gui(player, entity)
 				on_closed = {gui = "planetary_teleporter", action = "close"}
 			},
 			children = {
-				-- titlebar
+				-- Titlebar
 				{type = "flow", style_mods = {horizontal_spacing = 8}, ref = {"titlebar_flow"}, children = {
 					{
 						type = "label",
@@ -443,9 +443,9 @@ local function create_gui(player, entity)
 						}
 					}
 				}},
-				-- content frame
+				-- Content frame
 				{type = "frame", style = "inside_shallow_frame", direction = "vertical", children = {
-					-- toolbar
+					-- Toolbar
 					{
 						type = "frame",
 						style = "subheader_frame",
@@ -487,20 +487,20 @@ local function create_gui(player, entity)
 						}
 					},
 					{type = "flow", style_mods = {padding = 12, vertical_spacing = 8}, direction = "vertical", children = {
-						-- entity status line
+						-- Entity status line
 						{type = "flow", style = "status_flow", style_mods = {vertical_align = "center"}, children = {
 							{type = "sprite", style = "status_image", ref = {"status_image"}},
 							{type = "label", ref = {"status_label"}}
 						}},
-						-- entity preview
+						-- Entity preview
 						{type = "frame", style = "deep_frame_in_shallow_frame", children = {
 							{type = "entity-preview", style = "wide_entity_button", elem_mods = {entity = entity}}
 						}},
 					}},
-					-- destinations table
+					-- Destinations table
 					{type = "scroll-pane", style = "kr_planetary_teleporter_destinations_scroll_pane", children = {
 						{type = "frame", style = "kr_planetary_teleporter_destinations_frame", direction = "vertical", children = {
-							-- warning frame
+							-- Warning frame
 							{type = "frame", style = "negative_subheader_frame", ref = {"no_destinations_frame"}, children = {
 								{type = "empty-widget", style_mods = {horizontally_stretchable = true}},
 								{
@@ -510,7 +510,7 @@ local function create_gui(player, entity)
 								},
 								{type = "empty-widget", style_mods = {horizontally_stretchable = true}},
 							}},
-							-- destinations
+							-- Destinations
 							{type = "table", style = "slot_table", column_count = 3, ref = {"destinations_table"}}
 						}}
 					}}
@@ -603,7 +603,7 @@ end
 local function on_entity_built(e)
 	local entity = e.created_entity
 	if entity and entity.valid and entity.name == pt_entity_name then
-		-- if revived from a blueprint and it has a name, get it from the tags
+		-- If revived from a blueprint and it has a name, get it from the tags
 		local name = e.tags and e.tags.kr_planetary_teleporter_name or nil
 		local entities = create_entities(entity)
 		local data = {
@@ -626,24 +626,24 @@ local function on_entity_destroyed(e)
 		local data = global.planetary_teleporters[unit_number]
 		-- In case the entity was destroyed immediately (AAI Vehicles)
 		if not data then return end
-		-- destroy other entities
+		-- Destroy other entities
 		-- TODO: handle edge case of deletion during a teleportation - perhaps the character should die?
 		for _, entity_to_destroy in pairs(data.entities) do
 			if entity_to_destroy.valid then
 				entity_to_destroy.destroy()
 			end
 		end
-		-- remove from lists
+		-- Remove from lists
 		global.planetary_teleporters[unit_number] = nil
 		-- TODO: valid check?
-		-- close any open GUIs
+		-- Close any open GUIs
 		for _, gui_data in pairs(global.planetary_teleporter_guis) do
 			local other_entity = gui_data.state.entity
 			if other_entity.valid and other_entity.unit_number == unit_number then
 				handle_gui_action({action = "close"}, {player_index = gui_data.state.player.index})
 			end
 		end
-		-- update destinations
+		-- Update destinations
 		update_all_destination_tables()
 	end
 end
@@ -684,7 +684,7 @@ end
 local function on_string_translated(e)
 	local localised_string = e.localised_string
 	if type(localised_string) == "table" and localised_string[1] == "gui.kr-planetary-teleporter-unnamed" then
-		-- sometimes the translation might fail - in that case, fall back on the english
+		-- Sometimes the translation might fail - in that case, fall back on the english
 		global.planetary_teleporter_unnamed_translations[e.player_index] = e.translated and e.result or "<Unnamed>"
 	end
 end
@@ -692,18 +692,18 @@ end
 local function on_player_setup_blueprint(e)
 	local player = game.get_player(e.player_index)
 
-	-- get blueprint
+	-- Get blueprint
 	local bp = player.blueprint_to_setup
 	if not bp or not bp.valid_for_read then
 		bp = player.cursor_stack
 	end
 
-	-- get blueprint entities and mapping
+	-- Get blueprint entities and mapping
 	local entities = bp.get_blueprint_entities()
 	if not entities then return end
 	local mapping = e.mapping.get()
 
-	-- find any planetary teleporters in this blueprint
+	-- Find any planetary teleporters in this blueprint
 	for i, bp_entity in ipairs(entities) do
 		if bp_entity.name == pt_entity_name then
 			local entity = mapping[i]
@@ -736,20 +736,20 @@ local function on_script_trigger_effect(e)
 end
 
 return {
-	-- bootstrap
+	-- Bootstrap
 	{init_global_data, "on_init"},
 	{init_global_data, "on_configuration_changed"},
-	-- built
+	-- Built
 	{on_entity_built, "on_built_entity", pt_built_entity_filters},
 	{on_entity_built, "on_robot_built_entity", pt_built_entity_filters},
 	{on_entity_built, "script_raised_built"},
 	{on_entity_built, "script_raised_revive"},
-	-- destroyed
+	-- Destroyed
 	{on_entity_destroyed, "on_player_mined_entity", pt_built_entity_filters},
 	{on_entity_destroyed, "on_robot_mined_entity", pt_built_entity_filters},
 	{on_entity_destroyed, "on_entity_died", pt_built_entity_filters},
 	{on_entity_destroyed, "script_raised_destroy", pt_built_entity_filters},
-	-- gui
+	-- Gui
 	{on_focus_search, "kr-focus-search"},
 	{on_gui_event, "on_gui_click"},
 	{on_gui_event, "on_gui_closed"},
@@ -758,12 +758,12 @@ return {
 	{on_gui_opened, "on_gui_opened"},
 	{update_gui_statuses, "on_tick"},
 	{update_all_destination_availability, "on_tick"},
-	-- player
+	-- Player
 	{on_player_created, "on_player_created"},
 	{on_player_removed, "on_player_removed"},
 	{on_string_translated, "on_string_translated"},
-	-- blueprint
+	-- Blueprint
 	{on_player_setup_blueprint, "on_player_setup_blueprint"},
-	-- trigger
+	-- Trigger
 	{on_script_trigger_effect, "on_script_trigger_effect"}
 }
