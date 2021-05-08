@@ -560,6 +560,13 @@ local function init_global_data()
 	for _, player in pairs(game.players) do
 		player.request_translation{"gui.kr-planetary-teleporter-unnamed"}
 	end
+	-- Create teleporter force
+	if not game.forces["kr-planetary-teleporter-turret"] then
+		game.create_force("kr-planetary-teleporter-turret")
+		for _, teleporter_data in pairs(global.planetary_teleporters) do
+			teleporter_data.entities.turret.force = "kr-planetary-teleporter-turret"
+		end
+	end
 end
 
 local collision_entity_offsets = {
@@ -589,7 +596,7 @@ local function create_entities(base_entity)
 	entities.turret = surface.create_entity{
 		name = "kr-planetary-teleporter-turret",
 		position = {x = position.x, y = position.y + 1.15},
-		force = "enemy",
+		force = "kr-planetary-teleporter-turret",
 		create_build_effect_smoke = false
 	}
 	for name, entity in pairs(entities) do
