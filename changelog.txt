@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.1
-Date: ????
+Date: 2021-05-08
   Balancing:
     - Reverted advanced machines having passive productivity, as it allowed for various broken loops on recipes that usually don't support productivity modules
   Bugfixes:
