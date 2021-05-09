@@ -6,6 +6,10 @@ labels: bug
 assignees: ""
 ---
 
+<!--
+IF YOU ARE NOT OPENING A BUG REPORT OR SPECIFIC FEATURE REQUEST, PLEASE START A DISCUSSION IN THE DISCUSSIONS TAB INSTEAD.
+-->
+
 #### Describe the Bug
 
 A clear and concise description of what the bug is.
