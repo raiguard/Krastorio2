@@ -45,6 +45,6 @@
     "! laborat >= 0.1.0"
   ],
   "package": {
-    "ignore": [".git", ".vscode", ".kakrc"]
+    "ignore": [".git", ".github", ".vscode", ".kakrc"]
   }
 }
