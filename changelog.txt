@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.2
 Date: ????
-  Changes:
+  Bugfixes:
+    - Removed productivity modules from the advanced machine recipes, since they don't have passive productivity anymore
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.1
 Date: 2021-05-08

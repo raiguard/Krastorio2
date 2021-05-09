@@ -658,7 +658,6 @@ return
       {"steel-beam", 80},
       {"rare-metals", 40},
       {"copper-plate", 60},
-      {"productivity-module-3", 2},
       {"energy-control-unit", 10}
     },
     result = "kr-advanced-furnace"
@@ -674,8 +673,7 @@ return
       {"steel-beam", 8},
       {"assembling-machine-3", 2},
       {"electric-furnace", 2},
-      {"ai-core", 2},
-      {"productivity-module-3", 2}
+      {"ai-core", 2}
     },
     result = "kr-advanced-assembling-machine"
   },
@@ -690,7 +688,6 @@ return
       {"imersium-beam", 20},
       {"rare-metals", 40},
       {"imersium-gear-wheel", 20},
-      {"productivity-module-3", 2},
       {"kr-steel-pipe", 10}
     },
     result = "kr-advanced-chemical-plant"
@@ -791,7 +788,7 @@ return
     name = "kr-planetary-teleporter",
     energy_required = 20,
     enabled = false,
-    ingredients = 
+    ingredients =
     {
       {"imersium-beam", 10},
       {"imersite-crystal", 4},
