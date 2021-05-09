@@ -1,7 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.2
 Date: ????
+  Changes:
+    - Updated translations from Crowdin
   Bugfixes:
+    - Fixed a crash when disabling K2 containers with Space Exploration enabled
     - Removed productivity modules from the advanced machine recipes, since they don't have passive productivity anymore
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.1

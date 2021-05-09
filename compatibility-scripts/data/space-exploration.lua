@@ -83,7 +83,10 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
 
   for category_name, entities in pairs(allow_in_space) do
     for _, entity_name in pairs(entities) do
-      data.raw[category_name][entity_name].se_allow_in_space = true
+      local entity = data.raw[category_name][entity_name]
+      if entity then
+        entity.se_allow_in_space = true
+      end
     end
   end
 
