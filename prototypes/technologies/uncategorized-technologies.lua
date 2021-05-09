@@ -7,7 +7,7 @@ data:extend(
     type = "technology",
     name = "kr-iron-pickaxe",
     mod = "Krastorio2",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     icons =
     {
@@ -44,7 +44,7 @@ data:extend(
     type = "technology",
     name = "kr-advanced-pickaxe",
     mod = "Krastorio2",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     icons =
     {
@@ -69,7 +69,7 @@ data:extend(
     unit =
     {
       count = 200,
-      ingredients = 
+      ingredients =
       {
         {"production-science-pack", 1},
         {"utility-science-pack", 1},
@@ -83,11 +83,11 @@ data:extend(
     type = "technology",
     name = "kr-tesla-coil",
     mod = "Krastorio2",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     icon = kr_technologies_icons_path .. "tesla-coil.png",
     upgrade = false,
-    effects = 
+    effects =
     {
       {
         type = "unlock-recipe",
@@ -99,14 +99,14 @@ data:extend(
       }
     },
     prerequisites = {"battery-equipment", "power-armor"},
-    unit =    
+    unit =
     {
       count = 500,
-      ingredients = 
+      ingredients =
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1}  
+        {"chemical-science-pack", 1}
       },
       time = 60
     }
@@ -115,24 +115,24 @@ data:extend(
     type = "technology",
     name = "kr-tesla-coil-upgrade-mk1",
     mod = "Krastorio2",
-    icons = 
+    icons =
     {
       { icon = kr_technologies_icons_path .. "tesla-coil.png", icon_size = 256, icon_mipmaps = 4 },
       { icon = kr_technologies_icons_path .. "/overlays/" .. "tesla-coil-upgrade-1.png", icon_size = 256, icon_mipmaps = 4 },
     },
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     upgrade = false,
     effects = {},
     prerequisites = {"kr-tesla-coil"},
-    unit =    
+    unit =
     {
       count = 750,
-      ingredients = 
+      ingredients =
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1}  
+        {"chemical-science-pack", 1}
       },
       time = 60
     }
@@ -141,24 +141,24 @@ data:extend(
     type = "technology",
     name = "kr-tesla-coil-upgrade-mk2",
     mod = "Krastorio2",
-    icons = 
+    icons =
     {
       { icon = kr_technologies_icons_path .. "tesla-coil.png", icon_size = 256, icon_mipmaps = 4 },
       { icon = kr_technologies_icons_path .. "/overlays/" .. "tesla-coil-upgrade-2.png", icon_size = 256, icon_mipmaps = 4 },
     },
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     upgrade = false,
     effects = {},
     prerequisites = {"kr-tesla-coil-upgrade-mk1"},
-    unit =    
+    unit =
     {
       count = 800,
-      ingredients = 
+      ingredients =
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1}, 
+        {"chemical-science-pack", 1},
         {"production-science-pack", 1}
       },
       time = 60
@@ -167,26 +167,26 @@ data:extend(
   {
     type = "technology",
     name = "kr-tesla-coil-upgrade-mk3",
-    mod = "Krastorio2",   
-    icons = 
+    mod = "Krastorio2",
+    icons =
     {
       { icon = kr_technologies_icons_path .. "tesla-coil.png", icon_size = 256, icon_mipmaps = 4 },
       { icon = kr_technologies_icons_path .. "/overlays/" .. "tesla-coil-upgrade-3.png", icon_size = 256, icon_mipmaps = 4 },
     },
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     upgrade = false,
     effects = {},
     prerequisites = {"kr-tesla-coil-upgrade-mk2"},
-    unit =    
+    unit =
     {
       count = 900,
-      ingredients = 
+      ingredients =
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1}, 
-        {"production-science-pack", 1}, 
+        {"chemical-science-pack", 1},
+        {"production-science-pack", 1},
         {"utility-science-pack", 1}
       },
       time = 60
@@ -195,26 +195,26 @@ data:extend(
   {
     type = "technology",
     name = "kr-tesla-coil-upgrade-mk4",
-    mod = "Krastorio2",   
-    icons = 
+    mod = "Krastorio2",
+    icons =
     {
       { icon = kr_technologies_icons_path .. "tesla-coil.png", icon_size = 256, icon_mipmaps = 4 },
       { icon = kr_technologies_icons_path .. "/overlays/" .. "tesla-coil-upgrade-4.png", icon_size = 256, icon_mipmaps = 4 },
     },
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     upgrade = false,
     effects = {},
     prerequisites = {"kr-tesla-coil-upgrade-mk3"},
-    unit =    
+    unit =
     {
       count = 1000,
-      ingredients = 
+      ingredients =
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1}, 
-        {"production-science-pack", 1}, 
+        {"chemical-science-pack", 1},
+        {"production-science-pack", 1},
         {"utility-science-pack", 1},
         {"advanced-tech-card", 1}
       },
@@ -229,7 +229,7 @@ data:extend(
     name = "kr-greenhouse",
     mod = "Krastorio2",
     icon = kr_technologies_icons_path .. "greenhouse.png",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     effects =
     {
@@ -246,7 +246,7 @@ data:extend(
     unit =
     {
       count = 40,
-      ingredients = 
+      ingredients =
       {
         {"basic-tech-card", 1}
       },
@@ -258,7 +258,7 @@ data:extend(
     name = "kr-fluids-chemistry",
     mod = "Krastorio2",
     icon = kr_technologies_icons_path .. "fluids-chemistry.png",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     effects =
     {
@@ -277,13 +277,13 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "kr-water-electrolysis"
-      }   
+      }
     },
     prerequisites = { "kr-basic-fluid-handling", "steel-processing" },
     unit =
     {
       count = 100,
-      ingredients = 
+      ingredients =
       {
         {"basic-tech-card", 1},
         {"automation-science-pack", 1}
@@ -296,7 +296,7 @@ data:extend(
     name = "kr-fluid-excess-handling",
     mod = "Krastorio2",
     icon = kr_technologies_icons_path .. "fluid-burner.png",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     effects =
     {
@@ -309,7 +309,7 @@ data:extend(
     unit =
     {
       count = 150,
-      ingredients = 
+      ingredients =
       {
         {"basic-tech-card", 1},
         {"automation-science-pack", 1},
@@ -317,13 +317,13 @@ data:extend(
       },
       time = 45
     }
-  },    
+  },
   {
     type = "technology",
     name = "kr-atmosphere-condensation",
     mod = "Krastorio2",
     icon = kr_technologies_icons_path .. "atmospheric-condenser.png",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     effects =
     {
@@ -352,7 +352,7 @@ data:extend(
     unit =
     {
       count = 175,
-      ingredients = 
+      ingredients =
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
@@ -366,7 +366,7 @@ data:extend(
     name = "kr-air-purification",
     mod = "Krastorio2",
     icon = kr_technologies_icons_path .. "air-purifier.png",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     effects =
     {
@@ -392,7 +392,7 @@ data:extend(
     unit =
     {
       count = 275,
-      ingredients = 
+      ingredients =
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
@@ -400,24 +400,24 @@ data:extend(
       },
       time = 45
     }
-    },  
+    },
   {
     type = "technology",
     name = "kr-fusion-energy",
     mod = "Krastorio2",
     icon = kr_technologies_icons_path .. "fusion-energy.png",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     effects =
     {
       {
-        type = "unlock-recipe",     
+        type = "unlock-recipe",
         recipe = "kr-fusion-reactor"
       },
       {
-        type = "unlock-recipe",     
+        type = "unlock-recipe",
         recipe = "kr-advanced-steam-turbine"
-      },      
+      },
       {
         type = "unlock-recipe",
         recipe = krastorio.recipes.changed_names["heavy-water"] or "heavy-water"
@@ -433,13 +433,13 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = krastorio.recipes.changed_names["dt-fuel"] or "dt-fuel"
-      }     
+      }
     },
     prerequisites = {"advanced-electronics-2", "kr-lithium-processing", "nuclear-power", "utility-science-pack", "low-density-structure", "kovarex-enrichment-process"},
     unit =
     {
       count = 1500,
-      ingredients = 
+      ingredients =
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
@@ -458,7 +458,7 @@ data:extend(
     name = "kr-fuel",
     mod = "Krastorio2",
     icon = kr_technologies_icons_path .. "fuel-refinery.png",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     effects =
     {
@@ -479,7 +479,7 @@ data:extend(
     unit =
     {
       count = 125,
-      ingredients = 
+      ingredients =
       {
         {"basic-tech-card", 1},
         {"automation-science-pack", 1},
@@ -496,7 +496,7 @@ data:extend(
         name = "kr-silicon-processing",
     mod = "Krastorio2",
         icon = kr_technologies_icons_path .. "silicon-processing.png",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
         effects =
         {
@@ -528,7 +528,7 @@ data:extend(
         name = "kr-advanced-chemistry",
     mod = "Krastorio2",
         icon = kr_technologies_icons_path .. "advanced-chemistry.png",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
         effects =
         {
@@ -555,7 +555,7 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = krastorio.recipes.changed_names["biomethanol"] or "biomethanol"
-      }   
+      }
         },
         prerequisites = {"sulfur-processing", "kr-mineral-water-gathering", "kr-atmosphere-condensation"},
     order = "d-a",
@@ -576,7 +576,7 @@ data:extend(
     name = "kr-bio-processing",
     mod = "Krastorio2",
     icon = kr_technologies_icons_path .. "bio-lab.png",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     effects =
     {
@@ -599,13 +599,13 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "kr-grow-wood-plus"
-      }     
+      }
     },
     prerequisites = { "kr-greenhouse", "kr-advanced-chemistry", "electronics" },
     unit =
     {
       count = 150,
-      ingredients = 
+      ingredients =
       {
                 {"automation-science-pack", 1},
                 {"logistic-science-pack", 1},
@@ -614,14 +614,14 @@ data:extend(
       },
       time = 45
     }
-  },  
+  },
   -- Enriched ores, copper and iron
   {
     type = "technology",
     name = "kr-enriched-ores",
     mod = "Krastorio2",
     icon = kr_technologies_icons_path .. "enriched-ores.png",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     effects =
     {
@@ -636,7 +636,7 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "enriched-rare-metals"
-      },      
+      },
       {
         type = "unlock-recipe",
         recipe = "enriched-iron-plate"
@@ -648,7 +648,7 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "rare-metals-2"
-      },      
+      },
       {
         type = "unlock-recipe",
         recipe = "dirty-water-filtration-1"
@@ -666,7 +666,7 @@ data:extend(
     unit =
     {
       count = 275,
-      ingredients = 
+      ingredients =
       {
                 {"automation-science-pack", 1},
                 {"logistic-science-pack", 1},
@@ -680,7 +680,7 @@ data:extend(
     name = "kr-lithium-processing",
     mod = "Krastorio2",
     icon = kr_technologies_icons_path .. "lithium-processing.png",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     effects =
     {
@@ -691,13 +691,13 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = krastorio.recipes.changed_names["lithium-chloride"] or "lithium-chloride"
-      }     
+      }
     },
     prerequisites = {"kr-advanced-chemistry"},
     unit =
     {
       count = 275,
-      ingredients = 
+      ingredients =
       {
                 {"automation-science-pack", 1},
                 {"logistic-science-pack", 1},
@@ -705,13 +705,13 @@ data:extend(
       },
       time = 60
     }
-    },  
+    },
   {
     type = "technology",
     name = "kr-quarry-minerals-extraction",
     mod = "Krastorio2",
     icon = kr_technologies_icons_path .. "quarry-drill.png",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     effects =
     {
@@ -733,7 +733,7 @@ data:extend(
     unit =
     {
       count = 350,
-      ingredients = 
+      ingredients =
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
@@ -748,12 +748,12 @@ data:extend(
     name = "kr-automation",
     mod = "Krastorio2",
     icon = kr_technologies_icons_path .. "advanced-assembling-machine.png",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     effects =
     {
       {
-        type = "unlock-recipe",     
+        type = "unlock-recipe",
         recipe = "kr-advanced-assembling-machine"
       },
       {
@@ -789,11 +789,11 @@ data:extend(
         recipe = krastorio.recipes.changed_names["kr-s-c-imersium-beam"] or "kr-s-c-imersium-beam"
       }
     },
-    prerequisites = {"automation-3", "productivity-module-3", "kr-imersium-processing", "kr-energy-control-unit", "kr-advanced-tech-card"},
+    prerequisites = {"automation-3", "kr-imersium-processing", "kr-energy-control-unit", "kr-advanced-tech-card"},
     unit =
     {
       count = 500,
-      ingredients = 
+      ingredients =
       {
         {"production-science-pack", 1},
         {"utility-science-pack", 1},
@@ -808,7 +808,7 @@ data:extend(
     name = "kr-railgun-turret",
     mod = "Krastorio2",
     icon = kr_technologies_icons_path .. "railgun-turret.png",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {"military-4", "utility-science-pack"},
     effects =
@@ -816,7 +816,7 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "kr-railgun-turret"
-      },    
+      },
       {
         type = "unlock-recipe",
         recipe = krastorio.recipes.changed_names["basic-railgun-shell"] or "basic-railgun-shell"
@@ -830,11 +830,11 @@ data:extend(
     unit =
     {
       count = 500,
-      ingredients = 
+      ingredients =
       {
         {"military-science-pack", 1},
         {"production-science-pack", 1},
-        {"utility-science-pack", 1}     
+        {"utility-science-pack", 1}
       },
       time = 60
     }
@@ -844,7 +844,7 @@ data:extend(
     name = "kr-rocket-turret",
     mod = "Krastorio2",
     icon = kr_technologies_icons_path .. "rocket-turret.png",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {"kr-military-5", "kr-advanced-tech-card", "kr-railgun-turret", "atomic-bomb"},
     effects =
@@ -866,7 +866,7 @@ data:extend(
     unit =
     {
       count = 750,
-      ingredients = 
+      ingredients =
       {
         {"military-science-pack", 1},
         {"production-science-pack", 1},
@@ -881,7 +881,7 @@ data:extend(
     name = "kr-antimatter-reactor",
     mod = "Krastorio2",
     icon = kr_technologies_icons_path .. "antimatter-reactor.png",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = {"kr-fusion-energy", "kr-singularity-tech-card"},
     effects =
@@ -903,14 +903,14 @@ data:extend(
     unit =
     {
       count = 2000,
-      ingredients = 
+      ingredients =
       {
         {"production-science-pack", 1},
         {"utility-science-pack", 1},
         {"space-science-pack", 1},
         {"matter-tech-card", 1},
         {"advanced-tech-card", 1},
-        {"singularity-tech-card", 1}    
+        {"singularity-tech-card", 1}
       },
       time = 60
     }
@@ -922,7 +922,7 @@ data:extend(
     type = "technology",
     name = "kr-robot-battery",
     icon = kr_technologies_icons_path .. "robot-battery.png",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     effects =
     {
@@ -935,7 +935,7 @@ data:extend(
     unit =
     {
       count = 500,
-      ingredients = 
+      ingredients =
       {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
@@ -948,7 +948,7 @@ data:extend(
     type = "technology",
     name = "kr-robot-battery-plus",
     icon = kr_technologies_icons_path .. "robot-battery-plus.png",
-    icon_size = 256, 
+    icon_size = 256,
     icon_mipmaps = 4,
     effects =
     {
@@ -961,7 +961,7 @@ data:extend(
     unit =
     {
       count = 1000,
-      ingredients = 
+      ingredients =
       {
         {"production-science-pack", 1},
         {"utility-science-pack", 1},
@@ -978,7 +978,7 @@ data:extend(
     icon = kr_technologies_icons_path .. "planetary-teleporter.png",
     icon_size = 256,
     icon_mipmaps = 4,
-    effects = 
+    effects =
     {
       {
         type = "unlock-recipe",
@@ -990,10 +990,10 @@ data:extend(
       }
     },
     prerequisites = {"effect-transmission", "kr-singularity-tech-card"},
-    unit = 
+    unit =
     {
       count = 500,
-      ingredients = 
+      ingredients =
       {
         {"production-science-pack", 1},
         {"utility-science-pack", 1},

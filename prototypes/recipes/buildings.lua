@@ -656,8 +656,9 @@ return
     {
       {"imersium-beam", 20},
       {"steel-beam", 80},
-      {"rare-metals", 40},
+      {"rare-metals", 80},
       {"copper-plate", 60},
+      {"electronic-components", 20},
       {"energy-control-unit", 10}
     },
     result = "kr-advanced-furnace"
@@ -670,7 +671,6 @@ return
     ingredients =
     {
       {"imersium-beam", 4},
-      {"steel-beam", 8},
       {"assembling-machine-3", 2},
       {"electric-furnace", 2},
       {"ai-core", 2}
@@ -686,7 +686,8 @@ return
     {
       {"processing-unit", 20},
       {"imersium-beam", 20},
-      {"rare-metals", 40},
+      {"rare-metals", 80},
+      {"electronic-components", 40},
       {"imersium-gear-wheel", 20},
       {"kr-steel-pipe", 10}
     },

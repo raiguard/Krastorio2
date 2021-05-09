@@ -674,7 +674,6 @@ data:extend(
         }
       },
       prerequisites = {
-        "productivity-module-3",
         "kr-imersium-processing",
         "kr-energy-control-unit",
         "kr-advanced-tech-card"
@@ -731,7 +730,7 @@ data:extend(
           recipe = "kr-advanced-chemical-plant"
         }
       },
-      prerequisites = {"productivity-module-3", "kr-imersium-processing", "kr-advanced-tech-card"},
+      prerequisites = {"kr-imersium-processing", "kr-advanced-tech-card"},
       unit = {
         count = 500,
         ingredients = {
