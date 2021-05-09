@@ -127,8 +127,8 @@ data:extend(
   {
     type = "container",
     name = "kr-shelter-container",
-    localised_name        = {"item-name.kr-shelter"},
-    localised_description = {"item-description.kr-shelter"},
+    localised_name        = {"entity-name.kr-shelter"},
+    localised_description = {"entity-description.kr-shelter"},
     icon = kr_entities_icons_path .. "shelter.png",
     icon_size = 64,
     icon_mipmaps = 4,
@@ -139,13 +139,13 @@ data:extend(
     corpse = "kr-medium-random-pipes-remnant",
     collision_box = {{-2.75, -2.75}, {2.75, 2.75}},
     selection_box = {{-3, -3}, {3, 3.20}},
-    resistances = 
+    resistances =
     {
       {type = "physical", percent = 50},
       {type = "fire", percent = 75},
       {type = "impact", percent = 75}
     },
-    
+
     water_reflection =
     {
       pictures =
@@ -161,22 +161,22 @@ data:extend(
       rotate = false,
       orientation_to_variation = false
     },
-    
+
     picture = shelter_animation,
     inventory_size = 200,
     scale_info_icons = kr_icons_size,
     open_sound = { filename = kr_sounds_mod .. "buildings/open.ogg", volume = 1 },
     close_sound = { filename = kr_sounds_mod .. "buildings/close.ogg", volume = 1 },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 } 
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 }
   },
-  
+
   -- Shelter light
 
   {
     type = "lamp",
     name = "kr-shelter-light",
-    localised_name        = {"item-name.kr-shelter"},
-    localised_description = {"item-description.kr-shelter"},
+    localised_name        = {"entity-name.kr-shelter"},
+    localised_description = {"entity-description.kr-shelter"},
     icon = kr_entities_path .. "empty.png",
     icon_size = 1,
     allow_copy_paste = false,
@@ -187,17 +187,17 @@ data:extend(
     energy_usage_per_tick = "1W",
     darkness_for_all_lamps_on = 0.2,
     darkness_for_all_lamps_off = 0.1,
-    light = 
+    light =
     {
-      intensity = 0.8, 
-      size = 12, 
-      shift = {0.0, 1.75}, 
+      intensity = 0.8,
+      size = 12,
+      shift = {0.0, 1.75},
       color = {r=0.95, g=0.88, b=0.85}
     },
-    light_when_colored = 
+    light_when_colored =
     {
-      intensity = 1, 
-      size = 6, 
+      intensity = 1,
+      size = 6,
       color = {r=1.0, g=1.0, b=1.0}
     },
     glow_size = 6,

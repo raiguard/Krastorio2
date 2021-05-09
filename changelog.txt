@@ -5,6 +5,7 @@ Date: ????
     - Updated translations from Crowdin
   Bugfixes:
     - Fixed a crash when disabling K2 containers with Space Exploration enabled
+    - Fixed missing localization on the shelter
     - Removed productivity modules from the advanced machine recipes, since they don't have passive productivity anymore
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.1
