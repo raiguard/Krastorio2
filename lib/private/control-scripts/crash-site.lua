@@ -134,9 +134,6 @@ local function createCrashSite(event)
             create_build_effect_smoke = false
           })
           if created_entity.type == "container" then
-            if not random_generator or not random_generator.valid then
-              random_generator = game.create_random_generator()
-            end
             local start_items_count = table_size(start_items)
             item_name = start_items[math.random(1, start_items_count)]
             item_name_2 = start_items[math.random(1, start_items_count)]
