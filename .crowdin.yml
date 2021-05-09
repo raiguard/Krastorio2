@@ -4,23 +4,19 @@
 
 "files": [
   {
-    "source": "locale/en/Krastorio2.cfg",
-    "dest": "Krastorio2.cfg",
-    "translation": "locale/%locale%/Krastorio2.cfg"
+    "source": "/locale/en/Krastorio2.cfg",
+    "translation": "/locale/%locale%/Krastorio2.cfg"
   },
   {
-    "source": "locale/en/Krastorio2Compatibility.cfg.cfg",
-    "dest": "Krastorio2Compatibility.cfg",
-    "translation": "locale/%locale%/Krastorio2Compatibility.cfg"
+    "source": "/locale/en/Krastorio2Compatibility.cfg",
+    "translation": "/locale/%locale%/Krastorio2Compatibility.cfg"
   },
   {
-    "source": "locale/en/Krastorio2Tips.cfg.cfg",
-    "dest": "Krastorio2Tips.cfg",
-    "translation": "locale/%locale%/Krastorio2Tips.cfg"
+    "source": "/locale/en/Krastorio2Tips.cfg",
+    "translation": "/locale/%locale%/Krastorio2Tips.cfg"
   },
   {
-    "source": "locale/en/Krastorio2Wiki.cfg.cfg",
-    "dest": "Krastorio2Wiki.cfg",
-    "translation": "locale/%locale%/Krastorio2Wiki.cfg"
-  },
+    "source": "/locale/en/Krastorio2Wiki.cfg",
+    "translation": "/locale/%locale%/Krastorio2Wiki.cfg"
+  }
 ]
