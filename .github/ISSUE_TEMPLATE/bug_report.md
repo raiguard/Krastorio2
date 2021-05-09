@@ -29,9 +29,13 @@ Be certain to reproduce the issue on the same save file that you upload.
 
 Upload the save file where the bug occured. If the file is too large for GitHub, use an alternative file service.
 
-Please also provide your in-game username so I can reproduce the conditions exactly.
+**ALTERNATIVELY:** Reproduce the issue on a brand-new save file, provide any needed blueprints and instructions, and attach another brand-new save file to this issue.
 
-_IF YOU DO NOT UPLOAD A SAVE FILE AND PROVIDE YOUR USERNAME, THE BUG REPORT WILL BE IGNORED UNTIL YOU DO._
+**ALTERNATIVELY:** If the issue is a crash on startup (the game shows an error before you get to the main menu), then disable Krastorio 2, create a new save, and upload that save file.
+
+Please also provide your in-game username so we can reproduce the conditions exactly.
+
+_IF YOU DO NOT FOLLOW ONE OF THESE STEPS, THE BUG REPORT WILL BE MARKED AS INVALID AND IGNORED._
 
 #### Log file
 
