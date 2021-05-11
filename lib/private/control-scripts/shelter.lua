@@ -1,32 +1,12 @@
 require("__Krastorio2__/lib/private/control-scripts/control-lib/control-lib-initialization")
 
-local KRASTORIO_SHELTER_EVENT_FILTER =
-{
-  -- shelter entity name
-  {
-    filter = "name", 
-        name   = "kr-shelter"
-    },
-  {
-    filter = "name", 
-        name   = "kr-shelter-container"
-    },
-  {
-    filter = "name", 
-        name   = "kr-shelter-light"
-    },
-  {
-    filter = "name", 
-        name   = "kr-shelter-plus"
-    },
-  {
-    filter = "name", 
-        name   = "kr-shelter-plus-container"
-    },
-  {
-    filter = "name", 
-        name   = "kr-shelter-plus-light"
-    }
+local KRASTORIO_SHELTER_EVENT_FILTER = {
+  {filter = "name", name = "kr-shelter"},
+  {filter = "name", name = "kr-shelter-container"},
+  {filter = "name", name = "kr-shelter-light"},
+  {filter = "name", name = "kr-shelter-plus"},
+  {filter = "name", name = "kr-shelter-plus-container"},
+  {filter = "name", name = "kr-shelter-plus-light"}
 }
 
 local function onInitAndConf()
@@ -38,13 +18,13 @@ end
 
 -- The dictionary is structured like:
 -- default_spawn_points[surface][force] -> position
--- spawn_points[surface][force] -> {animation, light}entity of shelter 
+-- spawn_points[surface][force] -> {animation, light}entity of shelter
 
 -- Called when the game is created
 function shelterVariablesInitializing()
   global.default_spawn_points = {}
   global.spawn_points         = {}
-  
+
   if game.surfaces[1] then
     global.default_spawn_points[1] = {}
     global.spawn_points[1]         = {}
@@ -61,8 +41,8 @@ local function saveStartPoint(event)
   local surface_index = event.surface_index
   global.default_spawn_points[surface_index] = {}
   global.spawn_points[surface_index]         = {}
-    
-  for _, player in pairs(game.players) do   
+
+  for _, player in pairs(game.players) do
     if not global.default_spawn_points[surface_index][player.force.index] then
       local base_spawn_point = player.force.get_spawn_position(surface_index) or {x = 0, y = 0}
       global.default_spawn_points[surface_index][player.force.index] = base_spawn_point
@@ -76,13 +56,13 @@ local function onBuiltAnEntity(event)
   if entity.valid and (entity.name == "kr-shelter" or entity.name == "kr-shelter-plus") then
     local surface = entity.surface.index
     local force   = entity.force.index
-  
+
     if global.spawn_points[surface] then
       if not global.spawn_points[surface][force] then -- the first on the surface
         entity.force.set_spawn_position({entity.position.x, entity.position.y + 3}, surface)
         if entity.name == "kr-shelter" then
           -- create shelter light
-          entity.surface.create_entity
+          local container = entity.surface.create_entity
           {
             type     = "container",
             name     = "kr-shelter-container",
@@ -102,10 +82,10 @@ local function onBuiltAnEntity(event)
             create_build_effect_smoke = false
           }
 
-          global.spawn_points[surface][force] = {entity} -- {entity, light}
+          global.spawn_points[surface][force] = {entity, container, light}
         else
           -- create shelter plus light
-          entity.surface.create_entity
+          local container = entity.surface.create_entity
           {
             type     = "container",
             name     = "kr-shelter-plus-container",
@@ -125,12 +105,12 @@ local function onBuiltAnEntity(event)
             create_build_effect_smoke = false
           }
 
-          global.spawn_points[surface][force] = {entity}-- {entity, light}
+          global.spawn_points[surface][force] = {entity, container, light}
         end
-      else -- exist another shelter 
+      else -- exist another shelter
         for _, product in pairs(entity.prototype.mineable_properties.products) do
           entity.last_user.insert{name=product.name or product[1], count=product.amount or product[2]}
-        end       
+        end
         krastorio.flying_texts.showOnSurfaceText
         {
           entity = entity,
@@ -142,7 +122,7 @@ local function onBuiltAnEntity(event)
           path            = "utility/cannot_build",
           volume_modifier = 1.0
         }
-        entity.destroy()        
+        entity.destroy()
       end
     end
   end
@@ -151,21 +131,21 @@ end
 -- @event, on_player_mined_entity or on_robot_mined_entity or on_entity_died
 local function onRemovingAnEntity(event)
   local entity = event.entity
-  
-  if entity.valid and (entity.name == "kr-shelter" or entity.name == "kr-shelter-container" or entity.name == "kr-shelter-light" or entity.name == "kr-shelter-plus" or entity.name == "kr-shelter-plus-container" or entity.name == "kr-shelter-plus-light") then
+
+  if entity.valid then
     local surface = entity.surface.index
     local force   = entity.force.index
-  
+
     if global.spawn_points[surface] then
       if global.spawn_points[surface][force] then
-        -- reset spawn point        
+        -- reset spawn point
         if global.default_spawn_points[surface][force] then
           entity.force.set_spawn_position(global.default_spawn_points[surface][force], surface)
         else
           entity.force.set_spawn_position({0, 0}, surface)
         end
         -- Remove entities (for compatibility)
-        for _, entity in pairs(global.spawn_points[surface][force]) do 
+        for _, entity in pairs(global.spawn_points[surface][force]) do
           if entity and entity.valid then
             entity.destroy()
           end
@@ -174,21 +154,21 @@ local function onRemovingAnEntity(event)
         global.spawn_points[surface][force] = nil
       end
     end
-  end 
+  end
 end
 
 return
-{ 
+{
   -- -- Bootstrap
   -- For setup variables
   { onInitAndConf, "on_init" },
   { onInitAndConf, "on_configuration_changed" },
-  -- -- Actions   
-  { saveStartPoint, "on_surface_created" }, 
+  -- -- Actions
+  { saveStartPoint, "on_surface_created" },
   { onBuiltAnEntity, "on_built_entity", KRASTORIO_SHELTER_EVENT_FILTER },
   { onBuiltAnEntity, "on_robot_built_entity", KRASTORIO_SHELTER_EVENT_FILTER },
   { onBuiltAnEntity, "script_raised_built" },
-  { onBuiltAnEntity, "script_raised_revive" },    
+  { onBuiltAnEntity, "script_raised_revive" },
   { onRemovingAnEntity, "on_player_mined_entity", KRASTORIO_SHELTER_EVENT_FILTER },
   { onRemovingAnEntity, "on_robot_mined_entity", KRASTORIO_SHELTER_EVENT_FILTER },
   { onRemovingAnEntity, "on_entity_died", KRASTORIO_SHELTER_EVENT_FILTER }

@@ -9,6 +9,7 @@ Date: ????
   Bugfixes:
     - Fixed a crash when disabling K2 containers with Space Exploration enabled
     - Fixed missing localization on the shelter
+    - Fixed that mining a shelter would not destroy all of its internal entities
     - Removed the ingredient limit on advanced assembling machines
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.1
