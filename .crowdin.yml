@@ -5,18 +5,18 @@
 "files": [
   {
     "source": "/locale/en/Krastorio2.cfg",
-    "translation": "/locale/%locale%/Krastorio2.cfg"
+    "translation": "/locale/%two_letters_code%/Krastorio2.cfg"
   },
   {
     "source": "/locale/en/Krastorio2Compatibility.cfg",
-    "translation": "/locale/%locale%/Krastorio2Compatibility.cfg"
+    "translation": "/locale/%two_letters_code%/Krastorio2Compatibility.cfg"
   },
   {
     "source": "/locale/en/Krastorio2Tips.cfg",
-    "translation": "/locale/%locale%/Krastorio2Tips.cfg"
+    "translation": "/locale/%two_letters_code%/Krastorio2Tips.cfg"
   },
   {
     "source": "/locale/en/Krastorio2Wiki.cfg",
-    "translation": "/locale/%locale%/Krastorio2Wiki.cfg"
+    "translation": "/locale/%two_letters_code%/Krastorio2Wiki.cfg"
   }
 ]
