@@ -14,10 +14,11 @@ jobs:
     - name: Sync with Crowdin
       uses: crowdin/github-action@1.1.0
       with:
-        upload_sources: false
+        upload_sources: true
         upload_translations: false
         download_translations: true
         config: '.crowdin.yml'
+        pull_request_title: 'Update Crowdin translations'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
