@@ -9,7 +9,12 @@ return {
           local surface_data = shelters[surface.index]
           if surface_data then
             local shelter_data = surface_data[force]
-            if shelter_data then
+            if shelter_data
+              and surface.find_entities_filtered{
+                name = {"kr-shelter-container", "kr-shelter-plus-container"},
+                position = light.position
+              }[1]
+            then
               shelter_data[#shelter_data + 1] = light
             else
               light.destroy()
