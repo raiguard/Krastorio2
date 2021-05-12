@@ -1,22 +1,30 @@
 "project_id_env": CROWDIN_PROJECT_ID
 "api_token_env": CROWDIN_PERSONAL_TOKEN
-# "preserve_hierarchy": true
+"preserve_hierarchy": true
 
 "files": [
   {
     "source": "/locale/en/Krastorio2.cfg",
-    "translation": "/locale/%two_letters_code%/Krastorio2.cfg"
+    "dest": "Krastorio2.ini",
+    "translation": "/locale/%two_letters_code%/%original_file_name%",
+    "type": "ini"
   },
   {
     "source": "/locale/en/Krastorio2Compatibility.cfg",
-    "translation": "/locale/%two_letters_code%/Krastorio2Compatibility.cfg"
+    "dest": "Krastorio2Compatibility.ini",
+    "translation": "/locale/%two_letters_code%/%original_file_name%",
+    "type": "ini"
   },
   {
     "source": "/locale/en/Krastorio2Tips.cfg",
-    "translation": "/locale/%two_letters_code%/Krastorio2Tips.cfg"
+    "dest": "Krastorio2Tips.ini",
+    "translation": "/locale/%two_letters_code%/%original_file_name%",
+    "type": "ini"
   },
   {
     "source": "/locale/en/Krastorio2Wiki.cfg",
-    "translation": "/locale/%two_letters_code%/Krastorio2Wiki.cfg"
+    "dest": "Krastorio2Wiki.ini",
+    "translation": "/locale/%two_letters_code%/Krastorio2Wiki.cfg",
+    "type": "ini"
   }
 ]
