@@ -3,6 +3,7 @@ name: Sync with Crowdin
 on:
   schedule:
     - cron: '0 16 * * SUN'
+  workflow_dispatch:
 
 jobs:
   synchronize-with-crowdin:
