@@ -2,6 +2,7 @@
 Version: 1.1.2
 Date: ????
   Changes:
+    - K2 now depends on `flib`. Sorry, but not really sorry!
     - Updated translations from Crowdin
   Balancing:
     - Reverted advanced machine recipes to their pre-1.1 configurations
