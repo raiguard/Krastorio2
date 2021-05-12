@@ -8,6 +8,9 @@ ControlCallbackMerger = require(control_scripts_path .. "control-lib/control-cal
 ccm = ControlCallbackMerger:new()
 require(control_lib_path)
 
+local migration = require("__flib__/migration")
+local migrations = require("__Krastorio2__/lib/private/control-scripts/migrations")
+
 -- Scrips
 local scripts =
 {
@@ -74,6 +77,14 @@ for _, script in pairs(scripts) do
     ccm:addCallBacks(script)
   end
 end
+
+-- Migrations on configuration changed
+ccm:addCallBack{
+  function(e)
+    migration.on_config_changed(e, migrations)
+  end,
+  "on_configuration_changed"
+}
 
 -- GUI events
 local ce  = krastorio.gui.getCollectiveClickEventsCallback()
