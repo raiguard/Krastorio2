@@ -46,7 +46,7 @@ data:extend(
     type = "bool-setting",
     name = "kr-disable-wiki",
     setting_type = "runtime-per-user",
-    default_value = false,
+    default_value = true,
     order = "a6"
   },
   {

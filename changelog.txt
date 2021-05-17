@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.3
 Date: ????
+  Changes:
+    - The K2 miniwiki is now disabled by default
   Bugfixes:
     - Fixed a crash when closing the miniwiki by opening another GUI
     - Fixed a crash when loading the game with the Chinese Simplified locale active
