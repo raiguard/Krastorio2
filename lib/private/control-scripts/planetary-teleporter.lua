@@ -664,6 +664,8 @@ local function on_gui_opened(e)
 end
 
 local function on_gui_event(e)
+  -- TEMPORARY: This is to work around a bug in flib that will be fixed in v0.8.0
+  if not e.element or not e.element.valid then return end
   local msg = gui.read_action(e)
   if msg and msg.gui == "planetary_teleporter" then
     handle_gui_action(msg, e)
