@@ -9,6 +9,7 @@ Date: ????
     - Reverted advanced machine technologies requiring the productivity module 3 technology
   Bugfixes:
     - Fixed a crash when disabling K2 containers with Space Exploration enabled
+    - Fixed inserter tooltips showing a nonexistent hotkey when using Bob's adjustable inserters
     - Fixed missing localization on the shelter
     - Fixed that mining a shelter would not destroy all of its internal entities
     - Fixed that the K2 crash site entities could overlap other entities
