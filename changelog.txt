@@ -3,6 +3,8 @@ Version: 1.1.3
 Date: ????
   Bugfixes:
     - Fixed a crash when closing the miniwiki by opening another GUI
+    - Fixed a crash when loading the game with the Chinese Simplified locale active
+    - Fixed a crash when using the creep collector with an invalid inventory
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.2
 Date: 2021-05-17

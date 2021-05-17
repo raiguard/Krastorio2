@@ -29,8 +29,8 @@ local function onCollection(event)
     local SelectionArea = area.load(event.area)
     local tiles = event.tiles
 
-    -- do nothing if we do not have an inventory
-    if not inventory then
+    -- do nothing if we do not have an inventory or it's not valid
+    if not inventory or not inventory.valid then
       showFlyingText(player, {"other.kr-player-inventory-full-error"}, {1, 0, 0}, SelectionArea:center())
       return
     -- or if there are no tiles in the selection
