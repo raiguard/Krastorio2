@@ -52,6 +52,7 @@ local function playerThrowAntiCreep(event)
       ccm:unlistenCallBack("on_nth_tick", 1, 10)
 
       -- begin creep removal
+      -- FIXME: This causes insane amounts of lag with lots os creep tiles
       local creep_tiles = surface.find_tiles_filtered{name = "kr-creep"}
       local num_creeps = #creep_tiles
       creep_viruses[surface_index] = {

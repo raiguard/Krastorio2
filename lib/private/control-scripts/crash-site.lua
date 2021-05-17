@@ -125,7 +125,9 @@ local function createCrashSite(event)
       while try_count < 1000 do
         to_place_position = randomizePosition(start_position, 25)
         to_place_position = surface.find_non_colliding_position(entity_name, to_place_position, 30, 3)
-        if to_place_position then
+        if to_place_position
+          and surface.can_place_entity{name = entity_name, position = to_place_position, force = player_force}
+        then
           created_entity = surface.create_entity(
           {
             name = entity_name,
