@@ -67,7 +67,6 @@ local function onBuiltAnEntity(event)
         color  = {1, 0, 0}
       }
       -- Only try to play the sound if a player placed this
-      -- FIXME: If a robot places this, the materials will be lost
       if event.player_index then
         game.players[event.player_index].play_sound
         {
