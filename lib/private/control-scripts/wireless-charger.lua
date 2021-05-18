@@ -15,27 +15,27 @@ TRIGGER_EQUIPMENT_SIZE = {W = 2, H = 2}
 local KRASTORIO_WIRELESS_CHARGING_BUILT_EVENT_FILTER =
 {
   {
-    filter = "name", 
+    filter = "name",
         name   = TRIGGER_ENTITY_NAME
     },
   {
-    filter = "type", 
+    filter = "type",
         type   = "car"
     },
   {
-    filter = "type", 
+    filter = "type",
         type   = "artillery-wagon"
     },
   {
-    filter = "type", 
+    filter = "type",
         type   = "cargo-wagon"
     },
   {
-    filter = "type", 
+    filter = "type",
         type   = "fluid-wagon"
     },
   {
-    filter = "type", 
+    filter = "type",
         type   = "locomotive"
     }
 }
@@ -61,9 +61,9 @@ end
 -- Return the gui type name from the identifier number
 local function getGUITypeName(given_id)
   for name, id in pairs(defines.gui_type) do
-    if given_id == id then 
+    if given_id == id then
       return name
-    end 
+    end
   end
 end
 
@@ -74,10 +74,10 @@ local function saveLastOpenInformations(event)
     global.player_last_open_entity[event.player_index] = {nil, nil}
   end
 
-  if 
-    (event.gui_type == 3 or event.gui_type == 5) and 
-    game.players[event.player_index] and 
-    game.players[event.player_index].character 
+  if
+    (event.gui_type == 3 or event.gui_type == 5) and
+    game.players[event.player_index] and
+    game.players[event.player_index].character
   then
     global.player_last_open_entity[event.player_index] = game.players[event.player_index].character
   elseif event.gui_type == 1 and event.entity then
@@ -143,16 +143,16 @@ local function removeMonitoredGrid(index, player_index)
       end
     end
   end
-  
+
   local old_index = table_size(global.wireless_grids)
   if old_index < 2 or old_index == index then
     -- Simply empty the table
-    global.wireless_grids[index] = nil  
+    global.wireless_grids[index] = nil
   elseif global.wireless_grids[old_index] ~= nil then
     -- Move the tail over the element to be removed
     global.wireless_grids[index] = util.copy(global.wireless_grids[old_index])
     global.wireless_grids[old_index] = nil
-    
+
     -- Update the players grid indexing if necessary
     for player_index, entity_index in pairs(global.players_wireless_grids) do
       if entity_index == old_index then
@@ -160,18 +160,18 @@ local function removeMonitoredGrid(index, player_index)
         break
       end
     end
-  else 
+  else
     -- Find the latest element if the table is not well indexed
     local i, _ = next(global.wireless_grids, nil)
     while i do
       old_index = i
       i, _ = next(global.wireless_grids, i)
     end
-    
+
     if old_index ~= index then
       -- Move the tail over the element to be removed
       global.wireless_grids[index] = util.copy(global.wireless_grids[old_index])
-      
+
       -- Update the players grid indexing if necessary
       for player_index, entity_index in pairs(global.players_wireless_grids) do
         if entity_index == old_index then
@@ -180,7 +180,7 @@ local function removeMonitoredGrid(index, player_index)
         end
       end
     end
-    
+
     global.wireless_grids[old_index] = nil
   end
 end
@@ -196,7 +196,7 @@ local function addMonitoredGrid(grid, entity, player_index)
       if player_index ~= nil and global.players_wireless_grids[player_index] ~= nil then
         removeMonitoredGrid(global.players_wireless_grids[player_index], player_index)
       end
-      
+
       local index = table_size(global.wireless_grids) + 1
       global.wireless_grids[index] = {grid, entity, nil}
       if player_index ~= nil then
@@ -288,29 +288,29 @@ local function onRemovingingEquip(event)
       if group[1] == event.grid then
         removeMonitoredGrid(i)
       end
-    end   
+    end
   end
 end
 
--- Check if any of monitored grids are in range with any tesla coil 
+-- Check if any of monitored grids are in range with any tesla coil
 local function checkIfInRange(event)
   if not global.wireless_grids or table_size(global.wireless_grids) == 0 then
     return false
   end
-  
+
   local i, group = next(global.wireless_grids)
   local entity = nil
-  
+
   while i do
     entity = group[2]
     if entity and entity.valid then
       local matched = entity.surface.find_entities_filtered
       {
-        position = entity.position, 
-        radius   = WIRELESS_CHARGE_RADIUS, 
+        position = entity.position,
+        radius   = WIRELESS_CHARGE_RADIUS,
         name     = TRIGGER_ENTITY_NAME
       }
-      if matched and table_size(matched) > 0 then 
+      if matched and table_size(matched) > 0 then
         global.wireless_grids[i][3] = matched
       else
         global.wireless_grids[i][3] = nil
@@ -318,10 +318,10 @@ local function checkIfInRange(event)
     elseif not entity.valid then
       removeMonitoredGrid(i)
     end
-    
-    i, group = next(global.wireless_grids, i) 
+
+    i, group = next(global.wireless_grids, i)
   end
-  
+
 end
 
 -- Charge if possible
@@ -329,36 +329,36 @@ local function charge(event)
   if not global.wireless_grids or table_size(global.wireless_grids) == 0 then
     return false
   end
-  
+
   local i, group = next(global.wireless_grids)
   local grid, grid_entity, matched = nil, nil, nil
   local powered = false
   local receiver_equiment = nil
   local needed_energy = nil
-  
+
   while i and group do
     grid        = group[1]
     grid_entity = group[2]
     matched     = group[3]
-    
+
     if
-      grid and 
-      grid.valid and 
+      grid and
+      grid.valid and
       grid_entity and
       grid_entity.valid and
-      matched and 
+      matched and
       table_size(matched) > 0 and
       grid.available_in_batteries < grid.battery_capacity
     then
-      receiver_equiment = nil     
+      receiver_equiment = nil
       for _, equipment in pairs(grid.equipment) do
         if equipment.name == TRIGGER_EQUIP_NAME then
           receiver_equiment = equipment
           break
         end
       end
-      
-      if 
+
+      if
         receiver_equiment and
         receiver_equiment.energy < receiver_equiment.max_energy
       then
@@ -368,7 +368,7 @@ local function charge(event)
             powered = true
             -- Calculate energy can must be inserted in the equipment, between max available and available space
             needed_energy = math.min(receiver_equiment.max_energy - receiver_equiment.energy, global.wireless_charge_ratio)
-            -- Add energy to equiment               
+            -- Add energy to equiment
             receiver_equiment.energy = receiver_equiment.energy + needed_energy
             -- Remove energy from the entity
             entity.energy = entity.energy - needed_energy*6
@@ -386,38 +386,42 @@ local function charge(event)
     elseif not grid.valid then
       removeMonitoredGrid(i)
     end
-    
+
     i, group = next(global.wireless_grids, i)
   end
 end
 
 local function onBuiltAnEntity(event)
   local entity = event.created_entity or event.entity
-  
+
   if entity and entity.valid then
-    if entity.name == TRIGGER_ENTITY_NAME then 
+    if entity.name == TRIGGER_ENTITY_NAME then
       local same_entities = entity.surface.find_entities_filtered
       {
-        position = entity.position, 
-        radius   = WIRELESS_CHARGE_RADIUS, 
+        position = entity.position,
+        radius   = WIRELESS_CHARGE_RADIUS,
         name     = TRIGGER_ENTITY_NAME
       }
       if table_size(same_entities) > 1 then
         for _, product in pairs(entity.prototype.mineable_properties.products) do
           entity.last_user.insert{name=product.name or product[1], count=product.amount or product[2]}
-        end       
+        end
         krastorio.flying_texts.showOnSurfaceText
         {
           entity = entity,
           text   = {"other.kr-another-tesla-coil-in-range"},
           color  = {1, 0, 0}
         }
-        game.players[event.player_index].play_sound
-        {
-          path            = "utility/cannot_build",
-          volume_modifier = 1.0
-        }
-        entity.destroy()  
+        -- Only try to play the sound if a player placed this
+        -- FIXME: If a robot places this, the materials will be lost
+        if event.player_index then
+          game.players[event.player_index].play_sound
+          {
+            path            = "utility/cannot_build",
+            volume_modifier = 1.0
+          }
+        end
+        entity.destroy()
       end
     elseif entity.grid and haveOneTriggerEquip(entity.grid) then
       addMonitoredGrid(entity.grid, entity)
@@ -429,25 +433,25 @@ end
 
 local function onRemovingAnEntity(event)
   local removed_entity = event.entity
-  
-  if 
-    removed_entity and 
-    removed_entity.valid and 
-    removed_entity.grid and 
-    haveOneTriggerEquip(removed_entity.grid)  
+
+  if
+    removed_entity and
+    removed_entity.valid and
+    removed_entity.grid and
+    haveOneTriggerEquip(removed_entity.grid)
   then
     local i, group = next(global.wireless_grids)
     local entity = nil
-    
+
     while i and group do
       entity = group[2]
       if removed_entity == entity then
         removeMonitoredGrid(i)
         break
       end
-      i, group = next(global.wireless_grids, i) 
+      i, group = next(global.wireless_grids, i)
     end
-  end 
+  end
 end
 
 local function onPlayerArmorInventoryChanged(event)
@@ -461,8 +465,8 @@ local function onPlayerArmorInventoryChanged(event)
       if character and character.valid and character.grid and haveOneTriggerEquip(character.grid) then
         addMonitoredGrid(character.grid, character, player_index)
       end
-    else      
-      if global.players_wireless_grids[player_index] ~= nil then        
+    else
+      if global.players_wireless_grids[player_index] ~= nil then
         removeMonitoredGrid(global.players_wireless_grids[player_index], player_index)
       end
     end
@@ -488,10 +492,10 @@ end
 -- Fix for previous versions
 local function tidyUpIndexes()
   local count = 1
-  local tidy_up_table = {}  
+  local tidy_up_table = {}
   local i, group = next(global.wireless_grids, nil)
-  
-  while i do    
+
+  while i do
     tidy_up_table[count] = util.copy(group)
     -- Update the players grid indexing if necessary
     for player_index, entity_index in pairs(global.players_wireless_grids) do
@@ -499,7 +503,7 @@ local function tidyUpIndexes()
         global.players_wireless_grids[player_index] = count
         break
       end
-    end 
+    end
     count = count + 1
     i, group = next(global.wireless_grids, i)
   end
@@ -507,7 +511,7 @@ end
 
 ------------------------------------------------------------------------------------
 return
-{ 
+{
   -- -- Bootstrap
   -- For setup variables
   { onInitAndConf, "on_init" },
@@ -518,13 +522,13 @@ return
   { saveLastOpenInformations, "on_gui_opened" },
   { onPlayerJoinedGame, "on_player_joined_game" },
   { onInstallingEquip, "on_player_placed_equipment" },
-  { onRemovingingEquip, "on_player_removed_equipment" },  
+  { onRemovingingEquip, "on_player_removed_equipment" },
   { onPlayerArmorInventoryChanged, "on_player_armor_inventory_changed" },
   -- Built entity
   { onBuiltAnEntity, "on_built_entity", KRASTORIO_WIRELESS_CHARGING_BUILT_EVENT_FILTER },
   { onBuiltAnEntity, "on_robot_built_entity", KRASTORIO_WIRELESS_CHARGING_BUILT_EVENT_FILTER },
   { onBuiltAnEntity, "script_raised_built" },
-  { onBuiltAnEntity, "script_raised_revive" },  
+  { onBuiltAnEntity, "script_raised_revive" },
   -- Remove entity
   { onRemovingAnEntity, "on_player_mined_entity", KRASTORIO_WIRELESS_CHARGING_BUILT_EVENT_FILTER },
   { onRemovingAnEntity, "on_robot_mined_entity", KRASTORIO_WIRELESS_CHARGING_BUILT_EVENT_FILTER },

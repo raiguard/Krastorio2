@@ -66,11 +66,15 @@ local function onBuiltAnEntity(event)
         text   = {"other.kr-intergalactic-transceiver-error"},
         color  = {1, 0, 0}
       }
-      game.players[event.player_index].play_sound
-      {
-        path            = "utility/cannot_build",
-        volume_modifier = 1.0
-      }
+      -- Only try to play the sound if a player placed this
+      -- FIXME: If a robot places this, the materials will be lost
+      if event.player_index then
+        game.players[event.player_index].play_sound
+        {
+          path            = "utility/cannot_build",
+          volume_modifier = 1.0
+        }
+      end
       entity.destroy()
     end
   end
