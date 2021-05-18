@@ -274,8 +274,12 @@ local function onInstallingEquip(event)
         addMonitoredGrid(grid, last_open_entity)
       end
     elseif havePlayerThisGridOpen(event.player_index, grid) then
-      game.players[event.player_index].insert(grid.take({equipment=equipment}))
-      game.print({"other.kr-already-one-antenna"}, {1, 0, 0})
+      local player = game.get_player(event.player_index)
+      if player and player.valid then
+        player.insert(grid.take{equipment=equipment})
+        player.create_local_flying_text{text = {"other.kr-already-one-antenna"}, create_at_cursor = true}
+        player.play_sound{path = "utility/cannot_build"}
+      end
     end
   end
 end
