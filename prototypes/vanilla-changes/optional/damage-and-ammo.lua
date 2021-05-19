@@ -48,7 +48,7 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
   -- Laser turret
   data.raw["electric-turret"]["laser-turret"].max_health = 500 -- nerf /2
   data.raw["electric-turret"]["laser-turret"].call_for_help_radius = 35 -- nerf -5
-  data.raw["electric-turret"]["laser-turret"].energy_source =  -- nerf x2{
+  data.raw["electric-turret"]["laser-turret"].energy_source =  { -- nerf x2
     type = "electric",
     buffer_capacity = "2000kJ",
     input_flow_limit = "4000kW",

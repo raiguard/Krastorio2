@@ -166,7 +166,7 @@ local creep_transitions = {
 }
 
 local creep_transitions_between_transitions = {
-  make_generic_transition_template --generic_transition_between_transitions_template(
+  make_generic_transition_template( --generic_transition_between_transitions_template
     nil,
     default_transition_group_id,
     water_transition_group_id,

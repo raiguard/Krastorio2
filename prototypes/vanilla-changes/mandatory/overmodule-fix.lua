@@ -2,12 +2,12 @@
 -- multiply by 5 the recipe stat for avoid overmodule bug effect
 for name, recipe in pairs(data.raw.recipe) do
   local energy_required = krastorio.recipes.normalEnergyRequired(name) or 3.2
-  if  -- Smeltingrecipe.category and recipe.category == "smelting" and energy_required < 6.4 then
+  if recipe.category and recipe.category == "smelting" and energy_required < 6.4 then -- Smelting
     if not recipe.energy_required then
       krastorio.recipes.setEnergyCost(name, 3.2)
     end
     krastorio.recipes.multiplyRecipeStat(name, 5)
-  elseif -- Chemical recipe.category and recipe.category == "chemistry" and energy_required < 2.0 then
+  elseif recipe.category and recipe.category == "chemistry" and energy_required < 2.0 then -- Chemical
     if not recipe.energy_required then
       krastorio.recipes.setEnergyCost(name, 0.5)
     end
@@ -16,7 +16,7 @@ for name, recipe in pairs(data.raw.recipe) do
     else
       krastorio.recipes.multiplyRecipeStat(name, 4)
     end
-  elseif -- Intermediate crafting not recipe.category or recipe.category == "crafting" then
+  elseif not recipe.category or recipe.category == "crafting" then -- Intermediate crafting
     local recipe_item = krastorio.items.getItem(name) or false
 
     if
