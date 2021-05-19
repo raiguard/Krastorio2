@@ -1,7 +1,6 @@
-data:extend(
-{
+data:extend({
   {
     type = "damage-type",
-    name = "kr-explosion" --special damage for turrets
-  }
+    name = "kr-explosion", --special damage for turrets
+  },
 })

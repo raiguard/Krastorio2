@@ -1,7 +1,6 @@
-data:extend(
-{
+data:extend({
   {
     type = "damage-type",
-    name = "radioactive"
-  }
+    name = "radioactive",
+  },
 })

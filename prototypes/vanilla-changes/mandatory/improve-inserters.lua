@@ -6,16 +6,17 @@ for _, inserter in pairs(data.raw.inserter) do
       inserter.localised_description = {
         "other.conservative-additional-inserter-description",
         inserter.localised_description,
-        {"other.additional-inserter-description"}
+        { "other.additional-inserter-description" },
       }
     else
-      inserter.localised_description = {"other.additional-inserter-description"}
+      inserter.localised_description = { "other.additional-inserter-description" }
     end
   end
   if inserter.energy_source and inserter.energy_source.type == "burner" then
     inserter.allow_burner_leech = true
     if not mods["bobinserters"] then
-      inserter.localised_description = {"other.additional-burner-inserter-description", inserter.localised_description}
+      inserter.localised_description =
+        { "other.additional-burner-inserter-description", inserter.localised_description }
     end
   end
 end

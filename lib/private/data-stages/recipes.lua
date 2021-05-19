@@ -182,12 +182,12 @@ function krastorio.recipes.resultToResults(recipe_name)
     if recipe.result then
       result_count = recipe.result_count or 1
       if type(recipe.result) == "string" then
-        recipe.results = {{type = "item", name = recipe.result, amount = result_count}}
+        recipe.results = { { type = "item", name = recipe.result, amount = result_count } }
       elseif recipe.result.name then
-        recipe.results = {recipe.result}
+        recipe.results = { recipe.result }
       elseif recipe.result[1] then
         result_count = recipe.result[2] or result_count
-        recipe.results = {{type = "item", name = recipe.result[1], amount = result_count}}
+        recipe.results = { { type = "item", name = recipe.result[1], amount = result_count } }
       end
       recipe.result = nil
       results = recipe.results
@@ -196,12 +196,12 @@ function krastorio.recipes.resultToResults(recipe_name)
     if not results and recipe.normal and recipe.normal.result then
       result_count = recipe.normal.result_count or 1
       if type(recipe.normal.result) == "string" then
-        recipe.normal.results = {{type = "item", name = recipe.normal.result, amount = result_count}}
+        recipe.normal.results = { { type = "item", name = recipe.normal.result, amount = result_count } }
       elseif recipe.normal.result.name then
-        recipe.normal.results = {recipe.normal.result}
+        recipe.normal.results = { recipe.normal.result }
       elseif recipe.normal.result[1] then
         result_count = recipe.normal.result[2] or result_count
-        recipe.normal.results = {{type = "item", name = recipe.normal.result[1], amount = result_count}}
+        recipe.normal.results = { { type = "item", name = recipe.normal.result[1], amount = result_count } }
       end
       recipe.normal.result = nil
       results = recipe.normal.results
@@ -210,12 +210,12 @@ function krastorio.recipes.resultToResults(recipe_name)
     if recipe.expensive and recipe.expensive.result then
       result_count = recipe.expensive.result_count or 1
       if type(recipe.expensive.result) == "string" then
-        recipe.expensive.results = {{type = "item", name = recipe.expensive.result, amount = result_count}}
+        recipe.expensive.results = { { type = "item", name = recipe.expensive.result, amount = result_count } }
       elseif recipe.expensive.result.name then
-        recipe.expensive.results = {recipe.expensive.result}
+        recipe.expensive.results = { recipe.expensive.result }
       elseif recipe.expensive.result[1] then
         result_count = recipe.expensive.result[2] or result_count
-        recipe.expensive.results = {{type = "item", name = recipe.expensive.result[1], amount = result_count}}
+        recipe.expensive.results = { { type = "item", name = recipe.expensive.result[1], amount = result_count } }
       end
       recipe.expensive.result = nil
       recipe.expensive.result_count = nil
@@ -321,7 +321,7 @@ function krastorio.recipes.getCategory(recipe_name)
 end
 
 function krastorio.recipes.normalEnergyRequired(recipe_name)
-  local recipe  = krastorio.recipes.getRecipeFromName(recipe_name)
+  local recipe = krastorio.recipes.getRecipeFromName(recipe_name)
   local seconds = 0
   if recipe then
     seconds = 0.5
@@ -345,7 +345,7 @@ end
 
 -- return a copy
 function krastorio.recipes.getParsedItem(item)
-  if type(item)~="table" then
+  if type(item) ~= "table" then
     return item
   end
 
@@ -390,10 +390,10 @@ function krastorio.recipes.getParsedItem(item)
 end
 
 function krastorio.recipes.mergeParsedItems(item_a, item_b)
-  local merged_item  = {}
+  local merged_item = {}
   -- mandatory property
-  merged_item.name   = item_b.name
-  merged_item.type   = item_b.type
+  merged_item.name = item_b.name
+  merged_item.type = item_b.type
 
   if item_a.amount and item_b.amount then
     merged_item.amount = item_a.amount + item_b.amount
@@ -430,7 +430,9 @@ end
 
 function krastorio.recipes.uniteDuplicateItems(items)
   local count = #items
-  for i=1, count do items[i]=krastorio.recipes.getParsedItem(items[i]) end
+  for i = 1, count do
+    items[i] = krastorio.recipes.getParsedItem(items[i])
+  end
   deduplicated_items = {}
   local united = false
   local inner_item_name = nil
@@ -451,9 +453,13 @@ function krastorio.recipes.uniteDuplicateItems(items)
       table.insert(deduplicated_items, item)
     end
   end
-  for i=1, count do items[i]=nil end
+  for i = 1, count do
+    items[i] = nil
+  end
   count = #deduplicated_items
-  for i=1, count do table.insert(items, deduplicated_items[i]) end
+  for i = 1, count do
+    table.insert(items, deduplicated_items[i])
+  end
 end
 
 function krastorio.recipes.remove(items, item_name)
@@ -473,7 +479,7 @@ function krastorio.recipes.add(items, item)
   local ingredient_name = ""
   local ingredient_to_insert = nil
   if type(item) == "string" then
-    ingredient_to_insert = {item, 1}
+    ingredient_to_insert = { item, 1 }
   elseif type(item) == "table" then
     ingredient_to_insert = item
   else
@@ -893,16 +899,22 @@ end
 -- @ old_ingredient_names
 -- @ new_ingredients
 function krastorio.recipes.replaceIngredients(recipe_name, old_ingredient_names, new_ingredients)
-  if type(old_ingredient_names) ~= "table" or type(new_ingredients) ~= "table" then return false end
+  if type(old_ingredient_names) ~= "table" or type(new_ingredients) ~= "table" then
+    return false
+  end
   local replaced_all = true
   local replaced = false
   local i, old_ingredient_name = next(old_ingredient_names, nil)
-  local j, ingredient          = next(new_ingredients, nil)
+  local j, ingredient = next(new_ingredients, nil)
   while i and j and type(ingredient) == "table" do
-    replaced = krastorio.recipes.replaceIngredient(recipe_name, old_ingredient_name, krastorio_utils.tables.fullCopy(ingredient))
+    replaced = krastorio.recipes.replaceIngredient(
+      recipe_name,
+      old_ingredient_name,
+      krastorio_utils.tables.fullCopy(ingredient)
+    )
     replaced_all = replaced_all and replaced
     i, old_ingredient_name = next(old_ingredient_names, i)
-    j, ingredient          = next(new_ingredients, j)
+    j, ingredient = next(new_ingredients, j)
   end
   return replaced_all
 end
@@ -915,7 +927,9 @@ function krastorio.recipes.replaceIngredientToAllRecipes(old_ingredient_name, ne
   local count = 0
   if next(new_ingredient) ~= nil then
     for name, recipe in pairs(data.raw.recipe) do
-      if krastorio.recipes.replaceIngredient(name, old_ingredient_name, krastorio_utils.tables.fullCopy(new_ingredient)) then
+      if
+        krastorio.recipes.replaceIngredient(name, old_ingredient_name, krastorio_utils.tables.fullCopy(new_ingredient))
+      then
         count = count + 1
       end
     end
@@ -928,14 +942,16 @@ end
 -- @ old_ingredient_names
 -- @ new_ingredients
 function krastorio.recipes.replaceIngredientsToAllRecipes(old_ingredient_names, new_ingredients)
-  if type(old_ingredient_names) ~= "table" or type(new_ingredients) ~= "table" then return false end
+  if type(old_ingredient_names) ~= "table" or type(new_ingredients) ~= "table" then
+    return false
+  end
   local total_count = 0
   local i, old_ingredient_name = next(old_ingredient_names, nil)
-  local j, ingredient          = next(new_ingredients, nil)
+  local j, ingredient = next(new_ingredients, nil)
   while i and j and next(ingredient) ~= nil do
     total_count = total_count + krastorio.recipes.replaceIngredientToAllRecipes(old_ingredient_name, ingredient)
     i, old_ingredient_name = next(old_ingredient_names, i)
-    j, ingredient          = next(new_ingredients, j)
+    j, ingredient = next(new_ingredients, j)
   end
   return total_count
 end
@@ -970,17 +986,23 @@ end
 -- @ old_ingredient_names
 -- @ new_ingredients
 function krastorio.recipes.addOrReplaceIngredients(recipe_name, old_ingredient_names, new_ingredients)
-  if type(old_ingredient_names) ~= "table" or type(new_ingredients) ~= "table" then return false end
+  if type(old_ingredient_names) ~= "table" or type(new_ingredients) ~= "table" then
+    return false
+  end
   local i, old_ingredient_name = next(old_ingredient_names, nil)
-  local j, ingredient          = next(new_ingredients, nil)
+  local j, ingredient = next(new_ingredients, nil)
   while j and type(ingredient) == "table" do
     if not old_ingredient_name then
       krastorio.recipes.addIngredient(recipe_name, krastorio_utils.tables.fullCopy(ingredient))
     else
-      krastorio.recipes.addOrReplaceIngredient(recipe_name, old_ingredient_name, krastorio_utils.tables.fullCopy(ingredient))
+      krastorio.recipes.addOrReplaceIngredient(
+        recipe_name,
+        old_ingredient_name,
+        krastorio_utils.tables.fullCopy(ingredient)
+      )
     end
     i, old_ingredient_name = next(old_ingredient_names, i)
-    j, ingredient          = next(new_ingredients, j)
+    j, ingredient = next(new_ingredients, j)
   end
 end
 
@@ -999,13 +1021,15 @@ end
 -- @ old_ingredient_names
 -- @ new_ingredients
 function krastorio.recipes.addOrReplaceIngredientsToAllRecipes(old_ingredient_names, new_ingredients)
-  if type(old_ingredient_names) ~= "table" or type(new_ingredients) ~= "table" then return false end
+  if type(old_ingredient_names) ~= "table" or type(new_ingredients) ~= "table" then
+    return false
+  end
   local i, old_ingredient_name = next(old_ingredient_names, nil)
-  local j, ingredient          = next(new_ingredients, nil)
+  local j, ingredient = next(new_ingredients, nil)
   while j and type(ingredient) == "table" do
     krastorio.recipes.addOrReplaceIngredientToAllRecipes(old_ingredient_name, ingredient)
     i, old_ingredient_name = next(old_ingredient_names, i)
-    j, ingredient          = next(new_ingredients, j)
+    j, ingredient = next(new_ingredients, j)
   end
 end
 
@@ -1034,16 +1058,18 @@ end
 -- @ old_ingredient_names
 -- @ new_ingredients
 function krastorio.recipes.convertIngredients(recipe_name, old_ingredient_names, new_ingredient_names)
-  if type(old_ingredient_names) ~= "table" or type(new_ingredient_names) ~= "table" then return false end
+  if type(old_ingredient_names) ~= "table" or type(new_ingredient_names) ~= "table" then
+    return false
+  end
   local converted_all = true
-  local converted     = false
+  local converted = false
   local i, old_ingredient_name = next(old_ingredient_names, nil)
-  local j, ingredient_name     = next(new_ingredient_names, nil)
+  local j, ingredient_name = next(new_ingredient_names, nil)
   while i and j and type(ingredient_name) == "table" do
     converted = krastorio.recipes.convertIngredient(recipe_name, old_ingredient_name, ingredient_name)
     converted_all = converted_all and converted
     i, old_ingredient_name = next(old_ingredient_names, i)
-    j, ingredient_name     = next(new_ingredients, j)
+    j, ingredient_name = next(new_ingredients, j)
   end
   return converted_all
 end
@@ -1063,12 +1089,15 @@ end
 -- @ old_ingredient_names
 -- @ new_ingredients
 function krastorio.recipes.convertIngredientsFromAllRecipes(old_ingredient_names, new_ingredient_names)
-  if type(old_ingredient_names) ~= "table" or type(new_ingredient_names) ~= "table" then return false end
+  if type(old_ingredient_names) ~= "table" or type(new_ingredient_names) ~= "table" then
+    return false
+  end
   local total_count = 0
   local i, old_ingredient_name = next(old_ingredient_names, nil)
   local j, new_ingredient_name = next(new_ingredient_names, nil)
   while i and j and new_ingredient_name ~= nil do
-    total_count = total_count + krastorio.recipes.convertIngredientFromAllRecipes(old_ingredient_name, new_ingredient_name)
+    total_count = total_count
+      + krastorio.recipes.convertIngredientFromAllRecipes(old_ingredient_name, new_ingredient_name)
     i, old_ingredient_name = next(old_ingredient_names, i)
     j, new_ingredient_name = next(new_ingredient_names, j)
   end
@@ -1147,18 +1176,18 @@ function krastorio.recipes.overrideProducts(recipe_name, new_products, new_expen
   if recipe and next(recipe) then
     -- normal ingredients
     if recipe.normal then
-      recipe.normal.result          = nil
-      recipe.normal.results         = new_products
-      recipe.normal.result_count    = nil
+      recipe.normal.result = nil
+      recipe.normal.results = new_products
+      recipe.normal.result_count = nil
     else
-      recipe.result                 = nil
-      recipe.results                = table.deepcopy(new_products)
-      recipe.result_count           = nil
+      recipe.result = nil
+      recipe.results = table.deepcopy(new_products)
+      recipe.result_count = nil
     end
     -- expensive ingredients
     if recipe.expensive then
-      recipe.expensive.result       = nil
-      recipe.expensive.results      = new_expensive_products or table.deepcopy(new_products)
+      recipe.expensive.result = nil
+      recipe.expensive.results = new_expensive_products or table.deepcopy(new_products)
       recipe.expensive.result_count = nil
     end
     return true
@@ -1186,7 +1215,7 @@ function krastorio.recipes.removeProducts(recipe_name, product_names)
   local removed_all = true
   local removed = false
   for _, product_name in pairs(product_names) do
-    removed     = krastorio.recipes.removeProduct(recipe_name, product_name)
+    removed = krastorio.recipes.removeProduct(recipe_name, product_name)
     removed_all = removed_all and removed
   end
   return removed_all
@@ -1225,7 +1254,7 @@ function krastorio.recipes.addProduct(recipe_name, product)
   if next(products) ~= nil then
     local added = krastorio.recipes.add(products, product)
     local recipe = krastorio.recipes.getRecipeFromName(recipe_name)
-    if added and ( #products > 1 and ( not(recipe.icon and recipe.subgroup) or recipe.main_product ) )then
+    if added and (#products > 1 and (not (recipe.icon and recipe.subgroup) or recipe.main_product)) then
       local i, product = next(products)
       recipe.main_product = product.name
       if not (recipe.icon or recipe.icons) then
@@ -1351,16 +1380,18 @@ end
 -- @ old_product_names
 -- @ new_products
 function krastorio.recipes.replaceProducts(recipe_name, old_product_names, new_products)
-  if type(old_product_names) ~= "table" or type(new_products) ~= "table" then return false end
+  if type(old_product_names) ~= "table" or type(new_products) ~= "table" then
+    return false
+  end
   local replaced_all = true
   local replaced = false
   local i, old_product_name = next(old_product_names, nil)
-  local j, product          = next(new_products, nil)
+  local j, product = next(new_products, nil)
   while i and j and type(product) == "table" do
     replaced = krastorio.recipes.replaceProduct(recipe_name, old_product_name, krastorio_utils.tables.fullCopy(product))
     replaced_all = replaced_all and replaced
     i, old_product_name = next(old_product_names, i)
-    j, product          = next(new_products, j)
+    j, product = next(new_products, j)
   end
   return replaced_all
 end
@@ -1386,14 +1417,16 @@ end
 -- @ old_product_names
 -- @ new_products
 function krastorio.recipes.replaceProductsToAllRecipes(old_product_names, new_products)
-  if type(old_product_names) ~= "table" or type(new_products) ~= "table" then return false end
+  if type(old_product_names) ~= "table" or type(new_products) ~= "table" then
+    return false
+  end
   local total_count = 0
   local i, old_product_name = next(old_product_names, nil)
-  local j, product          = next(new_products, nil)
+  local j, product = next(new_products, nil)
   while i and j and next(product) ~= nil do
     total_count = total_count + krastorio.recipes.replaceProductToAllRecipes(old_product_name, product)
     i, old_product_name = next(old_product_names, i)
-    j, product          = next(new_products, j)
+    j, product = next(new_products, j)
   end
   return total_count
 end
@@ -1411,7 +1444,7 @@ function krastorio.recipes.addOrReplaceProduct(recipe_name, old_product_name, ne
   if next(products) ~= nil then
     local added = krastorio.recipes.addOrReplace(products, old_product_name, new_product)
     local recipe = krastorio.recipes.getRecipeFromName(recipe_name)
-    if #products > 1 and ( not(recipe.icon and recipe.subgroup) or recipe.main_product )then
+    if #products > 1 and (not (recipe.icon and recipe.subgroup) or recipe.main_product) then
       local i, product = next(products)
       recipe.main_product = product.name
       krastorio_utils.log.write(3, string.format("Maybe %s recipe needs the icon to be set correctly.", recipe.name))
@@ -1427,9 +1460,11 @@ end
 -- @ old_product_names
 -- @ new_products
 function krastorio.recipes.addOrReplaceProducts(recipe_name, old_product_names, new_products)
-  if type(old_product_names) ~= "table" or type(new_products) ~= "table" then return false end
+  if type(old_product_names) ~= "table" or type(new_products) ~= "table" then
+    return false
+  end
   local i, old_product_name = next(old_product_names, nil)
-  local j, product          = next(new_products, nil)
+  local j, product = next(new_products, nil)
   while j and type(product) == "table" do
     if not old_product_name then
       krastorio.recipes.addProduct(recipe_name, krastorio_utils.tables.fullCopy(product))
@@ -1437,7 +1472,7 @@ function krastorio.recipes.addOrReplaceProducts(recipe_name, old_product_names, 
       krastorio.recipes.addOrReplaceProduct(recipe_name, old_product_name, krastorio_utils.tables.fullCopy(product))
     end
     i, old_product_name = next(old_product_names, i)
-    j, product          = next(new_products, j)
+    j, product = next(new_products, j)
   end
 end
 
@@ -1456,13 +1491,15 @@ end
 -- @ old_product_names
 -- @ new_products
 function krastorio.recipes.addOrReplacProductsToAllRecipes(old_product_names, new_products)
-  if type(old_product_names) ~= "table" or type(new_products) ~= "table" then return false end
+  if type(old_product_names) ~= "table" or type(new_products) ~= "table" then
+    return false
+  end
   local i, old_product_name = next(old_product_names, nil)
-  local j, product          = next(new_products, nil)
+  local j, product = next(new_products, nil)
   while j and type(product) == "table" do
     krastorio.recipes.addOrReplaceProductToAllRecipes(old_product_name, product)
     i, old_product_name = next(old_product_names, i)
-    j, product          = next(new_products, j)
+    j, product = next(new_products, j)
   end
 end
 
@@ -1485,13 +1522,15 @@ end
 -- @ old_product_names
 -- @ new_products
 function krastorio.recipes.convertProducts(recipe_name, old_product_names, new_product_names)
-  if type(old_product_names) ~= "table" or type(new_product_names) ~= "table" then return false end
+  if type(old_product_names) ~= "table" or type(new_product_names) ~= "table" then
+    return false
+  end
   local converted_all = true
-  local converted     = false
+  local converted = false
   local i, old_product_name = next(old_product_names, nil)
   local j, new_product_name = next(new_product_names, nil)
   while i and j and new_product_name ~= nil do
-    converted     = krastorio.recipes.convertProduct(recipe_name, old_product_name, new_product_name)
+    converted = krastorio.recipes.convertProduct(recipe_name, old_product_name, new_product_name)
     converted_all = converted_all and converted
     i, old_product_name = next(old_product_names, i)
     j, new_product_name = next(new_product_names, j)
@@ -1518,7 +1557,9 @@ end
 -- @ old_product_names
 -- @ new_products
 function krastorio.recipes.convertProductsFromAllRecipes(old_product_names, new_product_names)
-  if type(old_product_names) ~= "table" or type(new_product_names) ~= "table" then return false end
+  if type(old_product_names) ~= "table" or type(new_product_names) ~= "table" then
+    return false
+  end
   local total_count = 0
   local i, old_product_name = next(old_product_names, nil)
   local j, new_product_name = next(new_product_names, nil)
@@ -1602,30 +1643,38 @@ function krastorio.recipes.addWithOverrideSafeNewRecipe(recipe)
   if recipe.type == "recipe" and recipe.name then
     if data.raw.recipe[recipe.name] then
       local suffix = 2
-      while data.raw.recipe[recipe.name.."-"..suffix] do
+      while data.raw.recipe[recipe.name .. "-" .. suffix] do
         suffix = suffix + 1
       end
       if not recipe.localised_name then
         if recipe.result then
-          recipe.localised_name = {"other.krastorio-recipe-variation-n", {"item-name."..recipe.result}, tostring(suffix)}
+          recipe.localised_name =
+            { "other.krastorio-recipe-variation-n", { "item-name." .. recipe.result }, tostring(suffix) }
         else
-          recipe.localised_name = {"other.krastorio-recipe-variation-n", {"recipe-name."..recipe.name}, tostring(suffix)}
+          recipe.localised_name =
+            { "other.krastorio-recipe-variation-n", { "recipe-name." .. recipe.name }, tostring(suffix) }
         end
       end
       -- log activity
-      krastorio_utils.log.write(3, string.format("Avoided recipe override chaning recipe name from %s to %s", recipe.name, recipe.name.."-"..suffix))
+      krastorio_utils.log.write(
+        3,
+        string.format(
+          "Avoided recipe override chaning recipe name from %s to %s",
+          recipe.name,
+          recipe.name .. "-" .. suffix
+        )
+      )
       -- apply
-      krastorio.recipes.changed_names[recipe.name] = recipe.name.."-"..suffix
-      recipe.name = recipe.name.."-"..suffix
+      krastorio.recipes.changed_names[recipe.name] = recipe.name .. "-" .. suffix
+      recipe.name = recipe.name .. "-" .. suffix
     end
-    data:extend({recipe})
+    data:extend({ recipe })
   end
 end
 
 -- @ recipe_name
 -- @ multiplier
 function krastorio.recipes.multiplyRecipeStat(recipe_name, multiplier, only_ingredients)
-
   local recipe = krastorio.recipes.getRecipeFromName(recipe_name)
 
   if recipe then
@@ -1698,9 +1747,7 @@ function krastorio.recipes.multiplyRecipeStat(recipe_name, multiplier, only_ingr
         recipe.expensive.energy_required = 0.5 * multiplier
       end
     end
-
   end
-
 end
 
 -- @ recipe_name
@@ -1738,16 +1785,15 @@ function krastorio.recipes.migrateCategory(old_category_name, new_category_name)
   end
   -- create new category if not exist
   if data.raw["recipe-category"][new_category_name] then
-    data:extend
-    ({
+    data:extend({
       {
-         type = "recipe-category",
-         name = new_category_name
-      }
+        type = "recipe-category",
+        name = new_category_name,
+      },
     })
   end
   -- change category in machines
-  for _, prototypes_type in pairs({"assembling-machine", "furnace"}) do
+  for _, prototypes_type in pairs({ "assembling-machine", "furnace" }) do
     for _, prototype in pairs(data.raw[prototypes_type]) do
       for i, category in pairs(prototype.crafting_categories) do
         if category == old_category_name then
@@ -1814,7 +1860,11 @@ function krastorio.recipes.setRecipeResultCount(recipe_name, result_count)
   local recipe = krastorio.recipes.getRecipeFromName(recipe_name)
 
   if recipe ~= nil then
-    if not recipe.result_count and not (recipe.normal and recipe.normal.result_count) and not (recipe.expensive and recipe.expensive.result_count) then
+    if
+      not recipe.result_count
+      and not (recipe.normal and recipe.normal.result_count)
+      and not (recipe.expensive and recipe.expensive.result_count)
+    then
       if recipe and recipe.ingredients then
         recipe.result_count = result_count
       end
@@ -1893,9 +1943,11 @@ function krastorio.recipes.findNotUnlockableRecipes()
   local all_recipes = {}
   local recipe_name = nil
   for index_name, recipe in pairs(data.raw.recipe) do
-    if recipe.enabled == false or
-       (recipe.normal and recipe.normal.enabled == false) or
-       (recipe.expensive and recipe.expensive.enabled == false) then
+    if
+      recipe.enabled == false
+      or (recipe.normal and recipe.normal.enabled == false)
+      or (recipe.expensive and recipe.expensive.enabled == false)
+    then
       recipe_name = recipe.name or index_name
       all_recipes[recipe_name] = true
     end
@@ -1911,11 +1963,77 @@ function krastorio.recipes.findNotUnlockableRecipes()
     end
   end
   -- remove recipes that is unlockable by default
-  local default_locked_vanilla_recipes = { "loader", "railgun-dart", "player-port", "railgun", "fast-loader", "express-loader", "small-plane", "electric-energy-interface" }
+  local default_locked_vanilla_recipes = {
+    "loader",
+    "railgun-dart",
+    "player-port",
+    "railgun",
+    "fast-loader",
+    "express-loader",
+    "small-plane",
+    "electric-energy-interface",
+  }
   for _, recipe_name in pairs(default_locked_vanilla_recipes) do
     all_recipes[recipe_name] = nil
   end
-  local default_locked_creative_mod = { "creative-mod_creative-chest", "creative-mod_creative-provider-chest", "creative-mod_autofill-requester-chest", "creative-mod_duplicating-chest", "creative-mod_duplicating-provider-chest", "creative-mod_void-requester-chest", "creative-mod_void-storage-chest", "creative-mod_super-loader", "creative-mod_creative-cargo-wagon", "creative-mod_duplicating-cargo-wagon", "creative-mod_void-cargo-wagon", "creative-mod_super-logistic-robot", "creative-mod_super-construction-robot", "creative-mod_super-roboport", "creative-mod_fluid-source", "creative-mod_fluid-void", "creative-mod_super-boiler", "creative-mod_super-cooler", "creative-mod_configurable-super-boiler", "creative-mod_heat-source", "creative-mod_heat-void", "creative-mod_item-source", "creative-mod_duplicator", "creative-mod_item-void", "creative-mod_random-item-source", "creative-mod_creative-lab", "creative-mod_active-electric-energy-interface-output", "creative-mod_passive-electric-energy-interface", "creative-mod_active-electric-energy-interface-input", "creative-mod_energy-source", "creative-mod_passive-energy-source", "creative-mod_energy-void", "creative-mod_passive-energy-void", "creative-mod_super-electric-pole", "creative-mod_super-substation", "creative-mod_energy-absorption", "creative-mod_magic-wand-creator", "creative-mod_magic-wand-healer", "creative-mod_magic-wand-modifier", "creative-mod_super-radar", "creative-mod_super-radar-2", "creative-mod_alien-attractor-small", "creative-mod_alien-attractor-medium", "creative-mod_alien-attractor-large", "creative-mod_super-beacon", "creative-mod_super-speed-module", "creative-mod_super-effectivity-module", "creative-mod_super-productivity-module", "creative-mod_super-clean-module", "creative-mod_super-slow-module", "creative-mod_super-consumption-module", "creative-mod_super-pollution-module", "infinity-chest", "creative-mod_belt-immunity-equipment", "creative-mod_super-fusion-reactor-equipment", "creative-mod_super-personal-roboport-equipment" }
+  local default_locked_creative_mod = {
+    "creative-mod_creative-chest",
+    "creative-mod_creative-provider-chest",
+    "creative-mod_autofill-requester-chest",
+    "creative-mod_duplicating-chest",
+    "creative-mod_duplicating-provider-chest",
+    "creative-mod_void-requester-chest",
+    "creative-mod_void-storage-chest",
+    "creative-mod_super-loader",
+    "creative-mod_creative-cargo-wagon",
+    "creative-mod_duplicating-cargo-wagon",
+    "creative-mod_void-cargo-wagon",
+    "creative-mod_super-logistic-robot",
+    "creative-mod_super-construction-robot",
+    "creative-mod_super-roboport",
+    "creative-mod_fluid-source",
+    "creative-mod_fluid-void",
+    "creative-mod_super-boiler",
+    "creative-mod_super-cooler",
+    "creative-mod_configurable-super-boiler",
+    "creative-mod_heat-source",
+    "creative-mod_heat-void",
+    "creative-mod_item-source",
+    "creative-mod_duplicator",
+    "creative-mod_item-void",
+    "creative-mod_random-item-source",
+    "creative-mod_creative-lab",
+    "creative-mod_active-electric-energy-interface-output",
+    "creative-mod_passive-electric-energy-interface",
+    "creative-mod_active-electric-energy-interface-input",
+    "creative-mod_energy-source",
+    "creative-mod_passive-energy-source",
+    "creative-mod_energy-void",
+    "creative-mod_passive-energy-void",
+    "creative-mod_super-electric-pole",
+    "creative-mod_super-substation",
+    "creative-mod_energy-absorption",
+    "creative-mod_magic-wand-creator",
+    "creative-mod_magic-wand-healer",
+    "creative-mod_magic-wand-modifier",
+    "creative-mod_super-radar",
+    "creative-mod_super-radar-2",
+    "creative-mod_alien-attractor-small",
+    "creative-mod_alien-attractor-medium",
+    "creative-mod_alien-attractor-large",
+    "creative-mod_super-beacon",
+    "creative-mod_super-speed-module",
+    "creative-mod_super-effectivity-module",
+    "creative-mod_super-productivity-module",
+    "creative-mod_super-clean-module",
+    "creative-mod_super-slow-module",
+    "creative-mod_super-consumption-module",
+    "creative-mod_super-pollution-module",
+    "infinity-chest",
+    "creative-mod_belt-immunity-equipment",
+    "creative-mod_super-fusion-reactor-equipment",
+    "creative-mod_super-personal-roboport-equipment",
+  }
   for _, recipe_name in pairs(default_locked_creative_mod) do
     all_recipes[recipe_name] = nil
   end
@@ -1929,7 +2047,13 @@ function krastorio.recipes.findNotUnlockableRecipes()
     krastorio_utils.log.write(1, string.format("All recipes are unlockable."))
   else
     local inspect = require(kr_private_lib .. "/utils/inspect")
-    krastorio_utils.log.write(3, string.format("This recipes are not unlockable, maybe is an error: %s [from findNotUnlockableRecipes()]", inspect(not_unlockable_recipe_names)))
+    krastorio_utils.log.write(
+      3,
+      string.format(
+        "This recipes are not unlockable, maybe is an error: %s [from findNotUnlockableRecipes()]",
+        inspect(not_unlockable_recipe_names)
+      )
+    )
   end
   return not_unlockable_recipe_names
 end

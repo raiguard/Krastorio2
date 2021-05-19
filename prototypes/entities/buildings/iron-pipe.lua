@@ -1,344 +1,297 @@
 kr_pipepictures = function()
-  return
-  {
-    straight_vertical_single =
-    {
+  return {
+    straight_vertical_single = {
       filename = "__base__/graphics/entity/pipe/pipe-straight-vertical-single.png",
       priority = "extra-high",
       width = 80,
       height = 80,
-      hr_version =
-      {
+      hr_version = {
         filename = "__base__/graphics/entity/pipe/hr-pipe-straight-vertical-single.png",
         priority = "extra-high",
         width = 160,
         height = 160,
-        scale = 0.5
-      }
+        scale = 0.5,
+      },
     },
-    straight_vertical =
-    {
+    straight_vertical = {
       filename = kr_entities_path .. "iron-pipe/pipe-straight-vertical.png",
       priority = "extra-high",
       width = 64,
       height = 64,
-      hr_version =
-      {
+      hr_version = {
         filename = kr_entities_path .. "iron-pipe/hr-pipe-straight-vertical.png",
         priority = "extra-high",
         width = 128,
         height = 128,
-        scale = 0.5
-      }
+        scale = 0.5,
+      },
     },
-    straight_vertical_window =
-    {
+    straight_vertical_window = {
       filename = kr_entities_path .. "iron-pipe/pipe-straight-vertical-window.png",
       priority = "extra-high",
       width = 64,
       height = 64,
-      hr_version =
-      {
+      hr_version = {
         filename = kr_entities_path .. "iron-pipe/hr-pipe-straight-vertical-window.png",
         priority = "extra-high",
         width = 128,
         height = 128,
-        scale = 0.5
-      }
+        scale = 0.5,
+      },
     },
-    straight_horizontal_window =
-    {
+    straight_horizontal_window = {
       filename = "__base__/graphics/entity/pipe/pipe-straight-horizontal-window.png",
       priority = "extra-high",
       width = 64,
       height = 64,
-      hr_version =
-      {
+      hr_version = {
         filename = "__base__/graphics/entity/pipe/hr-pipe-straight-horizontal-window.png",
         priority = "extra-high",
         width = 128,
         height = 128,
-        scale = 0.5
-      }
+        scale = 0.5,
+      },
     },
-    straight_horizontal =
-    {
+    straight_horizontal = {
       filename = "__base__/graphics/entity/pipe/pipe-straight-horizontal.png",
       priority = "extra-high",
       width = 64,
       height = 64,
-      hr_version =
-      {
+      hr_version = {
         filename = "__base__/graphics/entity/pipe/hr-pipe-straight-horizontal.png",
         priority = "extra-high",
         width = 128,
         height = 128,
-        scale = 0.5
-      }
+        scale = 0.5,
+      },
     },
-    corner_up_right =
-    {
+    corner_up_right = {
       filename = kr_entities_path .. "iron-pipe/pipe-corner-up-right.png",
       priority = "extra-high",
       width = 64,
       height = 64,
-      hr_version =
-      {
+      hr_version = {
         filename = kr_entities_path .. "iron-pipe/hr-pipe-corner-up-right.png",
         priority = "extra-high",
         width = 128,
         height = 128,
-        scale = 0.5
-      }
+        scale = 0.5,
+      },
     },
-    corner_up_left =
-    {
+    corner_up_left = {
       filename = kr_entities_path .. "iron-pipe/pipe-corner-up-left.png",
       priority = "extra-high",
       width = 64,
       height = 64,
-      hr_version =
-      {
+      hr_version = {
         filename = kr_entities_path .. "iron-pipe/hr-pipe-corner-up-left.png",
         priority = "extra-high",
         width = 128,
         height = 128,
-        scale = 0.5
-      }
+        scale = 0.5,
+      },
     },
-    corner_down_right =
-    {
+    corner_down_right = {
       filename = "__base__/graphics/entity/pipe/pipe-corner-down-right.png",
       priority = "extra-high",
       width = 64,
       height = 64,
-      hr_version =
-      {
+      hr_version = {
         filename = "__base__/graphics/entity/pipe/hr-pipe-corner-down-right.png",
         priority = "extra-high",
         width = 128,
         height = 128,
-        scale = 0.5
-      }
+        scale = 0.5,
+      },
     },
-    corner_down_left =
-    {
+    corner_down_left = {
       filename = "__base__/graphics/entity/pipe/pipe-corner-down-left.png",
       priority = "extra-high",
       width = 64,
       height = 64,
-      hr_version =
-      {
+      hr_version = {
         filename = "__base__/graphics/entity/pipe/hr-pipe-corner-down-left.png",
         priority = "extra-high",
         width = 128,
         height = 128,
-        scale = 0.5
-      }
+        scale = 0.5,
+      },
     },
-    t_up =
-    {
+    t_up = {
       filename = kr_entities_path .. "iron-pipe/pipe-t-up.png",
       priority = "extra-high",
       width = 64,
       height = 64,
-      hr_version =
-      {
+      hr_version = {
         filename = kr_entities_path .. "iron-pipe/hr-pipe-t-up.png",
         priority = "extra-high",
         width = 128,
         height = 128,
-        scale = 0.5
-      }
+        scale = 0.5,
+      },
     },
-    t_down =
-    {
+    t_down = {
       filename = "__base__/graphics/entity/pipe/pipe-t-down.png",
       priority = "extra-high",
       width = 64,
       height = 64,
-      hr_version =
-      {
+      hr_version = {
         filename = "__base__/graphics/entity/pipe/hr-pipe-t-down.png",
         priority = "extra-high",
         width = 128,
         height = 128,
-        scale = 0.5
-      }
+        scale = 0.5,
+      },
     },
-    t_right =
-    {
+    t_right = {
       filename = kr_entities_path .. "iron-pipe/pipe-t-right.png",
       priority = "extra-high",
       width = 64,
       height = 64,
-      hr_version =
-      {
+      hr_version = {
         filename = kr_entities_path .. "iron-pipe/hr-pipe-t-right.png",
         priority = "extra-high",
         width = 128,
         height = 128,
-        scale = 0.5
-      }
+        scale = 0.5,
+      },
     },
-    t_left =
-    {
+    t_left = {
       filename = kr_entities_path .. "iron-pipe/pipe-t-left.png",
       priority = "extra-high",
       width = 64,
       height = 64,
-      hr_version =
-      {
+      hr_version = {
         filename = kr_entities_path .. "iron-pipe/hr-pipe-t-left.png",
         priority = "extra-high",
         width = 128,
         height = 128,
-        scale = 0.5
-      }
+        scale = 0.5,
+      },
     },
-    cross =
-    {
+    cross = {
       filename = kr_entities_path .. "iron-pipe/pipe-cross.png",
       priority = "extra-high",
       width = 64,
       height = 64,
-      hr_version =
-      {
+      hr_version = {
         filename = kr_entities_path .. "iron-pipe/hr-pipe-cross.png",
         priority = "extra-high",
         width = 128,
         height = 128,
-        scale = 0.5
-      }
+        scale = 0.5,
+      },
     },
-    ending_up =
-    {
+    ending_up = {
       filename = kr_entities_path .. "iron-pipe/pipe-ending-up.png",
       priority = "extra-high",
       width = 64,
       height = 64,
-      hr_version =
-      {
+      hr_version = {
         filename = kr_entities_path .. "iron-pipe/hr-pipe-ending-up.png",
         priority = "extra-high",
         width = 128,
         height = 128,
-        scale = 0.5
-      }
+        scale = 0.5,
+      },
     },
-    ending_down =
-    {
+    ending_down = {
       filename = "__base__/graphics/entity/pipe/pipe-ending-down.png",
       priority = "extra-high",
       width = 64,
       height = 64,
-      hr_version =
-      {
+      hr_version = {
         filename = "__base__/graphics/entity/pipe/hr-pipe-ending-down.png",
         priority = "extra-high",
         width = 128,
         height = 128,
-        scale = 0.5
-      }
+        scale = 0.5,
+      },
     },
-    ending_right =
-    {
+    ending_right = {
       filename = "__base__/graphics/entity/pipe/pipe-ending-right.png",
       priority = "extra-high",
       width = 64,
       height = 64,
-      hr_version =
-      {
+      hr_version = {
         filename = "__base__/graphics/entity/pipe/hr-pipe-ending-right.png",
         priority = "extra-high",
         width = 128,
         height = 128,
-        scale = 0.5
-      }
+        scale = 0.5,
+      },
     },
-    ending_left =
-    {
+    ending_left = {
       filename = "__base__/graphics/entity/pipe/pipe-ending-left.png",
       priority = "extra-high",
       width = 64,
       height = 64,
-      hr_version =
-      {
+      hr_version = {
         filename = "__base__/graphics/entity/pipe/hr-pipe-ending-left.png",
         priority = "extra-high",
         width = 128,
         height = 128,
-        scale = 0.5
-      }
+        scale = 0.5,
+      },
     },
-    horizontal_window_background =
-    {
+    horizontal_window_background = {
       filename = "__base__/graphics/entity/pipe/pipe-horizontal-window-background.png",
       priority = "extra-high",
       width = 64,
       height = 64,
-      hr_version =
-      {
+      hr_version = {
         filename = "__base__/graphics/entity/pipe/hr-pipe-horizontal-window-background.png",
         priority = "extra-high",
         width = 128,
         height = 128,
-        scale = 0.5
-      }
+        scale = 0.5,
+      },
     },
-    vertical_window_background =
-    {
+    vertical_window_background = {
       filename = "__base__/graphics/entity/pipe/pipe-vertical-window-background.png",
       priority = "extra-high",
       width = 64,
       height = 64,
-      hr_version =
-      {
+      hr_version = {
         filename = "__base__/graphics/entity/pipe/hr-pipe-vertical-window-background.png",
         priority = "extra-high",
         width = 128,
         height = 128,
-        scale = 0.5
-      }
+        scale = 0.5,
+      },
     },
-    fluid_background =
-    {
+    fluid_background = {
       filename = "__base__/graphics/entity/pipe/fluid-background.png",
       priority = "extra-high",
       width = 32,
       height = 20,
-      hr_version =
-      {
+      hr_version = {
         filename = "__base__/graphics/entity/pipe/hr-fluid-background.png",
         priority = "extra-high",
         width = 64,
         height = 40,
-        scale = 0.5
-      }
+        scale = 0.5,
+      },
     },
-    low_temperature_flow =
-    {
+    low_temperature_flow = {
       filename = "__base__/graphics/entity/pipe/fluid-flow-low-temperature.png",
       priority = "extra-high",
       width = 160,
-      height = 18
+      height = 18,
     },
-    middle_temperature_flow =
-    {
+    middle_temperature_flow = {
       filename = "__base__/graphics/entity/pipe/fluid-flow-medium-temperature.png",
       priority = "extra-high",
       width = 160,
-      height = 18
+      height = 18,
     },
-    high_temperature_flow =
-    {
+    high_temperature_flow = {
       filename = "__base__/graphics/entity/pipe/fluid-flow-high-temperature.png",
       priority = "extra-high",
       width = 160,
-      height = 18
+      height = 18,
     },
-    gas_flow =
-    {
+    gas_flow = {
       filename = "__base__/graphics/entity/pipe/steam.png",
       priority = "extra-high",
       line_length = 10,
@@ -347,8 +300,7 @@ kr_pipepictures = function()
       frame_count = 60,
       axially_symmetrical = false,
       direction_count = 1,
-      hr_version =
-      {
+      hr_version = {
         filename = "__base__/graphics/entity/pipe/hr-steam.png",
         priority = "extra-high",
         line_length = 10,
@@ -356,73 +308,64 @@ kr_pipepictures = function()
         height = 30,
         frame_count = 60,
         axially_symmetrical = false,
-        direction_count = 1
-      }
-    }
+        direction_count = 1,
+      },
+    },
   }
 end
 
 data.raw.pipe["pipe"].pictures = kr_pipepictures()
-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures =
-  {
-    up =
-    {
-      filename = kr_entities_path .. "iron-pipe/pipe-to-ground-up.png",
-      priority = "high",
-      width = 64,
-      height = 64, --, shift = {0.10, -0.04}
-      hr_version =
-      {
-        filename = kr_entities_path .. "iron-pipe/hr-pipe-to-ground-up.png",
-        priority = "extra-high",
-        width = 128,
-        height = 128,
-        scale = 0.5
-      }
+data.raw["pipe-to-ground"]["pipe-to-ground"].pictures = {
+  up = {
+    filename = kr_entities_path .. "iron-pipe/pipe-to-ground-up.png",
+    priority = "high",
+    width = 64,
+    height = 64, --, shift = {0.10, -0.04}
+    hr_version = {
+      filename = kr_entities_path .. "iron-pipe/hr-pipe-to-ground-up.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
     },
-    down =
-    {
-      filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-down.png",
-      priority = "high",
-      width = 64,
-      height = 64, --, shift = {0.05, 0}
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/hr-pipe-to-ground-down.png",
-        priority = "extra-high",
-        width = 128,
-        height = 128,
-        scale = 0.5
-      }
+  },
+  down = {
+    filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-down.png",
+    priority = "high",
+    width = 64,
+    height = 64, --, shift = {0.05, 0}
+    hr_version = {
+      filename = "__base__/graphics/entity/pipe-to-ground/hr-pipe-to-ground-down.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
     },
-    left =
-    {
-      filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-left.png",
-      priority = "high",
-      width = 64,
-      height = 64, --, shift = {-0.12, 0.1}
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/hr-pipe-to-ground-left.png",
-        priority = "extra-high",
-        width = 128,
-        height = 128,
-        scale = 0.5
-      }
+  },
+  left = {
+    filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-left.png",
+    priority = "high",
+    width = 64,
+    height = 64, --, shift = {-0.12, 0.1}
+    hr_version = {
+      filename = "__base__/graphics/entity/pipe-to-ground/hr-pipe-to-ground-left.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
     },
-    right =
-    {
-      filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-right.png",
-      priority = "high",
-      width = 64,
-      height = 64, --, shift = {0.1, 0.1}
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/hr-pipe-to-ground-right.png",
-        priority = "extra-high",
-        width = 128,
-        height = 128,
-        scale = 0.5
-      }
-    }
-  }
+  },
+  right = {
+    filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-right.png",
+    priority = "high",
+    width = 64,
+    height = 64, --, shift = {0.1, 0.1}
+    hr_version = {
+      filename = "__base__/graphics/entity/pipe-to-ground/hr-pipe-to-ground-right.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+    },
+  },
+}

@@ -1,7 +1,7 @@
 -- Path
-local control_scripts_path               = "__Krastorio2__/lib/private/control-scripts/"
+local control_scripts_path = "__Krastorio2__/lib/private/control-scripts/"
 local control_compatibility_scripts_path = "__Krastorio2__/compatibility-scripts/control/"
-local control_lib_path                   = control_scripts_path .. "control-lib/control-lib-initialization"
+local control_lib_path = control_scripts_path .. "control-lib/control-lib-initialization"
 
 -- Libs
 ControlCallbackMerger = require(control_scripts_path .. "control-lib/control-callbacks-merger")
@@ -12,8 +12,7 @@ local migration = require("__flib__/migration")
 local migrations = require("__Krastorio2__/lib/private/control-scripts/migrations")
 
 -- Scrips
-local scripts =
-{
+local scripts = {
   -- -- KRASTORIO 2 SCRIPTS
   -- Wireless script
   require(control_scripts_path .. "wireless-charger"),
@@ -66,7 +65,7 @@ local scripts =
   -- aai-industry
   require(control_compatibility_scripts_path .. "aai-industry"),
   -- Schall Uranium Processing
-  require(control_compatibility_scripts_path .. "SchallUranium")
+  require(control_compatibility_scripts_path .. "SchallUranium"),
 }
 
 -- Load all callbacks from control scripts (not for GUI events)
@@ -79,22 +78,22 @@ for _, script in pairs(scripts) do
 end
 
 -- Migrations on configuration changed
-ccm:addCallBack{
+ccm:addCallBack({
   function(e)
     migration.on_config_changed(e, migrations)
   end,
-  "on_configuration_changed"
-}
+  "on_configuration_changed",
+})
 
 -- GUI events
-local ce  = krastorio.gui.getCollectiveClickEventsCallback()
-ccm:addCallBack({ce, "on_gui_click"})
-local se  = krastorio.gui.getCollectiveSelectEventsCallback()
-ccm:addCallBack({se, "on_gui_selection_state_changed"})
+local ce = krastorio.gui.getCollectiveClickEventsCallback()
+ccm:addCallBack({ ce, "on_gui_click" })
+local se = krastorio.gui.getCollectiveSelectEventsCallback()
+ccm:addCallBack({ se, "on_gui_selection_state_changed" })
 local ce2 = krastorio.gui.getCollectiveConfirmedEventsCallback()
-ccm:addCallBack({ce2, "on_gui_confirmed"})
-local te  = krastorio.gui.getCollectiveTextEventsCallback()
-ccm:addCallBack({te, "on_gui_text_changed"})
+ccm:addCallBack({ ce2, "on_gui_confirmed" })
+local te = krastorio.gui.getCollectiveTextEventsCallback()
+ccm:addCallBack({ te, "on_gui_text_changed" })
 
 -- Active merged callbacks
 ccm:activeCallbacks()

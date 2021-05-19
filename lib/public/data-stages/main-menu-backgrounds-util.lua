@@ -1,8 +1,8 @@
 if not krastorio.backgrounds then
-  krastorio.backgrounds = {} 
+  krastorio.backgrounds = {}
 end
 if not krastorio.backgrounds_utils then
-  krastorio.backgrounds_utils = {} 
+  krastorio.backgrounds_utils = {}
 end
 
 function krastorio.backgrounds_utils.addBackgroundImage(name, path)

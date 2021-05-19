@@ -1,28 +1,27 @@
-data:extend(
-{
+data:extend({
   -- New category for vehicle fuel
   {
     type = "fuel-category",
-    name = "vehicle-fuel"
-  },  
+    name = "vehicle-fuel",
+  },
   -- Fuel for heavy vehicles like nuclear locomotive
   {
     type = "fuel-category",
-    name = "nuclear-fuel"
+    name = "nuclear-fuel",
   },
   -- Used by fusion reactors
   {
     type = "fuel-category",
-    name = "fusion-fuel"
+    name = "fusion-fuel",
   },
   -- Used by antimatter reactors
   {
     type = "fuel-category",
-    name = "antimatter-fuel"
+    name = "antimatter-fuel",
   },
   -- Burnable fluid fuel for gas power station
   {
     type = "fuel-category",
-    name = "burnable-fluid-fuel"
-  }
+    name = "burnable-fluid-fuel",
+  },
 })

@@ -10,13 +10,12 @@
 local util = require("__core__/lualib/util")
 -- -- VARIABLES
 -- function and variable container
-ControlCallbackMerger = 
-{
+ControlCallbackMerger = {
   -- lists of callbacks
-  simple_callbacks        = {},
-  filtered_callbacks      = {},
-  on_nth_tick_callbacks   = {},
-  listed_events_callbacks = {}
+  simple_callbacks = {},
+  filtered_callbacks = {},
+  on_nth_tick_callbacks = {},
+  listed_events_callbacks = {},
 }
 ControlCallbackMerger.__index = ControlCallbackMerger
 -----------------------------------------------------------------------------
@@ -37,8 +36,7 @@ end
 -- with the same argument(s) given to the collective function
 -- @callbacks, table of functions
 local function createCollectiveCallback(callbacks)
-  return 
-  function(...)
+  return function(...)
     if callbacks and #callbacks > 0 then
       for _, callback in pairs(callbacks) do
         callback(...)
@@ -68,9 +66,9 @@ end
 function listCallbackWithIndex(list, callback, index)
   if index and index > 0 then
     if list[index] then
-      list[#list+1]=list[index]
+      list[#list + 1] = list[index]
     end
-    list[index]=callback
+    list[index] = callback
   else
     table.insert(list, callback)
   end
@@ -87,7 +85,7 @@ function deRegistercallbacksOnEvent(listed_events_callbacks, event_name, ticks)
   if listed_events_callbacks[true_event_name] then
     local cc = createCollectiveCallback(listed_events_callbacks[true_event_name][1])
     local filter = listed_events_callbacks[true_event_name][2]
-    if     event_name == "on_init" then     
+    if event_name == "on_init" then
       script.on_init(cc)
     elseif event_name == "on_configuration_changed" then
       script.on_configuration_changed(cc)
@@ -112,7 +110,7 @@ end
 -- @filter_ticks filter for the event or ticks for on_nth_tick callbacks
 function registercallbacksOnEvent(listed_events_callbacks, event_name, callbacks, filter_ticks)
   local cc = createCollectiveCallback(callbacks)
-  if     event_name == "on_init" then     
+  if event_name == "on_init" then
     script.on_init(cc)
   elseif event_name == "on_configuration_changed" then
     script.on_configuration_changed(cc)
@@ -125,11 +123,11 @@ function registercallbacksOnEvent(listed_events_callbacks, event_name, callbacks
   else
     script.on_event(event_name, cc)
   end
-  
+
   if event_name == "on_nth_tick" then
-    listed_events_callbacks["on_nth_tick"..tostring(filter_ticks)] = {callbacks, filter_ticks}
+    listed_events_callbacks["on_nth_tick" .. tostring(filter_ticks)] = { callbacks, filter_ticks }
   else
-    listed_events_callbacks[event_name] = {callbacks, filter_ticks}
+    listed_events_callbacks[event_name] = { callbacks, filter_ticks }
   end
 end
 
@@ -151,15 +149,15 @@ end
 -- script.on_init(F) -> {F, "on_init"}
 -- script.on_event(defines.events.E, F) ->
 -- {F, E}
--- 
+--
 -- an additional property is the index,
 -- use to remove a callback later when the game is running
 -- TO USE BEFORE CHE GAME START
 function ControlCallbackMerger:addCallBack(input)
-  local callback   = input.callback   or input[1] or false
+  local callback = input.callback or input[1] or false
   local event_name = input.event_name or input[2] or false
-  local filter     = input.filter     or input[3] or false
-  local index      = input.index      or input[4] or false
+  local filter = input.filter or input[3] or false
+  local index = input.index or input[4] or false
   if not callback or not event_name then
     return false
   end
@@ -170,28 +168,28 @@ function ControlCallbackMerger:addCallBack(input)
         self.on_nth_tick_callbacks[ticks] = {}
       end
       if index then
-        table.insert(self.on_nth_tick_callbacks[ticks], {callback, index})        
+        table.insert(self.on_nth_tick_callbacks[ticks], { callback, index })
       else
-        table.insert(self.on_nth_tick_callbacks[ticks], {callback})
+        table.insert(self.on_nth_tick_callbacks[ticks], { callback })
       end
     else
       if not self.filtered_callbacks[event_name] then
         self.filtered_callbacks[event_name] = {}
       end
       if index then
-        table.insert(self.filtered_callbacks[event_name], {callback, filter, index})
+        table.insert(self.filtered_callbacks[event_name], { callback, filter, index })
       else
-        table.insert(self.filtered_callbacks[event_name], {callback, filter})
+        table.insert(self.filtered_callbacks[event_name], { callback, filter })
       end
-    end   
+    end
   else -- without filter callback
     if not self.simple_callbacks[event_name] then
       self.simple_callbacks[event_name] = {}
     end
     if index then
-      table.insert(self.simple_callbacks[event_name], {callback, index})  
+      table.insert(self.simple_callbacks[event_name], { callback, index })
     else
-      table.insert(self.simple_callbacks[event_name], {callback}) 
+      table.insert(self.simple_callbacks[event_name], { callback })
     end
   end
   return true
@@ -207,21 +205,21 @@ end
 
 -- TO USE AFTER CHE GAME START
 function ControlCallbackMerger:listenCallBack(input)
-  local callback   = input.callback   or input[1] or false
+  local callback = input.callback or input[1] or false
   local event_name = input.event_name or input[2] or false
-  local filter     = input.filter     or input[3] or false
-  local index      = input.index      or input[4] or false
-  
+  local filter = input.filter or input[3] or false
+  local index = input.index or input[4] or false
+
   local true_event_name = event_name
   if true_event_name == "on_nth_tick" then
     true_event_name = true_event_name .. (filter or "1")
   end
-  
+
   if not self.listed_events_callbacks[true_event_name] then
-    local cc_list = {}  
+    local cc_list = {}
     cc_list[index or 1] = callback
     local cc = createCollectiveCallback(cc_list)
-    if     event_name == "on_init" then     
+    if event_name == "on_init" then
       script.on_init(cc)
     elseif event_name == "on_configuration_changed" then
       script.on_configuration_changed(cc)
@@ -234,10 +232,10 @@ function ControlCallbackMerger:listenCallBack(input)
     else
       script.on_event(event_name, cc)
     end
-    self.listed_events_callbacks[true_event_name] = {cc, filter or nil}
+    self.listed_events_callbacks[true_event_name] = { cc, filter or nil }
   else
-    local old_cc_list = deRegistercallbacksOnEvent(self.listed_events_callbacks, event_name, filter)    
-    
+    local old_cc_list = deRegistercallbacksOnEvent(self.listed_events_callbacks, event_name, filter)
+
     -- update list
     listCallbackWithIndex(old_cc_list[1], callback, index)
     if filter then
@@ -246,25 +244,25 @@ function ControlCallbackMerger:listenCallBack(input)
       else
         old_cc_list[2] = mergeFilters(old_cc_list[2] or {}, filter)
       end
-    end 
-    
+    end
+
     registercallbacksOnEvent(self.listed_events_callbacks, event_name, old_cc_list[1], old_cc_list[2] or nil)
   end
 end
 
 -- TO USE AFTER CHE GAME START
-function ControlCallbackMerger:unlistenCallBack(event_name, index, ticks) 
+function ControlCallbackMerger:unlistenCallBack(event_name, index, ticks)
   local true_event_name = event_name
   if true_event_name == "on_nth_tick" then
     true_event_name = true_event_name .. (ticks or "1")
   end
 
   if self.listed_events_callbacks[true_event_name] and self.listed_events_callbacks[true_event_name][1][index] then
-    local old_cc_list = deRegistercallbacksOnEvent(self.listed_events_callbacks, event_name, ticks or nil)    
-    
+    local old_cc_list = deRegistercallbacksOnEvent(self.listed_events_callbacks, event_name, ticks or nil)
+
     -- update list
     old_cc_list[1][index] = nil
-    
+
     if #old_cc_list > 0 then
       registercallbacksOnEvent(self.listed_events_callbacks, event_name, old_cc_list[1], old_cc_list[2] or nil)
     end
@@ -284,7 +282,7 @@ end
 function ControlCallbackMerger:activeCallbacks()
   -- Merge simple and filtered callbacks if necessary
   for event_name, _ in pairs(self.simple_callbacks) do
-    if self.filtered_callbacks[event_name] then     
+    if self.filtered_callbacks[event_name] then
       for _, callback in pairs(self.filtered_callbacks[event_name]) do
         table.insert(self.simple_callbacks[event_name], callback[1])
       end
@@ -293,14 +291,14 @@ function ControlCallbackMerger:activeCallbacks()
   end
   -- Simple
   for event_name, callbacks in pairs(self.simple_callbacks) do
-    local cc_list = {}    
-    if #callbacks > 0 then    
+    local cc_list = {}
+    if #callbacks > 0 then
       for _, callback in pairs(callbacks) do
         listCallbackWithIndex(cc_list, callback[1], callback[2] or false)
       end
     end
     local cc = createCollectiveCallback(cc_list)
-    if     event_name == "on_init" then     
+    if event_name == "on_init" then
       script.on_init(cc)
     elseif event_name == "on_configuration_changed" then
       script.on_configuration_changed(cc)
@@ -311,8 +309,8 @@ function ControlCallbackMerger:activeCallbacks()
     else
       script.on_event(event_name, cc)
     end
-    self.listed_events_callbacks[event_name] = {cc_list, nil}
-  end 
+    self.listed_events_callbacks[event_name] = { cc_list, nil }
+  end
   -- Filtered
   for event_name, callbacks in pairs(self.filtered_callbacks) do
     local cc = nil
@@ -330,20 +328,20 @@ function ControlCallbackMerger:activeCallbacks()
       cc = createCollectiveCallback(cc_list)
     end
     script.on_event(defines.events[event_name], cc, collective_filter)
-    self.listed_events_callbacks[event_name] = {cc_list, collective_filter or nil}
+    self.listed_events_callbacks[event_name] = { cc_list, collective_filter or nil }
   end
   -- On nth ticks
   for ticks, callbacks in pairs(self.on_nth_tick_callbacks) do
     local cc = nil
-    local cc_list = {}    
-    if #callbacks > 0 then    
+    local cc_list = {}
+    if #callbacks > 0 then
       for _, callback in pairs(callbacks) do
         listCallbackWithIndex(cc_list, callback[1], callback[2] or false)
       end
     end
     cc = createCollectiveCallback(cc_list)
     script.on_nth_tick(ticks, cc)
-    self.listed_events_callbacks["on_nth_tick"..tostring(ticks)] = {cc_list, ticks or nil}
+    self.listed_events_callbacks["on_nth_tick" .. tostring(ticks)] = { cc_list, ticks or nil }
   end
 end
 -----------------------------------------------------------------------------

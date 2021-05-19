@@ -1,23 +1,21 @@
 -- -- Adding new signals subgroups
-data:extend(
-{
+data:extend({
   {
     type = "item-subgroup",
     name = "kr-special-signals",
     group = "signals",
-    order = "z1"
+    order = "z1",
   },
   {
     type = "item-subgroup",
     name = "kr-special-signals-2",
     group = "signals",
-    order = "z2"
-  }
+    order = "z2",
+  },
 })
 
 -- -- Adding new signals (virtual signals)
-data:extend(
-{ 
+data:extend({
   -- -- WARNINGS
   {
     type = "virtual-signal",
@@ -25,7 +23,7 @@ data:extend(
     icon = kr_signals_icons_path .. "attention_1.png",
     icon_size = 64,
     subgroup = "kr-special-signals",
-    order = "a[special-signals]-1[attention_1]"
+    order = "a[special-signals]-1[attention_1]",
   },
   {
     type = "virtual-signal",
@@ -33,7 +31,7 @@ data:extend(
     icon = kr_signals_icons_path .. "attention_2.png",
     icon_size = 64,
     subgroup = "kr-special-signals",
-    order = "a[special-signals]-2[attention_2]"
+    order = "a[special-signals]-2[attention_2]",
   },
   {
     type = "virtual-signal",
@@ -41,7 +39,7 @@ data:extend(
     icon = kr_signals_icons_path .. "attention_3.png",
     icon_size = 64,
     subgroup = "kr-special-signals",
-    order = "a[special-signals]-3[attention_3]"
+    order = "a[special-signals]-3[attention_3]",
   },
   {
     type = "virtual-signal",
@@ -49,7 +47,7 @@ data:extend(
     icon = kr_signals_icons_path .. "nuclear-1.png",
     icon_size = 64,
     subgroup = "kr-special-signals",
-    order = "a[special-signals]-4[nuclear-1]"
+    order = "a[special-signals]-4[nuclear-1]",
   },
   {
     type = "virtual-signal",
@@ -57,7 +55,7 @@ data:extend(
     icon = kr_signals_icons_path .. "nuclear-2.png",
     icon_size = 64,
     subgroup = "kr-special-signals",
-    order = "a[special-signals]-5[nuclear-2]"
+    order = "a[special-signals]-5[nuclear-2]",
   },
   {
     type = "virtual-signal",
@@ -65,7 +63,7 @@ data:extend(
     icon = kr_signals_icons_path .. "biohazard.png",
     icon_size = 64,
     subgroup = "kr-special-signals",
-    order = "a[special-signals]-6[biohazard]"
+    order = "a[special-signals]-6[biohazard]",
   },
   -- UTILITY
   {
@@ -74,7 +72,7 @@ data:extend(
     icon = kr_signals_icons_path .. "power.png",
     icon_size = 64,
     subgroup = "kr-special-signals",
-    order = "a[special-signals]-7[power]"
+    order = "a[special-signals]-7[power]",
   },
   {
     type = "virtual-signal",
@@ -82,7 +80,7 @@ data:extend(
     icon = kr_signals_icons_path .. "power_on.png",
     icon_size = 64,
     subgroup = "kr-special-signals",
-    order = "a[special-signals]-8[power_on]"
+    order = "a[special-signals]-8[power_on]",
   },
   {
     type = "virtual-signal",
@@ -90,7 +88,7 @@ data:extend(
     icon = kr_signals_icons_path .. "power_off.png",
     icon_size = 64,
     subgroup = "kr-special-signals",
-    order = "a[special-signals]-9[power_off]"
+    order = "a[special-signals]-9[power_off]",
   },
   {
     type = "virtual-signal",
@@ -98,7 +96,7 @@ data:extend(
     icon = kr_signals_icons_path .. "battery.png",
     icon_size = 64,
     subgroup = "kr-special-signals",
-    order = "a[special-signals]-a[battery]"
+    order = "a[special-signals]-a[battery]",
   },
   {
     type = "virtual-signal",
@@ -106,7 +104,7 @@ data:extend(
     icon = kr_signals_icons_path .. "battery_low.png",
     icon_size = 64,
     subgroup = "kr-special-signals",
-    order = "a[special-signals]-b[battery_low]"
+    order = "a[special-signals]-b[battery_low]",
   },
   {
     type = "virtual-signal",
@@ -114,7 +112,7 @@ data:extend(
     icon = kr_signals_icons_path .. "star_w.png",
     icon_size = 64,
     subgroup = "kr-special-signals",
-    order = "a[special-signals]-c[star_w]"
+    order = "a[special-signals]-c[star_w]",
   },
   {
     type = "virtual-signal",
@@ -122,7 +120,7 @@ data:extend(
     icon = kr_signals_icons_path .. "star_b.png",
     icon_size = 64,
     subgroup = "kr-special-signals",
-    order = "a[special-signals]-d[star_b]"
+    order = "a[special-signals]-d[star_b]",
   },
   {
     type = "virtual-signal",
@@ -130,7 +128,7 @@ data:extend(
     icon = kr_signals_icons_path .. "energy_1.png",
     icon_size = 64,
     subgroup = "kr-special-signals",
-    order = "a[special-signals]-e[energy-1]"
+    order = "a[special-signals]-e[energy-1]",
   },
   {
     type = "virtual-signal",
@@ -138,7 +136,7 @@ data:extend(
     icon = kr_signals_icons_path .. "energy_2.png",
     icon_size = 64,
     subgroup = "kr-special-signals",
-    order = "a[special-signals]-e[energy-2]"
+    order = "a[special-signals]-e[energy-2]",
   },
   {
     type = "virtual-signal",
@@ -146,7 +144,7 @@ data:extend(
     icon = kr_signals_icons_path .. "time.png",
     icon_size = 64,
     subgroup = "kr-special-signals",
-    order = "a[special-signals]-f[time]"
+    order = "a[special-signals]-f[time]",
   },
   {
     type = "virtual-signal",
@@ -154,7 +152,7 @@ data:extend(
     icon = kr_signals_icons_path .. "gear_w.png",
     icon_size = 64,
     subgroup = "kr-special-signals",
-    order = "a[special-signals]-g[gear_w]"
+    order = "a[special-signals]-g[gear_w]",
   },
   {
     type = "virtual-signal",
@@ -162,7 +160,7 @@ data:extend(
     icon = kr_signals_icons_path .. "gear_b.png",
     icon_size = 64,
     subgroup = "kr-special-signals",
-    order = "a[special-signals]-h[gear_b]"
+    order = "a[special-signals]-h[gear_b]",
   },
   {
     type = "virtual-signal",
@@ -170,7 +168,7 @@ data:extend(
     icon = kr_signals_icons_path .. "recycling.png",
     icon_size = 64,
     subgroup = "kr-special-signals",
-    order = "a[special-signals]-i[recycling]"
+    order = "a[special-signals]-i[recycling]",
   },
   {
     type = "virtual-signal",
@@ -178,7 +176,7 @@ data:extend(
     icon = kr_signals_icons_path .. "build_here.png",
     icon_size = 64,
     subgroup = "kr-special-signals-2",
-    order = "a[special-signals]-1[build_here]"
+    order = "a[special-signals]-1[build_here]",
   },
   {
     type = "virtual-signal",
@@ -186,7 +184,7 @@ data:extend(
     icon = kr_signals_icons_path .. "dont_touch.png",
     icon_size = 64,
     subgroup = "kr-special-signals-2",
-    order = "a[special-signals]-2[dont_touch]"
+    order = "a[special-signals]-2[dont_touch]",
   },
   {
     type = "virtual-signal",
@@ -194,7 +192,7 @@ data:extend(
     icon = kr_signals_icons_path .. "kill.png",
     icon_size = 64,
     subgroup = "kr-special-signals-2",
-    order = "a[special-signals]-3[kill]"
+    order = "a[special-signals]-3[kill]",
   },
   {
     type = "virtual-signal",
@@ -202,7 +200,7 @@ data:extend(
     icon = kr_signals_icons_path .. "wtf.png",
     icon_size = 64,
     subgroup = "kr-special-signals-2",
-    order = "a[special-signals]-4[wtf]"
+    order = "a[special-signals]-4[wtf]",
   },
   {
     type = "virtual-signal",
@@ -210,7 +208,7 @@ data:extend(
     icon = kr_signals_icons_path .. "heart.png",
     icon_size = 64,
     subgroup = "kr-special-signals-2",
-    order = "a[special-signals]-5[heart]"
+    order = "a[special-signals]-5[heart]",
   },
   {
     type = "virtual-signal",
@@ -218,7 +216,7 @@ data:extend(
     icon = kr_signals_icons_path .. "smile.png",
     icon_size = 64,
     subgroup = "kr-special-signals-2",
-    order = "a[special-signals]-zz9[smile]"
+    order = "a[special-signals]-zz9[smile]",
   },
   {
     type = "virtual-signal",
@@ -226,22 +224,22 @@ data:extend(
     icon = kr_signals_icons_path .. "scull.png",
     icon_size = 64,
     subgroup = "kr-special-signals-2",
-    order = "a[special-signals]-zz9[scull]"
-  },  
+    order = "a[special-signals]-zz9[scull]",
+  },
   {
     type = "virtual-signal",
     name = "kr-krastorio",
     icon = kr_signals_icons_path .. "krastorio.png",
     icon_size = 64,
     subgroup = "kr-special-signals-2",
-    order = "a[special-signals]-zzz[krastorio]"
-  },  
+    order = "a[special-signals]-zzz[krastorio]",
+  },
   {
     type = "virtual-signal",
     name = "kr-question-mark",
     icon = kr_signals_icons_path .. "question-mark.png",
     icon_size = 64,
     subgroup = "kr-special-signals-2",
-    order = "a[special-signals]-www[question-mark]"
-  } 
+    order = "a[special-signals]-www[question-mark]",
+  },
 })

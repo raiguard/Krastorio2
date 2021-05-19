@@ -8,11 +8,13 @@ local collision_mask_util = require("__core__/lualib/collision-mask-util")
 --@ category_name
 --@ entity_name
 function krastorio.entities.getEntity(category_name, entity_name)
-  local no_err, entity = pcall(function() return data.raw[category_name][entity_name] end)
+  local no_err, entity = pcall(function()
+    return data.raw[category_name][entity_name]
+  end)
   if no_err and entity ~= nil and next(entity) ~= nil then
     return entity
   end
-  return nil 
+  return nil
 end
 
 --@ category_name
@@ -30,7 +32,9 @@ end
 function krastorio.entities.removeCollisionMaskOnEntity(category_name, entity_name, to_remove_mask_name)
   local entity = krastorio.entities.getEntity(category_name, entity_name)
   if entity then
-    local no_err, collision_mask = pcall(function() return entity.collision_mask end)
+    local no_err, collision_mask = pcall(function()
+      return entity.collision_mask
+    end)
     if no_err and collision_mask ~= nil then
       for i, mask_name in pairs(collision_mask) do
         if mask_name == to_remove_mask_name then
@@ -49,7 +53,8 @@ end
 function krastorio.entities.addCollisionMaskOnEntity(category_name, entity_name, to_add_mask_name)
   local entity = krastorio.entities.getEntity(category_name, entity_name)
   if entity and to_add_mask_name ~= nil then
-    local collision_mask = collision_mask_util.get_mask(entity) or {"item-layer", "object-layer", "player-layer", "water-tile"}
+    local collision_mask = collision_mask_util.get_mask(entity)
+      or { "item-layer", "object-layer", "player-layer", "water-tile" }
     local miss = true
     for _, mask_name in pairs(collision_mask) do
       if mask_name == to_add_mask_name then
@@ -71,7 +76,11 @@ end
 --@ to_add_crafting_category
 function krastorio.entities.addCraftingCategory(category_name, entity_name, to_add_crafting_category)
   local entity = krastorio.entities.getEntity(category_name, entity_name)
-  if entity and (entity.type == "assembling-machine" or entity.type == "furnace" or entity.type == "rocket-silo") and data.raw["recipe-category"][to_add_crafting_category] then
+  if
+    entity
+    and (entity.type == "assembling-machine" or entity.type == "furnace" or entity.type == "rocket-silo")
+    and data.raw["recipe-category"][to_add_crafting_category]
+  then
     if entity.crafting_categories then
       table.insert(entity.crafting_categories, to_add_crafting_category)
     else
@@ -87,7 +96,11 @@ end
 --@ to_remove_crafting_category
 function krastorio.entities.removeCraftingCategory(category_name, entity_name, to_remove_crafting_category)
   local entity = krastorio.entities.getEntity(category_name, entity_name)
-  if entity and (entity.type == "assembling-machine" or entity.type == "furnace" or entity.type == "rocket-silo") and entity.crafting_categories then
+  if
+    entity
+    and (entity.type == "assembling-machine" or entity.type == "furnace" or entity.type == "rocket-silo")
+    and entity.crafting_categories
+  then
     for i, crafting_category in pairs(entity.crafting_categories) do
       if crafting_category == to_remove_crafting_category then
         table.remove(entity.crafting_categories, i)
@@ -103,7 +116,7 @@ function krastorio.entities.getLabInputs(lab_name)
     if data.raw["lab"][lab_name].inputs == nil then
       data.raw["lab"][lab_name].inputs = {}
     end
-    
+
     return data.raw["lab"][lab_name].inputs
   end
   return nil
@@ -165,7 +178,7 @@ end
 
 function krastorio.entities.removeFuelCategory(category_name, entity_name, fuel_category)
   local entity = krastorio.entities.getEntity(category_name, entity_name)
-  
+
   if entity and type(entity) == "table" then
     if entity.energy_source and entity.energy_source.type == "burner" then
       if entity.energy_source.fuel_category and entity.energy_source.fuel_category == fuel_category then
@@ -188,7 +201,7 @@ function krastorio.entities.addFuelCategory(category_name, entity_name, fuel_cat
   if entity and type(entity) == "table" then
     if entity.energy_source and entity.energy_source.type == "burner" then
       if entity.energy_source.fuel_category then
-        local fuel_categories = {entity.energy_source.fuel_category, fuel_category}
+        local fuel_categories = { entity.energy_source.fuel_category, fuel_category }
         entity.energy_source.fuel_category = nil
         entity.energy_source.fuel_categories = fuel_categories
       else

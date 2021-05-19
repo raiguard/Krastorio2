@@ -11,4 +11,3 @@ require(kr_fluids_prototypes_path .. "dirty-water")
 
 -- Adding chemical elements
 require(kr_fluids_prototypes_path .. "chemistry")
-

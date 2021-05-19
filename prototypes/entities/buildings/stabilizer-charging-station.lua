@@ -1,31 +1,27 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
-local sounds      = require("__base__/prototypes/entity/sounds")
+local sounds = require("__base__/prototypes/entity/sounds")
 
-data:extend(
-{
+data:extend({
   {
     type = "furnace",
     name = "kr-stabilizer-charging-station",
     icon = kr_entities_icons_path .. "stabilizer-charging-station.png",
-    icon_size = 128,    
+    icon_size = 128,
     icon_mipmaps = 4,
-    flags = {"placeable-neutral","placeable-player", "player-creation"},
-    minable = {mining_time = 0.5, result = "kr-stabilizer-charging-station"},
+    flags = { "placeable-neutral", "placeable-player", "player-creation" },
+    minable = { mining_time = 0.5, result = "kr-stabilizer-charging-station" },
     max_health = 200,
     damaged_trigger_effect = hit_effects.entity(),
     dying_explosion = "small-matter-explosion",
     corpse = "medium-remnants",
-    resistances = 
-    {
-      {type = "physical", percent = 20},
-      {type = "fire", percent = 35}
+    resistances = {
+      { type = "physical", percent = 20 },
+      { type = "fire", percent = 35 },
     },
-    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
-    selection_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    animation =
-    {
-      layers =
-      {
+    collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
+    selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
+    animation = {
+      layers = {
         {
           filename = kr_entities_path .. "stabilizer-charging-station/stabilizer-charging-station.png",
           priority = "high",
@@ -35,8 +31,7 @@ data:extend(
           line_length = 10,
           animation_speed = 0.4,
           scale = 0.8,
-          hr_version =
-          {
+          hr_version = {
             filename = kr_entities_path .. "stabilizer-charging-station/hr-stabilizer-charging-station.png",
             priority = "high",
             width = 170,
@@ -44,8 +39,8 @@ data:extend(
             frame_count = 80,
             line_length = 10,
             animation_speed = 0.4,
-            scale = 0.4
-          }
+            scale = 0.4,
+          },
         },
         {
           filename = kr_entities_path .. "stabilizer-charging-station/stabilizer-charging-station-sh.png",
@@ -55,11 +50,10 @@ data:extend(
           frame_count = 80,
           line_length = 8,
           animation_speed = 0.4,
-          shift = {0.23, 0.262},
+          shift = { 0.23, 0.262 },
           draw_as_shadow = true,
           scale = 0.9,
-          hr_version =
-          {
+          hr_version = {
             filename = kr_entities_path .. "stabilizer-charging-station/hr-stabilizer-charging-station-sh.png",
             priority = "high",
             width = 170,
@@ -67,18 +61,16 @@ data:extend(
             frame_count = 80,
             line_length = 8,
             animation_speed = 0.4,
-            shift = {0.23, 0.262},
+            shift = { 0.23, 0.262 },
             draw_as_shadow = true,
-            scale = 0.4
-          }
-        }
-      }
-    },    
-    working_visualisations =
-    {
+            scale = 0.4,
+          },
+        },
+      },
+    },
+    working_visualisations = {
       {
-        animation =
-        {
+        animation = {
           filename = kr_entities_path .. "stabilizer-charging-station/stabilizer-charging-station-light.png",
           priority = "high",
           width = 85,
@@ -88,8 +80,7 @@ data:extend(
           animation_speed = 0.4,
           scale = 0.8,
           draw_as_light = true,
-          hr_version =
-          {
+          hr_version = {
             filename = kr_entities_path .. "stabilizer-charging-station/hr-stabilizer-charging-station-light.png",
             priority = "high",
             width = 170,
@@ -98,38 +89,32 @@ data:extend(
             line_length = 10,
             animation_speed = 0.4,
             scale = 0.4,
-            draw_as_light = true
-          }
-        }
-      }
-    },    
-    crafting_categories = {"stabilizer-charging"},
+            draw_as_light = true,
+          },
+        },
+      },
+    },
+    crafting_categories = { "stabilizer-charging" },
     vehicle_impact_sound = sounds.generic_impact,
-    working_sound =
-    {
-      sound =
-      {
+    working_sound = {
+      sound = {
         filename = kr_buildings_sounds_path .. "stabilizer-charging-station.ogg",
-        volume = 0.75     
+        volume = 0.75,
       },
-      idle_sound = 
-      { 
-        filename = "__base__/sound/idle1.ogg"
+      idle_sound = {
+        filename = "__base__/sound/idle1.ogg",
       },
-      apparent_volume = 1.5
+      apparent_volume = 1.5,
     },
     crafting_speed = 2.0,
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 1
+      emissions_per_minute = 1,
     },
-    
-    water_reflection =
-    {
-      pictures =
-      {
+
+    water_reflection = {
+      pictures = {
         filename = kr_entities_path .. "stabilizer-charging-station/stabilizer-charging-station-reflection.png",
         priority = "extra-high",
         width = 20,
@@ -139,16 +124,16 @@ data:extend(
         scale = 5,
       },
       rotate = false,
-      orientation_to_variation = false
+      orientation_to_variation = false,
     },
-    
+
     energy_usage = "1MW",
     -- ingredient_count = 1,
     result_inventory_size = 1,
     source_inventory_size = 1,
     module_specification = { module_slots = 2 },
-    allowed_effects = {"consumption", "speed", "pollution"},
+    allowed_effects = { "consumption", "speed", "pollution" },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
-    close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 }
-  }
+    close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
+  },
 })

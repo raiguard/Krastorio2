@@ -6,8 +6,7 @@ local function addRadioactiveItems()
   end
 end
 
-return 
-{
+return {
   { addRadioactiveItems, "on_init" },
-  { addRadioactiveItems, "on_configuration_changed" }
+  { addRadioactiveItems, "on_configuration_changed" },
 }

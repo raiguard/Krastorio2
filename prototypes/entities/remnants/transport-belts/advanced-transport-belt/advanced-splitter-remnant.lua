@@ -1,13 +1,12 @@
-data:extend(
-{
+data:extend({
   {
     type = "corpse",
     name = "kr-advanced-splitter-remnant",
-    localised_name = {"remnant-name", {"entity-name.kr-advanced-splitter"}},
+    localised_name = { "remnant-name", { "entity-name.kr-advanced-splitter" } },
     icon = kr_entities_icons_path .. "transport-belts/advanced-transport-belt/advanced-splitter.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "not-on-map"},
-    selection_box = {{-0.9, -0.5}, {0.9, 0.5}},
+    flags = { "placeable-neutral", "not-on-map" },
+    selection_box = { { -0.9, -0.5 }, { 0.9, 0.5 } },
     tile_width = 2,
     tile_height = 1,
     selectable_in_game = false,
@@ -16,8 +15,7 @@ data:extend(
     time_before_removed = 60 * 60 * 15, -- 15 minutes
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
-    animation =
-    {
+    animation = {
       filename = kr_remnants_path .. "transport-belts/advanced-transport-belt/splitter/advanced-splitter-remnant.png",
       line_length = 1,
       width = 86,
@@ -27,8 +25,7 @@ data:extend(
       axially_symmetrical = false,
       direction_count = 4,
       shift = util.by_pixel(1, 3),
-      hr_version =
-      {
+      hr_version = {
         filename = kr_remnants_path .. "transport-belts/advanced-transport-belt/splitter/hr-advanced-splitter-remnant.png",
         line_length = 1,
         width = 172,
@@ -38,8 +35,8 @@ data:extend(
         axially_symmetrical = false,
         direction_count = 4,
         shift = util.by_pixel(1, 3),
-        scale = 0.5
-      }
-    }
-  }
+        scale = 0.5,
+      },
+    },
+  },
 })

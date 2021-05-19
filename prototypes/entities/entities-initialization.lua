@@ -112,12 +112,20 @@ require(kr_entities_prototypes_path .. "remnants/turret")
 -- -- Belts
 -- Advanced
 require(kr_entities_prototypes_path .. "remnants/transport-belts/advanced-transport-belt/advanced-splitter-remnant")
-require(kr_entities_prototypes_path .. "remnants/transport-belts/advanced-transport-belt/advanced-transport-belt-remnant")
-require(kr_entities_prototypes_path .. "remnants/transport-belts/advanced-transport-belt/advanced-underground-belt-remnant")
+require(
+  kr_entities_prototypes_path .. "remnants/transport-belts/advanced-transport-belt/advanced-transport-belt-remnant"
+)
+require(
+  kr_entities_prototypes_path .. "remnants/transport-belts/advanced-transport-belt/advanced-underground-belt-remnant"
+)
 -- Superior
 require(kr_entities_prototypes_path .. "remnants/transport-belts/superior-transport-belt/superior-splitter-remnant")
-require(kr_entities_prototypes_path .. "remnants/transport-belts/superior-transport-belt/superior-transport-belt-remnant")
-require(kr_entities_prototypes_path .. "remnants/transport-belts/superior-transport-belt/superior-underground-belt-remnant")
+require(
+  kr_entities_prototypes_path .. "remnants/transport-belts/superior-transport-belt/superior-transport-belt-remnant"
+)
+require(
+  kr_entities_prototypes_path .. "remnants/transport-belts/superior-transport-belt/superior-underground-belt-remnant"
+)
 ---------------------------------------------------------------------------------------
 -- -- -- VEHICLES
 ---------------------------------------------------------------------------------------

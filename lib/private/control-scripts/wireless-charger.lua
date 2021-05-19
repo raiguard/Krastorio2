@@ -7,37 +7,36 @@ require("__Krastorio2__/lib/private/control-scripts/control-lib/control-lib-init
 
 -- Constants
 WIRELESS_CHARGE_RADIUS = 20
-TRIGGER_ENTITY_NAME    = "kr-tesla-coil"
-TRIGGER_EQUIP_NAME     = "energy-absorber"
-TRIGGER_EQUIPMENT_SIZE = {W = 2, H = 2}
+TRIGGER_ENTITY_NAME = "kr-tesla-coil"
+TRIGGER_EQUIP_NAME = "energy-absorber"
+TRIGGER_EQUIPMENT_SIZE = { W = 2, H = 2 }
 
 -- Filter to events that support filtering
-local KRASTORIO_WIRELESS_CHARGING_BUILT_EVENT_FILTER =
-{
+local KRASTORIO_WIRELESS_CHARGING_BUILT_EVENT_FILTER = {
   {
     filter = "name",
-        name   = TRIGGER_ENTITY_NAME
-    },
+    name = TRIGGER_ENTITY_NAME,
+  },
   {
     filter = "type",
-        type   = "car"
-    },
+    type = "car",
+  },
   {
     filter = "type",
-        type   = "artillery-wagon"
-    },
+    type = "artillery-wagon",
+  },
   {
     filter = "type",
-        type   = "cargo-wagon"
-    },
+    type = "cargo-wagon",
+  },
   {
     filter = "type",
-        type   = "fluid-wagon"
-    },
+    type = "fluid-wagon",
+  },
   {
     filter = "type",
-        type   = "locomotive"
-    }
+    type = "locomotive",
+  },
 }
 
 ------------------------------------------------------------------------------------
@@ -71,13 +70,13 @@ end
 local function saveLastOpenInformations(event)
   inizializeGlobalLastOpenDictionary()
   if not global.player_last_open_entity[event.player_index] then
-    global.player_last_open_entity[event.player_index] = {nil, nil}
+    global.player_last_open_entity[event.player_index] = { nil, nil }
   end
 
   if
-    (event.gui_type == 3 or event.gui_type == 5) and
-    game.players[event.player_index] and
-    game.players[event.player_index].character
+    (event.gui_type == 3 or event.gui_type == 5)
+    and game.players[event.player_index]
+    and game.players[event.player_index].character
   then
     global.player_last_open_entity[event.player_index] = game.players[event.player_index].character
   elseif event.gui_type == 1 and event.entity then
@@ -108,7 +107,7 @@ local function countTriggerEquip(grid)
   local equipment = nil
   for w = 1, grid.width, TRIGGER_EQUIPMENT_SIZE.W do
     for h = 1, grid.height, TRIGGER_EQUIPMENT_SIZE.H do
-      equipment = grid.get({w, h})
+      equipment = grid.get({ w, h })
       if equipment and equipment.name == TRIGGER_EQUIP_NAME then
         count = count + 1
       end
@@ -198,7 +197,7 @@ local function addMonitoredGrid(grid, entity, player_index)
       end
 
       local index = table_size(global.wireless_grids) + 1
-      global.wireless_grids[index] = {grid, entity, nil}
+      global.wireless_grids[index] = { grid, entity, nil }
       if player_index ~= nil then
         global.players_wireless_grids[player_index] = index
       end
@@ -224,17 +223,16 @@ local function addMonitoredGrid(grid, entity, player_index)
 end
 
 local function drawLightnings(sender_entity, receiver_entity)
-  sender_entity.surface.create_entity
-  {
+  sender_entity.surface.create_entity({
     name = "kr-tesla-coil-electric-beam",
     source = sender_entity,
-    source_offset = { 0, - 2.2 },
+    source_offset = { 0, -2.2 },
     position = sender_entity.position,
     target = receiver_entity,
     duration = 30,
     max_length = 21,
-    force = sender_entity.force
-  }
+    force = sender_entity.force,
+  })
 end
 ------------------------------------------------------------------------------------
 -- -- Callbacks
@@ -276,9 +274,9 @@ local function onInstallingEquip(event)
     elseif havePlayerThisGridOpen(event.player_index, grid) then
       local player = game.get_player(event.player_index)
       if player and player.valid then
-        player.insert(grid.take{equipment=equipment})
-        player.create_local_flying_text{text = {"other.kr-already-one-antenna"}, create_at_cursor = true}
-        player.play_sound{path = "utility/cannot_build"}
+        player.insert(grid.take({ equipment = equipment }))
+        player.create_local_flying_text({ text = { "other.kr-already-one-antenna" }, create_at_cursor = true })
+        player.play_sound({ path = "utility/cannot_build" })
       end
     end
   end
@@ -308,12 +306,11 @@ local function checkIfInRange(event)
   while i do
     entity = group[2]
     if entity and entity.valid then
-      local matched = entity.surface.find_entities_filtered
-      {
+      local matched = entity.surface.find_entities_filtered({
         position = entity.position,
-        radius   = WIRELESS_CHARGE_RADIUS,
-        name     = TRIGGER_ENTITY_NAME
-      }
+        radius = WIRELESS_CHARGE_RADIUS,
+        name = TRIGGER_ENTITY_NAME,
+      })
       if matched and table_size(matched) > 0 then
         global.wireless_grids[i][3] = matched
       else
@@ -325,7 +322,6 @@ local function checkIfInRange(event)
 
     i, group = next(global.wireless_grids, i)
   end
-
 end
 
 -- Charge if possible
@@ -341,18 +337,18 @@ local function charge(event)
   local needed_energy = nil
 
   while i and group do
-    grid        = group[1]
+    grid = group[1]
     grid_entity = group[2]
-    matched     = group[3]
+    matched = group[3]
 
     if
-      grid and
-      grid.valid and
-      grid_entity and
-      grid_entity.valid and
-      matched and
-      table_size(matched) > 0 and
-      grid.available_in_batteries < grid.battery_capacity
+      grid
+      and grid.valid
+      and grid_entity
+      and grid_entity.valid
+      and matched
+      and table_size(matched) > 0
+      and grid.available_in_batteries < grid.battery_capacity
     then
       receiver_equiment = nil
       for _, equipment in pairs(grid.equipment) do
@@ -362,20 +358,25 @@ local function charge(event)
         end
       end
 
-      if
-        receiver_equiment and
-        receiver_equiment.energy < receiver_equiment.max_energy
-      then
+      if receiver_equiment and receiver_equiment.energy < receiver_equiment.max_energy then
         powered = false
         for _, entity in pairs(matched) do
-          if entity and entity.valid and entity.surface == grid_entity.surface and entity.energy >= global.wireless_charge_ratio*6 then
+          if
+            entity
+            and entity.valid
+            and entity.surface == grid_entity.surface
+            and entity.energy >= global.wireless_charge_ratio * 6
+          then
             powered = true
             -- Calculate energy can must be inserted in the equipment, between max available and available space
-            needed_energy = math.min(receiver_equiment.max_energy - receiver_equiment.energy, global.wireless_charge_ratio)
+            needed_energy = math.min(
+              receiver_equiment.max_energy - receiver_equiment.energy,
+              global.wireless_charge_ratio
+            )
             -- Add energy to equiment
             receiver_equiment.energy = receiver_equiment.energy + needed_energy
             -- Remove energy from the entity
-            entity.energy = entity.energy - needed_energy*6
+            entity.energy = entity.energy - needed_energy * 6
             -- Draw a visible lighting to show the passage
             drawLightnings(entity, grid_entity)
             break
@@ -400,29 +401,26 @@ local function onBuiltAnEntity(event)
 
   if entity and entity.valid then
     if entity.name == TRIGGER_ENTITY_NAME then
-      local same_entities = entity.surface.find_entities_filtered
-      {
+      local same_entities = entity.surface.find_entities_filtered({
         position = entity.position,
-        radius   = WIRELESS_CHARGE_RADIUS,
-        name     = TRIGGER_ENTITY_NAME
-      }
+        radius = WIRELESS_CHARGE_RADIUS,
+        name = TRIGGER_ENTITY_NAME,
+      })
       if table_size(same_entities) > 1 then
         for _, product in pairs(entity.prototype.mineable_properties.products) do
-          entity.last_user.insert{name=product.name or product[1], count=product.amount or product[2]}
+          entity.last_user.insert({ name = product.name or product[1], count = product.amount or product[2] })
         end
-        krastorio.flying_texts.showOnSurfaceText
-        {
+        krastorio.flying_texts.showOnSurfaceText({
           entity = entity,
-          text   = {"other.kr-another-tesla-coil-in-range"},
-          color  = {1, 0, 0}
-        }
+          text = { "other.kr-another-tesla-coil-in-range" },
+          color = { 1, 0, 0 },
+        })
         -- Only try to play the sound if a player placed this
         if event.player_index then
-          game.players[event.player_index].play_sound
-          {
-            path            = "utility/cannot_build",
-            volume_modifier = 1.0
-          }
+          game.players[event.player_index].play_sound({
+            path = "utility/cannot_build",
+            volume_modifier = 1.0,
+          })
         end
         entity.destroy()
       end
@@ -438,10 +436,10 @@ local function onRemovingAnEntity(event)
   local removed_entity = event.entity
 
   if
-    removed_entity and
-    removed_entity.valid and
-    removed_entity.grid and
-    haveOneTriggerEquip(removed_entity.grid)
+    removed_entity
+    and removed_entity.valid
+    and removed_entity.grid
+    and haveOneTriggerEquip(removed_entity.grid)
   then
     local i, group = next(global.wireless_grids)
     local entity = nil
@@ -513,8 +511,7 @@ local function tidyUpIndexes()
 end
 
 ------------------------------------------------------------------------------------
-return
-{
+return {
   -- -- Bootstrap
   -- For setup variables
   { onInitAndConf, "on_init" },
@@ -540,5 +537,5 @@ return
   { onResearchFinished, "on_research_finished" },
   -- Overtime (charing)
   { checkIfInRange, "on_nth_tick", 120 },
-  { charge, "on_nth_tick", 30 }
+  { charge, "on_nth_tick", 30 },
 }

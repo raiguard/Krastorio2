@@ -2,7 +2,18 @@
 
 krastorio.items = {}
 
-krastorio.items.item_types = {"ammo", "armor", "capsule", "fluid", "gun", "item", "mining-tool", "module", "tool", "item-with-entity-data"}
+krastorio.items.item_types = {
+  "ammo",
+  "armor",
+  "capsule",
+  "fluid",
+  "gun",
+  "item",
+  "mining-tool",
+  "module",
+  "tool",
+  "item-with-entity-data",
+}
 
 function krastorio.items.exist(item_name)
   return krastorio.items.getItem(item_name) ~= nil
@@ -12,7 +23,9 @@ function krastorio.items.getItem(item_name)
   if type(item_name) == "string" then
     for _, type_name in pairs(krastorio.items.item_types) do
       local item = data.raw[type_name][item_name]
-      if item then return item end
+      if item then
+        return item
+      end
     end
   end
   return nil

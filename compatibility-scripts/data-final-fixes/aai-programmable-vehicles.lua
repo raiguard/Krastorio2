@@ -11,8 +11,8 @@ if mods["aai-programmable-vehicles"] then
   end
   if mods["aai-vehicles-flame-tumbler"] and data.raw["car"]["vehicle-flame-tumbler-flame-tumbler-flamethrower"] then
     if mods["Aircraft"] then
-      data.raw["car"]["vehicle-flame-tumbler-flame-tumbler-flamethrower"].equipment_grid = "kr-flying-fortress-grid" 
-    else 
+      data.raw["car"]["vehicle-flame-tumbler-flame-tumbler-flamethrower"].equipment_grid = "kr-flying-fortress-grid"
+    else
       data.raw["car"]["vehicle-flame-tumbler-flame-tumbler-flamethrower"].equipment_grid = "kr-car-grid"
     end
   end

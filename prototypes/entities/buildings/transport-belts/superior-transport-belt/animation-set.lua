@@ -1,23 +1,20 @@
-kr_superior_transport_belt_animation_set = 
-{
-  animation_set =
-  {
+kr_superior_transport_belt_animation_set = {
+  animation_set = {
     filename = kr_entities_path .. "transport-belts/superior-transport-belt/transport-belt/superior-transport-belt.png",
     priority = "extra-high",
     width = 64,
     height = 64,
     frame_count = 32,
     direction_count = 20,
-    hr_version =
-    {
+    hr_version = {
       filename = kr_entities_path .. "transport-belts/superior-transport-belt/transport-belt/hr-superior-transport-belt.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
       frame_count = 32,
-      direction_count = 20
-    }
+      direction_count = 20,
+    },
   },
 
   east_index = 1,
@@ -47,5 +44,5 @@ kr_superior_transport_belt_animation_set =
   ending_north_index = 18,
 
   starting_east_index = 19,
-  ending_east_index = 20
+  ending_east_index = 20,
 }

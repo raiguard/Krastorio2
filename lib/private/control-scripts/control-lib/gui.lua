@@ -85,16 +85,15 @@ end
 
 function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others)
   if parent and parent.valid then
-
     -- construct the element
     local element = {}
-    element.type    = others.type or e_type
-    element.name    = others.name or name
+    element.type = others.type or e_type
+    element.name = others.name or name
     element.caption = others.caption or caption
     element.tooltip = others.tooltip or tooltip
     element.enabled = others.enabled
     element.ignored_by_interaction = others.ignored_by_interaction
-    element.style   = others.style
+    element.style = others.style
 
     -- Button
     if element.type == "button" then
@@ -113,7 +112,7 @@ function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others
 
     -- Flow
     if element.type == "flow" then
-      element.direction  = others.direction
+      element.direction = others.direction
     end
 
     -- Frame
@@ -262,7 +261,6 @@ function krastorio.gui.addElement(parent, e_type, name, caption, tooltip, others
     end
 
     return element
-
   end
   return nil
 end
@@ -368,7 +366,7 @@ end
 function krastorio.gui.addSpriteButton(parent, name, sprite, tooltip, others)
   others = krastorio.gui.getOthersTable(name, nil, tooltip, others)
   others.sprite = others.sprite or sprite
-  others.style  = others.style or "button"
+  others.style = others.style or "button"
   return krastorio.gui.addElement(parent, "sprite-button", name, nil, tooltip, others)
 end
 
@@ -427,8 +425,7 @@ function krastorio.gui.addClickElementEvent(element_name, callback_name)
 end
 
 function krastorio.gui.getCollectiveClickEventsCallback()
-  return
-  function(...)
+  return function(...)
     local called_element_name = krastorio.gui.getElementNameFromEvent(...)
     if global.krastorio.gui.click_events then
       for element_name, callback in pairs(global.krastorio.gui.click_events) do
@@ -457,8 +454,7 @@ function krastorio.gui.addSelectElementEvent(element_name, callback_name)
 end
 
 function krastorio.gui.getCollectiveSelectEventsCallback()
-  return
-  function(...)
+  return function(...)
     local called_element_name = krastorio.gui.getElementNameFromEvent(...)
     if global.krastorio.gui.select_events then
       for element_name, callback in pairs(global.krastorio.gui.select_events) do
@@ -487,8 +483,7 @@ function krastorio.gui.addConfirmedElementEvent(element_name, callback_name)
 end
 
 function krastorio.gui.getCollectiveConfirmedEventsCallback()
-  return
-  function(...)
+  return function(...)
     local called_element_name = krastorio.gui.getElementNameFromEvent(...)
     if global.krastorio.gui.confirmed_events then
       for element_name, callback in pairs(global.krastorio.gui.confirmed_events) do
@@ -517,8 +512,7 @@ function krastorio.gui.addTextElementEvent(element_name, callback_name)
 end
 
 function krastorio.gui.getCollectiveTextEventsCallback()
-  return
-  function(...)
+  return function(...)
     local called_element_name = krastorio.gui.getElementNameFromEvent(...)
     if global.krastorio.gui.text_events then
       for element_name, callback in pairs(global.krastorio.gui.text_events) do

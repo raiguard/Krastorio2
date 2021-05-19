@@ -1,5 +1,4 @@
-if mods ["angelsbioprocessing"] then
-  
+if mods["angelsbioprocessing"] then
   -- Remove angels alien science pack from non wanted labs
   local function removeFromLab(name, inputs)
     for key, pack in pairs(inputs) do
@@ -11,7 +10,7 @@ if mods ["angelsbioprocessing"] then
   end
   removeFromLab("token-bio", data.raw.lab["biusart-lab"].inputs)
   removeFromLab("token-bio", data.raw.lab["kr-singularity-lab"].inputs)
-  
+
   krastorio.technologies.addResearchUnitIngredient("bio-farm-alien", "token-bio", 1, true)
 
   krastorio.technologies.addResearchUnitIngredient("bio-arboretum-2", "token-bio", 1, true)
@@ -31,17 +30,16 @@ if mods ["angelsbioprocessing"] then
   krastorio.technologies.addResearchUnitIngredient("bio-swamp-farm", "token-bio", 1, true)
 
   krastorio.technologies.addResearchUnitIngredient("bio-temperate-farm", "token-bio", 1, true)
-  
+
   -- Recipes
-  local to_convert =
-  {
+  local to_convert = {
     -- Fluids
     ["gas-methanol"] = "biomethanol",
-    
+
     -- Items
-    ["solid-fertilizer"] = "fertilizer"
+    ["solid-fertilizer"] = "fertilizer",
   }
-  
+
   for old_name, new_name in pairs(to_convert) do
     if krastorio.items.getItem(old_name) and krastorio.items.getItem(new_name) then
       for recipe_name, _ in pairs(data.raw.recipe) do
@@ -52,5 +50,4 @@ if mods ["angelsbioprocessing"] then
       end
     end
   end
-  
 end

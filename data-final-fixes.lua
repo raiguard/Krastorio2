@@ -5,7 +5,7 @@ krastorio.stage = "data-final-fixes"
 ---------------------------------------------------------------------------
 -- Apply module limitations
 for recipe_name, recipe in pairs(data.raw.recipe) do
-  if recipe.mod == "Krastorio2" then 
+  if recipe.mod == "Krastorio2" then
     if recipe.allow_efficiency == true then
       krastorio.modules.addEfficiencyLimitation(recipe_name, true)
     elseif recipe.allow_speed == true then
@@ -21,8 +21,7 @@ end
 -- -- -- SCIENCE PACK SANITIZING
 
 -- -- Krastorio 2 science pack collection
-krastorio.technologies.addSciencePackCollection("Krastorio2",
-{
+krastorio.technologies.addSciencePackCollection("Krastorio2", {
   "basic-tech-card",
   "automation-science-pack",
   "logistic-science-pack",
@@ -33,20 +32,19 @@ krastorio.technologies.addSciencePackCollection("Krastorio2",
   "matter-tech-card",
   "space-science-pack",
   "advanced-tech-card",
-  "singularity-tech-card"
+  "singularity-tech-card",
 })
 
 -- sanitize Krastorio Technologies with other mods
 krastorio.technologies.sanitizeUnitsOfAllTechnologiesInPacks("Krastorio2", false)
 
 -- -- Sanitize T2 only (in bottom up on tree for correct result)
-local science_pack_incompatibilities = 
-{
+local science_pack_incompatibilities = {
   "basic-tech-card",
   "automation-science-pack",
   "logistic-science-pack",
   "military-science-pack",
-  "chemical-science-pack"
+  "chemical-science-pack",
 }
 
 -- Sanitize matter tech card from T1 packs
@@ -59,9 +57,8 @@ krastorio.technologies.removeSciencePackIncompatibleWith("advanced-tech-card", s
 krastorio.technologies.removeSciencePackIncompatibleWith("singularity-tech-card", science_pack_incompatibilities)
 
 -- -- Sanitize T1 only (in bottom up on tree for correct result)
-science_pack_incompatibilities = 
-{
-  "basic-tech-card"
+science_pack_incompatibilities = {
+  "basic-tech-card",
 }
 
 -- Sanitize production science pack from T0 packs
@@ -69,7 +66,7 @@ krastorio.technologies.removeSciencePackIncompatibleWith("production-science-pac
 -- Sanitize utility science pack from T0 packs
 krastorio.technologies.removeSciencePackIncompatibleWith("utility-science-pack", science_pack_incompatibilities)
 
--- -- -- ENFORCE SCIENCE PACK PREREQUISITE COHERENCE 
+-- -- -- ENFORCE SCIENCE PACK PREREQUISITE COHERENCE
 krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
 ---------------------------------------------------------------------------
 -- OPTION FIXES

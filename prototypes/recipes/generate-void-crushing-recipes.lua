@@ -3,12 +3,12 @@
 
 -- calculate all product that can be processed in "crushing" category
 local crushing_ingredients = {}
-for recipe_name, recipe in pairs(data.raw.recipe) do  
-  if recipe.category and recipe.category == "crushing" then 
-    for _, ingredient in pairs(krastorio.recipes.getIngredients(recipe_name)) do      
+for recipe_name, recipe in pairs(data.raw.recipe) do
+  if recipe.category and recipe.category == "crushing" then
+    for _, ingredient in pairs(krastorio.recipes.getIngredients(recipe_name)) do
       crushing_ingredients[krastorio.recipes.getIngredientName(ingredient)] = true
     end
-    for _, ingredient in pairs(krastorio.recipes.getExpensiveIngredients(recipe_name)) do     
+    for _, ingredient in pairs(krastorio.recipes.getExpensiveIngredients(recipe_name)) do
       crushing_ingredients[krastorio.recipes.getIngredientName(ingredient)] = true
     end
   end
@@ -20,10 +20,9 @@ local void_crushing_recipes_prefix = "kr-vc-"
 -- creating void crushing recipes
 for _, type_name in pairs(krastorio.items.item_types) do
   if type_name ~= "fluid" then
-    for item_name, _ in pairs(data.raw[type_name]) do   
+    for item_name, _ in pairs(data.raw[type_name]) do
       if not crushing_ingredients[item_name] then
-        data:extend(
-        {
+        data:extend({
           {
             type = "recipe",
             name = void_crushing_recipes_prefix .. item_name,
@@ -34,8 +33,8 @@ for _, type_name in pairs(krastorio.items.item_types) do
             hide_from_stats = true,
             energy_required = 2,
             ingredients = { { item_name, 1 } },
-            results = { { "kr-void", 0 } }
-          }
+            results = { { "kr-void", 0 } },
+          },
         })
       end
     end

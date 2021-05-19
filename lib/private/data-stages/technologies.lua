@@ -1,22 +1,57 @@
 krastorio.technologies = {}
 
-krastorio.technologies.research_types =
-{
-  "inserter-stack-size-bonus", "stack-inserter-capacity-bonus", "laboratory-speed", "character-logistic-slots", "character-logistic-trash-slots", "maximum-following-robots-count", "worker-robot-speed", "worker-robot-storage", "ghost-time-to-live", "turret-attack", "ammo-damage", "give-item", "gun-speed", "unlock-recipe", "character-crafting-speed", "character-mining-speed", "character-running-speed", "character-build-distance", "character-item-drop-distance", "character-reach-distance", "character-resource-reach-distance", "character-item-pickup-distance", "character-loot-pickup-distance", "character-inventory-slots-bonus", "deconstruction-time-to-live", "character-health-bonus", "auto-character-logistic-trash-slots", "mining-drill-productivity-bonus", "train-braking-force-bonus", "zoom-to-world-enabled", "zoom-to-world-ghost-building-enabled", "zoom-to-world-blueprint-enabled", "zoom-to-world-deconstruction-planner-enabled", "zoom-to-world-selection-tool-enabled", "worker-robot-battery", "laboratory-productivity", "follower-robot-lifetime", "artillery-range", "nothing"
+krastorio.technologies.research_types = {
+  "inserter-stack-size-bonus",
+  "stack-inserter-capacity-bonus",
+  "laboratory-speed",
+  "character-logistic-slots",
+  "character-logistic-trash-slots",
+  "maximum-following-robots-count",
+  "worker-robot-speed",
+  "worker-robot-storage",
+  "ghost-time-to-live",
+  "turret-attack",
+  "ammo-damage",
+  "give-item",
+  "gun-speed",
+  "unlock-recipe",
+  "character-crafting-speed",
+  "character-mining-speed",
+  "character-running-speed",
+  "character-build-distance",
+  "character-item-drop-distance",
+  "character-reach-distance",
+  "character-resource-reach-distance",
+  "character-item-pickup-distance",
+  "character-loot-pickup-distance",
+  "character-inventory-slots-bonus",
+  "deconstruction-time-to-live",
+  "character-health-bonus",
+  "auto-character-logistic-trash-slots",
+  "mining-drill-productivity-bonus",
+  "train-braking-force-bonus",
+  "zoom-to-world-enabled",
+  "zoom-to-world-ghost-building-enabled",
+  "zoom-to-world-blueprint-enabled",
+  "zoom-to-world-deconstruction-planner-enabled",
+  "zoom-to-world-selection-tool-enabled",
+  "worker-robot-battery",
+  "laboratory-productivity",
+  "follower-robot-lifetime",
+  "artillery-range",
+  "nothing",
 }
 
-krastorio.technologies.science_pack_collections =
-{
-  ["Vanilla"] =
-  {
+krastorio.technologies.science_pack_collections = {
+  ["Vanilla"] = {
     "automation-science-pack",
     "logistic-science-pack",
     "military-science-pack",
     "chemical-science-pack",
     "production-science-pack",
     "utility-science-pack",
-    "space-science-pack"
-  }
+    "space-science-pack",
+  },
 }
 
 -- -- -- GETTING(READ) FUNCTIONS
@@ -180,7 +215,12 @@ function krastorio.technologies.removePrerequisites(technology_name, prerequisit
   return removed_all
 end
 
-function krastorio.technologies.convertPrerequisite(technology_name, old_prerequisite_name, new_prerequisite_name, check_circular_dependency)
+function krastorio.technologies.convertPrerequisite(
+  technology_name,
+  old_prerequisite_name,
+  new_prerequisite_name,
+  check_circular_dependency
+)
   local prerequisites = krastorio.technologies.getPrerequisites(technology_name)
   if prerequisites and #prerequisites > 0 and krastorio.technologies.exist(new_prerequisite_name) then
     for i, prerequisite_name in pairs(prerequisites) do
@@ -194,10 +234,21 @@ function krastorio.technologies.convertPrerequisite(technology_name, old_prerequ
   return false
 end
 
-function krastorio.technologies.convertPrerequisiteFromAllTechnologies(old_prerequisite_name, new_prerequisite_name, check_circular_dependency)
+function krastorio.technologies.convertPrerequisiteFromAllTechnologies(
+  old_prerequisite_name,
+  new_prerequisite_name,
+  check_circular_dependency
+)
   local count = 0
   for technology_name, _ in pairs(data.raw.technology) do
-    if krastorio.technologies.convertPrerequisite(technology_name, old_prerequisite_name, new_prerequisite_name, check_circular_dependency or nil) then
+    if
+      krastorio.technologies.convertPrerequisite(
+        technology_name,
+        old_prerequisite_name,
+        new_prerequisite_name,
+        check_circular_dependency or nil
+      )
+    then
       count = count + 1
     end
   end
@@ -223,7 +274,14 @@ function krastorio.technologies.addPrerequisite(technology_name, prerequisite_na
           table.insert(prerequisites, prerequisite_name)
           return true
         else
-          krastorio_utils.log.write(3, string.format("Finded a circular dependency on %s if depends on %s, the prerequisite will be not added.", technology_name, prerequisite_name))
+          krastorio_utils.log.write(
+            3,
+            string.format(
+              "Finded a circular dependency on %s if depends on %s, the prerequisite will be not added.",
+              technology_name,
+              prerequisite_name
+            )
+          )
         end
       end
     else
@@ -234,10 +292,17 @@ function krastorio.technologies.addPrerequisite(technology_name, prerequisite_na
           circular_depenency = isaCircularDependency(technology_name, prerequisite_name)
         end
         if not circular_dependency then
-          technology.prerequisites = {prerequisite_name}
+          technology.prerequisites = { prerequisite_name }
           return true
         else
-          krastorio_utils.log.write(3, string.format("Finded a circular dependency on %s if depends on %s, will be not added.", technology_name, prerequisite_name))
+          krastorio_utils.log.write(
+            3,
+            string.format(
+              "Finded a circular dependency on %s if depends on %s, will be not added.",
+              technology_name,
+              prerequisite_name
+            )
+          )
         end
       end
     end
@@ -245,7 +310,15 @@ function krastorio.technologies.addPrerequisite(technology_name, prerequisite_na
     if type(technology_name) == "table" then
       technology_name = technology_name[1]
     end
-    krastorio_utils.log.write(4, string.format("Can't add prerequisite %s, on technology %s, because technology %s don't exist.", prerequisite_name, technology_name, prerequisite_name))
+    krastorio_utils.log.write(
+      4,
+      string.format(
+        "Can't add prerequisite %s, on technology %s, because technology %s don't exist.",
+        prerequisite_name,
+        technology_name,
+        prerequisite_name
+      )
+    )
   end
   return false
 end
@@ -269,12 +342,18 @@ function krastorio.technologies.removeEffect(technology_name, to_remove_effect)
     for i, effect in pairs(effects) do
       if effect.type == to_remove_effect.type then
         if effect.type == "gun-speed" then
-          if effect.ammo_category == to_remove_effect.ammo_category and effect.modifier == to_remove_effect.modifier then
+          if
+            effect.ammo_category == to_remove_effect.ammo_category
+            and effect.modifier == to_remove_effect.modifier
+          then
             table.remove(effects, i)
             return true
           end
         elseif effect.type == "ammo-damage" then
-          if effect.ammo_category == to_remove_effect.ammo_category and effect.modifier == to_remove_effect.modifier then
+          if
+            effect.ammo_category == to_remove_effect.ammo_category
+            and effect.modifier == to_remove_effect.modifier
+          then
             table.remove(effects, i)
             return true
           end
@@ -400,7 +479,15 @@ function krastorio.technologies.addEffect(technology_name, new_effect)
           table.insert(effects, new_effect)
           return true
         else
-          krastorio_utils.log.write(4, string.format("Can't add to %s, the effect of unlock recipe %s, because recipe %s don't exist!", technology_name, new_effect.recipe, new_effect.recipe))
+          krastorio_utils.log.write(
+            4,
+            string.format(
+              "Can't add to %s, the effect of unlock recipe %s, because recipe %s don't exist!",
+              technology_name,
+              new_effect.recipe,
+              new_effect.recipe
+            )
+          )
         end
       else
         table.insert(effects, new_effect)
@@ -410,7 +497,7 @@ function krastorio.technologies.addEffect(technology_name, new_effect)
   else
     local technology = krastorio.technologies.getTechnologyFromName(technology_name)
     if technology and next(technology) ~= nil then
-      technology.effects = {new_effect}
+      technology.effects = { new_effect }
     end
   end
   return false
@@ -427,30 +514,30 @@ function krastorio.technologies.addEffects(technology_name, new_effects)
 end
 
 function krastorio.technologies.removeUnlockRecipe(technology_name, recipe_name)
-  return krastorio.technologies.removeEffect(technology_name, {type = "unlock-recipe", recipe = recipe_name})
+  return krastorio.technologies.removeEffect(technology_name, { type = "unlock-recipe", recipe = recipe_name })
 end
 
 function krastorio.technologies.removeUnlockRecipes(technology_name, recipe_names)
   recipes_to_effects = {}
   for _, name in pairs(recipe_names) do
-    table.insert({type = "unlock-recipe", recipe = name})
+    table.insert({ type = "unlock-recipe", recipe = name })
   end
 
   return krastorio.technologies.removeEffects(technology_name, recipes_to_effects)
 end
 
 function krastorio.technologies.removeUnlockRecipeFromAllTechnologies(recipe_name)
-  return krastorio.technologies.removeEffectFromAllTechnologies({type = "unlock-recipe", recipe = recipe_name})
+  return krastorio.technologies.removeEffectFromAllTechnologies({ type = "unlock-recipe", recipe = recipe_name })
 end
 
 function krastorio.technologies.addUnlockRecipe(technology_name, recipe_name)
-  return krastorio.technologies.addEffect(technology_name, {type = "unlock-recipe", recipe = recipe_name})
+  return krastorio.technologies.addEffect(technology_name, { type = "unlock-recipe", recipe = recipe_name })
 end
 
 function krastorio.technologies.addUnlockRecipes(technology_name, recipe_names)
   recipes_to_effects = {}
   for _, name in pairs(recipe_names) do
-    table.insert({type = "unlock-recipe", recipe = name})
+    table.insert({ type = "unlock-recipe", recipe = name })
   end
 
   return krastorio.technologies.addEffects(technology_name, recipes_to_effects)
@@ -466,12 +553,12 @@ end
 -- -- RESEARCH UNIT INGREDIENTS(research_unit_ingredients)
 
 function krastorio.technologies.removeResearchUnitIngredient(technology_name, science_pack_name)
-  local technology        = krastorio.technologies.getTechnologyFromName(technology_name)
+  local technology = krastorio.technologies.getTechnologyFromName(technology_name)
   if technology then
     local prerequisites = technology.prerequisites
-    local ingredients   = false
+    local ingredients = false
     if technology.unit and technology.unit.ingredients then
-      ingredients     = technology.unit.ingredients
+      ingredients = technology.unit.ingredients
     end
 
     if ingredients and #ingredients > 0 then
@@ -497,20 +584,27 @@ function krastorio.technologies.removeResearchUnitIngredient(technology_name, sc
   return false
 end
 
-function krastorio.technologies.addResearchUnitIngredient(technology_name, science_pack_name, count, check_circular_dependency)
+function krastorio.technologies.addResearchUnitIngredient(
+  technology_name,
+  science_pack_name,
+  count,
+  check_circular_dependency
+)
   local technology = krastorio.technologies.getTechnologyFromName(technology_name)
 
   if technology and next(technology) ~= nil then
     correct_count = count or 1
     -- add prerequisite
-    local science_pack_tech = krastorio.technologies.getTechnologyFromName(science_pack_name) or krastorio.technologies.getTechnologyThatUnlockRecipe(science_pack_name)
+    local science_pack_tech = krastorio.technologies.getTechnologyFromName(science_pack_name)
+      or krastorio.technologies.getTechnologyThatUnlockRecipe(science_pack_name)
     if science_pack_tech then
       local hold = false
       if technology.prerequisites and #technology.prerequisites > 0 then
         for _, prerequisite in pairs(technology.prerequisites) do
-          if prerequisite == science_pack_name or
-             krastorio.technologies.hasIngredient(prerequisite, science_pack_name) or
-             krastorio.technologies.hasPrerequisite(prerequisite, science_pack_name)
+          if
+            prerequisite == science_pack_name
+            or krastorio.technologies.hasIngredient(prerequisite, science_pack_name)
+            or krastorio.technologies.hasPrerequisite(prerequisite, science_pack_name)
           then
             hold = true
             break
@@ -518,7 +612,11 @@ function krastorio.technologies.addResearchUnitIngredient(technology_name, scien
         end
       end
       if not hold then
-        krastorio.technologies.addPrerequisite({technology_name, technology.prerequisites}, science_pack_tech.name, check_circular_dependency or false)
+        krastorio.technologies.addPrerequisite(
+          { technology_name, technology.prerequisites },
+          science_pack_tech.name,
+          check_circular_dependency or false
+        )
       end
     end
     -- add ingredient
@@ -539,7 +637,7 @@ function krastorio.technologies.addResearchUnitIngredient(technology_name, scien
         return true
       end
     end
-    table.insert(technology.unit.ingredients, {science_pack_name, correct_count})
+    table.insert(technology.unit.ingredients, { science_pack_name, correct_count })
     return true
   end
   return false
@@ -555,14 +653,16 @@ function krastorio.technologies.overrideResearchUnitIngredient(technology_name, 
     local science_pack_tech = nil
     for _, ingredient in pairs(ingredients) do
       local science_pack_name = krastorio.technologies.getIngredientName(ingredient)
-      local science_pack_tech = krastorio.technologies.getTechnologyFromName(science_pack_name) or krastorio.technologies.getTechnologyThatUnlockRecipe(science_pack_name)
+      local science_pack_tech = krastorio.technologies.getTechnologyFromName(science_pack_name)
+        or krastorio.technologies.getTechnologyThatUnlockRecipe(science_pack_name)
       if science_pack_tech then
         hold = false
         if technology.prerequisites and #technology.prerequisites > 0 then
           for _, prerequisite in pairs(technology.prerequisites) do
-            if prerequisite == science_pack_name or
-               krastorio.technologies.hasIngredient(prerequisite, science_pack_name) or
-               krastorio.technologies.hasPrerequisite(prerequisite, science_pack_name)
+            if
+              prerequisite == science_pack_name
+              or krastorio.technologies.hasIngredient(prerequisite, science_pack_name)
+              or krastorio.technologies.hasPrerequisite(prerequisite, science_pack_name)
             then
               hold = true
               break
@@ -570,7 +670,11 @@ function krastorio.technologies.overrideResearchUnitIngredient(technology_name, 
           end
         end
         if not hold then
-          krastorio.technologies.addPrerequisite({technology_name, technology.prerequisites}, science_pack_tech.name, check_circular_dependency or false)
+          krastorio.technologies.addPrerequisite(
+            { technology_name, technology.prerequisites },
+            science_pack_tech.name,
+            check_circular_dependency or false
+          )
         end
       end
     end
@@ -584,14 +688,18 @@ function krastorio.technologies.overrideResearchUnitIngredient(technology_name, 
   return false
 end
 
-function krastorio.technologies.convertResearchUnitIngredient(technology_name, old_science_pack_name, new_science_pack_name)
-  local technology    = krastorio.technologies.getTechnologyFromName(technology_name)
+function krastorio.technologies.convertResearchUnitIngredient(
+  technology_name,
+  old_science_pack_name,
+  new_science_pack_name
+)
+  local technology = krastorio.technologies.getTechnologyFromName(technology_name)
   local prerequisites = (technology and technology.prerequisites) or false
-  local ingredients   = false
+  local ingredients = false
   if technology and technology.unit and technology.unit.ingredients then
-    ingredients     = technology.unit.ingredients
+    ingredients = technology.unit.ingredients
   end
-  local converted     = false
+  local converted = false
 
   if technology and next(technology) ~= nil and ingredients and next(ingredients) ~= nil then
     -- convert ingredient
@@ -599,7 +707,7 @@ function krastorio.technologies.convertResearchUnitIngredient(technology_name, o
     for i = 1, #ingredients do
       ingredient_name = krastorio.technologies.getIngredientName(ingredients[i])
       if ingredient_name == old_science_pack_name then
-        ingredients[i] = {new_science_pack_name, krastorio.technologies.getIngredientCount(ingredients[i])}
+        ingredients[i] = { new_science_pack_name, krastorio.technologies.getIngredientCount(ingredients[i]) }
         converted = true
         break
       end
@@ -609,7 +717,7 @@ function krastorio.technologies.convertResearchUnitIngredient(technology_name, o
       if prerequisites and next(prerequisites) ~= nil then
         local index_old, index_new = -1, -1
         for i, prerequisite in pairs(prerequisites) do
-          if      prerequisite == old_science_pack_name then
+          if prerequisite == old_science_pack_name then
             index_old = i
           elseif prerequisite == new_science_pack_name then
             index_new = i
@@ -619,7 +727,7 @@ function krastorio.technologies.convertResearchUnitIngredient(technology_name, o
           end
         end
 
-        if     index_old == -1 and index_new == -1 then
+        if index_old == -1 and index_new == -1 then
           table.insert(prerequisites, new_science_pack_name)
         elseif index_old ~= -1 and index_new ~= -1 then
           table.remove(prerequisites, index_old)
@@ -627,7 +735,7 @@ function krastorio.technologies.convertResearchUnitIngredient(technology_name, o
           prerequisites[index_old] = new_science_pack_name
         end
       else
-        prerequisites = {new_science_pack_name}
+        prerequisites = { new_science_pack_name }
       end
     end
   end
@@ -701,7 +809,14 @@ function isaCircularDependency(tech, to_add_prerequisite, already_checked)
             return true
           end
         else
-          krastorio_utils.log.write(3, string.format("The technology %s, have a prerequisite called %s, that doesn't exist!", to_add_prerequisite, prerequisite))
+          krastorio_utils.log.write(
+            3,
+            string.format(
+              "The technology %s, have a prerequisite called %s, that doesn't exist!",
+              to_add_prerequisite,
+              prerequisite
+            )
+          )
         end
       end
     end
@@ -728,10 +843,8 @@ end
 -- @ if given science_pack is compatible with vanilla science_pack
 function krastorio.technologies.sanitizeUnitsOfAllTechnologiesInPacks(science_pack_collection_name, with_vanilla)
   if type(science_pack_collection_name) == "string" then
-
     local main_science_pack_collection = krastorio.technologies.science_pack_collections[science_pack_collection_name]
     if main_science_pack_collection then
-
       local vanilla_science_pack_collections = krastorio.technologies.science_pack_collections["Vanilla"]
       for technology_name, technology in pairs(data.raw.technology) do
         if technology.check_science_packs_incompatibilities ~= false then
@@ -869,7 +982,8 @@ function krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
   -- calculate existance of science pack technologies
   local science_techs = {}
   for _, science_pack in pairs(krastorio.items.getAllItemsOfType("tool")) do
-    local science_pack_tech = krastorio.technologies.getTechnologyFromName(science_pack.name) or krastorio.technologies.getTechnologyThatUnlockRecipe(science_pack.name)
+    local science_pack_tech = krastorio.technologies.getTechnologyFromName(science_pack.name)
+      or krastorio.technologies.getTechnologyThatUnlockRecipe(science_pack.name)
     if science_pack_tech then
       science_techs[science_pack.name] = science_pack_tech.name
     end
@@ -878,7 +992,7 @@ function krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
   -- enforce science packs in prerequisites (or in their prerequisites) for each technology
   for technology_name, technology in pairs(data.raw.technology) do
     if technology.enforce_used_science_packs_in_prerequisites ~= false then
-      local prerequisites     = technology.prerequisites
+      local prerequisites = technology.prerequisites
       local ingredients = false
       if technology.unit and technology.unit.ingredients then
         ingredients = technology.unit.ingredients
@@ -892,9 +1006,10 @@ function krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
             hold = false
             if prerequisites and #prerequisites > 0 then
               for _, prerequisite in pairs(prerequisites) do
-                if prerequisite == science_pack_name or
-                   krastorio.technologies.hasIngredient(prerequisite, science_pack_name) or
-                   krastorio.technologies.hasPrerequisite(prerequisite, science_pack_name)
+                if
+                  prerequisite == science_pack_name
+                  or krastorio.technologies.hasIngredient(prerequisite, science_pack_name)
+                  or krastorio.technologies.hasPrerequisite(prerequisite, science_pack_name)
                 then
                   hold = true
                   break

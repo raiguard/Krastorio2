@@ -5,51 +5,42 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
   -- Whitelisting the K2 entities in right way how SE manage the space entities,
   -- all entities in the se_allow_in_space CAN(POSITIVE) BE placed in the space
   local allow_in_space = {
-    ["accumulator"] =
-    {
+    ["accumulator"] = {
       "kr-energy-storage",
-      "kr-intergalactic-transceiver"
+      "kr-intergalactic-transceiver",
     },
-    ["assembling-machine"] =
-    {
+    ["assembling-machine"] = {
       "kr-fuel-refinery",
     },
-    ["beacon"] =
-    {
-      "kr-singularity-beacon"
+    ["beacon"] = {
+      "kr-singularity-beacon",
     },
-    ["burner-generator"] =
-    {
-      "kr-antimatter-reactor"
+    ["burner-generator"] = {
+      "kr-antimatter-reactor",
     },
-    ["container"] =
-    {
+    ["container"] = {
       "kr-medium-container",
-      "kr-big-container"
+      "kr-big-container",
     },
-    ["electric-energy-interface"] =
-    {
-      "kr-tesla-coil"
+    ["electric-energy-interface"] = {
+      "kr-tesla-coil",
     },
-    ["inserter"] =
-    {
+    ["inserter"] = {
       "kr-superior-inserter",
       "kr-superior-long-inserter",
       "kr-superior-filter-inserter",
       "kr-superior-long-filter-inserter",
-      "kr-superior-long-filter-inserter"
+      "kr-superior-long-filter-inserter",
     },
-    ["lab"] =
-    {
-      "kr-singularity-lab"
+    ["lab"] = {
+      "kr-singularity-lab",
     },
     -- kr-se-loader is given the property in data-final-fixes, when it is created
     -- ["loader-1x1"] =
     -- {
     --  "kr-se-loader"
     -- },
-    ["logistic-container"] =
-    {
+    ["logistic-container"] = {
       "kr-medium-active-provider-container",
       "kr-medium-buffer-container",
       "kr-medium-passive-provider-container",
@@ -60,25 +51,21 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
       "kr-big-buffer-container",
       "kr-big-passive-provider-container",
       "kr-big-requester-container",
-      "kr-big-storage-container"
+      "kr-big-storage-container",
     },
-    ["mining-drill"] =
-    {
-      "kr-quarry-drill"
+    ["mining-drill"] = {
+      "kr-quarry-drill",
     },
-    ["radar"] =
-    {
-      "kr-sentinel"
+    ["radar"] = {
+      "kr-sentinel",
     },
-    ["solar-panel"] =
-    {
-      "kr-advanced-solar-panel"
+    ["solar-panel"] = {
+      "kr-advanced-solar-panel",
     },
-    ["storage-tank"] =
-    {
+    ["storage-tank"] = {
       "kr-fluid-storage-1",
-      "kr-fluid-storage-2"
-    }
+      "kr-fluid-storage-2",
+    },
   }
 
   for category_name, entities in pairs(allow_in_space) do
@@ -92,51 +79,43 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
 
   -- Adding space collisions (Disabling some Krastorio 2 entities in space),
   -- this is a BLACKLIST, all entities in this table CAN'T(NOT) be placed in the space.
-  local krastorio_entities_to_add =
-  {
-    ["assembling-machine"] =
-    {
+  local krastorio_entities_to_add = {
+    ["assembling-machine"] = {
       "kr-advanced-furnace",
       "kr-electrolysis-plant",
       "kr-filtration-plant",
-      "kr-air-filter"
+      "kr-air-filter",
     },
-    ["boiler"] =
-    {
-      "se-electric-boiler"
+    ["boiler"] = {
+      "se-electric-boiler",
     },
-    ["generator"] =
-    {
-      "kr-advanced-steam-turbine"
+    ["generator"] = {
+      "kr-advanced-steam-turbine",
     },
-    ["furnace"] =
-    {
+    ["furnace"] = {
       "kr-crusher",
-      "kr-air-purifier"
+      "kr-air-purifier",
     },
-    ["lab"] =
-    {
-      "biusart-lab"
+    ["lab"] = {
+      "biusart-lab",
     },
-    ["loader-1x1"] =
-    {
+    ["loader-1x1"] = {
       "kr-loader",
       "kr-fast-loader",
       "kr-express-loader",
       "kr-advanced-loader",
-      "kr-superior-loader"
+      "kr-superior-loader",
     },
-    ["mining-drill"] =
-    {
-      "kr-water-pumpjack"
+    ["mining-drill"] = {
+      "kr-water-pumpjack",
     },
-    ["electric-energy-interface"] =
-    {
-      "kr-wind-turbine"
-    }
+    ["electric-energy-interface"] = {
+      "kr-wind-turbine",
+    },
   }
 
-  local collision_mask_util_extended = require("__space-exploration__/collision-mask-util-extended/data/collision-mask-util-extended")
+  local collision_mask_util_extended =
+    require("__space-exploration__/collision-mask-util-extended/data/collision-mask-util-extended")
   local space_collision_layer = collision_mask_util_extended.get_make_named_collision_mask("space-tile")
 
   for category_name, entities in pairs(krastorio_entities_to_add) do

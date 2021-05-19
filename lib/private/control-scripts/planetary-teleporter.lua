@@ -2,7 +2,7 @@ require("__Krastorio2__/lib/private/control-scripts/control-lib/control-lib-init
 
 local gui = require("__flib__/gui-beta")
 
-local pt_built_entity_filters = {{filter = "name", name = "kr-planetary-teleporter"}}
+local pt_built_entity_filters = { { filter = "name", name = "kr-planetary-teleporter" } }
 local pt_entity_name = "kr-planetary-teleporter"
 
 -- TODO: cutscene and relative positioning
@@ -15,16 +15,16 @@ local function teleport_player(player, from, to)
   position.y = position.y + 1.1
   player.teleport(position, to.surface)
   -- Play sounds
-  from.surface.play_sound{
+  from.surface.play_sound({
     path = "kr-planetary-teleporter-effect-sound",
     position = from.position,
-    volume_modifier = 0.8
-  }
-  to.surface.play_sound{
+    volume_modifier = 0.8,
+  })
+  to.surface.play_sound({
     path = "kr-planetary-teleporter-effect-sound",
     position = to.position,
-    volume_modifier = 1
-  }
+    volume_modifier = 1,
+  })
 end
 
 -- GUI
@@ -39,7 +39,7 @@ local status_images = {
   [defines.entity_status.disabled_by_script] = "status_not_working",
   [defines.entity_status.discharging] = "status_not_working",
   [defines.entity_status.low_power] = "status_not_working",
-  [defines.entity_status.no_power] = "status_not_working"
+  [defines.entity_status.no_power] = "status_not_working",
 }
 
 local function update_fully_charged(refs, state)
@@ -62,7 +62,7 @@ local function update_fully_charged(refs, state)
     warning_label.caption = {
       "",
       "[img=utility/warning_white] ",
-      {"gui.kr-planetary-teleporter-warning-"..active_warning}
+      { "gui.kr-planetary-teleporter-warning-" .. active_warning },
     }
   else
     refs.name_label.style = "subheader_caption_label"
@@ -86,13 +86,14 @@ local function update_gui_statuses()
     local fully_charged = percent_full == 100
 
     if status == defines.entity_status.charging or status == defines.entity_status.discharging then
-      refs.status_label.caption = {"", {"entity-status."..status_labels[status]}, " - "..math.floor(percent_full).."%"}
+      refs.status_label.caption =
+        { "", { "entity-status." .. status_labels[status] }, " - " .. math.floor(percent_full) .. "%" }
     elseif fully_charged then
-      refs.status_label.caption = {"entity-status.fully-charged"}
+      refs.status_label.caption = { "entity-status.fully-charged" }
     else
-      refs.status_label.caption = {"entity-status."..status_labels[status]}
+      refs.status_label.caption = { "entity-status." .. status_labels[status] }
     end
-    refs.status_image.sprite = "utility/"..(status_images[status] or "status_working")
+    refs.status_image.sprite = "utility/" .. (status_images[status] or "status_working")
 
     -- Warning
     local warning = false
@@ -138,7 +139,7 @@ local function get_destination_properties(teleporter_data)
     enabled = fully_charged and not destination_blocked,
     tooltip = tooltip,
     charge_percent = charge_percent,
-    charge_value = charge_value
+    charge_value = charge_value,
   }
 end
 
@@ -170,79 +171,101 @@ local function update_destinations_table(refs, state)
       local destination_frame = children[i]
       if not destination_frame then
         local destination_refs = gui.build(destinations_table, {
-          {type = "frame", style = "train_with_minimap_frame", direction = "vertical", ref = {"frame"}, children = {
-            {type = "frame", name = "minimap_frame", style = "deep_frame_in_shallow_frame", children = {
+          {
+            type = "frame",
+            style = "train_with_minimap_frame",
+            direction = "vertical",
+            ref = { "frame" },
+            children = {
               {
-                type = "minimap",
-                name = "minimap",
-                style = "kr_planetary_teleporter_destination_minimap",
-                chart_player_index = player_index,
-                force = force_name,
-                zoom = 1,
+                type = "frame",
+                name = "minimap_frame",
+                style = "deep_frame_in_shallow_frame",
+                children = {
+                  {
+                    type = "minimap",
+                    name = "minimap",
+                    style = "kr_planetary_teleporter_destination_minimap",
+                    chart_player_index = player_index,
+                    force = force_name,
+                    zoom = 1,
+                    children = {
+                      {
+                        type = "button",
+                        name = "minimap_button",
+                        style = "kr_planetary_teleporter_destination_minimap_button",
+                        tooltip = { "gui.kr-planetary-teleporter-teleport-tooltip" },
+                        actions = {
+                          on_click = { gui = "planetary_teleporter", action = "teleport" },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+              { type = "progressbar", name = "bar", style = "kr_planetary_teleporter_destination_charge_bar" },
+              {
+                type = "frame",
+                style = "deep_frame_in_shallow_frame",
                 children = {
                   {
                     type = "button",
-                    name = "minimap_button",
-                    style = "kr_planetary_teleporter_destination_minimap_button",
-                    tooltip = {"gui.kr-planetary-teleporter-teleport-tooltip"},
-                    actions = {
-                      on_click = {gui = "planetary_teleporter", action = "teleport"}
-                    }
-                  }
-                }
-              }
-            }},
-            {type = "progressbar", name = "bar", style = "kr_planetary_teleporter_destination_charge_bar"},
-            {type = "frame", style = "deep_frame_in_shallow_frame", children = {
-              {
-                type = "button",
-                style = "kr_planetary_teleporter_destination_name_button",
-                tooltip = {"gui.kr-planetary-teleporter-teleport"},
-                enabled = false
-              }
-            }}
-          }}
+                    style = "kr_planetary_teleporter_destination_name_button",
+                    tooltip = { "gui.kr-planetary-teleporter-teleport" },
+                    enabled = false,
+                  },
+                },
+              },
+            },
+          },
         })
         destination_frame = destination_refs.frame
       end
 
       local distance = math.ceil(get_distance(position, data.position))
-      local name_and_distance = {"gui.kr-planetary-teleporter-name-and-distance", data.name or unnamed_str, distance}
+      local name_and_distance = { "gui.kr-planetary-teleporter-name-and-distance", data.name or unnamed_str, distance }
       local destination_properties = get_destination_properties(data)
 
-      gui.update(
-        destination_frame,
-        {children = {
-          {children = {
-            {
-              elem_mods = {
-                position = data.position
+      gui.update(destination_frame, {
+        children = {
+          {
+            children = {
+              {
+                elem_mods = {
+                  position = data.position,
+                },
+                children = {
+                  {
+                    cb = function(elem)
+                      gui.update_tags(elem, { number = destination_number })
+                    end,
+                    elem_mods = {
+                      enabled = destination_properties.enabled,
+                      tooltip = { "gui.kr-planetary-teleporter-" .. destination_properties.tooltip .. "-tooltip" },
+                    },
+                  },
+                },
               },
-              children = {
-                {
-                  cb = function(elem)
-                    gui.update_tags(elem, {number = destination_number})
-                  end,
-                  elem_mods = {
-                    enabled = destination_properties.enabled,
-                    tooltip = {"gui.kr-planetary-teleporter-"..destination_properties.tooltip.."-tooltip"}
-                  }
-                }
-              }
-            }
-          }},
-          {elem_mods = {
-            tooltip = destination_properties.charge_percent.."%",
-            value = destination_properties.charge_value}
+            },
           },
-          {children = {
-            {elem_mods = {
-              caption = name_and_distance,
-              tooltip = name_and_distance
-            }}
-          }}
-        }}
-      )
+          {
+            elem_mods = {
+              tooltip = destination_properties.charge_percent .. "%",
+              value = destination_properties.charge_value,
+            },
+          },
+          {
+            children = {
+              {
+                elem_mods = {
+                  caption = name_and_distance,
+                  tooltip = name_and_distance,
+                },
+              },
+            },
+          },
+        },
+      })
     end
   end
 
@@ -288,10 +311,10 @@ local function update_all_destination_availability()
         local parent = children[i]
         local bar = parent.bar
         bar.value = destination_properties.charge_value
-        bar.tooltip = destination_properties.charge_percent.."%"
+        bar.tooltip = destination_properties.charge_percent .. "%"
         local button = parent.minimap_frame.minimap.minimap_button
         button.enabled = destination_properties.enabled
-        button.tooltip = {"gui.kr-planetary-teleporter-"..destination_properties.tooltip.."-tooltip"}
+        button.tooltip = { "gui.kr-planetary-teleporter-" .. destination_properties.tooltip .. "-tooltip" }
       end
     end
   end
@@ -323,9 +346,9 @@ local function handle_gui_action(msg, e)
     end
     refs.window.destroy()
     global.planetary_teleporter_guis[e.player_index] = nil
-    player.play_sound{
-      path = "entity-close/kr-planetary-teleporter"
-    }
+    player.play_sound({
+      path = "entity-close/kr-planetary-teleporter",
+    })
   elseif msg.action == "toggle_search" then
     local textfield = refs.search_textfield
     local search_button = refs.search_button
@@ -373,13 +396,13 @@ local function handle_gui_action(msg, e)
       -- Teleport player
       teleport_player(player, source_entity, destination_entity)
     else
-      player.create_local_flying_text{
-        text = {"gui.kr-planetary-teleporter-invalid"},
-        create_at_cursor = true
-      }
-      player.play_sound{
-        path = "utility/cannot_build"
-      }
+      player.create_local_flying_text({
+        text = { "gui.kr-planetary-teleporter-invalid" },
+        create_at_cursor = true,
+      })
+      player.play_sound({
+        path = "utility/cannot_build",
+      })
       update_destinations_table(refs, state)
     end
   end
@@ -391,132 +414,174 @@ local function create_gui(player, entity)
     {
       type = "frame",
       direction = "vertical",
-      ref = {"window"},
+      ref = { "window" },
       actions = {
-        on_closed = {gui = "planetary_teleporter", action = "close"}
+        on_closed = { gui = "planetary_teleporter", action = "close" },
       },
       children = {
         -- Titlebar
-        {type = "flow", style_mods = {horizontal_spacing = 8}, ref = {"titlebar_flow"}, children = {
-          {
-            type = "label",
-            style = "frame_title",
-            caption = {"entity-name.kr-planetary-teleporter"},
-            ignored_by_interaction = true
+        {
+          type = "flow",
+          style_mods = { horizontal_spacing = 8 },
+          ref = { "titlebar_flow" },
+          children = {
+            {
+              type = "label",
+              style = "frame_title",
+              caption = { "entity-name.kr-planetary-teleporter" },
+              ignored_by_interaction = true,
+            },
+            {
+              type = "empty-widget",
+              style = "draggable_space_header",
+              style_mods = { height = 24, horizontally_stretchable = true, right_margin = 4 },
+              ignored_by_interaction = true,
+            },
+            {
+              type = "textfield",
+              style_mods = { top_margin = -3 },
+              visible = false,
+              ref = { "search_textfield" },
+              actions = {
+                on_text_changed = { gui = "planetary_teleporter", action = "update_search_query" },
+              },
+            },
+            {
+              type = "sprite-button",
+              style = "frame_action_button",
+              sprite = "utility/search_white",
+              hovered_sprite = "utility/search_black",
+              clicked_sprite = "utility/search_black",
+              tooltip = { "gui.kr-planetary-teleporter-search-tooltip" },
+              ref = { "search_button" },
+              actions = {
+                on_click = { gui = "planetary_teleporter", action = "toggle_search" },
+              },
+            },
+            {
+              type = "sprite-button",
+              style = "frame_action_button",
+              sprite = "utility/close_white",
+              hovered_sprite = "utility/close_black",
+              clicked_sprite = "utility/close_black",
+              tooltip = { "gui.close-instruction" },
+              actions = {
+                on_click = { gui = "planetary_teleporter", action = "close" },
+              },
+            },
           },
-          {
-            type = "empty-widget",
-            style = "draggable_space_header",
-            style_mods = {height = 24, horizontally_stretchable = true, right_margin = 4},
-            ignored_by_interaction = true
-          },
-          {
-            type = "textfield",
-            style_mods = {top_margin = -3},
-            visible = false,
-            ref = {"search_textfield"},
-            actions = {
-              on_text_changed = {gui = "planetary_teleporter", action = "update_search_query"}
-            }
-          },
-          {
-            type = "sprite-button",
-            style = "frame_action_button",
-            sprite = "utility/search_white",
-            hovered_sprite = "utility/search_black",
-            clicked_sprite = "utility/search_black",
-            tooltip = {"gui.kr-planetary-teleporter-search-tooltip"},
-            ref = {"search_button"},
-            actions = {
-              on_click = {gui = "planetary_teleporter", action = "toggle_search"}
-            }
-          },
-          {
-            type = "sprite-button",
-            style = "frame_action_button",
-            sprite = "utility/close_white",
-            hovered_sprite = "utility/close_black",
-            clicked_sprite = "utility/close_black",
-            tooltip = {"gui.close-instruction"},
-            actions = {
-              on_click = {gui = "planetary_teleporter", action = "close"}
-            }
-          }
-        }},
+        },
         -- Content frame
-        {type = "frame", style = "inside_shallow_frame", direction = "vertical", children = {
-          -- Toolbar
-          {
-            type = "frame",
-            style = "subheader_frame",
-            ref = {"toolbar"},
-            children = {
-              {
-                type = "label",
-                style = "subheader_caption_label",
-                style_mods = {maximal_width = 370},
-                caption = entity_data.name or global.planetary_teleporter_unnamed_translations[player.index],
-                ref = {"name_label"}
-              },
-              {
-                type = "textfield",
-                visible = false,
-                ref = {"name_textfield"},
-                actions = {
-                  on_confirmed = {gui = "planetary_teleporter", action = "toggle_rename"},
-                  on_text_changed = {gui = "planetary_teleporter", action = "update_name"}
-                }
-              },
-              {
-                type = "sprite-button",
-                style = "mini_button_aligned_to_text_vertically_when_centered",
-                sprite = "utility/rename_icon_small_black",
-                tooltip = {"gui.kr-planetary-teleporter-rename-tooltip"},
-                actions = {
-                  on_click = {gui = "planetary_teleporter", action = "toggle_rename"}
-                }
-              },
-              {type = "empty-widget", style_mods = {horizontally_stretchable = true}},
-              {
-                type = "label",
-                name = "warning_label",
-                style = "bold_label",
-                style_mods = {right_padding = 8},
-                visible = false
-              }
-            }
-          },
-          {type = "flow", style_mods = {padding = 12, vertical_spacing = 8}, direction = "vertical", children = {
-            -- Entity status line
-            {type = "flow", style = "status_flow", style_mods = {vertical_align = "center"}, children = {
-              {type = "sprite", style = "status_image", ref = {"status_image"}},
-              {type = "label", ref = {"status_label"}}
-            }},
-            -- Entity preview
-            {type = "frame", style = "deep_frame_in_shallow_frame", children = {
-              {type = "entity-preview", style = "wide_entity_button", elem_mods = {entity = entity}}
-            }},
-          }},
-          -- Destinations table
-          {type = "scroll-pane", style = "kr_planetary_teleporter_destinations_scroll_pane", children = {
-            {type = "frame", style = "kr_planetary_teleporter_destinations_frame", direction = "vertical", children = {
-              -- Warning frame
-              {type = "frame", style = "negative_subheader_frame", ref = {"no_destinations_frame"}, children = {
-                {type = "empty-widget", style_mods = {horizontally_stretchable = true}},
+        {
+          type = "frame",
+          style = "inside_shallow_frame",
+          direction = "vertical",
+          children = {
+            -- Toolbar
+            {
+              type = "frame",
+              style = "subheader_frame",
+              ref = { "toolbar" },
+              children = {
                 {
                   type = "label",
-                  style = "bold_label",
-                  caption = {"", "[img=utility/warning_white] ", {"gui.kr-planetary-teleporter-no-destinations-found"}}
+                  style = "subheader_caption_label",
+                  style_mods = { maximal_width = 370 },
+                  caption = entity_data.name or global.planetary_teleporter_unnamed_translations[player.index],
+                  ref = { "name_label" },
                 },
-                {type = "empty-widget", style_mods = {horizontally_stretchable = true}},
-              }},
-              -- Destinations
-              {type = "table", style = "slot_table", column_count = 3, ref = {"destinations_table"}}
-            }}
-          }}
-        }}
-      }
-    }
+                {
+                  type = "textfield",
+                  visible = false,
+                  ref = { "name_textfield" },
+                  actions = {
+                    on_confirmed = { gui = "planetary_teleporter", action = "toggle_rename" },
+                    on_text_changed = { gui = "planetary_teleporter", action = "update_name" },
+                  },
+                },
+                {
+                  type = "sprite-button",
+                  style = "mini_button_aligned_to_text_vertically_when_centered",
+                  sprite = "utility/rename_icon_small_black",
+                  tooltip = { "gui.kr-planetary-teleporter-rename-tooltip" },
+                  actions = {
+                    on_click = { gui = "planetary_teleporter", action = "toggle_rename" },
+                  },
+                },
+                { type = "empty-widget", style_mods = { horizontally_stretchable = true } },
+                {
+                  type = "label",
+                  name = "warning_label",
+                  style = "bold_label",
+                  style_mods = { right_padding = 8 },
+                  visible = false,
+                },
+              },
+            },
+            {
+              type = "flow",
+              style_mods = { padding = 12, vertical_spacing = 8 },
+              direction = "vertical",
+              children = {
+                -- Entity status line
+                {
+                  type = "flow",
+                  style = "status_flow",
+                  style_mods = { vertical_align = "center" },
+                  children = {
+                    { type = "sprite", style = "status_image", ref = { "status_image" } },
+                    { type = "label", ref = { "status_label" } },
+                  },
+                },
+                -- Entity preview
+                {
+                  type = "frame",
+                  style = "deep_frame_in_shallow_frame",
+                  children = {
+                    { type = "entity-preview", style = "wide_entity_button", elem_mods = { entity = entity } },
+                  },
+                },
+              },
+            },
+            -- Destinations table
+            {
+              type = "scroll-pane",
+              style = "kr_planetary_teleporter_destinations_scroll_pane",
+              children = {
+                {
+                  type = "frame",
+                  style = "kr_planetary_teleporter_destinations_frame",
+                  direction = "vertical",
+                  children = {
+                    -- Warning frame
+                    {
+                      type = "frame",
+                      style = "negative_subheader_frame",
+                      ref = { "no_destinations_frame" },
+                      children = {
+                        { type = "empty-widget", style_mods = { horizontally_stretchable = true } },
+                        {
+                          type = "label",
+                          style = "bold_label",
+                          caption = {
+                            "",
+                            "[img=utility/warning_white] ",
+                            { "gui.kr-planetary-teleporter-no-destinations-found" },
+                          },
+                        },
+                        { type = "empty-widget", style_mods = { horizontally_stretchable = true } },
+                      },
+                    },
+                    -- Destinations
+                    { type = "table", style = "slot_table", column_count = 3, ref = { "destinations_table" } },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
   })
 
   refs.titlebar_flow.drag_target = refs.window
@@ -532,8 +597,8 @@ local function create_gui(player, entity)
       entity_data = entity_data,
       player = player,
       search_query = "",
-      shown_teleporters = {}
-    }
+      shown_teleporters = {},
+    },
   }
 
   global.planetary_teleporter_guis[player.index] = gui_data
@@ -558,7 +623,7 @@ local function init_global_data()
     global.planetary_teleporter_unnamed_translations = {}
   end
   for _, player in pairs(game.players) do
-    player.request_translation{"gui.kr-planetary-teleporter-unnamed"}
+    player.request_translation({ "gui.kr-planetary-teleporter-unnamed" })
   end
   -- Create teleporter force
   if not game.forces["kr-planetary-teleporter-turret"] then
@@ -570,35 +635,35 @@ local function init_global_data()
 end
 
 local collision_entity_offsets = {
-  {x = 0, y = 0},
-  {x = -2, y = 2},
-  {x = 2, y = 2}
+  { x = 0, y = 0 },
+  { x = -2, y = 2 },
+  { x = 2, y = 2 },
 }
 
 local function create_entities(base_entity)
   local entities = {
-    base = base_entity
+    base = base_entity,
   }
   local surface = base_entity.surface
   local position = base_entity.position
   for i, offset in ipairs(collision_entity_offsets) do
-    entities["collision_"..i] = surface.create_entity{
-      name = "kr-planetary-teleporter-collision-"..i,
-      position = {x = position.x + offset.x, y = position.y + offset.y},
-      create_build_effect_smoke = false
-    }
+    entities["collision_" .. i] = surface.create_entity({
+      name = "kr-planetary-teleporter-collision-" .. i,
+      position = { x = position.x + offset.x, y = position.y + offset.y },
+      create_build_effect_smoke = false,
+    })
   end
-  entities.front_layer = surface.create_entity{
+  entities.front_layer = surface.create_entity({
     name = "kr-planetary-teleporter-front-layer",
     position = position,
-    create_build_effect_smoke = false
-  }
-  entities.turret = surface.create_entity{
+    create_build_effect_smoke = false,
+  })
+  entities.turret = surface.create_entity({
     name = "kr-planetary-teleporter-turret",
-    position = {x = position.x, y = position.y + 1.15},
+    position = { x = position.x, y = position.y + 1.15 },
     force = "kr-planetary-teleporter-turret",
-    create_build_effect_smoke = false
-  }
+    create_build_effect_smoke = false,
+  })
   for name, entity in pairs(entities) do
     if name ~= "base" then
       entity.destructible = false
@@ -619,7 +684,7 @@ local function on_entity_built(e)
       name = name,
       position = entity.position,
       surface = entity.surface,
-      turret_unit_number = entities.turret.unit_number
+      turret_unit_number = entities.turret.unit_number,
     }
     global.planetary_teleporters[entity.unit_number] = data
     update_all_destination_tables()
@@ -632,7 +697,9 @@ local function on_entity_destroyed(e)
     local unit_number = entity.unit_number
     local data = global.planetary_teleporters[unit_number]
     -- In case the entity was destroyed immediately (AAI Vehicles)
-    if not data then return end
+    if not data then
+      return
+    end
     -- Destroy other entities
     -- TODO: handle edge case of deletion during a teleportation - perhaps the character should die?
     for _, entity_to_destroy in pairs(data.entities) do
@@ -647,7 +714,7 @@ local function on_entity_destroyed(e)
     for _, gui_data in pairs(global.planetary_teleporter_guis) do
       local other_entity = gui_data.state.entity
       if other_entity.valid and other_entity.unit_number == unit_number then
-        handle_gui_action({action = "close"}, {player_index = gui_data.state.player.index})
+        handle_gui_action({ action = "close" }, { player_index = gui_data.state.player.index })
       end
     end
     -- Update destinations
@@ -665,7 +732,9 @@ end
 
 local function on_gui_event(e)
   -- TEMPORARY: This is to work around a bug in flib that will be fixed in v0.8.0
-  if not e.element or not e.element.valid then return end
+  if not e.element or not e.element.valid then
+    return
+  end
   local msg = gui.read_action(e)
   if msg and msg.gui == "planetary_teleporter" then
     handle_gui_action(msg, e)
@@ -675,12 +744,12 @@ end
 local function on_focus_search(e)
   local gui_data = global.planetary_teleporter_guis[e.player_index]
   if gui_data then
-    handle_gui_action({action = "toggle_search"}, e)
+    handle_gui_action({ action = "toggle_search" }, e)
   end
 end
 
 local function on_player_created(e)
-  game.get_player(e.player_index).request_translation{"gui.kr-planetary-teleporter-unnamed"}
+  game.get_player(e.player_index).request_translation({ "gui.kr-planetary-teleporter-unnamed" })
 end
 
 local function on_player_removed(e)
@@ -709,7 +778,9 @@ local function on_player_setup_blueprint(e)
 
   -- Get blueprint entities and mapping
   local entities = bp.get_blueprint_entities()
-  if not entities then return end
+  if not entities then
+    return
+  end
   local mapping = e.mapping.get()
 
   -- Find any planetary teleporters in this blueprint
@@ -728,10 +799,14 @@ end
 
 local function on_script_trigger_effect(e)
   if e.effect_id == "kr-planetary-teleporter-character-trigger" then
-    if not e.source_entity.valid or not e.target_entity.valid then return end
+    if not e.source_entity.valid or not e.target_entity.valid then
+      return
+    end
 
     local player = e.target_entity.player
-    if not player or not player.valid then return end
+    if not player or not player.valid then
+      return
+    end
     local player_index = player.index
 
     local turret_unit_number = e.source_entity.unit_number
@@ -739,40 +814,40 @@ local function on_script_trigger_effect(e)
     if players then
       players[player_index] = true
     else
-      global.planetary_teleporter_players[turret_unit_number] = {[player_index] = true}
+      global.planetary_teleporter_players[turret_unit_number] = { [player_index] = true }
     end
   end
 end
 
 return {
   -- Bootstrap
-  {init_global_data, "on_init"},
-  {init_global_data, "on_configuration_changed"},
+  { init_global_data, "on_init" },
+  { init_global_data, "on_configuration_changed" },
   -- Built
-  {on_entity_built, "on_built_entity", pt_built_entity_filters},
-  {on_entity_built, "on_robot_built_entity", pt_built_entity_filters},
-  {on_entity_built, "script_raised_built"},
-  {on_entity_built, "script_raised_revive"},
+  { on_entity_built, "on_built_entity", pt_built_entity_filters },
+  { on_entity_built, "on_robot_built_entity", pt_built_entity_filters },
+  { on_entity_built, "script_raised_built" },
+  { on_entity_built, "script_raised_revive" },
   -- Destroyed
-  {on_entity_destroyed, "on_player_mined_entity", pt_built_entity_filters},
-  {on_entity_destroyed, "on_robot_mined_entity", pt_built_entity_filters},
-  {on_entity_destroyed, "on_entity_died", pt_built_entity_filters},
-  {on_entity_destroyed, "script_raised_destroy", pt_built_entity_filters},
+  { on_entity_destroyed, "on_player_mined_entity", pt_built_entity_filters },
+  { on_entity_destroyed, "on_robot_mined_entity", pt_built_entity_filters },
+  { on_entity_destroyed, "on_entity_died", pt_built_entity_filters },
+  { on_entity_destroyed, "script_raised_destroy", pt_built_entity_filters },
   -- Gui
-  {on_focus_search, "kr-focus-search"},
-  {on_gui_event, "on_gui_click"},
-  {on_gui_event, "on_gui_closed"},
-  {on_gui_event, "on_gui_confirmed"},
-  {on_gui_event, "on_gui_text_changed"},
-  {on_gui_opened, "on_gui_opened"},
-  {update_gui_statuses, "on_tick"},
-  {update_all_destination_availability, "on_tick"},
+  { on_focus_search, "kr-focus-search" },
+  { on_gui_event, "on_gui_click" },
+  { on_gui_event, "on_gui_closed" },
+  { on_gui_event, "on_gui_confirmed" },
+  { on_gui_event, "on_gui_text_changed" },
+  { on_gui_opened, "on_gui_opened" },
+  { update_gui_statuses, "on_tick" },
+  { update_all_destination_availability, "on_tick" },
   -- Player
-  {on_player_created, "on_player_created"},
-  {on_player_removed, "on_player_removed"},
-  {on_string_translated, "on_string_translated"},
+  { on_player_created, "on_player_created" },
+  { on_player_removed, "on_player_removed" },
+  { on_string_translated, "on_string_translated" },
   -- Blueprint
-  {on_player_setup_blueprint, "on_player_setup_blueprint"},
+  { on_player_setup_blueprint, "on_player_setup_blueprint" },
   -- Trigger
-  {on_script_trigger_effect, "on_script_trigger_effect"}
+  { on_script_trigger_effect, "on_script_trigger_effect" },
 }

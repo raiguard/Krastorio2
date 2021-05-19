@@ -1,8 +1,7 @@
 local patreons_list = {}
 
 -- Top Supporters
-patreons_list.high_supporters =
-{
+patreons_list.high_supporters = {
   "mkaito",
   "Brayden McLean",
   "bob",
@@ -46,12 +45,11 @@ patreons_list.high_supporters =
   "Tobi",
   "Arun Bhat",
   "Zoey Oliva",
-  "sollevix"
+  "sollevix",
 }
 
 -- Patreon how donate 9 or less dollars
-patreons_list.low_supporters =
-{
+patreons_list.low_supporters = {
   "Andrew Spade",
   "Adrian Leonhard",
   "billbo99",
@@ -95,7 +93,7 @@ patreons_list.low_supporters =
   "Wolfgang Weber",
   "webchip",
   "antt1995",
-  "Влад"
+  "Влад",
 }
 
 function patreons_list.getHighSupportersList()

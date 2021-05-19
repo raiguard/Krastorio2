@@ -7,27 +7,30 @@ if mods["angelsaddons-crawlertrain"] or mods["angelsaddons-mobility"] then
       end
     end
   end
-  
+
   local function changeLocomotiveBurnerCategory(locomotive_name)
-    if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") and data.raw.locomotive[locomotive_name] and data.raw.locomotive[locomotive_name].burner then
-      data.raw.locomotive[locomotive_name].burner.fuel_category   = nil
+    if
+      krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels")
+      and data.raw.locomotive[locomotive_name]
+      and data.raw.locomotive[locomotive_name].burner
+    then
+      data.raw.locomotive[locomotive_name].burner.fuel_category = nil
       if mods["IndustrialRevolution"] then
-        data.raw.locomotive[locomotive_name].burner.fuel_categories = {"chemical", "vehicle-fuel", "battery"}
+        data.raw.locomotive[locomotive_name].burner.fuel_categories = { "chemical", "vehicle-fuel", "battery" }
       else
-        data.raw.locomotive[locomotive_name].burner.fuel_categories = {"chemical", "vehicle-fuel"}
+        data.raw.locomotive[locomotive_name].burner.fuel_categories = { "chemical", "vehicle-fuel" }
       end
     end
   end
 
-  local new_train_grids =
-  {
+  local new_train_grids = {
     "angels-crawler",
     "angels-crawler-bot-wagon",
     "angels-crawler-locomotive",
     "angels-crawler-loco-wagon",
-    "angels-crawler-wagon"
+    "angels-crawler-wagon",
   }
-    
+
   for _, grid_name in pairs(new_train_grids) do
     if data.raw["equipment-grid"][grid_name] then
       removeEquipment(data.raw["equipment-grid"][grid_name].equipment_categories, "angels-basegame-movement")
@@ -35,15 +38,13 @@ if mods["angelsaddons-crawlertrain"] or mods["angelsaddons-mobility"] then
       table.insert(data.raw["equipment-grid"][grid_name].equipment_categories, "vehicle-equipment")
     end
   end
-  
-  local new_locomotive_names =
-  {
+
+  local new_locomotive_names = {
     "crawler-locomotive",
-    "crawler-locomotive-wagon"
+    "crawler-locomotive-wagon",
   }
-  
+
   for _, locomotive_name in pairs(new_locomotive_names) do
     changeLocomotiveBurnerCategory(locomotive_name)
   end
-  
 end

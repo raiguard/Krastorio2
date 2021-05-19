@@ -1,42 +1,37 @@
-if not mods["Squeak Through"] then return end
+if not mods["Squeak Through"] then
+  return
+end
 
-require("__Squeak Through__/config")  
+require("__Squeak Through__/config")
 
 function addExcludedEntityToSqueakThrough(name, category)
-  table.insert(exclusions, 
-  { 
-    {      
-      apply_when_object_exists = 
-      {
+  table.insert(exclusions, {
+    {
+      apply_when_object_exists = {
         type = category,
         name = name,
       },
-      excluded_prototype_names = 
-      {
-        name
-      }
-    }
+      excluded_prototype_names = {
+        name,
+      },
+    },
   })
-end 
+end
 
-local exclusions_to_add =
-{ 
-  ["ammo-turret"] =
-  {
+local exclusions_to_add = {
+  ["ammo-turret"] = {
     "kr-railgun-turret",
-    "kr-rocket-turret"
+    "kr-rocket-turret",
   },
-  ["accumulator"] =
-  {
+  ["accumulator"] = {
     "kr-energy-storage",
-    "kr-intergalactic-transceiver"
+    "kr-intergalactic-transceiver",
   },
-  ["assembling-machine"] =
-  {
+  ["assembling-machine"] = {
     "kr-greenhouse",
-    "kr-advanced-furnace",      
+    "kr-advanced-furnace",
     "kr-electrolysis-plant",
-    "kr-filtration-plant",        
+    "kr-filtration-plant",
     "kr-air-filter",
     "kr-fuel-refinery",
     "kr-atmospheric-condenser",
@@ -45,51 +40,43 @@ local exclusions_to_add =
     "kr-advanced-chemical-plant",
     "kr-matter-assembler",
     "kr-matter-plant",
-    "kr-quantum-computer"
+    "kr-quantum-computer",
   },
-  ["beacon"] =
-  {
-    "kr-singularity-beacon"
+  ["beacon"] = {
+    "kr-singularity-beacon",
   },
-  ["burner-generator"] =
-  {
-    "kr-antimatter-reactor"
+  ["burner-generator"] = {
+    "kr-antimatter-reactor",
   },
-  ["container"] =
-  {
+  ["container"] = {
     "kr-medium-container",
     "kr-big-container",
     "kr-shelter-container",
-    "kr-shelter-plus-container"
+    "kr-shelter-plus-container",
   },
-  ["lab"] =
-  {
+  ["lab"] = {
     "biusart_lab",
-    "kr-singularity-lab"
+    "kr-singularity-lab",
   },
-  ["furnace"] =
-  {
+  ["furnace"] = {
     "kr-crusher",
     "kr-fluid-burner",
     "kr-crusher",
     "kr-air-purifier",
     "kr-fusion-reactor",
-    "kr-stabilizer-charging-station"
+    "kr-stabilizer-charging-station",
   },
-  ["mining-drill"] =
-  {
+  ["mining-drill"] = {
     "kr-mineral-water-pumpjack",
-    "kr-quarry-drill"
+    "kr-quarry-drill",
   },
-  ["electric-energy-interface"] =
-  {
+  ["electric-energy-interface"] = {
     "kr-wind-turbine",
     "kr-shelter",
     "kr-shelter-plus",
-    "kr-activated-intergalactic-transceiver"
-  },  
-  ["logistic-container"] =
-  {
+    "kr-activated-intergalactic-transceiver",
+  },
+  ["logistic-container"] = {
     "kr-medium-active-provider-container",
     "kr-medium-buffer-container",
     "kr-medium-passive-provider-container",
@@ -99,51 +86,44 @@ local exclusions_to_add =
     "kr-big-buffer-container",
     "kr-big-passive-provider-container",
     "kr-big-requester-container",
-    "kr-big-storage-container"
-  },  
-  ["storage-tank"] =
-  {
+    "kr-big-storage-container",
+  },
+  ["storage-tank"] = {
     "fluid-storage-1",
-    "fluid-storage-2"
+    "fluid-storage-2",
   },
-  ["generator"] =
-  {
+  ["generator"] = {
     "kr-advanced-steam-turbine",
-    "kr-gas-power-station"
+    "kr-gas-power-station",
   },
-  ["radar"] =
-  {
-    "kr-sentinel"
+  ["radar"] = {
+    "kr-sentinel",
   },
-  ["solar-panel"] =
-  {
-    "kr-advanced-solar-panel"
+  ["solar-panel"] = {
+    "kr-advanced-solar-panel",
   },
-  ["roboport"] =
-  {
+  ["roboport"] = {
     "kr-small-roboport",
-    "kr-large-roboport"
-  }
+    "kr-large-roboport",
+  },
 }
 
 if settings.startup["loaders"] and settings.startup["loaders"].value then
   if mods["space-exploration"] then
-    exclusions_to_add["loader"] = 
-    {
-      "kr-loader",
-      "kr-fast-loader",
-      "kr-express-loader",
-      "kr-superior-loader"
-    }
-  else
-    exclusions_to_add["loader"] = 
-    {
+    exclusions_to_add["loader"] = {
       "kr-loader",
       "kr-fast-loader",
       "kr-express-loader",
       "kr-superior-loader",
-      "kr-se-loader"
-    }   
+    }
+  else
+    exclusions_to_add["loader"] = {
+      "kr-loader",
+      "kr-fast-loader",
+      "kr-express-loader",
+      "kr-superior-loader",
+      "kr-se-loader",
+    }
   end
 end
 
@@ -154,4 +134,4 @@ for category_name, entities in pairs(exclusions_to_add) do
       data.raw[category_name][entity_name].squeak_behaviour = false
     end
   end
-end 
+end

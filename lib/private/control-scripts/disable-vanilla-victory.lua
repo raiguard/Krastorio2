@@ -8,8 +8,7 @@ local function disable_rocket_victory()
 end
 
 -- With control-callbacks-merger
-return
-{
+return {
   -- -- Bootstrap
-  { disable_rocket_victory, "on_init" }      
+  { disable_rocket_victory, "on_init" },
 }

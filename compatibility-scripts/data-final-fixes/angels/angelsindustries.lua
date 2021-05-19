@@ -1,6 +1,5 @@
 if mods["angelsindustries"] then
-  local angels_equipment_categories = 
-  {
+  local angels_equipment_categories = {
     "angels-energy",
     "angels-construction",
     "angels-heavy-attack",
@@ -8,25 +7,24 @@ if mods["angelsindustries"] then
     "angels-light-attack",
     "angels-light-defence",
     "angels-moviment",
-    "angels-repair"
+    "angels-repair",
   }
 
-  local krastori_vehicles_equipment_grids =
-  {
+  local krastori_vehicles_equipment_grids = {
     "kr-car-grid",
     "kr-tank-grid",
     "kr-tank-grid-2",
     "kr-locomotive-grid",
-    "kr-wagons-grid"
+    "kr-wagons-grid",
   }
-  
+
   if mods["Aircraft"] then
     table.insert(krastori_vehicles_equipment_grids, "kr-gunship-grid")
     table.insert(krastori_vehicles_equipment_grids, "kr-cargo-plane-grid")
     table.insert(krastori_vehicles_equipment_grids, "kr-jet-grid")
     table.insert(krastori_vehicles_equipment_grids, "kr-flying-fortress-grid")
   end
-  
+
   for _, grid_name in pairs(krastori_vehicles_equipment_grids) do
     for _, equipment_name in pairs(angels_equipment_categories) do
       if data.raw["equipment-category"][equipment_name] then
@@ -34,9 +32,9 @@ if mods["angelsindustries"] then
       end
     end
   end
-  
+
   -- Removing not useful recipes
-  
+
   data.raw.technology["angels-ghosting-angels-construction-robots"] = nil
-  data.raw.technology["angels-ghosting-construction-robots"]        = nil
+  data.raw.technology["angels-ghosting-construction-robots"] = nil
 end

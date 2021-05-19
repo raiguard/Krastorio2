@@ -1,13 +1,12 @@
-data:extend(
-{
+data:extend({
   {
     type = "corpse",
     name = "kr-advanced-underground-belt-remnant",
-    localised_name = {"remnant-name", {"entity-name.kr-advanced-underground-belt"}},
+    localised_name = { "remnant-name", { "entity-name.kr-advanced-underground-belt" } },
     icon = kr_entities_icons_path .. "transport-belts/advanced-transport-belt/advanced-underground-belt.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "not-on-map", "building-direction-8-way"},
-    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    flags = { "placeable-neutral", "not-on-map", "building-direction-8-way" },
+    selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     tile_width = 1,
     tile_height = 1,
     selectable_in_game = false,
@@ -16,8 +15,7 @@ data:extend(
     time_before_removed = 60 * 60 * 15, -- 15 minutes
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
-    animation =
-    {
+    animation = {
       filename = kr_remnants_path .. "transport-belts/advanced-transport-belt/underground-belt/advanced-underground-belt-remnant.png",
       line_length = 1,
       width = 60,
@@ -27,8 +25,7 @@ data:extend(
       axially_symmetrical = false,
       direction_count = 8,
       shift = util.by_pixel(4, 3),
-      hr_version =
-      {
+      hr_version = {
         filename = kr_remnants_path .. "transport-belts/advanced-transport-belt/underground-belt/hr-advanced-underground-belt-remnant.png",
         line_length = 1,
         width = 116,
@@ -38,8 +35,8 @@ data:extend(
         axially_symmetrical = false,
         direction_count = 8,
         shift = util.by_pixel(3.5, 3.5),
-        scale = 0.5
-      }
-    }
-  }
+        scale = 0.5,
+      },
+    },
+  },
 })

@@ -8,4 +8,3 @@ require("images")
 
 -- Button sprites
 require("button-sprites")
-

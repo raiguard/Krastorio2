@@ -1,6 +1,5 @@
 --- list of whilisted user
-local krastorio_high_patreons =
-{
+local krastorio_high_patreons = {
   -- Mod Developers
   ["krastor"] = true,
   ["linver"] = true,
@@ -57,7 +56,7 @@ local krastorio_high_patreons =
   ["sollevix"] = true,
   ["tobi"] = true,
   ["quezler"] = true,
-  ["antt1995"] = true
+  ["antt1995"] = true,
 }
 
 -- lists of patreons
@@ -81,12 +80,11 @@ function givePatreonItems(event)
   local player = game.players[event.player_index]
   if player and player.character ~= nil and isHighLevelPatreon(player.name) then
     local inventory = player.get_main_inventory()
-    local patreon_items =
-    {
-      { name="kr-shelter-plus", count=1 },
-      { name="kr-accelerator", count=1 },
-      { name="firearm-magazine", count=190 },
-      { name="potato", count=6 }
+    local patreon_items = {
+      { name = "kr-shelter-plus", count = 1 },
+      { name = "kr-accelerator", count = 1 },
+      { name = "firearm-magazine", count = 190 },
+      { name = "potato", count = 6 },
     }
     if inventory and inventory.valid then
       for _, item in pairs(patreon_items) do
@@ -96,7 +94,7 @@ function givePatreonItems(event)
       end
       global.patreon_item_given[player.name] = true
     end
-    player.print({"other.kr-patreon-stuff-success"})
+    player.print({ "other.kr-patreon-stuff-success" })
   end
 end
 
@@ -106,23 +104,23 @@ local function tryToGetPatreonItems(command)
   if player then
     if isHighLevelPatreon(player.name) then
       if global.patreon_item_given[player.name] then
-        player.print({"other.kr-patreon-stuff-error"})
+        player.print({ "other.kr-patreon-stuff-error" })
       else
         givePatreonItems(command)
       end
     elseif player.character ~= nil then
       local inventory = player.get_main_inventory()
-      if inventory.can_insert({ name="spoiled-potato", count=1 }) then
-        inventory.insert({ name="spoiled-potato", count=1 })
+      if inventory.can_insert({ name = "spoiled-potato", count = 1 }) then
+        inventory.insert({ name = "spoiled-potato", count = 1 })
       end
       local num = math.random(1, 3)
-      player.print({"other.kr-patreon-stuff-fail-"..tostring(num)})
+      player.print({ "other.kr-patreon-stuff-fail-" .. tostring(num) })
     end
   end
 end
 -- Associate function to command
 if not commands.commands["kr-patreon-stuff"] then
-  commands.add_command("kr-patreon-stuff", {"other.kr-patreon-stuff-help"}, tryToGetPatreonItems)
+  commands.add_command("kr-patreon-stuff", { "other.kr-patreon-stuff-help" }, tryToGetPatreonItems)
 end
 
 -- Init
@@ -136,14 +134,12 @@ function initializePatreonsGlobalVariables()
   global.patreon_item_given = {}
 end
 
-return
-{
+return {
   -- -- Bootstrap
   -- For setup variables
   { onInitAndConf, "on_init" },
   { onInitAndConf, "on_configuration_changed" },
   -- On new game
   { givePatreonItems, "on_cutscene_cancelled" },
-  { givePatreonItems, "on_player_created" }
+  { givePatreonItems, "on_player_created" },
 }
-

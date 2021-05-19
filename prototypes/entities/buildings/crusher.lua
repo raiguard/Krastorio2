@@ -1,29 +1,25 @@
-data:extend(
-{   
+data:extend({
   {
     type = "furnace",
     name = "kr-crusher",
     icon_size = 64,
     icon_mipmaps = 4,
-    icon =  kr_entities_icons_path .. "crusher.png",
-    flags = {"placeable-neutral","placeable-player", "player-creation"},
-    minable = {hardness = 1, mining_time = 1, result = "kr-crusher"},
+    icon = kr_entities_icons_path .. "crusher.png",
+    flags = { "placeable-neutral", "placeable-player", "player-creation" },
+    minable = { hardness = 1, mining_time = 1, result = "kr-crusher" },
     max_health = 750,
     corpse = "kr-big-random-pipes-remnant",
     dying_explosion = "big-explosion",
-    resistances = 
-    {
-      {type = "physical",percent = 50},
-      {type = "fire",percent = 70},
-      {type = "impact",percent = 70}
+    resistances = {
+      { type = "physical", percent = 50 },
+      { type = "fire", percent = 70 },
+      { type = "impact", percent = 70 },
     },
-    collision_box = {{-3.25, -3.25}, {3.25, 3.25}},
-    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    collision_box = { { -3.25, -3.25 }, { 3.25, 3.25 } },
+    selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     fast_replaceable_group = "kr-crusher",
-    animation =
-    {
-      layers =
-      {
+    animation = {
+      layers = {
         {
           filename = kr_entities_path .. "crusher/crusher.png",
           priority = "high",
@@ -33,9 +29,8 @@ data:extend(
           frame_count = 30,
           frame_count = 30,
           line_length = 6,
-          animation_speed=0.75,
-          hr_version =
-          {
+          animation_speed = 0.75,
+          hr_version = {
             filename = kr_entities_path .. "crusher/hr-crusher.png",
             priority = "high",
             scale = scale,
@@ -43,9 +38,9 @@ data:extend(
             height = 512,
             frame_count = 30,
             line_length = 6,
-            animation_speed=0.75,
-            scale = 0.5
-          }
+            animation_speed = 0.75,
+            scale = 0.5,
+          },
         },
         {
           filename = kr_entities_path .. "crusher/crusher-shadow.png",
@@ -56,8 +51,7 @@ data:extend(
           frame_count = 30,
           line_length = 6,
           draw_as_shadow = true,
-          hr_version =
-          {
+          hr_version = {
             filename = kr_entities_path .. "crusher/hr-crusher-shadow.png",
             priority = "high",
             scale = scale,
@@ -66,39 +60,34 @@ data:extend(
             frame_count = 30,
             line_length = 6,
             draw_as_shadow = true,
-            scale = 0.5
-          }
+            scale = 0.5,
+          },
         },
-      }
+      },
     },
-    crafting_categories = {"crushing"},
+    crafting_categories = { "crushing" },
     scale_entity_info_icon = true,
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-        working_sound =
-        {
-      sound = 
-      { 
+    working_sound = {
+      sound = {
         filename = kr_buildings_sounds_path .. "crusher.ogg",
-        volume = 1.25
+        volume = 1.25,
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg" },
-      apparent_volume = 1.5
-        },
+      apparent_volume = 1.5,
+    },
     crafting_speed = 1,
     source_inventory_size = 1,
     result_inventory_size = 3,
     return_ingredients_on_change = true,
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 20
+      emissions_per_minute = 20,
     },
-    
-    water_reflection =
-    {
-      pictures =
-      {
+
+    water_reflection = {
+      pictures = {
         filename = kr_entities_path .. "crusher/crusher-reflection.png",
         priority = "extra-high",
         width = 80,
@@ -108,13 +97,13 @@ data:extend(
         scale = 5,
       },
       rotate = false,
-      orientation_to_variation = false
+      orientation_to_variation = false,
     },
-    
+
     energy_usage = "225KW",
-    module_specification = { module_slots = 4, module_info_icon_shift = {0, 1.7}, module_info_icon_scale = 1 },
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    module_specification = { module_slots = 4, module_info_icon_shift = { 0, 1.7 }, module_info_icon_scale = 1 },
+    allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     --open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
     --close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 }
-  }
+  },
 })

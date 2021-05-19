@@ -1,7 +1,7 @@
 if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mods["space-exploration"], "0.3.0") then
   -- Chaning the name of the antimatter reactor fuel for not be the same of the antimatter reactor of SE
-  data.raw.item["empty-antimatter-fuel-cell"].localised_name = {"item-name.empty-singularity-fuel-cell"}
-  data.raw.item["charged-antimatter-fuel-cell"].localised_name = {"item-name.charged-singularity-fuel-cell"}
+  data.raw.item["empty-antimatter-fuel-cell"].localised_name = { "item-name.empty-singularity-fuel-cell" }
+  data.raw.item["charged-antimatter-fuel-cell"].localised_name = { "item-name.charged-singularity-fuel-cell" }
 
   -- Rebalancing the se-liquid-rocket-fuel value to be used from the gas power station
   data.raw.fluid["se-liquid-rocket-fuel"].fuel_value = "1000KJ"
@@ -28,6 +28,10 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
   data.raw.item["kr-singularity-lab"].order = "g[lab]-g4[kr-singularity-lab]"
 
   if data.raw.capsule["first-aid-kit"] then
-    data.raw.capsule["first-aid-kit"].capsule_action.attack_parameters.ammo_type.action.action_delivery.target_effects.damage = {type = "physical", amount = -50}
+    data.raw.capsule["first-aid-kit"].capsule_action.attack_parameters.ammo_type.action.action_delivery.target_effects.damage =
+      {
+        type = "physical",
+        amount = -50,
+      }
   end
 end

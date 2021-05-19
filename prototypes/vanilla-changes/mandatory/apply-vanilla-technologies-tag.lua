@@ -1,5 +1,4 @@
-local vanilla_tech_names =
-{
+local vanilla_tech_names = {
   "basic-mining",
   "basic-electronics",
   "basic-mapping",
@@ -228,7 +227,7 @@ local vanilla_tech_names =
   "inserter-capacity-bonus-4",
   "inserter-capacity-bonus-5",
   "inserter-capacity-bonus-6",
-  "inserter-capacity-bonus-7"
+  "inserter-capacity-bonus-7",
 }
 
 for _, tech_name in pairs(vanilla_tech_names) do

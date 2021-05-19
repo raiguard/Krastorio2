@@ -1,42 +1,38 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
-local sounds      = require("__base__/prototypes/entity/sounds")
+local sounds = require("__base__/prototypes/entity/sounds")
 local variations_util = require(kr_public_lib .. "create-roboport-states")
-local empty_sprite =
-{
+local empty_sprite = {
   filename = kr_entities_path .. "empty.png",
   width = 1,
   height = 1,
-  frame_count = 1
+  frame_count = 1,
 }
 
-data:extend(
-{
+data:extend({
   {
     type = "roboport",
     name = "kr-small-roboport",
     icon = kr_entities_icons_path .. "small-roboport.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    flags = {"placeable-player", "player-creation"},
-    minable = {mining_time = 0.5, result = "kr-small-roboport"},
+    flags = { "placeable-player", "player-creation" },
+    minable = { mining_time = 0.5, result = "kr-small-roboport" },
     max_health = 350,
     corpse = "medium-remnants",
     damaged_trigger_effect = hit_effects.entity(),
-    collision_box = {{-0.8, -0.8}, {0.8, 0.8}},
-    selection_box = {{-1, -1}, {1, 1}},
-    resistances = 
-    {
-      {type = "physical",percent = 50},
-      {type = "fire",percent = 75},
-      {type = "impact",percent = 75}
+    collision_box = { { -0.8, -0.8 }, { 0.8, 0.8 } },
+    selection_box = { { -1, -1 }, { 1, 1 } },
+    resistances = {
+      { type = "physical", percent = 50 },
+      { type = "fire", percent = 75 },
+      { type = "impact", percent = 75 },
     },
     dying_explosion = "medium-explosion",
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
       input_flow_limit = "12MW",
-      buffer_capacity = "300MJ"
+      buffer_capacity = "300MJ",
     },
     recharge_minimum = "50MJ",
     energy_usage = "50kW",
@@ -47,55 +43,55 @@ data:extend(
     charge_approach_distance = 3,
     robot_slots_count = 0,
     material_slots_count = 0,
-    stationing_offset = {0, 0},
-    charging_offsets =
-    {
-      {-0.5, -1}, {-1, -0.5}, {-1, 0.5}, {-0.5, 1}, {0.5, 1}, {1, 0.5}, {1, -0.5}, {0.5, -1}
+    stationing_offset = { 0, 0 },
+    charging_offsets = {
+      { -0.5, -1 },
+      { -1, -0.5 },
+      { -1, 0.5 },
+      { -0.5, 1 },
+      { 0.5, 1 },
+      { 1, 0.5 },
+      { 1, -0.5 },
+      { 0.5, -1 },
     },
-    base =
-    {
-      layers =
-      {
+    base = {
+      layers = {
         {
           filename = kr_entities_path .. "small-roboport/small-roboport.png",
           width = 120,
           height = 150,
-          shift = {0, -0.1},
+          shift = { 0, -0.1 },
           scale = 0.5,
-          hr_version =
-          {
+          hr_version = {
             filename = kr_entities_path .. "small-roboport/hr-small-roboport.png",
             width = 240,
             height = 300,
-            shift = {0, -0.1},
+            shift = { 0, -0.1 },
             scale = scale,
-            scale = 0.25
-          }
+            scale = 0.25,
+          },
         },
         {
           filename = kr_entities_path .. "small-roboport/small-roboport-sh.png",
           width = 163,
           height = 84,
-          shift = {0.48, 0.43},
+          shift = { 0.48, 0.43 },
           draw_as_shadow = true,
           scale = 0.5,
-          hr_version =
-          {
+          hr_version = {
             filename = kr_entities_path .. "small-roboport/hr-small-roboport-sh.png",
             width = 322,
             height = 166,
-            shift = {0.48, 0.43},
+            shift = { 0.48, 0.43 },
             draw_as_shadow = true,
-            scale = 0.25
-          }
-        }
-      }
+            scale = 0.25,
+          },
+        },
+      },
     },
     base_patch = empty_sprite,
-    base_animation =
-    {
-      layers =
-      {
+    base_animation = {
+      layers = {
         {
           filename = kr_entities_path .. "small-roboport/small-roboport-animation.png",
           priority = "high",
@@ -103,11 +99,10 @@ data:extend(
           height = 40,
           scale = 0.5,
           frame_count = 8,
-          shift = {0, -0.92},
+          shift = { 0, -0.92 },
           draw_as_glow = true,
           animation_speed = 0.1,
-          hr_version =
-          {
+          hr_version = {
             filename = kr_entities_path .. "small-roboport/hr-small-roboport-animation.png",
             priority = "high",
             width = 110,
@@ -115,10 +110,10 @@ data:extend(
             scale = scale,
             scale = 0.25,
             frame_count = 8,
-            shift = {0, -0.92},
+            shift = { 0, -0.92 },
             draw_as_glow = true,
-            animation_speed = 0.1
-          }
+            animation_speed = 0.1,
+          },
         },
         {
           filename = kr_entities_path .. "small-roboport/small-roboport-animation-light.png",
@@ -127,11 +122,10 @@ data:extend(
           height = 40,
           scale = 0.5,
           frame_count = 8,
-          shift = {0, -0.92},
+          shift = { 0, -0.92 },
           draw_as_light = true,
           animation_speed = 0.1,
-          hr_version =
-          {
+          hr_version = {
             filename = kr_entities_path .. "small-roboport/hr-small-roboport-animation-light.png",
             priority = "high",
             width = 110,
@@ -139,19 +133,17 @@ data:extend(
             scale = scale,
             scale = 0.25,
             frame_count = 8,
-            shift = {0, -0.92},
+            shift = { 0, -0.92 },
             draw_as_light = true,
-            animation_speed = 0.1
-          }
-        }
-      }
+            animation_speed = 0.1,
+          },
+        },
+      },
     },
     door_animation_up = empty_sprite,
     door_animation_down = empty_sprite,
-    recharging_animation =
-    {
-      layers =
-      {
+    recharging_animation = {
+      layers = {
         {
           filename = kr_entities_path .. "small-roboport/small-roboport-recharging.png",
           priority = "high",
@@ -160,7 +152,7 @@ data:extend(
           frame_count = 16,
           scale = 1.5,
           draw_as_glow = true,
-          animation_speed = 0.5
+          animation_speed = 0.5,
         },
         {
           filename = kr_entities_path .. "small-roboport/small-roboport-recharging-light.png",
@@ -170,21 +162,18 @@ data:extend(
           frame_count = 16,
           scale = 1.5,
           draw_as_light = true,
-          animation_speed = 0.5
-        }
-      }
+          animation_speed = 0.5,
+        },
+      },
     },
-    recharging_light = 
-    {
-      intensity = 0.2, 
-      size = 1, 
-      color = {r = 0.196, g = 0.658, b = 0.650}
+    recharging_light = {
+      intensity = 0.2,
+      size = 1,
+      color = { r = 0.196, g = 0.658, b = 0.650 },
     },
-    
-    water_reflection =
-    {
-      pictures =
-      {
+
+    water_reflection = {
+      pictures = {
         filename = kr_entities_path .. "small-roboport/small-roboport-reflection.png",
         priority = "extra-high",
         width = 16,
@@ -194,13 +183,13 @@ data:extend(
         scale = 5,
       },
       rotate = false,
-      orientation_to_variation = false
+      orientation_to_variation = false,
     },
-    
+
     vehicle_impact_sound = sounds.generic_impact,
     request_to_open_door_timeout = 15,
-    spawn_and_station_height = 0.33
-  }
+    spawn_and_station_height = 0.33,
+  },
 })
 
 variations_util.createRoboportVariations("kr-small-roboport")

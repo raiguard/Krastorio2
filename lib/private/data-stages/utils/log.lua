@@ -1,4 +1,3 @@
-
 krastorio_utils.log = {}
 krastorio_utils.inspect = require("inspect")
 krastorio_utils.log.enabled = true
@@ -9,7 +8,8 @@ krastorio_utils.log.enabled = true
   WARNING   3 -- message with a possible problem of mod, maybe nothing of important, maybe not
   ERROR     4 -- message with an error report, the game with start but with problems
   SEVERE  >=5 -- message with a fatal error, the mod can't work with this errors
-]]-- 
+]]
+--
 
 function krastorio_utils.log.disableLogs()
   krastorio_utils.log.enabled = false
@@ -65,7 +65,7 @@ function krastorio_utils.log.write(level, txt)
         return krastorio_utils.log.warning(txt)
       elseif string.lower(level) == "error" then
         return krastorio_utils.log.error(txt)
-      else 
+      else
         return krastorio_utils.log.severe(txt)
       end
     end
@@ -93,21 +93,24 @@ function krastorio_utils.log._(txt, message_level)
   if debug.getinfo(3) then
     base_level = 2
   end
-  local out_file, out_function_name, out_line = debug.getinfo(base_level+1).short_src, debug.getinfo(base_level+1).name, debug.getinfo(base_level+1).currentline
-  local in_file, in_function_name, in_line = debug.getinfo(base_level).short_src, debug.getinfo(base_level).name, debug.getinfo(base_level).currentline
-  
+  local out_file, out_function_name, out_line = debug.getinfo(base_level + 1).short_src,
+    debug.getinfo(base_level + 1).name,
+    debug.getinfo(base_level + 1).currentline
+  local in_file, in_function_name, in_line =
+    debug.getinfo(base_level).short_src, debug.getinfo(base_level).name, debug.getinfo(base_level).currentline
+
   log("Krastorio 2|LogLevel:" .. message_level)
   if in_function_name then
-    log("From Krastorio 2->file:" .. in_file .. "->function:" .. in_function_name .. "->line:" .. in_line) 
+    log("From Krastorio 2->file:" .. in_file .. "->function:" .. in_function_name .. "->line:" .. in_line)
   else
-    log("From Krastorio 2->file:" .. in_file .. "->line:" .. in_line)  
-  end 
+    log("From Krastorio 2->file:" .. in_file .. "->line:" .. in_line)
+  end
   if out_function_name then
-    log("Called in->file:" .. out_file .. "->function:" .. out_function_name .. "->line:" .. out_line)  
+    log("Called in->file:" .. out_file .. "->function:" .. out_function_name .. "->line:" .. out_line)
   else
-    log("Called in->file:" .. out_file .. "->line:" .. out_line)  
+    log("Called in->file:" .. out_file .. "->line:" .. out_line)
   end
   log("Message: " .. krastorio_utils.inspect(txt))
-  
+
   return true
 end

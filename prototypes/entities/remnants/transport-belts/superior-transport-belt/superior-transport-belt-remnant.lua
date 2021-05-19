@@ -1,13 +1,12 @@
-data:extend(
-{
+data:extend({
   {
     type = "corpse",
     name = "kr-superior-transport-belt-remnant",
-    localised_name = {"remnant-name", {"entity-name.kr-superior-transport-belt"}},
+    localised_name = { "remnant-name", { "entity-name.kr-superior-transport-belt" } },
     icon = kr_entities_icons_path .. "transport-belts/superior-transport-belt/superior-transport-belt.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "not-on-map"},
-    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    flags = { "placeable-neutral", "not-on-map" },
+    selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     tile_width = 1,
     tile_height = 1,
     selectable_in_game = false,
@@ -16,8 +15,7 @@ data:extend(
     time_before_removed = 60 * 60 * 15, -- 15 minutes
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
-    animation =  make_rotated_animation_variations_from_sheet (8,
-    {
+    animation = make_rotated_animation_variations_from_sheet(8, {
       filename = kr_remnants_path .. "transport-belts/superior-transport-belt/transport-belt/superior-transport-belt-remnant.png",
       line_length = 1,
       width = 54,
@@ -27,8 +25,7 @@ data:extend(
       axially_symmetrical = false,
       direction_count = 1,
       shift = util.by_pixel(1, 0),
-      hr_version =
-      {
+      hr_version = {
         filename = kr_remnants_path .. "transport-belts/superior-transport-belt/transport-belt/hr-superior-transport-belt-remnant.png",
         line_length = 1,
         width = 106,
@@ -38,8 +35,8 @@ data:extend(
         axially_symmetrical = false,
         direction_count = 1,
         shift = util.by_pixel(1, -0.5),
-        scale = 0.5
-      }
-    })
-  }
+        scale = 0.5,
+      },
+    }),
+  },
 })

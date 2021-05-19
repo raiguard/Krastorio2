@@ -1,15 +1,13 @@
 random_generator = nil
 global.crash_site_enabled = true
-start_items =
-{
+start_items = {
   "iron-plate",
   "copper-cable",
   "iron-gear-wheel",
   "electronic-circuit",
-  "wood"
+  "wood",
 }
-entities_to_place =
-{
+entities_to_place = {
   "kr-crash-site-lab-repaired",
   "kr-mineable-wreckage",
   "kr-crash-site-assembling-machine-1-repaired",
@@ -30,28 +28,24 @@ entities_to_place =
   "kr-mineable-wreckage",
   "kr-crash-site-assembling-machine-2-repaired",
   "kr-mineable-wreckage",
-  "kr-mineable-wreckage"
+  "kr-mineable-wreckage",
 }
 
 if not remote.interfaces["kr-crash-site"] then
-  remote.add_interface("kr-crash-site",
-  {
-    crash_site_enabled =
-    function(bool)
+  remote.add_interface("kr-crash-site", {
+    crash_site_enabled = function(bool)
       if type(bool) ~= "boolean" then
         error("Value for 'crash_site_enabled' must be a boolean.")
       end
       global.crash_site_enabled = bool
     end,
-    add_crash_site_item =
-    function(item_name)
+    add_crash_site_item = function(item_name)
       if type(item_name) ~= "string" then
         error("Value for 'add_crash_site_item' must be a string.")
       end
       table.insert(start_items, item_name)
     end,
-    remove_crash_site_item =
-    function(item_name)
+    remove_crash_site_item = function(item_name)
       if type(item_name) ~= "string" then
         error("Value for 'remove_crash_site_item' must be a string.")
       end
@@ -67,15 +61,13 @@ if not remote.interfaces["kr-crash-site"] then
         end
       end
     end,
-    add_crash_site_entity =
-    function(entity_name)
+    add_crash_site_entity = function(entity_name)
       if type(entity_name) ~= "string" then
         error("Value for 'add_crash_site_entity' must be a string.")
       end
       table.insert(entities_to_place, entity_name)
     end,
-    remove_crash_site_entity =
-    function(entity_name)
+    remove_crash_site_entity = function(entity_name)
       if type(entity_name) ~= "string" then
         error("Value for 'remove_crash_site_entity' must be a string.")
       end
@@ -90,7 +82,7 @@ if not remote.interfaces["kr-crash-site"] then
           end
         end
       end
-    end
+    end,
   })
 end
 
@@ -98,7 +90,7 @@ local function randomizePosition(start_position, range)
   local x_modifier = (math.random(-1, 1)) * math.random(1, range)
   local y_modifier = (math.random(-1, 1)) * math.random(1, range)
 
-  return {x = start_position.x - x_modifier, y = start_position.y - y_modifier}
+  return { x = start_position.x - x_modifier, y = start_position.y - y_modifier }
 end
 
 local function createCrashSite(event)
@@ -125,15 +117,15 @@ local function createCrashSite(event)
       while try_count < 1000 do
         to_place_position = randomizePosition(start_position, 25)
         to_place_position = surface.find_non_colliding_position(entity_name, to_place_position, 30, 3)
-        if to_place_position
-          and surface.can_place_entity{name = entity_name, position = to_place_position, force = player_force}
+        if
+          to_place_position
+          and surface.can_place_entity({ name = entity_name, position = to_place_position, force = player_force })
         then
-          created_entity = surface.create_entity(
-          {
+          created_entity = surface.create_entity({
             name = entity_name,
             position = to_place_position,
             force = player_force,
-            create_build_effect_smoke = false
+            create_build_effect_smoke = false,
           })
           if created_entity.type == "container" then
             local start_items_count = table_size(start_items)
@@ -148,22 +140,22 @@ local function createCrashSite(event)
 
             -- First insert mandatory items
             if not insert_one_shelter then
-              created_entity.get_inventory(defines.inventory.chest).insert({name = "kr-shelter", count = 1})
+              created_entity.get_inventory(defines.inventory.chest).insert({ name = "kr-shelter", count = 1 })
               -- Compatibility
               if game.active_mods["IndustrialRevolution"] or game.active_mods["aai-industry"] then
-                created_entity.get_inventory(defines.inventory.chest).insert({name = "medium-electric-pole", count = 10})
+                created_entity.get_inventory(defines.inventory.chest).insert({ name = "medium-electric-pole", count = 10 })
               else
-                created_entity.get_inventory(defines.inventory.chest).insert({name = "wood", count = 100})
+                created_entity.get_inventory(defines.inventory.chest).insert({ name = "wood", count = 100 })
               end
 
               insert_one_shelter = true
             end
 
             -- Then randoms
-            created_entity.get_inventory(defines.inventory.chest).insert({name = item_name, count = item_count})
-            created_entity.get_inventory(defines.inventory.chest).insert({name = item_name_2, count = item_count_2})
-            created_entity.get_inventory(defines.inventory.chest).insert({name = item_name_3, count = item_count_3})
-            created_entity.get_inventory(defines.inventory.chest).insert({name = item_name_4, count = item_count_4})
+            created_entity.get_inventory(defines.inventory.chest).insert({ name = item_name, count = item_count })
+            created_entity.get_inventory(defines.inventory.chest).insert({ name = item_name_2, count = item_count_2 })
+            created_entity.get_inventory(defines.inventory.chest).insert({ name = item_name_3, count = item_count_3 })
+            created_entity.get_inventory(defines.inventory.chest).insert({ name = item_name_4, count = item_count_4 })
           end
           break
         else
@@ -178,8 +170,7 @@ local function createCrashSite(event)
 end
 
 -- With control-callbacks-merger
-return
-{
+return {
   -- -- Bootstrap
-  { createCrashSite, "on_player_created" }
+  { createCrashSite, "on_player_created" },
 }

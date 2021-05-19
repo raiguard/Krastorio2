@@ -1,5 +1,4 @@
-local krastorio_new_recipes =
-{
+local krastorio_new_recipes = {
   -- -- New recipes new available from start
   require(kr_recipes_prototypes_path .. "new-available-from-start"),
 
@@ -64,7 +63,7 @@ local krastorio_new_recipes =
   require(kr_recipes_prototypes_path .. "oil-processing"),
 
   -- -- Recipes for smelting assemblers
-  require(kr_recipes_prototypes_path .. "smelting-crafting")
+  require(kr_recipes_prototypes_path .. "smelting-crafting"),
 }
 
 -- -- Anti recipes override check
@@ -80,4 +79,3 @@ end
 -- Optional recipes
 require(kr_recipes_prototypes_path .. "containers")
 require(kr_recipes_prototypes_path .. "loaders")
-

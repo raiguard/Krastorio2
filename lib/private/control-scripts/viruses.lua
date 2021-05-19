@@ -29,7 +29,7 @@ local function onInitAndConfigChanged()
   -- this is a brute-force way of doing it, but my hand is forced by the weird ControlCallBackManager system
   global.viruses = {
     biter_viruses = {},
-    creep_viruses = {}
+    creep_viruses = {},
   }
 end
 
@@ -53,13 +53,13 @@ local function playerThrowAntiCreep(event)
 
       -- begin creep removal
       -- FIXME: This causes insane amounts of lag with lots os creep tiles
-      local creep_tiles = surface.find_tiles_filtered{name = "kr-creep"}
+      local creep_tiles = surface.find_tiles_filtered({ name = "kr-creep" })
       local num_creeps = #creep_tiles
       creep_viruses[surface_index] = {
         amount_per_iteration = math.floor(num_creeps / getRemovalModifier(num_creeps)),
         surface = surface,
         tiles = creep_tiles,
-        tiles_len = num_creeps
+        tiles_len = num_creeps,
       }
     end
 
@@ -85,7 +85,7 @@ local function removeCreep()
         local j = math.random(1, len)
         local tile = creeps[j]
         if tile and tile.valid then
-          tiles_to_replace[i] = {name = tile.hidden_tile or "landfill", position = tile.position}
+          tiles_to_replace[i] = { name = tile.hidden_tile or "landfill", position = tile.position }
           -- move the element at the end to the gap
           -- this has a O(1) performance impact, while `table.remove()` has an O(n) impact
           creeps[j] = creeps[len]
@@ -115,7 +115,7 @@ local function playerThrowAntiBiter(event)
       enemy.evolution_factor = enemy.evolution_factor * 0.67
 
       -- begin gradual enemy killoff
-      local enemy_entities = surface.find_entities_filtered{force = "enemy"}
+      local enemy_entities = surface.find_entities_filtered({ force = "enemy" })
       local len = #enemy_entities
       if len > 0 then
         biter_viruses[surface_index] = {
@@ -124,7 +124,7 @@ local function playerThrowAntiBiter(event)
           entities_killed = 0,
           entities_len = len,
           entities_to_kill = len / 2.5,
-          force = player.force
+          force = player.force,
         }
       end
     end
@@ -167,12 +167,11 @@ local function killEnemyEntities()
   end
 end
 
-return
-{
-  {onInitAndConfigChanged, "on_init"},
-  {onInitAndConfigChanged, "on_configuration_changed"},
-  {playerThrowAntiCreep, "on_player_used_capsule"},
-  {playerThrowAntiBiter, "on_player_used_capsule"},
-  {removeCreep, "on_nth_tick", 10},
-  {killEnemyEntities, "on_nth_tick", 10},
+return {
+  { onInitAndConfigChanged, "on_init" },
+  { onInitAndConfigChanged, "on_configuration_changed" },
+  { playerThrowAntiCreep, "on_player_used_capsule" },
+  { playerThrowAntiBiter, "on_player_used_capsule" },
+  { removeCreep, "on_nth_tick", 10 },
+  { killEnemyEntities, "on_nth_tick", 10 },
 }

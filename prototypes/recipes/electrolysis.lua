@@ -1,6 +1,5 @@
 -- A RECIPE FOR STAY IN THIS FILE SHOULD HAVE THE ATTRIBUTE category = "electrolysis"
-return
-{
+return {
   {
     type = "recipe",
     name = "kr-water-electrolysis",
@@ -11,22 +10,19 @@ return
     enabled = false,
     always_show_made_in = true,
     always_show_products = true,
-    ingredients =
-    {
+    ingredients = {
       { type = "item", name = "sand", amount = 10 },
-      { type = "fluid", name = "water", amount = 40, catalyst_amount = 40 }
+      { type = "fluid", name = "water", amount = 40, catalyst_amount = 40 },
     },
-    results =
-    {
+    results = {
       { type = "fluid", name = "chlorine", amount = 20 },
-      { type = "fluid", name = "hydrogen", amount = 30 }
+      { type = "fluid", name = "hydrogen", amount = 30 },
     },
-    crafting_machine_tint =
-    {
-      primary = {r = 0.10, g = 0.75, b = 0.10, a = 0.10}, --electrolysis plant have only primary color
+    crafting_machine_tint = {
+      primary = { r = 0.10, g = 0.75, b = 0.10, a = 0.10 }, --electrolysis plant have only primary color
     },
     subgroup = "fluid-recipes",
-    order = "y01[water-electrolysis]"
+    order = "y01[water-electrolysis]",
   },
   {
     type = "recipe",
@@ -38,21 +34,18 @@ return
     enabled = false,
     always_show_made_in = true,
     always_show_products = true,
-    ingredients =
-    {
-      { type = "fluid", name = "water", amount = 50, catalyst_amount = 50 }
+    ingredients = {
+      { type = "fluid", name = "water", amount = 50, catalyst_amount = 50 },
     },
-    results =
-    {
+    results = {
       { type = "fluid", name = "oxygen", amount = 20 },
-      { type = "fluid", name = "hydrogen", amount = 30 }
+      { type = "fluid", name = "hydrogen", amount = 30 },
     },
-    crafting_machine_tint =
-    {
-      primary = {r = 0.75, g = 0.10, b = 0.10, a = 0.10}, --electrolysis plant have only primary color
+    crafting_machine_tint = {
+      primary = { r = 0.75, g = 0.10, b = 0.10, a = 0.10 }, --electrolysis plant have only primary color
     },
     subgroup = "fluid-recipes",
-    order = "y02[water-separation]"
+    order = "y02[water-separation]",
   },
   {
     type = "recipe",
@@ -65,23 +58,20 @@ return
     always_show_made_in = true,
     always_show_products = true,
     allow_productivity = true,
-    ingredients =
-    {
-      { type = "item", name = "lithium-chloride", amount = 5},
-      { type = "fluid", name = "water", amount = 50},
+    ingredients = {
+      { type = "item", name = "lithium-chloride", amount = 5 },
+      { type = "fluid", name = "water", amount = 50 },
     },
-    results =
-    {
-      { type = "fluid", name = "chlorine", amount = 10},
-      { type = "item",  name = "lithium", amount = 5}
+    results = {
+      { type = "fluid", name = "chlorine", amount = 10 },
+      { type = "item", name = "lithium", amount = 5 },
     },
-    crafting_machine_tint =
-    {
-      primary = {r = 0.70, g = 0.50, b = 0.05, a = 0.10}, --electrolysis plant have only primary color
+    crafting_machine_tint = {
+      primary = { r = 0.70, g = 0.50, b = 0.05, a = 0.10 }, --electrolysis plant have only primary color
     },
     subgroup = "raw-material",
-    order = "h2[lithium]"
-    },
+    order = "h2[lithium]",
+  },
   {
     type = "recipe",
     name = "heavy-water",
@@ -91,22 +81,19 @@ return
     always_show_made_in = true,
     always_show_products = true,
     allow_productivity = true,
-    ingredients =
-    {
-      { type = "fluid", name = "water", amount = 500, catalyst_amount = 500}
+    ingredients = {
+      { type = "fluid", name = "water", amount = 500, catalyst_amount = 500 },
     },
-    crafting_machine_tint =
-    {
-      primary = {r = 0.405, g = 0.402, b = 1.000, a = 1.000},
-      secondary = {r = 0.391, g = 0.720, b = 1.000, a = 0.900},
-      tertiary = {r = 1.000, g = 1.000, b = 1.000, a = 0.500},
-      quaternary = {r = 1.000, g = 1.000, b = 1.000, a = 0.300}
+    crafting_machine_tint = {
+      primary = { r = 0.405, g = 0.402, b = 1.000, a = 1.000 },
+      secondary = { r = 0.391, g = 0.720, b = 1.000, a = 0.900 },
+      tertiary = { r = 1.000, g = 1.000, b = 1.000, a = 0.500 },
+      quaternary = { r = 1.000, g = 1.000, b = 1.000, a = 0.300 },
     },
-    results =
-    {
-      { type = "fluid", name = "heavy-water", amount = 20}
+    results = {
+      { type = "fluid", name = "heavy-water", amount = 20 },
     },
     subgroup = "fluid-recipes",
-    order = "y06[heavy-water]"
-    }
+    order = "y06[heavy-water]",
+  },
 }

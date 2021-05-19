@@ -2,7 +2,7 @@ local kr_color_lib = require(kr_path .. "lib/private/data-stages/colorRGB")
 
 if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mods["space-exploration"], "0.3.0") then
   -- Chaning the name of the antimatter reactor for not be the same of the antimatter reactor of SE
-  data.raw["burner-generator"]["kr-antimatter-reactor"].localised_name = {"entity-name.kr-singularity-reactor"}
+  data.raw["burner-generator"]["kr-antimatter-reactor"].localised_name = { "entity-name.kr-singularity-reactor" }
 
   -- Remove the SE fuel refiny to not be redundant
   krastorio.technologies.convertPrerequisiteFromAllTechnologies("se-fuel-refining", "kr-fuel", true)
@@ -32,18 +32,15 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
   -- Adding new space loader if krastorio 2 loaders are enabled
   if krastorio.general.getSafeSettingValue("kr-loaders") then
     local kr_se_graphic_path = kr_graphic_mod_path .. "compatibility/space-exploration/"
-    data:extend(
-    {
-      kr_loader_item
-      {
+    data:extend({
+      kr_loader_item({
         name = "kr-se-loader",
         icon = kr_se_graphic_path .. "kr-se-loader.png",
         icon_size = 32,
         order = "d[loader]-a5[se-loader]",
         subgroup = "belt",
-      },
-      createKrastorioLoader
-      {
+      }),
+      createKrastorioLoader({
         name = "kr-se-loader",
         speed = data.raw["transport-belt"]["se-space-transport-belt"].speed,
         belt_animation_set = data.raw["transport-belt"]["se-space-transport-belt"].belt_animation_set,
@@ -52,19 +49,17 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
         icon_size = 32,
         tint = kr_color_lib.convert(240, 240, 240, 125),
         apply_rust = false,
-        se_allow_in_space = true
-      },
-      kr_loader_recipe
-      {
+        se_allow_in_space = true,
+      }),
+      kr_loader_recipe({
         name = "kr-se-loader",
-        ingredients =
-        {
-          {"steel-gear-wheel", 10},
-          {"kr-fast-loader", 2},
-          {"se-space-transport-belt", 1}
+        ingredients = {
+          { "steel-gear-wheel", 10 },
+          { "kr-fast-loader", 2 },
+          { "se-space-transport-belt", 1 },
         },
-        subgroup = "belt"
-      }
+        subgroup = "belt",
+      }),
     })
     krastorio.technologies.addUnlockRecipe("se-space-platform-scaffold", "kr-se-loader")
   end
