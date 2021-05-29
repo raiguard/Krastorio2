@@ -1,0 +1,261 @@
+{
+  "date": "2021-05-28 19:14:25",
+  "operations": [
+    {
+      "source": "./locale-backup/fr/Krastorio2Tips.cfg",
+      "target": "./locale-backup/fr/Krastorio2Tips.ini"
+    },
+    {
+      "source": "./locale-backup/fr/Krastorio2Compatibility.cfg",
+      "target": "./locale-backup/fr/Krastorio2Compatibility.ini"
+    },
+    {
+      "source": "./locale-backup/tr/Krastorio2Tips.cfg",
+      "target": "./locale-backup/tr/Krastorio2Tips.ini"
+    },
+    {
+      "source": "./locale-backup/no/Krastorio2Wiki.cfg",
+      "target": "./locale-backup/no/Krastorio2Wiki.ini"
+    },
+    {
+      "source": "./locale-backup/it/Krastorio2Compatibility.cfg",
+      "target": "./locale-backup/it/Krastorio2Compatibility.ini"
+    },
+    {
+      "source": "./locale-backup/vi/Krastorio2Tips.cfg",
+      "target": "./locale-backup/vi/Krastorio2Tips.ini"
+    },
+    {
+      "source": "./locale-backup/ja/Krastorio2Compatibility.cfg",
+      "target": "./locale-backup/ja/Krastorio2Compatibility.ini"
+    },
+    {
+      "source": "./locale-backup/ru/Krastorio2Compatibility.cfg",
+      "target": "./locale-backup/ru/Krastorio2Compatibility.ini"
+    },
+    {
+      "source": "./locale-backup/pl/Krastorio2.cfg",
+      "target": "./locale-backup/pl/Krastorio2.ini"
+    },
+    {
+      "source": "./locale-backup/cs/Krastorio2Tips.cfg",
+      "target": "./locale-backup/cs/Krastorio2Tips.ini"
+    },
+    {
+      "source": "./locale-backup/en/Krastorio2Compatibility.cfg",
+      "target": "./locale-backup/en/Krastorio2Compatibility.ini"
+    },
+    {
+      "source": "./locale-backup/zh-TW/Krastorio2.cfg",
+      "target": "./locale-backup/zh-TW/Krastorio2.ini"
+    },
+    {
+      "source": "./locale-backup/de/Krastorio2Wiki.cfg",
+      "target": "./locale-backup/de/Krastorio2Wiki.ini"
+    },
+    {
+      "source": "./locale-backup/es-ES/Krastorio2.cfg",
+      "target": "./locale-backup/es-ES/Krastorio2.ini"
+    },
+    {
+      "source": "./locale-backup/es-ES/Krastorio2Compatibility.cfg",
+      "target": "./locale-backup/es-ES/Krastorio2Compatibility.ini"
+    },
+    {
+      "source": "./locale-backup/vi/Krastorio2.cfg",
+      "target": "./locale-backup/vi/Krastorio2.ini"
+    },
+    {
+      "source": "./locale-backup/ko/Krastorio2Wiki.cfg",
+      "target": "./locale-backup/ko/Krastorio2Wiki.ini"
+    },
+    {
+      "source": "./locale-backup/zh-TW/Krastorio2Tips.cfg",
+      "target": "./locale-backup/zh-TW/Krastorio2Tips.ini"
+    },
+    {
+      "source": "./locale-backup/cs/Krastorio2Compatibility.cfg",
+      "target": "./locale-backup/cs/Krastorio2Compatibility.ini"
+    },
+    {
+      "source": "./locale-backup/zh-CN/Krastorio2Tips.cfg",
+      "target": "./locale-backup/zh-CN/Krastorio2Tips.ini"
+    },
+    {
+      "source": "./locale-backup/ja/Krastorio2.cfg",
+      "target": "./locale-backup/ja/Krastorio2.ini"
+    },
+    {
+      "source": "./locale-backup/de/Krastorio2Compatibility.cfg",
+      "target": "./locale-backup/de/Krastorio2Compatibility.ini"
+    },
+    {
+      "source": "./locale-backup/zh-CN/Krastorio2Wiki.cfg",
+      "target": "./locale-backup/zh-CN/Krastorio2Wiki.ini"
+    },
+    {
+      "source": "./locale-backup/de/Krastorio2.cfg",
+      "target": "./locale-backup/de/Krastorio2.ini"
+    },
+    {
+      "source": "./locale-backup/cs/Krastorio2.cfg",
+      "target": "./locale-backup/cs/Krastorio2.ini"
+    },
+    {
+      "source": "./locale-backup/de/Krastorio2Tips.cfg",
+      "target": "./locale-backup/de/Krastorio2Tips.ini"
+    },
+    {
+      "source": "./locale-backup/tr/Krastorio2Compatibility.cfg",
+      "target": "./locale-backup/tr/Krastorio2Compatibility.ini"
+    },
+    {
+      "source": "./locale-backup/zh-CN/Krastorio2Compatibility.cfg",
+      "target": "./locale-backup/zh-CN/Krastorio2Compatibility.ini"
+    },
+    {
+      "source": "./locale-backup/ja/Krastorio2Wiki.cfg",
+      "target": "./locale-backup/ja/Krastorio2Wiki.ini"
+    },
+    {
+      "source": "./locale-backup/pl/Krastorio2Wiki.cfg",
+      "target": "./locale-backup/pl/Krastorio2Wiki.ini"
+    },
+    {
+      "source": "./locale-backup/tr/Krastorio2.cfg",
+      "target": "./locale-backup/tr/Krastorio2.ini"
+    },
+    {
+      "source": "./locale-backup/en/Krastorio2Wiki.cfg",
+      "target": "./locale-backup/en/Krastorio2Wiki.ini"
+    },
+    {
+      "source": "./locale-backup/fr/Krastorio2.cfg",
+      "target": "./locale-backup/fr/Krastorio2.ini"
+    },
+    {
+      "source": "./locale-backup/pl/Krastorio2Compatibility.cfg",
+      "target": "./locale-backup/pl/Krastorio2Compatibility.ini"
+    },
+    {
+      "source": "./locale-backup/nl/Krastorio2.cfg",
+      "target": "./locale-backup/nl/Krastorio2.ini"
+    },
+    {
+      "source": "./locale-backup/pt-PT/Krastorio2Wiki.cfg",
+      "target": "./locale-backup/pt-PT/Krastorio2Wiki.ini"
+    },
+    {
+      "source": "./locale-backup/it/Krastorio2Wiki.cfg",
+      "target": "./locale-backup/it/Krastorio2Wiki.ini"
+    },
+    {
+      "source": "./locale-backup/zh-TW/Krastorio2Compatibility.cfg",
+      "target": "./locale-backup/zh-TW/Krastorio2Compatibility.ini"
+    },
+    {
+      "source": "./locale-backup/pl/Krastorio2Tips.cfg",
+      "target": "./locale-backup/pl/Krastorio2Tips.ini"
+    },
+    {
+      "source": "./locale-backup/ru/Krastorio2Tips.cfg",
+      "target": "./locale-backup/ru/Krastorio2Tips.ini"
+    },
+    {
+      "source": "./locale-backup/en/Krastorio2Tips.cfg",
+      "target": "./locale-backup/en/Krastorio2Tips.ini"
+    },
+    {
+      "source": "./locale-backup/zh-TW/Krastorio2Wiki.cfg",
+      "target": "./locale-backup/zh-TW/Krastorio2Wiki.ini"
+    },
+    {
+      "source": "./locale-backup/ko/Krastorio2Compatibility.cfg",
+      "target": "./locale-backup/ko/Krastorio2Compatibility.ini"
+    },
+    {
+      "source": "./locale-backup/en/Krastorio2.cfg",
+      "target": "./locale-backup/en/Krastorio2.ini"
+    },
+    {
+      "source": "./locale-backup/it/Krastorio2Tips.cfg",
+      "target": "./locale-backup/it/Krastorio2Tips.ini"
+    },
+    {
+      "source": "./locale-backup/pt-PT/Krastorio2Compatibility.cfg",
+      "target": "./locale-backup/pt-PT/Krastorio2Compatibility.ini"
+    },
+    {
+      "source": "./locale-backup/ru/Krastorio2.cfg",
+      "target": "./locale-backup/ru/Krastorio2.ini"
+    },
+    {
+      "source": "./locale-backup/ko/Krastorio2Tips.cfg",
+      "target": "./locale-backup/ko/Krastorio2Tips.ini"
+    },
+    {
+      "source": "./locale-backup/nl/Krastorio2Tips.cfg",
+      "target": "./locale-backup/nl/Krastorio2Tips.ini"
+    },
+    {
+      "source": "./locale-backup/cs/Krastorio2Wiki.cfg",
+      "target": "./locale-backup/cs/Krastorio2Wiki.ini"
+    },
+    {
+      "source": "./locale-backup/es-ES/Krastorio2Tips.cfg",
+      "target": "./locale-backup/es-ES/Krastorio2Tips.ini"
+    },
+    {
+      "source": "./locale-backup/vi/Krastorio2Wiki.cfg",
+      "target": "./locale-backup/vi/Krastorio2Wiki.ini"
+    },
+    {
+      "source": "./locale-backup/es-ES/Krastorio2Wiki.cfg",
+      "target": "./locale-backup/es-ES/Krastorio2Wiki.ini"
+    },
+    {
+      "source": "./locale-backup/nl/Krastorio2Wiki.cfg",
+      "target": "./locale-backup/nl/Krastorio2Wiki.ini"
+    },
+    {
+      "source": "./locale-backup/pt-BR/Krastorio2Wiki.cfg",
+      "target": "./locale-backup/pt-BR/Krastorio2Wiki.ini"
+    },
+    {
+      "source": "./locale-backup/tr/Krastorio2Wiki.cfg",
+      "target": "./locale-backup/tr/Krastorio2Wiki.ini"
+    },
+    {
+      "source": "./locale-backup/vi/Krastorio2Compatibility.cfg",
+      "target": "./locale-backup/vi/Krastorio2Compatibility.ini"
+    },
+    {
+      "source": "./locale-backup/ko/Krastorio2.cfg",
+      "target": "./locale-backup/ko/Krastorio2.ini"
+    },
+    {
+      "source": "./locale-backup/ru/Krastorio2Wiki.cfg",
+      "target": "./locale-backup/ru/Krastorio2Wiki.ini"
+    },
+    {
+      "source": "./locale-backup/nl/Krastorio2Compatibility.cfg",
+      "target": "./locale-backup/nl/Krastorio2Compatibility.ini"
+    },
+    {
+      "source": "./locale-backup/fr/Krastorio2Wiki.cfg",
+      "target": "./locale-backup/fr/Krastorio2Wiki.ini"
+    },
+    {
+      "source": "./locale-backup/it/Krastorio2.cfg",
+      "target": "./locale-backup/it/Krastorio2.ini"
+    },
+    {
+      "source": "./locale-backup/zh-CN/Krastorio2.cfg",
+      "target": "./locale-backup/zh-CN/Krastorio2.ini"
+    },
+    {
+      "source": "./locale-backup/ja/Krastorio2Tips.cfg",
+      "target": "./locale-backup/ja/Krastorio2Tips.ini"
+    }
+  ]
+}

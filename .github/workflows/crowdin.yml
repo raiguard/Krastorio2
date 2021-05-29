@@ -24,6 +24,7 @@ jobs:
         pull_request_title: 'Update Crowdin translations'
         commit_message: 'Update Crowdin translations'
         export_only_approved: false
+        skip_untranslated_files: false
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
