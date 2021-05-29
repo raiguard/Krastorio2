@@ -127,25 +127,32 @@ local function onRemovingAnEntity(event)
   local entity = event.entity
 
   if entity.valid then
-    local surface = entity.surface.index
-    local force = entity.force.index
+    -- Check if this is an entity we care about
+    local entity_name = entity.name
+    for _, filter in pairs(KRASTORIO_SHELTER_EVENT_FILTER) do
+      if filter.name == entity_name then
+        local surface = entity.surface.index
+        local force = entity.force.index
 
-    if global.spawn_points[surface] then
-      if global.spawn_points[surface][force] then
-        -- reset spawn point
-        if global.default_spawn_points[surface][force] then
-          entity.force.set_spawn_position(global.default_spawn_points[surface][force], surface)
-        else
-          entity.force.set_spawn_position({ 0, 0 }, surface)
-        end
-        -- Remove entities (for compatibility)
-        for _, entity in pairs(global.spawn_points[surface][force]) do
-          if entity and entity.valid then
-            entity.destroy()
+        if global.spawn_points[surface] then
+          if global.spawn_points[surface][force] then
+            -- reset spawn point
+            if global.default_spawn_points[surface][force] then
+              entity.force.set_spawn_position(global.default_spawn_points[surface][force], surface)
+            else
+              entity.force.set_spawn_position({ 0, 0 }, surface)
+            end
+            -- Remove entities (for compatibility)
+            for _, entity in pairs(global.spawn_points[surface][force]) do
+              if entity and entity.valid then
+                entity.destroy()
+              end
+            end
+            -- Remove entities record
+            global.spawn_points[surface][force] = nil
           end
         end
-        -- Remove entities record
-        global.spawn_points[surface][force] = nil
+        return
       end
     end
   end

@@ -4,6 +4,7 @@ Date: ????
   Changes:
     - Changed energy absorber error message from a chat message to a flying text with an error sound
   Bugfixes:
+    - Fixed that mining an AAI programmable vehicle would destroy the shelter
     - Fixed the energy absorber error message would be printed for all players
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.3
