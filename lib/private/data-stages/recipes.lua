@@ -1647,6 +1647,7 @@ function krastorio.recipes.addWithOverrideSafeNewRecipe(recipe)
         suffix = suffix + 1
       end
       if not recipe.localised_name then
+        -- FIXME: Don't naively use `item-name` and `recipe-name`, use the actual localised names
         if recipe.result then
           recipe.localised_name =
             { "other.krastorio-recipe-variation-n", { "item-name." .. recipe.result }, tostring(suffix) }
