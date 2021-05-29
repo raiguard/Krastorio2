@@ -128,6 +128,7 @@ local function checkVictory()
           -- Cutscenes for each player of force
           for _, player in pairs(game.forces[force_index].connected_players) do
             if player.valid and player.controller_type ~= defines.controllers.editor then
+              -- FIXME: Teleport the player to the correct surface for the cutscene
               player.set_controller({
                 type = defines.controllers.cutscene,
                 waypoints = {
