@@ -63,6 +63,11 @@ local function onCollection(event)
         showFlyingText(player, { "other.kr-player-inventory-full-error" }, { 1, 0, 0 }, SelectionArea:center())
       elseif collected_count > 0 then
         surface.set_tiles(tiles_to_set)
+        -- Because sometimes the inventory can be invalidated between then and now?
+        if not inventory.valid then
+          showFlyingText(player, {"other.kr-something-went-wrong"}, {1, 0, 0}, SelectionArea:center())
+          return
+        end
         local inserted = inventory.insert({ type = "item", name = "biomass", count = collected_count })
         if inserted ~= collected_count then
           surface.spill_item_stack(position, { type = "item", name = "biomass", count = collected_count - inserted })
