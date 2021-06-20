@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.4
-Date: ????
+Date: 2021-06-20
   Changes:
     - Changed energy absorber error message from a chat message to a flying text with an error sound
     - Updated translations from Crowdin
