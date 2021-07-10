@@ -52,6 +52,7 @@ function util.add_to_crash_site()
   if
     remote.interfaces["freeplay"]
     and not remote.call("freeplay", "get_disable_crashsite")
+    and not remote.call("freeplay", "get_crashsite_generated")
   then
     local ship_parts = remote.call("freeplay", "get_ship_parts")
     for _, part in pairs(our_parts) do
