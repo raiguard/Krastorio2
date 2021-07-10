@@ -2,7 +2,7 @@ local hit_effects = require("__base__/prototypes/entity/hit-effects")
 
 data:extend({
   {
-    type = "simple-entity",
+    type = "simple-entity-with-owner",
     name = "kr-mineable-wreckage",
     localised_description = { "entity-description.mineable-wreckage" },
     icon = kr_crash_site_icons_path .. "small-ship-wreck.png",
