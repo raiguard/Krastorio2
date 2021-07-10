@@ -1,13 +1,13 @@
 {
   "name": "Krastorio2",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "title": "Krastorio 2",
   "description": "K2 is a global mod that introduces new energy sources, buildings, ores, technologies, turrets, coverings, fuel, ways of producing science, and a major re-balance of many vanilla features.",
   "author": "Linver, Krastor, raiguard",
   "contact": "https://discord.gg/sUmpTHN",
   "factorio_version": "1.1",
   "dependencies": [
-    "base >= 1.1.21",
+    "base >= 1.1.25",
     "flib >= 0.7.0",
     "(?) aai-industry >= 0.3.17",
     "(?) aai-vehicles-chaingunner >= 0.5.2",
