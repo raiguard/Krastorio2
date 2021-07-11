@@ -1,3 +1,5 @@
+local data_util = require("__flib__.data-util")
+
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 
@@ -402,5 +404,42 @@ data:extend({
         },
       },
     },
+  },
+  -- Collision detection
+  {
+    type = "land-mine",
+    name = "kr-tesla-coil-land-mine",
+    icon = kr_entities_icons_path.."tesla-coil.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    collision_mask = {},
+    alert_when_damaged = false,
+    picture_safe = {filename = data_util.empty_image, size = 1},
+    picture_set = {filename = data_util.empty_image, size = 1},
+    trigger_radius = 20,
+    timeout = 0,
+    force_die_on_attack = false,
+    action = {
+      type = "area",
+      radius = 20,
+      collision_mode = "distance-from-center",
+      ignore_collision_condition = true,
+      trigger_target_mask = {"kr-tesla-coil-trigger"},
+      force = "friend",
+      action_delivery = {
+        type = "instant",
+        target_effects = {
+          {
+            type = "script",
+            effect_id = "kr-tesla-coil-trigger",
+          },
+        },
+      },
+    },
+    trigger_force = "friend",
+  },
+  {
+    type = "trigger-target-type",
+    name = "kr-tesla-coil-trigger",
   },
 })
