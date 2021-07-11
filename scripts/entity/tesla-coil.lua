@@ -25,6 +25,14 @@ function tesla_coil.build(source_entity)
       tower = source_entity,
     },
   }
+  -- TEMPORARY:
+  rendering.draw_circle{
+    color = {r = 0.05, a = 0.05},
+    radius = 20,
+    target = source_entity.position,
+    surface = source_entity.surface,
+    filled = true
+  }
 end
 
 function tesla_coil.destroy(source_entity)
