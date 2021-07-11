@@ -1,5 +1,6 @@
 local util = {}
 
+-- TODO: Move these functions to another file?
 local our_parts = {
   {
     name = "kr-crash-site-lab-repaired",
@@ -48,12 +49,11 @@ local our_parts = {
     max_distance = 10,
   },
 }
-
 function util.add_to_crash_site()
   if
     remote.interfaces["freeplay"]
     and not remote.call("freeplay", "get_disable_crashsite")
-    and not remote.call("freeplay", "get_crashsite_generated")
+    and not remote.call("freeplay", "get_init_ran")
   then
     local ship_parts = remote.call("freeplay", "get_ship_parts")
     for _, part in pairs(our_parts) do
@@ -62,7 +62,6 @@ function util.add_to_crash_site()
     remote.call("freeplay", "set_ship_parts", ship_parts)
   end
 end
-
 function util.disable_rocket_victory()
   if remote.interfaces["silo_script"] then
     remote.call("silo_script", "set_no_victory", true)
