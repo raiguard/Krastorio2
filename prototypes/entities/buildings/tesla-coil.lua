@@ -1,3 +1,4 @@
+local collision_mask_util = require("__core__.lualib.collision-mask-util")
 local data_util = require("__flib__.data-util")
 
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
@@ -43,6 +44,9 @@ local light_tint = { r = 0, g = 0.917, b = 1 }
 local beam_blend_mode = "additive-soft"
 local beam_non_light_flags = { "trilinear-filtering" }
 
+-- Collision mask
+local layer = collision_mask_util.get_first_unused_layer()
+
 data:extend({
   -- Tesla coil tower
   {
@@ -55,6 +59,7 @@ data:extend({
     max_health = 200,
     gui_mode = "none",
     corpse = "medium-remnants",
+    collision_mask = {"item-layer", "object-layer", "player-layer", "water-tile", layer},
     resistances = {
       {
         type = "fire",
@@ -405,7 +410,7 @@ data:extend({
       },
     },
   },
-  -- Collision detection
+  -- Range detection
   {
     type = "land-mine",
     name = "kr-tesla-coil-land-mine",
@@ -443,4 +448,17 @@ data:extend({
     type = "trigger-target-type",
     name = "kr-tesla-coil-trigger",
   },
+  -- Collision detection
+  {
+    type = "simple-entity",
+    name = "kr-tesla-coil-collision",
+    localised_name = {"entity-name.kr-tesla-coil"},
+    icon = kr_entities_icons_path.."tesla-coil.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    collision_mask = {layer},
+    collision_box = {{-18, -18}, {18, 18}},
+    picture = {filename = data_util.empty_image, size = 1},
+    flags = {"not-on-map", "not-selectable-in-game", "placeable-off-grid"},
+  }
 })

@@ -9,13 +9,19 @@ function tesla_coil.build(source_entity, player)
   local unit_number = source_entity.unit_number
 
   global.tesla_coils[unit_number] = {
-    tower = source_entity,
+    collision = surface.create_entity {
+      name = "kr-tesla-coil-collision",
+      position = source_entity.position,
+      force = source_entity.force,
+      create_build_effect_smoke = false,
+    },
     land_mine = surface.create_entity{
       name = "kr-tesla-coil-land-mine",
       position = source_entity.position,
       force = source_entity.force,
-      create_build_effect_smoke = false
-    }
+      create_build_effect_smoke = false,
+    },
+    tower = source_entity,
   }
 end
 
