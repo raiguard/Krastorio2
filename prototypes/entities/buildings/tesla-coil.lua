@@ -417,8 +417,9 @@ data:extend({
     picture_safe = {filename = data_util.empty_image, size = 1},
     picture_set = {filename = data_util.empty_image, size = 1},
     trigger_radius = 20,
-    timeout = 0,
+    timeout = 1,
     force_die_on_attack = false,
+    flags = {"not-on-map", "not-selectable-in-game", "placeable-off-grid"},
     action = {
       type = "area",
       radius = 20,
