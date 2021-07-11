@@ -30,6 +30,10 @@ return {
     end
   end,
   ["1.2.0"] = function()
+    -- NUKE EVERYTHING
+    global = {
+      tesla_coils = tesla_coil.init()
+    }
     -- TODO: Add collision entities and data for tesla coils
   end
 }
