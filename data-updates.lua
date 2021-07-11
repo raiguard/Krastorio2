@@ -32,3 +32,12 @@ require(scripts_path .. "Pyanodon")
 require(scripts_path .. "SchallUranium")
 require(scripts_path .. "Tral-robot-tree-farm")
 ---------------------------------------------------------------------------
+-- -- -- OTHER
+---------------------------------------------------------------------------
+-- Make characters be targeted by the teleporter turrets
+for _, character in pairs(data.raw["character"]) do
+  local mask = character.trigger_target_mask or {}
+  character.trigger_target_mask = mask
+
+  mask[#mask + 1] = "character"
+end
