@@ -38,10 +38,26 @@ event.register(
     local entity = e.entity or e.created_entity or e.destination
     local entity_name = entity.name
     if entity_name == "kr-tesla-coil" then
-      tesla_coil.build(entity, game.get_player(e.player_index))
+      tesla_coil.build(entity)
     end
   end
   -- TODO: Filters
+)
+
+event.register(
+  {
+    defines.events.on_player_mined_entity,
+    defines.events.on_robot_mined_entity,
+    defines.events.on_entity_died,
+    defines.events.script_raised_destroy
+  },
+  function(e)
+    local entity = e.entity
+    local entity_name = entity.name
+    if entity_name == "kr-tesla-coil" then
+      tesla_coil.destroy(entity)
+    end
+  end
 )
 
 event.on_script_trigger_effect(function(e)
