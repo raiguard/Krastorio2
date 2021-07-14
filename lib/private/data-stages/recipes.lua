@@ -1686,10 +1686,13 @@ function krastorio.recipes.multiplyRecipeStat(recipe_name, multiplier, only_ingr
         if ingredient.amount then
           ingredients[i].amount = ingredient.amount * multiplier
         elseif ingredient.amount_min then -- guaranteed to have both amount_min and amount_max
-          ingredient.amount_min = ingredient.amount_min * 2
-          ingredient.amount_max = ingredient.amount_max * 2
+          ingredient.amount_min = ingredient.amount_min * multiplier
+          ingredient.amount_max = ingredient.amount_max * multiplier
         else
           ingredients[i][2] = ingredient[2] * multiplier
+        end
+        if ingredient.catalyst_amount and ingredient.catalyst_amount > 0 then
+          ingredient.catalyst_amount = ingredient.catalyst_amount * multiplier
         end
       end
     end
@@ -1700,10 +1703,13 @@ function krastorio.recipes.multiplyRecipeStat(recipe_name, multiplier, only_ingr
         if ingredient.amount then
           expensive_ingredients[i].amount = ingredient.amount * multiplier
         elseif ingredient.amount_min then -- guaranteed to have both amount_min and amount_max
-          ingredient.amount_min = ingredient.amount_min * 2
-          ingredient.amount_max = ingredient.amount_max * 2
+          ingredient.amount_min = ingredient.amount_min * multiplier
+          ingredient.amount_max = ingredient.amount_max * multiplier
         else
           expensive_ingredients[i][2] = ingredient[2] * multiplier
+        end
+        if ingredient.catalyst_amount and ingredient.catalyst_amount > 0 then
+          ingredient.catalyst_amount = ingredient.catalyst_amount * multiplier
         end
       end
     end
@@ -1720,6 +1726,9 @@ function krastorio.recipes.multiplyRecipeStat(recipe_name, multiplier, only_ingr
             product.amount_max = product.amount_max * 2
           else
             products[i][2] = product[2] * multiplier
+          end
+          if product.catalyst_amount and product.catalyst_amount > 0 then
+            product.catalyst_amount = product.catalyst_amount * multiplier
           end
         end
         if recipe.expensive and recipe.expensive.results then
