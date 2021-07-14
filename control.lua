@@ -62,7 +62,7 @@ event.register(
 
 event.on_script_trigger_effect(function(e)
   if e.effect_id == "kr-tesla-coil-trigger" then
-    game.print("within range")
+    global.tick_print = game.ticks_played
+    game.print("trigger "..game.ticks_played.." "..e.target_entity.name)
   end
 end)
-

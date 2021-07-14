@@ -411,6 +411,7 @@ data:extend({
     },
   },
   -- Range detection
+  -- TODO: Only does it sometimes?
   {
     type = "land-mine",
     name = "kr-tesla-coil-land-mine",

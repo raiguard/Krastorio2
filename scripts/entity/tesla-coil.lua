@@ -50,4 +50,8 @@ function tesla_coil.destroy(source_entity)
   end
 end
 
+function tesla_coil.iterate(tower, target)
+
+end
+
 return tesla_coil
