@@ -38,35 +38,35 @@ function tesla_coil.build(source_entity)
   global.tesla_coils.by_tower[unit_number] = data
   global.tesla_coils.by_turret[data.turret_unit_number] = data
 
-  -- TEMPORARY:
-  -- TODO: Add a flib function to create an area from a centerpoint and width/height
-  local Collision = area.load({
-    left_top = {x = -18, y = -18},
-    right_bottom = {x = 18, y = 18},
-  }):center_on(data.entities.collision.position)
-  local render_objects = {
-    range = rendering.draw_circle{
-      color = {r = 0.1, a = 0.05},
-      filled = true,
-      radius = 20,
-      target = data.entities.turret,
-      surface = source_entity.surface,
-    },
-    collision = rendering.draw_rectangle{
-      color = {g = 0.05, a = 0.05},
-      filled = true,
-      left_top = Collision.left_top,
-      right_bottom = Collision.right_bottom,
-      surface = source_entity.surface,
-    },
-    number = rendering.draw_text{
-      text = data.entities.turret.unit_number,
-      color = {r = 0.2, g = 1, b = 1},
-      target = source_entity,
-      surface = source_entity.surface,
-    },
-  }
-  data.render_objects = render_objects
+  -- -- TEMPORARY:
+  -- -- TODO: Add a flib function to create an area from a centerpoint and width/height
+  -- local Collision = area.load({
+  --   left_top = {x = -18, y = -18},
+  --   right_bottom = {x = 18, y = 18},
+  -- }):center_on(data.entities.collision.position)
+  -- local render_objects = {
+  --   range = rendering.draw_circle{
+  --     color = {r = 0.1, a = 0.05},
+  --     filled = true,
+  --     radius = 20,
+  --     target = data.entities.turret,
+  --     surface = source_entity.surface,
+  --   },
+  --   collision = rendering.draw_rectangle{
+  --     color = {g = 0.05, a = 0.05},
+  --     filled = true,
+  --     left_top = Collision.left_top,
+  --     right_bottom = Collision.right_bottom,
+  --     surface = source_entity.surface,
+  --   },
+  --   number = rendering.draw_text{
+  --     text = data.entities.turret.unit_number,
+  --     color = {r = 0.2, g = 1, b = 1},
+  --     target = source_entity,
+  --     surface = source_entity.surface,
+  --   },
+  -- }
+  -- data.render_objects = render_objects
 end
 
 function tesla_coil.destroy(source_entity)
@@ -78,9 +78,9 @@ function tesla_coil.destroy(source_entity)
         entity.destroy()
       end
     end
-    for _, id in pairs(data.render_objects) do
-      rendering.destroy(id)
-    end
+    -- for _, id in pairs(data.render_objects) do
+    --   rendering.destroy(id)
+    -- end
     global.tesla_coils.by_tower[unit_number] = nil
     global.tesla_coils.by_turret[data.turret_unit_number] = nil
   else
