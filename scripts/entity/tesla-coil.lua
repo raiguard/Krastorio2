@@ -6,6 +6,7 @@ function tesla_coil.init()
   return {
     by_tower = {},
     by_turret = {},
+    to_update = {}, -- Keyed by turret
   }
 end
 
@@ -99,11 +100,15 @@ function tesla_coil.update_target(turret, target)
     data.targets[target_unit_number] = target_data
   end
   target_data.last_updated = game.tick
+
+  if not global.tesla_coils.to_update[turret.unit_number] then
+    global.tesla_coils.to_update[turret.unit_number] = data
+  end
 end
 
 function tesla_coil.iterate()
   local tick = game.tick
-  for _, data in pairs(global.tesla_coils.by_tower) do
+  for _, data in pairs(global.tesla_coils.to_update) do
     for target_unit_number, target_data in pairs(data.targets) do
       if target_data.last_updated >= tick - 1 then
         data.entities.turret.surface.create_entity({
@@ -121,6 +126,7 @@ function tesla_coil.iterate()
       end
     end
   end
+  global.tesla_coils.to_update = {}
 end
 
 return tesla_coil
