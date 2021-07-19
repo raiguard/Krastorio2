@@ -68,4 +68,10 @@ function util.disable_rocket_victory()
   end
 end
 
+function util.ensure_turret_force()
+  if not game.forces["kr-internal-turrets"] then
+    game.create_force("kr-internal-turrets")
+  end
+end
+
 return util

@@ -39,6 +39,19 @@ local tesla_coil_electric_beam_sound = {
   },
 }
 
+local function empty_animation()
+  return {
+    filename = "__core__/graphics/empty.png",
+    width = 1,
+    height = 1,
+    line_length = 1,
+    frame_count = 1,
+    shift = { 0, 0 },
+    animation_speed = 1,
+    direction_count = 1,
+  }
+end
+
 -- Beam config vars
 local light_tint = { r = 0, g = 0.917, b = 1 }
 local beam_blend_mode = "additive-soft"
@@ -411,39 +424,59 @@ data:extend({
     },
   },
   -- Range detection
-  -- TODO: Only does it sometimes?
   {
-    type = "land-mine",
-    name = "kr-tesla-coil-land-mine",
+    type = "turret",
+    name = "kr-tesla-coil-turret",
     icon = kr_entities_icons_path.."tesla-coil.png",
     icon_size = 64,
     icon_mipmaps = 4,
     collision_mask = {},
-    alert_when_damaged = false,
-    picture_safe = {filename = data_util.empty_image, size = 1},
-    picture_set = {filename = data_util.empty_image, size = 1},
-    trigger_radius = 20,
-    timeout = 0,
-    force_die_on_attack = false,
+    call_for_help_radius = 0,
+    folded_animation = {
+      north = empty_animation(),
+      east = empty_animation(),
+      south = empty_animation(),
+      west = empty_animation(),
+    },
     flags = {"not-on-map", "not-selectable-in-game", "placeable-off-grid"},
-    action = {
-      type = "area",
-      radius = 20,
-      collision_mode = "distance-from-center",
-      ignore_collision_condition = true,
-      trigger_target_mask = {"kr-tesla-coil-trigger"},
-      force = "friend",
-      action_delivery = {
-        type = "instant",
-        target_effects = {
-          {
-            type = "script",
-            effect_id = "kr-tesla-coil-trigger",
+    attack_parameters = {
+      type = "projectile",
+      range = 20,
+      cooldown = 1,
+      ammo_type = {
+        category = "melee",
+        target_type = "position",
+        energy_consumption = "1J",
+        action = {
+          type = "direct",
+          action_delivery = {
+            type = "instant",
+            source_effects = {
+              {
+                type = "nested-result",
+                affects_target = true,
+                action = {
+                  type = "area",
+                  radius = 20,
+                  collision_mode = "distance-from-center",
+                  ignore_collision_condition = true,
+                  trigger_target_mask = { "kr-tesla-coil-trigger" },
+                  action_delivery = {
+                    type = "instant",
+                    target_effects = {
+                      {
+                        type = "script",
+                        effect_id = "kr-tesla-coil-trigger",
+                      },
+                    },
+                  },
+                },
+              },
+            },
           },
         },
       },
     },
-    trigger_force = "friend",
   },
   {
     type = "trigger-target-type",

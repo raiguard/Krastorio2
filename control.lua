@@ -14,15 +14,17 @@ event.on_init(function()
   -- Initialize mod
   util.add_to_crash_site()
   util.disable_rocket_victory()
+  util.ensure_turret_force()
 end)
 
 event.on_configuration_changed(function(e)
   if migration.on_config_changed(e, migrations) then
     util.add_to_crash_site()
     util.disable_rocket_victory()
-    for i, player in pairs(game.players) do
-      -- TODO:
-    end
+    util.ensure_turret_force()
+    -- for i, player in pairs(game.players) do
+    --   -- TODO:
+    -- end
   end
 end)
 
