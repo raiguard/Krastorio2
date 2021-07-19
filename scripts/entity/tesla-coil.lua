@@ -89,11 +89,38 @@ function tesla_coil.destroy(source_entity)
 end
 
 function tesla_coil.update_target(turret, target)
+  local data = global.tesla_coils.by_turret[turret.unit_number]
+  if not data then error("Turret fired at something after being destroyed!?") end
 
+  local target_unit_number = target.unit_number
+  local target_data = data.targets[target_unit_number]
+  if not target_data then
+    target_data = {entity = target,}
+    data.targets[target_unit_number] = target_data
+  end
+  target_data.last_updated = game.tick
 end
 
-function tesla_coil.iterate(tower, target)
-
+function tesla_coil.iterate()
+  local tick = game.tick
+  for _, data in pairs(global.tesla_coils.by_tower) do
+    for target_unit_number, target_data in pairs(data.targets) do
+      if target_data.last_updated >= tick - 1 then
+        data.entities.turret.surface.create_entity({
+          name = "kr-tesla-coil-electric-beam",
+          source = data.entities.turret,
+          source_offset = { 0, -2.2 },
+          position = data.entities.turret.position,
+          target = target_data.entity,
+          duration = 30,
+          max_length = 21,
+          force = data.entities.turret.force,
+        })
+      else
+        data.targets[target_unit_number] = nil
+      end
+    end
+  end
 end
 
 return tesla_coil

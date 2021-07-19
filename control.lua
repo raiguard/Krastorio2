@@ -62,9 +62,12 @@ event.register(
   end
 )
 
+event.on_nth_tick(30, function()
+  tesla_coil.iterate()
+end)
+
 event.on_script_trigger_effect(function(e)
   if e.effect_id == "kr-tesla-coil-trigger" then
-    global.tick_print = game.ticks_played
-    game.print("trigger "..game.ticks_played.." "..e.target_entity.name)
+    tesla_coil.update_target(e.source_entity, e.target_entity)
   end
 end)
