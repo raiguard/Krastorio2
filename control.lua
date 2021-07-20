@@ -14,8 +14,7 @@ event.on_init(function()
   on_tick_n.init()
 
   -- Initialize `global` table
-  global.players = {}
-  global.tesla_coils = tesla_coil.init()
+  tesla_coil.init()
 
   -- Initialize mod
   util.add_to_crash_site()
@@ -28,9 +27,6 @@ event.on_configuration_changed(function(e)
     util.add_to_crash_site()
     util.disable_rocket_victory()
     util.ensure_turret_force()
-    -- for i, player in pairs(game.players) do
-    --   -- TODO:
-    -- end
   end
 end)
 
@@ -73,8 +69,7 @@ event.register(
 )
 
 event.on_entity_destroyed(function(e)
-  -- FIXME: Need to check if we should act on it or not - will crash if anything else raises this
-  tesla_coil.end_target(e.registration_number)
+  tesla_coil.remove_target(e.registration_number)
 end)
 
 -- TICKS AND TRIGGERS
@@ -92,6 +87,6 @@ end)
 
 event.on_script_trigger_effect(function(e)
   if e.effect_id == "kr-tesla-coil-trigger" then
-    tesla_coil.update_target(e.source_entity, e.target_entity)
+    tesla_coil.add_target(e.source_entity, e.target_entity)
   end
 end)
