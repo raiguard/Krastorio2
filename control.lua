@@ -66,6 +66,7 @@ event.register(
       game.print("beam gone!")
     end
   end
+  -- TODO: Filters
 )
 
 event.on_entity_destroyed(function(e)
