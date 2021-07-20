@@ -191,7 +191,8 @@ data:extend({
     flags = { "not-on-map" },
     width = 0.5,
     damage_interval = 20,
-    random_target_offset = true,
+    target_offset = {0, -0.5},
+    -- random_target_offset = true,
     action_triggered_automatically = false,
     working_sound = tesla_coil_electric_beam_sound,
 

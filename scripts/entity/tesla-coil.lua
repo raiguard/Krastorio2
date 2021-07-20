@@ -1,12 +1,13 @@
 local area = require("__flib__.area")
+local event = require("__flib__.event")
 
 local tesla_coil = {}
 
 function tesla_coil.init()
   return {
+    by_beam = {},
     by_tower = {},
     by_turret = {},
-    to_update = {}, -- Keyed by turret
   }
 end
 
@@ -30,6 +31,7 @@ function tesla_coil.build(source_entity)
         create_build_effect_smoke = false,
       },
     },
+    beam_to_target = {},
     targets = {},
   }
   -- Save data
@@ -38,36 +40,6 @@ function tesla_coil.build(source_entity)
   data.turret_unit_number = data.entities.turret.unit_number
   global.tesla_coils.by_tower[unit_number] = data
   global.tesla_coils.by_turret[data.turret_unit_number] = data
-
-  -- -- TEMPORARY:
-  -- -- TODO: Add a flib function to create an area from a centerpoint and width/height
-  -- local Collision = area.load({
-  --   left_top = {x = -18, y = -18},
-  --   right_bottom = {x = 18, y = 18},
-  -- }):center_on(data.entities.collision.position)
-  -- local render_objects = {
-  --   range = rendering.draw_circle{
-  --     color = {r = 0.1, a = 0.05},
-  --     filled = true,
-  --     radius = 20,
-  --     target = data.entities.turret,
-  --     surface = source_entity.surface,
-  --   },
-  --   collision = rendering.draw_rectangle{
-  --     color = {g = 0.05, a = 0.05},
-  --     filled = true,
-  --     left_top = Collision.left_top,
-  --     right_bottom = Collision.right_bottom,
-  --     surface = source_entity.surface,
-  --   },
-  --   number = rendering.draw_text{
-  --     text = data.entities.turret.unit_number,
-  --     color = {r = 0.2, g = 1, b = 1},
-  --     target = source_entity,
-  --     surface = source_entity.surface,
-  --   },
-  -- }
-  -- data.render_objects = render_objects
 end
 
 function tesla_coil.destroy(source_entity)
@@ -79,13 +51,11 @@ function tesla_coil.destroy(source_entity)
         entity.destroy()
       end
     end
-    -- for _, id in pairs(data.render_objects) do
-    --   rendering.destroy(id)
-    -- end
     global.tesla_coils.by_tower[unit_number] = nil
     global.tesla_coils.by_turret[data.turret_unit_number] = nil
-  else
-    error("WTF?")
+    for _, target in pairs(data.targets) do
+      global.tesla_coils.by_beam[target.beam_number] = nil
+    end
   end
 end
 
@@ -96,37 +66,35 @@ function tesla_coil.update_target(turret, target)
   local target_unit_number = target.unit_number
   local target_data = data.targets[target_unit_number]
   if not target_data then
-    target_data = {entity = target,}
+    target_data = {entity = target}
     data.targets[target_unit_number] = target_data
-  end
-  target_data.last_updated = game.tick
-
-  if not global.tesla_coils.to_update[turret.unit_number] then
-    global.tesla_coils.to_update[turret.unit_number] = data
+    local beam = data.entities.turret.surface.create_entity({
+      name = "kr-tesla-coil-electric-beam",
+      source = data.entities.turret,
+      source_offset = {0, -2.2},
+      position = data.entities.turret.position,
+      target = target_data.entity,
+      duration = 0,
+      max_length = 20,
+      force = data.entities.turret.force,
+    })
+    local beam_number = event.register_on_entity_destroyed(beam)
+    target_data.beam = beam
+    target_data.beam_number = beam_number
+    data.beam_to_target[beam_number] = target.unit_number
+    global.tesla_coils.by_beam[beam_number] = data
   end
 end
 
-function tesla_coil.iterate()
-  local tick = game.tick
-  for _, data in pairs(global.tesla_coils.to_update) do
-    for target_unit_number, target_data in pairs(data.targets) do
-      if target_data.last_updated >= tick - 1 then
-        data.entities.turret.surface.create_entity({
-          name = "kr-tesla-coil-electric-beam",
-          source = data.entities.turret,
-          source_offset = { 0, -2.2 },
-          position = data.entities.turret.position,
-          target = target_data.entity,
-          duration = 30,
-          max_length = 21,
-          force = data.entities.turret.force,
-        })
-      else
-        data.targets[target_unit_number] = nil
-      end
-    end
+function tesla_coil.end_target(beam_number)
+  local data = global.tesla_coils.by_beam[beam_number]
+  if data then
+    global.tesla_coils.by_beam[beam_number] = nil
+    local target_unit_number = data.beam_to_target[beam_number]
+    local target_data = data.targets[target_unit_number]
+    data.beam_to_target[beam_number] = nil
+    data.targets[target_unit_number] = nil
   end
-  global.tesla_coils.to_update = {}
 end
 
 return tesla_coil
