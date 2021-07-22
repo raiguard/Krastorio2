@@ -1,7 +1,15 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: ????
+  Features:
+    - Completely rewrote all of the control scripting
+      - Everything should migrate just fine, but please let me know if you run into any issues!
+    - Buffed tesla coils
+      - A single coil can charge multiple things simultaneously
+      - A thing can be charged by multiple tesla coils simultaneously
+      - Increased tesla coil charging speed
   Changes:
+    - The K2 crash site has been removed, now K2 simply adds more entities to the vanilla crash site
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: ????

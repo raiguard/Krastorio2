@@ -348,9 +348,10 @@ data:extend({
     },
     energy_source = {
       type = "electric",
-      buffer_capacity = "18MJ",
+      buffer_capacity = "5MJ",
       input_flow_limit = "0kW",
-      output_flow_limit = "6MW",
+      -- TODO: Sync with tesla coil charge rate somehow
+      output_flow_limit = "50MW",
       usage_priority = "primary-output",
     },
     categories = { "universal-equipment" },

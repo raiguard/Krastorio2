@@ -1,6 +1,8 @@
 local area = require("__flib__.area")
 local event = require("__flib__.event")
 
+local constants = require("scripts.constants")
+
 local tesla_coil = {}
 
 function tesla_coil.init()
@@ -8,7 +10,7 @@ function tesla_coil.init()
     by_beam = {},
     by_turret = {},
     by_tower = {},
-    grids = {},
+    -- grids = {},
   }
 end
 
@@ -96,32 +98,39 @@ function tesla_coil.add_target(data, target)
   -- Check the target's equipment grid for an energy absorber
   local grid, absorber = get_grid_info(target)
   if grid and absorber then
-    -- Create beam entity
-    local beam = data.entities.turret.surface.create_entity({
-      name = "kr-tesla-coil-electric-beam",
-      source = data.entities.turret,
-      source_offset = {0, -2.2},
-      position = data.entities.turret.position,
-      target = target,
-      duration = 0,
-      max_length = 20,
-      force = data.entities.turret.force,
-    })
-    local beam_number = event.register_on_entity_destroyed(beam)
-    -- Create data table
-    local target_data = {
-      absorber = absorber,
-      beam = beam,
-      beam_number = beam_number,
-      entity = target,
-      grid = grid,
-      unit_number = target_unit_number
-    }
-    data.targets.by_target[target_unit_number] = target_data
-    data.targets.by_beam[beam_number] = target_data
-    global.tesla_coils.by_beam[beam_number] = data
-  elseif grid then
-    global.tesla_coils.grids[target_unit_number] = grid
+    -- Check if the absorber has space
+    -- SLOW: Cache this, since it doesn't change
+    local capacity = absorber.prototype.energy_source.buffer_capacity
+    if absorber.energy < capacity then
+      -- Create beam entity
+      local beam = data.entities.turret.surface.create_entity({
+        name = "kr-tesla-coil-electric-beam",
+        source = data.entities.turret,
+        source_offset = {0, -2.2},
+        position = data.entities.turret.position,
+        target = target,
+        duration = 0,
+        max_length = 20,
+        force = data.entities.turret.force,
+      })
+      local beam_number = event.register_on_entity_destroyed(beam)
+      -- Create data table
+      local target_data = {
+        absorber = absorber,
+        beam = beam,
+        beam_number = beam_number,
+        entity = target,
+        grid = grid,
+        unit_number = target_unit_number
+      }
+      data.targets.by_target[target_unit_number] = target_data
+      data.targets.by_beam[beam_number] = target_data
+      global.tesla_coils.by_beam[beam_number] = data
+      return target_data
+    end
+  -- TODO:
+  -- elseif grid then
+    -- global.tesla_coils.grids[target_unit_number] = grid
   end
 end
 
@@ -129,8 +138,13 @@ function tesla_coil.remove_target(beam_number)
   local data = global.tesla_coils.by_beam[beam_number]
   if data then
     local target_data = data.targets.by_beam[beam_number]
+    -- Destroy beam if it still exists
+    if target_data.beam.valid then
+      target_data.beam.destroy()
+    end
     -- Remove reference to the target's equipment grid
-    global.tesla_coils.grids[target_data.unit_Number] = nil
+    -- FIXME: This will break if more than one coil is targeting the entity at once
+    -- global.tesla_coils.grids[target_data.unit_Number] = nil
     -- Remove target data table from all locations
     global.tesla_coils.by_beam[beam_number] = nil
     data.targets.by_beam[beam_number] = nil
@@ -139,9 +153,21 @@ function tesla_coil.remove_target(beam_number)
   end
 end
 
+-- TODO: Handle on_player_placed_equipment to check for energy absorbers
+
 function tesla_coil.update_target(data, target_data)
-  log("UPDATE")
-  -- TODO: Check if the `absorber` entry in target data is still there
+  local absorber = target_data.absorber
+  -- SLOW: Cache this, since it doesn't change
+  local capacity = absorber.prototype.energy_source.buffer_capacity
+  if absorber.energy < capacity then
+    -- Calculate how much to add
+    local to_add = math.max(capacity - (absorber.energy + constants.tesla_coil_energy_per_tick), 0)
+    absorber.energy = absorber.energy + to_add
+    local tower = data.entities.tower
+    tower.energy = tower.energy - (to_add * constants.tesla_coil_loss_multiplier)
+  else
+    tesla_coil.remove_target(target_data.beam_number)
+  end
 end
 
 function tesla_coil.process_turret_fire(turret, target)
@@ -150,10 +176,11 @@ function tesla_coil.process_turret_fire(turret, target)
 
   local target_data = data.targets.by_target[target.unit_number]
   if not target_data then
-    tesla_coil.add_target(data, target)
+    target_data = tesla_coil.add_target(data, target)
   end
-  tesla_coil.update_target(data, target_data)
-
+  if target_data then
+    tesla_coil.update_target(data, target_data)
+  end
 end
 
 return tesla_coil
