@@ -6,6 +6,7 @@ Date: ????
 Version: 1.1.5
 Date: ????
   Bugfixes:
+    - Fixed a crash when a technology doesn't have prerequisites
     - Fixed that K2's intermediate recipe doubling code was not accounting for catalysts
     - Fixed that K2's recipe multiplier function would always multiply ingredients or products with an amount range by 2
 ---------------------------------------------------------------------------------------------------

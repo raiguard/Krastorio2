@@ -896,7 +896,7 @@ function krastorio.technologies.sanitizeUnitsOfAllTechnologiesInPacks(science_pa
                 if wrong_one == -1 then
                   is_sanitized = true
                 else
-                  for j, prerequisite_name in pairs(technology.prerequisites) do
+                  for j, prerequisite_name in pairs(technology.prerequisites or {}) do
                     for _, value in pairs(ingredients[wrong_one]) do
                       if prerequisite_name == value then
                         table.remove(technology.prerequisites, j)
