@@ -8,6 +8,7 @@ function tesla_coil.init()
     by_beam = {},
     by_turret = {},
     by_tower = {},
+    grids = {},
   }
 end
 
@@ -60,52 +61,98 @@ function tesla_coil.destroy(source_entity)
   end
 end
 
-function tesla_coil.add_target(turret, target)
-  local data = global.tesla_coils.by_turret[turret.unit_number]
-  if not data then error("Turret fired at something after being destroyed!?") end
-
-  local target_unit_number = target.unit_number
-  local target_data = data.targets.by_target[target_unit_number]
-  if not target_data then
-    -- Check if the tower is powered
-    if data.entities.tower.energy < 10000000 then -- TODO: Add to constants
-      return
+local function get_grid_info(target)
+  local grid, absorber
+  if target.type == "character" then
+    local armor_inventory = target.get_inventory(defines.inventory.character_armor)
+    if armor_inventory and armor_inventory.valid then
+      local armor = armor_inventory[1]
+      if armor and armor.valid_for_read then
+        grid = armor.grid
+      end
     end
-    -- Save data
-    target_data = {entity = target, target_unit_number = target.unit_number}
-    data.targets.by_target[target_unit_number] = target_data
+  else
+    grid = target.grid
+  end
+
+  if grid and (grid.get_contents()["energy-absorber"] or 0) > 0 then
+    for _, equipment in pairs(grid.equipment) do
+      if equipment.name == "energy-absorber" then
+        absorber = equipment
+        break
+      end
+    end
+  end
+
+  return grid, absorber
+end
+
+function tesla_coil.add_target(data, target)
+  local target_unit_number = target.unit_number
+  -- Check if the tower is powered
+  if data.entities.tower.energy < 10000000 then -- TODO: Add to constants
+    return
+  end
+  -- Check the target's equipment grid for an energy absorber
+  local grid, absorber = get_grid_info(target)
+  if grid and absorber then
+    -- Create beam entity
     local beam = data.entities.turret.surface.create_entity({
       name = "kr-tesla-coil-electric-beam",
       source = data.entities.turret,
       source_offset = {0, -2.2},
       position = data.entities.turret.position,
-      target = target_data.entity,
+      target = target,
       duration = 0,
       max_length = 20,
       force = data.entities.turret.force,
     })
     local beam_number = event.register_on_entity_destroyed(beam)
-    target_data.beam = beam
-    target_data.beam_number = beam_number
+    -- Create data table
+    local target_data = {
+      absorber = absorber,
+      beam = beam,
+      beam_number = beam_number,
+      entity = target,
+      grid = grid,
+      unit_number = target_unit_number
+    }
+    data.targets.by_target[target_unit_number] = target_data
     data.targets.by_beam[beam_number] = target_data
     global.tesla_coils.by_beam[beam_number] = data
-    -- Charge target
-    tesla_coil.charge_target({turret = turret, target = target})
+  elseif grid then
+    global.tesla_coils.grids[target_unit_number] = grid
   end
 end
 
 function tesla_coil.remove_target(beam_number)
   local data = global.tesla_coils.by_beam[beam_number]
   if data then
-    global.tesla_coils.by_beam[beam_number] = nil
     local target_data = data.targets.by_beam[beam_number]
+    -- Remove reference to the target's equipment grid
+    global.tesla_coils.grids[target_data.unit_Number] = nil
+    -- Remove target data table from all locations
+    global.tesla_coils.by_beam[beam_number] = nil
     data.targets.by_beam[beam_number] = nil
-    data.targets.by_target[target_data.target_unit_number] = nil
+    data.targets.by_target[target_data.unit_number] = nil
     -- TODO: Give the target the partial amount of energy remaining
   end
 end
 
-function tesla_coil.charge_target()
+function tesla_coil.update_target(data, target_data)
+  log("UPDATE")
+  -- TODO: Check if the `absorber` entry in target data is still there
+end
+
+function tesla_coil.process_turret_fire(turret, target)
+  local data = global.tesla_coils.by_turret[turret.unit_number]
+  if not data then error("Turret fired at something after being destroyed!?") end
+
+  local target_data = data.targets.by_target[target.unit_number]
+  if not target_data then
+    tesla_coil.add_target(data, target)
+  end
+  tesla_coil.update_target(data, target_data)
 
 end
 

@@ -88,6 +88,6 @@ end)
 
 event.on_script_trigger_effect(function(e)
   if e.effect_id == "kr-tesla-coil-trigger" then
-    tesla_coil.add_target(e.source_entity, e.target_entity)
+    tesla_coil.process_turret_fire(e.source_entity, e.target_entity)
   end
 end)
