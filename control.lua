@@ -1,6 +1,5 @@
 local event = require("__flib__.event")
 local migration = require("__flib__.migration")
-local on_tick_n = require("__flib__.on-tick-n")
 
 local migrations = require("scripts.migrations")
 local util = require("scripts.util")
@@ -10,9 +9,6 @@ local tesla_coil = require("scripts.entity.tesla-coil")
 -- BOOTSTRAP
 
 event.on_init(function()
-  -- Initialize libraries
-  on_tick_n.init()
-
   -- Initialize `global` table
   tesla_coil.init()
 
@@ -74,17 +70,6 @@ event.on_entity_destroyed(function(e)
 end)
 
 -- TICKS AND TRIGGERS
-
-event.on_tick(function(e)
-  local actions = on_tick_n.get(e.tick)
-  if actions then
-    for _, action in pairs(actions) do
-      if action.name == "update_tesla_coil" then
-        tesla_coil.update(action.turret_unit_number)
-      end
-    end
-  end
-end)
 
 event.on_script_trigger_effect(function(e)
   if e.effect_id == "kr-tesla-coil-trigger" then
