@@ -159,11 +159,17 @@ function tesla_coil.update_target(data, target_data)
   local absorber = target_data.absorber
   -- SLOW: Cache this, since it doesn't change
   local capacity = absorber.prototype.energy_source.buffer_capacity
-  if absorber.energy < capacity then
+  local energy = absorber.energy
+  if energy < capacity then
     -- Calculate how much to add
-    local to_add = math.max(capacity - (absorber.energy + constants.tesla_coil_energy_per_tick), 0)
-    absorber.energy = absorber.energy + to_add
+    local to_add = constants.tesla_coil_energy_per_tick
+    local result = energy + to_add
     local tower = data.entities.tower
+    if result > capacity then
+      absorber.energy = capacity
+    else
+      absorber.energy = result
+    end
     tower.energy = tower.energy - (to_add * constants.tesla_coil_loss_multiplier)
   else
     tesla_coil.remove_target(target_data.beam_number)
