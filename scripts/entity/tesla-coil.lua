@@ -67,6 +67,11 @@ function tesla_coil.add_target(turret, target)
   local target_unit_number = target.unit_number
   local target_data = data.targets.by_target[target_unit_number]
   if not target_data then
+    -- Check if the tower is powered
+    if data.entities.tower.energy < 10000000 then -- TODO: Add to constants
+      return
+    end
+    -- Save data
     target_data = {entity = target, target_unit_number = target.unit_number}
     data.targets.by_target[target_unit_number] = target_data
     local beam = data.entities.turret.surface.create_entity({
@@ -84,6 +89,8 @@ function tesla_coil.add_target(turret, target)
     target_data.beam_number = beam_number
     data.targets.by_beam[beam_number] = target_data
     global.tesla_coils.by_beam[beam_number] = data
+    -- Charge target
+    tesla_coil.charge_target({turret = turret, target = target})
   end
 end
 
@@ -98,6 +105,8 @@ function tesla_coil.remove_target(beam_number)
   end
 end
 
-function tesla_coil.
+function tesla_coil.charge_target()
+
+end
 
 return tesla_coil
