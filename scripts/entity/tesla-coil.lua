@@ -101,7 +101,7 @@ function tesla_coil.add_target(data, target)
     -- Check if the absorber has space
     -- SLOW: Cache this, since it doesn't change
     local capacity = absorber.prototype.energy_source.buffer_capacity
-    if absorber.energy < capacity then
+     if absorber.energy < capacity then
       -- Create beam entity
       local beam = data.entities.turret.surface.create_entity({
         name = "kr-tesla-coil-electric-beam",
