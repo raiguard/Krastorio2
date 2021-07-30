@@ -138,7 +138,8 @@ function continueCreepGeneration(event)
       then
         spawnCreep(creep.surface, creep.position)
       else
-        continueCreepGeneration(event)
+        -- SLOW: This can cause insane amounts of slowdown if a surface is deleted
+        -- continueCreepGeneration(event)
       end
     end
   end
