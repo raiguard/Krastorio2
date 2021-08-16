@@ -157,6 +157,10 @@ end
 
 function tesla_coil.update_target(data, target_data)
   local absorber = target_data.absorber
+  if not absorber.valid then
+    tesla_coil.remove_target(target_data.beam_number)
+    return
+  end
   -- SLOW: Cache this, since it doesn't change
   local capacity = absorber.prototype.energy_source.buffer_capacity
   local energy = absorber.energy
