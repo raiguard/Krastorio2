@@ -13,6 +13,10 @@ function tesla_coil.init()
   }
 end
 
+function tesla_coil.get_absorber_buffer_capacity()
+  global.tesla_coils.absorber_buffer_capacity = game.equipment_prototypes["energy-absorber"].energy_source.buffer_capacity
+end
+
 function tesla_coil.build(source_entity)
   local surface = source_entity.surface
   local unit_number = source_entity.unit_number
@@ -98,8 +102,7 @@ function tesla_coil.add_target(data, target)
   local grid, absorber = get_grid_info(target)
   if grid and absorber then
     -- Check if the absorber has space
-    -- TODO: Cache this, since it doesn't change
-    local capacity = absorber.prototype.energy_source.buffer_capacity
+    local capacity = global.tesla_coils.absorber_buffer_capacity
      if absorber.energy < capacity then
       -- Create beam entity
       local beam = data.entities.turret.surface.create_entity({
@@ -155,8 +158,7 @@ function tesla_coil.update_target(data, target_data)
     tesla_coil.remove_target(target_data.beam_number)
     return
   end
-  -- TODO: Cache this, since it doesn't change
-  local capacity = absorber.prototype.energy_source.buffer_capacity
+  local capacity = global.tesla_coils.absorber_buffer_capacity
   local energy = absorber.energy
   if energy < capacity then
     -- Calculate how much to add

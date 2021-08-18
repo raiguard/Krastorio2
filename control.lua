@@ -16,6 +16,8 @@ event.on_init(function()
   util.add_to_crash_site()
   util.disable_rocket_victory()
   util.ensure_turret_force()
+
+  tesla_coil.get_absorber_buffer_capacity()
 end)
 
 event.on_configuration_changed(function(e)
@@ -23,6 +25,8 @@ event.on_configuration_changed(function(e)
     util.add_to_crash_site()
     util.disable_rocket_victory()
     util.ensure_turret_force()
+
+    tesla_coil.get_absorber_buffer_capacity()
   end
 end)
 
