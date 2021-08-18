@@ -190,7 +190,7 @@ function tesla_coil.process_turret_fire(turret, target)
 end
 
 function tesla_coil.check_energy_absorber(player, equipment, grid)
-  if grid.get_contents()["energy-absorber"] > 0 then
+  if grid.get_contents()["energy-absorber"] > 1 then
     -- Retrieve the equipment
     grid.take{equipment = equipment}
 
