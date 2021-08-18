@@ -2,7 +2,7 @@ local creep = {}
 
 -- We can safely assume that all of the entities will be on the same surface
 local function generate_creep(entities)
-  local radius = math.random(4, 10)
+  local radius = math.random(3, 5)
   local surface = entities[1].surface
   local to_add = {}
   local i = 0
@@ -20,12 +20,14 @@ function creep.init()
 end
 
 function creep.on_biter_base_built(entity)
-  generate_creep{entity}
+  if entity.type == "unit-spawner" then
+    generate_creep{entity}
+  end
 end
 
 function creep.on_chunk_generated(chunk_area, surface)
   local entities = surface.find_entities_filtered(
-    {type = {"turret", "unit-spawner"}, area = chunk_area, force = "enemy"}
+    {type = {"unit-spawner"}, area = chunk_area, force = "enemy"}
   )
 
   for _, entity in pairs(entities) do
