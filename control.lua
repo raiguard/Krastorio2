@@ -7,6 +7,10 @@ local util = require("scripts.util")
 local creep = require("scripts.creep")
 local tesla_coil = require("scripts.entity.tesla-coil")
 
+-- INTERFACES
+
+remote.add_interface("kr-creep", creep.remote_interface)
+
 -- BOOTSTRAP
 
 event.on_init(function()
