@@ -4,14 +4,17 @@ local creep = {}
 
 -- We can safely assume that all of the entities will be on the same surface
 local function generate_creep(entities)
-  local radius = math.random(3, 5)
+  -- Check if this surface is allowed to generate creep
   local surface = entities[1].surface
+  if not global.creep_settings.surfaces[surface.name] then return end
+
+  local radius = math.random(3, 5)
   local to_add = {}
   local i = 0
   for _, entity in pairs(entities) do
     for _, tile in pairs(surface.find_tiles_filtered{position = entity.position, radius = radius}) do
       i = i + 1
-      to_add[i] = {position = tile.position, name = "kr-creep"}
+      to_add[i] = {name = "kr-creep", position = tile.position}
     end
   end
   surface.set_tiles(to_add)
@@ -21,7 +24,7 @@ function creep.init()
   global.creep_settings = {
     on_biter_base_built = true,
     on_chunk_generated = true,
-    surfaces = {"nauvis"},
+    surfaces = {nauvis = true},
   }
 end
 
@@ -56,12 +59,13 @@ creep.remote_interface = {
     end
     global.creep_settings.on_biter_base_built = value
   end,
-  spawn_creep_at_position = function(surface, position)
+  spawn_creep_at_position = function(surface, position, override)
     if type(surface) ~= "table" or type(position) ~= "table" or not surface.valid then
       error("The surface or the position are invalid.")
     end
     -- The code here is duplicated from `generate_creep()` because that function is specifically optimized for multiple
     -- entities, while this function only needs to do it once.
+    if not global.creep_settings.surfaces[surface.name] and not override then return end
     local radius = math.random(3, 5)
     surface.set_tiles(
       table.map(
