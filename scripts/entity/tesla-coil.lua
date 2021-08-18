@@ -6,6 +6,8 @@ local util = require("scripts.util")
 
 local tesla_coil = {}
 
+-- TODO: Validate that all data is present during on_configuration_changed
+
 function tesla_coil.init()
   global.tesla_coil = {
     by_beam = {},
@@ -16,7 +18,8 @@ function tesla_coil.init()
 end
 
 function tesla_coil.get_absorber_buffer_capacity()
-  global.tesla_coil.absorber_buffer_capacity = game.equipment_prototypes["energy-absorber"].energy_source.buffer_capacity
+  global.tesla_coil.absorber_buffer_capacity =
+    game.equipment_prototypes["energy-absorber"].energy_source.buffer_capacity
 end
 
 function tesla_coil.build(source_entity)
