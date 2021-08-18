@@ -9,7 +9,10 @@ Date: ????
       - An entity can be charged by multiple tesla coils simultaneously
       - Increased tesla coil charging speed
   Changes:
+    - Biter creep only spawns on Nauvis
     - The K2 crash site has been removed, now K2 simply adds more entities to the vanilla crash site
+  Optimizations:
+    - Massively simplified biter creep generation
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: ????
