@@ -1,6 +1,8 @@
 local collision_mask_util = require("__core__.lualib.collision-mask-util")
 local data_util = require("__flib__.data-util")
 
+local constants = require("scripts.constants")
+
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 
@@ -97,7 +99,7 @@ data:extend({
       buffer_capacity = "60MJ",
       emissions_per_minute = 10,
       usage_priority = "secondary-input",
-      input_flow_limit = "30MW",
+      input_flow_limit = util.format_number(constants.tesla_coil.input_flow_limit, true).."W",
       output_flow_limit = "0W",
     },
 

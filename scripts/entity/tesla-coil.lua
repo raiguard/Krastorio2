@@ -8,9 +8,8 @@ local tesla_coil = {}
 function tesla_coil.init()
   global.tesla_coils = {
     by_beam = {},
-    by_turret = {},
     by_tower = {},
-    -- grids = {},
+    by_turret = {},
   }
 end
 
@@ -92,14 +91,14 @@ end
 function tesla_coil.add_target(data, target)
   local target_unit_number = target.unit_number
   -- Check if the tower is powered
-  if data.entities.tower.energy < 10000000 then -- TODO: Add to constants
+  if data.entities.tower.energy < constants.tesla_coil.required_energy then
     return
   end
   -- Check the target's equipment grid for an energy absorber
   local grid, absorber = get_grid_info(target)
   if grid and absorber then
     -- Check if the absorber has space
-    -- SLOW: Cache this, since it doesn't change
+    -- TODO: Cache this, since it doesn't change
     local capacity = absorber.prototype.energy_source.buffer_capacity
      if absorber.energy < capacity then
       -- Create beam entity
@@ -128,9 +127,6 @@ function tesla_coil.add_target(data, target)
       global.tesla_coils.by_beam[beam_number] = data
       return target_data
     end
-  -- TODO:
-  -- elseif grid then
-    -- global.tesla_coils.grids[target_unit_number] = grid
   end
 end
 
@@ -142,9 +138,6 @@ function tesla_coil.remove_target(beam_number)
     if target_data.beam.valid then
       target_data.beam.destroy()
     end
-    -- Remove reference to the target's equipment grid
-    -- FIXME: This will break if more than one coil is targeting the entity at once
-    -- global.tesla_coils.grids[target_data.unit_Number] = nil
     -- Remove target data table from all locations
     global.tesla_coils.by_beam[beam_number] = nil
     data.targets.by_beam[beam_number] = nil
@@ -157,16 +150,17 @@ end
 
 function tesla_coil.update_target(data, target_data)
   local absorber = target_data.absorber
-  if not absorber.valid then
+  -- Check if the tower is powered
+  if not absorber.valid or data.entities.tower.energy < constants.tesla_coil.required_energy then
     tesla_coil.remove_target(target_data.beam_number)
     return
   end
-  -- SLOW: Cache this, since it doesn't change
+  -- TODO: Cache this, since it doesn't change
   local capacity = absorber.prototype.energy_source.buffer_capacity
   local energy = absorber.energy
   if energy < capacity then
     -- Calculate how much to add
-    local to_add = constants.tesla_coil_energy_per_tick
+    local to_add = constants.tesla_coil.charging_rate / 60
     local result = energy + to_add
     local tower = data.entities.tower
     if result > capacity then
@@ -174,7 +168,7 @@ function tesla_coil.update_target(data, target_data)
     else
       absorber.energy = result
     end
-    tower.energy = tower.energy - (to_add * constants.tesla_coil_loss_multiplier)
+    tower.energy = tower.energy - (to_add * constants.tesla_coil.loss_multiplier)
   else
     tesla_coil.remove_target(target_data.beam_number)
   end
