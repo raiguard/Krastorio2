@@ -4,6 +4,7 @@ local migration = require("__flib__.migration")
 local migrations = require("scripts.migrations")
 local util = require("scripts.util")
 
+local creep = require("scripts.creep")
 local tesla_coil = require("scripts.entity.tesla-coil")
 
 -- BOOTSTRAP
@@ -73,6 +74,10 @@ event.on_entity_destroyed(function(e)
   tesla_coil.remove_target(e.registration_number)
 end)
 
+event.on_biter_base_built(function(e)
+  creep.on_biter_base_built(e.entity)
+end)
+
 -- PLAYER
 
 event.on_player_placed_equipment(function(e)
@@ -94,6 +99,12 @@ event.on_player_removed_equipment(function(e)
 end)
 
 -- TODO: Hook equipment gantry's custom event
+
+-- SURFACES
+
+event.on_chunk_generated(function(e)
+  creep.on_chunk_generated(e.area, e.surface)
+end)
 
 -- TICKS AND TRIGGERS
 
