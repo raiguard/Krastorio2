@@ -186,6 +186,7 @@ function tesla_coil.process_turret_fire(turret, target)
 end
 
 -- FIXME: This "compatible grids" system only works if the player manually places an absorber...
+-- We could fix this if there was an `on_equipment_grid_changed` event. Will investigate adding one.
 
 function tesla_coil.on_energy_absorber_placed(player, equipment, grid)
   if grid.get_contents()["energy-absorber"] > 1 then
