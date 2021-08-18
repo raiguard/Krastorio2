@@ -73,6 +73,19 @@ event.on_entity_destroyed(function(e)
   tesla_coil.remove_target(e.registration_number)
 end)
 
+-- PLAYER
+
+event.on_player_placed_equipment(function(e)
+  local equipment = e.equipment
+  if not equipment.valid or equipment.name ~= "energy-absorber" then return end
+  local grid = e.grid
+  if not grid.valid then return end
+
+  local player = game.get_player(e.player_index)
+  tesla_coil.check_energy_absorber(player, equipment, grid)
+end)
+-- TODO: Hook equipment gantry's custom event
+
 -- TICKS AND TRIGGERS
 
 event.on_script_trigger_effect(function(e)

@@ -74,4 +74,15 @@ function util.ensure_turret_force()
   end
 end
 
+function util.error_flying_text(player, text, options)
+  options = options or {}
+  player.create_local_flying_text{
+    color = options.color,
+    create_at_cursor = not options.position,
+    position = options.position,
+    text = text,
+  }
+  player.play_sound{path = "utility/cannot_build"}
+end
+
 return util

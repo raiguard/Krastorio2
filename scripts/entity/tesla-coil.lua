@@ -2,6 +2,7 @@ local area = require("__flib__.area")
 local event = require("__flib__.event")
 
 local constants = require("scripts.constants")
+local util = require("scripts.util")
 
 local tesla_coil = {}
 
@@ -66,6 +67,8 @@ function tesla_coil.destroy(source_entity)
   end
 end
 
+-- TODO: Handle on_player_placed_equipment to check for energy absorbers
+-- TODO: Cache grids so we don't have to check them all the time
 local function get_grid_info(target)
   local grid, absorber
   if target.type == "character" then
@@ -145,11 +148,8 @@ function tesla_coil.remove_target(beam_number)
     global.tesla_coils.by_beam[beam_number] = nil
     data.targets.by_beam[beam_number] = nil
     data.targets.by_target[target_data.unit_number] = nil
-    -- TODO: Give the target the partial amount of energy remaining
   end
 end
-
--- TODO: Handle on_player_placed_equipment to check for energy absorbers
 
 function tesla_coil.update_target(data, target_data)
   local absorber = target_data.absorber
@@ -186,6 +186,26 @@ function tesla_coil.process_turret_fire(turret, target)
   end
   if target_data then
     tesla_coil.update_target(data, target_data)
+  end
+end
+
+function tesla_coil.check_energy_absorber(player, equipment, grid)
+  if grid.get_contents()["energy-absorber"] > 0 then
+    -- Retrieve the equipment
+    grid.take{equipment = equipment}
+
+    -- Return the item
+    local cursor_stack = player.cursor_stack
+    -- If we're holding another absorber
+    if cursor_stack and cursor_stack.valid_for_read and cursor_stack.name == "energy-absorber" then
+      cursor_stack.count = cursor_stack.count + 1
+    -- If we're holding something else or the stack is empty
+    elseif player.clear_cursor() then
+      cursor_stack.set_stack{name = "energy-absorber", count = 1}
+    end
+
+    -- Show the error
+    util.error_flying_text(player, {"message.kr-already-one-energy-absorber"})
   end
 end
 
