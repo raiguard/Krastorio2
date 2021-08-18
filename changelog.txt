@@ -17,6 +17,7 @@ Date: ????
     - Fixed a crash when a technology doesn't have prerequisites
     - Fixed that K2's intermediate recipe doubling code was not accounting for catalysts
     - Fixed that K2's recipe multiplier function would always multiply ingredients or products with an amount range by 2
+    - Fixed that the creep generator would lag horrendously if a surface with lots of pending creep generation jobs was deleted
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.4
 Date: 2021-06-20
