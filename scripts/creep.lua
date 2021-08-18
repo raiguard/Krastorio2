@@ -6,7 +6,7 @@ local creep = {}
 local function generate_creep(entities)
   -- Check if this surface is allowed to generate creep
   local surface = entities[1].surface
-  if not global.creep_settings.surfaces[surface.name] then return end
+  if not global.creep_settings.surfaces[surface.index] then return end
 
   local radius = math.random(3, 5)
   local to_add = {}
@@ -24,18 +24,18 @@ function creep.init()
   global.creep_settings = {
     on_biter_base_built = true,
     on_chunk_generated = true,
-    surfaces = {nauvis = true},
+    surfaces = {[game.get_surface("nauvis").index] = true},
   }
 end
 
 function creep.on_biter_base_built(entity)
-  if entity.type == "unit-spawner" and entity.surface.name == "nauvis" then
+  if entity.type == "unit-spawner" and global.creep_settings.surfaces[entity.surface.index] then
     generate_creep{entity}
   end
 end
 
 function creep.on_chunk_generated(chunk_area, surface)
-  if surface.name ~= "nauvis" then return end
+  if not global.creep_settings.surfaces[surface.index] then return end
 
   local entities = surface.find_entities_filtered(
     {type = {"unit-spawner"}, area = chunk_area, force = "enemy"}
@@ -65,7 +65,7 @@ creep.remote_interface = {
     end
     -- The code here is duplicated from `generate_creep()` because that function is specifically optimized for multiple
     -- entities, while this function only needs to do it once.
-    if not global.creep_settings.surfaces[surface.name] and not override then return end
+    if not global.creep_settings.surfaces[surface.index] and not override then return end
     local radius = math.random(3, 5)
     surface.set_tiles(
       table.map(
