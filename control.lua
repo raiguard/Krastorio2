@@ -6,6 +6,7 @@ local util = require("scripts.util")
 
 local creep = require("scripts.creep")
 local tesla_coil = require("scripts.entity.tesla-coil")
+local virus = require("scripts.virus")
 
 -- INTERFACES
 
@@ -15,7 +16,9 @@ remote.add_interface("kr-creep", creep.remote_interface)
 
 event.on_init(function()
   -- Initialize `global` table
+  creep.init()
   tesla_coil.init()
+  virus.init()
 
   -- Initialize mod
   util.add_to_crash_site()
@@ -102,6 +105,9 @@ event.on_player_removed_equipment(function(e)
   tesla_coil.on_energy_absorber_removed(grid)
 end)
 
+-- TODO: Add validity checks feature to the flib event module
+event.on_player_used_capsule(virus.on_player_used_capsule)
+
 -- TODO: Hook equipment gantry's custom event
 
 -- SURFACES
@@ -116,4 +122,8 @@ event.on_script_trigger_effect(function(e)
   if e.effect_id == "kr-tesla-coil-trigger" then
     tesla_coil.process_turret_fire(e.source_entity, e.target_entity)
   end
+end)
+
+event.on_tick(function(e)
+  virus.iterate()
 end)

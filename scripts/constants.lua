@@ -1,5 +1,7 @@
 local constants = {}
 
+constants.creep_to_remove_per_tick = 300
+
 constants.tesla_coil = {
   charging_rate = 3000000, -- 3 MW
   input_flow_limit = 18000000, -- 8 MW
