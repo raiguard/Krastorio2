@@ -80,10 +80,19 @@ event.on_player_placed_equipment(function(e)
   if not equipment.valid or equipment.name ~= "energy-absorber" then return end
   local grid = e.grid
   if not grid.valid then return end
-
   local player = game.get_player(e.player_index)
-  tesla_coil.check_energy_absorber(player, equipment, grid)
+
+  tesla_coil.on_energy_absorber_placed(player, equipment, grid)
 end)
+
+event.on_player_removed_equipment(function(e)
+  if e.equipment ~= "energy-absorber" then return end
+  local grid = e.grid
+  if not grid.valid then return end
+
+  tesla_coil.on_energy_absorber_removed(grid)
+end)
+
 -- TODO: Hook equipment gantry's custom event
 
 -- TICKS AND TRIGGERS

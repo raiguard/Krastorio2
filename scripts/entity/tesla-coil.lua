@@ -11,6 +11,7 @@ function tesla_coil.init()
     by_beam = {},
     by_tower = {},
     by_turret = {},
+    grids = {},
   }
 end
 
@@ -67,10 +68,8 @@ function tesla_coil.destroy(source_entity)
   end
 end
 
--- TODO: Handle on_player_placed_equipment to check for energy absorbers
--- TODO: Cache grids so we don't have to check them all the time
 local function get_grid_info(target)
-  local grid, absorber
+  local grid
   if target.type == "character" then
     local armor_inventory = target.get_inventory(defines.inventory.character_armor)
     if armor_inventory and armor_inventory.valid then
@@ -83,16 +82,13 @@ local function get_grid_info(target)
     grid = target.grid
   end
 
-  if grid and (grid.get_contents()["energy-absorber"] or 0) > 0 then
-    for _, equipment in pairs(grid.equipment) do
-      if equipment.name == "energy-absorber" then
-        absorber = equipment
-        break
+  if grid then
+    for i, grid_data in pairs(global.tesla_coils.grids) do
+      if grid == grid_data.grid then
+        return grid_data
       end
     end
   end
-
-  return grid, absorber
 end
 
 function tesla_coil.add_target(data, target)
@@ -102,11 +98,11 @@ function tesla_coil.add_target(data, target)
     return
   end
   -- Check the target's equipment grid for an energy absorber
-  local grid, absorber = get_grid_info(target)
-  if grid and absorber then
+  local grid_data = get_grid_info(target)
+  if grid_data then
     -- Check if the absorber has space
     local capacity = global.tesla_coils.absorber_buffer_capacity
-     if absorber.energy < capacity then
+     if grid_data.absorber.energy < capacity then
       -- Create beam entity
       local beam = data.entities.turret.surface.create_entity({
         name = "kr-tesla-coil-electric-beam",
@@ -121,11 +117,11 @@ function tesla_coil.add_target(data, target)
       local beam_number = event.register_on_entity_destroyed(beam)
       -- Create data table
       local target_data = {
-        absorber = absorber,
+        absorber = grid_data.absorber,
         beam = beam,
         beam_number = beam_number,
         entity = target,
-        grid = grid,
+        grid = grid_data.grid,
         unit_number = target_unit_number
       }
       data.targets.by_target[target_unit_number] = target_data
@@ -189,7 +185,9 @@ function tesla_coil.process_turret_fire(turret, target)
   end
 end
 
-function tesla_coil.check_energy_absorber(player, equipment, grid)
+-- FIXME: This "compatible grids" system only works if the player manually places an absorber...
+
+function tesla_coil.on_energy_absorber_placed(player, equipment, grid)
   if grid.get_contents()["energy-absorber"] > 1 then
     -- Retrieve the equipment
     grid.take{equipment = equipment}
@@ -206,6 +204,18 @@ function tesla_coil.check_energy_absorber(player, equipment, grid)
 
     -- Show the error
     util.error_flying_text(player, {"message.kr-already-one-energy-absorber"})
+  else
+    -- Add this to the list of compatible grids
+    table.insert(global.tesla_coils.grids, {absorber = equipment, grid = grid})
+  end
+end
+
+function tesla_coil.on_energy_absorber_removed(grid)
+  -- Remove from the compatible grids list
+  for i, grid_data in pairs(global.tesla_coils.grids) do
+    if grid == grid_data.grid then
+      table.remove(global.tesla_coils.grids, i)
+    end
   end
 end
 
