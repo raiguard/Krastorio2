@@ -111,7 +111,7 @@ local function init_creep_virus(surface)
       global.creep.surfaces[surface.index] = nil
 
       -- Begin creep removal
-      -- FIXME: This causes insane amounts of lag with lots os creep tiles
+      -- FIXME: This causes insane amounts of lag with lots of creep tiles
       local creep_tiles = surface.find_tiles_filtered({name = "kr-creep"})
       local num_creeps = #creep_tiles
       creep_viruses[surface.index] = {
