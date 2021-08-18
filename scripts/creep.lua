@@ -20,12 +20,14 @@ function creep.init()
 end
 
 function creep.on_biter_base_built(entity)
-  if entity.type == "unit-spawner" then
+  if entity.type == "unit-spawner" and entity.surface.name == "nauvis" then
     generate_creep{entity}
   end
 end
 
 function creep.on_chunk_generated(chunk_area, surface)
+  if surface.name ~= "nauvis" then return end
+
   local entities = surface.find_entities_filtered(
     {type = {"unit-spawner"}, area = chunk_area, force = "enemy"}
   )
