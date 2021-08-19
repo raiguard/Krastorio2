@@ -170,50 +170,33 @@ local function update_destinations_table(refs, state)
       local destination_frame = children[i]
       if not destination_frame then
         local destination_refs = gui.build(destinations_table, {
-          {
-            type = "frame",
-            style = "train_with_minimap_frame",
-            direction = "vertical",
-            ref = {"frame"},
-            children = {
+          {type = "frame", style = "train_with_minimap_frame", direction = "vertical", ref = {"frame"},
+            {type = "frame", name = "minimap_frame", style = "deep_frame_in_shallow_frame",
               {
-                type = "frame",
-                name = "minimap_frame",
-                style = "deep_frame_in_shallow_frame",
-                children = {
-                  {
-                    type = "minimap",
-                    name = "minimap",
-                    style = "kr_planetary_teleporter_destination_minimap",
-                    chart_player_index = player_index,
-                    force = force_name,
-                    zoom = 1,
-                    children = {
-                      {
-                        type = "button",
-                        name = "minimap_button",
-                        style = "kr_planetary_teleporter_destination_minimap_button",
-                        tooltip = {"gui.kr-planetary-teleporter-teleport-tooltip"},
-                        actions = {
-                          on_click = {gui = "planetary_teleporter", action = "teleport"},
-                        },
-                      },
-                    },
+                type = "minimap",
+                name = "minimap",
+                style = "kr_planetary_teleporter_destination_minimap",
+                chart_player_index = player_index,
+                force = force_name,
+                zoom = 1,
+                {
+                  type = "button",
+                  name = "minimap_button",
+                  style = "kr_planetary_teleporter_destination_minimap_button",
+                  tooltip = {"gui.kr-planetary-teleporter-teleport-tooltip"},
+                  actions = {
+                    on_click = {gui = "planetary_teleporter", action = "teleport"},
                   },
                 },
               },
-              {type = "progressbar", name = "bar", style = "kr_planetary_teleporter_destination_charge_bar"},
+            },
+            {type = "progressbar", name = "bar", style = "kr_planetary_teleporter_destination_charge_bar"},
+            {type = "frame", style = "deep_frame_in_shallow_frame",
               {
-                type = "frame",
-                style = "deep_frame_in_shallow_frame",
-                children = {
-                  {
-                    type = "button",
-                    style = "kr_planetary_teleporter_destination_name_button",
-                    tooltip = {"gui.kr-planetary-teleporter-teleport"},
-                    enabled = false,
-                  },
-                },
+                type = "button",
+                style = "kr_planetary_teleporter_destination_name_button",
+                tooltip = {"gui.kr-planetary-teleporter-teleport"},
+                enabled = false,
               },
             },
           },
@@ -226,41 +209,33 @@ local function update_destinations_table(refs, state)
       local destination_properties = get_destination_properties(data)
 
       gui.update(destination_frame, {
-        children = {
-          {
-            children = {
-              {
-                elem_mods = {
-                  position = data.position,
-                },
-                children = {
-                  {
-                    cb = function(elem)
-                      gui.update_tags(elem, {number = destination_number})
-                    end,
-                    elem_mods = {
-                      enabled = destination_properties.enabled,
-                      tooltip = {"gui.kr-planetary-teleporter-" .. destination_properties.tooltip .. "-tooltip"},
-                    },
-                  },
-                },
-              },
-            },
-          },
+        {
           {
             elem_mods = {
-              tooltip = destination_properties.charge_percent .. "%",
-              value = destination_properties.charge_value,
+              position = data.position,
+            },
+            {
+              cb = function(elem)
+                gui.update_tags(elem, {number = destination_number})
+              end,
+              elem_mods = {
+                enabled = destination_properties.enabled,
+                tooltip = {"gui.kr-planetary-teleporter-" .. destination_properties.tooltip .. "-tooltip"},
+              },
             },
           },
+        },
+        {
+          elem_mods = {
+            tooltip = destination_properties.charge_percent .. "%",
+            value = destination_properties.charge_value,
+          },
+        },
+        {
           {
-            children = {
-              {
-                elem_mods = {
-                  caption = name_and_distance,
-                  tooltip = name_and_distance,
-                },
-              },
+            elem_mods = {
+              caption = name_and_distance,
+              tooltip = name_and_distance,
             },
           },
         },
