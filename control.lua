@@ -1,4 +1,5 @@
 local event = require("__flib__.event")
+local gui = require("__flib__.gui")
 local migration = require("__flib__.migration")
 
 local migrations = require("scripts.migrations")
@@ -6,6 +7,7 @@ local util = require("scripts.util")
 
 local creep = require("scripts.creep")
 local energy_absorber = require("scripts.energy-absorber")
+local planetary_teleporter = require("scripts.entity.planetary-teleporter")
 local tesla_coil = require("scripts.entity.tesla-coil")
 local virus = require("scripts.virus")
 
@@ -18,6 +20,7 @@ remote.add_interface("kr-creep", creep.remote_interface)
 event.on_init(function()
   -- Initialize `global` table
   creep.init()
+  planetary_teleporter.init()
   tesla_coil.init()
   virus.init()
 
@@ -54,6 +57,9 @@ event.register(
     local entity_name = entity.name
     if entity_name == "kr-tesla-coil" then
       tesla_coil.build(entity)
+    elseif entity_name == "kr-planetary-teleporter" then
+      -- TODO: Make better
+      planetary_teleporter.on_entity_built(e)
     end
   end
   -- TODO: Filters
@@ -69,7 +75,10 @@ event.register(
   function(e)
     local entity = e.entity
     local entity_name = entity.name
-    if entity_name == "kr-tesla-coil" then
+    if entity_name == "kr-planetary-teleporter" then
+      -- TODO: Make better
+      planetary_teleporter.on_entity_destroyed(e)
+    elseif entity_name == "kr-tesla-coil" then
       tesla_coil.destroy(entity)
     elseif entity_name == "kr-tesla-coil-electric-beam" then
       game.print("beam gone!")
@@ -92,10 +101,38 @@ event.on_player_placed_equipment(energy_absorber.on_placed)
 event.on_equipment_inserted(tesla_coil.on_equipment_inserted)
 event.on_equipment_removed(tesla_coil.on_equipment_removed)
 
+-- GUI
+
+local function handle_gui_event(e)
+  local msg = gui.read_action(e)
+  if msg then
+    if msg.gui == "planetary_teleporter" then
+      planetary_teleporter.handle_gui_action(msg, e)
+      return true
+    end
+  end
+  return false
+end
+
+gui.hook_events(handle_gui_event)
+
+event.on_gui_opened(function(e)
+  if not handle_gui_event(e) then
+    planetary_teleporter.on_gui_opened(e)
+  end
+end)
+
+event.register("kr-linked-focus-search", planetary_teleporter.on_focus_search)
+
 -- PLAYER
 
 -- TODO: Add validity checks feature to the flib event module
 event.on_player_used_capsule(virus.on_player_used_capsule)
+
+event.on_player_created(planetary_teleporter.on_player_created)
+event.on_player_removed(planetary_teleporter.on_player_removed)
+
+event.on_player_setup_blueprint(planetary_teleporter.on_player_setup_blueprint)
 
 -- SURFACES
 
@@ -103,14 +140,20 @@ event.on_chunk_generated(function(e)
   creep.on_chunk_generated(e.area, e.surface)
 end)
 
--- TICKS AND TRIGGERS
+-- OTHER
 
 event.on_script_trigger_effect(function(e)
   if e.effect_id == "kr-tesla-coil-trigger" then
     tesla_coil.process_turret_fire(e.source_entity, e.target_entity)
+  elseif e.effect_id == "kr-planetary-teleporter-character-trigger" then
+    planetary_teleporter.update_players_in_range(e.source_entity, e.target_entity)
   end
 end)
 
 event.on_tick(function(e)
+  planetary_teleporter.update_gui_statuses()
+  planetary_teleporter.update_all_destination_availability()
   virus.iterate()
 end)
+
+event.on_string_translated(planetary_teleporter.on_string_translated)

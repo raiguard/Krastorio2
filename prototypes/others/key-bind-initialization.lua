@@ -14,7 +14,7 @@ data:extend({
   },
   {
     type = "custom-input",
-    name = "kr-focus-search",
+    name = "kr-linked-focus-search",
     key_sequence = "",
     linked_game_control = "focus-search",
   },
