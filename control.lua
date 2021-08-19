@@ -5,6 +5,7 @@ local migrations = require("scripts.migrations")
 local util = require("scripts.util")
 
 local creep = require("scripts.creep")
+local energy_absorber = require("scripts.energy-absorber")
 local tesla_coil = require("scripts.entity.tesla-coil")
 local virus = require("scripts.virus")
 
@@ -85,30 +86,16 @@ event.on_biter_base_built(function(e)
   creep.on_biter_base_built(e.entity)
 end)
 
+-- EQUIPMENT
+
+event.on_player_placed_equipment(energy_absorber.on_placed)
+event.on_equipment_inserted(tesla_coil.on_equipment_inserted)
+event.on_equipment_removed(tesla_coil.on_equipment_removed)
+
 -- PLAYER
-
-event.on_player_placed_equipment(function(e)
-  local equipment = e.equipment
-  if not equipment.valid or equipment.name ~= "energy-absorber" then return end
-  local grid = e.grid
-  if not grid.valid then return end
-  local player = game.get_player(e.player_index)
-
-  tesla_coil.on_energy_absorber_placed(player, equipment, grid)
-end)
-
-event.on_player_removed_equipment(function(e)
-  if e.equipment ~= "energy-absorber" then return end
-  local grid = e.grid
-  if not grid.valid then return end
-
-  tesla_coil.on_energy_absorber_removed(grid)
-end)
 
 -- TODO: Add validity checks feature to the flib event module
 event.on_player_used_capsule(virus.on_player_used_capsule)
-
--- TODO: Hook equipment gantry's custom event
 
 -- SURFACES
 

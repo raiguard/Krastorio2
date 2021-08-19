@@ -7,7 +7,7 @@
   "contact": "https://discord.gg/sUmpTHN",
   "factorio_version": "1.1",
   "dependencies": [
-    "base >= 1.1.25",
+    "base >= 1.1.39",
     "flib >= 0.8.0",
     "(?) aai-industry >= 0.3.17",
     "(?) aai-vehicles-chaingunner >= 0.5.2",

@@ -102,7 +102,7 @@ function tesla_coil.add_target(data, target)
   end
   -- Check the target's equipment grid for an energy absorber
   local grid_data = get_grid_info(target)
-  if grid_data then
+  if grid_data and grid_data.absorber then
     -- Check if the absorber has space
     local capacity = global.tesla_coil.absorber_buffer_capacity
      if grid_data.absorber.energy < capacity then
@@ -188,36 +188,27 @@ function tesla_coil.process_turret_fire(turret, target)
   end
 end
 
--- FIXME: This "compatible grids" system only works if the player manually places an absorber...
--- We could fix this if there was an `on_equipment_grid_changed` event. Will investigate adding one.
+function tesla_coil.on_equipment_inserted(e)
+  local equipment = e.equipment
+  if not equipment.valid or equipment.name ~= "energy-absorber" then return end
+  local grid = e.grid
+  if not grid.valid then return end
 
-function tesla_coil.on_energy_absorber_placed(player, equipment, grid)
-  if grid.get_contents()["energy-absorber"] > 1 then
-    -- Retrieve the equipment
-    grid.take{equipment = equipment}
-
-    -- Return the item
-    local cursor_stack = player.cursor_stack
-    -- If we're holding another absorber
-    if cursor_stack and cursor_stack.valid_for_read and cursor_stack.name == "energy-absorber" then
-      cursor_stack.count = cursor_stack.count + 1
-    -- If we're holding something else or the stack is empty
-    elseif player.clear_cursor() then
-      cursor_stack.set_stack{name = "energy-absorber", count = 1}
-    end
-
-    -- Show the error
-    util.error_flying_text(player, {"message.kr-already-one-energy-absorber"})
-  else
-    -- Add this to the list of compatible grids
+  -- Add this to the list of compatible grids
+  if grid.get_contents()["energy-absorber"] == 1 then
     table.insert(global.tesla_coil.grids, {absorber = equipment, grid = grid})
   end
 end
 
-function tesla_coil.on_energy_absorber_removed(grid)
+function tesla_coil.on_equipment_removed(e)
+  local equipment = e.equipment
+  if equipment ~= "energy-absorber" then return end
+  local grid = e.grid
+  if not grid.valid then return end
+
   -- Remove from the compatible grids list
   for i, grid_data in pairs(global.tesla_coil.grids) do
-    if grid == grid_data.grid then
+    if grid == grid_data.grid and not grid.get_contents()["energy-absorber"] then
       table.remove(global.tesla_coil.grids, i)
     end
   end
