@@ -85,4 +85,15 @@ function util.error_flying_text(player, text, options)
   player.play_sound{path = "utility/cannot_build"}
 end
 
+function util.change_mode_flying_text(entity, text, color)
+  -- Flying text
+  entity.surface.create_entity{
+    type = "flying-text",
+    name = "flying-text",
+    position = entity.position,
+    text = text,
+    color = color,
+  }
+end
+
 return util

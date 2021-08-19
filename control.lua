@@ -7,6 +7,7 @@ local util = require("scripts.util")
 
 local creep = require("scripts.creep")
 local energy_absorber = require("scripts.energy-absorber")
+local inserter_modes = require("scripts.inserter-modes")
 local planetary_teleporter = require("scripts.entity.planetary-teleporter")
 local tesla_coil = require("scripts.entity.tesla-coil")
 local virus = require("scripts.virus")
@@ -41,6 +42,10 @@ event.on_configuration_changed(function(e)
     tesla_coil.get_absorber_buffer_capacity()
   end
 end)
+
+-- CUSTOM INPUT
+
+event.register("kr-inserter-change-lane", inserter_modes.on_inserter_change_hotkey)
 
 -- ENTITY
 

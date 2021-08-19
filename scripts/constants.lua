@@ -4,6 +4,11 @@ local constants = {}
 
 constants.biter_virus_evolution_multiplier = 0.67
 
+constants.inserter_drop_vectors = {
+  [true] = {[0] = {0.01, -0.2}, [2] = {0.2, 0.01}, [4] = {-0.01, 0.2}, [6] = {-0.2, -0.01}}, -- Near lane
+  [false] = { [0] = {0.0, 0.2}, [2] = {-0.2, 0.0}, [4] = {0.0, -0.2}, [6] = {0.2, 0.0}},  -- Far lane
+}
+
 constants.tesla_coil = {
   charging_rate = 3000000, -- 3 MW
   input_flow_limit = 18000000, -- 8 MW
