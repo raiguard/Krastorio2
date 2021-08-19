@@ -1,8 +1,6 @@
-local area = require("__flib__.area")
 local event = require("__flib__.event")
 
 local constants = require("scripts.constants")
-local util = require("scripts.util")
 
 local tesla_coil = {}
 
@@ -86,7 +84,7 @@ local function get_grid_info(target)
   end
 
   if grid then
-    for i, grid_data in pairs(global.tesla_coil.grids) do
+    for _, grid_data in pairs(global.tesla_coil.grids) do
       if grid == grid_data.grid then
         return grid_data
       end
