@@ -297,91 +297,6 @@ local function update_all_destination_availability()
   global.planetary_teleporter.players = {}
 end
 
-function planetary_teleporter.handle_gui_action(msg, e)
-  local player = game.get_player(e.player_index)
-  local gui_data = global.planetary_teleporter.guis[e.player_index]
-  local refs = gui_data.refs
-  local state = gui_data.state
-
-  if msg.action == "close" then
-    -- If escape was pressed and search is open, close search instead of closing the window
-    if e.element and e.element.type ~= "sprite-button" and refs.search_textfield.visible then
-      refs.search_button.style = "frame_action_button"
-      refs.search_button.sprite = "utility/search_white"
-      refs.search_textfield.visible = false
-      refs.search_textfield.text = ""
-      state.search_query = ""
-      update_destinations_table(refs, state)
-      player.opened = refs.window
-      return
-    end
-    if player.opened == refs.window then
-      player.opened = nil
-    end
-    refs.window.destroy()
-    global.planetary_teleporter.guis[e.player_index] = nil
-    player.play_sound({
-      path = "entity-close/kr-planetary-teleporter",
-    })
-  elseif msg.action == "toggle_search" then
-    local textfield = refs.search_textfield
-    local search_button = refs.search_button
-    if textfield.visible then
-      search_button.style = "frame_action_button"
-      search_button.sprite = "utility/search_white"
-      textfield.visible = false
-      textfield.text = ""
-      state.search_query = ""
-      update_destinations_table(refs, state)
-    else
-      search_button.style = "kr_selected_frame_action_button"
-      search_button.sprite = "utility/search_black"
-      textfield.visible = true
-      textfield.focus()
-    end
-  elseif msg.action == "update_search_query" then
-    state.search_query = e.text
-    update_destinations_table(refs, state)
-  elseif msg.action == "toggle_rename" then
-    local textfield = refs.name_textfield
-    local label = refs.name_label
-    if textfield.visible then
-      textfield.visible = false
-      label.caption = state.entity_data.name or global.planetary_teleporter.unnamed_translations[e.player_index]
-      label.visible = true
-    else
-      textfield.text = state.entity_data.name or ""
-      textfield.visible = true
-      textfield.focus()
-      label.visible = false
-    end
-  elseif msg.action == "update_name" then
-    state.entity_data.name = e.text ~= "" and e.text or nil
-  elseif msg.action == "teleport" then
-    -- Get info
-    local destination_number = gui.get_tags(e.element).number
-    local destination_info = global.planetary_teleporter.data[destination_number]
-    if destination_info then
-      local destination_entity = global.planetary_teleporter.data[destination_number].entities.base
-      local source_entity = state.entity
-      -- Close GUI
-      refs.window.destroy()
-      global.planetary_teleporter.guis[e.player_index] = nil
-      -- Teleport player
-      teleport_player(player, source_entity, destination_entity)
-    else
-      player.create_local_flying_text({
-        text = {"gui.kr-planetary-teleporter-invalid"},
-        create_at_cursor = true,
-      })
-      player.play_sound({
-        path = "utility/cannot_build",
-      })
-      update_destinations_table(refs, state)
-    end
-  end
-end
-
 local function create_gui(player, entity)
   local entity_data = global.planetary_teleporter.data[entity.unit_number]
   local refs = gui.build(player.gui.screen, {
@@ -583,6 +498,91 @@ end
 
 -- EVENT HANDLERS
 
+function planetary_teleporter.handle_gui_action(msg, e)
+  local player = game.get_player(e.player_index)
+  local gui_data = global.planetary_teleporter.guis[e.player_index]
+  local refs = gui_data.refs
+  local state = gui_data.state
+
+  if msg.action == "close" then
+    -- If escape was pressed and search is open, close search instead of closing the window
+    if e.element and e.element.type ~= "sprite-button" and refs.search_textfield.visible then
+      refs.search_button.style = "frame_action_button"
+      refs.search_button.sprite = "utility/search_white"
+      refs.search_textfield.visible = false
+      refs.search_textfield.text = ""
+      state.search_query = ""
+      update_destinations_table(refs, state)
+      player.opened = refs.window
+      return
+    end
+    if player.opened == refs.window then
+      player.opened = nil
+    end
+    refs.window.destroy()
+    global.planetary_teleporter.guis[e.player_index] = nil
+    player.play_sound({
+      path = "entity-close/kr-planetary-teleporter",
+    })
+  elseif msg.action == "toggle_search" then
+    local textfield = refs.search_textfield
+    local search_button = refs.search_button
+    if textfield.visible then
+      search_button.style = "frame_action_button"
+      search_button.sprite = "utility/search_white"
+      textfield.visible = false
+      textfield.text = ""
+      state.search_query = ""
+      update_destinations_table(refs, state)
+    else
+      search_button.style = "kr_selected_frame_action_button"
+      search_button.sprite = "utility/search_black"
+      textfield.visible = true
+      textfield.focus()
+    end
+  elseif msg.action == "update_search_query" then
+    state.search_query = e.text
+    update_destinations_table(refs, state)
+  elseif msg.action == "toggle_rename" then
+    local textfield = refs.name_textfield
+    local label = refs.name_label
+    if textfield.visible then
+      textfield.visible = false
+      label.caption = state.entity_data.name or global.planetary_teleporter.unnamed_translations[e.player_index]
+      label.visible = true
+    else
+      textfield.text = state.entity_data.name or ""
+      textfield.visible = true
+      textfield.focus()
+      label.visible = false
+    end
+  elseif msg.action == "update_name" then
+    state.entity_data.name = e.text ~= "" and e.text or nil
+  elseif msg.action == "teleport" then
+    -- Get info
+    local destination_number = gui.get_tags(e.element).number
+    local destination_info = global.planetary_teleporter.data[destination_number]
+    if destination_info then
+      local destination_entity = global.planetary_teleporter.data[destination_number].entities.base
+      local source_entity = state.entity
+      -- Close GUI
+      refs.window.destroy()
+      global.planetary_teleporter.guis[e.player_index] = nil
+      -- Teleport player
+      teleport_player(player, source_entity, destination_entity)
+    else
+      player.create_local_flying_text({
+        text = {"gui.kr-planetary-teleporter-invalid"},
+        create_at_cursor = true,
+      })
+      player.play_sound({
+        path = "utility/cannot_build",
+      })
+      update_destinations_table(refs, state)
+    end
+  end
+end
+
 function planetary_teleporter.init()
   global.planetary_teleporter = {
     data = {},
@@ -590,7 +590,6 @@ function planetary_teleporter.init()
     players = {},
     unnamed_translations = {},
   }
-  -- TODO: Use dictionary module
   for _, player in pairs(game.players) do
     player.request_translation({"gui.kr-planetary-teleporter-unnamed"})
   end
@@ -634,54 +633,48 @@ local function create_entities(base_entity)
   return entities
 end
 
-function planetary_teleporter.on_entity_built(e)
-  local entity = e.created_entity
-  if entity and entity.valid and entity.name == pt_entity_name then
-    -- If revived from a blueprint and it has a name, get it from the tags
-    local name = e.tags and e.tags.kr_planetary_teleporter_name or nil
-    local entities = create_entities(entity)
-    local data = {
-      entities = entities,
-      force = entity.force,
-      name = name,
-      position = entity.position,
-      surface = entity.surface,
-      turret_unit_number = entities.turret.unit_number,
-    }
-    global.planetary_teleporter.data[entity.unit_number] = data
-    update_all_destination_tables()
-  end
+function planetary_teleporter.build(entity, tags)
+  -- If revived from a blueprint and it has a name, get it from the tags
+  local name = tags and tags.kr_planetary_teleporter_name or nil
+  local entities = create_entities(entity)
+  local data = {
+    entities = entities,
+    force = entity.force,
+    name = name,
+    position = entity.position,
+    surface = entity.surface,
+    turret_unit_number = entities.turret.unit_number,
+  }
+  global.planetary_teleporter.data[entity.unit_number] = data
+  update_all_destination_tables()
 end
 
-function planetary_teleporter.on_entity_destroyed(e)
-  local entity = e.entity
-  if entity and entity.valid and entity.name == pt_entity_name then
-    local unit_number = entity.unit_number
-    local data = global.planetary_teleporter.data[unit_number]
-    -- In case the entity was destroyed immediately (AAI Vehicles)
-    if not data then
-      return
-    end
-    -- Destroy other entities
-    -- TODO: handle edge case of deletion during a teleportation - perhaps the character should die?
-    for _, entity_to_destroy in pairs(data.entities) do
-      if entity_to_destroy.valid then
-        entity_to_destroy.destroy()
-      end
-    end
-    -- Remove from lists
-    global.planetary_teleporter.data[unit_number] = nil
-    -- TODO: valid check?
-    -- Close any open GUIs
-    for _, gui_data in pairs(global.planetary_teleporter.guis) do
-      local other_entity = gui_data.state.entity
-      if other_entity.valid and other_entity.unit_number == unit_number then
-        planetary_teleporter.handle_gui_action({action = "close"}, {player_index = gui_data.state.player.index})
-      end
-    end
-    -- Update destinations
-    update_all_destination_tables()
+function planetary_teleporter.destroy(entity)
+  local unit_number = entity.unit_number
+  local data = global.planetary_teleporter.data[unit_number]
+  -- In case the entity was destroyed immediately (AAI Vehicles)
+  if not data then
+    return
   end
+  -- Destroy other entities
+  -- TODO: handle edge case of deletion during a teleportation - perhaps the character should die?
+  for _, entity_to_destroy in pairs(data.entities) do
+    if entity_to_destroy.valid then
+      entity_to_destroy.destroy()
+    end
+  end
+  -- Remove from lists
+  global.planetary_teleporter.data[unit_number] = nil
+  -- TODO: valid check?
+  -- Close any open GUIs
+  for _, gui_data in pairs(global.planetary_teleporter.guis) do
+    local other_entity = gui_data.state.entity
+    if other_entity.valid and other_entity.unit_number == unit_number then
+      planetary_teleporter.handle_gui_action({action = "close"}, {player_index = gui_data.state.player.index})
+    end
+  end
+  -- Update destinations
+  update_all_destination_tables()
 end
 
 function planetary_teleporter.on_gui_opened(e)
@@ -699,11 +692,11 @@ function planetary_teleporter.on_focus_search(e)
   end
 end
 
-function planetary_teleporter.on_player_created(e)
+function planetary_teleporter.request_translation(e)
   game.get_player(e.player_index).request_translation({"gui.kr-planetary-teleporter-unnamed"})
 end
 
-function planetary_teleporter.on_player_removed(e)
+function planetary_teleporter.clean_up_player(e)
   global.planetary_teleporter.unnamed_translations[e.player_index] = nil
   global.planetary_teleporter.guis[e.player_index] = nil
 end

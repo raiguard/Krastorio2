@@ -54,12 +54,12 @@ event.register(
   },
   function(e)
     local entity = e.entity or e.created_entity or e.destination
+    if not entity or not entity.valid then return end
     local entity_name = entity.name
-    if entity_name == "kr-tesla-coil" then
+    if entity_name == "kr-planetary-teleporter" then
+      planetary_teleporter.build(entity, e.tags)
+    elseif entity_name == "kr-tesla-coil" then
       tesla_coil.build(entity)
-    elseif entity_name == "kr-planetary-teleporter" then
-      -- TODO: Make better
-      planetary_teleporter.on_entity_built(e)
     end
   end
   -- TODO: Filters
@@ -74,14 +74,12 @@ event.register(
   },
   function(e)
     local entity = e.entity
+    if not entity or not entity.valid then return end
     local entity_name = entity.name
     if entity_name == "kr-planetary-teleporter" then
-      -- TODO: Make better
-      planetary_teleporter.on_entity_destroyed(e)
+      planetary_teleporter.destroy(entity)
     elseif entity_name == "kr-tesla-coil" then
       tesla_coil.destroy(entity)
-    elseif entity_name == "kr-tesla-coil-electric-beam" then
-      game.print("beam gone!")
     end
   end
   -- TODO: Filters
@@ -126,11 +124,10 @@ event.register("kr-linked-focus-search", planetary_teleporter.on_focus_search)
 
 -- PLAYER
 
--- TODO: Add validity checks feature to the flib event module
 event.on_player_used_capsule(virus.on_player_used_capsule)
 
-event.on_player_created(planetary_teleporter.on_player_created)
-event.on_player_removed(planetary_teleporter.on_player_removed)
+event.on_player_created(planetary_teleporter.request_translation)
+event.on_player_removed(planetary_teleporter.clean_up_player)
 
 event.on_player_setup_blueprint(planetary_teleporter.on_player_setup_blueprint)
 
