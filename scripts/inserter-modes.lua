@@ -1,12 +1,9 @@
+local math = require("__flib__.math")
+
 local constants = require("scripts.constants")
 local util = require("scripts.util")
 
 local inserter_modes = {}
-
--- For some reason, flib's `math.round` doesn't work for this, so here's Linver's
-local function round(num)
-  return (num + 0.5 - (num + 0.5) % 1.0)
-end
 
 local function change_lane(entity, is_near)
   -- Change lane
@@ -18,8 +15,8 @@ local function change_lane(entity, is_near)
   is_near = is_near ~= nil or math.fmod(vector_length, 1.0) < 0.5
   local dpf = constants.inserter_drop_vectors[is_near][entity.direction]
   entity.drop_position = {
-    entity.position.x + round(drop_pos_vector.x) + dpf[1],
-    entity.position.y + round(drop_pos_vector.y) + dpf[2],
+    entity.position.x + math.round(drop_pos_vector.x) + dpf[1],
+    entity.position.y + math.round(drop_pos_vector.y) + dpf[2],
   }
   -- Special effects
   util.change_mode_fx(
