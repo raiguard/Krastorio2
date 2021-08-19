@@ -9,6 +9,8 @@ constants.inserter_drop_vectors = {
   [false] = { [0] = {0.0, 0.2}, [2] = {-0.2, 0.0}, [4] = {0.0, -0.2}, [6] = {0.2, 0.0}},  -- Far lane
 }
 
+constants.mode_change_flying_text_color = {1, 0.615, 0.235}
+
 constants.tesla_coil = {
   charging_rate = 3000000, -- 3 MW
   input_flow_limit = 18000000, -- 8 MW

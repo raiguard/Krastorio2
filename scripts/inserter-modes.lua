@@ -1,9 +1,12 @@
-local math = require("__flib__.math")
-
 local constants = require("scripts.constants")
 local util = require("scripts.util")
 
 local inserter_modes = {}
+
+-- For some reason, flib's `math.round` doesn't work for this, so here's Linver's
+local function round(num)
+  return (num + 0.5 - (num + 0.5) % 1.0)
+end
 
 local function change_lane(entity, is_near)
   -- Change lane
@@ -12,29 +15,18 @@ local function change_lane(entity, is_near)
     y = entity.drop_position.y - entity.position.y,
   }
   local vector_length = math.sqrt(drop_pos_vector.x * drop_pos_vector.x + drop_pos_vector.y * drop_pos_vector.y)
-  is_near = is_near or math.fmod(vector_length, 1.0) < 0.5
+  is_near = is_near ~= nil or math.fmod(vector_length, 1.0) < 0.5
   local dpf = constants.inserter_drop_vectors[is_near][entity.direction]
   entity.drop_position = {
-    entity.position.x + math.round(drop_pos_vector.x) + dpf[1],
-    entity.position.y + math.round(drop_pos_vector.y) + dpf[2],
+    entity.position.x + round(drop_pos_vector.x) + dpf[1],
+    entity.position.y + round(drop_pos_vector.y) + dpf[2],
   }
-  -- Flying text
-  util.change_mode_flying_text(entity, is_near and {"message.kr-drop-near"} or {"message.kr-drop-far"})
-  -- Welding sound
-  game.play_sound({
-    path = "kr-welding",
-    position = entity.position,
-    volume_modifier = 1.0,
-  })
-  -- Welding particle
-  entity.surface.create_particle({
-    name = "kr-welding-particle",
-    position = {entity.position.x, entity.position.y + 1},
-    movement = {0.0, -0.05},
-    height = 1.0,
-    vertical_speed = 0.015,
-    frame_speed = 1,
-  })
+  -- Special effects
+  util.change_mode_fx(
+    entity,
+    is_near and {"message.kr-drop-near"} or {"message.kr-drop-far"},
+    constants.mode_change_flying_text_color
+  )
 end
 
 function inserter_modes.on_inserter_change_hotkey(e)
