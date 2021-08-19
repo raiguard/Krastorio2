@@ -1,6 +1,5 @@
 local gui = require("__flib__/gui-beta")
 
-local pt_built_entity_filters = {{filter = "name", name = "kr-planetary-teleporter"}}
 local pt_entity_name = "kr-planetary-teleporter"
 
 local planetary_teleporter = {}
