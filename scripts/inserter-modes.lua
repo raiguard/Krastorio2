@@ -12,7 +12,7 @@ local function change_lane(entity, is_near)
     y = entity.drop_position.y - entity.position.y,
   }
   local vector_length = math.sqrt(drop_pos_vector.x * drop_pos_vector.x + drop_pos_vector.y * drop_pos_vector.y)
-  is_near = is_near ~= nil or math.fmod(vector_length, 1.0) < 0.5
+  is_near = is_near ~= nil or vector_length % 1 < 0.5
   local dpf = constants.inserter_drop_vectors[is_near][entity.direction]
   entity.drop_position = {
     entity.position.x + math.round(drop_pos_vector.x) + dpf[1],
