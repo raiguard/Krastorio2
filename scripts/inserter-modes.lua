@@ -34,6 +34,8 @@ function inserter_modes.on_inserter_change_hotkey(e)
   end
 end
 
+-- TODO: Prevent copying of settins from normal inserters to long inserters
+
 -- TODO: Add relative GUI
 
 return inserter_modes
