@@ -45,7 +45,9 @@ end)
 
 -- CUSTOM INPUT
 
-event.register("kr-inserter-change-lane", inserter_modes.on_inserter_change_hotkey)
+if not script.active_mods["bobinserters"] then
+  event.register("kr-inserter-change-lane", inserter_modes.on_inserter_change_hotkey)
+end
 
 -- ENTITY
 
