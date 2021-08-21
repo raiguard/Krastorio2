@@ -9,6 +9,7 @@ local creep = require("scripts.creep")
 local energy_absorber = require("scripts.energy-absorber")
 local inserter = require("scripts.inserter")
 local planetary_teleporter = require("scripts.planetary-teleporter")
+local roboport = require("scripts.roboport")
 local tesla_coil = require("scripts.tesla-coil")
 local virus = require("scripts.virus")
 
@@ -55,6 +56,14 @@ if not script.active_mods["bobinserters"] then
     end
   end)
 end
+
+event.register("kr-change-roboport-state", function(e)
+  local player = game.get_player(e.player_index)
+  local selected = player.selected
+  if selected and selected.valid and selected.type == "roboport" then
+    roboport.change_mode(selected, player)
+  end
+end)
 
 -- ENTITY
 
