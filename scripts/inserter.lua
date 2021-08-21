@@ -30,10 +30,10 @@ function inserter.change_lane(entity, is_near)
   )
 end
 
-function inserter.save_settings(inserter)
-  global.temp_inserter_settings[inserter.unit_number] = {
-    drop_position = inserter.drop_position,
-    pickup_position = inserter.pickup_position,
+function inserter.save_settings(entity)
+  global.temp_inserter_settings[entity.unit_number] = {
+    drop_position = entity.drop_position,
+    pickup_position = entity.pickup_position,
   }
 end
 
