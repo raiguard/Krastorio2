@@ -8,8 +8,8 @@ local util = require("scripts.util")
 local creep = require("scripts.creep")
 local energy_absorber = require("scripts.energy-absorber")
 local inserter = require("scripts.inserter")
-local planetary_teleporter = require("scripts.entity.planetary-teleporter")
-local tesla_coil = require("scripts.entity.tesla-coil")
+local planetary_teleporter = require("scripts.planetary-teleporter")
+local tesla_coil = require("scripts.tesla-coil")
 local virus = require("scripts.virus")
 
 -- INTERFACES

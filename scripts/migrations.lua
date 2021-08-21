@@ -1,4 +1,4 @@
-local tesla_coil = require("scripts.entity.tesla-coil")
+local tesla_coil = require("scripts.tesla-coil")
 
 return {
   ["1.1.2"] = function()
