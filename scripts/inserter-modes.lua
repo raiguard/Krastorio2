@@ -26,6 +26,10 @@ local function change_lane(entity, is_near)
   )
 end
 
+function inserter_modes.init()
+  global.temp_inserter_settings = {}
+end
+
 function inserter_modes.on_inserter_change_hotkey(e)
   local player = game.get_player(e.player_index)
   local selected = player.selected
@@ -34,7 +38,31 @@ function inserter_modes.on_inserter_change_hotkey(e)
   end
 end
 
--- TODO: Prevent copying of settins from normal inserters to long inserters
+function inserter_modes.save_settings(inserter)
+  global.temp_inserter_settings[inserter.unit_number] = {
+    drop_position = inserter.drop_position,
+    pickup_position = inserter.pickup_position,
+  }
+end
+
+function inserter_modes.copy_settings(source, destination)
+  local temp_settings = global.temp_inserter_settings[destination.unit_number]
+  if not temp_settings then return end
+  global.temp_inserter_settings[destination.unit_number] = nil
+
+  local source_prototype = source.prototype
+  local destination_prototype = destination.prototype
+
+  if
+    (source_prototype.inserter_pickup_position[1] ~= destination_prototype.inserter_pickup_position[1])
+    or (source_prototype.inserter_pickup_position[2] ~= destination_prototype.inserter_pickup_position[2])
+    or (source_prototype.inserter_drop_position[1] ~= destination_prototype.inserter_drop_position[1])
+    or (source_prototype.inserter_drop_position[2] ~= destination_prototype.inserter_drop_position[2])
+  then
+    destination.pickup_position = temp_settings.pickup_position
+    destination.drop_position = temp_settings.drop_position
+  end
+end
 
 -- TODO: Add relative GUI
 

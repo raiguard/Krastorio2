@@ -21,6 +21,7 @@ remote.add_interface("kr-creep", creep.remote_interface)
 event.on_init(function()
   -- Initialize `global` table
   creep.init()
+  inserter_modes.init()
   planetary_teleporter.init()
   tesla_coil.init()
   virus.init()
@@ -98,6 +99,21 @@ end)
 
 event.on_biter_base_built(function(e)
   creep.on_biter_base_built(e.entity)
+end)
+
+event.on_pre_entity_settings_pasted(function(e)
+  if e.destination.valid and e.destination.type == "inserter" then
+    inserter_modes.save_settings(e.destination)
+  end
+end)
+
+event.on_entity_settings_pasted(function(e)
+  local source = e.source
+  local destination = e.destination
+
+  if source.valid and destination.valid and source.type == "inserter" and destination.type == "inserter" then
+    inserter_modes.copy_settings(source, destination)
+  end
 end)
 
 -- EQUIPMENT
