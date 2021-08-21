@@ -676,13 +676,7 @@ function planetary_teleporter.destroy(entity)
   update_all_destination_tables()
 end
 
-function planetary_teleporter.on_gui_opened(e)
-  local entity = e.entity
-  if entity and entity.valid and entity.name == pt_entity_name then
-    local player = game.get_player(e.player_index)
-    create_gui(player, entity)
-  end
-end
+planetary_teleporter.open_gui = open_gui
 
 function planetary_teleporter.on_focus_search(e)
   local gui_data = global.planetary_teleporter.guis[e.player_index]
@@ -691,13 +685,13 @@ function planetary_teleporter.on_focus_search(e)
   end
 end
 
-function planetary_teleporter.request_translation(e)
-  game.get_player(e.player_index).request_translation({"gui.kr-planetary-teleporter-unnamed"})
+function planetary_teleporter.request_translation(player)
+  player.request_translation({"gui.kr-planetary-teleporter-unnamed"})
 end
 
-function planetary_teleporter.clean_up_player(e)
-  global.planetary_teleporter.unnamed_translations[e.player_index] = nil
-  global.planetary_teleporter.guis[e.player_index] = nil
+function planetary_teleporter.clean_up_player(player_index)
+  global.planetary_teleporter.unnamed_translations[player_index] = nil
+  global.planetary_teleporter.guis[player_index] = nil
 end
 
 function planetary_teleporter.on_string_translated(e)

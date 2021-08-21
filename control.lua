@@ -24,6 +24,7 @@ event.on_init(function()
   creep.init()
   inserter.init()
   planetary_teleporter.init()
+  roboport.init()
   tesla_coil.init()
   virus.init()
 
@@ -32,7 +33,12 @@ event.on_init(function()
   util.disable_rocket_victory()
   util.ensure_turret_force()
 
+  roboport.find_variants()
   tesla_coil.get_absorber_buffer_capacity()
+
+  for _, player in pairs(game.players) do
+    roboport.refresh_gui(player)
+  end
 end)
 
 event.on_configuration_changed(function(e)
@@ -41,7 +47,12 @@ event.on_configuration_changed(function(e)
     util.disable_rocket_victory()
     util.ensure_turret_force()
 
+    roboport.find_variants()
     tesla_coil.get_absorber_buffer_capacity()
+
+    for _, player in pairs(game.players) do
+      roboport.refresh_gui(player)
+    end
   end
 end)
 
@@ -145,6 +156,8 @@ local function handle_gui_event(e)
     if msg.gui == "planetary_teleporter" then
       planetary_teleporter.handle_gui_action(msg, e)
       return true
+    elseif msg.gui == "roboport" then
+      roboport.handle_gui_action(msg, e)
     end
   end
   return false
@@ -154,7 +167,16 @@ gui.hook_events(handle_gui_event)
 
 event.on_gui_opened(function(e)
   if not handle_gui_event(e) then
-    planetary_teleporter.on_gui_opened(e)
+    local entity = e.entity
+    if entity and entity.valid then
+      local player = game.get_player(e.player_index)
+      local name = entity.name
+      if name == "kr-planetary-teleporter" then
+        planetary_teleporter.open_gui(player, entity)
+      elseif entity.type == "roboport" then
+        roboport.update_gui(player, entity)
+      end
+    end
   end
 end)
 
@@ -164,8 +186,16 @@ event.register("kr-linked-focus-search", planetary_teleporter.on_focus_search)
 
 event.on_player_used_capsule(virus.on_player_used_capsule)
 
-event.on_player_created(planetary_teleporter.request_translation)
-event.on_player_removed(planetary_teleporter.clean_up_player)
+event.on_player_created(function(e)
+  local player = game.get_player(e.player_index)
+  planetary_teleporter.request_translation(player)
+  roboport.refresh_gui(player)
+end)
+
+event.on_player_removed(function(e)
+  planetary_teleporter.clean_up_player(e.player_index)
+  roboport.destroy_gui(e.player_index)
+end)
 
 event.on_player_setup_blueprint(planetary_teleporter.on_player_setup_blueprint)
 

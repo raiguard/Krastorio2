@@ -12,9 +12,15 @@ constants.inserter_drop_vectors = {
 constants.mode_change_flying_text_color = {1, 0.615, 0.235}
 
 constants.next_roboport_mode = {
-  [""] = {color = {r = 0.5, g = 1, b = 0.4}, suffix = "-construction-mode", text = "construction"},
-  ["-construction-mode"] = {color = {r = 1, g = 0.5, b = 0.25}, suffix = "-logistic-mode", text = "logistic"},
-  ["-logistic-mode"] = {suffix = "", text = "normal"},
+  [""] = "construction",
+  ["-construction-mode"] = "logistic",
+  ["-logistic-mode"] = "normal",
+}
+
+constants.roboport_modes = {
+  normal = {suffix = "", text = "normal"},
+  construction = {color = {r = 0.5, g = 1, b = 0.4}, suffix = "-construction-mode", text = "construction"},
+  logistic = {color = {r = 1, g = 0.5, b = 0.25}, suffix = "-logistic-mode", text = "logistic"},
 }
 
 constants.tesla_coil = {
