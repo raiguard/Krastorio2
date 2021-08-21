@@ -3,9 +3,13 @@ local math = require("__flib__.math")
 local constants = require("scripts.constants")
 local util = require("scripts.util")
 
-local inserter_modes = {}
+local inserter = {}
 
-local function change_lane(entity, is_near)
+function inserter.init()
+  global.temp_inserter_settings = {}
+end
+
+function inserter.change_lane(entity, is_near)
   -- Change lane
   local drop_pos_vector = {
     x = entity.drop_position.x - entity.position.x,
@@ -26,26 +30,14 @@ local function change_lane(entity, is_near)
   )
 end
 
-function inserter_modes.init()
-  global.temp_inserter_settings = {}
-end
-
-function inserter_modes.on_inserter_change_hotkey(e)
-  local player = game.get_player(e.player_index)
-  local selected = player.selected
-  if selected and selected.valid and selected.type == "inserter" then
-    change_lane(selected)
-  end
-end
-
-function inserter_modes.save_settings(inserter)
+function inserter.save_settings(inserter)
   global.temp_inserter_settings[inserter.unit_number] = {
     drop_position = inserter.drop_position,
     pickup_position = inserter.pickup_position,
   }
 end
 
-function inserter_modes.copy_settings(source, destination)
+function inserter.copy_settings(source, destination)
   local temp_settings = global.temp_inserter_settings[destination.unit_number]
   if not temp_settings then return end
   global.temp_inserter_settings[destination.unit_number] = nil
@@ -66,4 +58,4 @@ end
 
 -- TODO: Add relative GUI
 
-return inserter_modes
+return inserter

@@ -7,7 +7,7 @@ local util = require("scripts.util")
 
 local creep = require("scripts.creep")
 local energy_absorber = require("scripts.energy-absorber")
-local inserter_modes = require("scripts.inserter-modes")
+local inserter = require("scripts.inserter")
 local planetary_teleporter = require("scripts.entity.planetary-teleporter")
 local tesla_coil = require("scripts.entity.tesla-coil")
 local virus = require("scripts.virus")
@@ -21,7 +21,7 @@ remote.add_interface("kr-creep", creep.remote_interface)
 event.on_init(function()
   -- Initialize `global` table
   creep.init()
-  inserter_modes.init()
+  inserter.init()
   planetary_teleporter.init()
   tesla_coil.init()
   virus.init()
@@ -47,7 +47,13 @@ end)
 -- CUSTOM INPUT
 
 if not script.active_mods["bobinserters"] then
-  event.register("kr-inserter-change-lane", inserter_modes.on_inserter_change_hotkey)
+  event.register("kr-inserter-change-lane", function(e)
+    local player = game.get_player(e.player_index)
+    local selected = player.selected
+    if selected and selected.valid and selected.type == "inserter" then
+      inserter.change_lane(selected)
+    end
+  end)
 end
 
 -- ENTITY
@@ -103,7 +109,7 @@ end)
 
 event.on_pre_entity_settings_pasted(function(e)
   if e.destination.valid and e.destination.type == "inserter" then
-    inserter_modes.save_settings(e.destination)
+    inserter.save_settings(e.destination)
   end
 end)
 
@@ -112,7 +118,7 @@ event.on_entity_settings_pasted(function(e)
   local destination = e.destination
 
   if source.valid and destination.valid and source.type == "inserter" and destination.type == "inserter" then
-    inserter_modes.copy_settings(source, destination)
+    inserter.copy_settings(source, destination)
   end
 end)
 
