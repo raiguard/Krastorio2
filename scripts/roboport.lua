@@ -24,17 +24,18 @@ function roboport.change_mode(entity, player)
   local new_entity = entity.surface.create_entity{
     name = new_name,
     position = entity.position,
-    direction = entity.direction,
     force = entity.force,
+    direction = entity.direction,
     fast_replace = true,
-    player = player,
     raise_built = true,
+    spill = false,
     create_build_effect_smoke = false,
   }
 
   if new_entity then
     new_entity.energy = energy
     new_entity.health = health
+    new_entity.last_user = player
 
     util.change_mode_fx(new_entity, {"message.kr-"..new_mode_data.text.."-mode"}, new_mode_data.color)
   end
