@@ -31,9 +31,11 @@ function roboport.change_mode(entity, player)
     raise_built = true,
     create_build_effect_smoke = false,
   }
+
   if new_entity then
     new_entity.energy = energy
     new_entity.health = health
+
     util.change_mode_fx(new_entity, {"message.kr-"..new_mode_data.text.."-mode"}, new_mode_data.color)
   end
 end
