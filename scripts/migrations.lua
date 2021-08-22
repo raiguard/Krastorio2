@@ -1,6 +1,9 @@
+local on_tick_n = require("__flib__.on-tick-n")
+
 local creep = require("scripts.creep")
 local inserter = require("scripts.inserter")
 local planetary_teleporter = require("scripts.planetary-teleporter")
+local radioactivity = require("scripts.radioactivity")
 local roboport = require("scripts.roboport")
 local tesla_coil = require("scripts.tesla-coil")
 local util = require("scripts.util")
@@ -56,10 +59,14 @@ migrations.versions = {
     -- NUKE EVERYTHING
     global = {}
 
-    -- Re-initialize
+    -- REINITIALIZE
+
+    on_tick_n.init()
+
     creep.init()
     inserter.init()
     planetary_teleporter.init()
+    radioactivity.init()
     roboport.init()
     tesla_coil.init()
     virus.init()

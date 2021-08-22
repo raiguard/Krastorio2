@@ -1,6 +1,7 @@
 local event = require("__flib__.event")
 local gui = require("__flib__.gui")
 local migration = require("__flib__.migration")
+local on_tick_n = require("__flib__.on-tick-n")
 
 local constants = require("scripts.constants")
 local creep = require("scripts.creep")
@@ -9,6 +10,7 @@ local inserter = require("scripts.inserter")
 local loader_snapping = require("scripts.loader-snapping")
 local migrations = require("scripts.migrations")
 local planetary_teleporter = require("scripts.planetary-teleporter")
+local radioactivity = require("scripts.radioactivity")
 local roboport = require("scripts.roboport")
 local tesla_coil = require("scripts.tesla-coil")
 local virus = require("scripts.virus")
@@ -20,10 +22,14 @@ remote.add_interface("kr-creep", creep.remote_interface)
 -- BOOTSTRAP
 
 event.on_init(function()
+  -- Initialize libraries
+  on_tick_n.init()
+
   -- Initialize `global` table
   creep.init()
   inserter.init()
   planetary_teleporter.init()
+  radioactivity.init()
   roboport.init()
   tesla_coil.init()
   virus.init()
@@ -202,6 +208,10 @@ end)
 
 event.on_player_setup_blueprint(planetary_teleporter.on_player_setup_blueprint)
 
+event.on_player_changed_position(function(e)
+  radioactivity.check_around_player(game.get_player(e.player_index))
+end)
+
 -- SURFACES
 
 event.on_chunk_generated(function(e)
@@ -222,6 +232,16 @@ event.on_tick(function(e)
   planetary_teleporter.update_gui_statuses()
   planetary_teleporter.update_all_destination_availability()
   virus.iterate()
+
+  local tasks = on_tick_n.retrieve(game.tick)
+  if tasks then
+    for _, task in pairs(tasks) do
+      if task.action == "update_radioactivity" then
+        local player = game.get_player(task.player_index)
+        radioactivity.update_player(player)
+      end
+    end
+  end
 end)
 
 event.on_string_translated(planetary_teleporter.on_string_translated)
