@@ -1,4 +1,4 @@
-local on_tick_n = require("__flib__.on-tick-n")
+local table = require("__flib__.table")
 
 local constants = require("scripts.constants")
 
@@ -12,6 +12,29 @@ function radioactivity.init()
   }
 end
 
+function radioactivity.add_player(player)
+  global.radioactivity.players[player.index] = {
+    inventory = false,
+    position = false,
+  }
+end
+
+function radioactivity.remove_player(player_index)
+  global.radioactivity.players[player_index] = nil
+end
+
+function radioactivity.refresh_players()
+  local existing = global.radioactivity.players
+  local new = {}
+  for player_index in pairs(game.players) do
+    new[player_index] = existing[player_index] or {
+      inventory = false,
+      position = false,
+    }
+  end
+  global.radioactivity.players = new
+end
+
 -- TODO: Only check if the player moves tiles, not if they move at all
 function radioactivity.check_around_player(player)
   local in_range = player.character and player.surface.count_entities_filtered{
@@ -19,37 +42,67 @@ function radioactivity.check_around_player(player)
     radius = constants.radioactivity_range,
     position = player.position
   } > 0
-  local prev_state = global.radioactivity.players[player.index]
-  global.radioactivity.players[player.index] = in_range or nil
+  local player_data = global.radioactivity.players[player.index]
+  player_data.position = in_range
+end
 
-  -- If we just entered range, update immediately and start the cycle
-  if in_range and not prev_state then
-    radioactivity.update_player(player)
+function radioactivity.check_inventory(player)
+  local inventories = {
+    player.get_main_inventory()
+  }
+  if player.character and player.character.valid then
+    local trash_inventory = player.get_inventory(defines.inventory.character_trash)
+    if trash_inventory then
+      table.insert(inventories, trash_inventory)
+    end
+  end
+
+  local player_data = global.radioactivity.players[player.index]
+
+  for _, inventory in pairs(inventories) do
+    for _, item_name in pairs(global.radioactivity.items) do
+      if inventory.get_item_count(item_name) > 0 then
+        player_data.inventory = true
+        return
+      end
+    end
+  end
+
+  player_data.inventory = false
+end
+
+function radioactivity.update_sounds()
+  for player_index, player_data in pairs(global.radioactivity.players) do
+    if table.find(player_data, true) then
+      local player = game.get_player(player_index)
+      if player.connected then
+        player.play_sound{
+          path = "kr-radioactive",
+          volume_modifier = 0.5,
+        }
+      end
+    end
   end
 end
 
-function radioactivity.update_player(player)
-  if global.radioactivity.players[player.index] and player.character then
-    -- Update alert and sound
-    player.play_sound{
-      path = "kr-radioactive",
-      position = player.position,
-      volume_modifier = 0.5,
-    }
-    player.add_custom_alert(
-      player.character,
-      {type = "virtual", name = "kr-nuclear-2"},
-      {"other.kr-taking-radioactive-damage"},
-      false
-    )
+function radioactivity.update_and_damage()
+  for player_index, player_data in pairs(global.radioactivity.players) do
+    if table.find(player_data, true) then
+      local player = game.get_player(player_index)
+      if player.connected and player.character then
+        player.add_custom_alert(
+          player.character,
+          {type = "virtual", name = "kr-nuclear-2"},
+          {"other.kr-taking-radioactive-damage"},
+          false
+        )
 
-    -- Damage the player
-    -- TODO: Account for armor and energy shields
-    local base_damage = 7.25
-    player.character.damage(base_damage, "enemy", "radioactive")
-
-    -- Do it again in one second
-    on_tick_n.add(game.tick + 60, {action = "update_radioactivity", player_index = player.index})
+        -- Damage the player
+        -- TODO: Account for armor and energy shields
+        local base_damage = 7.25
+        player.character.damage(base_damage, "enemy", "radioactive")
+      end
+    end
   end
 end
 

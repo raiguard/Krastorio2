@@ -1,5 +1,3 @@
-local on_tick_n = require("__flib__.on-tick-n")
-
 local creep = require("scripts.creep")
 local inserter = require("scripts.inserter")
 local planetary_teleporter = require("scripts.planetary-teleporter")
@@ -16,6 +14,7 @@ function migrations.generic()
   util.disable_rocket_victory()
   util.ensure_turret_force()
 
+  radioactivity.refresh_players()
   roboport.find_variants()
   tesla_coil.get_absorber_buffer_capacity()
 
@@ -60,8 +59,6 @@ migrations.versions = {
     global = {}
 
     -- REINITIALIZE
-
-    on_tick_n.init()
 
     creep.init()
     inserter.init()

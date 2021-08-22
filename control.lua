@@ -1,7 +1,6 @@
 local event = require("__flib__.event")
 local gui = require("__flib__.gui")
 local migration = require("__flib__.migration")
-local on_tick_n = require("__flib__.on-tick-n")
 
 local constants = require("scripts.constants")
 local creep = require("scripts.creep")
@@ -22,9 +21,6 @@ remote.add_interface("kr-creep", creep.remote_interface)
 -- BOOTSTRAP
 
 event.on_init(function()
-  -- Initialize libraries
-  on_tick_n.init()
-
   -- Initialize `global` table
   creep.init()
   inserter.init()
@@ -195,21 +191,40 @@ event.on_player_used_capsule(virus.on_player_used_capsule)
 
 event.on_player_created(function(e)
   local player = game.get_player(e.player_index)
-  planetary_teleporter.request_translation(player)
   inserter.refresh_gui(player)
+  planetary_teleporter.request_translation(player)
+  radioactivity.add_player(player)
   roboport.refresh_gui(player)
 end)
 
 event.on_player_removed(function(e)
-  planetary_teleporter.clean_up_player(e.player_index)
   inserter.destroy_gui(e.player_index)
+  planetary_teleporter.clean_up_player(e.player_index)
+  radioactivity.remove_player(e.player_index)
   roboport.destroy_gui(e.player_index)
+end)
+
+event.on_player_joined_game(function(e)
+  local player = game.get_player(e.player_index)
+  radioactivity.check_around_player(player)
+  radioactivity.check_inventory(player)
 end)
 
 event.on_player_setup_blueprint(planetary_teleporter.on_player_setup_blueprint)
 
 event.on_player_changed_position(function(e)
   radioactivity.check_around_player(game.get_player(e.player_index))
+end)
+
+event.on_player_main_inventory_changed(function(e)
+  local player = game.get_player(e.player_index)
+  radioactivity.check_inventory(player)
+end)
+
+event.on_player_toggled_map_editor(function(e)
+  local player = game.get_player(e.player_index)
+  radioactivity.check_around_player(player)
+  radioactivity.check_inventory(player)
 end)
 
 -- SURFACES
@@ -228,20 +243,15 @@ event.on_script_trigger_effect(function(e)
   end
 end)
 
-event.on_tick(function(e)
-  planetary_teleporter.update_gui_statuses()
+event.on_tick(function()
   planetary_teleporter.update_all_destination_availability()
+  planetary_teleporter.update_gui_statuses()
+  radioactivity.update_sounds()
   virus.iterate()
+end)
 
-  local tasks = on_tick_n.retrieve(game.tick)
-  if tasks then
-    for _, task in pairs(tasks) do
-      if task.action == "update_radioactivity" then
-        local player = game.get_player(task.player_index)
-        radioactivity.update_player(player)
-      end
-    end
-  end
+event.on_nth_tick(20, function()
+  radioactivity.update_and_damage()
 end)
 
 event.on_string_translated(planetary_teleporter.on_string_translated)
