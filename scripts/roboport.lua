@@ -14,7 +14,7 @@ local function radio_button(name, caption, gui_name, variant)
     caption = caption,
     state = false,
     actions = {
-      on_click = {gui = gui_name, variant = variant}
+      on_checked_state_changed = {gui = gui_name, action = "change_mode", variant = variant}
     }
   }
 end
@@ -65,15 +65,17 @@ function roboport.update_gui(player, entity)
 end
 
 function roboport.handle_gui_action(msg, e)
-  local player = game.get_player(e.player_index)
-  if not player.opened_gui_type == defines.gui_type.entity then return end
+  if msg.action == "change_mode" then
+    local player = game.get_player(e.player_index)
+    if not player.opened_gui_type == defines.gui_type.entity then return end
 
-  local entity = player.opened
-  if not entity.valid or entity.type ~= "roboport" then return end
+    local entity = player.opened
+    if not entity.valid or entity.type ~= "roboport" then return end
 
-  local new_entity = roboport.change_mode(entity, player, msg.variant)
-  if new_entity then
-    player.opened = new_entity
+    local new_entity = roboport.change_mode(entity, player, msg.variant)
+    if new_entity then
+      player.opened = new_entity
+    end
   end
 end
 
