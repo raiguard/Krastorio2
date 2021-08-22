@@ -1,0 +1,16 @@
+__DebugAdapter = {}
+__Profiler = {}
+commands = {}
+data = {}
+defines = {}
+game = {}
+global = {}
+log = {}
+mods = {}
+rcon = {}
+remote = {}
+rendering = {}
+script = {}
+serpent = {}
+settings = {}
+table_size = {}
