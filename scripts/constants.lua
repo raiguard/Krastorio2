@@ -9,6 +9,15 @@ constants.inserter_drop_vectors = {
   [false] = { [0] = {0.0, 0.2}, [2] = {-0.2, 0.0}, [4] = {0.0, -0.2}, [6] = {0.2, 0.0}},  -- Far lane
 }
 
+constants.loader_names = {
+  ["kr-loader"] = true,
+  ["kr-fast-loader"] = true,
+  ["kr-express-loader"] = true,
+  ["kr-advanced-loader"] = true,
+  ["kr-superior-loader"] = true,
+  ["kr-se-loader"] = true,
+}
+
 constants.mode_change_flying_text_color = {1, 0.615, 0.235}
 
 constants.next_roboport_mode = {
@@ -29,6 +38,15 @@ constants.tesla_coil = {
   loss_multiplier = 1.5,
   required_energy = 10000000, -- 10 MW
   simultaneous_allowed = 4,
+}
+
+constants.transport_belt_connectable_types = {
+  ["transport-belt"] = true,
+  ["underground-belt"] = true,
+  ["splitter"] = true,
+  ["loader"] = true,
+  ["loader-1x1"] = true,
+  ["linked-belt"] = true,
 }
 
 constants.virus_iteration_counts = {

@@ -2,12 +2,14 @@ local event = require("__flib__.event")
 local gui = require("__flib__.gui")
 local migration = require("__flib__.migration")
 
+local constants = require("scripts.constants")
 local migrations = require("scripts.migrations")
 local util = require("scripts.util")
 
 local creep = require("scripts.creep")
 local energy_absorber = require("scripts.energy-absorber")
 local inserter = require("scripts.inserter")
+local loader_snapping = require("scripts.loader-snapping")
 local planetary_teleporter = require("scripts.planetary-teleporter")
 local roboport = require("scripts.roboport")
 local tesla_coil = require("scripts.tesla-coil")
@@ -94,14 +96,29 @@ event.register(
     local entity = e.entity or e.created_entity or e.destination
     if not entity or not entity.valid then return end
     local entity_name = entity.name
+    local entity_type = entity.type
+
     if entity_name == "kr-planetary-teleporter" then
       planetary_teleporter.build(entity, e.tags)
     elseif entity_name == "kr-tesla-coil" then
       tesla_coil.build(entity)
+    elseif constants.loader_names[entity_name] then
+      loader_snapping.snap(entity)
+    elseif constants.transport_belt_connectable_types[entity_type] then
+      loader_snapping.snap_belt_neighbours(entity)
     end
   end
   -- TODO: Filters
 )
+
+event.on_player_rotated_entity(function(e)
+  local entity = e.entity
+  if not entity or not entity.valid then return end
+
+  if constants.transport_belt_connectable_types[entity.type] then
+    loader_snapping.snap_belt_neighbours(entity)
+  end
+end)
 
 event.register(
   {
