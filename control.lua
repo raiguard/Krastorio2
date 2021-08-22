@@ -221,11 +221,14 @@ event.on_player_main_inventory_changed(function(e)
   radioactivity.check_inventory(player)
 end)
 
-event.on_player_toggled_map_editor(function(e)
-  local player = game.get_player(e.player_index)
-  radioactivity.check_around_player(player)
-  radioactivity.check_inventory(player)
-end)
+event.register(
+  {defines.events.on_player_died, defines.events.on_player_respawned, defines.events.on_player_toggled_map_editor},
+  function(e)
+    local player = game.get_player(e.player_index)
+    radioactivity.check_around_player(player)
+    radioactivity.check_inventory(player)
+  end
+)
 
 -- SURFACES
 

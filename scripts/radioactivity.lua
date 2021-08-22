@@ -37,27 +37,28 @@ end
 
 -- TODO: Only check if the player moves tiles, not if they move at all
 function radioactivity.check_around_player(player)
+  local player_data = global.radioactivity.players[player.index]
+  if not player.character or not player.character.valid then
+    player_data.position = false
+    return
+  end
+
   local in_range = player.character and player.surface.count_entities_filtered{
     name = global.radioactivity.entities,
     radius = constants.radioactivity_range,
     position = player.position
   } > 0
-  local player_data = global.radioactivity.players[player.index]
   player_data.position = in_range
 end
 
 function radioactivity.check_inventory(player)
-  local inventories = {
-    player.get_main_inventory()
-  }
-  if player.character and player.character.valid then
-    local trash_inventory = player.get_inventory(defines.inventory.character_trash)
-    if trash_inventory then
-      table.insert(inventories, trash_inventory)
-    end
+  local player_data = global.radioactivity.players[player.index]
+  if not player.character or not player.character.valid then
+    player_data.inventory = false
+    return
   end
 
-  local player_data = global.radioactivity.players[player.index]
+  local inventories = {player.get_main_inventory(), player.get_inventory(defines.inventory.character_trash)}
 
   for _, inventory in pairs(inventories) do
     for _, item_name in pairs(global.radioactivity.items) do
