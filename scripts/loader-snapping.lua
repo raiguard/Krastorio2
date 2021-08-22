@@ -6,14 +6,6 @@ local loader_snapping = {}
 function loader_snapping.snap_belt_neighbours(entity)
   local loaders = {}
 
-  local linked_belt_neighbour
-  if entity.type == "linked-belt" then
-    linked_belt_neighbour = entity.linked_belt_neighbour
-    if linked_belt_neighbour then
-      entity.disconnect_linked_belts()
-    end
-  end
-
   for _ = 1, entity.type == "transport-belt" and 4 or 2 do
     for _, neighbours in pairs(entity.belt_neighbours) do
       for _, neighbour in ipairs(neighbours) do
