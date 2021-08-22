@@ -94,6 +94,17 @@ function inserter.change_lane(entity)
     is_far and {"message.kr-drop-near"} or {"message.kr-drop-far"},
     constants.mode_change_flying_text_color
   )
+
+  -- Update all player GUIs that have this open
+  for player_index in pairs(global.inserter_guis) do
+    local player = game.get_player(player_index)
+    if player.opened_gui_type == defines.gui_type.entity then
+      local opened = player.opened
+      if opened and opened == entity then
+        inserter.update_gui(player, entity)
+      end
+    end
+  end
 end
 
 function inserter.save_settings(entity)

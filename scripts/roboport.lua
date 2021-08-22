@@ -7,14 +7,14 @@ local roboport = {}
 
 -- GUI
 
-local function radio_button(name, caption, gui_name, variant)
+local function radio_button(name, caption, gui_name, mode)
   return {
     type = "radiobutton",
     name = name,
     caption = caption,
     state = false,
     actions = {
-      on_checked_state_changed = {gui = gui_name, action = "change_mode", variant = variant}
+      on_checked_state_changed = {gui = gui_name, action = "change_mode", mode = mode}
     }
   }
 end
@@ -72,10 +72,7 @@ function roboport.handle_gui_action(msg, e)
     local entity = player.opened
     if not entity.valid or entity.type ~= "roboport" then return end
 
-    local new_entity = roboport.change_mode(entity, player, msg.variant)
-    if new_entity then
-      player.opened = new_entity
-    end
+    roboport.change_mode(entity, player, msg.mode)
   end
 end
 
@@ -131,6 +128,19 @@ function roboport.change_mode(entity, player, to_mode)
   local energy = entity.energy
   local health = entity.health
 
+  -- Find all players that have this roboport open
+  -- This must be done before the roboport is swapped
+  local guis_to_update = {}
+  for player_index in pairs(global.roboport_guis) do
+    local player = game.get_player(player_index)
+    if player.opened_gui_type == defines.gui_type.entity then
+      local opened = player.opened
+      if opened and opened == entity then
+        table.insert(guis_to_update, player)
+      end
+    end
+  end
+
   local new_entity = entity.surface.create_entity{
     name = new_name,
     position = entity.position,
@@ -149,7 +159,11 @@ function roboport.change_mode(entity, player, to_mode)
 
     util.change_mode_fx(new_entity, {"message.kr-"..new_mode_data.text.."-mode"}, new_mode_data.color)
 
-    return new_entity
+    -- Re-open GUI for all players who had it open and update the radio buttons
+    for _, player in pairs(guis_to_update) do
+      player.opened = new_entity
+      roboport.update_gui(player, new_entity)
+    end
   end
 end
 
