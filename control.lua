@@ -19,6 +19,8 @@ remote.add_interface("kr-creep", creep.remote_interface)
 
 -- BOOTSTRAP
 
+-- TODO: Deduplicate the generic migrations code
+
 event.on_init(function()
   -- Initialize `global` table
   creep.init()
@@ -37,6 +39,7 @@ event.on_init(function()
   tesla_coil.get_absorber_buffer_capacity()
 
   for _, player in pairs(game.players) do
+    inserter.refresh_gui(player)
     roboport.refresh_gui(player)
   end
 end)
@@ -51,6 +54,7 @@ event.on_configuration_changed(function(e)
     tesla_coil.get_absorber_buffer_capacity()
 
     for _, player in pairs(game.players) do
+      inserter.refresh_gui(player)
       roboport.refresh_gui(player)
     end
   end
@@ -153,12 +157,14 @@ event.on_equipment_removed(tesla_coil.on_equipment_removed)
 local function handle_gui_event(e)
   local msg = gui.read_action(e)
   if msg then
-    if msg.gui == "planetary_teleporter" then
+    if msg.gui == "inserter" then
+      inserter.handle_gui_action(msg, e)
+    elseif msg.gui == "planetary_teleporter" then
       planetary_teleporter.handle_gui_action(msg, e)
-      return true
     elseif msg.gui == "roboport" then
       roboport.handle_gui_action(msg, e)
     end
+    return true
   end
   return false
 end
@@ -173,6 +179,8 @@ event.on_gui_opened(function(e)
       local name = entity.name
       if name == "kr-planetary-teleporter" then
         planetary_teleporter.open_gui(player, entity)
+      elseif entity.type == "inserter" then
+        inserter.update_gui(player, entity)
       elseif entity.type == "roboport" then
         roboport.update_gui(player, entity)
       end
@@ -189,11 +197,13 @@ event.on_player_used_capsule(virus.on_player_used_capsule)
 event.on_player_created(function(e)
   local player = game.get_player(e.player_index)
   planetary_teleporter.request_translation(player)
+  inserter.refresh_gui(player)
   roboport.refresh_gui(player)
 end)
 
 event.on_player_removed(function(e)
   planetary_teleporter.clean_up_player(e.player_index)
+  inserter.destroy_gui(e.player_index)
   roboport.destroy_gui(e.player_index)
 end)
 

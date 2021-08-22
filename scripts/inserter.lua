@@ -1,3 +1,4 @@
+local gui = require("__flib__.gui")
 local math = require("__flib__.math")
 
 local constants = require("scripts.constants")
@@ -5,27 +6,92 @@ local util = require("scripts.util")
 
 local inserter = {}
 
-function inserter.init()
-  global.temp_inserter_settings = {}
-end
-
-function inserter.change_lane(entity, is_near)
-  -- Change lane
+local function get_is_far(entity)
   local drop_pos_vector = {
     x = entity.drop_position.x - entity.position.x,
     y = entity.drop_position.y - entity.position.y,
   }
   local vector_length = math.sqrt(drop_pos_vector.x * drop_pos_vector.x + drop_pos_vector.y * drop_pos_vector.y)
-  is_near = is_near ~= nil or vector_length % 1 < 0.5
-  local dpf = constants.inserter_drop_vectors[is_near][entity.direction]
+  return vector_length % 1 < 0.5, drop_pos_vector
+end
+
+function inserter.refresh_gui(player)
+  inserter.destroy_gui(player.index)
+
+  global.inserter_guis[player.index] = gui.add(
+    player.gui.relative,
+    {
+      type = "frame",
+      caption = {"gui.kr-change-drop-lane"},
+      anchor = {
+        gui = defines.relative_gui_type.inserter_gui,
+        position = defines.relative_gui_position.right,
+      },
+      {type = "frame", name = "inner_frame", style = "inside_shallow_frame_with_padding", direction = "vertical",
+        {
+          type = "switch",
+          name = "switch",
+          switch_state = "left",
+          left_label_caption = {"gui.kr-near"},
+          right_label_caption = {"gui.kr-far"},
+          actions = {
+            on_switch_state_changed = {gui = "inserter", action = "change_belt_lane"},
+          }
+        }
+      }
+    }
+  )
+end
+
+function inserter.destroy_gui(player_index)
+  local player_gui = global.inserter_guis[player_index]
+  if player_gui and player_gui.valid then
+    player_gui.destroy()
+  end
+end
+
+function inserter.update_gui(player, entity)
+  local player_gui = global.inserter_guis[player.index]
+  if player_gui and player_gui.valid then
+    local is_far = get_is_far(entity)
+    player_gui.inner_frame.switch.switch_state = is_far and "right" or "left"
+  end
+end
+
+function inserter.handle_gui_action(msg, e)
+  if msg.action == "change_belt_lane" then
+    local player = game.get_player(e.player_index)
+    if not player.opened_gui_type == defines.gui_type.entity then return end
+
+    local entity = player.opened
+    if not entity.valid or entity.type ~= "inserter" then return end
+
+    inserter.change_lane(entity)
+  end
+end
+
+-- GENERAL
+
+function inserter.init()
+  global.inserter_guis = {}
+  global.temp_inserter_settings = {}
+end
+
+-- TODO: Update last_user
+function inserter.change_lane(entity)
+  local is_far, drop_pos_vector = get_is_far(entity)
+
+  -- Change lane
+  local dpf = constants.inserter_drop_vectors[is_far][entity.direction]
   entity.drop_position = {
     entity.position.x + math.round(drop_pos_vector.x) + dpf[1],
     entity.position.y + math.round(drop_pos_vector.y) + dpf[2],
   }
+
   -- Special effects
   util.change_mode_fx(
     entity,
-    is_near and {"message.kr-drop-near"} or {"message.kr-drop-far"},
+    is_far and {"message.kr-drop-near"} or {"message.kr-drop-far"},
     constants.mode_change_flying_text_color
   )
 end
