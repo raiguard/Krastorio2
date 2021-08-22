@@ -1,6 +1,29 @@
+local creep = require("scripts.creep")
+local inserter = require("scripts.inserter")
+local planetary_teleporter = require("scripts.planetary-teleporter")
+local roboport = require("scripts.roboport")
 local tesla_coil = require("scripts.tesla-coil")
+local util = require("scripts.util")
+local virus = require("scripts.virus")
 
-return {
+local migrations = {}
+
+function migrations.generic()
+  util.add_to_crash_site()
+  util.disable_rocket_victory()
+  util.ensure_turret_force()
+
+  roboport.find_variants()
+  tesla_coil.get_absorber_buffer_capacity()
+
+  for _, player in pairs(game.players) do
+    inserter.refresh_gui(player)
+    roboport.refresh_gui(player)
+  end
+end
+
+
+migrations.versions = {
   ["1.1.2"] = function()
     local shelters = global.spawn_points
     local filters = { name = { "kr-shelter-light", "kr-shelter-plus-light" } }
@@ -31,9 +54,19 @@ return {
   end,
   ["1.2.0"] = function()
     -- NUKE EVERYTHING
-    global = {
-      tesla_coils = tesla_coil.init()
-    }
+    global = {}
+
+    -- Re-initialize
+    creep.init()
+    inserter.init()
+    planetary_teleporter.init()
+    roboport.init()
+    tesla_coil.init()
+    virus.init()
+
     -- TODO: Add collision entities and data for tesla coils
+    -- TODO: Convert data format for planetary teleporters
   end
 }
+
+return migrations

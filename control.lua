@@ -3,13 +3,11 @@ local gui = require("__flib__.gui")
 local migration = require("__flib__.migration")
 
 local constants = require("scripts.constants")
-local migrations = require("scripts.migrations")
-local util = require("scripts.util")
-
 local creep = require("scripts.creep")
 local energy_absorber = require("scripts.energy-absorber")
 local inserter = require("scripts.inserter")
 local loader_snapping = require("scripts.loader-snapping")
+local migrations = require("scripts.migrations")
 local planetary_teleporter = require("scripts.planetary-teleporter")
 local roboport = require("scripts.roboport")
 local tesla_coil = require("scripts.tesla-coil")
@@ -21,8 +19,6 @@ remote.add_interface("kr-creep", creep.remote_interface)
 
 -- BOOTSTRAP
 
--- TODO: Deduplicate the generic migrations code
-
 event.on_init(function()
   -- Initialize `global` table
   creep.init()
@@ -33,32 +29,12 @@ event.on_init(function()
   virus.init()
 
   -- Initialize mod
-  util.add_to_crash_site()
-  util.disable_rocket_victory()
-  util.ensure_turret_force()
-
-  roboport.find_variants()
-  tesla_coil.get_absorber_buffer_capacity()
-
-  for _, player in pairs(game.players) do
-    inserter.refresh_gui(player)
-    roboport.refresh_gui(player)
-  end
+  migrations.generic()
 end)
 
 event.on_configuration_changed(function(e)
-  if migration.on_config_changed(e, migrations) then
-    util.add_to_crash_site()
-    util.disable_rocket_victory()
-    util.ensure_turret_force()
-
-    roboport.find_variants()
-    tesla_coil.get_absorber_buffer_capacity()
-
-    for _, player in pairs(game.players) do
-      inserter.refresh_gui(player)
-      roboport.refresh_gui(player)
-    end
+  if migration.on_config_changed(e, migrations.versions) then
+    migrations.generic()
   end
 end)
 
