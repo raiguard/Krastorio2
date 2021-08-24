@@ -85,8 +85,7 @@ function util.error_flying_text(player, text, options)
   player.play_sound{path = "utility/cannot_build"}
 end
 
-function util.change_mode_fx(entity, text, color)
-  -- Flying text
+function util.entity_flying_text(entity, text, color)
   entity.surface.create_entity{
     type = "flying-text",
     name = "flying-text",
@@ -94,6 +93,11 @@ function util.change_mode_fx(entity, text, color)
     text = text,
     color = color,
   }
+end
+
+function util.change_mode_fx(entity, text, color)
+  -- Flying text
+  util.entity_flying_text(entity, text, color)
   -- Welding sound
   game.play_sound({
     path = "kr-welding",

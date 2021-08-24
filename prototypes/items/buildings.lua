@@ -223,7 +223,7 @@ data:extend({
     icon_mipmaps = 4,
     subgroup = "storage",
     order = "aaa",
-    place_result = "kr-shelter",
+    place_result = "kr-shelter-container",
     stack_size = 1,
   },
   {
@@ -234,7 +234,7 @@ data:extend({
     icon_mipmaps = 4,
     subgroup = "storage",
     order = "aaa",
-    place_result = "kr-shelter-plus",
+    place_result = "kr-shelter-plus-container",
     stack_size = 1,
   },
   {

@@ -11,9 +11,10 @@ local migrations = require("scripts.migrations")
 local planetary_teleporter = require("scripts.planetary-teleporter")
 local radioactivity = require("scripts.radioactivity")
 local roboport = require("scripts.roboport")
+local shelter = require("scripts.shelter")
 local tesla_coil = require("scripts.tesla-coil")
-local virus = require("scripts.virus")
 local util = require("scripts.util")
+local virus = require("scripts.virus")
 
 -- COMMANDS
 
@@ -33,6 +34,7 @@ event.on_init(function()
   planetary_teleporter.init()
   radioactivity.init()
   roboport.init()
+  shelter.init()
   tesla_coil.init()
   virus.init()
 
@@ -84,6 +86,8 @@ event.register(
 
     if entity_name == "kr-planetary-teleporter" then
       planetary_teleporter.build(entity, e.tags)
+    elseif entity_name == "kr-shelter-container" or entity_name == "kr-shelter-plus-container" then
+      shelter.build(entity)
     elseif entity_name == "kr-tesla-coil" then
       tesla_coil.build(entity)
     elseif constants.loader_names[entity_name] then
@@ -115,7 +119,9 @@ event.register(
     local entity = e.entity
     if not entity or not entity.valid then return end
     local entity_name = entity.name
-    if entity_name == "kr-planetary-teleporter" then
+    if entity_name == "kr-shelter-container" or entity_name == "kr-shelter-plus-container" then
+      shelter.destroy(entity)
+    elseif entity_name == "kr-planetary-teleporter" then
       planetary_teleporter.destroy(entity)
     elseif entity_name == "kr-tesla-coil" then
       tesla_coil.destroy(entity)
@@ -152,6 +158,12 @@ end)
 event.on_player_placed_equipment(energy_absorber.on_placed)
 event.on_equipment_inserted(tesla_coil.on_equipment_inserted)
 event.on_equipment_removed(tesla_coil.on_equipment_removed)
+
+-- FORCE
+
+event.on_force_created(function(e)
+  shelter.force_init(e.force)
+end)
 
 -- GUI
 
@@ -261,6 +273,10 @@ end)
 
 event.on_nth_tick(20, function()
   radioactivity.update_and_damage()
+end)
+
+event.on_nth_tick(180, function()
+  shelter.spawn_flying_texts()
 end)
 
 event.on_string_translated(planetary_teleporter.on_string_translated)
