@@ -22,8 +22,9 @@ end
 
 function radioactivity.add_player(player)
   global.radioactivity.players[player.index] = {
+    entity = false,
     inventory = false,
-    position = false,
+    last_position = {x = 0, y = 0},
   }
 end
 
@@ -36,8 +37,9 @@ function radioactivity.refresh_players()
   local new = {}
   for player_index in pairs(game.players) do
     new[player_index] = existing[player_index] or {
+      entity = false,
       inventory = false,
-      position = false,
+      last_position = {x = 0, y = 0},
     }
   end
   global.radioactivity.players = new
@@ -48,16 +50,26 @@ function radioactivity.check_around_player(player)
 
   local player_data = global.radioactivity.players[player.index]
   if not player.character or not player.character.valid then
-    player_data.position = false
+    player_data.entity = false
     return
   end
 
-  local in_range = player.character and player.surface.count_entities_filtered{
-    name = global.radioactivity.entities,
-    radius = constants.radioactivity_range,
-    position = player.position
-  } > 0
-  player_data.position = in_range
+  local position = player.position
+  local last_position = player_data.last_position
+  if
+    math.floor(position.x) ~= math.floor(last_position.x)
+    or math.floor(position.y) ~= math.floor(last_position.y)
+  then
+    player_data.last_position = position
+
+    local in_range = player.character and player.surface.count_entities_filtered{
+      name = global.radioactivity.entities,
+      radius = constants.radioactivity_range,
+      position = player.position
+    } > 0
+    player_data.entity = in_range
+  end
+
 end
 
 function radioactivity.check_inventory(player)
