@@ -6,10 +6,17 @@ local radioactivity = {}
 
 function radioactivity.init()
   global.radioactivity = {
-    entities = {"uranium-ore"},
-    items = {"uranium-ore"},
     players = {},
   }
+end
+
+function radioactivity.reset_entities_items()
+  for types, list in pairs(constants.default_radioactive_objects) do
+    global.radioactivity[types[1]] = {}
+    for _, name in pairs(list) do
+      radioactivity.remote_interface["add_"..types[2]](name)
+    end
+  end
 end
 
 function radioactivity.add_player(player)
@@ -106,5 +113,30 @@ function radioactivity.update_and_damage()
     end
   end
 end
+
+radioactivity.remote_interface = {
+  add_entity = function(name)
+    if not name or type(name) ~= "string" then
+      error("`name` must be a string.")
+    end
+
+    if not game.entity_prototypes[name] then
+      error("Entity `"..name.."` does not exist.")
+    end
+
+    table.insert(global.radioactivity.entities, name)
+  end,
+  add_item = function(name)
+    if not name or type(name) ~= "string" then
+      error("`name` must be a string.")
+    end
+
+    if not game.item_prototypes[name] then
+      error("Item `"..name.."` does not exist.")
+    end
+
+    table.insert(global.radioactivity.items, name)
+  end,
+}
 
 return radioactivity

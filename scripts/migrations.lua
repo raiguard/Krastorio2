@@ -14,6 +14,7 @@ function migrations.generic()
   util.disable_rocket_victory()
   util.ensure_turret_force()
 
+  radioactivity.reset_entities_items()
   radioactivity.refresh_players()
   roboport.find_variants()
   tesla_coil.get_absorber_buffer_capacity()

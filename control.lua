@@ -17,6 +17,7 @@ local virus = require("scripts.virus")
 -- INTERFACES
 
 remote.add_interface("kr-creep", creep.remote_interface)
+remote.add_interface("kr-radioactivity", radioactivity.remote_interface)
 
 -- BOOTSTRAP
 
