@@ -6,6 +6,7 @@ local radioactivity = {}
 
 function radioactivity.init()
   global.radioactivity = {
+    enabled = true,
     players = {},
   }
 end
@@ -44,6 +45,8 @@ end
 
 -- TODO: Only check if the player moves tiles, not if they move at all
 function radioactivity.check_around_player(player)
+  if not global.radioactivity.enabled then return end
+
   local player_data = global.radioactivity.players[player.index]
   if not player.character or not player.character.valid then
     player_data.position = false
@@ -59,6 +62,8 @@ function radioactivity.check_around_player(player)
 end
 
 function radioactivity.check_inventory(player)
+  if not global.radioactivity.enabled then return end
+
   local player_data = global.radioactivity.players[player.index]
   if not player.character or not player.character.valid then
     player_data.inventory = false
@@ -80,6 +85,8 @@ function radioactivity.check_inventory(player)
 end
 
 function radioactivity.update_sounds()
+  if not global.radioactivity.enabled then return end
+
   for player_index, player_data in pairs(global.radioactivity.players) do
     if table.find(player_data, true) then
       local player = game.get_player(player_index)
@@ -94,6 +101,8 @@ function radioactivity.update_sounds()
 end
 
 function radioactivity.update_and_damage()
+  if not global.radioactivity.enabled then return end
+
   for player_index, player_data in pairs(global.radioactivity.players) do
     if table.find(player_data, true) then
       local player = game.get_player(player_index)
@@ -137,6 +146,13 @@ radioactivity.remote_interface = {
 
     table.insert(global.radioactivity.items, name)
   end,
+  set_enabled = function(to_state)
+    if to_state == nil or type(to_state) ~= "boolean" then
+      error("`to_state` must be a boolean.")
+    end
+
+    global.radioactivity.enabled = to_state
+  end
 }
 
 return radioactivity
