@@ -123,6 +123,17 @@ function radioactivity.update_and_damage()
   end
 end
 
+radioactivity.commands = {
+  ["kr-disable-radioactivity"] = function()
+    global.radioactivity.disabled = true
+    game.print{"message.kr-radioactivity-disabled"}
+  end,
+  ["kr-enable-radioactivity"] = function()
+    global.radioactivity.enabled = true
+    game.print{"message.kr-radioactivity-enabled"}
+  end,
+}
+
 radioactivity.remote_interface = {
   add_entity = function(name)
     if not name or type(name) ~= "string" then

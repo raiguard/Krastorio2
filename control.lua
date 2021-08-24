@@ -13,6 +13,11 @@ local radioactivity = require("scripts.radioactivity")
 local roboport = require("scripts.roboport")
 local tesla_coil = require("scripts.tesla-coil")
 local virus = require("scripts.virus")
+local util = require("scripts.util")
+
+-- COMMANDS
+
+util.add_commands(radioactivity.commands)
 
 -- INTERFACES
 

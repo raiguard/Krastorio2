@@ -111,4 +111,17 @@ function util.change_mode_fx(entity, text, color)
   })
 end
 
+function util.add_commands(commands_list)
+  for name, func in pairs(commands_list) do
+    commands.add_command(name, {"command-help."..name}, function(e)
+      local player = game.get_player(e.player_index)
+      if not player.admin then
+        player.print{"cant-run-command-not-admin", name}
+      end
+
+      func(e)
+    end)
+  end
+end
+
 return util
