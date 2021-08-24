@@ -4,18 +4,6 @@ local constants = {}
 
 constants.biter_virus_evolution_multiplier = 0.67
 
-constants.default_radioactive_objects = {
-  [{"entities", "entity"}] = {"uranium-ore"},
-  [{"items", "item"}] = {
-    "nuclear-fuel",
-    "uranium-235",
-    "uranium-238",
-    "uranium-fuel-cell",
-    "uranium-ore",
-    "used-up-uranium-fuel-cell",
-  },
-}
-
 constants.inserter_drop_vectors = {
   [true] = {[0] = {0.01, -0.2}, [2] = {0.2, 0.01}, [4] = {-0.01, 0.2}, [6] = {-0.2, -0.01}}, -- Near lane
   [false] = { [0] = {0.0, 0.2}, [2] = {-0.2, 0.0}, [4] = {0.0, -0.2}, [6] = {0.2, 0.0}},  -- Far lane
@@ -36,6 +24,22 @@ constants.next_roboport_mode = {
   [""] = "construction",
   ["-construction-mode"] = "logistic",
   ["-logistic-mode"] = "normal",
+}
+
+constants.radioactivity_defaults = {
+  {type = "entity", tbl = "entities", objects = {"uranium-ore"}},
+  {
+    type = "item",
+    tbl = "items",
+    objects = {
+      "nuclear-fuel",
+      "uranium-235",
+      "uranium-238",
+      "uranium-fuel-cell",
+      "uranium-ore",
+      "used-up-uranium-fuel-cell",
+    },
+  },
 }
 
 constants.radioactivity_range = 7

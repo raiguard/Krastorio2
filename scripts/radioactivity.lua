@@ -12,10 +12,10 @@ function radioactivity.init()
 end
 
 function radioactivity.reset_entities_items()
-  for types, list in pairs(constants.default_radioactive_objects) do
-    global.radioactivity[types[1]] = {}
-    for _, name in pairs(list) do
-      radioactivity.remote_interface["add_"..types[2]](name)
+  for _, data in pairs(constants.radioactivity_defaults) do
+    global.radioactivity[data.tbl] = {}
+    for _, name in pairs(data.objects) do
+      radioactivity.remote_interface["add_"..data.type](name)
     end
   end
 end
@@ -43,7 +43,6 @@ function radioactivity.refresh_players()
   global.radioactivity.players = new
 end
 
--- TODO: Only check if the player moves tiles, not if they move at all
 function radioactivity.check_around_player(player)
   if not global.radioactivity.enabled then return end
 
