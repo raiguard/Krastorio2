@@ -124,7 +124,7 @@ end
 
 radioactivity.commands = {
   ["kr-disable-radioactivity"] = function()
-    global.radioactivity.disabled = true
+    global.radioactivity.enabled = false
     game.print{"message.kr-radioactivity-disabled"}
   end,
   ["kr-enable-radioactivity"] = function()
