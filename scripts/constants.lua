@@ -4,6 +4,17 @@ local constants = {}
 
 constants.biter_virus_evolution_multiplier = 0.67
 
+constants.bonus_items = {
+  {name = "construction-robot", count = 50},
+  {name = "modular-armor", count = 1},
+  {name = "car", count = 1},
+  {name = "big-battery-equipment", count = 1},
+  {name = "personal-roboport-equipment", count = 1},
+  {name = "small-portable-generator", count = 2},
+  {name = "cliff-explosives", count = 50},
+  {name = "landfill", count = 50},
+}
+
 constants.freeplay_crash_site_parts = {
   {
     name = "kr-crash-site-lab-repaired",

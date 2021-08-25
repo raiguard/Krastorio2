@@ -13,6 +13,7 @@ local virus = require("scripts.virus")
 local migrations = {}
 
 function migrations.generic()
+  freeplay.add_bonus_items()
   freeplay.add_to_crash_site()
   freeplay.disable_rocket_victory()
   util.ensure_turret_force()
