@@ -121,6 +121,7 @@ function util.add_commands(commands_list)
       local player = game.get_player(e.player_index)
       if not player.admin then
         player.print{"cant-run-command-not-admin", name}
+        return
       end
 
       func(e)
