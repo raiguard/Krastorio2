@@ -194,7 +194,7 @@ event.on_gui_opened(function(e)
       local player = game.get_player(e.player_index)
       local name = entity.name
       if name == "kr-planetary-teleporter" then
-        planetary_teleporter.open_gui(player, entity)
+        planetary_teleporter.create_gui(player, entity)
       elseif entity.type == "inserter" then
         inserter.update_gui(player, entity)
       elseif entity.type == "roboport" then

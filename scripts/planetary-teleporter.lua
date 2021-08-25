@@ -659,8 +659,8 @@ function planetary_teleporter.destroy(entity)
   -- TODO: handle edge case of deletion during a teleportation - perhaps the character should die?
   for _, entity_to_destroy in pairs(data.entities) do
     if entity_to_destroy.valid then
-      entity_to_destroy.destroy()
     end
+      entity_to_destroy.destroy()
   end
   -- Remove from lists
   global.planetary_teleporter.data[unit_number] = nil
@@ -676,7 +676,7 @@ function planetary_teleporter.destroy(entity)
   update_all_destination_tables()
 end
 
-planetary_teleporter.open_gui = open_gui
+planetary_teleporter.create_gui = create_gui
 
 function planetary_teleporter.on_focus_search(e)
   local gui_data = global.planetary_teleporter.guis[e.player_index]
@@ -727,9 +727,9 @@ function planetary_teleporter.on_player_setup_blueprint(e)
         if name then
           bp.set_blueprint_entity_tag(i, "kr_planetary_teleporter_name", name)
         end
+  end
       end
     end
-  end
 end
 
 function planetary_teleporter.update_players_in_range(source, target)
