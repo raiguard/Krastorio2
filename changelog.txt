@@ -15,6 +15,8 @@ Date: ????
     - The K2 crash site has been removed, now K2 simply adds more entities to the vanilla crash site
   Optimizations:
     - Massively simplified biter creep generation
+  Bugfixes:
+    - Fixed that biter creep would spawn outside of the map
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: ????

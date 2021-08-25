@@ -13,8 +13,10 @@ local function generate_creep(entities)
   local i = 0
   for _, entity in pairs(entities) do
     for _, tile in pairs(surface.find_tiles_filtered{position = entity.position, radius = radius}) do
-      i = i + 1
-      to_add[i] = {name = "kr-creep", position = tile.position}
+      if tile.name ~= "out-of-map" then
+        i = i + 1
+        to_add[i] = {name = "kr-creep", position = tile.position}
+      end
     end
   end
   surface.set_tiles(to_add)
@@ -70,7 +72,11 @@ creep.remote_interface = {
     surface.set_tiles(
       table.map(
         surface.find_tiles_filtered{position = position, radius = radius},
-        function(tile) return {name = "kr-creep", position = tile.position} end
+        function(tile)
+          if tile.name ~= "out-of-map" then
+            return {name = "kr-creep", position = tile.position}
+          end
+        end
       )
     )
   end,
