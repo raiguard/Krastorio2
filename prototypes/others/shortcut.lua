@@ -7,6 +7,7 @@ data:extend{
     icon = {filename = data_util.empty_image, size = 1},
     action = "spawn-item",
     item_to_spawn = "kr-creep-collector",
+    associated_control_input = "kr-creep-collector",
   },
   {
     type = "shortcut",
@@ -14,5 +15,6 @@ data:extend{
     icon = {filename = data_util.empty_image, size = 1},
     action = "spawn-item",
     item_to_spawn = "kr-jackhammer",
+    associated_control_input = "kr-jackhammer",
   },
 }

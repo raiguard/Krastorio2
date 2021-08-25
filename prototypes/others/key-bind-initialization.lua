@@ -16,4 +16,18 @@ data:extend({
     key_sequence = "",
     linked_game_control = "focus-search",
   },
+  {
+    type = "custom-input",
+    name = "kr-creep-collector",
+    key_sequence = "ALT + C",
+    action = "spawn-item",
+    item_to_spawn = "kr-creep-collector",
+  },
+  {
+    type = "custom-input",
+    name = "kr-jackhammer",
+    key_sequence = "ALT + J",
+    action = "spawn-item",
+    item_to_spawn = "kr-jackhammer",
+  },
 })
