@@ -28,7 +28,6 @@ function shelter.build(entity)
     force_data.inactive_shelters[entity.unit_number] = entity
     entity.active = false
     entity.operable = false
-    util.entity_flying_text(entity, {"message.kr-shelter-is-inactive"}, {r = 1})
   else
     -- Build entities
     local _, _, base_name = string.find(entity.name, "^(.*)%-container")
@@ -82,8 +81,12 @@ end
 
 function shelter.spawn_flying_texts()
   for _, force_data in pairs(global.shelter) do
-    for _, entity in pairs(force_data.inactive_shelters) do
-      util.entity_flying_text(entity, {"message.kr-shelter-is-inactive"}, {r = 1})
+    for unit_number, entity in pairs(force_data.inactive_shelters) do
+      if entity.valid then
+        util.entity_flying_text(entity, {"message.kr-shelter-is-inactive"}, {r = 1})
+      else
+        force_data.inactive_shelters[unit_number] = nil
+      end
     end
   end
 end
