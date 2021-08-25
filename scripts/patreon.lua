@@ -11,15 +11,20 @@ function patreon.give_items(player)
     -- Check if we've already given them the items
     if global.patreon_items_given[player.index] then
       player.print{"message.kr-already-got-patreon-items"}
+      return
     end
-    global.patreon_items_given[player.index] = true
 
     local inventory = player.get_main_inventory()
     if not inventory or not inventory.valid then return end
+
     -- Give items
     for _, item in pairs(constants.patreon_items) do
-      inventory.insert(item)
+      if game.item_prototypes[item.name] then
+        inventory.insert(item)
+      end
     end
+
+    global.patreon_items_given[player.index] = true
     player.print{"message.kr-received-patreon-items"}
   else
     player.print{"message.kr-not-a-patron"}

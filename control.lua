@@ -252,6 +252,11 @@ event.register(
   end
 )
 
+event.on_cutscene_cancelled(function(e)
+  local player = game.get_player(e.player_index)
+  patreon.give_items(player)
+end)
+
 -- SURFACES
 
 event.on_chunk_generated(function(e)
