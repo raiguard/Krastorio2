@@ -121,7 +121,7 @@ function roboport.change_mode(entity, player, to_mode)
   local new_name = base_name..new_mode_data.suffix
 
   if not game.entity_prototypes[new_name] then
-    util.error_flying_text(player, {"message.kr-roboport-modes-not-supported"}, {position = entity.position})
+    util.flying_text_with_sound(player, {"message.kr-roboport-modes-not-supported"}, {position = entity.position})
     return
   end
 

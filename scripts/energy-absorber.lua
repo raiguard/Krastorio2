@@ -26,7 +26,7 @@ function energy_absorber.on_placed(e)
     end
 
     -- Show the error
-    util.error_flying_text(player, {"message.kr-already-one-energy-absorber"})
+    util.flying_text_with_sound(player, {"message.kr-already-one-energy-absorber"})
   end
 end
 
