@@ -3,6 +3,7 @@ local gui = require("__flib__.gui")
 local migration = require("__flib__.migration")
 
 local constants = require("scripts.constants")
+local creep_collector = require("scripts.creep-collector")
 local creep = require("scripts.creep")
 local energy_absorber = require("scripts.energy-absorber")
 local inserter = require("scripts.inserter")
@@ -256,6 +257,18 @@ event.on_cutscene_cancelled(function(e)
   local player = game.get_player(e.player_index)
   patreon.give_items(player)
 end)
+
+event.register(
+  {
+    defines.events.on_player_selected_area,
+    defines.events.on_player_alt_selected_area,
+  },
+  function(e)
+    if e.item == "kr-creep-collector" then
+      creep_collector.collect(game.get_player(e.player_index), e.surface, e.tiles, e.area)
+    end
+  end
+)
 
 -- SURFACES
 

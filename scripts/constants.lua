@@ -15,6 +15,13 @@ constants.bonus_items = {
   {name = "landfill", count = 50},
 }
 
+constants.creep_collection_rate = {
+  min = 30,
+  max = 80
+}
+
+constants.creep_max_reach = 10
+
 constants.freeplay_crash_site_parts = {
   {
     name = "kr-crash-site-lab-repaired",
