@@ -1,4 +1,5 @@
 local creep = require("scripts.creep")
+local freeplay = require("scripts.freeplay")
 local inserter = require("scripts.inserter")
 local patreon = require("scripts.patreon")
 local planetary_teleporter = require("scripts.planetary-teleporter")
@@ -12,8 +13,8 @@ local virus = require("scripts.virus")
 local migrations = {}
 
 function migrations.generic()
-  util.add_to_crash_site()
-  util.disable_rocket_victory()
+  freeplay.add_to_crash_site()
+  freeplay.disable_rocket_victory()
   util.ensure_turret_force()
 
   radioactivity.reset_entities_items()

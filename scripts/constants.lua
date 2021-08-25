@@ -4,6 +4,55 @@ local constants = {}
 
 constants.biter_virus_evolution_multiplier = 0.67
 
+constants.freeplay_crash_site_parts = {
+  {
+    name = "kr-crash-site-lab-repaired",
+    angle_deviation = 0.05,
+    max_distance = 30,
+    min_separation = 10,
+    fire_count = 3,
+    explosion_count = 1,
+  },
+  {
+    name = "kr-crash-site-assembling-machine-1-repaired",
+    repeat_count = 2,
+    angle_deviation = 0.3,
+    max_distance = 20,
+    min_separation = 5,
+    fire_count = 1,
+  },
+  {
+    name = "kr-crash-site-assembling-machine-2-repaired",
+    repeat_count = 2,
+    angle_deviation = 0.3,
+    max_distance = 20,
+    min_separation = 5,
+    fire_count = 1,
+  },
+  {
+    name = "kr-crash-site-chest-1",
+    repeat_count = 3,
+    angle_deviation = 0.1,
+    max_distance = 20,
+    min_separation = 3,
+    fire_count = 1,
+  },
+  {
+    name = "kr-crash-site-chest-2",
+    repeat_count = 3,
+    angle_deviation = 0.1,
+    max_distance = 20,
+    min_separation = 2,
+    fire_count = 1,
+  },
+  {
+    name = "kr-mineable-wreckage",
+    repeat_count = 9,
+    angle_deviation = 0.8,
+    max_distance = 10,
+  },
+}
+
 constants.high_patrons = {
   -- Mod Developers
   ["krastor"] = true,
