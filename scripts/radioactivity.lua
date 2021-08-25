@@ -49,6 +49,8 @@ function radioactivity.check_around_player(player)
   if not global.radioactivity.enabled then return end
 
   local player_data = global.radioactivity.players[player.index]
+  if not player_data then return end
+
   if not player.character or not player.character.valid then
     player_data.entity = false
     return
