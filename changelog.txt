@@ -10,6 +10,8 @@ Date: ????
       - Increased tesla coil charging speed
   Changes:
     - Biter creep only spawns on Nauvis
+    - The mod no longer prevents you from placing multiple shelters
+      - Instead, shelters placed after the first one will show an "inactive" warning, and will not function whatsoever
     - The K2 crash site has been removed, now K2 simply adds more entities to the vanilla crash site
   Optimizations:
     - Massively simplified biter creep generation

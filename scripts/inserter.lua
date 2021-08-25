@@ -133,6 +133,4 @@ function inserter.copy_settings(source, destination)
   end
 end
 
--- TODO: Add relative GUI
-
 return inserter

@@ -4,6 +4,66 @@ local constants = {}
 
 constants.biter_virus_evolution_multiplier = 0.67
 
+constants.high_patrons = {
+  -- Mod Developers
+  ["krastor"] = true,
+  ["linver"] = true,
+  ["raiguard"] = true,
+  -- Factorio Developers
+  ["bilka"] = true,
+  ["kovarex"] = true,
+  ["slpwnd"] = true,
+  ["glex"] = true,
+  ["twinsen"] = true,
+  ["posila"] = true,
+  ["oxyd"] = true,
+  ["rseding"] = true,
+  ["v453000"] = true,
+  ["klonan"] = true,
+  ["wheybags"] = true,
+  ["zopa"] = true,
+  -- Patreons
+  ["astazora"] = true,
+  ["biusart"] = true,
+  ["mkaito"] = true,
+  ["dmitrii"] = true,
+  ["egdod"] = true,
+  ["cvamp"] = true,
+  ["dr.feelgood999"] = true,
+  ["darkstroker"] = true,
+  ["andromedafallen"] = true,
+  ["andrewskier"] = true,
+  ["aski_raven"] = true,
+  ["wassabee"] = true,
+  ["jonasrejman"] = true,
+  ["melphin"] = true,
+  ["moonded"] = true,
+  ["reysdad"] = true,
+  ["rivsung"] = true,
+  ["grumblesxl"] = true,
+  ["pandabeezy"] = true,
+  ["nukeufo"] = true,
+  ["therightmark"] = true,
+  ["senard"] = true,
+  ["jkkelley86"] = true,
+  ["rougefallout365"] = true,
+  ["gbs5009"] = true,
+  ["vladhc"] = true,
+  ["tobi"] = true,
+  ["tobivollebregt"] = true,
+  ["max.perry"] = true,
+  ["djnaphthalin"] = true,
+  ["circk"] = true,
+  ["dusk88"] = true,
+  ["generaltank"] = true,
+  ["lordfish"] = true,
+  ["zippyit"] = true,
+  ["sollevix"] = true,
+  ["tobi"] = true,
+  ["quezler"] = true,
+  ["antt1995"] = true,
+}
+
 constants.inserter_drop_vectors = {
   [true] = {[0] = {0.01, -0.2}, [2] = {0.2, 0.01}, [4] = {-0.01, 0.2}, [6] = {-0.2, -0.01}}, -- Near lane
   [false] = { [0] = {0.0, 0.2}, [2] = {-0.2, 0.0}, [4] = {0.0, -0.2}, [6] = {0.2, 0.0}},  -- Far lane
@@ -24,6 +84,13 @@ constants.next_roboport_mode = {
   [""] = "construction",
   ["-construction-mode"] = "logistic",
   ["-logistic-mode"] = "normal",
+}
+
+constants.patreon_items = {
+  {name = "kr-shelter-plus", count = 1},
+  {name = "kr-accelerator", count = 1},
+  {name = "firearm-magazine", count = 190},
+  {name = "potato", count = 6},
 }
 
 constants.radioactivity_defaults = {

@@ -8,6 +8,7 @@ local energy_absorber = require("scripts.energy-absorber")
 local inserter = require("scripts.inserter")
 local loader_snapping = require("scripts.loader-snapping")
 local migrations = require("scripts.migrations")
+local patreon = require("scripts.patreon")
 local planetary_teleporter = require("scripts.planetary-teleporter")
 local radioactivity = require("scripts.radioactivity")
 local roboport = require("scripts.roboport")
@@ -18,6 +19,7 @@ local virus = require("scripts.virus")
 
 -- COMMANDS
 
+util.add_commands(patreon.commands)
 util.add_commands(radioactivity.commands)
 
 -- INTERFACES
@@ -31,6 +33,7 @@ event.on_init(function()
   -- Initialize `global` table
   creep.init()
   inserter.init()
+  patreon.init()
   planetary_teleporter.init()
   radioactivity.init()
   roboport.init()
@@ -210,6 +213,7 @@ event.on_player_used_capsule(virus.on_player_used_capsule)
 event.on_player_created(function(e)
   local player = game.get_player(e.player_index)
   inserter.refresh_gui(player)
+  patreon.give_items(player)
   planetary_teleporter.request_translation(player)
   radioactivity.add_player(player)
   roboport.refresh_gui(player)
