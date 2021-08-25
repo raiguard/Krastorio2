@@ -53,30 +53,6 @@ return {
   },
   {
     type = "recipe",
-    name = "kr-creep-collector",
-    energy_required = 3,
-    enabled = false,
-    ingredients = {
-      { "iron-stick", 1 },
-      { "iron-gear-wheel", 5 },
-      { "automation-core", 1 },
-    },
-    result = "kr-creep-collector",
-  },
-  {
-    type = "recipe",
-    name = "kr-jackhammer",
-    energy_required = 3,
-    enabled = false,
-    ingredients = {
-      { "iron-stick", 1 },
-      { "engine-unit", 1 },
-      { "steel-plate", 1 },
-    },
-    result = "kr-jackhammer",
-  },
-  {
-    type = "recipe",
     name = "first-aid-kit",
     energy_required = 5,
     enabled = false,
