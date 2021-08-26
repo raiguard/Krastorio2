@@ -10,6 +10,7 @@ local inserter = require("scripts.inserter")
 local jackhammer = require("scripts.jackhammer")
 local loader_snapping = require("scripts.loader-snapping")
 local migrations = require("scripts.migrations")
+local offshore_pump = require("scripts.offshore-pump")
 local patreon = require("scripts.patreon")
 local planetary_teleporter = require("scripts.planetary-teleporter")
 local radioactivity = require("scripts.radioactivity")
@@ -95,6 +96,8 @@ event.register(
       shelter.build(entity)
     elseif entity_name == "kr-tesla-coil" then
       tesla_coil.build(entity)
+    elseif entity_name == "offshore-pump" then
+      offshore_pump.build(entity)
     elseif constants.loader_names[entity_name] then
       loader_snapping.snap(entity)
     elseif constants.transport_belt_connectable_types[entity_type] then
@@ -232,7 +235,47 @@ event.on_player_joined_game(function(e)
   radioactivity.check_inventory(player)
 end)
 
-event.on_player_setup_blueprint(planetary_teleporter.on_player_setup_blueprint)
+event.on_player_setup_blueprint(function(e)
+  local player = game.get_player(e.player_index)
+
+  -- Get blueprint
+  local bp = player.blueprint_to_setup
+  if not bp or not bp.valid_for_read then
+    bp = player.cursor_stack
+    if bp.type == "blueprint-book" then
+      local item_inventory = bp.get_inventory(defines.inventory.item_main)
+      if item_inventory then
+        bp = item_inventory[bp.active_index]
+      else
+        return
+      end
+    end
+  end
+
+  -- Get blueprint entities and mapping
+  local entities = bp.get_blueprint_entities()
+  if not entities then return end
+  local mapping = e.mapping.get()
+
+  -- Iterate each entity
+  local changed_entity = false
+  for i = 1, #entities do
+    local entity = entities[i]
+    local entity_name = entity.name
+    if entity_name == "kr-electric-offshore-pump" then
+      changed_entity = true
+      offshore_pump.setup_blueprint(entity)
+    elseif entity_name == "kr-planetary-teleporter" then
+      changed_entity = true
+      planetary_teleporter.setup_blueprint(entity, mapping[i])
+    end
+  end
+
+  -- Set entities
+  if changed_entity then
+    bp.set_blueprint_entities(entities)
+  end
+end)
 
 event.on_player_changed_position(function(e)
   radioactivity.check_around_player(game.get_player(e.player_index))
