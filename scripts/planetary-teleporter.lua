@@ -1,7 +1,5 @@
 local gui = require("__flib__/gui-beta")
 
-local pt_entity_name = "kr-planetary-teleporter"
-
 local planetary_teleporter = {}
 
 local function teleport_player(player, from, to)
@@ -701,34 +699,16 @@ function planetary_teleporter.on_string_translated(e)
   end
 end
 
-function planetary_teleporter.on_player_setup_blueprint(e)
-  local player = game.get_player(e.player_index)
-
-  -- Get blueprint
-  local bp = player.blueprint_to_setup
-  if not bp or not bp.valid_for_read then
-    bp = player.cursor_stack
-  end
-
-  -- Get blueprint entities and mapping
-  local entities = bp.get_blueprint_entities()
-  if not entities then
-    return
-  end
-  local mapping = e.mapping.get()
-
-  -- Find any planetary teleporters in this blueprint
-  for i, bp_entity in ipairs(entities) do
-    if bp_entity.name == pt_entity_name then
-      local entity = mapping[i]
-      if entity and entity.valid then
-        local name = global.planetary_teleporter.data[entity.unit_number].name
-        if name then
-          bp.set_blueprint_entity_tag(i, "kr_planetary_teleporter_name", name)
-        end
-  end
+function planetary_teleporter.setup_blueprint(entity, real_entity)
+  if real_entity and real_entity.valid then
+    local name = global.planetary_teleporter.data[real_entity.unit_number].name
+    if name then
+      if not entity.tags then
+        entity.tags = {}
       end
+      entity.tags.kr_planetary_teleporter_name = name
     end
+  end
 end
 
 function planetary_teleporter.update_players_in_range(source, target)
