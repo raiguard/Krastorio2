@@ -7,6 +7,7 @@ local creep_collector = require("scripts.creep-collector")
 local creep = require("scripts.creep")
 local energy_absorber = require("scripts.energy-absorber")
 local inserter = require("scripts.inserter")
+local jackhammer = require("scripts.jackhammer")
 local loader_snapping = require("scripts.loader-snapping")
 local migrations = require("scripts.migrations")
 local patreon = require("scripts.patreon")
@@ -264,8 +265,11 @@ event.register(
     defines.events.on_player_alt_selected_area,
   },
   function(e)
+    local player = game.get_player(e.player_index)
     if e.item == "kr-creep-collector" then
-      creep_collector.collect(game.get_player(e.player_index), e.surface, e.tiles, e.area)
+      creep_collector.collect(player, e.surface, e.tiles, e.area)
+    elseif e.item == "kr-jackhammer" then
+      jackhammer.collect(player, e.surface, e.tiles, e.area)
     end
   end
 )
