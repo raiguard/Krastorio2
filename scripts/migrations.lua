@@ -1,6 +1,7 @@
 local creep = require("scripts.creep")
 local freeplay = require("scripts.freeplay")
 local inserter = require("scripts.inserter")
+local intergalactic_transceiver = require("scripts.intergalactic-transceiver")
 local patreon = require("scripts.patreon")
 local planetary_teleporter = require("scripts.planetary-teleporter")
 local radioactivity = require("scripts.radioactivity")
@@ -67,6 +68,7 @@ migrations.versions = {
 
     creep.init()
     inserter.init()
+    intergalactic_transceiver.init()
     patreon.init()
     planetary_teleporter.init()
     radioactivity.init()

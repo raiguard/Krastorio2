@@ -273,6 +273,60 @@ local intergalactic_transceiver_working_sound = {
   fade_out_ticks = 30,
 }
 
+local intergalactic_transceiver_picture = {
+  layers = {
+    {
+      filename = kr_entities_path .. "intergalactic-transceiver/intergalactic-transceiver-light.png",
+      width = 400,
+      height = 400,
+      frame_count = 1,
+      shift = { 0, -0.8 },
+      draw_as_light = true,
+      hr_version = {
+        filename = kr_entities_path .. "intergalactic-transceiver/hr-intergalactic-transceiver-light.png",
+        width = 800,
+        height = 800,
+        scale = 0.5,
+        frame_count = 1,
+        shift = { 0, -0.8 },
+        draw_as_light = true,
+      },
+    },
+    {
+      filename = kr_entities_path .. "intergalactic-transceiver/intergalactic-transceiver.png",
+      width = 400,
+      height = 400,
+      frame_count = 1,
+      shift = { 0, -0.8 },
+      hr_version = {
+        filename = kr_entities_path .. "intergalactic-transceiver/hr-intergalactic-transceiver.png",
+        width = 800,
+        height = 800,
+        scale = 0.5,
+        frame_count = 1,
+        shift = { 0, -0.8 },
+      },
+    },
+    {
+      filename = kr_entities_path .. "intergalactic-transceiver/intergalactic-transceiver-sh.png",
+      width = 434,
+      height = 313,
+      frame_count = 1,
+      draw_as_shadow = true,
+      shift = { 0.52, 0.5 },
+      hr_version = {
+        filename = kr_entities_path .. "intergalactic-transceiver/hr-intergalactic-transceiver-sh.png",
+        width = 867,
+        height = 626,
+        scale = 0.5,
+        frame_count = 1,
+        draw_as_shadow = true,
+        shift = { 0.52, 0.5 },
+      },
+    },
+  },
+}
+
 data:extend({
   -- Normal
   {
@@ -285,6 +339,7 @@ data:extend({
     map_color = { r = 0.37, g = 0.18, b = 0.47 },
     max_health = 20000,
     minable = { mining_time = 10, result = "kr-intergalactic-transceiver" },
+    placeable_by = {item = "kr-intergalactic-transceiver", count = 1},
     corpse = "kr-big-random-pipes-remnant",
     dying_explosion = "nuclear-reactor-explosion",
     damaged_trigger_effect = hit_effects.entity(),
@@ -303,59 +358,7 @@ data:extend({
       input_flow_limit = "60GW",
       output_flow_limit = "0W",
     },
-    picture = {
-      layers = {
-        {
-          filename = kr_entities_path .. "intergalactic-transceiver/intergalactic-transceiver-light.png",
-          width = 400,
-          height = 400,
-          frame_count = 1,
-          shift = { 0, -0.8 },
-          draw_as_light = true,
-          hr_version = {
-            filename = kr_entities_path .. "intergalactic-transceiver/hr-intergalactic-transceiver-light.png",
-            width = 800,
-            height = 800,
-            scale = 0.5,
-            frame_count = 1,
-            shift = { 0, -0.8 },
-            draw_as_light = true,
-          },
-        },
-        {
-          filename = kr_entities_path .. "intergalactic-transceiver/intergalactic-transceiver.png",
-          width = 400,
-          height = 400,
-          frame_count = 1,
-          shift = { 0, -0.8 },
-          hr_version = {
-            filename = kr_entities_path .. "intergalactic-transceiver/hr-intergalactic-transceiver.png",
-            width = 800,
-            height = 800,
-            scale = 0.5,
-            frame_count = 1,
-            shift = { 0, -0.8 },
-          },
-        },
-        {
-          filename = kr_entities_path .. "intergalactic-transceiver/intergalactic-transceiver-sh.png",
-          width = 434,
-          height = 313,
-          frame_count = 1,
-          draw_as_shadow = true,
-          shift = { 0.52, 0.5 },
-          hr_version = {
-            filename = kr_entities_path .. "intergalactic-transceiver/hr-intergalactic-transceiver-sh.png",
-            width = 867,
-            height = 626,
-            scale = 0.5,
-            frame_count = 1,
-            draw_as_shadow = true,
-            shift = { 0.52, 0.5 },
-          },
-        },
-      },
-    },
+    picture = intergalactic_transceiver_picture,
     charge_animation = intergalactic_transceiver_animation,
     discharge_animation = intergalactic_transceiver_animation,
     charge_cooldown = 240,
@@ -380,6 +383,7 @@ data:extend({
     map_color = { r = 0.37, g = 0.18, b = 0.47 },
     max_health = 10000,
     minable = { mining_time = 10, result = "kr-intergalactic-transceiver" },
+    placeable_by = {item = "kr-intergalactic-transceiver", count = 1},
     corpse = "kr-big-random-pipes-remnant",
     dying_explosion = "nuclear-reactor-explosion",
     damaged_trigger_effect = hit_effects.entity(),
@@ -408,4 +412,25 @@ data:extend({
     continuous_animation = true,
     working_sound = intergalactic_transceiver_working_sound,
   },
+  {
+    type = "simple-entity-with-owner",
+    name = "kr-inactive-intergalactic-transceiver",
+    localised_name = {"entity-name.kr-intergalactic-transceiver"},
+    localised_description = {"entity-description.kr-intergalactic-transceiver"},
+    icon = kr_entities_icons_path .. "intergalactic-transceiver.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {"hidden", "not-on-map"},
+    minable = { mining_time = 10, result = "kr-intergalactic-transceiver" },
+    placeable_by = {item = "kr-intergalactic-transceiver", count = 1},
+    picture = intergalactic_transceiver_picture,
+    collision_box = { { -5.75, -5.25 }, { 5.75, 5.25 } },
+    selection_box = { { -6, -5.5 }, { 6, 5.5 } },
+    drawing_box = { { -5.75, -5.25 }, { 5.75, 5.25 } },
+    resistances = {
+      { type = "physical", percent = 75 },
+      { type = "fire", percent = 75 },
+      { type = "impact", percent = 75 },
+    },
+  }
 })

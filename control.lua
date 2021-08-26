@@ -7,6 +7,7 @@ local creep_collector = require("scripts.creep-collector")
 local creep = require("scripts.creep")
 local energy_absorber = require("scripts.energy-absorber")
 local inserter = require("scripts.inserter")
+local intergalactic_transceiver = require("scripts.intergalactic-transceiver")
 local jackhammer = require("scripts.jackhammer")
 local loader_snapping = require("scripts.loader-snapping")
 local migrations = require("scripts.migrations")
@@ -36,6 +37,7 @@ event.on_init(function()
   -- Initialize `global` table
   creep.init()
   inserter.init()
+  intergalactic_transceiver.init()
   patreon.init()
   planetary_teleporter.init()
   radioactivity.init()
@@ -90,7 +92,9 @@ event.register(
     local entity_name = entity.name
     local entity_type = entity.type
 
-    if entity_name == "kr-planetary-teleporter" then
+    if entity_name == "kr-intergalactic-transceiver" then
+      intergalactic_transceiver.build(entity)
+    elseif entity_name == "kr-planetary-teleporter" then
       planetary_teleporter.build(entity, e.tags)
     elseif entity_name == "kr-shelter-container" or entity_name == "kr-shelter-plus-container" then
       shelter.build(entity)
@@ -126,7 +130,11 @@ event.register(
     local entity = e.entity
     if not entity or not entity.valid then return end
     local entity_name = entity.name
-    if entity_name == "kr-shelter-container" or entity_name == "kr-shelter-plus-container" then
+    if entity_name == "kr-intergalactic-transceiver" then
+      intergalactic_transceiver.destroy(entity)
+    elseif entity_name == "kr-inactive-intergalactic-transceiver" then
+      intergalactic_transceiver.destroy_inactive(entity)
+    elseif entity_name == "kr-shelter-container" or entity_name == "kr-shelter-plus-container" then
       shelter.destroy(entity)
     elseif entity_name == "kr-planetary-teleporter" then
       planetary_teleporter.destroy(entity)
@@ -343,6 +351,7 @@ event.on_nth_tick(20, function()
 end)
 
 event.on_nth_tick(180, function()
+  intergalactic_transceiver.spawn_flying_texts()
   shelter.spawn_flying_texts()
 end)
 
