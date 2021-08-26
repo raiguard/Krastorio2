@@ -659,8 +659,8 @@ function planetary_teleporter.destroy(entity)
   -- TODO: handle edge case of deletion during a teleportation - perhaps the character should die?
   for _, entity_to_destroy in pairs(data.entities) do
     if entity_to_destroy.valid then
-    end
       entity_to_destroy.destroy()
+    end
   end
   -- Remove from lists
   global.planetary_teleporter.data[unit_number] = nil
