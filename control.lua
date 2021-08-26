@@ -101,7 +101,6 @@ event.register(
       loader_snapping.snap_belt_neighbours(entity)
     end
   end
-  -- TODO: Filters
 )
 
 event.on_player_rotated_entity(function(e)
@@ -132,7 +131,6 @@ event.register(
       tesla_coil.destroy(entity)
     end
   end
-  -- TODO: Filters
 )
 
 event.on_entity_destroyed(function(e)

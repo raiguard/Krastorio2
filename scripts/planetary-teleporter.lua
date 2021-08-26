@@ -664,7 +664,6 @@ function planetary_teleporter.destroy(entity)
   end
   -- Remove from lists
   global.planetary_teleporter.data[unit_number] = nil
-  -- TODO: valid check?
   -- Close any open GUIs
   for _, gui_data in pairs(global.planetary_teleporter.guis) do
     local other_entity = gui_data.state.entity

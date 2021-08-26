@@ -77,7 +77,6 @@ function inserter.init()
   global.temp_inserter_settings = {}
 end
 
--- TODO: Update last_user
 function inserter.change_lane(entity)
   local is_far, drop_pos_vector = get_is_far(entity)
 
