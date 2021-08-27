@@ -49,6 +49,7 @@ function intergalactic_transceiver.build(entity)
     entity = entity,
     last_alert_tick = game.tick,
     last_energy = entity.energy,
+    status = "empty",
   }
 end
 
@@ -70,19 +71,22 @@ local constants = {
 function intergalactic_transceiver.iterate()
   local transceivers = global.intergalactic_transceiver.forces
   for force_index, data in pairs(transceivers) do
-    -- TODO: Keep track of "state" in the data
     local entity = data.entity
     if entity and entity.valid then
       local current_energy = entity.energy
       local new_energy = current_energy
       local difference = current_energy - data.last_energy
-      local alert
+      local status = "charging"
       -- If we're not receiving enough power
       if difference < constants.delta and current_energy > 0 then
         -- Drain the transceiver at 3 TJ / sec
         new_energy = math.max(0, current_energy - constants.drain)
-        -- Alert the force
-        alert = "TRANSCEIVER IS LOSING ENERGY"
+        -- Update status
+        if new_energy > 0 then
+          status = "discharging"
+        else
+          status = "empty"
+        end
       else
         -- TODO: Cache this
         -- The max that we allow, for graphical reasons
@@ -90,10 +94,10 @@ function intergalactic_transceiver.iterate()
         -- just below the max
         local max_energy = entity.prototype.electric_energy_source_prototype.buffer_capacity - constants.delta
         -- If we're above the allowed max
-        if max_energy <= current_energy then
+        if current_energy > max_energy then
           -- Reset the energy to the allowed max
           new_energy = max_energy
-          alert = "TRANSCEIVER IS READY"
+          status = "ready"
         end
       end
 
@@ -101,17 +105,18 @@ function intergalactic_transceiver.iterate()
       if new_energy ~= current_energy then
         entity.energy = new_energy
       end
-      -- Save the new energy
+      -- Save data
       data.last_energy = new_energy
+      data.status = status
 
       -- If we wish to show an alert and it's been more than a second since the last one
-      if alert and game.tick - data.last_alert_tick >= 60 then
+      if status ~= "charging" and game.tick - data.last_alert_tick >= 60 then
         data.last_alert_tick = game.tick
         for _, player in pairs(entity.force.players) do
           player.add_custom_alert(
             entity,
             {type = "item", name = "kr-intergalactic-transceiver"},
-            alert,
+            status,
             true
           )
         end
