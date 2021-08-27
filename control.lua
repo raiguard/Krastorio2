@@ -340,6 +340,7 @@ event.on_script_trigger_effect(function(e)
 end)
 
 event.on_tick(function()
+  intergalactic_transceiver.iterate()
   planetary_teleporter.update_all_destination_availability()
   planetary_teleporter.update_gui_statuses()
   radioactivity.update_sounds()
@@ -347,7 +348,6 @@ event.on_tick(function()
 end)
 
 event.on_nth_tick(20, function()
-  intergalactic_transceiver.iterate()
   radioactivity.update_and_damage()
 end)
 

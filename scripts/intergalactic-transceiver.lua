@@ -47,6 +47,7 @@ function intergalactic_transceiver.build(entity)
 
   global.intergalactic_transceiver.forces[entity.force.index] = {
     entity = entity,
+    last_alert_tick = game.tick,
     last_energy = entity.energy,
   }
 end
@@ -60,6 +61,12 @@ function intergalactic_transceiver.destroy_inactive(entity)
   global.intergalactic_transceiver.inactive[entity.unit_number] = nil
 end
 
+local constants = {
+  delta = 1e9,
+  drain = 50e9,
+  max_delta = 2e9
+}
+
 function intergalactic_transceiver.iterate()
   local transceivers = global.intergalactic_transceiver.forces
   for force_index, data in pairs(transceivers) do
@@ -68,29 +75,35 @@ function intergalactic_transceiver.iterate()
     if entity and entity.valid then
       local current_energy = entity.energy
       local difference = current_energy - data.last_energy
-      -- If we were charging at less than 60 GW, the singularity is not stable and is losing energy.
-      -- Remove 1 TJ every 20 ticks.
-      -- If we're within 20 ticks of being fully charged, maintain the not-quite-charged status to continue the
-      -- animation and power draw.
-      -- TODO: Add these to constants
       -- TODO: Cache this
-      local max_energy = entity.prototype.electric_energy_source_prototype.buffer_capacity - 2e9
-      if difference < 2e9 and current_energy > 0 then
-        entity.energy = math.max(0, current_energy - 8e11)
+      local max_energy = entity.prototype.electric_energy_source_prototype.buffer_capacity - constants.delta
+      local new_energy = current_energy
+      local alert
+      if difference < constants.delta and current_energy > 0 then
+        new_energy = math.max(0, current_energy - constants.drain)
+        alert = "TRANSCEIVER IS LOSING ENERGY"
       else
         if max_energy <= current_energy then
-          entity.energy = math.min(max_energy - 2e9, current_energy)
-          for _, player in pairs(entity.force.players) do
-            player.add_custom_alert(
-              entity,
-              {type = "item", name = "kr-intergalactic-transceiver"},
-              "TRANSCEIVER IS READY",
-              true
-            )
-          end
+          new_energy = math.min(max_energy - constants.delta, current_energy)
+          alert = "TRANSCEIVER IS READY"
         end
       end
-      data.last_energy = current_energy
+      if new_energy ~= current_energy then
+        entity.energy = new_energy
+      end
+      data.last_energy = new_energy
+
+      if alert and game.tick - data.last_alert_tick >= 60 then
+        data.last_alert_tick = game.tick
+        for _, player in pairs(entity.force.players) do
+          player.add_custom_alert(
+            entity,
+            {type = "item", name = "kr-intergalactic-transceiver"},
+            alert,
+            true
+          )
+        end
+      end
     else
       transceivers[force_index] = nil
     end
