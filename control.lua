@@ -347,6 +347,7 @@ event.on_tick(function()
 end)
 
 event.on_nth_tick(20, function()
+  intergalactic_transceiver.iterate()
   radioactivity.update_and_damage()
 end)
 
