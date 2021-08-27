@@ -74,25 +74,37 @@ function intergalactic_transceiver.iterate()
     local entity = data.entity
     if entity and entity.valid then
       local current_energy = entity.energy
-      local difference = current_energy - data.last_energy
-      -- TODO: Cache this
-      local max_energy = entity.prototype.electric_energy_source_prototype.buffer_capacity - constants.delta
       local new_energy = current_energy
+      local difference = current_energy - data.last_energy
       local alert
+      -- If we're not receiving enough power
       if difference < constants.delta and current_energy > 0 then
+        -- Drain the transceiver at 3 TJ / sec
         new_energy = math.max(0, current_energy - constants.drain)
+        -- Alert the force
         alert = "TRANSCEIVER IS LOSING ENERGY"
       else
+        -- TODO: Cache this
+        -- The max that we allow, for graphical reasons
+        -- If we allow the transceiver to fully charge, the animation stops, which we don't want, so we cap the energy
+        -- just below the max
+        local max_energy = entity.prototype.electric_energy_source_prototype.buffer_capacity - constants.delta
+        -- If we're above the allowed max
         if max_energy <= current_energy then
-          new_energy = math.min(max_energy - constants.delta, current_energy)
+          -- Reset the energy to the allowed max
+          new_energy = max_energy
           alert = "TRANSCEIVER IS READY"
         end
       end
+
+      -- If we are updating the amount of energy in the transceiver
       if new_energy ~= current_energy then
         entity.energy = new_energy
       end
+      -- Save the new energy
       data.last_energy = new_energy
 
+      -- If we wish to show an alert and it's been more than a second since the last one
       if alert and game.tick - data.last_alert_tick >= 60 then
         data.last_alert_tick = game.tick
         for _, player in pairs(entity.force.players) do
