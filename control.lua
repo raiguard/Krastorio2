@@ -187,7 +187,7 @@ local function handle_gui_event(e)
     if msg.gui == "inserter" then
       inserter.handle_gui_action(msg, e)
     elseif msg.gui == "intergalactic_transceiver" then
-      intergalactic_transceiver.gui_actions[msg.action](e, msg.payload)
+      intergalactic_transceiver.gui_actions[msg.action](e)
     elseif msg.gui == "planetary_teleporter" then
       planetary_teleporter.handle_gui_action(msg, e)
     elseif msg.gui == "roboport" then
