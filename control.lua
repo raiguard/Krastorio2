@@ -1,6 +1,7 @@
 local event = require("__flib__.event")
 local gui = require("__flib__.gui")
 local migration = require("__flib__.migration")
+local on_tick_n = require("__flib__.on-tick-n")
 
 local constants = require("scripts.constants")
 local creep_collector = require("scripts.creep-collector")
@@ -34,6 +35,9 @@ remote.add_interface("kr-radioactivity", radioactivity.remote_interface)
 -- BOOTSTRAP
 
 event.on_init(function()
+  -- Initialize libraries
+  on_tick_n.init()
+
   -- Initialize `global` table
   creep.init()
   inserter.init()
@@ -349,6 +353,15 @@ event.on_tick(function()
   planetary_teleporter.update_gui_statuses()
   radioactivity.update_sounds()
   virus.iterate()
+
+  local tasks = on_tick_n.retrieve(game.tick)
+  if tasks then
+    for _, task in pairs(tasks) do
+      if task.handler == "intergalactic_transceiver" then
+        intergalactic_transceiver[task.action](task.force_index)
+      end
+    end
+  end
 end)
 
 event.on_nth_tick(20, function()

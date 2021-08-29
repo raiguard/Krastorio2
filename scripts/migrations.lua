@@ -1,3 +1,5 @@
+local on_tick_n = require("__flib__.on-tick-n")
+
 local creep = require("scripts.creep")
 local freeplay = require("scripts.freeplay")
 local inserter = require("scripts.inserter")
@@ -66,6 +68,8 @@ migrations.versions = {
     global = {}
 
     -- REINITIALIZE
+
+    on_tick_n.init()
 
     creep.init()
     inserter.init()

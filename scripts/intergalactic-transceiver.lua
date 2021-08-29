@@ -1,5 +1,6 @@
 local gui = require("__flib__.gui")
 local math = require("__flib__.math")
+local on_tick_n = require("__flib__.on-tick-n")
 local reverse_defines = require("__flib__.reverse-defines")
 local table = require("__flib__.table")
 
@@ -141,7 +142,7 @@ function intergalactic_transceiver.iterate()
   end
 
   -- Update GUIs
-  for player_index, gui_data in pairs(global.intergalactic_transceiver.guis) do
+  for _, gui_data in pairs(global.intergalactic_transceiver.guis) do
     intergalactic_transceiver.update_gui(gui_data)
   end
 end
@@ -178,8 +179,29 @@ function intergalactic_transceiver.activate(entity)
   }
 
   if new_entity and new_entity.valid then
+    -- Save the new entity
     global.intergalactic_transceiver.forces[force.index] = {entity = new_entity}
+    -- Win in a second
+    on_tick_n.add(game.tick + 60, {handler = "intergalactic_transceiver", action = "win", force_index = force.index})
+    -- Play the sound a moment after the victory to ensure that you can hear the entire thing
+    on_tick_n.add(
+      game.tick + 70,
+      {handler = "intergalactic_transceiver", action = "play_victory_sound", force_index = force.index}
+    )
   end
+end
+
+function intergalactic_transceiver.win(force_index)
+  game.set_game_state{
+    game_finished = true,
+    player_won = true,
+    can_continue = true,
+    victorious_force = game.forces[force_index],
+  }
+end
+
+function intergalactic_transceiver.play_victory_sound(force_index)
+  game.forces[force_index].play_sound{path = "kr-win-joke-voice"}
 end
 
 -- GUI
