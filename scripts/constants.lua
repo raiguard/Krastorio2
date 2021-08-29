@@ -139,7 +139,14 @@ constants.inserter_drop_vectors = {
 constants.intergalactic_transceiver = {
   delta = 1e9,
   drain = 50e9,
-  max_delta = 2e9
+  max_delta = 2e9,
+  statuses = {
+    charging = {label = {"entity-status.charging"}, sprite = "utility/status_working"},
+    discharging = {label = {"entity-status.discharging"}, sprite = "utility/status_yellow"},
+    empty = {label = {"entity-status.empty"}, sprite = "utility/status_not_working"},
+    no_power = {label = {"entity-status.no-power"}, sprite = "utility/status_not_working"},
+    ready = {label = {"entity-status.kr-ready"}, sprite = "utility/status_working"},
+  },
 }
 
 constants.jackhammer_max_reach = 15

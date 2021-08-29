@@ -1,10 +1,14 @@
 local gui = require("__flib__.gui")
+local math = require("__flib__.math")
+local reverse_defines = require("__flib__.reverse-defines")
 local table = require("__flib__.table")
 
 local constants = require("scripts.constants")
 local util = require("scripts.util")
 
 local intergalactic_transceiver = {}
+
+local statuses = constants.intergalactic_transceiver.statuses
 
 --[[
   BEHAVIORS:
@@ -75,6 +79,7 @@ function intergalactic_transceiver.destroy_inactive(entity)
 end
 
 function intergalactic_transceiver.iterate()
+  -- Process transceiver logic and update statuses
   local transceivers = global.intergalactic_transceiver.forces
   for force_index, data in pairs(transceivers) do
     local entity = data.entity
@@ -105,6 +110,12 @@ function intergalactic_transceiver.iterate()
           -- offset of 0 - 20 MJ above the max every tick.
           new_energy = max_energy + math.random(0, 20) * 1000000
           status = "ready"
+        else
+          local entity_status = reverse_defines.entity_status[entity.status]
+          local status_data = statuses[entity_status]
+          if status_data then
+            status = entity_status
+          end
         end
       end
 
@@ -131,6 +142,11 @@ function intergalactic_transceiver.iterate()
     else
       transceivers[force_index] = nil
     end
+  end
+
+  -- Update GUIs
+  for player_index, gui_data in pairs(global.intergalactic_transceiver.guis) do
+    intergalactic_transceiver.update_gui(gui_data)
   end
 end
 
@@ -176,12 +192,21 @@ function intergalactic_transceiver.create_gui(player, entity)
         }
       },
       {type = "frame", style = "entity_frame", direction = "vertical",
-        {type = "flow", style = "status_flow",
-          {type = "sprite", style = "status_image", sprite = "utility/status_working"},
-          {type = "label", caption = "Charging"},
+        {type = "flow", style = "status_flow", style_mods = {vertical_align = "center"},
+          {type = "sprite", style = "flib_indicator", ref = {"status", "sprite"}},
+          {type = "label", ref = {"status", "label"}},
         },
         {type = "frame", style = "deep_frame_in_shallow_frame",
           {type = "entity-preview", style = "wide_entity_button", elem_mods = {entity = entity}},
+        },
+        {type = "flow", style_mods = {vertical_align = "center", top_margin = 4},
+          {
+            type = "progressbar",
+            style = "production_progressbar",
+            style_mods = {horizontally_stretchable = true},
+            value = 0,
+            ref = {"charge_progressbar"},
+          }
         }
       }
     }
@@ -200,7 +225,8 @@ function intergalactic_transceiver.create_gui(player, entity)
   global.intergalactic_transceiver.guis[player.index] = {
     refs = refs,
     state = {
-      -- TODO:
+      entity = entity,
+      previous_stats = "none",
     }
   }
 end
@@ -212,6 +238,26 @@ function intergalactic_transceiver.destroy_gui(player)
     -- FIXME: Add sounds to the prototype
     -- player.play_sound{path = "entity-close/kr-intergalactic-transceiver"}
     player.play_sound{path = "entity-close/accumulator"}
+  end
+end
+
+function intergalactic_transceiver.update_gui(gui_data)
+  local entity = gui_data.state.entity
+  if entity and entity.valid then
+    local entity_data = global.intergalactic_transceiver.forces[entity.force.index]
+    if entity_data then
+      -- Update progressbar
+      local progressbar = gui_data.refs.charge_progressbar
+      local charge = entity.energy / global.intergalactic_transceiver.max_energy
+      progressbar.value = charge
+      progressbar.caption = math.round(charge * 100).."%"
+
+      -- Update status indicator
+      local status = entity_data.status
+      local status_data = constants.intergalactic_transceiver.statuses[status]
+      gui_data.refs.status.sprite.sprite = status_data.sprite
+      gui_data.refs.status.label.caption = status_data.label
+    end
   end
 end
 
