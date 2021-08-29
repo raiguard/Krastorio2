@@ -96,7 +96,7 @@ function intergalactic_transceiver.iterate()
         if new_energy > 0 then
           status = "discharging"
         else
-          status = "empty"
+          status = "not_enough_input"
         end
       else
         -- The max that we allow, for graphical reasons
@@ -269,6 +269,7 @@ function intergalactic_transceiver.update_gui(gui_data)
       local status_data = constants.intergalactic_transceiver.statuses[status]
       refs.status.sprite.sprite = status_data.sprite
       refs.status.label.caption = status_data.label
+      refs.status.label.tooltip = status_data.tooltip or ""
 
       -- Update activate button
       refs.activate_button.enabled = status == "ready"
