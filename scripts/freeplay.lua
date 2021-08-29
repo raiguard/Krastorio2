@@ -3,7 +3,7 @@ local constants = require("scripts.constants")
 local freeplay = {}
 
 function freeplay.add_bonus_items()
-  if settings.startup["kr-bonus-items"].value then
+  if settings.startup["kr-bonus-items"].value and remote.interfaces["freeplay"] then
     local items = remote.call("freeplay", "get_created_items")
     for _, item in pairs(constants.bonus_items) do
       if game.item_prototypes[item.name] then
