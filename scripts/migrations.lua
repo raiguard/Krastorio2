@@ -19,8 +19,9 @@ function migrations.generic()
   freeplay.disable_rocket_victory()
   util.ensure_turret_force()
 
-  radioactivity.reset_entities_items()
+  intergalactic_transceiver.get_max_energy()
   radioactivity.refresh_players()
+  radioactivity.reset_entities_items()
   roboport.find_variants()
   tesla_coil.get_absorber_buffer_capacity()
 

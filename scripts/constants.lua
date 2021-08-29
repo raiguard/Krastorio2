@@ -136,6 +136,12 @@ constants.inserter_drop_vectors = {
   [false] = { [0] = {0.0, 0.2}, [2] = {-0.2, 0.0}, [4] = {0.0, -0.2}, [6] = {0.2, 0.0}},  -- Far lane
 }
 
+constants.intergalactic_transceiver = {
+  delta = 1e9,
+  drain = 50e9,
+  max_delta = 2e9
+}
+
 constants.jackhammer_max_reach = 15
 
 constants.loader_names = {
