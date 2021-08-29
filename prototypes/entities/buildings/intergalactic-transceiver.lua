@@ -371,6 +371,8 @@ data:extend({
     circuit_connector_sprites = nil, --circuit_connector_definitions["accumulator"].sprites,
     circuit_wire_max_distance = 0, --default_circuit_wire_max_distance,
     default_output_signal = { type = "virtual", name = "signal-I" },
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
   },
   -- Activated
   {

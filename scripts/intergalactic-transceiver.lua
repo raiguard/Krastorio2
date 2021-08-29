@@ -270,10 +270,9 @@ function intergalactic_transceiver.create_gui(player, entity)
   refs.titlebar_flow.drag_target = refs.window
 
   player.opened = refs.window
+  -- If in multiplayer, the default GUI will open a few ticks before this, so we rely on that GUI's sound
   if not game.is_multiplayer() then
-    -- FIXME: Add sounds to the prototype
-    -- player.play_sound{path = "entity-open/kr-intergalactic-transceiver"}
-    player.play_sound{path = "entity-open/accumulator"}
+    player.play_sound{path = "entity-open/kr-intergalactic-transceiver"}
   end
 
   global.intergalactic_transceiver.guis[player.index] = {
@@ -289,9 +288,7 @@ function intergalactic_transceiver.destroy_gui(player)
   local gui_data = table.retrieve(global.intergalactic_transceiver.guis, player.index)
   if gui_data then
     gui_data.refs.window.destroy()
-    -- FIXME: Add sounds to the prototype
-    -- player.play_sound{path = "entity-close/kr-intergalactic-transceiver"}
-    player.play_sound{path = "entity-close/accumulator"}
+    player.play_sound{path = "entity-close/kr-intergalactic-transceiver"}
   end
 end
 
