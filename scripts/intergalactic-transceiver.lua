@@ -207,7 +207,17 @@ function intergalactic_transceiver.create_gui(player, entity)
             value = 0,
             ref = {"charge_progressbar"},
           }
-        }
+        },
+        {type = "line", direction = "horizontal"},
+        {
+          type = "button",
+          style_mods = {height = 35, horizontally_stretchable = true},
+          caption = {"gui.kr-activate"},
+          ref = {"activate_button"},
+          actions = {
+            on_click = {gui = "intergalactic_transceiver", action = "activate"}
+          },
+        },
       }
     }
   })
@@ -246,6 +256,8 @@ function intergalactic_transceiver.update_gui(gui_data)
   if entity and entity.valid then
     local entity_data = global.intergalactic_transceiver.forces[entity.force.index]
     if entity_data then
+      local refs = gui_data.refs
+
       -- Update progressbar
       local progressbar = gui_data.refs.charge_progressbar
       local charge = entity.energy / global.intergalactic_transceiver.max_energy
@@ -255,8 +267,11 @@ function intergalactic_transceiver.update_gui(gui_data)
       -- Update status indicator
       local status = entity_data.status
       local status_data = constants.intergalactic_transceiver.statuses[status]
-      gui_data.refs.status.sprite.sprite = status_data.sprite
-      gui_data.refs.status.label.caption = status_data.label
+      refs.status.sprite.sprite = status_data.sprite
+      refs.status.label.caption = status_data.label
+
+      -- Update activate button
+      refs.activate_button.enabled = status == "ready"
     end
   end
 end
@@ -265,6 +280,10 @@ local actions = {}
 
 function actions.close(e)
   intergalactic_transceiver.destroy_gui(game.get_player(e.player_index))
+end
+
+function actions.activate(e)
+  game.print("ACTIVATE TRANSCEIVER!")
 end
 
 intergalactic_transceiver.gui_actions = actions
