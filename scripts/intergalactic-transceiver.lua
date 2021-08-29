@@ -17,8 +17,8 @@ local statuses = constants.intergalactic_transceiver.statuses
     - Once activated, play the cutscene and win the game
     - Update stats GUI with the charge progress
 
-  STATUSES:
     - Normal / no power: if charged, drain and warn. If not charged, do nothing
+  STATUSES:
     - Charging: Update charge status
     - Fully charged: notify of status
 ]]
@@ -83,7 +83,7 @@ function intergalactic_transceiver.iterate()
   local transceivers = global.intergalactic_transceiver.forces
   for force_index, data in pairs(transceivers) do
     local entity = data.entity
-    if entity and entity.valid then
+    if entity and entity.valid and entity.name == "kr-intergalactic-transceiver" then
       local current_energy = entity.energy
       local new_energy = current_energy
       local difference = current_energy - data.last_energy
@@ -160,7 +160,26 @@ function intergalactic_transceiver.activate(entity)
   local entity_data = global.intergalactic_transceiver.forces[entity.force.index]
   if not entity_data then return end
 
-  game.print("ACTIVATE TRANSCEIVER")
+  local force = entity.force
+  local player = entity.last_user
+  local position = entity.position
+  local surface = entity.surface
+
+  entity.destroy()
+
+  -- TODO: Cutscene
+
+  local new_entity = surface.create_entity{
+    name = "kr-activated-intergalactic-transceiver",
+    position = position,
+    force = force,
+    player = player,
+    create_build_effect_smoke = false,
+  }
+
+  if new_entity and new_entity.valid then
+    global.intergalactic_transceiver.forces[force.index] = {entity = new_entity}
+  end
 end
 
 -- GUI
