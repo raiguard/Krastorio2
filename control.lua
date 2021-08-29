@@ -76,8 +76,8 @@ event.register("kr-change-roboport-state", function(e)
   end
 end)
 
--- ENTITY
 
+-- ENTITY
 event.register(
   {
     defines.events.on_built_entity,
@@ -186,6 +186,8 @@ local function handle_gui_event(e)
   if msg then
     if msg.gui == "inserter" then
       inserter.handle_gui_action(msg, e)
+    elseif msg.gui == "intergalactic_transceiver" then
+      intergalactic_transceiver.gui_actions[msg.action](e, msg.payload)
     elseif msg.gui == "planetary_teleporter" then
       planetary_teleporter.handle_gui_action(msg, e)
     elseif msg.gui == "roboport" then
@@ -204,7 +206,9 @@ event.on_gui_opened(function(e)
     if entity and entity.valid then
       local player = game.get_player(e.player_index)
       local name = entity.name
-      if name == "kr-planetary-teleporter" then
+      if name == "kr-intergalactic-transceiver" then
+        intergalactic_transceiver.create_gui(player, entity)
+      elseif name == "kr-planetary-teleporter" then
         planetary_teleporter.create_gui(player, entity)
       elseif entity.type == "inserter" then
         inserter.update_gui(player, entity)

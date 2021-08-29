@@ -1,3 +1,6 @@
+local gui = require("__flib__.gui")
+local table = require("__flib__.table")
+
 local constants = require("scripts.constants")
 local util = require("scripts.util")
 
@@ -19,6 +22,7 @@ local intergalactic_transceiver = {}
 function intergalactic_transceiver.init()
   global.intergalactic_transceiver = {
     forces = {},
+    guis = {},
     inactive = {},
   }
 end
@@ -139,5 +143,84 @@ function intergalactic_transceiver.spawn_flying_texts()
     end
   end
 end
+
+-- GUI
+
+function intergalactic_transceiver.create_gui(player, entity)
+  local refs = gui.build(player.gui.screen, {
+    {
+      type = "frame",
+      direction = "vertical",
+      ref = {"window"},
+      actions = {
+        on_closed = {gui = "intergalactic_transceiver", action = "close"},
+      },
+      {type = "flow", style = "flib_titlebar_flow", ref = {"titlebar_flow"},
+        {
+          type = "label",
+          style = "frame_title",
+          caption = {"entity-name.kr-intergalactic-transceiver"},
+          ignored_by_interaction = true
+        },
+        {type = "empty-widget", style = "flib_titlebar_drag_handle", ignored_by_interaction = true},
+        {
+          type = "sprite-button",
+          style = "frame_action_button",
+          sprite = "utility/close_white",
+          hovered_sprite = "utility/close_black",
+          clicked_sprite = "utility/close_black",
+          tooltip = {"gui.close-instruction"},
+          actions = {
+            on_click = {gui = "intergalactic_transceiver", action = "close"},
+          },
+        }
+      },
+      {type = "frame", style = "entity_frame", direction = "vertical",
+        {type = "flow", style = "status_flow",
+          {type = "sprite", style = "status_image", sprite = "utility/status_working"},
+          {type = "label", caption = "Charging"},
+        },
+        {type = "frame", style = "deep_frame_in_shallow_frame",
+          {type = "entity-preview", style = "wide_entity_button", elem_mods = {entity = entity}},
+        }
+      }
+    }
+  })
+
+  refs.window.force_auto_center()
+  refs.titlebar_flow.drag_target = refs.window
+
+  player.opened = refs.window
+  if not game.is_multiplayer() then
+    -- FIXME: Add sounds to the prototype
+    -- player.play_sound{path = "entity-open/kr-intergalactic-transceiver"}
+    player.play_sound{path = "entity-open/accumulator"}
+  end
+
+  global.intergalactic_transceiver.guis[player.index] = {
+    refs = refs,
+    state = {
+      -- TODO:
+    }
+  }
+end
+
+function intergalactic_transceiver.destroy_gui(player)
+  local gui_data = table.retrieve(global.intergalactic_transceiver.guis, player.index)
+  if gui_data then
+    gui_data.refs.window.destroy()
+    -- FIXME: Add sounds to the prototype
+    -- player.play_sound{path = "entity-close/kr-intergalactic-transceiver"}
+    player.play_sound{path = "entity-close/accumulator"}
+  end
+end
+
+local actions = {}
+
+function actions.close(e)
+  intergalactic_transceiver.destroy_gui(game.get_player(e.player_index))
+end
+
+intergalactic_transceiver.gui_actions = actions
 
 return intergalactic_transceiver
