@@ -97,8 +97,8 @@ function intergalactic_transceiver.iterate()
         -- If we're above the allowed max
         if current_energy > max_energy then
           -- Reset the energy to the allowed max
-          -- HACK: If the energy stays constant, the entity will switch to "normal" mode. To combat this, we give it a
-          -- random offset of 20 MJ above the max every tick.
+          -- If the energy stays constant, the entity will switch to "normal" mode. To combat this, we give it a random
+          -- offset of 0 - 20 MJ above the max every tick.
           new_energy = max_energy + math.random(0, 20) * 1000000
           status = "ready"
         end
