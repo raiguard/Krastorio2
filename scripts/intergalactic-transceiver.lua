@@ -93,11 +93,7 @@ function intergalactic_transceiver.iterate()
         -- Drain the transceiver at 3 TJ / sec
         new_energy = math.max(0, current_energy - constants.intergalactic_transceiver.drain)
         -- Update status
-        if new_energy > 0 then
-          status = "discharging"
-        else
-          status = "not_enough_input"
-        end
+        status = "not_enough_input"
       else
         -- The max that we allow, for graphical reasons
         -- If we allow the transceiver to fully charge, the animation stops, which we don't want, so we cap the energy
@@ -158,6 +154,13 @@ function intergalactic_transceiver.spawn_flying_texts()
       global.shelter.inactive[unit_number] = nil
     end
   end
+end
+
+function intergalactic_transceiver.activate(entity)
+  local entity_data = global.intergalactic_transceiver.forces[entity.force.index]
+  if not entity_data then return end
+
+  game.print("ACTIVATE TRANSCEIVER")
 end
 
 -- GUI
@@ -284,7 +287,14 @@ function actions.close(e)
 end
 
 function actions.activate(e)
-  game.print("ACTIVATE TRANSCEIVER!")
+  local gui_data = global.intergalactic_transceiver.guis[e.player_index]
+  if not gui_data then return end
+
+  local entity = gui_data.state.entity
+  if not entity or not entity.valid then return end
+
+  intergalactic_transceiver.destroy_gui(game.get_player(e.player_index))
+  intergalactic_transceiver.activate(entity)
 end
 
 intergalactic_transceiver.gui_actions = actions

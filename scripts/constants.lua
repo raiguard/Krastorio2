@@ -142,7 +142,6 @@ constants.intergalactic_transceiver = {
   max_delta = 2e9,
   statuses = {
     charging = {label = {"entity-status.charging"}, sprite = "utility/status_working"},
-    discharging = {label = {"entity-status.discharging"}, sprite = "utility/status_yellow"},
     not_enough_input = {
       label = {"entity-status.kr-not-enough-input"},
       sprite = "utility/status_not_working",
