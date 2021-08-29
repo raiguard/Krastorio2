@@ -357,8 +357,8 @@ event.on_tick(function()
   local tasks = on_tick_n.retrieve(game.tick)
   if tasks then
     for _, task in pairs(tasks) do
-      if task.handler == "intergalactic_transceiver" then
-        intergalactic_transceiver[task.action](task.force_index)
+      if task.handler == "it_cutscene" then
+        intergalactic_transceiver.cutscene[task.action](task.force_index)
       end
     end
   end

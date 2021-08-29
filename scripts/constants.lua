@@ -137,6 +137,10 @@ constants.inserter_drop_vectors = {
 }
 
 constants.intergalactic_transceiver = {
+  cutscene = {
+    player_radius = 50,
+    final_transition_time = 60,
+  },
   delta = 1e9,
   drain = 50e9,
   max_delta = 2e9,

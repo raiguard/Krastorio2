@@ -1,5 +1,6 @@
 local gui = require("__flib__.gui")
 local math = require("__flib__.math")
+local misc = require("__flib__.misc")
 local on_tick_n = require("__flib__.on-tick-n")
 local reverse_defines = require("__flib__.reverse-defines")
 local table = require("__flib__.table")
@@ -9,6 +10,7 @@ local util = require("scripts.util")
 
 local intergalactic_transceiver = {}
 
+local cutscene_const = constants.intergalactic_transceiver.cutscene
 local statuses = constants.intergalactic_transceiver.statuses
 
 --[[
@@ -161,14 +163,106 @@ function intergalactic_transceiver.activate(entity)
   local entity_data = global.intergalactic_transceiver.forces[entity.force.index]
   if not entity_data then return end
 
+  -- Make the entity indestructible, just in case
+  entity.destructible = false
+  entity.operable = false
+
+  -- Start the cutscene in one second
+  on_tick_n.add(game.tick + 60, {handler = "it_cutscene", action = "begin", force_index = entity.force.index})
+end
+
+-- CUTSCENE
+
+local cutscene = {}
+
+function cutscene.begin(force_index)
+  local entity_data = global.intergalactic_transceiver.forces[force_index]
+  if not entity_data then return end
+
+  local entity = entity_data.entity
+  if not entity or not entity.valid then return end
+
+  local surface = entity.surface
+  local position = entity.position
+
+  for _, player in pairs(game.players) do
+    if
+      player.controller_type ~= defines.controllers.god
+      and player.surface == surface
+      and misc.get_distance(player.position, position) <= cutscene_const.player_radius
+    then
+      -- Start cutscene
+      player.set_controller{
+        type = defines.controllers.cutscene,
+        waypoints = {
+          {
+            position = position,
+            transition_time = 70,
+            zoom = 1.2,
+            time_to_wait = 30,
+          },
+          {
+            position = position,
+            transition_time = 135,
+            zoom = 1,
+            time_to_wait = 10,
+          },
+          {
+            position = position,
+            transition_time = 135,
+            zoom = 1.2,
+            time_to_wait = 10,
+          },
+          {
+            position = position,
+            transition_time = 135,
+            zoom = 1,
+            time_to_wait = 60,
+          },
+        },
+        start_position = player.position,
+        final_transition_time = cutscene_const.final_transition_time,
+      }
+
+      on_tick_n.add(game.tick + 100, {handler = "it_cutscene", action = "spawn_wave", force_index = force_index})
+    end
+  end
+end
+
+function cutscene.spawn_wave(force_index)
+  local entity_data = global.intergalactic_transceiver.forces[force_index]
+  if not entity_data then return end
+
+  local entity = entity_data.entity
+  if not entity or not entity.valid then return end
+
+  entity.surface.create_entity({
+    type = "projectile",
+    name = "intergalactic-transceiver-wave",
+    force = entity.force,
+    position = entity.position,
+    speed = 0,
+    max_range = 100,
+    target = entity,
+    create_build_effect_smoke = false,
+  })
+
+  on_tick_n.add(game.tick + 15, {handler = "it_cutscene", action = "replace_entity", force_index = force_index})
+end
+
+function cutscene.replace_entity(force_index)
+  local entity_data = global.intergalactic_transceiver.forces[force_index]
+  if not entity_data then return end
+
+  local entity = entity_data.entity
+  if not entity or not entity.valid then return end
+
   local force = entity.force
   local player = entity.last_user
   local position = entity.position
   local surface = entity.surface
 
   entity.destroy()
-
-  -- TODO: Cutscene
 
   local new_entity = surface.create_entity{
     name = "kr-activated-intergalactic-transceiver",
@@ -179,19 +273,19 @@ function intergalactic_transceiver.activate(entity)
   }
 
   if new_entity and new_entity.valid then
-    -- Save the new entity
     global.intergalactic_transceiver.forces[force.index] = {entity = new_entity}
-    -- Win in a second
-    on_tick_n.add(game.tick + 60, {handler = "intergalactic_transceiver", action = "win", force_index = force.index})
-    -- Play the sound a moment after the victory to ensure that you can hear the entire thing
-    on_tick_n.add(
-      game.tick + 70,
-      {handler = "intergalactic_transceiver", action = "play_victory_sound", force_index = force.index}
-    )
+
+    if not game.finished then
+      on_tick_n.add(game.tick + 650, {handler = "it_cutscene", action = "win", force_index = force_index})
+      on_tick_n.add(
+        game.tick + 660,
+        {handler = "it_cutscene", action = "play_victory_sound", force_index = force_index}
+      )
+    end
   end
 end
 
-function intergalactic_transceiver.win(force_index)
+function cutscene.win(force_index)
   game.set_game_state{
     game_finished = true,
     player_won = true,
@@ -200,9 +294,11 @@ function intergalactic_transceiver.win(force_index)
   }
 end
 
-function intergalactic_transceiver.play_victory_sound(force_index)
+function cutscene.play_victory_sound(force_index)
   game.forces[force_index].play_sound{path = "kr-win-joke-voice"}
 end
+
+intergalactic_transceiver.cutscene = cutscene
 
 -- GUI
 
