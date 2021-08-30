@@ -10,8 +10,8 @@ local util = require("scripts.util")
 
 local intergalactic_transceiver = {}
 
-local cutscene_const = constants.intergalactic_transceiver.cutscene
 local statuses = constants.intergalactic_transceiver.statuses
+local cutscene_const = constants.intergalactic_transceiver.cutscene
 
 --[[
   BEHAVIORS:
@@ -31,6 +31,7 @@ function intergalactic_transceiver.init()
     forces = {},
     guis = {},
     inactive = {},
+    is_victory = true,
   }
 end
 
@@ -297,7 +298,7 @@ function cutscene.replace_entity(force_index)
   if new_entity and new_entity.valid then
     global.intergalactic_transceiver.forces[force.index] = {entity = new_entity}
 
-    if not game.finished then
+    if global.intergalactic_transceiver.is_victory and not game.finished then
       on_tick_n.add(game.tick + 650, {handler = "it_cutscene", action = "win", force_index = force_index})
       on_tick_n.add(
         game.tick + 660,
@@ -454,5 +455,19 @@ function actions.activate(e)
 end
 
 intergalactic_transceiver.gui_actions = actions
+
+-- REMOTE
+
+intergalactic_transceiver.remote_interface = {
+  get_no_victory = function()
+    return not global.intergalactic_transceiver.is_victory
+  end,
+  set_no_victory = function(to_state)
+    if not to_state or type(to_state) ~= "boolean" then
+      error("`to_state` must be a boolean")
+    end
+    global.intergalactic_transceiver.is_victory = not to_state
+  end,
+}
 
 return intergalactic_transceiver

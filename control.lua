@@ -30,6 +30,7 @@ util.add_commands(radioactivity.commands)
 -- INTERFACES
 
 remote.add_interface("kr-creep", creep.remote_interface)
+remote.add_interface("kr-intergalactic-transceiver", intergalactic_transceiver.remote_interface)
 remote.add_interface("kr-radioactivity", radioactivity.remote_interface)
 
 -- BOOTSTRAP
