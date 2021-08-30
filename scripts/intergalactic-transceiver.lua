@@ -13,19 +13,6 @@ local intergalactic_transceiver = {}
 local statuses = constants.intergalactic_transceiver.statuses
 local cutscene_const = constants.intergalactic_transceiver.cutscene
 
---[[
-  BEHAVIORS:
-    - If the transceiver loses power, drain it rapidly
-    - Once 100% is reached, notify the players and add an activate button
-    - Once activated, play the cutscene and win the game
-    - Update stats GUI with the charge progress
-
-    - Normal / no power: if charged, drain and warn. If not charged, do nothing
-  STATUSES:
-    - Charging: Update charge status
-    - Fully charged: notify of status
-]]
-
 function intergalactic_transceiver.init()
   global.intergalactic_transceiver = {
     forces = {},
