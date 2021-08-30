@@ -73,6 +73,26 @@ function intergalactic_transceiver.build(entity)
   }
 end
 
+function intergalactic_transceiver.build_activated(entity)
+  local position = entity.position
+  local force = entity.force
+  local player = entity.last_user
+  local surface = entity.surface
+  entity.destroy()
+
+  local new_entity = surface.create_entity{
+    name = "kr-intergalactic-transceiver",
+    position = position,
+    force = force,
+    player = player,
+    create_build_effect_smoke = false,
+  }
+
+  if new_entity and new_entity.valid then
+    intergalactic_transceiver.build(new_entity)
+  end
+end
+
 function intergalactic_transceiver.destroy(entity)
   local force_index = entity.force.index
   global.intergalactic_transceiver.forces[force_index] = nil

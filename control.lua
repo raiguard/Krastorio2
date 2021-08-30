@@ -99,6 +99,8 @@ event.register(
 
     if entity_name == "kr-intergalactic-transceiver" then
       intergalactic_transceiver.build(entity)
+    elseif entity_name == "kr-activated-intergalactic-transceiver" then
+      intergalactic_transceiver.build_activated(entity)
     elseif entity_name == "kr-planetary-teleporter" then
       planetary_teleporter.build(entity, e.tags)
     elseif entity_name == "kr-shelter-container" or entity_name == "kr-shelter-plus-container" then
