@@ -147,6 +147,8 @@ event.register(
       planetary_teleporter.destroy(entity)
     elseif entity_name == "kr-tesla-coil" then
       tesla_coil.destroy(entity)
+    else
+      tesla_coil.remove_entity_from_cache(entity)
     end
   end
 )
@@ -304,6 +306,8 @@ event.on_player_main_inventory_changed(function(e)
   local player = game.get_player(e.player_index)
   radioactivity.check_inventory(player)
 end)
+
+event.on_player_armor_inventory_changed(tesla_coil.on_player_armor_inventory_changed)
 
 event.register(
   {defines.events.on_player_died, defines.events.on_player_respawned, defines.events.on_player_toggled_map_editor},

@@ -26,6 +26,7 @@ function migrations.generic()
   radioactivity.reset_entities_items()
   roboport.find_variants()
   tesla_coil.get_absorber_buffer_capacity()
+  tesla_coil.reset_grids_cache()
 
   for _, player in pairs(game.players) do
     inserter.refresh_gui(player)

@@ -4,15 +4,18 @@ local constants = require("scripts.constants")
 
 local tesla_coil = {}
 
--- TODO: Validate that all data is present during on_configuration_changed
-
 function tesla_coil.init()
   global.tesla_coil = {
     by_beam = {},
     by_tower = {},
     by_turret = {},
     grids = {},
+    grids_by_unit_number = {},
   }
+end
+
+function tesla_coil.reset_grids_cache()
+  global.tesla_coil.grids_by_unit_number = {}
 end
 
 function tesla_coil.get_absorber_buffer_capacity()
@@ -70,6 +73,9 @@ function tesla_coil.destroy(source_entity)
 end
 
 local function get_grid_info(target)
+  local existing = global.tesla_coil.grids_by_unit_number[target.unit_number]
+  if existing then return existing end
+
   local grid
   if target.type == "character" then
     local armor_inventory = target.get_inventory(defines.inventory.character_armor)
@@ -86,6 +92,8 @@ local function get_grid_info(target)
   if grid then
     for _, grid_data in pairs(global.tesla_coil.grids) do
       if grid == grid_data.grid then
+        grid_data.unit_number = target.unit_number
+        global.tesla_coil.grids_by_unit_number[target.unit_number] = grid_data
         return grid_data
       end
     end
@@ -208,8 +216,27 @@ function tesla_coil.on_equipment_removed(e)
   for i, grid_data in pairs(global.tesla_coil.grids) do
     if grid == grid_data.grid and not grid.get_contents()["energy-absorber"] then
       table.remove(global.tesla_coil.grids, i)
+      if grid_data.unit_number then
+        global.tesla_coil.grids_by_unit_number[grid_data.unit_number] = nil
+      end
     end
   end
+end
+
+-- Remove a character's grid from the cache if their armor inventory changed
+function tesla_coil.on_player_armor_inventory_changed(e)
+  local player = game.get_player(e.player_index)
+  local character = player.character
+  if character and character.valid then
+    global.tesla_coil.grids_by_unit_number[character.unit_number] = nil
+  end
+end
+
+function tesla_coil.remove_entity_from_cache(entity)
+  local unit_number = entity.unit_number
+  if not unit_number then return end
+
+  global.tesla_coil.grids_by_unit_number[unit_number] = nil
 end
 
 return tesla_coil
