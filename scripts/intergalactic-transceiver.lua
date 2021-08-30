@@ -216,7 +216,7 @@ function cutscene.begin(force_index)
 
   for _, player in pairs(game.players) do
     if
-      player.controller_type ~= defines.controllers.god
+      player.controller_type ~= defines.controllers.editor
       and player.surface == surface
       and misc.get_distance(player.position, position) <= cutscene_const.player_radius
     then

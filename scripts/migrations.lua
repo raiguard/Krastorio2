@@ -34,6 +34,17 @@ function migrations.generic()
   end
 end
 
+local function find_on_all_surfaces(filters)
+  local output = {}
+  for _, surface in pairs(game.surfaces) do
+    local entities = surface.find_entities_filtered(filters)
+    for _, entity in pairs(entities) do
+      table.insert(output, entity)
+    end
+  end
+  return output
+end
+
 
 migrations.versions = {
   ["1.1.2"] = function()
@@ -66,6 +77,7 @@ migrations.versions = {
   end,
   ["1.2.0"] = function()
     -- NUKE EVERYTHING
+
     global = {}
 
     -- REINITIALIZE
@@ -82,6 +94,16 @@ migrations.versions = {
     shelter.init()
     tesla_coil.init()
     virus.init()
+
+    -- MIGRATE
+
+    -- There should only be one of each, so this one is easy
+    for _, transceiver in pairs(find_on_all_surfaces{name = "kr-intergalactic-transceiver"}) do
+      intergalactic_transceiver.build(transceiver)
+    end
+    for _, transceiver in pairs(find_on_all_surfaces{name = "kr-activated-intergalactic-transceiver"}) do
+      global.intergalactic_transceiver.forces[transceiver.force.index] = {entity = transceiver}
+    end
 
     -- TODO: Add collision entities and data for tesla coils
     -- TODO: Convert data format for planetary teleporters
