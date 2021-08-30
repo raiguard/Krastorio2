@@ -78,6 +78,7 @@ migrations.versions = {
   ["1.2.0"] = function()
     -- NUKE EVERYTHING
 
+    local old_global = global
     global = {}
 
     -- REINITIALIZE
@@ -97,6 +98,14 @@ migrations.versions = {
 
     -- MIGRATE
 
+    -- Creep
+    global.creep.on_biter_base_built = old_global.creep_on_biter_base_built
+    global.creep.on_chunk_generated = old_global.creep_on_chunk_generated
+    if not old_global.creep_on_chunk_generated then
+      global.creep.surfaces[game.get_surface("nauvis").index] = nil
+    end
+
+    -- Intergalactic Transceiver
     -- There should only be one of each, so this one is easy
     for _, transceiver in pairs(find_on_all_surfaces{name = "kr-intergalactic-transceiver"}) do
       intergalactic_transceiver.build(transceiver)
@@ -104,6 +113,14 @@ migrations.versions = {
     for _, transceiver in pairs(find_on_all_surfaces{name = "kr-activated-intergalactic-transceiver"}) do
       global.intergalactic_transceiver.forces[transceiver.force.index] = {entity = transceiver}
     end
+
+    -- Radioactivity
+    local old_enabled = old_global.radioactivity_enabled
+    -- The old `global` didn't store the variable until it was needed
+    if old_enabled == nil then
+      old_enabled = true
+    end
+    global.radioactivity.enabled = old_enabled
 
     -- TODO: Add collision entities and data for tesla coils
     -- TODO: Convert data format for planetary teleporters

@@ -252,7 +252,6 @@ function cutscene.begin(force_index)
         start_position = player.position,
         final_transition_time = cutscene_const.final_transition_time,
       }
-
     end
   end
 
