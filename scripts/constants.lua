@@ -141,7 +141,7 @@ constants.intergalactic_transceiver = {
     player_radius = 100,
     final_transition_time = 60,
   },
-  delta = 1e9,
+  delta = 2.5e8, -- Requires charge rate of 15 GW
   drain = 50e9,
   max_delta = 2e9,
   statuses = {
