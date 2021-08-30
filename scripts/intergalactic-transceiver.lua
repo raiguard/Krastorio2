@@ -86,56 +86,58 @@ function intergalactic_transceiver.iterate()
   local transceivers = global.intergalactic_transceiver.forces
   for force_index, data in pairs(transceivers) do
     local entity = data.entity
-    if entity and entity.valid and entity.name == "kr-intergalactic-transceiver" then
-      local current_energy = entity.energy
-      local new_energy = current_energy
-      local difference = current_energy - data.last_energy
-      local status = "charging"
-      -- If we're not receiving enough power
-      if difference < constants.intergalactic_transceiver.delta and current_energy > 0 then
-        -- Drain the transceiver at 3 TJ / sec
-        new_energy = math.max(0, current_energy - constants.intergalactic_transceiver.drain)
-        -- Update status
-        status = "not_enough_input"
-      else
-        -- The max that we allow, for graphical reasons
-        -- If we allow the transceiver to fully charge, the animation stops, which we don't want, so we cap the energy
-        -- just below the max
-        local max_energy = global.intergalactic_transceiver.max_energy
-        -- If we're above the allowed max
-        if current_energy > max_energy then
-          -- Reset the energy to the allowed max
-          -- If the energy stays constant, the entity will switch to "normal" mode. To combat this, we give it a random
-          -- offset of 0 - 20 MJ above the max every tick.
-          new_energy = max_energy + math.random(0, 20) * 1000000
-          status = "ready"
+    if entity and entity.valid then
+      if entity.name == "kr-intergalactic-transceiver" then
+        local current_energy = entity.energy
+        local new_energy = current_energy
+        local difference = current_energy - data.last_energy
+        local status = "charging"
+        -- If we're not receiving enough power
+        if difference < constants.intergalactic_transceiver.delta and current_energy > 0 then
+          -- Drain the transceiver at 3 TJ / sec
+          new_energy = math.max(0, current_energy - constants.intergalactic_transceiver.drain)
+          -- Update status
+          status = "not_enough_input"
         else
-          local entity_status = reverse_defines.entity_status[entity.status]
-          local status_data = statuses[entity_status]
-          if status_data then
-            status = entity_status
+          -- The max that we allow, for graphical reasons
+          -- If we allow the transceiver to fully charge, the animation stops, which we don't want, so we cap the energy
+          -- just below the max
+          local max_energy = global.intergalactic_transceiver.max_energy
+          -- If we're above the allowed max
+          if current_energy > max_energy then
+            -- Reset the energy to the allowed max
+            -- If the energy stays constant, the entity will switch to "normal" mode. To combat this, we give it a random
+            -- offset of 0 - 20 MJ above the max every tick.
+            new_energy = max_energy + math.random(0, 20) * 1000000
+            status = "ready"
+          else
+            local entity_status = reverse_defines.entity_status[entity.status]
+            local status_data = statuses[entity_status]
+            if status_data then
+              status = entity_status
+            end
           end
         end
-      end
 
-      -- If we are updating the amount of energy in the transceiver
-      if new_energy ~= current_energy then
-        entity.energy = new_energy
-      end
-      -- Save data
-      data.last_energy = new_energy
-      data.status = status
+        -- If we are updating the amount of energy in the transceiver
+        if new_energy ~= current_energy then
+          entity.energy = new_energy
+        end
+        -- Save data
+        data.last_energy = new_energy
+        data.status = status
 
-      -- If we wish to show an alert and it's been more than a second since the last one
-      if status ~= "charging" and game.tick - data.last_alert_tick >= 60 then
-        data.last_alert_tick = game.tick
-        for _, player in pairs(entity.force.players) do
-          player.add_custom_alert(
-            entity,
-            {type = "item", name = "kr-intergalactic-transceiver"},
-            status,
-            true
-          )
+        -- If we wish to show an alert and it's been more than a second since the last one
+        if status ~= "charging" and game.tick - data.last_alert_tick >= 60 then
+          data.last_alert_tick = game.tick
+          for _, player in pairs(entity.force.players) do
+            player.add_custom_alert(
+              entity,
+              {type = "item", name = "kr-intergalactic-transceiver"},
+              status,
+              true
+            )
+          end
         end
       end
     else
@@ -166,6 +168,14 @@ function intergalactic_transceiver.activate(entity)
   -- Make the entity indestructible, just in case
   entity.destructible = false
   entity.operable = false
+
+  -- Close any open GUIs
+  for player_index, gui_data in pairs(global.intergalactic_transceiver.guis) do
+    local gui_entity = gui_data.state.entity
+    if gui_entity and gui_entity.valid and gui_entity == entity then
+      intergalactic_transceiver.destroy_gui(game.get_player(player_index))
+    end
+  end
 
   -- Start the cutscene in one second
   on_tick_n.add(game.tick + 60, {handler = "it_cutscene", action = "begin", force_index = entity.force.index})
@@ -224,9 +234,10 @@ function cutscene.begin(force_index)
         final_transition_time = cutscene_const.final_transition_time,
       }
 
-      on_tick_n.add(game.tick + 100, {handler = "it_cutscene", action = "spawn_wave", force_index = force_index})
     end
   end
+
+  on_tick_n.add(game.tick + 100, {handler = "it_cutscene", action = "spawn_wave", force_index = force_index})
 end
 
 function cutscene.spawn_wave(force_index)
