@@ -97,7 +97,11 @@ function intergalactic_transceiver.iterate()
           -- Drain the transceiver at 3 TJ / sec
           new_energy = math.max(0, current_energy - constants.intergalactic_transceiver.drain)
           -- Update status
-          status = "not_enough_input"
+          if new_energy > 0 then
+            status = "discharging"
+          else
+            status = "not_enough_input"
+          end
         else
           -- The max that we allow, for graphical reasons
           -- If we allow the transceiver to fully charge, the animation stops, which we don't want, so we cap the energy
@@ -123,20 +127,27 @@ function intergalactic_transceiver.iterate()
         if new_energy ~= current_energy then
           entity.energy = new_energy
         end
+        local last_status = data.status
         -- Save data
         data.last_energy = new_energy
         data.status = status
 
         -- If we wish to show an alert and it's been more than a second since the last one
-        if status ~= "charging" and game.tick - data.last_alert_tick >= 60 then
+        local status_data = constants.intergalactic_transceiver.statuses[status]
+        if status_data and status_data.alert_label and game.tick - data.last_alert_tick >= 60 then
           data.last_alert_tick = game.tick
           for _, player in pairs(entity.force.players) do
             player.add_custom_alert(
               entity,
               {type = "item", name = "kr-intergalactic-transceiver"},
-              status,
+              status_data.alert_label,
               true
             )
+            if status == "discharging" and last_status ~= status then
+              player.play_sound{
+                path = "kr-intergalactic-transceiver-discharging-warning"
+              }
+            end
           end
         end
       end

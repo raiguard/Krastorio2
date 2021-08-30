@@ -145,14 +145,31 @@ constants.intergalactic_transceiver = {
   drain = 50e9,
   max_delta = 2e9,
   statuses = {
-    charging = {label = {"entity-status.charging"}, sprite = "utility/status_working"},
+    charging = {
+      label = {"entity-status.charging"},
+      sprite = "utility/status_working"
+    },
+    discharging = {
+      alert_label = {"gui.kr-intergalactic-transceiver-alert-discharging"},
+      label = {"entity-status.discharging"},
+      sprite = "utility/status_not_working"
+    },
     not_enough_input = {
+      alert_label = {"gui.kr-intergalactic-transceiver-alert-not-enough-input"},
       label = {"entity-status.kr-not-enough-input"},
       sprite = "utility/status_not_working",
       tooltip = {"entity-status-tooltip.kr-not-enough-input"},
     },
-    no_power = {label = {"entity-status.no-power"}, sprite = "utility/status_not_working"},
-    ready = {label = {"entity-status.kr-ready"}, sprite = "utility/status_working"},
+    no_power = {
+      alert_label = {"gui.kr-intergalactic-transceiver-alert-no-power"},
+      label = {"entity-status.no-power"},
+      sprite = "utility/status_not_working"
+    },
+    ready = {
+      alert_label = {"gui.kr-intergalactic-transceiver-alert-ready"},
+      label = {"entity-status.kr-ready"},
+      sprite = "utility/status_working"
+    },
   },
 }
 

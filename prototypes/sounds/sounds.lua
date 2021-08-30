@@ -123,4 +123,17 @@ data:extend({
       count_already_playing = true,
     },
   },
+  {
+    type = "sound",
+    name = "kr-intergalactic-transceiver-discharging-warning",
+    category = "alert",
+    filename = "__Krastorio2__/sounds/others/alert-discharging.ogg",
+    volume = 1.0,
+    audible_distance_modifier = 1000,
+    aggregation = {
+      max_count = 1,
+      remove = false,
+      count_already_playing = true,
+    }
+  },
 })
