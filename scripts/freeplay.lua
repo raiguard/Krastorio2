@@ -17,6 +17,7 @@ end
 function freeplay.add_to_crash_site()
   if
     remote.interfaces["freeplay"]
+    and remote.interfaces["freeplay"].get_disable_crashsite
     and not remote.call("freeplay", "get_disable_crashsite")
     and not remote.call("freeplay", "get_init_ran")
   then
