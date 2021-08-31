@@ -356,8 +356,9 @@ end)
 
 event.on_tick(function()
   intergalactic_transceiver.iterate()
-  planetary_teleporter.update_all_destination_availability()
+  -- NOTE: These two are out of order on purpose, update_gui_statuses() must run first
   planetary_teleporter.update_gui_statuses()
+  planetary_teleporter.update_all_destination_availability()
   radioactivity.update_sounds()
   virus.iterate()
 

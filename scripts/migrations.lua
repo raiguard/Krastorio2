@@ -114,6 +114,22 @@ migrations.versions = {
       global.intergalactic_transceiver.forces[transceiver.force.index] = {entity = transceiver}
     end
 
+    -- Patreon items
+    for player_name in pairs(old_global.patreon_item_given) do
+      local player = game.get_player(player_name)
+      if player then
+        global.patreon_items_given[player.index] = true
+      end
+    end
+
+    -- Planetary teleporter
+    global.planetary_teleporter = {
+      data = old_global.planetary_teleporters,
+      guis = old_global.planetary_teleporter_guis,
+      players = old_global.planetary_teleporter_players,
+      unnamed_translations = old_global.planetary_teleporter_unnamed_translations,
+    }
+
     -- Radioactivity
     local old_enabled = old_global.radioactivity_enabled
     -- The old `global` didn't store the variable until it was needed
@@ -122,8 +138,10 @@ migrations.versions = {
     end
     global.radioactivity.enabled = old_enabled
 
-    -- TODO: Add collision entities and data for tesla coils
-    -- TODO: Convert data format for planetary teleporters
+    -- Tesla coils
+    for _, tower in pairs(find_on_all_surfaces{name = "kr-tesla-coil"}) do
+      tesla_coil.build(tower)
+    end
   end
 }
 
