@@ -338,13 +338,15 @@ event.register(
   end
 )
 
+event.on_string_translated(planetary_teleporter.on_string_translated)
+
 -- SURFACES
 
 event.on_chunk_generated(function(e)
   creep.on_chunk_generated(e.area, e.surface)
 end)
 
--- OTHER
+-- TICKS AND TRIGGERS
 
 event.on_script_trigger_effect(function(e)
   if e.effect_id == "kr-tesla-coil-trigger" then
@@ -380,5 +382,3 @@ event.on_nth_tick(180, function()
   intergalactic_transceiver.spawn_flying_texts()
   shelter.spawn_flying_texts()
 end)
-
-event.on_string_translated(planetary_teleporter.on_string_translated)
