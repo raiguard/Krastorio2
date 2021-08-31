@@ -138,6 +138,8 @@ migrations.versions = {
     end
     global.radioactivity.enabled = old_enabled
 
+    -- TODO: Shelter
+
     -- Tesla coils
     for _, tower in pairs(find_on_all_surfaces{name = "kr-tesla-coil"}) do
       tesla_coil.build(tower)
