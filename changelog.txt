@@ -5,6 +5,7 @@ Date: ????
     - Automation core technology is no longer affected by the technology cost multiplier
     - K2 now converts all furnaces with the `smelting` category to assembling machines, to allow for multi-ingredient recipes
   Bugfixes:
+    - Fixed that Tral's Tree Farm seed recipes were disabled if Deadlock's Stacking Beltboxes & Loaders was enabled
     - Fixed a crash when a technology doesn't have prerequisites
     - Fixed that K2's intermediate recipe doubling code was not accounting for catalysts
     - Fixed that K2's recipe multiplier function would always multiply ingredients or products with an amount range by 2

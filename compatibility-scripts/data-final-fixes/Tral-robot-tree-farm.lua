@@ -4,6 +4,7 @@ if mods["Tral_robot_tree_farm"] then
     local recipe = table.deepcopy(m_tral.base_recipes.seed)
     recipe.name = "kr2" .. seed.name
     recipe.result = seed.name
+    recipe.enabled = true
 
     -- change subgroup of seed (they get placed in the place of the krastorio tree)
     seed.subgroup = "kr-decorations-1"
@@ -13,7 +14,7 @@ if mods["Tral_robot_tree_farm"] then
     -- add recipe to game
     data:extend({ recipe })
     -- add recipe to technology
-    table.insert(m_tral.deco_tech_effects, { type = "unlock-recipe", recipe = recipe.name })
+    table.insert(data.raw["technology"]["kr-decorations"].effects, { type = "unlock-recipe", recipe = recipe.name })
 
     -- create the crushing recipe
     local crushing_recipe = table.deepcopy(m_tral.base_recipes.crushing)
