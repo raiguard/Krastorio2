@@ -139,7 +139,7 @@ data:extend({
     type = "bool-setting",
     name = "kr-re-enable-menu-simulations",
     setting_type = "startup",
-    default_value = false,
+    default_value = true,
     order = "u02",
   },
   {
