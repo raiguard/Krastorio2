@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
-Date: ????
+Date: 2021-09-03
   Changes:
     - Automation core technology is no longer affected by the technology cost multiplier
     - K2 now converts all furnaces with the `smelting` category to assembling machines, to allow for multi-ingredient recipes
