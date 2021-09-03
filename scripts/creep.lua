@@ -12,8 +12,9 @@ local function generate_creep(entities)
   local to_add = {}
   local i = 0
   for _, entity in pairs(entities) do
+    ---@type LuaTile
     for _, tile in pairs(surface.find_tiles_filtered{position = entity.position, radius = radius}) do
-      if tile.name ~= "out-of-map" then
+      if tile.collides_with("player-layer") then
         i = i + 1
         to_add[i] = {name = "kr-creep", position = tile.position}
       end
@@ -73,7 +74,7 @@ creep.remote_interface = {
       table.map(
         surface.find_tiles_filtered{position = position, radius = radius},
         function(tile)
-          if tile.name ~= "out-of-map" then
+          if not tile.collides_with("player-layer") then
             return {name = "kr-creep", position = tile.position}
           end
         end
