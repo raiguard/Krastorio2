@@ -23,6 +23,7 @@ data:extend({
       },
       time = 20,
     },
+    ignore_tech_cost_multiplier = true,
   },
   {
     type = "technology",

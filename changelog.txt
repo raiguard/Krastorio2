@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: ????
+  Changes:
+    - Automation core technology is no longer affected by the technology cost multiplier
   Bugfixes:
     - Fixed a crash when a technology doesn't have prerequisites
     - Fixed that K2's intermediate recipe doubling code was not accounting for catalysts
