@@ -138,7 +138,17 @@ migrations.versions = {
     end
     global.radioactivity.enabled = old_enabled
 
-    -- TODO: Shelter
+    -- Shelter
+    for _, entity in pairs(
+      find_on_all_surfaces{
+        name = {"kr-shelter-light", "kr-shelter", "kr-shelter-plus-light", "kr-shelter-plus"}
+      }
+    ) do
+      entity.destroy()
+    end
+    for _, container in pairs(find_on_all_surfaces{name = {"kr-shelter-container", "kr-shelter-plus-container"}}) do
+      shelter.build(container)
+    end
 
     -- Tesla coils
     for _, tower in pairs(find_on_all_surfaces{name = "kr-tesla-coil"}) do
