@@ -2,6 +2,7 @@ if mods["deadlock-beltboxes-loaders"] then
   local function krCreateStacks(_stackable_krastorio_items)
     for i, items in pairs(_stackable_krastorio_items) do
       for _, item_name in pairs(items) do
+        ---@diagnostic disable-next-line
         deadlock.add_stack(item_name, nil, "deadlock-stacking-" .. i)
       end
     end
@@ -11,6 +12,7 @@ if mods["deadlock-beltboxes-loaders"] then
   local loader_tier_3 = krastorio.items.getItem("express-transport-belt-loader")
     or krastorio.items.getItem("kr-express-loader")
     or "express-transport-belt"
+  ---@diagnostic disable-next-line
   deadlock.add_tier({
     transport_belt = "kr-advanced-transport-belt",
     colour = { r = 76, g = 232, b = 48, a = 250 },
@@ -36,6 +38,7 @@ if mods["deadlock-beltboxes-loaders"] then
   local loader_tier_4 = krastorio.items.getItem("kr-advanced-transport-belt-loader")
     or krastorio.items.getItem("kr-advanced-loader")
     or "advanced-transport-belt"
+  ---@diagnostic disable-next-line
   deadlock.add_tier({
     transport_belt = "kr-superior-transport-belt",
     colour = { r = 151, g = 34, b = 191, a = 250 },

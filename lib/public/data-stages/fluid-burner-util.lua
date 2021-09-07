@@ -1,4 +1,5 @@
 local color = require("__Krastorio2__/lib/private/data-stages/colorRGB")
+local matrix = require("__Krastorio2__/lib/private/data-stages/matrix")
 
 -- -- -- FLUID BURNER UTIL
 -- Notes: in fluid burner for don't handle a fluid must be blacklisted

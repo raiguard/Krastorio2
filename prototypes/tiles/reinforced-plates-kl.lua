@@ -172,7 +172,7 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
       },
       map_color = { r = 175, g = 175, b = 175 },
       pollution_absorption_per_second = 0,
-      vehicle_friction_modifier = concrete_vehicle_speed_modifier,
+      vehicle_friction_modifier = 0.8,
     },
 
     {
@@ -285,7 +285,7 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
       },
       map_color = { r = 50, g = 50, b = 50 },
       pollution_absorption_per_second = 0,
-      vehicle_friction_modifier = concrete_vehicle_speed_modifier,
+      vehicle_friction_modifier = 0.8,
     },
   })
 

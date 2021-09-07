@@ -1069,7 +1069,7 @@ function krastorio.recipes.convertIngredients(recipe_name, old_ingredient_names,
     converted = krastorio.recipes.convertIngredient(recipe_name, old_ingredient_name, ingredient_name)
     converted_all = converted_all and converted
     i, old_ingredient_name = next(old_ingredient_names, i)
-    j, ingredient_name = next(new_ingredients, j)
+    j, ingredient_name = next(new_ingredient_names, j)
   end
   return converted_all
 end

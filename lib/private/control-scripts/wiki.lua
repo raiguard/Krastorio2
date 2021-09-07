@@ -203,35 +203,36 @@ function createWiki(event)
   })
   -- Back button section
   --[[ OLD CLOSE BUTTON
-  local back_button_flow = krastorio.gui.addFlow(wiki_frame, 
+  local back_button_flow = krastorio.gui.addFlow(wiki_frame,
   {
     name      = w_prefix.."back-button-flow",
     direction = "horizontal",
     style     = "kr-wiki-back-button-flow"
-  })  
-  local inner_back_button_flow = krastorio.gui.addFlow(back_button_flow, 
+  })
+  local inner_back_button_flow = krastorio.gui.addFlow(back_button_flow,
   {
     name      = w_prefix.."inner-back-button-flow",
     direction = "horizontal",
     style     = "horizontal_flow"
-  })  
-  -- Bottom left close button 
-  krastorio.gui.addBackButton(inner_back_button_flow, 
+  })
+  -- Bottom left close button
+  krastorio.gui.addBackButton(inner_back_button_flow,
   {
-    name    = w_prefix.."close-button-2", 
+    name    = w_prefix.."close-button-2",
     caption = {"gui.close-wiki"},
     style   = "kr-wiki-back-button"
   })
   --]]
   --Filler
-  krastorio.gui.addElement(
-    back_button_flow,
-    "empty-widget",
-    w_prefix .. "bottom-filler",
-    nil,
-    nil,
-    { style = "draggable_space_with_no_right_margin" }
-  )
+  -- This wouldn't do anything since `back_button_flow` doesn't exist
+  -- krastorio.gui.addElement(
+  --   back_button_flow,
+  --   "empty-widget",
+  --   w_prefix .. "bottom-filler",
+  --   nil,
+  --   nil,
+  --   { style = "draggable_space_with_no_right_margin" }
+  -- )
 
   -- -- LEFT
   ----------------------------------

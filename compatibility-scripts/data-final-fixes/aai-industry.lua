@@ -84,7 +84,9 @@ if mods["aai-industry"] then
   krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
 
   -- External compatibility call
+  ---@diagnostic disable-next-line
   if k2_aai_industry_compatibility then
+    ---@diagnostic disable-next-line
     k2_aai_industry_compatibility()
   end
 end

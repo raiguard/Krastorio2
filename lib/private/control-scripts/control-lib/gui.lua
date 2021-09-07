@@ -337,7 +337,7 @@ function krastorio.gui.addDescription(parent, name, caption, tooltip, others)
 end
 
 function krastorio.gui.addTextField(parent, name, text, tooltip, others)
-  others = krastorio.gui.getOthersTable(name, caption, tooltip, others)
+  others = krastorio.gui.getOthersTable(name, nil, tooltip, others)
   others.style = others.style or "textbox"
   others.text = text or others.text or others.caption or ""
   return krastorio.gui.addElement(parent, "textfield", name, text, tooltip, others)
@@ -375,7 +375,7 @@ function krastorio.gui.addLine(parent, name, direction, others)
   others = krastorio.gui.getOthersTable(name, nil, nil, others)
   others.direction = direction or others.direction or "horizontal"
   others.style = others.style or "line"
-  return krastorio.gui.addElement(parent, "line", name, nil, tooltip, others)
+  return krastorio.gui.addElement(parent, "line", name, nil, nil, others)
 end
 
 -- Sprite
