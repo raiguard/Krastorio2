@@ -57,7 +57,6 @@ data:extend({
             width = 460,
             height = 520,
             shift = { 0, -0.2 },
-            scale = 0.5,
             frame_count = 1,
             scale = 0.5,
           },
@@ -74,7 +73,6 @@ data:extend({
           hr_version = {
             filename = kr_entities_path .. "filtration-plant/hr-filtration-plant-sh.png",
             priority = "high",
-            scale = scale,
             width = 498,
             height = 438,
             shift = { 0.33, 0.32 },
@@ -103,7 +101,6 @@ data:extend({
             width = 340,
             height = 370,
             shift = { 0.3, -0.59 },
-            scale = 0.5,
             frame_count = 30,
             line_length = 6,
             animation_speed = 0.6,

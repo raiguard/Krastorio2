@@ -62,7 +62,6 @@ data:extend({
           hr_version = {
             filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-sh.png",
             priority = "high",
-            scale = scale,
             width = 165,
             height = 480,
             shift = { 3.1, -0.1 },
@@ -169,9 +168,7 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = advanced_furnace_sound,
     idle_sound = { filename = "__base__/sound/idle1.ogg" },
-    -- FIXME: The base_productivity completely misbalances recipes that aren't supposed to take prod modules
     crafting_speed = 12,
-    -- base_productivity = 0.25,
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",

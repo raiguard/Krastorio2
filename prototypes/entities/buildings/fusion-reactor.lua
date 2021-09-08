@@ -64,7 +64,6 @@ data:extend({
           hr_version = {
             filename = kr_entities_path .. "fusion-reactor/hr-fusion-reactor-shadow.png",
             priority = "medium",
-            scale = scale,
             width = 1100,
             height = 1100,
             shift = { 1.01, 0 },

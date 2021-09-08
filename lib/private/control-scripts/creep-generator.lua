@@ -119,7 +119,7 @@ end
 
 -- Take and generate one section of creep to generate from the possible in the stack
 -- @event, on_tick
-function continueCreepGeneration(event)
+function continueCreepGeneration()
   if #global.creeps_to_generate > 0 then --and event.tick % 10 == 0 then
     -- Choose one index to calculate
     local i = global.creep_index
@@ -178,7 +178,7 @@ function spawnCreep(nest_surface, nest_position)
   y.rad = (y.max - y.min) / 2
   local thetha = 0
   local thetha_points = {} -- ellipse draw points
-  local xP, yP = nil
+  local xP, yP = nil, nil
   while thetha <= 360 do
     xP = math.floor(nest_position.x + x.rad * math.cos(thetha)) -- calculate x point
     yP = math.floor(nest_position.y + y.rad * math.sin(thetha)) -- calculate y point

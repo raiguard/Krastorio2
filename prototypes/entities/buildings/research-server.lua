@@ -34,7 +34,6 @@ data:extend({
           hr_version = {
             filename = kr_entities_path .. "research-server/hr-research-server.png",
             priority = "high",
-            scale = scale,
             width = 256,
             height = 256,
             shift = { 0., -0.2 },
@@ -58,7 +57,6 @@ data:extend({
           hr_version = {
             filename = kr_entities_path .. "research-server/hr-research-server-shadow.png",
             priority = "high",
-            scale = scale,
             width = 256,
             height = 256,
             draw_as_shadow = true,
@@ -87,7 +85,6 @@ data:extend({
           hr_version = {
             filename = kr_entities_path .. "research-server/hr-research-server-light.png",
             priority = "extra-high",
-            scale = scale,
             width = 256,
             height = 256,
             shift = { 0., -0.2 },

@@ -72,7 +72,6 @@ data:extend({
           hr_version = {
             filename = kr_entities_path .. "matter-plant/hr-matter-plant.png",
             priority = "high",
-            scale = scale,
             width = 462,
             height = 500,
             frame_count = 1,
@@ -92,7 +91,6 @@ data:extend({
           hr_version = {
             filename = kr_entities_path .. "matter-plant/hr-matter-plant-sh.png",
             priority = "high",
-            scale = scale,
             width = 504,
             height = 444,
             frame_count = 1,
@@ -120,7 +118,6 @@ data:extend({
           hr_version = {
             filename = kr_entities_path .. "matter-plant/hr-matter-plant-working-light.png",
             priority = "high",
-            scale = scale,
             width = 462,
             height = 500,
             frame_count = 30,
@@ -148,7 +145,6 @@ data:extend({
           hr_version = {
             filename = kr_entities_path .. "matter-plant/hr-matter-plant-working-glow.png",
             priority = "high",
-            scale = scale,
             width = 462,
             height = 500,
             frame_count = 30,
@@ -171,7 +167,6 @@ data:extend({
           animation_speed = 0.75,
           hr_version = {
             filename = kr_entities_path .. "matter-plant/hr-matter-plant-working.png",
-            scale = scale,
             width = 462,
             height = 500,
             frame_count = 30,

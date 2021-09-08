@@ -5,8 +5,9 @@
 krastorio = {}
 krastorio.internal_name = "Krastorio2"
 krastorio.title_name = "Krastorio 2"
-krastorio.version = mods[krastorio_name]
+krastorio.version = mods[krastorio.internal_name]
 krastorio.stage = "data"
+suppress_krastorio_assertions = false
 -- -- Global Krastorio 2 Paths
 require("__Krastorio2__/lib/public/data-stages/paths")
 -- -- Global Krastorio 2 library initialization, utilities library (support for main library)

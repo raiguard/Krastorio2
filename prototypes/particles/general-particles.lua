@@ -20,7 +20,7 @@ local make_particle = function(params)
     type = "optimized-particle",
     name = name,
 
-    life_time = params.life_time or 60 * 15,
+    life_time = params.life_time or (60 * 15),
 
     render_layer = params.render_layer or "projectile",
     render_layer_when_on_ground = params.render_layer_when_on_ground or "corpse",

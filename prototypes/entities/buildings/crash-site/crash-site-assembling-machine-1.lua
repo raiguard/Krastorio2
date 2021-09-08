@@ -40,7 +40,6 @@ data:extend({
     integration_patch_render_layer = "decals",
     integration_patch = {
       filename = kr_crash_site_sprites_path .. "assembling-machine/crash-site-assembling-machine-1-ground.png",
-      priority = crash_site_sprite_priority,
       width = 208,
       height = 116,
       shift = util.by_pixel(-24, 12),
@@ -48,7 +47,6 @@ data:extend({
       line_length = 1,
       hr_version = {
         filename = kr_crash_site_sprites_path .. "assembling-machine/hr-crash-site-assembling-machine-1-ground.png",
-        priority = crash_site_sprite_priority,
         width = 446,
         height = 234,
         shift = util.by_pixel(-31, 12),
@@ -61,7 +59,6 @@ data:extend({
       layers = {
         {
           filename = kr_crash_site_sprites_path .. "assembling-machine/crash-site-assembling-machine-1-repaired.png",
-          priority = crash_site_sprite_priority,
           width = 142,
           height = 92,
           frame_count = 20,
@@ -70,7 +67,6 @@ data:extend({
           animation_speed = kr_crash_site_assembling_machine_1_repaired_animation_speed,
           hr_version = {
             filename = kr_crash_site_sprites_path .. "assembling-machine/hr-crash-site-assembling-machine-1-repaired.png",
-            priority = crash_site_sprite_priority,
             width = 282,
             height = 182,
             frame_count = 20,
@@ -82,7 +78,6 @@ data:extend({
         },
         {
           filename = kr_crash_site_sprites_path .. "assembling-machine/crash-site-assembling-machine-1-repaired-shadow.png",
-          priority = crash_site_sprite_priority,
           width = 140,
           height = 84,
           frame_count = 20,
@@ -92,7 +87,6 @@ data:extend({
           animation_speed = kr_crash_site_assembling_machine_1_repaired_animation_speed,
           hr_version = {
             filename = kr_crash_site_sprites_path .. "assembling-machine/hr-crash-site-assembling-machine-1-repaired-shadow.png",
-            priority = crash_site_sprite_priority,
             width = 278,
             height = 168,
             frame_count = 20,
@@ -109,7 +103,6 @@ data:extend({
       {
         animation = {
           filename = kr_crash_site_sprites_path .. "assembling-machine/crash-site-assembling-machine-1-repaired-light.png",
-          priority = crash_site_sprite_priority,
           width = 78,
           height = 64,
           frame_count = 20,
@@ -120,7 +113,6 @@ data:extend({
           animation_speed = kr_crash_site_assembling_machine_1_repaired_animation_speed,
           hr_version = {
             filename = kr_crash_site_sprites_path .. "assembling-machine/hr-crash-site-assembling-machine-1-repaired-light.png",
-            priority = crash_site_sprite_priority,
             width = 162,
             height = 120,
             frame_count = 20,

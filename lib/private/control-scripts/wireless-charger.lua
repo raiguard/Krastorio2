@@ -427,7 +427,7 @@ local function onBuiltAnEntity(event)
     elseif entity.grid and haveOneTriggerEquip(entity.grid) then
       addMonitoredGrid(entity.grid, entity)
     elseif event.player_index and game.players[event.player_index].character == entity then
-      addMonitoredGrid(entity.grid, entity, player_index)
+      addMonitoredGrid(entity.grid, entity)
     end
   end
 end

@@ -200,7 +200,8 @@ local concrete_transitions = {
       --base = { layer = 40 }
     }
   ),
-  concrete_out_of_map_transition,
+  -- This doesn't exist?
+  -- concrete_out_of_map_transition,
 }
 
 local concrete_transitions_between_transitions = {

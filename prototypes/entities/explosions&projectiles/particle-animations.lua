@@ -29,7 +29,7 @@ particle_animations.get_metal_particle_big_pictures = function(options)
   }
 end
 
-particle_animations.get_wooden_particle_pictures = function(options)
+particle_animations.get_wooden_particle_pictures = function()
   return {
     {
       filename = "__base__/graphics/particle/wooden-particle/wooden-particle-01.png",
@@ -1350,7 +1350,7 @@ particle_animations.get_new_leaf_particle_pictures = function(options)
 end
 
 particle_animations.get_coal_particle_shadow_pictures = function()
-  return 
+  return
 {
     {
       filename = "__base__/graphics/particle/coal-particle/coal-particle-shadow-1.png",
@@ -1480,8 +1480,8 @@ particle_animations.get_coal_particle_pictures = function()
   }
 end
 
-particle_animations.get_old_stone_particle_shadow_pictures = function(options)
-  return 
+particle_animations.get_old_stone_particle_shadow_pictures = function()
+  return
 {
     {
       filename = "__base__/graphics/particle/stone-particle/stone-particle-shadow-1.png",
@@ -1546,7 +1546,7 @@ particle_animations.get_old_stone_particle_shadow_pictures = function(options)
   }
 end
 
-particle_animations.get_old_stone_particle_pictures = function(options)
+particle_animations.get_old_stone_particle_pictures = function()
   return {
     {
       filename = "__base__/graphics/particle/stone-particle/stone-particle-1.png",
@@ -1611,9 +1611,9 @@ particle_animations.get_old_stone_particle_pictures = function(options)
   }
 end
 
-particle_animations.get_copper_particle_shadow_pictures = function(options)
-  return 
-{
+particle_animations.get_copper_particle_shadow_pictures = function()
+  return
+  {
     {
       filename = "__base__/graphics/particle/copper-ore-particle/copper-ore-particle-shadow-1.png",
       priority = "extra-high",
@@ -1677,8 +1677,8 @@ particle_animations.get_copper_particle_shadow_pictures = function(options)
   }
 end
 
-particle_animations.get_copper_particle_pictures = function(options)
-  return 
+particle_animations.get_copper_particle_pictures = function()
+  return
 {
     {
       filename = "__base__/graphics/particle/copper-ore-particle/copper-ore-particle-1.png",
@@ -1743,7 +1743,7 @@ particle_animations.get_copper_particle_pictures = function(options)
   }
 end
 
-particle_animations.get_iron_particle_shadow_pictures = function(options)
+particle_animations.get_iron_particle_shadow_pictures = function()
   return {
     {
       filename = "__base__/graphics/particle/iron-ore-particle/iron-ore-particle-shadow-1.png",
@@ -1808,7 +1808,7 @@ particle_animations.get_iron_particle_shadow_pictures = function(options)
   }
 end
 
-particle_animations.get_iron_particle_pictures = function(options)
+particle_animations.get_iron_particle_pictures = function()
   return {
     {
       filename = "__base__/graphics/particle/iron-ore-particle/iron-ore-particle-1.png",
@@ -1900,8 +1900,7 @@ particle_animations.get_explosion_remnants_front_pictures = function(options)
   }
 end
 
-particle_animations.get_explosion_remnants_pictures = function(options)
-  local options = options or {}
+particle_animations.get_explosion_remnants_pictures = function()
   return {
     sheet = {
       filename = "__base__/graphics/particle/explosion-particle/explosion-particle.png",
@@ -1915,8 +1914,7 @@ particle_animations.get_explosion_remnants_pictures = function(options)
   }
 end
 
-particle_animations.get_explosion_remnants_shadow_pictures = function(options)
-  local options = options or {}
+particle_animations.get_explosion_remnants_shadow_pictures = function()
   return {
     sheet = {
       filename = "__base__/graphics/particle/explosion-particle/explosion-particle-shadow.png",
@@ -1931,7 +1929,7 @@ particle_animations.get_explosion_remnants_shadow_pictures = function(options)
   }
 end
 
-particle_animations.get_shell_particle_pictures = function(options)
+particle_animations.get_shell_particle_pictures = function()
   return {
     {
       filename = "__base__/graphics/particle/shell-particle/shell-particle-1.png",
@@ -1950,7 +1948,7 @@ particle_animations.get_shell_particle_pictures = function(options)
   }
 end
 
-particle_animations.get_shell_particle_shadow_pictures = function(options)
+particle_animations.get_shell_particle_shadow_pictures = function()
   return {
     {
       filename = "__base__/graphics/particle/shell-particle/shell-particle-shadow-1.png",
@@ -1969,7 +1967,7 @@ particle_animations.get_shell_particle_shadow_pictures = function(options)
   }
 end
 
-particle_animations.get_wooden_particle_shadow_pictures = function(options)
+particle_animations.get_wooden_particle_shadow_pictures = function()
   return {
     {
       filename = "__base__/graphics/particle/wooden-particle/wooden-particle-shadow-01.png",
@@ -2343,35 +2341,6 @@ particle_animations.get_wooden_particle_shadow_pictures = function(options)
         width = 45,
         height = 50,
         frame_count = 16,
-        scale = 0.5,
-      },
-    },
-  }
-end
-
-particle_animations.get_explosion_remnants_particle = function(options)
-  local options = options or {}
-  return {
-    sheet = {
-      filename = "__base__/graphics/particle/explosion-particle/explosion-particle-back.png",
-      priority = "extra-high",
-      width = 14,
-      height = 12,
-      frame_count = 12,
-      tint = options.tint,
-      animation_speed = 0.5,
-      variation_count = 24,
-      shift = util.add_shift(util.by_pixel(2.5, 0.5), options.shift),
-      hr_version = {
-        filename = "__base__/graphics/particle/explosion-particle/hr-explosion-particle-back.png",
-        priority = "extra-high",
-        width = 28,
-        height = 26,
-        frame_count = 12,
-        tint = options.tint,
-        animation_speed = 0.5,
-        variation_count = 24,
-        shift = util.add_shift(util.by_pixel(2.5, 0.5), options.shift),
         scale = 0.5,
       },
     },
@@ -2960,7 +2929,7 @@ particle_animations.get_pole_sparks_particle_pictures = function()
 end
 
 particle_animations.get_sparks_particle_pictures = function()
-  return 
+  return
 {
     sheet = {
       filename = "__base__/graphics/particle/spark-particle/sparks.png",
@@ -3114,7 +3083,6 @@ particle_animations.get_artillery_shell_particle = function(options)
       variation_count = 4,
       axially_symmetrical = false,
       direction_count = 1,
-      shift = util.by_pixel(2.5, -0.5),
       shift = util.add_shift(util.by_pixel(2.5, -0.5), options.shift),
       animation_speed = 1,
       hr_version = {

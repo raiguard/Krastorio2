@@ -143,16 +143,11 @@ end
 function krastorio.entities.removeLabInput(lab_name, input_name)
   local inputs = krastorio.entities.getLabInputs(lab_name)
   if inputs then
-    local finded = false
-    for i, input in pairs(inputs) do
+    for key, input in pairs(inputs) do
       if input_name == input then
-        finded = i
-        break
+        inputs[key] = nil
+        return true
       end
-    end
-    if finded then
-      table.remove(inputs, i, input_name)
-      return true
     end
   end
   return false

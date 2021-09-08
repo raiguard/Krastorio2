@@ -45,7 +45,6 @@ data:extend({
     integration_patch_render_layer = "decals",
     integration_patch = {
       filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-ground.png",
-      priority = crash_site_sprite_priority,
       width = 352,
       height = 170,
       shift = util.by_pixel(-48, 12),
@@ -53,7 +52,6 @@ data:extend({
       line_length = 1,
       hr_version = {
         filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-ground.png",
-        priority = crash_site_sprite_priority,
         width = 700,
         height = 344,
         shift = util.by_pixel(-49, 11),
@@ -66,7 +64,6 @@ data:extend({
       layers = {
         {
           filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-repaired.png",
-          priority = crash_site_sprite_priority,
           width = 244,
           height = 126,
           frame_count = 1,
@@ -76,7 +73,6 @@ data:extend({
           shift = util.by_pixel(-18, 14),
           hr_version = {
             filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-repaired.png",
-            priority = crash_site_sprite_priority,
             width = 488,
             height = 252,
             frame_count = 1,
@@ -89,7 +85,6 @@ data:extend({
         },
         {
           filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-repaired-beams.png",
-          priority = crash_site_sprite_priority,
           width = 68,
           height = 50,
           frame_count = 24,
@@ -100,7 +95,6 @@ data:extend({
           blend_mode = "additive",
           hr_version = {
             filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-repaired-beams.png",
-            priority = crash_site_sprite_priority,
             width = 130,
             height = 100,
             frame_count = 24,
@@ -114,7 +108,6 @@ data:extend({
         },
         {
           filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-repaired-beams-light.png",
-          priority = crash_site_sprite_priority,
           width = 68,
           height = 50,
           frame_count = 24,
@@ -125,7 +118,6 @@ data:extend({
           blend_mode = "additive",
           hr_version = {
             filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-repaired-beams-light.png",
-            priority = crash_site_sprite_priority,
             width = 130,
             height = 100,
             frame_count = 24,
@@ -139,7 +131,6 @@ data:extend({
         },
         {
           filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-repaired-shadow.png",
-          priority = crash_site_sprite_priority,
           width = 350,
           height = 148,
           frame_count = 1,
@@ -150,7 +141,6 @@ data:extend({
           draw_as_shadow = true,
           hr_version = {
             filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-repaired-shadow.png",
-            priority = crash_site_sprite_priority,
             width = 696,
             height = 302,
             frame_count = 1,
@@ -168,7 +158,6 @@ data:extend({
       layers = {
         {
           filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-repaired.png",
-          priority = crash_site_sprite_priority,
           width = 244,
           height = 126,
           frame_count = 1,
@@ -178,7 +167,6 @@ data:extend({
           shift = util.by_pixel(-18, 14),
           hr_version = {
             filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-repaired.png",
-            priority = crash_site_sprite_priority,
             width = 488,
             height = 252,
             frame_count = 1,
@@ -191,7 +179,6 @@ data:extend({
         },
         {
           filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-repaired-shadow.png",
-          priority = crash_site_sprite_priority,
           width = 350,
           height = 148,
           frame_count = 1,
@@ -202,7 +189,6 @@ data:extend({
           draw_as_shadow = true,
           hr_version = {
             filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-repaired-shadow.png",
-            priority = crash_site_sprite_priority,
             width = 696,
             height = 302,
             frame_count = 1,

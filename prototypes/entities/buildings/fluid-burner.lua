@@ -57,7 +57,6 @@ data:extend({
             hr_version = {
               filename = kr_entities_path .. "fluid-burner/hr-fluid-burner-sh.png",
               priority = "high",
-              scale = scale,
               width = 258,
               height = 94,
               shift = { 1.1, 0.25 },
@@ -97,7 +96,6 @@ data:extend({
             hr_version = {
               filename = kr_entities_path .. "fluid-burner/hr-fluid-burner-sh.png",
               priority = "high",
-              scale = scale,
               width = 258,
               height = 94,
               shift = { 1.1, 0.25 },
@@ -139,7 +137,6 @@ data:extend({
             hr_version = {
               filename = kr_entities_path .. "fluid-burner/hr-fluid-burner-sh.png",
               priority = "high",
-              scale = scale,
               width = 258,
               height = 94,
               shift = { 1.1, 0.25 },
@@ -179,7 +176,6 @@ data:extend({
             hr_version = {
               filename = kr_entities_path .. "fluid-burner/hr-fluid-burner-sh.png",
               priority = "high",
-              scale = scale,
               width = 258,
               height = 94,
               shift = { 1.1, 0.25 },

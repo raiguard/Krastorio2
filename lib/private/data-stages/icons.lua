@@ -44,25 +44,26 @@ function krastorio.icons.createOverlappedIcon(_position, _icon_path, _icon_size,
   }
 end
 
--- @ see krastorio.icons.createOverlappedIcon(...)
-function krastorio.icons.createULOverlappedIcon(_icon_path, _icon_size, _over_icon_path, _over_icon_size)
-  krastorio.icons.createOverlappedIcon(positions.upper_left, _icon_path, _icon_size, _over_icon_path, _over_icon_size)
-end
+-- These functions use a nonexistent `positions` table, and would crash immediately if used
+-- -- @ see krastorio.icons.createOverlappedIcon(...)
+-- function krastorio.icons.createULOverlappedIcon(_icon_path, _icon_size, _over_icon_path, _over_icon_size)
+--   krastorio.icons.createOverlappedIcon(positions.upper_left, _icon_path, _icon_size, _over_icon_path, _over_icon_size)
+-- end
 
--- @ see krastorio.icons.createOverlappedIcon(...)
-function krastorio.icons.createUROverlappedIcon(_icon_path, _icon_size, _over_icon_path, _over_icon_size)
-  krastorio.icons.createOverlappedIcon(positions.upper_right, _icon_path, _icon_size, _over_icon_path, _over_icon_size)
-end
+-- -- @ see krastorio.icons.createOverlappedIcon(...)
+-- function krastorio.icons.createUROverlappedIcon(_icon_path, _icon_size, _over_icon_path, _over_icon_size)
+--   krastorio.icons.createOverlappedIcon(positions.upper_right, _icon_path, _icon_size, _over_icon_path, _over_icon_size)
+-- end
 
--- @ see krastorio.icons.createOverlappedIcon(...)
-function krastorio.icons.createBLOverlappedIcon(_icon_path, _icon_size, _over_icon_path, _over_icon_size)
-  krastorio.icons.createOverlappedIcon(positions.bottom_left, _icon_path, _icon_size, _over_icon_path, _over_icon_size)
-end
+-- -- @ see krastorio.icons.createOverlappedIcon(...)
+-- function krastorio.icons.createBLOverlappedIcon(_icon_path, _icon_size, _over_icon_path, _over_icon_size)
+--   krastorio.icons.createOverlappedIcon(positions.bottom_left, _icon_path, _icon_size, _over_icon_path, _over_icon_size)
+-- end
 
--- @ see krastorio.icons.createOverlappedIcon(...)
-function krastorio.icons.createBROverlappedIcon(_icon_path, _icon_size, _over_icon_path, _over_icon_size)
-  krastorio.icons.createOverlappedIcon(positions.bottom_right, _icon_path, _icon_size, _over_icon_path, _over_icon_size)
-end
+-- -- @ see krastorio.icons.createOverlappedIcon(...)
+-- function krastorio.icons.createBROverlappedIcon(_icon_path, _icon_size, _over_icon_path, _over_icon_size)
+--   krastorio.icons.createOverlappedIcon(positions.bottom_right, _icon_path, _icon_size, _over_icon_path, _over_icon_size)
+-- end
 
 -- @item_or_recipe, item or recipe
 function krastorio.icons.getIconsForOverlay(item_or_recipe)

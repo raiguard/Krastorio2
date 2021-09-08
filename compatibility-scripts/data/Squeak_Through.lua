@@ -5,6 +5,7 @@ end
 require("__Squeak Through__/config")
 
 function addExcludedEntityToSqueakThrough(name, category)
+  ---@diagnostic disable-next-line
   table.insert(exclusions, {
     {
       apply_when_object_exists = {

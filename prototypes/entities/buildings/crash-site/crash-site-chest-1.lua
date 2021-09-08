@@ -39,7 +39,6 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     integration_patch = {
       filename = kr_crash_site_sprites_path .. "chests/crash-site-chest-1-ground.png",
-      priority = crash_site_sprite_priority,
       width = 111,
       height = 73,
       shift = util.by_pixel(-6, 12),
@@ -47,7 +46,6 @@ data:extend({
       line_length = 1,
       hr_version = {
         filename = kr_crash_site_sprites_path .. "chests/hr-crash-site-chest-1-ground.png",
-        priority = crash_site_sprite_priority,
         width = 220,
         height = 148,
         shift = util.by_pixel(-6, 12),
