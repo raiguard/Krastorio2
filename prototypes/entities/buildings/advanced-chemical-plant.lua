@@ -92,7 +92,6 @@ data:extend({
             width = 451,
             height = 535,
             shift = { 0, -0.48 },
-            scale = 0.5,
             frame_count = 20,
             line_length = 5,
             animation_speed = 0.25,
@@ -113,7 +112,6 @@ data:extend({
           hr_version = {
             filename = kr_entities_path .. "advanced-chemical-plant/hr-advanced-chemical-plant-sh.png",
             priority = "high",
-            scale = scale,
             width = 516,
             height = 458,
             shift = { 0.33, 0.32 },
@@ -134,9 +132,7 @@ data:extend({
       idle_sound = { filename = "__base__/sound/idle1.ogg" },
       apparent_volume = 1.1,
     },
-    -- FIXME: The base_productivity completely misbalances recipes that aren't supposed to take prod modules
     crafting_speed = 8,
-    -- base_productivity = 0.25,
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",

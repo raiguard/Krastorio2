@@ -28,7 +28,6 @@ data:extend({
       { type = "impact", percent = 60 },
       { type = "physical", percent = 50 },
     },
-    damaged_trigger_effect = hit_effects.entity(),
     collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
     selection_box = { { -1.3, -1.1 }, { 1.3, 1.1 } },
     damaged_trigger_effect = hit_effects.entity(),

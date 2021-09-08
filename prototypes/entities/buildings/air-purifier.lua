@@ -32,7 +32,6 @@ data:extend({
           hr_version = {
             filename = kr_entities_path .. "air-purifier/hr-air-purifier.png",
             priority = "high",
-            scale = scale,
             width = 150,
             height = 150,
             shift = { 0, -0.1 },
@@ -55,7 +54,6 @@ data:extend({
           hr_version = {
             filename = kr_entities_path .. "air-purifier/hr-air-purifier-sh.png",
             priority = "high",
-            scale = scale,
             width = 164,
             height = 102,
             shift = { 0.22, 0.25 },

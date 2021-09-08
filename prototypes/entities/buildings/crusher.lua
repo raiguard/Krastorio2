@@ -27,13 +27,11 @@ data:extend({
           width = 256,
           height = 256,
           frame_count = 30,
-          frame_count = 30,
           line_length = 6,
           animation_speed = 0.75,
           hr_version = {
             filename = kr_entities_path .. "crusher/hr-crusher.png",
             priority = "high",
-            scale = scale,
             width = 512,
             height = 512,
             frame_count = 30,
@@ -54,7 +52,6 @@ data:extend({
           hr_version = {
             filename = kr_entities_path .. "crusher/hr-crusher-shadow.png",
             priority = "high",
-            scale = scale,
             width = 512,
             height = 512,
             frame_count = 30,

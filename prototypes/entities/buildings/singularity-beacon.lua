@@ -81,7 +81,6 @@ data:extend({
       height = 10,
       frame_count = 10,
       line_length = 5,
-      scale = scale,
       scale = 0.5,
       animation_speed = 0.5,
     },

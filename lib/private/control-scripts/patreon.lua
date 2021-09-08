@@ -44,7 +44,6 @@ local krastorio_high_patreons = {
   ["rougefallout365"] = true,
   ["gbs5009"] = true,
   ["vladhc"] = true,
-  ["tobi"] = true,
   ["tobivollebregt"] = true,
   ["max.perry"] = true,
   ["djnaphthalin"] = true,
@@ -66,7 +65,7 @@ function isHighLevelPatreon(name)
   if krastorio_high_patreons[string.lower(name)] then
     return true
   end
-  for i, supporter in pairs(patreons_list.getHighSupportersList()) do
+  for _, supporter in pairs(patreons_list.getHighSupportersList()) do
     if string.lower(supporter) == string.lower(name) then
       return true
     end

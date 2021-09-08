@@ -1,4 +1,3 @@
-local default_locomotive_color = { r = 0.50, g = 0.65, b = 0.53, a = 0.5 }
 local nuclear_smoke_color = { r = 0.5, g = 0.55, b = 0.45, a = 0.25 }
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
@@ -390,41 +389,6 @@ data:extend({
       scale = 0.5,
     },
     wheels = standard_train_wheels,
-    stop_trigger = {
-      -- left side
-      {
-        type = "create-trivial-smoke",
-        repeat_count = 125,
-        smoke_name = "smoke-train-stop",
-        initial_height = 0,
-        -- smoke goes to the left
-        speed = { -0.03, 0 },
-        speed_multiplier = 0.75,
-        speed_multiplier_deviation = 1.1,
-        offset_deviation = { { -0.75, -2.7 }, { -0.3, 2.7 } },
-      },
-      -- right side
-      {
-        type = "create-trivial-smoke",
-        repeat_count = 125,
-        smoke_name = "smoke-train-stop",
-        initial_height = 0,
-        -- smoke goes to the right
-        speed = { 0.03, 0 },
-        speed_multiplier = 0.75,
-        speed_multiplier_deviation = 1.1,
-        offset_deviation = { { 0.3, -2.7 }, { 0.75, 2.7 } },
-      },
-      {
-        type = "play-sound",
-        sound = {
-          {
-            filename = "__base__/sound/train-breaks.ogg",
-            volume = 0.6,
-          },
-        },
-      },
-    },
     stop_trigger = {
       -- left side
       {

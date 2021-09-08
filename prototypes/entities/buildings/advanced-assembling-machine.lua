@@ -306,7 +306,7 @@ data:extend({
       fade_out_ticks = 30,
     },
     idle_sound = { filename = "__base__/sound/idle1.ogg" },
-    -- FIXME: The base_productivity completely misbalances recipes that aren't supposed to take prod modules
+    -- FIXME: The base_productivity completely unbalances recipes that aren't supposed to take prod modules
     crafting_speed = 5,
     -- base_productivity = 0.20,
     energy_source = {

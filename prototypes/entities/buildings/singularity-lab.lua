@@ -77,7 +77,6 @@ data:extend({
           hr_version = {
             filename = kr_entities_path .. "singularity-lab/hr-singularity-lab-glow-light.png",
             priority = "high",
-            scale = 0.5,
             width = 153,
             height = 117,
             shift = { 0, -0.8 },
@@ -101,7 +100,6 @@ data:extend({
           hr_version = {
             filename = kr_entities_path .. "singularity-lab/hr-singularity-lab-glow.png",
             priority = "high",
-            scale = 0.5,
             width = 153,
             height = 117,
             shift = { 0, -0.8 },
@@ -143,7 +141,6 @@ data:extend({
           animation_speed = 0.85,
           hr_version = {
             filename = kr_entities_path .. "singularity-lab/hr-singularity-lab-working.png",
-            scale = 0.5,
             width = 520,
             height = 500,
             shift = { 0.0, -0.1 },

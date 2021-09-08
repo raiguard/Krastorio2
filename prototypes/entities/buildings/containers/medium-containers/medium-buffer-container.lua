@@ -37,8 +37,6 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
       inventory_size = 120,
       scale_info_icons = kr_icons_size,
       logistic_mode = "buffer",
-      open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume = 0.65 },
-      close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
       vehicle_impact_sound = sounds.generic_impact,
       opened_duration = logistic_chest_opened_duration,
       animation = {

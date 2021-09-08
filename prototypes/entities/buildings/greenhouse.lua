@@ -1,5 +1,4 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
-local sounds = require("__base__/prototypes/entity/sounds")
 
 local greenhouse_working_sound = {
   filename = kr_buildings_sounds_path .. "greenhouse.ogg",
@@ -60,7 +59,6 @@ data:extend({
           hr_version = {
             filename = kr_entities_path .. "greenhouse/hr-greenhouse.png",
             priority = "high",
-            scale = scale,
             width = 512,
             height = 512,
             frame_count = 1,
@@ -79,7 +77,6 @@ data:extend({
           hr_version = {
             filename = kr_entities_path .. "greenhouse/hr-greenhouse-sh.png",
             priority = "high",
-            scale = scale,
             width = 512,
             height = 512,
             shift = { 0.32, 0 },
@@ -103,7 +100,6 @@ data:extend({
           animation_speed = 0.35,
           hr_version = {
             filename = kr_entities_path .. "greenhouse/hr-greenhouse-light.png",
-            scale = scale,
             width = 512,
             height = 512,
             frame_count = 1,
@@ -124,7 +120,6 @@ data:extend({
           animation_speed = 0.35,
           hr_version = {
             filename = kr_entities_path .. "greenhouse/hr-greenhouse-working.png",
-            scale = scale,
             width = 512,
             height = 512,
             frame_count = 10,

@@ -71,7 +71,6 @@ data:extend({
           hr_version = {
             filename = kr_entities_path .. "matter-assembler/hr-matter-assembler.png",
             priority = "high",
-            scale = scale,
             width = 473,
             height = 489,
             frame_count = 1,

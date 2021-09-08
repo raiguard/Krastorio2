@@ -174,8 +174,6 @@ return {
       { type = "fluid", name = "biomethanol", amount = 120 },
     },
     crafting_machine_tint = {
-      primary = { r = 0.25, g = 0.53, b = 0.15, a = 0.000 },
-      secondary = { r = 0.27, g = 0.53, b = 0.12, a = 0.250 },
       primary = { r = 0.25, g = 0.53, b = 0.15, a = 0.750 },
       secondary = { r = 0.27, g = 0.53, b = 0.12, a = 0.900 },
     },

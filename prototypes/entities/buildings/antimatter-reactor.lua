@@ -109,7 +109,6 @@ data:extend({
         {
           filename = kr_entities_path .. "antimatter-reactor/antimatter-reactor.png",
           priority = "high",
-          scale = scale,
           width = 330,
           height = 353,
           shift = { 0, -0.5 },
@@ -120,7 +119,6 @@ data:extend({
           hr_version = {
             filename = kr_entities_path .. "antimatter-reactor/hr-antimatter-reactor.png",
             priority = "high",
-            scale = scale,
             width = 660,
             height = 706,
             shift = { 0, -0.5 },

@@ -1,7 +1,5 @@
 local particle_animations = require("__Krastorio2__/prototypes/entities/explosions&projectiles/particle-animations")
-local sounds = require("__base__/prototypes/entity/sounds")
 
-local explosion_animations = require("__base__/prototypes/entity/explosion-animations")
 local smoke_animations = require("__base__/prototypes/entity/smoke-animations")
 local sounds = require("__base__/prototypes/entity/sounds")
 
@@ -19,7 +17,7 @@ local smoke_fast_animation = function(opts)
     width = 50,
     height = 50,
     frame_count = 16,
-    animation_speed = opts.animation_speed or 16 / 60,
+    animation_speed = opts.animation_speed or (16 / 60),
     scale = opts.scale,
     tint = opts.tint,
   }
@@ -105,7 +103,7 @@ local make_particle = function(params)
     type = "optimized-particle",
     name = name,
 
-    life_time = params.life_time or 60 * 15,
+    life_time = params.life_time or (60 * 15),
     fade_away_duration = params.fade_away_duration,
 
     render_layer = params.render_layer or "projectile",
