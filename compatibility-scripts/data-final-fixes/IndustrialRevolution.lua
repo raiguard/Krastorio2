@@ -299,7 +299,6 @@ if mods["IndustrialRevolution"] then
       type = "recipe",
       name = "gold-ingot-2",
       icons = {
-        { icon = "__IndustrialRevolution__/graphics/icons/64/washing-background.png", icon_size = 64, mipmap_count = 4 },
         { icon = "__IndustrialRevolution__/graphics/icons/64/gold-ingot.png", icon_size = 64, mipmap_count = 4 },
         {
           icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png",
@@ -339,7 +338,6 @@ if mods["IndustrialRevolution"] then
       type = "recipe",
       name = "chromium-pure-2",
       icons = {
-        { icon = "__IndustrialRevolution__/graphics/icons/64/washing-background.png", icon_size = 64, mipmap_count = 4 },
         { icon = "__IndustrialRevolution__/graphics/icons/64/chromium-pure.png", icon_size = 64, mipmap_count = 4 },
         {
           icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png",
@@ -376,7 +374,6 @@ if mods["IndustrialRevolution"] then
       type = "recipe",
       name = "lead-pure-2",
       icons = {
-        { icon = "__IndustrialRevolution__/graphics/icons/64/washing-background.png", icon_size = 64, mipmap_count = 4 },
         { icon = "__IndustrialRevolution__/graphics/icons/64/lead-pure.png", icon_size = 64, mipmap_count = 4 },
         {
           icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png",
@@ -413,7 +410,6 @@ if mods["IndustrialRevolution"] then
       type = "recipe",
       name = "nickel-pure-2",
       icons = {
-        { icon = "__IndustrialRevolution__/graphics/icons/64/washing-background.png", icon_size = 64, mipmap_count = 4 },
         { icon = "__IndustrialRevolution__/graphics/icons/64/nickel-pure.png", icon_size = 64, mipmap_count = 4 },
         {
           icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png",
@@ -450,7 +446,6 @@ if mods["IndustrialRevolution"] then
       type = "recipe",
       name = "tellurium-pure-2",
       icons = {
-        { icon = "__IndustrialRevolution__/graphics/icons/64/washing-background.png", icon_size = 64, mipmap_count = 4 },
         { icon = "__IndustrialRevolution__/graphics/icons/64/tellurium-pure.png", icon_size = 64, mipmap_count = 4 },
         {
           icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png",
