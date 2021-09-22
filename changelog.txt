@@ -1,4 +1,24 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: ????
+  Features:
+    - Completely rewrote all of the control scripting
+      - Everything should migrate just fine, but please let me know if you run into any issues!
+    - Buffed tesla coils
+      - A single coil can charge multiple entities simultaneously
+      - An entity can be charged by multiple tesla coils simultaneously
+      - Increased tesla coil charging speed
+  Changes:
+    - Biter creep only spawns on Nauvis
+    - The mod no longer prevents you from placing multiple shelters or intergalactic transceivers
+      - Instead, entities placed after the first one will show an "inactive" warning, and will not function whatsoever
+    - The K2 crash site has been removed, now K2 simply adds more entities to the vanilla crash site
+  Optimizations:
+    - Improved overall runtime performance
+    - Massively simplified biter creep generation
+  Bugfixes:
+    - Fixed that biter creep would spawn outside of the map and on water, causing problems with entities being occasionally deleted
+---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: ????
   Bugfixes:

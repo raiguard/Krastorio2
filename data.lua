@@ -60,6 +60,8 @@ require(kr_tiles_prototypes_path .. "tiles-initialization")
 require(kr_others_prototypes_path .. "virtual-signals-initialization")
 -- -- Adding new key binds
 require(kr_others_prototypes_path .. "key-bind-initialization")
+-- -- Adding new shortcuts
+require(kr_others_prototypes_path .. "shortcut")
 ---------------------------------------------------------------------------
 -- -- -- OPTIONAL CONTENTS INITIALIZATION (data stage)
 ---------------------------------------------------------------------------

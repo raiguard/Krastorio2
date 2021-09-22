@@ -5,6 +5,8 @@
 -- power = 50kW * grid_cells_occupied * tier_multiplier * big_version_multiplier
 -- (solar panel is useless, and with this formula will be boosted)
 
+local constants = require("scripts.constants")
+
 data:extend({
   ----------------------------------------------------------------------------------------------------
   -- -- BATTERIES
@@ -348,9 +350,12 @@ data:extend({
     },
     energy_source = {
       type = "electric",
-      buffer_capacity = "18MJ",
+      buffer_capacity = "5MJ",
       input_flow_limit = "0kW",
-      output_flow_limit = "6MW",
+      output_flow_limit = util.format_number(
+        constants.tesla_coil.charging_rate * constants.tesla_coil.simultaneous_allowed,
+        true
+      ).."W",
       usage_priority = "primary-output",
     },
     categories = { "universal-equipment" },

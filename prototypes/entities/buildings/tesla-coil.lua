@@ -1,3 +1,8 @@
+local collision_mask_util = require("__core__.lualib.collision-mask-util")
+local data_util = require("__flib__.data-util")
+
+local constants = require("scripts.constants")
+
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 
@@ -36,10 +41,26 @@ local tesla_coil_electric_beam_sound = {
   },
 }
 
+local function empty_animation()
+  return {
+    filename = "__core__/graphics/empty.png",
+    width = 1,
+    height = 1,
+    line_length = 1,
+    frame_count = 1,
+    shift = { 0, 0 },
+    animation_speed = 1,
+    direction_count = 1,
+  }
+end
+
 -- Beam config vars
 local light_tint = { r = 0, g = 0.917, b = 1 }
 local beam_blend_mode = "additive-soft"
 local beam_non_light_flags = { "trilinear-filtering" }
+
+-- Collision mask
+local layer = collision_mask_util.get_first_unused_layer()
 
 data:extend({
   -- Tesla coil tower
@@ -53,6 +74,7 @@ data:extend({
     max_health = 200,
     gui_mode = "none",
     corpse = "medium-remnants",
+    collision_mask = {"item-layer", "object-layer", "player-layer", "water-tile", layer},
     resistances = {
       {
         type = "fire",
@@ -77,7 +99,7 @@ data:extend({
       buffer_capacity = "60MJ",
       emissions_per_minute = 10,
       usage_priority = "secondary-input",
-      input_flow_limit = "30MW",
+      input_flow_limit = util.format_number(constants.tesla_coil.input_flow_limit, true).."W",
       output_flow_limit = "0W",
     },
 
@@ -171,7 +193,8 @@ data:extend({
     flags = { "not-on-map" },
     width = 0.5,
     damage_interval = 20,
-    random_target_offset = true,
+    target_offset = {0, -0.5},
+    -- random_target_offset = true,
     action_triggered_automatically = false,
     working_sound = tesla_coil_electric_beam_sound,
 
@@ -396,4 +419,76 @@ data:extend({
       },
     },
   },
+  -- Range detection
+  {
+    type = "turret",
+    name = "kr-tesla-coil-turret",
+    icon = kr_entities_icons_path.."tesla-coil.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    collision_mask = {},
+    call_for_help_radius = 0,
+    folded_animation = {
+      north = empty_animation(),
+      east = empty_animation(),
+      south = empty_animation(),
+      west = empty_animation(),
+    },
+    flags = {"not-on-map", "not-selectable-in-game", "placeable-off-grid"},
+    attack_parameters = {
+      type = "projectile",
+      range = 20,
+      cooldown = 1,
+      ammo_type = {
+        category = "melee",
+        target_type = "position",
+        energy_consumption = "1J",
+        action = {
+          type = "direct",
+          action_delivery = {
+            type = "instant",
+            source_effects = {
+              {
+                type = "nested-result",
+                affects_target = true,
+                action = {
+                  type = "area",
+                  radius = 20,
+                  collision_mode = "distance-from-center",
+                  ignore_collision_condition = true,
+                  trigger_target_mask = { "kr-tesla-coil-trigger" },
+                  action_delivery = {
+                    type = "instant",
+                    target_effects = {
+                      {
+                        type = "script",
+                        effect_id = "kr-tesla-coil-trigger",
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+  {
+    type = "trigger-target-type",
+    name = "kr-tesla-coil-trigger",
+  },
+  -- Collision detection
+  {
+    type = "simple-entity",
+    name = "kr-tesla-coil-collision",
+    localised_name = {"entity-name.kr-tesla-coil"},
+    icon = kr_entities_icons_path.."tesla-coil.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    collision_mask = {layer},
+    collision_box = {{-18, -18}, {18, 18}},
+    picture = {filename = data_util.empty_image, size = 1},
+    flags = {"not-on-map", "not-selectable-in-game", "placeable-off-grid"},
+  }
 })

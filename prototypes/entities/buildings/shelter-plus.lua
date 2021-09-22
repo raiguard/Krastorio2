@@ -7,8 +7,8 @@ end
 local s_tint = { r = 1, g = 1, b = 1, a = 1 } -- White (should be never setted)
 local setting_color = krastorio.general.getSafeSettingValue("kr-shelter-tint") or "Yellow"
 
-if setting_color == "Yellow" then
   s_tint = { r = 0.9, g = 0.7, b = 0, a = 0.75 }
+if setting_color == "Yellow" then
 elseif setting_color == "Olive" then
   s_tint = { r = 0.50, g = 0.60, b = 0.2, a = 0.5 }
 elseif setting_color == "Pink" then
@@ -65,8 +65,8 @@ local armored_shelter_animation = {
     {
       filename = kr_entities_path .. "shelter-plus/shelter-plus.png",
       priority = "high",
-      width = 225,
       height = 225,
+      width = 225,
       scale = 0.9,
       shift = { 0, -0.15 },
       frame_count = 6,
@@ -149,21 +149,11 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     allow_copy_paste = false,
-    flags = {
-      "placeable-player",
-      "player-creation",
-      "not-deconstructable",
-      "not-rotatable",
-      "not-blueprintable",
-      "not-repairable",
-      "not-on-map",
-    },
+    flags = { "hidden", "not-on-map", },
     fast_replaceable_group = "kr-shelter-plus",
     minable = { mining_time = 0.5, result = "kr-shelter-plus" },
     collision_box = { { -2.72, -2.72 }, { 2.72, 2.72 } },
     selection_box = { { 0, 0 }, { 0, 0 } },
-    animation = armored_shelter_animation,
-    continuous_animation = true,
     energy_source = {
       type = "electric",
       buffer_capacity = "250kJ",
@@ -185,7 +175,13 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     allow_copy_paste = false,
-    flags = { "player-creation", "not-rotatable", "not-blueprintable" },
+    flags = {
+      "no-automated-item-insertion",
+      "no-automated-item-removal",
+      "not-blueprintable",
+      "not-rotatable",
+      "player-creation",
+    },
     minable = { mining_time = 0.5, result = "kr-shelter-plus" },
     max_health = 5000,
     corpse = "kr-medium-random-pipes-remnant",
@@ -229,15 +225,7 @@ data:extend({
     icon = kr_entities_path .. "empty.png",
     icon_size = 1,
     allow_copy_paste = false,
-    flags = {
-      "hidden",
-      "player-creation",
-      "not-rotatable",
-      "not-deconstructable",
-      "not-blueprintable",
-      "not-repairable",
-      "not-on-map",
-    },
+    flags = { "hidden", "not-on-map" },
     collision_box = { { 0, 0 }, { 0, 0 } },
     selection_box = { { 0, 0 }, { 0, 0 } },
     energy_source = { type = "void" },

@@ -136,14 +136,7 @@ krastorio.technologies.addUnlockRecipe("coal-liquefaction", "coke-liquefaction")
 -- Science
 krastorio.technologies.addUnlockRecipe("automation-science-pack", "blank-tech-card")
 krastorio.technologies.addUnlockRecipe("military-science-pack", "biters-research-data")
-krastorio.technologies.addUnlockRecipe("military-science-pack", "kr-creep-collector")
 krastorio.technologies.addUnlockRecipe("space-science-pack", "space-science-pack")
-
--- Jackhammer
-local jackhammer_tech = krastorio.technologies.getTechnologyThatUnlockRecipe("concrete")
-if jackhammer_tech then
-  krastorio.technologies.addUnlockRecipe(jackhammer_tech.name, "kr-jackhammer")
-end
 
 -- Slow capsule
 krastorio.technologies.moveUnlockRecipe("military-3", "military", "slowdown-capsule", true)

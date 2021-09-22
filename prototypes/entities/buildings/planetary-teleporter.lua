@@ -333,9 +333,3 @@ data:extend({
   },
 })
 
-for _, character in pairs(data.raw["character"]) do
-  local mask = character.trigger_target_mask or {}
-  character.trigger_target_mask = mask
-
-  mask[#mask + 1] = "character"
-end
