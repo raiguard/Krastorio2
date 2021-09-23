@@ -112,6 +112,8 @@ require(scripts_path .. "Tral-robot-tree-farm")
 require(scripts_path .. "vtk-armor-plating")
 require(scripts_path .. "RealisticReactors")
 require(scripts_path .. "mod-assertions")
+-- Other
+require(scripts_path .. "spidertron-tiers")
 ---------------------------------------------------------------------------
 -- -- -- POST ALL FIXES
 ---------------------------------------------------------------------------

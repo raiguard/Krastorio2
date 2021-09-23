@@ -13,6 +13,8 @@ Date: ????
     - The mod no longer prevents you from placing multiple shelters or intergalactic transceivers
       - Instead, entities placed after the first one will show an "inactive" warning, and will not function whatsoever
     - The K2 crash site has been removed, now K2 simply adds more entities to the vanilla crash site
+  Compatibility:
+    - Added compatibilty for the "Spidertron Tiers" mod
   Optimizations:
     - Improved overall runtime performance
     - Massively simplified biter creep generation
