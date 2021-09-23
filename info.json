@@ -48,6 +48,6 @@
     "! laborat >= 0.1.0"
   ],
   "package": {
-    "ignore": [".git", ".github", ".vscode", ".kakrc"]
+    "ignore": [".crowdin.yml", ".git", ".github", ".gitignore", ".kakrc", ".vscode"]
   }
 }
