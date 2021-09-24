@@ -39,6 +39,11 @@ data:extend({
     type = "recipe-category",
     name = "crushing",
   },
+  -- Void Crushing, used by crusher
+  {
+    type = "recipe-category",
+    name = "void-crushing",
+  },
   -- Crushing, used by crusher
   {
     type = "recipe-category",
