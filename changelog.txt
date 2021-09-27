@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
-Date: ????
+Date: 2021-09-27
   Bugfixes:
     - Fixed a crash when using the `kr-restore` command
     - Fixed a crash with Industrial Revolution v2.3.1
