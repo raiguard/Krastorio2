@@ -52,7 +52,7 @@ data:extend({
       type = "electric",
       buffer_capacity = "20kJ",
       usage_priority = "primary-output",
-      input_flow_limit = "20kW",
+      -- input_flow_limit = "20kW",
       output_flow_limit = "20kW",
       render_no_power_icon = false,
     },
@@ -72,7 +72,7 @@ data:extend({
     },
 
     energy_production = "20kW",
-    energy_usage = "0kW",
+    -- energy_usage = "0kW",
     animation = {
       layers = {
         {
