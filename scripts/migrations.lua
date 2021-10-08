@@ -1,5 +1,6 @@
 local on_tick_n = require("__flib__.on-tick-n")
 
+local compatibility = require("scripts.compatibility")
 local creep = require("scripts.creep")
 local freeplay = require("scripts.freeplay")
 local inserter = require("scripts.inserter")
@@ -16,6 +17,10 @@ local virus = require("scripts.virus")
 local migrations = {}
 
 function migrations.generic()
+  compatibility.aai_industry()
+  compatibility.disco_science()
+  compatibility.schall_uranium()
+
   freeplay.add_bonus_items()
   freeplay.add_to_crash_site()
   freeplay.disable_rocket_victory()
