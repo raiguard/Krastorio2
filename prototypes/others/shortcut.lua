@@ -14,5 +14,6 @@ data:extend{
     action = "spawn-item",
     item_to_spawn = "kr-jackhammer",
     associated_control_input = "kr-jackhammer",
+    technology_to_unlock = "concrete"
   },
 }
