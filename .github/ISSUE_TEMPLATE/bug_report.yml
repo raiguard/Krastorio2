@@ -1,6 +1,5 @@
 name: Bug Report
 description: Report unexpected behavior, a crash, or other issues
-title: ""
 labels: ["bug"]
 assignees:
   - raiguard
@@ -14,23 +13,23 @@ body:
 
         For localization issues, refer to the [Krastorio 2 Crowdin page](https://crowdin.com/project/krastorio-2). That is where all localization is performed.
   - type: textarea
-      attributes:
-        label: Description
-        description: A brief explanation of the issue. Please include screenshots if applicable.
-        placeholder: I cannot craft iron plates by hand.
-      validations:
-        required: true
+    attributes:
+      label: Description
+      description: A brief explanation of the issue. Please include screenshots if applicable.
+      placeholder: I cannot craft iron plates by hand.
+    validations:
+      required: true
   - type: textarea
-      attributes:
-        label: Reproduction
-        description: Exact steps to replicate the issue. The first step must be one of `Create a new freeplay game` or `Open the attached save file`.
-        placeholder: |
-          1. Open the attached save file
-          2. Go to '...'
-          3. Click on '...'
-          4. See error
-      validations:
-        required: true
+    attributes:
+      label: Reproduction
+      description: Exact steps to replicate the issue. The first step must be one of `Create a new freeplay game` or `Open the attached save file`.
+      placeholder: |
+        1. Open the attached save file
+        2. Go to '...'
+        3. Click on '...'
+        4. See error
+    validations:
+      required: true
   - type: input
     attributes:
       label: "Factorio version"
