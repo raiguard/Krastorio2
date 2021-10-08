@@ -7,22 +7,26 @@ body:
   - type: markdown
     attributes:
       value: |
-        Please make sure to [search issues](https://github.com/raiguard/kakoune/issues?q=is%3Aissue) before creating a new one, to avoid duplicates and centralize conversations.
+        Please make sure to [search issues](https://github.com/raiguard/kakoune/issues?q=is%3Aissue) before creating a new one, to avoid duplicates and centralize conversations. If you wish to ask a question or provide general feedback, please use the [discussions](https://github.com/raiguard/krastorio-2/discussions) tab.
 
         Please replicate the issue on the **latest version** of the mod. Check the mod portal for updates before filing your issue.
 
         For localization issues, refer to the [Krastorio 2 Crowdin page](https://crowdin.com/project/krastorio-2). That is where all localization is performed.
+
+        **You must attach the save file where this occurred to the `Description` section by dragging it into the textfield. Failure to do so will result in your issue being closed as invalid.**
   - type: textarea
+    id: desc
     attributes:
       label: Description
-      description: A brief explanation of the issue. Please include screenshots if applicable.
+      description: A brief explanation of the issue. Please include screenshots if applicable. Please attach your save file by dragging it into this textfield.
       placeholder: I cannot craft iron plates by hand.
     validations:
       required: true
   - type: textarea
+    id: repro
     attributes:
       label: Reproduction
-      description: Exact steps to replicate the issue. The first step must be one of `Create a new freeplay game` or `Open the attached save file`.
+      description: Exact steps to replicate the issue.
       placeholder: |
         1. Open the attached save file
         2. Go to '...'
@@ -31,12 +35,14 @@ body:
     validations:
       required: true
   - type: input
+    id: version
     attributes:
       label: "Factorio version"
       description: "The version of Factorio that you are running."
     validations:
       required: true
   - type: input
+    id: username
     attributes:
       label: "In-game username"
       description: "Your in-game username is required in some cases for exact reproduction."
