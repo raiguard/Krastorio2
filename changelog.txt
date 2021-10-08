@@ -15,6 +15,7 @@ Date: ????
     - The K2 crash site has been removed, now K2 simply adds more entities to the vanilla crash site
     - The creep collector and jackhammer are now shortcuts instead of craftable items
       - Creep collector is available from the beginning of the game, but the jackhammer is still gated behind its technology
+    - The creep virus does not reduce the evolution percentage any longer
     - The mod no longer prevents you from placing multiple shelters or intergalactic transceivers
       - Instead, entities placed after the first one will show an "inactive" warning, and will not function whatsoever
   Compatibility:
@@ -27,8 +28,9 @@ Date: ????
     - Improved overall runtime performance
     - Massively simplified biter creep generation
   Bugfixes:
-    - Fixed the radioactivity remote interface not checking item validity on configuration changed
     - Fixed that biter creep would spawn outside of the map and on water, causing problems with entities being occasionally deleted
+    - Fixed the planetary teleporter front graphic being misaligned when squeak through is enabled
+    - Fixed the radioactivity remote interface not checking item validity on configuration changed
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 2021-09-27

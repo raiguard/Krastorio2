@@ -255,7 +255,7 @@ data:extend({
   {
     type = "simple-entity",
     name = "kr-planetary-teleporter-front-layer",
-    flags = { "not-on-map", "not-selectable-in-game" },
+    flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
     collision_mask = {},
     render_layer = "higher-object-above",
     picture = {
@@ -268,7 +268,6 @@ data:extend({
         },
       },
     },
-    -- FIXME: This doesn't appear to work
     -- Squeak through compatibility
     squeak_behaviour = false,
   },
