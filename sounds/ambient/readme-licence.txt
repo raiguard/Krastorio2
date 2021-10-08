@@ -1,1 +1,0 @@
-The content of this folder is under Creative Commons license (CC BY 3.0)

@@ -250,7 +250,7 @@ data:extend({
       },
       variations = {
         {
-          filename = "__Krastorio2__/sounds/others/intergalactic-transceiver-win-wave.ogg",
+          filename = "__Krastorio2Assets__/sounds/others/intergalactic-transceiver-win-wave.ogg",
           volume = 0.8,
         },
       },
