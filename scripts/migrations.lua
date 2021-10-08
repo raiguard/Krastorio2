@@ -17,10 +17,6 @@ local virus = require("scripts.virus")
 local migrations = {}
 
 function migrations.generic()
-  compatibility.aai_industry()
-  compatibility.disco_science()
-  compatibility.schall_uranium()
-
   freeplay.add_bonus_items()
   freeplay.add_to_crash_site()
   freeplay.disable_rocket_victory()
@@ -32,6 +28,10 @@ function migrations.generic()
   roboport.find_variants()
   tesla_coil.get_absorber_buffer_capacity()
   tesla_coil.reset_grids_cache()
+
+  compatibility.aai_industry()
+  compatibility.disco_science()
+  compatibility.schall_uranium()
 
   for _, player in pairs(game.players) do
     inserter.refresh_gui(player)
