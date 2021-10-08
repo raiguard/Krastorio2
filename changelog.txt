@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
-Date: ????
+Date: 2021-10-08
   Features:
     - Buffed tesla coils
       - A single coil can charge multiple entities simultaneously
