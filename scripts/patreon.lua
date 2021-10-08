@@ -6,7 +6,11 @@ function patreon.init()
   global.patreon_items_given = {}
 end
 
+---@type LuaPlayer
 function patreon.give_items(player)
+  local inventory = player.get_main_inventory()
+  if not inventory or not inventory.valid then return end
+
   if constants.high_patrons[string.lower(player.name)] then
     -- Check if we've already given them the items
     if global.patreon_items_given[player.index] then
@@ -14,8 +18,6 @@ function patreon.give_items(player)
       return
     end
 
-    local inventory = player.get_main_inventory()
-    if not inventory or not inventory.valid then return end
 
     -- Give items
     for _, item in pairs(constants.patreon_items) do
@@ -28,6 +30,9 @@ function patreon.give_items(player)
     player.print{"message.kr-received-patreon-items"}
   else
     player.print{"message.kr-not-a-patron"}
+    if game.item_prototypes["spoiled-potato"] then
+      inventory.insert{name = "spoiled-potato", count = 1}
+    end
   end
 end
 
