@@ -2,7 +2,7 @@ data:extend({
   {
     type = "corpse",
     name = "turret-remnant",
-    localised_name = { "entity-name.turret-remnant" }, -- TODO: Rename this entity
+    localised_name = { "entity-name.turret-remnant" },
     icon = kr_entities_icons_path .. "railgun-turret.png",
     icon_size = 64,
     flags = { "placeable-neutral", "building-direction-8-way", "not-on-map" },
