@@ -6,17 +6,18 @@ assignees:
 body:
   - type: markdown
     attributes:
-      value: |
+      value: "
         Please make sure to [search issues](https://github.com/raiguard/kakoune/issues?q=is%3Aissue) before creating a new one, to avoid duplicates and centralize conversations. If you wish to ask a question or provide general feedback, please use the [discussions](https://github.com/raiguard/krastorio-2/discussions) tab.
 
         Please replicate the issue on the **latest version** of the mod. Check the mod portal for updates before filing your issue.
 
         For localization issues, refer to the [Krastorio 2 Crowdin page](https://crowdin.com/project/krastorio-2). That is where all localization is performed.
 
-        \#\# Save file and log
+        ## Save file and log
+
         You must attach the save file where the issue occured, and upload `factorio-current.log`, in order for your issue to be accepted. Failure to do so will result in your issue being closed as invalid.
 
-        Attach these files by dragging them into the `Description` field below.
+        Attach these files by dragging them into the `Description` field below."
   - type: textarea
     id: desc
     attributes:
