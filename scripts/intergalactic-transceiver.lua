@@ -410,8 +410,9 @@ function intergalactic_transceiver.create_gui(player, entity)
 end
 
 function intergalactic_transceiver.destroy_gui(player)
-  local gui_data = table.retrieve(global.intergalactic_transceiver.guis, player.index)
+  local gui_data = global.intergalactic_transceiver.guis[player.index]
   if gui_data then
+    global.intergalactic_transceiver.guis[player.index] = nil
     gui_data.refs.window.destroy()
     player.play_sound{path = "entity-close/kr-intergalactic-transceiver"}
   end
