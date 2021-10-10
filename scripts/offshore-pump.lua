@@ -1,6 +1,10 @@
+local compatibility = require("scripts.compatibility")
+
 local offshore_pump = {}
 
 function offshore_pump.build(entity)
+  if not compatibility.should_build_pump() then return end
+
   local damage = entity.prototype.max_health - entity.health
   local position = entity.position
   local direction = entity.direction
