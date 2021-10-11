@@ -17,7 +17,9 @@ if mods["aai-industry"] then
   data.raw.technology["kr-electric-mining-drill"] = nil
 
   -- Fuel prerequisite
-  krastorio.technologies.addPrerequisite("kr-fuel", "fuel-processing")
+  if krastorio.general.getSafeSettingValue("aai-fuel-processor") then
+    krastorio.technologies.addPrerequisite("kr-fuel", "fuel-processing")
+  end
 
   krastorio.technologies.addUnlockRecipe("kr-basic-fluid-handling", "pipe")
   krastorio.technologies.addUnlockRecipe("kr-basic-fluid-handling", "pipe-to-ground")

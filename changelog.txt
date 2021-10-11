@@ -3,7 +3,8 @@ Version: 1.2.1
 Date: ????
   Bugfixes:
     - Fixed a crash when placing an offshore pump with Space Exploration enabled (#40)
-    - Fixed that other mods' modifications to the physical and laser damage research were being overwritten
+    - Fixed that other mods' modifications to the physical and laser damage research were being overwritten (#43)
+    - Fixed several unreachable technologies when AAI Industry fuel processing is disabled (#45)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 2021-10-08
