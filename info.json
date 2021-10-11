@@ -48,6 +48,7 @@
     "! laborat >= 0.1.0"
   ],
   "package": {
-    "ignore": [".crowdin.yml", ".git", ".github", ".gitignore", ".kakrc", ".vscode"]
+    "ignore": [".crowdin.yml", ".git", ".github", ".gitignore", ".kakrc", ".vscode"],
+    "no_portal_upload": true
   }
 }
