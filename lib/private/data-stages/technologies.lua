@@ -513,6 +513,20 @@ function krastorio.technologies.addEffects(technology_name, new_effects)
   return added_all
 end
 
+function krastorio.technologies.update_ammo_effects(tech, effects)
+  if not tech.effects then tech.effects = {} end
+
+  for _, updated_effect in pairs(effects) do
+    for _, effect in pairs(tech.effects) do
+      if effect.type == updated_effect.type and effect.ammo_catgory == updated_effect.ammo_category then
+        effect.modifier = updated_effect.modifier
+        return
+      end
+    end
+    table.insert(tech.effects, {type = updated_effect.type, ammo_category = updated_effect.ammo_category, modifier = updated_effect.modifier})
+  end
+end
+
 function krastorio.technologies.removeUnlockRecipe(technology_name, recipe_name)
   return krastorio.technologies.removeEffect(technology_name, { type = "unlock-recipe", recipe = recipe_name })
 end
