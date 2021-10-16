@@ -143,7 +143,7 @@ return {
     },
     result = "rare-metals",
     result_count = 5,
-    order = "wO[rare-metals]-b[enriched-rare-metals]",
+    order = "c[rare-metals]-b[enriched-rare-metals]",
   },
   {
     type = "recipe",

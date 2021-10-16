@@ -499,8 +499,8 @@ data:extend({
         mipmap_count = 4,
       },
     },
-    subgroup = "intermediate-product",
-    order = "w0[rare-metals]",
+    subgroup = "raw-material",
+    order = "c[rare-metals]",
     stack_size = 200,
   },
   {

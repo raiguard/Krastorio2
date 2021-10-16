@@ -31,8 +31,8 @@ data:extend({
         mipmap_count = 4,
       },
     },
-    subgroup = "raw-material",
-    order = "x[raw-rare-metals]",
+    subgroup = "raw-resource",
+    order = "ga[raw-rare-metals]",
     stack_size = 200,
   },
   {
@@ -124,7 +124,7 @@ data:extend({
       },
     },
     subgroup = "raw-resource",
-    order = "z[raw-imersite]",
+    order = "ga[raw-imersite]",
     stack_size = 200,
   },
 })
