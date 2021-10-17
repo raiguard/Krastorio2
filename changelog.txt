@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.2
-Date: ????
+Date: 2021-10-17
   Bugfixes:
     - Fixed AAI miners compatibility not running due to a typo (#48)
     - Fixed duplicate technology effects for some military technologies (#50)
