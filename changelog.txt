@@ -5,6 +5,7 @@ Date: ????
     - Fixed AAI miners compatibility not running due to a typo (#48)
     - Fixed duplicate technology effects for some military technologies (#50)
     - Fixed ordering of rare metals and imersite in the crafting menu (#51)
+    - Fixed that fuel was missing from the bonus items (#49)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.1
 Date: 2021-10-11

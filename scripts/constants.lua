@@ -8,6 +8,7 @@ constants.bonus_items = {
   {name = "construction-robot", count = 50},
   {name = "modular-armor", count = 1},
   {name = "car", count = 1},
+  {name = "fuel", count = 200},
   {name = "big-battery-equipment", count = 1},
   {name = "personal-roboport-equipment", count = 1},
   {name = "small-portable-generator", count = 2},
