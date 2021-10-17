@@ -1,5 +1,3 @@
-local table = require("__flib__.table")
-
 krastorio.technologies = {}
 
 krastorio.technologies.research_types = {
