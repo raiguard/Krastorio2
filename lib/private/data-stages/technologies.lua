@@ -1,3 +1,5 @@
+local table = require("__flib__.table")
+
 krastorio.technologies = {}
 
 krastorio.technologies.research_types = {
@@ -519,7 +521,8 @@ function krastorio.technologies.update_ammo_effects(tech, effects)
   for _, updated_effect in pairs(effects) do
     local exists = false
     for _, effect in pairs(tech.effects) do
-      if effect.type == updated_effect.type and effect.ammo_catgory == updated_effect.ammo_category then
+      if effect.type == updated_effect.type
+        and (effect.ammo_category == updated_effect.ammo_category or effect.turret_id == updated_effect.turret_id) then
         effect.modifier = updated_effect.modifier
         exists = true
         break

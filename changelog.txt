@@ -3,6 +3,7 @@ Version: 1.2.2
 Date: ????
   Bugfixes:
     - Fixed AAI miners compatibility not running due to a typo (#48)
+    - Fixed duplicate technology effects for some military technologies (#50)
     - Fixed ordering of rare metals and imersite in the crafting menu (#51)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.1
