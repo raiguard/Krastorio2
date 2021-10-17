@@ -36,7 +36,7 @@ krastorio.technologies.addSciencePackCollection("Krastorio2", {
 })
 
 -- sanitize Krastorio Technologies with other mods
--- krastorio.technologies.sanitizeUnitsOfAllTechnologiesInPacks("Krastorio2", false)--
+-- krastorio.technologies.sanitizeUnitsOfAllTechnologiesInPacks("Krastorio2", false)
 
 -- -- Sanitize T2 only (in bottom up on tree for correct result)
 local science_pack_incompatibilities = {

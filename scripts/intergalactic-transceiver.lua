@@ -3,7 +3,6 @@ local math = require("__flib__.math")
 local misc = require("__flib__.misc")
 local on_tick_n = require("__flib__.on-tick-n")
 local reverse_defines = require("__flib__.reverse-defines")
-local table = require("__flib__.table")
 
 local constants = require("scripts.constants")
 local util = require("scripts.util")
