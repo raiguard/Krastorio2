@@ -38,6 +38,7 @@ Date: 2021-10-08
     - The creep virus does not reduce the evolution percentage any longer
     - The mod no longer prevents you from placing multiple shelters or intergalactic transceivers
       - Instead, entities placed after the first one will show an "inactive" warning, and will not function whatsoever
+    - Removed the K2 MiniWiki
   Compatibility:
     - Added compatibilty for the "Spidertron Tiers" mod
     - Added `get_no_victory` to the intergalactic transceiver remote interface
