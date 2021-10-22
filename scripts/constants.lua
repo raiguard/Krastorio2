@@ -31,6 +31,7 @@ constants.freeplay_crash_site_parts = {
     min_separation = 10,
     fire_count = 3,
     explosion_count = 1,
+    force = "player",
   },
   {
     name = "kr-crash-site-assembling-machine-1-repaired",
@@ -39,6 +40,7 @@ constants.freeplay_crash_site_parts = {
     max_distance = 20,
     min_separation = 5,
     fire_count = 1,
+    force = "player",
   },
   {
     name = "kr-crash-site-assembling-machine-2-repaired",
@@ -47,6 +49,7 @@ constants.freeplay_crash_site_parts = {
     max_distance = 20,
     min_separation = 5,
     fire_count = 1,
+    force = "player",
   },
   {
     name = "kr-crash-site-chest-1",

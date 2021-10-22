@@ -6,6 +6,7 @@ Date: ????
       - This is unlocked with a new "Efficient fabrication" tech that is available after the optimization tech card
       - Other recipes may be added to this new technology over time
   Bugfixes:
+    - Fixed that the crash site lab was unusable (#41)
     - Fixed that the creep collector and jackhammer could be placed in inventories (#53)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.2
