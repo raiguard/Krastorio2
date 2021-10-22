@@ -1,6 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.3
 Date: ????
+  Features:
+    - Added new electronic components recipe that uses lithium to produce a higher yield (#54)
+      - This is unlocked with a new "Efficient fabrication" tech that is available after the optimization tech card
+      - Other recipes may be added to this new technology over time
   Bugfixes:
     - Fixed that the creep collector and jackhammer could be placed in inventories (#53)
 ---------------------------------------------------------------------------------------------------

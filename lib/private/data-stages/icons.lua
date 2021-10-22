@@ -65,29 +65,31 @@ end
 --   krastorio.icons.createOverlappedIcon(positions.bottom_right, _icon_path, _icon_size, _over_icon_path, _over_icon_size)
 -- end
 
--- @item_or_recipe, item or recipe
-function krastorio.icons.getIconsForOverlay(item_or_recipe)
+--- Standardize and return the prototype's `icons` table.
+--- @param proto table
+--- @return table
+function krastorio.icons.getIconsForOverlay(proto)
   local icons_table = {}
-  if item_or_recipe.icons then
+  if proto.icons then
     -- copy all icons from the source item to the returned table,
     -- but populate the icon_size in each icon; we want the icon size defined in each icon for future overlay scaling
-    for _, original_icon in ipairs(item_or_recipe.icons) do
+    for _, original_icon in ipairs(proto.icons) do
       -- create a copy of the icon with the appropriately found size
       local new_icon = krastorio_utils.tables.fullCopy(original_icon)
       -- per https://wiki.factorio.com/Types/IconSpecification, icon_size should be defined in one of two places
-      new_icon.icon_size = (item_or_recipe.icon_size or original_icon.icon_size or 32)
+      new_icon.icon_size = (proto.icon_size or original_icon.icon_size or 32)
       table.insert(icons_table, new_icon)
     end
   else
-    if not item_or_recipe.icon and item_or_recipe.type == "recipe" then
-      return krastorio.icons.getIconsForOverlay(krastorio.items.getItem(item_or_recipe.name))
-    elseif not item_or_recipe.icon and item_or_recipe.type ~= "recipe" then
+    if not proto.icon and proto.type == "recipe" then
+      return krastorio.icons.getIconsForOverlay(krastorio.items.getItem(proto.name))
+    elseif not proto.icon and proto.type ~= "recipe" then
       return {}
     end
     -- single icon, simple insert
     table.insert(icons_table, {
-      icon = item_or_recipe.icon,
-      icon_size = item_or_recipe.icon_size,
+      icon = proto.icon,
+      icon_size = proto.icon_size,
     })
   end
   return icons_table

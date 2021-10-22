@@ -948,6 +948,40 @@ data:extend({
       time = 60,
     },
   },
+  {
+    type = "technology",
+    name = "kr-efficient-fabrication",
+    -- Electronic components icon overlayed with lithium
+    -- TODO: Make a better icon
+    -- NOTE: This cannot be directly copied from the recipe, because the lithium does not scale consistently...
+    icons = {
+      {
+        icon = "__Krastorio2Assets__/icons/items-with-variations/electronic-components/electronic-components.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+      },
+      {
+        icon = "__Krastorio2Assets__/icons/items-with-variations/lithium/lithium.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+        scale = 0.75,
+        offset = {0.2, 0.2},
+      },
+    },
+    effects = {
+      {type = "unlock-recipe", recipe = "electronic-components-lithium"},
+    },
+    unit = {
+      count = 300,
+      ingredients = {
+        {"chemical-science-pack", 1},
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+      },
+      time = 60,
+    }
+  },
   -----------------------------------------------------------------------------------------------------------------
   -----------------------------------------------------------------------------------------------------------------
   -----------------------------------------------------------------------------------------------------------------
