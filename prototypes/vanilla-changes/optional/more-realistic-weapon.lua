@@ -826,7 +826,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
             action_delivery = {
               {
                 type = "projectile",
-                projectile = "anti-material-rifle-1",
+                projectile = "anti-material-rifle-ammo-1",
                 starting_speed = 3,
                 direction_deviation = 0.02,
                 range_deviation = 0.02,
@@ -850,7 +850,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 
     {
       type = "projectile",
-      name = "anti-material-rifle-1",
+      name = "anti-material-rifle-ammo-1",
       flags = { "not-on-map" },
       collision_box = bullets_collision_box,
       acceleration = -0.025,
