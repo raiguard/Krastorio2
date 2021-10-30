@@ -972,7 +972,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "electronic-components-lithium"},
     },
     unit = {
-      count = 300,
+      count = 500,
       ingredients = {
         {"chemical-science-pack", 1},
         {"production-science-pack", 1},
