@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.3
-Date: ????
+Date: 2021-10-30
   Features:
     - Added new electronic components recipe that uses lithium to produce a higher yield (#54)
       - This is unlocked with a new "Efficient fabrication" tech that is available after the optimization tech card
