@@ -2,6 +2,7 @@
 Version: 1.2.4
 Date: ????
   Changes:
+    - K2 no longer nerfs Space Exploration liquid rocket fuel (#63)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.3
 Date: 2021-10-30
