@@ -33,7 +33,8 @@ data:extend({
         height = 36,
         shift = util.by_pixel(6, 0),
         hr_version = {
-          filename = kr_entities_path .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-north.png",
+          filename = kr_entities_path
+            .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-north.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
@@ -52,7 +53,8 @@ data:extend({
         height = 44,
         shift = util.by_pixel(4, 12),
         hr_version = {
-          filename = kr_entities_path .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-east.png",
+          filename = kr_entities_path
+            .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-east.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
@@ -71,7 +73,8 @@ data:extend({
         height = 32,
         shift = util.by_pixel(4, 0),
         hr_version = {
-          filename = kr_entities_path .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-south.png",
+          filename = kr_entities_path
+            .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-south.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
@@ -90,7 +93,8 @@ data:extend({
         height = 44,
         shift = util.by_pixel(6, 12),
         hr_version = {
-          filename = kr_entities_path .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-west.png",
+          filename = kr_entities_path
+            .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-west.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
@@ -104,7 +108,8 @@ data:extend({
     structure_patch = {
       north = util.empty_sprite(),
       east = {
-        filename = kr_entities_path .. "transport-belts/superior-transport-belt/splitter/superior-splitter-east-top_patch.png",
+        filename = kr_entities_path
+          .. "transport-belts/superior-transport-belt/splitter/superior-splitter-east-top_patch.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",
@@ -112,7 +117,8 @@ data:extend({
         height = 52,
         shift = util.by_pixel(4, -20),
         hr_version = {
-          filename = kr_entities_path .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-east-top_patch.png",
+          filename = kr_entities_path
+            .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-east-top_patch.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",
@@ -124,7 +130,8 @@ data:extend({
       },
       south = util.empty_sprite(),
       west = {
-        filename = kr_entities_path .. "transport-belts/superior-transport-belt/splitter/superior-splitter-west-top_patch.png",
+        filename = kr_entities_path
+          .. "transport-belts/superior-transport-belt/splitter/superior-splitter-west-top_patch.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",
@@ -132,7 +139,8 @@ data:extend({
         height = 48,
         shift = util.by_pixel(6, -18),
         hr_version = {
-          filename = kr_entities_path .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-west-top_patch.png",
+          filename = kr_entities_path
+            .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-west-top_patch.png",
           frame_count = 32,
           line_length = 8,
           priority = "extra-high",

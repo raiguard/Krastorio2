@@ -25,13 +25,15 @@ end
 -- Snaps the loader to the transport-belt-connectable entity that it's facing
 -- If `target` is supplied, it will check against that entity, and will not snap if it cannot connect to it
 function loader_snapping.snap(entity, target)
-  if not entity or not entity.valid then return end
+  if not entity or not entity.valid then
+    return
+  end
 
   -- Check for a connected belt, then flip and try again, then flip back if failed
   for _ = 1, 2 do
     local loader_type = entity.loader_type
 
-    local connection = entity.belt_neighbours[loader_type.."s"][1]
+    local connection = entity.belt_neighbours[loader_type .. "s"][1]
     if connection and (not target or connection.unit_number == target.unit_number) then
       break
     else

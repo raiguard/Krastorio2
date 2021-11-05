@@ -24,14 +24,16 @@ data:extend({
       persistent = true,
     },
     animations = {
-      filename = kr_entities_path .. "transport-belts/superior-transport-belt/transport-belt/superior-transport-belt.png",
+      filename = kr_entities_path
+        .. "transport-belts/superior-transport-belt/transport-belt/superior-transport-belt.png",
       priority = "extra-high",
       width = 40,
       height = 40,
       frame_count = 32,
       direction_count = 12,
       hr_version = {
-        filename = kr_entities_path .. "transport-belts/superior-transport-belt/transport-belt/hr-superior-transport-belt.png",
+        filename = kr_entities_path
+          .. "transport-belts/superior-transport-belt/transport-belt/hr-superior-transport-belt.png",
         priority = "extra-high",
         width = 128,
         height = 128,

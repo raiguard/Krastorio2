@@ -125,8 +125,18 @@ data:extend({
     icon_mipmaps = 4,
     pictures = {
       { size = 64, filename = kr_items_with_variations_icons_path .. "sand/sand.png", scale = 0.25, mipmap_count = 4 },
-      { size = 64, filename = kr_items_with_variations_icons_path .. "sand/sand-1.png", scale = 0.25, mipmap_count = 4 },
-      { size = 64, filename = kr_items_with_variations_icons_path .. "sand/sand-2.png", scale = 0.25, mipmap_count = 4 },
+      {
+        size = 64,
+        filename = kr_items_with_variations_icons_path .. "sand/sand-1.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = kr_items_with_variations_icons_path .. "sand/sand-2.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
     },
     subgroup = "raw-resource",
     order = "a[sand]",
@@ -267,8 +277,18 @@ data:extend({
     icon_mipmaps = 4,
     pictures = {
       { size = 64, filename = kr_items_with_variations_icons_path .. "coke/coke.png", scale = 0.25, mipmap_count = 4 },
-      { size = 64, filename = kr_items_with_variations_icons_path .. "coke/coke-1.png", scale = 0.25, mipmap_count = 4 },
-      { size = 64, filename = kr_items_with_variations_icons_path .. "coke/coke-2.png", scale = 0.25, mipmap_count = 4 },
+      {
+        size = 64,
+        filename = kr_items_with_variations_icons_path .. "coke/coke-1.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = kr_items_with_variations_icons_path .. "coke/coke-2.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
     },
     fuel_category = "chemical",
     fuel_value = coke_value,

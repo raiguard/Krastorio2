@@ -37,13 +37,13 @@ function intergalactic_transceiver.build(entity)
     local surface = entity.surface
     entity.destroy()
 
-    local new_entity = surface.create_entity{
+    local new_entity = surface.create_entity({
       name = "kr-inactive-intergalactic-transceiver",
       position = position,
       force = force,
       player = player,
       create_build_effect_smoke = false,
-    }
+    })
     if new_entity and new_entity.valid then
       global.intergalactic_transceiver.inactive[new_entity.unit_number] = new_entity
     end
@@ -66,13 +66,13 @@ function intergalactic_transceiver.build_activated(entity)
   local surface = entity.surface
   entity.destroy()
 
-  local new_entity = surface.create_entity{
+  local new_entity = surface.create_entity({
     name = "kr-intergalactic-transceiver",
     position = position,
     force = force,
     player = player,
     create_build_effect_smoke = false,
-  }
+  })
 
   if new_entity and new_entity.valid then
     intergalactic_transceiver.build(new_entity)
@@ -146,14 +146,14 @@ function intergalactic_transceiver.iterate()
           for _, player in pairs(entity.force.players) do
             player.add_custom_alert(
               entity,
-              {type = "item", name = "kr-intergalactic-transceiver"},
+              { type = "item", name = "kr-intergalactic-transceiver" },
               status_data.alert_label,
               true
             )
             if status == "discharging" and last_status ~= status then
-              player.play_sound{
-                path = "kr-intergalactic-transceiver-discharging-warning"
-              }
+              player.play_sound({
+                path = "kr-intergalactic-transceiver-discharging-warning",
+              })
             end
           end
         end
@@ -172,7 +172,7 @@ end
 function intergalactic_transceiver.spawn_flying_texts()
   for unit_number, entity in pairs(global.intergalactic_transceiver.inactive) do
     if entity.valid then
-      util.entity_flying_text(entity, {"message.kr-transceiver-is-inactive"}, {r = 1})
+      util.entity_flying_text(entity, { "message.kr-transceiver-is-inactive" }, { r = 1 })
     else
       global.shelter.inactive[unit_number] = nil
     end
@@ -181,7 +181,9 @@ end
 
 function intergalactic_transceiver.activate(entity)
   local entity_data = global.intergalactic_transceiver.forces[entity.force.index]
-  if not entity_data then return end
+  if not entity_data then
+    return
+  end
 
   -- Make the entity indestructible, just in case
   entity.destructible = false
@@ -196,7 +198,7 @@ function intergalactic_transceiver.activate(entity)
   end
 
   -- Start the cutscene in one second
-  on_tick_n.add(game.tick + 60, {handler = "it_cutscene", action = "begin", force_index = entity.force.index})
+  on_tick_n.add(game.tick + 60, { handler = "it_cutscene", action = "begin", force_index = entity.force.index })
 end
 
 -- CUTSCENE
@@ -205,10 +207,14 @@ local cutscene = {}
 
 function cutscene.begin(force_index)
   local entity_data = global.intergalactic_transceiver.forces[force_index]
-  if not entity_data then return end
+  if not entity_data then
+    return
+  end
 
   local entity = entity_data.entity
-  if not entity or not entity.valid then return end
+  if not entity or not entity.valid then
+    return
+  end
 
   local surface = entity.surface
   local position = entity.position
@@ -220,7 +226,7 @@ function cutscene.begin(force_index)
       and misc.get_distance(player.position, position) <= cutscene_const.player_radius
     then
       -- Start cutscene
-      player.set_controller{
+      player.set_controller({
         type = defines.controllers.cutscene,
         waypoints = {
           {
@@ -250,19 +256,23 @@ function cutscene.begin(force_index)
         },
         start_position = player.position,
         final_transition_time = cutscene_const.final_transition_time,
-      }
+      })
     end
   end
 
-  on_tick_n.add(game.tick + 100, {handler = "it_cutscene", action = "spawn_wave", force_index = force_index})
+  on_tick_n.add(game.tick + 100, { handler = "it_cutscene", action = "spawn_wave", force_index = force_index })
 end
 
 function cutscene.spawn_wave(force_index)
   local entity_data = global.intergalactic_transceiver.forces[force_index]
-  if not entity_data then return end
+  if not entity_data then
+    return
+  end
 
   local entity = entity_data.entity
-  if not entity or not entity.valid then return end
+  if not entity or not entity.valid then
+    return
+  end
 
   entity.surface.create_entity({
     type = "projectile",
@@ -275,15 +285,19 @@ function cutscene.spawn_wave(force_index)
     create_build_effect_smoke = false,
   })
 
-  on_tick_n.add(game.tick + 15, {handler = "it_cutscene", action = "replace_entity", force_index = force_index})
+  on_tick_n.add(game.tick + 15, { handler = "it_cutscene", action = "replace_entity", force_index = force_index })
 end
 
 function cutscene.replace_entity(force_index)
   local entity_data = global.intergalactic_transceiver.forces[force_index]
-  if not entity_data then return end
+  if not entity_data then
+    return
+  end
 
   local entity = entity_data.entity
-  if not entity or not entity.valid then return end
+  if not entity or not entity.valid then
+    return
+  end
 
   local force = entity.force
   local player = entity.last_user
@@ -292,38 +306,38 @@ function cutscene.replace_entity(force_index)
 
   entity.destroy()
 
-  local new_entity = surface.create_entity{
+  local new_entity = surface.create_entity({
     name = "kr-activated-intergalactic-transceiver",
     position = position,
     force = force,
     player = player,
     create_build_effect_smoke = false,
-  }
+  })
 
   if new_entity and new_entity.valid then
-    global.intergalactic_transceiver.forces[force.index] = {entity = new_entity}
+    global.intergalactic_transceiver.forces[force.index] = { entity = new_entity }
 
     if global.intergalactic_transceiver.is_victory and not game.finished then
-      on_tick_n.add(game.tick + 650, {handler = "it_cutscene", action = "win", force_index = force_index})
+      on_tick_n.add(game.tick + 650, { handler = "it_cutscene", action = "win", force_index = force_index })
       on_tick_n.add(
         game.tick + 660,
-        {handler = "it_cutscene", action = "play_victory_sound", force_index = force_index}
+        { handler = "it_cutscene", action = "play_victory_sound", force_index = force_index }
       )
     end
   end
 end
 
 function cutscene.win(force_index)
-  game.set_game_state{
+  game.set_game_state({
     game_finished = true,
     player_won = true,
     can_continue = true,
     victorious_force = game.forces[force_index],
-  }
+  })
 end
 
 function cutscene.play_victory_sound(force_index)
-  game.forces[force_index].play_sound{path = "kr-win-joke-voice"}
+  game.forces[force_index].play_sound({ path = "kr-win-joke-voice" })
 end
 
 intergalactic_transceiver.cutscene = cutscene
@@ -335,59 +349,72 @@ function intergalactic_transceiver.create_gui(player, entity)
     {
       type = "frame",
       direction = "vertical",
-      ref = {"window"},
+      ref = { "window" },
       actions = {
-        on_closed = {gui = "intergalactic_transceiver", action = "close"},
+        on_closed = { gui = "intergalactic_transceiver", action = "close" },
       },
-      {type = "flow", style = "flib_titlebar_flow", ref = {"titlebar_flow"},
+      {
+        type = "flow",
+        style = "flib_titlebar_flow",
+        ref = { "titlebar_flow" },
         {
           type = "label",
           style = "frame_title",
-          caption = {"entity-name.kr-intergalactic-transceiver"},
-          ignored_by_interaction = true
+          caption = { "entity-name.kr-intergalactic-transceiver" },
+          ignored_by_interaction = true,
         },
-        {type = "empty-widget", style = "flib_titlebar_drag_handle", ignored_by_interaction = true},
+        { type = "empty-widget", style = "flib_titlebar_drag_handle", ignored_by_interaction = true },
         {
           type = "sprite-button",
           style = "frame_action_button",
           sprite = "utility/close_white",
           hovered_sprite = "utility/close_black",
           clicked_sprite = "utility/close_black",
-          tooltip = {"gui.close-instruction"},
+          tooltip = { "gui.close-instruction" },
           actions = {
-            on_click = {gui = "intergalactic_transceiver", action = "close"},
+            on_click = { gui = "intergalactic_transceiver", action = "close" },
           },
-        }
+        },
       },
-      {type = "frame", style = "entity_frame", direction = "vertical",
-        {type = "flow", style = "status_flow", style_mods = {vertical_align = "center"},
-          {type = "sprite", style = "flib_indicator", ref = {"status", "sprite"}},
-          {type = "label", ref = {"status", "label"}},
+      {
+        type = "frame",
+        style = "entity_frame",
+        direction = "vertical",
+        {
+          type = "flow",
+          style = "status_flow",
+          style_mods = { vertical_align = "center" },
+          { type = "sprite", style = "flib_indicator", ref = { "status", "sprite" } },
+          { type = "label", ref = { "status", "label" } },
         },
-        {type = "frame", style = "deep_frame_in_shallow_frame",
-          {type = "entity-preview", style = "wide_entity_button", elem_mods = {entity = entity}},
+        {
+          type = "frame",
+          style = "deep_frame_in_shallow_frame",
+          { type = "entity-preview", style = "wide_entity_button", elem_mods = { entity = entity } },
         },
-        {type = "flow", style_mods = {vertical_align = "center", top_margin = 4},
+        {
+          type = "flow",
+          style_mods = { vertical_align = "center", top_margin = 4 },
           {
             type = "progressbar",
             style = "production_progressbar",
-            style_mods = {horizontally_stretchable = true},
+            style_mods = { horizontally_stretchable = true },
             value = 0,
-            ref = {"charge_progressbar"},
-          }
-        },
-        {type = "line", direction = "horizontal"},
-        {
-          type = "button",
-          style_mods = {height = 35, horizontally_stretchable = true},
-          caption = {"gui.kr-activate"},
-          ref = {"activate_button"},
-          actions = {
-            on_click = {gui = "intergalactic_transceiver", action = "activate"}
+            ref = { "charge_progressbar" },
           },
         },
-      }
-    }
+        { type = "line", direction = "horizontal" },
+        {
+          type = "button",
+          style_mods = { height = 35, horizontally_stretchable = true },
+          caption = { "gui.kr-activate" },
+          ref = { "activate_button" },
+          actions = {
+            on_click = { gui = "intergalactic_transceiver", action = "activate" },
+          },
+        },
+      },
+    },
   })
 
   refs.window.force_auto_center()
@@ -396,7 +423,7 @@ function intergalactic_transceiver.create_gui(player, entity)
   player.opened = refs.window
   -- If in multiplayer, the default GUI will open a few ticks before this, so we rely on that GUI's sound
   if not game.is_multiplayer() then
-    player.play_sound{path = "entity-open/kr-intergalactic-transceiver"}
+    player.play_sound({ path = "entity-open/kr-intergalactic-transceiver" })
   end
 
   global.intergalactic_transceiver.guis[player.index] = {
@@ -404,7 +431,7 @@ function intergalactic_transceiver.create_gui(player, entity)
     state = {
       entity = entity,
       previous_stats = "none",
-    }
+    },
   }
 end
 
@@ -413,7 +440,7 @@ function intergalactic_transceiver.destroy_gui(player)
   if gui_data then
     global.intergalactic_transceiver.guis[player.index] = nil
     gui_data.refs.window.destroy()
-    player.play_sound{path = "entity-close/kr-intergalactic-transceiver"}
+    player.play_sound({ path = "entity-close/kr-intergalactic-transceiver" })
   end
 end
 
@@ -428,7 +455,7 @@ function intergalactic_transceiver.update_gui(gui_data)
       local progressbar = gui_data.refs.charge_progressbar
       local charge = entity.energy / global.intergalactic_transceiver.max_energy
       progressbar.value = charge
-      progressbar.caption = math.round(charge * 100).."%"
+      progressbar.caption = math.round(charge * 100) .. "%"
 
       -- Update status indicator
       local status = entity_data.status
@@ -451,10 +478,14 @@ end
 
 function actions.activate(e)
   local gui_data = global.intergalactic_transceiver.guis[e.player_index]
-  if not gui_data then return end
+  if not gui_data then
+    return
+  end
 
   local entity = gui_data.state.entity
-  if not entity or not entity.valid then return end
+  if not entity or not entity.valid then
+    return
+  end
 
   intergalactic_transceiver.destroy_gui(game.get_player(e.player_index))
   intergalactic_transceiver.activate(entity)

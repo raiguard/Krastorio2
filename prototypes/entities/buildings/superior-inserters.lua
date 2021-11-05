@@ -195,7 +195,8 @@ data:extend({
       width = 24,
       height = 41,
       hr_version = {
-        filename = kr_entities_path .. "superior-inserters/superior-long-inserter/hr-superior-long-inserter-hand-closed.png",
+        filename = kr_entities_path
+          .. "superior-inserters/superior-long-inserter/hr-superior-long-inserter-hand-closed.png",
         priority = "extra-high",
         width = 100,
         height = 164,
@@ -208,7 +209,8 @@ data:extend({
       width = 32,
       height = 41,
       hr_version = {
-        filename = kr_entities_path .. "superior-inserters/superior-long-inserter/hr-superior-long-inserter-hand-open.png",
+        filename = kr_entities_path
+          .. "superior-inserters/superior-long-inserter/hr-superior-long-inserter-hand-open.png",
         priority = "extra-high",
         width = 130,
         height = 164,
@@ -328,12 +330,14 @@ data:extend({
       },
     },
     hand_closed_picture = {
-      filename = kr_entities_path .. "superior-inserters/superior-filter-inserter/superior-filter-inserter-hand-closed.png",
+      filename = kr_entities_path
+        .. "superior-inserters/superior-filter-inserter/superior-filter-inserter-hand-closed.png",
       priority = "extra-high",
       width = 24,
       height = 41,
       hr_version = {
-        filename = kr_entities_path .. "superior-inserters/superior-filter-inserter/hr-superior-filter-inserter-hand-closed.png",
+        filename = kr_entities_path
+          .. "superior-inserters/superior-filter-inserter/hr-superior-filter-inserter-hand-closed.png",
         priority = "extra-high",
         width = 100,
         height = 164,
@@ -341,12 +345,14 @@ data:extend({
       },
     },
     hand_open_picture = {
-      filename = kr_entities_path .. "superior-inserters/superior-filter-inserter/superior-filter-inserter-hand-open.png",
+      filename = kr_entities_path
+        .. "superior-inserters/superior-filter-inserter/superior-filter-inserter-hand-open.png",
       priority = "extra-high",
       width = 32,
       height = 41,
       hr_version = {
-        filename = kr_entities_path .. "superior-inserters/superior-filter-inserter/hr-superior-filter-inserter-hand-open.png",
+        filename = kr_entities_path
+          .. "superior-inserters/superior-filter-inserter/hr-superior-filter-inserter-hand-open.png",
         priority = "extra-high",
         width = 130,
         height = 164,
@@ -466,12 +472,14 @@ data:extend({
       },
     },
     hand_closed_picture = {
-      filename = kr_entities_path .. "superior-inserters/superior-long-filter-inserter/superior-long-filter-inserter-hand-closed.png",
+      filename = kr_entities_path
+        .. "superior-inserters/superior-long-filter-inserter/superior-long-filter-inserter-hand-closed.png",
       priority = "extra-high",
       width = 24,
       height = 41,
       hr_version = {
-        filename = kr_entities_path .. "superior-inserters/superior-long-filter-inserter/hr-superior-long-filter-inserter-hand-closed.png",
+        filename = kr_entities_path
+          .. "superior-inserters/superior-long-filter-inserter/hr-superior-long-filter-inserter-hand-closed.png",
         priority = "extra-high",
         width = 100,
         height = 164,
@@ -479,12 +487,14 @@ data:extend({
       },
     },
     hand_open_picture = {
-      filename = kr_entities_path .. "superior-inserters/superior-long-filter-inserter/superior-long-filter-inserter-hand-open.png",
+      filename = kr_entities_path
+        .. "superior-inserters/superior-long-filter-inserter/superior-long-filter-inserter-hand-open.png",
       priority = "extra-high",
       width = 32,
       height = 41,
       hr_version = {
-        filename = kr_entities_path .. "superior-inserters/superior-long-filter-inserter/hr-superior-long-filter-inserter-hand-open.png",
+        filename = kr_entities_path
+          .. "superior-inserters/superior-long-filter-inserter/hr-superior-long-filter-inserter-hand-open.png",
         priority = "extra-high",
         width = 130,
         height = 164,

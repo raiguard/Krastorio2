@@ -136,7 +136,10 @@ function krastorio.fluid_burner_util.generateBurnFluidsRecipe(fluid_name)
         type = "recipe",
         name = "kr-burn-" .. fluid.name,
         localised_name = { "recipe-name.kr-burn", fluid.localised_name or { "fluid-name." .. fluid.name } },
-        localised_description = { "recipe-description.kr-burn", fluid.localised_name or { "fluid-name." .. fluid.name } },
+        localised_description = {
+          "recipe-description.kr-burn",
+          fluid.localised_name or { "fluid-name." .. fluid.name },
+        },
         category = "fuel-burning",
         icons = {
           {

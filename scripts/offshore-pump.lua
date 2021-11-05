@@ -3,7 +3,9 @@ local compatibility = require("scripts.compatibility")
 local offshore_pump = {}
 
 function offshore_pump.build(entity)
-  if not compatibility.should_build_pump() then return end
+  if not compatibility.should_build_pump() then
+    return
+  end
 
   local damage = entity.prototype.max_health - entity.health
   local position = entity.position
@@ -14,14 +16,14 @@ function offshore_pump.build(entity)
 
   entity.destroy()
 
-  local new_entity = surface.create_entity{
+  local new_entity = surface.create_entity({
     name = "kr-electric-offshore-pump",
     position = position,
     direction = direction,
     force = force,
     player = player,
-    create_build_effect_smoke = false
-  }
+    create_build_effect_smoke = false,
+  })
 
   if new_entity and new_entity.valid then
     if script.active_mods["WaterAsAResource"] then

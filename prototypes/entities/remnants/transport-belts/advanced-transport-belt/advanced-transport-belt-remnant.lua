@@ -16,7 +16,8 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(8, {
-      filename = kr_remnants_path .. "transport-belts/advanced-transport-belt/transport-belt/advanced-transport-belt-remnant.png",
+      filename = kr_remnants_path
+        .. "transport-belts/advanced-transport-belt/transport-belt/advanced-transport-belt-remnant.png",
       line_length = 1,
       width = 54,
       height = 52,
@@ -26,7 +27,8 @@ data:extend({
       direction_count = 1,
       shift = util.by_pixel(1, 0),
       hr_version = {
-        filename = kr_remnants_path .. "transport-belts/advanced-transport-belt/transport-belt/hr-advanced-transport-belt-remnant.png",
+        filename = kr_remnants_path
+          .. "transport-belts/advanced-transport-belt/transport-belt/hr-advanced-transport-belt-remnant.png",
         line_length = 1,
         width = 106,
         height = 102,

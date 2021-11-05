@@ -18,29 +18,30 @@ end
 function inserter.refresh_gui(player)
   inserter.destroy_gui(player.index)
 
-  global.inserter_guis[player.index] = gui.add(
-    player.gui.relative,
+  global.inserter_guis[player.index] = gui.add(player.gui.relative, {
+    type = "frame",
+    caption = { "gui.kr-change-drop-lane" },
+    anchor = {
+      gui = defines.relative_gui_type.inserter_gui,
+      position = defines.relative_gui_position.right,
+    },
     {
       type = "frame",
-      caption = {"gui.kr-change-drop-lane"},
-      anchor = {
-        gui = defines.relative_gui_type.inserter_gui,
-        position = defines.relative_gui_position.right,
+      name = "inner_frame",
+      style = "inside_shallow_frame_with_padding",
+      direction = "vertical",
+      {
+        type = "switch",
+        name = "switch",
+        switch_state = "left",
+        left_label_caption = { "gui.kr-near" },
+        right_label_caption = { "gui.kr-far" },
+        actions = {
+          on_switch_state_changed = { gui = "inserter", action = "change_belt_lane" },
+        },
       },
-      {type = "frame", name = "inner_frame", style = "inside_shallow_frame_with_padding", direction = "vertical",
-        {
-          type = "switch",
-          name = "switch",
-          switch_state = "left",
-          left_label_caption = {"gui.kr-near"},
-          right_label_caption = {"gui.kr-far"},
-          actions = {
-            on_switch_state_changed = {gui = "inserter", action = "change_belt_lane"},
-          }
-        }
-      }
-    }
-  )
+    },
+  })
 end
 
 function inserter.destroy_gui(player_index)
@@ -61,10 +62,14 @@ end
 function inserter.handle_gui_action(msg, e)
   if msg.action == "change_belt_lane" then
     local player = game.get_player(e.player_index)
-    if not player.opened_gui_type == defines.gui_type.entity then return end
+    if not player.opened_gui_type == defines.gui_type.entity then
+      return
+    end
 
     local entity = player.opened
-    if not entity.valid or entity.type ~= "inserter" then return end
+    if not entity.valid or entity.type ~= "inserter" then
+      return
+    end
 
     inserter.change_lane(entity)
   end
@@ -90,7 +95,7 @@ function inserter.change_lane(entity)
   -- Special effects
   util.change_mode_fx(
     entity,
-    is_far and {"message.kr-drop-near"} or {"message.kr-drop-far"},
+    is_far and { "message.kr-drop-near" } or { "message.kr-drop-far" },
     constants.mode_change_flying_text_color
   )
 
@@ -115,7 +120,9 @@ end
 
 function inserter.copy_settings(source, destination)
   local temp_settings = global.temp_inserter_settings[destination.unit_number]
-  if not temp_settings then return end
+  if not temp_settings then
+    return
+  end
   global.temp_inserter_settings[destination.unit_number] = nil
 
   local source_prototype = source.prototype

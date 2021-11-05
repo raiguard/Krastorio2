@@ -2045,7 +2045,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-N-wet-window-background-front.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk2/electric-mining-drill-N-wet-window-background-front.png",
                 line_length = 1,
                 width = 68,
                 height = 14,
@@ -2055,7 +2056,8 @@ data:extend({
                 shift = util.by_pixel(-2, -18),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-N-wet-window-background-front.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk2/hr-electric-mining-drill-N-wet-window-background-front.png",
                   line_length = 1,
                   width = 132,
                   height = 28,
@@ -2073,7 +2075,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-S-wet-window-background.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk2/electric-mining-drill-S-wet-window-background.png",
                 line_length = 1,
                 width = 68,
                 height = 46,
@@ -2083,7 +2086,8 @@ data:extend({
                 shift = util.by_pixel(-2, -34),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-S-wet-window-background.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk2/hr-electric-mining-drill-S-wet-window-background.png",
                   line_length = 1,
                   width = 132,
                   height = 88,
@@ -2106,7 +2110,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-N-wet-window-background.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk2/electric-mining-drill-N-wet-window-background.png",
                 line_length = 1,
                 width = 14,
                 height = 12,
@@ -2116,7 +2121,8 @@ data:extend({
                 shift = util.by_pixel(2, 20),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-N-wet-window-background.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk2/hr-electric-mining-drill-N-wet-window-background.png",
                   line_length = 1,
                   width = 30,
                   height = 20,
@@ -2133,7 +2139,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-W-wet-window-background-front.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk2/electric-mining-drill-W-wet-window-background-front.png",
                 line_length = 1,
                 width = 42,
                 height = 44,
@@ -2143,7 +2150,8 @@ data:extend({
                 shift = util.by_pixel(12, 0),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-W-wet-window-background-front.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk2/hr-electric-mining-drill-W-wet-window-background-front.png",
                   line_length = 1,
                   width = 88,
                   height = 86,
@@ -2161,7 +2169,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-E-wet-window-background-front.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk2/electric-mining-drill-E-wet-window-background-front.png",
                 line_length = 1,
                 width = 44,
                 height = 44,
@@ -2171,7 +2180,8 @@ data:extend({
                 shift = util.by_pixel(-12, 0),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-E-wet-window-background-front.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk2/hr-electric-mining-drill-E-wet-window-background-front.png",
                   line_length = 1,
                   width = 86,
                   height = 86,
@@ -2195,7 +2205,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-N-wet-fluid-background-front.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk2/electric-mining-drill-N-wet-fluid-background-front.png",
                 line_length = 1,
                 width = 66,
                 height = 20,
@@ -2205,7 +2216,8 @@ data:extend({
                 shift = util.by_pixel(0, -18),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-N-wet-fluid-background-front.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk2/hr-electric-mining-drill-N-wet-fluid-background-front.png",
                   line_length = 1,
                   width = 130,
                   height = 36,
@@ -2223,7 +2235,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-S-wet-fluid-background.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk2/electric-mining-drill-S-wet-fluid-background.png",
                 line_length = 1,
                 width = 66,
                 height = 48,
@@ -2233,7 +2246,8 @@ data:extend({
                 shift = util.by_pixel(0, -32),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-S-wet-fluid-background.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk2/hr-electric-mining-drill-S-wet-fluid-background.png",
                   line_length = 1,
                   width = 130,
                   height = 96,
@@ -2257,7 +2271,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-N-wet-fluid-background.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk2/electric-mining-drill-N-wet-fluid-background.png",
                 line_length = 1,
                 width = 14,
                 height = 10,
@@ -2267,7 +2282,8 @@ data:extend({
                 shift = util.by_pixel(2, 22),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-N-wet-fluid-background.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk2/hr-electric-mining-drill-N-wet-fluid-background.png",
                   line_length = 1,
                   width = 28,
                   height = 22,
@@ -2284,7 +2300,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-W-wet-fluid-background-front.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk2/electric-mining-drill-W-wet-fluid-background-front.png",
                 line_length = 1,
                 width = 42,
                 height = 42,
@@ -2294,7 +2311,8 @@ data:extend({
                 shift = util.by_pixel(12, 0),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-W-wet-fluid-background-front.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk2/hr-electric-mining-drill-W-wet-fluid-background-front.png",
                   line_length = 1,
                   width = 82,
                   height = 88,
@@ -2312,7 +2330,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-E-wet-fluid-background-front.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk2/electric-mining-drill-E-wet-fluid-background-front.png",
                 line_length = 1,
                 width = 42,
                 height = 42,
@@ -2322,7 +2341,8 @@ data:extend({
                 shift = util.by_pixel(-12, 0),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-E-wet-fluid-background-front.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk2/hr-electric-mining-drill-E-wet-fluid-background-front.png",
                   line_length = 1,
                   width = 82,
                   height = 88,
@@ -2347,7 +2367,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-N-wet-fluid-flow-front.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk2/electric-mining-drill-N-wet-fluid-flow-front.png",
                 line_length = 1,
                 width = 66,
                 height = 16,
@@ -2357,7 +2378,8 @@ data:extend({
                 shift = util.by_pixel(-2, -18),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-N-wet-fluid-flow-front.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk2/hr-electric-mining-drill-N-wet-fluid-flow-front.png",
                   line_length = 1,
                   width = 130,
                   height = 28,
@@ -2385,7 +2407,8 @@ data:extend({
                 shift = util.by_pixel(-2, -32),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-S-wet-fluid-flow.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk2/hr-electric-mining-drill-S-wet-fluid-flow.png",
                   line_length = 1,
                   width = 130,
                   height = 88,
@@ -2419,7 +2442,8 @@ data:extend({
                 shift = util.by_pixel(2, 22),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-N-wet-fluid-flow.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk2/hr-electric-mining-drill-N-wet-fluid-flow.png",
                   line_length = 1,
                   width = 26,
                   height = 20,
@@ -2436,7 +2460,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-W-wet-fluid-flow-front.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk2/electric-mining-drill-W-wet-fluid-flow-front.png",
                 line_length = 1,
                 width = 40,
                 height = 44,
@@ -2446,7 +2471,8 @@ data:extend({
                 shift = util.by_pixel(12, 0),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-W-wet-fluid-flow-front.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk2/hr-electric-mining-drill-W-wet-fluid-flow-front.png",
                   line_length = 1,
                   width = 84,
                   height = 86,
@@ -2464,7 +2490,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk2/electric-mining-drill-E-wet-fluid-flow-front.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk2/electric-mining-drill-E-wet-fluid-flow-front.png",
                 line_length = 1,
                 width = 42,
                 height = 44,
@@ -2474,7 +2501,8 @@ data:extend({
                 shift = util.by_pixel(-12, 0),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk2/hr-electric-mining-drill-E-wet-fluid-flow-front.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk2/hr-electric-mining-drill-E-wet-fluid-flow-front.png",
                   line_length = 1,
                   width = 82,
                   height = 86,
@@ -4076,7 +4104,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-N-wet-window-background-front.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk3/electric-mining-drill-N-wet-window-background-front.png",
                 line_length = 1,
                 width = 68,
                 height = 14,
@@ -4086,7 +4115,8 @@ data:extend({
                 shift = util.by_pixel(-2, -18),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-N-wet-window-background-front.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk3/hr-electric-mining-drill-N-wet-window-background-front.png",
                   line_length = 1,
                   width = 132,
                   height = 28,
@@ -4104,7 +4134,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-S-wet-window-background.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk3/electric-mining-drill-S-wet-window-background.png",
                 line_length = 1,
                 width = 68,
                 height = 46,
@@ -4114,7 +4145,8 @@ data:extend({
                 shift = util.by_pixel(-2, -34),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-S-wet-window-background.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk3/hr-electric-mining-drill-S-wet-window-background.png",
                   line_length = 1,
                   width = 132,
                   height = 88,
@@ -4137,7 +4169,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-N-wet-window-background.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk3/electric-mining-drill-N-wet-window-background.png",
                 line_length = 1,
                 width = 14,
                 height = 12,
@@ -4147,7 +4180,8 @@ data:extend({
                 shift = util.by_pixel(2, 20),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-N-wet-window-background.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk3/hr-electric-mining-drill-N-wet-window-background.png",
                   line_length = 1,
                   width = 30,
                   height = 20,
@@ -4164,7 +4198,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-W-wet-window-background-front.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk3/electric-mining-drill-W-wet-window-background-front.png",
                 line_length = 1,
                 width = 42,
                 height = 44,
@@ -4174,7 +4209,8 @@ data:extend({
                 shift = util.by_pixel(12, 0),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-W-wet-window-background-front.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk3/hr-electric-mining-drill-W-wet-window-background-front.png",
                   line_length = 1,
                   width = 88,
                   height = 86,
@@ -4192,7 +4228,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-E-wet-window-background-front.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk3/electric-mining-drill-E-wet-window-background-front.png",
                 line_length = 1,
                 width = 44,
                 height = 44,
@@ -4202,7 +4239,8 @@ data:extend({
                 shift = util.by_pixel(-12, 0),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-E-wet-window-background-front.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk3/hr-electric-mining-drill-E-wet-window-background-front.png",
                   line_length = 1,
                   width = 86,
                   height = 86,
@@ -4226,7 +4264,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-N-wet-fluid-background-front.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk3/electric-mining-drill-N-wet-fluid-background-front.png",
                 line_length = 1,
                 width = 66,
                 height = 20,
@@ -4236,7 +4275,8 @@ data:extend({
                 shift = util.by_pixel(0, -18),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-N-wet-fluid-background-front.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk3/hr-electric-mining-drill-N-wet-fluid-background-front.png",
                   line_length = 1,
                   width = 130,
                   height = 36,
@@ -4254,7 +4294,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-S-wet-fluid-background.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk3/electric-mining-drill-S-wet-fluid-background.png",
                 line_length = 1,
                 width = 66,
                 height = 48,
@@ -4264,7 +4305,8 @@ data:extend({
                 shift = util.by_pixel(0, -32),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-S-wet-fluid-background.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk3/hr-electric-mining-drill-S-wet-fluid-background.png",
                   line_length = 1,
                   width = 130,
                   height = 96,
@@ -4288,7 +4330,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-N-wet-fluid-background.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk3/electric-mining-drill-N-wet-fluid-background.png",
                 line_length = 1,
                 width = 14,
                 height = 10,
@@ -4298,7 +4341,8 @@ data:extend({
                 shift = util.by_pixel(2, 22),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-N-wet-fluid-background.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk3/hr-electric-mining-drill-N-wet-fluid-background.png",
                   line_length = 1,
                   width = 28,
                   height = 22,
@@ -4315,7 +4359,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-W-wet-fluid-background-front.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk3/electric-mining-drill-W-wet-fluid-background-front.png",
                 line_length = 1,
                 width = 42,
                 height = 42,
@@ -4325,7 +4370,8 @@ data:extend({
                 shift = util.by_pixel(12, 0),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-W-wet-fluid-background-front.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk3/hr-electric-mining-drill-W-wet-fluid-background-front.png",
                   line_length = 1,
                   width = 82,
                   height = 88,
@@ -4343,7 +4389,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-E-wet-fluid-background-front.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk3/electric-mining-drill-E-wet-fluid-background-front.png",
                 line_length = 1,
                 width = 42,
                 height = 42,
@@ -4353,7 +4400,8 @@ data:extend({
                 shift = util.by_pixel(-12, 0),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-E-wet-fluid-background-front.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk3/hr-electric-mining-drill-E-wet-fluid-background-front.png",
                   line_length = 1,
                   width = 82,
                   height = 88,
@@ -4378,7 +4426,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-N-wet-fluid-flow-front.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk3/electric-mining-drill-N-wet-fluid-flow-front.png",
                 line_length = 1,
                 width = 66,
                 height = 16,
@@ -4388,7 +4437,8 @@ data:extend({
                 shift = util.by_pixel(-2, -18),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-N-wet-fluid-flow-front.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk3/hr-electric-mining-drill-N-wet-fluid-flow-front.png",
                   line_length = 1,
                   width = 130,
                   height = 28,
@@ -4416,7 +4466,8 @@ data:extend({
                 shift = util.by_pixel(-2, -32),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-S-wet-fluid-flow.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk3/hr-electric-mining-drill-S-wet-fluid-flow.png",
                   line_length = 1,
                   width = 130,
                   height = 88,
@@ -4450,7 +4501,8 @@ data:extend({
                 shift = util.by_pixel(2, 22),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-N-wet-fluid-flow.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk3/hr-electric-mining-drill-N-wet-fluid-flow.png",
                   line_length = 1,
                   width = 26,
                   height = 20,
@@ -4467,7 +4519,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-W-wet-fluid-flow-front.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk3/electric-mining-drill-W-wet-fluid-flow-front.png",
                 line_length = 1,
                 width = 40,
                 height = 44,
@@ -4477,7 +4530,8 @@ data:extend({
                 shift = util.by_pixel(12, 0),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-W-wet-fluid-flow-front.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk3/hr-electric-mining-drill-W-wet-fluid-flow-front.png",
                   line_length = 1,
                   width = 84,
                   height = 86,
@@ -4495,7 +4549,8 @@ data:extend({
             layers = {
               {
                 priority = "high",
-                filename = kr_entities_path .. "electric-mining-drill-mk3/electric-mining-drill-E-wet-fluid-flow-front.png",
+                filename = kr_entities_path
+                  .. "electric-mining-drill-mk3/electric-mining-drill-E-wet-fluid-flow-front.png",
                 line_length = 1,
                 width = 42,
                 height = 44,
@@ -4505,7 +4560,8 @@ data:extend({
                 shift = util.by_pixel(-12, 0),
                 hr_version = {
                   priority = "high",
-                  filename = kr_entities_path .. "electric-mining-drill-mk3/hr-electric-mining-drill-E-wet-fluid-flow-front.png",
+                  filename = kr_entities_path
+                    .. "electric-mining-drill-mk3/hr-electric-mining-drill-E-wet-fluid-flow-front.png",
                   line_length = 1,
                   width = 82,
                   height = 86,

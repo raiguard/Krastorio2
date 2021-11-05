@@ -16,7 +16,7 @@ end
 
 -- Automatically convert all furnaces that have the "smelting" category
 -- Fill the excludes list with any breakages that are found
-local excludes = table.invert{}
+local excludes = table.invert({})
 for _, furnace in pairs(data.raw["furnace"]) do
   if not excludes[furnace.name] and table.find(furnace.crafting_categories, "smelting") then
     transferFromFurnacesToAssemblers(furnace.name)

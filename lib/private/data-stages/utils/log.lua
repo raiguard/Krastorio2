@@ -93,7 +93,8 @@ function krastorio_utils.log._(txt, message_level)
   if debug.getinfo(3) then
     base_level = 2
   end
-  local out_file, out_function_name, out_line = debug.getinfo(base_level + 1).short_src,
+  local out_file, out_function_name, out_line =
+    debug.getinfo(base_level + 1).short_src,
     debug.getinfo(base_level + 1).name,
     debug.getinfo(base_level + 1).currentline
   local in_file, in_function_name, in_line =

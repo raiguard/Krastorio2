@@ -15,7 +15,7 @@ function radioactivity.reset_entities_items()
   for _, data in pairs(constants.radioactivity_defaults) do
     global.radioactivity[data.tbl] = {}
     for _, name in pairs(data.objects) do
-      radioactivity.remote_interface["add_"..data.type](name)
+      radioactivity.remote_interface["add_" .. data.type](name)
     end
   end
 end
@@ -24,7 +24,7 @@ function radioactivity.add_player(player)
   global.radioactivity.players[player.index] = {
     entity = false,
     inventory = false,
-    last_position = {x = 0, y = 0},
+    last_position = { x = 0, y = 0 },
   }
 end
 
@@ -36,20 +36,25 @@ function radioactivity.refresh_players()
   local existing = global.radioactivity.players
   local new = {}
   for player_index in pairs(game.players) do
-    new[player_index] = existing[player_index] or {
-      entity = false,
-      inventory = false,
-      last_position = {x = 0, y = 0},
-    }
+    new[player_index] = existing[player_index]
+      or {
+        entity = false,
+        inventory = false,
+        last_position = { x = 0, y = 0 },
+      }
   end
   global.radioactivity.players = new
 end
 
 function radioactivity.check_around_player(player)
-  if not global.radioactivity.enabled then return end
+  if not global.radioactivity.enabled then
+    return
+  end
 
   local player_data = global.radioactivity.players[player.index]
-  if not player_data then return end
+  if not player_data then
+    return
+  end
 
   if not player.character or not player.character.valid then
     player_data.entity = false
@@ -58,24 +63,24 @@ function radioactivity.check_around_player(player)
 
   local position = player.position
   local last_position = player_data.last_position
-  if
-    math.floor(position.x) ~= math.floor(last_position.x)
-    or math.floor(position.y) ~= math.floor(last_position.y)
-  then
+  if math.floor(position.x) ~= math.floor(last_position.x) or math.floor(position.y) ~= math.floor(last_position.y) then
     player_data.last_position = position
 
-    local in_range = player.character and player.surface.count_entities_filtered{
-      name = global.radioactivity.entities,
-      radius = constants.radioactivity_range,
-      position = player.position
-    } > 0
+    local in_range = player.character
+      and player.surface.count_entities_filtered({
+          name = global.radioactivity.entities,
+          radius = constants.radioactivity_range,
+          position = player.position,
+        })
+        > 0
     player_data.entity = in_range
   end
-
 end
 
 function radioactivity.check_inventory(player)
-  if not global.radioactivity.enabled then return end
+  if not global.radioactivity.enabled then
+    return
+  end
 
   local player_data = global.radioactivity.players[player.index]
   if not player.character or not player.character.valid then
@@ -83,7 +88,7 @@ function radioactivity.check_inventory(player)
     return
   end
 
-  local inventories = {player.get_main_inventory(), player.get_inventory(defines.inventory.character_trash)}
+  local inventories = { player.get_main_inventory(), player.get_inventory(defines.inventory.character_trash) }
 
   for _, inventory in pairs(inventories) do
     for _, item_name in pairs(global.radioactivity.items) do
@@ -98,23 +103,27 @@ function radioactivity.check_inventory(player)
 end
 
 function radioactivity.update_sounds()
-  if not global.radioactivity.enabled then return end
+  if not global.radioactivity.enabled then
+    return
+  end
 
   for player_index, player_data in pairs(global.radioactivity.players) do
     if table.find(player_data, true) then
       local player = game.get_player(player_index)
       if player.connected then
-        player.play_sound{
+        player.play_sound({
           path = "kr-radioactive",
           volume_modifier = 0.5,
-        }
+        })
       end
     end
   end
 end
 
 function radioactivity.update_and_damage()
-  if not global.radioactivity.enabled then return end
+  if not global.radioactivity.enabled then
+    return
+  end
 
   for player_index, player_data in pairs(global.radioactivity.players) do
     if table.find(player_data, true) then
@@ -122,8 +131,8 @@ function radioactivity.update_and_damage()
       if player.connected and player.character then
         player.add_custom_alert(
           player.character,
-          {type = "virtual", name = "kr-nuclear-2"},
-          {"other.kr-taking-radioactive-damage"},
+          { type = "virtual", name = "kr-nuclear-2" },
+          { "other.kr-taking-radioactive-damage" },
           false
         )
 
@@ -139,11 +148,11 @@ end
 radioactivity.commands = {
   ["kr-disable-radioactivity"] = function()
     global.radioactivity.enabled = false
-    game.print{"message.kr-radioactivity-disabled"}
+    game.print({ "message.kr-radioactivity-disabled" })
   end,
   ["kr-enable-radioactivity"] = function()
     global.radioactivity.enabled = true
-    game.print{"message.kr-radioactivity-enabled"}
+    game.print({ "message.kr-radioactivity-enabled" })
   end,
 }
 
@@ -154,7 +163,7 @@ radioactivity.remote_interface = {
     end
 
     if not game.entity_prototypes[name] then
-      error("Entity `"..name.."` does not exist.")
+      error("Entity `" .. name .. "` does not exist.")
     end
 
     table.insert(global.radioactivity.entities, name)
@@ -165,7 +174,7 @@ radioactivity.remote_interface = {
     end
 
     if not game.item_prototypes[name] then
-      error("Item `"..name.."` does not exist.")
+      error("Item `" .. name .. "` does not exist.")
     end
 
     table.insert(global.radioactivity.items, name)
@@ -176,7 +185,7 @@ radioactivity.remote_interface = {
     end
 
     global.radioactivity.enabled = to_state
-  end
+  end,
 }
 
 return radioactivity

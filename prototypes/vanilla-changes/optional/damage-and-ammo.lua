@@ -48,7 +48,7 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
   -- Laser turret
   data.raw["electric-turret"]["laser-turret"].max_health = 500 -- nerf /2
   data.raw["electric-turret"]["laser-turret"].call_for_help_radius = 35 -- nerf -5
-  data.raw["electric-turret"]["laser-turret"].energy_source =  { -- nerf x2
+  data.raw["electric-turret"]["laser-turret"].energy_source = { -- nerf x2
     type = "electric",
     buffer_capacity = "2000kJ",
     input_flow_limit = "4000kW",
@@ -92,11 +92,17 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
   data.raw.projectile["cannon-projectile"].acceleration = 0.1
   data.raw.projectile["cannon-projectile"].light = { intensity = 0.45, size = 8, color = { r = 0.8, g = 0.8, b = 0.8 } }
   data.raw.projectile["explosive-cannon-projectile"].acceleration = 0.1
-  data.raw.projectile["explosive-cannon-projectile"].light =
-    { intensity = 0.45, size = 8, color = { r = 1.0, g = 0.75, b = 0.75 } }
+  data.raw.projectile["explosive-cannon-projectile"].light = {
+    intensity = 0.45,
+    size = 8,
+    color = { r = 1.0, g = 0.75, b = 0.75 },
+  }
   data.raw.projectile["uranium-cannon-projectile"].acceleration = 0.1
-  data.raw.projectile["uranium-cannon-projectile"].light =
-    { intensity = 0.45, size = 8, color = { r = 0.5, g = 0.75, b = 0.75 } }
+  data.raw.projectile["uranium-cannon-projectile"].light = {
+    intensity = 0.45,
+    size = 8,
+    color = { r = 0.5, g = 0.75, b = 0.75 },
+  }
   data.raw.projectile["explosive-uranium-cannon-projectile"].acceleration = 0.1
   data.raw.projectile["explosive-uranium-cannon-projectile"].light = {
     intensity = 0.45,
@@ -209,8 +215,11 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
 
   -- Explosive rocket
   data.raw["projectile"]["explosive-rocket"].acceleration = 0.05
-  data.raw["projectile"]["explosive-rocket"].light =
-    { intensity = 0.45, size = 8, color = { r = 1, g = 0.75, b = 0.8 } }
+  data.raw["projectile"]["explosive-rocket"].light = {
+    intensity = 0.45,
+    size = 8,
+    color = { r = 1, g = 0.75, b = 0.8 },
+  }
   data.raw["projectile"]["explosive-rocket"].action.action_delivery.target_effects = {
     {
       type = "create-entity",

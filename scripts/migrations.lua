@@ -50,7 +50,6 @@ local function find_on_all_surfaces(filters)
   return output
 end
 
-
 migrations.versions = {
   ["1.1.2"] = function()
     local shelters = global.spawn_points
@@ -112,11 +111,11 @@ migrations.versions = {
 
     -- Intergalactic Transceiver
     -- There should only be one of each, so this one is easy
-    for _, transceiver in pairs(find_on_all_surfaces{name = "kr-intergalactic-transceiver"}) do
+    for _, transceiver in pairs(find_on_all_surfaces({ name = "kr-intergalactic-transceiver" })) do
       intergalactic_transceiver.build(transceiver)
     end
-    for _, transceiver in pairs(find_on_all_surfaces{name = "kr-activated-intergalactic-transceiver"}) do
-      global.intergalactic_transceiver.forces[transceiver.force.index] = {entity = transceiver}
+    for _, transceiver in pairs(find_on_all_surfaces({ name = "kr-activated-intergalactic-transceiver" })) do
+      global.intergalactic_transceiver.forces[transceiver.force.index] = { entity = transceiver }
     end
 
     -- Patreon items
@@ -144,22 +143,20 @@ migrations.versions = {
     global.radioactivity.enabled = old_enabled
 
     -- Shelter
-    for _, entity in pairs(
-      find_on_all_surfaces{
-        name = {"kr-shelter-light", "kr-shelter", "kr-shelter-plus-light", "kr-shelter-plus"}
-      }
-    ) do
+    for _, entity in pairs(find_on_all_surfaces({
+      name = { "kr-shelter-light", "kr-shelter", "kr-shelter-plus-light", "kr-shelter-plus" },
+    })) do
       entity.destroy()
     end
-    for _, container in pairs(find_on_all_surfaces{name = {"kr-shelter-container", "kr-shelter-plus-container"}}) do
+    for _, container in pairs(find_on_all_surfaces({ name = { "kr-shelter-container", "kr-shelter-plus-container" } })) do
       shelter.build(container)
     end
 
     -- Tesla coils
-    for _, tower in pairs(find_on_all_surfaces{name = "kr-tesla-coil"}) do
+    for _, tower in pairs(find_on_all_surfaces({ name = "kr-tesla-coil" })) do
       tesla_coil.build(tower)
     end
-  end
+  end,
 }
 
 return migrations

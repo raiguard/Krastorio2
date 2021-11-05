@@ -16,7 +16,8 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = {
-      filename = kr_remnants_path .. "transport-belts/advanced-transport-belt/underground-belt/advanced-underground-belt-remnant.png",
+      filename = kr_remnants_path
+        .. "transport-belts/advanced-transport-belt/underground-belt/advanced-underground-belt-remnant.png",
       line_length = 1,
       width = 60,
       height = 50,
@@ -26,7 +27,8 @@ data:extend({
       direction_count = 8,
       shift = util.by_pixel(4, 3),
       hr_version = {
-        filename = kr_remnants_path .. "transport-belts/advanced-transport-belt/underground-belt/hr-advanced-underground-belt-remnant.png",
+        filename = kr_remnants_path
+          .. "transport-belts/advanced-transport-belt/underground-belt/hr-advanced-underground-belt-remnant.png",
         line_length = 1,
         width = 116,
         height = 100,

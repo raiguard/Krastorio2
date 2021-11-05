@@ -26,7 +26,8 @@ data:extend({
       direction_count = 4,
       shift = util.by_pixel(1, 3),
       hr_version = {
-        filename = kr_remnants_path .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-remnant.png",
+        filename = kr_remnants_path
+          .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-remnant.png",
         line_length = 1,
         width = 172,
         height = 156,

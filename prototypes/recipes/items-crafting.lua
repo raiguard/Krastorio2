@@ -28,36 +28,36 @@ return {
     result = "electronic-components",
     result_count = 4,
   },
-{
-  type = "recipe",
-  name = "electronic-components-lithium",
-  energy_required = 10,
-  enabled = false,
-  allow_productivity = true,
-  ingredients = {
-    {"silicon", 3},
-    {"plastic-bar", 3},
-    {"glass", 3},
-    {"lithium", 3},
-  },
-  result = "electronic-components",
-  result_count = 10,
-  -- Electronic components icon overlayed with lithium
-  icons = {
-    {
-      icon = "__Krastorio2Assets__/icons/items-with-variations/electronic-components/electronic-components.png",
-      icon_size = 64,
-      icon_mipmaps = 4,
+  {
+    type = "recipe",
+    name = "electronic-components-lithium",
+    energy_required = 10,
+    enabled = false,
+    allow_productivity = true,
+    ingredients = {
+      { "silicon", 3 },
+      { "plastic-bar", 3 },
+      { "glass", 3 },
+      { "lithium", 3 },
     },
-    {
-      icon = "__Krastorio2Assets__/icons/items-with-variations/lithium/lithium.png",
-      icon_size = 64,
-      icon_mipmaps = 4,
-      scale = 0.4,
-      offset = {0.2, 0.2},
+    result = "electronic-components",
+    result_count = 10,
+    -- Electronic components icon overlayed with lithium
+    icons = {
+      {
+        icon = "__Krastorio2Assets__/icons/items-with-variations/electronic-components/electronic-components.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+      },
+      {
+        icon = "__Krastorio2Assets__/icons/items-with-variations/lithium/lithium.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+        scale = 0.4,
+        offset = { 0.2, 0.2 },
+      },
     },
   },
-},
   {
     type = "recipe",
     name = "steel-gear-wheel",
@@ -101,7 +101,12 @@ return {
     localized_description = { "item-description.landfill" },
     icons = {
       { icon = "__base__/graphics/icons/landfill.png", icon_size = 64 },
-      { icon = kr_items_with_variations_icons_path .. "sand/sand.png", icon_size = 64, scale = 0.26, shift = { 8, -8 } },
+      {
+        icon = kr_items_with_variations_icons_path .. "sand/sand.png",
+        icon_size = 64,
+        scale = 0.26,
+        shift = { 8, -8 },
+      },
     },
     category = "crafting-with-fluid",
     enabled = false,

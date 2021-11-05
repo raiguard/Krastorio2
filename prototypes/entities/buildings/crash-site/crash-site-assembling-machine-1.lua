@@ -66,7 +66,8 @@ data:extend({
           shift = util.by_pixel(-12, 2),
           animation_speed = kr_crash_site_assembling_machine_1_repaired_animation_speed,
           hr_version = {
-            filename = kr_crash_site_sprites_path .. "assembling-machine/hr-crash-site-assembling-machine-1-repaired.png",
+            filename = kr_crash_site_sprites_path
+              .. "assembling-machine/hr-crash-site-assembling-machine-1-repaired.png",
             width = 282,
             height = 182,
             frame_count = 20,
@@ -77,7 +78,8 @@ data:extend({
           },
         },
         {
-          filename = kr_crash_site_sprites_path .. "assembling-machine/crash-site-assembling-machine-1-repaired-shadow.png",
+          filename = kr_crash_site_sprites_path
+            .. "assembling-machine/crash-site-assembling-machine-1-repaired-shadow.png",
           width = 140,
           height = 84,
           frame_count = 20,
@@ -86,7 +88,8 @@ data:extend({
           shift = util.by_pixel(4, 6),
           animation_speed = kr_crash_site_assembling_machine_1_repaired_animation_speed,
           hr_version = {
-            filename = kr_crash_site_sprites_path .. "assembling-machine/hr-crash-site-assembling-machine-1-repaired-shadow.png",
+            filename = kr_crash_site_sprites_path
+              .. "assembling-machine/hr-crash-site-assembling-machine-1-repaired-shadow.png",
             width = 278,
             height = 168,
             frame_count = 20,
@@ -102,7 +105,8 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = kr_crash_site_sprites_path .. "assembling-machine/crash-site-assembling-machine-1-repaired-light.png",
+          filename = kr_crash_site_sprites_path
+            .. "assembling-machine/crash-site-assembling-machine-1-repaired-light.png",
           width = 78,
           height = 64,
           frame_count = 20,
@@ -112,7 +116,8 @@ data:extend({
           blend_mode = "additive",
           animation_speed = kr_crash_site_assembling_machine_1_repaired_animation_speed,
           hr_version = {
-            filename = kr_crash_site_sprites_path .. "assembling-machine/hr-crash-site-assembling-machine-1-repaired-light.png",
+            filename = kr_crash_site_sprites_path
+              .. "assembling-machine/hr-crash-site-assembling-machine-1-repaired-light.png",
             width = 162,
             height = 120,
             frame_count = 20,

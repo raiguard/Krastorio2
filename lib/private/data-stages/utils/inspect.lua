@@ -26,12 +26,16 @@ local inspect = {
 
 local tostring = tostring
 
-inspect.KEY = setmetatable({}, { __tostring = function()
-  return "inspect.KEY"
-end })
-inspect.METATABLE = setmetatable({}, { __tostring = function()
-  return "inspect.METATABLE"
-end })
+inspect.KEY = setmetatable({}, {
+  __tostring = function()
+    return "inspect.KEY"
+  end,
+})
+inspect.METATABLE = setmetatable({}, {
+  __tostring = function()
+    return "inspect.METATABLE"
+  end,
+})
 
 local function rawpairs(t)
   return next, t, nil
@@ -353,8 +357,10 @@ function inspect.inspect(root, options)
   return table.concat(inspector.buffer)
 end
 
-setmetatable(inspect, { __call = function(_, ...)
-  return inspect.inspect(...)
-end })
+setmetatable(inspect, {
+  __call = function(_, ...)
+    return inspect.inspect(...)
+  end,
+})
 
 return inspect

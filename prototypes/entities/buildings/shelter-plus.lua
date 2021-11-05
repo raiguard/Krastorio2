@@ -7,7 +7,7 @@ end
 local s_tint = { r = 1, g = 1, b = 1, a = 1 } -- White (should be never setted)
 local setting_color = krastorio.general.getSafeSettingValue("kr-shelter-tint") or "Yellow"
 
-  s_tint = { r = 0.9, g = 0.7, b = 0, a = 0.75 }
+s_tint = { r = 0.9, g = 0.7, b = 0, a = 0.75 }
 if setting_color == "Yellow" then
 elseif setting_color == "Olive" then
   s_tint = { r = 0.50, g = 0.60, b = 0.2, a = 0.5 }
@@ -149,7 +149,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     allow_copy_paste = false,
-    flags = { "hidden", "not-on-map", },
+    flags = { "hidden", "not-on-map" },
     fast_replaceable_group = "kr-shelter-plus",
     minable = { mining_time = 0.5, result = "kr-shelter-plus" },
     collision_box = { { -2.72, -2.72 }, { 2.72, 2.72 } },

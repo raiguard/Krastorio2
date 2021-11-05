@@ -555,8 +555,9 @@ table.insert(data.raw["energy-shield-equipment"]["energy-shield-mk2-equipment"].
 -- Localized names
 data.raw.item["energy-shield-equipment"].localised_name = { "equipment-name.shield-generator-mk1" }
 data.raw.item["energy-shield-equipment"].localised_description = { "equipment-description.shield-generator-mk1" }
-data.raw["energy-shield-equipment"]["energy-shield-equipment"].localised_name =
-  { "equipment-name.shield-generator-mk1" }
+data.raw["energy-shield-equipment"]["energy-shield-equipment"].localised_name = {
+  "equipment-name.shield-generator-mk1",
+}
 data.raw["energy-shield-equipment"]["energy-shield-equipment"].localised_description = {
   "equipment-description.shield-generator-mk1",
 }

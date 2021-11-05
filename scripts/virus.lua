@@ -58,7 +58,7 @@ local function init_biter_virus(player, surface)
     enemy.evolution_factor = enemy.evolution_factor * constants.biter_virus_evolution_multiplier
 
     -- Begin gradual enemy killoff
-    local enemy_entities = surface.find_entities_filtered({force = "enemy"})
+    local enemy_entities = surface.find_entities_filtered({ force = "enemy" })
     local len = #enemy_entities
     if len > 0 then
       biter_viruses[surface.index] = {
@@ -92,7 +92,7 @@ local function iterate_creep_virus(virus_data)
     local j = math.random(1, len)
     local tile = creeps[j]
     if tile and tile.valid then
-      tiles_to_replace[i] = {name = tile.hidden_tile or "landfill", position = tile.position}
+      tiles_to_replace[i] = { name = tile.hidden_tile or "landfill", position = tile.position }
       -- Move the element at the end to the gap
       -- This removes the element at `i` while achieving O(1) performance
       creeps[j] = creeps[len]
@@ -107,19 +107,19 @@ end
 local function init_creep_virus(surface)
   local creep_viruses = global.virus.creep
   if not creep_viruses[surface.index] then
-      -- Disable creep generation on this surface
-      global.creep.surfaces[surface.index] = nil
+    -- Disable creep generation on this surface
+    global.creep.surfaces[surface.index] = nil
 
-      -- Begin creep removal
-      -- FIXME: This causes insane amounts of lag with lots of creep tiles
-      local creep_tiles = surface.find_tiles_filtered({name = "kr-creep"})
-      local num_creeps = #creep_tiles
-      creep_viruses[surface.index] = {
-        amount_per_iteration = math.floor(num_creeps / get_removal_count(num_creeps)),
-        surface = surface,
-        tiles = creep_tiles,
-        tiles_len = num_creeps,
-      }
+    -- Begin creep removal
+    -- FIXME: This causes insane amounts of lag with lots of creep tiles
+    local creep_tiles = surface.find_tiles_filtered({ name = "kr-creep" })
+    local num_creeps = #creep_tiles
+    creep_viruses[surface.index] = {
+      amount_per_iteration = math.floor(num_creeps / get_removal_count(num_creeps)),
+      surface = surface,
+      tiles = creep_tiles,
+      tiles_len = num_creeps,
+    }
   end
 end
 
@@ -132,7 +132,9 @@ end
 
 function virus.on_player_used_capsule(e)
   local item = e.item
-  if not item or not item.valid then return end
+  if not item or not item.valid then
+    return
+  end
 
   local player = game.get_player(e.player_index)
   local surface = player.surface

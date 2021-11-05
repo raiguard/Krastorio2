@@ -23,7 +23,6 @@ local smoke_fast_animation = function(opts)
   }
 end
 
-
 -- Copy of main Factorio function to make standard water reflect
 
 local default_ended_in_water_trigger_effect = function()
@@ -3079,7 +3078,10 @@ data:extend({
   make_particle({
     name = "virus-capsule-metal-particle",
     pictures = particle_animations.get_metal_particle_small_pictures({}),
-    shadows = particle_animations.get_metal_particle_small_pictures({ tint = shadowtint(), shift = util.by_pixel(1, 0) }),
+    shadows = particle_animations.get_metal_particle_small_pictures({
+      tint = shadowtint(),
+      shift = util.by_pixel(1, 0),
+    }),
     regular_trigger_effect = {
       type = "create-trivial-smoke",
       smoke_name = "poison-capsule-particle-smoke",

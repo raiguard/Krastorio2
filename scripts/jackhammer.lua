@@ -16,7 +16,7 @@ function jackhammer.collect(player, surface, tiles, sel_area)
   for _, tile in pairs(tiles) do
     if misc.get_distance(tile.position, player_pos) <= constants.jackhammer_max_reach then
       i = i + 1
-      tiles_to_set[i] = {name = tile.hidden_tile or "landfill", position = tile.position}
+      tiles_to_set[i] = { name = tile.hidden_tile or "landfill", position = tile.position }
       local mineable = tile.prototype.mineable_properties
       local products = mineable.products
       if mineable and mineable.minable and products then
@@ -40,12 +40,8 @@ function jackhammer.collect(player, surface, tiles, sel_area)
     local inventory = player.get_main_inventory()
     for name, count in pairs(items_to_give) do
       -- If we can't fit all of the items, print a message and don't take any tiles
-      if not inventory.can_insert{name = name, count = count} then
-        util.flying_text_with_sound(
-          player,
-          {"message.kr-inventory-is-full"},
-          {position = area.center(sel_area)}
-        )
+      if not inventory.can_insert({ name = name, count = count }) then
+        util.flying_text_with_sound(player, { "message.kr-inventory-is-full" }, { position = area.center(sel_area) })
         return
       end
     end
@@ -53,7 +49,7 @@ function jackhammer.collect(player, surface, tiles, sel_area)
     -- Insert all of the items
     local inserted_count = 0
     for name, count in pairs(items_to_give) do
-      inventory.insert{name = name, count = count}
+      inventory.insert({ name = name, count = count })
       inserted_count = inserted_count + count
     end
 
@@ -61,15 +57,10 @@ function jackhammer.collect(player, surface, tiles, sel_area)
     surface.set_tiles(tiles_to_set)
 
     -- FX
-    player.play_sound{path = "kr-jackhammer", volume_modifier = 1}
+    player.play_sound({ path = "kr-jackhammer", volume_modifier = 1 })
   else
-    util.flying_text_with_sound(
-      player,
-      {"message.kr-no-tiles-in-selection"},
-      {position = area.center(sel_area)}
-    )
+    util.flying_text_with_sound(player, { "message.kr-no-tiles-in-selection" }, { position = area.center(sel_area) })
   end
 end
 
 return jackhammer
-

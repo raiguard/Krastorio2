@@ -57,7 +57,11 @@ if mods["angelspetrochem"] then
     data.raw.technology["chlorine-processing-2"] = data.raw.technology["chlorine-processing-3"]
     data.raw.technology["chlorine-processing-3"] = nil
     data.raw.technology["chlorine-processing-2"].name = "chlorine-processing-2"
-    krastorio.technologies.convertPrerequisiteFromAllTechnologies("chlorine-processing-3", "chlorine-processing-2", true)
+    krastorio.technologies.convertPrerequisiteFromAllTechnologies(
+      "chlorine-processing-3",
+      "chlorine-processing-2",
+      true
+    )
   end
 
   -- Remove other unseful recipes and techs
@@ -89,7 +93,10 @@ if mods["angelspetrochem"] then
   krastorio.recipes.replaceIngredient("rocket-fuel-with-ammonia", "iron-plate", { "rocket-fuel-capsule", 10 })
   krastorio.recipes.addIngredient("rocket-fuel-with-ammonia", { "rocket-oxidizer-capsule", 10 })
 
-  krastorio.recipes.replaceIngredient("rocket-fuel-with-hydrogen-chlorine", "iron-plate", { "rocket-fuel-capsule", 10 })
+  krastorio.recipes.replaceIngredient("rocket-fuel-with-hydrogen-chlorine", "iron-plate", {
+    "rocket-fuel-capsule",
+    10,
+  })
   krastorio.recipes.addIngredient("rocket-fuel-with-hydrogen-chlorine", { "rocket-oxidizer-capsule", 10 })
 
   -- Fixing coke ingredients

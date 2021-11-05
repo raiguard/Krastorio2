@@ -14,31 +14,32 @@ local function radio_button(name, caption, gui_name, mode)
     caption = caption,
     state = false,
     actions = {
-      on_checked_state_changed = {gui = gui_name, action = "change_mode", mode = mode}
-    }
+      on_checked_state_changed = { gui = gui_name, action = "change_mode", mode = mode },
+    },
   }
 end
 
 function roboport.refresh_gui(player)
   roboport.destroy_gui(player.index)
 
-  global.roboport_guis[player.index] = gui.add(
-    player.gui.relative,
+  global.roboport_guis[player.index] = gui.add(player.gui.relative, {
+    type = "frame",
+    caption = { "gui.kr-change-mode" },
+    anchor = {
+      gui = defines.relative_gui_type.roboport_gui,
+      position = defines.relative_gui_position.right,
+      names = global.roboport_has_variants_gui,
+    },
     {
       type = "frame",
-      caption = {"gui.kr-change-mode"},
-      anchor = {
-        gui = defines.relative_gui_type.roboport_gui,
-        position = defines.relative_gui_position.right,
-        names = global.roboport_has_variants_gui,
-      },
-      {type = "frame", name = "inner_frame", style = "inside_shallow_frame_with_padding", direction = "vertical",
-        radio_button("normal", {"message.kr-normal-mode"}, "roboport", "normal"),
-        radio_button("construction", {"message.kr-construction-mode"}, "roboport", "construction"),
-        radio_button("logistic", {"message.kr-logistic-mode"}, "roboport", "logistic"),
-      }
-    }
-  )
+      name = "inner_frame",
+      style = "inside_shallow_frame_with_padding",
+      direction = "vertical",
+      radio_button("normal", { "message.kr-normal-mode" }, "roboport", "normal"),
+      radio_button("construction", { "message.kr-construction-mode" }, "roboport", "construction"),
+      radio_button("logistic", { "message.kr-logistic-mode" }, "roboport", "logistic"),
+    },
+  })
 end
 
 function roboport.destroy_gui(player_index)
@@ -67,10 +68,14 @@ end
 function roboport.handle_gui_action(msg, e)
   if msg.action == "change_mode" then
     local player = game.get_player(e.player_index)
-    if not player.opened_gui_type == defines.gui_type.entity then return end
+    if not player.opened_gui_type == defines.gui_type.entity then
+      return
+    end
 
     local entity = player.opened
-    if not entity.valid or entity.type ~= "roboport" then return end
+    if not entity.valid or entity.type ~= "roboport" then
+      return
+    end
 
     roboport.change_mode(entity, player, msg.mode)
   end
@@ -85,7 +90,7 @@ end
 function roboport.find_variants()
   -- Find all compatible roboports
   local has_variants_gui = {}
-  for _, entity in pairs(game.get_filtered_entity_prototypes{{filter = "type", type = "roboport"}}) do
+  for _, entity in pairs(game.get_filtered_entity_prototypes({ { filter = "type", type = "roboport" } })) do
     local matched, _, base_name = string.find(entity.name, "^(.-)%-%w*%-mode")
     if matched then
       has_variants_gui[base_name] = true
@@ -118,10 +123,10 @@ function roboport.change_mode(entity, player, to_mode)
     new_mode_data = constants.roboport_modes[constants.next_roboport_mode[suffix]]
   end
 
-  local new_name = base_name..new_mode_data.suffix
+  local new_name = base_name .. new_mode_data.suffix
 
   if not game.entity_prototypes[new_name] then
-    util.flying_text_with_sound(player, {"message.kr-roboport-modes-not-supported"}, {position = entity.position})
+    util.flying_text_with_sound(player, { "message.kr-roboport-modes-not-supported" }, { position = entity.position })
     return
   end
 
@@ -141,7 +146,7 @@ function roboport.change_mode(entity, player, to_mode)
     end
   end
 
-  local new_entity = entity.surface.create_entity{
+  local new_entity = entity.surface.create_entity({
     name = new_name,
     position = entity.position,
     force = entity.force,
@@ -150,14 +155,14 @@ function roboport.change_mode(entity, player, to_mode)
     raise_built = true,
     spill = false,
     create_build_effect_smoke = false,
-  }
+  })
 
   if new_entity then
     new_entity.energy = energy
     new_entity.health = health
     new_entity.last_user = player
 
-    util.change_mode_fx(new_entity, {"message.kr-"..new_mode_data.text.."-mode"}, new_mode_data.color)
+    util.change_mode_fx(new_entity, { "message.kr-" .. new_mode_data.text .. "-mode" }, new_mode_data.color)
 
     -- Re-open GUI for all players who had it open and update the radio buttons
     for _, player in pairs(guis_to_update) do

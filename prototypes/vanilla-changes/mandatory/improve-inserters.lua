@@ -15,8 +15,10 @@ for _, inserter in pairs(data.raw.inserter) do
   if inserter.energy_source and inserter.energy_source.type == "burner" then
     inserter.allow_burner_leech = true
     if not mods["bobinserters"] then
-      inserter.localised_description =
-        { "other.additional-burner-inserter-description", inserter.localised_description }
+      inserter.localised_description = {
+        "other.additional-burner-inserter-description",
+        inserter.localised_description,
+      }
     end
   end
 end

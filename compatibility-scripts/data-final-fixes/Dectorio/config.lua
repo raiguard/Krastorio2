@@ -108,7 +108,9 @@ DECT.ITEM_GROUP = DECT.ENABLED["item-group"] and "dectorio" or "logistics"
 DECT.CONFIG.SETTINGS = {
   ["decorative_removal_probability"] = krastorio.general.getSafeSettingValue("dectorio-decorative-removal-probability"),
   ["vanilla_hazard_concrete"] = krastorio.general.getSafeSettingValue("dectorio-vanilla-hazard-concrete-style"),
-  ["painted_concrete_speed_modifier"] = krastorio.general.getSafeSettingValue("dectorio-painted-concrete-speed-modifier"),
+  ["painted_concrete_speed_modifier"] = krastorio.general.getSafeSettingValue(
+    "dectorio-painted-concrete-speed-modifier"
+  ),
   ["landscaping_blueprintable"] = krastorio.general.getSafeSettingValue("dectorio-landscaping-blueprintable"),
   ["remove_decoratives_near_entity"] = krastorio.general.getSafeSettingValue("dectorio-remove-decoratives-near-entity"),
   ["flooring_stack_size"] = krastorio.general.getSafeSettingValue("dectorio-flooring-stack-size"),

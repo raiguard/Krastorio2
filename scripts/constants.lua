@@ -5,20 +5,20 @@ local constants = {}
 constants.biter_virus_evolution_multiplier = 0.67
 
 constants.bonus_items = {
-  {name = "construction-robot", count = 50},
-  {name = "modular-armor", count = 1},
-  {name = "car", count = 1},
-  {name = "fuel", count = 200},
-  {name = "big-battery-equipment", count = 1},
-  {name = "personal-roboport-equipment", count = 1},
-  {name = "small-portable-generator", count = 2},
-  {name = "cliff-explosives", count = 50},
-  {name = "landfill", count = 50},
+  { name = "construction-robot", count = 50 },
+  { name = "modular-armor", count = 1 },
+  { name = "car", count = 1 },
+  { name = "fuel", count = 200 },
+  { name = "big-battery-equipment", count = 1 },
+  { name = "personal-roboport-equipment", count = 1 },
+  { name = "small-portable-generator", count = 2 },
+  { name = "cliff-explosives", count = 50 },
+  { name = "landfill", count = 50 },
 }
 
 constants.creep_collection_rate = {
   min = 30,
-  max = 80
+  max = 80,
 }
 
 constants.creep_max_reach = 10
@@ -135,8 +135,8 @@ constants.high_patrons = {
 }
 
 constants.inserter_drop_vectors = {
-  [true] = {[0] = {0.01, -0.2}, [2] = {0.2, 0.01}, [4] = {-0.01, 0.2}, [6] = {-0.2, -0.01}}, -- Near lane
-  [false] = { [0] = {0.0, 0.2}, [2] = {-0.2, 0.0}, [4] = {0.0, -0.2}, [6] = {0.2, 0.0}},  -- Far lane
+  [true] = { [0] = { 0.01, -0.2 }, [2] = { 0.2, 0.01 }, [4] = { -0.01, 0.2 }, [6] = { -0.2, -0.01 } }, -- Near lane
+  [false] = { [0] = { 0.0, 0.2 }, [2] = { -0.2, 0.0 }, [4] = { 0.0, -0.2 }, [6] = { 0.2, 0.0 } }, -- Far lane
 }
 
 constants.intergalactic_transceiver = {
@@ -149,29 +149,29 @@ constants.intergalactic_transceiver = {
   max_delta = 2e9,
   statuses = {
     charging = {
-      label = {"entity-status.charging"},
-      sprite = "utility/status_working"
+      label = { "entity-status.charging" },
+      sprite = "utility/status_working",
     },
     discharging = {
-      alert_label = {"gui.kr-intergalactic-transceiver-alert-discharging"},
-      label = {"entity-status.discharging"},
-      sprite = "utility/status_not_working"
+      alert_label = { "gui.kr-intergalactic-transceiver-alert-discharging" },
+      label = { "entity-status.discharging" },
+      sprite = "utility/status_not_working",
     },
     not_enough_input = {
-      alert_label = {"gui.kr-intergalactic-transceiver-alert-not-enough-input"},
-      label = {"entity-status.kr-not-enough-input"},
+      alert_label = { "gui.kr-intergalactic-transceiver-alert-not-enough-input" },
+      label = { "entity-status.kr-not-enough-input" },
       sprite = "utility/status_not_working",
-      tooltip = {"entity-status-tooltip.kr-not-enough-input"},
+      tooltip = { "entity-status-tooltip.kr-not-enough-input" },
     },
     no_power = {
-      alert_label = {"gui.kr-intergalactic-transceiver-alert-no-power"},
-      label = {"entity-status.no-power"},
-      sprite = "utility/status_not_working"
+      alert_label = { "gui.kr-intergalactic-transceiver-alert-no-power" },
+      label = { "entity-status.no-power" },
+      sprite = "utility/status_not_working",
     },
     ready = {
-      alert_label = {"gui.kr-intergalactic-transceiver-alert-ready"},
-      label = {"entity-status.kr-ready"},
-      sprite = "utility/status_working"
+      alert_label = { "gui.kr-intergalactic-transceiver-alert-ready" },
+      label = { "entity-status.kr-ready" },
+      sprite = "utility/status_working",
     },
   },
 }
@@ -187,7 +187,7 @@ constants.loader_names = {
   ["kr-se-loader"] = true,
 }
 
-constants.mode_change_flying_text_color = {r = 1, g = 0.5, b = 0.25}
+constants.mode_change_flying_text_color = { r = 1, g = 0.5, b = 0.25 }
 
 constants.next_roboport_mode = {
   [""] = "construction",
@@ -196,14 +196,14 @@ constants.next_roboport_mode = {
 }
 
 constants.patreon_items = {
-  {name = "kr-shelter-plus", count = 1},
-  {name = "kr-accelerator", count = 1},
-  {name = "firearm-magazine", count = 190},
-  {name = "potato", count = 6},
+  { name = "kr-shelter-plus", count = 1 },
+  { name = "kr-accelerator", count = 1 },
+  { name = "firearm-magazine", count = 190 },
+  { name = "potato", count = 6 },
 }
 
 constants.radioactivity_defaults = {
-  {type = "entity", tbl = "entities", objects = {"uranium-ore"}},
+  { type = "entity", tbl = "entities", objects = { "uranium-ore" } },
   {
     type = "item",
     tbl = "items",
@@ -221,9 +221,9 @@ constants.radioactivity_defaults = {
 constants.radioactivity_range = 7
 
 constants.roboport_modes = {
-  normal = {suffix = "", text = "normal"},
-  construction = {color = {r = 0.5, g = 1, b = 0.4}, suffix = "-construction-mode", text = "construction"},
-  logistic = {color = {r = 1, g = 0.5, b = 0.25}, suffix = "-logistic-mode", text = "logistic"},
+  normal = { suffix = "", text = "normal" },
+  construction = { color = { r = 0.5, g = 1, b = 0.4 }, suffix = "-construction-mode", text = "construction" },
+  logistic = { color = { r = 1, g = 0.5, b = 0.25 }, suffix = "-logistic-mode", text = "logistic" },
 }
 
 constants.tesla_coil = {

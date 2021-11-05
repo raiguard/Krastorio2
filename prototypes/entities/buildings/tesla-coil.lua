@@ -74,7 +74,7 @@ data:extend({
     max_health = 200,
     gui_mode = "none",
     corpse = "medium-remnants",
-    collision_mask = {"item-layer", "object-layer", "player-layer", "water-tile", layer},
+    collision_mask = { "item-layer", "object-layer", "player-layer", "water-tile", layer },
     resistances = {
       {
         type = "fire",
@@ -99,7 +99,7 @@ data:extend({
       buffer_capacity = "60MJ",
       emissions_per_minute = 10,
       usage_priority = "secondary-input",
-      input_flow_limit = util.format_number(constants.tesla_coil.input_flow_limit, true).."W",
+      input_flow_limit = util.format_number(constants.tesla_coil.input_flow_limit, true) .. "W",
       output_flow_limit = "0W",
     },
 
@@ -193,7 +193,7 @@ data:extend({
     flags = { "not-on-map" },
     width = 0.5,
     damage_interval = 20,
-    target_offset = {0, -0.5},
+    target_offset = { 0, -0.5 },
     -- random_target_offset = true,
     action_triggered_automatically = false,
     working_sound = tesla_coil_electric_beam_sound,
@@ -423,7 +423,7 @@ data:extend({
   {
     type = "turret",
     name = "kr-tesla-coil-turret",
-    icon = kr_entities_icons_path.."tesla-coil.png",
+    icon = kr_entities_icons_path .. "tesla-coil.png",
     icon_size = 64,
     icon_mipmaps = 4,
     collision_mask = {},
@@ -434,7 +434,7 @@ data:extend({
       south = empty_animation(),
       west = empty_animation(),
     },
-    flags = {"not-on-map", "not-selectable-in-game", "placeable-off-grid"},
+    flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
     attack_parameters = {
       type = "projectile",
       range = 20,
@@ -482,13 +482,13 @@ data:extend({
   {
     type = "simple-entity",
     name = "kr-tesla-coil-collision",
-    localised_name = {"entity-name.kr-tesla-coil"},
-    icon = kr_entities_icons_path.."tesla-coil.png",
+    localised_name = { "entity-name.kr-tesla-coil" },
+    icon = kr_entities_icons_path .. "tesla-coil.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    collision_mask = {layer},
-    collision_box = {{-18, -18}, {18, 18}},
-    picture = {filename = data_util.empty_image, size = 1},
-    flags = {"not-on-map", "not-selectable-in-game", "placeable-off-grid"},
-  }
+    collision_mask = { layer },
+    collision_box = { { -18, -18 }, { 18, 18 } },
+    picture = { filename = data_util.empty_image, size = 1 },
+    flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
+  },
 })

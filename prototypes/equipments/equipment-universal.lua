@@ -355,7 +355,7 @@ data:extend({
       output_flow_limit = util.format_number(
         constants.tesla_coil.charging_rate * constants.tesla_coil.simultaneous_allowed,
         true
-      ).."W",
+      ) .. "W",
       usage_priority = "primary-output",
     },
     categories = { "universal-equipment" },

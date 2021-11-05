@@ -157,9 +157,11 @@ end
 --// matrix ( rows [, comlumns [, value]] )
 -- set __call behaviour of matrix
 -- for matrix( ... ) as matrix.new( ... )
-setmetatable(matrix, { __call = function(...)
-  return matrix.new(...)
-end })
+setmetatable(matrix, {
+  __call = function(...)
+    return matrix.new(...)
+  end,
+})
 
 -- functions are designed to be light on checks
 -- so we get Lua errors instead on wrong input
@@ -599,7 +601,8 @@ function matrix.root(m1, root, iters)
     --mx,my = ((p-1)*mx + my^-1)/p,
     --  ((((p-1)*my + mx^-1)/p)*my^-1)^(p-2) *
     --  ((p-1)*my + mx^-1)/p
-    mx, my = mx:mulnum(root - 1):add(my:invert()):divnum(root),
+    mx, my =
+      mx:mulnum(root - 1):add(my:invert()):divnum(root),
       my
         :mulnum(root - 1)
         :add(mx:invert())
@@ -1167,9 +1170,11 @@ symbol_meta.to = symbol_meta.new
 -- symbol( arg )
 -- same as symbol.to( arg )
 -- set __call behaviour of symbol
-setmetatable(symbol_meta, { __call = function(_, s)
-  return symbol_meta.to(s)
-end })
+setmetatable(symbol_meta, {
+  __call = function(_, s)
+    return symbol_meta.to(s)
+  end,
+})
 
 -- Converts object to string, optionally with formatting.
 function symbol_meta.tostring(e, fstr)

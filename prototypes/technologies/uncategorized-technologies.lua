@@ -965,22 +965,22 @@ data:extend({
         icon_size = 64,
         icon_mipmaps = 4,
         scale = 0.75,
-        offset = {0.2, 0.2},
+        offset = { 0.2, 0.2 },
       },
     },
     effects = {
-      {type = "unlock-recipe", recipe = "electronic-components-lithium"},
+      { type = "unlock-recipe", recipe = "electronic-components-lithium" },
     },
     unit = {
       count = 500,
       ingredients = {
-        {"chemical-science-pack", 1},
-        {"production-science-pack", 1},
-        {"utility-science-pack", 1},
-        {"space-science-pack", 1},
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
+        { "space-science-pack", 1 },
       },
       time = 60,
-    }
+    },
   },
   -----------------------------------------------------------------------------------------------------------------
   -----------------------------------------------------------------------------------------------------------------

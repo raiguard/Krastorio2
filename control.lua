@@ -81,78 +81,77 @@ event.register("kr-change-roboport-state", function(e)
   end
 end)
 
-
 -- ENTITY
 
-event.register(
-  {
-    defines.events.on_built_entity,
-    defines.events.on_entity_cloned,
-    defines.events.on_robot_built_entity,
-    defines.events.script_raised_built,
-    defines.events.script_raised_revive,
-  },
-  function(e)
-    local entity = e.entity or e.created_entity or e.destination
-    if not entity or not entity.valid then return end
-    local entity_name = entity.name
-    local entity_type = entity.type
-
-    if entity_name == "kr-intergalactic-transceiver" then
-      intergalactic_transceiver.build(entity)
-    elseif entity_name == "kr-activated-intergalactic-transceiver" then
-      intergalactic_transceiver.build_activated(entity)
-    elseif entity_name == "kr-planetary-teleporter" then
-      planetary_teleporter.build(entity, e.tags)
-    elseif entity_name == "kr-shelter-container" or entity_name == "kr-shelter-plus-container" then
-      shelter.build(entity)
-    elseif entity_name == "kr-tesla-coil" then
-      tesla_coil.build(entity)
-    elseif entity_name == "offshore-pump" then
-      offshore_pump.build(entity)
-    elseif constants.loader_names[entity_name] then
-      loader_snapping.snap(entity)
-    elseif constants.transport_belt_connectable_types[entity_type] then
-      loader_snapping.snap_belt_neighbours(entity)
-    end
+event.register({
+  defines.events.on_built_entity,
+  defines.events.on_entity_cloned,
+  defines.events.on_robot_built_entity,
+  defines.events.script_raised_built,
+  defines.events.script_raised_revive,
+}, function(e)
+  local entity = e.entity or e.created_entity or e.destination
+  if not entity or not entity.valid then
+    return
   end
-)
+  local entity_name = entity.name
+  local entity_type = entity.type
+
+  if entity_name == "kr-intergalactic-transceiver" then
+    intergalactic_transceiver.build(entity)
+  elseif entity_name == "kr-activated-intergalactic-transceiver" then
+    intergalactic_transceiver.build_activated(entity)
+  elseif entity_name == "kr-planetary-teleporter" then
+    planetary_teleporter.build(entity, e.tags)
+  elseif entity_name == "kr-shelter-container" or entity_name == "kr-shelter-plus-container" then
+    shelter.build(entity)
+  elseif entity_name == "kr-tesla-coil" then
+    tesla_coil.build(entity)
+  elseif entity_name == "offshore-pump" then
+    offshore_pump.build(entity)
+  elseif constants.loader_names[entity_name] then
+    loader_snapping.snap(entity)
+  elseif constants.transport_belt_connectable_types[entity_type] then
+    loader_snapping.snap_belt_neighbours(entity)
+  end
+end)
 
 event.on_player_rotated_entity(function(e)
   local entity = e.entity
-  if not entity or not entity.valid then return end
+  if not entity or not entity.valid then
+    return
+  end
 
   if constants.transport_belt_connectable_types[entity.type] then
     loader_snapping.snap_belt_neighbours(entity)
   end
 end)
 
-event.register(
-  {
-    defines.events.on_player_mined_entity,
-    defines.events.on_robot_mined_entity,
-    defines.events.on_entity_died,
-    defines.events.script_raised_destroy
-  },
-  function(e)
-    local entity = e.entity
-    if not entity or not entity.valid then return end
-    local entity_name = entity.name
-    if entity_name == "kr-intergalactic-transceiver" then
-      intergalactic_transceiver.destroy(entity)
-    elseif entity_name == "kr-inactive-intergalactic-transceiver" then
-      intergalactic_transceiver.destroy_inactive(entity)
-    elseif entity_name == "kr-shelter-container" or entity_name == "kr-shelter-plus-container" then
-      shelter.destroy(entity)
-    elseif entity_name == "kr-planetary-teleporter" then
-      planetary_teleporter.destroy(entity)
-    elseif entity_name == "kr-tesla-coil" then
-      tesla_coil.destroy(entity)
-    else
-      tesla_coil.remove_entity_from_cache(entity)
-    end
+event.register({
+  defines.events.on_player_mined_entity,
+  defines.events.on_robot_mined_entity,
+  defines.events.on_entity_died,
+  defines.events.script_raised_destroy,
+}, function(e)
+  local entity = e.entity
+  if not entity or not entity.valid then
+    return
   end
-)
+  local entity_name = entity.name
+  if entity_name == "kr-intergalactic-transceiver" then
+    intergalactic_transceiver.destroy(entity)
+  elseif entity_name == "kr-inactive-intergalactic-transceiver" then
+    intergalactic_transceiver.destroy_inactive(entity)
+  elseif entity_name == "kr-shelter-container" or entity_name == "kr-shelter-plus-container" then
+    shelter.destroy(entity)
+  elseif entity_name == "kr-planetary-teleporter" then
+    planetary_teleporter.destroy(entity)
+  elseif entity_name == "kr-tesla-coil" then
+    tesla_coil.destroy(entity)
+  else
+    tesla_coil.remove_entity_from_cache(entity)
+  end
+end)
 
 event.on_entity_destroyed(function(e)
   tesla_coil.remove_target(e.registration_number)
@@ -276,7 +275,9 @@ event.on_player_setup_blueprint(function(e)
 
   -- Get blueprint entities and mapping
   local entities = bp.get_blueprint_entities()
-  if not entities then return end
+  if not entities then
+    return
+  end
   local mapping = e.mapping.get()
 
   -- Iterate each entity
@@ -311,7 +312,7 @@ end)
 event.on_player_armor_inventory_changed(tesla_coil.on_player_armor_inventory_changed)
 
 event.register(
-  {defines.events.on_player_died, defines.events.on_player_respawned, defines.events.on_player_toggled_map_editor},
+  { defines.events.on_player_died, defines.events.on_player_respawned, defines.events.on_player_toggled_map_editor },
   function(e)
     local player = game.get_player(e.player_index)
     radioactivity.check_around_player(player)
@@ -324,20 +325,17 @@ event.on_cutscene_cancelled(function(e)
   patreon.give_items(player)
 end)
 
-event.register(
-  {
-    defines.events.on_player_selected_area,
-    defines.events.on_player_alt_selected_area,
-  },
-  function(e)
-    local player = game.get_player(e.player_index)
-    if e.item == "kr-creep-collector" then
-      creep_collector.collect(player, e.surface, e.tiles, e.area)
-    elseif e.item == "kr-jackhammer" then
-      jackhammer.collect(player, e.surface, e.tiles, e.area)
-    end
+event.register({
+  defines.events.on_player_selected_area,
+  defines.events.on_player_alt_selected_area,
+}, function(e)
+  local player = game.get_player(e.player_index)
+  if e.item == "kr-creep-collector" then
+    creep_collector.collect(player, e.surface, e.tiles, e.area)
+  elseif e.item == "kr-jackhammer" then
+    jackhammer.collect(player, e.surface, e.tiles, e.area)
   end
-)
+end)
 
 event.on_string_translated(planetary_teleporter.on_string_translated)
 

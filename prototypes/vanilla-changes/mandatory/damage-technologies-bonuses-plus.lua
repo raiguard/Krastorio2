@@ -647,7 +647,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       type = "artillery-range",
       modifier = 0.4,
-    }
+    },
   })
 
   krastorio.technologies.update_ammo_effects(data.raw["technology"]["artillery-shell-speed-1"], {

@@ -289,7 +289,13 @@ data:extend({
         },
       },
     },
-    crafting_categories = { "basic-crafting", "crafting", "advanced-crafting", "crafting-with-fluid", "smelting-crafting" },
+    crafting_categories = {
+      "basic-crafting",
+      "crafting",
+      "advanced-crafting",
+      "crafting-with-fluid",
+      "smelting-crafting",
+    },
     scale_entity_info_icon = true,
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {

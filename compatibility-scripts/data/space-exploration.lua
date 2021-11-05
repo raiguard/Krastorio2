@@ -114,8 +114,9 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
     },
   }
 
-  local collision_mask_util_extended =
-    require("__space-exploration__/collision-mask-util-extended/data/collision-mask-util-extended")
+  local collision_mask_util_extended = require(
+    "__space-exploration__/collision-mask-util-extended/data/collision-mask-util-extended"
+  )
   local space_collision_layer = collision_mask_util_extended.get_make_named_collision_mask("space-tile")
 
   for category_name, entities in pairs(krastorio_entities_to_add) do

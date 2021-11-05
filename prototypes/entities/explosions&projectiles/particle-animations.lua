@@ -1350,8 +1350,7 @@ particle_animations.get_new_leaf_particle_pictures = function(options)
 end
 
 particle_animations.get_coal_particle_shadow_pictures = function()
-  return
-{
+  return {
     {
       filename = "__base__/graphics/particle/coal-particle/coal-particle-shadow-1.png",
       priority = "extra-high",
@@ -1481,8 +1480,7 @@ particle_animations.get_coal_particle_pictures = function()
 end
 
 particle_animations.get_old_stone_particle_shadow_pictures = function()
-  return
-{
+  return {
     {
       filename = "__base__/graphics/particle/stone-particle/stone-particle-shadow-1.png",
       priority = "extra-high",
@@ -1612,8 +1610,7 @@ particle_animations.get_old_stone_particle_pictures = function()
 end
 
 particle_animations.get_copper_particle_shadow_pictures = function()
-  return
-  {
+  return {
     {
       filename = "__base__/graphics/particle/copper-ore-particle/copper-ore-particle-shadow-1.png",
       priority = "extra-high",
@@ -1678,8 +1675,7 @@ particle_animations.get_copper_particle_shadow_pictures = function()
 end
 
 particle_animations.get_copper_particle_pictures = function()
-  return
-{
+  return {
     {
       filename = "__base__/graphics/particle/copper-ore-particle/copper-ore-particle-1.png",
       priority = "extra-high",
@@ -2929,8 +2925,7 @@ particle_animations.get_pole_sparks_particle_pictures = function()
 end
 
 particle_animations.get_sparks_particle_pictures = function()
-  return
-{
+  return {
     sheet = {
       filename = "__base__/graphics/particle/spark-particle/sparks.png",
       line_length = 12,

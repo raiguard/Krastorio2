@@ -20,8 +20,7 @@ data:extend({
     collision_box = { { -10.75, -1.25 }, { 10.75, 1.25 } },
     selection_box = { { -11.0, -1.5 }, { 11.0, 1.5 } },
 
-    animation = 
-{
+    animation = {
       layers = {
         {
           filename = kr_entities_path .. "logo/logo.png",

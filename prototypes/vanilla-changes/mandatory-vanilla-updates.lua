@@ -27,7 +27,7 @@ local modifications = {
   "vanilla-energy-changes", -- Rebalance accumulators ans panels
   "vanilla-robots-changes", -- Rebalance vanilla drones
   "electrify-offshore-pump", -- Add energy source to offshore-pump
-  "removing-impossible-achievements",  -- Remove impossible vanilla achievements
+  "removing-impossible-achievements", -- Remove impossible vanilla achievements
 }
 
 -- Application of the modifications

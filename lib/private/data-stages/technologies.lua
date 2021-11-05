@@ -514,20 +514,27 @@ function krastorio.technologies.addEffects(technology_name, new_effects)
 end
 
 function krastorio.technologies.update_ammo_effects(tech, effects)
-  if not tech.effects then tech.effects = {} end
+  if not tech.effects then
+    tech.effects = {}
+  end
 
   for _, updated_effect in pairs(effects) do
     local exists = false
     for _, effect in pairs(tech.effects) do
-      if effect.type == updated_effect.type
-        and (effect.ammo_category == updated_effect.ammo_category or effect.turret_id == updated_effect.turret_id) then
+      if
+        effect.type == updated_effect.type
+        and (effect.ammo_category == updated_effect.ammo_category or effect.turret_id == updated_effect.turret_id)
+      then
         effect.modifier = updated_effect.modifier
         exists = true
         break
       end
     end
     if not exists then
-      table.insert(tech.effects, {type = updated_effect.type, ammo_category = updated_effect.ammo_category, modifier = updated_effect.modifier})
+      table.insert(
+        tech.effects,
+        { type = updated_effect.type, ammo_category = updated_effect.ammo_category, modifier = updated_effect.modifier }
+      )
     end
   end
 end

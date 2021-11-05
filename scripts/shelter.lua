@@ -33,20 +33,20 @@ function shelter.build(entity)
       container = entity,
     }
 
-    for key, suffix in pairs{electric = "", light = "-light"} do
-      local name = base_name..suffix
-      shelter_data[key] = surface.create_entity{
+    for key, suffix in pairs({ electric = "", light = "-light" }) do
+      local name = base_name .. suffix
+      shelter_data[key] = surface.create_entity({
         name = name,
         position = entity.position,
         force = force,
         player = entity.last_user,
         create_build_effect_smoke = false,
-      }
+      })
     end
 
     -- Set spawn point
     shelter_data.former_spawn_point = force.get_spawn_position(surface)
-    force.set_spawn_position({x = entity.position.x, y = entity.position.y + 3.5}, surface)
+    force.set_spawn_position({ x = entity.position.x, y = entity.position.y + 3.5 }, surface)
 
     force_shelters[surface.index] = shelter_data
   end
@@ -60,11 +60,15 @@ function shelter.destroy(entity)
     local force = entity.force
 
     local force_shelters = global.shelter.forces[force.index]
-    if not force_shelters then return end
+    if not force_shelters then
+      return
+    end
 
     local surface_index = entity.surface.index
     local shelter_data = force_shelters[surface_index]
-    if not shelter_data then return end
+    if not shelter_data then
+      return
+    end
 
     -- Destroy entities
     shelter_data.electric.destroy()
@@ -79,7 +83,7 @@ end
 function shelter.spawn_flying_texts()
   for unit_number, entity in pairs(global.shelter.inactive) do
     if entity.valid then
-      util.entity_flying_text(entity, {"message.kr-shelter-is-inactive"}, {r = 1})
+      util.entity_flying_text(entity, { "message.kr-shelter-is-inactive" }, { r = 1 })
     else
       global.shelter.inactive[unit_number] = nil
     end
