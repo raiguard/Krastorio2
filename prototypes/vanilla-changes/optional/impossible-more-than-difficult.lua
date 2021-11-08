@@ -1,15 +1,17 @@
 if krastorio.general.getSafeSettingValue("kr-impossible-more-than-difficult") then
   -- Doubles expensive ingredients of all recipes
   for name, recipe in pairs(data.raw.recipe) do
-    if krastorio.recipes.hasNoExpensiveIngredients(name) then
-      local recipe_def = krastorio_utils.tables.fullCopy(recipe)
-      recipe.normal = recipe_def
-      recipe.expensive = krastorio_utils.tables.fullCopy(recipe_def)
+    if not string.find(name, "^fill%-.*%-barrel$") and not string.find(name, "empty%-.*%-barrel$") then
+      if krastorio.recipes.hasNoExpensiveIngredients(name) then
+        local recipe_def = krastorio_utils.tables.fullCopy(recipe)
+        recipe.normal = recipe_def
+        recipe.expensive = krastorio_utils.tables.fullCopy(recipe_def)
+      end
+      krastorio.recipes.multiplyAllExpensiveIngredients(name, 2, recipe.expensive.ingredients)
     end
-    krastorio.recipes.multiplyAllExpensiveIngredients(name, 2, recipe.expensive.ingredients)
   end
   -- Doubles expensive ingredients of all technologies
-  for technology_name, technology in pairs(data.raw.technology) do
+  for _, technology in pairs(data.raw.technology) do
     if not technology.expensive then
       local tec_def = krastorio_utils.tables.fullCopy(technology)
       technology.normal = tec_def

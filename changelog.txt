@@ -2,7 +2,8 @@
 Version: 1.2.4
 Date: ????
   Changes:
-    - K2 no longer nerfs Space Exploration liquid rocket fuel (#63)
+    - "Impossible more than difficult" mode will ignore barreling recipes (#61)
+    - Space Exploration liquid rocket fuel is no longer nerfed (#63)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.3
 Date: 2021-10-30
