@@ -345,7 +345,7 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     collision_box = { { -5.75, -5.25 }, { 5.75, 5.25 } },
     selection_box = { { -6, -5.5 }, { 6, 5.5 } },
-    drawing_box = { { -5.75, -5.25 }, { 5.75, 5.25 } },
+    drawing_box = { { -6, -6.5 }, { 6, 4.5 } },
     resistances = {
       { type = "physical", percent = 75 },
       { type = "fire", percent = 75 },
@@ -391,7 +391,7 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     collision_box = { { -5.75, -5.25 }, { 5.75, 5.25 } },
     selection_box = { { -6, -5.5 }, { 6, 5.5 } },
-    drawing_box = { { -5.75, -5.25 }, { 5.75, 5.25 } },
+    drawing_box = { { -6, -6.5 }, { 6, 4.5 } },
     resistances = {
       { type = "physical", percent = 75 },
       { type = "fire", percent = 75 },
@@ -428,7 +428,7 @@ data:extend({
     picture = intergalactic_transceiver_picture,
     collision_box = { { -5.75, -5.25 }, { 5.75, 5.25 } },
     selection_box = { { -6, -5.5 }, { 6, 5.5 } },
-    drawing_box = { { -5.75, -5.25 }, { 5.75, 5.25 } },
+    drawing_box = { { -6, -6.5 }, { 6, 4.5 } },
     resistances = {
       { type = "physical", percent = 75 },
       { type = "fire", percent = 75 },
