@@ -634,6 +634,7 @@ local function create_entities(base_entity)
     force = "kr-internal-turrets",
     create_build_effect_smoke = false,
   })
+  entities.turret.destructible = false
   for name, entity in pairs(entities) do
     if name ~= "base" then
       entity.destructible = false

@@ -158,6 +158,16 @@ migrations.versions = {
       tesla_coil.build(tower)
     end
   end,
+  ["1.2.4"] = function()
+    -- Make internal turrets indestructible so they won't be targeted by anything
+    for _, surface in pairs(game.surfaces) do
+      for _, turret in pairs(surface.find_entities_filtered({
+        name = { "kr-planetary-teleporter-turret", "kr-tesla-coil-turret" },
+      })) do
+        turret.destructible = false
+      end
+    end
+  end,
 }
 
 return migrations

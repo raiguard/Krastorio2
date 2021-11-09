@@ -51,6 +51,8 @@ function tesla_coil.build(source_entity)
   data.tower_unit_number = unit_number
   data.turret_unit_number = data.entities.turret.unit_number
 
+  data.entities.turret.destructible = false
+
   global.tesla_coil.by_tower[unit_number] = data
   global.tesla_coil.by_turret[data.turret_unit_number] = data
 end
