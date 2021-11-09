@@ -192,6 +192,7 @@ end
 
 -- -- PREREQUISITES
 
+-- FIXME: Does not account for normal / expensive
 function krastorio.technologies.removePrerequisite(technology_name, prerequisite_name_to_remove)
   local prerequisites = krastorio.technologies.getPrerequisites(technology_name)
   if next(prerequisites) ~= nil then
