@@ -7,6 +7,7 @@ Date: ????
   Compatibility:
     - Added (re-added?) radioactivity compatibility with the Nuclear Fuel mod (#64)
   Bugfixes:
+    - Fixed friendly turrets targeting tesla coils and planetary teleporters (#66)
     - Fixed radioactivity not ending when a robot takes a radioactive item from your trash inventory
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.3
