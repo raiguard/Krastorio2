@@ -304,10 +304,13 @@ event.on_player_changed_position(function(e)
   radioactivity.check_around_player(game.get_player(e.player_index))
 end)
 
-event.on_player_main_inventory_changed(function(e)
-  local player = game.get_player(e.player_index)
-  radioactivity.check_inventory(player)
-end)
+event.register(
+  { defines.events.on_player_main_inventory_changed, defines.events.on_player_trash_inventory_changed },
+  function(e)
+    local player = game.get_player(e.player_index)
+    radioactivity.check_inventory(player)
+  end
+)
 
 event.on_player_armor_inventory_changed(tesla_coil.on_player_armor_inventory_changed)
 

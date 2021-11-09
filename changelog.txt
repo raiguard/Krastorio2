@@ -4,6 +4,8 @@ Date: ????
   Changes:
     - "Impossible more than difficult" mode will ignore barreling recipes (#61)
     - Space Exploration liquid rocket fuel is no longer nerfed (#63)
+  Bugfixes:
+    - Fixed radioactivity not ending when a robot takes a radioactive item from your trash inventory
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.3
 Date: 2021-10-30
