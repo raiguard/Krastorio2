@@ -31,6 +31,7 @@ function migrations.generic()
 
   compatibility.aai_industry()
   compatibility.disco_science()
+  compatibility.nuclear_fuel()
   compatibility.schall_uranium()
 
   for _, player in pairs(game.players) do

@@ -21,6 +21,14 @@ function compatibility.disco_science()
   end
 end
 
+function compatibility.nuclear_fuel()
+  if game.active_mods["Nuclear Fuel"] then
+    remote.call("kr-radioactivity", "add_item", "breeder-fuel-cell")
+    remote.call("kr-radioactivity", "add_item", "plutonium")
+    remote.call("kr-radioactivity", "add_item", "used-up-breeder-fuel-cell")
+  end
+end
+
 function compatibility.schall_uranium()
   if script.active_mods["SchallUraniumProcessing"] then
     remote.call("kr-radioactivity", "add_item", "uranium-concentrate")
