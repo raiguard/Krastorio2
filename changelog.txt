@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.4
-Date: ????
+Date: 2021-11-11
   Changes:
     - "Impossible more than difficult" mode will ignore barreling recipes (#61)
   Compatibility:
