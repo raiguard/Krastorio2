@@ -3,9 +3,10 @@ Version: 1.2.4
 Date: ????
   Changes:
     - "Impossible more than difficult" mode will ignore barreling recipes (#61)
-    - Space Exploration liquid rocket fuel is no longer nerfed (#63)
   Compatibility:
     - Added (re-added?) radioactivity compatibility with the Nuclear Fuel mod (#64)
+    - Moved lithium sulfur battery recipe to intermediate-product when Space Exploration is enabled (#67)
+    - Space Exploration liquid rocket fuel is no longer nerfed (#63)
   Bugfixes:
     - Fixed friendly turrets targeting tesla coils and planetary teleporters (#66)
     - Fixed radioactivity not ending when a robot takes a radioactive item from your trash inventory

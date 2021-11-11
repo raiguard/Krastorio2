@@ -72,4 +72,7 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
   end
   -- Boost SE glass recipe
   krastorio.recipes.replaceProduct("se-glass-vulcanite", "glass", { "glass", 16 })
+
+  -- Move lithium sulfur battery
+  data.raw["recipe"]["lithium-sulfur-battery"].subgroup = "intermediate-product"
 end
