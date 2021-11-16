@@ -30,6 +30,7 @@ function create_roboport_states.createRoboportVariations(roboport_name)
     construction_roboport.placeable_by = { item = roboport.name, count = 1 }
     construction_roboport.construction_radius = construction_roboport.construction_radius
       + construction_roboport.construction_radius * 0.25
+    construction_roboport.logistics_connection_distance = construction_roboport.logistics_radius * 1.5
     construction_roboport.logistics_radius = 0
     construction_roboport.fast_replaceable_group = fr_group
 
