@@ -22,12 +22,12 @@ local modifications = {
   "vanilla-lab-changes", -- Modify stat and accepted science packs of vanilla lab
   "fluids-changes", -- Add some new properties to vanilla fluids
   "next-upgrades", -- Setup entity upgrates
-  "roboport-variations", -- Generate roboport variations for roboport states
   "damage-technologies-bonuses", -- Rebalance the damage donus from technologies
   "vanilla-energy-changes", -- Rebalance accumulators ans panels
   "vanilla-robots-changes", -- Rebalance vanilla drones
   "electrify-offshore-pump", -- Add energy source to offshore-pump
   "removing-impossible-achievements", -- Remove impossible vanilla achievements
+  "roboport-variations", -- Generate roboport variations for roboport states
 }
 
 -- Application of the modifications
