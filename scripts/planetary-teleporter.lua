@@ -677,7 +677,8 @@ function planetary_teleporter.destroy(entity)
   -- Close any open GUIs
   for _, gui_data in pairs(global.planetary_teleporter.guis) do
     local other_entity = gui_data.state.entity
-    if other_entity.valid and other_entity.unit_number == unit_number then
+    -- If it's invalid we want to destroy the GUI anyway, so side effects here don't matter
+    if not other_entity.valid then
       planetary_teleporter.handle_gui_action({ action = "close" }, { player_index = gui_data.state.player.index })
     end
   end

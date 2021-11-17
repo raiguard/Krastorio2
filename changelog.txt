@@ -5,6 +5,7 @@ Date: ????
     - Construction mode roboports now have a connection distance of 1.5x their former logistic radius
   Bugfixes:
     - Fixed vanilla roboport variations having too many slots (#71)
+    - Fixed a crash when mining a planetary teleporter with its GUI open (#73)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.4
 Date: 2021-11-11
