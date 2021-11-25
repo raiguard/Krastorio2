@@ -621,18 +621,21 @@ local function create_entities(base_entity)
       name = "kr-planetary-teleporter-collision-" .. i,
       position = { x = position.x + offset.x, y = position.y + offset.y },
       create_build_effect_smoke = false,
+      raise_built = true,
     })
   end
   entities.front_layer = surface.create_entity({
     name = "kr-planetary-teleporter-front-layer",
     position = position,
     create_build_effect_smoke = false,
+    raise_built = true,
   })
   entities.turret = surface.create_entity({
     name = "kr-planetary-teleporter-turret",
     position = { x = position.x, y = position.y + 1.15 },
     force = "kr-internal-turrets",
     create_build_effect_smoke = false,
+    raise_built = true,
   })
   entities.turret.destructible = false
   for name, entity in pairs(entities) do

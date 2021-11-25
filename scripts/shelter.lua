@@ -41,6 +41,7 @@ function shelter.build(entity)
         force = force,
         player = entity.last_user,
         create_build_effect_smoke = false,
+        raise_built = true,
       })
     end
 

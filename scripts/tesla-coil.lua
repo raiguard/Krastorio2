@@ -34,6 +34,7 @@ function tesla_coil.build(source_entity)
         position = source_entity.position,
         force = source_entity.force,
         create_build_effect_smoke = false,
+        raise_built = true,
       }),
       tower = source_entity,
       turret = surface.create_entity({
@@ -41,6 +42,7 @@ function tesla_coil.build(source_entity)
         position = source_entity.position,
         force = game.forces["kr-internal-turrets"],
         create_build_effect_smoke = false,
+        raise_built = true,
       }),
     },
     targets = {
@@ -126,6 +128,7 @@ function tesla_coil.add_target(data, target)
         duration = 0,
         max_length = 20,
         force = data.entities.turret.force,
+        raise_built = true,
       })
       local beam_number = event.register_on_entity_destroyed(beam)
       -- Create data table

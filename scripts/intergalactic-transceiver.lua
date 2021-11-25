@@ -43,6 +43,7 @@ function intergalactic_transceiver.build(entity)
       force = force,
       player = player,
       create_build_effect_smoke = false,
+      raise_built = true,
     })
     if new_entity and new_entity.valid then
       global.intergalactic_transceiver.inactive[new_entity.unit_number] = new_entity
@@ -60,22 +61,26 @@ function intergalactic_transceiver.build(entity)
 end
 
 function intergalactic_transceiver.build_activated(entity)
-  local position = entity.position
-  local force = entity.force
-  local player = entity.last_user
-  local surface = entity.surface
-  entity.destroy()
+  local existing = global.intergalactic_transceiver.forces[entity.force.index]
+  if not existing or not existing.activating then
+    local position = entity.position
+    local force = entity.force
+    local player = entity.last_user
+    local surface = entity.surface
+    entity.destroy()
 
-  local new_entity = surface.create_entity({
-    name = "kr-intergalactic-transceiver",
-    position = position,
-    force = force,
-    player = player,
-    create_build_effect_smoke = false,
-  })
+    local new_entity = surface.create_entity({
+      name = "kr-intergalactic-transceiver",
+      position = position,
+      force = force,
+      player = player,
+      create_build_effect_smoke = false,
+      raise_built = true,
+    })
 
-  if new_entity and new_entity.valid then
-    intergalactic_transceiver.build(new_entity)
+    if new_entity and new_entity.valid then
+      intergalactic_transceiver.build(new_entity)
+    end
   end
 end
 
@@ -283,6 +288,7 @@ function cutscene.spawn_wave(force_index)
     max_range = 100,
     target = entity,
     create_build_effect_smoke = false,
+    raise_built = true,
   })
 
   on_tick_n.add(game.tick + 15, { handler = "it_cutscene", action = "replace_entity", force_index = force_index })
@@ -306,13 +312,18 @@ function cutscene.replace_entity(force_index)
 
   entity.destroy()
 
+  entity_data.activating = true
+
   local new_entity = surface.create_entity({
     name = "kr-activated-intergalactic-transceiver",
     position = position,
     force = force,
     player = player,
     create_build_effect_smoke = false,
+    raise_built = true,
   })
+
+  entity_data.activating = false
 
   if new_entity and new_entity.valid then
     global.intergalactic_transceiver.forces[force.index] = { entity = new_entity }

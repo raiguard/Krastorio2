@@ -23,6 +23,7 @@ function offshore_pump.build(entity)
     force = force,
     player = player,
     create_build_effect_smoke = false,
+    raise_built = true,
   })
 
   if new_entity and new_entity.valid then
