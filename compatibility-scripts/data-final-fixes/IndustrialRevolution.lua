@@ -567,8 +567,12 @@ if mods["IndustrialRevolution"] then
   -- Locomotive
   data.raw.locomotive["locomotive"].burner.fuel_categories = { "chemical", "vehicle-fuel", "battery" }
   data.raw.locomotive["locomotive"].burner.fuel_category = nil
+  
+  -- Cars
   data.raw.car["monowheel"].burner.fuel_categories = { "chemical", "vehicle-fuel", "battery" }
   data.raw.car["monowheel"].burner.fuel_category = nil
+  data.raw.car["heavy-roller"].burner.fuel_categories = { "chemical", "vehicle-fuel", "battery" }
+  data.raw.car["heavy-roller"].burner.fuel_category = nil
 
   -----------------------------------------------------------------------------------------------------------------------
   -- -- OTHERS
