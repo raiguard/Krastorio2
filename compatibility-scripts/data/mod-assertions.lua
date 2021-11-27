@@ -3,15 +3,10 @@
 -- that make incompatible situation where is not possible load correclty and stop it before loading
 -- can be suppressed by another mod setting suppress_krastorio_assertions = true
 if suppress_krastorio_assertions ~= true then
-  krastorio_assertions = {
-    "incompatible mod combination",
-  }
-
   -- Can't be used IndustrialRevolution and aai-industry at the same time with Krastorio
   if mods["IndustrialRevolution"] and mods["aai-industry"] then
-    krastorio.general.printWarningMessage(
-      krastorio_assertions[1],
-      "Industrial Revolution and AAI Industry can't be used at the same time with Krastorio 2!\n(This is not a bug, it's a fact, don't report this to mod developers)."
+    error(
+      "\n\nINCOMPATIBLE MOD COMBINATION:\nKrastorio 2, Industrial Revolution, and AAI Industry may not be used all at once. This is not a bug, do not report it!\n"
     )
   end
 
@@ -28,9 +23,8 @@ if suppress_krastorio_assertions ~= true then
     or mods["angelssmelting"]
 
   if any_bob and any_angel then
-    krastorio.general.printWarningMessage(
-      krastorio_assertions[1],
-      "Any Bob's mod with any Angel's mod can't be used with Krastorio 2!\n(This is not a bug, it's a fact, don't report this to mod developers)."
+    error(
+      "\n\nINCOMPATIBLE MOD COMBINATION:\nKrastorio 2, Bob's mods, and Angel's mods  may not be used all at once. This is not a bug, do not report it!\n"
     )
   end
 end
