@@ -2,8 +2,10 @@
 Version: 1.2.5
 Date: ????
   Changes:
-    - All calls to create_entity() now call script_raised_built
     - Construction mode roboports now have a connection distance of 1.5x their former logistic radius
+  Compatibility:
+    - All calls to create_entity() now call script_raised_built
+    - IR2 Heavy Roller now accepts non-Krastorio fuels (#80) (credit to Inujel)
   Bugfixes:
     - Fixed vanilla roboport variations having too many slots (#71)
     - Fixed a crash when mining a planetary teleporter with its GUI open (#73)
