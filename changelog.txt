@@ -2,7 +2,8 @@
 Version: 1.2.6
 Date: ????
   Bugfixes:
-    - Fixed a crash when calling the intergalactic transceiver remote interface while upgrading from before v1.2.0
+    - Fixed a crash when calling the intergalactic transceiver remote interface while upgrading from before v1.2.0 (#81)
+    - Fixed extra AAI vehicles grids disappearing when under AI control (#29)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.5
 Date: 2021-11-27

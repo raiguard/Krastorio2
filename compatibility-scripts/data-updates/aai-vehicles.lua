@@ -1,4 +1,4 @@
-local aai_vehicles_path = "compatibility-scripts/data-final-fixes/aai-vehicles/"
+local aai_vehicles_path = "compatibility-scripts/data-updates/aai-vehicles/"
 require(aai_vehicles_path .. "aai-vehicles-chaingunner")
 require(aai_vehicles_path .. "aai-vehicles-flame-tank")
 require(aai_vehicles_path .. "aai-vehicles-flame-tumbler")
