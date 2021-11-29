@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.6
-Date: ????
+Date: 2021-11-29
   Compatibility:
     - Industrial Revolution 2:
       - Carbon steel beam, gear, and plate are now called carbon steel instead of steel
