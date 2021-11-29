@@ -53,28 +53,42 @@ end
 
 creep.remote_interface = {
   set_creep_on_chunk_generated = function(value)
+    if not global.creep then
+      return
+    end
     if type(value) ~= "boolean" then
       error("Value for 'creep_on_chunk_generated' must be a boolean.")
     end
     global.creep.on_chunk_generated = value
   end,
   set_creep_on_biter_base_built = function(value)
+    if not global.creep then
+      return
+    end
     if type(value) ~= "boolean" then
       error("Value for 'creep_on_biter_base_built' must be a boolean.")
     end
     global.creep.on_biter_base_built = value
   end,
   spawn_creep_at_position = function(surface, position, override)
+    if not global.creep then
+      return
+    end
     if type(surface) ~= "table" or type(position) ~= "table" or not surface.valid then
       error("The surface or the position are invalid.")
     end
     -- The code here is duplicated from `generate_creep()` because that function is specifically optimized for multiple
+    -- if not global.creep then return end
     -- entities, while this function only needs to do it once.
+    -- if not global.creep then return end
     if not global.creep.surfaces[surface.index] and not override then
       return
     end
     local radius = math.random(3, 5)
     surface.set_tiles(table.map(surface.find_tiles_filtered({ position = position, radius = radius }), function(tile)
+      if not global.creep then
+        return
+      end
       if not tile.collides_with("player-layer") then
         return { name = "kr-creep", position = tile.position }
       end

@@ -158,6 +158,9 @@ radioactivity.commands = {
 
 radioactivity.remote_interface = {
   add_entity = function(name)
+    if not global.radioactivity then
+      return
+    end
     if not name or type(name) ~= "string" then
       error("`name` must be a string.")
     end
@@ -169,6 +172,9 @@ radioactivity.remote_interface = {
     table.insert(global.radioactivity.entities, name)
   end,
   add_item = function(name)
+    if not global.radioactivity then
+      return
+    end
     if not name or type(name) ~= "string" then
       error("`name` must be a string.")
     end
@@ -180,6 +186,9 @@ radioactivity.remote_interface = {
     table.insert(global.radioactivity.items, name)
   end,
   set_enabled = function(to_state)
+    if not global.radioactivity then
+      return
+    end
     if to_state == nil or type(to_state) ~= "boolean" then
       error("`to_state` must be a boolean.")
     end

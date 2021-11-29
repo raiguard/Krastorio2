@@ -508,13 +508,17 @@ intergalactic_transceiver.gui_actions = actions
 
 intergalactic_transceiver.remote_interface = {
   get_no_victory = function()
-    return not global.intergalactic_transceiver.is_victory
+    if global.intergalactic_transceiver then
+      return not global.intergalactic_transceiver.is_victory
+    end
   end,
   set_no_victory = function(to_state)
     if not to_state or type(to_state) ~= "boolean" then
       error("`to_state` must be a boolean")
     end
-    global.intergalactic_transceiver.is_victory = not to_state
+    if global.intergalactic_transceiver then
+      global.intergalactic_transceiver.is_victory = not to_state
+    end
   end,
 }
 
