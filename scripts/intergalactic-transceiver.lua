@@ -231,6 +231,7 @@ function cutscene.begin(force_index)
       and misc.get_distance(player.position, position) <= cutscene_const.player_radius
     then
       -- Start cutscene
+      -- TODO: Handle the case when the player dies during the cutscene
       player.set_controller({
         type = defines.controllers.cutscene,
         waypoints = {
