@@ -136,11 +136,26 @@ if mods["IndustrialRevolution"] then
   -- -- Recipes
   -----------------------------------------------------------------------------------------------------------------------
 
+  -- Use IR2 copper and iron plate icons
+  data.raw["recipe"]["copper-plate"].icons = {
+    { icon = "__IndustrialRevolution__/graphics/icons/64/copper-plate.png", icon_size = 64, icon_mipmaps = 4 },
+  }
+  data.raw["recipe"]["iron-plate"].icons = {
+    { icon = "__IndustrialRevolution__/graphics/icons/64/iron-plate.png", icon_size = 64, icon_mipmaps = 4 },
+  }
+
+  -- Use IR2 steel recipe
+  data.raw["recipe"]["steel-plate"].ingredients = { { "steel-ingot", 1 } }
+
   -- Unifing redundant item
   krastorio.recipes.convertIngredientFromAllRecipes("charcoal", "coke")
   krastorio.recipes.convertProductFromAllRecipes("charcoal", "coke")
   krastorio.recipes.convertIngredientFromAllRecipes("sand", "silica")
   krastorio.recipes.convertProductFromAllRecipes("sand", "silica")
+
+  -- Basic intermediates
+  data.raw["recipe"]["iron-plate"].icon = "__IndustrialRevolution__/graphics/icons/64/iron-plate.png"
+  data.raw["recipe"]["copper-plate"].icon = "__IndustrialRevolution__/graphics/icons/64/copper-plate.png"
 
   -- Basic tech card
   krastorio.recipes.convertIngredient("basic-tech-card", "copper-cable", "copper-gear-wheel")
@@ -567,7 +582,7 @@ if mods["IndustrialRevolution"] then
   -- Locomotive
   data.raw.locomotive["locomotive"].burner.fuel_categories = { "chemical", "vehicle-fuel", "battery" }
   data.raw.locomotive["locomotive"].burner.fuel_category = nil
-  
+
   -- Cars
   data.raw.car["monowheel"].burner.fuel_categories = { "chemical", "vehicle-fuel", "battery" }
   data.raw.car["monowheel"].burner.fuel_category = nil
@@ -577,6 +592,20 @@ if mods["IndustrialRevolution"] then
   -----------------------------------------------------------------------------------------------------------------------
   -- -- OTHERS
   -----------------------------------------------------------------------------------------------------------------------
+
+  -- Use IR2 plate and beam icons
+  data.raw["item"]["copper-plate"].icon = "__IndustrialRevolution__/graphics/icons/64/copper-plate.png"
+  data.raw["item"]["iron-beam"].icon = "__IndustrialRevolution__/graphics/icons/64/iron-beam.png"
+  data.raw["item"]["iron-gear-wheel"].icon = "__IndustrialRevolution__/graphics/icons/64/iron-gear-wheel.png"
+  data.raw["item"]["iron-plate"].icon = "__IndustrialRevolution__/graphics/icons/64/iron-plate.png"
+  data.raw["item"]["steel-beam"].icon = "__IndustrialRevolution__/graphics/icons/64/steel-beam.png"
+  data.raw["item"]["steel-gear-wheel"].icon = "__IndustrialRevolution__/graphics/icons/64/steel-gear-wheel.png"
+  data.raw["item"]["steel-plate"].icon = "__IndustrialRevolution__/graphics/icons/64/steel-plate.png"
+
+  -- Use IR2 steel naming
+  data.raw["item"]["steel-beam"].localised_name = { "item-name.carbon-steel-beam" }
+  data.raw["item"]["steel-gear-wheel"].localised_name = { "item-name.carbon-steel-gear" }
+  data.raw["item"]["steel-plate"].localised_name = { "item-name.carbon-steel-plate" }
 
   -- Fix uranium magazine bug
   data:extend({

@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.6
 Date: ????
+  Compatibility:
+    - Industrial Revolution 2:
+      - Carbon steel beam, gear, and plate are now called carbon steel instead of steel
+      - Carbon steel plate now uses the IR2 recipe
+      - Copper, iron, and carbon steel beams, gears, and plates now use the IR2 graphics
   Bugfixes:
     - Fixed a crash when calling the intergalactic transceiver remote interface while upgrading from before v1.2.0 (#81)
     - Fixed extra AAI vehicles grids disappearing when under AI control (#29)
