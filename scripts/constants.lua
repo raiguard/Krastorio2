@@ -25,6 +25,15 @@ constants.creep_max_reach = 10
 
 constants.freeplay_crash_site_parts = {
   {
+    name = "kr-crash-site-generator",
+    angle_deviation = 0.2,
+    max_distance = 25,
+    min_separation = 10,
+    fire_count = 3,
+    explosion_count = 1,
+    force = "player",
+  },
+  {
     name = "kr-crash-site-lab-repaired",
     angle_deviation = 0.05,
     max_distance = 30,
