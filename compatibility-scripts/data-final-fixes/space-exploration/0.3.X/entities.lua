@@ -1,3 +1,4 @@
+-- require('__debugadapter__/debugadapter.lua')
 local kr_color_lib = require(kr_path .. "lib/private/data-stages/colorRGB")
 
 if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mods["space-exploration"], "0.3.0") then
@@ -50,6 +51,7 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
         tint = kr_color_lib.convert(240, 240, 240, 125),
         apply_rust = false,
         se_allow_in_space = true,
+        energy_required = data.raw["recipe"]["se-space-transport-belt"].energy_required,
       }),
       kr_loader_recipe({
         name = "kr-se-loader",
