@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.7
 Date: ????
+  Compatibility:
+    - Added Deep Space Loader for Space Exploration (#87)
   Bugfixes:
     - Fixed the damage ship reactor not showing up in the crash site
 ---------------------------------------------------------------------------------------------------
