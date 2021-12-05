@@ -194,6 +194,7 @@ constants.loader_names = {
   ["kr-advanced-loader"] = true,
   ["kr-superior-loader"] = true,
   ["kr-se-loader"] = true,
+  ["kr-se-deep-space-loader-black"] = true,
 }
 
 constants.mode_change_flying_text_color = { r = 1, g = 0.5, b = 0.25 }

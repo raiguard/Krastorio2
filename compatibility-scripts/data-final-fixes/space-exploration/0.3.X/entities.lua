@@ -62,6 +62,44 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
       }),
     })
     krastorio.technologies.addUnlockRecipe("se-space-platform-scaffold", "kr-se-loader")
+    data:extend({
+      kr_loader_item({
+        name = "kr-se-deep-space-loader-black",
+        icon = kr_se_graphic_path .. "kr-se-deep-space-loader-black.png",
+        icon_size = 64,
+        order = "e-g",
+        subgroup = "belt",
+      }),
+      createKrastorioLoader({
+        name = "kr-se-deep-space-loader-black",
+        speed = data.raw["transport-belt"]["se-deep-space-transport-belt-black"].speed,
+        belt_animation_set = data.raw["transport-belt"]["se-deep-space-transport-belt-black"].belt_animation_set,
+        order = data.raw["transport-belt"]["se-deep-space-transport-belt-black"].order,
+        icon = kr_se_graphic_path .. "kr-se-deep-space-loader-black.png",
+        icon_size = 64,
+        tint = kr_color_lib.convert(50, 50, 50, 100),
+        apply_rust = false,
+        se_allow_in_space = true,
+        upgrade = "kr-se-loader",
+      }),
+      kr_loader_recipe({
+        name = "kr-se-deep-space-loader-black",
+        category = data.raw["recipe"]["se-deep-space-splitter"].category,
+        energy_required = data.raw["recipe"]["se-deep-space-splitter"].energy_required,
+        ingredients = {
+          { "se-naquium-cube", 1},
+          { "imersium-gear-wheel", 10 },
+          { "kr-se-loader", 2 },
+          { type = "fluid", name = "lubricant", amount = 100},
+          { "se-deep-space-transport-belt-black", 1},
+          { "se-superconductive-cable", 1},
+          { "se-dynamic-emitter", 1},
+          { "ai-core", 1},
+        },
+        subgroup = "belt",
+      }),
+    })
+    krastorio.technologies.addUnlockRecipe("se-deep-space-transport-belt", "kr-se-deep-space-loader-black")
   end
 
   -- -- Singularity laboratory fixes
