@@ -55,10 +55,13 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
       }),
       kr_loader_recipe({
         name = "kr-se-loader",
+        -- Copying the recipe category is the right way. It would enable the use of lubricant, but this will break old games.
+        -- category = data.raw["recipe"]["se-space-splitter"].category,
         ingredients = {
           { "steel-gear-wheel", 10 },
           { "kr-fast-loader", 2 },
           { "se-space-transport-belt", 1 },
+          -- { type = "fluid", name = "lubricant", amount = 40},
         },
         subgroup = "belt",
       }),
