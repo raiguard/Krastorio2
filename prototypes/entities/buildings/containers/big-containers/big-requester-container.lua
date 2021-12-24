@@ -22,7 +22,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
       icon_mipmaps = 4,
       flags = { "placeable-player", "player-creation", "not-rotatable" },
       minable = { mining_time = 1, result = "kr-big-requester-container" },
-      max_logistic_slots = 30,
+      -- max_logistic_slots = 30,
       max_health = 1500,
       corpse = "kr-big-random-pipes-remnant",
       collision_box = { { -2.75, -2.75 }, { 2.75, 2.75 } },

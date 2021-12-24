@@ -23,7 +23,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
       flags = { "placeable-player", "player-creation", "not-rotatable" },
       minable = { mining_time = 1, result = "kr-big-buffer-container" },
       max_health = 1500,
-      max_logistic_slots = 30,
+      -- max_logistic_slots = 30,
       corpse = "kr-big-random-pipes-remnant",
       collision_box = { { -2.75, -2.75 }, { 2.75, 2.75 } },
       selection_box = { { -3, -3 }, { 3, 3 } },
