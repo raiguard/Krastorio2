@@ -327,7 +327,7 @@ data:extend({
   },
   -- energy absorber
   {
-    type = "battery-equipment",
+    type = "active-defense-equipment",
     name = "energy-absorber",
     sprite = {
       filename = kr_universal_equipments_path .. "energy-absorber.png",
@@ -351,7 +351,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "5MJ",
-      input_flow_limit = "0kW",
+      input_flow_limit = "50000kW",
       output_flow_limit = util.format_number(
         constants.tesla_coil.charging_rate * constants.tesla_coil.simultaneous_allowed,
         true
@@ -359,6 +359,45 @@ data:extend({
       usage_priority = "primary-output",
     },
     categories = { "universal-equipment" },
+    attack_parameters = {
+      type = "projectile",
+      range = 20,
+      cooldown = 1,
+      ammo_type = {
+        category = "melee",
+        target_type = "position",
+        energy_consumption = "0J",
+        action = {
+          type = "direct",
+          action_delivery = {
+            type = "instant",
+            source_effects = {
+              {
+                type = "nested-result",
+                affects_target = true,
+                action = {
+                  type = "area",
+                  radius = 20,
+                  collision_mode = "distance-from-center",
+                  ignore_collision_condition = true,
+                  trigger_target_mask = { "kr-tesla-coil-trigger" },
+                  action_delivery = {
+                    type = "instant",
+                    target_effects = {
+                      {
+                        type = "script",
+                        effect_id = "kr-tesla-coil-trigger",
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    automatic = true,
   },
   ----------------------------------------------------------------------------------------------------
   -- SOLAR PANELS (GENERATORS)

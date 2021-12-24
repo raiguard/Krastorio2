@@ -37,8 +37,8 @@ function tesla_coil.build(source_entity)
         raise_built = true,
       }),
       tower = source_entity,
-      turret = surface.create_entity({
-        name = "kr-tesla-coil-turret",
+      target = surface.create_entity({
+        name = "kr-tesla-coil-target",
         position = source_entity.position,
         force = game.forces["kr-internal-turrets"],
         create_build_effect_smoke = false,
@@ -51,12 +51,12 @@ function tesla_coil.build(source_entity)
     },
   }
   data.tower_unit_number = unit_number
-  data.turret_unit_number = data.entities.turret.unit_number
+  -- data.turret_unit_number = data.entities.turret.unit_number
 
-  data.entities.turret.destructible = false
+  -- data.entities.turret.destructible = false
 
   global.tesla_coil.by_tower[unit_number] = data
-  global.tesla_coil.by_turret[data.turret_unit_number] = data
+  -- global.tesla_coil.by_turret[data.turret_unit_number] = data
 end
 
 function tesla_coil.destroy(source_entity)

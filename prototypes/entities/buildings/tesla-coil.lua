@@ -62,6 +62,8 @@ local beam_non_light_flags = { "trilinear-filtering" }
 -- Collision mask
 local layer = collision_mask_util.get_first_unused_layer()
 
+local tesla_coil_collision_box = { { -1.25, -1.25 }, { 1.25, 1.25 } }
+
 data:extend({
   -- Tesla coil tower
   {
@@ -91,7 +93,7 @@ data:extend({
     },
     fast_replaceable_group = "tesla-coil",
     damaged_trigger_effect = hit_effects.entity(),
-    collision_box = { { -1.25, -1.25 }, { 1.25, 1.25 } },
+    collision_box = tesla_coil_collision_box,
     selection_box = { { -1.45, -1.45 }, { 1.45, 1.45 } },
     drawing_box = { { -0.5, -2 }, { 0.5, 1 } },
     energy_source = {
@@ -421,58 +423,17 @@ data:extend({
   },
   -- Range detection
   {
-    type = "turret",
-    name = "kr-tesla-coil-turret",
+    type = "simple-entity-with-force",
+    name = "kr-tesla-coil-target",
+    localised_name = { "entity-name.kr-tesla-coil" },
     icon = kr_entities_icons_path .. "tesla-coil.png",
     icon_size = 64,
     icon_mipmaps = 4,
     collision_mask = {},
-    call_for_help_radius = 0,
-    folded_animation = {
-      north = empty_animation(),
-      east = empty_animation(),
-      south = empty_animation(),
-      west = empty_animation(),
-    },
+    collision_box = tesla_coil_collision_box,
+    picture = { filename = data_util.empty_image, size = 1 },
     flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
-    attack_parameters = {
-      type = "projectile",
-      range = 20,
-      cooldown = 1,
-      ammo_type = {
-        category = "melee",
-        target_type = "position",
-        energy_consumption = "1J",
-        action = {
-          type = "direct",
-          action_delivery = {
-            type = "instant",
-            source_effects = {
-              {
-                type = "nested-result",
-                affects_target = true,
-                action = {
-                  type = "area",
-                  radius = 20,
-                  collision_mode = "distance-from-center",
-                  ignore_collision_condition = true,
-                  trigger_target_mask = { "kr-tesla-coil-trigger" },
-                  action_delivery = {
-                    type = "instant",
-                    target_effects = {
-                      {
-                        type = "script",
-                        effect_id = "kr-tesla-coil-trigger",
-                      },
-                    },
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
-    },
+    trigger_target_mask = { "kr-tesla-coil-trigger" },
   },
   {
     type = "trigger-target-type",
