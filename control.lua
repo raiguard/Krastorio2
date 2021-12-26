@@ -154,7 +154,7 @@ event.register({
 end)
 
 event.on_entity_destroyed(function(e)
-  tesla_coil.remove_target(e.registration_number)
+  tesla_coil.remove_connection(e.registration_number)
 end)
 
 event.on_biter_base_built(function(e)
@@ -179,8 +179,6 @@ end)
 -- EQUIPMENT
 
 event.on_player_placed_equipment(energy_absorber.on_placed)
-event.on_equipment_inserted(tesla_coil.on_equipment_inserted)
-event.on_equipment_removed(tesla_coil.on_equipment_removed)
 
 -- FORCE
 
@@ -352,7 +350,24 @@ end)
 
 event.on_script_trigger_effect(function(e)
   if e.effect_id == "kr-tesla-coil-trigger" then
-    game.print("TRIGGERED")
+    rendering.draw_circle({
+      color = { r = 0.5, a = 0.5 },
+      radius = 0.2,
+      target = e.source_entity,
+      filled = true,
+      surface = e.source_entity.surface,
+      players = { 1 },
+      time_to_live = 2,
+    })
+    rendering.draw_circle({
+      color = { g = 0.5, a = 0.5 },
+      radius = 0.2,
+      target = e.target_entity,
+      filled = true,
+      surface = e.source_entity.surface,
+      players = { 1 },
+      time_to_live = 2,
+    })
     -- tesla_coil.process_turret_fire(e.source_entity, e.target_entity)
   elseif e.effect_id == "kr-planetary-teleporter-character-trigger" then
     planetary_teleporter.update_players_in_range(e.source_entity, e.target_entity)

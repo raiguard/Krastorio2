@@ -424,7 +424,7 @@ data:extend({
   -- Range detection
   {
     type = "simple-entity-with-force",
-    name = "kr-tesla-coil-target",
+    name = "kr-tesla-coil-trigger",
     localised_name = { "entity-name.kr-tesla-coil" },
     icon = kr_entities_icons_path .. "tesla-coil.png",
     icon_size = 64,
