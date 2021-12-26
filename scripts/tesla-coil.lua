@@ -37,6 +37,13 @@ function tesla_coil.build(source_entity)
         raise_built = true,
       }),
       tower = source_entity,
+      trigger = surface.create_entity({
+        name = "kr-tesla-coil-trigger",
+        position = source_entity.position,
+        force = source_entity.force,
+        create_build_effect_smoke = false,
+        raise_built = true,
+      }),
       turret = surface.create_entity({
         name = "kr-tesla-coil-turret",
         position = source_entity.position,

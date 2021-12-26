@@ -6,6 +6,7 @@ Date: ????
   Compatibility:
     - Added Deep Space Loader for Space Exploration (#87)
   Bugfixes:
+    - Fixed that tesla coils would not charge non-military entities when a military entity was not present (#84)
     - Fixed the damage ship reactor not showing up in the crash site
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.6
