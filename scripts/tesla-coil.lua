@@ -45,9 +45,10 @@ function tesla_coil.build(source_entity)
         raise_built = true,
       }),
       tower = source_entity,
+      -- This entity isn't actually used for any logic, it's simply to make the defense equipment fire
       trigger = surface.create_entity({
         name = "kr-tesla-coil-trigger",
-        position = source_entity.position,
+        position = { x = source_entity.position.x, y = source_entity.position.y + 5 },
         force = game.forces["kr-internal-turrets"],
         create_build_effect_smoke = false,
         raise_built = true,
@@ -55,7 +56,6 @@ function tesla_coil.build(source_entity)
     },
     unit_number = unit_number,
   }
-  data.target_unit_number = data.entities.target.unit_number
 
   global.tesla_coil.towers[unit_number] = data
 end
@@ -206,7 +206,6 @@ function tesla_coil.update_connection(target_data, tower_data)
   end
 end
 
--- FIXME: This isn't the tower, it's the trigger entity!
 function tesla_coil.process_equipment_fire(target, tower)
   local tower_data = global.tesla_coil.towers[tower.unit_number]
   if not tower_data then

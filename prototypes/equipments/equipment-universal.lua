@@ -369,6 +369,7 @@ data:extend({
         energy_consumption = "0J",
         action = {
           type = "direct",
+          force = "same",
           action_delivery = {
             type = "instant",
             source_effects = {

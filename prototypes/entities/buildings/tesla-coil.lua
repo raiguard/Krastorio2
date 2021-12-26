@@ -107,6 +107,8 @@ data:extend({
 
     energy_usage = "6MW",
 
+    trigger_target_mask = { "kr-tesla-coil-trigger" },
+
     animation = {
       layers = {
         {
@@ -433,7 +435,6 @@ data:extend({
     collision_box = tesla_coil_collision_box,
     picture = { filename = data_util.empty_image, size = 1 },
     flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
-    trigger_target_mask = { "kr-tesla-coil-trigger" },
   },
   {
     type = "trigger-target-type",
