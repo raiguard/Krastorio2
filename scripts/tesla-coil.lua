@@ -57,6 +57,12 @@ function tesla_coil.build(source_entity)
       by_target = {},
     },
   }
+
+  if not data.entities.turret or not data.entities.turret.valid then
+    game.print("Tesla coil building was not completed successfully, this tesla coil will not function.")
+    return
+  end
+
   data.tower_unit_number = unit_number
   data.turret_unit_number = data.entities.turret.unit_number
 
