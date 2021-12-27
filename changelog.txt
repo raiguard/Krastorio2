@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.7
-Date: ????
+Date: 2021-12-27
   Changes:
     - Medium and large requester and buffer containers have unlimited slots to match vanilla chests
     - Removed tesla coil upgrade technologies - tesla coils start with max recharge rate (#98)
