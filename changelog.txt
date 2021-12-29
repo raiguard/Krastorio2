@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.8
 Date: ????
-  Changes:
+  Bugfixes:
+    - Fixed that power poles were not given when playing with Industrial Revolution or AAI Industry
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.7
 Date: 2021-12-27

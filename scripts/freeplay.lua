@@ -14,6 +14,17 @@ function freeplay.add_bonus_items()
   end
 end
 
+function freeplay.add_electric_poles()
+  if
+    (game.active_mods["IndustrialRevolution"] or game.active_mods["aai-industry"])
+    and game.item_prototypes["medium-electric-pole"]
+  then
+    local items = remote.call("freeplay", "get_created_items")
+    items["medium-electric-pole"] = 10
+    remote.call("freeplay", "set_created_items", items)
+  end
+end
+
 function freeplay.add_to_crash_site()
   if
     remote.interfaces["freeplay"]
