@@ -1,0 +1,31 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "factoriomod",
+      "request": "launch",
+      "name": "Debug",
+      "factorioPath": "/home/rai/dev/factorio/1/bin/x64/factorio",
+      "hookMode": "debug",
+      "hookControl": ["Krastorio2", "level", "Sandbox"],
+    },
+    {
+      "type": "factoriomod",
+      "request": "launch",
+      "name": "Debug (data)",
+      "factorioPath": "/home/rai/dev/factorio/1/bin/x64/factorio",
+      "hookMode": "debug",
+      "hookControl": ["Krastorio2", "level", "Sandbox"],
+      "hookData": true,
+      "hookSettings": true,
+    },
+    {
+      "type": "factoriomod",
+      "request": "launch",
+      "name": "Profile",
+      "factorioPath": "/home/rai/dev/factorio/1/bin/x64/factorio",
+      "hookMode": "profile",
+      "hookControl": ["Krastorio2", "level", "Sandbox"]
+    }
+  ]
+}
