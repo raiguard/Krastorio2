@@ -40,7 +40,8 @@ require(scripts_path .. "Tral-robot-tree-farm")
 ---------------------------------------------------------------------------
 -- Make characters be targeted by the teleporter turrets
 for _, character in pairs(data.raw["character"]) do
-  local mask = character.trigger_target_mask or {}
+  -- The game assigns characters these two target masks if they don't have any
+  local mask = character.trigger_target_mask or {"common", "ground-unit"}
   character.trigger_target_mask = mask
 
   mask[#mask + 1] = "character"
@@ -65,7 +66,8 @@ for _, type in pairs(types_have_grid) do
       end
     end
 
-    local mask = prototype.trigger_target_mask or {}
+    -- The game assigns characters these two target masks if they don't have any
+    local mask = prototype.trigger_target_mask or {"common", "ground-unit"}
     prototype.trigger_target_mask = mask
     mask[#mask + 1] = "kr-tesla-coil-trigger"
 

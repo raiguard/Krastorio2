@@ -2,6 +2,7 @@
 Version: 1.2.8
 Date: ????
   Bugfixes:
+    - Fixed that characters would not get damaged by spitter acid splashes
     - Fixed that power poles were not given when playing with Industrial Revolution or AAI Industry
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.7
