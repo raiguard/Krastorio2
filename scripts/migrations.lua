@@ -172,15 +172,17 @@ migrations.versions = {
   ["1.2.7"] = function()
     -- Add triggers to all tesla coils
     for _, tesla_coil in pairs(global.tesla_coil.by_tower) do
-      local tower = tesla_coil.entities.tower
-      if tower and tower.valid then
-        tesla_coil.entities.trigger = tower.surface.create_entity({
-          name = "kr-tesla-coil-trigger",
-          position = tower.position,
-          force = tower.force,
-          create_build_effect_smoke = false,
-          raise_built = true,
-        })
+      if not tesla_coil.entities.trigger then
+        local tower = tesla_coil.entities.tower
+        if tower and tower.valid then
+          tesla_coil.entities.trigger = tower.surface.create_entity({
+            name = "kr-tesla-coil-trigger",
+            position = tower.position,
+            force = tower.force,
+            create_build_effect_smoke = false,
+            raise_built = true,
+          })
+        end
       end
     end
   end,
