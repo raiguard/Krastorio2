@@ -28,8 +28,6 @@ function migrations.generic()
   radioactivity.reset_entities_items()
   roboport.find_variants()
   tesla_coil.get_absorber_buffer_capacity()
-  -- TODO:
-  -- tesla_coil.reset_grids_cache()
 
   compatibility.aai_industry()
   compatibility.disco_science()
@@ -172,7 +170,7 @@ migrations.versions = {
   end,
   ["1.2.7"] = function()
     -- Add triggers to all tesla coils
-    for _, tesla_coil in pairs(global.tesla_coil.by_tower) do
+    for _, tesla_coil in pairs(global.tesla_coil.by_tower or {}) do
       if not tesla_coil.entities.trigger then
         local tower = tesla_coil.entities.tower
         if tower and tower.valid then
@@ -185,6 +183,41 @@ migrations.versions = {
           })
         end
       end
+    end
+  end,
+  ["1.2.11"] = function()
+    -- If we migrated from pre-1.2.0, we don't need to do this
+    if global.tesla_coil.beams then
+      return
+    end
+
+    -- Temporarily add this table so the beam destroyed logic doesn't crash
+    global.tesla_coil.beams = {}
+
+    -- Destroy all extra entities
+    local towers = {}
+    for _, tower_data in pairs(global.tesla_coil.by_tower) do
+      table.insert(towers, tower_data.entities.tower)
+      for name, entity in pairs(tower_data.entities) do
+        if name ~= "tower" and entity.valid then
+          entity.destroy()
+        end
+      end
+
+      for _, target_data in pairs(tower_data.targets.by_beam) do
+        local beam = target_data.beam
+        if beam and beam.valid then
+          target_data.beam.destroy()
+        end
+      end
+    end
+
+    -- Restart from scratch
+    global.tesla_coil = nil
+    tesla_coil.init()
+
+    for _, tower in pairs(towers) do
+      tesla_coil.build(tower)
     end
   end,
 }
