@@ -47,6 +47,10 @@ data:extend({
     collision_box = { { -3.25, -3.25 }, { 3.25, 3.25 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     fast_replaceable_group = "kr-greenhouse",
+    module_specification = {
+      module_slots = 3,
+    },
+    allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     animation = {
       layers = {
         {
@@ -143,6 +147,5 @@ data:extend({
     },
     energy_usage = "144.8KW",
     ingredient_count = 4,
-    allowed_effects = nil,
   },
 })

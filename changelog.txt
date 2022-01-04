@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.10
 Date: ????
+  Features:
+    - The Greenhouse and Bio Lab can take modules
   Bugfixes:
     - Fixed Greenhouses being unlockable before basic fluid handling
 ---------------------------------------------------------------------------------------------------
