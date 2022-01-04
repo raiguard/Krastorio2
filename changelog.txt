@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.9
-Date: ????
+Date: 2022-01-04
   Compatibility:
     - SE Space Loader is changed to require steel plates instead of fast loaders (#105)
   Bugfixes:
