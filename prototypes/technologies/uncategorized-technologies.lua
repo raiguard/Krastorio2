@@ -123,7 +123,7 @@ data:extend({
         recipe = "kr-grow-wood-with-water",
       },
     },
-    prerequisites = { "kr-automation-core", "kr-stone-processing" },
+    prerequisites = { "kr-automation-core", "kr-stone-processing", "kr-basic-fluid-handling" },
     unit = {
       count = 40,
       ingredients = {
