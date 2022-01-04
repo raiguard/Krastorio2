@@ -1,3 +1,4 @@
 - Greenhouses can be unlocked before Basic Fluid Handling
     - This was with K2 + SE, but it might be true in regular K2 as well
 - Greenhouse blueprints cannot be flipped
+- Telsa coil removes decoratives when placed
