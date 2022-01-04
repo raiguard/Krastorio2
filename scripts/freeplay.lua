@@ -16,6 +16,7 @@ end
 
 function freeplay.add_electric_poles()
   if
+    remote.interfaces["freeplay"] and
     (game.active_mods["IndustrialRevolution"] or game.active_mods["aai-industry"])
     and game.item_prototypes["medium-electric-pole"]
   then
