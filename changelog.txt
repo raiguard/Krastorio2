@@ -6,6 +6,7 @@ Date: ????
     - Fixed that characters would not get damaged by spitter acid splashes
     - Fixed that Logistics 4 and 5 were missing descriptions (#113)
     - Fixed that power poles were not given when playing with Industrial Revolution or AAI Industry
+    - Fixed various typos in technology descriptions (#109)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.7
 Date: 2021-12-27
