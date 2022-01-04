@@ -196,6 +196,7 @@ function tesla_coil.add_connection(target_data, tower_data)
     --- @class BeamData
     global.tesla_coil.beams[beam_number] = {
       beam = beam,
+      beam_number = beam_number,
       target_data = target_data,
       tower_data = tower_data,
     }
@@ -203,20 +204,27 @@ function tesla_coil.add_connection(target_data, tower_data)
     --- @class ConnectionData
     local connection_data = {
       beam = beam,
+      beam_number = beam_number,
       tower_data = tower_data,
     }
     target_data.connections.by_beam[beam_number] = connection_data
     target_data.connections.by_tower[tower_data.unit_number] = connection_data
+
+    return true
   end
 end
 
+--- @param target_data TargetData
+--- @param tower_data TowerData
 function tesla_coil.update_connection(target_data, tower_data)
-  local absorber = target_data.absorber
+  local absorber = target_data.grid_data.absorber
+
   -- Check if the tower is powered
   if not absorber or not absorber.valid or tower_data.entities.tower.energy < constants.tesla_coil.required_energy then
-    tesla_coil.remove_connection(target_data.beam_number)
+    tesla_coil.remove_connection(target_data, tower_data)
     return
   end
+
   local capacity = global.tesla_coil.absorber_buffer_capacity
   local energy = absorber.energy
   if energy < capacity then
@@ -224,35 +232,39 @@ function tesla_coil.update_connection(target_data, tower_data)
     local to_add = constants.tesla_coil.charging_rate / 60
     local result = energy + to_add
     local tower = tower_data.entities.tower
+
     if result > capacity then
       absorber.energy = capacity
     else
       absorber.energy = result
     end
+
     tower.energy = tower.energy - (to_add * constants.tesla_coil.loss_multiplier)
   else
-    tesla_coil.remove_connection(target_data.beam_number)
+    tesla_coil.remove_connection(target_data, tower_data)
   end
 end
 
-function tesla_coil.remove_connection(beam_number)
-  local beam_data = global.tesla_coil.beams[beam_number]
-  if beam_data then
-    -- Destroy beam if it still exists
-    if beam_data.beam.valid then
-      beam_data.beam.destroy()
-    end
-    global.tesla_coil.beams[beam_number] = nil
+--- @param target_data TargetData
+--- @param tower_data TowerData
+function tesla_coil.remove_connection(target_data, tower_data)
+  local connection_data = target_data.connections.by_tower[tower_data.unit_number]
+  -- Destroy beam if it still exists
+  if connection_data.beam.valid then
+    connection_data.beam.destroy()
+  end
+  local beam_number = connection_data.beam_number
+  global.tesla_coil.beams[beam_number] = nil
 
-    local target_data = beam_data.target_data
-    target_data.connections.by_beam[beam_number] = nil
-    target_data.connections.by_tower[beam_data.tower_data.unit_number] = nil
-    if table_size(target_data.connections) == 0 then
-      tesla_coil.remove_target(target_data.unit_number)
-    end
+  target_data.connections.by_beam[beam_number] = nil
+  target_data.connections.by_tower[tower_data.unit_number] = nil
+  if table_size(target_data.connections.by_beam) == 0 then
+    tesla_coil.remove_target(target_data.unit_number)
   end
 end
 
+--- @param target LuaEntity
+--- @param tower LuaEntity
 function tesla_coil.process_equipment_fire(target, tower)
   local tower_data = global.tesla_coil.towers[tower.unit_number]
   if not tower_data then
@@ -266,10 +278,9 @@ function tesla_coil.process_equipment_fire(target, tower)
 
   if target_data then
     local connection = target_data.connections.by_tower[tower.unit_number]
-    if not connection then
-      tesla_coil.add_connection(target_data, tower_data)
+    if connection or tesla_coil.add_connection(target_data, tower_data) then
+      tesla_coil.update_connection(target_data, tower_data)
     end
-    tesla_coil.update_connection(target_data, tower_data)
   end
 end
 

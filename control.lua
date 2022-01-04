@@ -197,7 +197,10 @@ event.register({
 end)
 
 event.on_entity_destroyed(function(e)
-  tesla_coil.remove_connection(e.registration_number)
+  local beam_data = global.tesla_coil.beams[e.registration_number]
+  if beam_data then
+    tesla_coil.remove_connection(beam_data.target_data, beam_data.tower_data)
+  end
 end)
 
 event.on_biter_base_built(function(e)
