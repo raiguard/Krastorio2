@@ -2,6 +2,7 @@
 Version: 1.2.9
 Date: ????
   Bugfixes:
+    - Fixed a crash when a mod generates a chunk before pre-1.2.0 migrations can occur
     - Fixed that high supporters on Patreon wouldn't be given bonus items
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.8
