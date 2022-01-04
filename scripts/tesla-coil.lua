@@ -37,6 +37,7 @@ function tesla_coil.build(source_entity)
         raise_built = true,
       }),
       tower = source_entity,
+      -- FIXME: This causes insane amounts of entity time
       trigger = surface.create_entity({
         name = "kr-tesla-coil-trigger",
         position = source_entity.position,
