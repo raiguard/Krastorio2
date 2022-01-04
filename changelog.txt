@@ -2,6 +2,10 @@
 Version: 1.2.11
 Date: ????
   Changes:
+    - Rewrote Tesla Coils again to use active defense equipment
+      - This substantially improves performance and greatly simplifies the logic
+      - Targets will only be charged every ten ticks instead of every tick to improve performance further
+      - Increased energy transfer loss multiplier to compensate for changes
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.10
 Date: 2022-01-04
