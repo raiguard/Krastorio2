@@ -436,6 +436,19 @@ data:extend({
     picture = { filename = data_util.empty_image, size = 1 },
     flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
   },
+  -- This entity is not used for logic, but is present to ensure that the turret will be awake
+  {
+    type = "simple-entity-with-force",
+    name = "kr-tesla-coil-trigger",
+    localised_name = { "entity-name.kr-tesla-coil" },
+    icon = kr_entities_icons_path .. "tesla-coil.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    collision_mask = {},
+    collision_box = { { -1.25, -1.25 }, { 1.25, 1.25 } },
+    picture = { filename = data_util.empty_image, size = 1 },
+    flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
+  },
   {
     type = "trigger-target-type",
     name = "kr-tesla-coil-trigger",

@@ -40,7 +40,8 @@ function creep.on_biter_base_built(entity)
 end
 
 function creep.on_chunk_generated(chunk_area, surface)
-  if not global.creep.surfaces[surface.index] then
+  -- Mods can cause chunk generations before we migrate from pre-1.2.0
+  if not global.creep or not global.creep.surfaces[surface.index] then
     return
   end
 

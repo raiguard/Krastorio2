@@ -203,6 +203,7 @@ data:extend({
   {
     type = "technology",
     name = "kr-military-5",
+    localised_description = { "technology-description.military" },
     mod = "Krastorio2",
     icon = kr_technologies_icons_path .. "military-5.png",
     icon_size = 256,

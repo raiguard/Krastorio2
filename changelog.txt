@@ -1,11 +1,38 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.2.7
+Version: 1.2.10
 Date: ????
+  Features:
+    - The Greenhouse and Bio Lab can take modules
+  Bugfixes:
+    - Fixed Greenhouses being unlockable before basic fluid handling
+---------------------------------------------------------------------------------------------------
+Version: 1.2.9
+Date: 2022-01-04
+  Compatibility:
+    - SE Space Loader is changed to require steel plates instead of fast loaders (#105)
+  Bugfixes:
+    - Fixed a crash when a mod generates a chunk before pre-1.2.0 migrations can occur
+    - Fixed that high supporters on Patreon wouldn't be given bonus items
+---------------------------------------------------------------------------------------------------
+Version: 1.2.8
+Date: 2022-01-04
+  Bugfixes:
+    - Fixed an extra entity being created when migrating tesla coils from before v1.2.0
+    - Fixed that characters would not get damaged by spitter acid splashes
+    - Fixed that Logistics 4 and 5 were missing descriptions (#113)
+    - Fixed that power poles were not given when playing with Industrial Revolution or AAI Industry
+    - Fixed various typos in technology descriptions (#109)
+---------------------------------------------------------------------------------------------------
+Version: 1.2.7
+Date: 2021-12-27
   Changes:
     - Medium and large requester and buffer containers have unlimited slots to match vanilla chests
+    - Removed tesla coil upgrade technologies - tesla coils start with max recharge rate (#98)
   Compatibility:
     - Added Deep Space Loader for Space Exploration (#87)
   Bugfixes:
+    - Fixed a crash when a mod prevents the proper placement of a tesla coil (#94)
+    - Fixed that tesla coils would not charge non-military entities when a military entity was not present (#84)
     - Fixed the damage ship reactor not showing up in the crash site
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.6
