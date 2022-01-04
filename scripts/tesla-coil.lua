@@ -68,7 +68,9 @@ function tesla_coil.destroy(entity)
   end
 end
 
---- Finds the energy absorber in the given equipment grid, if there is one.
+-- TARGET
+-- An entity that will receive energy from a tesla coil
+
 --- @param grid LuaEquipmentGrid
 --- @return LuaEquipment|nil
 local function find_absorber_in_grid(grid)
@@ -110,7 +112,7 @@ end
 
 --- Updates the absorber object in a target's equipment grid
 --- @param grid LuaEquipmentGrid
-function tesla_coil.update_cached_grid(grid)
+function tesla_coil.update_target_grid(grid)
   for _, target_data in pairs(global.tesla_coil.targets) do
     local grid_data = target_data.grid_data
     if grid_data.grid == grid then
@@ -118,9 +120,6 @@ function tesla_coil.update_cached_grid(grid)
     end
   end
 end
-
--- TARGET
--- An entity that will receive energy from a tesla coil
 
 --- @param target LuaEntity
 --- @param tower_data TowerData
@@ -236,15 +235,18 @@ end
 --- @param tower_data TowerData
 function tesla_coil.remove_connection(target_data, tower_data)
   local connection_data = target_data.connections.by_tower[tower_data.unit_number]
+
   -- Destroy beam if it still exists
   if connection_data.beam.valid then
     connection_data.beam.destroy()
   end
+
   local beam_number = connection_data.beam_number
   global.tesla_coil.beams[beam_number] = nil
 
   target_data.connections.by_beam[beam_number] = nil
   target_data.connections.by_tower[tower_data.unit_number] = nil
+
   if table_size(target_data.connections.by_beam) == 0 then
     tesla_coil.remove_target(target_data.unit_number)
   end
