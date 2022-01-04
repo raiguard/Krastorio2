@@ -1,1 +1,2 @@
 - Tesla coil removes decoratives when placed
+- Add interface for specifying creep surfaces

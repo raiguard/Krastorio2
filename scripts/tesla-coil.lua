@@ -8,17 +8,12 @@ function tesla_coil.init()
   global.tesla_coil = {
     --- @type BeamData[]
     beams = {},
-    -- grids = {},
     --- @type TowerData[]
     towers = {},
     --- @type TargetData[]
     targets = {},
   }
 end
-
--- function tesla_coil.reset_grids_cache()
---   global.tesla_coil.grids = {}
--- end
 
 function tesla_coil.get_absorber_buffer_capacity()
   global.tesla_coil.absorber_buffer_capacity =
@@ -85,18 +80,10 @@ local function find_absorber_in_grid(grid)
   end
 end
 
---- @class GridData
---- @field grid LuaEquipmentGrid
---- @field absorber LuaEquipment|nil
-
 --- @param target LuaEntity
 --- @return GridData
-function tesla_coil.get_grid_data(target)
-  -- local existing = global.tesla_coil.grids[target.unit_number]
-  -- if existing then
-  --   return existing
-  -- end
-
+local function get_grid_data(target)
+  --- @type LuaEquipmentGrid
   local grid
   if target.type == "character" then
     local armor_inventory = target.get_inventory(defines.inventory.character_armor)
@@ -111,11 +98,11 @@ function tesla_coil.get_grid_data(target)
   end
 
   if grid then
+    --- @class GridData
     local data = {
       absorber = find_absorber_in_grid(grid),
       grid = grid,
     }
-    -- global.tesla_coil.grids[target.unit_number] = data
 
     return data
   end
@@ -144,7 +131,7 @@ function tesla_coil.add_target(target, tower_data)
     return
   end
   -- Check the target's equipment grid for an energy absorber
-  local grid_data = tesla_coil.get_grid_data(target)
+  local grid_data = get_grid_data(target)
   if grid_data and grid_data.absorber and grid_data.absorber.valid then
     --- @class TargetData
     local target_data = {
@@ -229,7 +216,7 @@ function tesla_coil.update_connection(target_data, tower_data)
   local energy = absorber.energy
   if energy < capacity then
     -- Calculate how much to add
-    local to_add = constants.tesla_coil.charging_rate / 60
+    local to_add = constants.tesla_coil.charging_rate / 60 * constants.tesla_coil.cooldown
     local result = energy + to_add
     local tower = tower_data.entities.tower
 

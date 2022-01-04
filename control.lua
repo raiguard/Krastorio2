@@ -406,24 +406,24 @@ end)
 
 event.on_script_trigger_effect(function(e)
   if e.effect_id == "kr-tesla-coil-trigger" then
-    rendering.draw_circle({
-      color = { r = 0.5, a = 0.5 },
-      radius = 0.2,
-      target = e.source_entity,
-      filled = true,
-      surface = e.source_entity.surface,
-      players = { 1 },
-      time_to_live = 2,
-    })
-    rendering.draw_circle({
-      color = { g = 0.5, a = 0.5 },
-      radius = 0.2,
-      target = e.target_entity,
-      filled = true,
-      surface = e.source_entity.surface,
-      players = { 1 },
-      time_to_live = 2,
-    })
+    -- rendering.draw_circle({
+    --   color = { r = 0.5, a = 0.5 },
+    --   radius = 0.2,
+    --   target = e.source_entity,
+    --   filled = true,
+    --   surface = e.source_entity.surface,
+    --   players = { 1 },
+    --   time_to_live = 2,
+    -- })
+    -- rendering.draw_circle({
+    --   color = { g = 0.5, a = 0.5 },
+    --   radius = 0.2,
+    --   target = e.target_entity,
+    --   filled = true,
+    --   surface = e.source_entity.surface,
+    --   players = { 1 },
+    --   time_to_live = 2,
+    -- })
     tesla_coil.process_equipment_fire(e.source_entity, e.target_entity)
   elseif e.effect_id == "kr-planetary-teleporter-character-trigger" then
     planetary_teleporter.update_players_in_range(e.source_entity, e.target_entity)

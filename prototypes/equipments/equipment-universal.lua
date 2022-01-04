@@ -362,7 +362,7 @@ data:extend({
     attack_parameters = {
       type = "projectile",
       range = 20,
-      cooldown = 1,
+      cooldown = constants.tesla_coil.cooldown,
       ammo_type = {
         category = "melee",
         target_type = "position",
