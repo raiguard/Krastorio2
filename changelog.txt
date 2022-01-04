@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.8
-Date: ????
+Date: 2022-01-04
   Bugfixes:
     - Fixed an extra entity being created when migrating tesla coils from before v1.2.0
     - Fixed that characters would not get damaged by spitter acid splashes
