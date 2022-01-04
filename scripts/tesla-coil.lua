@@ -74,14 +74,30 @@ function tesla_coil.destroy(entity)
   end
 end
 
+--- @class GridInfo
+--- @field grid LuaEquipmentGrid
+--- @field absorber LuaEquipment|nil
+
+--- Finds the energy absorber in the given equipment grid, if there is one.
+--- @param grid LuaEquipmentGrid
+--- @return LuaEquipment|nil
+local function find_absorber_in_grid(grid)
+  -- Find the energy absorber
+  for _, equipment in pairs(grid.equipment) do
+    if equipment.name == "energy-absorber" then
+      return equipment
+    end
+  end
+end
+
 --- @param target LuaEntity
-local function get_grid_info(target)
+--- @return GridInfo
+function tesla_coil.get_grid_info(target)
   local existing = global.tesla_coil.grids[target.unit_number]
   if existing then
     return existing
   end
 
-  --- @type LuaEquipmentGrid
   local grid
   if target.type == "character" then
     local armor_inventory = target.get_inventory(defines.inventory.character_armor)
@@ -96,45 +112,48 @@ local function get_grid_info(target)
   end
 
   if grid then
-    --- @type LuaEquipment
-    local absorber
-    -- Find the energy absorber
-    for _, equipment in pairs(grid.equipment) do
-      if equipment.name == "energy-absorber" then
-        absorber = equipment
-        break
-      end
-    end
-
-    global.tesla_coil.grids[target.unit_number] = {
-      absorber = absorber,
+    local data = {
+      absorber = find_absorber_in_grid(grid),
       grid = grid,
     }
+    global.tesla_coil.grids[target.unit_number] = data
+
+    return data
+  end
+end
+
+--- Updates the absorber object in a cached equipment grid
+--- @param grid LuaEquipmentGrid
+function tesla_coil.update_cached_grid(grid)
+  for _, grid_data in pairs(global.tesla_coil.grids) do
+    if grid_data.grid == grid then
+      grid_data.absorber = find_absorber_in_grid(grid)
+    end
   end
 end
 
 function tesla_coil.add_target(target, tower_data)
   local target_unit_number = target.unit_number
   -- Check if the tower is powered
-  if data.entities.tower.energy < constants.tesla_coil.required_energy then
+  if tower_data.entities.tower.energy < constants.tesla_coil.required_energy then
     return
   end
   -- Check the target's equipment grid for an energy absorber
-  local grid_data = get_grid_info(target)
+  local grid_data = tesla_coil.get_grid_info(target)
   if grid_data and grid_data.absorber and grid_data.absorber.valid then
     -- Check if the absorber has space
     local capacity = global.tesla_coil.absorber_buffer_capacity
     if grid_data.absorber.energy < capacity then
       -- Create beam entity
-      local beam = data.entities.tower.surface.create_entity({
+      local beam = tower_data.entities.tower.surface.create_entity({
         name = "kr-tesla-coil-electric-beam",
-        source = data.entities.tower,
+        source = tower_data.entities.tower,
         source_offset = { 0, -2.2 },
-        position = data.entities.tower.position,
+        position = tower_data.entities.tower.position,
         target = target,
         duration = 0,
         max_length = 20,
-        force = data.entities.tower.force,
+        force = tower_data.entities.tower.force,
         raise_built = true,
       })
       local beam_number = event.register_on_entity_destroyed(beam)
@@ -184,7 +203,7 @@ end
 function tesla_coil.update_connection(target_data, tower_data)
   local absorber = target_data.absorber
   -- Check if the tower is powered
-  if not absorber.valid or tower_data.entities.tower.energy < constants.tesla_coil.required_energy then
+  if not absorber or not absorber.valid or tower_data.entities.tower.energy < constants.tesla_coil.required_energy then
     tesla_coil.remove_connection(target_data.beam_number)
     return
   end

@@ -53,6 +53,47 @@ event.on_init(function()
 
   -- Initialize mod
   migrations.generic()
+
+  -- TEMPORARY:
+  event.register(remote.call("EditorExtensions", "debug_world_ready_event"), function()
+    local surface = game.surfaces.nauvis
+
+    local coils = {
+      { x = -9.5, y = -9.5 },
+      { x = 10.5, y = -9.5 },
+      { x = -9.5, y = 10.5 },
+      { x = 10.5, y = 10.5 },
+    }
+    for _, position in pairs(coils) do
+      surface.create_entity({
+        name = "kr-tesla-coil",
+        direction = defines.direction.north,
+        position = position,
+        force = game.forces.player,
+        raise_built = true,
+        create_build_effect_smoke = false,
+      })
+    end
+    surface.create_entity({
+      name = "ee-infinity-accumulator-primary-output",
+      position = { x = -1, y = -9 },
+      force = game.forces.player,
+      raise_built = true,
+      create_build_effect_smoke = false,
+    })
+    surface.create_entity({
+      name = "ee-super-substation",
+      position = { x = 1, y = -9 },
+      force = game.forces.player,
+      raise_built = true,
+      create_build_effect_smoke = false,
+    })
+
+    local grid_info = tesla_coil.get_grid_info(game.get_player("raiguard").character)
+    if grid_info then
+      grid_info.grid.put({ name = "energy-absorber", position = { 5, 5 } })
+    end
+  end)
 end)
 
 event.on_configuration_changed(function(e)
@@ -179,6 +220,16 @@ end)
 -- EQUIPMENT
 
 event.on_player_placed_equipment(energy_absorber.on_placed)
+event.on_equipment_inserted(function(e)
+  if e.equipment.valid and e.equipment.name == "energy-absorber" then
+    tesla_coil.update_cached_grid(e.grid)
+  end
+end)
+event.on_equipment_removed(function(e)
+  if e.equipment == "energy-absorber" then
+    tesla_coil.update_cached_grid(e.grid)
+  end
+end)
 
 -- FORCE
 
@@ -368,7 +419,7 @@ event.on_script_trigger_effect(function(e)
       players = { 1 },
       time_to_live = 2,
     })
-    -- tesla_coil.process_turret_fire(e.source_entity, e.target_entity)
+    tesla_coil.process_equipment_fire(e.source_entity, e.target_entity)
   elseif e.effect_id == "kr-planetary-teleporter-character-trigger" then
     planetary_teleporter.update_players_in_range(e.source_entity, e.target_entity)
   end

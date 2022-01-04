@@ -1,4 +1,1 @@
-- Greenhouse blueprints cannot be flipped
-    - Is there no way to fix this?
-- Telsa coil removes decoratives when placed
-    - We need to rewrite tesla coils again anyway
+- Tesla coil removes decoratives when placed
