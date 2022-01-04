@@ -4,6 +4,7 @@ Date: ????
   Features:
     - The Greenhouse and Bio Lab can take modules
   Bugfixes:
+    - Fixed a crash when the freeplay remote interface does not exist
     - Fixed Greenhouses being unlockable before basic fluid handling
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.9
