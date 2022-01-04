@@ -6,11 +6,11 @@ local tesla_coil = {}
 
 function tesla_coil.init()
   global.tesla_coil = {
-    --- @type BeamData[]
+    --- @type table<number, BeamData>
     beams = {},
-    --- @type TowerData[]
+    --- @type table<number, TowerData>
     towers = {},
-    --- @type TargetData[]
+    --- @type table<number, TargetData>
     targets = {},
   }
 end
@@ -136,9 +136,9 @@ function tesla_coil.add_target(target, tower_data)
     --- @class TargetData
     local target_data = {
       connections = {
-        --- @type ConnectionData[]
+        --- @type table<number, ConnectionData>
         by_beam = {},
-        --- @type ConnectionData[]
+        --- @type table<number, ConnectionData>
         by_tower = {},
       },
       entity = target,
