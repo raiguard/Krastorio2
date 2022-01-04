@@ -89,9 +89,13 @@ event.on_init(function()
       create_build_effect_smoke = false,
     })
 
-    local grid_info = tesla_coil.get_grid_info(game.get_player("raiguard").character)
-    if grid_info then
-      grid_info.grid.put({ name = "energy-absorber", position = { 5, 5 } })
+    local character = game.get_player(1).character
+    local armor_inventory = character.get_inventory(defines.inventory.character_armor)
+    if armor_inventory and armor_inventory.valid then
+      local armor = armor_inventory[1]
+      if armor and armor.valid_for_read then
+        armor.grid.put({ name = "energy-absorber", position = { 5, 5 } })
+      end
     end
   end)
 end)
@@ -189,8 +193,6 @@ event.register({
     planetary_teleporter.destroy(entity)
   elseif entity_name == "kr-tesla-coil" then
     tesla_coil.destroy(entity)
-  else
-    tesla_coil.remove_entity_from_cache(entity)
   end
 end)
 

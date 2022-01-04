@@ -28,7 +28,8 @@ function migrations.generic()
   radioactivity.reset_entities_items()
   roboport.find_variants()
   tesla_coil.get_absorber_buffer_capacity()
-  tesla_coil.reset_grids_cache()
+  -- TODO:
+  -- tesla_coil.reset_grids_cache()
 
   compatibility.aai_industry()
   compatibility.disco_science()

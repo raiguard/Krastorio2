@@ -1,12 +1,3 @@
---[[
-  DATA:
-  - We have:
-    - beam number
-    - target number
-    - tower number
-  - We need:
-    - to get
-]]
 local event = require("__flib__.event")
 
 local constants = require("scripts.constants")
@@ -15,26 +6,34 @@ local tesla_coil = {}
 
 function tesla_coil.init()
   global.tesla_coil = {
+    --- @type BeamData[]
     beams = {},
-    grids = {},
+    -- grids = {},
+    --- @type TowerData[]
     towers = {},
+    --- @type TargetData[]
     targets = {},
   }
 end
 
-function tesla_coil.reset_grids_cache()
-  global.tesla_coil.grids = {}
-end
+-- function tesla_coil.reset_grids_cache()
+--   global.tesla_coil.grids = {}
+-- end
 
 function tesla_coil.get_absorber_buffer_capacity()
   global.tesla_coil.absorber_buffer_capacity =
     game.equipment_prototypes["energy-absorber"].energy_source.buffer_capacity
 end
 
+-- TOWER
+-- The entity that is interacted with
+
+--- @param source_entity LuaEntity
 function tesla_coil.build(source_entity)
   local surface = source_entity.surface
   local unit_number = source_entity.unit_number
 
+  --- @class TowerData
   local data = {
     entities = {
       collision = surface.create_entity({
@@ -45,7 +44,7 @@ function tesla_coil.build(source_entity)
         raise_built = true,
       }),
       tower = source_entity,
-      -- This entity isn't actually used for any logic, it's simply to make the defense equipment fire
+      -- This entity isn't actually used for any logic, it's simply to make the defense equipment fire consistently
       trigger = surface.create_entity({
         name = "kr-tesla-coil-trigger",
         position = { x = source_entity.position.x, y = source_entity.position.y + 5 },
@@ -74,10 +73,6 @@ function tesla_coil.destroy(entity)
   end
 end
 
---- @class GridInfo
---- @field grid LuaEquipmentGrid
---- @field absorber LuaEquipment|nil
-
 --- Finds the energy absorber in the given equipment grid, if there is one.
 --- @param grid LuaEquipmentGrid
 --- @return LuaEquipment|nil
@@ -90,13 +85,17 @@ local function find_absorber_in_grid(grid)
   end
 end
 
+--- @class GridData
+--- @field grid LuaEquipmentGrid
+--- @field absorber LuaEquipment|nil
+
 --- @param target LuaEntity
---- @return GridInfo
-function tesla_coil.get_grid_info(target)
-  local existing = global.tesla_coil.grids[target.unit_number]
-  if existing then
-    return existing
-  end
+--- @return GridData
+function tesla_coil.get_grid_data(target)
+  -- local existing = global.tesla_coil.grids[target.unit_number]
+  -- if existing then
+  --   return existing
+  -- end
 
   local grid
   if target.type == "character" then
@@ -116,22 +115,28 @@ function tesla_coil.get_grid_info(target)
       absorber = find_absorber_in_grid(grid),
       grid = grid,
     }
-    global.tesla_coil.grids[target.unit_number] = data
+    -- global.tesla_coil.grids[target.unit_number] = data
 
     return data
   end
 end
 
---- Updates the absorber object in a cached equipment grid
+--- Updates the absorber object in a target's equipment grid
 --- @param grid LuaEquipmentGrid
 function tesla_coil.update_cached_grid(grid)
-  for _, grid_data in pairs(global.tesla_coil.grids) do
+  for _, target_data in pairs(global.tesla_coil.targets) do
+    local grid_data = target_data.grid_data
     if grid_data.grid == grid then
       grid_data.absorber = find_absorber_in_grid(grid)
     end
   end
 end
 
+-- TARGET
+-- An entity that will receive energy from a tesla coil
+
+--- @param target LuaEntity
+--- @param tower_data TowerData
 function tesla_coil.add_target(target, tower_data)
   local target_unit_number = target.unit_number
   -- Check if the tower is powered
@@ -139,64 +144,69 @@ function tesla_coil.add_target(target, tower_data)
     return
   end
   -- Check the target's equipment grid for an energy absorber
-  local grid_data = tesla_coil.get_grid_info(target)
+  local grid_data = tesla_coil.get_grid_data(target)
   if grid_data and grid_data.absorber and grid_data.absorber.valid then
-    -- Check if the absorber has space
-    local capacity = global.tesla_coil.absorber_buffer_capacity
-    if grid_data.absorber.energy < capacity then
-      -- Create beam entity
-      local beam = tower_data.entities.tower.surface.create_entity({
-        name = "kr-tesla-coil-electric-beam",
-        source = tower_data.entities.tower,
-        source_offset = { 0, -2.2 },
-        position = tower_data.entities.tower.position,
-        target = target,
-        duration = 0,
-        max_length = 20,
-        force = tower_data.entities.tower.force,
-        raise_built = true,
-      })
-      local beam_number = event.register_on_entity_destroyed(beam)
+    --- @class TargetData
+    local target_data = {
+      connections = {
+        --- @type ConnectionData[]
+        by_beam = {},
+        --- @type ConnectionData[]
+        by_tower = {},
+      },
+      entity = target,
+      grid_data = grid_data,
+      unit_number = target_unit_number,
+    }
+    global.tesla_coil.targets[target_unit_number] = target_data
 
-      global.tesla_coil.beams[beam_number] = {
-        entity = beam,
-        target = target_unit_number,
-        tower = tower_data.unit_number,
-      }
-      global.tesla_coil.targets[target_unit_number] = {
-        connections = {},
-        entity = target,
-        grid_data = grid_data,
-        unit_number = target_unit_number,
-      }
-
-      return global.tesla_coil.targets[target_unit_number]
-    end
+    return target_data
   end
 end
 
+--- @param target_unit_number number
 function tesla_coil.remove_target(target_unit_number)
   global.tesla_coil.targets[target_unit_number] = nil
 end
 
-function tesla_coil.remove_connection(beam_number)
-  local beam_data = global.tesla_coil.beams[beam_number]
-  if beam_data then
-    local target_data = global.tesla_coil.targets[beam_data.target]
-    if not target_data then
-      return
-    end
-    -- Destroy beam if it still exists
-    if beam_data.entity.valid then
-      beam_data.entity.destroy()
-    end
-    -- Remove data tables
-    global.tesla_coil.beams[beam_number] = nil
-    target_data.connections[beam_number] = nil
+-- CONNECTION
+-- A connection between a tower and a target, comprising of a beam
+-- There can be unlimited connections per target
 
-    if table_size(target_data.connections) == 0 then
-      tesla_coil.remove_target(target_data.unit_number)
-    end
+--- @param target_data TargetData
+--- @param tower_data TowerData
+function tesla_coil.add_connection(target_data, tower_data)
+  -- Check if the absorber has space
+  local capacity = global.tesla_coil.absorber_buffer_capacity
+  if target_data.grid_data.absorber.energy < capacity then
+    -- Create beam entity
+    local beam = tower_data.entities.tower.surface.create_entity({
+      name = "kr-tesla-coil-electric-beam",
+      source = tower_data.entities.tower,
+      source_offset = { 0, -2.2 },
+      position = tower_data.entities.tower.position,
+      target = target_data.entity,
+      duration = 0,
+      max_length = 20,
+      force = tower_data.entities.tower.force,
+      raise_built = true,
+    })
+    local beam_number = event.register_on_entity_destroyed(beam)
+
+    --- @class BeamData
+    global.tesla_coil.beams[beam_number] = {
+      beam = beam,
+      target_data = target_data,
+      tower_data = tower_data,
+    }
+
+    --- @class ConnectionData
+    local connection_data = {
+      beam = beam,
+      tower_data = tower_data,
+    }
+    target_data.connections.by_beam[beam_number] = connection_data
+    target_data.connections.by_tower[tower_data.unit_number] = connection_data
   end
 end
 
@@ -225,6 +235,24 @@ function tesla_coil.update_connection(target_data, tower_data)
   end
 end
 
+function tesla_coil.remove_connection(beam_number)
+  local beam_data = global.tesla_coil.beams[beam_number]
+  if beam_data then
+    -- Destroy beam if it still exists
+    if beam_data.beam.valid then
+      beam_data.beam.destroy()
+    end
+    global.tesla_coil.beams[beam_number] = nil
+
+    local target_data = beam_data.target_data
+    target_data.connections.by_beam[beam_number] = nil
+    target_data.connections.by_tower[beam_data.tower_data.unit_number] = nil
+    if table_size(target_data.connections) == 0 then
+      tesla_coil.remove_target(target_data.unit_number)
+    end
+  end
+end
+
 function tesla_coil.process_equipment_fire(target, tower)
   local tower_data = global.tesla_coil.towers[tower.unit_number]
   if not tower_data then
@@ -237,6 +265,10 @@ function tesla_coil.process_equipment_fire(target, tower)
   end
 
   if target_data then
+    local connection = target_data.connections.by_tower[tower.unit_number]
+    if not connection then
+      tesla_coil.add_connection(target_data, tower_data)
+    end
     tesla_coil.update_connection(target_data, tower_data)
   end
 end
