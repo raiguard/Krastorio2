@@ -512,6 +512,7 @@ data:extend({
   {
     type = "technology",
     name = "kr-logistic-4",
+    localised_description = { "technology-description.logistics" },
     mod = "Krastorio2",
     icon = kr_technologies_icons_path .. "logistics-4.png",
     icon_size = 256,
@@ -630,6 +631,7 @@ data:extend({
   {
     type = "technology",
     name = "kr-logistic-5",
+    localised_description = { "technology-description.logistics" },
     mod = "Krastorio2",
     icon = kr_technologies_icons_path .. "logistics-5.png",
     icon_size = 256,
