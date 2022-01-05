@@ -7,7 +7,9 @@ Date: ????
       - Targets will only be charged every ten ticks instead of every tick to improve performance further
       - Increased energy transfer loss multiplier to compensate for changes
   Bugfixes:
+    - ACTUALLY fixed patrons not getting bonus items
     - Fixed a crash when Industrial Revolution is enabled
+    - Fixed that the spoiled potato and failure message would be given when starting a new game as a non-patron
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.10
 Date: 2022-01-04
