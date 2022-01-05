@@ -13,6 +13,7 @@ if mods["IndustrialRevolution"] then
   -- Overriding
   krastorio.technologies.removePrerequisite("logistic-science-pack", "ir2-electronics-1")
   krastorio.technologies.removePrerequisite("fluid-handling", "kr-basic-fluid-handling")
+  krastorio.technologies.removePrerequisite("kr-greenhouse", "kr-basic-fluid-handling")
   krastorio.technologies.removePrerequisite("nuclear-power", "kr-steam-engine")
   krastorio.technologies.removePrerequisite("production-science-pack", "uranium-processing")
   krastorio.technologies.removePrerequisite("utility-science-pack", "rocket-fuel")
