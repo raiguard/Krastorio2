@@ -274,3 +274,50 @@ function tesla_coil.process_equipment_fire(target, tower)
 end
 
 return tesla_coil
+
+--[[
+  -- Quick testing code
+  event.register(remote.call("EditorExtensions", "debug_world_ready_event"), function()
+    local surface = game.surfaces.nauvis
+
+    local coils = {
+      { x = -9.5, y = -9.5 },
+      { x = 10.5, y = -9.5 },
+      { x = -9.5, y = 10.5 },
+      { x = 10.5, y = 10.5 },
+    }
+    for _, position in pairs(coils) do
+      surface.create_entity({
+        name = "kr-tesla-coil",
+        direction = defines.direction.north,
+        position = position,
+        force = game.forces.player,
+        raise_built = true,
+        create_build_effect_smoke = false,
+      })
+    end
+    surface.create_entity({
+      name = "ee-infinity-accumulator-primary-output",
+      position = { x = -1, y = -9 },
+      force = game.forces.player,
+      raise_built = true,
+      create_build_effect_smoke = false,
+    })
+    surface.create_entity({
+      name = "ee-super-substation",
+      position = { x = 1, y = -9 },
+      force = game.forces.player,
+      raise_built = true,
+      create_build_effect_smoke = false,
+    })
+
+    local character = game.get_player(1).character
+    local armor_inventory = character.get_inventory(defines.inventory.character_armor)
+    if armor_inventory and armor_inventory.valid then
+      local armor = armor_inventory[1]
+      if armor and armor.valid_for_read then
+        armor.grid.put({ name = "energy-absorber", position = { 5, 5 } })
+      end
+    end
+  end)
+]]
