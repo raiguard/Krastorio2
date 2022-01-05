@@ -41,19 +41,6 @@ local tesla_coil_electric_beam_sound = {
   },
 }
 
-local function empty_animation()
-  return {
-    filename = "__core__/graphics/empty.png",
-    width = 1,
-    height = 1,
-    line_length = 1,
-    frame_count = 1,
-    shift = { 0, 0 },
-    animation_speed = 1,
-    direction_count = 1,
-  }
-end
-
 -- Beam config vars
 local light_tint = { r = 0, g = 0.917, b = 1 }
 local beam_blend_mode = "additive-soft"
@@ -433,19 +420,6 @@ data:extend({
     icon_mipmaps = 4,
     collision_mask = {},
     collision_box = tesla_coil_collision_box,
-    picture = { filename = data_util.empty_image, size = 1 },
-    flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
-  },
-  -- This entity is not used for logic, but is present to ensure that the turret will be awake
-  {
-    type = "simple-entity-with-force",
-    name = "kr-tesla-coil-trigger",
-    localised_name = { "entity-name.kr-tesla-coil" },
-    icon = kr_entities_icons_path .. "tesla-coil.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    collision_mask = {},
-    collision_box = { { -1.25, -1.25 }, { 1.25, 1.25 } },
     picture = { filename = data_util.empty_image, size = 1 },
     flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
   },
