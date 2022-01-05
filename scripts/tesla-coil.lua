@@ -54,6 +54,7 @@ function tesla_coil.build(source_entity)
   global.tesla_coil.towers[unit_number] = data
 end
 
+--- @param entity LuaEntity
 function tesla_coil.destroy(entity)
   -- Beams will automatically get destroyed
   local unit_number = entity.unit_number
