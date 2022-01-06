@@ -182,12 +182,12 @@ end)
 event.on_player_placed_equipment(energy_absorber.on_placed)
 event.on_equipment_inserted(function(e)
   if e.equipment.valid and e.equipment.name == "energy-absorber" then
-    tesla_coil.update_cached_grid(e.grid)
+    tesla_coil.update_target_grid(e.grid)
   end
 end)
 event.on_equipment_removed(function(e)
   if e.equipment == "energy-absorber" then
-    tesla_coil.update_cached_grid(e.grid)
+    tesla_coil.update_target_grid(e.grid)
   end
 end)
 

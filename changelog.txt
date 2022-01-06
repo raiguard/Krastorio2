@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.12
 Date: ????
-  Changes:
+  Bugfixes:
+    - Fixed a crash when inserting or removing an energy absorber to/from an equipment grid
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.11
 Date: 2022-01-05
