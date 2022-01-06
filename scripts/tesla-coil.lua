@@ -9,6 +9,8 @@ function tesla_coil.init()
     --- @type table<number, BeamData>
     beams = {},
     --- @type table<number, TowerData>
+    mines = {},
+    --- @type table<number, TowerData>
     towers = {},
     --- @type table<number, TargetData>
     targets = {},
@@ -38,21 +40,20 @@ function tesla_coil.build(source_entity)
         create_build_effect_smoke = false,
         raise_built = true,
       }),
-      tower = source_entity,
-      -- This entity isn't actually used for any logic, it's simply to make the defense equipment fire consistently
-      trigger = surface.create_entity({
-        name = "kr-tesla-coil-trigger",
-        position = { x = source_entity.position.x, y = source_entity.position.y + 5 },
+      mine = surface.create_entity({
+        name = "kr-tesla-coil-land-mine",
+        position = source_entity.position,
         force = source_entity.force,
         create_build_effect_smoke = false,
         raise_built = true,
       }),
+      tower = source_entity,
     },
-    unit_number = unit_number,
+    tower_unit_number = unit_number,
   }
-  -- So friendly turrets don't target it
-  -- data.entities.trigger.destructible = false
+  data.mine_unit_number = data.entities.mine.unit_number
 
+  global.tesla_coil.mines[data.mine_unit_number] = data
   global.tesla_coil.towers[unit_number] = data
 end
 
@@ -60,14 +61,16 @@ end
 function tesla_coil.destroy(entity)
   -- Beams will automatically get destroyed
   local unit_number = entity.unit_number
-  local data = global.tesla_coil.towers[unit_number]
-  if data then
-    for _, entity in pairs(data.entities) do
+  local tower_data = global.tesla_coil.towers[unit_number]
+  if tower_data then
+    global.tesla_coil.mines[tower_data.mine_unit_number] = nil
+    global.tesla_coil.towers[unit_number] = nil
+
+    for _, entity in pairs(tower_data.entities) do
       if entity and entity.valid then
         entity.destroy()
       end
     end
-    global.tesla_coil.towers[unit_number] = nil
   end
 end
 
@@ -167,7 +170,7 @@ end
 function tesla_coil.add_connection(target_data, tower_data)
   -- Check if the absorber has space
   local capacity = global.tesla_coil.absorber_buffer_capacity
-  if target_data.grid_data.absorber.energy < capacity then
+  if target_data.grid_data.absorber and target_data.grid_data.absorber.energy < capacity then
     -- Create beam entity
     local beam = tower_data.entities.tower.surface.create_entity({
       name = "kr-tesla-coil-electric-beam",
@@ -197,7 +200,7 @@ function tesla_coil.add_connection(target_data, tower_data)
       tower_data = tower_data,
     }
     target_data.connections.by_beam[beam_number] = connection_data
-    target_data.connections.by_tower[tower_data.unit_number] = connection_data
+    target_data.connections.by_tower[tower_data.tower_unit_number] = connection_data
 
     return true
   end
@@ -237,7 +240,7 @@ end
 --- @param target_data TargetData
 --- @param tower_data TowerData
 function tesla_coil.remove_connection(target_data, tower_data)
-  local connection_data = target_data.connections.by_tower[tower_data.unit_number]
+  local connection_data = target_data.connections.by_tower[tower_data.tower_unit_number]
 
   -- Destroy beam if it still exists
   if connection_data.beam.valid then
@@ -248,7 +251,7 @@ function tesla_coil.remove_connection(target_data, tower_data)
   global.tesla_coil.beams[beam_number] = nil
 
   target_data.connections.by_beam[beam_number] = nil
-  target_data.connections.by_tower[tower_data.unit_number] = nil
+  target_data.connections.by_tower[tower_data.tower_unit_number] = nil
 
   if table_size(target_data.connections.by_beam) == 0 then
     tesla_coil.remove_target(target_data.unit_number)
@@ -256,9 +259,9 @@ function tesla_coil.remove_connection(target_data, tower_data)
 end
 
 --- @param target LuaEntity
---- @param tower LuaEntity
-function tesla_coil.process_equipment_fire(target, tower)
-  local tower_data = global.tesla_coil.towers[tower.unit_number]
+--- @param land_mine LuaEntity
+function tesla_coil.process_explosion(target, land_mine)
+  local tower_data = global.tesla_coil.mines[land_mine.unit_number]
   if not tower_data then
     return
   end
@@ -269,7 +272,7 @@ function tesla_coil.process_equipment_fire(target, tower)
   end
 
   if target_data then
-    local connection = target_data.connections.by_tower[tower.unit_number]
+    local connection = target_data.connections.by_tower[tower_data.tower_unit_number]
     if connection or tesla_coil.add_connection(target_data, tower_data) then
       tesla_coil.update_connection(target_data, tower_data)
     end

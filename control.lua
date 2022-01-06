@@ -361,7 +361,7 @@ end)
 
 event.on_script_trigger_effect(function(e)
   if e.effect_id == "kr-tesla-coil-trigger" then
-    tesla_coil.process_equipment_fire(e.source_entity, e.target_entity)
+    tesla_coil.process_explosion(e.target_entity, e.source_entity)
   elseif e.effect_id == "kr-planetary-teleporter-character-trigger" then
     planetary_teleporter.update_players_in_range(e.source_entity, e.target_entity)
   end

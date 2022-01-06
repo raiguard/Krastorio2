@@ -3,6 +3,7 @@ Version: 1.2.12
 Date: ????
   Bugfixes:
     - Fixed a crash when inserting or removing an energy absorber to/from an equipment grid
+    - Fixed that friendly turrets would fire on tesla coils (#119)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.11
 Date: 2022-01-05

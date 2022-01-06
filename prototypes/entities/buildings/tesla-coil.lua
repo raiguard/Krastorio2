@@ -94,8 +94,6 @@ data:extend({
 
     energy_usage = "6MW",
 
-    trigger_target_mask = { "kr-tesla-coil-trigger" },
-
     animation = {
       layers = {
         {
@@ -412,16 +410,43 @@ data:extend({
   },
   -- Range detection
   {
-    type = "simple-entity-with-force",
-    name = "kr-tesla-coil-trigger",
-    localised_name = { "entity-name.kr-tesla-coil" },
-    icon = kr_entities_icons_path .. "tesla-coil.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    type = "land-mine",
+    name = "kr-tesla-coil-land-mine",
+    picture_set = util.empty_sprite(),
+    picture_safe = util.empty_sprite(),
     collision_mask = {},
-    collision_box = tesla_coil_collision_box,
-    picture = { filename = data_util.empty_image, size = 1 },
+    trigger_radius = 20,
     flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
+    action = {
+      type = "direct",
+      action_delivery = {
+        type = "instant",
+        source_effects = {
+          {
+            type = "nested-result",
+            affects_target = true,
+            action = {
+              type = "area",
+              trigger_target_mask = { "kr-tesla-coil-trigger" },
+              radius = 20,
+              filter_enabled = true,
+              ignore_collision_condition = true,
+              force = "ally",
+              action_delivery = {
+                type = "instant",
+                target_effects = {
+                  type = "script",
+                  effect_id = "kr-tesla-coil-trigger",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    force_die_on_attack = false,
+    trigger_force = "ally",
+    timeout = 0,
   },
   {
     type = "trigger-target-type",
