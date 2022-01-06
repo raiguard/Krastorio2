@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.12
-Date: ????
+Date: 2022-01-06
   Changes:
     - Tesla coil performance is now much worse than before, improving the performance will require additions to the Factorio API
   Bugfixes:
