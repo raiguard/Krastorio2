@@ -121,7 +121,7 @@ end
 function tesla_coil.update_target_grid(grid)
   for _, target_data in pairs(global.tesla_coil.targets) do
     local grid_data = target_data.grid_data
-    if grid_data.grid == grid then
+    if grid_data.grid.valid and grid_data.grid == grid then
       grid_data.absorber = find_absorber_in_grid(grid)
     end
   end
@@ -170,7 +170,8 @@ end
 function tesla_coil.add_connection(target_data, tower_data)
   -- Check if the absorber has space
   local capacity = global.tesla_coil.absorber_buffer_capacity
-  if target_data.grid_data.absorber and target_data.grid_data.absorber.energy < capacity then
+  local absorber = target_data.grid_data.absorber
+  if absorber and absorber.valid and absorber.energy < capacity then
     -- Create beam entity
     local beam = tower_data.entities.tower.surface.create_entity({
       name = "kr-tesla-coil-electric-beam",
