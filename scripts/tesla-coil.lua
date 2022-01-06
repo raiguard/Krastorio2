@@ -43,13 +43,15 @@ function tesla_coil.build(source_entity)
       trigger = surface.create_entity({
         name = "kr-tesla-coil-trigger",
         position = { x = source_entity.position.x, y = source_entity.position.y + 5 },
-        force = game.forces["kr-internal-turrets"],
+        force = source_entity.force,
         create_build_effect_smoke = false,
         raise_built = true,
       }),
     },
     unit_number = unit_number,
   }
+  -- So friendly turrets don't target it
+  -- data.entities.trigger.destructible = false
 
   global.tesla_coil.towers[unit_number] = data
 end
