@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.12
 Date: ????
+  Changes:
+    - Tesla coil performance is now much worse than before, improving the performance will require additions to the Factorio API
   Bugfixes:
     - Fixed a crash when inserting or removing an energy absorber to/from an equipment grid
     - Fixed that friendly turrets would fire on tesla coils (#119)
