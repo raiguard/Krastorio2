@@ -415,7 +415,7 @@ data:extend({
     picture_set = util.empty_sprite(),
     picture_safe = util.empty_sprite(),
     collision_mask = {},
-    trigger_radius = 20,
+    trigger_radius = constants.tesla_coil.range,
     flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
     action = {
       type = "direct",
@@ -428,7 +428,7 @@ data:extend({
             action = {
               type = "area",
               trigger_target_mask = { "kr-tesla-coil-trigger" },
-              radius = 20,
+              radius = constants.tesla_coil.range,
               filter_enabled = true,
               ignore_collision_condition = true,
               force = "ally",

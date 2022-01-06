@@ -179,7 +179,7 @@ function tesla_coil.add_connection(target_data, tower_data)
       position = tower_data.entities.tower.position,
       target = target_data.entity,
       duration = 0,
-      max_length = 20,
+      max_length = constants.tesla_coil.range,
       force = tower_data.entities.tower.force,
       raise_built = true,
     })
