@@ -158,33 +158,6 @@ migrations.versions = {
       tesla_coil.build(tower)
     end
   end,
-  ["1.2.4"] = function()
-    -- Make internal turrets indestructible so they won't be targeted by anything
-    for _, surface in pairs(game.surfaces) do
-      for _, turret in pairs(surface.find_entities_filtered({
-        name = { "kr-planetary-teleporter-turret", "kr-tesla-coil-turret" },
-      })) do
-        turret.destructible = false
-      end
-    end
-  end,
-  ["1.2.7"] = function()
-    -- Add triggers to all tesla coils
-    for _, tesla_coil in pairs(global.tesla_coil.by_tower or {}) do
-      if not tesla_coil.entities.trigger then
-        local tower = tesla_coil.entities.tower
-        if tower and tower.valid then
-          tesla_coil.entities.trigger = tower.surface.create_entity({
-            name = "kr-tesla-coil-trigger",
-            position = tower.position,
-            force = tower.force,
-            create_build_effect_smoke = false,
-            raise_built = true,
-          })
-        end
-      end
-    end
-  end,
   ["1.2.11"] = function()
     -- If we migrated from pre-1.2.0, we don't need to do this
     if global.tesla_coil.beams then
