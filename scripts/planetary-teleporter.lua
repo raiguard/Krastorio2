@@ -308,6 +308,11 @@ end
 
 local function create_gui(player, entity)
   local entity_data = global.planetary_teleporter.data[entity.unit_number]
+  if not entity_data then
+    player.opened = nil
+    player.print("This teleporter was not built correctly, please remove and re-place it.")
+    return
+  end
   local refs = gui.build(player.gui.screen, {
     {
       type = "frame",
@@ -610,12 +615,31 @@ local collision_entity_offsets = {
   { x = 2, y = 2 },
 }
 
+--- @param base_entity LuaEntity
 local function create_entities(base_entity)
   local entities = {
     base = base_entity,
   }
   local surface = base_entity.surface
   local position = base_entity.position
+
+  -- Building the turret can fail due to AAI vehicles
+  entities.turret = surface.create_entity({
+    name = "kr-planetary-teleporter-turret",
+    position = { x = position.x, y = position.y + 1.15 },
+    force = "kr-internal-turrets",
+    create_build_effect_smoke = false,
+    raise_built = true,
+  })
+
+  if not entities.turret or not entities.turret.valid then
+    game.print(
+      "Building planetary teleporter failed due to AAI Programmable Vehicles. This teleporter will not function."
+    )
+    base_entity.active = false
+    return
+  end
+
   for i, offset in ipairs(collision_entity_offsets) do
     entities["collision_" .. i] = surface.create_entity({
       name = "kr-planetary-teleporter-collision-" .. i,
@@ -630,14 +654,6 @@ local function create_entities(base_entity)
     create_build_effect_smoke = false,
     raise_built = true,
   })
-  entities.turret = surface.create_entity({
-    name = "kr-planetary-teleporter-turret",
-    position = { x = position.x, y = position.y + 1.15 },
-    force = "kr-internal-turrets",
-    create_build_effect_smoke = false,
-    raise_built = true,
-  })
-  entities.turret.destructible = false
   for name, entity in pairs(entities) do
     if name ~= "base" then
       entity.destructible = false
@@ -650,16 +666,18 @@ function planetary_teleporter.build(entity, tags)
   -- If revived from a blueprint and it has a name, get it from the tags
   local name = tags and tags.kr_planetary_teleporter_name or nil
   local entities = create_entities(entity)
-  local data = {
-    entities = entities,
-    force = entity.force,
-    name = name,
-    position = entity.position,
-    surface = entity.surface,
-    turret_unit_number = entities.turret.unit_number,
-  }
-  global.planetary_teleporter.data[entity.unit_number] = data
-  update_all_destination_tables()
+  if entities then
+    local data = {
+      entities = entities,
+      force = entity.force,
+      name = name,
+      position = entity.position,
+      surface = entity.surface,
+      turret_unit_number = entities.turret.unit_number,
+    }
+    global.planetary_teleporter.data[entity.unit_number] = data
+    update_all_destination_tables()
+  end
 end
 
 function planetary_teleporter.destroy(entity)

@@ -5,6 +5,7 @@ Date: ????
     - Tesla coil performance is now much worse than before, improving the performance will require additions to the Factorio API
   Bugfixes:
     - Fixed a crash when inserting or removing an energy absorber to/from an equipment grid
+    - Fixed a crash when placing a teleporter near turrets with AAI vehicles enabled
     - Fixed that friendly turrets would fire on tesla coils (#119)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.11
