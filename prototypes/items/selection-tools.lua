@@ -25,10 +25,10 @@ data:extend({
     pictures = {
       { size = 64, filename = kr_icons_path .. "items/creep-collector.png", scale = 0.25, mipmap_count = 4 },
     },
-    flags = { "not-stackable", "spawnable", "only-in-cursor" },
+    flags = { "hidden", "not-stackable", "spawnable", "only-in-cursor" },
     stack_size = 1,
-    subgroup = "terrain",
-    order = "z-[collector-tools]-b[creep-collector]",
+    -- subgroup = "terrain",
+    -- order = "z-[collector-tools]-b[creep-collector]",
     selection_color = { r = 0.50, g = 0, b = 0.35 },
     alt_selection_color = { r = 0.55, g = 0, b = 0.40 },
     selection_mode = {
@@ -52,10 +52,10 @@ data:extend({
     icon = kr_icons_path .. "items/jackhammer.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    flags = { "not-stackable", "spawnable", "only-in-cursor" },
+    flags = { "hidden", "not-stackable", "spawnable", "only-in-cursor" },
     stack_size = 1,
-    subgroup = "terrain",
-    order = "z-[collector-tools]-a[jackhammer]",
+    -- subgroup = "terrain",
+    -- order = "z-[collector-tools]-a[jackhammer]",
     selection_color = { r = 0.55, g = 0.35, b = 0.22 },
     alt_selection_color = { r = 0.55, g = 0.35, b = 0.22 },
     selection_mode = {
