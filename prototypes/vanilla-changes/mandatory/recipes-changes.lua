@@ -348,11 +348,13 @@ krastorio.recipes.replaceIngredient("express-transport-belt", "iron-gear-wheel",
 -- Express underground belt (Red tier 3)
 krastorio.recipes.replaceIngredient("express-underground-belt", "iron-gear-wheel", { "express-transport-belt", 20 })
 krastorio.recipes.removeIngredient("express-underground-belt", "lubricant")
+krastorio.recipes.setCategoryIfExist("express-underground-belt", "crafting")
 
 -- Express splitter (Red tier 3)
 krastorio.recipes.replaceIngredient("express-splitter", "iron-gear-wheel", { "steel-gear-wheel", 4 })
 krastorio.recipes.removeIngredient("express-splitter", "lubricant")
 krastorio.recipes.replaceIngredient("express-splitter", "advanced-circuit", { "electronic-components", 4 })
+krastorio.recipes.setCategoryIfExist("express-splitter", "crafting")
 
 -- Heat pipe
 krastorio.recipes.convertIngredient("heat-pipe", "steel-plate", "quartz")
