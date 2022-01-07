@@ -3,6 +3,7 @@ Version: 1.2.13
 Date: ????
   Bugfixes:
     - Fixed a crash when an energy absorber was invalid (#125)
+    - Fixed a crash when an entity was invalid when generating creep (#126)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.12
 Date: 2022-01-06
