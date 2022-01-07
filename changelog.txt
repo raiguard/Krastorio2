@@ -5,6 +5,7 @@ Date: ????
     - Fixed a crash when an energy absorber was invalid (#125)
     - Fixed a crash when an entity was invalid when generating creep (#126)
     - Fixed several items showing up in selection lists that shouldn't have been (#128)
+    - Fixed that the gas power station would consume non-burnable fluid (#121)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.12
 Date: 2022-01-06

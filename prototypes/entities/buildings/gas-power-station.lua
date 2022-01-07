@@ -102,6 +102,7 @@ data:extend({
     maximum_temperature = 25,
     burns_fluid = true,
     scale_fluid_usage = true,
+    destroy_non_fuel_fluid = false,
     effectivity = 1,
     resistances = {
       { type = "physical", percent = 25 },
