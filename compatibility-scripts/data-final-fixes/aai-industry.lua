@@ -16,6 +16,24 @@ if mods["aai-industry"] then
   krastorio.technologies.convertPrerequisiteFromAllTechnologies("kr-electric-mining-drill", "electric-mining")
   data.raw.technology["kr-electric-mining-drill"] = nil
 
+  -- AAI Industry makes Greenhouse a dependency of these technologies. Disable cost multiplier to avoid manually harvesting
+  -- unreasonable amounts of wood.
+  local tech_multiplier_everywhere = krastorio.general.getSafeSettingValue("kr-tech-multiplier-everywhere")
+  if not tech_multiplier_everywhere then
+    local tech = data.raw.technology["automation-science-pack"]
+    if tech ~= nil then
+      tech.ignore_tech_cost_multiplier = true
+    end
+    tech = data.raw.technology["fuel-processing"]
+    if tech ~= nil then
+      tech.ignore_tech_cost_multiplier = true
+    end
+    tech = data.raw.technology["electricity"]
+    if tech ~= nil then
+      tech.ignore_tech_cost_multiplier = true
+    end
+  end
+
   -- Fuel prerequisite
   if krastorio.general.getSafeSettingValue("aai-fuel-processor") then
     krastorio.technologies.addPrerequisite("kr-fuel", "fuel-processing")

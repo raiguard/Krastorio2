@@ -131,6 +131,8 @@ data:extend({
       },
       time = 45,
     },
+     -- Disable cost multiplier to avoid manually harvesting unreasonable amount of wood.
+    ignore_tech_cost_multiplier = not krastorio.general.getSafeSettingValue("kr-tech-multiplier-everywhere"),
   },
   {
     type = "technology",
@@ -473,6 +475,8 @@ data:extend({
       },
       time = 45,
     },
+     -- Disable cost multiplier to avoid manually harvesting unreasonable amount of Bio matter.
+    ignore_tech_cost_multiplier = not krastorio.general.getSafeSettingValue("kr-tech-multiplier-everywhere"),
   },
   -- Enriched ores, copper and iron
   {
