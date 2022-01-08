@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.14
 Date: ????
+  Compatibility:
+    - [AAI Industry] All Greenhouse tech prerequisites will ignore science cost multiplier
   Bugfixes:
     - Fixed express underground belts and express splitters not being hand-craftable (#108)
 ---------------------------------------------------------------------------------------------------
