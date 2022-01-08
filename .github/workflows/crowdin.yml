@@ -18,7 +18,7 @@ jobs:
       uses: crowdin/github-action@1.1.0
       with:
         upload_sources: true
-        upload_translations: false
+        upload_translations: true
         download_translations: true
         config: '.crowdin.yml'
         pull_request_title: 'Update Crowdin translations'
