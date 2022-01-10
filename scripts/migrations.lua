@@ -224,6 +224,9 @@ migrations.versions = {
       global.tesla_coil.mines[mine_unit_number] = tower_data
     end
   end,
+    ["1.2.15"] = function()
+      -- trigger inserter.find_droplanes() through migrations.generic()
+    end,
 }
 
 return migrations
