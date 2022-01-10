@@ -24,6 +24,7 @@ function inserter.refresh_gui(player)
     anchor = {
       gui = defines.relative_gui_type.inserter_gui,
       position = defines.relative_gui_position.right,
+      names = global.inserter_has_droplane_gui,
     },
     {
       type = "frame",
@@ -80,6 +81,28 @@ end
 function inserter.init()
   global.inserter_guis = {}
   global.temp_inserter_settings = {}
+end
+
+function inserter.find_droplanes()
+  -- Find all compatible inserters
+  local has_droplane_gui = {}
+  for _, entity in pairs(game.get_filtered_entity_prototypes({ { filter = "type", type = "inserter" } })) do
+    if entity.name:sub(-#"-miniloader-inserter") == "-miniloader-inserter" then
+      -- being able to switch drop lanes on these make no sense
+    else
+      has_droplane_gui[entity.name] = true
+    end
+  end
+
+  -- Convert to a format usable by GuiAnchor
+  local output = {}
+  local i = 0
+  for entity in pairs(has_droplane_gui) do
+    i = i + 1
+    output[i] = entity
+  end
+
+  global.inserter_has_droplane_gui = output
 end
 
 function inserter.change_lane(entity)
