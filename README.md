@@ -124,7 +124,7 @@ The following mods have been tested for compatibility:
 
 - **Linver** - Wrote ~80% of the mod's original code
 
-- **raiguard** - Unapologetically rips out and guts the mod's code at his leisure
+- **raiguard** - Current maintainer and fixer-upper.
 
 ### Special Thanks
 
