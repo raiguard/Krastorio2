@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.15
 Date: ????
-  Changes:
+  Bugfixes:
+    - Fixed that the fluid burner util was unintentionally modifying fluid base colors
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.14
 Date: 2022-01-08

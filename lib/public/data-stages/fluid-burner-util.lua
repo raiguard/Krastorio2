@@ -149,14 +149,14 @@ function krastorio.fluid_burner_util.generateBurnFluidsRecipe(fluid_name)
           {
             icon = krastorio.fluid_burner_util.CORNER_PATH_MASK,
             icon_size = krastorio.fluid_burner_util.ICON_SIZE,
-            tint = krastorio.fluid_burner_util.setTransparency(fluid.base_color, 0.9),
+            tint = krastorio.fluid_burner_util.setTransparency(table.deepcopy(fluid.base_color), 0.9),
           },
         },
         crafting_machine_tint = {
           primary = fluid.base_color,
-          secondary = krastorio.fluid_burner_util.setTransparency(fluid.base_color, 0.35),
-          tertiary = krastorio.fluid_burner_util.setTransparency(fluid.flow_color, 0.5),
-          quaternary = krastorio.fluid_burner_util.setTransparency(fluid.flow_color, 0.75),
+          secondary = krastorio.fluid_burner_util.setTransparency(table.deepcopy(fluid.base_color), 0.35),
+          tertiary = krastorio.fluid_burner_util.setTransparency(table.deepcopy(fluid.flow_color), 0.5),
+          quaternary = krastorio.fluid_burner_util.setTransparency(table.deepcopy(fluid.flow_color), 0.75),
         },
         energy_required = 2,
         enabled = false,
