@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.15
 Date: ????
+  Compatibility:
+    - [Miniloader] Removed the drop lane switcher from it's gui
   Bugfixes:
     - Fixed that the fluid burner util was unintentionally modifying fluid base colors
 ---------------------------------------------------------------------------------------------------
