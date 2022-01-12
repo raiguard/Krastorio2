@@ -88,7 +88,7 @@ end
 -- @fluid_name, name of fluid that create the product
 -- @products, the products table for this fluid
 function krastorio.fluid_burner_util.addBurnFluidProduct(fluid_name, products)
-  if products and #products > 1 then
+  if products and #products > 0 then
     krastorio.fluid_burner_util.fluid_products[fluid_name] = products
   end
 end

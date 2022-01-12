@@ -8,6 +8,7 @@ Date: ????
   Bugfixes:
     - Fixed a bunch of locale typos (#140)
     - Fixed a crash when planetary teleporter data didn't exist prior to migration (#133, #135)
+    - Fixed that fluid burner util "addBurnFluidProduct" behavior did not match the documentation (#146)
     - Fixed that the fluid burner util was unintentionally modifying fluid base colors
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.14
