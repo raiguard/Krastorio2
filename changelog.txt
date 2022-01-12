@@ -6,6 +6,7 @@ Date: ????
   Compatibility
     - [Space Shuttle] Added an equipment grid to the Space Shuttle (#134)
   Bugfixes:
+    - Fixed a bunch of locale typos (#140)
     - Fixed that the fluid burner util was unintentionally modifying fluid base colors
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.14
