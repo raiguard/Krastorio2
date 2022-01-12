@@ -129,10 +129,10 @@ migrations.versions = {
 
     -- Planetary teleporter
     global.planetary_teleporter = {
-      data = old_global.planetary_teleporters,
-      guis = old_global.planetary_teleporter_guis,
-      players = old_global.planetary_teleporter_players,
-      unnamed_translations = old_global.planetary_teleporter_unnamed_translations,
+      data = old_global.planetary_teleporters or {},
+      guis = old_global.planetary_teleporter_guis or {},
+      players = old_global.planetary_teleporter_players or {},
+      unnamed_translations = old_global.planetary_teleporter_unnamed_translations or {},
     }
 
     -- Radioactivity

@@ -7,6 +7,7 @@ Date: ????
     - [Space Shuttle] Added an equipment grid to the Space Shuttle (#134)
   Bugfixes:
     - Fixed a bunch of locale typos (#140)
+    - Fixed a crash when planetary teleporter data didn't exist prior to migration (#133, #135)
     - Fixed that the fluid burner util was unintentionally modifying fluid base colors
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.14
