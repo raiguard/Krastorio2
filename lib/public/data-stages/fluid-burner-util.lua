@@ -126,7 +126,7 @@ function krastorio.fluid_burner_util.generateBurnFluidsRecipe(fluid_name)
     local tech = krastorio.technologies.getTechnologyThatUnlockRecipe("kr-fluid-burner")
     local tech_name = tech and tech.name or nil
     local accepted = false
-    if not krastorio.fluid_burner_util.blacklist[fluid_name] then
+    if not krastorio.fluid_burner_util.blacklist[fluid_name] and not data.raw.fluid[fluid_name].hidden then
       accepted = true
     end -- blacklist
 
