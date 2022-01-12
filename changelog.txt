@@ -1,6 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.15
 Date: ????
+  Changes:
+    - Flare stack no longer burns hidden fluids (#145)
+  Compatibility
+    - [Space Shuttle] Added an equipment grid to the Space Shuttle (#134)
   Bugfixes:
     - Fixed that the fluid burner util was unintentionally modifying fluid base colors
 ---------------------------------------------------------------------------------------------------
