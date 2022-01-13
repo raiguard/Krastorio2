@@ -81,3 +81,15 @@ for _, type in pairs(types_have_grid) do
     ::continue::
   end
 end
+-- Make trains targetable by tesla coils
+local types_are_military = {
+  "locomotive",
+  "cargo-wagon",
+  "fluid-wagon",
+  "artillery-wagon",
+}
+for _, type in pairs(types_are_military) do
+  for _, prototype in pairs(data.raw[type]) do
+    prototype.is_military_target = true
+  end
+end
