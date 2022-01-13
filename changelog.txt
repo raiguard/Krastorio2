@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.15
 Date: ????
+  Features:
+    - Re-added advanced loader snapping - the loader will auto-correct if you place it backwards
   Changes:
     - Flare stack no longer burns hidden fluids (#145)
   Compatibility
