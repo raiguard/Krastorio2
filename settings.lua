@@ -143,13 +143,6 @@ data:extend({
     order = "u01",
   },
   {
-    type = "bool-setting",
-    name = "kr-re-enable-menu-simulations",
-    setting_type = "startup",
-    default_value = true,
-    order = "u02",
-  },
-  {
     type = "string-setting",
     name = "kr-main-menu-background",
     setting_type = "startup",

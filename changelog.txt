@@ -3,6 +3,7 @@ Version: 1.2.15
 Date: ????
   Changes:
     - Flare stack no longer burns hidden fluids (#145)
+    - Removed the option to disable menu simulations - use the option in the game's graphics settings instead (#149)
   Compatibility
     - [Miniloader] Removed the inserter drop lane switcher (#142)
     - [Space Shuttle] Added an equipment grid to the Space Shuttle (#134)
