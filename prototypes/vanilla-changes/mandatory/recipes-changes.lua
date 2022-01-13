@@ -43,7 +43,7 @@ krastorio.recipes.setCategoryIfExist("rocket-fuel", "fuel-refinery")
 krastorio.recipes.addOrReplaceIngredient(
   "rocket-fuel",
   "light-oil",
-  { type = "fluid", name = "light-oil", amount = 30, catalyst_amount = 30 }
+  { type = "fluid", name = "light-oil", amount = 30 }
 )
 krastorio.recipes.replaceIngredient("rocket-fuel", "solid-fuel", { "iron-plate", 1 })
 krastorio.recipes.addIngredient("rocket-fuel", { type = "fluid", name = "oxygen", amount = 50 })
