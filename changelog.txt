@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.15
-Date: ????
+Date: 2022-01-13
   Changes:
     - Flare stack no longer burns hidden fluids (#145)
     - Removed the option to disable menu simulations - use the option in the game's graphics settings instead (#149)
