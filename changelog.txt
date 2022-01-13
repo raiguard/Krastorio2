@@ -4,8 +4,8 @@ Date: ????
   Changes:
     - Flare stack no longer burns hidden fluids (#145)
   Compatibility
+    - [Miniloader] Removed the inserter drop lane switcher (#142)
     - [Space Shuttle] Added an equipment grid to the Space Shuttle (#134)
-    - [Miniloader] Removed the drop lane switcher from it's gui (#142)
   Bugfixes:
     - Fixed a bunch of locale typos (#140)
     - Fixed a crash when planetary teleporter data didn't exist prior to migration (#133, #135)
