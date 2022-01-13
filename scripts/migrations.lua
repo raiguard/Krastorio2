@@ -26,6 +26,7 @@ function migrations.generic()
   intergalactic_transceiver.get_max_energy()
   radioactivity.refresh_players()
   radioactivity.reset_entities_items()
+  inserter.find_droplanes()
   roboport.find_variants()
   tesla_coil.get_absorber_buffer_capacity()
 
