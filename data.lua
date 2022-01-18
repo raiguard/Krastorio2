@@ -62,6 +62,8 @@ require(kr_others_prototypes_path .. "virtual-signals-initialization")
 require(kr_others_prototypes_path .. "key-bind-initialization")
 -- -- Adding new shortcuts
 require(kr_others_prototypes_path .. "shortcut")
+-- -- Map generation presets
+require(kr_others_prototypes_path .. "map-gen-presets")
 ---------------------------------------------------------------------------
 -- -- -- OPTIONAL CONTENTS INITIALIZATION (data stage)
 ---------------------------------------------------------------------------

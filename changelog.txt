@@ -4,6 +4,8 @@ Date: ????
   Features:
     - Added an option to make it possible to re-enable the vanilla menu simulations (#149)
     - Re-added advanced loader snapping - the loader will auto-correct if you place it backwards
+  Bugfixes:
+    - Fixed that K2 resource would not change when adjusting map gen presets (#160)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.15
 Date: 2022-01-13
