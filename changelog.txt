@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.16
-Date: ????
+Date: 2022-01-18
   Features:
     - Added an option to make it possible to re-enable the vanilla menu simulations (#149)
     - Re-added advanced loader snapping - the loader will auto-correct if you place it backwards
