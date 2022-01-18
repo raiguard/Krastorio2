@@ -110,7 +110,7 @@ event.register({
   elseif entity_name == "offshore-pump" then
     offshore_pump.build(entity)
   elseif constants.loader_names[entity_name] then
-    loader_snapping.snap(entity)
+    loader_snapping.snap_to_container(entity)
   elseif constants.transport_belt_connectable_types[entity_type] then
     loader_snapping.snap_belt_neighbours(entity)
   end

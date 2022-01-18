@@ -2,7 +2,59 @@ local constants = require("scripts.constants")
 
 local loader_snapping = {}
 
--- Checks for any K2 loaders around the belt entity, then snaps any it finds
+--- Checks to see if the loader was placed backwards against a container
+--- @param entity LuaEntity
+function loader_snapping.snap_to_container(entity)
+  for i = 1, 2 do
+    local container = entity.loader_container
+    if container and i == 2 then
+      entity.loader_type = "input"
+    elseif not container then
+      local dir = entity.direction
+      local force = entity.force
+      local loader_type = entity.loader_type
+      local name = entity.name
+      local position = entity.position
+      local surface = entity.surface
+      entity.destroy()
+      entity = surface.create_entity({
+        name = name,
+        direction = dir,
+        force = force,
+        position = position,
+      })
+      entity.loader_type = loader_type
+      entity.update_connections()
+    end
+  end
+  loader_snapping.snap_direction(entity)
+end
+
+--- Snaps the loader to the transport-belt-connectable entity that it's facing
+--- If `target` is supplied, it will check against that entity, and will not snap if it cannot connect to it
+--- @param entity LuaEntity
+--- @param target? LuaEntity
+function loader_snapping.snap_direction(entity, target)
+  if not entity or not entity.valid then
+    return
+  end
+
+  -- Check for a connected belt, then flip and try again, then flip back if failed
+  for _ = 1, 2 do
+    local loader_type = entity.loader_type
+
+    local connection = entity.belt_neighbours[loader_type .. "s"][1]
+    if connection and (not target or connection.unit_number == target.unit_number) then
+      break
+    else
+      -- Flip the direction
+      entity.rotate()
+    end
+  end
+end
+
+--- Checks for any K2 loaders around the belt entity, then snaps any it finds
+--- @param entity LuaEntity
 function loader_snapping.snap_belt_neighbours(entity)
   local loaders = {}
 
@@ -18,28 +70,7 @@ function loader_snapping.snap_belt_neighbours(entity)
   end
 
   for _, loader in pairs(loaders) do
-    loader_snapping.snap(loader, entity)
-  end
-end
-
--- Snaps the loader to the transport-belt-connectable entity that it's facing
--- If `target` is supplied, it will check against that entity, and will not snap if it cannot connect to it
-function loader_snapping.snap(entity, target)
-  if not entity or not entity.valid then
-    return
-  end
-
-  -- Check for a connected belt, then flip and try again, then flip back if failed
-  for _ = 1, 2 do
-    local loader_type = entity.loader_type
-
-    local connection = entity.belt_neighbours[loader_type .. "s"][1]
-    if connection and (not target or connection.unit_number == target.unit_number) then
-      break
-    else
-      -- Flip the direction
-      entity.loader_type = loader_type == "output" and "input" or "output"
-    end
+    loader_snapping.snap_direction(loader, entity)
   end
 end
 
