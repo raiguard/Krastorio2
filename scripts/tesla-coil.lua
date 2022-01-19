@@ -9,7 +9,7 @@ function tesla_coil.init()
     --- @type table<number, BeamData>
     beams = {},
     --- @type table<number, TowerData>
-    mines = {},
+    turrets = {},
     --- @type table<number, TowerData>
     towers = {},
     --- @type table<number, TargetData>
@@ -40,20 +40,21 @@ function tesla_coil.build(source_entity)
         create_build_effect_smoke = false,
         raise_built = true,
       }),
-      mine = surface.create_entity({
-        name = "kr-tesla-coil-land-mine",
+      tower = source_entity,
+      turret = surface.create_entity({
+        name = "kr-tesla-coil-turret",
         position = source_entity.position,
-        force = source_entity.force,
+        force = game.forces["kr-internal-turrets"],
         create_build_effect_smoke = false,
         raise_built = true,
       }),
-      tower = source_entity,
     },
     tower_unit_number = unit_number,
   }
-  data.mine_unit_number = data.entities.mine.unit_number
+  data.entities.turret.destructible = false
+  data.turret_unit_number = data.entities.turret.unit_number
 
-  global.tesla_coil.mines[data.mine_unit_number] = data
+  global.tesla_coil.turrets[data.turret_unit_number] = data
   global.tesla_coil.towers[unit_number] = data
 end
 
@@ -63,7 +64,7 @@ function tesla_coil.destroy(entity)
   local unit_number = entity.unit_number
   local tower_data = global.tesla_coil.towers[unit_number]
   if tower_data then
-    global.tesla_coil.mines[tower_data.mine_unit_number] = nil
+    global.tesla_coil.turrets[tower_data.turret_unit_number] = nil
     global.tesla_coil.towers[unit_number] = nil
 
     for _, entity in pairs(tower_data.entities) do
@@ -262,7 +263,7 @@ end
 --- @param target LuaEntity
 --- @param land_mine LuaEntity
 function tesla_coil.process_explosion(target, land_mine)
-  local tower_data = global.tesla_coil.mines[land_mine.unit_number]
+  local tower_data = global.tesla_coil.turrets[land_mine.unit_number]
   if not tower_data then
     return
   end
