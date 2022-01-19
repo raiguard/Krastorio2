@@ -159,14 +159,11 @@ migrations.versions = {
       tesla_coil.build(tower)
     end
   end,
-  ["1.2.11"] = function()
+  ["1.2.17"] = function()
     -- If we migrated from pre-1.2.0, we don't need to do this
-    if global.tesla_coil.beams then
+    if global.tesla_coil.beams and global.tesla_coil.turrets then
       return
     end
-
-    -- Temporarily add this table so the beam destroyed logic doesn't crash
-    global.tesla_coil.beams = {}
 
     -- Destroy all extra entities
     local towers = {}
@@ -192,36 +189,6 @@ migrations.versions = {
 
     for _, tower in pairs(towers) do
       tesla_coil.build(tower)
-    end
-  end,
-  ["1.2.12"] = function()
-    -- If we migrated from pre-1.2.11, we don't need to do this
-    if global.tesla_coil.mines then
-      return
-    end
-
-    global.tesla_coil.mines = {}
-
-    -- Add mines to all tesla coiles
-    -- The triggers will already be gone at this point, since the prototype is gone
-    for _, tower_data in pairs(global.tesla_coil.towers) do
-      tower_data.tower_unit_number = tower_data.unit_number
-      tower_data.unit_number = nil
-      tower_data.entities.trigger = nil
-
-      local tower = tower_data.entities.tower
-      tower_data.entities.mine = tower.surface.create_entity({
-        name = "kr-tesla-coil-land-mine",
-        position = tower.position,
-        force = tower.force,
-        create_build_effect_smoke = false,
-        raise_built = true,
-      })
-
-      local mine_unit_number = tower_data.entities.mine.unit_number
-      tower_data.mine_unit_number = mine_unit_number
-
-      global.tesla_coil.mines[mine_unit_number] = tower_data
     end
   end,
 }

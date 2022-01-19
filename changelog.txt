@@ -2,6 +2,8 @@
 Version: 1.2.17
 Date: ????
   Changes:
+    - Tesla coils are now turrets once again
+      - The new Factorio version introduced capabilities to fix the UPS, friendly fire, and train issues
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.16
 Date: 2022-01-18
