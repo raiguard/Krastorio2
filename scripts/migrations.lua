@@ -167,7 +167,7 @@ migrations.versions = {
 
     -- Destroy all extra entities
     local towers = {}
-    for _, tower_data in pairs(global.tesla_coil.by_tower) do
+    for _, tower_data in pairs(global.tesla_coil.by_tower or global.tesla_coil.towers) do
       table.insert(towers, tower_data.entities.tower)
       for name, entity in pairs(tower_data.entities) do
         if name ~= "tower" and entity.valid then
@@ -175,11 +175,19 @@ migrations.versions = {
         end
       end
 
-      for _, target_data in pairs(tower_data.targets.by_beam) do
-        local beam = target_data.beam
-        if beam and beam.valid then
-          target_data.beam.destroy()
+      if tower_data.targets and tower_data.targets.by_beam then
+        for _, target_data in pairs(tower_data.targets.by_beam) do
+          local beam = target_data.beam
+          if beam and beam.valid then
+            target_data.beam.destroy()
+          end
         end
+      end
+    end
+
+    for _, beam_data in pairs(global.tesla_coil.beams or {}) do
+      if beam_data.beam and beam_data.beam.valid then
+        beam_data.beam.destroy()
       end
     end
 
