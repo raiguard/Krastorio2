@@ -261,9 +261,9 @@ function tesla_coil.remove_connection(target_data, tower_data)
 end
 
 --- @param target LuaEntity
---- @param land_mine LuaEntity
-function tesla_coil.process_explosion(target, land_mine)
-  local tower_data = global.tesla_coil.turrets[land_mine.unit_number]
+--- @param turret LuaEntity
+function tesla_coil.process_turret_fire(target, turret)
+  local tower_data = global.tesla_coil.turrets[turret.unit_number]
   if not tower_data then
     return
   end
