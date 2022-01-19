@@ -6,6 +6,8 @@ Date: ????
     - Requires Factorio 1.1.52
     - Tesla coils are now turrets once again
       - The new Factorio version introduced capabilities to fix the UPS, friendly fire, and train issues
+  Bugfixes:
+    - Fixed loaders not retaining their filters when blueprinting
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.16
 Date: 2022-01-18

@@ -5,6 +5,12 @@ local loader_snapping = {}
 --- Checks to see if the loader was placed backwards against a container
 --- @param entity LuaEntity
 function loader_snapping.snap_to_container(entity)
+  -- Save loader filters
+  local filters = {}
+  local filter_count = entity.filter_slot_count
+  for i = 1, filter_count do
+    filters[i] = entity.get_filter(i)
+  end
   for i = 1, 2 do
     local container = entity.loader_container
     if container and i == 2 then
@@ -24,6 +30,10 @@ function loader_snapping.snap_to_container(entity)
         position = position,
       })
       entity.loader_type = loader_type
+      -- Sync filters
+      for j, filter in pairs(filters) do
+        entity.set_filter(j, filter)
+      end
       entity.update_connections()
     end
   end
