@@ -1,7 +1,7 @@
 -- -- -- Sorting changes to vanilla items
 
 -- Logistic chests
-if mods["aai-containers"] then
+if not mods["aai-containers"] then
   local logistic_subgroup_1 = "kr-logistics-1"
   data.raw.item["logistic-chest-active-provider"].subgroup = logistic_subgroup_1
   data.raw.item["logistic-chest-active-provider"].order = "a[chest-active-provider]"
