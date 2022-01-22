@@ -114,9 +114,10 @@ krastorio.recipes.replaceProduct("iron-gear-wheel", "iron-gear-wheel", { "iron-g
 krastorio.recipes.convertIngredient("engine-unit", "steel-plate", "iron-plate")
 
 -- Bricks
-if krastorio.recipes.exist("stone-brick") then
-  data.raw.recipe["stone-brick"].subgroup = "raw-material"
-end
+-- But why?
+-- if krastorio.recipes.exist("stone-brick") then
+--   data.raw.recipe["stone-brick"].subgroup = "raw-material"
+-- end
 krastorio.recipes.replaceIngredient("refined-concrete", "steel-plate", { "iron-beam", 5 })
 krastorio.recipes.removeIngredient("refined-concrete", "iron-stick")
 

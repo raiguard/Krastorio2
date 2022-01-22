@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.18
 Date: ????
+  Changes:
+    - Moved stone bricks back to the terrain subgroup (logistics tab) (#162)
   Compatibility:
     - [AAI Containers] Updated ordering of logistic chests to match the other containers (#168)
   Bugfixes:
