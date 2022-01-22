@@ -15,21 +15,22 @@ function freeplay.add_bonus_items()
 end
 
 function freeplay.add_starting_items()
-  local items = remote.call("freeplay", "get_created_items")
+  if remote.interfaces["freeplay"] then
+    local items = remote.call("freeplay", "get_created_items")
 
-  -- Shelter
-  items["kr-shelter"] = 1
+    -- Shelter
+    items["kr-shelter"] = 1
 
-  -- Electric poles
-  if
-    (game.active_mods["IndustrialRevolution"] or game.active_mods["aai-industry"])
-    and game.item_prototypes["medium-electric-pole"]
-    and remote.interfaces["freeplay"]
-  then
-    items["medium-electric-pole"] = 10
+    -- Electric poles
+    if
+      (game.active_mods["IndustrialRevolution"] or game.active_mods["aai-industry"])
+      and game.item_prototypes["medium-electric-pole"]
+    then
+      items["medium-electric-pole"] = 10
+    end
+
+    remote.call("freeplay", "set_created_items", items)
   end
-
-  remote.call("freeplay", "set_created_items", items)
 end
 
 function freeplay.add_to_crash_site()
