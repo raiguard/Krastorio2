@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.18
 Date: ????
+  Compatibility:
+    - [AAI Containers] Updated ordering of logistic chests to match the other containers (#168)
   Bugfixes:
     - Fixed a crash when the tesla coil beam isn't created for some reason
 ---------------------------------------------------------------------------------------------------
