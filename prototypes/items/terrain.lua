@@ -13,6 +13,7 @@ data:extend({
     icon = kr_items_with_variations_icons_path .. "biomass/biomass.png",
     icon_size = 64,
     icon_mipmaps = 4,
+    flags = { "hidden" },
     pictures = {
       {
         size = 64,
