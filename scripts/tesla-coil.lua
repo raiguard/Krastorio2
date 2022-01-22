@@ -30,6 +30,20 @@ function tesla_coil.build(source_entity)
   local surface = source_entity.surface
   local unit_number = source_entity.unit_number
 
+  local turret = surface.create_entity({
+    name = "kr-tesla-coil-turret",
+    position = source_entity.position,
+    force = game.forces["kr-internal-turrets"],
+    create_build_effect_smoke = false,
+    raise_built = true,
+  })
+  if not turret or not turret.valid then
+    game.print("Building tesla failed due to AAI Programmable Vehicles. This tesla coil will not function.")
+    source_entity.active = false
+    return
+  end
+  turret.destructible = false
+
   --- @class TowerData
   local data = {
     entities = {
@@ -41,18 +55,11 @@ function tesla_coil.build(source_entity)
         raise_built = true,
       }),
       tower = source_entity,
-      turret = surface.create_entity({
-        name = "kr-tesla-coil-turret",
-        position = source_entity.position,
-        force = game.forces["kr-internal-turrets"],
-        create_build_effect_smoke = false,
-        raise_built = true,
-      }),
+      turret = turret,
     },
     tower_unit_number = unit_number,
+    turret_unit_number = turret.unit_number,
   }
-  data.entities.turret.destructible = false
-  data.turret_unit_number = data.entities.turret.unit_number
 
   global.tesla_coil.turrets[data.turret_unit_number] = data
   global.tesla_coil.towers[unit_number] = data
