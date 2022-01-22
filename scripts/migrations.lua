@@ -168,7 +168,11 @@ migrations.versions = {
     -- Destroy all extra entities
     local towers = {}
     for _, tower_data in pairs(global.tesla_coil.by_tower or global.tesla_coil.towers) do
-      table.insert(towers, tower_data.entities.tower)
+      local tower = tower_data.entities.tower
+      if tower and tower.valid then
+        table.insert(towers, tower)
+      end
+
       for name, entity in pairs(tower_data.entities) do
         if name ~= "tower" and entity.valid then
           entity.destroy()
