@@ -2,6 +2,7 @@
 Version: 1.2.20
 Date: ????
   Changes:
+    - Removed defunct setting for the K2 MiniWiki
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.19
 Date: 2022-01-22
