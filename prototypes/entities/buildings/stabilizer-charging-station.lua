@@ -133,7 +133,7 @@ data:extend({
     source_inventory_size = 1,
     module_specification = { module_slots = 2 },
     allowed_effects = { "consumption", "speed", "pollution" },
-    open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
-    close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
   },
 })

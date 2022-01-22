@@ -72,8 +72,8 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
       circuit_wire_connection_point = circuit_connector_definitions["kr-big-container"].points,
       circuit_connector_sprites = circuit_connector_definitions["kr-big-container"].sprites,
       circuit_wire_max_distance = 20,
-      open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
-      close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
+      open_sound = sounds.machine_open,
+      close_sound = sounds.machine_close,
     },
   })
 end

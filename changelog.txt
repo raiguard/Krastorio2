@@ -9,6 +9,7 @@ Date: ????
     - Fixed a crash in tesla coil migrations when the tower entity is invalid (#144)
     - Fixed a crash when the tesla coil beam isn't created for some reason
     - Fixed a crash when the tesla coil turret is not built properly (#167)
+    - Fixed volume of machine open sounds compared to other entities (#171)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.17
 Date: 2022-01-19

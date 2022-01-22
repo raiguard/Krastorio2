@@ -243,7 +243,7 @@ data:extend({
     ingredient_count = 6,
     module_specification = { module_slots = 4, module_info_icon_shift = { 0, 1.8 }, module_info_icon_scale = 0.6 },
     allowed_effects = { "consumption", "productivity", "speed", "pollution" },
-    open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
-    close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
   },
 })

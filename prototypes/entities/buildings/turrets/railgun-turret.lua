@@ -1,4 +1,5 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
+local sounds = require("__base__/prototypes/entity/sounds")
 
 function cannon_turret_attack_sheet(inputs)
   return {
@@ -341,8 +342,8 @@ data:extend({
       orientation_to_variation = false,
     },
 
-    open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
-    close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
     call_for_help_radius = 80,
   },
 })

@@ -273,8 +273,8 @@ data:extend({
     default_total_logistic_output_signal = { type = "virtual", name = "signal-Y" },
     default_available_construction_output_signal = { type = "virtual", name = "signal-Z" },
     default_total_construction_output_signal = { type = "virtual", name = "signal-T" },
-    open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.6 },
-    close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.6 },
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
   },
 })
 

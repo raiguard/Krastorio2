@@ -1,4 +1,5 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
+local sounds = require("__base__/prototypes/entity/sounds")
 
 function laser_artillery_turret_sheet(inputs)
   return {
@@ -252,8 +253,8 @@ data:extend({
 
     shoot_in_prepare_state = false,
     turret_base_has_direction = true,
-    open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.75 },
-    close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
     call_for_help_radius = 110,
   },
 })
