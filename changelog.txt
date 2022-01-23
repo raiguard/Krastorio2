@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.20
-Date: ????
+Date: 2022-01-23
   Features:
     - Added /kr-enable-nauvis-creep and /kr-disable-nauvis-creep commands
   Changes:
