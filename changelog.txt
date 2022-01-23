@@ -3,6 +3,8 @@ Version: 1.2.20
 Date: ????
   Changes:
     - Removed defunct setting for the K2 MiniWiki
+  Bugfixes:
+    - Fixed a crash when a target has data but is invalid, and added a migration to remove invalid target data (#182)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.19
 Date: 2022-01-22

@@ -284,6 +284,10 @@ function tesla_coil.process_turret_fire(target, turret)
   end
 
   if target_data then
+    -- Just in case (#182)
+    if not target_data.entity.valid then
+      target_data.entity = target
+    end
     local connection = target_data.connections.by_tower[tower_data.tower_unit_number]
     if connection or tesla_coil.add_connection(target_data, tower_data) then
       tesla_coil.update_connection(target_data, tower_data)

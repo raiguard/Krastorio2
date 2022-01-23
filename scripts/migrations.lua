@@ -1,4 +1,5 @@
 local on_tick_n = require("__flib__.on-tick-n")
+local table = require("__flib__.table")
 
 local compatibility = require("scripts.compatibility")
 local creep = require("scripts.creep")
@@ -202,6 +203,13 @@ migrations.versions = {
     for _, tower in pairs(towers) do
       tesla_coil.build(tower)
     end
+  end,
+  ["1.2.20"] = function()
+    global.tesla_coil.targets = table.map(global.tesla_coil.targets, function(target_data)
+      if target_data.entity and target_data.entity.valid then
+        return target_data
+      end
+    end)
   end,
 }
 
