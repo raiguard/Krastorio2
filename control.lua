@@ -24,6 +24,7 @@ local virus = require("scripts.virus")
 
 -- COMMANDS
 
+util.add_commands(creep.commands)
 util.add_commands(patreon.commands)
 util.add_commands(radioactivity.commands)
 

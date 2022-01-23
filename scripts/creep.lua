@@ -54,6 +54,17 @@ function creep.on_chunk_generated(chunk_area, surface)
   end
 end
 
+creep.commands = {
+  ["kr-enable-nauvis-creep"] = function()
+    global.creep.surfaces[game.surfaces.nauvis.index] = true
+    game.print({ "message.kr-nauvis-creep-enabled" })
+  end,
+  ["kr-disable-nauvis-creep"] = function()
+    global.creep.surfaces[game.surfaces.nauvis.index] = nil
+    game.print({ "message.kr-nauvis-creep-disabled" })
+  end,
+}
+
 creep.remote_interface = {
   set_creep_on_chunk_generated = function(value)
     if not global.creep then
