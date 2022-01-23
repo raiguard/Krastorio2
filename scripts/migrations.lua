@@ -205,11 +205,26 @@ migrations.versions = {
     end
   end,
   ["1.2.20"] = function()
+    -- Remove invalid entity references
     global.tesla_coil.targets = table.map(global.tesla_coil.targets, function(target_data)
       if target_data.entity and target_data.entity.valid then
         return target_data
       end
     end)
+
+    -- Clean up any remaining MiniWiki buttons
+    for _, player in pairs(game.players) do
+      local frame = player.gui.top.mod_gui_top_frame --- @diagnostic disable-line
+      if frame then
+        local frame = frame.mod_gui_inner_frame
+        if frame then
+          local button = frame["kr-wiki-toggle-wiki"]
+          if button then
+            button.destroy()
+          end
+        end
+      end
+    end
   end,
 }
 

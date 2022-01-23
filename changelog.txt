@@ -5,6 +5,7 @@ Date: ????
     - Added /kr-enable-nauvis-creep and /kr-disable-nauvis-creep commands
   Changes:
     - Removed defunct setting for the K2 MiniWiki
+    - The K2 MiniWiki button will be removed if it still exists
   Bugfixes:
     - Fixed a crash when a target has data but is invalid, and added a migration to remove invalid target data (#182)
 ---------------------------------------------------------------------------------------------------
