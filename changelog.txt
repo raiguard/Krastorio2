@@ -2,6 +2,7 @@
 Version: 1.2.21
 Date: ????
   Changes:
+    - K2 resources now properly follow map gen preset, if used
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.20
 Date: 2022-01-23
