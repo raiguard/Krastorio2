@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.21
 Date: ????
-  Changes:
+  Bugfixes:
+    - [Miniloader] Fixed the yellow miniloader still having a drop lane switcher
     - K2 resources now properly follow map gen preset, if used
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.20

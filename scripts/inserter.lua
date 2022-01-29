@@ -87,7 +87,7 @@ function inserter.find_droplanes()
   -- Find all compatible inserters
   local has_droplane_gui = {}
   for _, entity in pairs(game.get_filtered_entity_prototypes({ { filter = "type", type = "inserter" } })) do
-    if not string.find(entity.name, "%-miniloader%-inserter") then
+    if not string.find(entity.name, "%-?miniloader%-inserter") then
       has_droplane_gui[entity.name] = true
     end
   end
