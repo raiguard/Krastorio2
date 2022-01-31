@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: "
-        Please make sure to [search issues](https://github.com/raiguard/kakoune/issues?q=is%3Aissue) before creating a new one, to avoid duplicates and centralize conversations. If you wish to ask a question or provide general feedback, please use the [discussions](https://github.com/raiguard/krastorio-2/discussions) tab.
+        Please make sure to [search issues](https://github.com/raiguard/krastorio-2/issues?q=is%3Aissue) before creating a new one, to avoid duplicates and centralize conversations. If you wish to ask a question or provide general feedback, please use the [discussions](https://github.com/raiguard/krastorio-2/discussions) tab.
 
         Please replicate the issue on the **latest version** of the mod. Check the mod portal for updates before filing your issue.
 
