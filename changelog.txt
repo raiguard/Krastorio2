@@ -8,6 +8,7 @@ Date: ????
   Bugfixes:
     - Fixed loaders not being included in the undo history
     - Fixed loaders not retaining filters when upgraded (#197)
+    - [Industrial Revolution 2] Fixed a crash when disabling "more realistic weapons"
     - [Miniloader] Fixed the yellow miniloader still having a drop lane switcher
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.20

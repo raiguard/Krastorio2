@@ -545,6 +545,7 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
   }
 
   -- Piercing rounds magazine
+  data.raw["ammo"]["piercing-rounds-magazine"].ammo_type.action.type = "direct"
   data.raw["ammo"]["piercing-rounds-magazine"].ammo_type.action.action_delivery = {
     type = "instant",
     source_effects = {
@@ -566,6 +567,7 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
   }
 
   -- Uranium rounds magazine
+  data.raw["ammo"]["uranium-rounds-magazine"].ammo_type.action.type = "direct"
   data.raw["ammo"]["uranium-rounds-magazine"].ammo_type.action.action_delivery = {
     type = "instant",
     source_effects = {
