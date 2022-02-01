@@ -524,7 +524,10 @@ function krastorio.technologies.update_ammo_effects(tech, effects)
     for _, effect in pairs(tech.effects) do
       if
         effect.type == updated_effect.type
-        and (effect.ammo_category == updated_effect.ammo_category or effect.turret_id == updated_effect.turret_id)
+        and (
+          effect.ammo_category == updated_effect.ammo_category
+          or (effect.turret_id ~= nil and effect.turret_id == updated_effect.turret_id)
+        )
       then
         effect.modifier = updated_effect.modifier
         exists = true

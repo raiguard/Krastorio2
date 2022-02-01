@@ -9,6 +9,7 @@ Date: ????
   Bugfixes:
     - Fixed loaders not being included in the undo history
     - Fixed loaders not retaining filters when upgraded (#197)
+    - Fixed physical projectile damage 1-10 not affecting artillery shells (regression) (#186)
     - [Industrial Revolution 2] Fixed a crash when disabling "more realistic weapons"
     - [Miniloader] Fixed the yellow miniloader still having a drop lane switcher
 ---------------------------------------------------------------------------------------------------
