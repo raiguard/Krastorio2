@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.21
 Date: ????
+  Changes:
+    - Tesla coils will no longer flicker when the target is full (#198)
   Compatibility:
     - K2 resources now follow modded map generation presets (#193)
   Bugfixes:

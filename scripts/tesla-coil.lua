@@ -155,6 +155,8 @@ function tesla_coil.add_target(target, tower_data)
         by_tower = {},
       },
       entity = target,
+      --- @type number?
+      full_tick = nil,
       grid_data = grid_data,
       unit_number = target_unit_number,
     }
@@ -239,12 +241,14 @@ function tesla_coil.update_connection(target_data, tower_data)
 
     if result > capacity then
       absorber.energy = capacity
+      target_data.full_tick = game.tick
     else
       absorber.energy = result
+      target_data.full_tick = nil
     end
 
     tower.energy = tower.energy - (to_add * constants.tesla_coil.loss_multiplier)
-  else
+  elseif target_data.full_tick and target_data.full_tick + constants.tesla_coil.cooldown <= game.tick then
     tesla_coil.remove_connection(target_data, tower_data)
   end
 end
