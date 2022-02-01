@@ -93,3 +93,6 @@ for _, type in pairs(types_are_military) do
     prototype.is_military_target = true
   end
 end
+
+-- Map generation presets
+require(kr_others_prototypes_path .. "map-gen-preset-updates")
