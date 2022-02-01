@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.21
 Date: ????
+  Compatibility:
+    - K2 resources now follow modded map generation presets (#193)
   Bugfixes:
     - Fixed loaders not being included in the undo history
     - Fixed loaders not retaining filters when upgraded (#197)
     - [Miniloader] Fixed the yellow miniloader still having a drop lane switcher
-    - K2 resources now properly follow map gen preset, if used
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.20
 Date: 2022-01-23
