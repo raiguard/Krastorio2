@@ -2,6 +2,8 @@
 Version: 1.2.21
 Date: ????
   Bugfixes:
+    - Fixed loaders not being included in the undo history
+    - Fixed loaders not retaining filters when upgraded (#197)
     - [Miniloader] Fixed the yellow miniloader still having a drop lane switcher
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.20
