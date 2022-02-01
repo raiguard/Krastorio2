@@ -2066,7 +2066,7 @@ function krastorio.recipes.findNotUnlockableRecipes()
     krastorio_utils.log.write(
       3,
       string.format(
-        "This recipes are not unlockable, maybe is an error: %s [from findNotUnlockableRecipes()]",
+        "These recipes are not unlockable, maybe this is an error: %s [from findNotUnlockableRecipes()]",
         inspect(not_unlockable_recipe_names)
       )
     )
