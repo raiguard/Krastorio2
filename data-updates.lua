@@ -22,6 +22,7 @@ matter_util.createStandardKrastorioMatterRecipes()
 -- -- -- COMPATIBILITY INITIALIZATION (data update stage)
 ---------------------------------------------------------------------------
 local scripts_path = "compatibility-scripts/data-updates/"
+require(scripts_path .. "angelsaddons-mobility")
 require(scripts_path .. "angelsaddons-smeltingtrain")
 require(scripts_path .. "Construction_Drones")
 require(scripts_path .. "Flow_Control")

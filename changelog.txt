@@ -4,6 +4,7 @@ Date: ????
   Changes:
     - Tesla coils will no longer flicker when the target is full (#198)
   Compatibility:
+    - [Angel's Addons - Mass Transit] Made additional electric engines compatible with locomotives from this mod (#188)
     - K2 resources now follow modded map generation presets (#193)
   Bugfixes:
     - Fixed loaders not being included in the undo history
