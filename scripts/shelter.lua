@@ -23,9 +23,24 @@ function shelter.build(entity)
   local force_shelters = global.shelter.forces[force.index]
 
   if force_shelters[surface.index] then
-    global.shelter.inactive[entity.unit_number] = entity
-    entity.active = false
-    entity.operable = false
+    local name = entity.name:gsub("kr%-", "kr-inactive-"):gsub("%-container", "")
+    local position = entity.position
+    local force = entity.force
+    local player = entity.last_user
+    local surface = entity.surface
+    entity.destroy()
+
+    local new_entity = surface.create_entity({
+      name = name,
+      position = position,
+      force = force,
+      player = player,
+      create_build_effect_smoke = false,
+      raise_built = true,
+    })
+    if new_entity and new_entity.valid then
+      global.shelter.inactive[new_entity.unit_number] = new_entity
+    end
   else
     -- Build entities
     local _, _, base_name = string.find(entity.name, "^(.*)%-container")
