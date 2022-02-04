@@ -146,9 +146,11 @@ migrations.versions = {
     global.radioactivity.enabled = old_enabled
 
     -- Shelter
-    for _, entity in pairs(find_on_all_surfaces({
-      name = { "kr-shelter-light", "kr-shelter", "kr-shelter-plus-light", "kr-shelter-plus" },
-    })) do
+    for _, entity in
+      pairs(find_on_all_surfaces({
+        name = { "kr-shelter-light", "kr-shelter", "kr-shelter-plus-light", "kr-shelter-plus" },
+      }))
+    do
       entity.destroy()
     end
     for _, container in pairs(find_on_all_surfaces({ name = { "kr-shelter-container", "kr-shelter-plus-container" } })) do
@@ -223,6 +225,14 @@ migrations.versions = {
             button.destroy()
           end
         end
+      end
+    end
+  end,
+  ["1.2.22"] = function()
+    for _, surface in pairs(game.surfaces) do
+      for _, tesla_coil in pairs(surface.find_entities_filtered({ name = "kr-tesla-coil" })) do
+        -- 300 kW / 60 ticks per second
+        tesla_coil.power_usage = 300000 / 60
       end
     end
   end,
