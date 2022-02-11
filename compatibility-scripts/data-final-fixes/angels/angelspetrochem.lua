@@ -1,12 +1,11 @@
 if mods["angelspetrochem"] then
   local function makeFluidBurnable(fluid_name, value, emission)
-    local fluid = krastorio.items.getItem(fluid_name)
+    local fluid = data.raw["fluid"][fluid_name]
     if fluid then
       if not fluid.gas_temperature or fluid.gas_temperature < 30 then
         fluid.gas_temperature = 30
       end
       fluid.fuel_value = value
-      fluid.fuel_category = "burnable-fluid-fuel"
       fluid.emissions_multiplier = emission
     end
   end

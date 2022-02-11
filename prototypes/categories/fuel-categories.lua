@@ -19,9 +19,4 @@ data:extend({
     type = "fuel-category",
     name = "antimatter-fuel",
   },
-  -- Burnable fluid fuel for gas power station
-  {
-    type = "fuel-category",
-    name = "burnable-fluid-fuel",
-  },
 })
