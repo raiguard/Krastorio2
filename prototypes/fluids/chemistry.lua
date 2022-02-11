@@ -116,7 +116,7 @@ data:extend({
     gas_temperature = 30,
     fuel_value = "750KJ",
     fuel_category = "burnable-fluid-fuel",
-    fuel_emissions_multiplier = 0.8,
+    emissions_multiplier = 0.8,
     icon = kr_fluids_icons_path .. "biomethanol.png",
     icon_size = 64,
     icon_mipmaps = 4,

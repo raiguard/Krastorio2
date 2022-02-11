@@ -7,7 +7,7 @@ if mods["angelspetrochem"] then
       end
       fluid.fuel_value = value
       fluid.fuel_category = "burnable-fluid-fuel"
-      fluid.fuel_emissions_multiplier = emission
+      fluid.emissions_multiplier = emission
     end
   end
 
