@@ -6,6 +6,7 @@ Date: ????
     - Petroleum has a pollution multiplier of 125% when burned, and biomethanol has a multiplier of 80%
   Bugfixes:
     - Fixed that matter which was consumed as part of "Get X from matter" recipes were not shown in production stats (#206)
+    - Fixed that tesla coil beams would never disappear if the energy absorber was placed while in range of the coil (#209)
     - Fixed typos preventing fluids from having their intended fuel pollution multipliers
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.21

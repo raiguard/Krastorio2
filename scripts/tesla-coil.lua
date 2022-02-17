@@ -239,7 +239,7 @@ function tesla_coil.update_connection(target_data, tower_data)
     local result = energy + to_add
     local tower = tower_data.entities.tower
 
-    if result > capacity then
+    if result >= capacity then
       absorber.energy = capacity
       target_data.full_tick = game.tick
     else
