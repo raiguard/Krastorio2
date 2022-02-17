@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.22
-Date: ????
+Date: 2022-02-17
   Changes:
     - The crusher will no longer crush modules (#203)
   Balancing:
