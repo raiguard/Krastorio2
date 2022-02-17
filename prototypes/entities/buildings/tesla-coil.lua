@@ -92,7 +92,7 @@ data:extend({
       output_flow_limit = "0W",
     },
 
-    energy_usage = "300kW",
+    energy_usage = "60kW",
 
     animation = {
       layers = {

@@ -231,8 +231,8 @@ migrations.versions = {
   ["1.2.22"] = function()
     for _, surface in pairs(game.surfaces) do
       for _, tesla_coil in pairs(surface.find_entities_filtered({ name = "kr-tesla-coil" })) do
-        -- 300 kW / 60 ticks per second
-        tesla_coil.power_usage = 300000 / 60
+        -- 60 kW / 60 ticks per second
+        tesla_coil.power_usage = 60000 / 60
       end
     end
   end,

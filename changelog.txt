@@ -2,7 +2,7 @@
 Version: 1.2.22
 Date: ????
   Balancing:
-    - Tesla coil passive power consumption decreased from 6 MW to 300 kW
+    - Tesla coil passive power consumption decreased from 6 MW to 60 kW
     - Petroleum has a pollution multiplier of 125% when burned, and biomethanol has a multiplier of 80%
   Bugfixes:
     - Fixed typos preventing fluids from having their intended fuel pollution multipliers
