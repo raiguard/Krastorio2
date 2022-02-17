@@ -1,6 +1,12 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 
+local kr_icons_size = false
+
+if krastorio.general.getSafeSettingValue("kr-large-icons") then
+  kr_icons_size = true
+end
+
 data:extend({
   {
     type = "assembling-machine",
@@ -59,6 +65,7 @@ data:extend({
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
     damaged_trigger_effect = hit_effects.entity(),
     fast_replaceable_group = "assembling-machine",
+    scale_entity_info_icon = kr_icons_size,
     animation = {
       layers = {
         {
@@ -148,7 +155,6 @@ data:extend({
       },
     },
     crafting_categories = { "electrolysis" },
-    scale_entity_info_icon = true,
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
       sound = {

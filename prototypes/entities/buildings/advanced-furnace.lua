@@ -1,6 +1,12 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 
+local kr_icons_size = false
+
+if krastorio.general.getSafeSettingValue("kr-large-icons") then
+  kr_icons_size = true
+end
+
 local advanced_furnace_sound = {
   filename = kr_buildings_sounds_path .. "advanced-furnace.ogg",
   volume = 0.50,
@@ -164,7 +170,7 @@ data:extend({
       },
     },
     crafting_categories = { "smelting", "advanced-smelting" },
-    scale_entity_info_icon = true,
+    scale_entity_info_icon = kr_icons_size,
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = advanced_furnace_sound,
     idle_sound = { filename = "__base__/sound/idle1.ogg" },

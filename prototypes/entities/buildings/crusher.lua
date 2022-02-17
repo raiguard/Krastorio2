@@ -1,3 +1,9 @@
+local kr_icons_size = false
+
+if krastorio.general.getSafeSettingValue("kr-large-icons") then
+  kr_icons_size = true
+end
+
 data:extend({
   {
     type = "furnace",
@@ -18,6 +24,7 @@ data:extend({
     collision_box = { { -3.25, -3.25 }, { 3.25, 3.25 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     fast_replaceable_group = "kr-crusher",
+    scale_entity_info_icon = kr_icons_size,
     animation = {
       layers = {
         {
@@ -63,7 +70,6 @@ data:extend({
       },
     },
     crafting_categories = { "crushing", "void-crushing" },
-    scale_entity_info_icon = true,
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
       sound = {

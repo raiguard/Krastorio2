@@ -1,6 +1,12 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 
+local kr_icons_size = false
+
+if krastorio.general.getSafeSettingValue("kr-large-icons") then
+  kr_icons_size = true
+end
+
 data:extend({
   {
     type = "assembling-machine",
@@ -84,7 +90,7 @@ data:extend({
       },
     },
     crafting_categories = { "atmosphere-condensation" },
-    scale_entity_info_icon = true,
+    scale_entity_info_icon = kr_icons_size,
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {

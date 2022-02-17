@@ -1,3 +1,9 @@
+local kr_icons_size = false
+
+if krastorio.general.getSafeSettingValue("kr-large-icons") then
+  kr_icons_size = true
+end
+
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 
 local greenhouse_working_sound = {
@@ -135,7 +141,7 @@ data:extend({
       },
     },
     crafting_categories = { "growing" },
-    scale_entity_info_icon = true,
+    scale_entity_info_icon = kr_icons_size,
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = greenhouse_working_sound,
     crafting_speed = 1,

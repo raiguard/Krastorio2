@@ -1,6 +1,13 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 
+-- Labs do not support entity info icon scaling...
+-- local kr_icons_size = false
+
+-- if krastorio.general.getSafeSettingValue("kr-large-icons") then
+--   kr_icons_size = true
+-- end
+
 data:extend({
   {
     type = "lab",
@@ -22,6 +29,7 @@ data:extend({
     collision_box = { { -3.75, -3.75 }, { 3.75, 3.75 } },
     selection_box = { { -3.9, -3.9 }, { 3.9, 3.9 } },
     fast_replaceable_group = "assembling-machine",
+    -- scale_entity_info_icon = kr_icons_size,
     off_animation = {
       layers = {
         {

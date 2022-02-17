@@ -1,6 +1,12 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 
+local kr_icons_size = false
+
+if krastorio.general.getSafeSettingValue("kr-large-icons") then
+  kr_icons_size = true
+end
+
 data:extend({
   {
     type = "assembling-machine",
@@ -59,6 +65,7 @@ data:extend({
     collision_box = { { -3.25, -3.25 }, { 3.25, 3.25 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     fast_replaceable_group = "assembling-machine",
+    scale_entity_info_icon = kr_icons_size,
     animation = {
       layers = {
         {
@@ -179,7 +186,6 @@ data:extend({
       },
     },
     crafting_categories = { "matter-conversion" },
-    scale_entity_info_icon = true,
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = { filename = kr_buildings_sounds_path .. "matter-plant.ogg" },
