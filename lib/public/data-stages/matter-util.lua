@@ -10,9 +10,9 @@ krastorio.matter_func = {}
   This function will create two recipes for convert one item to matter
   and the recipe for re-convert into the original(or another) item using matter,
   for the two(or one) generated recipes will be add a limitation on productivity modules too
-  
+
   Can be converted only items, fluids and tools(science pack), not other items is accepted for conversions
-  
+
   This is how must be defined the args table, only argument of function call
   (the first tree variable is mandatory, the other is optional)
   args=
@@ -118,7 +118,10 @@ function krastorio.matter_func.createMatterRecipe(args)
         always_show_products = true,
         show_amount_in_title = false,
         ingredients = {
-          { type = "fluid", name = "matter", amount = args.matter_value, catalyst_amount = args.matter_value },
+          -- This was included for some reason that I cannot determine, which broke production stats (#206)
+          -- These recipes do not allow productivity so the catalyst amount only affects prod stats
+          -- catalyst_amount = args.matter_value
+          { type = "fluid", name = "matter", amount = args.matter_value },
         },
         results = {
           { type = true_return_item_type, name = _return_item.name, amount = args.minimum_conversion_quantity },
@@ -165,8 +168,8 @@ end
 
 --[[
   This is the argument that must be given for remove a matter recipe:
-  
-  item_name, -- (string) the name of raw product 
+
+  item_name, -- (string) the name of raw product
   return_item -- (optional)(string) if the return item from the decoversion(matter to item) is different from the first one
 --]]
 -- @item_name
