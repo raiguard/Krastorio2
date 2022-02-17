@@ -1,30 +1,29 @@
 if krastorio.general.getSafeSettingValue("kr-main-menu-song") then
   data:extend({
-    -- -- Main Menu
+    -- Main Menu
     {
       type = "ambient-sound",
       name = "K2-main-menu",
+      track_type = "menu-track",
       sound = {
         filename = "__Krastorio2Assets__/sounds/ambient/K2-main-menu.ogg",
-        volume = 1,
-        preload = true,
+        volume = 0.6,
       },
-      track_type = "menu-track",
-      weight = 666,
     },
-    -- -- Ambient
+    -- Ambient
     {
       type = "ambient-sound",
       name = "K2-ambient",
+      track_type = "main-track",
       sound = {
         filename = "__Krastorio2Assets__/sounds/ambient/K2-main-menu.ogg",
-        volume = 1,
-        preload = true,
+        volume = 0.5,
       },
-      track_type = "main-track",
-      weight = 666,
     },
   })
+
+  -- Remove default menu song
+  data.raw["ambient-sound"]["main-menu"] = nil
 end
 
 data:extend({
