@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.22
 Date: ????
+  Changes:
+    - The crusher will no longer crush modules (#203)
   Balancing:
     - Tesla coil passive power consumption decreased from 6 MW to 60 kW
     - Petroleum has a pollution multiplier of 125% when burned, and biomethanol has a multiplier of 80%

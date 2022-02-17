@@ -6,7 +6,7 @@ krastorio.items.item_types = {
   "ammo",
   "armor",
   "capsule",
-  "fluid",
+  "fluid", -- But why
   "gun",
   "item",
   "mining-tool",

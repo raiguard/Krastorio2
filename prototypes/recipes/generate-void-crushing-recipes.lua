@@ -19,7 +19,7 @@ local void_crushing_recipes_prefix = "kr-vc-"
 
 -- creating void crushing recipes
 for _, type_name in pairs(krastorio.items.item_types) do
-  if type_name ~= "fluid" then
+  if type_name ~= "fluid" and type_name ~= "module" then
     for item_name, _ in pairs(data.raw[type_name]) do
       if not crushing_ingredients[item_name] then
         data:extend({
