@@ -1,6 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.23
 Date: ????
+  Changes:
+    - Removed code to automatically abort when certain mod combinations are detected
+      - Do not report crashes regarding K2 + SE + IR2, or K2 + Bobs + Angels - these combinations are not supported
   Bugfixes:
     - Significantly reduced the volume of the K2 theme and made it play less often
 ---------------------------------------------------------------------------------------------------
