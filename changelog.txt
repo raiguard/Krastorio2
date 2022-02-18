@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.23
-Date: ????
+Date: 2022-02-18
   Changes:
     - Removed code to automatically abort when certain mod combinations are detected
       - Do not report crashes regarding K2 + SE + IR2, or K2 + Bobs + Angels - these combinations are not supported
