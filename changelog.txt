@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.24
 Date: ????
-  Changes:
+  Bugfixes:
+    - Fixed a rare edge case where the tesla coil would not charge a target with an invalid absorber (#223)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.23
 Date: 2022-02-18

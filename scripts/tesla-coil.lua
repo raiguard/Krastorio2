@@ -181,42 +181,46 @@ function tesla_coil.add_connection(target_data, tower_data)
   -- Check if the absorber has space
   local capacity = global.tesla_coil.absorber_buffer_capacity
   local absorber = target_data.grid_data.absorber
-  if absorber and absorber.valid and absorber.energy < capacity then
-    -- Create beam entity
-    local beam = tower_data.entities.tower.surface.create_entity({
-      name = "kr-tesla-coil-electric-beam",
-      source = tower_data.entities.tower,
-      source_offset = { 0, -2.2 },
-      position = tower_data.entities.tower.position,
-      target = target_data.entity,
-      duration = 0,
-      max_length = constants.tesla_coil.range,
-      force = tower_data.entities.tower.force,
-      raise_built = true,
-    })
-    if not beam then
-      return
+  if absorber and absorber.valid then
+    if absorber.energy < capacity then
+      -- Create beam entity
+      local beam = tower_data.entities.tower.surface.create_entity({
+        name = "kr-tesla-coil-electric-beam",
+        source = tower_data.entities.tower,
+        source_offset = { 0, -2.2 },
+        position = tower_data.entities.tower.position,
+        target = target_data.entity,
+        duration = 0,
+        max_length = constants.tesla_coil.range,
+        force = tower_data.entities.tower.force,
+        raise_built = true,
+      })
+      if not beam then
+        return
+      end
+      local beam_number = event.register_on_entity_destroyed(beam)
+
+      --- @class BeamData
+      global.tesla_coil.beams[beam_number] = {
+        beam = beam,
+        beam_number = beam_number,
+        target_data = target_data,
+        tower_data = tower_data,
+      }
+
+      --- @class ConnectionData
+      local connection_data = {
+        beam = beam,
+        beam_number = beam_number,
+        tower_data = tower_data,
+      }
+      target_data.connections.by_beam[beam_number] = connection_data
+      target_data.connections.by_tower[tower_data.tower_unit_number] = connection_data
+
+      return true
     end
-    local beam_number = event.register_on_entity_destroyed(beam)
-
-    --- @class BeamData
-    global.tesla_coil.beams[beam_number] = {
-      beam = beam,
-      beam_number = beam_number,
-      target_data = target_data,
-      tower_data = tower_data,
-    }
-
-    --- @class ConnectionData
-    local connection_data = {
-      beam = beam,
-      beam_number = beam_number,
-      tower_data = tower_data,
-    }
-    target_data.connections.by_beam[beam_number] = connection_data
-    target_data.connections.by_tower[tower_data.tower_unit_number] = connection_data
-
-    return true
+  else
+    tesla_coil.remove_target(target_data.unit_number)
   end
 end
 
