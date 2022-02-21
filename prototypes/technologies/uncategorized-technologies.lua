@@ -131,7 +131,7 @@ data:extend({
       },
       time = 45,
     },
-     -- Disable cost multiplier to avoid manually harvesting unreasonable amount of wood.
+    -- Disable cost multiplier to avoid manually harvesting unreasonable amount of wood.
     ignore_tech_cost_multiplier = not krastorio.general.getSafeSettingValue("kr-tech-multiplier-everywhere"),
   },
   {
@@ -475,7 +475,7 @@ data:extend({
       },
       time = 45,
     },
-     -- Disable cost multiplier to avoid manually harvesting unreasonable amount of Bio matter.
+    -- Disable cost multiplier to avoid manually harvesting unreasonable amount of Bio matter.
     ignore_tech_cost_multiplier = not krastorio.general.getSafeSettingValue("kr-tech-multiplier-everywhere"),
   },
   -- Enriched ores, copper and iron
@@ -640,6 +640,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = krastorio.recipes.changed_names["kr-s-c-imersium-beam"] or "kr-s-c-imersium-beam",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = krastorio.recipes.changed_names["kr-s-c-electronic-components"] or "kr-s-c-electronic-components",
       },
     },
     prerequisites = { "automation-3", "kr-imersium-processing", "kr-energy-control-unit", "kr-advanced-tech-card" },
@@ -834,40 +838,6 @@ data:extend({
         { "matter-tech-card", 1 },
         { "advanced-tech-card", 1 },
         { "singularity-tech-card", 1 },
-      },
-      time = 60,
-    },
-  },
-  {
-    type = "technology",
-    name = "kr-efficient-fabrication",
-    -- Electronic components icon overlayed with lithium
-    -- TODO: Make a better icon
-    -- NOTE: This cannot be directly copied from the recipe, because the lithium does not scale consistently...
-    icons = {
-      {
-        icon = "__Krastorio2Assets__/icons/items-with-variations/electronic-components/electronic-components.png",
-        icon_size = 64,
-        icon_mipmaps = 4,
-      },
-      {
-        icon = "__Krastorio2Assets__/icons/items-with-variations/lithium/lithium.png",
-        icon_size = 64,
-        icon_mipmaps = 4,
-        scale = 0.75,
-        offset = { 0.2, 0.2 },
-      },
-    },
-    effects = {
-      { type = "unlock-recipe", recipe = "electronic-components-lithium" },
-    },
-    unit = {
-      count = 500,
-      ingredients = {
-        { "chemical-science-pack", 1 },
-        { "production-science-pack", 1 },
-        { "utility-science-pack", 1 },
-        { "space-science-pack", 1 },
       },
       time = 60,
     },

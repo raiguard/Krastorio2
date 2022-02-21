@@ -30,36 +30,6 @@ return {
   },
   {
     type = "recipe",
-    name = "electronic-components-lithium",
-    energy_required = 10,
-    enabled = false,
-    allow_productivity = true,
-    ingredients = {
-      { "silicon", 3 },
-      { "plastic-bar", 3 },
-      { "glass", 3 },
-      { "lithium", 3 },
-    },
-    result = "electronic-components",
-    result_count = 10,
-    -- Electronic components icon overlayed with lithium
-    icons = {
-      {
-        icon = "__Krastorio2Assets__/icons/items-with-variations/electronic-components/electronic-components.png",
-        icon_size = 64,
-        icon_mipmaps = 4,
-      },
-      {
-        icon = "__Krastorio2Assets__/icons/items-with-variations/lithium/lithium.png",
-        icon_size = 64,
-        icon_mipmaps = 4,
-        scale = 0.4,
-        offset = { 0.2, 0.2 },
-      },
-    },
-  },
-  {
-    type = "recipe",
     name = "steel-gear-wheel",
     energy_required = 0.5,
     enabled = false,

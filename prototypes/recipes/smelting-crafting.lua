@@ -134,4 +134,23 @@ return {
     result = "imersium-beam",
     result_count = 1,
   },
+  -- Other
+  {
+    type = "recipe",
+    name = "kr-s-c-electronic-components",
+    category = "smelting-crafting",
+    subgroup = "smelting-crafting",
+    energy_required = 12.0,
+    enabled = false,
+    allow_productivity = true,
+    hide_from_player_crafting = true,
+    always_show_made_in = true,
+    ingredients = {
+      { "plastic-bar", 4 },
+      { "stone", 4 },
+      { type = "fluid", name = "water", amount = 4 },
+    },
+    result = "electronic-components",
+    result_count = 4,
+  },
 }
