@@ -108,8 +108,8 @@ if mods["IndustrialRevolution"] then
     {
       type = "technology",
       name = "kr-wind-turbine",
-      localised_name = { "item-name.kr-wind-turbine" },
-      localised_description = { "item-description.kr-wind-turbine" },
+      localised_name = { "entity-name.kr-wind-turbine" },
+      localised_description = { "entity-description.kr-wind-turbine" },
       mod = "Krastorio2",
       icon = kr_technologies_icons_path .. "wind-turbine.png",
       icon_size = 256,
