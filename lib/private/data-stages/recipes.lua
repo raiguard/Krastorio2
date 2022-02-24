@@ -2058,19 +2058,20 @@ function krastorio.recipes.findNotUnlockableRecipes()
   for recipe_name, _ in pairs(all_recipes) do
     table.insert(not_unlockable_recipe_names, recipe_name)
   end
-  -- print result in log before return the list
-  if next(not_unlockable_recipe_names) == nil then
-    krastorio_utils.log.write(1, string.format("All recipes are unlockable."))
-  else
-    local inspect = require(kr_private_lib .. "/utils/inspect")
-    krastorio_utils.log.write(
-      3,
-      string.format(
-        "These recipes are not unlockable, maybe this is an error: %s [from findNotUnlockableRecipes()]",
-        inspect(not_unlockable_recipe_names)
-      )
-    )
-  end
+  -- #224: Why were these being printed?
+  -- -- print result in log before return the list
+  -- if next(not_unlockable_recipe_names) == nil then
+  --   krastorio_utils.log.write(1, string.format("All recipes are unlockable."))
+  -- else
+  --   local inspect = require(kr_private_lib .. "/utils/inspect")
+  --   krastorio_utils.log.write(
+  --     3,
+  --     string.format(
+  --       "These recipes are not unlockable, maybe this is an error: %s [from findNotUnlockableRecipes()]",
+  --       inspect(not_unlockable_recipe_names)
+  --     )
+  --   )
+  -- end
   return not_unlockable_recipe_names
 end
 
