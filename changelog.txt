@@ -1,8 +1,13 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.2.24
+Version: 1.2.25
 Date: ????
+  Changes:
+---------------------------------------------------------------------------------------------------
+Version: 1.2.24
+Date: 2022-02-24
   Bugfixes:
     - Fixed a rare edge case where the tesla coil would not charge a target with an invalid absorber (#223)
+    - [Industrial Revolution 2] Fixed invalid locale key on the wind turbine technology (#229)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.23
 Date: 2022-02-18
