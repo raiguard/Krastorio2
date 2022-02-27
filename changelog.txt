@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.25
 Date: ????
-  Changes:
+  Bugfixes:
+    - Fixed a crash when another mod removes one of the default radioactive items or entities
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.24
 Date: 2022-02-24

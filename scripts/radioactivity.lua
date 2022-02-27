@@ -15,7 +15,9 @@ function radioactivity.reset_entities_items()
   for _, data in pairs(constants.radioactivity_defaults) do
     global.radioactivity[data.tbl] = {}
     for _, name in pairs(data.objects) do
-      radioactivity.remote_interface["add_" .. data.type](name)
+      if game[data.type .. "_prototypes"][name] then
+        radioactivity.remote_interface["add_" .. data.type](name)
+      end
     end
   end
 end
