@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.25
 Date: ????
+  Changes:
+    - Reduced volume of the tesla coil and the energy beam
   Bugfixes:
     - Fixed a crash when another mod removes one of the default radioactive items or entities
 ---------------------------------------------------------------------------------------------------

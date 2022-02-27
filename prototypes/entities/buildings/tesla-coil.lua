@@ -9,7 +9,7 @@ local sounds = require("__base__/prototypes/entity/sounds")
 -- Entity sound
 local tesla_coil_sound = {
   filename = kr_buildings_sounds_path .. "tesla-coil.ogg",
-  volume = 0.75,
+  volume = 0.5,
   aggregation = {
     max_count = 2,
     remove = false,
@@ -22,15 +22,15 @@ local tesla_coil_electric_beam_sound = {
   variations = {
     {
       filename = kr_others_sounds_path .. "zap-1.ogg",
-      volume = 0.5,
+      volume = 0.25,
     },
     {
       filename = kr_others_sounds_path .. "zap-2.ogg",
-      volume = 0.5,
+      volume = 0.25,
     },
     {
       filename = kr_others_sounds_path .. "zap-3.ogg",
-      volume = 0.5,
+      volume = 0.25,
     },
   },
   audible_distance_modifier = 2.0,
