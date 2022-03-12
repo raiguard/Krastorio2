@@ -31,7 +31,7 @@ data:extend({
       },
       time = 20,
     },
-     -- Disable cost multiplier to avoid manually harvesting unreasonable amount of wood.
+    -- Disable cost multiplier to avoid manually harvesting unreasonable amount of wood.
     ignore_tech_cost_multiplier = not krastorio.general.getSafeSettingValue("kr-tech-multiplier-everywhere"),
   },
   {
@@ -67,52 +67,7 @@ data:extend({
     icon = kr_technologies_icons_path .. "decorations.png",
     icon_size = 256,
     icon_mipmaps = 4,
-    effects = {
-      {
-        type = "unlock-recipe",
-        recipe = "tree-01",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "tree-02",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "tree-03",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "tree-04",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "tree-05",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "tree-06",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "tree-07",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "tree-08",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "tree-09",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "rock-big",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "rock-huge",
-      },
-    },
+    effects = {}, -- This is populated during data-updates by prototypes/others/greenhouse.lua
     prerequisites = { "kr-greenhouse" },
     unit = {
       count = 30,
@@ -143,7 +98,7 @@ data:extend({
       },
       time = 30,
     },
-     -- Disable cost multiplier to avoid manually harvesting unreasonable amount of wood.
+    -- Disable cost multiplier to avoid manually harvesting unreasonable amount of wood.
     ignore_tech_cost_multiplier = not krastorio.general.getSafeSettingValue("kr-tech-multiplier-everywhere"),
   },
   -----------------------------------------------------------------------

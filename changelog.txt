@@ -3,6 +3,9 @@ Version: 1.3.0
 Date: ????
   Changes:
     - Adjusted Intergalactic Transceiver night lighting to be more purple
+    - Moved tree and rock recipes from intermediate products to environment group
+  Compatibility:
+    - Added auto-generated recipes for modded trees and rocks in the greenhouse (#115)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.26
 Date: ????

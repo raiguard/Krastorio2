@@ -3,9 +3,6 @@
 -- -- Items for buildings and other entities
 require(kr_items_prototypes_path .. "buildings")
 
--- -- Decorations
-require(kr_items_prototypes_path .. "decorations")
-
 -- -- Equipments
 require(kr_items_prototypes_path .. "equipments")
 

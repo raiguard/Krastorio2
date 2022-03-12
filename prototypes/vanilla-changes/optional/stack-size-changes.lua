@@ -114,21 +114,4 @@ if kr_stack_size_value and kr_stack_size_value ~= "No changes" then
   data.raw.item["fuel"].stack_size = special_stack_size
   data.raw.item["bio-fuel"].stack_size = special_stack_size
   data.raw.item["advanced-fuel"].stack_size = special_stack_size
-
-  -- Decorations
-
-  data.raw.item["tree-01"].stack_size = kr_stack_size_value * 0.5
-  data.raw.item["tree-02"].stack_size = kr_stack_size_value * 0.5
-  data.raw.item["tree-03"].stack_size = kr_stack_size_value * 0.5
-  data.raw.item["tree-04"].stack_size = kr_stack_size_value * 0.5
-  data.raw.item["tree-05"].stack_size = kr_stack_size_value * 0.5
-  data.raw.item["tree-06"].stack_size = kr_stack_size_value * 0.5
-  data.raw.item["tree-07"].stack_size = kr_stack_size_value * 0.5
-  data.raw.item["tree-08"].stack_size = kr_stack_size_value * 0.5
-  data.raw.item["tree-09"].stack_size = kr_stack_size_value * 0.5
-  data.raw.item["tree-08"].stack_size = kr_stack_size_value * 0.5
-  data.raw.item["tree-09"].stack_size = kr_stack_size_value * 0.5
-
-  data.raw.item["rock-big"].stack_size = kr_stack_size_value * 0.5
-  data.raw.item["rock-huge"].stack_size = kr_stack_size_value * 0.5
 end

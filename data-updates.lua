@@ -18,6 +18,8 @@ fluid_burner_util.generateBurnFluidsRecipes()
 require(kr_recipes_prototypes_path .. "generate-void-crushing-recipes")
 local matter_util = require(kr_public_lib .. "matter-util")
 matter_util.createStandardKrastorioMatterRecipes()
+-- Generate tree and rock recipes
+require("prototypes.others.greenhouse")
 ---------------------------------------------------------------------------
 -- -- -- COMPATIBILITY INITIALIZATION (data update stage)
 ---------------------------------------------------------------------------

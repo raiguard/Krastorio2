@@ -5,9 +5,6 @@ local krastorio_new_recipes = {
   -- -- Recipes for buildings and other entities (not associated non-buildings-items)
   require(kr_recipes_prototypes_path .. "buildings"),
 
-  -- -- Recipes for decorations
-  require(kr_recipes_prototypes_path .. "decorations"),
-
   -- -- New science packs recipes (tech card) (tools)
   require(kr_recipes_prototypes_path .. "tech-cards"),
 

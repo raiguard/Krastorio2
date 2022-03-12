@@ -57,14 +57,14 @@ data:extend({
   {
     type = "item-subgroup",
     name = "kr-decorations-1",
-    group = "intermediate-products",
-    order = "zzd1",
+    group = "environment",
+    order = "d1",
   },
   {
     type = "item-subgroup",
     name = "kr-decorations-2",
-    group = "intermediate-products",
-    order = "zzd2",
+    group = "environment",
+    order = "d2",
   },
 
   -- Crash site
