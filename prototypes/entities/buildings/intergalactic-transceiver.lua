@@ -5,14 +5,14 @@ local intergalactic_transceiver_light = {
   intensity = 0.75,
   size = 20,
   shift = { 0, -0.5 },
-  color = { r = 1, g = 0.5, b = 0.75 },
+  color = { r = 1, g = 0.2, b = 1 },
 }
 
 local activated_intergalactic_transceiver_light = {
   intensity = 1.75,
   size = 30,
   shift = { 0, -0.5 },
-  color = { r = 1, g = 0.5, b = 0.75 },
+  color = { r = 1, g = 0.2, b = 1 },
 }
 
 local intergalactic_transceiver_animation = {

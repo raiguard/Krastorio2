@@ -2,6 +2,7 @@
 Version: 1.2.25
 Date: ????
   Changes:
+    - Adjusted Intergalactic Transceiver night lighting to be more purple
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.24
 Date: 2022-02-24
