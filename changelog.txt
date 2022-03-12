@@ -3,6 +3,8 @@ Version: 1.2.25
 Date: ????
   Changes:
     - Reduced volume of the tesla coil and the energy beam
+  Compatibility:
+    - [Space Exploration] Moved steel pipes and pump to the pipes subgroup and improved ordering (#236)
   Bugfixes:
     - Fixed a crash when another mod removes one of the default radioactive items or entities
 ---------------------------------------------------------------------------------------------------

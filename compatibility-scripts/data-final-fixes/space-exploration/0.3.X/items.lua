@@ -27,6 +27,12 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
   data.raw.item["se-space-science-lab"].order = "g[lab]-g3[kr-singularity-lab]"
   data.raw.item["kr-singularity-lab"].order = "g[lab]-g4[kr-singularity-lab]"
 
+  data.raw.item["kr-steel-pipe"].subgroup = "pipe"
+  data.raw.item["kr-steel-pipe-to-ground"].subgroup = "pipe"
+  data.raw.item["kr-steel-pump"].subgroup = "pipe"
+
+  data.raw.item["se-space-pipe"].order = "a[pipe]-ab[se-space-pipe]"
+
   if data.raw.capsule["first-aid-kit"] then
     data.raw.capsule["first-aid-kit"].capsule_action.attack_parameters.ammo_type.action.action_delivery.target_effects.damage =
       {
