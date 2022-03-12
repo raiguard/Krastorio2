@@ -146,11 +146,11 @@ return {
     hide_from_player_crafting = true,
     always_show_made_in = true,
     ingredients = {
-      { "plastic-bar", 4 },
-      { "stone", 4 },
-      { type = "fluid", name = "water", amount = 4 },
+      { "plastic-bar", 5 },
+      { "stone", 12 },
+      { type = "fluid", name = "water", amount = 20 },
     },
     result = "electronic-components",
-    result_count = 4,
+    result_count = 6,
   },
 }
