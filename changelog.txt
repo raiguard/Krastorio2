@@ -10,6 +10,7 @@ Date: ????
     - Removed "efficient fabrication" technology and the lithium electronic components recipe
   Compatibility:
     - Added auto-generated recipes for modded trees and rocks in the greenhouse (#115)
+    - [Space Exploration] Added landfill recipes made from raw imersite and raw rare metals (#115)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.26
 Date: ????
