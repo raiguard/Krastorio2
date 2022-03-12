@@ -1,5 +1,6 @@
 - Tesla coil removes decoratives when placed
 - Add interface for specifying creep surfaces
+- Add tesla coil range visualization
 
 ## Integration tests to write
 - [angelsaddons-mobility] Locomotives do not support additional electric engines (#188)

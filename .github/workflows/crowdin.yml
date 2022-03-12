@@ -20,7 +20,7 @@ jobs:
         upload_sources: true
         upload_translations: true
         download_translations: true
-        config: '.crowdin.yml'
+        config: '.crowdin/config.yml'
         pull_request_title: 'Update Crowdin translations'
         commit_message: 'Update Crowdin translations'
         export_only_approved: false

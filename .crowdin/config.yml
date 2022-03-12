@@ -20,11 +20,5 @@
     "dest": "Krastorio2Tips.ini",
     "translation": "/locale/%two_letters_code%/%original_file_name%",
     "type": "ini"
-  },
-  {
-    "source": "/locale/en/Krastorio2Wiki.cfg",
-    "dest": "Krastorio2Wiki.ini",
-    "translation": "/locale/%two_letters_code%/%original_file_name%",
-    "type": "ini"
   }
 ]
