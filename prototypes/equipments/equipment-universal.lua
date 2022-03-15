@@ -351,7 +351,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "5MJ",
-      input_flow_limit = "50000kW",
+      input_flow_limit = "12MW",
       output_flow_limit = util.format_number(
         constants.tesla_coil.charging_rate * constants.tesla_coil.simultaneous_allowed,
         true

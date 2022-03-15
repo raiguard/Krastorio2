@@ -12,6 +12,7 @@ Date: ????
     - Added auto-generated recipes for modded trees and rocks in the greenhouse (#115)
     - [Space Exploration] Added landfill recipes made from raw imersite and raw rare metals (#115)
   Bugfixes:
+    - Fixed inaccurate max consumption for the energy absorber (#249)
     - Fixed that tesla coils would not leave a ghost when destroyed (#248)
     - Fixed that the tesla coil collision entity could be destroyed by turrets (#247)
     - Fixed that you would be spammed with error messages when dragging an energy absorber in a grid (#245)
