@@ -8,6 +8,7 @@ Date: ????
     - Adjusted Intergalactic Transceiver night lighting to be more purple
     - Moved tree and rock recipes from intermediate products to environment group
     - Removed "efficient fabrication" technology and the lithium electronic components recipe
+    - Updated translations from Crowdin
   Compatibility:
     - Added auto-generated recipes for modded trees and rocks in the greenhouse (#115)
     - [Space Exploration] Added landfill recipes made from raw imersite and raw rare metals (#115)
@@ -18,11 +19,6 @@ Date: ????
     - Fixed that you would be spammed with error messages when dragging an energy absorber in a grid (#245)
     - Fixed the secret research not being unlocked after the game is won (#246)
     - Fixed various recipes having catalysts that didn't need them (#243)
----------------------------------------------------------------------------------------------------
-Version: 1.2.26
-Date: ????
-  Changes:
-    - Updated Crowdin translations
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.25
 Date: 2022-03-12
