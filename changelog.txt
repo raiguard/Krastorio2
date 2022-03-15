@@ -5,6 +5,7 @@ Date: ????
     - Added special electronic components recipe to the advanced assembler (#216)
       - This recipe is much less efficient, but allows you to skip several intermediate steps
     - Added a light to the substation mk2
+    - Mineral water will be made infinite if "Finite oil" setting is disabled (#240)
   Changes:
     - Adjusted Intergalactic Transceiver night lighting to be more purple
     - Moved tree and rock recipes from intermediate products to environment group
