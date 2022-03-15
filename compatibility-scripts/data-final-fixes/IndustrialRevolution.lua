@@ -333,10 +333,10 @@ if mods["IndustrialRevolution"] then
       allow_productivity = true,
       ingredients = {
         { type = "fluid", name = "sulfuric-acid", amount = 10 },
-        { type = "item", name = "crushed-rare-metals", amount = 5, catalyst_amount = 10 },
+        { type = "item", name = "crushed-rare-metals", amount = 5 },
       },
       results = {
-        { type = "item", name = "gold-ingot", amount = 10, catalyst_amount = 10 },
+        { type = "item", name = "gold-ingot", amount = 10 },
         { type = "fluid", name = "dirty-water", amount = 20 },
       },
       main_product = "gold-ingot",
@@ -372,10 +372,10 @@ if mods["IndustrialRevolution"] then
       allow_productivity = true,
       ingredients = {
         { type = "fluid", name = "sulfuric-acid", amount = 20 },
-        { type = "item", name = "crushed-rare-metals", amount = 5, catalyst_amount = 10 },
+        { type = "item", name = "crushed-rare-metals", amount = 5 },
       },
       results = {
-        { type = "item", name = "chromium-pure", amount = 5, catalyst_amount = 5 },
+        { type = "item", name = "chromium-pure", amount = 5 },
         { type = "fluid", name = "dirty-water", amount = 40 },
       },
       main_product = "chromium-pure",
@@ -408,10 +408,10 @@ if mods["IndustrialRevolution"] then
       allow_productivity = true,
       ingredients = {
         { type = "fluid", name = "sulfuric-acid", amount = 20 },
-        { type = "item", name = "crushed-rare-metals", amount = 5, catalyst_amount = 10 },
+        { type = "item", name = "crushed-rare-metals", amount = 5 },
       },
       results = {
-        { type = "item", name = "lead-pure", amount = 5, catalyst_amount = 5 },
+        { type = "item", name = "lead-pure", amount = 5 },
         { type = "fluid", name = "dirty-water", amount = 40 },
       },
       main_product = "lead-pure",
@@ -444,10 +444,10 @@ if mods["IndustrialRevolution"] then
       allow_productivity = true,
       ingredients = {
         { type = "fluid", name = "sulfuric-acid", amount = 20 },
-        { type = "item", name = "crushed-rare-metals", amount = 5, catalyst_amount = 10 },
+        { type = "item", name = "crushed-rare-metals", amount = 5 },
       },
       results = {
-        { type = "item", name = "nickel-pure", amount = 5, catalyst_amount = 5 },
+        { type = "item", name = "nickel-pure", amount = 5 },
         { type = "fluid", name = "dirty-water", amount = 40 },
       },
       main_product = "nickel-pure",
@@ -480,7 +480,7 @@ if mods["IndustrialRevolution"] then
       allow_productivity = true,
       ingredients = {
         { type = "fluid", name = "sulfuric-acid", amount = 20 },
-        { type = "item", name = "crushed-rare-metals", amount = 5, catalyst_amount = 10 },
+        { type = "item", name = "crushed-rare-metals", amount = 5 },
       },
       results = {
         { type = "item", name = "tellurium-pure", amount = 5, catalyst_amount = 5 },

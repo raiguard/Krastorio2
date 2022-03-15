@@ -43,7 +43,7 @@ return {
     always_show_products = true,
     allow_productivity = true,
     ingredients = {
-      { type = "fluid", name = "light-oil", amount = 60, catalyst_amount = 60 },
+      { type = "fluid", name = "light-oil", amount = 60 },
     },
     results = {
       { type = "item", name = "fuel", amount = 10 },

@@ -12,7 +12,7 @@ return {
     always_show_products = true,
     ingredients = {
       { type = "item", name = "sand", amount = 10 },
-      { type = "fluid", name = "water", amount = 40, catalyst_amount = 40 },
+      { type = "fluid", name = "water", amount = 40 },
     },
     results = {
       { type = "fluid", name = "chlorine", amount = 20 },
@@ -35,7 +35,7 @@ return {
     always_show_made_in = true,
     always_show_products = true,
     ingredients = {
-      { type = "fluid", name = "water", amount = 50, catalyst_amount = 50 },
+      { type = "fluid", name = "water", amount = 50 },
     },
     results = {
       { type = "fluid", name = "oxygen", amount = 20 },
@@ -82,7 +82,7 @@ return {
     always_show_products = true,
     allow_productivity = true,
     ingredients = {
-      { type = "fluid", name = "water", amount = 500, catalyst_amount = 500 },
+      { type = "fluid", name = "water", amount = 500 },
     },
     crafting_machine_tint = {
       primary = { r = 0.405, g = 0.402, b = 1.000, a = 1.000 },

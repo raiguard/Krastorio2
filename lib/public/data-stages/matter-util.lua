@@ -118,9 +118,6 @@ function krastorio.matter_func.createMatterRecipe(args)
         always_show_products = true,
         show_amount_in_title = false,
         ingredients = {
-          -- This was included for some reason that I cannot determine, which broke production stats (#206)
-          -- These recipes do not allow productivity so the catalyst amount only affects prod stats
-          -- catalyst_amount = args.matter_value
           { type = "fluid", name = "matter", amount = args.matter_value },
         },
         results = {

@@ -144,12 +144,12 @@ return {
     allow_productivity = true,
     ingredients = {
       { type = "fluid", name = "sulfuric-acid", amount = 3 },
-      { type = "fluid", name = "water", amount = 25, catalyst_amount = 25 },
+      { type = "fluid", name = "water", amount = 25 },
       { type = "item", name = "iron-ore", amount = 9 },
     },
     results = {
       { type = "item", name = "enriched-iron", amount = 6 },
-      { type = "fluid", name = "dirty-water", amount = 25, catalyst_amount = 25 },
+      { type = "fluid", name = "dirty-water", amount = 25 },
     },
     crafting_machine_tint = {
       primary = { r = 0.25, g = 0.50, b = 0.65, a = 0.200 },
@@ -174,12 +174,12 @@ return {
     allow_productivity = true,
     ingredients = {
       { type = "fluid", name = "sulfuric-acid", amount = 3 },
-      { type = "fluid", name = "water", amount = 25, catalyst_amount = 25 },
+      { type = "fluid", name = "water", amount = 25 },
       { type = "item", name = "copper-ore", amount = 9 },
     },
     results = {
       { type = "item", name = "enriched-copper", amount = 6 },
-      { type = "fluid", name = "dirty-water", amount = 25, catalyst_amount = 25 },
+      { type = "fluid", name = "dirty-water", amount = 25 },
     },
     crafting_machine_tint = {
       primary = { r = 0.970, g = 0.501, b = 0.000, a = 0.000 },
@@ -204,12 +204,12 @@ return {
     allow_productivity = true,
     ingredients = {
       { type = "fluid", name = "hydrogen-chloride", amount = 10 },
-      { type = "fluid", name = "water", amount = 25, catalyst_amount = 25 },
+      { type = "fluid", name = "water", amount = 25 },
       { type = "item", name = "raw-rare-metals", amount = 9 },
     },
     results = {
       { type = "item", name = "enriched-rare-metals", amount = 6 },
-      { type = "fluid", name = "dirty-water", amount = 25, catalyst_amount = 25 },
+      { type = "fluid", name = "dirty-water", amount = 25 },
     },
     crafting_machine_tint = {
       primary = { r = 0.721, g = 0.525, b = 0.043, a = 0.000 },

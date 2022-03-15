@@ -72,10 +72,10 @@ return {
     always_show_made_in = true,
     always_show_products = true,
     ingredients = {
-      { type = "fluid", name = "dirty-water", amount = 100, catalyst_amount = 100 },
+      { type = "fluid", name = "dirty-water", amount = 100 },
     },
     results = {
-      { type = "fluid", name = "water", amount = 100, catalyst_amount = 100 },
+      { type = "fluid", name = "water", amount = 100 },
       { type = "item", name = "stone", probability = 0.30, amount = 1 },
       { type = "item", name = "iron-ore", probability = 0.10, amount = 1 },
     },
@@ -109,10 +109,10 @@ return {
     always_show_made_in = true,
     always_show_products = true,
     ingredients = {
-      { type = "fluid", name = "dirty-water", amount = 100, catalyst_amount = 100 },
+      { type = "fluid", name = "dirty-water", amount = 100 },
     },
     results = {
-      { type = "fluid", name = "water", amount = 100, catalyst_amount = 100 },
+      { type = "fluid", name = "water", amount = 100 },
       { type = "item", name = "stone", probability = 0.30, amount = 1 },
       { type = "item", name = "copper-ore", probability = 0.10, amount = 1 },
     },
@@ -146,10 +146,10 @@ return {
     always_show_made_in = true,
     always_show_products = true,
     ingredients = {
-      { type = "fluid", name = "dirty-water", amount = 100, catalyst_amount = 100 },
+      { type = "fluid", name = "dirty-water", amount = 100 },
     },
     results = {
-      { type = "fluid", name = "water", amount = 100, catalyst_amount = 100 },
+      { type = "fluid", name = "water", amount = 100 },
       { type = "item", name = "stone", probability = 0.30, amount = 1 },
       { type = "item", name = "raw-rare-metals", probability = 0.05, amount = 1 },
     },

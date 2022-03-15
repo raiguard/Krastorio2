@@ -16,6 +16,7 @@ Date: ????
     - Fixed that the tesla coil collision entity could be destroyed by turrets (#247)
     - Fixed that you would be spammed with error messages when dragging an energy absorber in a grid (#245)
     - Fixed the secret research not being unlocked after the game is won (#246)
+    - Fixed various recipes having catalysts that didn't need them (#243)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.26
 Date: ????
