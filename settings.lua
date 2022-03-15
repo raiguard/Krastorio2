@@ -254,13 +254,6 @@ data:extend({
   },
   {
     type = "bool-setting",
-    name = "kr-substation-mk2",
-    setting_type = "startup",
-    default_value = false,
-    order = "b12",
-  },
-  {
-    type = "bool-setting",
     name = "kr-vehicles-minable-changes",
     setting_type = "startup",
     default_value = false,

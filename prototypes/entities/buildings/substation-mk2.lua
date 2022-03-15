@@ -69,28 +69,26 @@ data:extend({
       },
     },
 
-    --active_picture =
-    --{
-    --  filename = "__base__/graphics/entity/substation/substation-light.png",
-    --  priority = "high",
-    --  width = 46,
-    --  height = 78,
-    --  --direction_count = 4,
-    --  shift = util.by_pixel(0, 16-32),
-    --  blend_mode = "additive",
-    --  hr_version =
-    --  {
-    --    filename = "__base__/graphics/entity/substation/hr-substation-light.png",
-    --    priority = "high",
-    --    width = 92,
-    --    height = 156,
-    --    --direction_count = 4,
-    --    shift = util.by_pixel(0.5, 16.5-32),
-    --    blend_mode = "additive",
-    --    scale = 0.5
-    --  }
-    --},
-    --light = {intensity = 0.75, size = 3, color = {r = 1.0, g = 1.0, b = 1.0}},
+    active_picture = {
+      filename = "__Krastorio2Assets__/entities/substation-mk2/substation-mk2-light.png",
+      priority = "high",
+      width = 46,
+      height = 78,
+      --direction_count = 4,
+      shift = util.by_pixel(0, 16 - 32),
+      blend_mode = "additive",
+      hr_version = {
+        filename = "__Krastorio2Assets__/entities/substation-mk2/hr-substation-mk2-light.png",
+        priority = "high",
+        width = 92,
+        height = 156,
+        --direction_count = 4,
+        shift = util.by_pixel(0.5, 16.5 - 32),
+        blend_mode = "additive",
+        scale = 0.5,
+      },
+    },
+    light = { intensity = 0.75, size = 3, color = { r = 1.0, g = 1.0, b = 1.0 } },
 
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {

@@ -294,7 +294,6 @@ data:extend({
   {
     type = "item",
     name = "kr-substation-mk2",
-    flags = { "hidden" },
     icon = kr_entities_icons_path .. "substation-mk2.png",
     icon_size = 64,
     icon_mipmaps = 4,

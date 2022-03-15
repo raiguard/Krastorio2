@@ -4,10 +4,12 @@ Date: ????
   Features:
     - Added special electronic components recipe to the advanced assembler (#216)
       - This recipe is much less efficient, but allows you to skip several intermediate steps
+    - Added a light to the substation mk2
   Changes:
     - Adjusted Intergalactic Transceiver night lighting to be more purple
     - Moved tree and rock recipes from intermediate products to environment group
     - Removed "efficient fabrication" technology and the lithium electronic components recipe
+    - Removed the setting to disable the substation mk2
     - Updated translations from Crowdin
   Compatibility:
     - Added auto-generated recipes for modded trees and rocks in the greenhouse (#115)

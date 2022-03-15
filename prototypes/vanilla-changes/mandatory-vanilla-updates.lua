@@ -28,6 +28,7 @@ local modifications = {
   "electrify-offshore-pump", -- Add energy source to offshore-pump
   "removing-impossible-achievements", -- Remove impossible vanilla achievements
   "roboport-variations", -- Generate roboport variations for roboport states
+  "substation-mk2", -- Adds Substation-mk2
 }
 
 -- Application of the modifications
