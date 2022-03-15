@@ -7,13 +7,20 @@ local util = require("scripts.util")
 
 local creep_collector = {}
 
-function creep_collector.collect(player, surface, tiles, sel_area)
+--- @param e on_player_selected_area
+function creep_collector.collect(e)
+  local player = game.get_player(e.player_index)
   local player_pos = player.position
+
+  if #e.entities > 0 then
+    util.flying_text_with_sound(player, { "message.kr-enemy-entities-nearby" }, { position = area.center(e.area) })
+    return
+  end
 
   local tiles_to_set = {}
   local i = 0
-  for _, tile in pairs(tiles) do
-    if misc.get_distance(tile.position, player_pos) <= constants.creep_max_reach then
+  for _, tile in pairs(e.tiles) do
+    if misc.get_distance(tile.position, player_pos) <= player.reach_distance then
       i = i + 1
       tiles_to_set[i] = { name = tile.hidden_tile or "landfill", position = tile.position }
     end
@@ -25,17 +32,17 @@ function creep_collector.collect(player, surface, tiles, sel_area)
     local inventory = player.get_main_inventory()
     if inventory.can_insert({ name = "biomass", count = collected_amount }) then
       inventory.insert({ name = "biomass", count = collected_amount })
-      surface.set_tiles(tiles_to_set)
+      e.surface.set_tiles(tiles_to_set)
 
       util.flying_text_with_sound(player, { "message.kr-collected-amount", collected_amount, { "item-name.biomass" } }, {
-        position = area.center(sel_area),
+        position = area.center(e.area),
         sound = { path = "kr-collect-creep", volume_modifier = 1 },
       })
     else
-      util.flying_text_with_sound(player, { "message.kr-inventory-is-full" }, { position = area.center(sel_area) })
+      util.flying_text_with_sound(player, { "message.kr-inventory-is-full" }, { position = area.center(e.area) })
     end
   else
-    util.flying_text_with_sound(player, { "message.kr-no-creep-in-selection" }, { position = area.center(sel_area) })
+    util.flying_text_with_sound(player, { "message.kr-no-creep-in-selection" }, { position = area.center(e.area) })
   end
 end
 

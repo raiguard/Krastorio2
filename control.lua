@@ -350,7 +350,7 @@ event.register({
 }, function(e)
   local player = game.get_player(e.player_index)
   if e.item == "kr-creep-collector" then
-    creep_collector.collect(player, e.surface, e.tiles, e.area)
+    creep_collector.collect(e)
   elseif e.item == "kr-jackhammer" then
     jackhammer.collect(player, e.surface, e.tiles, e.area)
   end

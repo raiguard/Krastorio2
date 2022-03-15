@@ -12,6 +12,8 @@ Date: ????
     - Removed "efficient fabrication" technology and the lithium electronic components recipe
     - Removed the setting to disable the substation mk2
     - Updated translations from Crowdin
+  Balancing:
+    - Creep collection range is based on your reach distance, but cannot be collected if there are enemies nearby (#239)
   Compatibility:
     - Added auto-generated recipes for modded trees and rocks in the greenhouse (#115)
     - [Space Exploration] Added landfill recipes made from raw imersite and raw rare metals (#115)

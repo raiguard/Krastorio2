@@ -32,10 +32,14 @@ data:extend({
     selection_color = { r = 0.50, g = 0, b = 0.35 },
     alt_selection_color = { r = 0.55, g = 0, b = 0.40 },
     selection_mode = {
+      "any-entity",
       "any-tile",
+      "enemy",
     },
     alt_selection_mode = {
+      "any-entity",
       "any-tile",
+      "enemy",
     },
     selection_cursor_box_type = "not-allowed",
     alt_selection_cursor_box_type = "not-allowed",
