@@ -78,7 +78,7 @@ function tesla_coil.destroy(entity)
     global.tesla_coil.towers[unit_number] = nil
 
     for _, entity in pairs(tower_data.entities) do
-      if entity and entity.valid then
+      if entity and entity.valid and entity.type ~= "electric-energy-interface" then
         entity.destroy()
       end
     end
