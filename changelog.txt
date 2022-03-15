@@ -11,6 +11,8 @@ Date: ????
   Compatibility:
     - Added auto-generated recipes for modded trees and rocks in the greenhouse (#115)
     - [Space Exploration] Added landfill recipes made from raw imersite and raw rare metals (#115)
+  Bugfixes:
+    - Fixed that the tesla coil collision entity could be destroyed by turrets (#247)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.26
 Date: ????

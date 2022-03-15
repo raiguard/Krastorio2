@@ -7,3 +7,4 @@
 - [IR2] Crash when disabling "more realistic weapons" (#191)
 - Physical projectile damage 1-10 did not affect artillery shells (REGRESSION) (#186)
 - Matter is not included in production stats (#206)
+- Antimatter rocket destroying tesla coil collision (#247)

@@ -44,16 +44,19 @@ function tesla_coil.build(source_entity)
   end
   turret.destructible = false
 
+  local collision_entity = surface.create_entity({
+    name = "kr-tesla-coil-collision",
+    position = source_entity.position,
+    force = source_entity.force,
+    create_build_effect_smoke = false,
+    raise_built = true,
+  })
+  collision_entity.destructible = false
+
   --- @class TowerData
   local data = {
     entities = {
-      collision = surface.create_entity({
-        name = "kr-tesla-coil-collision",
-        position = source_entity.position,
-        force = source_entity.force,
-        create_build_effect_smoke = false,
-        raise_built = true,
-      }),
+      collision = collision_entity,
       tower = source_entity,
       turret = turret,
     },
