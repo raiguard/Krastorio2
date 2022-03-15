@@ -198,6 +198,12 @@ event.on_force_created(function(e)
   shelter.force_init(e.force)
 end)
 
+event.on_technology_effects_reset(function(e)
+  if game.finished or game.finished_but_continuing then
+    e.force.technologies["kr-logo"].enabled = true
+  end
+end)
+
 -- GUI
 
 local function handle_gui_event(e)

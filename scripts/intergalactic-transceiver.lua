@@ -346,6 +346,8 @@ function cutscene.win(force_index)
     can_continue = true,
     victorious_force = game.forces[force_index],
   })
+  -- Enable the secret logo research
+  game.forces[force_index].technologies["kr-logo"].enabled = true
 end
 
 function cutscene.play_victory_sound(force_index)

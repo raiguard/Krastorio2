@@ -236,6 +236,13 @@ migrations.versions = {
       end
     end
   end,
+  ["1.3.0"] = function()
+    if game.finished or game.finished_but_continuing then
+      for _, force in pairs(game.forces) do
+        force.technologies["kr-logo"].enabled = true
+      end
+    end
+  end,
 }
 
 return migrations
