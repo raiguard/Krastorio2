@@ -68,6 +68,24 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
       }),
     })
     krastorio.technologies.addUnlockRecipe("se-space-platform-scaffold", "kr-se-loader")
+    for _, color in pairs({ "black", "blue", "cyan", "green", "magenta", "red", "white", "yellow" }) do
+      data:extend({
+        createKrastorioLoader({
+          name = "kr-se-deep-space-loader-" .. color,
+          localised_name = { "entity-name.kr-se-deep-space-loader" },
+          speed = data.raw["transport-belt"]["se-deep-space-transport-belt-" .. color].speed,
+          belt_animation_set = data.raw["transport-belt"]["se-deep-space-transport-belt-" .. color].belt_animation_set,
+          order = data.raw["transport-belt"]["se-deep-space-transport-belt-" .. color].order,
+          icon = kr_se_graphic_path .. "kr-se-deep-space-loader-black.png",
+          icon_size = 64,
+          tint = kr_color_lib.convert(50, 50, 50, 100),
+          apply_rust = false,
+          se_allow_in_space = true,
+          upgrade = "kr-se-loader",
+          result = "kr-se-deep-space-loader-black",
+        }),
+      })
+    end
     data:extend({
       kr_loader_item({
         name = "kr-se-deep-space-loader-black",
@@ -75,18 +93,6 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
         icon_size = 64,
         order = "e-g",
         subgroup = "belt",
-      }),
-      createKrastorioLoader({
-        name = "kr-se-deep-space-loader-black",
-        speed = data.raw["transport-belt"]["se-deep-space-transport-belt-black"].speed,
-        belt_animation_set = data.raw["transport-belt"]["se-deep-space-transport-belt-black"].belt_animation_set,
-        order = data.raw["transport-belt"]["se-deep-space-transport-belt-black"].order,
-        icon = kr_se_graphic_path .. "kr-se-deep-space-loader-black.png",
-        icon_size = 64,
-        tint = kr_color_lib.convert(50, 50, 50, 100),
-        apply_rust = false,
-        se_allow_in_space = true,
-        upgrade = "kr-se-loader",
       }),
       kr_loader_recipe({
         name = "kr-se-deep-space-loader-black",

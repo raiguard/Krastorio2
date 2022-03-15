@@ -17,6 +17,7 @@ Date: ????
   Compatibility:
     - Added auto-generated recipes for modded trees and rocks in the greenhouse (#115)
     - [Space Exploration] Added landfill recipes made from raw imersite and raw rare metals (#115)
+    - [Space Exploration] The Deep Space Loader will match the belt color of the deep space belt it is connected to (#115)
   Bugfixes:
     - Fixed inaccurate max consumption for the energy absorber (#249)
     - Fixed that tesla coils would not leave a ghost when destroyed (#248)

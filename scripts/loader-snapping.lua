@@ -35,6 +35,23 @@ function loader_snapping.snap_direction(entity, target)
 
     local connection = entity.belt_neighbours[loader_type .. "s"][1]
     if connection and (not target or connection.unit_number == target.unit_number) then
+      -- SPACE EXPLORATION: Snap the color of the deep space belt
+      local _, _, loader_color = string.find(entity.name, "^kr%-se%-deep%-space%-loader%-(%w-)$")
+      if loader_color then
+        local _, _, connection_color = string.find(connection.name, "se%-deep%-space%-.*%-(%w-)$")
+        if connection_color and connection_color ~= loader_color then
+          entity.surface.create_entity({
+            name = "kr-se-deep-space-loader-" .. connection_color,
+            direction = entity.direction,
+            force = entity.force,
+            position = entity.position,
+            player = entity.last_user,
+            fast_replace = true,
+            type = entity.loader_type,
+            create_build_effect_smoke = false,
+          })
+        end
+      end
       break
     else
       -- Flip the direction

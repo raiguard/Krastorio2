@@ -270,6 +270,13 @@ constants.loader_names = {
   ["kr-superior-loader"] = true,
   ["kr-se-loader"] = true,
   ["kr-se-deep-space-loader-black"] = true,
+  ["kr-se-deep-space-loader-blue"] = true,
+  ["kr-se-deep-space-loader-cyan"] = true,
+  ["kr-se-deep-space-loader-green"] = true,
+  ["kr-se-deep-space-loader-magenta"] = true,
+  ["kr-se-deep-space-loader-red"] = true,
+  ["kr-se-deep-space-loader-white"] = true,
+  ["kr-se-deep-space-loader-yellow"] = true,
 }
 
 constants.mode_change_flying_text_color = { r = 1, g = 0.5, b = 0.25 }
