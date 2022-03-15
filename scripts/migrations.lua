@@ -3,6 +3,7 @@ local table = require("__flib__.table")
 
 local compatibility = require("scripts.compatibility")
 local creep = require("scripts.creep")
+local energy_absorber = require("scripts.energy-absorber")
 local freeplay = require("scripts.freeplay")
 local inserter = require("scripts.inserter")
 local intergalactic_transceiver = require("scripts.intergalactic-transceiver")
@@ -24,6 +25,7 @@ function migrations.generic()
   freeplay.disable_rocket_victory()
   util.ensure_turret_force()
 
+  energy_absorber.init()
   intergalactic_transceiver.get_max_energy()
   radioactivity.refresh_players()
   radioactivity.reset_entities_items()
@@ -237,6 +239,7 @@ migrations.versions = {
     end
   end,
   ["1.3.0"] = function()
+    global.error_message_tick = {}
     if game.finished or game.finished_but_continuing then
       for _, force in pairs(game.forces) do
         force.technologies["kr-logo"].enabled = true

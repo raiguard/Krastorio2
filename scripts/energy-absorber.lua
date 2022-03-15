@@ -2,6 +2,12 @@ local util = require("scripts.util")
 
 local energy_absorber = {}
 
+function energy_absorber.init()
+  --- Holds the last tick that an energy absorber error message was displayed for each player
+  --- @type table<number, number>
+  global.error_message_tick = {}
+end
+
 -- Limit each grid to a single absorber
 function energy_absorber.on_placed(e)
   local equipment = e.equipment
@@ -30,7 +36,10 @@ function energy_absorber.on_placed(e)
     end
 
     -- Show the error
-    util.flying_text_with_sound(player, { "message.kr-already-one-energy-absorber" })
+    if (global.error_message_tick[e.player_index] or 0) + 30 < game.ticks_played then
+      util.flying_text_with_sound(player, { "message.kr-already-one-energy-absorber" })
+    end
+    global.error_message_tick[e.player_index] = game.ticks_played
   end
 end
 

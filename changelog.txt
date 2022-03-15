@@ -14,6 +14,7 @@ Date: ????
   Bugfixes:
     - Fixed that tesla coils would not leave a ghost when destroyed (#248)
     - Fixed that the tesla coil collision entity could be destroyed by turrets (#247)
+    - Fixed that you would be spammed with error messages when dragging an energy absorber in a grid (#245)
     - Fixed the secret research not being unlocked after the game is won (#246)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.26
