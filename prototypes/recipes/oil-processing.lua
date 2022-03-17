@@ -13,8 +13,8 @@ return {
       { type = "fluid", name = "steam", amount = 50 },
     },
     results = {
-      { type = "fluid", name = "light-oil", amount = 90 },
       { type = "fluid", name = "heavy-oil", amount = 20 },
+      { type = "fluid", name = "light-oil", amount = 90 },
       { type = "fluid", name = "petroleum-gas", amount = 10 },
     },
 
