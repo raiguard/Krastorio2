@@ -239,7 +239,7 @@ migrations.versions = {
     end
   end,
   ["1.3.0"] = function()
-    global.error_message_tick = {}
+    energy_absorber.init()
     if game.finished or game.finished_but_continuing then
       for _, force in pairs(game.forces) do
         force.technologies["kr-logo"].enabled = true
