@@ -615,7 +615,15 @@ data:extend({
       },
       {
         type = "unlock-recipe",
+        recipe = krastorio.recipes.changed_names["kr-s-c-copper-cable"] or "kr-s-c-copper-cable-enriched",
+      },
+      {
+        type = "unlock-recipe",
         recipe = krastorio.recipes.changed_names["kr-s-c-iron-stick"] or "kr-s-c-iron-stick",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = krastorio.recipes.changed_names["kr-s-c-iron-stick"] or "kr-s-c-iron-stick-enriched",
       },
       {
         type = "unlock-recipe",
@@ -623,7 +631,15 @@ data:extend({
       },
       {
         type = "unlock-recipe",
+        recipe = krastorio.recipes.changed_names["kr-s-c-iron-gear-wheel"] or "kr-s-c-iron-gear-wheel-enriched",
+      },
+      {
+        type = "unlock-recipe",
         recipe = krastorio.recipes.changed_names["kr-s-c-iron-beam"] or "kr-s-c-iron-beam",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = krastorio.recipes.changed_names["kr-s-c-iron-beam"] or "kr-s-c-iron-beam-enriched",
       },
       {
         type = "unlock-recipe",
@@ -646,7 +662,13 @@ data:extend({
         recipe = krastorio.recipes.changed_names["kr-s-c-electronic-components"] or "kr-s-c-electronic-components",
       },
     },
-    prerequisites = { "automation-3", "kr-imersium-processing", "kr-energy-control-unit", "kr-advanced-tech-card" },
+    prerequisites = {
+      "automation-3",
+      "kr-imersium-processing",
+      "kr-energy-control-unit",
+      "kr-advanced-tech-card",
+      "kr-enriched-ores",
+    },
     unit = {
       count = 500,
       ingredients = {
