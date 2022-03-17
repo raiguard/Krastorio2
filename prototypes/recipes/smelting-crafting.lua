@@ -1,8 +1,19 @@
--- A RECIPE FOR STAY IN THIS FILE SHOULD HAVE THE ATTRIBUTE category = "smelting-crafting"
+local data_util = require("__flib__.data-util")
+local table = require("__flib__.table")
+
+local function sc_icon(product, ingredient)
+  local product_icon = data_util.create_icons(data.raw[product.type][product.name])
+  local ingredient_icon = data_util.create_icons(data.raw[ingredient.type][ingredient.name])
+  ingredient_icon[1].scale = 0.22
+  ingredient_icon[1].shift = { -8, -8 }
+  return table.array_merge({ product_icon, ingredient_icon })
+end
+
 return {
   {
     type = "recipe",
     name = "kr-s-c-copper-cable",
+    icons = sc_icon({ type = "item", name = "copper-cable" }, { type = "item", name = "copper-ore" }),
     category = "smelting-crafting",
     subgroup = "smelting-crafting",
     energy_required = 1.0,
@@ -20,6 +31,7 @@ return {
   {
     type = "recipe",
     name = "kr-s-c-iron-stick",
+    icons = sc_icon({ type = "item", name = "iron-stick" }, { type = "item", name = "iron-ore" }),
     category = "smelting-crafting",
     subgroup = "smelting-crafting",
     energy_required = 1.0,
@@ -36,6 +48,7 @@ return {
   {
     type = "recipe",
     name = "kr-s-c-iron-gear-wheel",
+    icons = sc_icon({ type = "item", name = "iron-gear-wheel" }, { type = "item", name = "iron-ore" }),
     category = "smelting-crafting",
     subgroup = "smelting-crafting",
     energy_required = 1.0,
@@ -52,6 +65,7 @@ return {
   {
     type = "recipe",
     name = "kr-s-c-iron-beam",
+    icons = sc_icon({ type = "item", name = "iron-beam" }, { type = "item", name = "iron-ore" }),
     category = "smelting-crafting",
     subgroup = "smelting-crafting",
     energy_required = 4.0,
@@ -68,6 +82,7 @@ return {
   {
     type = "recipe",
     name = "kr-s-c-steel-gear-wheel",
+    icons = sc_icon({ type = "item", name = "steel-gear-wheel" }, { type = "item", name = "iron-plate" }),
     category = "smelting-crafting",
     subgroup = "smelting-crafting",
     energy_required = 5.0,
@@ -85,6 +100,7 @@ return {
   {
     type = "recipe",
     name = "kr-s-c-steel-beam",
+    icons = sc_icon({ type = "item", name = "steel-beam" }, { type = "item", name = "iron-plate" }),
     category = "smelting-crafting",
     subgroup = "smelting-crafting",
     energy_required = 20.0,
@@ -103,6 +119,7 @@ return {
   {
     type = "recipe",
     name = "kr-s-c-imersium-gear-wheel",
+    icons = sc_icon({ type = "item", name = "imersium-gear-wheel" }, { type = "item", name = "imersite-powder" }),
     category = "smelting-crafting",
     subgroup = "smelting-crafting",
     energy_required = 2.0,
@@ -120,6 +137,7 @@ return {
   {
     type = "recipe",
     name = "kr-s-c-imersium-beam",
+    icons = sc_icon({ type = "item", name = "imersium-beam" }, { type = "item", name = "imersite-powder" }),
     category = "smelting-crafting",
     subgroup = "smelting-crafting",
     energy_required = 12.0,
