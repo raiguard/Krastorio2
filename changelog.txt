@@ -9,9 +9,11 @@ Date: ????
     - Mineral water will be made infinite if "Finite oil" setting is disabled (#240)
   Changes:
     - Adjusted Intergalactic Transceiver night lighting to be more purple
+    - Creep will be restricted to Nauvis only if Space Exploration is enabled (#252)
     - Moved tree and rock recipes from intermediate products to environment group
     - Removed "efficient fabrication" technology and the lithium electronic components recipe
     - Removed the setting to disable the substation mk2
+    - Replaced /kr-enable-nauvis-creep and /kr-disable-nauvis-creep with /kr-set-creep-on-surface
     - Updated translations from Crowdin
   Balancing:
     - Creep collection range is based on your reach distance, but cannot be collected if there are enemies nearby (#239)

@@ -364,6 +364,13 @@ event.on_chunk_generated(function(e)
   creep.on_chunk_generated(e.area, e.surface)
 end)
 
+event.on_surface_created(function(e)
+  -- Space Exploration: only generate creep on Nauvis
+  if not script.active_mods["space-exploration"] then
+    creep.add_surface(e.surface_index)
+  end
+end)
+
 -- TICKS AND TRIGGERS
 
 event.on_script_trigger_effect(function(e)
