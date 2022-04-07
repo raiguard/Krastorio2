@@ -83,6 +83,7 @@ data:extend({
     fuel_emissions_multiplier = 0.8,
     fuel_acceleration_multiplier = 0.8,
     fuel_top_speed_multiplier = 0.8,
+    flags = { "always-show" },
     subgroup = "raw-material",
     order = "a[biomass]",
     stack_size = 200,
@@ -124,7 +125,12 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
-      { size = 64, filename = kr_items_with_variations_icons_path .. "sand/sand.png", scale = 0.25, mipmap_count = 4 },
+      {
+        size = 64,
+        filename = kr_items_with_variations_icons_path .. "sand/sand.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
       {
         size = 64,
         filename = kr_items_with_variations_icons_path .. "sand/sand-1.png",
@@ -276,7 +282,12 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
-      { size = 64, filename = kr_items_with_variations_icons_path .. "coke/coke.png", scale = 0.25, mipmap_count = 4 },
+      {
+        size = 64,
+        filename = kr_items_with_variations_icons_path .. "coke/coke.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
       {
         size = 64,
         filename = kr_items_with_variations_icons_path .. "coke/coke-1.png",

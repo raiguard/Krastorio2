@@ -23,6 +23,7 @@ Date: ????
     - [Space Exploration] The Deep Space Loader will match the belt color of the deep space belt it is connected to (#115)
   Bugfixes:
     - Fixed inaccurate max consumption for the energy absorber (#249)
+    - Fixed that biomass would not show in selection lists until after researching bioprocessing (#255)
     - Fixed that coke liquefaction had different fluid output locations than coke liquefaction (#250)
     - Fixed that tesla coils would not leave a ghost when destroyed (#248)
     - Fixed that the tesla coil collision entity could be destroyed by turrets (#247)
