@@ -25,6 +25,7 @@ Date: ????
     - Fixed inaccurate max consumption for the energy absorber (#249)
     - Fixed that biomass would not show in selection lists until after researching bioprocessing (#255)
     - Fixed that coke liquefaction had different fluid output locations than coke liquefaction (#250)
+    - Fixed that Editor Extensions linked belts would be flipped when placed
     - Fixed that tesla coils would not leave a ghost when destroyed (#248)
     - Fixed that the tesla coil collision entity could be destroyed by turrets (#247)
     - Fixed that you would be spammed with error messages when dragging an energy absorber in a grid (#245)
