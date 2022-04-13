@@ -73,7 +73,12 @@ function loader_snapping.snap_belt_neighbours(entity)
         end
       end
     end
-    entity.rotate()
+    if entity.type == "linked-belt" then
+      -- Calling rotate() on a linked belt will actually rotate it instead of changing its type
+      entity.linked_belt_type = entity.linked_belt_type == "output" and "input" or "output"
+    else
+      entity.rotate()
+    end
   end
 
   for _, loader in pairs(loaders) do
