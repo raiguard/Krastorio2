@@ -74,6 +74,10 @@ function loader_snapping.snap_belt_neighbours(entity)
       end
     end
     if entity.type == "linked-belt" then
+      -- Trying to "flip" the linked belt when it is connected throws an exception
+      if entity.linked_belt_neighbour then
+        break
+      end
       -- Calling rotate() on a linked belt will actually rotate it instead of changing its type
       entity.linked_belt_type = entity.linked_belt_type == "output" and "input" or "output"
     else
