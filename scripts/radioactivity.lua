@@ -49,7 +49,7 @@ function radioactivity.refresh_players()
 end
 
 function radioactivity.check_around_player(player)
-  if not global.radioactivity.enabled then
+  if not global.radioactivity.enabled or #global.radioactivity.entities == 0 then
     return
   end
 
