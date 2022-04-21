@@ -75,7 +75,11 @@ Your path may lead you to discoveries that, perhaps, should remain purely scienc
 
 ### Overhaul mods
 
-Krastorio 2 has extended compatibility for [Space Exploration](https://mods.factorio.com/mod/space-exploration) and [Industrial Revolution 2](https://mods.factorio.com/mod/IndustrialRevolution) individually. You may not play K2 + SE + IR2 together.
+Krastorio 2 has comprehensive compatibility with [Space Exploration](https://mods.factorio.com/mod/space-exploration).
+
+Krastorio 2 has limited compatibility with [Industrial Revolution 2](https://mods.factorio.com/mod/IndustrialRevolution). The integration is currently at the "better than nothing" stage.
+
+You may not play K2 + IR2 + SE all at the same time.
 
 Krastorio 2 does **NOT** have compatibility for the Bob's and Angel's (B&A) suite of mods. Attempting to play Krastorio 2 with these modpacks will result in crashes.
 
