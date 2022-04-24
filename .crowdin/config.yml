@@ -4,9 +4,9 @@
 
 "files": [
   {
-    "source": "locale/en/*.cfg",
+    "source": "/locale/en/*.cfg",
     "dest": "%file_name%.ini",
-    "translation": "locale/%two_letters_code%/%original_file_name%",
+    "translation": "/locale/%two_letters_code%/%original_file_name%",
     "type": "ini"
   },
 ]
