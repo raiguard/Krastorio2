@@ -13,12 +13,14 @@ local statuses = constants.intergalactic_transceiver.statuses
 local cutscene_const = constants.intergalactic_transceiver.cutscene
 
 function intergalactic_transceiver.init()
-  global.intergalactic_transceiver = {
-    forces = {},
-    guis = {},
-    inactive = {},
-    is_victory = true,
-  }
+  if not global.intergalactic_transceiver then -- Can be already initialised through remote interface
+    global.intergalactic_transceiver = {
+      forces = {},
+      guis = {},
+      inactive = {},
+      is_victory = true,
+    }
+  end
 end
 
 function intergalactic_transceiver.get_max_energy()
@@ -511,17 +513,15 @@ intergalactic_transceiver.gui_actions = actions
 
 intergalactic_transceiver.remote_interface = {
   get_no_victory = function()
-    if global.intergalactic_transceiver then
-      return not global.intergalactic_transceiver.is_victory
-    end
+    if not global.intergalactic_transceiver then intergalactic_transceiver.init() end
+    return not global.intergalactic_transceiver.is_victory
   end,
   set_no_victory = function(to_state)
     if not to_state or type(to_state) ~= "boolean" then
       error("`to_state` must be a boolean")
     end
-    if global.intergalactic_transceiver then
-      global.intergalactic_transceiver.is_victory = not to_state
-    end
+    if not global.intergalactic_transceiver then intergalactic_transceiver.init() end
+    global.intergalactic_transceiver.is_victory = not to_state
   end,
 }
 
