@@ -62,7 +62,7 @@ local function init_biter_virus(player, surface)
     local len = #enemy_entities
     if len > 0 then
       biter_viruses[surface.index] = {
-        amount_per_iteration = math.floor(len / get_removal_count(len)),
+        amount_per_iteration = math.ceil(len / get_removal_count(len)),
         entities = enemy_entities,
         entities_killed = 0,
         entities_len = len,
@@ -115,7 +115,7 @@ local function init_creep_virus(surface)
     local creep_tiles = surface.find_tiles_filtered({ name = "kr-creep" })
     local num_creeps = #creep_tiles
     creep_viruses[surface.index] = {
-      amount_per_iteration = math.floor(num_creeps / get_removal_count(num_creeps)),
+      amount_per_iteration = math.ceil(num_creeps / get_removal_count(num_creeps)),
       surface = surface,
       tiles = creep_tiles,
       tiles_len = num_creeps,
