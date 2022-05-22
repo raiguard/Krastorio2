@@ -9,34 +9,6 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
   krastorio.modules.removeProductivityLimitation("se-rocket-fuel-from-water-copper")
   krastorio.recipes.setCategoryIfExist("rocket-fuel", "fuel-refinery")
 
-  -- Change the core fragments value to rebalance well the gain value
-  local function scaleCoreFragmentRecipe(_recipe_name, _item_name, _multiplier)
-    local cf_recipe_name = "se-core-fragment-" .. _recipe_name
-    local amount = krastorio.recipes.countProduct("se-core-fragment-omni", _item_name)
-    local _item_type = krastorio.items.getItemType(_item_name)
-    krastorio.recipes.replaceProduct(
-      "se-core-fragment-omni",
-      _item_name,
-      { type = _item_type, name = _item_name, amount = amount * _multiplier }
-    )
-    krastorio.recipes.replaceProduct(
-      cf_recipe_name,
-      _item_name,
-      { type = _item_type, name = _item_name, amount = amount * _multiplier }
-    )
-  end
-
-  local core_fragment_to_change = {
-    ["imersite"] = { "raw-imersite", 0.2 },
-    ["rare-metals"] = { "raw-rare-metals", 0.2 },
-    ["mineral-water"] = { "mineral-water", 0.25 },
-    ["crude-oil"] = { "crude-oil", 0.5 },
-  }
-
-  for item_name, multiplier in pairs(core_fragment_to_change) do
-    scaleCoreFragmentRecipe(item_name, multiplier[1], multiplier[2])
-  end
-
   -- Adding new K2 recipe categories to some space machines to make users able to process the K2 intermediates in the space
   krastorio.entities.addCraftingCategory("assembling-machine", "se-space-mechanical-laboratory", "crushing")
   krastorio.entities.addCraftingCategory("assembling-machine", "se-pulveriser", "crushing")
