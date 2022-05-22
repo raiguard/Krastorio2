@@ -17,6 +17,7 @@ Date: ????
     - Updated translations from Crowdin
   Balancing:
     - Creep collection range is based on your reach distance, but cannot be collected if there are enemies nearby (#239)
+    - Productivity modules may be used for Quartz (#277)
   Compatibility:
     - Added auto-generated recipes for modded trees and rocks in the greenhouse (#115)
     - Added fluidbox connections to the advanced furnace (#278)

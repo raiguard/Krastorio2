@@ -17,3 +17,8 @@ data.raw.capsule["raw-fish"].capsule_action.attack_parameters.ammo_type.action.a
 }
 
 -----------------------------------------------------------------
+
+-- Make prod modules work in the filtration plant
+table.insert(data.raw.module["productivity-module"].limitation, "quartz")
+table.insert(data.raw.module["productivity-module-2"].limitation, "quartz")
+table.insert(data.raw.module["productivity-module-3"].limitation, "quartz")
