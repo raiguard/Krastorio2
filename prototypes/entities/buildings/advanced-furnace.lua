@@ -1,3 +1,133 @@
+function furnacekpipepictures_a()
+  return {
+    north = {
+      filename = kr_entities_path .. "advanced-furnace/advanced-furnace-k-pipe-N.png",
+      priority = "extra-high",
+      width = 35,
+      height = 18,
+      shift = util.by_pixel(2.5, 14),
+      hr_version = {
+        filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-k-pipe-N.png",
+        priority = "extra-high",
+        width = 71,
+        height = 38,
+        shift = util.by_pixel(2.25, 13.5),
+        scale = 0.5,
+      },
+    },
+    east = {
+      filename = kr_entities_path .. "advanced-furnace/advanced-furnace-k-pipe-E-top.png",
+      priority = "extra-high",
+      width = 30, --20,
+      height = 38,
+      shift = util.by_pixel(-29, 1),
+      hr_version = {
+        filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-k-pipe-E-top.png",
+        priority = "extra-high",
+        width = 59, --42,
+        height = 76,
+        shift = util.by_pixel(-28.75, 1),
+        scale = 0.5,
+      },
+    },
+    south = {
+      filename = kr_entities_path .. "advanced-furnace/advanced-furnace-k-pipe-S-right.png",
+      priority = "extra-high",
+      width = 44,
+      height = 31,
+      shift = util.by_pixel(0, -31.5),
+      hr_version = {
+        filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-k-pipe-S-right.png",
+        priority = "extra-high",
+        width = 88,
+        height = 61,
+        shift = util.by_pixel(0, -31.5),
+        scale = 0.5,
+      },
+    },
+    west = {
+      filename = kr_entities_path .. "advanced-furnace/advanced-furnace-k-pipe-W-bottom.png",
+      priority = "extra-high",
+      width = 19,
+      height = 37,
+      shift = util.by_pixel(25.5, 1.5),
+      hr_version = {
+        filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-k-pipe-W-bottom.png",
+        priority = "extra-high",
+        width = 39,
+        height = 73,
+        shift = util.by_pixel(25.75, 1.25),
+        scale = 0.5,
+      },
+    },
+  }
+end
+
+function furnacekpipepictures_b()
+  return {
+    north = {
+      filename = kr_entities_path .. "advanced-furnace/advanced-furnace-k-pipe-N.png",
+      priority = "extra-high",
+      width = 35,
+      height = 18,
+      shift = util.by_pixel(2.5, 14),
+      hr_version = {
+        filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-k-pipe-N.png",
+        priority = "extra-high",
+        width = 71,
+        height = 38,
+        shift = util.by_pixel(2.25, 13.5),
+        scale = 0.5,
+      },
+    },
+    east = {
+      filename = kr_entities_path .. "advanced-furnace/advanced-furnace-k-pipe-E-bottom.png",
+      priority = "extra-high",
+      width = 38, --20,
+      height = 38,
+      shift = util.by_pixel(-33, 1),
+      hr_version = {
+        filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-k-pipe-E-bottom.png",
+        priority = "extra-high",
+        width = 76, --42,
+        height = 76,
+        shift = util.by_pixel(-33, 1),
+        scale = 0.5,
+      },
+    },
+    south = {
+      filename = kr_entities_path .. "advanced-furnace/advanced-furnace-k-pipe-S-left.png",
+      priority = "extra-high",
+      width = 44,
+      height = 31,
+      shift = util.by_pixel(0, -31.5),
+      hr_version = {
+        filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-k-pipe-S-left.png",
+        priority = "extra-high",
+        width = 88,
+        height = 61,
+        shift = util.by_pixel(0, -31.25),
+        scale = 0.5,
+      },
+    },
+    west = {
+      filename = kr_entities_path .. "advanced-furnace/advanced-furnace-k-pipe-W-top.png",
+      priority = "extra-high",
+      width = 19,
+      height = 42, --37,
+      shift = util.by_pixel(25.5, -2.25),
+      hr_version = {
+        filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-k-pipe-W-top.png",
+        priority = "extra-high",
+        width = 39,
+        height = 87, --73,
+        shift = util.by_pixel(25.5, -2.25),
+        scale = 0.5,
+      },
+    },
+  }
+end
+
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 
@@ -37,6 +167,81 @@ data:extend({
     collision_box = { { -3.25, -3.25 }, { 3.25, 3.25 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     damaged_trigger_effect = hit_effects.entity(),
+    fluid_boxes = {
+      {
+        production_type = "input",
+        pipe_picture = furnacekpipepictures_a(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = -1,
+        pipe_connections = { { type = "input", position = { -1, -4 } } },
+        secondary_draw_orders = { north = -1 },
+      },
+      {
+        production_type = "input",
+        pipe_picture = furnacekpipepictures_b(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = -1,
+        pipe_connections = { { type = "input", position = { 1, -4 } } },
+        secondary_draw_orders = { north = -1 },
+      },
+      {
+        production_type = "input",
+        pipe_picture = furnacekpipepictures_b(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = -1,
+        pipe_connections = { { type = "input", position = { -4, -1 } } },
+        secondary_draw_orders = { north = -1 },
+      },
+      {
+        production_type = "input",
+        pipe_picture = furnacekpipepictures_a(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = -1,
+        pipe_connections = { { type = "input", position = { 4, -1 } } },
+        secondary_draw_orders = { north = -1 },
+      },
+      {
+        production_type = "output",
+        pipe_picture = furnacekpipepictures_b(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = 1,
+        pipe_connections = { { type = "output", position = { -1, 4 } } },
+        secondary_draw_orders = { north = -1 },
+      },
+      {
+        production_type = "output",
+        pipe_picture = furnacekpipepictures_a(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = 1,
+        pipe_connections = { { type = "output", position = { 1, 4 } } },
+        secondary_draw_orders = { north = -1 },
+      },
+      {
+        production_type = "output",
+        pipe_picture = furnacekpipepictures_a(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = 1,
+        pipe_connections = { { type = "output", position = { -4, 1 } } },
+        secondary_draw_orders = { north = -1 },
+      },
+      {
+        production_type = "output",
+        pipe_picture = furnacekpipepictures_b(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = 1,
+        pipe_connections = { { type = "output", position = { 4, 1 } } },
+        secondary_draw_orders = { north = -1 },
+      },
+      off_when_no_fluid_recipe = true,
+    },
     animation = {
       layers = {
         {
