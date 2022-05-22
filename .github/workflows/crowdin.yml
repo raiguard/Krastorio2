@@ -25,8 +25,8 @@ jobs:
         upload_translations: true
         download_translations: true
         config: '.crowdin.yml'
-        pull_request_title: 'Update Crowdin translations'
         commit_message: 'Update Crowdin translations'
+        create_pull_request: false
         export_only_approved: false
         skip_untranslated_files: false
       env:
@@ -37,3 +37,8 @@ jobs:
     - name: Unquote translations
       run: ./.github/scripts/unquote-translations.sh
       shell: bash
+
+    - name: Commit
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_options: '--amend'
