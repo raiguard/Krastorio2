@@ -110,4 +110,8 @@ if mods["angelspetrochem"] then
   makeFluidBurnable("gas-butane", "950KJ", 1.4)
   makeFluidBurnable("gas-propene", "1000KJ", 1.4)
   makeFluidBurnable("gas-benzene", "1000KJ", 1.4)
+
+  -- Fix tech levels
+  data.raw.technology["chlorine-processing-4"] = nil
+  krastorio.technologies.convertPrerequisiteFromAllTechnologies("chlorine-processing-4", "chlorine-processing-2", true)
 end
