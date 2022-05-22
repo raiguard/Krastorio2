@@ -41,4 +41,5 @@ jobs:
     - name: Commit
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_options: '--amend'
+        commit_message: 'Unquote translations'
+        branch: '${{ github.head_ref }}'
