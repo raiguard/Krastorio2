@@ -14,6 +14,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
+    - name: Quote sources
+      run: ./.github/scripts/quote-sources.sh
+      shell: bash
+
     - name: Sync with Crowdin
       uses: crowdin/github-action@1.4.8
       with:
@@ -29,3 +33,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
         CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+
+    - name: Unquote translations
+      run: ./.github/scripts/unquote-translations.sh
+      shell: bash
