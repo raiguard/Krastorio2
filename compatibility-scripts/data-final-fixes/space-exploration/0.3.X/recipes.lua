@@ -9,9 +9,6 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
   krastorio.modules.removeProductivityLimitation("se-rocket-fuel-from-water-copper")
   krastorio.recipes.setCategoryIfExist("rocket-fuel", "fuel-refinery")
 
-  -- Restore the satellite production from sending satellite in the space to get K2 space data
-  data.raw.item["satellite"].rocket_launch_product = { "space-research-data", 1000 }
-
   -- Change the core fragments value to rebalance well the gain value
   local function scaleCoreFragmentRecipe(_recipe_name, _item_name, _multiplier)
     local cf_recipe_name = "se-core-fragment-" .. _recipe_name
