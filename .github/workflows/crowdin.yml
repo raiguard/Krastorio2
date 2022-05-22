@@ -26,7 +26,8 @@ jobs:
         download_translations: true
         config: '.crowdin.yml'
         commit_message: 'Update Crowdin translations'
-        create_pull_request: false
+        # FIXME: Commit directly to master
+        pull_request_title: 'Update Crowdin translations'
         export_only_approved: false
         skip_untranslated_files: false
       env:
@@ -34,13 +35,13 @@ jobs:
         CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
         CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
 
-    - name: Unquote translations
-      run: ./.github/scripts/unquote-translations.sh
-      shell: bash
+    # FIXME: The commit action is failing with insufficient permissions
+    # - name: Unquote translations
+    #   run: ./.github/scripts/unquote-translations.sh
+    #   shell: bash
 
-    - name: Commit
-      uses: EndBug/add-and-commit@v9
-      with:
-        commit: '--amend'
-        default_author: 'github_actions'
-
+    # - name: Commit
+    #   uses: EndBug/add-and-commit@v9
+    #   with:
+    #     commit: '--amend'
+    #     default_author: 'github_actions'
