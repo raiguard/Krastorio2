@@ -43,7 +43,6 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
   -- Adding new K2 recipe categories to some space machines to make users able to process the K2 intermediates in the space
   krastorio.entities.addCraftingCategory("assembling-machine", "se-space-mechanical-laboratory", "crushing")
   krastorio.entities.addCraftingCategory("assembling-machine", "se-pulveriser", "crushing")
-  krastorio.entities.addCraftingCategory("assembling-machine", "se-space-biochemical-laboratory", "electrolysis")
   krastorio.entities.addCraftingCategory("assembling-machine", "se-space-decontamination-facility", "fluid-filtration")
 
   -- Merge the sand recipes
