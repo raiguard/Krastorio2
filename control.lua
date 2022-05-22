@@ -44,6 +44,7 @@ event.on_init(function()
   creep.init()
   inserter.init()
   intergalactic_transceiver.init()
+  loader_snapping.init()
   patreon.init()
   planetary_teleporter.init()
   radioactivity.init()
@@ -111,7 +112,11 @@ event.register({
   elseif entity_name == "offshore-pump" then
     offshore_pump.build(entity)
   elseif constants.loader_names[entity_name] then
-    loader_snapping.snap_to_container(entity)
+    -- Only snap if we built manually, and if we did not build over a ghost
+    if e.name == defines.events.on_built_entity and global.building_loader[e.player_index] then
+      global.building_loader[e.player_index] = nil
+      loader_snapping.snap_to_container(entity)
+    end
   elseif constants.transport_belt_connectable_types[entity_type] then
     loader_snapping.snap_belt_neighbours(entity)
   end
@@ -175,6 +180,26 @@ event.on_entity_settings_pasted(function(e)
 
   if source.valid and destination.valid and source.type == "inserter" and destination.type == "inserter" then
     inserter.copy_settings(source, destination)
+  end
+end)
+
+event.on_pre_build(function(e)
+  local player = game.get_player(e.player_index)
+  local cursor_stack = player.cursor_stack
+  if not cursor_stack.valid_for_read then
+    return
+  end
+
+  local place_result = cursor_stack.prototype.place_result
+  if not place_result or not constants.loader_names[place_result.name] then
+    return
+  end
+
+  local surface = player.surface
+  local ghost = surface.find_entity("entity-ghost", e.position)
+  -- Only snap loaders if the player is not building over a loader ghost
+  if not ghost or not constants.loader_names[ghost.ghost_name] then
+    global.building_loader[e.player_index] = true
   end
 end)
 

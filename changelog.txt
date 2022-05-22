@@ -39,6 +39,7 @@ Date: ????
     - Fixed that you would be spammed with error messages when dragging an energy absorber in a grid (#245)
     - Fixed the secret research not being unlocked after the game is won (#246)
     - Fixed various recipes having catalysts that didn't need them (#243)
+    - Loaders will only be snapped when a player builds them, and they are not built over a ghost (#272)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.25
 Date: 2022-03-12

@@ -7,6 +7,7 @@ local energy_absorber = require("scripts.energy-absorber")
 local freeplay = require("scripts.freeplay")
 local inserter = require("scripts.inserter")
 local intergalactic_transceiver = require("scripts.intergalactic-transceiver")
+local loader_snapping = require("scripts.loader-snapping")
 local patreon = require("scripts.patreon")
 local planetary_teleporter = require("scripts.planetary-teleporter")
 local radioactivity = require("scripts.radioactivity")
@@ -26,10 +27,10 @@ function migrations.generic()
   util.ensure_turret_force()
 
   energy_absorber.init()
+  inserter.find_droplanes()
   intergalactic_transceiver.get_max_energy()
   radioactivity.refresh_players()
   radioactivity.reset_entities_items()
-  inserter.find_droplanes()
   roboport.find_variants()
   tesla_coil.get_absorber_buffer_capacity()
 
@@ -240,6 +241,7 @@ migrations.versions = {
   end,
   ["1.3.0"] = function()
     energy_absorber.init()
+    loader_snapping.init()
     if game.finished or game.finished_but_continuing then
       for _, force in pairs(game.forces) do
         force.technologies["kr-logo"].enabled = true

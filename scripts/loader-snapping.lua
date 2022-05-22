@@ -4,6 +4,13 @@ local constants = require("scripts.constants")
 
 local loader_snapping = {}
 
+--- Initializes global table.
+function loader_snapping.init()
+  --- If a player index is here, then they are building a loader manually without building over a ghost
+  --- @type table<number, boolean>
+  global.building_loader = {}
+end
+
 --- Checks to see if the loader was placed backwards against a container
 --- @param entity LuaEntity
 function loader_snapping.snap_to_container(entity)
