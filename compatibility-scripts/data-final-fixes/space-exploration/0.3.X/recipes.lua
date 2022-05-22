@@ -70,8 +70,6 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
     krastorio.technologies.removeUnlockRecipeFromAllTechnologies("glass-from-sand")
     krastorio.modules.removeProductivityLimitation("glass-from-sand")
   end
-  -- Boost SE glass recipe
-  krastorio.recipes.replaceProduct("se-glass-vulcanite", "glass", { "glass", 16 })
 
   -- Move lithium sulfur battery
   data.raw["recipe"]["lithium-sulfur-battery"].subgroup = "intermediate-product"
