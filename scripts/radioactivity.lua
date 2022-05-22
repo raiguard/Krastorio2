@@ -85,6 +85,10 @@ function radioactivity.check_inventory(player)
   end
 
   local player_data = global.radioactivity.players[player.index]
+  if not player_data then
+    return
+  end
+
   if not player.character or not player.character.valid then
     player_data.inventory = false
     return
