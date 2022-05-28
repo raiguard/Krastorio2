@@ -1,6 +1,71 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 
+function qunatumkpipepictures()
+  return {
+    north = {
+      filename = kr_entities_path .. "quantum-computer/quantum-computer-k-pipe-N.png",
+      priority = "extra-high",
+      width = 39, --35
+      height = 36, -- 18
+      shift = util.by_pixel(4.25, 23),
+      hr_version = {
+        filename = kr_entities_path .. "quantum-computer/hr-quantum-computer-k-pipe-N.png",
+        priority = "extra-high",
+        width = 78, --71
+        height = 71, -- 38
+        shift = util.by_pixel(4.25, 23),
+        scale = 0.5,
+      },
+    },
+    east = {
+      filename = kr_entities_path .. "quantum-computer/quantum-computer-k-pipe-E.png",
+      priority = "extra-high",
+      width = 20,
+      height = 38,
+      shift = util.by_pixel(-25, 1),
+      hr_version = {
+        filename = kr_entities_path .. "quantum-computer/hr-quantum-computer-k-pipe-E.png",
+        priority = "extra-high",
+        width = 42,
+        height = 76,
+        shift = util.by_pixel(-24.5, 1),
+        scale = 0.5,
+      },
+    },
+    south = {
+      filename = kr_entities_path .. "quantum-computer/quantum-computer-k-pipe-S.png",
+      priority = "extra-high",
+      width = 44,
+      height = 31,
+      shift = util.by_pixel(0, -31.5),
+      hr_version = {
+        filename = kr_entities_path .. "quantum-computer/hr-quantum-computer-k-pipe-S.png",
+        priority = "extra-high",
+        width = 88,
+        height = 61,
+        shift = util.by_pixel(0, -31.25),
+        scale = 0.5,
+      },
+    },
+    west = {
+      filename = kr_entities_path .. "quantum-computer/quantum-computer-k-pipe-W.png",
+      priority = "extra-high",
+      width = 19,
+      height = 37,
+      shift = util.by_pixel(25.5, 1.5),
+      hr_version = {
+        filename = kr_entities_path .. "quantum-computer/hr-quantum-computer-k-pipe-W.png",
+        priority = "extra-high",
+        width = 39,
+        height = 73,
+        shift = util.by_pixel(25.75, 1.25),
+        scale = 0.5,
+      },
+    },
+  }
+end
+
 data:extend({
   {
     type = "assembling-machine",
@@ -21,6 +86,27 @@ data:extend({
     },
     collision_box = { { -2.8, -2.8 }, { 2.8, 2.8 } },
     selection_box = { { -2.95, -2.95 }, { 2.95, 2.95 } },
+    fluid_boxes = {
+      {
+        production_type = "input",
+        pipe_picture = qunatumkpipepictures(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = -1,
+        pipe_connections = { { type = "input", position = { -0.5, -3.5 } } },
+        secondary_draw_orders = { north = -1 },
+      },
+      {
+        production_type = "output",
+        pipe_picture = qunatumkpipepictures(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = 1,
+        pipe_connections = { { type = "output", position = { 0.5, 3.5 } } },
+        secondary_draw_orders = { north = -1 },
+      },
+      off_when_no_fluid_recipe = true,
+    },
     fast_replaceable_group = "assembling-machine",
     animation = {
       layers = {

@@ -21,6 +21,8 @@ Date: ????
   Compatibility:
     - Added auto-generated recipes for modded trees and rocks in the greenhouse (#115)
     - Added fluidbox connections to the advanced furnace (#278)
+    - Added fluidbox connections to the research server
+    - Added fluidbox connections to the advanced research server
     - Fixed intergalactic transceiver not respecting "no victory" remote calls from mods loaded before K2.
     - [Realistic Reactors] Heat exchangers output 10 MW (#282)
     - [Space Exploration] Added landfill recipes made from raw imersite and raw rare metals (#115)

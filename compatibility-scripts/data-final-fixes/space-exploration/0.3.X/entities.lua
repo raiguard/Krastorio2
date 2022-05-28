@@ -22,7 +22,6 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
   -- Fix laboratory science packs
   if data.raw.lab["kr-singularity-lab"] then
     table.insert(data.raw.lab["kr-singularity-lab"].inputs, "space-science-pack")
-    table.insert(data.raw.lab["kr-singularity-lab"].inputs, "se-deep-space-science-pack")
   end
 
   -- Rebalance the electric boiler to not create infinite energy
@@ -117,5 +116,4 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
   -- -- Singularity laboratory fixes
   -- Special collision
   data.raw["lab"]["kr-singularity-lab"].collision_mask = data.raw["lab"]["se-space-science-lab"].collision_mask
-  krastorio.entities.addLabInput("kr-singularity-lab", "se-deep-space-science-pack")
 end
