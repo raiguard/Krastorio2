@@ -30,6 +30,7 @@ require(scripts_path .. "Construction_Drones")
 require(scripts_path .. "Flow_Control")
 require(scripts_path .. "Load-Furn")
 require(scripts_path .. "MineLiquidOres")
+require(scripts_path .. "RealisticReactors")
 -- AAI (Programmable) Vehicles
 require(scripts_path .. "aai-vehicles")
 require(scripts_path .. "aai-programmable-vehicles")
