@@ -13,7 +13,7 @@ local spiders = {
   "voyage_spidertron_mk2",
 }
 
-if mods["spidertrontiers"] then
+if mods["spidertrontiers"] or mods["spidertrontiers-circulardependency"] then
   for _, name in pairs(spiders) do
     local spider = data.raw["spider-vehicle"][name]
     if spider then
