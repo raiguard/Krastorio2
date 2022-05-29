@@ -35,13 +35,15 @@ jobs:
         CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
         CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
 
-    # FIXME: The commit action is failing with insufficient permissions
-    # - name: Unquote translations
-    #   run: ./.github/scripts/unquote-translations.sh
-    #   shell: bash
+    - name: Unquote translations
+      run: ./.github/scripts/unquote-translations.sh
+      shell: bash
 
     # - name: Commit
     #   uses: EndBug/add-and-commit@v9
     #   with:
     #     commit: '--amend'
     #     default_author: 'github_actions'
+
+    - name: Commit
+      run: git add
