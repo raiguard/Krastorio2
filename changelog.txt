@@ -29,6 +29,7 @@ Date: ????
     - [Space Exploration] The Deep Space Loader will match the belt color of the deep space belt it is connected to (#115)
   Bugfixes:
     - Fixed a crash with radioactivity in certain scenarios (#268)
+    - Fixed circular dependency with Spidertron Tiers
     - Fixed inaccurate max consumption for the energy absorber (#249)
     - Fixed non-English translations missing some content, and certain strings being surrounded in quotes (#230, #253)
     - Fixed technology load error with Angel's Petro Chemical Processing (#274)
