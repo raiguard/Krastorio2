@@ -80,7 +80,7 @@ function loader_snapping.snap_belt_neighbours(entity)
         end
       end
     end
-    if entity.type == "linked-belt" then
+    if entity.type == "linked-belt" and not krastorio.do_not_flip_linked_belts then
       -- Trying to "flip" the linked belt when it is connected throws an exception
       if entity.linked_belt_neighbour then
         break
