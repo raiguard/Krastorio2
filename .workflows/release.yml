@@ -1,0 +1,34 @@
+image: archlinux
+packages:
+  - crowdin-cli-bin
+sources:
+  - 'git@git.sr.ht:~raiguard/Krastorio2'
+secrets:
+  - 6c693801-2009-4531-98ea-eb0863140971
+  - fc39ea3f-59de-4230-9eec-9835e6006322
+tasks:
+  - crowdin: |
+      set +x
+      export CROWDIN_PERSONAL_TOKEN=$(cat ~/.crowdin-token)
+      set -x
+
+      cd Krastorio2
+
+      # Quote sources
+      for file in $(find ./locale -name "*.cfg"); do
+          perl -pi -e 's/\"/\\\"/g' $file
+          perl -pi -e 's/([^=])=(.*)/\1="\2"/' $file
+      done
+
+      crowdin push sources --config=.crowdin.yml
+      crowdin pull --config=.crowdin.yml
+
+      # Unquote translations
+      for file in $(find ./locale -name "*.cfg"); do
+          perl -pi -e 's/([^=])="(.*)"/\1=\2/' $file
+          perl -pi -e 's/\\\"/\"/g' $file
+      done
+
+      git add .
+      git commit -m "Update Crowdin translations"
+      git push
