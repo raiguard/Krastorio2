@@ -246,6 +246,16 @@ krastorio.technologies.setResearchUnitCount("automation-3", 350)
 krastorio.technologies.setResearchUnitCount("effect-transmission", 500)
 krastorio.technologies.setResearchUnitCount("low-density-structure", 500)
 
+local military_card = data.raw.technology["military-science-pack"]
+if military_card then
+  military_card.localised_description = {
+    "",
+    military_card.localised_description or { "technology-description.military-science-pack" },
+    "\n",
+    { "technology-description.military-science-pack-creep" },
+  }
+end
+
 --------------
 -- nuclear
 
