@@ -32,3 +32,19 @@ tasks:
       git add .
       git commit -m "Update Crowdin translations"
       git push
+  - package: |
+      cd Krastorio2
+
+      version=$(grep 'Version:' changelog.txt | awk '{print $2}' | head -1)
+
+      # Datestamp changelog and commit
+      sed -i "3s/.*/Date: $(date -I)/"
+      git add changelog.txt
+      git commit -m "Prepare to release version $version"
+
+      # Create tag with changelog
+      changelog=$(awk "/Version: $version$/ { flag = 1 } /^--/ { flag = 0 } flag { gsub(/^  /, \"\"); print }" $file | tail -n +3)
+      git tag v$version -a -m "$changelog"
+
+      # Create archive
+      git archive --format=zip --prefix=Krastorio2/ HEAD -o ../Krastorio2_$version.zip

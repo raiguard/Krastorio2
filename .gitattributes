@@ -1,0 +1,10 @@
+.crowdin.yml export-ignore
+.gitattributes export-ignore
+images export-ignore
+.kakrc export-ignore
+.mailmap export-ignore
+stylua.toml export-ignore
+todo-bz.md export-ignore
+TODO.md export-ignore
+.vscode export-ignore
+.workflows export-ignore
