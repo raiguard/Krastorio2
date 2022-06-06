@@ -1,5 +1,5 @@
-![](.github/images/main.png)
-![](.github/images/explanation.png)
+![](images/main.png)
+![](images/explanation.png)
 
 # Krastorio 2
 
@@ -28,7 +28,7 @@ Download and install from the [official Factorio mod portal](https://mods.factor
 
 ### New resources
 
-![](.github/images/resources.png)
+![](images/resources.png)
 
 Three new resources have been added to the game:
 
@@ -38,14 +38,14 @@ Three new resources have been added to the game:
 
 ### Biter creep
 
-![](.github/images/biter-creep.png)
+![](images/biter-creep.png)
 
 Biters have evolved a passive defense mechanism that drastically slows down other life-forms attempting to attack their hives. This Biter Creep is gross, but will prove useful in your quest to vanquish the territorial bugs from this world.
 
 While the material must initially be harvested by hand, further research into the species may yield a method of growing it in an automated fashion.
 ### Combat mechanics overhaul
 
-![](.github/images/combat.png)
+![](images/combat.png)
 
 Combat has been completely overhauled. Bullets are now physical objects that have speed, wind resistance, and various AoE effects. Bullets have to travel through space to their target, and can be blocked by solid objects.
 
@@ -53,7 +53,7 @@ Auto-aim is disabled by default, requiring the player to skillfully choose what 
 
 ### Science
 
-![](.github/images/tech-cards.png)
+![](images/tech-cards.png)
 
 Science progression has been majorly overhauled. Instead of science packs, you produce tech cards that are inserted into research computers. There are three tiers of tech card, each of which require their own laboratories.
 
@@ -61,13 +61,13 @@ Early-game tech cards will be phased out as the game progresses, allowing you to
 
 ### Equipment
 
-![](.github/images/equipment.png)
+![](images/equipment.png)
 
 Higher tier equipment has been added, allowing for even greater quality of life during the end-game. Almost all vehicles now have equipment grids.
 
 ### ... And more!
 
-![](.github/images/singularity.png)
+![](images/singularity.png)
 
 Your path may lead you to discoveries that, perhaps, should remain purely science fiction.
 
