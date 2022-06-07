@@ -1,6 +1,7 @@
 image: archlinux
 packages:
   - crowdin-cli-bin
+  - fmm
 sources:
   - 'git@git.sr.ht:~raiguard/Krastorio2'
 secrets:
@@ -31,14 +32,15 @@ tasks:
 
       git add .
       git commit -m "Update Crowdin translations"
-      git push
   - package: |
+      # Extract version for later use
+      grep 'Version:' changelog.txt | awk '{print $2}' | head -1 > ../version
+      version=$(cat ../version)
+
       cd Krastorio2
 
-      version=$(grep 'Version:' changelog.txt | awk '{print $2}' | head -1)
-
       # Datestamp changelog and commit
-      sed -i "3s/.*/Date: $(date -I)/"
+      sed -i "3s/.*/Date: $(date -I)/" changelog.txt
       git add changelog.txt
       git commit -m "Prepare to release version $version"
 
@@ -48,3 +50,21 @@ tasks:
 
       # Create archive
       git archive --format=zip --prefix=Krastorio2/ HEAD -o ../Krastorio2_$version.zip
+  - publish: |
+      set +x
+      token=$(cat .factorio-token)
+      set -x
+
+      fmm publish Krastorio2_$(cat version).zip --token $token
+  - finish: |
+      # Increment version
+      version=$(cat version | awk 'BEGIN { FS = "."; OFS = "." } { print $1, $2, $3 + 1 }')
+      cd Krastorio2
+      sed -i "s/^  \"version\":.*\$/  \"version\": \"$version\",/" info.json
+      echo -e "---------------------------------------------------------------------------------------------------\nVersion: $version\nDate: ????\n  Features:\n$(cat changelog.txt)" > changelog.txt
+
+      git add .
+      git commit -m "Move to version $version"
+
+      git push
+      git push --tags
