@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.0
-Date: ????
+Date: 2022-06-08
   Features:
     - Added advanced assembler recipes to convert enriched ores into intermediate products (#115)
     - Added special electronic components recipe to the advanced assembler (#216)
