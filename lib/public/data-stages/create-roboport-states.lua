@@ -14,7 +14,7 @@ function create_roboport_states.createRoboportVariations(roboport_name)
     logistic_roboport.has_backer_name = false
     logistic_roboport.localised_description = { "entity-description." .. roboport.name }
     logistic_roboport.placeable_by = { item = roboport.name, count = 1 }
-    logistic_roboport.logistics_radius = logistic_roboport.logistics_radius + logistic_roboport.logistics_radius * 0.25
+    logistic_roboport.logistics_radius = logistic_roboport.logistics_radius + logistic_roboport.logistics_radius * 0.275 -- Standard roboport has 64x64 radius
     logistic_roboport.construction_radius = 0
     logistic_roboport.fast_replaceable_group = fr_group
 
