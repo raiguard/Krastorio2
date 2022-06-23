@@ -2,8 +2,9 @@
 Version: 1.3.1
 Date: ????
   Changes:
-    - Slightly increased logistic roboport variant radius to make vanilla logistic roboport radius 64x64
+    - Slightly increased logistic roboport variant radius to make vanilla logistic roboport radius (64x64)
   Compatibility:
+    - [Bob's Logistics] Leave worker robot properties unchanged when Bob's Logistics is enabled
     - [Electric Train] Made tesla coils compatible with electric locomotives and cargo / fluid wagon upgrades (https://todo.sr.ht/~raiguard/factorio-mods/30)
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.0

@@ -11,16 +11,20 @@ data.raw["roboport"]["roboport"].material_slots_count = 3 --7
 -- -- Robots
 --------------------------------------
 -- logistic-robot
-data.raw["logistic-robot"]["logistic-robot"].speed = 0.0694
-data.raw["logistic-robot"]["logistic-robot"].max_energy = "3MJ"
-data.raw["logistic-robot"]["logistic-robot"].max_health = 50
-data.raw["logistic-robot"]["logistic-robot"].max_payload_size = 7
+if not mods["boblogistics"] then
+  data.raw["logistic-robot"]["logistic-robot"].speed = 0.0694
+  data.raw["logistic-robot"]["logistic-robot"].max_energy = "3MJ"
+  data.raw["logistic-robot"]["logistic-robot"].max_health = 50
+  data.raw["logistic-robot"]["logistic-robot"].max_payload_size = 7
+end
 
 -- Construction robot
-data.raw["construction-robot"]["construction-robot"].speed = 0.09257
-data.raw["construction-robot"]["construction-robot"].max_energy = "3MJ"
-data.raw["construction-robot"]["construction-robot"].max_health = 50
-data.raw["construction-robot"]["construction-robot"].max_payload_size = 2
+if not mods["boblogistics"] then
+  data.raw["construction-robot"]["construction-robot"].speed = 0.09257
+  data.raw["construction-robot"]["construction-robot"].max_energy = "3MJ"
+  data.raw["construction-robot"]["construction-robot"].max_health = 50
+  data.raw["construction-robot"]["construction-robot"].max_payload_size = 2
+end
 --------------------------------------
 
 local sounds = require("__base__/prototypes/entity/sounds")
