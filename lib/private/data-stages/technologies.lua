@@ -50,7 +50,7 @@ krastorio.technologies.science_pack_collections = {
     "chemical-science-pack",
     "production-science-pack",
     "utility-science-pack",
-    "space-science-pack",
+    krastorio.optimization_tech_card_name,
   },
 }
 

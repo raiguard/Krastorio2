@@ -79,7 +79,7 @@ local vanilla_tech_names = {
   "military-science-pack",
   "production-science-pack",
   "utility-science-pack",
-  "space-science-pack",
+  krastorio.optimization_tech_card_name,
   "steel-processing",
   "steel-axe",
   "military",

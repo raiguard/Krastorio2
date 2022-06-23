@@ -37,7 +37,7 @@ krastorio.technologies.addPrerequisite("production-science-pack", "kr-advanced-l
 krastorio.technologies.addPrerequisite("production-science-pack", "uranium-processing")
 krastorio.technologies.addPrerequisite("utility-science-pack", "kr-research-server")
 krastorio.technologies.addPrerequisite("utility-science-pack", "rocket-fuel")
-krastorio.technologies.addPrerequisite("space-science-pack", "kr-singularity-lab")
+krastorio.technologies.addPrerequisite(krastorio.optimization_tech_card_name, "kr-singularity-lab")
 
 -- Modules
 krastorio.technologies.addPrerequisite("speed-module-3", "advanced-electronics-2")
@@ -136,7 +136,7 @@ krastorio.technologies.addUnlockRecipe("coal-liquefaction", "coke-liquefaction")
 -- Science
 krastorio.technologies.addUnlockRecipe("automation-science-pack", "blank-tech-card")
 krastorio.technologies.addUnlockRecipe("military-science-pack", "biters-research-data")
-krastorio.technologies.addUnlockRecipe("space-science-pack", "space-science-pack")
+krastorio.technologies.addUnlockRecipe(krastorio.optimization_tech_card_name, krastorio.optimization_tech_card_name)
 
 -- Slow capsule
 krastorio.technologies.moveUnlockRecipe("military-3", "military", "slowdown-capsule", true)
@@ -177,7 +177,7 @@ for technology_name, technology in pairs(data.raw.technology) do
     or krastorio.technologies.hasIngredient(technology_name, "chemical-science-pack")
     or krastorio.technologies.hasIngredient(technology_name, "production-science-pack")
     or krastorio.technologies.hasIngredient(technology_name, "utility-science-pack")
-    or krastorio.technologies.hasIngredient(technology_name, "space-science-pack")
+    or krastorio.technologies.hasIngredient(technology_name, krastorio.optimization_tech_card_name)
     or krastorio.technologies.hasIngredient(technology_name, "matter-tech-card")
   then
     krastorio.technologies.removeResearchUnitIngredient(technology_name, "basic-tech-card")
@@ -189,7 +189,7 @@ end
 --------------
 -- rocket
 
-krastorio.technologies.setResearchUnitCount("space-science-pack", 1000)
+krastorio.technologies.setResearchUnitCount(krastorio.optimization_tech_card_name, 1000)
 krastorio.technologies.setResearchUnitCount("rocket-control-unit", 500)
 
 --------------
@@ -319,7 +319,7 @@ data:extend({
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
-        { "space-science-pack", 1 },
+        { krastorio.optimization_tech_card_name, 1 },
         { "matter-tech-card", 1 },
         { "advanced-tech-card", 1 },
       },
@@ -359,7 +359,7 @@ data:extend({
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
-        { "space-science-pack", 1 },
+        { krastorio.optimization_tech_card_name, 1 },
         { "matter-tech-card", 1 },
         { "advanced-tech-card", 1 },
         { "singularity-tech-card", 1 },
@@ -403,7 +403,7 @@ data:extend({
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
-        { "space-science-pack", 1 },
+        { krastorio.optimization_tech_card_name, 1 },
         { "matter-tech-card", 1 },
         { "advanced-tech-card", 1 },
       },
@@ -444,7 +444,7 @@ data:extend({
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
-        { "space-science-pack", 1 },
+        { krastorio.optimization_tech_card_name, 1 },
         { "matter-tech-card", 1 },
         { "advanced-tech-card", 1 },
         { "singularity-tech-card", 1 },
@@ -488,7 +488,7 @@ data:extend({
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
-        { "space-science-pack", 1 },
+        { krastorio.optimization_tech_card_name, 1 },
         { "matter-tech-card", 1 },
         { "advanced-tech-card", 1 },
       },
@@ -528,7 +528,7 @@ data:extend({
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
-        { "space-science-pack", 1 },
+        { krastorio.optimization_tech_card_name, 1 },
         { "matter-tech-card", 1 },
         { "advanced-tech-card", 1 },
         { "singularity-tech-card", 1 },
@@ -588,7 +588,7 @@ data:extend({
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
-        { "space-science-pack", 1 },
+        { krastorio.optimization_tech_card_name, 1 },
         { "matter-tech-card", 1 },
         { "advanced-tech-card", 1 },
       },
@@ -644,7 +644,7 @@ data:extend({
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
-        { "space-science-pack", 1 },
+        { krastorio.optimization_tech_card_name, 1 },
         { "matter-tech-card", 1 },
         { "advanced-tech-card", 1 },
         { "singularity-tech-card", 1 },
@@ -704,7 +704,7 @@ data:extend({
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
-        { "space-science-pack", 1 },
+        { krastorio.optimization_tech_card_name, 1 },
         { "matter-tech-card", 1 },
         { "advanced-tech-card", 1 },
       },
@@ -760,7 +760,7 @@ data:extend({
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
-        { "space-science-pack", 1 },
+        { krastorio.optimization_tech_card_name, 1 },
         { "matter-tech-card", 1 },
         { "advanced-tech-card", 1 },
         { "singularity-tech-card", 1 },
@@ -810,7 +810,7 @@ data:extend({
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
-        { "space-science-pack", 1 },
+        { krastorio.optimization_tech_card_name, 1 },
         { "matter-tech-card", 1 },
         { "advanced-tech-card", 1 },
       },
@@ -856,7 +856,7 @@ data:extend({
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
-        { "space-science-pack", 1 },
+        { krastorio.optimization_tech_card_name, 1 },
         { "matter-tech-card", 1 },
         { "advanced-tech-card", 1 },
         { "singularity-tech-card", 1 },
@@ -901,7 +901,7 @@ data:extend({
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
-        { "space-science-pack", 1 },
+        { krastorio.optimization_tech_card_name, 1 },
         { "matter-tech-card", 1 },
         { "advanced-tech-card", 1 },
       },
@@ -942,7 +942,7 @@ data:extend({
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
-        { "space-science-pack", 1 },
+        { krastorio.optimization_tech_card_name, 1 },
         { "matter-tech-card", 1 },
         { "advanced-tech-card", 1 },
         { "singularity-tech-card", 1 },
@@ -986,7 +986,7 @@ data:extend({
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
-        { "space-science-pack", 1 },
+        { krastorio.optimization_tech_card_name, 1 },
         { "matter-tech-card", 1 },
         { "advanced-tech-card", 1 },
       },
@@ -1026,7 +1026,7 @@ data:extend({
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
-        { "space-science-pack", 1 },
+        { krastorio.optimization_tech_card_name, 1 },
         { "matter-tech-card", 1 },
         { "advanced-tech-card", 1 },
         { "singularity-tech-card", 1 },
@@ -1071,7 +1071,7 @@ data:extend({
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
-        { "space-science-pack", 1 },
+        { krastorio.optimization_tech_card_name, 1 },
         { "matter-tech-card", 1 },
         { "advanced-tech-card", 1 },
       },
@@ -1112,7 +1112,7 @@ data:extend({
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
-        { "space-science-pack", 1 },
+        { krastorio.optimization_tech_card_name, 1 },
         { "matter-tech-card", 1 },
         { "advanced-tech-card", 1 },
         { "singularity-tech-card", 1 },

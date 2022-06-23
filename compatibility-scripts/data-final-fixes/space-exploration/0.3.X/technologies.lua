@@ -11,12 +11,12 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
   krastorio.technologies.addResearchUnitIngredient("battery-mk2-equipment", "logistic-science-pack")
   krastorio.technologies.addResearchUnitIngredient("battery-mk2-equipment", "chemical-science-pack")
   krastorio.technologies.removeResearchUnitIngredient("battery-mk2-equipment", "utility-science-pack")
-  krastorio.technologies.removeResearchUnitIngredient("battery-mk2-equipment", "space-science-pack")
+  krastorio.technologies.removeResearchUnitIngredient("battery-mk2-equipment", krastorio.optimization_tech_card_name)
 
   krastorio.technologies.addResearchUnitIngredient("kr-battery-mk3-equipment", "automation-science-pack")
   krastorio.technologies.addResearchUnitIngredient("kr-battery-mk3-equipment", "logistic-science-pack")
   krastorio.technologies.addResearchUnitIngredient("kr-battery-mk3-equipment", "chemical-science-pack")
-  krastorio.technologies.removeResearchUnitIngredient("kr-battery-mk3-equipment", "space-science-pack")
+  krastorio.technologies.removeResearchUnitIngredient("kr-battery-mk3-equipment", krastorio.optimization_tech_card_name)
 
   krastorio.technologies.removeResearchUnitIngredient("personal-roboport-equipment", "utility-science-pack")
   ---------------------------------------------------------------------------------------------------------------

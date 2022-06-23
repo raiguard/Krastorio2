@@ -21,6 +21,16 @@ require(kr_path .. "lib/private/data-stages/modules")
 require(kr_path .. "lib/private/data-stages/recipes")
 require(kr_path .. "lib/private/data-stages/technologies")
 ---------------------------------------------------------------------------
+-- -- -- COMPATIBILITY PRE-INITIALIZATION (data stage)
+---------------------------------------------------------------------------
+-- -- Use vanilla Space Science Pack as the basis for the Optimization Tech Card
+krastorio.optimization_tech_card_name = "space-science-pack"
+-- -- Define Compatibility Script Path
+local scripts_path = "compatibility-scripts/data/"
+-- -- Pre-Init Compat for SE
+require(scripts_path .. "space-exploration-pre-init")
+
+---------------------------------------------------------------------------
 -- -- -- CONTENTS INITIALIZATION (data stage)
 ---------------------------------------------------------------------------
 -- -- Adding new achievements
@@ -66,7 +76,7 @@ require(kr_others_prototypes_path .. "shortcut")
 ---------------------------------------------------------------------------
 -- -- -- COMPATIBILITY INITIALIZATION (data stage)
 ---------------------------------------------------------------------------
-local scripts_path = "compatibility-scripts/data/"
+-- -- Execute Compatilbility Scripts for the data stage
 require(scripts_path .. "aircraft")
 require(scripts_path .. "early-electric-furnaces")
 require(scripts_path .. "deadlock-beltboxes-loaders")
