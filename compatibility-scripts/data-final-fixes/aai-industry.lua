@@ -9,6 +9,7 @@ if mods["aai-industry"] then
   -- basic fluid handling
   krastorio.technologies.convertPrerequisiteFromAllTechnologies("basic-fluid-handling", "kr-basic-fluid-handling")
   data.raw.technology["basic-fluid-handling"] = nil
+  krastorio.technologies.addResearchUnitIngredient("kr-greenhouse", "automation-science-pack")
   -- steam power engine
   krastorio.technologies.convertPrerequisiteFromAllTechnologies("steam-power", "kr-steam-engine")
   data.raw.technology["steam-power"] = nil

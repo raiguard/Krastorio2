@@ -4,6 +4,7 @@ Date: ????
   Changes:
     - Slightly increased logistic roboport variant radius to make vanilla logistic roboport radius 64x64
   Compatibility:
+    - [AAI Industry] Greenhouse technology requires automation tech cards (https://todo.sr.ht/~raiguard/factorio-mods/39)
     - [Bob's Logistics] Leave worker robot properties unchanged when Bob's Logistics is enabled
     - [Electric Train] Made tesla coils compatible with electric locomotives and cargo / fluid wagon upgrades (https://todo.sr.ht/~raiguard/factorio-mods/30)
     - [Space Exploration] Added compatibility for SE 0.6's science pack changes (https://lists.sr.ht/~raiguard/factorio-mods-devel/patches/33218)
