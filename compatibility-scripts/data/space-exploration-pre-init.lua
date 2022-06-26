@@ -5,10 +5,10 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
   -- Create the item
   local optimization_tech_card_item = table.deepcopy(data.raw.tool["space-science-pack"])
   optimization_tech_card_item.name = krastorio.optimization_tech_card_name
-  data:extend({optimization_tech_card_item})
+  data:extend({ optimization_tech_card_item })
 
   -- Create the technology
   local optimization_tech_card_tech = table.deepcopy(data.raw.technology["space-science-pack"])
   optimization_tech_card_tech.name = krastorio.optimization_tech_card_name
-  data:extend({optimization_tech_card_tech})
+  data:extend({ optimization_tech_card_tech })
 end

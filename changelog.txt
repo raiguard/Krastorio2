@@ -6,6 +6,7 @@ Date: ????
   Compatibility:
     - [Bob's Logistics] Leave worker robot properties unchanged when Bob's Logistics is enabled
     - [Electric Train] Made tesla coils compatible with electric locomotives and cargo / fluid wagon upgrades (https://todo.sr.ht/~raiguard/factorio-mods/30)
+    - [Space Exploration] Added compatibility for SE 0.6's science pack changes (by Trex)
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.0
 Date: 2022-06-08
