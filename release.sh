@@ -53,8 +53,10 @@ rootpath=$PWD
 filename="${modname}_${version}.zip"
 cd $archivepath
 git archive --format=zip --prefix=$modname/ HEAD -o $filename
-fmm upload $filename
-rm $filename
+if [ "$1" != "--noupload" ]; then
+    fmm upload $filename
+    rm $filename
+fi
 cd $rootpath
 
 # Increment version
