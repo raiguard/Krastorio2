@@ -278,7 +278,7 @@ event.on_player_used_capsule(virus.on_player_used_capsule)
 event.on_player_created(function(e)
   local player = game.get_player(e.player_index)
   inserter.refresh_gui(player)
-  patreon.give_items(player)
+  patreon.give_items(player, false)
   planetary_teleporter.request_translation(player)
   radioactivity.add_player(player)
   roboport.refresh_gui(player)
@@ -366,7 +366,7 @@ event.register(
 
 event.on_cutscene_cancelled(function(e)
   local player = game.get_player(e.player_index)
-  patreon.give_items(player)
+  patreon.give_items(player, false)
 end)
 
 event.register({
