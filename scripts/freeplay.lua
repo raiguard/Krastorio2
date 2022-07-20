@@ -48,9 +48,26 @@ function freeplay.add_to_crash_site()
   end
 end
 
+function freeplay.disable_intro()
+  if remote.interfaces["freeplay"] and not script.active_mods["space-exploration"] then
+    remote.call("freeplay", "set_skip_intro", true)
+  end
+end
+
 function freeplay.disable_rocket_victory()
   if remote.interfaces["silo_script"] then
     remote.call("silo_script", "set_no_victory", true)
+  end
+end
+
+--- @param player LuaPlayer
+function freeplay.show_intro(player)
+  if remote.interfaces["freeplay"] and not script.active_mods["space-exploration"] then
+    if game.is_multiplayer() then
+      player.print({ "message.kr-intro" })
+    else
+      game.show_message_dialog({ text = { "message.kr-intro" } })
+    end
   end
 end
 

@@ -1,3 +1,4 @@
+local crash_site = require("__core__.lualib.crash-site")
 local event = require("__flib__.event")
 local gui = require("__flib__.gui")
 local migration = require("__flib__.migration")
@@ -7,6 +8,7 @@ local constants = require("scripts.constants")
 local creep_collector = require("scripts.creep-collector")
 local creep = require("scripts.creep")
 local energy_absorber = require("scripts.energy-absorber")
+local freeplay = require("scripts.freeplay")
 local inserter = require("scripts.inserter")
 local intergalactic_transceiver = require("scripts.intergalactic-transceiver")
 local jackhammer = require("scripts.jackhammer")
@@ -367,6 +369,13 @@ event.register(
 event.on_cutscene_cancelled(function(e)
   local player = game.get_player(e.player_index)
   patreon.give_items(player, false)
+end)
+
+event.on_cutscene_waypoint_reached(function(e)
+  if crash_site.is_crash_site_cutscene(e) then
+    local player = game.get_player(e.player_index)
+    freeplay.show_intro(player)
+  end
 end)
 
 event.register({

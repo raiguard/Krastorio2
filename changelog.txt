@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.4
 Date: ????
+  Features:
+    - Added a custom introduction message that appears when starting a freeplay game (https://todo.sr.ht/~raiguard/factorio-mods/51)
   Bugfixes:
     - Fixed that the new advanced assembler recipes were not unlocked for existing saves (https://todo.sr.ht/~raiguard/factorio-mods/50)
 ---------------------------------------------------------------------------------------------------
