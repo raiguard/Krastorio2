@@ -39,7 +39,7 @@ if mods["angelsaddons-smeltingtrain"] or mods["angelsaddons-mobility"] then
 
   local new_locomotive_names = {
     "smelting-locomotive-1",
-    "crawler-locomotive-tender",
+    "smelting-locomotive-tender",
   }
 
   for _, locomotive_name in pairs(new_locomotive_names) do
