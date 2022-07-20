@@ -41,6 +41,16 @@ data:extend({
       "any-tile",
       "enemy",
     },
+    entity_type_filters = {
+      "unit",
+      "unit-spawner",
+      "turret",
+    },
+    alt_entity_type_filters = {
+      "unit",
+      "unit-spawner",
+      "turret",
+    },
     selection_cursor_box_type = "not-allowed",
     alt_selection_cursor_box_type = "not-allowed",
     always_include_tiles = true,
