@@ -33,6 +33,7 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
       "kr-superior-long-filter-inserter",
     },
     ["lab"] = {
+      "biusart-lab",
       "kr-singularity-lab",
     },
     -- kr-se-loader is given the property in data-final-fixes, when it is created
@@ -95,9 +96,6 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
     ["furnace"] = {
       "kr-crusher",
       "kr-air-purifier",
-    },
-    ["lab"] = {
-      "biusart-lab",
     },
     ["loader-1x1"] = {
       "kr-loader",
