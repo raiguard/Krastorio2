@@ -156,6 +156,9 @@ data.raw["solar-panel"]["solar-panel"].fast_replaceable_group = "solar-panel"
 -- Radar
 data.raw.radar["radar"].fast_replaceable_group = "radar"
 
+-- Rocket silo
+data.raw["rocket-silo"]["rocket-silo"].localised_description = { "entity-description.kr-rocket-silo" }
+
 -- Wall&gate resistances
 data.raw.wall["stone-wall"].resistances = {
   {
