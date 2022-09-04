@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.5
 Date: ????
-  Features:
+  Bugfixes:
+    - Fixed that the intergalactic transceiver GUI would not be destroyed when the entity was destroyed (https://todo.sr.ht/~raiguard/factorio-mods/69)
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.4
 Date: 2022-07-19

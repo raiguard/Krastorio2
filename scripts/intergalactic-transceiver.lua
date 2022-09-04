@@ -89,6 +89,14 @@ end
 function intergalactic_transceiver.destroy(entity)
   local force_index = entity.force.index
   global.intergalactic_transceiver.forces[force_index] = nil
+
+  -- Close any open GUIs
+  for player_index, gui_data in pairs(global.intergalactic_transceiver.guis) do
+    local gui_entity = gui_data.state.entity
+    if gui_entity and gui_entity.valid and gui_entity == entity then
+      intergalactic_transceiver.destroy_gui(game.get_player(player_index))
+    end
+  end
 end
 
 function intergalactic_transceiver.destroy_inactive(entity)
@@ -513,14 +521,18 @@ intergalactic_transceiver.gui_actions = actions
 
 intergalactic_transceiver.remote_interface = {
   get_no_victory = function()
-    if not global.intergalactic_transceiver then intergalactic_transceiver.init() end
+    if not global.intergalactic_transceiver then
+      intergalactic_transceiver.init()
+    end
     return not global.intergalactic_transceiver.is_victory
   end,
   set_no_victory = function(to_state)
     if not to_state or type(to_state) ~= "boolean" then
       error("`to_state` must be a boolean")
     end
-    if not global.intergalactic_transceiver then intergalactic_transceiver.init() end
+    if not global.intergalactic_transceiver then
+      intergalactic_transceiver.init()
+    end
     global.intergalactic_transceiver.is_victory = not to_state
   end,
 }
