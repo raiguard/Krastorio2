@@ -371,6 +371,7 @@ event.on_cutscene_cancelled(function(e)
   patreon.give_items(player, false)
 end)
 
+--- XXX: This shows a message whenever _any_ cutscene plays. Proper fix requires a new API feature
 event.on_cutscene_waypoint_reached(function(e)
   if crash_site.is_crash_site_cutscene(e) then
     local player = game.get_player(e.player_index)
