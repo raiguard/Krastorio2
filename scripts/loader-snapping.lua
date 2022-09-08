@@ -56,6 +56,7 @@ function loader_snapping.snap_direction(entity, target)
             fast_replace = true,
             type = entity.loader_type,
             create_build_effect_smoke = false,
+            raise_built = true,
           })
         end
       end
