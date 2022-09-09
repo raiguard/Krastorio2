@@ -3,6 +3,8 @@ Version: 1.3.6
 Date: ????
   Compatibility:
     - [Space Exploration] Raise script_raised_built when snapping the belt color of the deep space loader
+  Bugfixes:
+    - Fixed several entities with equipment grids not being detected by the tesla coil (https://todo.sr.ht/~raiguard/factorio-mods/73)
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.5
 Date: 2022-09-04

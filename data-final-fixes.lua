@@ -1,3 +1,4 @@
+local table = require("__flib__.table")
 ---------------------------------------------------------------------------
 -- -- -- PRE FINAL FIXES
 ---------------------------------------------------------------------------
@@ -50,7 +51,10 @@ local science_pack_incompatibilities = {
 -- Sanitize matter tech card from T1 packs
 krastorio.technologies.removeSciencePackIncompatibleWith("matter-tech-card", science_pack_incompatibilities)
 -- Sanitize space science pack from T1 packs
-krastorio.technologies.removeSciencePackIncompatibleWith(krastorio.optimization_tech_card_name, science_pack_incompatibilities)
+krastorio.technologies.removeSciencePackIncompatibleWith(
+  krastorio.optimization_tech_card_name,
+  science_pack_incompatibilities
+)
 -- Sanitize advanced tech card from T1 packs
 krastorio.technologies.removeSciencePackIncompatibleWith("advanced-tech-card", science_pack_incompatibilities)
 -- Sanitize singularity tech card from T1 packs
@@ -121,3 +125,44 @@ krastorio.entities.addFuelCategory("assembling-machine", "steel-furnace", "vehic
 krastorio.entities.addFuelCategory("boiler", "boiler", "vehicle-fuel")
 krastorio.entities.addFuelCategory("inserter", "burner-inserter", "vehicle-fuel")
 krastorio.entities.addFuelCategory("mining-drill", "burner-mining-drill", "vehicle-fuel")
+
+-- Make characters be targeted by the teleporter turrets
+for _, character in pairs(data.raw["character"]) do
+  local mask = character.trigger_target_mask or { "common", "ground-unit" }
+  character.trigger_target_mask = mask
+
+  -- FIXME: Use a proper name
+  table.insert(mask, "character")
+end
+
+-- Make anything with an equipment grid of the correct category be targetable by tesla coils
+local types_have_grid = {
+  "artillery-wagon",
+  "car",
+  "cargo-wagon",
+  "character",
+  "fluid-wagon",
+  "locomotive",
+  "spider-vehicle",
+}
+local grids = data.raw["equipment-grid"]
+for _, type in pairs(types_have_grid) do
+  for _, prototype in pairs(data.raw[type]) do
+    if type ~= "character" then
+      local grid = grids[prototype.equipment_grid]
+      if not grid or not table.find(grid.equipment_categories, "universal-equipment") then
+        goto continue
+      end
+    end
+
+    local mask = prototype.trigger_target_mask or { "common", "ground-unit" }
+    prototype.trigger_target_mask = mask
+    -- The tesla coil turrets will only target entities with this mask
+    table.insert(mask, "kr-tesla-coil-trigger")
+    -- If the entity is not considered a "military target", then the tesla coil turrets will not wake up when the entity
+    -- gets within range
+    prototype.is_military_target = true
+
+    ::continue::
+  end
+end
