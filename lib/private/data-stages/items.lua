@@ -13,6 +13,7 @@ krastorio.items.item_types = {
   "module",
   "tool",
   "item-with-entity-data",
+  "repair-tool",
 }
 
 function krastorio.items.exist(item_name)
