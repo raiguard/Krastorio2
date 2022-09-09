@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.6
 Date: ????
-  Features:
+  Compatibility:
+    - [Space Exploration] Raise script_raised_built when snapping the belt color of the deep space loader
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.5
 Date: 2022-09-04
