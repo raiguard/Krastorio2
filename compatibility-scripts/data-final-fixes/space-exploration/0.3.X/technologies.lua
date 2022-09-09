@@ -64,8 +64,5 @@ if mods["space-exploration"] and krastorio.general.isVersionGreaterEqualThan(mod
   krastorio.technologies.removePrerequisite("fusion-reactor-equipment", "se-deep-space-science-pack")
   ---------------------------------------------------------------------------------------------------------------
 
-  -- Remove basic tech card from advanced radar, since it now requires the chemical tech card
-  krastorio.technologies.removeResearchUnitIngredient("advanced-radar", "basic-tech-card")
-
   data.raw.technology["se-rocket-fuel-from-water"] = nil
 end

@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.6
 Date: ????
+  Balancing:
+    - Advanced radar technology no longer requires basic tech cards, but now requires chemical and utility tech cards (https://todo.sr.ht/~raiguard/factorio-mods/61)
   Compatibility:
     - [Space Exploration] Raise script_raised_built when snapping the belt color of the deep space loader
   Bugfixes:

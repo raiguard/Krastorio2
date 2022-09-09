@@ -209,9 +209,10 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
       unit = {
         count = 200,
         ingredients = {
-          { "basic-tech-card", 1 },
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
+          { "chemical-science-pack", 1 },
+          { "utility-science-pack", 1 },
         },
         time = 60,
       },

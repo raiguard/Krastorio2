@@ -55,7 +55,6 @@ if mods["IndustrialRevolution"] then
   krastorio.technologies.addResearchUnitIngredient("kr-silicon-processing", "chemical-science-pack", 1)
   krastorio.technologies.addResearchUnitIngredient("kr-fluid-excess-handling", "chemical-science-pack", 1)
   krastorio.technologies.addResearchUnitIngredient("automobilism", "chemical-science-pack", 1)
-  krastorio.technologies.addResearchUnitIngredient("advanced-radar", "chemical-science-pack", 1)
 
   krastorio.technologies.removeResearchUnitIngredient("kr-fluids-chemistry", "basic-tech-card")
   krastorio.technologies.removeResearchUnitIngredient("kr-fluid-excess-handling", "basic-tech-card")
