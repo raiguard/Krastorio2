@@ -40,11 +40,24 @@ function freeplay.add_to_crash_site()
     and not remote.call("freeplay", "get_disable_crashsite")
     and not remote.call("freeplay", "get_init_ran")
   then
+    -- Add new entities
     local ship_parts = remote.call("freeplay", "get_ship_parts")
     for _, part in pairs(constants.freeplay_crash_site_parts) do
       ship_parts[#ship_parts + 1] = part
     end
     remote.call("freeplay", "set_ship_parts", ship_parts)
+    -- If playing a treeless game, add wood to the spaceship
+    local nauvis = game.get_surface("nauvis")
+    if nauvis then
+      local tree_setting = nauvis.map_gen_settings.autoplace_controls.trees
+      if not tree_setting or tree_setting.size == 0 then
+        -- Add wood to the ship inventory
+        local items = remote.call("freeplay", "get_ship_items")
+        -- This is overkill for base K2, but should provide for plenty of margin of error
+        items["wood"] = 400
+        remote.call("freeplay", "set_ship_items", items)
+      end
+    end
   end
 end
 
