@@ -7,6 +7,10 @@ local util = require("scripts.util")
 
 local jackhammer = {}
 
+--- @param player LuaPlayer
+--- @param surface LuaSurface
+--- @param tiles LuaTile[]
+--- @param sel_area BoundingBox
 function jackhammer.collect(player, surface, tiles, sel_area)
   local player_pos = player.position
 
@@ -14,7 +18,9 @@ function jackhammer.collect(player, surface, tiles, sel_area)
   local tiles_to_set = {}
   local i = 0
   for _, tile in pairs(tiles) do
-    if misc.get_distance(tile.position, player_pos) <= constants.jackhammer_max_reach then
+    if
+      misc.get_distance(tile.position --[[@as MapPosition]], player_pos) <= constants.jackhammer_max_reach
+    then
       i = i + 1
       tiles_to_set[i] = { name = tile.hidden_tile or "landfill", position = tile.position }
       local mineable = tile.prototype.mineable_properties
@@ -38,6 +44,9 @@ function jackhammer.collect(player, surface, tiles, sel_area)
   if i > 0 then
     -- Check if we can insert all of the items
     local inventory = player.get_main_inventory()
+    if not inventory then
+      return
+    end
     for name, count in pairs(items_to_give) do
       -- If we can't fit all of the items, print a message and don't take any tiles
       if not inventory.can_insert({ name = name, count = count }) then

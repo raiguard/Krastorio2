@@ -28,7 +28,7 @@ end
 --- @param source_entity LuaEntity
 function tesla_coil.build(source_entity)
   local surface = source_entity.surface
-  local unit_number = source_entity.unit_number
+  local unit_number = source_entity.unit_number --[[@as uint]]
 
   local turret = surface.create_entity({
     name = "kr-tesla-coil-turret",
@@ -71,7 +71,7 @@ end
 --- @param entity LuaEntity
 function tesla_coil.destroy(entity)
   -- Beams will automatically get destroyed
-  local unit_number = entity.unit_number
+  local unit_number = entity.unit_number --[[@as uint]]
   local tower_data = global.tesla_coil.towers[unit_number]
   if tower_data then
     global.tesla_coil.turrets[tower_data.turret_unit_number] = nil
@@ -100,7 +100,7 @@ local function find_absorber_in_grid(grid)
 end
 
 --- @param target LuaEntity
---- @return GridData
+--- @return GridData?
 local function get_grid_data(target)
   --- @type LuaEquipmentGrid
   local grid
@@ -141,7 +141,7 @@ end
 --- @param target LuaEntity
 --- @param tower_data TowerData
 function tesla_coil.add_target(target, tower_data)
-  local target_unit_number = target.unit_number
+  local target_unit_number = target.unit_number --[[@as uint]]
   -- Check if the tower is powered
   if tower_data.entities.tower.energy < constants.tesla_coil.required_energy then
     return

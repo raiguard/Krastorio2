@@ -7,6 +7,10 @@ local roboport = {}
 
 -- GUI
 
+--- @param name string
+--- @param caption LocalisedString
+--- @param gui_name string
+--- @param mode string
 local function radio_button(name, caption, gui_name, mode)
   return {
     type = "radiobutton",
@@ -19,6 +23,7 @@ local function radio_button(name, caption, gui_name, mode)
   }
 end
 
+--- @param player LuaPlayer
 function roboport.refresh_gui(player)
   roboport.destroy_gui(player.index)
 
@@ -42,6 +47,7 @@ function roboport.refresh_gui(player)
   })
 end
 
+--- @param player_index uint
 function roboport.destroy_gui(player_index)
   local player_gui = global.roboport_guis[player_index]
   if player_gui and player_gui.valid then
@@ -49,6 +55,8 @@ function roboport.destroy_gui(player_index)
   end
 end
 
+--- @param player LuaPlayer
+--- @param entity LuaEntity
 function roboport.update_gui(player, entity)
   local player_gui = global.roboport_guis[player.index]
   if player_gui and player_gui.valid then
@@ -67,16 +75,14 @@ end
 
 function roboport.handle_gui_action(msg, e)
   if msg.action == "change_mode" then
-    local player = game.get_player(e.player_index)
-    if not player.opened_gui_type == defines.gui_type.entity then
+    local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
+    if player.opened_gui_type ~= defines.gui_type.entity then
       return
     end
-
-    local entity = player.opened
+    local entity = player.opened --[[@as LuaEntity]]
     if not entity.valid or entity.type ~= "roboport" then
       return
     end
-
     roboport.change_mode(entity, player, msg.mode)
   end
 end
@@ -84,6 +90,7 @@ end
 -- GENERAL
 
 function roboport.init()
+  --- @type table<uint, LuaGuiElement>
   global.roboport_guis = {}
 end
 
@@ -109,6 +116,9 @@ function roboport.find_variants()
   global.roboport_has_variants_gui = output
 end
 
+--- @param entity LuaEntity
+--- @param player LuaPlayer
+--- @param to_mode string?
 function roboport.change_mode(entity, player, to_mode)
   local matched, _, base_name, suffix = string.find(entity.name, "^(.-)(%-%w-%-mode)$")
   if not matched then
@@ -137,7 +147,7 @@ function roboport.change_mode(entity, player, to_mode)
   -- This must be done before the roboport is swapped
   local guis_to_update = {}
   for player_index in pairs(global.roboport_guis) do
-    local player = game.get_player(player_index)
+    local player = game.get_player(player_index) --[[@as LuaPlayer]]
     if player.opened_gui_type == defines.gui_type.entity then
       local opened = player.opened
       if opened and opened == entity then

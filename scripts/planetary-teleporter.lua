@@ -1,7 +1,11 @@
-local gui = require("__flib__/gui-beta")
+local gui = require("__flib__.gui")
+local misc = require("__flib__.misc")
 
 local planetary_teleporter = {}
 
+--- @param player LuaPlayer
+--- @param from LuaEntity
+--- @param to LuaEntity
 local function teleport_player(player, from, to)
   -- Discharge both entities
   from.energy = 0
@@ -38,6 +42,7 @@ local status_images = {
   [defines.entity_status.no_power] = "status_not_working",
 }
 
+--- @param state PlanetaryTeleporterGuiState
 local function update_fully_charged(refs, state)
   local active_warning = state.active_warning
 
@@ -94,6 +99,7 @@ local function update_gui_statuses()
     refs.status_image.sprite = "utility/" .. (status_images[status] or "status_working")
 
     -- Warning
+    --- @type boolean|string
     local warning = false
     local players = global.planetary_teleporter.players[state.entity_data.turret_unit_number] or {}
     if not players[player_index] then
@@ -111,10 +117,7 @@ local function update_gui_statuses()
   end
 end
 
-local function get_distance(pos1, pos2)
-  return math.sqrt((pos1.x - pos2.x) ^ 2 + (pos1.y - pos2.y) ^ 2)
-end
-
+--- @param teleporter_data PlanetaryTeleporterData
 local function get_destination_properties(teleporter_data)
   local entity = teleporter_data.entities.base
   local charge_value = entity.energy / entity.prototype.electric_energy_source_prototype.buffer_capacity
@@ -141,6 +144,7 @@ local function get_destination_properties(teleporter_data)
   }
 end
 
+--- @param state PlanetaryTeleporterGuiState
 local function update_destinations_table(refs, state)
   local destinations_table = refs.destinations_table
   local children = destinations_table.children
@@ -212,7 +216,7 @@ local function update_destinations_table(refs, state)
         destination_frame = destination_refs.frame
       end
 
-      local distance = math.ceil(get_distance(position, data.position))
+      local distance = math.ceil(misc.get_distance(position, data.position))
       local name_and_distance = { "gui.kr-planetary-teleporter-name-and-distance", data.name or unnamed_str, distance }
       local destination_properties = get_destination_properties(data)
 
@@ -305,6 +309,8 @@ local function update_all_destination_availability()
   global.planetary_teleporter.players = {}
 end
 
+--- @param player LuaPlayer
+--- @param entity LuaEntity
 local function create_gui(player, entity)
   local entity_data = global.planetary_teleporter.data[entity.unit_number]
   if not entity_data then
@@ -491,9 +497,12 @@ local function create_gui(player, entity)
 
   player.opened = refs.window
 
+  --- @class PlanetaryTeleporterGui
   local gui_data = {
     refs = refs,
+    --- @class PlanetaryTeleporterGuiState
     state = {
+      --- @type boolean|string
       active_warning = false,
       entity = entity,
       entity_data = entity_data,
@@ -512,7 +521,7 @@ end
 -- EVENT HANDLERS
 
 function planetary_teleporter.handle_gui_action(msg, e)
-  local player = game.get_player(e.player_index)
+  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
   local gui_data = global.planetary_teleporter.guis[e.player_index]
   local refs = gui_data.refs
   local state = gui_data.state
@@ -598,9 +607,13 @@ end
 
 function planetary_teleporter.init()
   global.planetary_teleporter = {
+    --- @type table<uint, PlanetaryTeleporterData>
     data = {},
+    --- @type table<uint, PlanetaryTeleporterGui>
     guis = {},
+    --- @type table<uint, table<uint, boolean>>
     players = {},
+    --- @type table<uint, string>
     unnamed_translations = {},
   }
   for _, player in pairs(game.players) do
@@ -614,7 +627,16 @@ local collision_entity_offsets = {
   { x = 2, y = 2 },
 }
 
+--- @class PlanetaryTeleporterEntities
+--- @field base LuaEntity
+--- @field turret LuaEntity
+--- @field collision_1 LuaEntity
+--- @field collision_2 LuaEntity
+--- @field collision_3 LuaEntity
+--- @field front_layer LuaEntity
+
 --- @param base_entity LuaEntity
+--- @return PlanetaryTeleporterEntities?
 local function create_entities(base_entity)
   local entities = {
     base = base_entity,
@@ -661,11 +683,14 @@ local function create_entities(base_entity)
   return entities
 end
 
+--- @param entity LuaEntity
+--- @param tags Tags
 function planetary_teleporter.build(entity, tags)
   -- If revived from a blueprint and it has a name, get it from the tags
-  local name = tags and tags.kr_planetary_teleporter_name or nil
+  local name = tags and tags.kr_planetary_teleporter_name or nil --[[@as string?]]
   local entities = create_entities(entity)
   if entities then
+    --- @class PlanetaryTeleporterData
     local data = {
       entities = entities,
       force = entity.force,
@@ -679,8 +704,9 @@ function planetary_teleporter.build(entity, tags)
   end
 end
 
+--- @param entity LuaEntity
 function planetary_teleporter.destroy(entity)
-  local unit_number = entity.unit_number
+  local unit_number = entity.unit_number --[[@as uint]]
   local data = global.planetary_teleporter.data[unit_number]
   -- In case the entity was destroyed immediately (AAI Vehicles)
   if not data then
@@ -708,6 +734,7 @@ end
 
 planetary_teleporter.create_gui = create_gui
 
+--- @param e CustomInputEvent
 function planetary_teleporter.on_focus_search(e)
   local gui_data = global.planetary_teleporter.guis[e.player_index]
   if gui_data then
@@ -715,15 +742,18 @@ function planetary_teleporter.on_focus_search(e)
   end
 end
 
+--- @param player LuaPlayer
 function planetary_teleporter.request_translation(player)
   player.request_translation({ "gui.kr-planetary-teleporter-unnamed" })
 end
 
+--- @param player_index uint
 function planetary_teleporter.clean_up_player(player_index)
   global.planetary_teleporter.unnamed_translations[player_index] = nil
   global.planetary_teleporter.guis[player_index] = nil
 end
 
+--- @param e on_string_translated
 function planetary_teleporter.on_string_translated(e)
   local localised_string = e.localised_string
   if type(localised_string) == "table" and localised_string[1] == "gui.kr-planetary-teleporter-unnamed" then
@@ -732,6 +762,8 @@ function planetary_teleporter.on_string_translated(e)
   end
 end
 
+--- @param entity BlueprintEntity
+--- @param real_entity LuaEntity?
 function planetary_teleporter.setup_blueprint(entity, real_entity)
   if real_entity and real_entity.valid then
     local name = global.planetary_teleporter.data[real_entity.unit_number].name
@@ -744,6 +776,8 @@ function planetary_teleporter.setup_blueprint(entity, real_entity)
   end
 end
 
+--- @param source LuaEntity
+--- @param target LuaEntity
 function planetary_teleporter.update_players_in_range(source, target)
   if not source.valid or not target.valid then
     return
@@ -755,7 +789,7 @@ function planetary_teleporter.update_players_in_range(source, target)
   end
   local player_index = player.index
 
-  local turret_unit_number = source.unit_number
+  local turret_unit_number = source.unit_number --[[@as uint]]
   local players = global.planetary_teleporter.players[turret_unit_number]
   if players then
     players[player_index] = true

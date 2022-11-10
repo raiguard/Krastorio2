@@ -1,10 +1,18 @@
 local util = require("scripts.util")
 
+--- @class ShelterData
+--- @field container LuaEntity
+--- @field electric LuaEntity
+--- @field light LuaEntity
+--- @field former_spawn_point MapPosition
+
 local shelter = {}
 
 function shelter.init()
   global.shelter = {
+    --- @type table<uint, table<uint, ShelterData>>
     forces = {},
+    --- @type table<uint, LuaEntity>
     inactive = {},
   }
 
@@ -13,10 +21,12 @@ function shelter.init()
   end
 end
 
+--- @param force LuaForce
 function shelter.force_init(force)
   global.shelter.forces[force.index] = {}
 end
 
+--- @param entity LuaEntity
 function shelter.build(entity)
   local force = entity.force
   local surface = entity.surface
@@ -68,6 +78,7 @@ function shelter.build(entity)
   end
 end
 
+--- @param entity LuaEntity
 function shelter.destroy(entity)
   local inactive = global.shelter.inactive[entity.unit_number]
   if inactive then

@@ -19,7 +19,7 @@ function energy_absorber.on_placed(e)
     return
   end
 
-  local player = game.get_player(e.player_index)
+  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
 
   if grid.get_contents()["energy-absorber"] > 1 then
     -- Retrieve the equipment
@@ -29,9 +29,9 @@ function energy_absorber.on_placed(e)
     local cursor_stack = player.cursor_stack
     -- If we're holding another absorber
     if cursor_stack and cursor_stack.valid_for_read and cursor_stack.name == "energy-absorber" then
-      cursor_stack.count = cursor_stack.count + 1
+      cursor_stack.count = cursor_stack.count + 1 --[[@as uint]]
       -- If we're holding something else or the stack is empty
-    elseif player.clear_cursor() then
+    elseif cursor_stack and player.clear_cursor() then
       cursor_stack.set_stack({ name = "energy-absorber", count = 1 })
     end
 

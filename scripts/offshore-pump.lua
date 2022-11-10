@@ -2,6 +2,7 @@ local compatibility = require("scripts.compatibility")
 
 local offshore_pump = {}
 
+--- @param entity LuaEntity
 function offshore_pump.build(entity)
   if not compatibility.should_build_pump() then
     return
@@ -32,7 +33,7 @@ function offshore_pump.build(entity)
     end
 
     if damage > 0 then
-      new_entity.damage(damage, game.forces.neutral)
+      new_entity.damage(damage --[[@as float]], game.forces.neutral)
     end
   end
 end

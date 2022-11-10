@@ -68,7 +68,7 @@ creep.commands = {
   ["kr-set-creep-on-surface"] = function(e)
     local _, _, surface_ident, value = string.find(e.parameter, "^(%w-) (%w-)$")
 
-    local player = game.get_player(e.player_index)
+    local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
     if not surface_ident or not value then
       player.print({ "message.kr-invalid-command-syntax" })
     end

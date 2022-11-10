@@ -2,7 +2,8 @@ local constants = require("scripts.constants")
 
 local virus = {}
 
--- Modifier to change the quantity of objects iterated for each round of the function, based on the total
+--- Modifier to change the quantity of objects iterated for each round of the function, based on the total
+--- @param count number
 local function get_removal_count(count)
   for limit, per in pairs(constants.virus_iteration_counts) do
     if count <= limit then
@@ -11,6 +12,7 @@ local function get_removal_count(count)
   end
 end
 
+--- @param virus_data BiterVirusData
 local function iterate_biter_virus(virus_data)
   local surface = virus_data.surface
   if not surface or not surface.valid then
@@ -50,6 +52,8 @@ local function iterate_biter_virus(virus_data)
   virus_data.tiles_len = len
 end
 
+--- @param player LuaPlayer
+--- @param surface LuaSurface
 local function init_biter_virus(player, surface)
   local biter_viruses = global.virus.biter
   if not biter_viruses[surface.index] then
@@ -61,6 +65,7 @@ local function init_biter_virus(player, surface)
     local enemy_entities = surface.find_entities_filtered({ force = "enemy" })
     local len = #enemy_entities
     if len > 0 then
+      --- @class BiterVirusData
       biter_viruses[surface.index] = {
         amount_per_iteration = math.ceil(len / get_removal_count(len)),
         entities = enemy_entities,
@@ -74,6 +79,7 @@ local function init_biter_virus(player, surface)
   end
 end
 
+--- @param virus_data CreepVirusData
 local function iterate_creep_virus(virus_data)
   local surface = virus_data.surface
   if not surface or not surface.valid then
@@ -104,6 +110,7 @@ local function iterate_creep_virus(virus_data)
   surface.set_tiles(tiles_to_replace)
 end
 
+--- @param surface LuaSurface
 local function init_creep_virus(surface)
   local creep_viruses = global.virus.creep
   if not creep_viruses[surface.index] then
@@ -114,6 +121,7 @@ local function init_creep_virus(surface)
     -- FIXME: This causes insane amounts of lag with lots of creep tiles
     local creep_tiles = surface.find_tiles_filtered({ name = "kr-creep" })
     local num_creeps = #creep_tiles
+    --- @class CreepVirusData
     creep_viruses[surface.index] = {
       amount_per_iteration = math.ceil(num_creeps / get_removal_count(num_creeps)),
       surface = surface,
@@ -125,18 +133,21 @@ end
 
 function virus.init()
   global.virus = {
+    --- @type table<uint, BiterVirusData>
     biter = {},
+    --- @type table<uint, CreepVirusData>
     creep = {},
   }
 end
 
+--- @param e on_player_used_capsule
 function virus.on_player_used_capsule(e)
   local item = e.item
   if not item or not item.valid then
     return
   end
 
-  local player = game.get_player(e.player_index)
+  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
   local surface = player.surface
 
   if item.name == "kr-biter-virus" then

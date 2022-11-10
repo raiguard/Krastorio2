@@ -46,6 +46,7 @@ function migrations.generic()
   end
 end
 
+--- @param filters EntityPrototypeFilter[]
 local function find_on_all_surfaces(filters)
   local output = {}
   for _, surface in pairs(game.surfaces) do
@@ -186,6 +187,7 @@ migrations.versions = {
         end
       end
 
+      --- @diagnostic disable
       if tower_data.targets and tower_data.targets.by_beam then
         for _, target_data in pairs(tower_data.targets.by_beam) do
           local beam = target_data.beam
@@ -194,6 +196,7 @@ migrations.versions = {
           end
         end
       end
+      --- @diagnostic enable
     end
 
     for _, beam_data in pairs(global.tesla_coil.beams or {}) do

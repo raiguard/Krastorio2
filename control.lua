@@ -69,7 +69,7 @@ end)
 
 if not script.active_mods["bobinserters"] then
   event.register("kr-inserter-change-lane", function(e)
-    local player = game.get_player(e.player_index)
+    local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
     local selected = player.selected
     if selected and selected.valid and selected.type == "inserter" then
       inserter.change_lane(selected)
@@ -78,7 +78,7 @@ if not script.active_mods["bobinserters"] then
 end
 
 event.register("kr-change-roboport-state", function(e)
-  local player = game.get_player(e.player_index)
+  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
   local selected = player.selected
   if selected and selected.valid and selected.type == "roboport" then
     roboport.change_mode(selected, player)
@@ -186,9 +186,9 @@ event.on_entity_settings_pasted(function(e)
 end)
 
 event.on_pre_build(function(e)
-  local player = game.get_player(e.player_index)
+  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
   local cursor_stack = player.cursor_stack
-  if not cursor_stack.valid_for_read then
+  if not cursor_stack or not cursor_stack.valid_for_read then
     return
   end
 
@@ -256,7 +256,7 @@ event.on_gui_opened(function(e)
   if not handle_gui_event(e) then
     local entity = e.entity
     if entity and entity.valid then
-      local player = game.get_player(e.player_index)
+      local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
       local name = entity.name
       if name == "kr-intergalactic-transceiver" then
         intergalactic_transceiver.create_gui(player, entity)
@@ -278,7 +278,7 @@ event.register("kr-linked-focus-search", planetary_teleporter.on_focus_search)
 event.on_player_used_capsule(virus.on_player_used_capsule)
 
 event.on_player_created(function(e)
-  local player = game.get_player(e.player_index)
+  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
   inserter.refresh_gui(player)
   patreon.give_items(player, false)
   planetary_teleporter.request_translation(player)
@@ -294,18 +294,21 @@ event.on_player_removed(function(e)
 end)
 
 event.on_player_joined_game(function(e)
-  local player = game.get_player(e.player_index)
+  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
   radioactivity.check_around_player(player)
   radioactivity.check_inventory(player)
 end)
 
 event.on_player_setup_blueprint(function(e)
-  local player = game.get_player(e.player_index)
+  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
 
   -- Get blueprint
   local bp = player.blueprint_to_setup
   if not bp or not bp.valid_for_read then
     bp = player.cursor_stack
+    if not bp then
+      return
+    end
     if bp.type == "blueprint-book" then
       local item_inventory = bp.get_inventory(defines.inventory.item_main)
       if item_inventory then
@@ -344,13 +347,14 @@ event.on_player_setup_blueprint(function(e)
 end)
 
 event.on_player_changed_position(function(e)
-  radioactivity.check_around_player(game.get_player(e.player_index))
+  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
+  radioactivity.check_around_player(player)
 end)
 
 event.register(
   { defines.events.on_player_main_inventory_changed, defines.events.on_player_trash_inventory_changed },
   function(e)
-    local player = game.get_player(e.player_index)
+    local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
     radioactivity.check_inventory(player)
   end
 )
@@ -360,21 +364,21 @@ event.on_player_armor_inventory_changed(tesla_coil.on_player_armor_inventory_cha
 event.register(
   { defines.events.on_player_died, defines.events.on_player_respawned, defines.events.on_player_toggled_map_editor },
   function(e)
-    local player = game.get_player(e.player_index)
+    local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
     radioactivity.check_around_player(player)
     radioactivity.check_inventory(player)
   end
 )
 
 event.on_cutscene_cancelled(function(e)
-  local player = game.get_player(e.player_index)
+  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
   patreon.give_items(player, false)
 end)
 
---- XXX: This shows a message whenever _any_ cutscene plays. Proper fix requires a new API feature
+--- FIXME: This shows a message whenever _any_ cutscene plays. Proper fix requires a new API feature
 event.on_cutscene_waypoint_reached(function(e)
   if crash_site.is_crash_site_cutscene(e) then
-    local player = game.get_player(e.player_index)
+    local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
     freeplay.show_intro(player)
   end
 end)
@@ -383,7 +387,7 @@ event.register({
   defines.events.on_player_selected_area,
   defines.events.on_player_alt_selected_area,
 }, function(e)
-  local player = game.get_player(e.player_index)
+  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
   if e.item == "kr-creep-collector" then
     creep_collector.collect(e)
   elseif e.item == "kr-jackhammer" then

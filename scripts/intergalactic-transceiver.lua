@@ -15,8 +15,11 @@ local cutscene_const = constants.intergalactic_transceiver.cutscene
 function intergalactic_transceiver.init()
   if not global.intergalactic_transceiver then -- Can be already initialised through remote interface
     global.intergalactic_transceiver = {
+      --- @type table<uint, IntergalacticTransceiverForceData>
       forces = {},
+      --- @type table<uint, IntergalacticTransceiverGuiData>
       guis = {},
+      --- @type table<uint, LuaEntity>
       inactive = {},
       is_victory = true,
     }
@@ -30,6 +33,7 @@ function intergalactic_transceiver.get_max_energy()
   global.intergalactic_transceiver.max_energy = buffer_capacity - constants.intergalactic_transceiver.max_delta
 end
 
+--- @param entity LuaEntity
 function intergalactic_transceiver.build(entity)
   local existing = global.intergalactic_transceiver.forces[entity.force.index]
   if existing then
@@ -54,7 +58,9 @@ function intergalactic_transceiver.build(entity)
     return
   end
 
+  --- @class IntergalacticTransceiverForceData
   global.intergalactic_transceiver.forces[entity.force.index] = {
+    activating = false,
     entity = entity,
     last_alert_tick = game.tick,
     last_energy = entity.energy,
@@ -62,6 +68,7 @@ function intergalactic_transceiver.build(entity)
   }
 end
 
+--- @param entity LuaEntity
 function intergalactic_transceiver.build_activated(entity)
   local existing = global.intergalactic_transceiver.forces[entity.force.index]
   if not existing or not existing.activating then
@@ -86,6 +93,7 @@ function intergalactic_transceiver.build_activated(entity)
   end
 end
 
+--- @param entity LuaEntity
 function intergalactic_transceiver.destroy(entity)
   local force_index = entity.force.index
   global.intergalactic_transceiver.forces[force_index] = nil
@@ -94,11 +102,13 @@ function intergalactic_transceiver.destroy(entity)
   for player_index, gui_data in pairs(global.intergalactic_transceiver.guis) do
     local gui_entity = gui_data.state.entity
     if gui_entity and gui_entity.valid and gui_entity == entity then
-      intergalactic_transceiver.destroy_gui(game.get_player(player_index))
+      local player = game.get_player(player_index) --[[@as LuaPlayer]]
+      intergalactic_transceiver.destroy_gui(player)
     end
   end
 end
 
+--- @param entity LuaEntity
 function intergalactic_transceiver.destroy_inactive(entity)
   global.intergalactic_transceiver.inactive[entity.unit_number] = nil
 end
@@ -189,11 +199,12 @@ function intergalactic_transceiver.spawn_flying_texts()
     if entity.valid then
       util.entity_flying_text(entity, { "message.kr-transceiver-is-inactive" }, { r = 1 })
     else
-      global.shelter.inactive[unit_number] = nil
+      global.intergalactic_transceiver.inactive[unit_number] = nil
     end
   end
 end
 
+--- @param entity LuaEntity
 function intergalactic_transceiver.activate(entity)
   local entity_data = global.intergalactic_transceiver.forces[entity.force.index]
   if not entity_data then
@@ -208,7 +219,8 @@ function intergalactic_transceiver.activate(entity)
   for player_index, gui_data in pairs(global.intergalactic_transceiver.guis) do
     local gui_entity = gui_data.state.entity
     if gui_entity and gui_entity.valid and gui_entity == entity then
-      intergalactic_transceiver.destroy_gui(game.get_player(player_index))
+      local player = game.get_player(player_index) --[[@as LuaPlayer]]
+      intergalactic_transceiver.destroy_gui(player)
     end
   end
 
@@ -220,6 +232,7 @@ end
 
 local cutscene = {}
 
+--- @param force_index uint
 function cutscene.begin(force_index)
   local entity_data = global.intergalactic_transceiver.forces[force_index]
   if not entity_data then
@@ -279,6 +292,7 @@ function cutscene.begin(force_index)
   on_tick_n.add(game.tick + 100, { handler = "it_cutscene", action = "spawn_wave", force_index = force_index })
 end
 
+--- @param force_index uint
 function cutscene.spawn_wave(force_index)
   local entity_data = global.intergalactic_transceiver.forces[force_index]
   if not entity_data then
@@ -305,6 +319,7 @@ function cutscene.spawn_wave(force_index)
   on_tick_n.add(game.tick + 15, { handler = "it_cutscene", action = "replace_entity", force_index = force_index })
 end
 
+--- @param force_index uint
 function cutscene.replace_entity(force_index)
   local entity_data = global.intergalactic_transceiver.forces[force_index]
   if not entity_data then
@@ -349,6 +364,7 @@ function cutscene.replace_entity(force_index)
   end
 end
 
+--- @param force_index uint
 function cutscene.win(force_index)
   game.set_game_state({
     game_finished = true,
@@ -368,6 +384,8 @@ intergalactic_transceiver.cutscene = cutscene
 
 -- GUI
 
+--- @param player LuaPlayer
+--- @param entity LuaEntity
 function intergalactic_transceiver.create_gui(player, entity)
   local refs = gui.build(player.gui.screen, {
     {
@@ -450,6 +468,7 @@ function intergalactic_transceiver.create_gui(player, entity)
     player.play_sound({ path = "entity-open/kr-intergalactic-transceiver" })
   end
 
+  --- @class IntergalacticTransceiverGuiData
   global.intergalactic_transceiver.guis[player.index] = {
     refs = refs,
     state = {
@@ -459,6 +478,7 @@ function intergalactic_transceiver.create_gui(player, entity)
   }
 end
 
+--- @param player LuaPlayer
 function intergalactic_transceiver.destroy_gui(player)
   local gui_data = global.intergalactic_transceiver.guis[player.index]
   if gui_data then
@@ -468,6 +488,7 @@ function intergalactic_transceiver.destroy_gui(player)
   end
 end
 
+--- @param gui_data IntergalacticTransceiverGuiData
 function intergalactic_transceiver.update_gui(gui_data)
   local entity = gui_data.state.entity
   if entity and entity.valid then
@@ -496,10 +517,13 @@ end
 
 local actions = {}
 
+--- @param e GuiEventData
 function actions.close(e)
-  intergalactic_transceiver.destroy_gui(game.get_player(e.player_index))
+  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
+  intergalactic_transceiver.destroy_gui(player)
 end
 
+--- @param e GuiEventData
 function actions.activate(e)
   local gui_data = global.intergalactic_transceiver.guis[e.player_index]
   if not gui_data then
@@ -511,7 +535,8 @@ function actions.activate(e)
     return
   end
 
-  intergalactic_transceiver.destroy_gui(game.get_player(e.player_index))
+  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
+  intergalactic_transceiver.destroy_gui(player)
   intergalactic_transceiver.activate(entity)
 end
 

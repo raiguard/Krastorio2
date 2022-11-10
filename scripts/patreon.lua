@@ -40,7 +40,7 @@ end
 
 patreon.commands = {
   ["kr-give-patreon-items"] = function(e)
-    local player = game.get_player(e.player_index)
+    local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
     patreon.give_items(player, true)
   end,
 }

@@ -7,6 +7,7 @@ local radioactivity = {}
 function radioactivity.init()
   global.radioactivity = {
     enabled = true,
+    --- @type table<uint, RadioactivityPlayerData>
     players = {},
   }
 end
@@ -39,6 +40,7 @@ function radioactivity.refresh_players()
   local new = {}
   for player_index in pairs(game.players) do
     new[player_index] = existing[player_index]
+      --- @class RadioactivityPlayerData
       or {
         entity = false,
         inventory = false,
@@ -48,6 +50,7 @@ function radioactivity.refresh_players()
   global.radioactivity.players = new
 end
 
+--- @param player LuaPlayer
 function radioactivity.check_around_player(player)
   if not global.radioactivity.enabled or #global.radioactivity.entities == 0 then
     return
@@ -69,16 +72,17 @@ function radioactivity.check_around_player(player)
     player_data.last_position = position
 
     local in_range = player.character
-      and player.surface.count_entities_filtered({
+        and player.surface.count_entities_filtered({
           name = global.radioactivity.entities,
           radius = constants.radioactivity_range,
           position = player.position,
-        })
-        > 0
+        }) > 0
+      or false
     player_data.entity = in_range
   end
 end
 
+--- @param player LuaPlayer
 function radioactivity.check_inventory(player)
   if not global.radioactivity.enabled then
     return
@@ -115,7 +119,7 @@ function radioactivity.update_sounds()
 
   for player_index, player_data in pairs(global.radioactivity.players) do
     if table.find(player_data, true) then
-      local player = game.get_player(player_index)
+      local player = game.get_player(player_index) --[[@as LuaPlayer]]
       if player.connected then
         player.play_sound({
           path = "kr-radioactive",
@@ -133,7 +137,7 @@ function radioactivity.update_and_damage()
 
   for player_index, player_data in pairs(global.radioactivity.players) do
     if table.find(player_data, true) then
-      local player = game.get_player(player_index)
+      local player = game.get_player(player_index) --[[@as LuaPlayer]]
       if player.connected and player.character then
         player.add_custom_alert(
           player.character,

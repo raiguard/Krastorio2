@@ -6,6 +6,14 @@ function util.ensure_turret_force()
   end
 end
 
+--- @class FlyingTextOptions
+--- @field color Color?
+--- @field position MapPosition?
+--- @field sound LuaPlayer.play_sound_param?
+
+--- @param player LuaPlayer
+--- @param text LocalisedString
+--- @param options FlyingTextOptions?
 function util.flying_text_with_sound(player, text, options)
   options = options or {}
   options.sound = options.sound or { path = "utility/cannot_build" }
@@ -18,6 +26,9 @@ function util.flying_text_with_sound(player, text, options)
   player.play_sound(options.sound)
 end
 
+--- @param entity LuaEntity
+--- @param text LocalisedString
+--- @param color Color?
 function util.entity_flying_text(entity, text, color)
   entity.surface.create_entity({
     type = "flying-text",
@@ -28,6 +39,9 @@ function util.entity_flying_text(entity, text, color)
   })
 end
 
+--- @param entity LuaEntity
+--- @param text LocalisedString
+--- @param color Color
 function util.change_mode_fx(entity, text, color)
   -- Flying text
   util.entity_flying_text(entity, text, color)
@@ -48,10 +62,11 @@ function util.change_mode_fx(entity, text, color)
   })
 end
 
+--- @param commands_list table<string, function>
 function util.add_commands(commands_list)
   for name, func in pairs(commands_list) do
     commands.add_command(name, { "command-help." .. name }, function(e)
-      local player = game.get_player(e.player_index)
+      local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
       if not player.admin then
         player.print({ "cant-run-command-not-admin", name })
         return

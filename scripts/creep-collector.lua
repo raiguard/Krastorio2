@@ -7,9 +7,9 @@ local util = require("scripts.util")
 
 local creep_collector = {}
 
---- @param e on_player_selected_area
+--- @param e on_player_selected_area|on_player_alt_selected_area
 function creep_collector.collect(e)
-  local player = game.get_player(e.player_index)
+  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
   local player_pos = player.position
 
   if #e.entities > 0 then
@@ -20,7 +20,9 @@ function creep_collector.collect(e)
   local tiles_to_set = {}
   local i = 0
   for _, tile in pairs(e.tiles) do
-    if misc.get_distance(tile.position, player_pos) <= player.reach_distance then
+    if
+      misc.get_distance(tile.position --[[@as MapPosition]], player_pos) <= player.reach_distance
+    then
       i = i + 1
       tiles_to_set[i] = { name = tile.hidden_tile or "landfill", position = tile.position }
     end
@@ -28,8 +30,11 @@ function creep_collector.collect(e)
 
   if i > 0 then
     local percentage = math.random(constants.creep_collection_rate.min, constants.creep_collection_rate.max)
-    local collected_amount = math.ceil(i * (percentage / 100))
+    local collected_amount = math.ceil(i * (percentage / 100)) --[[@as uint]]
     local inventory = player.get_main_inventory()
+    if not inventory then
+      return
+    end
     if inventory.can_insert({ name = "biomass", count = collected_amount }) then
       inventory.insert({ name = "biomass", count = collected_amount })
       e.surface.set_tiles(tiles_to_set)

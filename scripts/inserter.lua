@@ -6,6 +6,7 @@ local util = require("scripts.util")
 
 local inserter = {}
 
+--- @param entity LuaEntity
 local function get_is_far(entity)
   local drop_pos_vector = {
     x = entity.drop_position.x - entity.position.x,
@@ -15,6 +16,7 @@ local function get_is_far(entity)
   return vector_length % 1 < 0.5, drop_pos_vector
 end
 
+--- @param player LuaPlayer
 function inserter.refresh_gui(player)
   inserter.destroy_gui(player.index)
 
@@ -45,6 +47,7 @@ function inserter.refresh_gui(player)
   })
 end
 
+--- @param player_index uint
 function inserter.destroy_gui(player_index)
   local player_gui = global.inserter_guis[player_index]
   if player_gui and player_gui.valid then
@@ -52,6 +55,8 @@ function inserter.destroy_gui(player_index)
   end
 end
 
+--- @param player LuaPlayer
+--- @param entity LuaEntity
 function inserter.update_gui(player, entity)
   local player_gui = global.inserter_guis[player.index]
   if player_gui and player_gui.valid then
@@ -60,15 +65,17 @@ function inserter.update_gui(player, entity)
   end
 end
 
+--- @param msg table
+--- @param e GuiEventData
 function inserter.handle_gui_action(msg, e)
   if msg.action == "change_belt_lane" then
-    local player = game.get_player(e.player_index)
+    local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
     if not player.opened_gui_type == defines.gui_type.entity then
       return
     end
 
     local entity = player.opened
-    if not entity.valid or entity.type ~= "inserter" then
+    if not entity or not entity.valid or entity.type ~= "inserter" then
       return
     end
 
@@ -103,6 +110,7 @@ function inserter.find_droplanes()
   global.inserter_has_droplane_gui = output
 end
 
+--- @param entity LuaEntity
 function inserter.change_lane(entity)
   local is_far, drop_pos_vector = get_is_far(entity)
 
@@ -122,7 +130,7 @@ function inserter.change_lane(entity)
 
   -- Update all player GUIs that have this open
   for player_index in pairs(global.inserter_guis) do
-    local player = game.get_player(player_index)
+    local player = game.get_player(player_index) --[[@as LuaPlayer]]
     if player.opened_gui_type == defines.gui_type.entity then
       local opened = player.opened
       if opened and opened == entity then
@@ -132,6 +140,7 @@ function inserter.change_lane(entity)
   end
 end
 
+--- @param entity LuaEntity
 function inserter.save_settings(entity)
   global.temp_inserter_settings[entity.unit_number] = {
     drop_position = entity.drop_position,
@@ -139,6 +148,8 @@ function inserter.save_settings(entity)
   }
 end
 
+--- @param source LuaEntity
+--- @param destination LuaEntity
 function inserter.copy_settings(source, destination)
   local temp_settings = global.temp_inserter_settings[destination.unit_number]
   if not temp_settings then
