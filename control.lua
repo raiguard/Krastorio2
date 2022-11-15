@@ -72,7 +72,7 @@ if not script.active_mods["bobinserters"] then
     local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
     local selected = player.selected
     if selected and selected.valid and selected.type == "inserter" then
-      inserter.change_lane(selected)
+      inserter.change_lane(selected, player)
     end
   end)
 end

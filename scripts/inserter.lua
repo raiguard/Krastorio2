@@ -26,7 +26,7 @@ function inserter.refresh_gui(player)
     anchor = {
       gui = defines.relative_gui_type.inserter_gui,
       position = defines.relative_gui_position.right,
-      names = global.inserter_has_droplane_gui,
+      names = global.inserter_supports_droplanes_anchor,
     },
     {
       type = "frame",
@@ -74,12 +74,12 @@ function inserter.handle_gui_action(msg, e)
       return
     end
 
-    local entity = player.opened
+    local entity = player.opened --[[@as LuaEntity?]]
     if not entity or not entity.valid or entity.type ~= "inserter" then
       return
     end
 
-    inserter.change_lane(entity)
+    inserter.change_lane(entity, player)
   end
 end
 
@@ -94,24 +94,30 @@ function inserter.find_droplanes()
   -- Find all compatible inserters
   local has_droplane_gui = {}
   for _, entity in pairs(game.get_filtered_entity_prototypes({ { filter = "type", type = "inserter" } })) do
-    if not string.find(entity.name, "%-?miniloader%-inserter") then
+    if entity.allow_custom_vectors and not string.find(entity.name, "%-?miniloader%-inserter") then
       has_droplane_gui[entity.name] = true
     end
   end
 
   -- Convert to a format usable by GuiAnchor
-  local output = {}
+  local anchor = {}
   local i = 0
   for entity in pairs(has_droplane_gui) do
     i = i + 1
-    output[i] = entity
+    anchor[i] = entity
   end
 
-  global.inserter_has_droplane_gui = output
+  global.inserter_supports_droplanes_anchor = anchor
+  global.inserter_supports_droplanes = has_droplane_gui
 end
 
 --- @param entity LuaEntity
-function inserter.change_lane(entity)
+--- @param player LuaPlayer
+function inserter.change_lane(entity, player)
+  if not global.inserter_supports_droplanes[entity.name] then
+    util.flying_text_with_sound(player, { "message.kr-cannot-change-inserter-drop-lane" })
+    return
+  end
   local is_far, drop_pos_vector = get_is_far(entity)
 
   -- Change lane

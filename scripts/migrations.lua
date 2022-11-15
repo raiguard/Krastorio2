@@ -258,6 +258,9 @@ migrations.versions = {
       force.reset_technology_effects()
     end
   end,
+  ["1.3.7"] = function()
+    global.inserter_has_droplane_gui = nil
+  end,
 }
 
 return migrations
