@@ -2,7 +2,6 @@
 Version: 1.3.7
 Date: ????
   Changes:
-    - Added dedicated creep collector and jackhammer shortcut icons
     - An error will be printed if an inserter does not support droplane switching
     - Roboport variant ranges are rounded up to the nearest whole tile (vanilla roboport logistic mode can now be chunk-aligned)
   Compatibility:
