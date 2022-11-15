@@ -5,6 +5,8 @@ Date: ????
     - Added dedicated creep collector and jackhammer shortcut icons
     - An error will be printed if an inserter does not support droplane switching
     - Roboport variant ranges are rounded up to the nearest whole tile (vanilla roboport logistic mode can now be chunk-aligned)
+  Compatibility:
+    - [AAI Industry] Nerfed stone wall resistances to be in line with AAI-added walls
   Bugfixes:
     - Fixed a crash when loading Tral's Robot Tree Farm
     - Fixed the electric mining drill entity icon not matching the item icon

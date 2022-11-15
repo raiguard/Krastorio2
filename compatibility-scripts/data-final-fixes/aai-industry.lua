@@ -1,3 +1,5 @@
+local table = require("__flib__.table")
+
 if mods["aai-industry"] then
   -- -- -- Techologies fixes
   -- Sand
@@ -67,6 +69,12 @@ if mods["aai-industry"] then
 
   -- -- -- Entities fixes
   data.raw["lab"]["burner-lab"].inputs = { "basic-tech-card", "automation-science-pack" }
+
+  -- Remove explosion and physical resistances from stone wall
+  local stone_wall = data.raw["wall"]["stone-wall"]
+  stone_wall.resistances = table.filter(stone_wall.resistances, function(resistance)
+    return resistance.type ~= "physical" and resistance.type ~= "explosion"
+  end, true)
 
   -- Fix for fuels
   if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
