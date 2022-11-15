@@ -332,13 +332,13 @@ function matrix.det(m1)
 
   if size == 3 then
     return (
-        m1[1][1] * m1[2][2] * m1[3][3]
-        + m1[1][2] * m1[2][3] * m1[3][1]
-        + m1[1][3] * m1[2][1] * m1[3][2]
-        - m1[1][3] * m1[2][2] * m1[3][1]
-        - m1[1][1] * m1[2][3] * m1[3][2]
-        - m1[1][2] * m1[2][1] * m1[3][3]
-      )
+      m1[1][1] * m1[2][2] * m1[3][3]
+      + m1[1][2] * m1[2][3] * m1[3][1]
+      + m1[1][3] * m1[2][1] * m1[3][2]
+      - m1[1][3] * m1[2][2] * m1[3][1]
+      - m1[1][1] * m1[2][3] * m1[3][2]
+      - m1[1][2] * m1[2][1] * m1[3][3]
+    )
   end
 
   --// no symbolic matrix supported below here
@@ -603,8 +603,7 @@ function matrix.root(m1, root, iters)
     --  ((p-1)*my + mx^-1)/p
     mx, my =
       mx:mulnum(root - 1):add(my:invert()):divnum(root),
-      my
-        :mulnum(root - 1)
+      my:mulnum(root - 1)
         :add(mx:invert())
         :divnum(root)
         :mul(my:invert():pow(root - 2))

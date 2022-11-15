@@ -88,7 +88,9 @@ local function applyAndIntegrateEquipmentCategories(vehicle_type, vehicle_name, 
         equipment_categories_set[equipment_category] = true
       end
 
-      for _, equipment_category in pairs(data.raw["equipment-grid"][data.raw[vehicle_type][vehicle_name].equipment_grid].equipment_categories) do
+      for _, equipment_category in
+        pairs(data.raw["equipment-grid"][data.raw[vehicle_type][vehicle_name].equipment_grid].equipment_categories)
+      do
         if equipment_category ~= "armor" and not equipment_categories_set[equipment_category] then
           table.insert(data.raw["equipment-grid"][equipment_grid_name].equipment_categories, equipment_category)
         end

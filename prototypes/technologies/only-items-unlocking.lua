@@ -23,7 +23,7 @@ data:extend({
       },
       time = 20,
     },
-     -- Disable cost multiplier to avoid manually harvesting unreasonable amount of wood.
+    -- Disable cost multiplier to avoid manually harvesting unreasonable amount of wood.
     ignore_tech_cost_multiplier = not krastorio.general.getSafeSettingValue("kr-tech-multiplier-everywhere"),
   },
   {
@@ -95,7 +95,7 @@ data:extend({
       },
       time = 30,
     },
-     -- Disable cost multiplier to avoid manually harvesting unreasonable amount of wood.
+    -- Disable cost multiplier to avoid manually harvesting unreasonable amount of wood.
     ignore_tech_cost_multiplier = not krastorio.general.getSafeSettingValue("kr-tech-multiplier-everywhere"),
   },
   ---

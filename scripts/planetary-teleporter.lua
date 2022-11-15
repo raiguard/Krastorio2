@@ -76,9 +76,8 @@ local function update_gui_statuses()
     local status = entity.status
     -- Workaround for a base game issue where the accumulator won't actually charge all the way sometimes
     -- Round the percent full to a whole percentage to eliminate the game's floating point error
-    local percent_full = math.ceil(
-      (entity.energy / entity.prototype.electric_energy_source_prototype.buffer_capacity) * 100
-    )
+    local percent_full =
+      math.ceil((entity.energy / entity.prototype.electric_energy_source_prototype.buffer_capacity) * 100)
     local fully_charged = percent_full == 100
 
     if status == defines.entity_status.charging or status == defines.entity_status.discharging then

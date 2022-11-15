@@ -907,11 +907,8 @@ function krastorio.recipes.replaceIngredients(recipe_name, old_ingredient_names,
   local i, old_ingredient_name = next(old_ingredient_names, nil)
   local j, ingredient = next(new_ingredients, nil)
   while i and j and type(ingredient) == "table" do
-    replaced = krastorio.recipes.replaceIngredient(
-      recipe_name,
-      old_ingredient_name,
-      krastorio_utils.tables.fullCopy(ingredient)
-    )
+    replaced =
+      krastorio.recipes.replaceIngredient(recipe_name, old_ingredient_name, krastorio_utils.tables.fullCopy(ingredient))
     replaced_all = replaced_all and replaced
     i, old_ingredient_name = next(old_ingredient_names, i)
     j, ingredient = next(new_ingredients, j)

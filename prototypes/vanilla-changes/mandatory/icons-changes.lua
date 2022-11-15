@@ -172,7 +172,12 @@ end
 krastorio.icons.setTechnologyIcon("utility-science-pack", kr_technologies_icons_path .. "utility-tech-card.png", 256, 4)
 
 -- Space science pack
-krastorio.icons.setItemIcon(krastorio.optimization_tech_card_name, kr_cards_icons_path .. "optimization-tech-card.png", 64, 4)
+krastorio.icons.setItemIcon(
+  krastorio.optimization_tech_card_name,
+  kr_cards_icons_path .. "optimization-tech-card.png",
+  64,
+  4
+)
 if data.raw.tool[krastorio.optimization_tech_card_name] then
   data.raw.tool[krastorio.optimization_tech_card_name].order = "b08[optimization-tech-card]"
   data.raw.tool[krastorio.optimization_tech_card_name].pictures = {

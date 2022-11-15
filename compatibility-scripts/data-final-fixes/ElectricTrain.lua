@@ -10,7 +10,9 @@ if mods["ElectricTrain"] then
           equipment_categories_set[equipment_category] = true
         end
 
-        for _, equipment_category in pairs(data.raw["equipment-grid"][data.raw["locomotive"][locomotive_name].equipment_grid].equipment_categories) do
+        for _, equipment_category in
+          pairs(data.raw["equipment-grid"][data.raw["locomotive"][locomotive_name].equipment_grid].equipment_categories)
+        do
           if equipment_category ~= "armor" and not equipment_categories_set[equipment_category] then
             table.insert(data.raw["equipment-grid"]["kr-locomotive-grid"].equipment_categories, equipment_category)
           end
