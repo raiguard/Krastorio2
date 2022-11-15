@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.7
 Date: ????
+  Changes:
+    - Added dedicated creep collector and jackhammer shortcut icons
   Bugfixes:
     - Fixed a crash when loading Tral's Robot Tree Farm
     - Fixed the electric mining drill entity icon not matching the item icon
