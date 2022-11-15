@@ -9,6 +9,7 @@ Date: ????
     - [AAI Industry] Nerfed stone wall resistances to be in line with AAI-added walls
   Bugfixes:
     - Fixed a crash when loading Tral's Robot Tree Farm
+    - Fixed that the fluid chemistry technology was missing stone processing and engine technology prerequisites
     - Fixed the electric mining drill entity icon not matching the item icon
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.6

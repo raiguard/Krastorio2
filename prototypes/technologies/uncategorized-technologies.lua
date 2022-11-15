@@ -159,7 +159,7 @@ data:extend({
         recipe = "kr-water-electrolysis",
       },
     },
-    prerequisites = { "kr-basic-fluid-handling", "steel-processing" },
+    prerequisites = { "kr-basic-fluid-handling", "steel-processing", "kr-stone-processing", "engine" },
     unit = {
       count = 100,
       ingredients = {
