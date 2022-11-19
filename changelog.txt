@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.8
 Date: ????
-  Features:
+  Bugfixes:
+    - Fixed a crash when changing inserter drop lane or roboport mode after a player was removed from the game
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.7
 Date: 2022-11-14

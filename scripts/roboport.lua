@@ -50,8 +50,11 @@ end
 --- @param player_index uint
 function roboport.destroy_gui(player_index)
   local player_gui = global.roboport_guis[player_index]
-  if player_gui and player_gui.valid then
-    player_gui.destroy()
+  if player_gui then
+    if player_gui.valid then
+      player_gui.destroy()
+    end
+    global.roboport_guis[player_index] = nil
   end
 end
 

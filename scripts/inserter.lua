@@ -50,8 +50,11 @@ end
 --- @param player_index uint
 function inserter.destroy_gui(player_index)
   local player_gui = global.inserter_guis[player_index]
-  if player_gui and player_gui.valid then
-    player_gui.destroy()
+  if player_gui then
+    if player_gui.valid then
+      player_gui.destroy()
+    end
+    global.inserter_guis[player_index] = nil
   end
 end
 
@@ -86,6 +89,7 @@ end
 -- GENERAL
 
 function inserter.init()
+  --- @type table<uint, LuaGuiElement>
   global.inserter_guis = {}
   global.temp_inserter_settings = {}
 end

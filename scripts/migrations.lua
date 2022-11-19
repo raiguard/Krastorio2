@@ -261,6 +261,23 @@ migrations.versions = {
   ["1.3.7"] = function()
     global.inserter_has_droplane_gui = nil
   end,
+  ["1.3.8"] = function()
+    -- Clean up any invalid inserter and roboport GUIs
+    local new = {}
+    for player_index, player_gui in pairs(global.inserter_guis) do
+      if player_gui.valid then
+        new[player_index] = player_gui
+      end
+    end
+    global.inserter_guis = new
+    local new = {}
+    for player_index, player_gui in pairs(global.roboport_guis) do
+      if player_gui.valid then
+        new[player_index] = player_gui
+      end
+    end
+    global.roboport_guis = new
+  end,
 }
 
 return migrations
