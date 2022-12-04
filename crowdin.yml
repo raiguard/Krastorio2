@@ -1,0 +1,19 @@
+api_token_env: CROWDIN_TOKEN
+project_id: CROWDIN_KRASTORIO_ID
+preserve_hierarchy: true
+
+files:
+  - source: /locale/en/Krastorio2.cfg
+    dest: Krastorio2.ini
+    translation: /locale/%two_letters_code%/%original_file_name%
+    type: ini
+
+  - source: /locale/en/Krastorio2Compatibility.cfg
+    dest: Krastorio2Compatibility.ini
+    translation: /locale/%two_letters_code%/%original_file_name%
+    type: ini
+
+  - source: /locale/en/Krastorio2Tips.cfg
+    dest: Krastorio2Tips.ini
+    translation: /locale/%two_letters_code%/%original_file_name%
+    type: ini
