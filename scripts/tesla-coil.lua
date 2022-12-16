@@ -38,7 +38,9 @@ function tesla_coil.build(source_entity)
     raise_built = true,
   })
   if not turret or not turret.valid then
-    game.print("Building tesla failed due to AAI Programmable Vehicles. This tesla coil will not function.")
+    game.print(
+      "Building tesla failed due to AAI Programmable Vehicles; This tesla coil will not function. To fix this, change the 'Deadzone construction denial range' map setting to zero."
+    )
     source_entity.active = false
     return
   end
