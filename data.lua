@@ -82,5 +82,4 @@ require(scripts_path .. "early-electric-furnaces")
 require(scripts_path .. "deadlock-beltboxes-loaders")
 require(scripts_path .. "IndustrialRevolution")
 require(scripts_path .. "Squeak_Through")
-require(scripts_path .. "space-exploration")
 ---------------------------------------------------------------------------
