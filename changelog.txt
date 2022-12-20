@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.9
-Date: ????
+Date: 2022-12-19
   Compatibility:
     - [Space Exploration] Relocated most of the space exploration compatibility code to the SE mod
 ---------------------------------------------------------------------------------------------------
