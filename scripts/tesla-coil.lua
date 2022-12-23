@@ -1,5 +1,3 @@
-local event = require("__flib__.event")
-
 local constants = require("scripts.constants")
 
 local tesla_coil = {}
@@ -203,7 +201,7 @@ function tesla_coil.add_connection(target_data, tower_data)
       if not beam then
         return
       end
-      local beam_number = event.register_on_entity_destroyed(beam)
+      local beam_number = script.register_on_entity_destroyed(beam)
 
       --- @class BeamData
       global.tesla_coil.beams[beam_number] = {

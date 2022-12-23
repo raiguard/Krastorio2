@@ -8,9 +8,9 @@
   "homepage": "https://sr.ht/~raiguard/factorio-mods",
   "factorio_version": "1.1",
   "dependencies": [
-    "base >= 1.1.52",
+    "base >= 1.1.74",
     "Krastorio2Assets >= 1.2.1",
-    "flib >= 0.11.0",
+    "flib >= 0.12.0",
     "(?) aai-industry >= 0.3.17",
     "(?) aai-vehicles-chaingunner >= 0.5.2",
     "(?) Aircraft >= 1.6.6",

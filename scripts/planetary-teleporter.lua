@@ -1,5 +1,5 @@
 local gui = require("__flib__.gui")
-local misc = require("__flib__.misc")
+local position = require("__flib__.position")
 
 local planetary_teleporter = {}
 
@@ -154,7 +154,7 @@ local function update_destinations_table(refs, state)
   local force_name = force.name
   local unit_number = state.entity.unit_number
   local player_index = state.player.index
-  local position = state.entity.position
+  local pos = state.entity.position
   local surface = state.entity.surface
   local unnamed_str = global.planetary_teleporter.unnamed_translations[player_index]
 
@@ -216,7 +216,7 @@ local function update_destinations_table(refs, state)
         destination_frame = destination_refs.frame
       end
 
-      local distance = math.ceil(misc.get_distance(position, data.position))
+      local distance = math.ceil(position.distance(pos, data.position))
       local name_and_distance = { "gui.kr-planetary-teleporter-name-and-distance", data.name or unnamed_str, distance }
       local destination_properties = get_destination_properties(data)
 
@@ -734,7 +734,7 @@ end
 
 planetary_teleporter.create_gui = create_gui
 
---- @param e CustomInputEvent
+--- @param e EventData.CustomInputEvent
 function planetary_teleporter.on_focus_search(e)
   local gui_data = global.planetary_teleporter.guis[e.player_index]
   if gui_data then
@@ -753,7 +753,7 @@ function planetary_teleporter.clean_up_player(player_index)
   global.planetary_teleporter.guis[player_index] = nil
 end
 
---- @param e on_string_translated
+--- @param e EventData.on_string_translated
 function planetary_teleporter.on_string_translated(e)
   local localised_string = e.localised_string
   if type(localised_string) == "table" and localised_string[1] == "gui.kr-planetary-teleporter-unnamed" then

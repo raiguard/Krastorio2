@@ -1,5 +1,4 @@
 local crash_site = require("__core__.lualib.crash-site")
-local event = require("__flib__.event")
 local gui = require("__flib__.gui")
 local migration = require("__flib__.migration")
 local on_tick_n = require("__flib__.on-tick-n")
@@ -38,7 +37,7 @@ remote.add_interface("kr-radioactivity", radioactivity.remote_interface)
 
 -- BOOTSTRAP
 
-event.on_init(function()
+script.on_init(function()
   -- Initialize libraries
   on_tick_n.init()
 
@@ -59,17 +58,16 @@ event.on_init(function()
   migrations.generic()
 end)
 
-event.on_configuration_changed(function(e)
-  if migration.on_config_changed(e, migrations.versions) then
-    migrations.generic()
-  end
-end)
+migration.handle_on_configuration_changed(migrations.versions, migrations.generic)
 
 -- CUSTOM INPUT
 
 if not script.active_mods["bobinserters"] then
-  event.register("kr-inserter-change-lane", function(e)
-    local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
+  script.on_event("kr-inserter-change-lane", function(e)
+    local player = game.get_player(e.player_index)
+    if not player then
+      return
+    end
     local selected = player.selected
     if selected and selected.valid and selected.type == "inserter" then
       inserter.change_lane(selected, player)
@@ -77,8 +75,11 @@ if not script.active_mods["bobinserters"] then
   end)
 end
 
-event.register("kr-change-roboport-state", function(e)
-  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
+script.on_event("kr-change-roboport-state", function(e)
+  local player = game.get_player(e.player_index)
+  if not player then
+    return
+  end
   local selected = player.selected
   if selected and selected.valid and selected.type == "roboport" then
     roboport.change_mode(selected, player)
@@ -87,7 +88,7 @@ end)
 
 -- ENTITY
 
-event.register({
+script.on_event({
   defines.events.on_built_entity,
   defines.events.on_entity_cloned,
   defines.events.on_robot_built_entity,
@@ -124,7 +125,7 @@ event.register({
   end
 end)
 
-event.on_player_rotated_entity(function(e)
+script.on_event(defines.events.on_player_rotated_entity, function(e)
   local entity = e.entity
   if not entity or not entity.valid then
     return
@@ -135,7 +136,7 @@ event.on_player_rotated_entity(function(e)
   end
 end)
 
-event.register({
+script.on_event({
   defines.events.on_player_mined_entity,
   defines.events.on_robot_mined_entity,
   defines.events.on_entity_died,
@@ -159,24 +160,24 @@ event.register({
   end
 end)
 
-event.on_entity_destroyed(function(e)
+script.on_event(defines.events.on_entity_destroyed, function(e)
   local beam_data = global.tesla_coil.beams[e.registration_number]
   if beam_data then
     tesla_coil.remove_connection(beam_data.target_data, beam_data.tower_data)
   end
 end)
 
-event.on_biter_base_built(function(e)
+script.on_event(defines.events.on_biter_base_built, function(e)
   creep.on_biter_base_built(e.entity)
 end)
 
-event.on_pre_entity_settings_pasted(function(e)
+script.on_event(defines.events.on_pre_entity_settings_pasted, function(e)
   if e.destination.valid and e.destination.type == "inserter" then
     inserter.save_settings(e.destination)
   end
 end)
 
-event.on_entity_settings_pasted(function(e)
+script.on_event(defines.events.on_entity_settings_pasted, function(e)
   local source = e.source
   local destination = e.destination
 
@@ -185,8 +186,11 @@ event.on_entity_settings_pasted(function(e)
   end
 end)
 
-event.on_pre_build(function(e)
-  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
+script.on_event(defines.events.on_pre_build, function(e)
+  local player = game.get_player(e.player_index)
+  if not player then
+    return
+  end
   local cursor_stack = player.cursor_stack
   if not cursor_stack or not cursor_stack.valid_for_read then
     return
@@ -207,13 +211,13 @@ end)
 
 -- EQUIPMENT
 
-event.on_player_placed_equipment(energy_absorber.on_placed)
-event.on_equipment_inserted(function(e)
+script.on_event(defines.events.on_player_placed_equipment, energy_absorber.on_placed)
+script.on_event(defines.events.on_equipment_inserted, function(e)
   if e.equipment.valid and e.equipment.name == "energy-absorber" then
     tesla_coil.update_target_grid(e.grid)
   end
 end)
-event.on_equipment_removed(function(e)
+script.on_event(defines.events.on_equipment_removed, function(e)
   if e.equipment == "energy-absorber" then
     tesla_coil.update_target_grid(e.grid)
   end
@@ -221,11 +225,11 @@ end)
 
 -- FORCE
 
-event.on_force_created(function(e)
+script.on_event(defines.events.on_force_created, function(e)
   shelter.force_init(e.force)
 end)
 
-event.on_technology_effects_reset(function(e)
+script.on_event(defines.events.on_technology_effects_reset, function(e)
   if game.finished or game.finished_but_continuing then
     e.force.technologies["kr-logo"].enabled = true
   end
@@ -252,11 +256,14 @@ end
 
 gui.hook_events(handle_gui_event)
 
-event.on_gui_opened(function(e)
+script.on_event(defines.events.on_gui_opened, function(e)
   if not handle_gui_event(e) then
     local entity = e.entity
     if entity and entity.valid then
-      local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
+      local player = game.get_player(e.player_index)
+      if not player then
+        return
+      end
       local name = entity.name
       if name == "kr-intergalactic-transceiver" then
         intergalactic_transceiver.create_gui(player, entity)
@@ -271,14 +278,17 @@ event.on_gui_opened(function(e)
   end
 end)
 
-event.register("kr-linked-focus-search", planetary_teleporter.on_focus_search)
+script.on_event("kr-linked-focus-search", planetary_teleporter.on_focus_search)
 
 -- PLAYER
 
-event.on_player_used_capsule(virus.on_player_used_capsule)
+script.on_event(defines.events.on_player_used_capsule, virus.on_player_used_capsule)
 
-event.on_player_created(function(e)
-  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
+script.on_event(defines.events.on_player_created, function(e)
+  local player = game.get_player(e.player_index)
+  if not player then
+    return
+  end
   inserter.refresh_gui(player)
   patreon.give_items(player, false)
   planetary_teleporter.request_translation(player)
@@ -286,21 +296,27 @@ event.on_player_created(function(e)
   roboport.refresh_gui(player)
 end)
 
-event.on_player_removed(function(e)
+script.on_event(defines.events.on_player_removed, function(e)
   inserter.destroy_gui(e.player_index)
   planetary_teleporter.clean_up_player(e.player_index)
   radioactivity.remove_player(e.player_index)
   roboport.destroy_gui(e.player_index)
 end)
 
-event.on_player_joined_game(function(e)
-  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
+script.on_event(defines.events.on_player_joined_game, function(e)
+  local player = game.get_player(e.player_index)
+  if not player then
+    return
+  end
   radioactivity.check_around_player(player)
   radioactivity.check_inventory(player)
 end)
 
-event.on_player_setup_blueprint(function(e)
-  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
+script.on_event(defines.events.on_player_setup_blueprint, function(e)
+  local player = game.get_player(e.player_index)
+  if not player then
+    return
+  end
 
   -- Get blueprint
   local bp = player.blueprint_to_setup
@@ -346,48 +362,66 @@ event.on_player_setup_blueprint(function(e)
   end
 end)
 
-event.on_player_changed_position(function(e)
-  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
+script.on_event(defines.events.on_player_changed_position, function(e)
+  local player = game.get_player(e.player_index)
+  if not player then
+    return
+  end
   radioactivity.check_around_player(player)
 end)
 
-event.register(
+script.on_event(
   { defines.events.on_player_main_inventory_changed, defines.events.on_player_trash_inventory_changed },
   function(e)
-    local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
+    local player = game.get_player(e.player_index)
+    if not player then
+      return
+    end
     radioactivity.check_inventory(player)
   end
 )
 
-event.on_player_armor_inventory_changed(tesla_coil.on_player_armor_inventory_changed)
+script.on_event(defines.events.on_player_armor_inventory_changed, tesla_coil.on_player_armor_inventory_changed)
 
-event.register(
+script.on_event(
   { defines.events.on_player_died, defines.events.on_player_respawned, defines.events.on_player_toggled_map_editor },
   function(e)
-    local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
+    local player = game.get_player(e.player_index)
+    if not player then
+      return
+    end
     radioactivity.check_around_player(player)
     radioactivity.check_inventory(player)
   end
 )
 
-event.on_cutscene_cancelled(function(e)
-  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
+script.on_event(defines.events.on_cutscene_cancelled, function(e)
+  local player = game.get_player(e.player_index)
+  if not player then
+    return
+  end
   patreon.give_items(player, false)
 end)
 
 --- FIXME: This shows a message whenever _any_ cutscene plays. Proper fix requires a new API feature
-event.on_cutscene_waypoint_reached(function(e)
+script.on_event(defines.events.on_cutscene_waypoint_reached, function(e)
   if crash_site.is_crash_site_cutscene(e) then
-    local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
+    local player = game.get_player(e.player_index)
+    if not player then
+      return
+    end
     freeplay.show_intro(player)
   end
 end)
 
-event.register({
+script.on_event({
   defines.events.on_player_selected_area,
   defines.events.on_player_alt_selected_area,
 }, function(e)
-  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
+  local player = game.get_player(e.player_index)
+  if not player then
+    return
+  end
   if e.item == "kr-creep-collector" then
     creep_collector.collect(e)
   elseif e.item == "kr-jackhammer" then
@@ -395,15 +429,15 @@ event.register({
   end
 end)
 
-event.on_string_translated(planetary_teleporter.on_string_translated)
+script.on_event(defines.events.on_string_translated, planetary_teleporter.on_string_translated)
 
 -- SURFACES
 
-event.on_chunk_generated(function(e)
+script.on_event(defines.events.on_chunk_generated, function(e)
   creep.on_chunk_generated(e.area, e.surface)
 end)
 
-event.on_surface_created(function(e)
+script.on_event(defines.events.on_surface_created, function(e)
   -- Space Exploration: only generate creep on Nauvis
   if not script.active_mods["space-exploration"] then
     creep.add_surface(e.surface_index)
@@ -412,7 +446,7 @@ end)
 
 -- TICKS AND TRIGGERS
 
-event.on_script_trigger_effect(function(e)
+script.on_event(defines.events.on_script_trigger_effect, function(e)
   if e.effect_id == "kr-tesla-coil-trigger" then
     tesla_coil.process_turret_fire(e.target_entity, e.source_entity)
   elseif e.effect_id == "kr-planetary-teleporter-character-trigger" then
@@ -420,7 +454,7 @@ event.on_script_trigger_effect(function(e)
   end
 end)
 
-event.on_tick(function()
+script.on_event(defines.events.on_tick, function()
   intergalactic_transceiver.iterate()
   -- NOTE: These two are out of order on purpose, update_gui_statuses() must run first
   planetary_teleporter.update_gui_statuses()
@@ -438,11 +472,11 @@ event.on_tick(function()
   end
 end)
 
-event.on_nth_tick(20, function()
+script.on_nth_tick(20, function()
   radioactivity.update_and_damage()
 end)
 
-event.on_nth_tick(180, function()
+script.on_nth_tick(180, function()
   intergalactic_transceiver.spawn_flying_texts()
   shelter.spawn_flying_texts()
 end)

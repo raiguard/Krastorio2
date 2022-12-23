@@ -1,8 +1,8 @@
 local gui = require("__flib__.gui")
 local math = require("__flib__.math")
-local misc = require("__flib__.misc")
 local on_tick_n = require("__flib__.on-tick-n")
 local reverse_defines = require("__flib__.reverse-defines")
+local position = require("__flib__.position")
 
 local constants = require("scripts.constants")
 local util = require("scripts.util")
@@ -245,13 +245,13 @@ function cutscene.begin(force_index)
   end
 
   local surface = entity.surface
-  local position = entity.position
+  local pos = entity.position
 
   for _, player in pairs(game.players) do
     if
       player.controller_type ~= defines.controllers.editor
       and player.surface == surface
-      and misc.get_distance(player.position, position) <= cutscene_const.player_radius
+      and position.distance(player.position, pos) <= cutscene_const.player_radius
     then
       -- Start cutscene
       -- TODO: Handle the case when the player dies during the cutscene
@@ -259,25 +259,25 @@ function cutscene.begin(force_index)
         type = defines.controllers.cutscene,
         waypoints = {
           {
-            position = position,
+            position = pos,
             transition_time = 70,
             zoom = 1.2,
             time_to_wait = 30,
           },
           {
-            position = position,
+            position = pos,
             transition_time = 135,
             zoom = 1,
             time_to_wait = 10,
           },
           {
-            position = position,
+            position = pos,
             transition_time = 135,
             zoom = 1.2,
             time_to_wait = 10,
           },
           {
-            position = position,
+            position = pos,
             transition_time = 135,
             zoom = 1,
             time_to_wait = 60,

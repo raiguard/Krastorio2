@@ -140,7 +140,7 @@ function virus.init()
   }
 end
 
---- @param e on_player_used_capsule
+--- @param e EventData.on_player_used_capsule
 function virus.on_player_used_capsule(e)
   local item = e.item
   if not item or not item.valid then

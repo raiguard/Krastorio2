@@ -1,28 +1,30 @@
-local area = require("__flib__.area")
+local bounding_box = require("__flib__.bounding-box")
 local math = require("__flib__.math")
-local misc = require("__flib__.misc")
+local position = require("__flib__.position")
 
 local constants = require("scripts.constants")
 local util = require("scripts.util")
 
 local creep_collector = {}
 
---- @param e on_player_selected_area|on_player_alt_selected_area
+--- @param e EventData.on_player_selected_area|EventData.on_player_alt_selected_area
 function creep_collector.collect(e)
   local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
   local player_pos = player.position
 
   if #e.entities > 0 then
-    util.flying_text_with_sound(player, { "message.kr-enemy-entities-nearby" }, { position = area.center(e.area) })
+    util.flying_text_with_sound(
+      player,
+      { "message.kr-enemy-entities-nearby" },
+      { position = bounding_box.center(e.area) }
+    )
     return
   end
 
   local tiles_to_set = {}
   local i = 0
   for _, tile in pairs(e.tiles) do
-    if
-      misc.get_distance(tile.position --[[@as MapPosition]], player_pos) <= player.reach_distance
-    then
+    if position.distance(tile.position, player_pos) <= player.reach_distance then
       i = i + 1
       tiles_to_set[i] = { name = tile.hidden_tile or "landfill", position = tile.position }
     end
@@ -40,14 +42,22 @@ function creep_collector.collect(e)
       e.surface.set_tiles(tiles_to_set)
 
       util.flying_text_with_sound(player, { "message.kr-collected-amount", collected_amount, { "item-name.biomass" } }, {
-        position = area.center(e.area),
+        position = bounding_box.center(e.area),
         sound = { path = "kr-collect-creep", volume_modifier = 1 },
       })
     else
-      util.flying_text_with_sound(player, { "message.kr-inventory-is-full" }, { position = area.center(e.area) })
+      util.flying_text_with_sound(
+        player,
+        { "message.kr-inventory-is-full" },
+        { position = bounding_box.center(e.area) }
+      )
     end
   else
-    util.flying_text_with_sound(player, { "message.kr-no-creep-in-selection" }, { position = area.center(e.area) })
+    util.flying_text_with_sound(
+      player,
+      { "message.kr-no-creep-in-selection" },
+      { position = bounding_box.center(e.area) }
+    )
   end
 end
 

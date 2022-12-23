@@ -26,7 +26,7 @@ if mods["IndustrialRevolution"] then
   krastorio.technologies.removePrerequisite("light-armor", "military")
   krastorio.technologies.addPrerequisite("ir2-steambot", "light-armor")
   krastorio.technologies.addResearchUnitIngredient("light-armor", "automation-science-pack", 1)
-  krastorio.technologies.removeResearchUnitIngredient("light-armor", "logistic-science-pack", 1)
+  krastorio.technologies.removeResearchUnitIngredient("light-armor", "logistic-science-pack")
   krastorio.technologies.addResearchUnitIngredient("heavy-armor", "logistic-science-pack", 1)
 
   -- -- Fix technologies that must be under iron age
