@@ -2,6 +2,7 @@ local crash_site = require("__core__.lualib.crash-site")
 local gui = require("__flib__.gui")
 local migration = require("__flib__.migration")
 local on_tick_n = require("__flib__.on-tick-n")
+local table = require("__flib__.table")
 
 local constants = require("scripts.constants")
 local creep_collector = require("scripts.creep-collector")
@@ -101,6 +102,21 @@ script.on_event({
   end
   local entity_name = entity.name
   local entity_type = entity.type
+
+  -- Clean up cloned internal entities
+  if
+    e.name == defines.events.on_entity_cloned
+    and (
+      entity_name == "kr-tesla-coil-turret"
+      or entity_name == "kr-tesla-coil-collision"
+      or entity_name == "kr-planetary-teleporter-front-layer"
+      or entity_name == "kr-planetary-teleporter-turret"
+      or string.find(entity_name, "kr-planetary-teleporter-collision", nil, true)
+    )
+  then
+    entity.destroy()
+    return
+  end
 
   if entity_name == "kr-intergalactic-transceiver" then
     intergalactic_transceiver.build(entity)

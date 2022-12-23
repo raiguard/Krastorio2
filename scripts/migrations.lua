@@ -278,6 +278,37 @@ migrations.versions = {
     end
     global.roboport_guis = new
   end,
+  ["1.3.10"] = function()
+    -- Clean up any orphaned internal entities
+    local valid_unit_numbers = {}
+    for _, data in pairs(global.tesla_coil.towers) do
+      for _, entity in pairs(data.entities) do
+        valid_unit_numbers[entity.unit_number or 0] = true
+      end
+    end
+    for _, data in pairs(global.planetary_teleporter.data) do
+      for _, entity in pairs(data.entities) do
+        valid_unit_numbers[entity.unit_number or 0] = true
+      end
+    end
+    for _, surface in pairs(game.surfaces) do
+      for _, entity in
+        pairs(surface.find_entities_filtered({
+          { filter = "name", name = "kr-planetary-teleporter-turret" },
+          { filter = "name", name = "kr-planetary-teleporter-front-layer" },
+          { filter = "name", name = "kr-planetary-teleporter-collision-1" },
+          { filter = "name", name = "kr-planetary-teleporter-collision-2" },
+          { filter = "name", name = "kr-planetary-teleporter-collision-3" },
+          { filter = "name", name = "kr-tesla-coil-turret" },
+          { filter = "name", name = "kr-tesla-coil-collision" },
+        }))
+      do
+        if not valid_unit_numbers[entity.unit_number] then
+          entity.destroy()
+        end
+      end
+    end
+  end,
 }
 
 return migrations
