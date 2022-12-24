@@ -419,17 +419,6 @@ script.on_event(defines.events.on_cutscene_cancelled, function(e)
   patreon.give_items(player, false)
 end)
 
---- FIXME: This shows a message whenever _any_ cutscene plays. Proper fix requires a new API feature
-script.on_event(defines.events.on_cutscene_waypoint_reached, function(e)
-  if crash_site.is_crash_site_cutscene(e) then
-    local player = game.get_player(e.player_index)
-    if not player then
-      return
-    end
-    freeplay.show_intro(player)
-  end
-end)
-
 script.on_event({
   defines.events.on_player_selected_area,
   defines.events.on_player_alt_selected_area,

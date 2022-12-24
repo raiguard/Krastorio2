@@ -3,6 +3,7 @@ Version: 1.3.10
 Date: ????
   Bugfixes:
     - Fixed that cloning tesla coils or planetary teleporters would leave behind extra entities
+    - Fixed that the intro message would show after the end of ANY cutscene
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.9
 Date: 2022-12-19

@@ -3,34 +3,34 @@ local constants = require("scripts.constants")
 local freeplay = {}
 
 function freeplay.add_bonus_items()
-  if settings.startup["kr-bonus-items"].value and remote.interfaces["freeplay"] then
-    local items = remote.call("freeplay", "get_created_items")
-    for _, item in pairs(constants.bonus_items) do
-      if game.item_prototypes[item.name] then
-        items[item.name] = item.count
-      end
-    end
-    remote.call("freeplay", "set_created_items", items)
+  if not settings.startup["kr-bonus-items"].value or not remote.interfaces["freeplay"] then
+    return
   end
+  local items = remote.call("freeplay", "get_created_items")
+  for _, item in pairs(constants.bonus_items) do
+    if game.item_prototypes[item.name] then
+      items[item.name] = item.count
+    end
+  end
+  remote.call("freeplay", "set_created_items", items)
 end
 
 function freeplay.add_starting_items()
-  if remote.interfaces["freeplay"] then
-    local items = remote.call("freeplay", "get_created_items")
-
-    -- Shelter
-    items["kr-shelter"] = 1
-
-    -- Electric poles
-    if
-      (game.active_mods["IndustrialRevolution"] or game.active_mods["aai-industry"])
-      and game.item_prototypes["medium-electric-pole"]
-    then
-      items["medium-electric-pole"] = 10
-    end
-
-    remote.call("freeplay", "set_created_items", items)
+  if not remote.interfaces["freeplay"] then
+    return
   end
+
+  local items = remote.call("freeplay", "get_created_items")
+  -- Shelter
+  items["kr-shelter"] = 1
+  -- Electric poles
+  if
+    (game.active_mods["IndustrialRevolution"] or game.active_mods["aai-industry"])
+    and game.item_prototypes["medium-electric-pole"]
+  then
+    items["medium-electric-pole"] = 10
+  end
+  remote.call("freeplay", "set_created_items", items)
 end
 
 function freeplay.add_to_crash_site()
@@ -61,26 +61,16 @@ function freeplay.add_to_crash_site()
   end
 end
 
-function freeplay.disable_intro()
-  if remote.interfaces["freeplay"] and not script.active_mods["space-exploration"] then
-    remote.call("freeplay", "set_skip_intro", true)
+function freeplay.set_custom_intro()
+  if not remote.interfaces["freeplay"] then
+    return
   end
+  remote.call("freeplay", "set_custom_intro_message", { "message.kr-intro" })
 end
 
 function freeplay.disable_rocket_victory()
   if remote.interfaces["silo_script"] then
     remote.call("silo_script", "set_no_victory", true)
-  end
-end
-
---- @param player LuaPlayer
-function freeplay.show_intro(player)
-  if remote.interfaces["freeplay"] and not script.active_mods["space-exploration"] then
-    if game.is_multiplayer() then
-      player.print({ "message.kr-intro" })
-    else
-      game.show_message_dialog({ text = { "message.kr-intro" } })
-    end
   end
 end
 

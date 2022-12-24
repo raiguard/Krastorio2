@@ -23,7 +23,7 @@ function migrations.generic()
   freeplay.add_bonus_items()
   freeplay.add_to_crash_site()
   freeplay.add_starting_items()
-  freeplay.disable_intro()
+  freeplay.set_custom_intro()
   freeplay.disable_rocket_victory()
   util.ensure_turret_force()
 
