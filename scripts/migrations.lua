@@ -294,13 +294,15 @@ migrations.versions = {
     for _, surface in pairs(game.surfaces) do
       for _, entity in
         pairs(surface.find_entities_filtered({
-          { filter = "name", name = "kr-planetary-teleporter-turret" },
-          { filter = "name", name = "kr-planetary-teleporter-front-layer" },
-          { filter = "name", name = "kr-planetary-teleporter-collision-1" },
-          { filter = "name", name = "kr-planetary-teleporter-collision-2" },
-          { filter = "name", name = "kr-planetary-teleporter-collision-3" },
-          { filter = "name", name = "kr-tesla-coil-turret" },
-          { filter = "name", name = "kr-tesla-coil-collision" },
+          name = {
+            "kr-planetary-teleporter-turret",
+            "kr-planetary-teleporter-front-layer",
+            "kr-planetary-teleporter-collision-1",
+            "kr-planetary-teleporter-collision-2",
+            "kr-planetary-teleporter-collision-3",
+            "kr-tesla-coil-turret",
+            "kr-tesla-coil-collision",
+          },
         }))
       do
         if entity.valid and not valid_unit_numbers[entity.unit_number] then
