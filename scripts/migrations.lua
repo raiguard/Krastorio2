@@ -283,12 +283,16 @@ migrations.versions = {
     local valid_unit_numbers = {}
     for _, data in pairs(global.tesla_coil.towers) do
       for _, entity in pairs(data.entities) do
-        valid_unit_numbers[entity.unit_number or 0] = true
+        if entity.valid then
+          valid_unit_numbers[entity.unit_number or 0] = true
+        end
       end
     end
     for _, data in pairs(global.planetary_teleporter.data) do
       for _, entity in pairs(data.entities) do
-        valid_unit_numbers[entity.unit_number or 0] = true
+        if entity.valid then
+          valid_unit_numbers[entity.unit_number or 0] = true
+        end
       end
     end
     for _, surface in pairs(game.surfaces) do
