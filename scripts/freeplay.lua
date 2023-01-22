@@ -62,7 +62,7 @@ function freeplay.add_to_crash_site()
 end
 
 function freeplay.set_custom_intro()
-  if not remote.interfaces["freeplay"] then
+  if not remote.interfaces["freeplay"] or not remote.interfaces["freeplay"]["set_custom_intro_message"] then
     return
   end
   remote.call("freeplay", "set_custom_intro_message", { "message.kr-intro" })
