@@ -303,7 +303,7 @@ migrations.versions = {
           { filter = "name", name = "kr-tesla-coil-collision" },
         }))
       do
-        if not valid_unit_numbers[entity.unit_number] then
+        if entity.valid and not valid_unit_numbers[entity.unit_number] then
           entity.destroy()
         end
       end
