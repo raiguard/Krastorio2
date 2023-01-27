@@ -115,13 +115,19 @@ compatibility. Simply load both mods and it will "just work". The K2/SE
 compatibility code is maintained by Trex on the Space Exploration discord
 server. Please reach out to him for any balance issues or bugs.
 
-Krastorio 2 has compatibility with the Angel's mod suite. This compatibility
-has not been tested or maintained for several years, so there may be rough
-edges. Please reach out if you run into any issues.
+Krastorio 2 has compatibility with [Angel's
+mods](https://mods.factorio.com/user/Arch666Angel). This compatibility has not
+been tested or maintained for several years, so there may be rough edges.
+Please reach out if you run into any issues.
 
-Krastorio2 is _not_ compatible with [Bob's
+Krastorio 2 is _not_ compatible with [Bob's
 mods](https://mods.factorio.com/user/Bobingabout), with the exception of [Bob's
 adjustable inserters](https://mods.factorio.com/mod/bobinserters).
+
+Krastorio 2 has compatibility with [Industrial Revolution
+2](https://mods.factorio.com/mod/IndustrialRevolution). However, it is not
+compatible with IR3, and never will be. Because IR2 has been deprecated,
+support for it will be removed in the near future.
 
 ### Recommended companion mods
 
