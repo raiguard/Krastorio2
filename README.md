@@ -155,7 +155,7 @@ sound effects.
 ### Special Thanks
 
 - BiusArt
-  - For giving us permission to use their [their
+  - For giving us permission to use [their
 graphics](https://mods.factorio.com/mod/laborat) for the mod's second tier lab
 
 - Bilka and Gangsir
