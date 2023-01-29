@@ -1,8 +1,15 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.15
 Date: ????
+  Features:
+    - Added loader snapping for rails
+  Changes:
+    - Loaders will no longer snap to belts - they will only snap to containers and machines
+    - Reworked loader snapping to use an entity search instead of rotations
   Bugfixes:
     - Fixed circular dependency with K2 - SE - Hovercrafts
+    - Fixed several edge cases with loader snapping and blueprints
+    - Fixed that items on belts would be compressed when a loader was placed next to it
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.14
 Date: 2023-01-22

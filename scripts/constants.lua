@@ -262,23 +262,6 @@ constants.intergalactic_transceiver = {
 
 constants.jackhammer_max_reach = 15
 
-constants.loader_names = {
-  ["kr-loader"] = true,
-  ["kr-fast-loader"] = true,
-  ["kr-express-loader"] = true,
-  ["kr-advanced-loader"] = true,
-  ["kr-superior-loader"] = true,
-  ["kr-se-loader"] = true,
-  ["kr-se-deep-space-loader-black"] = true,
-  ["kr-se-deep-space-loader-blue"] = true,
-  ["kr-se-deep-space-loader-cyan"] = true,
-  ["kr-se-deep-space-loader-green"] = true,
-  ["kr-se-deep-space-loader-magenta"] = true,
-  ["kr-se-deep-space-loader-red"] = true,
-  ["kr-se-deep-space-loader-white"] = true,
-  ["kr-se-deep-space-loader-yellow"] = true,
-}
-
 constants.mode_change_flying_text_color = { r = 1, g = 0.5, b = 0.25 }
 
 constants.next_roboport_mode = {

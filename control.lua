@@ -2,14 +2,12 @@ local gui = require("__flib__.gui")
 local migration = require("__flib__.migration")
 local on_tick_n = require("__flib__.on-tick-n")
 
-local constants = require("scripts.constants")
 local creep_collector = require("scripts.creep-collector")
 local creep = require("scripts.creep")
 local energy_absorber = require("scripts.energy-absorber")
 local inserter = require("scripts.inserter")
 local intergalactic_transceiver = require("scripts.intergalactic-transceiver")
 local jackhammer = require("scripts.jackhammer")
-local loader_snapping = require("scripts.loader-snapping")
 local migrations = require("scripts.migrations")
 local offshore_pump = require("scripts.offshore-pump")
 local patreon = require("scripts.patreon")
@@ -17,6 +15,7 @@ local planetary_teleporter = require("scripts.planetary-teleporter")
 local radioactivity = require("scripts.radioactivity")
 local roboport = require("scripts.roboport")
 local shelter = require("scripts.shelter")
+local snap_loader = require("scripts.snap-loader")
 local tesla_coil = require("scripts.tesla-coil")
 local util = require("scripts.util")
 local virus = require("scripts.virus")
@@ -43,7 +42,6 @@ script.on_init(function()
   creep.init()
   inserter.init()
   intergalactic_transceiver.init()
-  loader_snapping.init()
   patreon.init()
   planetary_teleporter.init()
   radioactivity.init()
@@ -98,7 +96,6 @@ script.on_event({
     return
   end
   local entity_name = entity.name
-  local entity_type = entity.type
 
   -- Clean up cloned internal entities
   if
@@ -127,25 +124,8 @@ script.on_event({
     tesla_coil.build(entity)
   elseif entity_name == "offshore-pump" then
     offshore_pump.build(entity)
-  elseif constants.loader_names[entity_name] then
-    -- Only snap if we built manually, and if we did not build over a ghost
-    if e.name == defines.events.on_built_entity and global.building_loader[e.player_index] then
-      global.building_loader[e.player_index] = nil
-      loader_snapping.snap_to_container(entity)
-    end
-  elseif constants.transport_belt_connectable_types[entity_type] then
-    loader_snapping.snap_belt_neighbours(entity)
-  end
-end)
-
-script.on_event(defines.events.on_player_rotated_entity, function(e)
-  local entity = e.entity
-  if not entity or not entity.valid then
-    return
-  end
-
-  if constants.transport_belt_connectable_types[entity.type] then
-    loader_snapping.snap_belt_neighbours(entity)
+  elseif string.match(entity_name, "^kr.*%-loader$") then
+    snap_loader(entity)
   end
 end)
 
@@ -196,29 +176,6 @@ script.on_event(defines.events.on_entity_settings_pasted, function(e)
 
   if source.valid and destination.valid and source.type == "inserter" and destination.type == "inserter" then
     inserter.copy_settings(source, destination)
-  end
-end)
-
-script.on_event(defines.events.on_pre_build, function(e)
-  local player = game.get_player(e.player_index)
-  if not player then
-    return
-  end
-  local cursor_stack = player.cursor_stack
-  if not cursor_stack or not cursor_stack.valid_for_read then
-    return
-  end
-
-  local place_result = cursor_stack.prototype.place_result
-  if not place_result or not constants.loader_names[place_result.name] then
-    return
-  end
-
-  local surface = player.surface
-  local ghost = surface.find_entity("entity-ghost", e.position)
-  -- Only snap loaders if the player is not building over a loader ghost
-  if not ghost or not constants.loader_names[ghost.ghost_name] then
-    global.building_loader[e.player_index] = true
   end
 end)
 

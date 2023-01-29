@@ -7,7 +7,6 @@ local energy_absorber = require("scripts.energy-absorber")
 local freeplay = require("scripts.freeplay")
 local inserter = require("scripts.inserter")
 local intergalactic_transceiver = require("scripts.intergalactic-transceiver")
-local loader_snapping = require("scripts.loader-snapping")
 local patreon = require("scripts.patreon")
 local planetary_teleporter = require("scripts.planetary-teleporter")
 local radioactivity = require("scripts.radioactivity")
@@ -245,7 +244,6 @@ migrations.versions = {
   end,
   ["1.3.0"] = function()
     energy_absorber.init()
-    loader_snapping.init()
     if game.finished or game.finished_but_continuing then
       for _, force in pairs(game.forces) do
         force.technologies["kr-logo"].enabled = true
