@@ -1,3 +1,5 @@
+local sounds = require("__base__/prototypes/entity/sounds")
+
 local color = require(kr_path .. "lib/private/data-stages/colorRGB")
 
 if krastorio.general.getSafeSettingValue("kr-loaders") then
@@ -92,6 +94,10 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
       speed = speed,
       -- for space exploration compatibility
       se_allow_in_space = data.se_allow_in_space,
+
+      open_sound = sounds.machine_open,
+      close_sound = sounds.machine_close,
+
       structure = {
         direction_in = {
           sheets = {
