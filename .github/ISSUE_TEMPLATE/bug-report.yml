@@ -1,0 +1,25 @@
+name: Bug report
+description: File a bug report
+assignees:
+  - raiguard
+body:
+  - type: textarea
+    attributes:
+      label: Description
+      description: A brief description of the issue. Attach `factorio-current.log` by dragging the file into the area below.
+      placeholder: |
+        The mod EditorExtensions (2.0.0) caused an unrecoverable error...
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Reproduction
+      description: Exact steps to reproduce the issue. Attach the save file used to reproduce the issue, or use a file sharing service. Alternatively, reproduce the issue on a fresh save file.
+      placeholder: |
+        1. Load save file
+        2. Click on "..."
+        3. See error
+  - type: markdown
+    attributes:
+      value: |
+        **ISSUES MUST BE REPRODUCED ON THE LATEST VERSIONS OF FACTORIO AND ALL MODS.**
