@@ -6,6 +6,7 @@ Date: ????
   Bugfixes:
     - Fixed a crash when a tesla coil tower is removed but the internal turret is not (#305)
     - Fixed a crash when blueprinting a planetary teleporter ghost (#292)
+    - Fixed that the K2 logo research was unattainable if the transceiver victory was disabled (#311)
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.16
 Date: 2023-03-05

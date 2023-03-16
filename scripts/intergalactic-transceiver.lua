@@ -354,6 +354,8 @@ function cutscene.replace_entity(force_index)
   if new_entity and new_entity.valid then
     global.intergalactic_transceiver.forces[force.index] = { entity = new_entity }
 
+    on_tick_n.add(game.tick + 660, { handler = "it_cutscene", action = "unlock_logo", force_index = force_index })
+
     if global.intergalactic_transceiver.is_victory and not game.finished then
       on_tick_n.add(game.tick + 650, { handler = "it_cutscene", action = "win", force_index = force_index })
       on_tick_n.add(
@@ -365,6 +367,11 @@ function cutscene.replace_entity(force_index)
 end
 
 --- @param force_index uint
+function cutscene.unlock_logo(force_index)
+  game.forces[force_index].technologies["kr-logo"].enabled = true
+end
+
+--- @param force_index uint
 function cutscene.win(force_index)
   game.set_game_state({
     game_finished = true,
@@ -372,8 +379,6 @@ function cutscene.win(force_index)
     can_continue = true,
     victorious_force = game.forces[force_index],
   })
-  -- Enable the secret logo research
-  game.forces[force_index].technologies["kr-logo"].enabled = true
 end
 
 function cutscene.play_victory_sound(force_index)
