@@ -766,12 +766,13 @@ end
 --- @param real_entity LuaEntity?
 function planetary_teleporter.setup_blueprint(entity, real_entity)
   if real_entity and real_entity.valid then
-    local name = global.planetary_teleporter.data[real_entity.unit_number].name
-    if name then
+    local unit_number = real_entity.unit_number --[[@as uint]]
+    local data = global.planetary_teleporter.data[unit_number]
+    if data and data.name then
       if not entity.tags then
         entity.tags = {}
       end
-      entity.tags.kr_planetary_teleporter_name = name
+      entity.tags.kr_planetary_teleporter_name = data.name
     end
   end
 end
