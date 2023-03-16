@@ -33,7 +33,7 @@ data:extend({
       },
       production_type = "input-output",
       filter = "steam",
-      minimum_temperature = 350.0,
+      minimum_temperature = 950.0,
     },
     energy_source = {
       type = "electric",
