@@ -41,7 +41,7 @@ if mods["angelssmelting"] then
     type = "recipe",
     name = "enriched-copper-smelting",
     icons = {
-      { icon = "__angelssmelting__/graphics/icons/ingot-copper.png", icon_size = 64},
+      { icon = "__angelssmelting__/graphics/icons/ingot-copper.png", icon_size = 64 },
       { icon = enriched_copper.icon, icon_size = enriched_copper.icon_size, scale = 0.20, shift = { -8, -8 } },
     },
     category = "blast-smelting",
@@ -129,7 +129,7 @@ if mods["angelssmelting"] then
   for _, recipe_name in pairs(copper_recipes) do
     if data.raw.recipe[recipe_name] then
       data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "copper-plate.png"
---         data.raw.recipe[recipe_name].icons[2].icon_size = 32 -- Doing this actually removed (or made the icon appear VERY small)
+      --         data.raw.recipe[recipe_name].icons[2].icon_size = 32 -- Doing this actually removed (or made the icon appear VERY small)
       data.raw.recipe[recipe_name].icon_size = 64
     end
   end
@@ -155,7 +155,7 @@ if mods["angelssmelting"] then
     if data.raw.recipe[recipe_name] then
       print(recipe_name)
       data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "steel-plate.png"
---         data.raw.recipe[recipe_name].icons[2].icon_size = 32 -- Doing this actually removed (or made the icon appear VERY small)
+      --         data.raw.recipe[recipe_name].icons[2].icon_size = 32 -- Doing this actually removed (or made the icon appear VERY small)
       data.raw.recipe[recipe_name].icon_size = 64
     end
   end

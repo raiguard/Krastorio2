@@ -63,24 +63,24 @@ if mods["angelspetrochem"] then
     )
   end
 
-  -- Disable technologies 
+  -- Disable technologies
   local to_disable = {
     "resin-1",
     "resin-2",
     "resin-3",
     "angels-flare-stack",
-    "rubber"
+    "rubber",
   }
-  
+
   for _, research_name in pairs(to_disable) do
     if data.raw.technology[research_name] then
-        data.raw.technology[research_name].enabled = false        
+      data.raw.technology[research_name].enabled = false
     end
   end
 
---Fix Technology Dead end
-krastorio.technologies.removeResearchUnitIngredient("rocket-fuel", "utility-science-pack")
-krastorio.technologies.addPrerequisite("rocket-fuel","production-science-pack")
+  --Fix Technology Dead end
+  krastorio.technologies.removeResearchUnitIngredient("rocket-fuel", "utility-science-pack")
+  krastorio.technologies.addPrerequisite("rocket-fuel", "production-science-pack")
 
   -- Change the air filters
   krastorio.technologies.addPrerequisite("kr-advanced-chemistry", "angels-nitrogen-processing-1")

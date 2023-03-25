@@ -27,7 +27,7 @@ if mods["angelsrefining"] then
   for _, recipe_name in pairs(iron_recipes) do
     if data.raw.recipe[recipe_name] then
       data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "iron-plate.png"
---         data.raw.recipe[recipe_name].icons[2].icon_size = 32 -- Doing this actually removed (or made the icon appear VERY small)
+      --         data.raw.recipe[recipe_name].icons[2].icon_size = 32 -- Doing this actually removed (or made the icon appear VERY small)
       data.raw.recipe[recipe_name].icon_size = 64
     end
   end
