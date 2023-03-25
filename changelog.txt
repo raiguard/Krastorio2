@@ -2,6 +2,7 @@
 Version: 1.3.18
 Date: ????
   Bugfixes:
+    - Fixed a crash when loading with Angel's mods (#315, #316)
     - Fixed a crash when providing no parameters to /kr-set-creep-on-surface (#314)
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.17
