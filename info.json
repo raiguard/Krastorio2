@@ -47,15 +47,10 @@
     "! laborat >= 0.1.0"
   ],
   "package": {
-    "ignore": [
-      ".crowdin.yml",
-      ".gitattributes",
-      "images",
-      ".kakrc",
-      ".mailmap",
-      "stylua.toml",
-      "TODO.md",
-      ".vscode"
-    ]
+    "ignore": [ "TODO.md", "crowdin.yml", "images", "stylua.toml", "tests" ],
+    "scripts": {
+      "prepublish": "factorio-crowdin-sync"
+    },
+    "sync_portal_details": true
   }
 }
