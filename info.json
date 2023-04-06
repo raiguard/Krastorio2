@@ -4,8 +4,8 @@
   "title": "Krastorio 2",
   "description": "An overhaul mod focusing on end-game technologies and moderately increased complexity.",
   "author": "Linver, Krastor, raiguard",
-  "contact": "https://lists.sr.ht/~raiguard/factorio-mods-discuss",
-  "homepage": "https://sr.ht/~raiguard/factorio-mods",
+  "contact": "https://github.com/raiguard/Krastorio2/issues",
+  "homepage": "https://discord.gg/ECBzaXu",
   "factorio_version": "1.1",
   "dependencies": [
     "base >= 1.1.74",
