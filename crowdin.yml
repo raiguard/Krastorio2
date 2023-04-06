@@ -1,5 +1,5 @@
 api_token_env: CROWDIN_TOKEN
-project_id: CROWDIN_KRASTORIO_ID
+project_id_env: CROWDIN_KRASTORIO_ID
 preserve_hierarchy: true
 
 files:
