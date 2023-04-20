@@ -1,7 +1,7 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 
-function qunatumkpipepictures()
+function quantumkpipepictures()
   return {
     north = {
       filename = kr_entities_path .. "quantum-computer/quantum-computer-k-pipe-N.png",
@@ -89,7 +89,7 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = qunatumkpipepictures(),
+        pipe_picture = quantumkpipepictures(),
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
@@ -98,7 +98,7 @@ data:extend({
       },
       {
         production_type = "output",
-        pipe_picture = qunatumkpipepictures(),
+        pipe_picture = quantumkpipepictures(),
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = 1,
