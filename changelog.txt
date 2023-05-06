@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.19
-Date: ????
+Date: 2023-05-06
   Changes:
     - Updated translations from Crowdin (finally!)
   Bugfixes:
