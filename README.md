@@ -16,14 +16,6 @@ by Krastor and Linver, now maintained by raiguard.
 Download and install from the [official Factorio mod
 portal](https://mods.factorio.com/mod/Krastorio2).
 
-## Contributing
-
-[Report bugs or ask questions](https://lists.sr.ht/~raiguard/factorio-mods-discuss)
-
-[Submit patches](https://lists.sr.ht/~raiguard/factorio-mods-devel)
-
-[Help with translations](https://crowdin.com/project/krastorio-2)
-
 ## Features
 
 - All new high resolution animated sprites
