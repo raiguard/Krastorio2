@@ -20,15 +20,35 @@ if mods["angelsrefining"] then
     "angels-iron-pebbles-smelting",
     "angels-iron-nugget-smelting",
     "iron-plate",
-    "angels-plate-iron",
-    "angels-roll-iron-converting",
   }
 
   for _, recipe_name in pairs(iron_recipes) do
     if data.raw.recipe[recipe_name] then
       data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "iron-plate.png"
-      --         data.raw.recipe[recipe_name].icons[2].icon_size = 32 -- Doing this actually removed (or made the icon appear VERY small)
-      data.raw.recipe[recipe_name].icon_size = 64
+      data.raw.recipe[recipe_name].icons[1].icon_size = 64 -- override the base sprite size
+      data.raw.recipe[recipe_name].icons[1].scale = 32/64
+      data.raw.recipe[recipe_name].icons[2].icon_size = 32 -- override the 'exponent' sprite size
+      data.raw.recipe[recipe_name].icons[2].scale = 32/64
+      data.raw.recipe[recipe_name].icon_size = 64 -- override the composite sprite size
+      data.raw.recipe[recipe_name].scale = 32/64
+    end
+  end
+
+  -- These recipes use different scaling than the others
+  local badly_scaled_recipes = {
+    "angels-plate-iron",
+    "angels-roll-iron-converting",
+  }
+  -- Implement relative custom scaling
+  for _, recipe_name in pairs(badly_scaled_recipes) do
+    if data.raw.recipe[recipe_name] then
+      data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "iron-plate.png"
+      data.raw.recipe[recipe_name].icons[1].icon_size = 64 -- override the base sprite size
+      -- double the scale, because the background is double the size
+      data.raw.recipe[recipe_name].icons[2].scale = data.raw.recipe[recipe_name].icons[2].scale * 2
+      -- double the offset, because the background is twice the size
+      data.raw.recipe[recipe_name].icons[2].shift[1] = data.raw.recipe[recipe_name].icons[2].shift[1] * 2
+      data.raw.recipe[recipe_name].icons[2].shift[2] = data.raw.recipe[recipe_name].icons[2].shift[2] * 2
     end
   end
 
