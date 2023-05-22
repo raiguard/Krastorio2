@@ -122,17 +122,38 @@ if mods["angelssmelting"] then
     "angels-copper-pebbles-smelting",
     "angels-copper-nugget-smelting",
     "copper-plate",
-    "angels-plate-copper",
-    "angels-roll-copper-converting",
   }
 
   for _, recipe_name in pairs(copper_recipes) do
     if data.raw.recipe[recipe_name] then
       data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "copper-plate.png"
-      --         data.raw.recipe[recipe_name].icons[2].icon_size = 32 -- Doing this actually removed (or made the icon appear VERY small)
-      data.raw.recipe[recipe_name].icon_size = 64
+      data.raw.recipe[recipe_name].icons[1].icon_size = 64 -- override the base sprite size
+      data.raw.recipe[recipe_name].icons[1].scale = 32/64
+      data.raw.recipe[recipe_name].icons[2].icon_size = 32
+      data.raw.recipe[recipe_name].icons[2].scale = 32/64
+      data.raw.recipe[recipe_name].icon_size = 64 -- override the composite sprite size
+      data.raw.recipe[recipe_name].scale = 32/64
     end
   end
+
+  -- These recipes use different scaling than the others
+  local badly_scaled_recipes = {
+    "angels-plate-copper",
+    "angels-roll-copper-converting",
+  }
+  -- Implement relative custom scaling
+  for _, recipe_name in pairs(badly_scaled_recipes) do
+    if data.raw.recipe[recipe_name] then
+      data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "copper-plate.png"
+      data.raw.recipe[recipe_name].icons[1].icon_size = 64 -- override the base sprite size
+      -- double the scale, because the background is double the size
+      data.raw.recipe[recipe_name].icons[2].scale = data.raw.recipe[recipe_name].icons[2].scale * 2
+      -- double the offset, because the background is twice the size
+      data.raw.recipe[recipe_name].icons[2].shift[1] = data.raw.recipe[recipe_name].icons[2].shift[1] * 2
+      data.raw.recipe[recipe_name].icons[2].shift[2] = data.raw.recipe[recipe_name].icons[2].shift[2] * 2
+    end
+  end
+
 
   data.raw.recipe["enriched-copper-plate"].icons = {
     { icon = kr_items_icons_path .. "copper-plate.png", icon_size = 64 },
@@ -146,10 +167,16 @@ if mods["angelssmelting"] then
 
   -- Irons
   local iron_recipes = {
-    "steel-plate", -- Doesn't have an icons[2]
     "angels-plate-steel",
     "angels-roll-steel-converting",
   }
+
+  -- Needs to be handled separately because it uses icon instead of icons
+  if data.raw.recipe["steel-plate"] then
+    print("steel-plate")
+    data.raw.recipe["steel-plate"].icon = kr_items_icons_path .. "steel-plate.png"
+    data.raw.recipe["steel-plate"].icon_size = 64
+  end
 
   for _, recipe_name in pairs(iron_recipes) do
     if data.raw.recipe[recipe_name] then

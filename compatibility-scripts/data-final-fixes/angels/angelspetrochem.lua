@@ -23,8 +23,8 @@ if mods["angelspetrochem"] then
     ["gas-chlorine"] = "chlorine",
     ["gas-hydrogen-chlorine"] = "hydrogen-chlorine",
     ["gas-oxygen"] = "oxygen",
-    ["gas-nitrogen"] = "nitrogen",
-    ["gas-ammonia"] = "ammonia",
+    --["gas-nitrogen"] = "nitrogen", -- Angel's replaces over Bob's with gas-nitrogen; this breaks it back
+    --["gas-ammonia"] = "ammonia", -- Angel's replaces over Bob's with gas-ammonia; this breaks it back
     ["liquid-nitric-acid"] = "nitric-acid",
     ["liquid-heavy-water"] = "heavy-water",
 
