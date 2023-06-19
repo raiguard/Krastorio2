@@ -46,6 +46,7 @@ data:extend({
         pipe_picture = kr_pipe_path,
         pipe_covers = pipecoverspictures(),
         base_area = 10,
+        height = 2,
         base_level = -1,
         pipe_connections = {
           { type = "input-output", position = { 4, 0 } },
