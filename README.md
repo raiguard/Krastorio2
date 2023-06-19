@@ -112,9 +112,9 @@ mods](https://mods.factorio.com/user/Arch666Angel). This compatibility has not
 been tested or maintained for several years, so there may be rough edges.
 Please reach out if you run into any issues.
 
-Krastorio 2 is _not_ compatible with [Bob's
-mods](https://mods.factorio.com/user/Bobingabout), with the exception of [Bob's
-adjustable inserters](https://mods.factorio.com/mod/bobinserters).
+Krastorio 2 has rudimentary compatibility with the AngelBob's suite of mods.
+This compatibility is not well-balanced and you will encounter issues in
+gameplay, but it shouldn't crash.
 
 Krastorio 2 has compatibility with [Industrial Revolution
 2](https://mods.factorio.com/mod/IndustrialRevolution). However, it is not
