@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.20
-Date: ????
+Date: 2023-06-19
   Changes:
     - Main menu background image will not be overwritten if the K2 simulation is enabled (#332)
   Compatibility:
