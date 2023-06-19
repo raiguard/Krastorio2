@@ -1,15 +1,17 @@
 -- Enabling custom vectors and burner leech (if possible) on all inserters
 for _, inserter in pairs(data.raw.inserter) do
   inserter.allow_custom_vectors = true
-  if not mods["bobinserters"] then
-    if inserter.localized_description then
-      inserter.localised_description = {
-        "other.conservative-additional-inserter-description",
-        inserter.localised_description,
-        { "other.additional-inserter-description" },
-      }
-    else
-      inserter.localised_description = { "other.additional-inserter-description" }
+  if not string.find(inserter.name, "%-?miniloader%-inserter") then
+    if not mods["bobinserters"] then
+      if inserter.localized_description then
+        inserter.localised_description = {
+          "other.conservative-additional-inserter-description",
+          inserter.localised_description,
+          { "other.additional-inserter-description" },
+        }
+      else
+        inserter.localised_description = { "other.additional-inserter-description" }
+      end
     end
   end
   if inserter.energy_source and inserter.energy_source.type == "burner" then
