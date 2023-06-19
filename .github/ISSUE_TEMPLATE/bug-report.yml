@@ -1,7 +1,5 @@
 name: Bug report
 description: File a bug report
-assignees:
-  - raiguard
 body:
   - type: textarea
     attributes:
