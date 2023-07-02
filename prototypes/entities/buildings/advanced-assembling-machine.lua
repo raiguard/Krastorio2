@@ -307,7 +307,7 @@ data:extend({
       sound = {
         {
           filename = kr_buildings_sounds_path .. "advanced-assembling-machine.ogg",
-          volume = 0.8,
+          volume = 0.5,
         },
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.3 },

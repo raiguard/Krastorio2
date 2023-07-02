@@ -252,15 +252,15 @@ local intergalactic_transceiver_working_sound = {
     variations = {
       {
         filename = kr_buildings_sounds_path .. "intergalactic-transceiver-charge.ogg",
-        volume = 1.2,
+        volume = 1,
       },
       {
         filename = kr_buildings_sounds_path .. "intergalactic-transceiver-charge.ogg",
-        volume = 1.2,
+        volume = 1,
       },
       {
         filename = kr_buildings_sounds_path .. "intergalactic-transceiver-charge-morse.ogg",
-        volume = 1.2,
+        volume = 1,
       },
     },
   },

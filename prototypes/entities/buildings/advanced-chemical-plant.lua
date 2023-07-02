@@ -134,9 +134,9 @@ data:extend({
     crafting_categories = { "chemistry" },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
-      sound = { filename = kr_buildings_sounds_path .. "advanced-chemical-plant.ogg" },
+      sound = { filename = kr_buildings_sounds_path .. "advanced-chemical-plant.ogg", volume = 0.5 },
       idle_sound = { filename = "__base__/sound/idle1.ogg" },
-      apparent_volume = 1.1,
+      apparent_volume = 1,
     },
     crafting_speed = 8,
     energy_source = {

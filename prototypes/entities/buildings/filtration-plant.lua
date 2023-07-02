@@ -155,9 +155,9 @@ data:extend({
     },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
-      sound = { filename = kr_buildings_sounds_path .. "filtration-plant.ogg" },
+      sound = { filename = kr_buildings_sounds_path .. "filtration-plant.ogg", volume = 0.5 },
       idle_sound = { filename = "__base__/sound/idle1.ogg" },
-      apparent_volume = 1.25,
+      apparent_volume = 1,
     },
     crafting_speed = 1.0,
     energy_source = {

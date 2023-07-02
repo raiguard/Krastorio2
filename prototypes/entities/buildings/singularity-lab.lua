@@ -195,7 +195,7 @@ data:extend({
     working_sound = {
       sound = {
         filename = kr_buildings_sounds_path .. "singularity-lab.ogg",
-        volume = 1.15,
+        volume = 0.5,
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 1 },
       max_sounds_per_type = 6,

@@ -138,7 +138,7 @@ data:extend({
     working_sound = {
       sound = {
         filename = kr_buildings_sounds_path .. "quarry-drill.ogg",
-        volume = 0.9,
+        volume = 0.5,
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg" },
       max_sounds_per_type = 2,
