@@ -4,13 +4,13 @@ local tesla_coil = {}
 
 function tesla_coil.init()
   global.tesla_coil = {
-    --- @type table<number, BeamData>
+    --- @type table<uint, BeamData>
     beams = {},
-    --- @type table<number, TowerData>
+    --- @type table<uint, TowerData>
     turrets = {},
-    --- @type table<number, TowerData>
+    --- @type table<uint, TowerData>
     towers = {},
-    --- @type table<number, TargetData>
+    --- @type table<uint, TargetData>
     targets = {},
   }
 end
@@ -47,7 +47,7 @@ function tesla_coil.build(source_entity)
   local collision_entity = surface.create_entity({
     name = "kr-tesla-coil-collision",
     position = source_entity.position,
-    force = source_entity.force,
+    force = "neutral",
     create_build_effect_smoke = false,
     raise_built = true,
   })
@@ -152,13 +152,13 @@ function tesla_coil.add_target(target, tower_data)
     --- @class TargetData
     local target_data = {
       connections = {
-        --- @type table<number, ConnectionData>
+        --- @type table<uint, ConnectionData>
         by_beam = {},
-        --- @type table<number, ConnectionData>
+        --- @type table<uint, ConnectionData>
         by_tower = {},
       },
       entity = target,
-      --- @type number?
+      --- @type uint?
       full_tick = nil,
       grid_data = grid_data,
       unit_number = target_unit_number,
@@ -169,7 +169,7 @@ function tesla_coil.add_target(target, tower_data)
   end
 end
 
---- @param target_unit_number number
+--- @param target_unit_number uint
 function tesla_coil.remove_target(target_unit_number)
   global.tesla_coil.targets[target_unit_number] = nil
 end
@@ -314,6 +314,26 @@ function tesla_coil.process_turret_fire(target, turret)
       tesla_coil.update_connection(target_data, tower_data)
     end
   end
+end
+
+--- @param e EventData.on_player_armor_inventory_changed
+function tesla_coil.on_player_armor_inventory_changed(e)
+  local player = game.get_player(e.player_index)
+  if not player then
+    return
+  end
+  local character = player.character
+  if not character then
+    return
+  end
+  --- @type TargetData
+  local target_data = global.tesla_coil.targets[character.unit_number]
+  if target_data then
+    for _, connection_data in pairs(target_data.connections.by_tower) do
+      tesla_coil.remove_connection(target_data, connection_data.tower_data)
+    end
+  end
+  tesla_coil.remove_target(character.unit_number)
 end
 
 return tesla_coil
