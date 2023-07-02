@@ -4,6 +4,7 @@ Date: ????
   Changes:
     - Reduced audio volumes of several entities to be more consistent
   Bugfixes:
+    - [miniloader] Fixed miniloader descriptions being given the change lane hotkey info despite them not being compatible with it (#349)
     - Fixed that the tesla coil logic would get stuck if you changed armor sets while in a tesla coil's range (#355)
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.20
