@@ -234,11 +234,15 @@ local rocket_fuel_icons = {
   { icon = light_oil_icon, icon_size = data.raw.fluid["light-oil"].icon_size or 64, scale = 0.26, shift = { 8, -8 } },
 }
 krastorio.icons.setRecipeIcons("rocket-fuel", rocket_fuel_icons)
-local solid_fuel_icons = {
-  { icon = "__base__/graphics/icons/solid-fuel.png", icon_size = 64 },
-  { icon = light_oil_icon, icon_size = data.raw.fluid["light-oil"].icon_size or 64, scale = 0.26, shift = { -8, -8 } },
-}
-krastorio.icons.setRecipeIcons("solid-fuel-from-light-oil", solid_fuel_icons)
+
+local fluids_for_solid_fuel = {"petroleum-gas", "light-oil", "heavy-oil"}
+for _, fluid in ipairs(fluids_for_solid_fuel) do
+  local icons = {
+    { icon = "__base__/graphics/icons/solid-fuel.png", icon_size = 64 },
+    { icon = kr_fluids_icons_path .. fluid .. ".png", icon_size = data.raw.fluid[fluid].icon_size or 64, scale = 0.26, shift = { -8, -8 } }
+  }
+  krastorio.icons.setRecipeIcons("solid-fuel-from-" .. fluid, icons)
+end
 
 krastorio.icons.setItemIcon("electronic-circuit", kr_items_icons_path .. "electronic-circuit.png", 64, 4)
 krastorio.icons.setItemIcon("advanced-circuit", kr_items_icons_path .. "advanced-circuit.png", 64, 4)
