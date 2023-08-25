@@ -124,7 +124,7 @@ script.on_event({
     tesla_coil.build(entity)
   elseif entity_name == "offshore-pump" then
     offshore_pump.build(entity)
-  elseif string.match(entity_name, "^kr.*%-loader$") then
+  elseif string.match(entity_name, "^kr.*%-loader") then
     snap_loader(entity)
   end
 end)
