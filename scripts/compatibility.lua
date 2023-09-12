@@ -29,6 +29,32 @@ function compatibility.nuclear_fuel()
   end
 end
 
+function compatibility.atomic_overhaul()       --Added This
+  if game.active_mods["Atomic_Overhaul"] then
+    remote.call("kr-radioactivity", "add_item", "plutonium")
+    remote.call("kr-radioactivity", "add_item", "MOX")
+    remote.call("kr-radioactivity", "add_item", "thorium")
+    
+    remote.call("kr-radioactivity", "add_item", "uranium-fuel-rod")
+    remote.call("kr-radioactivity", "add_item", "plutonium-fuel-rod")
+    remote.call("kr-radioactivity", "add_item", "MOX-fuel-rod")
+    remote.call("kr-radioactivity", "add_item", "thorium-fuel-rod")
+        
+    remote.call("kr-radioactivity", "add_item", "non-moderated-fuel-cell")
+    remote.call("kr-radioactivity", "add_item", "plutonium-fuel-cell")
+    remote.call("kr-radioactivity", "add_item", "MOX-fuel-cell")
+    remote.call("kr-radioactivity", "add_item", "thorium-fuel-cell")
+    
+    remote.call("kr-radioactivity", "add_item", "non-moderated-depleted-cell")
+    remote.call("kr-radioactivity", "add_item", "plutonium-depleted-cell")
+    remote.call("kr-radioactivity", "add_item", "MOX-depleted-cell")
+    remote.call("kr-radioactivity", "add_item", "thorium-depleted-cell")
+        
+    remote.call("kr-radioactivity", "add_item", "nuclear-waste")
+    remote.call("kr-radioactivity", "add_item", "waste-solution-barrel")   
+  end
+end
+
 function compatibility.schall_uranium()
   if script.active_mods["SchallUraniumProcessing"] then
     remote.call("kr-radioactivity", "add_item", "uranium-concentrate")
