@@ -43,8 +43,8 @@ if not krastorio.fluid_burner_util.fluid_emissions_multiplier then
     ["chlorine"] = 2.0,
     ["hydrogen"] = 0.0,
     ["hydrogen-chloride"] = 2.0,
-    ["ammonia"] = 0.0,
-    ["nitrogen"] = 2.0,
+    ["ammonia"] = 4.0,
+    ["nitrogen"] = 0.0,
   }
 end
 
