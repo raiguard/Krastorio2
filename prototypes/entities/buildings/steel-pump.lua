@@ -2925,3 +2925,7 @@ data:extend({
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
 })
+
+if mods["Mini_Trains"] then
+  data.raw.pump["kr-steel-pump"].fluid_wagon_connector_alignment_tolerance = (2 / 32) * 10
+end
