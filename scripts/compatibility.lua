@@ -2,7 +2,7 @@ local compatibility = {}
 
 function compatibility.aai_industry()
   -- Disable AAI industry crash site
-  if script.active_mods["aai-industry"] then
+  if script.active_mods["aai-industry"] and not remote.interfaces["kr-to-aai-industry"] then
     remote.add_interface("kr-to-aai-industry", {
       allow_aai_crash_sequence = function(_)
         return { allow = false, weight = 1 }
