@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.23
 Date: ????
+  Changes:
+    - Updated solid fuel recipe icons to match K2's oil icons. (#362)
   Balancing:
     - Burning ammonia produces pollution. (#361)
     - Burning nitrogen no longer produces pollution (burning nitrogen doesn't make sense in the first place). (#361)
