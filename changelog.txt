@@ -8,6 +8,7 @@ Date: ????
     - Fixed a crash when selecting new contents for blueprints in the blueprint library. (#366)
     - Fixed a crash when loading a world with aai-industry in some situations. (#368)
     - Fixed that the steel pump had no open/close sounds.
+    - Fixed vietnamese language errors preventing the game from loading. (#376)
     - [Mini Trains] Fixed that steel pumps would not reliably connect to mini fluid wagons. (#374)
     - [Space Exploration] Fixed that deep space loaders would not snap. (#369)
 ---------------------------------------------------------------------------------------------------
