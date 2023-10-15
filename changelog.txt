@@ -7,6 +7,7 @@ Date: ????
   Bugfixes:
     - Fixed a crash when selecting new contents for blueprints in the blueprint library. (#366)
     - Fixed a crash when loading a world with aai-industry in some situations. (#368)
+    - Fixed that the steel pump had no open/close sounds.
     - [Space Exploration] Fixed that deep space loaders would not snap. (#369)
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.22

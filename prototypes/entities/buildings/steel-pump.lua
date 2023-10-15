@@ -1,3 +1,5 @@
+local sounds = require("__base__/prototypes/entity/sounds")
+
 data:extend({
   {
     type = "pump",
@@ -12,6 +14,8 @@ data:extend({
     corpse = "1x2-remnants",
     collision_box = { { -0.29, -0.9 }, { 0.29, 0.9 } },
     selection_box = { { -0.5, -1 }, { 0.5, 1 } },
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
     resistances = {
       {
         type = "fire",
