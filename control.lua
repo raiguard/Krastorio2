@@ -292,7 +292,7 @@ script.on_event(defines.events.on_player_setup_blueprint, function(e)
   local bp = player.blueprint_to_setup
   if not bp or not bp.valid_for_read then
     bp = player.cursor_stack
-    if not bp then
+    if not bp or not bp.valid_for_read then
       return
     end
     if bp.type == "blueprint-book" then
