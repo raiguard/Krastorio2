@@ -8,7 +8,8 @@ return {
     icon_size = 64,
     energy_required = 480,
     enabled = false,
-    hidden = true,
+    hidden = false,
+    hide_from_player_crafting = true,
     ingredients = {
       { type = "item", name = "pollution-filter", amount = 1 },
     },
@@ -26,7 +27,8 @@ return {
     icon_size = 64,
     energy_required = 600,
     enabled = false,
-    hidden = true,
+    hidden = false,
+    hide_from_player_crafting = true,
     ingredients = {
       { type = "item", name = "improved-pollution-filter", amount = 1 },
     },
