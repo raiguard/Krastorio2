@@ -373,12 +373,16 @@ end
 
 --- @param force_index uint
 function cutscene.win(force_index)
-  game.set_game_state({
-    game_finished = true,
-    player_won = true,
-    can_continue = true,
-    victorious_force = game.forces[force_index],
-  })
+  if remote.interfaces["better-victory-screen"] and remote.interfaces["better-victory-screen"]["trigger_victory"] then
+    remote.call("better-victory-screen", "trigger_victory", game.forces[force_index])
+  else
+    game.set_game_state({
+      game_finished = true,
+      player_won = true,
+      can_continue = true,
+      victorious_force = game.forces[force_index],
+    })
+  end
 end
 
 function cutscene.play_victory_sound(force_index)
