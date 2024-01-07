@@ -2,6 +2,8 @@
 Version: 1.3.24
 Date: ????
   Changes:
+  Compatibility:
+    - Added compatibility with Better Victory Screen. (#407)
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.23
 Date: 2023-10-15
