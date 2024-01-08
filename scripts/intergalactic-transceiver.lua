@@ -65,6 +65,8 @@ function intergalactic_transceiver.build(entity)
     last_alert_tick = game.tick,
     last_energy = entity.energy,
     status = "empty",
+    tick_built = game.tick,
+    tick_ready = nil,
   }
 end
 
@@ -134,6 +136,8 @@ function intergalactic_transceiver.iterate()
           else
             status = "not_enough_input"
           end
+
+          data.tick_ready = nil   -- If it was ready before, we lost power again, so reset.
         else
           -- The max that we allow, for graphical reasons
           -- If we allow the transceiver to fully charge, the animation stops, which we don't want, so we cap the energy
@@ -146,6 +150,10 @@ function intergalactic_transceiver.iterate()
             -- offset of 0 - 20 MJ above the max every tick.
             new_energy = max_energy + math.random(0, 20) * 1000000
             status = "ready"
+
+            if not data.tick_ready then
+              data.tick_ready = game.tick
+            end
           else
             local entity_status = reverse_defines.entity_status[entity.status]
             local status_data = statuses[entity_status]
@@ -352,7 +360,11 @@ function cutscene.replace_entity(force_index)
   entity_data.activating = false
 
   if new_entity and new_entity.valid then
-    global.intergalactic_transceiver.forces[force.index] = { entity = new_entity }
+    local charge_time
+    if entity_data.tick_built and entity_data.tick_ready then
+      charge_time = entity_data.tick_ready - entity_data.tick_built
+    end
+    global.intergalactic_transceiver.forces[force.index] = { entity = new_entity, charge_time = charge_time }
 
     on_tick_n.add(game.tick + 660, { handler = "it_cutscene", action = "unlock_logo", force_index = force_index })
 
@@ -569,6 +581,26 @@ intergalactic_transceiver.remote_interface = {
     end
     global.intergalactic_transceiver.is_victory = not to_state
   end,
+
+  ---@param winning_force LuaForce
+  ---@param forces LuaForce[] list of forces that GUI will be show to
+  ["better-victory-screen-statistics"] = function(winning_force, forces)
+    local statistics = { by_force = { } }
+    for _, force in pairs(forces) do
+      local data = global.intergalactic_transceiver.forces[force.index]
+      if not data or not data.charge_time then goto continue end
+      statistics.by_force = {
+        -- Only add information to winning force
+        [winning_force.name] = {
+          ["intergalactic-communication"] = { order = "a", stats = {
+            ["charging-intergalactic-transceiver"] = {value = data.charge_time, unit = "time"}
+          }}
+        }
+      }
+      ::continue::
+    end
+    return statistics
+  end
 }
 
 return intergalactic_transceiver
