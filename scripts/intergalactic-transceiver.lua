@@ -360,15 +360,12 @@ function cutscene.replace_entity(force_index)
   entity_data.activating = false
 
   if new_entity and new_entity.valid then
-    local charge_time
-    if entity_data.tick_built and entity_data.tick_ready then
-      charge_time = entity_data.tick_ready - entity_data.tick_built
-    end
+    local charge_time = (entity_data.tick_ready and entity_data.tick_built) and (entity_data.tick_ready - entity_data.tick_built)
     global.intergalactic_transceiver.forces[force.index] = { entity = new_entity, charge_time = charge_time }
 
     on_tick_n.add(game.tick + 660, { handler = "it_cutscene", action = "unlock_logo", force_index = force_index })
 
-    if global.intergalactic_transceiver.is_victory and not game.finished then
+    if global.intergalactic_transceiver.is_victory and not (game.finished or global.finished[force_index]) then
       on_tick_n.add(game.tick + 650, { handler = "it_cutscene", action = "win", force_index = force_index })
       on_tick_n.add(
         game.tick + 660,
@@ -385,6 +382,8 @@ end
 
 --- @param force_index uint
 function cutscene.win(force_index)
+  global.finished[force_index] = true
+
   if remote.interfaces["better-victory-screen"] and remote.interfaces["better-victory-screen"]["trigger_victory"] then
     remote.call("better-victory-screen", "trigger_victory", game.forces[force_index])
   else
