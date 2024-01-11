@@ -43,10 +43,6 @@ function migrations.generic()
     inserter.refresh_gui(player)
     roboport.refresh_gui(player)
   end
-
-  ---Keep track of the forces who have finished the game
-  ---@type table<int, boolean> where the key is the force index
-  global.finished = global.finished or {}
 end
 
 --- @param filters EntityPrototypeFilter[]
