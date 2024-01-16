@@ -385,7 +385,7 @@ function cutscene.win(force_index)
   global.finished = true
 
   if remote.interfaces["better-victory-screen"] and remote.interfaces["better-victory-screen"]["trigger_victory"] then
-    remote.call("better-victory-screen", "trigger_victory", game.forces[force_index])
+    remote.call("better-victory-screen", "trigger_victory", game.forces[force_index], true) -- Force it always
   else
     game.set_game_state({
       game_finished = true,
