@@ -67,6 +67,7 @@ function intergalactic_transceiver.build(entity)
     status = "empty",
     tick_built = game.tick,
     tick_ready = nil,
+    charge_time = nil, -- Total time charged. Calculated during activation
   }
 end
 
@@ -584,21 +585,14 @@ intergalactic_transceiver.remote_interface = {
   ---@param winning_force LuaForce
   ---@param forces LuaForce[] list of forces that GUI will be show to
   ["better-victory-screen-statistics"] = function(winning_force, forces)
-    local statistics = { by_force = { } }
-    for _, force in pairs(forces) do
-      local data = global.intergalactic_transceiver.forces[force.index]
-      if not data or not data.charge_time then goto continue end
-      statistics.by_force = {
-        -- Only add information to winning force
-        [winning_force.name] = {
-          ["intergalactic-communication"] = { order = "a", stats = {
-            ["charging-intergalactic-transceiver"] = {value = data.charge_time, unit = "time"}
-          }}
-        }
-      }
-      ::continue::
-    end
-    return statistics
+    -- Only add the transceiver charge time to the winning force's victory screen
+    local data = global.intergalactic_transceiver.forces[winning_force.index]
+    if not data or not data.charge_time then return { } end
+    return { by_force = { [winning_force.name] = {
+        ["intergalactic-communication"] = { order = "aa", stats = {
+          ["charging-intergalactic-transceiver"] = {value = data.charge_time, unit = "time"}
+        }}
+    }}}
   end
 }
 
