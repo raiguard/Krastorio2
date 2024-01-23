@@ -583,6 +583,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = krastorio.recipes.changed_names["imersite-crystal"] or "imersite-crystal",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "imersite-crystal-to-dust",
+      },
     },
     prerequisites = { "kr-advanced-chemistry", "advanced-electronics-2", "electric-engine" },
     order = "g-e-d",
