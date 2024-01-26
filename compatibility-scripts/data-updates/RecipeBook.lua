@@ -11,3 +11,5 @@ recipe_book.set_alternative(data.raw["item"]["kr-shelter-plus"], data.raw["item"
 recipe_book.set_group_with(data.raw["item"]["wood"], data.raw["recipe"]["kr-grow-wood-with-water"])
 recipe_book.set_group_with(data.raw["resource"]["imersite"], data.raw["item"]["raw-imersite"])
 recipe_book.set_group_with(data.raw["resource"]["rare-metals"], data.raw["item"]["raw-rare-metals"])
+recipe_book.set_hidden(data.raw["recipe"]["nuclear-fuel"], true)
+recipe_book.set_hidden(data.raw["item"]["nuclear-fuel"], true)
