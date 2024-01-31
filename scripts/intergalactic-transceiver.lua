@@ -590,7 +590,7 @@ intergalactic_transceiver.remote_interface = {
     if not data or not data.charge_time then return { } end
     return { by_force = { [winning_force.name] = {
         ["intergalactic-communication"] = { order = "aa", stats = {
-          ["charging-intergalactic-transceiver"] = {value = data.charge_time, unit = "time"}
+          ["charging-intergalactic-transceiver"] = {value = data.charge_time, unit = "time", has_tooltip=true}
         }}
     }}}
   end
