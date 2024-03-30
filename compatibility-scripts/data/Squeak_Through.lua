@@ -100,6 +100,12 @@ local exclusions_to_add = {
   ["radar"] = {
     "kr-sentinel",
   },
+  ["simple-entity"] = {
+    ["kr-planetary-teleporter-front-layer"] = true,
+    ["kr-planetary-teleporter-collision-1"] = true,
+    ["kr-planetary-teleporter-collision-2"] = true,
+    ["kr-planetary-teleporter-collision-3"] = true,
+  },
   ["solar-panel"] = {
     "kr-advanced-solar-panel",
   },

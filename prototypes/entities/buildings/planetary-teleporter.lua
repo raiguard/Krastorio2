@@ -228,8 +228,6 @@ local function collision_entity(collision_box)
     collision_box = collision_box,
     picture = { filename = "__core__/graphics/empty.png", size = 1 },
     collision_mask = { "player-layer" },
-    -- Squeak through compatibility
-    squeak_behaviour = false,
   }
 end
 
@@ -268,8 +266,6 @@ data:extend({
         },
       },
     },
-    -- Squeak through compatibility
-    squeak_behaviour = false,
   },
   -- collision detection
   {
