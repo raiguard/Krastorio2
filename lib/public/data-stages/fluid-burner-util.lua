@@ -160,7 +160,7 @@ function krastorio.fluid_burner_util.generateBurnFluidsRecipe(fluid_name)
         },
         energy_required = 2,
         enabled = false,
-        hidden = true,
+        hidden = false,
         hide_from_player_crafting = true,
         always_show_products = false,
         show_amount_in_title = false,
