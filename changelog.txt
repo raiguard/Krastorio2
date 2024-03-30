@@ -1,9 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.24
 Date: ????
-  Changes:
   Bugfixes:
-    - Fixed being unable to load the game when using Industrial Revolution 2 and Bob's Adjustable Inserters #389
+    - Fixed being unable to load the game when using Industrial Revolution 2 and Bob's Adjustable Inserters. (#389)
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.23
 Date: 2023-10-15
