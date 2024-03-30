@@ -69,8 +69,10 @@ function freeplay.set_custom_intro()
 end
 
 function freeplay.disable_rocket_victory()
-  if remote.interfaces["silo_script"] then
-    remote.call("silo_script", "set_no_victory", true)
+  for _, interface in pairs{"silo_script", "better-victory-screen"} do
+    if remote.interfaces[interface] and remote.interfaces[interface]["set_no_victory"] then
+      remote.call(interface, "set_no_victory", true)
+    end
   end
 end
 

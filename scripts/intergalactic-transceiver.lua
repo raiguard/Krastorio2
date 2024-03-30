@@ -65,6 +65,9 @@ function intergalactic_transceiver.build(entity)
     last_alert_tick = game.tick,
     last_energy = entity.energy,
     status = "empty",
+    tick_built = game.tick,
+    tick_ready = nil,
+    charge_time = nil, -- Total time charged. Calculated during activation
   }
 end
 
@@ -134,6 +137,8 @@ function intergalactic_transceiver.iterate()
           else
             status = "not_enough_input"
           end
+
+          data.tick_ready = nil   -- If it was ready before, we lost power again, so reset.
         else
           -- The max that we allow, for graphical reasons
           -- If we allow the transceiver to fully charge, the animation stops, which we don't want, so we cap the energy
@@ -146,6 +151,10 @@ function intergalactic_transceiver.iterate()
             -- offset of 0 - 20 MJ above the max every tick.
             new_energy = max_energy + math.random(0, 20) * 1000000
             status = "ready"
+
+            if not data.tick_ready then
+              data.tick_ready = game.tick
+            end
           else
             local entity_status = reverse_defines.entity_status[entity.status]
             local status_data = statuses[entity_status]
@@ -352,11 +361,12 @@ function cutscene.replace_entity(force_index)
   entity_data.activating = false
 
   if new_entity and new_entity.valid then
-    global.intergalactic_transceiver.forces[force.index] = { entity = new_entity }
+    local charge_time = (entity_data.tick_ready and entity_data.tick_built) and (entity_data.tick_ready - entity_data.tick_built)
+    global.intergalactic_transceiver.forces[force.index] = { entity = new_entity, charge_time = charge_time }
 
     on_tick_n.add(game.tick + 660, { handler = "it_cutscene", action = "unlock_logo", force_index = force_index })
 
-    if global.intergalactic_transceiver.is_victory and not game.finished then
+    if global.intergalactic_transceiver.is_victory and not (game.finished or global.finished) then
       on_tick_n.add(game.tick + 650, { handler = "it_cutscene", action = "win", force_index = force_index })
       on_tick_n.add(
         game.tick + 660,
@@ -373,12 +383,18 @@ end
 
 --- @param force_index uint
 function cutscene.win(force_index)
-  game.set_game_state({
-    game_finished = true,
-    player_won = true,
-    can_continue = true,
-    victorious_force = game.forces[force_index],
-  })
+  global.finished = true
+
+  if remote.interfaces["better-victory-screen"] and remote.interfaces["better-victory-screen"]["trigger_victory"] then
+    remote.call("better-victory-screen", "trigger_victory", game.forces[force_index], true) -- Force it always
+  else
+    game.set_game_state({
+      game_finished = true,
+      player_won = true,
+      can_continue = true,
+      victorious_force = game.forces[force_index],
+    })
+  end
 end
 
 function cutscene.play_victory_sound(force_index)
@@ -565,6 +581,19 @@ intergalactic_transceiver.remote_interface = {
     end
     global.intergalactic_transceiver.is_victory = not to_state
   end,
+
+  ---@param winning_force LuaForce
+  ---@param forces LuaForce[] list of forces that GUI will be show to
+  ["better-victory-screen-statistics"] = function(winning_force, forces)
+    -- Only add the transceiver charge time to the winning force's victory screen
+    local data = global.intergalactic_transceiver.forces[winning_force.index]
+    if not data or not data.charge_time then return { } end
+    return { by_force = { [winning_force.name] = {
+        ["intergalactic-communication"] = { order = "aa", stats = {
+          ["charging-intergalactic-transceiver"] = {value = data.charge_time, unit = "time", has_tooltip=true}
+        }}
+    }}}
+  end
 }
 
 return intergalactic_transceiver
