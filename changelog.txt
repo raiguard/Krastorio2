@@ -1,9 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.24
 Date: ????
-  Changes:
   Compatibility:
     - Added compatibility with Better Victory Screen. (#407)
+  Bugfixes:
+    - Fixed being unable to load the game when using Industrial Revolution 2 and Bob's Adjustable Inserters. (#389)
+    - Fixed that the air purifier and flare stack didn't show possible ingredients. (#403, #411)
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.23
 Date: 2023-10-15
