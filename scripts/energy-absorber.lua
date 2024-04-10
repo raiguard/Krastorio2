@@ -1,4 +1,4 @@
-local util = require("__Krastorio2__/scripts/util")
+local util = require("scripts.util")
 
 --- @param e EventData.on_player_placed_equipment
 local function on_player_placed_equipment(e)

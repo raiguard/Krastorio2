@@ -1,4 +1,4 @@
-local util = require("__Krastorio2__/scripts/util")
+local util = require("scripts.util")
 
 --- @param e EntityBuiltEvent
 local function on_entity_built(e)

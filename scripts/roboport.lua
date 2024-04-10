@@ -1,7 +1,7 @@
-local flib_gui = require("__flib__/gui-lite")
+local flib_gui = require("__flib__.gui-lite")
 
-local constants = require("__Krastorio2__/scripts/constants")
-local util = require("__Krastorio2__/scripts/util")
+local constants = require("scripts.constants")
+local util = require("scripts.util")
 
 -- GUI
 

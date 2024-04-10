@@ -1,66 +1,66 @@
 local krastorio_new_recipes = {
   -- -- New recipes new available from start
-  require("__Krastorio2__/prototypes/recipes/new-available-from-start"),
+  require("prototypes.recipes.new-available-from-start"),
 
   -- -- Recipes for buildings and other entities (not associated non-buildings-items)
-  require("__Krastorio2__/prototypes/recipes/buildings"),
+  require("prototypes.recipes.buildings"),
 
   -- -- New science packs recipes (tech card) (tools)
-  require("__Krastorio2__/prototypes/recipes/tech-cards"),
+  require("prototypes.recipes.tech-cards"),
 
   -- -- New generic recipes for items (not associated to buildings)
-  require("__Krastorio2__/prototypes/recipes/items-crafting"),
+  require("prototypes.recipes.items-crafting"),
 
   -- -- New recipes for equipments items
-  require("__Krastorio2__/prototypes/recipes/equipments"),
+  require("prototypes.recipes.equipments"),
 
   -- -- New recipes for plants(wood) growing
-  require("__Krastorio2__/prototypes/recipes/growing"),
+  require("prototypes.recipes.growing"),
 
   -- -- New recipes for crushing items
-  require("__Krastorio2__/prototypes/recipes/crushing"),
+  require("prototypes.recipes.crushing"),
 
   -- -- New recipes for smelting items
-  require("__Krastorio2__/prototypes/recipes/smelting"),
+  require("prototypes.recipes.smelting"),
 
   -- -- New recipes for electrolysis items
-  require("__Krastorio2__/prototypes/recipes/electrolysis"),
+  require("prototypes.recipes.electrolysis"),
 
   -- -- New recipes for fluid-filtration items
-  require("__Krastorio2__/prototypes/recipes/fluid-filtration"),
+  require("prototypes.recipes.fluid-filtration"),
 
   -- -- New recipes for atmosphere condensation products(should produce only gases)
-  require("__Krastorio2__/prototypes/recipes/atmosphere-condensation"),
+  require("prototypes.recipes.atmosphere-condensation"),
 
   -- -- New recipes for chemistry products(can produce fluids)
-  require("__Krastorio2__/prototypes/recipes/chemistry"),
+  require("prototypes.recipes.chemistry"),
 
   -- -- New recipes for fuel refinery products(produce only fuels)
-  require("__Krastorio2__/prototypes/recipes/fuel-refinery"),
+  require("prototypes.recipes.fuel-refinery"),
 
   -- -- Recipes used by fusion reactor to create steam
-  require("__Krastorio2__/prototypes/recipes/nuclear-fusion"),
+  require("prototypes.recipes.nuclear-fusion"),
 
   -- -- Recipes for centrifuging processing
-  require("__Krastorio2__/prototypes/recipes/centrifuging"),
+  require("prototypes.recipes.centrifuging"),
 
   -- -- Recipes used for purify air from pollution
-  require("__Krastorio2__/prototypes/recipes/air-purification"),
+  require("prototypes.recipes.air-purification"),
 
   -- -- Recipes used for bio- and crep processing
-  require("__Krastorio2__/prototypes/recipes/bioprocessing"),
+  require("prototypes.recipes.bioprocessing"),
 
   -- -- Recipe for charge stabilizers
-  require("__Krastorio2__/prototypes/recipes/stabilizer-charging"),
+  require("prototypes.recipes.stabilizer-charging"),
 
   -- -- Vehicle recipes
-  require("__Krastorio2__/prototypes/recipes/vehicles"),
+  require("prototypes.recipes.vehicles"),
 
   -- -- Recipes for refinery
-  require("__Krastorio2__/prototypes/recipes/oil-processing"),
+  require("prototypes.recipes.oil-processing"),
 
   -- -- Recipes for smelting assemblers
-  require("__Krastorio2__/prototypes/recipes/smelting-crafting"),
+  require("prototypes.recipes.smelting-crafting"),
 }
 
 -- -- Anti recipes override check
@@ -74,5 +74,5 @@ for _, recipe_section in pairs(krastorio_new_recipes) do
 end
 
 -- Optional recipes
-require("__Krastorio2__/prototypes/recipes/containers")
-require("__Krastorio2__/prototypes/recipes/loaders")
+require("prototypes.recipes.containers")
+require("prototypes.recipes.loaders")

@@ -1,4 +1,4 @@
-local util = require("__Krastorio2__/scripts/util")
+local util = require("scripts.util")
 
 --- @class ShelterData
 --- @field container LuaEntity

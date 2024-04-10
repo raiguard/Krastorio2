@@ -1,5 +1,5 @@
-local gui = require("__flib__/gui")
-local position = require("__flib__/position")
+local gui = require("__flib__.gui")
+local position = require("__flib__.position")
 
 local planetary_teleporter = {}
 

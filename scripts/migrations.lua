@@ -1,12 +1,12 @@
-local on_tick_n = require("__flib__/on-tick-n")
-local table = require("__flib__/table")
+local on_tick_n = require("__flib__.on-tick-n")
+local table = require("__flib__.table")
 
-local compatibility = require("__Krastorio2__/scripts/compatibility")
-local freeplay = require("__Krastorio2__/scripts/freeplay")
-local planetary_teleporter = require("__Krastorio2__/scripts/planetary-teleporter")
-local shelter = require("__Krastorio2__/scripts/shelter")
-local tesla_coil = require("__Krastorio2__/scripts/tesla-coil")
-local util = require("__Krastorio2__/scripts/util")
+local compatibility = require("scripts.compatibility")
+local freeplay = require("scripts.freeplay")
+local planetary_teleporter = require("scripts.planetary-teleporter")
+local shelter = require("scripts.shelter")
+local tesla_coil = require("scripts.tesla-coil")
+local util = require("scripts.util")
 
 local migrations = {}
 

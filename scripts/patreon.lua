@@ -1,4 +1,4 @@
-local util = require("__Krastorio2__/scripts/util")
+local util = require("scripts.util")
 
 local patreon_items = {
   { name = "kr-shelter-plus", count = 1 },

@@ -1,5 +1,5 @@
-local flib_direction = require("__flib__/direction")
-local flib_position = require("__flib__/position")
+local flib_direction = require("__flib__.direction")
+local flib_position = require("__flib__.position")
 
 --- @type table<defines.direction, Vector>
 local offsets = {

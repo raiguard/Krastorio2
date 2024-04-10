@@ -1,8 +1,8 @@
-local flib_gui = require("__flib__/gui-lite")
-local flib_math = require("__flib__/math")
-local flib_position = require("__flib__/position")
+local flib_gui = require("__flib__.gui-lite")
+local flib_math = require("__flib__.math")
+local flib_position = require("__flib__.position")
 
-local util = require("__Krastorio2__/scripts/util")
+local util = require("scripts.util")
 
 --- @alias IntergalacticTransceiverStatus
 --- | "charging"

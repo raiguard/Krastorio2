@@ -5,7 +5,7 @@
 -- power = 50kW * grid_cells_occupied * tier_multiplier * big_version_multiplier
 -- (solar panel is useless, and with this formula will be boosted)
 
-local constants = require("__Krastorio2__/scripts/constants")
+local constants = require("scripts.constants")
 
 data:extend({
   ----------------------------------------------------------------------------------------------------

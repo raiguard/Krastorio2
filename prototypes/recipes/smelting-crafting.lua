@@ -1,5 +1,5 @@
-local data_util = require("__flib__/data-util")
-local table = require("__flib__/table")
+local data_util = require("__flib__.data-util")
+local table = require("__flib__.table")
 
 local function sc_icon(product, ingredient)
   local product_icon = data_util.create_icons(data.raw[product.type][product.name])

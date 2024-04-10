@@ -1,4 +1,4 @@
-require("__Krastorio2__/lib/private/data-stages/utils/split")
+require("lib.private.data-stages.utils.split")
 
 krastorio.general = {}
 

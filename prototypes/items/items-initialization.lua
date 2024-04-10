@@ -1,39 +1,39 @@
 -- -- -- New items
 
 -- -- Items for buildings and other entities
-require("__Krastorio2__/prototypes/items/buildings")
+require("prototypes.items.buildings")
 
 -- -- Equipments
-require("__Krastorio2__/prototypes/items/equipments")
+require("prototypes.items.equipments")
 
 -- Loader (optional items)
-require("__Krastorio2__/prototypes/items/loaders")
+require("prototypes.items.loaders")
 
 -- -- Raw materials/Resources
-require("__Krastorio2__/prototypes/items/resources")
+require("prototypes.items.resources")
 
 -- -- New science packs graphic
-require("__Krastorio2__/prototypes/items/techcards")
+require("prototypes.items.techcards")
 
 -- -- Items for terrain
-require("__Krastorio2__/prototypes/items/terrain")
+require("prototypes.items.terrain")
 
 -- -- Items for vehicles
-require("__Krastorio2__/prototypes/items/vehicles")
+require("prototypes.items.vehicles")
 
 -- -- Selection tools
-require("__Krastorio2__/prototypes/items/selection-tools")
+require("prototypes.items.selection-tools")
 
 -- -- Adding new capsules
-require("__Krastorio2__/prototypes/items/capsules")
+require("prototypes.items.capsules")
 
 -- -- All other items
-require("__Krastorio2__/prototypes/items/uncategorized")
+require("prototypes.items.uncategorized")
 
 -- -- Guns
 -- Character guns
-require("__Krastorio2__/prototypes/items/guns")
+require("prototypes.items.guns")
 -- Adavanced tank guns
-require("__Krastorio2__/prototypes/items/adavanced-tank-guns")
+require("prototypes.items.adavanced-tank-guns")
 -- Ammos
-require("__Krastorio2__/prototypes/items/ammo")
+require("prototypes.items.ammo")

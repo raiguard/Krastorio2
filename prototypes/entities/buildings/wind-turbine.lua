@@ -1,4 +1,4 @@
-local hit_effects = require("__base__/prototypes/entity/hit-effects")
+local hit_effects = require("__base__.prototypes.entity.hit-effects")
 
 local wind_turbine_persistent_sound = {
   variations = {

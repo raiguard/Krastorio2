@@ -33,5 +33,5 @@ local modifications = {
 
 -- Application of the modifications
 for _, modification_name in pairs(modifications) do
-  require("mandatory/" .. modification_name)
+  require("mandatory." .. modification_name)
 end

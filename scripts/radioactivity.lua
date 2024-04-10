@@ -1,6 +1,6 @@
-local flib_position = require("__flib__/position")
+local flib_position = require("__flib__.position")
 
-local util = require("__Krastorio2__/scripts/util")
+local util = require("scripts.util")
 
 --- @class RadioactivityPlayerData
 --- @field entity boolean

@@ -2,7 +2,7 @@ if not mods["Squeak Through"] then
   return
 end
 
-require("__Squeak Through__/config")
+require("__Squeak Through__.config")
 
 function addExcludedEntityToSqueakThrough(name, category)
   ---@diagnostic disable-next-line

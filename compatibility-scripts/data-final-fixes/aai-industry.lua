@@ -1,4 +1,4 @@
-local table = require("__flib__/table")
+local table = require("__flib__.table")
 
 if mods["aai-industry"] then
   -- -- -- Techologies fixes

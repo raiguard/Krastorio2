@@ -1,26 +1,28 @@
-local handler = require("__core__/lualib/event_handler")
+local handler = require("__core__.lualib.event_handler")
 
-handler.add_lib(require("__flib__/gui-lite"))
+handler.add_libraries({
+  require("__flib__.gui-lite"),
 
-handler.add_lib(require("__Krastorio2__/scripts/creep-collector"))
-handler.add_lib(require("__Krastorio2__/scripts/energy-absorber"))
-handler.add_lib(require("__Krastorio2__/scripts/intergalactic-transceiver"))
-handler.add_lib(require("__Krastorio2__/scripts/jackhammer"))
-handler.add_lib(require("__Krastorio2__/scripts/loader-snapping"))
-handler.add_lib(require("__Krastorio2__/scripts/offshore-pump"))
-handler.add_lib(require("__Krastorio2__/scripts/patreon"))
-handler.add_lib(require("__Krastorio2__/scripts/radioactivity"))
-handler.add_lib(require("__Krastorio2__/scripts/roboport"))
-handler.add_lib(require("__Krastorio2__/scripts/shelter"))
-handler.add_lib(require("__Krastorio2__/scripts/virus"))
+  require("scripts.creep-collector"),
+  require("scripts.energy-absorber"),
+  require("scripts.intergalactic-transceiver"),
+  require("scripts.jackhammer"),
+  require("scripts.loader-snapping"),
+  require("scripts.offshore-pump"),
+  require("scripts.patreon"),
+  require("scripts.radioactivity"),
+  require("scripts.roboport"),
+  require("scripts.shelter"),
+  require("scripts.virus"),
+})
 
-local gui = require("__flib__/gui")
-local migration = require("__flib__/migration")
+local gui = require("__flib__.gui")
+local migration = require("__flib__.migration")
 
--- local creep = require("__Krastorio2__/scripts/creep")
-local migrations = require("__Krastorio2__/scripts/migrations")
-local planetary_teleporter = require("__Krastorio2__/scripts/planetary-teleporter")
-local tesla_coil = require("__Krastorio2__/scripts/tesla-coil")
+-- local creep = require("scripts.creep")
+local migrations = require("scripts.migrations")
+local planetary_teleporter = require("scripts.planetary-teleporter")
+local tesla_coil = require("scripts.tesla-coil")
 
 -- COMMANDS
 

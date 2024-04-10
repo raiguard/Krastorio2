@@ -1,4 +1,4 @@
-local resource_autoplace = require("__core__/lualib/resource-autoplace")
+local resource_autoplace = require("__core__.lualib.resource-autoplace")
 
 -- Adding rare metals
 data:extend({

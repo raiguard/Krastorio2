@@ -1,4 +1,4 @@
-local flib_math = require("__flib__/math")
+local flib_math = require("__flib__.math")
 
 local biter_virus_evolution_multiplier = 0.67
 

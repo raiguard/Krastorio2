@@ -1,4 +1,4 @@
-local math = require("__flib__/math")
+local math = require("__flib__.math")
 
 local constants = {}
 

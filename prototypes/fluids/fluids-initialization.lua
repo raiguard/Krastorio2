@@ -1,13 +1,13 @@
 -- -- Adding new fluids
 
 -- Adding matter
-require("__Krastorio2__/prototypes/fluids/matter")
+require("prototypes.fluids.matter")
 
 -- Adding mineral water
-require("__Krastorio2__/prototypes/fluids/mineral-water")
+require("prototypes.fluids.mineral-water")
 
 -- Adding dirty water
-require("__Krastorio2__/prototypes/fluids/dirty-water")
+require("prototypes.fluids.dirty-water")
 
 -- Adding chemical elements
-require("__Krastorio2__/prototypes/fluids/chemistry")
+require("prototypes.fluids.chemistry")

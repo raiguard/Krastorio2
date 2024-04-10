@@ -1,5 +1,5 @@
 krastorio.entities = {}
-local collision_mask_util = require("__core__/lualib/collision-mask-util")
+local collision_mask_util = require("__core__.lualib.collision-mask-util")
 
 -- -- -- TO DO
 

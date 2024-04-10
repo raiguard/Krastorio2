@@ -21,5 +21,5 @@ local modifications = {
 
 -- Application of the modifications
 for _, modification_name in pairs(modifications) do
-  require("optional/" .. modification_name)
+  require("optional." .. modification_name)
 end

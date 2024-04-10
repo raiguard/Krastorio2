@@ -1,4 +1,4 @@
-local backgrounds_util = require("__Krastorio2__/lib/public/data-stages/main-menu-backgrounds-util")
+local backgrounds_util = require("lib.public.data-stages.main-menu-backgrounds-util")
 
 -- Add possible backgrounds
 backgrounds_util.addBackgroundImage("Factorio", "__core__/graphics/background-image.jpg")

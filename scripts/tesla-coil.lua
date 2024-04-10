@@ -1,4 +1,4 @@
-local constants = require("__Krastorio2__/scripts/constants")
+local constants = require("scripts.constants")
 
 local tesla_coil = {}
 

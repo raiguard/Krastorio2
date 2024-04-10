@@ -1,10 +1,10 @@
-local collision_mask_util = require("__core__/lualib/collision-mask-util")
-local data_util = require("__flib__/data-util")
+local collision_mask_util = require("__core__.lualib.collision-mask-util")
+local data_util = require("__flib__.data-util")
 
-local constants = require("__Krastorio2__/scripts/constants")
+local constants = require("scripts.constants")
 
-local hit_effects = require("__base__/prototypes/entity/hit-effects")
-local sounds = require("__base__/prototypes/entity/sounds")
+local hit_effects = require("__base__.prototypes.entity.hit-effects")
+local sounds = require("__base__.prototypes.entity.sounds")
 
 -- Entity sound
 local tesla_coil_sound = {

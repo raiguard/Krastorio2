@@ -1,4 +1,4 @@
-local table = require("__flib__/table")
+local table = require("__flib__.table")
 
 -- -- -- Changing "furnaces" from furnace prototype to assembler prototype
 

@@ -1,7 +1,7 @@
-local flib_bounding_box = require("__flib__/bounding-box")
-local flib_position = require("__flib__/position")
+local flib_bounding_box = require("__flib__.bounding-box")
+local flib_position = require("__flib__.position")
 
-local util = require("__Krastorio2__/scripts/util")
+local util = require("scripts.util")
 
 local min_collection_rate = 30
 local max_collection_rate = 80
