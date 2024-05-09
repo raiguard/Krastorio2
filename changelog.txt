@@ -9,6 +9,7 @@ Date: ????
     - Fixed that loaders would inconsistently snap when sandwiched between two containers or belts. (#386)
     - Fixed that personal laser defense did not require low density structure technology. (#390)
     - Fixed rocket fuel from light oil recipe showing redundant product count. (#401)
+    - Fixed a crash when loading with Bob's modules with the "productivity limitation" option disabled. (#412)
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.23
 Date: 2023-10-15

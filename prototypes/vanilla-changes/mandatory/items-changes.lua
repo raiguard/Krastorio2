@@ -19,7 +19,14 @@ data.raw.capsule["raw-fish"].capsule_action.attack_parameters.ammo_type.action.a
 
 -----------------------------------------------------------------
 
+--- @param limitation string[]
+--- @param key string
+local function insert_if_present(limitation, key)
+  if limitation then
+    table.insert(limitation, key)
+  end
+end
 -- Make prod modules work in the filtration plant
-table.insert(data.raw.module["productivity-module"].limitation, "quartz")
-table.insert(data.raw.module["productivity-module-2"].limitation, "quartz")
-table.insert(data.raw.module["productivity-module-3"].limitation, "quartz")
+insert_if_present(data.raw.module["productivity-module"].limitation, "quartz")
+insert_if_present(data.raw.module["productivity-module-2"].limitation, "quartz")
+insert_if_present(data.raw.module["productivity-module-3"].limitation, "quartz")
