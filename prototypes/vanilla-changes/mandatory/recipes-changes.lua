@@ -54,7 +54,6 @@ data.raw.recipe["rocket-fuel"].crafting_machine_tint = {
   tertiary = { r = 0.554, g = 0.417, b = 0.529, a = 0.500 },
   quaternary = { r = 0.462, g = 0.607, b = 0.839, a = 0.900 },
 }
-data.raw.recipe["rocket-fuel"].always_show_products = true
 
 krastorio.recipes.setEnergyCost("rocket-fuel", 16)
 
