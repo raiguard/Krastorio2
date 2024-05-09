@@ -48,7 +48,7 @@
   ],
   "package": {
     "git_publish_branch": "master",
-    "ignore": [ "TODO.md", "crowdin.yml", "images", "stylua.toml", "tests" ],
+    "ignore": [ "TODO.md", "crowdin.yml", "images/**", "stylua.toml", "tests/**" ],
     "scripts": {
       "prepublish": "factorio-crowdin-sync"
     },
