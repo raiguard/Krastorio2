@@ -39,6 +39,8 @@ require(scripts_path .. "Pyanodon")
 -- Schall Uranium Processing
 require(scripts_path .. "SchallUranium")
 require(scripts_path .. "Tral-robot-tree-farm")
+-- Constructron Continued
+require(scripts_path .. "Constructron-Continued")
 ---------------------------------------------------------------------------
 -- -- -- OTHER
 ---------------------------------------------------------------------------
