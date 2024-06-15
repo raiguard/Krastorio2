@@ -36,7 +36,7 @@ function compatibility.schall_uranium()
   end
 end
 
-function compatibility.nuclear_fuel()
+function compatibility.nuclear_overhaul()
   if script.active_mods["nuclear-overhaul"] then
     remote.call("kr-radioactivity", "add_entity", "thorium-ore")
     remote.call("kr-radioactivity", "add_item", "neptunium-237")
