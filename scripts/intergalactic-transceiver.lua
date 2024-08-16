@@ -138,7 +138,7 @@ function intergalactic_transceiver.iterate()
             status = "not_enough_input"
           end
 
-          data.tick_ready = nil   -- If it was ready before, we lost power again, so reset.
+          data.tick_ready = nil -- If it was ready before, we lost power again, so reset.
         else
           -- The max that we allow, for graphical reasons
           -- If we allow the transceiver to fully charge, the animation stops, which we don't want, so we cap the energy
@@ -361,7 +361,8 @@ function cutscene.replace_entity(force_index)
   entity_data.activating = false
 
   if new_entity and new_entity.valid then
-    local charge_time = (entity_data.tick_ready and entity_data.tick_built) and (entity_data.tick_ready - entity_data.tick_built)
+    local charge_time = (entity_data.tick_ready and entity_data.tick_built)
+      and (entity_data.tick_ready - entity_data.tick_built)
     global.intergalactic_transceiver.forces[force.index] = { entity = new_entity, charge_time = charge_time }
 
     on_tick_n.add(game.tick + 660, { handler = "it_cutscene", action = "unlock_logo", force_index = force_index })
@@ -587,13 +588,22 @@ intergalactic_transceiver.remote_interface = {
   ["better-victory-screen-statistics"] = function(winning_force, forces)
     -- Only add the transceiver charge time to the winning force's victory screen
     local data = global.intergalactic_transceiver.forces[winning_force.index]
-    if not data or not data.charge_time then return { } end
-    return { by_force = { [winning_force.name] = {
-        ["intergalactic-communication"] = { order = "aa", stats = {
-          ["charging-intergalactic-transceiver"] = {value = data.charge_time, unit = "time", has_tooltip=true}
-        }}
-    }}}
-  end
+    if not data or not data.charge_time then
+      return {}
+    end
+    return {
+      by_force = {
+        [winning_force.name] = {
+          ["intergalactic-communication"] = {
+            order = "aa",
+            stats = {
+              ["charging-intergalactic-transceiver"] = { value = data.charge_time, unit = "time", has_tooltip = true },
+            },
+          },
+        },
+      },
+    }
+  end,
 }
 
 return intergalactic_transceiver

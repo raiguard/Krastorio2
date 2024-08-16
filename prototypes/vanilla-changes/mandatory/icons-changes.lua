@@ -235,11 +235,16 @@ local rocket_fuel_icons = {
 }
 krastorio.icons.setRecipeIcons("rocket-fuel", rocket_fuel_icons)
 
-local fluids_for_solid_fuel = {"petroleum-gas", "light-oil", "heavy-oil"}
+local fluids_for_solid_fuel = { "petroleum-gas", "light-oil", "heavy-oil" }
 for _, fluid in ipairs(fluids_for_solid_fuel) do
   local icons = {
     { icon = "__base__/graphics/icons/solid-fuel.png", icon_size = 64 },
-    { icon = kr_fluids_icons_path .. fluid .. ".png", icon_size = data.raw.fluid[fluid].icon_size or 64, scale = 0.26, shift = { -8, -8 } }
+    {
+      icon = kr_fluids_icons_path .. fluid .. ".png",
+      icon_size = data.raw.fluid[fluid].icon_size or 64,
+      scale = 0.26,
+      shift = { -8, -8 },
+    },
   }
   krastorio.icons.setRecipeIcons("solid-fuel-from-" .. fluid, icons)
 end

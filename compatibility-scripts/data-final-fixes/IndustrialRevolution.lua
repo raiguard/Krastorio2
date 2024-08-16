@@ -532,7 +532,8 @@ if mods["IndustrialRevolution"] then
 
   -- -- Fast replecable group next upgrades
   -- Inserters
-  data.raw.inserter["long-handed-inserter"].fast_replaceable_group = data.raw.inserter["kr-superior-long-inserter"].fast_replaceable_group
+  data.raw.inserter["long-handed-inserter"].fast_replaceable_group =
+    data.raw.inserter["kr-superior-long-inserter"].fast_replaceable_group
   data.raw.inserter["long-handed-inserter"].next_upgrade = "kr-superior-long-inserter"
   data.raw.inserter["kr-superior-filter-inserter"].fast_replaceable_group = "filter-inserter"
 

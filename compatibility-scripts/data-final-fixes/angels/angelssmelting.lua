@@ -128,11 +128,11 @@ if mods["angelssmelting"] then
     if data.raw.recipe[recipe_name] then
       data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "copper-plate.png"
       data.raw.recipe[recipe_name].icons[1].icon_size = 64 -- override the base sprite size
-      data.raw.recipe[recipe_name].icons[1].scale = 32/64
+      data.raw.recipe[recipe_name].icons[1].scale = 32 / 64
       data.raw.recipe[recipe_name].icons[2].icon_size = 32
-      data.raw.recipe[recipe_name].icons[2].scale = 32/64
+      data.raw.recipe[recipe_name].icons[2].scale = 32 / 64
       data.raw.recipe[recipe_name].icon_size = 64 -- override the composite sprite size
-      data.raw.recipe[recipe_name].scale = 32/64
+      data.raw.recipe[recipe_name].scale = 32 / 64
     end
   end
 
@@ -153,7 +153,6 @@ if mods["angelssmelting"] then
       data.raw.recipe[recipe_name].icons[2].shift[2] = data.raw.recipe[recipe_name].icons[2].shift[2] * 2
     end
   end
-
 
   data.raw.recipe["enriched-copper-plate"].icons = {
     { icon = kr_items_icons_path .. "copper-plate.png", icon_size = 64 },

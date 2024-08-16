@@ -41,10 +41,14 @@ function creep_collector.collect(e)
       inventory.insert({ name = "biomass", count = collected_amount })
       e.surface.set_tiles(tiles_to_set)
 
-      util.flying_text_with_sound(player, { "message.kr-collected-amount", collected_amount, { "item-name.biomass" } }, {
-        position = bounding_box.center(e.area),
-        sound = { path = "kr-collect-creep", volume_modifier = 1 },
-      })
+      util.flying_text_with_sound(
+        player,
+        { "message.kr-collected-amount", collected_amount, { "item-name.biomass" } },
+        {
+          position = bounding_box.center(e.area),
+          sound = { path = "kr-collect-creep", volume_modifier = 1 },
+        }
+      )
     else
       util.flying_text_with_sound(
         player,
