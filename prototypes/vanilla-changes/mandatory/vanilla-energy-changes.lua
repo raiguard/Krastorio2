@@ -42,12 +42,8 @@ data.raw["lamp"]["small-lamp"].glow_size = 8 --6
 -- -- -- Vanilla inserters stats modifcation
 
 -- Stack inserter
-data.raw.inserter["stack-inserter"].energy_per_movement = "12KJ"
-data.raw.inserter["stack-inserter"].energy_per_movement = "12KJ"
-
--- Filter stack inserter
-data.raw.inserter["stack-filter-inserter"].energy_per_movement = "14KJ"
-data.raw.inserter["stack-filter-inserter"].energy_per_movement = "14KJ"
+data.raw.inserter["bulk-inserter"].energy_per_movement = "12KJ"
+data.raw.inserter["bulk-inserter"].energy_per_movement = "12KJ"
 
 -- --  Mining drills
 ----------------------------------------
@@ -61,7 +57,7 @@ end
 if data.raw["mining-drill"]["electric-mining-drill"] then
   data.raw["mining-drill"]["electric-mining-drill"].energy_source.emissions_per_minute = 7.5
   data.raw["mining-drill"]["electric-mining-drill"].energy_usage = "100kW"
-  data.raw["mining-drill"]["electric-mining-drill"].module_specification.module_slots = 2
+  data.raw["mining-drill"]["electric-mining-drill"].module_slots = 2
 end
 ----------------------------------------
 -- Assembling machines

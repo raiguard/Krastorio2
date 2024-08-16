@@ -1,4 +1,3 @@
-local collision_mask_util = require("__core__/lualib/collision-mask-util")
 local data_util = require("__flib__.data-util")
 
 local constants = require("scripts.constants")
@@ -42,12 +41,9 @@ local tesla_coil_electric_beam_sound = {
 }
 
 -- Beam config vars
-local light_tint = { r = 0, g = 0.917, b = 1 }
+-- local light_tint = { r = 0, g = 0.917, b = 1 }
 local beam_blend_mode = "additive-soft"
 local beam_non_light_flags = { "trilinear-filtering" }
-
--- Collision mask
-local layer = collision_mask_util.get_first_unused_layer()
 
 local tesla_coil_collision_box = { { -1.25, -1.25 }, { 1.25, 1.25 } }
 
@@ -63,7 +59,15 @@ data:extend({
     max_health = 200,
     gui_mode = "none",
     corpse = "medium-remnants",
-    collision_mask = { "item-layer", "object-layer", "player-layer", "water-tile", layer },
+    collision_mask = {
+      layers = {
+        ["item-layer"] = true,
+        ["object-layer"] = true,
+        ["player-layer"] = true,
+        ["water-tile"] = true,
+        ["kr-tesla-coil"] = true,
+      },
+    },
     resistances = {
       {
         type = "fire",
@@ -187,224 +191,228 @@ data:extend({
     action_triggered_automatically = false,
     working_sound = tesla_coil_electric_beam_sound,
 
-    -- Graphics
-    start = {
-      filename = "__base__/graphics/entity/beam/tileable-beam-START.png",
-      flags = beam_non_light_flags,
-      line_length = 4,
-      width = 52,
-      height = 40,
-      frame_count = 16,
-      direction_count = 1,
-      shift = { -0.03125, 0 },
-      hr_version = {
-        filename = "__base__/graphics/entity/beam/hr-tileable-beam-START.png",
-        flags = beam_non_light_flags,
-        line_length = 4,
-        width = 94,
-        height = 66,
-        frame_count = 16,
-        direction_count = 1,
-        shift = { 0.53125, 0 },
-        scale = 0.5,
-      },
-    },
+    graphics_set = {
+      beam = {
+        start = {
+          filename = "__base__/graphics/entity/beam/tileable-beam-START.png",
+          flags = beam_non_light_flags,
+          line_length = 4,
+          width = 52,
+          height = 40,
+          frame_count = 16,
+          direction_count = 1,
+          shift = { -0.03125, 0 },
+          hr_version = {
+            filename = "__base__/graphics/entity/beam/hr-tileable-beam-START.png",
+            flags = beam_non_light_flags,
+            line_length = 4,
+            width = 94,
+            height = 66,
+            frame_count = 16,
+            direction_count = 1,
+            shift = { 0.53125, 0 },
+            scale = 0.5,
+          },
+        },
 
-    ending = {
-      filename = "__base__/graphics/entity/beam/tileable-beam-END.png",
-      flags = beam_non_light_flags,
-      line_length = 4,
-      width = 49,
-      height = 54,
-      frame_count = 16,
-      direction_count = 1,
-      shift = { -0.046875, 0 },
-      hr_version = {
-        filename = "__base__/graphics/entity/beam/hr-tileable-beam-END.png",
-        flags = beam_non_light_flags,
-        line_length = 4,
-        width = 91,
-        height = 93,
-        frame_count = 16,
-        direction_count = 1,
-        shift = { -0.078125, -0.046875 },
-        scale = 0.5,
-      },
-    },
+        ending = {
+          filename = "__base__/graphics/entity/beam/tileable-beam-END.png",
+          flags = beam_non_light_flags,
+          line_length = 4,
+          width = 49,
+          height = 54,
+          frame_count = 16,
+          direction_count = 1,
+          shift = { -0.046875, 0 },
+          hr_version = {
+            filename = "__base__/graphics/entity/beam/hr-tileable-beam-END.png",
+            flags = beam_non_light_flags,
+            line_length = 4,
+            width = 91,
+            height = 93,
+            frame_count = 16,
+            direction_count = 1,
+            shift = { -0.078125, -0.046875 },
+            scale = 0.5,
+          },
+        },
 
-    head = {
-      filename = "__base__/graphics/entity/beam/beam-head.png",
-      flags = beam_non_light_flags,
-      line_length = 16,
-      width = 45 - 7,
-      height = 39,
-      frame_count = 16,
-      shift = util.by_pixel(-7 / 2, 0),
-      blend_mode = beam_blend_mode,
-    },
-
-    tail = {
-      filename = "__base__/graphics/entity/beam/beam-tail.png",
-      flags = beam_non_light_flags,
-      line_length = 16,
-      width = 45 - 6,
-      height = 39,
-      frame_count = 16,
-      shift = util.by_pixel(6 / 2, 0),
-      blend_mode = beam_blend_mode,
-    },
-
-    body = {
-      {
-        filename = "__base__/graphics/entity/beam/beam-body-1.png",
-        flags = beam_non_light_flags,
-        line_length = 16,
-        width = 32,
-        height = 39,
-        frame_count = 16,
-        blend_mode = beam_blend_mode,
-      },
-      {
-        filename = "__base__/graphics/entity/beam/beam-body-2.png",
-        flags = beam_non_light_flags,
-        line_length = 16,
-        width = 32,
-        height = 39,
-        frame_count = 16,
-        blend_mode = beam_blend_mode,
-      },
-      {
-        filename = "__base__/graphics/entity/beam/beam-body-3.png",
-        flags = beam_non_light_flags,
-        line_length = 16,
-        width = 32,
-        height = 39,
-        frame_count = 16,
-        blend_mode = beam_blend_mode,
-      },
-      {
-        filename = "__base__/graphics/entity/beam/beam-body-4.png",
-        flags = beam_non_light_flags,
-        line_length = 16,
-        width = 32,
-        height = 39,
-        frame_count = 16,
-        blend_mode = beam_blend_mode,
-      },
-      {
-        filename = "__base__/graphics/entity/beam/beam-body-5.png",
-        flags = beam_non_light_flags,
-        line_length = 16,
-        width = 32,
-        height = 39,
-        frame_count = 16,
-        blend_mode = beam_blend_mode,
-      },
-      {
-        filename = "__base__/graphics/entity/beam/beam-body-6.png",
-        flags = beam_non_light_flags,
-        line_length = 16,
-        width = 32,
-        height = 39,
-        frame_count = 16,
-        blend_mode = beam_blend_mode,
-      },
-    },
-
-    light_animations = {
-      start = {
-        filename = "__base__/graphics/entity/beam/hr-tileable-beam-START-light.png",
-        line_length = 4,
-        width = 94,
-        height = 66,
-        frame_count = 16,
-        direction_count = 1,
-        shift = { 0.53125, 0 },
-        scale = 0.5,
-        tint = light_tint,
-      },
-
-      ending = {
-        filename = "__base__/graphics/entity/beam/hr-tileable-beam-END-light.png",
-        line_length = 4,
-        width = 91,
-        height = 93,
-        frame_count = 16,
-        direction_count = 1,
-        shift = { -0.078125, -0.046875 },
-        scale = 0.5,
-        tint = light_tint,
-      },
-
-      head = {
-        filename = "__base__/graphics/entity/beam/beam-head-light.png",
-        line_length = 16,
-        width = 45 - 7,
-        height = 39,
-        frame_count = 16,
-        shift = util.by_pixel(-7 / 2, 0),
-        tint = light_tint,
-      },
-
-      tail = {
-        filename = "__base__/graphics/entity/beam/beam-tail-light.png",
-        line_length = 16,
-        width = 45 - 6,
-        height = 39,
-        shift = util.by_pixel(6 / 2, 0),
-        frame_count = 16,
-        tint = light_tint,
-      },
-
-      body = {
-        {
-          filename = "__base__/graphics/entity/beam/beam-body-1-light.png",
+        head = {
+          filename = "__base__/graphics/entity/beam/beam-head.png",
+          flags = beam_non_light_flags,
           line_length = 16,
-          width = 32,
+          width = 45 - 7,
           height = 39,
           frame_count = 16,
-          tint = light_tint,
+          shift = util.by_pixel(-7 / 2, 0),
+          blend_mode = beam_blend_mode,
         },
-        {
-          filename = "__base__/graphics/entity/beam/beam-body-2-light.png",
+
+        tail = {
+          filename = "__base__/graphics/entity/beam/beam-tail.png",
+          flags = beam_non_light_flags,
           line_length = 16,
-          width = 32,
+          width = 45 - 6,
           height = 39,
           frame_count = 16,
-          tint = light_tint,
+          shift = util.by_pixel(6 / 2, 0),
+          blend_mode = beam_blend_mode,
         },
-        {
-          filename = "__base__/graphics/entity/beam/beam-body-3-light.png",
-          line_length = 16,
-          width = 32,
-          height = 39,
-          frame_count = 16,
-          tint = light_tint,
+
+        body = {
+          {
+            filename = "__base__/graphics/entity/beam/beam-body-1.png",
+            flags = beam_non_light_flags,
+            line_length = 16,
+            width = 32,
+            height = 39,
+            frame_count = 16,
+            blend_mode = beam_blend_mode,
+          },
+          {
+            filename = "__base__/graphics/entity/beam/beam-body-2.png",
+            flags = beam_non_light_flags,
+            line_length = 16,
+            width = 32,
+            height = 39,
+            frame_count = 16,
+            blend_mode = beam_blend_mode,
+          },
+          {
+            filename = "__base__/graphics/entity/beam/beam-body-3.png",
+            flags = beam_non_light_flags,
+            line_length = 16,
+            width = 32,
+            height = 39,
+            frame_count = 16,
+            blend_mode = beam_blend_mode,
+          },
+          {
+            filename = "__base__/graphics/entity/beam/beam-body-4.png",
+            flags = beam_non_light_flags,
+            line_length = 16,
+            width = 32,
+            height = 39,
+            frame_count = 16,
+            blend_mode = beam_blend_mode,
+          },
+          {
+            filename = "__base__/graphics/entity/beam/beam-body-5.png",
+            flags = beam_non_light_flags,
+            line_length = 16,
+            width = 32,
+            height = 39,
+            frame_count = 16,
+            blend_mode = beam_blend_mode,
+          },
+          {
+            filename = "__base__/graphics/entity/beam/beam-body-6.png",
+            flags = beam_non_light_flags,
+            line_length = 16,
+            width = 32,
+            height = 39,
+            frame_count = 16,
+            blend_mode = beam_blend_mode,
+          },
         },
-        {
-          filename = "__base__/graphics/entity/beam/beam-body-4-light.png",
-          line_length = 16,
-          width = 32,
-          height = 39,
-          frame_count = 16,
-          tint = light_tint,
-        },
-        {
-          filename = "__base__/graphics/entity/beam/beam-body-5-light.png",
-          line_length = 16,
-          width = 32,
-          height = 39,
-          frame_count = 16,
-          tint = light_tint,
-        },
-        {
-          filename = "__base__/graphics/entity/beam/beam-body-6-light.png",
-          line_length = 16,
-          width = 32,
-          height = 39,
-          frame_count = 16,
-          tint = light_tint,
-        },
+
+        -- TODO: Where does this go now?
+        -- light_animations = {
+        --   start = {
+        --     filename = "__base__/graphics/entity/beam/hr-tileable-beam-START-light.png",
+        --     line_length = 4,
+        --     width = 94,
+        --     height = 66,
+        --     frame_count = 16,
+        --     direction_count = 1,
+        --     shift = { 0.53125, 0 },
+        --     scale = 0.5,
+        --     tint = light_tint,
+        --   },
+
+        --   ending = {
+        --     filename = "__base__/graphics/entity/beam/hr-tileable-beam-END-light.png",
+        --     line_length = 4,
+        --     width = 91,
+        --     height = 93,
+        --     frame_count = 16,
+        --     direction_count = 1,
+        --     shift = { -0.078125, -0.046875 },
+        --     scale = 0.5,
+        --     tint = light_tint,
+        --   },
+
+        --   head = {
+        --     filename = "__base__/graphics/entity/beam/beam-head-light.png",
+        --     line_length = 16,
+        --     width = 45 - 7,
+        --     height = 39,
+        --     frame_count = 16,
+        --     shift = util.by_pixel(-7 / 2, 0),
+        --     tint = light_tint,
+        --   },
+
+        --   tail = {
+        --     filename = "__base__/graphics/entity/beam/beam-tail-light.png",
+        --     line_length = 16,
+        --     width = 45 - 6,
+        --     height = 39,
+        --     shift = util.by_pixel(6 / 2, 0),
+        --     frame_count = 16,
+        --     tint = light_tint,
+        --   },
+
+        --   body = {
+        --     {
+        --       filename = "__base__/graphics/entity/beam/beam-body-1-light.png",
+        --       line_length = 16,
+        --       width = 32,
+        --       height = 39,
+        --       frame_count = 16,
+        --       tint = light_tint,
+        --     },
+        --     {
+        --       filename = "__base__/graphics/entity/beam/beam-body-2-light.png",
+        --       line_length = 16,
+        --       width = 32,
+        --       height = 39,
+        --       frame_count = 16,
+        --       tint = light_tint,
+        --     },
+        --     {
+        --       filename = "__base__/graphics/entity/beam/beam-body-3-light.png",
+        --       line_length = 16,
+        --       width = 32,
+        --       height = 39,
+        --       frame_count = 16,
+        --       tint = light_tint,
+        --     },
+        --     {
+        --       filename = "__base__/graphics/entity/beam/beam-body-4-light.png",
+        --       line_length = 16,
+        --       width = 32,
+        --       height = 39,
+        --       frame_count = 16,
+        --       tint = light_tint,
+        --     },
+        --     {
+        --       filename = "__base__/graphics/entity/beam/beam-body-5-light.png",
+        --       line_length = 16,
+        --       width = 32,
+        --       height = 39,
+        --       frame_count = 16,
+        --       tint = light_tint,
+        --     },
+        --     {
+        --       filename = "__base__/graphics/entity/beam/beam-body-6-light.png",
+        --       line_length = 16,
+        --       width = 32,
+        --       height = 39,
+        --       frame_count = 16,
+        --       tint = light_tint,
+        --     },
+        --   },
+        -- },
       },
     },
   },
@@ -415,7 +423,7 @@ data:extend({
     icon = kr_entities_icons_path .. "tesla-coil.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    collision_mask = {},
+    collision_mask = { layers = {} },
     call_for_help_radius = 0,
     folded_animation = {
       north = util.empty_sprite(1),
@@ -475,7 +483,7 @@ data:extend({
     icon = kr_entities_icons_path .. "tesla-coil.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    collision_mask = { layer },
+    collision_mask = { layers = { ["tesla-coil-collision"] = true } },
     collision_box = { { -18, -18 }, { 18, 18 } },
     picture = { filename = data_util.empty_image, size = 1 },
     flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },

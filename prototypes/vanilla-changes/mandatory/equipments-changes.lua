@@ -421,15 +421,15 @@ data.raw.capsule["discharge-defense-remote"].order = "f[active-defense-equipment
 -- -- Items visual(icon, sprites)/modifcation
 objects_to_modify = {
   ["generator-equipment"] = {
-    ["fusion-reactor-equipment"] = { "fusion-reactor-equipment.png", 64, 128, 128, 2 },
+    ["fission-reactor-equipment"] = { "fission-reactor-equipment.png", 64, 128, 128, 2 },
   },
 }
-if data.raw.item["fusion-reactor-equipment"] then
-  data.raw.item["fusion-reactor-equipment"].pictures = {
+if data.raw.item["fission-reactor-equipment"] then
+  data.raw.item["fission-reactor-equipment"].pictures = {
     layers = {
       {
         size = 64,
-        filename = kr_universal_equipments_icons_path .. "fusion-reactor-equipment.png",
+        filename = kr_universal_equipments_icons_path .. "fission-reactor-equipment.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -437,7 +437,7 @@ if data.raw.item["fusion-reactor-equipment"] then
         draw_as_light = true,
         flags = { "light" },
         size = 64,
-        filename = kr_universal_equipments_icons_path .. "fusion-reactor-equipment-light.png",
+        filename = kr_universal_equipments_icons_path .. "fission-reactor-equipment-light.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -448,15 +448,15 @@ end
 -- iterating...
 updateVanillaEquipmentGraphics(objects_to_modify, kr_universal_equipments_icons_path, kr_universal_equipments_path)
 
-krastorio.icons.setTechnologyIcons("fusion-reactor-equipment", {
-  { icon = kr_technologies_icons_path .. "fusion-reactor-equipment.png", icon_size = 256, icon_mipmaps = 4 },
+krastorio.icons.setTechnologyIcons("fission-reactor-equipment", {
+  { icon = kr_technologies_icons_path .. "fission-reactor-equipment.png", icon_size = 256, icon_mipmaps = 4 },
   { icon = kr_technologies_icons_path .. "overlays/equipment-overlay.png", icon_size = 256, icon_mipmaps = 4 },
 }, 256, 4)
 
 -- Equipments categories
-table.insert(data.raw["generator-equipment"]["fusion-reactor-equipment"].categories, "universal-equipment")
+table.insert(data.raw["generator-equipment"]["fission-reactor-equipment"].categories, "universal-equipment")
 
-data.raw["generator-equipment"]["fusion-reactor-equipment"].burner = {
+data.raw["generator-equipment"]["fission-reactor-equipment"].burner = {
   fuel_category = "fusion-fuel",
   effectivity = 2,
   fuel_inventory_size = 1,
@@ -467,9 +467,9 @@ data.raw["generator-equipment"]["fusion-reactor-equipment"].burner = {
 -- Equipment energy generated is balanced on this formula:
 -- power = 50kW * grid_cells_occupied * tier_multiplier * big_version_multiplier
 -- (solar panel is useless, and with this formula will be boosted)
-data.raw["generator-equipment"]["fusion-reactor-equipment"].power = "3.2MW" -- 50kW * 16 * 4 * 1
-data.raw.item["fusion-reactor-equipment"].order = "a2[energy-source]-a5[portable-nuclear-core]"
-data.raw.item["fusion-reactor-equipment"].subgroup = "equipment"
+data.raw["generator-equipment"]["fission-reactor-equipment"].power = "3.2MW" -- 50kW * 16 * 4 * 1
+data.raw.item["fission-reactor-equipment"].order = "a2[energy-source]-a5[portable-nuclear-core]"
+data.raw.item["fission-reactor-equipment"].subgroup = "equipment"
 
 -----------------------------------------------------------------------------------------------------------------
 -- -- Roboport equipment

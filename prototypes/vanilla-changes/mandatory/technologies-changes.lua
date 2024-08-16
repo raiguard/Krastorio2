@@ -222,8 +222,8 @@ data.raw.technology["stronger-explosives-7"].max_level = 10
 data.raw.technology["refined-flammables-7"].unit.count_formula = "((L-6)^2)*3000"
 data.raw.technology["refined-flammables-7"].max_level = 10
 
-data.raw.technology["energy-weapons-damage-7"].unit.count_formula = "((L-6)^2)*3000"
-data.raw.technology["energy-weapons-damage-7"].max_level = 10
+data.raw.technology["laser-weapons-damage-5"].unit.count_formula = "((L-6)^2)*3000"
+data.raw.technology["laser-weapons-damage-5"].max_level = 10
 
 data.raw.technology["artillery-shell-range-1"].unit.count_formula = "L^2*3500"
 data.raw.technology["artillery-shell-range-1"].max_level = 2
@@ -275,8 +275,8 @@ krastorio.technologies.setResearchUnitCount("mining-productivity-3", 500)
 data.raw.technology["mining-productivity-4"].unit.count_formula = "(L^2)*200"
 data.raw.technology["mining-productivity-4"].max_level = 10
 
-data.raw.technology["follower-robot-count-7"].unit.count_formula = "((L-6)^2)*5000"
-data.raw.technology["follower-robot-count-7"].max_level = nil
+data.raw.technology["follower-robot-count-5"].unit.count_formula = "((L-6)^2)*5000"
+data.raw.technology["follower-robot-count-5"].max_level = nil
 
 data.raw.technology["worker-robots-speed-6"].unit.count_formula = "((L-5)^2)*5000"
 data.raw.technology["worker-robots-speed-6"].max_level = nil

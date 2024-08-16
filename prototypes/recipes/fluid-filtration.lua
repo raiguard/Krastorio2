@@ -49,6 +49,7 @@ return {
   ---
   -- DIRTY WATER FILTRATION RECIPES
   ---
+  -- TODO: Make this less fragile
   {
     type = "recipe",
     name = "dirty-water-filtration-1",
@@ -56,16 +57,16 @@ return {
     icons = {
       {
         icon = data.raw.fluid["dirty-water"].icon,
-        icon_size = data.raw.fluid["dirty-water"].icon_size,
+        icon_size = data.raw.fluid["dirty-water"].icon_size or 64,
       },
       {
         icon = data.raw.item["iron-ore"].icon,
-        icon_size = data.raw.item["iron-ore"].icon_size,
-        scale = 0.20 * (data.raw.fluid["dirty-water"].icon_size / data.raw.item["iron-ore"].icon_size),
+        icon_size = data.raw.item["iron-ore"].icon_size or 64,
+        scale = 0.20 * ((data.raw.fluid["dirty-water"].icon_size or 64) / (data.raw.item["iron-ore"].icon_size or 64)),
         shift = { 0, 4 },
       },
     },
-    icon_size = data.raw.fluid["dirty-water"].icon_size,
+    icon_size = data.raw.fluid["dirty-water"].icon_size or 64,
     energy_required = 2,
     enabled = false,
     allow_as_intermediate = false,
@@ -93,12 +94,13 @@ return {
     icons = {
       {
         icon = data.raw.fluid["dirty-water"].icon,
-        icon_size = data.raw.fluid["dirty-water"].icon_size,
+        icon_size = data.raw.fluid["dirty-water"].icon_size or 64,
       },
       {
         icon = data.raw.item["copper-ore"].icon,
-        icon_size = data.raw.item["copper-ore"].icon_size,
-        scale = 0.20 * (data.raw.fluid["dirty-water"].icon_size / data.raw.item["copper-ore"].icon_size),
+        icon_size = data.raw.item["copper-ore"].icon_size or 64,
+        scale = 0.20
+          * ((data.raw.fluid["dirty-water"].icon_size or 64) / (data.raw.item["copper-ore"].icon_size or 64)),
         shift = { 0, 4 },
       },
     },
@@ -130,16 +132,17 @@ return {
     icons = {
       {
         icon = data.raw.fluid["dirty-water"].icon,
-        icon_size = data.raw.fluid["dirty-water"].icon_size,
+        icon_size = data.raw.fluid["dirty-water"].icon_size or 64,
       },
       {
         icon = data.raw.item["raw-rare-metals"].icon,
-        icon_size = data.raw.item["raw-rare-metals"].icon_size,
-        scale = 0.20 * (data.raw.fluid["dirty-water"].icon_size / data.raw.item["raw-rare-metals"].icon_size),
+        icon_size = data.raw.item["raw-rare-metals"].icon_size or 64,
+        scale = 0.20
+          * ((data.raw.fluid["dirty-water"].icon_size or 64) / (data.raw.item["raw-rare-metals"].icon_size or 64)),
         shift = { 0, 4 },
       },
     },
-    icon_size = data.raw.fluid["dirty-water"].icon_size,
+    icon_size = data.raw.fluid["dirty-water"].icon_size or 64,
     energy_required = 2,
     enabled = false,
     allow_as_intermediate = false,

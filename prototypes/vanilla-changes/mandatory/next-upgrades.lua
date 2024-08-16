@@ -27,11 +27,7 @@ data.raw["pipe-to-ground"]["pipe-to-ground"].next_upgrade = "kr-steel-pipe-to-gr
 
 -- Speedy inserters
 data.raw["inserter"]["fast-inserter"].next_upgrade = "stack-inserter"
-data.raw["inserter"]["stack-inserter"].next_upgrade = "kr-superior-inserter"
-
--- Filter inserters
-data.raw["inserter"]["filter-inserter"].next_upgrade = "stack-filter-inserter"
-data.raw["inserter"]["stack-filter-inserter"].next_upgrade = "kr-superior-filter-inserter"
+data.raw["inserter"]["bulk-inserter"].next_upgrade = "kr-superior-inserter"
 
 -- Long handed inserter
 data.raw["inserter"]["long-handed-inserter"].fast_replaceable_group = "long-handed-inserter"

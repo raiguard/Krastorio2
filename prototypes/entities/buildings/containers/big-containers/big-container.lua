@@ -7,14 +7,13 @@ if krastorio.general.getSafeSettingValue("kr-large-icons") then
   kr_icons_size = true
 end
 
-circuit_connector_definitions["kr-big-container"] = circuit_connector_definitions.create(universal_connector_template, {
-  {
+circuit_connector_definitions["kr-big-container"] =
+  circuit_connector_definitions.create_single(universal_connector_template, {
     variation = 26,
     main_offset = util.by_pixel(0.5, -2.6),
     shadow_offset = util.by_pixel(3.5, 0),
     show_shadow = true,
-  },
-})
+  })
 
 local _medium_containers = "containers/big-containers/"
 local _specific = "big-container/"

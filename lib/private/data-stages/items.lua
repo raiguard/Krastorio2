@@ -1,20 +1,6 @@
--- -- -- TO DO
+-- -- -- TODO: Nuke all of this
 
 krastorio.items = {}
-
-krastorio.items.item_types = {
-  "ammo",
-  "armor",
-  "capsule",
-  "fluid", -- But why
-  "gun",
-  "item",
-  "mining-tool",
-  "module",
-  "tool",
-  "item-with-entity-data",
-  "repair-tool",
-}
 
 function krastorio.items.exist(item_name)
   return krastorio.items.getItem(item_name) ~= nil
@@ -22,8 +8,8 @@ end
 
 function krastorio.items.getItem(item_name)
   if type(item_name) == "string" then
-    for _, type_name in pairs(krastorio.items.item_types) do
-      local item = data.raw[type_name][item_name]
+    for type_name in pairs(defines.prototypes.item) do
+      local item = data.raw[type_name] and data.raw[type_name][item_name]
       if item then
         return item
       end
@@ -35,7 +21,7 @@ end
 function krastorio.items.getAllItemsOfType(item_type)
   local exist = false
   local items = {}
-  for _, _type in pairs(krastorio.items.item_types) do
+  for _, _type in pairs(defines.prototypes.item) do
     if _type == item_type then
       exist = true
       break

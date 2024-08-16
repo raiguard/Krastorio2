@@ -5,15 +5,15 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles-fuels") then
   -- -- Locomotive
   data.raw.locomotive["locomotive"].max_health = 1000
   data.raw.locomotive["locomotive"].braking_force = 30
-  data.raw.locomotive["locomotive"].burner.fuel_inventory_size = 3
-  data.raw.locomotive["locomotive"].burner.fuel_category = nil
-  data.raw.locomotive["locomotive"].burner.fuel_categories = { "chemical", "vehicle-fuel" }
-  data.raw.locomotive["locomotive"].burner.emissions_per_minute = 20
+  data.raw.locomotive["locomotive"].energy_source.fuel_inventory_size = 3
+  data.raw.locomotive["locomotive"].energy_source.fuel_category = nil
+  data.raw.locomotive["locomotive"].energy_source.fuel_categories = { "chemical", "vehicle-fuel" }
+  data.raw.locomotive["locomotive"].energy_source.emissions_per_minute = 20
   data.raw.locomotive["locomotive"].minable = { mining_time = 1, result = "locomotive" }
   data.raw.locomotive["locomotive"].weight = 10000
   data.raw.locomotive["locomotive"].max_speed = 1.0185
   data.raw.locomotive["locomotive"].max_power = "2MW"
-  data.raw.locomotive["locomotive"].burner.effectivity = 1
+  data.raw.locomotive["locomotive"].energy_source.effectivity = 1
 
   -- recipe modification
   krastorio.recipes.setEnergyCost("locomotive", 60, 120)

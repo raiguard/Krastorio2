@@ -41,7 +41,6 @@ if kr_stack_size_value and kr_stack_size_value ~= "No changes" then
   data.raw.item["battery"].stack_size = kr_stack_size_value
   data.raw.capsule["cliff-explosives"].stack_size = kr_stack_size_value
 
-  data.raw.item["rocket-control-unit"].stack_size = kr_stack_size_value * 0.5
   data.raw.item["rocket-fuel"].stack_size = kr_stack_size_value * 0.5
   data.raw.item["low-density-structure"].stack_size = kr_stack_size_value * 0.5
 
@@ -51,7 +50,7 @@ if kr_stack_size_value and kr_stack_size_value ~= "No changes" then
 
   data.raw.tool[krastorio.optimization_tech_card_name].stack_size = 200
   data.raw.capsule["raw-fish"].stack_size = 50
-  data.raw.item["empty-barrel"].stack_size = 10
+  data.raw.item["barrel"].stack_size = 10
   data.raw.item["nuclear-fuel"].stack_size = 10
 
   -- K2-Suff

@@ -18,9 +18,10 @@ end
 local void_crushing_recipes_prefix = "kr-vc-"
 
 -- creating void crushing recipes
-for _, type_name in pairs(krastorio.items.item_types) do
+for type_name in pairs(defines.prototypes.item) do
   if type_name ~= "fluid" and type_name ~= "module" then
-    for item_name, _ in pairs(data.raw[type_name]) do
+    -- TODO: Investigate why `item-with-inventory` has no members.
+    for item_name, _ in pairs(data.raw[type_name] or {}) do
       if not crushing_ingredients[item_name] then
         data:extend({
           {

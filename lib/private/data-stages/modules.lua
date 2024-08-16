@@ -39,8 +39,8 @@ end
 function krastorio.modules.hasPositiveProductivity(module)
   local has_it = false
   if module.effect then
-    for effect_name, effect in pairs(module.effect) do
-      if effect_name == "productivity" and effect.bonus > 0 then
+    for effect_name, bonus in pairs(module.effect) do
+      if effect_name == "productivity" and bonus > 0 then
         has_it = true
         break
       end
@@ -54,7 +54,7 @@ function krastorio.modules.hasPositiveSpeed(module)
   local has_it = false
   if module.effect then
     for effect_name, effect in pairs(module.effect) do
-      if effect_name == "speed" and effect.bonus > 0 then
+      if effect_name == "speed" and effect > 0 then
         has_it = true
         break
       end
@@ -68,7 +68,7 @@ function krastorio.modules.hasPositiveEfficiency(module)
   local has_it = false
   if module.effect then
     for effect_name, effect in pairs(module.effect) do
-      if effect_name == "consumption" and effect.bonus < 0 then
+      if effect_name == "consumption" and effect < 0 then
         has_it = true
         break
       end
@@ -82,7 +82,7 @@ function krastorio.modules.hasPositiveLessPollution(module)
   local has_it = false
   if module.effect then
     for effect_name, effect in pairs(module.effect) do
-      if effect_name == "pollution" and effect.bonus < 0 then
+      if effect_name == "pollution" and effect < 0 then
         has_it = true
         break
       end

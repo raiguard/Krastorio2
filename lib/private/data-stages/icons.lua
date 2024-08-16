@@ -119,7 +119,7 @@ function krastorio.icons.addOverlayIcons(item_or_recipe, icons_to_add, icon_size
   for _, icon_to_add in ipairs(icons_to_add) do
     local overlay_icon = krastorio_utils.tables.fullCopy(icon_to_add)
     -- preserve the overlay icon's scale and include the argument requested scale, accounting for differing icon sizes
-    overlay_icon.scale = scale * (icon_size / overlay_icon.icon_size) * (overlay_icon.scale or 1)
+    overlay_icon.scale = scale * (icon_size / (overlay_icon.icon_size or 64)) * (overlay_icon.scale or 1)
 
     if overlay_icon.shift then
       -- if the overlay icon had shift already, preserve it and add the argument requested shift

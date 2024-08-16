@@ -1,6 +1,6 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
-circuit_connector_definitions["kr-quarry-drill"] = circuit_connector_definitions.create(universal_connector_template, {
+circuit_connector_definitions["kr-quarry-drill"] = circuit_connector_definitions.create_vector(universal_connector_template, {
   { variation = 0, main_offset = util.by_pixel(5, -118), shadow_offset = util.by_pixel(7, -118), show_shadow = true },
   {
     variation = 2,

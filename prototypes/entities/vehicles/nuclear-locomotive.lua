@@ -124,42 +124,9 @@ data:extend({
         },
       },
     },
-    front_light = {
-      {
-        type = "oriented",
-        minimum_darkness = 0.3,
-        picture = {
-          filename = "__core__/graphics/light-cone.png",
-          priority = "extra-high",
-          flags = { "light" },
-          scale = 2,
-          width = 200,
-          height = 200,
-        },
-        shift = { -0.6, -16 },
-        size = 2,
-        intensity = 0.8,
-        color = nuclear_smoke_color,
-      },
-      {
-        type = "oriented",
-        minimum_darkness = 0.3,
-        picture = {
-          filename = "__core__/graphics/light-cone.png",
-          priority = "extra-high",
-          flags = { "light" },
-          scale = 2,
-          width = 200,
-          height = 200,
-        },
-        shift = { 0.6, -16 },
-        size = 2,
-        intensity = 0.8,
-        color = nuclear_smoke_color,
-      },
-    },
-    back_light = rolling_stock_back_light(),
-    stand_by_light = rolling_stock_stand_by_light(),
+    front_light = data.raw["locomotive"]["locomotive"].front_light,
+    back_light = data.raw["locomotive"]["locomotive"].back_light,
+    stand_by_light = data.raw["locomotive"]["locomotive"].stand_by_light,
     color = { r = 0.92, g = 0.07, b = 0, a = 0.5 },
     pictures = {
       layers = {
@@ -423,7 +390,7 @@ data:extend({
         sound = sounds.train_brake_screech,
       },
     },
-    drive_over_tie_trigger = drive_over_tie(),
+    drive_over_tie_trigger = data.raw["locomotive"]["locomotive"].drive_over_tie_trigger,
     tie_distance = 50,
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
@@ -437,6 +404,6 @@ data:extend({
     open_sound = { filename = "__base__/sound/train-door-open.ogg", volume = 0.5 },
     close_sound = { filename = "__base__/sound/train-door-close.ogg", volume = 0.4 },
     sound_minimum_speed = 0.25,
-    water_reflection = locomotive_reflection(),
+    water_reflection = data.raw["locomotive"]["locomotive"].water_reflection,
   },
 })
