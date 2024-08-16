@@ -1,4 +1,4 @@
-if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
+if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles-fuels") then
   data.raw.item["wooden-chest"].fuel_acceleration_multiplier = 0.35 --empty
   data.raw.item["wooden-chest"].fuel_top_speed_multiplier = 0.5 --empty
   data.raw.item["wooden-chest"].fuel_emissions_multiplier = 1.25 --empty

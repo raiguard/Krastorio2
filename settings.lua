@@ -177,7 +177,7 @@ data:extend({
   -- B - Config
   {
     type = "bool-setting",
-    name = "kr-rebalance-vehicles&fuels",
+    name = "kr-rebalance-vehicles-fuels",
     setting_type = "startup",
     default_value = true,
     order = "b01",

@@ -1,6 +1,6 @@
 -- -- -- Vanilla and Non Trains changes
 -- Give to trains more cargo with more energy consume
-if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
+if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles-fuels") then
   ---------------------
   -- -- Locomotive
   data.raw.locomotive["locomotive"].max_health = 1000

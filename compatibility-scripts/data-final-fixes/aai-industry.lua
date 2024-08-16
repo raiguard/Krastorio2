@@ -77,7 +77,7 @@ if mods["aai-industry"] then
   end, true)
 
   -- Fix for fuels
-  if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
+  if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles-fuels") then
     if data.raw.item["processed-fuel"] then
       data.raw.item["processed-fuel"].fuel_category = "vehicle-fuel"
       data.raw.item["processed-fuel"].fuel_acceleration_multiplier = 0.9
