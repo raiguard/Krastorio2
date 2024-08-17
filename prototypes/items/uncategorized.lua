@@ -105,7 +105,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "other",
-    flags = { "hidden" },
+    hidden = true,
     stack_size = 50,
   },
   {
@@ -474,7 +474,7 @@ data:extend({
     type = "item",
     name = "kr-void",
     icon = kr_items_icons_path .. "void.png",
-    flags = { "hidden" },
+    hidden = true,
     icon_size = 64,
     icon_mipmaps = 4,
     order = "zzz[kr-void]",

@@ -7,7 +7,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles-fuels") then
 
   data.raw.car["car"].minable = { mining_time = 3, result = "car" }
   data.raw.car["car"].energy_source.fuel_category = "vehicle-fuel"
-  data.raw.car["car"].energy_source.emissions_per_minute = 5
+  data.raw.car["car"].energy_source.emissions_per_minute = { pollution = 5 }
   krastorio.recipes.setEnergyCost("car", 30)
   ---------------------
 
@@ -19,7 +19,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles-fuels") then
   data.raw.car["tank"].max_health = 3000
   data.raw.car["tank"].minable = { mining_time = 5, result = "tank" }
   data.raw.car["tank"].energy_source.fuel_category = "vehicle-fuel"
-  data.raw.car["tank"].energy_source.emissions_per_minute = 15
+  data.raw.car["tank"].energy_source.emissions_per_minute = { pollution = 15 }
   data.raw.car["tank"].inventory_size = 100
   data.raw.car["tank"].weight = 30000
   data.raw.car["tank"].consumption = "1MW"
@@ -52,13 +52,13 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles-fuels") then
       enabled = false,
       allow_productivity = true,
       ingredients = {
-        { "locomotive", 1 },
-        { "electronic-components", 20 },
-        { "steel-gear-wheel", 20 },
-        { "processing-unit", 20 },
-        { "rare-metals", 80 },
+        { type = "item", name = "locomotive", amount = 1 },
+        { type = "item", name = "electronic-components", amount = 20 },
+        { type = "item", name = "steel-gear-wheel", amount = 20 },
+        { type = "item", name = "processing-unit", amount = 20 },
+        { type = "item", name = "rare-metals", amount = 80 },
       },
-      result = "kr-nuclear-locomotive",
+      results = { { type = "item", name = "kr-nuclear-locomotive", amount = 1 } },
     },
     {
       type = "technology",

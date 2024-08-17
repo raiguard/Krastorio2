@@ -1580,7 +1580,7 @@ Date: 2020-03-01
     - Now is possible choise the bonus reach multiplier for build and interaction distances.
   Changes:
     - Nerfed wood fuel value from 2MJ to 1MJ.
-    - Nerfed greenhouse energy usage from 100KW to 150KW.
+    - Nerfed greenhouse energy usage from 100kW to 150kW.
     - Rebalanced boilers (ratio is not changed only fuel usage).
   Bugfixes:
     - Fixed that roboports Mk1 and Mk2 are unplaceable inside power armors Mk3 and Mk4.

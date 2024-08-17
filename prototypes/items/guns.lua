@@ -78,7 +78,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "other",
-    flags = { "hidden" },
+    hidden = true,
     --subgroup = "gun",
     --order = "z[dolphin-gun]",
     attack_parameters = {

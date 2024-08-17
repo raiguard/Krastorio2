@@ -67,7 +67,7 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
       icon = icon,
       icon_size = icon_size,
       icon_mipmaps = icon_mipmaps,
-      flags = { "placeable-neutral", "player-creation", "fast-replaceable-no-build-while-moving" },
+      flags = { "placeable-neutral", "player-creation" },
       minable = { mining_time = 0.25, result = data.result or name },
       placeable_by = { item = data.result or name, count = 1 },
       max_health = 300,

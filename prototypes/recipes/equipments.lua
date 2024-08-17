@@ -9,12 +9,12 @@ return {
     enabled = false,
     energy_required = 40,
     ingredients = {
-      { "power-armor-mk2", 1 },
-      { "speed-module-3", 25 },
-      { "effectivity-module-3", 25 },
-      { "energy-control-unit", 25 },
+      { type = "item", name = "power-armor-mk2", amount = 1 },
+      { type = "item", name = "speed-module-3", amount = 25 },
+      { type = "item", name = "effectivity-module-3", amount = 25 },
+      { type = "item", name = "energy-control-unit", amount = 25 },
     },
-    result = "power-armor-mk3",
+    results = { { type = "item", name = "power-armor-mk3", amount = 1 } },
     requester_paste_multiplier = 1,
   },
   {
@@ -24,13 +24,13 @@ return {
     energy_required = 40,
     category = "crafting-with-fluid",
     ingredients = {
-      { "power-armor-mk3", 1 },
-      { "ai-core", 40 },
-      { "imersium-plate", 40 },
-      { "imersite-crystal", 10 },
+      { type = "item", name = "power-armor-mk3", amount = 1 },
+      { type = "item", name = "ai-core", amount = 40 },
+      { type = "item", name = "imersium-plate", amount = 40 },
+      { type = "item", name = "imersite-crystal", amount = 10 },
       { type = "fluid", name = "nitric-acid", amount = 50 },
     },
-    result = "power-armor-mk4",
+    results = { { type = "item", name = "power-armor-mk4", amount = 1 } },
     requester_paste_multiplier = 1,
   },
   -- -- Exoskeletons
@@ -40,12 +40,12 @@ return {
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "exoskeleton-equipment", 1 },
-      { "low-density-structure", 10 },
-      { "advanced-circuit", 10 },
-      { "speed-module-2", 10 },
+      { type = "item", name = "exoskeleton-equipment", amount = 1 },
+      { type = "item", name = "low-density-structure", amount = 10 },
+      { type = "item", name = "advanced-circuit", amount = 10 },
+      { type = "item", name = "speed-module-2", amount = 10 },
     },
-    result = "advanced-exoskeleton-equipment",
+    results = { { type = "item", name = "advanced-exoskeleton-equipment", amount = 1 } },
   },
   {
     type = "recipe",
@@ -53,12 +53,12 @@ return {
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "advanced-exoskeleton-equipment", 1 },
-      { "ai-core", 10 },
-      { "imersium-plate", 10 },
-      { "speed-module-3", 10 },
+      { type = "item", name = "advanced-exoskeleton-equipment", amount = 1 },
+      { type = "item", name = "ai-core", amount = 10 },
+      { type = "item", name = "imersium-plate", amount = 10 },
+      { type = "item", name = "speed-module-3", amount = 10 },
     },
-    result = "superior-exoskeleton-equipment",
+    results = { { type = "item", name = "superior-exoskeleton-equipment", amount = 1 } },
   },
   -- -- Imersite night visor
   {
@@ -68,13 +68,13 @@ return {
     energy_required = 10,
     category = "crafting-with-fluid",
     ingredients = {
-      { "night-vision-equipment", 1 },
-      { "low-density-structure", 10 },
-      { "advanced-circuit", 10 },
-      { "imersite-crystal", 5 },
+      { type = "item", name = "night-vision-equipment", amount = 1 },
+      { type = "item", name = "low-density-structure", amount = 10 },
+      { type = "item", name = "advanced-circuit", amount = 10 },
+      { type = "item", name = "imersite-crystal", amount = 5 },
       { type = "fluid", name = "nitric-acid", amount = 25 },
     },
-    result = "imersite-night-vision-equipment",
+    results = { { type = "item", name = "imersite-night-vision-equipment", amount = 1 } },
   },
   -----------------------------------------------------------------------------------------------------------------
   --------------------------------------------------VEHICLES EQUIPMENTS--------------------------------------------
@@ -85,11 +85,11 @@ return {
     energy_required = 20,
     enabled = false,
     ingredients = {
-      { "electric-engine-unit", 2 },
-      { "electronic-circuit", 5 },
-      { "steel-plate", 5 },
+      { type = "item", name = "electric-engine-unit", amount = 2 },
+      { type = "item", name = "electronic-circuit", amount = 5 },
+      { type = "item", name = "steel-plate", amount = 5 },
     },
-    result = "additional-engine",
+    results = { { type = "item", name = "additional-engine", amount = 1 } },
   },
   {
     type = "recipe",
@@ -97,11 +97,11 @@ return {
     energy_required = 30,
     enabled = false,
     ingredients = {
-      { "additional-engine", 2 },
-      { "steel-plate", 5 },
-      { "processing-unit", 1 },
+      { type = "item", name = "additional-engine", amount = 2 },
+      { type = "item", name = "steel-plate", amount = 5 },
+      { type = "item", name = "processing-unit", amount = 1 },
     },
-    result = "advanced-additional-engine",
+    results = { { type = "item", name = "advanced-additional-engine", amount = 1 } },
   },
   {
     type = "recipe",
@@ -109,11 +109,11 @@ return {
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "personal-roboport-equipment", 2 },
-      { "steel-plate", 4 },
-      { "advanced-circuit", 1 },
+      { type = "item", name = "personal-roboport-equipment", amount = 2 },
+      { type = "item", name = "steel-plate", amount = 4 },
+      { type = "item", name = "advanced-circuit", amount = 1 },
     },
-    result = "vehicle-roboport",
+    results = { { type = "item", name = "vehicle-roboport", amount = 1 } },
   },
   -----------------------------------------------------------------------------------------------------------------
   --------------------------------------------------UNIVERSAL EQUIPMENTS-------------------------------------------
@@ -126,11 +126,11 @@ return {
     enabled = false,
     energy_required = 10,
     ingredients = {
-      { "battery-mk2-equipment", 2 },
-      { "lithium-sulfur-battery", 4 },
-      { "processing-unit", 1 },
+      { type = "item", name = "battery-mk2-equipment", amount = 2 },
+      { type = "item", name = "lithium-sulfur-battery", amount = 4 },
+      { type = "item", name = "processing-unit", amount = 1 },
     },
-    result = "battery-mk3-equipment",
+    results = { { type = "item", name = "battery-mk3-equipment", amount = 1 } },
   },
   -- big-battery-equipment
   {
@@ -139,11 +139,11 @@ return {
     energy_required = 15,
     enabled = false,
     ingredients = {
-      { "battery-equipment", 4 },
-      { "iron-plate", 4 },
-      { "copper-plate", 1 },
+      { type = "item", name = "battery-equipment", amount = 4 },
+      { type = "item", name = "iron-plate", amount = 4 },
+      { type = "item", name = "copper-plate", amount = 1 },
     },
-    result = "big-battery-equipment",
+    results = { { type = "item", name = "big-battery-equipment", amount = 1 } },
   },
   -- big-battery-mk2-equipment
   {
@@ -152,11 +152,11 @@ return {
     energy_required = 30,
     enabled = false,
     ingredients = {
-      { "big-battery-equipment", 2 },
-      { "steel-plate", 4 },
-      { "advanced-circuit", 2 },
+      { type = "item", name = "big-battery-equipment", amount = 2 },
+      { type = "item", name = "steel-plate", amount = 4 },
+      { type = "item", name = "advanced-circuit", amount = 2 },
     },
-    result = "big-battery-mk2-equipment",
+    results = { { type = "item", name = "big-battery-mk2-equipment", amount = 1 } },
   },
   -- big-battery-mk3-equipment
   {
@@ -165,11 +165,11 @@ return {
     energy_required = 60,
     enabled = false,
     ingredients = {
-      { "big-battery-mk2-equipment", 2 },
-      { "lithium-sulfur-battery", 4 },
-      { "processing-unit", 2 },
+      { type = "item", name = "big-battery-mk2-equipment", amount = 2 },
+      { type = "item", name = "lithium-sulfur-battery", amount = 4 },
+      { type = "item", name = "processing-unit", amount = 2 },
     },
-    result = "big-battery-mk3-equipment",
+    results = { { type = "item", name = "big-battery-mk3-equipment", amount = 1 } },
   },
   -- -- GENERATORS
   -- small-portable-generator-equipment
@@ -179,10 +179,10 @@ return {
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { "engine-unit", 1 },
-      { "iron-beam", 2 },
+      { type = "item", name = "engine-unit", amount = 1 },
+      { type = "item", name = "iron-beam", amount = 2 },
     },
-    result = "small-portable-generator",
+    results = { { type = "item", name = "small-portable-generator", amount = 1 } },
   },
   -- portable-generator
   {
@@ -191,11 +191,11 @@ return {
     energy_required = 20,
     enabled = false,
     ingredients = {
-      { "iron-beam", 2 },
-      { "engine-unit", 2 },
-      { "small-portable-generator", 2 },
+      { type = "item", name = "iron-beam", amount = 2 },
+      { type = "item", name = "engine-unit", amount = 2 },
+      { type = "item", name = "small-portable-generator", amount = 2 },
     },
-    result = "portable-generator",
+    results = { { type = "item", name = "portable-generator", amount = 1 } },
   },
   -- nuclear-reactor-equipment
   {
@@ -204,11 +204,11 @@ return {
     energy_required = 60,
     enabled = false,
     ingredients = {
-      { "copper-plate", 50 },
-      { "steel-plate", 50 },
-      { "advanced-circuit", 50 },
+      { type = "item", name = "copper-plate", amount = 50 },
+      { type = "item", name = "steel-plate", amount = 50 },
+      { type = "item", name = "advanced-circuit", amount = 50 },
     },
-    result = "nuclear-reactor-equipment",
+    results = { { type = "item", name = "nuclear-reactor-equipment", amount = 1 } },
   },
   -- antimatter-reactor-equipment
   {
@@ -217,11 +217,11 @@ return {
     energy_required = 60,
     enabled = false,
     ingredients = {
-      { "energy-control-unit", 25 },
-      { "imersium-plate", 100 },
-      { "ai-core", 25 },
+      { type = "item", name = "energy-control-unit", amount = 25 },
+      { type = "item", name = "imersium-plate", amount = 100 },
+      { type = "item", name = "ai-core", amount = 25 },
     },
-    result = "antimatter-reactor-equipment",
+    results = { { type = "item", name = "antimatter-reactor-equipment", amount = 1 } },
   },
   {
     type = "recipe",
@@ -229,11 +229,11 @@ return {
     energy_required = 3,
     enabled = false,
     ingredients = {
-      { "copper-plate", 6 },
-      { "copper-cable", 12 },
-      { "battery", 6 },
+      { type = "item", name = "copper-plate", amount = 6 },
+      { type = "item", name = "copper-cable", amount = 12 },
+      { type = "item", name = "battery", amount = 6 },
     },
-    result = "energy-absorber",
+    results = { { type = "item", name = "energy-absorber", amount = 1 } },
   },
   -- -- SOLAR PANELS (GENERATORS)
   {
@@ -242,10 +242,10 @@ return {
     energy_required = 10,
     enabled = false,
     ingredients = {
-      { "solar-panel-equipment", 4 },
-      { "electronic-components", 10 },
+      { type = "item", name = "solar-panel-equipment", amount = 4 },
+      { type = "item", name = "electronic-components", amount = 10 },
     },
-    result = "big-solar-panel-equipment",
+    results = { { type = "item", name = "big-solar-panel-equipment", amount = 1 } },
   },
   {
     type = "recipe",
@@ -254,12 +254,12 @@ return {
     enabled = false,
     category = "crafting-with-fluid",
     ingredients = {
-      { "solar-panel-equipment", 1 },
-      { "imersite-crystal", 5 },
+      { type = "item", name = "solar-panel-equipment", amount = 1 },
+      { type = "item", name = "imersite-crystal", amount = 5 },
       { type = "fluid", name = "nitric-acid", amount = 25 },
-      { "processing-unit", 1 },
+      { type = "item", name = "processing-unit", amount = 1 },
     },
-    result = "imersite-solar-panel-equipment",
+    results = { { type = "item", name = "imersite-solar-panel-equipment", amount = 1 } },
   },
   {
     type = "recipe",
@@ -267,10 +267,10 @@ return {
     energy_required = 20,
     enabled = false,
     ingredients = {
-      { "imersite-solar-panel-equipment", 4 },
-      { "electronic-components", 40 },
+      { type = "item", name = "imersite-solar-panel-equipment", amount = 4 },
+      { type = "item", name = "electronic-components", amount = 40 },
     },
-    result = "big-imersite-solar-panel-equipment",
+    results = { { type = "item", name = "big-imersite-solar-panel-equipment", amount = 1 } },
   },
   -- -- PERSONAL DEFENCES
   {
@@ -278,38 +278,38 @@ return {
     name = "personal-laser-defense-mk2-equipment",
     energy_required = 10,
     ingredients = {
-      { "personal-laser-defense-equipment", 1 },
-      { "lithium-sulfur-battery", 5 },
-      { "advanced-circuit", 10 },
+      { type = "item", name = "personal-laser-defense-equipment", amount = 1 },
+      { type = "item", name = "lithium-sulfur-battery", amount = 5 },
+      { type = "item", name = "advanced-circuit", amount = 10 },
     },
     enabled = false,
-    result = "personal-laser-defense-mk2-equipment",
+    results = { { type = "item", name = "personal-laser-defense-mk2-equipment", amount = 1 } },
   },
   {
     type = "recipe",
     name = "personal-laser-defense-mk3-equipment",
     energy_required = 10,
     ingredients = {
-      { "personal-laser-defense-mk2-equipment", 1 },
-      { "processing-unit", 10 },
-      { "lithium-sulfur-battery", 10 },
-      { "imersium-plate", 5 },
+      { type = "item", name = "personal-laser-defense-mk2-equipment", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 10 },
+      { type = "item", name = "lithium-sulfur-battery", amount = 10 },
+      { type = "item", name = "imersium-plate", amount = 5 },
     },
     enabled = false,
-    result = "personal-laser-defense-mk3-equipment",
+    results = { { type = "item", name = "personal-laser-defense-mk3-equipment", amount = 1 } },
   },
   {
     type = "recipe",
     name = "personal-laser-defense-mk4-equipment",
     energy_required = 10,
     ingredients = {
-      { "personal-laser-defense-mk3-equipment", 1 },
-      { "ai-core", 10 },
-      { "lithium-sulfur-battery", 20 },
-      { "energy-control-unit", 10 },
+      { type = "item", name = "personal-laser-defense-mk3-equipment", amount = 1 },
+      { type = "item", name = "ai-core", amount = 10 },
+      { type = "item", name = "lithium-sulfur-battery", amount = 20 },
+      { type = "item", name = "energy-control-unit", amount = 10 },
     },
     enabled = false,
-    result = "personal-laser-defense-mk4-equipment",
+    results = { { type = "item", name = "personal-laser-defense-mk4-equipment", amount = 1 } },
   },
   {
     type = "recipe",
@@ -317,12 +317,12 @@ return {
     energy_required = 15,
     enabled = false,
     ingredients = {
-      { "laser-turret", 1 },
-      { "battery", 5 },
-      { "electronic-components", 10 },
-      { "iron-plate", 5 },
+      { type = "item", name = "laser-turret", amount = 1 },
+      { type = "item", name = "battery", amount = 5 },
+      { type = "item", name = "electronic-components", amount = 10 },
+      { type = "item", name = "iron-plate", amount = 5 },
     },
-    result = "personal-submachine-laser-defense-mk1-equipment",
+    results = { { type = "item", name = "personal-submachine-laser-defense-mk1-equipment", amount = 1 } },
   },
   {
     type = "recipe",
@@ -330,12 +330,12 @@ return {
     energy_required = 30,
     enabled = false,
     ingredients = {
-      { "personal-submachine-laser-defense-mk1-equipment", 1 },
-      { "battery", 10 },
-      { "advanced-circuit", 10 },
-      { "steel-plate", 5 },
+      { type = "item", name = "personal-submachine-laser-defense-mk1-equipment", amount = 1 },
+      { type = "item", name = "battery", amount = 10 },
+      { type = "item", name = "advanced-circuit", amount = 10 },
+      { type = "item", name = "steel-plate", amount = 5 },
     },
-    result = "personal-submachine-laser-defense-mk2-equipment",
+    results = { { type = "item", name = "personal-submachine-laser-defense-mk2-equipment", amount = 1 } },
   },
   {
     type = "recipe",
@@ -343,12 +343,12 @@ return {
     energy_required = 60,
     enabled = false,
     ingredients = {
-      { "personal-submachine-laser-defense-mk2-equipment", 1 },
-      { "processing-unit", 10 },
-      { "lithium-sulfur-battery", 5 },
-      { "imersium-plate", 5 },
+      { type = "item", name = "personal-submachine-laser-defense-mk2-equipment", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 10 },
+      { type = "item", name = "lithium-sulfur-battery", amount = 5 },
+      { type = "item", name = "imersium-plate", amount = 5 },
     },
-    result = "personal-submachine-laser-defense-mk3-equipment",
+    results = { { type = "item", name = "personal-submachine-laser-defense-mk3-equipment", amount = 1 } },
   },
   {
     type = "recipe",
@@ -356,12 +356,12 @@ return {
     energy_required = 90,
     enabled = false,
     ingredients = {
-      { "personal-submachine-laser-defense-mk3-equipment", 1 },
-      { "ai-core", 10 },
-      { "lithium-sulfur-battery", 10 },
-      { "energy-control-unit", 5 },
+      { type = "item", name = "personal-submachine-laser-defense-mk3-equipment", amount = 1 },
+      { type = "item", name = "ai-core", amount = 10 },
+      { type = "item", name = "lithium-sulfur-battery", amount = 10 },
+      { type = "item", name = "energy-control-unit", amount = 5 },
     },
-    result = "personal-submachine-laser-defense-mk4-equipment",
+    results = { { type = "item", name = "personal-submachine-laser-defense-mk4-equipment", amount = 1 } },
   },
   -- -- SHIELDS
   {
@@ -370,11 +370,11 @@ return {
     enabled = false,
     energy_required = 40,
     ingredients = {
-      { "energy-shield-mk2-equipment", 5 },
-      { "electronic-components", 20 },
-      { "lithium-sulfur-battery", 10 },
+      { type = "item", name = "energy-shield-mk2-equipment", amount = 5 },
+      { type = "item", name = "electronic-components", amount = 20 },
+      { type = "item", name = "lithium-sulfur-battery", amount = 10 },
     },
-    result = "energy-shield-mk3-equipment",
+    results = { { type = "item", name = "energy-shield-mk3-equipment", amount = 1 } },
   },
   {
     type = "recipe",
@@ -382,11 +382,11 @@ return {
     enabled = false,
     energy_required = 80,
     ingredients = {
-      { "energy-shield-mk3-equipment", 5 },
-      { "ai-core", 5 },
-      { "imersium-plate", 10 },
+      { type = "item", name = "energy-shield-mk3-equipment", amount = 5 },
+      { type = "item", name = "ai-core", amount = 5 },
+      { type = "item", name = "imersium-plate", amount = 10 },
     },
-    result = "energy-shield-mk4-equipment",
+    results = { { type = "item", name = "energy-shield-mk4-equipment", amount = 1 } },
   },
   -----------------------------------------------------------------------------------------------------------------
   -----------------------------------------------------------------------------------------------------------------

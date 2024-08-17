@@ -543,11 +543,7 @@ if not mods["aai-industry"] then
   -- Modification to offshore pump copied prototype to be an assembler
   electric_offshore_pump.type = "assembling-machine"
   electric_offshore_pump.name = "kr-electric-offshore-pump"
-  if electric_offshore_pump.flags then
-    table.insert(electric_offshore_pump.flags, "hidden")
-  else
-    electric_offshore_pump.flags = { "placeable-neutral", "placeable-player", "player-creation", "hidden" }
-  end
+  electric_offshore_pump.hidden = true
   electric_offshore_pump.localised_name = { "entity-name.offshore-pump" }
   electric_offshore_pump.localised_description = { "entity-description.offshore-pump" }
   electric_offshore_pump.crafting_speed = 1
@@ -566,17 +562,11 @@ if not mods["aai-industry"] then
   electric_offshore_pump.show_recipe_icon = false
   electric_offshore_pump.fluid_boxes = {
     fluid_box = {
-      base_area = 0.5,
-      base_level = 1,
+      volume = 50,
       pipe_covers = pipecoverspictures(),
       production_type = "output",
       filter = "water",
-      pipe_connections = {
-        {
-          position = { 0, 1 },
-          type = "output",
-        },
-      },
+      pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 1 } } },
     },
     off_when_no_fluid_recipe = false,
   }
@@ -597,9 +587,7 @@ if not mods["aai-industry"] then
       enabled = true,
       hidden = true,
       ingredients = {},
-      results = {
-        { type = "fluid", name = "water", amount = 1250 },
-      },
+      results = { { type = "fluid", name = "water", amount = 1250 } },
     },
     -- Entity
     electric_offshore_pump,

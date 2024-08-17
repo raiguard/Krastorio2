@@ -383,7 +383,7 @@ styles.kr_planetary_teleporter_destinations_frame = {
 
 styles.kr_planetary_teleporter_destinations_scroll_pane = {
   type = "scroll_pane_style",
-  parent = "filter_scroll_pane",
+  parent = "deep_slots_scroll_pane",
   bottom_margin = 12,
   bottom_padding = 0,
   extra_bottom_padding_when_activated = 0,

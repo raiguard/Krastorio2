@@ -142,7 +142,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "other",
-    flags = { "hidden" },
+    hidden = true,
     capsule_action = {
       type = "use-on-self",
       attack_parameters = {
@@ -177,7 +177,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "other",
-    flags = { "hidden" },
+    hidden = true,
     capsule_action = {
       type = "throw",
       attack_parameters = {
@@ -258,7 +258,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "other",
-    flags = { "hidden" },
+    hidden = true,
     capsule_action = {
       type = "use-on-self",
       attack_parameters = {

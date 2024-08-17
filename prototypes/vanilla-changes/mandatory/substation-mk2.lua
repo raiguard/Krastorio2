@@ -8,12 +8,12 @@ data:extend({
     energy_required = 1,
     enabled = false,
     ingredients = {
-      { "imersium-beam", 3 },
-      { "rare-metals", 6 },
-      { "substation", 1 },
-      { "processing-unit", 2 },
+      { type = "item", name = "imersium-beam", amount = 3 },
+      { type = "item", name = "rare-metals", amount = 6 },
+      { type = "item", name = "substation", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 2 },
     },
-    result = "kr-substation-mk2",
+    results = { { type = "item", name = "kr-substation-mk2", amount = 1 } },
   },
   -- Technology
   {

@@ -9,8 +9,8 @@ return {
     energy_required = 2,
     enabled = false,
     ingredients = {
-      { "matter-stabilizer", 1 },
+      { type = "item", name = "matter-stabilizer", amount = 1 },
     },
-    result = "charged-matter-stabilizer",
+    results = { { type = "item", name = "charged-matter-stabilizer", amount = 1 } },
   },
 }

@@ -8,11 +8,10 @@ return {
     enabled = false,
     allow_productivity = true,
     ingredients = {
-      { "coal", 6 },
-      { "wood", 6 },
+      { type = "item", name = "coal", amount = 6 },
+      { type = "item", name = "wood", amount = 6 },
     },
-    result = "coke",
-    result_count = 6,
+    results = { { type = "item", name = "coke", amount = 6 } },
   },
   {
     type = "recipe",
@@ -24,10 +23,9 @@ return {
     always_show_products = true,
     allow_productivity = true,
     ingredients = {
-      { "sand", 16 },
+      { type = "item", name = "sand", amount = 16 },
     },
-    result = "glass",
-    result_count = 8,
+    results = { { type = "item", name = "glass", amount = 8 } },
   },
   {
     type = "recipe",
@@ -39,10 +37,9 @@ return {
     always_show_products = true,
     allow_productivity = true,
     ingredients = {
-      { "quartz", 18 },
+      { type = "item", name = "quartz", amount = 18 },
     },
-    result = "silicon",
-    result_count = 9,
+    results = { { type = "item", name = "silicon", amount = 9 } },
   },
   {
     type = "recipe",
@@ -64,10 +61,9 @@ return {
     always_show_products = true,
     allow_productivity = true,
     ingredients = {
-      { "raw-rare-metals", 10 },
+      { type = "item", name = "raw-rare-metals", amount = 10 },
     },
-    result = "rare-metals",
-    result_count = 5,
+    results = { { type = "item", name = "rare-metals", amount = 5 } },
   },
   {
     type = "recipe",
@@ -88,10 +84,9 @@ return {
     always_show_products = true,
     allow_productivity = true,
     ingredients = {
-      { "enriched-iron", 5 },
+      { type = "item", name = "enriched-iron", amount = 5 },
     },
-    result = "iron-plate",
-    result_count = 5,
+    results = { { type = "item", name = "iron-plate", amount = 5 } },
     order = "b[iron-plate]-b[enriched-iron-plate]",
   },
   {
@@ -113,10 +108,9 @@ return {
     always_show_products = true,
     allow_productivity = true,
     ingredients = {
-      { "enriched-copper", 5 },
+      { type = "item", name = "enriched-copper", amount = 5 },
     },
-    result = "copper-plate",
-    result_count = 5,
+    results = { { type = "item", name = "copper-plate", amount = 5 } },
     order = "c[copper-plate]-b[enriched-copper-plate]",
   },
   {
@@ -139,10 +133,9 @@ return {
     always_show_products = true,
     allow_productivity = true,
     ingredients = {
-      { "enriched-rare-metals", 5 },
+      { type = "item", name = "enriched-rare-metals", amount = 5 },
     },
-    result = "rare-metals",
-    result_count = 5,
+    results = { { type = "item", name = "rare-metals", amount = 5 } },
     order = "c[rare-metals]-b[enriched-rare-metals]",
   },
   {
@@ -155,10 +148,9 @@ return {
     always_show_products = true,
     allow_productivity = true,
     ingredients = {
-      { "imersite-powder", 9 },
-      { "rare-metals", 6 },
+      { type = "item", name = "imersite-powder", amount = 9 },
+      { type = "item", name = "rare-metals", amount = 6 },
     },
-    result = "imersium-plate",
-    result_count = 3,
+    results = { { type = "item", name = "imersium-plate", amount = 3 } },
   },
 }

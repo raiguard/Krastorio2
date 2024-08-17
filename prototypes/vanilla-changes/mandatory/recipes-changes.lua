@@ -25,16 +25,16 @@ end
 --------------------------------------------------------------------
 
 -- Iron plate
-krastorio.recipes.replaceIngredient("iron-plate", "iron-ore", { "iron-ore", 2 })
-krastorio.recipes.replaceIngredient("iron-gear-wheel", "iron-plate", { "iron-plate", 1 })
+krastorio.recipes.replaceIngredient("iron-plate", "iron-ore", { type = "item", name = "iron-ore", amount = 2 })
+krastorio.recipes.replaceIngredient("iron-gear-wheel", "iron-plate", { type = "item", name = "iron-plate", amount = 1 })
 
 -- Copper plate
-krastorio.recipes.replaceIngredient("copper-plate", "copper-ore", { "copper-ore", 2 })
+krastorio.recipes.replaceIngredient("copper-plate", "copper-ore", { type = "item", name = "copper-ore", amount = 2 })
 
 -- rail
 krastorio.recipes.overrideIngredients("rail", {
-  { "steel-beam", 1 },
-  { "stone", 2 },
+  { type = "item", name = "steel-beam", amount = 1 },
+  { type = "item", name = "stone", amount = 2 },
 })
 
 -- Rocket fuel category
@@ -45,7 +45,7 @@ krastorio.recipes.addOrReplaceIngredient(
   "light-oil",
   { type = "fluid", name = "light-oil", amount = 30 }
 )
-krastorio.recipes.replaceIngredient("rocket-fuel", "solid-fuel", { "iron-plate", 1 })
+krastorio.recipes.replaceIngredient("rocket-fuel", "solid-fuel", { type = "item", name = "iron-plate", amount = 1 })
 krastorio.recipes.addIngredient("rocket-fuel", { type = "fluid", name = "oxygen", amount = 50 })
 
 data.raw.recipe["rocket-fuel"].crafting_machine_tint = {
@@ -62,52 +62,56 @@ krastorio.recipes.removeIngredient("slowdown-capsule", "electronic-circuit")
 
 -- Apply automation core to the early game items
 krastorio.recipes.overrideIngredients("burner-inserter", {
-  { "inserter-parts", 1 },
-  { "iron-plate", 1 },
+  { type = "item", name = "inserter-parts", amount = 1 },
+  { type = "item", name = "iron-plate", amount = 1 },
 })
 krastorio.recipes.overrideIngredients("inserter", {
-  { "inserter-parts", 1 },
-  { "automation-core", 1 },
+  { type = "item", name = "inserter-parts", amount = 1 },
+  { type = "item", name = "automation-core", amount = 1 },
 })
 krastorio.recipes.overrideIngredients("long-handed-inserter", {
-  { "inserter-parts", 1 },
-  { "automation-core", 1 },
-  { "iron-stick", 2 },
+  { type = "item", name = "inserter-parts", amount = 1 },
+  { type = "item", name = "automation-core", amount = 1 },
+  { type = "item", name = "iron-stick", amount = 2 },
 })
 krastorio.recipes.overrideIngredients("fast-inserter", {
-  { "inserter-parts", 1 },
-  { "electronic-circuit", 2 },
-  { "steel-plate", 1 },
+  { type = "item", name = "inserter-parts", amount = 1 },
+  { type = "item", name = "electronic-circuit", amount = 2 },
+  { type = "item", name = "steel-plate", amount = 1 },
 })
 krastorio.recipes.overrideIngredients("filter-inserter", {
-  { "inserter-parts", 1 },
-  { "electronic-circuit", 4 },
-  { "steel-plate", 1 },
+  { type = "item", name = "inserter-parts", amount = 1 },
+  { type = "item", name = "electronic-circuit", amount = 4 },
+  { type = "item", name = "steel-plate", amount = 1 },
 })
 krastorio.recipes.overrideIngredients("stack-inserter", {
-  { "inserter-parts", 1 },
-  { "advanced-circuit", 2 },
-  { "steel-plate", 1 },
-  { "steel-gear-wheel", 2 },
+  { type = "item", name = "inserter-parts", amount = 1 },
+  { type = "item", name = "advanced-circuit", amount = 2 },
+  { type = "item", name = "steel-plate", amount = 1 },
+  { type = "item", name = "steel-gear-wheel", amount = 2 },
 })
 krastorio.recipes.overrideIngredients("stack-filter-inserter", {
-  { "inserter-parts", 1 },
-  { "advanced-circuit", 4 },
-  { "steel-plate", 1 },
-  { "steel-gear-wheel", 2 },
+  { type = "item", name = "inserter-parts", amount = 1 },
+  { type = "item", name = "advanced-circuit", amount = 4 },
+  { type = "item", name = "steel-plate", amount = 1 },
+  { type = "item", name = "steel-gear-wheel", amount = 2 },
 })
 
 -- Chaning steel recipes
 krastorio.recipes.overrideIngredients("steel-plate", {
-  { "iron-plate", 10 },
-  { "coke", 2 },
+  { type = "item", name = "iron-plate", amount = 10 },
+  { type = "item", name = "coke", amount = 2 },
 })
 krastorio.recipes.overrideProducts("steel-plate", {
-  { "steel-plate", 5 },
+  { type = "item", name = "steel-plate", amount = 5 },
 })
 krastorio.recipes.setEnergyCost("steel-plate", 16)
 
-krastorio.recipes.replaceProduct("iron-gear-wheel", "iron-gear-wheel", { "iron-gear-wheel", 1 })
+krastorio.recipes.replaceProduct(
+  "iron-gear-wheel",
+  "iron-gear-wheel",
+  { type = "item", name = "iron-gear-wheel", amount = 1 }
+)
 
 -- Engine
 krastorio.recipes.convertIngredient("engine-unit", "steel-plate", "iron-plate")
@@ -117,56 +121,112 @@ krastorio.recipes.convertIngredient("engine-unit", "steel-plate", "iron-plate")
 -- if krastorio.recipes.exist("stone-brick") then
 --   data.raw.recipe["stone-brick"].subgroup = "raw-material"
 -- end
-krastorio.recipes.replaceIngredient("refined-concrete", "steel-plate", { "iron-beam", 5 })
+krastorio.recipes.replaceIngredient(
+  "refined-concrete",
+  "steel-plate",
+  { type = "item", name = "iron-beam", amount = 5 }
+)
 krastorio.recipes.removeIngredient("refined-concrete", "iron-stick")
 
 -- ROBOT/DRONES
-krastorio.recipes.replaceIngredient("flying-robot-frame", "electronic-circuit", { "electronic-components", 10 })
+krastorio.recipes.replaceIngredient(
+  "flying-robot-frame",
+  "electronic-circuit",
+  { type = "item", name = "electronic-components", amount = 10 }
+)
 
 -- Circuits
-krastorio.recipes.addIngredient("electronic-circuit", { "wood", 1 })
-krastorio.recipes.replaceIngredient("electronic-circuit", "iron-plate", { "iron-plate", 1 })
-krastorio.recipes.replaceIngredient("electronic-circuit", "copper-cable", { "copper-cable", 4 })
+krastorio.recipes.addIngredient("electronic-circuit", { type = "item", name = "wood", amount = 1 })
+krastorio.recipes.replaceIngredient(
+  "electronic-circuit",
+  "iron-plate",
+  { type = "item", name = "iron-plate", amount = 1 }
+)
+krastorio.recipes.replaceIngredient(
+  "electronic-circuit",
+  "copper-cable",
+  { type = "item", name = "copper-cable", amount = 4 }
+)
 krastorio.recipes.setEnergyCost("electronic-circuit", 2)
-krastorio.recipes.replaceProduct("electronic-circuit", "electronic-circuit", { "electronic-circuit", 2 })
+krastorio.recipes.replaceProduct(
+  "electronic-circuit",
+  "electronic-circuit",
+  { type = "item", name = "electronic-circuit", amount = 2 }
+)
 
-krastorio.recipes.replaceIngredient("advanced-circuit", "electronic-circuit", { "electronic-circuit", 4 })
-krastorio.recipes.replaceIngredient("advanced-circuit", "copper-cable", { "copper-cable", 4 })
-krastorio.recipes.replaceIngredient("advanced-circuit", "plastic-bar", { "electronic-components", 2 })
+krastorio.recipes.replaceIngredient(
+  "advanced-circuit",
+  "electronic-circuit",
+  { type = "item", name = "electronic-circuit", amount = 4 }
+)
+krastorio.recipes.replaceIngredient(
+  "advanced-circuit",
+  "copper-cable",
+  { type = "item", name = "copper-cable", amount = 4 }
+)
+krastorio.recipes.replaceIngredient(
+  "advanced-circuit",
+  "plastic-bar",
+  { type = "item", name = "electronic-components", amount = 2 }
+)
 krastorio.recipes.setEnergyCost("advanced-circuit", 4)
-krastorio.recipes.replaceProduct("advanced-circuit", "advanced-circuit", { "advanced-circuit", 2 })
+krastorio.recipes.replaceProduct(
+  "advanced-circuit",
+  "advanced-circuit",
+  { type = "item", name = "advanced-circuit", amount = 2 }
+)
 
 krastorio.recipes.removeIngredient("processing-unit", "electronic-circuit")
-krastorio.recipes.replaceIngredient("processing-unit", "advanced-circuit", { "advanced-circuit", 6 })
-krastorio.recipes.addIngredient("processing-unit", { "rare-metals", 3 })
+krastorio.recipes.replaceIngredient(
+  "processing-unit",
+  "advanced-circuit",
+  { type = "item", name = "advanced-circuit", amount = 6 }
+)
+krastorio.recipes.addIngredient("processing-unit", { type = "item", name = "rare-metals", amount = 3 })
 krastorio.recipes.replaceIngredient(
   "processing-unit",
   "sulfuric-acid",
   { type = "fluid", name = "sulfuric-acid", amount = 10 }
 )
 krastorio.recipes.setEnergyCost("processing-unit", 12)
-krastorio.recipes.replaceProduct("processing-unit", "processing-unit", { "processing-unit", 2 })
+krastorio.recipes.replaceProduct(
+  "processing-unit",
+  "processing-unit",
+  { type = "item", name = "processing-unit", amount = 2 }
+)
 
 -- --
 
-krastorio.recipes.replaceIngredient("repair-pack", "iron-gear-wheel", { "iron-plate", 2 })
-krastorio.recipes.replaceIngredient("repair-pack", "electronic-circuit", { "copper-plate", 2 })
-krastorio.recipes.addIngredient("repair-pack", { "stone", 2 })
+krastorio.recipes.replaceIngredient(
+  "repair-pack",
+  "iron-gear-wheel",
+  { type = "item", name = "iron-plate", amount = 2 }
+)
+krastorio.recipes.replaceIngredient(
+  "repair-pack",
+  "electronic-circuit",
+  { type = "item", name = "copper-plate", amount = 2 }
+)
+krastorio.recipes.addIngredient("repair-pack", { type = "item", name = "stone", amount = 2 })
 
 -- EQUIPMENTS
 krastorio.recipes.replaceIngredient(
   "personal-laser-defense-equipment",
   "processing-unit",
-  { "electronic-components", 50 }
+  { type = "item", name = "electronic-components", amount = 50 }
 )
 
 krastorio.recipes.replaceIngredient(
   "energy-shield-mk2-equipment",
   "energy-shield-equipment",
-  { "energy-shield-equipment", 5 }
+  { type = "item", name = "energy-shield-equipment", amount = 5 }
 )
 
-krastorio.recipes.replaceIngredient("low-density-structure", "copper-plate", { "copper-plate", 10 })
+krastorio.recipes.replaceIngredient(
+  "low-density-structure",
+  "copper-plate",
+  { type = "item", name = "copper-plate", amount = 10 }
+)
 
 -- MODULES
 -- Speed modules
@@ -174,24 +234,24 @@ krastorio.recipes.replaceIngredient("low-density-structure", "copper-plate", { "
 -- Speed module 1
 krastorio.recipes.setEnergyCost("speed-module", 15)
 krastorio.recipes.overrideIngredients("speed-module", {
-  { "electronic-circuit", 5 },
-  { "electronic-components", 10 },
+  { type = "item", name = "electronic-circuit", amount = 5 },
+  { type = "item", name = "electronic-components", amount = 10 },
 })
 
 -- Speed module 2
 krastorio.recipes.setEnergyCost("speed-module-2", 15)
 krastorio.recipes.overrideIngredients("speed-module-2", {
-  { "advanced-circuit", 5 },
-  { "electronic-circuit", 5 },
-  { "speed-module", 5 },
+  { type = "item", name = "advanced-circuit", amount = 5 },
+  { type = "item", name = "electronic-circuit", amount = 5 },
+  { type = "item", name = "speed-module", amount = 5 },
 })
 
 -- Speed module 3
 krastorio.recipes.setEnergyCost("speed-module-3", 15)
 krastorio.recipes.overrideIngredients("speed-module-3", {
-  { "processing-unit", 5 },
-  { "advanced-circuit", 5 },
-  { "speed-module-2", 5 },
+  { type = "item", name = "processing-unit", amount = 5 },
+  { type = "item", name = "advanced-circuit", amount = 5 },
+  { type = "item", name = "speed-module-2", amount = 5 },
 })
 
 -- Ammos
@@ -203,24 +263,24 @@ krastorio.recipes.convertIngredient("flamethrower-ammo", "steel-plate", "iron-pl
 -- Productivity module 1
 krastorio.recipes.setEnergyCost("productivity-module", 15)
 krastorio.recipes.overrideIngredients("productivity-module", {
-  { "electronic-circuit", 5 },
-  { "electronic-components", 10 },
+  { type = "item", name = "electronic-circuit", amount = 5 },
+  { type = "item", name = "electronic-components", amount = 10 },
 })
 
 -- Productivity module 2
 krastorio.recipes.setEnergyCost("productivity-module-2", 15)
 krastorio.recipes.overrideIngredients("productivity-module-2", {
-  { "advanced-circuit", 5 },
-  { "electronic-circuit", 5 },
-  { "productivity-module", 5 },
+  { type = "item", name = "advanced-circuit", amount = 5 },
+  { type = "item", name = "electronic-circuit", amount = 5 },
+  { type = "item", name = "productivity-module", amount = 5 },
 })
 
 -- Productivity module 3
 krastorio.recipes.setEnergyCost("productivity-module-3", 15)
 krastorio.recipes.overrideIngredients("productivity-module-3", {
-  { "processing-unit", 5 },
-  { "advanced-circuit", 5 },
-  { "productivity-module-2", 5 },
+  { type = "item", name = "processing-unit", amount = 5 },
+  { type = "item", name = "advanced-circuit", amount = 5 },
+  { type = "item", name = "productivity-module-2", amount = 5 },
 })
 
 ------------------------------------------------
@@ -229,24 +289,24 @@ krastorio.recipes.overrideIngredients("productivity-module-3", {
 -- Effectivity module 1
 krastorio.recipes.setEnergyCost("effectivity-module", 15)
 krastorio.recipes.overrideIngredients("effectivity-module", {
-  { "electronic-circuit", 5 },
-  { "electronic-components", 10 },
+  { type = "item", name = "electronic-circuit", amount = 5 },
+  { type = "item", name = "electronic-components", amount = 10 },
 })
 
 -- Effectivity module 2
 krastorio.recipes.setEnergyCost("effectivity-module-2", 15)
 krastorio.recipes.overrideIngredients("effectivity-module-2", {
-  { "advanced-circuit", 5 },
-  { "electronic-circuit", 5 },
-  { "effectivity-module", 5 },
+  { type = "item", name = "advanced-circuit", amount = 5 },
+  { type = "item", name = "electronic-circuit", amount = 5 },
+  { type = "item", name = "effectivity-module", amount = 5 },
 })
 
 -- Effectivity module 3
 krastorio.recipes.setEnergyCost("effectivity-module-3", 15)
 krastorio.recipes.overrideIngredients("effectivity-module-3", {
-  { "processing-unit", 5 },
-  { "advanced-circuit", 5 },
-  { "effectivity-module-2", 5 },
+  { type = "item", name = "processing-unit", amount = 5 },
+  { type = "item", name = "advanced-circuit", amount = 5 },
+  { type = "item", name = "effectivity-module-2", amount = 5 },
 })
 
 --------------------------------------------------------------------
@@ -291,7 +351,7 @@ for name, technology in pairs(data.raw.technology) do
             krastorio.recipes.replaceIngredient(
               effect.recipe,
               "electronic-circuit",
-              { "automation-core", math.ceil(count / 2) }
+              { type = "item", name = "automation-core", amount = math.ceil(count / 2) }
             )
           end
         end
@@ -302,58 +362,110 @@ end
 
 -- Exceptions
 krastorio.recipes.convertIngredient("fast-inserter", "automation-core", "electronic-circuit")
-krastorio.recipes.addOrReplaceIngredient("filter-inserter", "automation-core", { "electronic-circuit", 2 })
+krastorio.recipes.addOrReplaceIngredient(
+  "filter-inserter",
+  "automation-core",
+  { type = "item", name = "electronic-circuit", amount = 2 }
+)
 
 -- Lamp (glass)
 krastorio.recipes.convertIngredient("small-lamp", "automation-core", "glass")
 krastorio.recipes.addOrReplaceIngredient("small-lamp", { name = "glass", amount = 1 })
 
 -- Solar panel
-krastorio.recipes.replaceIngredient("solar-panel", "copper-plate", { "glass", 10 })
-krastorio.recipes.replaceIngredient("solar-panel", "steel-plate", { "steel-plate", 5 })
-krastorio.recipes.replaceIngredient("solar-panel", "electronic-circuit", { "electronic-circuit", 10 })
-krastorio.recipes.addIngredient("solar-panel", { "silicon", 5 })
+krastorio.recipes.replaceIngredient("solar-panel", "copper-plate", { type = "item", name = "glass", amount = 10 })
+krastorio.recipes.replaceIngredient("solar-panel", "steel-plate", { type = "item", name = "steel-plate", amount = 5 })
+krastorio.recipes.replaceIngredient(
+  "solar-panel",
+  "electronic-circuit",
+  { type = "item", name = "electronic-circuit", amount = 10 }
+)
+krastorio.recipes.addIngredient("solar-panel", { type = "item", name = "silicon", amount = 5 })
 
-krastorio.recipes.replaceIngredient("solar-panel", "iron-plate", { "iron-beam", 4 })
+krastorio.recipes.replaceIngredient("solar-panel", "iron-plate", { type = "item", name = "iron-beam", amount = 4 })
 
 -- Assembling machine tier 1
-krastorio.recipes.replaceIngredient("assembling-machine-1", "iron-plate", { "iron-beam", 4 })
+krastorio.recipes.replaceIngredient(
+  "assembling-machine-1",
+  "iron-plate",
+  { type = "item", name = "iron-beam", amount = 4 }
+)
 
 -- Electric mining drill 1
-krastorio.recipes.replaceIngredient("electric-mining-drill", "iron-plate", { "iron-beam", 2 })
+krastorio.recipes.replaceIngredient(
+  "electric-mining-drill",
+  "iron-plate",
+  { type = "item", name = "iron-beam", amount = 2 }
+)
 
 -- -- -- -- -- -- -- -- -- -- -- -- --
 
 -- Underground belt (Yellow tier 1)
-krastorio.recipes.replaceIngredient("underground-belt", "iron-plate", { "iron-beam", 2 })
+krastorio.recipes.replaceIngredient("underground-belt", "iron-plate", { type = "item", name = "iron-beam", amount = 2 })
 
 -- Splitter (Yellow tier 1)
-krastorio.recipes.replaceIngredient("splitter", "iron-plate", { "iron-gear-wheel", 5 })
-krastorio.recipes.replaceIngredient("splitter", "automation-core", { "automation-core", 1 })
+krastorio.recipes.replaceIngredient("splitter", "iron-plate", { type = "item", name = "iron-gear-wheel", amount = 5 })
+krastorio.recipes.replaceIngredient(
+  "splitter",
+  "automation-core",
+  { type = "item", name = "automation-core", amount = 1 }
+)
 
 -- Fast belt (Red tier 2)
-krastorio.recipes.replaceIngredient("fast-transport-belt", "iron-gear-wheel", { "iron-gear-wheel", 4 })
+krastorio.recipes.replaceIngredient(
+  "fast-transport-belt",
+  "iron-gear-wheel",
+  { type = "item", name = "iron-gear-wheel", amount = 4 }
+)
 
 -- Fast underground belt (Red tier 2)
 -- krastorio.recipes.convertIngredient("fast-underground-belt", "iron-gear-wheel", "steel-gear-wheel")
-krastorio.recipes.replaceIngredient("fast-underground-belt", "iron-gear-wheel", { "fast-transport-belt", 10 })
+krastorio.recipes.replaceIngredient(
+  "fast-underground-belt",
+  "iron-gear-wheel",
+  { type = "item", name = "fast-transport-belt", amount = 10 }
+)
 
 -- Fast splitter (Red tier 2)
-krastorio.recipes.replaceIngredient("fast-splitter", "iron-gear-wheel", { "iron-gear-wheel", 4 })
-krastorio.recipes.replaceIngredient("fast-splitter", "electronic-circuit", { "electronic-circuit", 2 })
+krastorio.recipes.replaceIngredient(
+  "fast-splitter",
+  "iron-gear-wheel",
+  { type = "item", name = "iron-gear-wheel", amount = 4 }
+)
+krastorio.recipes.replaceIngredient(
+  "fast-splitter",
+  "electronic-circuit",
+  { type = "item", name = "electronic-circuit", amount = 2 }
+)
 
 -- Express belt (Red tier 3)
-krastorio.recipes.replaceIngredient("express-transport-belt", "iron-gear-wheel", { "steel-gear-wheel", 4 })
+krastorio.recipes.replaceIngredient(
+  "express-transport-belt",
+  "iron-gear-wheel",
+  { type = "item", name = "steel-gear-wheel", amount = 4 }
+)
 
 -- Express underground belt (Red tier 3)
-krastorio.recipes.replaceIngredient("express-underground-belt", "iron-gear-wheel", { "express-transport-belt", 20 })
+krastorio.recipes.replaceIngredient(
+  "express-underground-belt",
+  "iron-gear-wheel",
+  { type = "item", name = "express-transport-belt", amount = 20 }
+)
 krastorio.recipes.removeIngredient("express-underground-belt", "lubricant")
 krastorio.recipes.setCategoryIfExist("express-underground-belt", "crafting")
 
 -- Express splitter (Red tier 3)
-krastorio.recipes.replaceIngredient("express-splitter", "iron-gear-wheel", { "steel-gear-wheel", 4 })
+krastorio.recipes.replaceIngredient(
+  "express-splitter",
+  "iron-gear-wheel",
+  { type = "item", name = "steel-gear-wheel", amount = 4 }
+)
 krastorio.recipes.removeIngredient("express-splitter", "lubricant")
-krastorio.recipes.replaceIngredient("express-splitter", "advanced-circuit", { "electronic-components", 4 })
+krastorio.recipes.replaceIngredient(
+  "express-splitter",
+  "advanced-circuit",
+  { type = "item", name = "electronic-components", amount = 4 }
+)
 krastorio.recipes.setCategoryIfExist("express-splitter", "crafting")
 
 -- Heat pipe
@@ -361,12 +473,16 @@ krastorio.recipes.convertIngredient("heat-pipe", "steel-plate", "quartz")
 
 -- Turrets
 krastorio.recipes.addIngredient("laser-turret", { name = "quartz", amount = 5 })
-krastorio.recipes.replaceIngredient("laser-turret", "steel-plate", { "steel-plate", 15 })
+krastorio.recipes.replaceIngredient("laser-turret", "steel-plate", { type = "item", name = "steel-plate", amount = 15 })
 
-krastorio.recipes.replaceIngredient("flamethrower-turret", "steel-plate", { "steel-plate", 20 })
+krastorio.recipes.replaceIngredient(
+  "flamethrower-turret",
+  "steel-plate",
+  { type = "item", name = "steel-plate", amount = 20 }
+)
 
 -- Storage tank
-krastorio.recipes.replaceIngredient("storage-tank", "iron-plate", { "iron-plate", 10 })
+krastorio.recipes.replaceIngredient("storage-tank", "iron-plate", { type = "item", name = "iron-plate", amount = 10 })
 krastorio.recipes.convertIngredient("storage-tank", "steel-plate", "iron-beam")
 
 -- Pump
@@ -374,45 +490,81 @@ krastorio.recipes.convertIngredient("storage-tank", "steel-plate", "iron-beam")
 
 -- Pumpjack
 krastorio.recipes.convertIngredient("pumpjack", "iron-gear-wheel", "steel-gear-wheel")
-krastorio.recipes.replaceIngredient("pumpjack", "steel-plate", { "steel-beam", 4 })
-krastorio.recipes.replaceIngredient("pumpjack", "iron-plate", { "steel-beam", 4 })
+krastorio.recipes.replaceIngredient("pumpjack", "steel-plate", { type = "item", name = "steel-beam", amount = 4 })
+krastorio.recipes.replaceIngredient("pumpjack", "iron-plate", { type = "item", name = "steel-beam", amount = 4 })
 
 -- Oil refinery
-krastorio.recipes.replaceIngredient("oil-refinery", "steel-plate", { "steel-beam", 4 })
+krastorio.recipes.replaceIngredient("oil-refinery", "steel-plate", { type = "item", name = "steel-beam", amount = 4 })
 krastorio.recipes.convertIngredient("oil-refinery", "iron-gear-wheel", "steel-gear-wheel")
 
 -- Chemical plant
-krastorio.recipes.replaceIngredient("chemical-plant", "steel-plate", { "steel-beam", 4 })
+krastorio.recipes.replaceIngredient("chemical-plant", "steel-plate", { type = "item", name = "steel-beam", amount = 4 })
 krastorio.recipes.convertIngredient("chemical-plant", "iron-gear-wheel", "steel-gear-wheel")
 
 -- Poles
-krastorio.recipes.replaceIngredient("small-electric-pole", "copper-cable", { "copper-cable", 1 })
-krastorio.recipes.replaceProduct("small-electric-pole", "small-electric-pole", { "small-electric-pole", 1 })
+krastorio.recipes.replaceIngredient(
+  "small-electric-pole",
+  "copper-cable",
+  { type = "item", name = "copper-cable", amount = 1 }
+)
+krastorio.recipes.replaceProduct(
+  "small-electric-pole",
+  "small-electric-pole",
+  { type = "item", name = "small-electric-pole", amount = 1 }
+)
 
-krastorio.recipes.replaceIngredient("medium-electric-pole", "copper-plate", { "copper-cable", 4 })
-krastorio.recipes.replaceIngredient("medium-electric-pole", "steel-plate", { "iron-beam", 2 })
+krastorio.recipes.replaceIngredient(
+  "medium-electric-pole",
+  "copper-plate",
+  { type = "item", name = "copper-cable", amount = 4 }
+)
+krastorio.recipes.replaceIngredient(
+  "medium-electric-pole",
+  "steel-plate",
+  { type = "item", name = "iron-beam", amount = 2 }
+)
 
-krastorio.recipes.replaceIngredient("big-electric-pole", "copper-plate", { "copper-cable", 8 })
-krastorio.recipes.replaceIngredient("big-electric-pole", "steel-plate", { "steel-beam", 4 })
+krastorio.recipes.replaceIngredient(
+  "big-electric-pole",
+  "copper-plate",
+  { type = "item", name = "copper-cable", amount = 8 }
+)
+krastorio.recipes.replaceIngredient(
+  "big-electric-pole",
+  "steel-plate",
+  { type = "item", name = "steel-beam", amount = 4 }
+)
 
-krastorio.recipes.replaceIngredient("substation", "copper-plate", { "copper-cable", 16 })
-krastorio.recipes.replaceIngredient("substation", "steel-plate", { "steel-beam", 8 })
+krastorio.recipes.replaceIngredient("substation", "copper-plate", { type = "item", name = "copper-cable", amount = 16 })
+krastorio.recipes.replaceIngredient("substation", "steel-plate", { type = "item", name = "steel-beam", amount = 8 })
 
-krastorio.recipes.replaceIngredient("roboport", "steel-plate", { "steel-beam", 20 })
+krastorio.recipes.replaceIngredient("roboport", "steel-plate", { type = "item", name = "steel-beam", amount = 20 })
 
 -- Vanilla Lab
-krastorio.recipes.replaceIngredient("lab", "electronic-circuit", { "iron-beam", 10 })
-krastorio.recipes.replaceIngredient("lab", "iron-gear-wheel", { "copper-plate", 10 })
-krastorio.recipes.replaceIngredient("lab", "transport-belt", { "copper-cable", 10 })
+krastorio.recipes.replaceIngredient("lab", "electronic-circuit", { type = "item", name = "iron-beam", amount = 10 })
+krastorio.recipes.replaceIngredient("lab", "iron-gear-wheel", { type = "item", name = "copper-plate", amount = 10 })
+krastorio.recipes.replaceIngredient("lab", "transport-belt", { type = "item", name = "copper-cable", amount = 10 })
 
 -- Nuclear reactor
 data.raw.recipe["nuclear-reactor"].energy_required = 120
 data.raw.recipe["nuclear-reactor"].category = "crafting-with-fluid"
-krastorio.recipes.replaceIngredient("nuclear-reactor", "concrete", { "concrete", 500 }) --it's not a mistake. it's for future rebalance
-krastorio.recipes.replaceIngredient("nuclear-reactor", "steel-plate", { "steel-plate", 200 }) --it's not a mistake. it's for future rebalance
-krastorio.recipes.replaceIngredient("nuclear-reactor", "advanced-circuit", { "advanced-circuit", 200 }) --it's not a mistake. it's for future rebalance
-krastorio.recipes.replaceIngredient("nuclear-reactor", "copper-plate", { "heat-pipe", 20 })
-krastorio.recipes.addIngredient("nuclear-reactor", { "rare-metals", 200 })
+krastorio.recipes.replaceIngredient("nuclear-reactor", "concrete", { type = "item", name = "concrete", amount = 500 }) --it's not a mistake. it's for future rebalance
+krastorio.recipes.replaceIngredient(
+  "nuclear-reactor",
+  "steel-plate",
+  { type = "item", name = "steel-plate", amount = 200 }
+) --it's not a mistake. it's for future rebalance
+krastorio.recipes.replaceIngredient(
+  "nuclear-reactor",
+  "advanced-circuit",
+  { type = "item", name = "advanced-circuit", amount = 200 }
+) --it's not a mistake. it's for future rebalance
+krastorio.recipes.replaceIngredient(
+  "nuclear-reactor",
+  "copper-plate",
+  { type = "item", name = "heat-pipe", amount = 20 }
+)
+krastorio.recipes.addIngredient("nuclear-reactor", { type = "item", name = "rare-metals", amount = 200 })
 
 -- -- Turbines
 ----------------------------
@@ -422,25 +574,45 @@ krastorio.recipes.setEnergyCost("steam-engine", 5)
 
 -- Steam turbine
 krastorio.recipes.setEnergyCost("steam-turbine", 10)
-krastorio.recipes.addIngredient("steam-turbine", { "steam-engine", 2 })
-krastorio.recipes.replaceIngredient("steam-turbine", "iron-gear-wheel", { "iron-gear-wheel", 14 })
-krastorio.recipes.replaceIngredient("steam-turbine", "pipe", { "pipe", 10 })
+krastorio.recipes.addIngredient("steam-turbine", { type = "item", name = "steam-engine", amount = 2 })
+krastorio.recipes.replaceIngredient(
+  "steam-turbine",
+  "iron-gear-wheel",
+  { type = "item", name = "iron-gear-wheel", amount = 14 }
+)
+krastorio.recipes.replaceIngredient("steam-turbine", "pipe", { type = "item", name = "pipe", amount = 10 })
 
 -- Assembling machine
 krastorio.recipes.setEnergyCost("assembling-machine-1", 1)
 krastorio.recipes.setEnergyCost("assembling-machine-2", 2)
-krastorio.recipes.replaceIngredient("assembling-machine-3", "assembling-machine-2", { "assembling-machine-2", 1 })
-krastorio.recipes.replaceIngredient("assembling-machine-3", "speed-module", { "speed-module", 2 })
-krastorio.recipes.addIngredient("assembling-machine-3", { "advanced-circuit", 3 })
-krastorio.recipes.addIngredient("assembling-machine-3", { "steel-gear-wheel", 5 })
+krastorio.recipes.replaceIngredient(
+  "assembling-machine-3",
+  "assembling-machine-2",
+  { type = "item", name = "assembling-machine-2", amount = 1 }
+)
+krastorio.recipes.replaceIngredient(
+  "assembling-machine-3",
+  "speed-module",
+  { type = "item", name = "speed-module", amount = 2 }
+)
+krastorio.recipes.addIngredient("assembling-machine-3", { type = "item", name = "advanced-circuit", amount = 3 })
+krastorio.recipes.addIngredient("assembling-machine-3", { type = "item", name = "steel-gear-wheel", amount = 5 })
 krastorio.recipes.setEnergyCost("assembling-machine-3", 3)
 
 -- TURRETS
 
 -- Gun turret
-krastorio.recipes.replaceIngredient("gun-turret", "iron-plate", { "iron-beam", 5 })
-krastorio.recipes.replaceIngredient("gun-turret", "copper-plate", { "automation-core", 3 })
-krastorio.recipes.replaceIngredient("gun-turret", "iron-gear-wheel", { "iron-gear-wheel", 4 })
+krastorio.recipes.replaceIngredient("gun-turret", "iron-plate", { type = "item", name = "iron-beam", amount = 5 })
+krastorio.recipes.replaceIngredient(
+  "gun-turret",
+  "copper-plate",
+  { type = "item", name = "automation-core", amount = 3 }
+)
+krastorio.recipes.replaceIngredient(
+  "gun-turret",
+  "iron-gear-wheel",
+  { type = "item", name = "iron-gear-wheel", amount = 4 }
+)
 
 ----------------------------
 
@@ -448,7 +620,7 @@ krastorio.recipes.replaceIngredient("gun-turret", "iron-gear-wheel", { "iron-gea
 -- -- -- VEHICLES
 --------------------------------------------------------------------
 
-krastorio.recipes.replaceIngredient("cargo-wagon", "steel-plate", { "steel-beam", 10 })
+krastorio.recipes.replaceIngredient("cargo-wagon", "steel-plate", { type = "item", name = "steel-beam", amount = 10 })
 
 --------------------------------------------------------------------
 -- -- -- SPECIAL
@@ -459,7 +631,11 @@ krastorio.recipes.removeIngredient("red-wire", "electronic-circuit")
 krastorio.recipes.removeIngredient("green-wire", "electronic-circuit")
 
 krastorio.recipes.convertIngredient("spidertron", "raw-fish", "ai-core")
-krastorio.recipes.replaceIngredient("spidertron", "fusion-reactor-equipment", { "fusion-reactor-equipment", 1 })
+krastorio.recipes.replaceIngredient(
+  "spidertron",
+  "fusion-reactor-equipment",
+  { type = "item", name = "fusion-reactor-equipment", amount = 1 }
+)
 
 --------------------------------------------------------------------
 -- -- -- NUCLEAR
@@ -502,21 +678,37 @@ krastorio.recipes.replaceIngredient("kovarex-enrichment-process", "uranium-235",
 krastorio.recipes.replaceIngredient("kovarex-enrichment-process", "uranium-238", { name = "uranium-238", amount = 3 })
 krastorio.recipes.setEnergyCost("kovarex-enrichment-process", 60)
 
-krastorio.recipes.replaceProduct("kovarex-enrichment-process", "uranium-235", { "uranium-235", 31 })
-krastorio.recipes.replaceProduct("kovarex-enrichment-process", "uranium-238", { "stone", 2 })
+krastorio.recipes.replaceProduct(
+  "kovarex-enrichment-process",
+  "uranium-235",
+  { type = "item", name = "uranium-235", amount = 31 }
+)
+krastorio.recipes.replaceProduct(
+  "kovarex-enrichment-process",
+  "uranium-238",
+  { type = "item", name = "stone", amount = 2 }
+)
 
 krastorio.recipes.replaceIngredient("uranium-fuel-cell", "uranium-235", { name = "uranium-235", amount = 2 })
 krastorio.recipes.replaceIngredient("uranium-fuel-cell", "uranium-238", { name = "uranium-238", amount = 10 })
 krastorio.recipes.replaceIngredient("uranium-fuel-cell", "iron-plate", { name = "steel-plate", amount = 1 })
-krastorio.recipes.replaceProduct("uranium-fuel-cell", "uranium-fuel-cell", { "uranium-fuel-cell", 1 })
+krastorio.recipes.replaceProduct(
+  "uranium-fuel-cell",
+  "uranium-fuel-cell",
+  { type = "item", name = "uranium-fuel-cell", amount = 1 }
+)
 
 krastorio.recipes.replaceIngredient(
   "nuclear-fuel-reprocessing",
   "used-up-uranium-fuel-cell",
   { name = "used-up-uranium-fuel-cell", amount = 1 }
 )
-krastorio.recipes.replaceProduct("nuclear-fuel-reprocessing", "uranium-238", { "uranium-238", 6 })
-krastorio.recipes.addProduct("nuclear-fuel-reprocessing", { "stone", 4 })
+krastorio.recipes.replaceProduct(
+  "nuclear-fuel-reprocessing",
+  "uranium-238",
+  { type = "item", name = "uranium-238", amount = 6 }
+)
+krastorio.recipes.addProduct("nuclear-fuel-reprocessing", { type = "item", name = "stone", amount = 4 })
 krastorio.recipes.addProduct(
   "nuclear-fuel-reprocessing",
   { type = "item", name = "tritium", probability = 0.15, amount = 1 }
@@ -524,27 +716,59 @@ krastorio.recipes.addProduct(
 
 -- More realistic weapons craft
 
-krastorio.recipes.addIngredient("atomic-bomb", { "heavy-rocket", 1 })
-krastorio.recipes.replaceIngredient("atomic-bomb", "uranium-235", { "uranium-235", 20 })
+krastorio.recipes.addIngredient("atomic-bomb", { type = "item", name = "heavy-rocket", amount = 1 })
+krastorio.recipes.replaceIngredient("atomic-bomb", "uranium-235", { type = "item", name = "uranium-235", amount = 20 })
 krastorio.recipes.setEnergyCost("atomic-bomb", 10)
 
-krastorio.recipes.replaceIngredient("pistol", "iron-plate", { "iron-plate", 2 })
-krastorio.recipes.replaceIngredient("pistol", "copper-plate", { "copper-plate", 1 })
+krastorio.recipes.replaceIngredient("pistol", "iron-plate", { type = "item", name = "iron-plate", amount = 2 })
+krastorio.recipes.replaceIngredient("pistol", "copper-plate", { type = "item", name = "copper-plate", amount = 1 })
 
-krastorio.recipes.replaceIngredient("piercing-shotgun-shell", "shotgun-shell", { "shotgun-shell", 1 })
-krastorio.recipes.replaceIngredient("piercing-shotgun-shell", "steel-plate", { "steel-plate", 3 })
+krastorio.recipes.replaceIngredient(
+  "piercing-shotgun-shell",
+  "shotgun-shell",
+  { type = "item", name = "shotgun-shell", amount = 1 }
+)
+krastorio.recipes.replaceIngredient(
+  "piercing-shotgun-shell",
+  "steel-plate",
+  { type = "item", name = "steel-plate", amount = 3 }
+)
 krastorio.recipes.removeIngredient("piercing-shotgun-shell", "copper-plate")
 
-krastorio.recipes.replaceIngredient("submachine-gun", "iron-plate", { "iron-plate", 3 })
-krastorio.recipes.replaceIngredient("submachine-gun", "copper-plate", { "copper-plate", 2 })
-krastorio.recipes.replaceIngredient("submachine-gun", "iron-gear-wheel", { "iron-gear-wheel", 5 })
+krastorio.recipes.replaceIngredient("submachine-gun", "iron-plate", { type = "item", name = "iron-plate", amount = 3 })
+krastorio.recipes.replaceIngredient(
+  "submachine-gun",
+  "copper-plate",
+  { type = "item", name = "copper-plate", amount = 2 }
+)
+krastorio.recipes.replaceIngredient(
+  "submachine-gun",
+  "iron-gear-wheel",
+  { type = "item", name = "iron-gear-wheel", amount = 5 }
+)
 
-krastorio.recipes.replaceIngredient("shotgun", "wood", { "wood", 2 })
-krastorio.recipes.replaceIngredient("shotgun", "iron-plate", { "iron-plate", 3 })
-krastorio.recipes.replaceIngredient("shotgun", "copper-plate", { "copper-plate", 2 })
-krastorio.recipes.replaceIngredient("shotgun", "iron-gear-wheel", { "iron-gear-wheel", 3 })
+krastorio.recipes.replaceIngredient("shotgun", "wood", { type = "item", name = "wood", amount = 2 })
+krastorio.recipes.replaceIngredient("shotgun", "iron-plate", { type = "item", name = "iron-plate", amount = 3 })
+krastorio.recipes.replaceIngredient("shotgun", "copper-plate", { type = "item", name = "copper-plate", amount = 2 })
+krastorio.recipes.replaceIngredient(
+  "shotgun",
+  "iron-gear-wheel",
+  { type = "item", name = "iron-gear-wheel", amount = 3 }
+)
 
-krastorio.recipes.replaceIngredient("combat-shotgun", "wood", { "wood", 3 })
-krastorio.recipes.replaceIngredient("combat-shotgun", "steel-plate", { "steel-plate", 4 })
-krastorio.recipes.replaceIngredient("combat-shotgun", "copper-plate", { "copper-plate", 2 })
-krastorio.recipes.replaceIngredient("combat-shotgun", "iron-gear-wheel", { "iron-gear-wheel", 3 })
+krastorio.recipes.replaceIngredient("combat-shotgun", "wood", { type = "item", name = "wood", amount = 3 })
+krastorio.recipes.replaceIngredient(
+  "combat-shotgun",
+  "steel-plate",
+  { type = "item", name = "steel-plate", amount = 4 }
+)
+krastorio.recipes.replaceIngredient(
+  "combat-shotgun",
+  "copper-plate",
+  { type = "item", name = "copper-plate", amount = 2 }
+)
+krastorio.recipes.replaceIngredient(
+  "combat-shotgun",
+  "iron-gear-wheel",
+  { type = "item", name = "iron-gear-wheel", amount = 3 }
+)

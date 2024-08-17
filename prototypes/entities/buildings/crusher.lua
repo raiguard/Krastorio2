@@ -86,7 +86,7 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 20,
+      emissions_per_minute = { pollution = 20 },
     },
 
     water_reflection = {
@@ -103,7 +103,7 @@ data:extend({
       orientation_to_variation = false,
     },
 
-    energy_usage = "225KW",
+    energy_usage = "225kW",
     module_specification = { module_slots = 4, module_info_icon_shift = { 0, 1.7 }, module_info_icon_scale = 1 },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     --open_sound = sounds.machine_open,

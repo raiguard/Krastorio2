@@ -196,11 +196,11 @@ return {
     always_show_made_in = true,
     category = "fuel-refinery",
     ingredients = {
-      { "iron-plate", 1 },
+      { type = "item", name = "iron-plate", amount = 1 },
       { type = "fluid", name = "ammonia", amount = 50 },
       { type = "fluid", name = "oxygen", amount = 50 },
     },
-    result = "rocket-fuel",
+    results = { { type = "item", name = "rocket-fuel", amount = 1 } },
     crafting_machine_tint = {
       primary = { r = 0.261, g = 0.200, b = 0.650, a = 0.100 },
       secondary = { r = 0.211, g = 0.447, b = 0.670, a = 0.250 },
@@ -223,11 +223,11 @@ return {
     always_show_made_in = true,
     category = "fuel-refinery",
     ingredients = {
-      { "iron-plate", 1 },
+      { type = "item", name = "iron-plate", amount = 1 },
       { type = "fluid", name = "hydrogen-chloride", amount = 50 },
       { type = "fluid", name = "oxygen", amount = 50 },
     },
-    result = "rocket-fuel",
+    results = { { type = "item", name = "rocket-fuel", amount = 1 } },
     crafting_machine_tint = {
       primary = { r = 0.421, g = 0.720, b = 0.350, a = 0.100 },
       secondary = { r = 0.541, g = 0.797, b = 0.370, a = 0.250 },

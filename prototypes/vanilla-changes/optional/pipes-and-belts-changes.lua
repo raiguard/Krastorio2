@@ -2,13 +2,16 @@
 
 if krastorio.general.getSafeSettingValue("kr-pipes-and-belts-changes") then
   -- -- Pipes
+  -- TODO: Only override max_underground_distance
   data.raw["pipe-to-ground"]["pipe-to-ground"].fluid_box = {
-    base_area = 1,
+    volume = 100,
     pipe_covers = pipecoverspictures(),
     pipe_connections = {
-      { position = { 0, -1 } },
+      { direction = defines.direction.north, position = { 0, 0 } },
       {
-        position = { 0, 1 },
+        direction = defines.direction.south,
+        position = { 0, 0 },
+        connection_type = "underground",
         max_underground_distance = 20,
       },
     },

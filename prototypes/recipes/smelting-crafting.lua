@@ -22,10 +22,9 @@ return {
     hide_from_player_crafting = true,
     always_show_made_in = true,
     ingredients = {
-      { "copper-ore", 2 },
+      { type = "item", name = "copper-ore", amount = 2 },
     },
-    result = "copper-cable",
-    result_count = 2,
+    results = { { type = "item", name = "copper-cable", amount = 2 } },
   },
   {
     type = "recipe",
@@ -39,10 +38,9 @@ return {
     hide_from_player_crafting = true,
     always_show_made_in = true,
     ingredients = {
-      { "enriched-copper", 1 },
+      { type = "item", name = "enriched-copper", amount = 1 },
     },
-    result = "copper-cable",
-    result_count = 2,
+    results = { { type = "item", name = "copper-cable", amount = 2 } },
   },
   -- Irons
   {
@@ -57,10 +55,9 @@ return {
     hide_from_player_crafting = true,
     always_show_made_in = true,
     ingredients = {
-      { "iron-ore", 2 },
+      { type = "item", name = "iron-ore", amount = 2 },
     },
-    result = "iron-stick",
-    result_count = 2,
+    results = { { type = "item", name = "iron-stick", amount = 2 } },
   },
   {
     type = "recipe",
@@ -74,10 +71,9 @@ return {
     hide_from_player_crafting = true,
     always_show_made_in = true,
     ingredients = {
-      { "enriched-iron", 1 },
+      { type = "item", name = "enriched-iron", amount = 1 },
     },
-    result = "iron-stick",
-    result_count = 2,
+    results = { { type = "item", name = "iron-stick", amount = 2 } },
   },
   {
     type = "recipe",
@@ -91,10 +87,9 @@ return {
     hide_from_player_crafting = true,
     always_show_made_in = true,
     ingredients = {
-      { "iron-ore", 2 },
+      { type = "item", name = "iron-ore", amount = 2 },
     },
-    result = "iron-gear-wheel",
-    result_count = 1,
+    results = { { type = "item", name = "iron-gear-wheel", amount = 1 } },
   },
   {
     type = "recipe",
@@ -108,10 +103,9 @@ return {
     hide_from_player_crafting = true,
     always_show_made_in = true,
     ingredients = {
-      { "enriched-iron", 1 },
+      { type = "item", name = "enriched-iron", amount = 1 },
     },
-    result = "iron-gear-wheel",
-    result_count = 1,
+    results = { { type = "item", name = "iron-gear-wheel", amount = 1 } },
   },
   {
     type = "recipe",
@@ -125,9 +119,9 @@ return {
     hide_from_player_crafting = true,
     always_show_made_in = true,
     ingredients = {
-      { "iron-ore", 4 },
+      { type = "item", name = "iron-ore", amount = 4 },
     },
-    result = "iron-beam",
+    results = { { type = "item", name = "iron-beam", amount = 1 } },
   },
   {
     type = "recipe",
@@ -141,9 +135,9 @@ return {
     hide_from_player_crafting = true,
     always_show_made_in = true,
     ingredients = {
-      { "enriched-iron", 4 },
+      { type = "item", name = "enriched-iron", amount = 4 },
     },
-    result = "iron-beam",
+    results = { { type = "item", name = "iron-beam", amount = 1 } },
   },
   -- Steels
   {
@@ -158,11 +152,10 @@ return {
     hide_from_player_crafting = true,
     always_show_made_in = true,
     ingredients = {
-      { "iron-plate", 10 },
-      { "coke", 1 },
+      { type = "item", name = "iron-plate", amount = 10 },
+      { type = "item", name = "coke", amount = 1 },
     },
-    result = "steel-gear-wheel",
-    result_count = 5,
+    results = { { type = "item", name = "steel-gear-wheel", amount = 5 } },
   },
   {
     type = "recipe",
@@ -176,11 +169,10 @@ return {
     hide_from_player_crafting = true,
     always_show_made_in = true,
     ingredients = {
-      { "iron-plate", 20 },
-      { "coke", 4 },
+      { type = "item", name = "iron-plate", amount = 20 },
+      { type = "item", name = "coke", amount = 4 },
     },
-    result = "steel-beam",
-    result_count = 5,
+    results = { { type = "item", name = "steel-beam", amount = 5 } },
   },
   -- Imersiums
   {
@@ -195,11 +187,10 @@ return {
     hide_from_player_crafting = true,
     always_show_made_in = true,
     ingredients = {
-      { "imersite-powder", 3 },
-      { "rare-metals", 2 },
+      { type = "item", name = "imersite-powder", amount = 3 },
+      { type = "item", name = "rare-metals", amount = 2 },
     },
-    result = "imersium-gear-wheel",
-    result_count = 1,
+    results = { { type = "item", name = "imersium-gear-wheel", amount = 1 } },
   },
   {
     type = "recipe",
@@ -213,11 +204,10 @@ return {
     hide_from_player_crafting = true,
     always_show_made_in = true,
     ingredients = {
-      { "imersite-powder", 6 },
-      { "rare-metals", 4 },
+      { type = "item", name = "imersite-powder", amount = 6 },
+      { type = "item", name = "rare-metals", amount = 4 },
     },
-    result = "imersium-beam",
-    result_count = 1,
+    results = { { type = "item", name = "imersium-beam", amount = 1 } },
   },
   -- Other
   {
@@ -231,11 +221,10 @@ return {
     hide_from_player_crafting = true,
     always_show_made_in = true,
     ingredients = {
-      { "plastic-bar", 5 },
-      { "stone", 12 },
+      { type = "item", name = "plastic-bar", amount = 5 },
+      { type = "item", name = "stone", amount = 12 },
       { type = "fluid", name = "water", amount = 20 },
     },
-    result = "electronic-components",
-    result_count = 6,
+    results = { { type = "item", name = "electronic-components", amount = 6 } },
   },
 }

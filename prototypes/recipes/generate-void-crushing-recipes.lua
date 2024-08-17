@@ -33,8 +33,8 @@ for type_name in pairs(defines.prototypes.item) do
             hidden = true,
             hide_from_stats = true,
             energy_required = 2,
-            ingredients = { { item_name, 1 } },
-            results = { { "kr-void", 0 } },
+            ingredients = { { type = "item", name = item_name, amount = 1 } },
+            results = { { type = "item", name = "kr-void", amount = 0 } },
           },
         })
       end

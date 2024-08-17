@@ -21,9 +21,10 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         pipe_picture = kr_pipe_path,
-        base_area = 5,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0.5, 1.5 } } },
+        volume = 500,
+        pipe_connections = {
+          { flow_direction = "input", direction = defines.direction.south, position = { 0.5, 0.5 } },
+        },
       },
       off_when_no_fluid_recipe = false,
     },
@@ -230,7 +231,7 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 5,
+      emissions_per_minute = { pollution = 5 },
     },
 
     water_reflection = {

@@ -182,7 +182,7 @@ data:extend({
     collision_box = { { -2.65, -1.9 }, { 2.65, 3.2 } },
     selection_box = { { -3, -2 }, { 3, 3.4 } },
     drawing_box = { { -3, -3 }, { 3, 3 } },
-    collision_mask = { "item-layer", "object-layer", "water-tile" },
+    collision_mask = { layers = { ["item-layer"] = true, ["object-layer"] = true, ["water-tile"] = true } },
     resistances = {
       { type = "physical", percent = 75 },
       { type = "fire", percent = 75 },
@@ -227,7 +227,7 @@ local function collision_entity(collision_box)
     flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
     collision_box = collision_box,
     picture = { filename = "__core__/graphics/empty.png", size = 1 },
-    collision_mask = { "player-layer" },
+    collision_mask = { layers = { ["player-layer"] = true } },
   }
 end
 
@@ -254,7 +254,7 @@ data:extend({
     type = "simple-entity",
     name = "kr-planetary-teleporter-front-layer",
     flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
-    collision_mask = {},
+    collision_mask = { layers = {} },
     render_layer = "higher-object-above",
     picture = {
       layers = {
@@ -278,7 +278,7 @@ data:extend({
     icon = kr_entities_icons_path .. "planetary-teleporter.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    collision_mask = {},
+    collision_mask = { layers = {} },
     call_for_help_radius = 0,
     folded_animation = {
       north = empty_animation(),

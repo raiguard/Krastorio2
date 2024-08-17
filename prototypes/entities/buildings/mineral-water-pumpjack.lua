@@ -16,16 +16,17 @@ data:extend({
     drawing_box = { { -1.6, -2.5 }, { 1.5, 1.6 } },
     energy_source = {
       type = "electric",
-      emissions_per_minute = 10,
+      emissions_per_minute = { pollution = 10 },
       usage_priority = "secondary-input",
     },
     output_fluid_box = {
-      base_area = 1,
-      base_level = 1,
+      volume = 100,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         {
-          positions = { { 1, -2 }, { 2, -1 }, { -1, 2 }, { -2, 1 } },
+          flow_direction = "input-output",
+          direction = defines.direction.north,
+          positions = { { 1, -1 }, { 1, -1 }, { -1, 1 }, { -1, 1 } },
         },
       },
     },

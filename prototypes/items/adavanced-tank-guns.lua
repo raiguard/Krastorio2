@@ -47,7 +47,7 @@ data:extend({
     name = "advanced-tank-machine-gun",
     icon = kr_guns_icons_path .. "advanced-tank-machine-gun.png",
     icon_size = 64,
-    flags = { "hidden" },
+    hidden = true,
     subgroup = "gun",
     order = "z[tank]-a[tank-machine-gun]",
     attack_parameters = {
@@ -79,7 +79,7 @@ data:extend({
     name = "advanced-tank-laser-cannon",
     icon = kr_guns_icons_path .. "advanced-tank-laser-cannon.png",
     icon_size = 64,
-    flags = { "hidden" },
+    hidden = true,
     subgroup = "gun",
     order = "z[tank]-b[laser-cannon]",
     attack_parameters = {
@@ -101,7 +101,7 @@ data:extend({
     name = "advanced-tank-cannon-a",
     icon = kr_guns_icons_path .. "advanced-tank-cannon-a.png",
     icon_size = 64,
-    flags = { "hidden" },
+    hidden = true,
     subgroup = "gun",
     order = "z[tank]-a[cannon-a]",
     attack_parameters = {
@@ -129,7 +129,7 @@ data:extend({
     name = "advanced-tank-cannon-b",
     icon = kr_guns_icons_path .. "advanced-tank-cannon-b.png",
     icon_size = 64,
-    flags = { "hidden" },
+    hidden = true,
     subgroup = "gun",
     order = "z[tank]-a[cannon-b]",
     attack_parameters = {
@@ -157,7 +157,7 @@ data:extend({
     name = "advanced-tank-cannon-c",
     icon = kr_guns_icons_path .. "advanced-tank-cannon-c.png",
     icon_size = 64,
-    flags = { "hidden" },
+    hidden = true,
     subgroup = "gun",
     order = "z[tank]-a[cannon-c]",
     attack_parameters = {

@@ -14,11 +14,9 @@ local recipe_template = {
   enabled = false,
   hide_from_player_crafting = true,
   ingredients = {
-    { "wood", 40 },
+    { type = "item", name = "wood", amount = 40 },
     { type = "fluid", name = "water", amount = 100 },
   },
-  result = nil,
-  result_count = 1,
 }
 
 local rock_recipe_template = {
@@ -28,11 +26,9 @@ local rock_recipe_template = {
   enabled = false,
   hide_from_player_crafting = true,
   ingredients = {
-    { "coal", 50 },
-    { "stone", 75 },
+    { type = "item", name = "coal", amount = 50 },
+    { type = "item", name = "stone", amount = 75 },
   },
-  result = nil,
-  result_count = 1,
 }
 
 local tech = data.raw["technology"]["kr-decorations"]
@@ -49,7 +45,7 @@ for name, tree in pairs(data.raw["tree"]) do
 
   local recipe = table.deepcopy(recipe_template)
   recipe.name = name
-  recipe.result = name
+  recipe.results = { { type = "item", name = name, amount = 1 } }
 
   table.insert(tech.effects, {
     type = "unlock-recipe",
@@ -70,7 +66,7 @@ for name, entity in pairs(data.raw["simple-entity"]) do
 
     local recipe = table.deepcopy(rock_recipe_template)
     recipe.name = name
-    recipe.result = name
+    recipe.results = { { type = "item", name = name, amount = 1 } }
 
     table.insert(tech.effects, {
       type = "unlock-recipe",

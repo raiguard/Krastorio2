@@ -24,9 +24,8 @@ data:extend({
     selection_box = { { -4.95, -4.95 }, { 4.95, 4.95 } },
     fluid_box = {
       production_type = "input",
-      base_area = 1,
-      base_level = -1,
-      pipe_connections = { { type = "input", position = { 5, 0 } } },
+      volume = 100,
+      pipe_connections = { { flow_direction = "input", direction = defines.direction.east, position = { 4, 0 } } },
     },
     energy_source = {
       type = "electric",
@@ -39,7 +38,7 @@ data:extend({
       fuel_inventory_size = 1,
       burnt_inventory_size = 1,
       effectivity = 1,
-      emissions_per_minute = 200,
+      emissions_per_minute = { pollution = 200 },
       light_flicker = {
         minimum_intensity = 0.01,
         maximum_intensity = 0.50,

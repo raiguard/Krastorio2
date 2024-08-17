@@ -90,7 +90,7 @@ data:extend({
     energy_source = {
       type = "electric",
       buffer_capacity = "60MJ",
-      emissions_per_minute = 10,
+      emissions_per_minute = { pollution = 10 },
       usage_priority = "secondary-input",
       input_flow_limit = util.format_number(constants.tesla_coil.input_flow_limit, true) .. "W",
       output_flow_limit = "0W",

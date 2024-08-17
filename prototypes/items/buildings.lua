@@ -15,7 +15,7 @@ data:extend({
     order = "x[crash-site-lab-repaired]",
     place_result = "kr-crash-site-lab-repaired",
     stack_size = 1,
-    flags = { "hidden" },
+    hidden = true,
   },
   {
     type = "item",
@@ -29,7 +29,7 @@ data:extend({
     order = "x[crash-site-assembling-machine-1-repaired]",
     place_result = "kr-crash-site-assembling-machine-1-repaired",
     stack_size = 1,
-    flags = { "hidden" },
+    hidden = true,
   },
   {
     type = "item",
@@ -43,7 +43,7 @@ data:extend({
     order = "x[crash-site-assembling-machine-2-repaired]",
     place_result = "kr-crash-site-assembling-machine-2-repaired",
     stack_size = 1,
-    flags = { "hidden" },
+    hidden = true,
   },
   {
     type = "item",
@@ -57,7 +57,7 @@ data:extend({
     order = "x[crash-site-generator]",
     place_result = "kr-crash-site-generator",
     stack_size = 1,
-    flags = { "hidden" },
+    hidden = true,
   },
   {
     type = "item",
@@ -71,7 +71,7 @@ data:extend({
     order = "x[crash-site-chest]",
     place_result = "kr-crash-site-chest-1",
     stack_size = 1,
-    flags = { "hidden" },
+    hidden = true,
   },
   {
     type = "item",
@@ -85,7 +85,7 @@ data:extend({
     order = "x[crash-site-chest]",
     place_result = "kr-crash-site-chest-2",
     stack_size = 1,
-    flags = { "hidden" },
+    hidden = true,
   },
   -- K2
   {

@@ -13,7 +13,7 @@ data:extend({
     icon = kr_items_with_variations_icons_path .. "biomass/biomass.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    flags = { "hidden" },
+    hidden = true,
     pictures = {
       {
         size = 64,
@@ -45,7 +45,7 @@ data:extend({
     place_as_tile = {
       result = "kr-creep",
       condition_size = 1,
-      condition = { "water-tile" },
+      condition = { layers = { ["water-tile"] = true } },
     },
     stack_size = 200,
   },
@@ -65,7 +65,7 @@ data:extend({
     place_as_tile = {
       result = "kr-black-reinforced-plate",
       condition_size = 1,
-      condition = { "water-tile" },
+      condition = { layers = { ["water-tile"] = true } },
     },
     stack_size = 200,
   },
@@ -80,7 +80,7 @@ data:extend({
     place_as_tile = {
       result = "kr-white-reinforced-plate",
       condition_size = 1,
-      condition = { "water-tile" },
+      condition = { layers = { ["water-tile"] = true } },
     },
     stack_size = 200,
   },

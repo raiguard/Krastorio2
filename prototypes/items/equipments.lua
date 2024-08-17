@@ -333,7 +333,7 @@ data:extend({
     icon_size = 64,
     placed_as_equipment_result = "cyber-potato-equipment",
     subgroup = "other",
-    flags = { "hidden" },
+    hidden = true,
     stack_size = 10,
   },
   {

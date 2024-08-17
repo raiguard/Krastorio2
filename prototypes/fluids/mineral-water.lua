@@ -11,5 +11,6 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     order = "ya01[mineral-water]",
+    base_flow_rate = 100,
   },
 })

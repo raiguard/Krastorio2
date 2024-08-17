@@ -13,6 +13,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     order = "ya01[hydrogen]",
+    base_flow_rate = 100,
   },
   -- Chlorine
   {
@@ -28,6 +29,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     order = "ya02[chlorine]",
+    base_flow_rate = 100,
   },
   -- Oxygen
   {
@@ -43,6 +45,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     order = "ya03[oxygen]",
+    base_flow_rate = 100,
   },
   -- Nitrogen
   {
@@ -58,6 +61,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     order = "ya04[nitrogen]",
+    base_flow_rate = 100,
   },
   -- Ammonia
   {
@@ -73,6 +77,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     order = "ya05[ammonia]",
+    base_flow_rate = 100,
   },
   -- Nitric acid
   {
@@ -88,6 +93,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     order = "ya06[nitric-acid]",
+    base_flow_rate = 100,
   },
   -- Hydrogen chloride
   {
@@ -103,6 +109,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     order = "ya07[hydrogen-chloride]",
+    base_flow_rate = 100,
   },
   -- Biomethanol
   {
@@ -114,12 +121,13 @@ data:extend({
     base_color = { r = 0.25, g = 0.53, b = 0.15 },
     flow_color = { r = 0.27, g = 0.53, b = 0.12 },
     gas_temperature = 30,
-    fuel_value = "750KJ",
+    fuel_value = "750kJ",
     emissions_multiplier = 0.8,
     icon = kr_fluids_icons_path .. "biomethanol.png",
     icon_size = 64,
     icon_mipmaps = 4,
     order = "ya08[biomethanol]",
+    base_flow_rate = 100,
   },
   -- Heavy water
   {
@@ -134,5 +142,6 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     order = "ya09[heavy-water]",
+    base_flow_rate = 100,
   },
 })

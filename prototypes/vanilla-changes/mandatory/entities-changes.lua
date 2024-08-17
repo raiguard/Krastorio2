@@ -25,7 +25,7 @@ end
 
 -- Boilers
 
-data.raw["boiler"]["boiler"].energy_source.emissions_per_minute = 20
+data.raw["boiler"]["boiler"].energy_source.emissions_per_minute = { pollution = 20 }
 
 -- Pumpjack sprites modification
 
@@ -143,14 +143,14 @@ data.raw.corpse["pumpjack-remnants"].animation = make_rotated_animation_variatio
 data.raw["offshore-pump"]["offshore-pump"].pumping_speed = 20.8334
 
 -- Chemical plant
---data.raw["assembling-machine"]["chemical-plant"].energy_source.emissions_per_minute = 2
+--data.raw["assembling-machine"]["chemical-plant"].energy_source.emissions_per_minute = { pollution = 2 }
 
 -- Lab
 data.raw.lab["lab"].fast_replaceable_group = "lab"
 data.raw.lab["lab"].next_upgrade = "biusart-lab"
 
 -- Solar panel
-data.raw["solar-panel"]["solar-panel"].production = "100KW"
+data.raw["solar-panel"]["solar-panel"].production = "100kW"
 data.raw["solar-panel"]["solar-panel"].fast_replaceable_group = "solar-panel"
 
 -- Radar
@@ -295,7 +295,7 @@ krastorio.entities.overrideMiningResult("container", "crash-site-spaceship", cra
 -- Spidertron fuel usage
 data.raw["spider-vehicle"]["spidertron"].energy_source = {
   type = "burner",
-  emissions_per_minute = 0,
+  emissions_per_minute = { pollution = 0 },
   effectivity = 1,
   render_no_power_icon = true,
   render_no_network_icon = false,

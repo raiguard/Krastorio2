@@ -1,4 +1,5 @@
 -- A RECIPE FOR STAY IN THIS FILE SHOULD HAVE PRODUCTS THAT IS ONLY TOOLS
+
 return {
   {
     type = "recipe",
@@ -7,11 +8,10 @@ return {
     enabled = false,
     allow_productivity = true,
     ingredients = {
-      { "iron-plate", 2 },
-      { "copper-cable", 2 },
+      { type = "item", name = "iron-plate", amount = 2 },
+      { type = "item", name = "copper-cable", amount = 2 },
     },
-    result = "blank-tech-card",
-    result_count = 5,
+    results = { { type = "item", name = "blank-tech-card", amount = 5 } },
   },
   {
     type = "recipe",
@@ -20,12 +20,11 @@ return {
     enabled = false,
     allow_productivity = true,
     ingredients = {
-      { "biomass", 10 },
-      { "coke", 5 },
-      { "steel-plate", 5 },
+      { type = "item", name = "biomass", amount = 10 },
+      { type = "item", name = "coke", amount = 5 },
+      { type = "item", name = "steel-plate", amount = 5 },
     },
-    result = "biters-research-data",
-    result_count = 5,
+    results = { { type = "item", name = "biters-research-data", amount = 5 } },
   },
   {
     type = "recipe",
@@ -34,11 +33,10 @@ return {
     enabled = true,
     allow_productivity = true,
     ingredients = {
-      { "wood", 5 },
-      { "copper-cable", 5 },
+      { type = "item", name = "wood", amount = 5 },
+      { type = "item", name = "copper-cable", amount = 5 },
     },
-    result = "basic-tech-card",
-    result_count = 5,
+    results = { { type = "item", name = "basic-tech-card", amount = 5 } },
   },
   {
     type = "recipe",
@@ -48,11 +46,10 @@ return {
     enabled = false,
     allow_productivity = true,
     ingredients = {
-      { "blank-tech-card", 10 },
-      { "space-research-data", 5 },
+      { type = "item", name = "blank-tech-card", amount = 10 },
+      { type = "item", name = "space-research-data", amount = 5 },
     },
-    result = krastorio.optimization_tech_card_name,
-    result_count = 5,
+    results = { { type = "item", name = krastorio.optimization_tech_card_name, amount = 5 } },
   },
   {
     type = "recipe",
@@ -62,13 +59,12 @@ return {
     enabled = false,
     allow_productivity = true,
     ingredients = {
-      { "imersite-crystal", 5 },
-      { "rare-metals", 5 },
-      { "lithium", 5 },
-      { "plastic-bar", 5 },
+      { type = "item", name = "imersite-crystal", amount = 5 },
+      { type = "item", name = "rare-metals", amount = 5 },
+      { type = "item", name = "lithium", amount = 5 },
+      { type = "item", name = "plastic-bar", amount = 5 },
     },
-    result = "matter-research-data",
-    result_count = 5,
+    results = { { type = "item", name = "matter-research-data", amount = 5 } },
   },
   {
     type = "recipe",
@@ -78,12 +74,11 @@ return {
     enabled = false,
     allow_productivity = true,
     ingredients = {
-      { "blank-tech-card", 15 },
-      { "matter-research-data", 5 },
-      { "processing-unit", 5 },
+      { type = "item", name = "blank-tech-card", amount = 15 },
+      { type = "item", name = "matter-research-data", amount = 5 },
+      { type = "item", name = "processing-unit", amount = 5 },
     },
-    result = "matter-tech-card",
-    result_count = 5,
+    results = { { type = "item", name = "matter-tech-card", amount = 5 } },
   },
   {
     type = "recipe",
@@ -93,13 +88,12 @@ return {
     enabled = false,
     allow_productivity = true,
     ingredients = {
-      { "blank-tech-card", 15 },
-      { "imersium-gear-wheel", 20 },
-      { "lithium-sulfur-battery", 10 },
-      { "electric-engine-unit", 5 },
+      { type = "item", name = "blank-tech-card", amount = 15 },
+      { type = "item", name = "imersium-gear-wheel", amount = 20 },
+      { type = "item", name = "lithium-sulfur-battery", amount = 10 },
+      { type = "item", name = "electric-engine-unit", amount = 5 },
     },
-    result = "advanced-tech-card",
-    result_count = 5,
+    results = { { type = "item", name = "advanced-tech-card", amount = 5 } },
   },
   {
     type = "recipe",
@@ -109,11 +103,10 @@ return {
     enabled = false,
     allow_productivity = true,
     ingredients = {
-      { "blank-tech-card", 15 },
-      { "charged-matter-stabilizer", 5 },
-      { "ai-core", 5 },
+      { type = "item", name = "blank-tech-card", amount = 15 },
+      { type = "item", name = "charged-matter-stabilizer", amount = 5 },
+      { type = "item", name = "ai-core", amount = 5 },
     },
-    result = "singularity-tech-card",
-    result_count = 5,
+    results = { { type = "item", name = "singularity-tech-card", amount = 5 } },
   },
 }

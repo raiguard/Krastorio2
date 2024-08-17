@@ -285,7 +285,7 @@ if data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"] then
   data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].energy_source = {
     type = "electric",
     buffer_capacity = "50MJ",
-    input_flow_limit = "5000KW",
+    input_flow_limit = "5000kW",
     usage_priority = "secondary-input",
   }
   data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].charging_energy = "2000kW"
@@ -293,10 +293,22 @@ if data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"] then
 end
 
 -- Personal roboport equipment (recipe)
-krastorio.recipes.addIngredient("personal-roboport-equipment", { "steel-plate", 10 })
-krastorio.recipes.replaceIngredient("personal-roboport-equipment", "battery", { "battery", 45 })
-krastorio.recipes.replaceIngredient("personal-roboport-equipment", "advanced-circuit", { "advanced-circuit", 5 })
-krastorio.recipes.replaceIngredient("personal-roboport-equipment", "iron-gear-wheel", { "iron-gear-wheel", 20 })
+krastorio.recipes.addIngredient("personal-roboport-equipment", { type = "item", name = "steel-plate", amount = 10 })
+krastorio.recipes.replaceIngredient(
+  "personal-roboport-equipment",
+  "battery",
+  { type = "item", name = "battery", amount = 45 }
+)
+krastorio.recipes.replaceIngredient(
+  "personal-roboport-equipment",
+  "advanced-circuit",
+  { type = "item", name = "advanced-circuit", amount = 5 }
+)
+krastorio.recipes.replaceIngredient(
+  "personal-roboport-equipment",
+  "iron-gear-wheel",
+  { type = "item", name = "iron-gear-wheel", amount = 20 }
+)
 krastorio.recipes.removeIngredient("personal-roboport-equipment", "steel-plate")
 
 -- Personal roboport mk2 equipment (recipe)
@@ -383,14 +395,14 @@ data.raw["battery-equipment"]["battery-mk2-equipment"].energy_source = {
 
 -- Recipe
 krastorio.recipes.overrideIngredients("battery-equipment", {
-  { "battery", 2 },
-  { "iron-plate", 2 },
-  { "electronic-circuit", 1 },
+  { type = "item", name = "battery", amount = 2 },
+  { type = "item", name = "iron-plate", amount = 2 },
+  { type = "item", name = "electronic-circuit", amount = 1 },
 })
 krastorio.recipes.overrideIngredients("battery-mk2-equipment", {
-  { "battery-equipment", 2 },
-  { "steel-plate", 2 },
-  { "advanced-circuit", 1 },
+  { type = "item", name = "battery-equipment", amount = 2 },
+  { type = "item", name = "steel-plate", amount = 2 },
+  { type = "item", name = "advanced-circuit", amount = 1 },
 })
 
 -- subgroup
@@ -649,10 +661,10 @@ data.raw["night-vision-equipment"]["night-vision-equipment"].shape = {
 }
 
 krastorio.recipes.overrideIngredients("night-vision-equipment", {
-  { "advanced-circuit", 2 },
-  { "iron-plate", 1 },
-  { "plastic-bar", 1 },
-  { "glass", 1 },
+  { type = "item", name = "advanced-circuit", amount = 2 },
+  { type = "item", name = "iron-plate", amount = 1 },
+  { type = "item", name = "plastic-bar", amount = 1 },
+  { type = "item", name = "glass", amount = 1 },
 })
 
 data.raw.item["night-vision-equipment"].subgroup = "character-equipment"

@@ -9,8 +9,7 @@ return {
     ingredients = {
       { type = "fluid", name = "water", amount = 200 },
     },
-    result = "wood",
-    result_count = 40,
+    results = { { type = "item", name = "wood", amount = 40 } },
   },
   {
     type = "recipe",
@@ -22,9 +21,8 @@ return {
     enabled = false,
     ingredients = {
       { type = "fluid", name = "water", amount = 200 },
-      { name = "fertilizer", amount = 1 },
+      { type = "item", name = "fertilizer", amount = 1 },
     },
-    result = "wood",
-    result_count = 80,
+    results = { { type = "item", name = "wood", amount = 80 } },
   },
 }

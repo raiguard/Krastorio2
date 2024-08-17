@@ -15,18 +15,18 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
   function kr_loader_recipe(data)
     local name = data.name or "loader-test"
     local category = data.category or nil
-    local ingredients = data.ingredients or { { "wood", 1 } }
+    local ingredients = data.ingredients or { { type = "item", name = "wood", amount = 1 } }
     local enabled = data.enabled or false
     local energy_required = data.energy_required or standard_loaders_crafting_speed
     return {
-      ["type"] = "recipe",
-      ["name"] = name,
-      ["category"] = category,
-      ["ingredients"] = ingredients,
-      ["enabled"] = enabled,
-      ["energy_required"] = energy_required,
-      ["result"] = name,
-      ["mod"] = "Krastorio2",
+      type = "recipe",
+      name = name,
+      category = category,
+      ingredients = ingredients,
+      enabled = enabled,
+      energy_required = energy_required,
+      results = { { type = "item", name = name, amount = 1 } },
+      mod = "Krastorio2",
     }
   end
 
@@ -34,41 +34,41 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
     kr_loader_recipe({
       name = loader_names[1],
       ingredients = {
-        { "transport-belt", 1 },
-        { "iron-gear-wheel", 10 },
-        { "iron-beam", 2 },
+        { type = "item", name = "transport-belt", amount = 1 },
+        { type = "item", name = "iron-gear-wheel", amount = 10 },
+        { type = "item", name = "iron-beam", amount = 2 },
       },
     }),
     kr_loader_recipe({
       name = loader_names[2],
       ingredients = {
-        { "fast-transport-belt", 1 },
-        { "kr-loader", 2 },
-        { "iron-gear-wheel", 10 },
+        { type = "item", name = "fast-transport-belt", amount = 1 },
+        { type = "item", name = "kr-loader", amount = 2 },
+        { type = "item", name = "iron-gear-wheel", amount = 10 },
       },
     }),
     kr_loader_recipe({
       name = loader_names[3],
       ingredients = {
-        { "express-transport-belt", 1 },
-        { "kr-fast-loader", 2 },
-        { "steel-gear-wheel", 10 },
+        { type = "item", name = "express-transport-belt", amount = 1 },
+        { type = "item", name = "kr-fast-loader", amount = 2 },
+        { type = "item", name = "steel-gear-wheel", amount = 10 },
       },
     }),
     kr_loader_recipe({
       name = loader_names[4],
       ingredients = {
-        { "kr-advanced-transport-belt", 1 },
-        { "kr-express-loader", 2 },
-        { "rare-metals", 10 },
+        { type = "item", name = "kr-advanced-transport-belt", amount = 1 },
+        { type = "item", name = "kr-express-loader", amount = 2 },
+        { type = "item", name = "rare-metals", amount = 10 },
       },
     }),
     kr_loader_recipe({
       name = loader_names[5],
       ingredients = {
-        { "kr-superior-transport-belt", 1 },
-        { "kr-advanced-loader", 2 },
-        { "imersium-gear-wheel", 10 },
+        { type = "item", name = "kr-superior-transport-belt", amount = 1 },
+        { type = "item", name = "kr-advanced-loader", amount = 2 },
+        { type = "item", name = "imersium-gear-wheel", amount = 10 },
       },
     }),
   }

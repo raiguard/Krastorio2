@@ -9,7 +9,7 @@ return {
     allow_productivity = true,
     ingredients = {
       { type = "fluid", name = "nitric-acid", amount = 10 },
-      { name = "biomass", amount = 2 },
+      { type = "item", name = "biomass", amount = 2 },
     },
     results = {
       { type = "item", name = "fertilizer", amount = 10 },
@@ -255,26 +255,14 @@ return {
     always_show_made_in = true,
     always_show_products = true,
     allow_productivity = true,
-    normal = {
-      energy_required = 4,
-      enabled = false,
-      ingredients = {
-        { type = "fluid", name = "sulfuric-acid", amount = 10 },
-        { type = "item", name = "lithium", amount = 1 },
-        { type = "item", name = "copper-plate", amount = 1 },
-      },
-      result = "lithium-sulfur-battery",
+    energy_required = 4,
+    enabled = false,
+    ingredients = {
+      { type = "fluid", name = "sulfuric-acid", amount = 10 },
+      { type = "item", name = "lithium", amount = 1 },
+      { type = "item", name = "copper-plate", amount = 1 },
     },
-    expensive = {
-      energy_required = 5,
-      enabled = false,
-      ingredients = {
-        { type = "fluid", name = "sulfuric-acid", amount = 20 },
-        { type = "item", name = "lithium", amount = 2 },
-        { type = "item", name = "copper-plate", amount = 2 },
-      },
-      result = "lithium-sulfur-battery",
-    },
+    results = { { type = "item", name = "lithium-sulfur-battery", amount = 1 } },
     crafting_machine_tint = {
       primary = { r = 0.35, g = 0.392, b = 0.328, a = 0.900 },
       secondary = { r = 0.831, g = 0.760, b = 0.422, a = 0.800 },
@@ -298,7 +286,7 @@ return {
       { type = "fluid", name = "nitric-acid", amount = 10 },
       { type = "fluid", name = "sulfuric-acid", amount = 10 },
     },
-    result = "imersite-crystal",
+    results = { { type = "item", name = "imersite-crystal", amount = 1 } },
     subgroup = "intermediate-product",
     order = "o6[imersite-crystal]",
     crafting_machine_tint = {
@@ -321,7 +309,7 @@ return {
       { type = "item", name = "tritium", amount = 1 },
       { type = "item", name = "empty-dt-fuel", amount = 1 },
     },
-    result = "dt-fuel",
+    results = { { type = "item", name = "dt-fuel", amount = 1 } },
     crafting_machine_tint = {
       primary = { r = 0.800, g = 0.776, b = 0.313, a = 0.000 },
       secondary = { r = 0.200, g = 0.680, b = 0.300, a = 0.350 },

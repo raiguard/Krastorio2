@@ -208,7 +208,7 @@ if mods["IndustrialRevolution"] then
   krastorio.recipes.replaceIngredient("long-handed-pipe-inserter", "tin-rod", { "inserter-parts", 1 })
 
   -- Loaders
-  krastorio.recipes.replaceIngredient("kr-loader", "iron-beam", { "copper-frame-small", 1 })
+  krastorio.recipes.replaceIngredient("kr-loader", "iron-beam", { type = "item", name = "copper-frame-small", amount = 1 })
   krastorio.recipes.replaceIngredient("kr-fast-loader", "kr-loader", { "iron-frame-small", 1 })
   krastorio.recipes.replaceIngredient("kr-express-loader", "kr-fast-loader", { "steel-frame-small", 1 })
   krastorio.recipes.replaceIngredient("kr-se-loader", "kr-fast-loader", { "steel-frame-small", 1 })

@@ -14,9 +14,9 @@ data.raw.item["wood"].fuel_value = "2MJ" --2
 
 -- -- -- Vanilla steam stat changes
 
-data.raw.fluid["sulfuric-acid"].heat_capacity = "0.25KJ"
-data.raw.fluid["water"].heat_capacity = "0.5KJ"
-data.raw.fluid["steam"].heat_capacity = "0.5KJ"
+data.raw.fluid["sulfuric-acid"].heat_capacity = "0.25kJ"
+data.raw.fluid["water"].heat_capacity = "0.5kJ"
+data.raw.fluid["steam"].heat_capacity = "0.5kJ"
 --data.raw.fluid["steam"].max_temperature = 1000 --1000
 
 data.raw["generator"]["steam-engine"].effectivity = 1
@@ -26,7 +26,7 @@ data.raw["generator"]["steam-engine"].max_power_output = "0.75MW"
 
 data.raw["boiler"]["boiler"].energy_consumption = "1.5MW"
 data.raw["boiler"]["boiler"].target_temperature = 165
-data.raw["boiler"]["boiler"].energy_source.emissions_per_minute = 20
+data.raw["boiler"]["boiler"].energy_source.emissions_per_minute = { pollution = 20 }
 --data.raw["boiler"]["boiler"].energy_source.effectivity = 1
 
 -- -- -- Accumulator and solar panel modification
@@ -42,20 +42,20 @@ data.raw["lamp"]["small-lamp"].glow_size = 8 --6
 -- -- -- Vanilla inserters stats modifcation
 
 -- Stack inserter
-data.raw.inserter["bulk-inserter"].energy_per_movement = "12KJ"
-data.raw.inserter["bulk-inserter"].energy_per_movement = "12KJ"
+data.raw.inserter["bulk-inserter"].energy_per_movement = "12kJ"
+data.raw.inserter["bulk-inserter"].energy_per_movement = "12kJ"
 
 -- --  Mining drills
 ----------------------------------------
 -- Burner mining drill
 if data.raw["mining-drill"]["burner-mining-drill"] then
-  data.raw["mining-drill"]["burner-mining-drill"].energy_source.emissions_per_minute = 5
+  data.raw["mining-drill"]["burner-mining-drill"].energy_source.emissions_per_minute = { pollution = 5 }
   data.raw["mining-drill"]["burner-mining-drill"].energy_usage = "100kW"
 end
 
 -- Electric mining drill
 if data.raw["mining-drill"]["electric-mining-drill"] then
-  data.raw["mining-drill"]["electric-mining-drill"].energy_source.emissions_per_minute = 7.5
+  data.raw["mining-drill"]["electric-mining-drill"].energy_source.emissions_per_minute = { pollution = 7.5 }
   data.raw["mining-drill"]["electric-mining-drill"].energy_usage = "100kW"
   data.raw["mining-drill"]["electric-mining-drill"].module_slots = 2
 end
@@ -73,5 +73,5 @@ end
 -- Electric furnace
 if data.raw["furnace"]["electric-furnace"] then
   data.raw["furnace"]["electric-furnace"].energy_usage = "350kW"
-  data.raw["furnace"]["electric-furnace"].energy_source.emissions_per_minute = 1
+  data.raw["furnace"]["electric-furnace"].energy_source.emissions_per_minute = { pollution = 1 }
 end

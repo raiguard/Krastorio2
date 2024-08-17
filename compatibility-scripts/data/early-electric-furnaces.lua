@@ -5,7 +5,7 @@ if mods["Early-3x3-Electric-Furnaces"] then
       local furnace = krastorio_utils.tables.fullCopy(data.raw.furnace[furnace_name])
       furnace.type = "assembling-machine"
       furnace.source_inventory_size = 2
-      furnace.energy_source.emissions_per_minute = 2
+      furnace.energy_source.emissions_per_minute = { pollution = 2 }
       furnace.energy_usage = "0.2MW"
       data.raw.furnace[furnace_name] = nil
       data:extend({ furnace })

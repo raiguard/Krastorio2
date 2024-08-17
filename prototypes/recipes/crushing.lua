@@ -13,7 +13,7 @@ return {
     enabled = false,
     allow_productivity = true,
     ingredients = {
-      { "stone", 3 },
+      { type = "item", name = "stone", amount = 3 },
     },
     results = {
       { type = "item", name = "sand", amount_min = 7, amount_max = 8 },
@@ -34,11 +34,11 @@ return {
     enabled = false,
     allow_productivity = true,
     ingredients = {
-      { "raw-imersite", 3 },
+      { type = "item", name = "raw-imersite", amount = 3 },
     },
     results = {
-      { "imersite-powder", 3 },
-      { "sand", 3 },
+      { type = "item", name = "imersite-powder", amount = 3 },
+      { type = "item", name = "sand", amount = 3 },
     },
     main_product = "imersite-powder",
   },
@@ -55,10 +55,9 @@ return {
     energy_required = 1,
     enabled = true,
     ingredients = {
-      { "inserter", 1 },
+      { type = "item", name = "inserter", amount = 1 },
     },
-    result = "inserter-parts",
-    result_count = 1,
+    results = { { type = "item", name = "inserter-parts", amount = 1 } },
   },
   {
     type = "recipe",
@@ -73,10 +72,9 @@ return {
     energy_required = 1,
     enabled = true,
     ingredients = {
-      { "fast-inserter", 1 },
+      { type = "item", name = "fast-inserter", amount = 1 },
     },
-    result = "inserter-parts",
-    result_count = 1,
+    results = { { type = "item", name = "inserter-parts", amount = 1 } },
   },
   {
     type = "recipe",
@@ -91,10 +89,9 @@ return {
     energy_required = 1,
     enabled = true,
     ingredients = {
-      { "long-handed-inserter", 1 },
+      { type = "item", name = "long-handed-inserter", amount = 1 },
     },
-    result = "inserter-parts",
-    result_count = 1,
+    results = { { type = "item", name = "inserter-parts", amount = 1 } },
   },
   {
     type = "recipe",
@@ -109,10 +106,9 @@ return {
     energy_required = 1,
     enabled = true,
     ingredients = {
-      { "burner-inserter", 1 },
+      { type = "item", name = "burner-inserter", amount = 1 },
     },
-    result = "inserter-parts",
-    result_count = 1,
+    results = { { type = "item", name = "inserter-parts", amount = 1 } },
   },
   {
     type = "recipe",
@@ -131,11 +127,11 @@ return {
     energy_required = 1,
     enabled = true,
     ingredients = {
-      { "stack-inserter", 1 },
+      { type = "item", name = "stack-inserter", amount = 1 },
     },
     results = {
-      { "inserter-parts", 1 },
-      { "electronic-components", 2 },
+      { type = "item", name = "inserter-parts", amount = 1 },
+      { type = "item", name = "electronic-components", amount = 2 },
     },
   },
   {
@@ -155,11 +151,11 @@ return {
     energy_required = 1,
     enabled = true,
     ingredients = {
-      { "stack-filter-inserter", 1 },
+      { type = "item", name = "stack-filter-inserter", amount = 1 },
     },
     results = {
-      { "inserter-parts", 1 },
-      { "electronic-components", 2 },
+      { type = "item", name = "inserter-parts", amount = 1 },
+      { type = "item", name = "electronic-components", amount = 2 },
     },
   },
   {
@@ -175,10 +171,9 @@ return {
     energy_required = 1,
     enabled = true,
     ingredients = {
-      { "filter-inserter", 1 },
+      { type = "item", name = "filter-inserter", amount = 1 },
     },
-    result = "inserter-parts",
-    result_count = 1,
+    results = { { type = "item", name = "inserter-parts", amount = 1 } },
   },
   {
     type = "recipe",
@@ -197,14 +192,13 @@ return {
     energy_required = 1,
     enabled = true,
     ingredients = {
-      { "kr-superior-inserter", 1 },
+      { type = "item", name = "kr-superior-inserter", amount = 1 },
     },
     results = {
-      { "inserter-parts", 1 },
-      { "electronic-components", 4 },
-      { "imersite-powder", 3 },
+      { type = "item", name = "inserter-parts", amount = 1 },
+      { type = "item", name = "electronic-components", amount = 4 },
+      { type = "item", name = "imersite-powder", amount = 3 },
     },
-    result_count = 1,
   },
   {
     type = "recipe",
@@ -223,12 +217,12 @@ return {
     energy_required = 1,
     enabled = true,
     ingredients = {
-      { "kr-superior-long-inserter", 1 },
+      { type = "item", name = "kr-superior-long-inserter", amount = 1 },
     },
     results = {
-      { "inserter-parts", 1 },
-      { "electronic-components", 4 },
-      { "imersite-powder", 6 },
+      { type = "item", name = "inserter-parts", amount = 1 },
+      { type = "item", name = "electronic-components", amount = 4 },
+      { type = "item", name = "imersite-powder", amount = 6 },
     },
   },
   {
@@ -248,12 +242,12 @@ return {
     energy_required = 1,
     enabled = true,
     ingredients = {
-      { "kr-superior-filter-inserter", 1 },
+      { type = "item", name = "kr-superior-filter-inserter", amount = 1 },
     },
     results = {
-      { "inserter-parts", 1 },
-      { "electronic-components", 6 },
-      { "imersite-powder", 3 },
+      { type = "item", name = "inserter-parts", amount = 1 },
+      { type = "item", name = "electronic-components", amount = 6 },
+      { type = "item", name = "imersite-powder", amount = 3 },
     },
   },
   {
@@ -273,12 +267,12 @@ return {
     energy_required = 1,
     enabled = true,
     ingredients = {
-      { "kr-superior-long-filter-inserter", 1 },
+      { type = "item", name = "kr-superior-long-filter-inserter", amount = 1 },
     },
     results = {
-      { "inserter-parts", 1 },
-      { "electronic-components", 6 },
-      { "imersite-powder", 6 },
+      { type = "item", name = "inserter-parts", amount = 1 },
+      { type = "item", name = "electronic-components", amount = 6 },
+      { type = "item", name = "imersite-powder", amount = 6 },
     },
   },
   {
@@ -298,10 +292,10 @@ return {
     energy_required = 1,
     enabled = true,
     ingredients = {
-      { "imersite-crystal", 1 },
+      { type = "item", name = "imersite-crystal", amount = 1 },
     },
     results = {
-      { "imersite-powder", 3 },
+      { type = "item", name = "imersite-powder", amount = 3 },
     },
   },
 }

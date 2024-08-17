@@ -15,9 +15,9 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
       subgroup = "terrain",
       order = "z[black-reinforced-plate]-a1[black-reinforced-plate]",
       place_as_tile = {
-        result = "kr-black-reinforced-plate-l",
+        results = { { type = "item", name = "kr-black-reinforced-plate-l", amount = 1 } },
         condition_size = 1,
-        condition = { "water-tile" },
+        condition = { layers = { ["water-tile"] = true } },
       },
       stack_size = stack_size,
     },
@@ -30,9 +30,9 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
       subgroup = "terrain",
       order = "z[white-reinforced-plate]-a2[white-reinforced-plate]",
       place_as_tile = {
-        result = "kr-white-reinforced-plate-l",
+        results = { { type = "item", name = "kr-white-reinforced-plate-l", amount = 1 } },
         condition_size = 1,
-        condition = { "water-tile" },
+        condition = { layers = { ["water-tile"] = true } },
       },
       stack_size = stack_size,
     },
@@ -43,11 +43,10 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
       energy_required = 5,
       enabled = false,
       ingredients = {
-        { "refined-concrete", 20 },
-        { "steel-beam", 5 },
+        { type = "item", name = "refined-concrete", amount = 20 },
+        { type = "item", name = "steel-beam", amount = 5 },
       },
-      result = "kr-black-reinforced-plate-l",
-      result_count = 10,
+      results = { { type = "item", name = "kr-black-reinforced-plate-l", amount = 10 } },
     },
     {
       type = "recipe",
@@ -55,20 +54,21 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
       energy_required = 5,
       enabled = false,
       ingredients = {
-        { "refined-concrete", 20 },
-        { "steel-beam", 5 },
+        { type = "item", name = "refined-concrete", amount = 20 },
+        { type = "item", name = "steel-beam", amount = 5 },
       },
-      result = "kr-white-reinforced-plate-l",
-      result_count = 10,
+      results = { { type = "item", name = "kr-white-reinforced-plate-l", amount = 10 } },
     },
 
     {
       type = "tile",
       name = "kr-white-reinforced-plate-l",
       needs_correction = false,
-      minable = { mining_time = 0.05, result = "kr-white-reinforced-plate-l" },
+      minables = {
+        { type = "item", name = { mining_time = 0.05, result = "kr-white-reinforced-plate-l" }, amount = 1 },
+      },
       mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
-      collision_mask = { "ground-tile" },
+      collision_mask = { layers = { ["ground-tile"] = true } },
       walking_speed_modifier = 1.75,
       layer = 80,
       transition_overlay_layer_offset = 5,
@@ -98,57 +98,61 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
             },
           },
         },
-        inner_corner = {
-          picture = kr_tiles_path .. "reinforced-plates-kl/plate-inner-corner.png",
-          count = 4,
-          tall = true,
-          hr_version = {
-            picture = kr_tiles_path .. "reinforced-plates-kl/hr-plate-inner-corner.png",
-            count = 4,
-            tall = true,
-            scale = 0.5,
-          },
-        },
-        outer_corner = {
-          picture = kr_tiles_path .. "reinforced-plates-kl/plate-outer-corner.png",
-          count = 4,
-          tall = true,
-          hr_version = {
-            picture = kr_tiles_path .. "reinforced-plates-kl/hr-plate-outer-corner.png",
-            count = 4,
-            tall = true,
-            scale = 0.5,
-          },
-        },
-        side = {
-          picture = kr_tiles_path .. "reinforced-plates-kl/plate-side.png",
-          count = 16,
-          tall = true,
-          hr_version = {
-            picture = kr_tiles_path .. "reinforced-plates-kl/hr-plate-side.png",
-            count = 16,
-            tall = true,
-            scale = 0.5,
-          },
-        },
-        u_transition = {
-          picture = kr_tiles_path .. "reinforced-plates-kl/plate-u.png",
-          count = 2,
-          tall = true,
-          hr_version = {
-            picture = kr_tiles_path .. "reinforced-plates-kl/hr-plate-u.png",
-            count = 2,
-            tall = true,
-            scale = 0.5,
-          },
-        },
-        o_transition = {
-          picture = kr_tiles_path .. "reinforced-plates-kl/plate-o.png",
-          count = 2,
-          hr_version = {
-            picture = kr_tiles_path .. "reinforced-plates-kl/hr-plate-o.png",
-            count = 2,
-            scale = 0.5,
+        transition = {
+          overlay_layout = {
+            inner_corner = {
+              spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-inner-corner.png",
+              count = 4,
+              tall = true,
+              hr_version = {
+                spritesheet = kr_tiles_path .. "reinforced-plates-kl/hr-plate-inner-corner.png",
+                count = 4,
+                tall = true,
+                scale = 0.5,
+              },
+            },
+            outer_corner = {
+              spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-outer-corner.png",
+              count = 4,
+              tall = true,
+              hr_version = {
+                spritesheet = kr_tiles_path .. "reinforced-plates-kl/hr-plate-outer-corner.png",
+                count = 4,
+                tall = true,
+                scale = 0.5,
+              },
+            },
+            side = {
+              spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-side.png",
+              count = 16,
+              tall = true,
+              hr_version = {
+                spritesheet = kr_tiles_path .. "reinforced-plates-kl/hr-plate-side.png",
+                count = 16,
+                tall = true,
+                scale = 0.5,
+              },
+            },
+            u_transition = {
+              spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-u.png",
+              count = 2,
+              tall = true,
+              hr_version = {
+                spritesheet = kr_tiles_path .. "reinforced-plates-kl/hr-plate-u.png",
+                count = 2,
+                tall = true,
+                scale = 0.5,
+              },
+            },
+            o_transition = {
+              spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-o.png",
+              count = 2,
+              hr_version = {
+                spritesheet = kr_tiles_path .. "reinforced-plates-kl/hr-plate-o.png",
+                count = 2,
+                scale = 0.5,
+              },
+            },
           },
         },
       },
@@ -171,7 +175,6 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
         },
       },
       map_color = { r = 175, g = 175, b = 175 },
-      pollution_absorption_per_second = 0,
       vehicle_friction_modifier = 0.8,
     },
 
@@ -179,9 +182,11 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
       type = "tile",
       name = "kr-black-reinforced-plate-l",
       needs_correction = false,
-      minable = { mining_time = 0.05, result = "kr-black-reinforced-plate-l" },
+      minables = {
+        { type = "item", name = { mining_time = 0.05, result = "kr-black-reinforced-plate-l" }, amount = 1 },
+      },
       mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
-      collision_mask = { "ground-tile" },
+      collision_mask = { layers = { ["ground-tile"] = true } },
       walking_speed_modifier = 1.75,
       layer = 85,
       transition_overlay_layer_offset = 6,
@@ -211,57 +216,59 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
             },
           },
         },
-        inner_corner = {
-          picture = kr_tiles_path .. "reinforced-plates-kl/plate-inner-corner.png",
-          count = 4,
-          tall = true,
-          hr_version = {
-            picture = kr_tiles_path .. "reinforced-plates-kl/hr-plate-inner-corner.png",
+        overlay_layout = {
+          inner_corner = {
+            spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-inner-corner.png",
             count = 4,
             tall = true,
-            scale = 0.5,
+            hr_version = {
+              spritesheet = kr_tiles_path .. "reinforced-plates-kl/hr-plate-inner-corner.png",
+              count = 4,
+              tall = true,
+              scale = 0.5,
+            },
           },
-        },
-        outer_corner = {
-          picture = kr_tiles_path .. "reinforced-plates-kl/plate-outer-corner.png",
-          count = 4,
-          tall = true,
-          hr_version = {
-            picture = kr_tiles_path .. "reinforced-plates-kl/hr-plate-outer-corner.png",
+          outer_corner = {
+            spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-outer-corner.png",
             count = 4,
             tall = true,
-            scale = 0.5,
+            hr_version = {
+              spritesheet = kr_tiles_path .. "reinforced-plates-kl/hr-plate-outer-corner.png",
+              count = 4,
+              tall = true,
+              scale = 0.5,
+            },
           },
-        },
-        side = {
-          picture = kr_tiles_path .. "reinforced-plates-kl/plate-side.png",
-          count = 16,
-          tall = true,
-          hr_version = {
-            picture = kr_tiles_path .. "reinforced-plates-kl/hr-plate-side.png",
+          side = {
+            spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-side.png",
             count = 16,
             tall = true,
-            scale = 0.5,
+            hr_version = {
+              spritesheet = kr_tiles_path .. "reinforced-plates-kl/hr-plate-side.png",
+              count = 16,
+              tall = true,
+              scale = 0.5,
+            },
           },
-        },
-        u_transition = {
-          picture = kr_tiles_path .. "reinforced-plates-kl/plate-u.png",
-          count = 2,
-          tall = true,
-          hr_version = {
-            picture = kr_tiles_path .. "reinforced-plates-kl/hr-plate-u.png",
+          u_transition = {
+            spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-u.png",
             count = 2,
             tall = true,
-            scale = 0.5,
+            hr_version = {
+              spritesheet = kr_tiles_path .. "reinforced-plates-kl/hr-plate-u.png",
+              count = 2,
+              tall = true,
+              scale = 0.5,
+            },
           },
-        },
-        o_transition = {
-          picture = kr_tiles_path .. "reinforced-plates-kl/plate-o.png",
-          count = 2,
-          hr_version = {
-            picture = kr_tiles_path .. "reinforced-plates-kl/hr-plate-o.png",
+          o_transition = {
+            spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-o.png",
             count = 2,
-            scale = 0.5,
+            hr_version = {
+              spritesheet = kr_tiles_path .. "reinforced-plates-kl/hr-plate-o.png",
+              count = 2,
+              scale = 0.5,
+            },
           },
         },
       },
@@ -284,7 +291,6 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
         },
       },
       map_color = { r = 50, g = 50, b = 50 },
-      pollution_absorption_per_second = 0,
       vehicle_friction_modifier = 0.8,
     },
   })

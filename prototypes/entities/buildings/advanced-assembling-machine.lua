@@ -96,18 +96,16 @@ data:extend({
         production_type = "input",
         pipe_picture = assemblerkpipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0, -3 } } },
+        volume = 1000,
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -2 } } },
         secondary_draw_orders = { north = -1 },
       },
       {
         production_type = "output",
         pipe_picture = assemblerkpipepictures(),
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 0, 3 } } },
+        volume = 1000,
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0, 2 } } },
         secondary_draw_orders = { north = -1 },
       },
       off_when_no_fluid_recipe = true,
@@ -321,7 +319,7 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 5,
+      emissions_per_minute = { pollution = 5 },
     },
 
     water_reflection = {

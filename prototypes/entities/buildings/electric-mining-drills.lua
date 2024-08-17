@@ -771,13 +771,11 @@ data:extend({
       production_type = "input-output",
       pipe_picture = assembler2pipepictures(),
       pipe_covers = pipecoverspictures(),
-      base_area = 1,
-      height = 2,
-      base_level = -1,
+      volume = 200,
       pipe_connections = {
-        { position = { -2, 0 } },
-        { position = { 2, 0 } },
-        { position = { 0, 2 } },
+        { flow_direction = "input-output", direction = defines.direction.north, position = { -1, 0 } },
+        { flow_direction = "input-output", direction = defines.direction.east, position = { 1, 0 } },
+        { flow_direction = "input-output", direction = defines.direction.south, position = { 0, 1 } },
       },
     },
     working_sound = {
@@ -2782,7 +2780,7 @@ data:extend({
     mining_speed = 0.75,
     energy_source = {
       type = "electric",
-      emissions_per_minute = 10,
+      emissions_per_minute = { pollution = 10 },
       usage_priority = "secondary-input",
     },
     energy_usage = "125kW",
@@ -2830,13 +2828,11 @@ data:extend({
       production_type = "input-output",
       pipe_picture = assembler2pipepictures(),
       pipe_covers = pipecoverspictures(),
-      base_area = 1,
-      height = 2,
-      base_level = -1,
+      volume = 200,
       pipe_connections = {
-        { position = { -2, 0 } },
-        { position = { 2, 0 } },
-        { position = { 0, 2 } },
+        { flow_direction = "input-output", direction = defines.direction.west, position = { -1, 0 } },
+        { flow_direction = "input-output", direction = defines.direction.east, position = { 1, 0 } },
+        { flow_direction = "input-output", direction = defines.direction.south, position = { 0, 1 } },
       },
     },
     working_sound = {
@@ -4841,7 +4837,7 @@ data:extend({
     mining_speed = 1,
     energy_source = {
       type = "electric",
-      emissions_per_minute = 15,
+      emissions_per_minute = { pollution = 15 },
       usage_priority = "secondary-input",
     },
     energy_usage = "150kW",

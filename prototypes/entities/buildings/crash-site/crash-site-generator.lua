@@ -10,7 +10,8 @@ data:extend({
     icon = kr_crash_site_icons_path .. "crash-site-generator.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    flags = { "placeable-player", "player-creation", "hidden", "not-rotatable" },
+    flags = { "placeable-player", "player-creation", "not-rotatable" },
+    hidden = true,
     map_color = { r = 0, g = 0.365, b = 0.58, a = 1 },
     max_health = 150,
     resistances = {

@@ -26,7 +26,7 @@ return {
       { type = "fluid", name = "hydrogen-chloride", amount = 50 },
       { type = "fluid", name = "sulfuric-acid", amount = 50 },
     },
-    result = "kr-creep-virus",
+    results = { { type = "item", name = "kr-creep-virus", amount = 1 } },
   },
   {
     type = "recipe",
@@ -40,6 +40,6 @@ return {
       { type = "fluid", name = "nitric-acid", amount = 50 },
       { type = "fluid", name = "biomethanol", amount = 50 },
     },
-    result = "kr-biter-virus",
+    results = { { type = "item", name = "kr-biter-virus", amount = 1 } },
   },
 }

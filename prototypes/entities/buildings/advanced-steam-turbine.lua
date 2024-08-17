@@ -23,13 +23,11 @@ data:extend({
     collision_box = { { -2.25, -3.25 }, { 2.25, 3.25 } },
     selection_box = { { -2.5, -3.5 }, { 2.5, 3.5 } },
     fluid_box = {
-      base_area = 5,
-      height = 2,
-      base_level = -1,
+      volume = 1000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { type = "input-output", position = { 0, 4 } },
-        { type = "input-output", position = { 0, -4 } },
+        { flow_direction = "input-output", direction = defines.direction.south, position = { 0, 3 } },
+        { flow_direction = "input-output", direction = defines.direction.north, position = { 0, -3 } },
       },
       production_type = "input-output",
       filter = "steam",

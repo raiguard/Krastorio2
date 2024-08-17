@@ -3,6 +3,8 @@ krastorio.recipes.recipes_groups = {}
 krastorio.recipes.changed_names = {}
 
 -- -- -- GETTING(READ) FUNCTIONS
+--
+-- TODO: Expensive/normal removal, ingredients/products unification
 
 -- -- INGREDIENTS
 
@@ -165,82 +167,10 @@ end
 -- -- PRODUCTS
 
 -- @ recipe_name
-function krastorio.recipes.resultToResults(recipe_name)
-  local recipe = krastorio.recipes.getRecipeFromName(recipe_name)
-  local results = nil
-
-  if recipe.results then
-    results = recipe.results
-  elseif recipe.normal and recipe.normal.results then
-    results = recipe.normal.results
-  elseif recipe.expensive and recipe.expensive.results then
-    results = recipe.expensive.results
-  end
-
-  if not results then
-    local result_count = 1
-    if recipe.result then
-      result_count = recipe.result_count or 1
-      if type(recipe.result) == "string" then
-        recipe.results = { { type = "item", name = recipe.result, amount = result_count } }
-      elseif recipe.result.name then
-        recipe.results = { recipe.result }
-      elseif recipe.result[1] then
-        result_count = recipe.result[2] or result_count
-        recipe.results = { { type = "item", name = recipe.result[1], amount = result_count } }
-      end
-      recipe.result = nil
-      results = recipe.results
-      recipe.result_count = nil
-    end
-    if not results and recipe.normal and recipe.normal.result then
-      result_count = recipe.normal.result_count or 1
-      if type(recipe.normal.result) == "string" then
-        recipe.normal.results = { { type = "item", name = recipe.normal.result, amount = result_count } }
-      elseif recipe.normal.result.name then
-        recipe.normal.results = { recipe.normal.result }
-      elseif recipe.normal.result[1] then
-        result_count = recipe.normal.result[2] or result_count
-        recipe.normal.results = { { type = "item", name = recipe.normal.result[1], amount = result_count } }
-      end
-      recipe.normal.result = nil
-      results = recipe.normal.results
-      recipe.normal.result_count = nil
-    end
-    if recipe.expensive and recipe.expensive.result then
-      result_count = recipe.expensive.result_count or 1
-      if type(recipe.expensive.result) == "string" then
-        recipe.expensive.results = { { type = "item", name = recipe.expensive.result, amount = result_count } }
-      elseif recipe.expensive.result.name then
-        recipe.expensive.results = { recipe.expensive.result }
-      elseif recipe.expensive.result[1] then
-        result_count = recipe.expensive.result[2] or result_count
-        recipe.expensive.results = { { type = "item", name = recipe.expensive.result[1], amount = result_count } }
-      end
-      recipe.expensive.result = nil
-      recipe.expensive.result_count = nil
-      if not results then
-        results = recipe.expensive.results
-      end
-    end
-  end
-  return results
-end
-
---
-
--- @ recipe_name
 -- return a table, with one ore more product
 function krastorio.recipes.getProducts(recipe_name)
   local recipe = krastorio.recipes.getRecipeFromName(recipe_name)
-  if recipe then
-    results = krastorio.recipes.resultToResults(recipe_name) -- test
-    if results == nil then
-      results = {}
-    end
-    return results
-  end
-  return {}
+  return recipe and recipe.results or {}
 end
 
 --
@@ -1171,22 +1101,7 @@ end
 function krastorio.recipes.overrideProducts(recipe_name, new_products, new_expensive_products)
   local recipe = krastorio.recipes.getRecipeFromName(recipe_name)
   if recipe and next(recipe) then
-    -- normal ingredients
-    if recipe.normal then
-      recipe.normal.result = nil
-      recipe.normal.results = new_products
-      recipe.normal.result_count = nil
-    else
-      recipe.result = nil
-      recipe.results = table.deepcopy(new_products)
-      recipe.result_count = nil
-    end
-    -- expensive ingredients
-    if recipe.expensive then
-      recipe.expensive.result = nil
-      recipe.expensive.results = new_expensive_products or table.deepcopy(new_products)
-      recipe.expensive.result_count = nil
-    end
+    recipe.results = new_products
     return true
   end
   return false
@@ -1863,40 +1778,6 @@ function krastorio.recipes.setEnergyCost(recipe_name, energy_cost, expensive_cos
     end
     if recipe.expensive then
       recipe.expensive.energy_required = expensive_cost or energy_cost
-    end
-  end
-end
-
--- @ recipe_name
--- @ result_count
-function krastorio.recipes.setRecipeResultCount(recipe_name, result_count)
-  local recipe = krastorio.recipes.getRecipeFromName(recipe_name)
-
-  if recipe ~= nil then
-    if
-      not recipe.result_count
-      and not (recipe.normal and recipe.normal.result_count)
-      and not (recipe.expensive and recipe.expensive.result_count)
-    then
-      if recipe and recipe.ingredients then
-        recipe.result_count = result_count
-      end
-      if recipe.normal ~= nil and recipe.normal.ingredients then
-        recipe.normal.result_count = result_count
-      end
-      if recipe.expensive ~= nil then
-        recipe.expensive.result_count = result_count
-      end
-    else
-      if recipe.result_count ~= nil then
-        recipe.result_count = result_count
-      end
-      if recipe.normal ~= nil and recipe.normal.ingredients and recipe.normal.result_count ~= nil then
-        recipe.normal.result_count = result_count
-      end
-      if recipe.expensive ~= nil and recipe.expensive.ingredients and recipe.expensive.result_count ~= nil then
-        recipe.expensive.result_count = result_count
-      end
     end
   end
 end

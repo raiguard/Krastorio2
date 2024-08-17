@@ -10,7 +10,8 @@ data:extend({
     icon = kr_crash_site_icons_path .. "crash-site-chest.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    flags = { "placeable-player", "player-creation", "hidden", "not-rotatable" },
+    flags = { "placeable-player", "player-creation", "not-rotatable" },
+    hidden = true,
     max_health = 350,
     corpse = "small-remnants",
     minable = {

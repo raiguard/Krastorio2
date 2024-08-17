@@ -213,10 +213,10 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
       energy_required = 0.5,
       enabled = true,
       ingredients = {
-        { "coal", 1 },
-        { "iron-plate", 1 },
+        { type = "item", name = "coal", amount = 1 },
+        { type = "item", name = "iron-plate", amount = 1 },
       },
-      result = "firearm-magazine",
+      results = { { type = "item", name = "firearm-magazine", amount = 1 } },
     },
 
     -- ---------------------------------------------------------------------------------------------------------------- --
@@ -314,10 +314,10 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
       energy_required = 1,
       enabled = false,
       ingredients = {
-        { "firearm-magazine", 1 },
-        { "steel-plate", 1 },
+        { type = "item", name = "firearm-magazine", amount = 1 },
+        { type = "item", name = "steel-plate", amount = 1 },
       },
-      result = "piercing-rounds-magazine",
+      results = { { type = "item", name = "piercing-rounds-magazine", amount = 1 } },
     },
   })
 
@@ -428,11 +428,11 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
       energy_required = 1,
       enabled = false,
       ingredients = {
-        { "coal", 2 },
-        { "iron-plate", 1 },
-        { "copper-plate", 1 },
+        { type = "item", name = "coal", amount = 2 },
+        { type = "item", name = "iron-plate", amount = 1 },
+        { type = "item", name = "copper-plate", amount = 1 },
       },
-      result = "rifle-magazine",
+      results = { { type = "item", name = "rifle-magazine", amount = 1 } },
     },
 
     -- ---------------------------------------------------------------------------------------------------------------- --
@@ -530,10 +530,10 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
       energy_required = 2,
       enabled = false,
       ingredients = {
-        { "rifle-magazine", 1 },
-        { "steel-plate", 2 },
+        { type = "item", name = "rifle-magazine", amount = 1 },
+        { type = "item", name = "steel-plate", amount = 2 },
       },
-      result = "armor-piercing-rifle-magazine",
+      results = { { type = "item", name = "armor-piercing-rifle-magazine", amount = 1 } },
     },
 
     -- ---------------------------------------------------------------------------------------------------------------- --
@@ -635,10 +635,10 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
       energy_required = 3,
       enabled = false,
       ingredients = {
-        { "rifle-magazine", 1 },
-        { "uranium-238", 2 },
+        { type = "item", name = "rifle-magazine", amount = 1 },
+        { type = "item", name = "uranium-238", amount = 2 },
       },
-      result = "uranium-rifle-magazine",
+      results = { { type = "item", name = "uranium-rifle-magazine", amount = 1 } },
     },
 
     -- ---------------------------------------------------------------------------------------------------------------- --
@@ -740,10 +740,10 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
       energy_required = 4,
       enabled = false,
       ingredients = {
-        { "rifle-magazine", 1 },
-        { "imersite-crystal", 2 },
+        { type = "item", name = "rifle-magazine", amount = 1 },
+        { type = "item", name = "imersite-crystal", amount = 2 },
       },
-      result = "imersite-rifle-magazine",
+      results = { { type = "item", name = "imersite-rifle-magazine", amount = 1 } },
     },
   })
 
@@ -794,10 +794,10 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
       energy_required = 10,
       enabled = false,
       ingredients = {
-        { "submachine-gun", 2 },
-        { "steel-plate", 4 },
+        { type = "item", name = "submachine-gun", amount = 2 },
+        { type = "item", name = "steel-plate", amount = 4 },
       },
-      result = "anti-material-rifle",
+      results = { { type = "item", name = "anti-material-rifle", amount = 1 } },
     },
 
     -- ---------------------------------------------------------------------------------------------------------------- --
@@ -910,11 +910,11 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
       energy_required = 2,
       enabled = false,
       ingredients = {
-        { "coal", 3 },
-        { "iron-plate", 2 },
-        { "copper-plate", 1 },
+        { type = "item", name = "coal", amount = 3 },
+        { type = "item", name = "iron-plate", amount = 2 },
+        { type = "item", name = "copper-plate", amount = 1 },
       },
-      result = "anti-material-rifle-magazine",
+      results = { { type = "item", name = "anti-material-rifle-magazine", amount = 1 } },
     },
 
     -- ---------------------------------------------------------------------------------------------------------------- --
@@ -1027,10 +1027,10 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
       energy_required = 3,
       enabled = false,
       ingredients = {
-        { "anti-material-rifle-magazine", 1 },
-        { "steel-plate", 3 },
+        { type = "item", name = "anti-material-rifle-magazine", amount = 1 },
+        { type = "item", name = "steel-plate", amount = 3 },
       },
-      result = "armor-piercing-anti-material-rifle-magazine",
+      results = { { type = "item", name = "armor-piercing-anti-material-rifle-magazine", amount = 1 } },
     },
 
     -- ---------------------------------------------------------------------------------------------------------------- --
@@ -1147,10 +1147,10 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
       energy_required = 4,
       enabled = false,
       ingredients = {
-        { "anti-material-rifle-magazine", 1 },
-        { "uranium-238", 3 },
+        { type = "item", name = "anti-material-rifle-magazine", amount = 1 },
+        { type = "item", name = "uranium-238", amount = 3 },
       },
-      result = "uranium-anti-material-rifle-magazine",
+      results = { { type = "item", name = "uranium-anti-material-rifle-magazine", amount = 1 } },
     },
 
     -- ---------------------------------------------------------------------------------------------------------------- --
@@ -1270,10 +1270,10 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
       energy_required = 5,
       enabled = false,
       ingredients = {
-        { "anti-material-rifle-magazine", 1 },
-        { "imersite-crystal", 3 },
+        { type = "item", name = "anti-material-rifle-magazine", amount = 1 },
+        { type = "item", name = "imersite-crystal", amount = 3 },
       },
-      result = "imersite-anti-material-rifle-magazine",
+      results = { { type = "item", name = "imersite-anti-material-rifle-magazine", amount = 1 } },
     },
   })
 
@@ -1367,8 +1367,8 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 
   -- -- Krastorio
 
-  data.raw.ammo["uranium-rounds-magazine"].flags = { "hidden" }
-  data.raw.ammo["imersite-rounds-magazine"].flags = { "hidden" }
+  data.raw.ammo["uranium-rounds-magazine"].hidden = true
+  data.raw.ammo["imersite-rounds-magazine"].hidden = true
 
   data.raw.gun["advanced-tank-machine-gun"].attack_parameters.ammo_category = "anti-material-rifle-ammo"
   data.raw.gun["advanced-tank-machine-gun"].attack_parameters.range = sniper_range

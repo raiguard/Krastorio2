@@ -9,9 +9,9 @@ return {
     enabled = true,
     allow_productivity = true,
     ingredients = {
-      { "iron-plate", 2 },
+      { type = "item", name = "iron-plate", amount = 2 },
     },
-    result = "iron-beam",
+    results = { { type = "item", name = "iron-beam", amount = 1 } },
   },
   {
     type = "recipe",
@@ -19,13 +19,12 @@ return {
     energy_required = 5,
     enabled = true,
     ingredients = {
-      { "iron-plate", 6 },
-      { "iron-beam", 2 },
-      { "iron-gear-wheel", 6 },
-      { "copper-cable", 6 },
+      { type = "item", name = "iron-plate", amount = 6 },
+      { type = "item", name = "iron-beam", amount = 2 },
+      { type = "item", name = "iron-gear-wheel", amount = 6 },
+      { type = "item", name = "copper-cable", amount = 6 },
     },
-    result = "kr-wind-turbine",
-    result_count = 1,
+    results = { { type = "item", name = "kr-wind-turbine", amount = 1 } },
   },
   {
     type = "recipe",
@@ -34,10 +33,10 @@ return {
     enabled = true,
     allow_productivity = true,
     ingredients = {
-      { "iron-stick", 2 },
-      { "iron-gear-wheel", 2 },
+      { type = "item", name = "iron-stick", amount = 2 },
+      { type = "item", name = "iron-gear-wheel", amount = 2 },
     },
-    result = "inserter-parts",
+    results = { { type = "item", name = "inserter-parts", amount = 1 } },
   },
   -----------------------------------------------------------------------------------------------------------------
   -----------------------------------------------------------------------------------------------------------------

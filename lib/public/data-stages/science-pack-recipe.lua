@@ -1,7 +1,7 @@
 --[[
-  -- How is defined science_pack_recipes: 
+  -- How is defined science_pack_recipes:
   science_pack_recipes["name of mod"]["name of science pack"]
-  
+
   "name of science pack" could be only:
   "automation-science-pack",
   "logistic-science-pack",
@@ -9,7 +9,7 @@
   "chemical-science-pack",
   "production-science-pack",
   "utility-science-pack"
-  
+
   Also, to add a new variant in automatic way, call this function:
   science_pack_recipes.addRecipeVariation(mod_name, science_pack_name, recipe)
   where:
@@ -37,10 +37,10 @@ if not krastorio.science_pack_recipes then
     enabled = false,
     energy_required = 5,
     ingredients = {
-      { "copper-plate", 1 },
-      { "iron-gear-wheel", 1 },
+      { type = "item", name = "copper-plate", amount = 1 },
+      { type = "item", name = "iron-gear-wheel", amount = 1 },
     },
-    result = "automation-science-pack",
+    results = { { type = "item", name = "automation-science-pack", amount = 1 } },
   }
   -- Logistic science pack (Vanilla)
   krastorio.science_pack_recipes["Factorio"]["logistic-science-pack"] = {
@@ -49,10 +49,10 @@ if not krastorio.science_pack_recipes then
     enabled = false,
     energy_required = 6,
     ingredients = {
-      { "inserter", 1 },
-      { "transport-belt", 1 },
+      { type = "item", name = "inserter", amount = 1 },
+      { type = "item", name = "transport-belt", amount = 1 },
     },
-    result = "logistic-science-pack",
+    results = { { type = "item", name = "logistic-science-pack", amount = 1 } },
   }
   -- Military science pack (Vanilla)
   krastorio.science_pack_recipes["Factorio"]["military-science-pack"] = {
@@ -60,13 +60,12 @@ if not krastorio.science_pack_recipes then
     name = "military-science-pack",
     enabled = false,
     energy_required = 10,
-    result_count = 2,
     ingredients = {
-      { "piercing-rounds-magazine", 1 },
-      { "grenade", 1 },
-      { "stone-wall", 2 },
+      { type = "item", name = "piercing-rounds-magazine", amount = 1 },
+      { type = "item", name = "grenade", amount = 1 },
+      { type = "item", name = "stone-wall", amount = 2 },
     },
-    result = "military-science-pack",
+    results = { { type = "item", name = "military-science-pack", amount = 2 } },
   }
   -- Chemical science pack (Vanilla)
   krastorio.science_pack_recipes["Factorio"]["chemical-science-pack"] = {
@@ -74,13 +73,12 @@ if not krastorio.science_pack_recipes then
     name = "chemical-science-pack",
     enabled = false,
     energy_required = 24,
-    result_count = 2,
     ingredients = {
-      { "engine-unit", 2 },
-      { "advanced-circuit", 3 },
-      { "sulfur", 1 },
+      { type = "item", name = "engine-unit", amount = 2 },
+      { type = "item", name = "advanced-circuit", amount = 3 },
+      { type = "item", name = "sulfur", amount = 1 },
     },
-    result = "chemical-science-pack",
+    results = { { type = "item", name = "chemical-science-pack", amount = 2 } },
   }
   -- Production science pack (Vanilla)
   krastorio.science_pack_recipes["Factorio"]["production-science-pack"] = {
@@ -88,13 +86,12 @@ if not krastorio.science_pack_recipes then
     name = "production-science-pack",
     enabled = false,
     energy_required = 21,
-    result_count = 3,
     ingredients = {
-      { "electric-furnace", 1 },
-      { "productivity-module", 1 },
-      { "rail", 30 },
+      { type = "item", name = "electric-furnace", amount = 1 },
+      { type = "item", name = "productivity-module", amount = 1 },
+      { type = "item", name = "rail", amount = 30 },
     },
-    result = "production-science-pack",
+    results = { { type = "item", name = "production-science-pack", amount = 3 } },
   }
   -- Utility science pack (Vanilla)
   krastorio.science_pack_recipes["Factorio"]["utility-science-pack"] = {
@@ -102,13 +99,12 @@ if not krastorio.science_pack_recipes then
     name = "utility-science-pack",
     enabled = false,
     energy_required = 21,
-    result_count = 3,
     ingredients = {
-      { "low-density-structure", 3 },
-      { "processing-unit", 2 },
-      { "flying-robot-frame", 1 },
+      { type = "item", name = "low-density-structure", amount = 3 },
+      { type = "item", name = "processing-unit", amount = 2 },
+      { type = "item", name = "flying-robot-frame", amount = 1 },
     },
-    result = "utility-science-pack",
+    results = { { type = "item", name = "utility-science-pack", amount = 3 } },
   }
 
   --------------------------------------------------------------------------------------
@@ -122,12 +118,11 @@ if not krastorio.science_pack_recipes then
     name = "automation-science-pack",
     enabled = false,
     energy_required = 20,
-    result_count = 5,
     ingredients = {
-      { "blank-tech-card", 5 },
-      { "automation-core", 1 },
+      { type = "item", name = "blank-tech-card", amount = 5 },
+      { type = "item", name = "automation-core", amount = 1 },
     },
-    result = "automation-science-pack",
+    results = { { type = "item", name = "automation-science-pack", amount = 5 } },
   }
   -- Logistic science pack (Krastorio)
   krastorio.science_pack_recipes["Krastorio 2"]["logistic-science-pack"] = {
@@ -135,13 +130,12 @@ if not krastorio.science_pack_recipes then
     name = "logistic-science-pack",
     enabled = false,
     energy_required = 20,
-    result_count = 5,
     ingredients = {
-      { "blank-tech-card", 5 },
-      { "electronic-circuit", 5 },
-      { "iron-gear-wheel", 5 },
+      { type = "item", name = "blank-tech-card", amount = 5 },
+      { type = "item", name = "electronic-circuit", amount = 5 },
+      { type = "item", name = "iron-gear-wheel", amount = 5 },
     },
-    result = "logistic-science-pack",
+    results = { { type = "item", name = "logistic-science-pack", amount = 5 } },
   }
   -- Military science pack (Krastorio)
   krastorio.science_pack_recipes["Krastorio 2"]["military-science-pack"] = {
@@ -149,13 +143,12 @@ if not krastorio.science_pack_recipes then
     name = "military-science-pack",
     enabled = false,
     energy_required = 20,
-    result_count = 5,
     ingredients = {
-      { "blank-tech-card", 5 },
-      { "biters-research-data", 1 },
-      { "electronic-components", 5 },
+      { type = "item", name = "blank-tech-card", amount = 5 },
+      { type = "item", name = "biters-research-data", amount = 1 },
+      { type = "item", name = "electronic-components", amount = 5 },
     },
-    result = "military-science-pack",
+    results = { { type = "item", name = "military-science-pack", amount = 5 } },
   }
   -- Chemical science pack (Krastorio)
   krastorio.science_pack_recipes["Krastorio 2"]["chemical-science-pack"] = {
@@ -164,14 +157,13 @@ if not krastorio.science_pack_recipes then
     category = "crafting-with-fluid",
     enabled = false,
     energy_required = 20,
-    result_count = 5,
     ingredients = {
-      { "blank-tech-card", 5 },
-      { "glass", 15 },
-      { "advanced-circuit", 5 },
+      { type = "item", name = "blank-tech-card", amount = 5 },
+      { type = "item", name = "glass", amount = 15 },
+      { type = "item", name = "advanced-circuit", amount = 5 },
       { type = "fluid", name = "sulfuric-acid", amount = 50 },
     },
-    result = "chemical-science-pack",
+    results = { { type = "item", name = "chemical-science-pack", amount = 5 } },
   }
   -- Production science pack (Krastorio)
   krastorio.science_pack_recipes["Krastorio 2"]["production-science-pack"] = {
@@ -179,14 +171,13 @@ if not krastorio.science_pack_recipes then
     name = "production-science-pack",
     enabled = false,
     energy_required = 20,
-    result_count = 5,
     ingredients = {
-      { "blank-tech-card", 10 },
-      { "fast-transport-belt", 10 },
-      { "productivity-module", 5 },
-      { "uranium-238", 5 },
+      { type = "item", name = "blank-tech-card", amount = 10 },
+      { type = "item", name = "fast-transport-belt", amount = 10 },
+      { type = "item", name = "productivity-module", amount = 5 },
+      { type = "item", name = "uranium-238", amount = 5 },
     },
-    result = "production-science-pack",
+    results = { { type = "item", name = "production-science-pack", amount = 5 } },
   }
   -- Utility science pack (Krastorio)
   krastorio.science_pack_recipes["Krastorio 2"]["utility-science-pack"] = {
@@ -194,14 +185,13 @@ if not krastorio.science_pack_recipes then
     name = "utility-science-pack",
     enabled = false,
     energy_required = 20,
-    result_count = 5,
     ingredients = {
-      { "blank-tech-card", 10 },
-      { "processing-unit", 5 },
-      { "rocket-fuel", 5 },
-      { "low-density-structure", 5 },
+      { type = "item", name = "blank-tech-card", amount = 10 },
+      { type = "item", name = "processing-unit", amount = 5 },
+      { type = "item", name = "rocket-fuel", amount = 5 },
+      { type = "item", name = "low-density-structure", amount = 5 },
     },
-    result = "utility-science-pack",
+    results = { { type = "item", name = "utility-science-pack", amount = 5 } },
   }
 end
 

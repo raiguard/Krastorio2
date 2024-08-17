@@ -25,13 +25,15 @@ data:extend({
     collision_box = { { -0.29, -0.29 }, { 0.29, 0.2 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
-      base_area = 1,
-      height = 1.25,
+      volume = 125,
       pipe_covers = steel_pipecoverspictures,
       pipe_connections = {
-        { position = { 0, -1 } },
+        { flow_direction = "input-output", direction = defines.direction.north, position = { 0, 0 } },
         {
-          position = { 0, 1 },
+          flow_direction = "input-output",
+          direction = defines.direction.south,
+          position = { 0, 0 },
+          connection_type = "underground",
           max_underground_distance = 30,
         },
       },

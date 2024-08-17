@@ -114,13 +114,13 @@ if mods["angelspetrochem"] then
   krastorio.recipes.addIngredient("solid-coke-sulfur", { "wood", 1 })
 
   -- Make some angels fluids burnable in the gas power station
-  makeFluidBurnable("gas-methane", "775KJ", 1.3)
-  makeFluidBurnable("gas-methanol", "790KJ", 1.3)
-  makeFluidBurnable("gas-ethane", "850KJ", 1.3)
-  makeFluidBurnable("gas-ethane", "850KJ", 1.3)
-  makeFluidBurnable("gas-butane", "950KJ", 1.4)
-  makeFluidBurnable("gas-propene", "1000KJ", 1.4)
-  makeFluidBurnable("gas-benzene", "1000KJ", 1.4)
+  makeFluidBurnable("gas-methane", "775kJ", 1.3)
+  makeFluidBurnable("gas-methanol", "790kJ", 1.3)
+  makeFluidBurnable("gas-ethane", "850kJ", 1.3)
+  makeFluidBurnable("gas-ethane", "850kJ", 1.3)
+  makeFluidBurnable("gas-butane", "950kJ", 1.4)
+  makeFluidBurnable("gas-propene", "1000kJ", 1.4)
+  makeFluidBurnable("gas-benzene", "1000kJ", 1.4)
 
   -- Fix tech levels
   data.raw.technology["chlorine-processing-4"] = nil

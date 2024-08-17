@@ -183,12 +183,12 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
       energy_required = 20,
       enabled = false,
       ingredients = {
-        { "radar", 1 },
-        { "steel-beam", 5 },
-        { "advanced-circuit", 5 },
-        { "rare-metals", 5 },
+        { type = "item", name = "radar", amount = 1 },
+        { type = "item", name = "steel-beam", amount = 5 },
+        { type = "item", name = "advanced-circuit", amount = 5 },
+        { type = "item", name = "rare-metals", amount = 5 },
       },
-      result = "advanced-radar",
+      results = { { type = "item", name = "advanced-radar", amount = 1 } },
     },
 
     -- Tech

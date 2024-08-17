@@ -9,9 +9,9 @@ return {
     always_show_made_in = true,
     allow_productivity = true,
     ingredients = {
-      { "lithium", 30 },
-      { "rare-metals", 5 },
-      { "uranium-235", 1 },
+      { type = "item", name = "lithium", amount = 30 },
+      { type = "item", name = "rare-metals", amount = 5 },
+      { type = "item", name = "uranium-235", amount = 1 },
     },
     results = { { type = "item", name = "tritium", amount = 5 } },
   },

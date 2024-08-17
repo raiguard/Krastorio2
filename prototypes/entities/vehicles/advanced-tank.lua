@@ -1836,7 +1836,7 @@ data:extend({
     braking_power = "12MW",
     burner = {
       fuel_category = "chemical",
-      emissions_per_minute = 25,
+      emissions_per_minute = { pollution = 25 },
       effectivity = 1,
       fuel_inventory_size = 3,
       smoke = {

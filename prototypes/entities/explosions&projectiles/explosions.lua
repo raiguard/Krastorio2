@@ -7,7 +7,8 @@ data:extend({
   {
     type = "explosion",
     name = "impulse-rifle-beam",
-    flags = { "not-on-map", "hidden" },
+    flags = { "not-on-map" },
+    hidden = true,
     subgroup = "explosions",
     rotate = true,
     beam = true,

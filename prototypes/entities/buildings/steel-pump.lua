@@ -27,12 +27,11 @@ data:extend({
       },
     },
     fluid_box = {
-      base_area = 1,
-      height = 5,
+      volume = 500,
       pipe_covers = steel_pipecoverspictures,
       pipe_connections = {
-        { position = { 0, -1.5 }, type = "output" },
-        { position = { 0, 1.5 }, type = "input" },
+        { flow_direction = "output", direction = defines.direction.north, position = { 0, -0.5 } },
+        { flow_direction = "input", direction = defines.direction.south, position = { 0, 0.5 } },
       },
     },
     energy_source = {

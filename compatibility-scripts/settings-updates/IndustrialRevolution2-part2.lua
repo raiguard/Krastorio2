@@ -55,7 +55,7 @@ if mods["IndustrialRevolution"] then
     ingredients = {
       { "electronic-circuit", 2 },
       { "concrete", 5 },
-      { "iron-beam", 3 },
+      { type = "item", name = "iron-beam", amount = 3 },
     },
     result = "chemical-science-pack",
     result_count = 1,

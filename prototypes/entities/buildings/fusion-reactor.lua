@@ -22,17 +22,15 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         pipe_picture = kr_pipe_path,
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0, 8 } } },
+        volume = 1000,
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { 0, 7 } } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         pipe_picture = kr_pipe_path,
-        base_area = 1000,
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 0, -8 } } },
+        volume = 100000,
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0, -7 } } },
       },
       off_when_no_fluid_recipe = false,
     },
@@ -228,7 +226,7 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 5,
+      emissions_per_minute = { pollution = 5 },
     },
 
     water_reflection = {

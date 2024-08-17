@@ -94,7 +94,7 @@ data:extend({
       type = "electric",
       usage_priority = "secondary-input",
     },
-    energy_usage = "750KW",
+    energy_usage = "750kW",
     vehicle_impact_sound = sounds.generic_impact,
     allowed_effects = { "consumption", "speed", "pollution" },
     module_specification = {

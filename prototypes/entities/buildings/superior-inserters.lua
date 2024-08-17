@@ -27,8 +27,8 @@ data:extend({
     selection_box = { { -0.4, -0.35 }, { 0.4, 0.45 } },
     pickup_position = { 0, -1 },
     insert_position = { 0, 1.2 },
-    energy_per_movement = "12KJ",
-    energy_per_rotation = "12KJ",
+    energy_per_movement = "12kJ",
+    energy_per_rotation = "12kJ",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -164,8 +164,8 @@ data:extend({
     selection_box = { { -0.4, -0.35 }, { 0.4, 0.45 } },
     pickup_position = { 0, -2 },
     insert_position = { 0, 2.2 },
-    energy_per_movement = "13KJ",
-    energy_per_rotation = "13KJ",
+    energy_per_movement = "13kJ",
+    energy_per_rotation = "13kJ",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -304,8 +304,8 @@ data:extend({
     selection_box = { { -0.4, -0.35 }, { 0.4, 0.45 } },
     pickup_position = { 0, -1 },
     insert_position = { 0, 1.2 },
-    energy_per_movement = "15KJ",
-    energy_per_rotation = "15KJ",
+    energy_per_movement = "15kJ",
+    energy_per_rotation = "15kJ",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -446,8 +446,8 @@ data:extend({
     selection_box = { { -0.4, -0.35 }, { 0.4, 0.45 } },
     pickup_position = { 0, -2 },
     insert_position = { 0, 2.2 },
-    energy_per_movement = "16KJ",
-    energy_per_rotation = "16KJ",
+    energy_per_movement = "16kJ",
+    energy_per_rotation = "16kJ",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",

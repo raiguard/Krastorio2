@@ -19,13 +19,13 @@ data:extend({
     collision_box = { { -1.25, -1.25 }, { 1.25, 1.25 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     fluid_box = {
-      base_area = 500,
+      volume = 50000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = { -2, 0 } },
-        { position = { 0, -2 } },
-        { position = { 2, 0 } },
-        { position = { 0, 2 } },
+        { flow_direction = "input-output", direction = defines.direction.west, position = { -1, 0 } },
+        { flow_direction = "input-output", direction = defines.direction.north, position = { 0, -1 } },
+        { flow_direction = "input-output", direction = defines.direction.east, position = { 1, 0 } },
+        { flow_direction = "input-output", direction = defines.direction.south, position = { 0, 1 } },
       },
     },
     window_bounding_box = { { -0.125, 0.6875 }, { 0.1875, 1.1875 } },
