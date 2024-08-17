@@ -426,18 +426,18 @@ data:extend({
     collision_mask = { layers = {} },
     call_for_help_radius = 0,
     folded_animation = {
-      north = util.empty_sprite(1),
-      east = util.empty_sprite(1),
-      south = util.empty_sprite(1),
-      west = util.empty_sprite(1),
+      north = util.empty_animation(1),
+      east = util.empty_animation(1),
+      south = util.empty_animation(1),
+      west = util.empty_animation(1),
     },
     flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
     attack_parameters = {
       type = "projectile",
       range = 20,
       cooldown = 10,
+      ammo_category = "melee",
       ammo_type = {
-        category = "melee",
         target_type = "position",
         energy_consumption = "1J",
         action = {
@@ -470,6 +470,7 @@ data:extend({
         },
       },
     },
+    graphics_set = {},
   },
   {
     type = "trigger-target-type",

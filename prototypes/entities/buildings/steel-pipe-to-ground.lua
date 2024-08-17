@@ -39,13 +39,7 @@ data:extend({
       },
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    working_sound = {
-      sound = sounds.pipe,
-      match_volume_to_activity = true,
-      audible_distance_modifier = 0.3,
-      fade_in_ticks = 4,
-      fade_out_ticks = 60,
-    },
+    working_sound = sounds.pipe,
     pictures = {
       up = {
         filename = kr_entities_path .. "steel-pipe-to-ground/steel-pipe-to-ground-up.png",

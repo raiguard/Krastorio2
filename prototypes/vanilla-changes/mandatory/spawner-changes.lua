@@ -105,7 +105,7 @@ data.raw["unit"]["medium-biter"].max_health = 100
 data.raw["unit"]["big-biter"].max_health = 500
 data.raw["unit"]["behemoth-biter"].max_health = 3500
 
-data.raw["unit"]["behemoth-biter"].pollution_to_join_attack = 500
+data.raw["unit"]["behemoth-biter"].absorptions_to_join_attack.pollution = 500
 
 -- -- Spitters stats
 
@@ -113,7 +113,7 @@ data.raw["unit"]["medium-spitter"].max_health = 75
 data.raw["unit"]["big-spitter"].max_health = 350
 data.raw["unit"]["behemoth-spitter"].max_health = 2500
 
-data.raw["unit"]["behemoth-spitter"].pollution_to_join_attack = 500
+data.raw["unit"]["behemoth-spitter"].absorptions_to_join_attack.pollution = 500
 
 -- -- Worms stats
 

@@ -66,7 +66,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         pipe_picture = kr_pipe_path,
         volume = 1000,
-        pipe_connections = { { flow_direction = "output", direction = defines.direction.east, osition = { -2, 3 } } },
+        pipe_connections = { { flow_direction = "output", direction = defines.direction.east, position = { -2, 3 } } },
       },
 
       off_when_no_fluid_recipe = false,

@@ -566,7 +566,7 @@ if not mods["aai-industry"] then
       pipe_covers = pipecoverspictures(),
       production_type = "output",
       filter = "water",
-      pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 1 } } },
+      pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 0 } } },
     },
     off_when_no_fluid_recipe = false,
   }

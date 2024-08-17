@@ -26,12 +26,18 @@ data:extend({
         percent = 30,
       },
     },
-    fluid_box = {
+    input_fluid_box = {
+      volume = 500,
+      pipe_covers = steel_pipecoverspictures,
+      pipe_connections = {
+        { flow_direction = "input", direction = defines.direction.south, position = { 0, 0.5 } },
+      },
+    },
+    output_fluid_box = {
       volume = 500,
       pipe_covers = steel_pipecoverspictures,
       pipe_connections = {
         { flow_direction = "output", direction = defines.direction.north, position = { 0, -0.5 } },
-        { flow_direction = "input", direction = defines.direction.south, position = { 0, 0.5 } },
       },
     },
     energy_source = {

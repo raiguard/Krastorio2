@@ -1834,7 +1834,8 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     effectivity = 1,
     braking_power = "12MW",
-    burner = {
+    energy_source = {
+      type = "burner",
       fuel_category = "chemical",
       emissions_per_minute = { pollution = 25 },
       effectivity = 1,

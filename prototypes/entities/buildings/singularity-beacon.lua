@@ -97,12 +97,7 @@ data:extend({
     energy_usage = "750kW",
     vehicle_impact_sound = sounds.generic_impact,
     allowed_effects = { "consumption", "speed", "pollution" },
-    module_specification = {
-      module_slots = 2,
-      module_info_icon_shift = { 0, 0.5 },
-      module_info_multi_row_initial_height_modifier = -0.3,
-    },
-
+    module_slots = 2,
     water_reflection = {
       pictures = {
         filename = kr_entities_path .. "singularity-beacon/singularity-beacon-reflection.png",

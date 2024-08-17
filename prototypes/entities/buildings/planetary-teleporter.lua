@@ -291,8 +291,8 @@ data:extend({
       type = "projectile",
       range = 0.75,
       cooldown = 1,
+      ammo_category = "melee",
       ammo_type = {
-        category = "melee",
         target_type = "position",
         energy_consumption = "1J",
         action = {
@@ -325,5 +325,6 @@ data:extend({
         },
       },
     },
+    graphics_set = {},
   },
 })

@@ -63,8 +63,8 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
     source_direction_count = 64,
     source_offset = { 0, -3.423489 / 4 },
     damage_modifier = 3,
+    ammo_category = "laser",
     ammo_type = {
-      category = "laser",
       energy_consumption = "975kJ",
       action = {
         type = "direct",
@@ -269,7 +269,7 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
       tile_name = "nuclear-ground",
       radius = 12,
       apply_projection = true,
-      tile_collision_mask = { layers = {["water-tile"] = true} },
+      tile_collision_mask = { layers = { ["water-tile"] = true } },
     },
     {
       type = "destroy-cliffs",
@@ -463,7 +463,7 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
             {
               type = "create-entity",
               entity_name = "nuclear-smouldering-smoke-source",
-              tile_collision_mask = { layers = {["water-tile"] = true} },
+              tile_collision_mask = { layers = { ["water-tile"] = true } },
             },
           },
         },

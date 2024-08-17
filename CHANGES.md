@@ -28,3 +28,13 @@
 - Tile transitions definitions layout change (variants.transition).
   - `picture` -> `spritesheet`.
 - Emissions values are now a dictionary keyed by pollutant.
+- Overhauled pipe connection definitions
+  - Positions needs to be inside the entity
+  - Direction
+  - Connection type
+- Pump has two fluid boxes now.
+- Attack parameters gained ammo category, moved out of ammo type subtable.
+- Mandatory graphics set on turrets.
+  - Change `base_picture` to `graphics_set` and wrap contents in `base_visualisations.animation` subtables.
+- `util.empty_sprite(frams)` -> `util.empty_animation(frames)`. Continue using `empty_sprite` when not an animation.
+- SLOPED SPRITES FOR ROLLING STOCK
