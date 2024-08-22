@@ -26,7 +26,7 @@ data:extend({
     structure = {
       north = {
         filename = kr_entities_path
-          .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-north.png",
+          .. "transport-belts/superior-transport-belt/splitter/superior-splitter-north.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",
@@ -37,7 +37,7 @@ data:extend({
       },
       east = {
         filename = kr_entities_path
-          .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-east.png",
+          .. "transport-belts/superior-transport-belt/splitter/superior-splitter-east.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",
@@ -48,7 +48,7 @@ data:extend({
       },
       south = {
         filename = kr_entities_path
-          .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-south.png",
+          .. "transport-belts/superior-transport-belt/splitter/superior-splitter-south.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",
@@ -59,7 +59,7 @@ data:extend({
       },
       west = {
         filename = kr_entities_path
-          .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-west.png",
+          .. "transport-belts/superior-transport-belt/splitter/superior-splitter-west.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",
@@ -73,7 +73,7 @@ data:extend({
       north = util.empty_sprite(),
       east = {
         filename = kr_entities_path
-          .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-east-top_patch.png",
+          .. "transport-belts/superior-transport-belt/splitter/superior-splitter-east-top_patch.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",
@@ -85,7 +85,7 @@ data:extend({
       south = util.empty_sprite(),
       west = {
         filename = kr_entities_path
-          .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-west-top_patch.png",
+          .. "transport-belts/superior-transport-belt/splitter/superior-splitter-west-top_patch.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",

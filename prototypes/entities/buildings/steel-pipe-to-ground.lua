@@ -42,28 +42,28 @@ data:extend({
     working_sound = sounds.pipe,
     pictures = {
       up = {
-        filename = kr_entities_path .. "steel-pipe-to-ground/hr-steel-pipe-to-ground-up.png",
+        filename = kr_entities_path .. "steel-pipe-to-ground/steel-pipe-to-ground-up.png",
         priority = "extra-high",
         width = 128,
         height = 128,
         scale = 0.5,
       },
       down = {
-        filename = kr_entities_path .. "steel-pipe-to-ground/hr-steel-pipe-to-ground-down.png",
+        filename = kr_entities_path .. "steel-pipe-to-ground/steel-pipe-to-ground-down.png",
         priority = "extra-high",
         width = 128,
         height = 128,
         scale = 0.5,
       },
       left = {
-        filename = kr_entities_path .. "steel-pipe-to-ground/hr-steel-pipe-to-ground-left.png",
+        filename = kr_entities_path .. "steel-pipe-to-ground/steel-pipe-to-ground-left.png",
         priority = "extra-high",
         width = 128,
         height = 128,
         scale = 0.5,
       },
       right = {
-        filename = kr_entities_path .. "steel-pipe-to-ground/hr-steel-pipe-to-ground-right.png",
+        filename = kr_entities_path .. "steel-pipe-to-ground/steel-pipe-to-ground-right.png",
         priority = "extra-high",
         width = 128,
         height = 128,

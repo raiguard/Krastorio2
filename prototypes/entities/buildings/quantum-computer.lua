@@ -4,7 +4,7 @@ local sounds = require("__base__/prototypes/entity/sounds")
 function quantumkpipepictures()
   return {
     north = {
-      filename = kr_entities_path .. "quantum-computer/hr-quantum-computer-k-pipe-N.png",
+      filename = kr_entities_path .. "quantum-computer/quantum-computer-k-pipe-N.png",
       priority = "extra-high",
       width = 78, --71
       height = 71, -- 38
@@ -12,7 +12,7 @@ function quantumkpipepictures()
       scale = 0.5,
     },
     east = {
-      filename = kr_entities_path .. "quantum-computer/hr-quantum-computer-k-pipe-E.png",
+      filename = kr_entities_path .. "quantum-computer/quantum-computer-k-pipe-E.png",
       priority = "extra-high",
       width = 42,
       height = 76,
@@ -20,7 +20,7 @@ function quantumkpipepictures()
       scale = 0.5,
     },
     south = {
-      filename = kr_entities_path .. "quantum-computer/hr-quantum-computer-k-pipe-S.png",
+      filename = kr_entities_path .. "quantum-computer/quantum-computer-k-pipe-S.png",
       priority = "extra-high",
       width = 88,
       height = 61,
@@ -28,7 +28,7 @@ function quantumkpipepictures()
       scale = 0.5,
     },
     west = {
-      filename = kr_entities_path .. "quantum-computer/hr-quantum-computer-k-pipe-W.png",
+      filename = kr_entities_path .. "quantum-computer/quantum-computer-k-pipe-W.png",
       priority = "extra-high",
       width = 39,
       height = 73,
@@ -85,7 +85,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "quantum-computer/hr-quantum-computer.png",
+          filename = kr_entities_path .. "quantum-computer/quantum-computer.png",
           priority = "high",
           width = 400,
           height = 420,
@@ -96,7 +96,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "quantum-computer/hr-quantum-computer-sh.png",
+          filename = kr_entities_path .. "quantum-computer/quantum-computer-sh.png",
           priority = "medium",
           width = 402,
           height = 362,
@@ -121,7 +121,7 @@ data:extend({
       {
         draw_as_light = true,
         animation = {
-          filename = kr_entities_path .. "quantum-computer/hr-quantum-computer-light.png",
+          filename = kr_entities_path .. "quantum-computer/quantum-computer-light.png",
           priority = "extra-high",
           width = 400,
           height = 420,
@@ -136,7 +136,7 @@ data:extend({
         draw_as_glow = true,
         blend_mode = "additive-soft",
         animation = {
-          filename = kr_entities_path .. "quantum-computer/hr-quantum-computer-glow.png",
+          filename = kr_entities_path .. "quantum-computer/quantum-computer-glow.png",
           priority = "extra-high",
           width = 400,
           height = 420,

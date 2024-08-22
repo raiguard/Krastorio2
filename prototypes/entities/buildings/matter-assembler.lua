@@ -65,7 +65,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "matter-assembler/hr-matter-assembler.png",
+          filename = kr_entities_path .. "matter-assembler/matter-assembler.png",
           priority = "high",
           width = 473,
           height = 489,
@@ -74,7 +74,7 @@ data:extend({
           shift = { 0, -0.15 },
         },
         {
-          filename = kr_entities_path .. "matter-assembler/hr-matter-assembler-sh.png",
+          filename = kr_entities_path .. "matter-assembler/matter-assembler-sh.png",
           priority = "medium",
           width = 508,
           height = 446,
@@ -89,7 +89,7 @@ data:extend({
       {
         draw_as_light = true,
         animation = {
-          filename = kr_entities_path .. "matter-assembler/hr-matter-assembler-working-glow-light.png",
+          filename = kr_entities_path .. "matter-assembler/matter-assembler-working-glow-light.png",
           priority = "high",
           width = 144,
           height = 110,
@@ -105,7 +105,7 @@ data:extend({
         blend_mode = "additive",
         synced_fadeout = true,
         animation = {
-          filename = kr_entities_path .. "matter-assembler/hr-matter-assembler-working-glow.png",
+          filename = kr_entities_path .. "matter-assembler/matter-assembler-working-glow.png",
           priority = "high",
           width = 144,
           height = 110,
@@ -120,7 +120,7 @@ data:extend({
         animation = {
           layers = {
             {
-              filename = kr_entities_path .. "matter-assembler/hr-matter-assembler-working-light.png",
+              filename = kr_entities_path .. "matter-assembler/matter-assembler-working-light.png",
               priority = "high",
               width = 473,
               height = 489,
@@ -132,7 +132,7 @@ data:extend({
               draw_as_light = true,
             },
             {
-              filename = kr_entities_path .. "matter-assembler/hr-matter-assembler-working.png",
+              filename = kr_entities_path .. "matter-assembler/matter-assembler-working.png",
               priority = "high",
               width = 473,
               height = 489,

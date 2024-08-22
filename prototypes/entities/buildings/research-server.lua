@@ -4,7 +4,7 @@ local sounds = require("__base__/prototypes/entity/sounds")
 function serverkpipepictures()
   return {
     north = {
-      filename = kr_entities_path .. "research-server/hr-research-server-k-pipe-N.png",
+      filename = kr_entities_path .. "research-server/research-server-k-pipe-N.png",
       priority = "extra-high",
       width = 71,
       height = 38,
@@ -12,7 +12,7 @@ function serverkpipepictures()
       scale = 0.5,
     },
     east = {
-      filename = kr_entities_path .. "research-server/hr-research-server-k-pipe-E.png",
+      filename = kr_entities_path .. "research-server/research-server-k-pipe-E.png",
       priority = "extra-high",
       width = 42,
       height = 76,
@@ -20,7 +20,7 @@ function serverkpipepictures()
       scale = 0.5,
     },
     south = {
-      filename = kr_entities_path .. "research-server/hr-research-server-k-pipe-S.png",
+      filename = kr_entities_path .. "research-server/research-server-k-pipe-S.png",
       priority = "extra-high",
       width = 88,
       height = 61,
@@ -28,7 +28,7 @@ function serverkpipepictures()
       scale = 0.5,
     },
     west = {
-      filename = kr_entities_path .. "research-server/hr-research-server-k-pipe-W.png",
+      filename = kr_entities_path .. "research-server/research-server-k-pipe-W.png",
       priority = "extra-high",
       width = 39,
       height = 73,
@@ -78,7 +78,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "research-server/hr-research-server.png",
+          filename = kr_entities_path .. "research-server/research-server.png",
           priority = "high",
           width = 256,
           height = 256,
@@ -89,7 +89,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "research-server/hr-research-server-shadow.png",
+          filename = kr_entities_path .. "research-server/research-server-shadow.png",
           priority = "high",
           width = 256,
           height = 256,
@@ -105,7 +105,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = kr_entities_path .. "research-server/hr-research-server-light.png",
+          filename = kr_entities_path .. "research-server/research-server-light.png",
           priority = "extra-high",
           width = 256,
           height = 256,

@@ -28,7 +28,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "crusher/hr-crusher.png",
+          filename = kr_entities_path .. "crusher/crusher.png",
           priority = "high",
           width = 512,
           height = 512,
@@ -38,7 +38,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "crusher/hr-crusher-shadow.png",
+          filename = kr_entities_path .. "crusher/crusher-shadow.png",
           priority = "high",
           width = 512,
           height = 512,

@@ -63,14 +63,14 @@ data:extend({
     base = {
       layers = {
         {
-          filename = kr_entities_path .. "large-roboport/hr-large-roboport.png",
+          filename = kr_entities_path .. "large-roboport/large-roboport.png",
           width = 560,
           height = 560,
           shift = { 0, 0.08 },
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "large-roboport/hr-large-roboport-sh.png",
+          filename = kr_entities_path .. "large-roboport/large-roboport-sh.png",
           width = 626,
           height = 426,
           shift = { 1.1, 1.19 },
@@ -80,7 +80,7 @@ data:extend({
       },
     },
     base_patch = {
-      filename = kr_entities_path .. "large-roboport/hr-large-roboport-patch.png",
+      filename = kr_entities_path .. "large-roboport/large-roboport-patch.png",
       width = 138,
       height = 112,
       shift = { 0, 0.28 },
@@ -89,7 +89,7 @@ data:extend({
     base_animation = {
       layers = {
         {
-          filename = kr_entities_path .. "large-roboport/hr-large-roboport-animation.png",
+          filename = kr_entities_path .. "large-roboport/large-roboport-animation.png",
           priority = "medium",
           width = 350,
           height = 286,
@@ -101,7 +101,7 @@ data:extend({
           animation_speed = 0.1,
         },
         {
-          filename = kr_entities_path .. "large-roboport/hr-large-roboport-animation-light.png",
+          filename = kr_entities_path .. "large-roboport/large-roboport-animation-light.png",
           priority = "high",
           width = 350,
           height = 286,
@@ -115,7 +115,7 @@ data:extend({
       },
     },
     door_animation_up = {
-      filename = kr_entities_path .. "large-roboport/hr-large-roboport-door-up.png",
+      filename = kr_entities_path .. "large-roboport/large-roboport-door-up.png",
       priority = "medium",
       width = 98,
       height = 38,
@@ -124,7 +124,7 @@ data:extend({
       shift = { 0, -0.86 },
     },
     door_animation_down = {
-      filename = kr_entities_path .. "large-roboport/hr-large-roboport-door-down.png",
+      filename = kr_entities_path .. "large-roboport/large-roboport-door-down.png",
       priority = "medium",
       width = 98,
       height = 36,

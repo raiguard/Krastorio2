@@ -21,7 +21,7 @@ data:extend({
     animation = make_4way_animation_from_spritesheet({
       layers = {
         {
-          filename = kr_entities_path .. "fuel-refinery/hr-fuel-refinery.png",
+          filename = kr_entities_path .. "fuel-refinery/fuel-refinery.png",
           width = 244,
           height = 268,
           frame_count = 1,
@@ -29,7 +29,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "fuel-refinery/hr-fuel-refinery-shadow.png",
+          filename = kr_entities_path .. "fuel-refinery/fuel-refinery-shadow.png",
           width = 350,
           height = 219,
           frame_count = 1,
@@ -47,7 +47,7 @@ data:extend({
         east_position = util.by_pixel(-11, -1),
         apply_recipe_tint = "primary",
         animation = {
-          filename = kr_entities_path .. "fuel-refinery/hr-boiling-green-patch.png",
+          filename = kr_entities_path .. "fuel-refinery/boiling-green-patch.png",
           frame_count = 32,
           width = 30,
           height = 20,
@@ -62,7 +62,7 @@ data:extend({
         east_position = util.by_pixel(-11, -1),
         apply_recipe_tint = "secondary",
         animation = {
-          filename = kr_entities_path .. "fuel-refinery/hr-boiling-green-patch-mask.png",
+          filename = kr_entities_path .. "fuel-refinery/boiling-green-patch-mask.png",
           frame_count = 32,
           width = 30,
           height = 20,
@@ -77,7 +77,7 @@ data:extend({
         south_position = { 0, 0 },
         east_position = { 0, 0 },
         north_animation = {
-          filename = kr_entities_path .. "fuel-refinery/hr-boiling-window-green-patch.png",
+          filename = kr_entities_path .. "fuel-refinery/boiling-window-green-patch.png",
           x = 0,
           frame_count = 1,
           width = 174,
@@ -86,7 +86,7 @@ data:extend({
           scale = 0.5,
         },
         east_animation = {
-          filename = kr_entities_path .. "fuel-refinery/hr-boiling-window-green-patch.png",
+          filename = kr_entities_path .. "fuel-refinery/boiling-window-green-patch.png",
           x = 174,
           frame_count = 1,
           width = 174,
@@ -95,7 +95,7 @@ data:extend({
           scale = 0.5,
         },
         south_animation = {
-          filename = kr_entities_path .. "fuel-refinery/hr-boiling-window-green-patch.png",
+          filename = kr_entities_path .. "fuel-refinery/boiling-window-green-patch.png",
           x = 348,
           frame_count = 1,
           width = 174,

@@ -141,7 +141,7 @@ data:extend({
       type = "full",
     },
     sprite = {
-      filename = kr_character_equipments_path .. "hr-advanced-exoskeleton-equipment.png",
+      filename = kr_character_equipments_path .. "advanced-exoskeleton-equipment.png",
       width = 128,
       height = 256,
       priority = "medium",
@@ -165,7 +165,7 @@ data:extend({
       type = "full",
     },
     sprite = {
-      filename = kr_character_equipments_path .. "hr-superior-exoskeleton-equipment.png",
+      filename = kr_character_equipments_path .. "superior-exoskeleton-equipment.png",
       width = 128,
       height = 256,
       priority = "medium",
@@ -178,7 +178,7 @@ data:extend({
     type = "night-vision-equipment",
     name = "imersite-night-vision-equipment",
     sprite = {
-      filename = kr_character_equipments_path .. "hr-imersite-night-vision-equipment.png",
+      filename = kr_character_equipments_path .. "imersite-night-vision-equipment.png",
       width = 128,
       height = 128,
       priority = "medium",

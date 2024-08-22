@@ -17,7 +17,7 @@ data:extend({
     remove_on_tile_placement = false,
     animation = {
       filename = kr_remnants_path
-        .. "transport-belts/advanced-transport-belt/underground-belt/hr-advanced-underground-belt-remnant.png",
+        .. "transport-belts/advanced-transport-belt/underground-belt/advanced-underground-belt-remnant.png",
       line_length = 1,
       width = 116,
       height = 100,

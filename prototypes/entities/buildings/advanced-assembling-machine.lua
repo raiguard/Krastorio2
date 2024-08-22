@@ -1,7 +1,7 @@
 function assemblerkpipepictures()
   return {
     north = {
-      filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-k-pipe-N.png",
+      filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-k-pipe-N.png",
       priority = "extra-high",
       width = 71,
       height = 38,
@@ -9,7 +9,7 @@ function assemblerkpipepictures()
       scale = 0.5,
     },
     east = {
-      filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-k-pipe-E.png",
+      filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-k-pipe-E.png",
       priority = "extra-high",
       width = 42,
       height = 76,
@@ -17,7 +17,7 @@ function assemblerkpipepictures()
       scale = 0.5,
     },
     south = {
-      filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-k-pipe-S.png",
+      filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-k-pipe-S.png",
       priority = "extra-high",
       width = 88,
       height = 61,
@@ -25,7 +25,7 @@ function assemblerkpipepictures()
       scale = 0.5,
     },
     west = {
-      filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-k-pipe-W.png",
+      filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-k-pipe-W.png",
       priority = "extra-high",
       width = 39,
       height = 73,
@@ -86,7 +86,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine.png",
+          filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine.png",
           priority = "high",
           width = 320,
           height = 320,
@@ -97,7 +97,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-w1.png",
+          filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-w1.png",
           priority = "high",
           width = 128,
           height = 144,
@@ -108,7 +108,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-steam.png",
+          filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-steam.png",
           priority = "high",
           width = 80,
           height = 81,
@@ -119,7 +119,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-sh.png",
+          filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-sh.png",
           priority = "high",
           width = 346,
           height = 302,
@@ -131,7 +131,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-w2.png",
+          filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-w2.png",
           priority = "high",
           width = 37,
           height = 25,
@@ -143,7 +143,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-w3.png",
+          filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-w3.png",
           priority = "high",
           width = 23,
           height = 15,
@@ -155,7 +155,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-w3.png",
+          filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-w3.png",
           priority = "high",
           width = 23,
           height = 15,
@@ -167,7 +167,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-w3.png",
+          filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-w3.png",
           priority = "high",
           width = 23,
           height = 15,

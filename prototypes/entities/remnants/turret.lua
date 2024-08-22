@@ -16,7 +16,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(1, {
-      filename = kr_entities_path .. "remnants/turret/hr-turret-remnant.png",
+      filename = kr_entities_path .. "remnants/turret/turret-remnant.png",
       line_length = 1,
       width = 373,
       height = 253,

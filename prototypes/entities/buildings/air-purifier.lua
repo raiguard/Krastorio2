@@ -20,7 +20,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "air-purifier/hr-air-purifier.png",
+          filename = kr_entities_path .. "air-purifier/air-purifier.png",
           priority = "high",
           width = 150,
           height = 150,
@@ -31,7 +31,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "air-purifier/hr-air-purifier-sh.png",
+          filename = kr_entities_path .. "air-purifier/air-purifier-sh.png",
           priority = "high",
           width = 164,
           height = 102,

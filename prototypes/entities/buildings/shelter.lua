@@ -16,7 +16,7 @@ local empty_sprite = {
 local shelter_animation = {
   layers = {
     {
-      filename = kr_entities_path .. "shelter/hr-shelter-light.png",
+      filename = kr_entities_path .. "shelter/shelter-light.png",
       priority = "high",
       width = 512,
       height = 512,
@@ -28,7 +28,7 @@ local shelter_animation = {
       animation_speed = 0.5,
     },
     {
-      filename = kr_entities_path .. "shelter/hr-shelter.png",
+      filename = kr_entities_path .. "shelter/shelter.png",
       priority = "high",
       width = 512,
       height = 512,
@@ -39,7 +39,7 @@ local shelter_animation = {
       animation_speed = 0.5,
     },
     {
-      filename = kr_entities_path .. "shelter/hr-shelter-shadow.png",
+      filename = kr_entities_path .. "shelter/shelter-shadow.png",
       priority = "high",
       width = 512,
       height = 512,

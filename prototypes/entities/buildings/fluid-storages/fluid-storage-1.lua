@@ -33,7 +33,7 @@ data:extend({
       picture = {
         sheets = {
           {
-            filename = _fluid_storages_path .. "fluid-storage-1/hr-fluid-storage-1.png",
+            filename = _fluid_storages_path .. "fluid-storage-1/fluid-storage-1.png",
             priority = "extra-high",
             frames = 1,
             scale = 0.5,
@@ -41,7 +41,7 @@ data:extend({
             height = 256,
           },
           {
-            filename = _fluid_storages_path .. "fluid-storage-1/hr-fluid-storage-1-sh.png",
+            filename = _fluid_storages_path .. "fluid-storage-1/fluid-storage-1-sh.png",
             priority = "extra-high",
             frames = 1,
             scale = 0.5,
@@ -71,7 +71,7 @@ data:extend({
         height = 20,
       },
       gas_flow = {
-        filename = "__base__/graphics/entity/pipe/hr-steam.png",
+        filename = "__base__/graphics/entity/pipe/steam.png",
         priority = "extra-high",
         line_length = 10,
         width = 48,

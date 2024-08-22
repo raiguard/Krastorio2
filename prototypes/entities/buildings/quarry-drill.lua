@@ -60,7 +60,7 @@ data:extend({
       layers = {
         {
           priority = "extra-high",
-          filename = kr_entities_path .. "quarry-drill/hr-quarry-drill-light.png",
+          filename = kr_entities_path .. "quarry-drill/quarry-drill-light.png",
           width = 440,
           height = 464,
           frame_count = 90,
@@ -74,7 +74,7 @@ data:extend({
         },
         {
           priority = "high",
-          filename = kr_entities_path .. "quarry-drill/hr-quarry-drill.png",
+          filename = kr_entities_path .. "quarry-drill/quarry-drill.png",
           width = 440,
           height = 464,
           frame_count = 90,
@@ -85,7 +85,7 @@ data:extend({
         },
         {
           priority = "medium",
-          filename = kr_entities_path .. "quarry-drill/hr-quarry-drill-sh.png",
+          filename = kr_entities_path .. "quarry-drill/quarry-drill-sh.png",
           width = 500,
           height = 422,
           frame_count = 1,

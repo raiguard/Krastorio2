@@ -38,7 +38,7 @@ data:extend({
     stage_counts = { 15000, 9500, 5500, 2900, 1300, 400, 150, 80 },
     stages = {
       sheet = {
-        filename = kr_resources_sprites_path .. "rare-metals/hr-rare-metals.png",
+        filename = kr_resources_sprites_path .. "rare-metals/rare-metals.png",
         priority = "extra-high",
         width = 128,
         height = 128,
@@ -49,7 +49,7 @@ data:extend({
     },
     stages_effect = {
       sheet = {
-        filename = kr_resources_sprites_path .. "rare-metals/hr-rare-metals-glow.png",
+        filename = kr_resources_sprites_path .. "rare-metals/rare-metals-glow.png",
         priority = "extra-high",
         width = 128,
         height = 128,

@@ -39,14 +39,14 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "fusion-reactor/hr-fusion-reactor.png",
+          filename = kr_entities_path .. "fusion-reactor/fusion-reactor.png",
           width = 1100,
           height = 1100,
           scale = 0.5,
           shift = { 1.01, 0 },
         },
         {
-          filename = kr_entities_path .. "fusion-reactor/hr-fusion-reactor-shadow.png",
+          filename = kr_entities_path .. "fusion-reactor/fusion-reactor-shadow.png",
           priority = "medium",
           width = 1100,
           height = 1100,
@@ -91,7 +91,7 @@ data:extend({
       },
       {
         animation = {
-          filename = kr_entities_path .. "fusion-reactor/hr-fusion-reactor-animation-glow.png",
+          filename = kr_entities_path .. "fusion-reactor/fusion-reactor-animation-glow.png",
           priority = "high",
           line_length = 6,
           width = 626,
@@ -107,7 +107,7 @@ data:extend({
       {
         draw_as_light = true,
         animation = {
-          filename = kr_entities_path .. "fusion-reactor/hr-fusion-reactor-animation-light.png",
+          filename = kr_entities_path .. "fusion-reactor/fusion-reactor-animation-light.png",
           line_length = 6,
           width = 626,
           height = 688,
@@ -119,7 +119,7 @@ data:extend({
       },
       {
         animation = {
-          filename = kr_entities_path .. "fusion-reactor/hr-fusion-reactor-light.png",
+          filename = kr_entities_path .. "fusion-reactor/fusion-reactor-light.png",
           priority = "high",
           width = 1100,
           height = 1100,
@@ -134,7 +134,7 @@ data:extend({
       },
       {
         animation = {
-          filename = kr_entities_path .. "fusion-reactor/hr-fusion-reactor-animation.png",
+          filename = kr_entities_path .. "fusion-reactor/fusion-reactor-animation.png",
           line_length = 6,
           width = 626,
           height = 688,

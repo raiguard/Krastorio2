@@ -76,13 +76,13 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
       variants = {
         main = {
           {
-            picture = kr_tiles_path .. "reinforced-plates-kl/hr-reinforced-plate.png",
+            picture = kr_tiles_path .. "reinforced-plates-kl/reinforced-plate.png",
             count = 16,
             scale = 0.5,
             size = 4,
           },
           {
-            picture = kr_tiles_path .. "reinforced-plates-kl/hr-reinforced-plate.png",
+            picture = kr_tiles_path .. "reinforced-plates-kl/reinforced-plate.png",
             count = 16,
             scale = 0.5,
             size = 1,
@@ -91,31 +91,31 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
         transition = {
           overlay_layout = {
             inner_corner = {
-              spritesheet = kr_tiles_path .. "reinforced-plates-kl/hr-plate-inner-corner.png",
+              spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-inner-corner.png",
               count = 4,
               tall = true,
               scale = 0.5,
             },
             outer_corner = {
-              spritesheet = kr_tiles_path .. "reinforced-plates-kl/hr-plate-outer-corner.png",
+              spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-outer-corner.png",
               count = 4,
               tall = true,
               scale = 0.5,
             },
             side = {
-              spritesheet = kr_tiles_path .. "reinforced-plates-kl/hr-plate-side.png",
+              spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-side.png",
               count = 16,
               tall = true,
               scale = 0.5,
             },
             u_transition = {
-              spritesheet = kr_tiles_path .. "reinforced-plates-kl/hr-plate-u.png",
+              spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-u.png",
               count = 2,
               tall = true,
               scale = 0.5,
             },
             o_transition = {
-              spritesheet = kr_tiles_path .. "reinforced-plates-kl/hr-plate-o.png",
+              spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-o.png",
               count = 2,
               scale = 0.5,
             },
@@ -160,13 +160,13 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
       variants = {
         main = {
           {
-            picture = kr_tiles_path .. "reinforced-plates-kl/hr-black-reinforced-plate.png",
+            picture = kr_tiles_path .. "reinforced-plates-kl/black-reinforced-plate.png",
             count = 16,
             scale = 0.5,
             size = 4,
           },
           {
-            picture = kr_tiles_path .. "reinforced-plates-kl/hr-black-reinforced-plate.png",
+            picture = kr_tiles_path .. "reinforced-plates-kl/black-reinforced-plate.png",
             count = 16,
             scale = 0.5,
             size = 1,
@@ -174,31 +174,31 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
         },
         overlay_layout = {
           inner_corner = {
-            spritesheet = kr_tiles_path .. "reinforced-plates-kl/hr-plate-inner-corner.png",
+            spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-inner-corner.png",
             count = 4,
             tall = true,
             scale = 0.5,
           },
           outer_corner = {
-            spritesheet = kr_tiles_path .. "reinforced-plates-kl/hr-plate-outer-corner.png",
+            spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-outer-corner.png",
             count = 4,
             tall = true,
             scale = 0.5,
           },
           side = {
-            spritesheet = kr_tiles_path .. "reinforced-plates-kl/hr-plate-side.png",
+            spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-side.png",
             count = 16,
             tall = true,
             scale = 0.5,
           },
           u_transition = {
-            spritesheet = kr_tiles_path .. "reinforced-plates-kl/hr-plate-u.png",
+            spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-u.png",
             count = 2,
             tall = true,
             scale = 0.5,
           },
           o_transition = {
-            spritesheet = kr_tiles_path .. "reinforced-plates-kl/hr-plate-o.png",
+            spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-o.png",
             count = 2,
             scale = 0.5,
           },

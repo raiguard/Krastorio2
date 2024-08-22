@@ -36,7 +36,7 @@ data.raw["mining-drill"]["pumpjack"].radius_visualisation_picture.filename = kr_
   .. "oil-pumpjack/oil-pumpjack-radius-visualization.png"
 data.raw["mining-drill"]["pumpjack"].base_picture.sheets = {
   {
-    filename = kr_entities_path .. "oil-pumpjack/hr-oil-pumpjack-base.png",
+    filename = kr_entities_path .. "oil-pumpjack/oil-pumpjack-base.png",
     priority = "extra-high",
     width = 261,
     height = 273,
@@ -44,7 +44,7 @@ data.raw["mining-drill"]["pumpjack"].base_picture.sheets = {
     scale = 0.5,
   },
   {
-    filename = kr_entities_path .. "oil-pumpjack/hr-oil-pumpjack-base-shadow.png",
+    filename = kr_entities_path .. "oil-pumpjack/oil-pumpjack-base-shadow.png",
     width = 220,
     height = 220,
     scale = 0.5,
@@ -58,7 +58,7 @@ data.raw["mining-drill"]["pumpjack"].animations = {
     layers = {
       {
         animation_speed = 0.5,
-        filename = kr_entities_path .. "oil-pumpjack/hr-oil-pumpjack-horsehead.png",
+        filename = kr_entities_path .. "oil-pumpjack/oil-pumpjack-horsehead.png",
         frame_count = 40,
         height = 202,
         line_length = 8,
@@ -70,7 +70,7 @@ data.raw["mining-drill"]["pumpjack"].animations = {
       {
         animation_speed = 0.5,
         draw_as_shadow = true,
-        filename = kr_entities_path .. "oil-pumpjack/hr-oil-pumpjack-horsehead-shadow.png",
+        filename = kr_entities_path .. "oil-pumpjack/oil-pumpjack-horsehead-shadow.png",
         frame_count = 40,
         height = 82,
         line_length = 8,
@@ -84,7 +84,7 @@ data.raw["mining-drill"]["pumpjack"].animations = {
 }
 
 data.raw.corpse["pumpjack-remnants"].animation = make_rotated_animation_variations_from_sheet(2, {
-  filename = kr_entities_path .. "oil-pumpjack/remnants/hr-oil-pumpjack-remnants.png",
+  filename = kr_entities_path .. "oil-pumpjack/remnants/oil-pumpjack-remnants.png",
   line_length = 1,
   width = 274,
   height = 284,
@@ -262,7 +262,7 @@ data.raw["spider-vehicle"]["spidertron"].movement_energy_consumption = "3MW"
 data.raw["corpse"]["spidertron-remnants"].animation = make_rotated_animation_variations_from_sheet(1, {
   layers = {
     {
-      filename = kr_entities_path .. "remnants/spidertron/hr-spidertron-remnants.png",
+      filename = kr_entities_path .. "remnants/spidertron/spidertron-remnants.png",
       line_length = 1,
       width = 448,
       height = 448,
@@ -275,7 +275,7 @@ data.raw["corpse"]["spidertron-remnants"].animation = make_rotated_animation_var
     },
     {
       priority = "low",
-      filename = "__base__/graphics/entity/spidertron/remnants/mask/hr-spidertron-remnants-mask.png",
+      filename = "__base__/graphics/entity/spidertron/remnants/mask/spidertron-remnants-mask.png",
       width = 366,
       height = 350,
       frame_count = 1,

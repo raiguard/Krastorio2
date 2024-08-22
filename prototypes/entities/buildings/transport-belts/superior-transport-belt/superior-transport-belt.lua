@@ -25,7 +25,7 @@ data:extend({
     },
     animations = {
       filename = kr_entities_path
-        .. "transport-belts/superior-transport-belt/transport-belt/hr-superior-transport-belt.png",
+        .. "transport-belts/superior-transport-belt/transport-belt/superior-transport-belt.png",
       priority = "extra-high",
       width = 128,
       height = 128,

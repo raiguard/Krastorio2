@@ -2,7 +2,7 @@ local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local animation = {
   layers = {
     {
-      filename = kr_entities_path .. "gas-power-station/hr-gas-power-station.png",
+      filename = kr_entities_path .. "gas-power-station/gas-power-station.png",
       width = 380,
       height = 380,
       scale = 0.5,
@@ -12,7 +12,7 @@ local animation = {
       shift = { 0, 0 },
     },
     {
-      filename = kr_entities_path .. "pipe-patch/hr-pipe-patch.png",
+      filename = kr_entities_path .. "pipe-patch/pipe-patch.png",
       width = 55,
       height = 50,
       frame_count = 1,
@@ -22,7 +22,7 @@ local animation = {
     },
 
     {
-      filename = kr_entities_path .. "gas-power-station/hr-gas-power-station-sh.png",
+      filename = kr_entities_path .. "gas-power-station/gas-power-station-sh.png",
       width = 380,
       height = 380,
       scale = 0.5,

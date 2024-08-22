@@ -38,7 +38,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
       vehicle_impact_sound = sounds.generic_impact,
       opened_duration = logistic_chest_opened_duration,
       picture = {
-        filename = _sprites_path .. "hr-medium-container.png",
+        filename = _sprites_path .. "medium-container.png",
         priority = "extra-high",
         width = 340,
         height = 340,

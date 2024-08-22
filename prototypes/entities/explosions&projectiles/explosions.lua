@@ -36,7 +36,7 @@ data:extend({
     flags = { "not-on-map" },
     animations = {
       {
-        filename = kr_explosions_sprites_path .. "hr-matter-shockwave-1.png",
+        filename = kr_explosions_sprites_path .. "matter-shockwave-1.png",
         priority = "high",
         flags = { "smoke" },
         line_length = 8,
@@ -48,7 +48,7 @@ data:extend({
         scale = 1.5,
       },
       {
-        filename = kr_explosions_sprites_path .. "hr-matter-shockwave-2.png",
+        filename = kr_explosions_sprites_path .. "matter-shockwave-2.png",
         priority = "high",
         flags = { "smoke" },
         line_length = 8,
@@ -111,22 +111,22 @@ data:extend({
       dice_y = 5,
       stripes = {
         {
-          filename = kr_explosions_sprites_path .. "hr-matter-explosion-1.png",
+          filename = kr_explosions_sprites_path .. "matter-explosion-1.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
         {
-          filename = kr_explosions_sprites_path .. "hr-matter-explosion-2.png",
+          filename = kr_explosions_sprites_path .. "matter-explosion-2.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
         {
-          filename = kr_explosions_sprites_path .. "hr-matter-explosion-3.png",
+          filename = kr_explosions_sprites_path .. "matter-explosion-3.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
         {
-          filename = kr_explosions_sprites_path .. "hr-matter-explosion-4.png",
+          filename = kr_explosions_sprites_path .. "matter-explosion-4.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
@@ -240,22 +240,22 @@ data:extend({
       dice_y = 5,
       stripes = {
         {
-          filename = kr_explosions_sprites_path .. "hr-matter-explosion-1.png",
+          filename = kr_explosions_sprites_path .. "matter-explosion-1.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
         {
-          filename = kr_explosions_sprites_path .. "hr-matter-explosion-2.png",
+          filename = kr_explosions_sprites_path .. "matter-explosion-2.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
         {
-          filename = kr_explosions_sprites_path .. "hr-matter-explosion-3.png",
+          filename = kr_explosions_sprites_path .. "matter-explosion-3.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
         {
-          filename = kr_explosions_sprites_path .. "hr-matter-explosion-4.png",
+          filename = kr_explosions_sprites_path .. "matter-explosion-4.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },

@@ -101,7 +101,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "tesla-coil/hr-tesla-coil-animation-light.png",
+          filename = kr_entities_path .. "tesla-coil/tesla-coil-animation-light.png",
           priority = "high",
           width = 194,
           height = 232,
@@ -115,7 +115,7 @@ data:extend({
           blend_mode = "additive-soft",
         },
         {
-          filename = kr_entities_path .. "tesla-coil/hr-tesla-coil-animation.png",
+          filename = kr_entities_path .. "tesla-coil/tesla-coil-animation.png",
           priority = "high",
           width = 194,
           height = 232,
@@ -127,7 +127,7 @@ data:extend({
           shift = { 0, -0.75 },
         },
         {
-          filename = kr_entities_path .. "tesla-coil/hr-tesla-coil-shadow.png",
+          filename = kr_entities_path .. "tesla-coil/tesla-coil-shadow.png",
           priority = "medium",
           width = 250,
           height = 150,
@@ -162,7 +162,7 @@ data:extend({
     graphics_set = {
       beam = {
         start = {
-          filename = "__base__/graphics/entity/beam/hr-tileable-beam-START.png",
+          filename = "__base__/graphics/entity/beam/tileable-beam-START.png",
           flags = beam_non_light_flags,
           line_length = 4,
           width = 94,
@@ -174,7 +174,7 @@ data:extend({
         },
 
         ending = {
-          filename = "__base__/graphics/entity/beam/hr-tileable-beam-END.png",
+          filename = "__base__/graphics/entity/beam/tileable-beam-END.png",
           flags = beam_non_light_flags,
           line_length = 4,
           width = 91,
@@ -267,7 +267,7 @@ data:extend({
         -- TODO: Where does this go now?
         -- light_animations = {
         --   start = {
-        --     filename = "__base__/graphics/entity/beam/hr-tileable-beam-START-light.png",
+        --     filename = "__base__/graphics/entity/beam/tileable-beam-START-light.png",
         --     line_length = 4,
         --     width = 94,
         --     height = 66,
@@ -279,7 +279,7 @@ data:extend({
         --   },
 
         --   ending = {
-        --     filename = "__base__/graphics/entity/beam/hr-tileable-beam-END-light.png",
+        --     filename = "__base__/graphics/entity/beam/tileable-beam-END-light.png",
         --     line_length = 4,
         --     width = 91,
         --     height = 93,

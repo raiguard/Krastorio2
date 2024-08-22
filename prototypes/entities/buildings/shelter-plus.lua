@@ -39,7 +39,7 @@ local empty_sprite = {
 local armored_shelter_animation = {
   layers = {
     {
-      filename = kr_entities_path .. "shelter-plus/hr-shelter-plus-light.png",
+      filename = kr_entities_path .. "shelter-plus/shelter-plus-light.png",
       priority = "high",
       width = 450,
       height = 450,
@@ -51,7 +51,7 @@ local armored_shelter_animation = {
       animation_speed = 0.5,
     },
     {
-      filename = kr_entities_path .. "shelter-plus/hr-shelter-plus.png",
+      filename = kr_entities_path .. "shelter-plus/shelter-plus.png",
       priority = "high",
       width = 450,
       height = 450,
@@ -62,7 +62,7 @@ local armored_shelter_animation = {
       animation_speed = 0.5,
     },
     {
-      filename = kr_entities_path .. "shelter-plus/hr-shelter-plus-sh.png",
+      filename = kr_entities_path .. "shelter-plus/shelter-plus-sh.png",
       priority = "high",
       width = 520,
       height = 342,
@@ -74,7 +74,7 @@ local armored_shelter_animation = {
       draw_as_shadow = true,
     },
     {
-      filename = kr_entities_path .. "shelter-plus/hr-shelter-plus-mask.png",
+      filename = kr_entities_path .. "shelter-plus/shelter-plus-mask.png",
       flags = { "mask" },
       priority = "extra-high",
       width = 450,

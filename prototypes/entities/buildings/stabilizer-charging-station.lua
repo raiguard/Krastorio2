@@ -23,7 +23,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "stabilizer-charging-station/hr-stabilizer-charging-station.png",
+          filename = kr_entities_path .. "stabilizer-charging-station/stabilizer-charging-station.png",
           priority = "high",
           width = 170,
           height = 170,
@@ -33,7 +33,7 @@ data:extend({
           scale = 0.4,
         },
         {
-          filename = kr_entities_path .. "stabilizer-charging-station/hr-stabilizer-charging-station-sh.png",
+          filename = kr_entities_path .. "stabilizer-charging-station/stabilizer-charging-station-sh.png",
           priority = "high",
           width = 170,
           height = 144,
@@ -49,7 +49,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = kr_entities_path .. "stabilizer-charging-station/hr-stabilizer-charging-station-light.png",
+          filename = kr_entities_path .. "stabilizer-charging-station/stabilizer-charging-station-light.png",
           priority = "high",
           width = 170,
           height = 170,

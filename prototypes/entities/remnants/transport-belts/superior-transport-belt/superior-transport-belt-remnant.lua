@@ -17,7 +17,7 @@ data:extend({
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(8, {
       filename = kr_remnants_path
-        .. "transport-belts/superior-transport-belt/transport-belt/hr-superior-transport-belt-remnant.png",
+        .. "transport-belts/superior-transport-belt/transport-belt/superior-transport-belt-remnant.png",
       line_length = 1,
       width = 106,
       height = 102,

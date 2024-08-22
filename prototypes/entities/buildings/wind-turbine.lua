@@ -76,7 +76,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "wind-turbine/hr-wind-turbine.png",
+          filename = kr_entities_path .. "wind-turbine/wind-turbine.png",
           priority = "medium",
           width = 196,
           height = 286,
@@ -87,7 +87,7 @@ data:extend({
           shift = { 0, -1.2 },
         },
         {
-          filename = kr_entities_path .. "wind-turbine/hr-wind-turbine-shadow.png",
+          filename = kr_entities_path .. "wind-turbine/wind-turbine-shadow.png",
           priority = "medium",
           width = 242,
           height = 100,

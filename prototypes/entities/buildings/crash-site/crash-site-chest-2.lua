@@ -39,7 +39,7 @@ data:extend({
     inventory_size = 5,
     vehicle_impact_sound = sounds.generic_impact,
     integration_patch = {
-      filename = kr_crash_site_sprites_path .. "chests/hr-crash-site-chest-2-ground.png",
+      filename = kr_crash_site_sprites_path .. "chests/crash-site-chest-2-ground.png",
       width = 218,
       height = 186,
       shift = util.by_pixel(-10, 5),
@@ -50,7 +50,7 @@ data:extend({
     picture = {
       layers = {
         {
-          filename = kr_crash_site_sprites_path .. "chests/hr-crash-site-chest-2.png",
+          filename = kr_crash_site_sprites_path .. "chests/crash-site-chest-2.png",
           priority = "extra-high",
           width = 116,
           height = 88,
@@ -58,7 +58,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_crash_site_sprites_path .. "chests/hr-crash-site-chest-2-shadow.png",
+          filename = kr_crash_site_sprites_path .. "chests/crash-site-chest-2-shadow.png",
           priority = "extra-high",
           width = 188,
           height = 126,

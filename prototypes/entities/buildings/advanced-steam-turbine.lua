@@ -40,7 +40,7 @@ data:extend({
     horizontal_animation = {
       layers = {
         {
-          filename = kr_entities_path .. "advanced-steam-turbine/hr-advanced-steam-turbine-H.png",
+          filename = kr_entities_path .. "advanced-steam-turbine/advanced-steam-turbine-H.png",
           width = 469,
           height = 270,
           frame_count = 6,
@@ -49,7 +49,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "advanced-steam-turbine/hr-advanced-steam-turbine-sh-H.png",
+          filename = kr_entities_path .. "advanced-steam-turbine/advanced-steam-turbine-sh-H.png",
           width = 514,
           height = 225,
           frame_count = 6,
@@ -63,7 +63,7 @@ data:extend({
     vertical_animation = {
       layers = {
         {
-          filename = kr_entities_path .. "advanced-steam-turbine/hr-advanced-steam-turbine-V.png",
+          filename = kr_entities_path .. "advanced-steam-turbine/advanced-steam-turbine-V.png",
           width = 330,
           height = 500,
           frame_count = 6,
@@ -72,7 +72,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "advanced-steam-turbine/hr-advanced-steam-turbine-sh-V.png",
+          filename = kr_entities_path .. "advanced-steam-turbine/advanced-steam-turbine-sh-V.png",
           width = 350,
           height = 425,
           frame_count = 6,

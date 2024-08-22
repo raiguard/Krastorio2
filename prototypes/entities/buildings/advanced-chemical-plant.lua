@@ -78,7 +78,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "advanced-chemical-plant/hr-advanced-chemical-plant.png",
+          filename = kr_entities_path .. "advanced-chemical-plant/advanced-chemical-plant.png",
           priority = "high",
           width = 451,
           height = 535,
@@ -89,7 +89,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "advanced-chemical-plant/hr-advanced-chemical-plant-sh.png",
+          filename = kr_entities_path .. "advanced-chemical-plant/advanced-chemical-plant-sh.png",
           priority = "high",
           width = 516,
           height = 458,

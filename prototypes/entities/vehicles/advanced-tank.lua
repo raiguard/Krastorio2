@@ -1904,7 +1904,7 @@ data:extend({
           scale = 0.525,
           stripes = {
             {
-              filename = kr_entities_path .. "advanced-tank/hr-advanced-tank-base.png",
+              filename = kr_entities_path .. "advanced-tank/advanced-tank-base.png",
               width_in_frames = 16,
               height_in_frames = 8,
             },
@@ -1923,7 +1923,7 @@ data:extend({
           scale = 0.525,
           stripes = {
             {
-              filename = kr_entities_path .. "advanced-tank/hr-advanced-tank-base-mask.png",
+              filename = kr_entities_path .. "advanced-tank/advanced-tank-base-mask.png",
               width_in_frames = 16,
               height_in_frames = 8,
             },
@@ -1941,7 +1941,7 @@ data:extend({
           max_advance = 0.2,
           stripes = {
             {
-              filename = kr_entities_path .. "advanced-tank/hr-advanced-tank-base-shadow.png",
+              filename = kr_entities_path .. "advanced-tank/advanced-tank-base-shadow.png",
               width_in_frames = 16,
               height_in_frames = 8,
             },
@@ -1963,7 +1963,7 @@ data:extend({
           line_length = 16,
           stripes = {
             {
-              filename = kr_entities_path .. "advanced-tank/hr-advanced-tank-turret.png",
+              filename = kr_entities_path .. "advanced-tank/advanced-tank-turret.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
@@ -1982,7 +1982,7 @@ data:extend({
           scale = 0.525,
           stripes = {
             {
-              filename = kr_entities_path .. "advanced-tank/hr-advanced-tank-turret-mask.png",
+              filename = kr_entities_path .. "advanced-tank/advanced-tank-turret-mask.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
@@ -2001,7 +2001,7 @@ data:extend({
           scale = 0.525,
           stripes = {
             {
-              filename = kr_entities_path .. "advanced-tank/hr-advanced-tank-turret-shadow.png",
+              filename = kr_entities_path .. "advanced-tank/advanced-tank-turret-shadow.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },

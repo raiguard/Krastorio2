@@ -6,7 +6,7 @@ if not mods["aai-industry"] then
     north = {
       layers = {
         {
-          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_North-glass.png",
+          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_North-glass.png",
           priority = "high",
           width = 36,
           height = 40,
@@ -17,7 +17,7 @@ if not mods["aai-industry"] then
           scale = 0.5,
         },
         {
-          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_North-legs.png",
+          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_North-legs.png",
           priority = "high",
           width = 114,
           height = 106,
@@ -28,7 +28,7 @@ if not mods["aai-industry"] then
           scale = 0.5,
         },
         {
-          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_North-underwater.png",
+          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_North-underwater.png",
           priority = "high",
           width = 98,
           height = 36,
@@ -39,7 +39,7 @@ if not mods["aai-industry"] then
           scale = 0.5,
         },
         {
-          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_North.png",
+          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_North.png",
           priority = "high",
           line_length = 8,
           frame_count = 32,
@@ -50,7 +50,7 @@ if not mods["aai-industry"] then
           scale = 0.5,
         },
         {
-          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_North-shadow.png",
+          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_North-shadow.png",
           priority = "high",
           line_length = 8,
           frame_count = 32,
@@ -66,7 +66,7 @@ if not mods["aai-industry"] then
     east = {
       layers = {
         {
-          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_East-glass.png",
+          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_East-glass.png",
           priority = "high",
           width = 30,
           height = 32,
@@ -77,7 +77,7 @@ if not mods["aai-industry"] then
           scale = 0.5,
         },
         {
-          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_East-legs.png",
+          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_East-legs.png",
           priority = "high",
           width = 106,
           height = 60,
@@ -88,7 +88,7 @@ if not mods["aai-industry"] then
           scale = 0.5,
         },
         {
-          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_East-underwater.png",
+          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_East-underwater.png",
           priority = "high",
           width = 40,
           height = 72,
@@ -99,7 +99,7 @@ if not mods["aai-industry"] then
           scale = 0.5,
         },
         {
-          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_East.png",
+          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_East.png",
           priority = "high",
           line_length = 8,
           frame_count = 32,
@@ -110,7 +110,7 @@ if not mods["aai-industry"] then
           scale = 0.5,
         },
         {
-          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_East-shadow.png",
+          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_East-shadow.png",
           priority = "high",
           line_length = 8,
           frame_count = 32,
@@ -126,7 +126,7 @@ if not mods["aai-industry"] then
     south = {
       layers = {
         {
-          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_South-glass.png",
+          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_South-glass.png",
           priority = "high",
           width = 40,
           height = 24,
@@ -137,7 +137,7 @@ if not mods["aai-industry"] then
           scale = 0.5,
         },
         {
-          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_South-legs.png",
+          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_South-legs.png",
           priority = "high",
           width = 110,
           height = 108,
@@ -148,7 +148,7 @@ if not mods["aai-industry"] then
           scale = 0.5,
         },
         {
-          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_South-underwater.png",
+          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_South-underwater.png",
           priority = "high",
           width = 98,
           height = 48,
@@ -159,7 +159,7 @@ if not mods["aai-industry"] then
           scale = 0.5,
         },
         {
-          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_South.png",
+          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_South.png",
           priority = "high",
           line_length = 8,
           frame_count = 32,
@@ -170,7 +170,7 @@ if not mods["aai-industry"] then
           scale = 0.5,
         },
         {
-          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_South-shadow.png",
+          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_South-shadow.png",
           priority = "high",
           line_length = 8,
           frame_count = 32,
@@ -186,7 +186,7 @@ if not mods["aai-industry"] then
     west = {
       layers = {
         {
-          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_West-glass.png",
+          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_West-glass.png",
           priority = "high",
           width = 30,
           height = 32,
@@ -197,7 +197,7 @@ if not mods["aai-industry"] then
           scale = 0.5,
         },
         {
-          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_West-legs.png",
+          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_West-legs.png",
           priority = "high",
           width = 108,
           height = 64,
@@ -208,7 +208,7 @@ if not mods["aai-industry"] then
           scale = 0.5,
         },
         {
-          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_West-underwater.png",
+          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_West-underwater.png",
           priority = "high",
           width = 40,
           height = 72,
@@ -219,7 +219,7 @@ if not mods["aai-industry"] then
           scale = 0.5,
         },
         {
-          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_West.png",
+          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_West.png",
           priority = "high",
           line_length = 8,
           frame_count = 32,
@@ -230,7 +230,7 @@ if not mods["aai-industry"] then
           scale = 0.5,
         },
         {
-          filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_West-shadow.png",
+          filename = "__base__/graphics/entity/offshore-pump/offshore-pump_West-shadow.png",
           priority = "high",
           line_length = 8,
           frame_count = 32,
@@ -247,7 +247,7 @@ if not mods["aai-industry"] then
   local electric_offshore_pump_working_visualisations = {
     {
       north_animation = {
-        filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_North-fluid.png",
+        filename = "__base__/graphics/entity/offshore-pump/offshore-pump_North-fluid.png",
         tint = { r = 0.109, g = 0.639, b = 0.925, a = 0.25 },
         line_length = 8,
         frame_count = 32,
@@ -258,7 +258,7 @@ if not mods["aai-industry"] then
         scale = 0.5,
       },
       east_animation = {
-        filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_East-fluid.png",
+        filename = "__base__/graphics/entity/offshore-pump/offshore-pump_East-fluid.png",
         tint = { r = 0.109, g = 0.639, b = 0.925, a = 0.25 },
         line_length = 8,
         frame_count = 32,
@@ -269,7 +269,7 @@ if not mods["aai-industry"] then
         scale = 0.5,
       },
       south_animation = {
-        filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_South-fluid.png",
+        filename = "__base__/graphics/entity/offshore-pump/offshore-pump_South-fluid.png",
         tint = { r = 0.109, g = 0.639, b = 0.925, a = 0.25 },
         line_length = 8,
         frame_count = 32,
@@ -280,7 +280,7 @@ if not mods["aai-industry"] then
         scale = 0.5,
       },
       west_animation = {
-        filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_West-fluid.png",
+        filename = "__base__/graphics/entity/offshore-pump/offshore-pump_West-fluid.png",
         tint = { r = 0.109, g = 0.639, b = 0.925, a = 0.25 },
         line_length = 8,
         frame_count = 32,

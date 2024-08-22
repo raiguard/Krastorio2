@@ -45,7 +45,7 @@ data:extend({
     },
     integration_patch_render_layer = "decals",
     integration_patch = {
-      filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-ground.png",
+      filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-ground.png",
       width = 700,
       height = 344,
       shift = util.by_pixel(-49, 11),
@@ -56,7 +56,7 @@ data:extend({
     on_animation = {
       layers = {
         {
-          filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-repaired.png",
+          filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-repaired.png",
           width = 488,
           height = 252,
           frame_count = 1,
@@ -67,7 +67,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-repaired-beams.png",
+          filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-repaired-beams.png",
           width = 130,
           height = 100,
           frame_count = 24,
@@ -79,7 +79,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-repaired-beams-light.png",
+          filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-repaired-beams-light.png",
           width = 130,
           height = 100,
           frame_count = 24,
@@ -91,7 +91,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-repaired-shadow.png",
+          filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-repaired-shadow.png",
           width = 696,
           height = 302,
           frame_count = 1,
@@ -107,7 +107,7 @@ data:extend({
     off_animation = {
       layers = {
         {
-          filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-repaired.png",
+          filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-repaired.png",
           width = 488,
           height = 252,
           frame_count = 1,
@@ -118,7 +118,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-repaired-shadow.png",
+          filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-repaired-shadow.png",
           width = 696,
           height = 302,
           frame_count = 1,

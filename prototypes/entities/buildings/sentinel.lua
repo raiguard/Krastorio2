@@ -37,7 +37,7 @@ data:extend({
     pictures = {
       layers = {
         {
-          filename = kr_entities_path .. "sentinel/hr-sentinel.png",
+          filename = kr_entities_path .. "sentinel/sentinel.png",
           priority = "low",
           width = 128,
           height = 128,

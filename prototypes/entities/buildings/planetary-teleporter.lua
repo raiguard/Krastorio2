@@ -5,7 +5,7 @@ local planetary_teleporter_animation = {
   layers = {
     --SHADOW
     {
-      filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter-shadow.png",
+      filename = kr_entities_path .. "planetary-teleporter/planetary-teleporter-shadow.png",
       priority = "low",
       width = 531,
       height = 292,
@@ -18,7 +18,7 @@ local planetary_teleporter_animation = {
     },
     --BUILDING
     {
-      filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-base-combined.png",
+      filename = kr_entities_path .. "planetary-teleporter/new/teleporter-base-combined.png",
       priority = "medium",
       width = 400,
       height = 475,
@@ -28,7 +28,7 @@ local planetary_teleporter_animation = {
       animation_speed = 0.5,
     },
     {
-      filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-under-forward-towers.png",
+      filename = kr_entities_path .. "planetary-teleporter/new/teleporter-under-forward-towers.png",
       priority = "medium",
       width = 400,
       height = 475,
@@ -38,7 +38,7 @@ local planetary_teleporter_animation = {
     },
     -- GLOWS
     {
-      filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-base-combined-glow.png",
+      filename = kr_entities_path .. "planetary-teleporter/new/teleporter-base-combined-glow.png",
       priority = "high",
       width = 400,
       height = 475,
@@ -52,7 +52,7 @@ local planetary_teleporter_animation = {
     },
     -- LIGHTS
     {
-      filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-base-combined-glow.png",
+      filename = kr_entities_path .. "planetary-teleporter/new/teleporter-base-combined-glow.png",
       priority = "extra-high",
       width = 400,
       height = 475,
@@ -64,7 +64,7 @@ local planetary_teleporter_animation = {
       blend_mode = "additive-soft",
     },
     {
-      filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-forward-towers-light.png",
+      filename = kr_entities_path .. "planetary-teleporter/new/teleporter-forward-towers-light.png",
       priority = "extra-high",
       width = 400,
       height = 475,
@@ -80,7 +80,7 @@ local planetary_teleporter_animation_red = {
   layers = {
     --SHADOW
     {
-      filename = kr_entities_path .. "planetary-teleporter/hr-planetary-teleporter-shadow.png",
+      filename = kr_entities_path .. "planetary-teleporter/planetary-teleporter-shadow.png",
       priority = "low",
       width = 531,
       height = 292,
@@ -93,7 +93,7 @@ local planetary_teleporter_animation_red = {
     },
     --BUILDING
     {
-      filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-base-combined.png",
+      filename = kr_entities_path .. "planetary-teleporter/new/teleporter-base-combined.png",
       priority = "medium",
       width = 400,
       height = 475,
@@ -103,7 +103,7 @@ local planetary_teleporter_animation_red = {
       animation_speed = 0.5,
     },
     {
-      filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-under-forward-towers.png",
+      filename = kr_entities_path .. "planetary-teleporter/new/teleporter-under-forward-towers.png",
       priority = "medium",
       width = 400,
       height = 475,
@@ -113,7 +113,7 @@ local planetary_teleporter_animation_red = {
     },
     -- TINT
     {
-      filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-base-combined-glow-red.png",
+      filename = kr_entities_path .. "planetary-teleporter/new/teleporter-base-combined-glow-red.png",
       flags = { "mask" },
       priority = "extra-high",
       width = 400,
@@ -127,7 +127,7 @@ local planetary_teleporter_animation_red = {
     },
     -- GLOWS
     {
-      filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-base-combined-glow-red.png",
+      filename = kr_entities_path .. "planetary-teleporter/new/teleporter-base-combined-glow-red.png",
       priority = "high",
       width = 400,
       height = 475,
@@ -141,7 +141,7 @@ local planetary_teleporter_animation_red = {
     },
     -- LIGHTS
     {
-      filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-base-combined-glow-red.png",
+      filename = kr_entities_path .. "planetary-teleporter/new/teleporter-base-combined-glow-red.png",
       priority = "extra-high",
       width = 400,
       height = 475,
@@ -153,7 +153,7 @@ local planetary_teleporter_animation_red = {
       blend_mode = "additive-soft",
     },
     {
-      filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-forward-towers-light.png",
+      filename = kr_entities_path .. "planetary-teleporter/new/teleporter-forward-towers-light.png",
       priority = "extra-high",
       width = 400,
       height = 475,
@@ -259,7 +259,7 @@ data:extend({
     picture = {
       layers = {
         {
-          filename = kr_entities_path .. "planetary-teleporter/new/hr-teleporter-forward-towers.png",
+          filename = kr_entities_path .. "planetary-teleporter/new/teleporter-forward-towers.png",
           width = 400,
           height = 475,
           scale = 0.5,

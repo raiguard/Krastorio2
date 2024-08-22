@@ -18,7 +18,7 @@ local activated_intergalactic_transceiver_light = {
 local intergalactic_transceiver_animation = {
   layers = {
     {
-      filename = kr_entities_path .. "intergalactic-transceiver/hr-intergalactic-transceiver.png",
+      filename = kr_entities_path .. "intergalactic-transceiver/intergalactic-transceiver.png",
       width = 800,
       height = 800,
       scale = 0.5,
@@ -28,7 +28,7 @@ local intergalactic_transceiver_animation = {
       shift = { 0, -0.8 },
     },
     {
-      filename = kr_entities_path .. "intergalactic-transceiver/hr-intergalactic-transceiver-sh.png",
+      filename = kr_entities_path .. "intergalactic-transceiver/intergalactic-transceiver-sh.png",
       priority = "low",
       width = 867,
       height = 626,
@@ -40,7 +40,7 @@ local intergalactic_transceiver_animation = {
       shift = { 0.52, 0.5 },
     },
     {
-      filename = kr_entities_path .. "intergalactic-transceiver/hr-intergalactic-transceiver-charging.png",
+      filename = kr_entities_path .. "intergalactic-transceiver/intergalactic-transceiver-charging.png",
       priority = "high",
       width = 800,
       height = 800,
@@ -52,7 +52,7 @@ local intergalactic_transceiver_animation = {
       draw_as_glow = true,
     },
     {
-      filename = kr_entities_path .. "intergalactic-transceiver/hr-intergalactic-transceiver-light.png",
+      filename = kr_entities_path .. "intergalactic-transceiver/intergalactic-transceiver-light.png",
       priority = "high",
       width = 800,
       height = 800,
@@ -64,7 +64,7 @@ local intergalactic_transceiver_animation = {
       draw_as_light = true,
     },
     {
-      filename = kr_entities_path .. "intergalactic-transceiver/hr-intergalactic-transceiver-charging-light.png",
+      filename = kr_entities_path .. "intergalactic-transceiver/intergalactic-transceiver-charging-light.png",
       priority = "high",
       width = 800,
       height = 800,
@@ -81,7 +81,7 @@ local intergalactic_transceiver_animation = {
 local activated_intergalactic_transceiver_animation = {
   layers = {
     {
-      filename = kr_entities_path .. "intergalactic-transceiver/hr-intergalactic-transceiver.png",
+      filename = kr_entities_path .. "intergalactic-transceiver/intergalactic-transceiver.png",
       width = 800,
       height = 800,
       scale = 0.5,
@@ -91,7 +91,7 @@ local activated_intergalactic_transceiver_animation = {
       shift = { 0, -0.8 },
     },
     {
-      filename = kr_entities_path .. "intergalactic-transceiver/hr-intergalactic-transceiver-sh.png",
+      filename = kr_entities_path .. "intergalactic-transceiver/intergalactic-transceiver-sh.png",
       priority = "low",
       width = 867,
       height = 626,
@@ -103,7 +103,7 @@ local activated_intergalactic_transceiver_animation = {
       shift = { 0.52, 0.5 },
     },
     {
-      filename = kr_entities_path .. "intergalactic-transceiver/hr-intergalactic-transceiver-charge.png",
+      filename = kr_entities_path .. "intergalactic-transceiver/intergalactic-transceiver-charge.png",
       priority = "high",
       width = 800,
       height = 800,
@@ -115,7 +115,7 @@ local activated_intergalactic_transceiver_animation = {
       draw_as_glow = true,
     },
     {
-      filename = kr_entities_path .. "intergalactic-transceiver/hr-intergalactic-transceiver-light.png",
+      filename = kr_entities_path .. "intergalactic-transceiver/intergalactic-transceiver-light.png",
       priority = "high",
       width = 800,
       height = 800,
@@ -127,7 +127,7 @@ local activated_intergalactic_transceiver_animation = {
       draw_as_light = true,
     },
     {
-      filename = kr_entities_path .. "intergalactic-transceiver/hr-intergalactic-transceiver-charge-light.png",
+      filename = kr_entities_path .. "intergalactic-transceiver/intergalactic-transceiver-charge-light.png",
       priority = "high",
       width = 800,
       height = 800,
@@ -170,7 +170,7 @@ local intergalactic_transceiver_working_sound = {
 local intergalactic_transceiver_picture = {
   layers = {
     {
-      filename = kr_entities_path .. "intergalactic-transceiver/hr-intergalactic-transceiver-light.png",
+      filename = kr_entities_path .. "intergalactic-transceiver/intergalactic-transceiver-light.png",
       width = 800,
       height = 800,
       scale = 0.5,
@@ -179,7 +179,7 @@ local intergalactic_transceiver_picture = {
       draw_as_light = true,
     },
     {
-      filename = kr_entities_path .. "intergalactic-transceiver/hr-intergalactic-transceiver.png",
+      filename = kr_entities_path .. "intergalactic-transceiver/intergalactic-transceiver.png",
       width = 800,
       height = 800,
       scale = 0.5,
@@ -187,7 +187,7 @@ local intergalactic_transceiver_picture = {
       shift = { 0, -0.8 },
     },
     {
-      filename = kr_entities_path .. "intergalactic-transceiver/hr-intergalactic-transceiver-sh.png",
+      filename = kr_entities_path .. "intergalactic-transceiver/intergalactic-transceiver-sh.png",
       width = 867,
       height = 626,
       scale = 0.5,

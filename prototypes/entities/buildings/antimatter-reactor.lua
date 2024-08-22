@@ -52,7 +52,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "antimatter-reactor/hr-antimatter-reactor-light.png",
+          filename = kr_entities_path .. "antimatter-reactor/antimatter-reactor-light.png",
           priority = "high",
           width = 660,
           height = 706,
@@ -65,7 +65,7 @@ data:extend({
           blend_mode = "additive",
         },
         {
-          filename = kr_entities_path .. "antimatter-reactor/hr-antimatter-reactor-glow.png",
+          filename = kr_entities_path .. "antimatter-reactor/antimatter-reactor-glow.png",
           priority = "high",
           width = 660,
           height = 706,
@@ -79,7 +79,7 @@ data:extend({
           fadeout = true,
         },
         {
-          filename = kr_entities_path .. "antimatter-reactor/hr-antimatter-reactor.png",
+          filename = kr_entities_path .. "antimatter-reactor/antimatter-reactor.png",
           priority = "high",
           width = 660,
           height = 706,
@@ -90,7 +90,7 @@ data:extend({
           scale = 0.48,
         },
         {
-          filename = kr_entities_path .. "antimatter-reactor/hr-antimatter-reactor-sh.png",
+          filename = kr_entities_path .. "antimatter-reactor/antimatter-reactor-sh.png",
           width = 724,
           height = 630,
           shift = { 0.57, 0.27 },

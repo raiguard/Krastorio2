@@ -23,7 +23,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "logo/hr-logo.png",
+          filename = kr_entities_path .. "logo/logo.png",
           priority = "high",
           width = 1600,
           height = 300,
@@ -35,7 +35,7 @@ data:extend({
         },
 
         {
-          filename = kr_entities_path .. "logo/hr-logo-ef.png",
+          filename = kr_entities_path .. "logo/logo-ef.png",
           priority = "high",
           width = 1600,
           height = 300,
@@ -47,7 +47,7 @@ data:extend({
           animation_speed = 0.5,
         },
         {
-          filename = kr_entities_path .. "logo/hr-logo-efl.png",
+          filename = kr_entities_path .. "logo/logo-efl.png",
           priority = "high",
           width = 1600,
           height = 300,
@@ -59,7 +59,7 @@ data:extend({
           animation_speed = 0.5,
         },
         {
-          filename = kr_entities_path .. "logo/hr-logo-efl.png",
+          filename = kr_entities_path .. "logo/logo-efl.png",
           priority = "high",
           width = 1600,
           height = 300,
@@ -72,7 +72,7 @@ data:extend({
         },
 
         {
-          filename = kr_entities_path .. "logo/hr-logo-light.png",
+          filename = kr_entities_path .. "logo/logo-light.png",
           priority = "high",
           width = 1600,
           height = 300,
@@ -83,7 +83,7 @@ data:extend({
           animation_speed = 0.5,
         },
         {
-          filename = kr_entities_path .. "logo/hr-logo-light.png",
+          filename = kr_entities_path .. "logo/logo-light.png",
           priority = "high",
           width = 1600,
           height = 300,
@@ -94,7 +94,7 @@ data:extend({
           animation_speed = 0.5,
         },
         {
-          filename = kr_entities_path .. "logo/hr-logo-light.png",
+          filename = kr_entities_path .. "logo/logo-light.png",
           priority = "high",
           width = 1600,
           height = 300,
@@ -106,7 +106,7 @@ data:extend({
         },
 
         {
-          filename = kr_entities_path .. "logo/hr-logo-sh.png",
+          filename = kr_entities_path .. "logo/logo-sh.png",
           priority = "high",
           width = 1600,
           height = 300,

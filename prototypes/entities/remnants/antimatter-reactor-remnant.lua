@@ -16,7 +16,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(1, {
-      filename = kr_remnants_path .. "antimatter-reactor/hr-antimatter-reactor-remnant.png",
+      filename = kr_remnants_path .. "antimatter-reactor/antimatter-reactor-remnant.png",
       line_length = 1,
       width = 600,
       height = 600,

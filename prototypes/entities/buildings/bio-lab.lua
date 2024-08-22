@@ -65,7 +65,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "bio-lab/hr-bio-lab.png",
+          filename = kr_entities_path .. "bio-lab/bio-lab.png",
           priority = "high",
           width = 512,
           height = 512,
@@ -73,7 +73,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "bio-lab/hr-bio-lab-sh.png",
+          filename = kr_entities_path .. "bio-lab/bio-lab-sh.png",
           priority = "high",
           width = 512,
           height = 512,
@@ -87,7 +87,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = kr_entities_path .. "bio-lab/hr-bio-lab-working.png",
+          filename = kr_entities_path .. "bio-lab/bio-lab-working.png",
           width = 387,
           height = 342,
           shift = { 0.05, -0.31 },

@@ -46,7 +46,7 @@ data:extend({
     stage_counts = { 0 },
     stages = {
       sheet = {
-        filename = kr_resources_sprites_path .. "imersite/hr-imersite-rift.png",
+        filename = kr_resources_sprites_path .. "imersite/imersite-rift.png",
         priority = "extra-high",
         width = 500,
         height = 500,
@@ -58,7 +58,7 @@ data:extend({
     stages_effect = {
       sheets = {
         {
-          filename = kr_resources_sprites_path .. "imersite/hr-imersite-rift-glow.png",
+          filename = kr_resources_sprites_path .. "imersite/imersite-rift-glow.png",
           priority = "extra-high",
           width = 500,
           height = 500,

@@ -34,7 +34,7 @@ data:extend({
       north = {
         layers = {
           {
-            filename = kr_entities_path .. "fluid-burner/hr-fluid-burner-n.png",
+            filename = kr_entities_path .. "fluid-burner/fluid-burner-n.png",
             width = 150,
             height = 300,
             scale = 0.5,
@@ -42,7 +42,7 @@ data:extend({
             shift = { 0, -1 },
           },
           {
-            filename = kr_entities_path .. "fluid-burner/hr-fluid-burner-sh.png",
+            filename = kr_entities_path .. "fluid-burner/fluid-burner-sh.png",
             priority = "high",
             width = 258,
             height = 94,
@@ -56,7 +56,7 @@ data:extend({
       east = {
         layers = {
           {
-            filename = kr_entities_path .. "fluid-burner/hr-fluid-burner-e.png",
+            filename = kr_entities_path .. "fluid-burner/fluid-burner-e.png",
             width = 150,
             height = 300,
             scale = 0.5,
@@ -64,7 +64,7 @@ data:extend({
             shift = { 0, -1 },
           },
           {
-            filename = kr_entities_path .. "fluid-burner/hr-fluid-burner-sh.png",
+            filename = kr_entities_path .. "fluid-burner/fluid-burner-sh.png",
             priority = "high",
             width = 258,
             height = 94,
@@ -78,7 +78,7 @@ data:extend({
       south = {
         layers = {
           {
-            filename = kr_entities_path .. "fluid-burner/hr-fluid-burner-s.png",
+            filename = kr_entities_path .. "fluid-burner/fluid-burner-s.png",
             width = 150,
             height = 300,
             scale = 0.5,
@@ -86,7 +86,7 @@ data:extend({
             shift = { 0, -1 },
           },
           {
-            filename = kr_entities_path .. "fluid-burner/hr-fluid-burner-sh.png",
+            filename = kr_entities_path .. "fluid-burner/fluid-burner-sh.png",
             priority = "high",
             width = 258,
             height = 94,
@@ -100,7 +100,7 @@ data:extend({
       west = {
         layers = {
           {
-            filename = kr_entities_path .. "fluid-burner/hr-fluid-burner-w.png",
+            filename = kr_entities_path .. "fluid-burner/fluid-burner-w.png",
             width = 150,
             height = 300,
             scale = 0.5,
@@ -108,7 +108,7 @@ data:extend({
             shift = { 0, -1 },
           },
           {
-            filename = kr_entities_path .. "fluid-burner/hr-fluid-burner-sh.png",
+            filename = kr_entities_path .. "fluid-burner/fluid-burner-sh.png",
             priority = "high",
             width = 258,
             height = 94,

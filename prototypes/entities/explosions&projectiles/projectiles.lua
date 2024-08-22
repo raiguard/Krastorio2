@@ -1046,13 +1046,13 @@ data:extend({
     reveal_map = true,
     map_color = { r = 1, g = 1, b = 0 },
     picture = {
-      filename = "__base__/graphics/entity/artillery-projectile/hr-shell.png",
+      filename = "__base__/graphics/entity/artillery-projectile/shell.png",
       width = 64,
       height = 64,
       scale = 0.5,
     },
     shadow = {
-      filename = "__base__/graphics/entity/artillery-projectile/hr-shell-shadow.png",
+      filename = "__base__/graphics/entity/artillery-projectile/shell-shadow.png",
       width = 64,
       height = 64,
       scale = 0.5,
@@ -2640,13 +2640,13 @@ data:extend({
     },
     light = { intensity = 0.8, size = 15 },
     picture = {
-      filename = "__base__/graphics/entity/artillery-projectile/hr-shell.png",
+      filename = "__base__/graphics/entity/artillery-projectile/shell.png",
       width = 64,
       height = 64,
       scale = 0.5,
     },
     shadow = {
-      filename = "__base__/graphics/entity/artillery-projectile/hr-shell-shadow.png",
+      filename = "__base__/graphics/entity/artillery-projectile/shell-shadow.png",
       width = 64,
       height = 64,
       scale = 0.5,
@@ -2856,7 +2856,7 @@ data:extend({
     },
     light = { intensity = 0.5, size = 4 },
     animation = {
-      filename = kr_entities_path .. "bullets/hr-poop.png",
+      filename = kr_entities_path .. "bullets/poop.png",
       frame_count = 12,
       animation_speed = 0.3,
       width = 64,
@@ -2866,7 +2866,7 @@ data:extend({
       scale = 0.35,
     },
     shadow = {
-      filename = kr_entities_path .. "bullets/hr-poop.png",
+      filename = kr_entities_path .. "bullets/poop.png",
       frame_count = 12,
       animation_speed = 0.3,
       width = 64,
@@ -3108,7 +3108,7 @@ data:extend({
     },
     light = { intensity = 0.5, size = 4 },
     animation = {
-      filename = kr_entities_path .. "bullets/hr-virus-capsule.png",
+      filename = kr_entities_path .. "bullets/virus-capsule.png",
       frame_count = 16,
       line_length = 8,
       animation_speed = 0.250,
@@ -3119,7 +3119,7 @@ data:extend({
       scale = 0.5,
     },
     shadow = {
-      filename = kr_entities_path .. "bullets/hr-virus-capsule-sh.png",
+      filename = kr_entities_path .. "bullets/virus-capsule-sh.png",
       frame_count = 16,
       line_length = 8,
       animation_speed = 0.25,

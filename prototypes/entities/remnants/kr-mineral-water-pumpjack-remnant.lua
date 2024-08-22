@@ -16,7 +16,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(2, {
-      filename = kr_remnants_path .. "mineral-water-pumpjack/hr-mineral-water-pumpjack-remnant.png",
+      filename = kr_remnants_path .. "mineral-water-pumpjack/mineral-water-pumpjack-remnant.png",
       line_length = 1,
       width = 274,
       height = 284,

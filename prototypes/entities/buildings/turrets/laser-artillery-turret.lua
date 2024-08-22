@@ -5,7 +5,7 @@ function laser_artillery_turret_sheet(inputs)
   return {
     layers = {
       {
-        filename = kr_entities_path .. "turrets/hr-laser-artillery-turret-sheet.png",
+        filename = kr_entities_path .. "turrets/laser-artillery-turret-sheet.png",
         width = 440,
         height = 380,
         line_length = inputs.frame_count or 8,
@@ -17,7 +17,7 @@ function laser_artillery_turret_sheet(inputs)
       },
       {
         flags = { "mask" },
-        filename = kr_entities_path .. "turrets/hr-laser-artillery-turret-sheet-mask.png",
+        filename = kr_entities_path .. "turrets/laser-artillery-turret-sheet-mask.png",
         width = 440,
         height = 380,
         line_length = inputs.frame_count or 8,
@@ -29,7 +29,7 @@ function laser_artillery_turret_sheet(inputs)
         scale = 0.5,
       },
       {
-        filename = kr_entities_path .. "turrets/hr-laser-artillery-turret-sheet-shadow.png",
+        filename = kr_entities_path .. "turrets/laser-artillery-turret-sheet-shadow.png",
         width = 460,
         height = 380,
         line_length = inputs.frame_count or 8,
@@ -68,7 +68,7 @@ data:extend({
         animation = {
           layers = {
             {
-              filename = kr_entities_path .. "turrets/hr-kr-turret-base.png",
+              filename = kr_entities_path .. "turrets/kr-turret-base.png",
               priority = "high",
               width = 440,
               height = 380,
@@ -79,7 +79,7 @@ data:extend({
               scale = 0.5,
             },
             {
-              filename = kr_entities_path .. "turrets/hr-kr-turret-base-mask.png",
+              filename = kr_entities_path .. "turrets/kr-turret-base-mask.png",
               flags = { "mask", "low-object" },
               line_length = 1,
               width = 440,
@@ -92,7 +92,7 @@ data:extend({
               scale = 0.5,
             },
             {
-              filename = kr_entities_path .. "turrets/hr-kr-turret-base-shadow.png",
+              filename = kr_entities_path .. "turrets/kr-turret-base-shadow.png",
               line_length = 1,
               width = 440,
               height = 380,

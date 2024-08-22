@@ -65,7 +65,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "matter-plant/hr-matter-plant.png",
+          filename = kr_entities_path .. "matter-plant/matter-plant.png",
           priority = "high",
           width = 462,
           height = 500,
@@ -74,7 +74,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "matter-plant/hr-matter-plant-sh.png",
+          filename = kr_entities_path .. "matter-plant/matter-plant-sh.png",
           priority = "high",
           width = 504,
           height = 444,
@@ -90,7 +90,7 @@ data:extend({
         draw_as_light = true,
         blend_mode = "additive-soft",
         animation = {
-          filename = kr_entities_path .. "matter-plant/hr-matter-plant-working-light.png",
+          filename = kr_entities_path .. "matter-plant/matter-plant-working-light.png",
           priority = "high",
           width = 462,
           height = 500,
@@ -106,7 +106,7 @@ data:extend({
         blend_mode = "additive-soft",
         synced_fadeout = true,
         animation = {
-          filename = kr_entities_path .. "matter-plant/hr-matter-plant-working-glow.png",
+          filename = kr_entities_path .. "matter-plant/matter-plant-working-glow.png",
           priority = "high",
           width = 462,
           height = 500,
@@ -119,7 +119,7 @@ data:extend({
       },
       {
         animation = {
-          filename = kr_entities_path .. "matter-plant/hr-matter-plant-working.png",
+          filename = kr_entities_path .. "matter-plant/matter-plant-working.png",
           width = 462,
           height = 500,
           frame_count = 30,

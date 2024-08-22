@@ -33,7 +33,7 @@ data:extend({
     off_animation = {
       layers = {
         {
-          filename = kr_entities_path .. "singularity-lab/hr-singularity-lab.png",
+          filename = kr_entities_path .. "singularity-lab/singularity-lab.png",
           priority = "high",
           width = 520,
           height = 500,
@@ -42,7 +42,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "singularity-lab/hr-singularity-lab-sh.png",
+          filename = kr_entities_path .. "singularity-lab/singularity-lab-sh.png",
           priority = "high",
           width = 548,
           height = 482,
@@ -56,7 +56,7 @@ data:extend({
     on_animation = {
       layers = {
         {
-          filename = kr_entities_path .. "singularity-lab/hr-singularity-lab-glow-light.png",
+          filename = kr_entities_path .. "singularity-lab/singularity-lab-glow-light.png",
           priority = "high",
           width = 153,
           height = 117,
@@ -68,7 +68,7 @@ data:extend({
           draw_as_light = true,
         },
         {
-          filename = kr_entities_path .. "singularity-lab/hr-singularity-lab-glow.png",
+          filename = kr_entities_path .. "singularity-lab/singularity-lab-glow.png",
           priority = "high",
           width = 153,
           height = 117,
@@ -80,7 +80,7 @@ data:extend({
           blend_mode = "additive",
         },
         {
-          filename = kr_entities_path .. "singularity-lab/hr-singularity-lab-light.png",
+          filename = kr_entities_path .. "singularity-lab/singularity-lab-light.png",
           priority = "high",
           width = 520,
           height = 500,
@@ -91,7 +91,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "singularity-lab/hr-singularity-lab-working.png",
+          filename = kr_entities_path .. "singularity-lab/singularity-lab-working.png",
           width = 520,
           height = 500,
           shift = { 0.0, -0.1 },
@@ -101,7 +101,7 @@ data:extend({
           animation_speed = 0.85,
         },
         {
-          filename = kr_entities_path .. "singularity-lab/hr-singularity-lab-sh.png",
+          filename = kr_entities_path .. "singularity-lab/singularity-lab-sh.png",
           priority = "medium",
           width = 548,
           height = 482,

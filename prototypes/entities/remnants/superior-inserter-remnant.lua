@@ -16,7 +16,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(3, {
-      filename = kr_remnants_path .. "superior-inserter/hr-superior-inserter-remnant.png",
+      filename = kr_remnants_path .. "superior-inserter/superior-inserter-remnant.png",
       line_length = 1,
       width = 102,
       height = 80,

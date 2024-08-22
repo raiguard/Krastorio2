@@ -6,7 +6,7 @@ data:extend({
     type = "movement-bonus-equipment",
     name = "additional-engine",
     sprite = {
-      filename = kr_vehicle_equipments_path .. "hr-additional-engine.png",
+      filename = kr_vehicle_equipments_path .. "additional-engine.png",
       width = 256,
       height = 256,
       priority = "medium",
@@ -30,7 +30,7 @@ data:extend({
     type = "movement-bonus-equipment",
     name = "advanced-additional-engine",
     sprite = {
-      filename = kr_vehicle_equipments_path .. "hr-advanced-additional-engine.png",
+      filename = kr_vehicle_equipments_path .. "advanced-additional-engine.png",
       width = 256,
       height = 256,
       priority = "medium",
@@ -56,7 +56,7 @@ data:extend({
     name = "vehicle-roboport",
     take_result = "vehicle-roboport",
     sprite = {
-      filename = kr_vehicle_equipments_path .. "hr-vehicle-roboport.png",
+      filename = kr_vehicle_equipments_path .. "vehicle-roboport.png",
       width = 256,
       height = 256,
       priority = "medium",

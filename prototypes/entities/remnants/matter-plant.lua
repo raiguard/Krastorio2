@@ -16,7 +16,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(1, {
-      filename = kr_entities_path .. "remnants/matter-plant/hr-matter-plant-remnant.png",
+      filename = kr_entities_path .. "remnants/matter-plant/matter-plant-remnant.png",
       line_length = 1,
       width = 600,
       height = 600,

@@ -51,7 +51,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "atmospheric-condenser/hr-atmospheric-condenser.png",
+          filename = kr_entities_path .. "atmospheric-condenser/atmospheric-condenser.png",
           width = 380,
           height = 380,
           scale = 0.5,
@@ -60,7 +60,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = kr_entities_path .. "atmospheric-condenser/hr-atmospheric-condenser-sh.png",
+          filename = kr_entities_path .. "atmospheric-condenser/atmospheric-condenser-sh.png",
           width = 380,
           height = 380,
           scale = 0.5,

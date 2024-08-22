@@ -55,7 +55,7 @@ local creep_walking_sound = {
 -- water_transition_group_id = 1
 -- out_of_map_transition_group_id = 2
 -- patch_for_inner_corner_of_transition_between_transition = {
---     filename = "__base__/graphics/terrain/water-transitions/hr-water-patch.png",
+--     filename = "__base__/graphics/terrain/water-transitions/water-patch.png",
 --     scale = 0.5,
 --     width = 64,
 --     height = 64,
@@ -89,7 +89,7 @@ local creep_walking_sound = {
 
 -- local ground_to_out_of_map_transition = create_transition_to_out_of_map_from_template(
 --   "__base__/graphics/terrain/out-of-map-transition/out-of-map-transition.png",
---   "__base__/graphics/terrain/out-of-map-transition/hr-out-of-map-transition.png",
+--   "__base__/graphics/terrain/out-of-map-transition/out-of-map-transition.png",
 --   { has_base_layer = false, has_background = true, has_mask = true }
 -- )
 -- base_tile_transition_effect_maps = {}
@@ -97,7 +97,7 @@ local creep_walking_sound = {
 
 -- ttfxmaps.water_creep = {
 --   filename_norm = "__base__/graphics/terrain/effect-maps/water-dirt-mask.png",
---   filename_high = "__base__/graphics/terrain/effect-maps/hr-water-dirt-mask.png",
+--   filename_high = "__base__/graphics/terrain/effect-maps/water-dirt-mask.png",
 --   count = 8,
 --   o_transition_tall = false,
 --   u_transition_count = 2,
@@ -106,7 +106,7 @@ local creep_walking_sound = {
 
 -- ttfxmaps.water_creep_to_land = {
 --   filename_norm = "__base__/graphics/terrain/effect-maps/water-dirt-to-land-mask.png",
---   filename_high = "__base__/graphics/terrain/effect-maps/hr-water-dirt-to-land-mask.png",
+--   filename_high = "__base__/graphics/terrain/effect-maps/water-dirt-to-land-mask.png",
 --   count = 3,
 --   u_transition_count = 1,
 --   o_transition_count = 0,
@@ -114,7 +114,7 @@ local creep_walking_sound = {
 
 -- ttfxmaps.water_creep_to_out_of_map = {
 --   filename_norm = "__base__/graphics/terrain/effect-maps/water-dirt-to-out-of-map-mask.png",
---   filename_high = "__base__/graphics/terrain/effect-maps/hr-water-dirt-to-out-of-map-mask.png",
+--   filename_high = "__base__/graphics/terrain/effect-maps/water-dirt-to-out-of-map-mask.png",
 --   count = 3,
 --   u_transition_count = 0,
 --   o_transition_count = 0,
@@ -125,7 +125,7 @@ local creep_walking_sound = {
 --   default_transition_group_id,
 --   out_of_map_transition_group_id,
 --   "__base__/graphics/terrain/out-of-map-transition/dirt-out-of-map-transition.png",
---   "__base__/graphics/terrain/out-of-map-transition/hr-dirt-out-of-map-transition.png",
+--   "__base__/graphics/terrain/out-of-map-transition/dirt-out-of-map-transition.png",
 --   {
 --     inner_corner_tall = true,
 --     inner_corner_count = 3,
@@ -144,7 +144,7 @@ local creep_walking_sound = {
 --   water_transition_template_with_effect(
 --     water_tile_type_names,
 --     "__base__/graphics/terrain/water-transitions/dark-dirt.png",
---     "__base__/graphics/terrain/water-transitions/hr-dark-dirt.png",
+--     "__base__/graphics/terrain/water-transitions/dark-dirt.png",
 --     {
 --       effect_map = ttfxmaps.water_creep,
 --       o_transition_tall = false,
@@ -164,7 +164,7 @@ local creep_walking_sound = {
 --     default_transition_group_id,
 --     water_transition_group_id,
 --     "__base__/graphics/terrain/water-transitions/dark-dirt-transition.png",
---     "__base__/graphics/terrain/water-transitions/hr-dark-dirt-transition.png",
+--     "__base__/graphics/terrain/water-transitions/dark-dirt-transition.png",
 --     {
 --       effect_map = ttfxmaps.water_creep_to_land,
 --       o_transition_tall = false,
@@ -184,7 +184,7 @@ local creep_walking_sound = {
 --     water_transition_group_id,
 --     out_of_map_transition_group_id,
 --     "__base__/graphics/terrain/out-of-map-transition/dark-dirt-shore-out-of-map-transition.png",
---     "__base__/graphics/terrain/out-of-map-transition/hr-dark-dirt-shore-out-of-map-transition.png",
+--     "__base__/graphics/terrain/out-of-map-transition/dark-dirt-shore-out-of-map-transition.png",
 --     {
 --       effect_map = ttfxmaps.water_creep_to_out_of_map,
 --       o_transition_tall = false,
@@ -295,8 +295,8 @@ data:extend({
     transition_overlay_layer_offset = 3,
     decorative_removal_probability = 0.35,
     variants = tile_variations_template(
-      kr_tiles_path .. "creep/hr-creep.png",
-      "__base__/graphics/terrain/masks/hr-transition-1.png",
+      kr_tiles_path .. "creep/creep.png",
+      "__base__/graphics/terrain/masks/transition-1.png",
       {
         max_size = 4,
         [1] = {

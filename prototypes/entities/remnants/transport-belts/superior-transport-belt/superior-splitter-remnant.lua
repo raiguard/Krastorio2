@@ -17,7 +17,7 @@ data:extend({
     remove_on_tile_placement = false,
     animation = {
       filename = kr_remnants_path
-        .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-remnant.png",
+        .. "transport-belts/superior-transport-belt/splitter/superior-splitter-remnant.png",
       line_length = 1,
       width = 172,
       height = 156,

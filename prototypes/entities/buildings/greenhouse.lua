@@ -58,7 +58,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "greenhouse/hr-greenhouse.png",
+          filename = kr_entities_path .. "greenhouse/greenhouse.png",
           priority = "high",
           width = 512,
           height = 512,
@@ -66,7 +66,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "greenhouse/hr-greenhouse-sh.png",
+          filename = kr_entities_path .. "greenhouse/greenhouse-sh.png",
           priority = "high",
           width = 512,
           height = 512,
@@ -81,7 +81,7 @@ data:extend({
       {
         draw_as_light = true,
         animation = {
-          filename = kr_entities_path .. "greenhouse/hr-greenhouse-light.png",
+          filename = kr_entities_path .. "greenhouse/greenhouse-light.png",
           width = 512,
           height = 512,
           frame_count = 1,
@@ -92,7 +92,7 @@ data:extend({
       },
       {
         animation = {
-          filename = kr_entities_path .. "greenhouse/hr-greenhouse-working.png",
+          filename = kr_entities_path .. "greenhouse/greenhouse-working.png",
           width = 512,
           height = 512,
           frame_count = 10,

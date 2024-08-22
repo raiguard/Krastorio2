@@ -17,7 +17,7 @@ data:extend({
     selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     damaged_trigger_effect = hit_effects.entity(),
     base_picture = {
-      filename = kr_entities_path .. "singularity-beacon/hr-singularity-beacon.png",
+      filename = kr_entities_path .. "singularity-beacon/singularity-beacon.png",
       width = 360,
       height = 360,
       shift = util.by_pixel(0, -5),
@@ -26,7 +26,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "singularity-beacon/hr-singularity-beacon-w-light.png",
+          filename = kr_entities_path .. "singularity-beacon/singularity-beacon-w-light.png",
           width = 190,
           height = 214,
           frame_count = 10,
@@ -38,7 +38,7 @@ data:extend({
           animation_speed = 0.5,
         },
         {
-          filename = kr_entities_path .. "singularity-beacon/hr-singularity-beacon-w.png",
+          filename = kr_entities_path .. "singularity-beacon/singularity-beacon-w.png",
           width = 190,
           height = 214,
           frame_count = 10,

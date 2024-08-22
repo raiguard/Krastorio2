@@ -57,14 +57,14 @@ data:extend({
     base = {
       layers = {
         {
-          filename = kr_entities_path .. "small-roboport/hr-small-roboport.png",
+          filename = kr_entities_path .. "small-roboport/small-roboport.png",
           width = 240,
           height = 300,
           shift = { 0, -0.1 },
           scale = 0.25,
         },
         {
-          filename = kr_entities_path .. "small-roboport/hr-small-roboport-sh.png",
+          filename = kr_entities_path .. "small-roboport/small-roboport-sh.png",
           width = 322,
           height = 166,
           shift = { 0.48, 0.43 },
@@ -77,7 +77,7 @@ data:extend({
     base_animation = {
       layers = {
         {
-          filename = kr_entities_path .. "small-roboport/hr-small-roboport-animation.png",
+          filename = kr_entities_path .. "small-roboport/small-roboport-animation.png",
           priority = "high",
           width = 110,
           height = 80,
@@ -88,7 +88,7 @@ data:extend({
           animation_speed = 0.1,
         },
         {
-          filename = kr_entities_path .. "small-roboport/hr-small-roboport-animation-light.png",
+          filename = kr_entities_path .. "small-roboport/small-roboport-animation-light.png",
           priority = "high",
           width = 110,
           height = 80,

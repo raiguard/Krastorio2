@@ -25,7 +25,7 @@ data:extend({
       layers = {
         {
 
-          filename = kr_entities_path .. "advanced-solar-panel/hr-advanced-solar-panel-light.png",
+          filename = kr_entities_path .. "advanced-solar-panel/advanced-solar-panel-light.png",
           priority = "high",
           width = 280,
           height = 280,
@@ -34,7 +34,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "advanced-solar-panel/hr-advanced-solar-panel.png",
+          filename = kr_entities_path .. "advanced-solar-panel/advanced-solar-panel.png",
           priority = "high",
           width = 280,
           height = 280,
@@ -42,7 +42,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "advanced-solar-panel/hr-advanced-solar-panel-sh.png",
+          filename = kr_entities_path .. "advanced-solar-panel/advanced-solar-panel-sh.png",
           priority = "high",
           width = 280,
           height = 280,
@@ -55,7 +55,7 @@ data:extend({
     overlay = {
       layers = {
         {
-          filename = kr_entities_path .. "advanced-solar-panel/hr-advanced-solar-panel-sh-ov.png",
+          filename = kr_entities_path .. "advanced-solar-panel/advanced-solar-panel-sh-ov.png",
           priority = "high",
           width = 280,
           height = 280,

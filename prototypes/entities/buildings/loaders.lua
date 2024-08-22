@@ -27,7 +27,7 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
     local rust_layer_direction_in, rust_layer_direction_out = nil, nil
     if data.apply_rust ~= false then
       rust_layer_direction_in = {
-        filename = kr_entities_path .. "loader/hr-kr-loader-rust.png",
+        filename = kr_entities_path .. "loader/kr-loader-rust.png",
         priority = "extra-high",
         shift = { 0.15625, 0.0703125 },
         width = 106,
@@ -36,7 +36,7 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
         scale = 0.5,
       }
       rust_layer_direction_out = {
-        filename = kr_entities_path .. "loader/hr-kr-loader-rust.png",
+        filename = kr_entities_path .. "loader/kr-loader-rust.png",
         priority = "extra-high",
         shift = { 0.15625, 0.0703125 },
         width = 106,
@@ -87,7 +87,7 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
         direction_in = {
           sheets = {
             {
-              filename = kr_entities_path .. "loader/hr-kr-loader.png",
+              filename = kr_entities_path .. "loader/kr-loader.png",
               priority = "extra-high",
               shift = { 0.15625, 0.0703125 },
               width = 106,
@@ -96,7 +96,7 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
               scale = 0.5,
             },
             {
-              filename = kr_entities_path .. "loader/hr-kr-loader-mask.png",
+              filename = kr_entities_path .. "loader/kr-loader-mask.png",
               priority = "extra-high",
               shift = { 0.15625, 0.0703125 },
               width = 106,
@@ -111,7 +111,7 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
         direction_out = {
           sheets = {
             {
-              filename = kr_entities_path .. "loader/hr-kr-loader.png",
+              filename = kr_entities_path .. "loader/kr-loader.png",
               priority = "extra-high",
               shift = { 0.15625, 0.0703125 },
               width = 106,
@@ -119,7 +119,7 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
               scale = 0.5,
             },
             {
-              filename = kr_entities_path .. "loader/hr-kr-loader-mask.png",
+              filename = kr_entities_path .. "loader/kr-loader-mask.png",
               priority = "extra-high",
               shift = { 0.15625, 0.0703125 },
               width = 106,

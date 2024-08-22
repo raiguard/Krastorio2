@@ -65,7 +65,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "electrolysis-plant/hr-electrolysis-plant.png",
+          filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant.png",
           width = 380,
           height = 380,
           scale = 0.5,
@@ -73,7 +73,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = kr_entities_path .. "electrolysis-plant/hr-electrolysis-plant-sh.png",
+          filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant-sh.png",
           width = 380,
           height = 380,
           scale = 0.5,
@@ -87,7 +87,7 @@ data:extend({
       {
         apply_recipe_tint = "primary",
         animation = {
-          filename = kr_entities_path .. "electrolysis-plant/hr-electrolysis-plant-work.png",
+          filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant-work.png",
           width = 380,
           height = 380,
           scale = 0.5,
@@ -102,7 +102,7 @@ data:extend({
       {
         apply_recipe_tint = "primary",
         animation = {
-          filename = kr_entities_path .. "electrolysis-plant/hr-electrolysis-plant-work-light.png",
+          filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant-work-light.png",
           width = 380,
           height = 380,
           scale = 0.5,

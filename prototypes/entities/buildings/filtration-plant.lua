@@ -42,7 +42,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "filtration-plant/hr-filtration-plant.png",
+          filename = kr_entities_path .. "filtration-plant/filtration-plant.png",
           priority = "high",
           width = 460,
           height = 520,
@@ -51,7 +51,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "filtration-plant/hr-filtration-plant-sh.png",
+          filename = kr_entities_path .. "filtration-plant/filtration-plant-sh.png",
           priority = "high",
           width = 498,
           height = 438,
@@ -65,7 +65,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = kr_entities_path .. "filtration-plant/hr-filtration-plant-working.png",
+          filename = kr_entities_path .. "filtration-plant/filtration-plant-working.png",
           priority = "high",
           width = 340,
           height = 370,
@@ -79,7 +79,7 @@ data:extend({
       {
         apply_recipe_tint = "primary",
         animation = {
-          filename = kr_entities_path .. "filtration-plant/hr-filtration-plant-dirty-mask.png",
+          filename = kr_entities_path .. "filtration-plant/filtration-plant-dirty-mask.png",
           width = 156,
           height = 120,
           scale = 0.5,
@@ -92,7 +92,7 @@ data:extend({
       {
         apply_recipe_tint = "secondary",
         animation = {
-          filename = kr_entities_path .. "filtration-plant/hr-filtration-plant-clear-mask.png",
+          filename = kr_entities_path .. "filtration-plant/filtration-plant-clear-mask.png",
           width = 156,
           height = 120,
           scale = 0.5,

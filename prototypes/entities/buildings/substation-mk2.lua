@@ -31,7 +31,7 @@ data:extend({
       layers = {
 
         {
-          filename = kr_entities_path .. "substation-mk2/hr-substation-mk2.png",
+          filename = kr_entities_path .. "substation-mk2/substation-mk2.png",
           priority = "high",
           width = 138,
           height = 270,
@@ -40,7 +40,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__base__/graphics/entity/substation/hr-substation-shadow.png",
+          filename = "__base__/graphics/entity/substation/substation-shadow.png",
           priority = "high",
           width = 370,
           height = 104,
@@ -53,7 +53,7 @@ data:extend({
     },
 
     active_picture = {
-      filename = "__Krastorio2Assets__/entities/substation-mk2/hr-substation-mk2-light.png",
+      filename = "__Krastorio2Assets__/entities/substation-mk2/substation-mk2-light.png",
       priority = "high",
       width = 92,
       height = 156,

@@ -40,7 +40,7 @@ data:extend({
     alert_icon_shift = util.by_pixel(-3, -12),
     integration_patch_render_layer = "decals",
     integration_patch = {
-      filename = kr_crash_site_sprites_path .. "assembling-machine/hr-crash-site-assembling-machine-1-ground.png",
+      filename = kr_crash_site_sprites_path .. "assembling-machine/crash-site-assembling-machine-1-ground.png",
       width = 446,
       height = 234,
       shift = util.by_pixel(-31, 12),
@@ -52,7 +52,7 @@ data:extend({
       layers = {
         {
           filename = kr_crash_site_sprites_path
-            .. "assembling-machine/hr-crash-site-assembling-machine-1-repaired.png",
+            .. "assembling-machine/crash-site-assembling-machine-1-repaired.png",
           width = 282,
           height = 182,
           frame_count = 20,
@@ -63,7 +63,7 @@ data:extend({
         },
         {
           filename = kr_crash_site_sprites_path
-            .. "assembling-machine/hr-crash-site-assembling-machine-1-repaired-shadow.png",
+            .. "assembling-machine/crash-site-assembling-machine-1-repaired-shadow.png",
           width = 278,
           height = 168,
           frame_count = 20,
@@ -79,7 +79,7 @@ data:extend({
       {
         animation = {
           filename = kr_crash_site_sprites_path
-            .. "assembling-machine/hr-crash-site-assembling-machine-1-repaired-light.png",
+            .. "assembling-machine/crash-site-assembling-machine-1-repaired-light.png",
           width = 162,
           height = 120,
           frame_count = 20,
