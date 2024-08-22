@@ -199,36 +199,9 @@ data:extend({
         },
       },
     },
-    animation = {
-      filename = "__base__/graphics/entity/rocket/rocket.png",
-      frame_count = 8,
-      line_length = 8,
-      width = 9,
-      height = 35,
-      shift = { 0, 0 },
-      priority = "high",
-    },
-    shadow = {
-      filename = "__base__/graphics/entity/rocket/rocket-shadow.png",
-      frame_count = 1,
-      width = 7,
-      height = 24,
-      priority = "high",
-      shift = { 0, 0 },
-    },
-    smoke = {
-      {
-        name = "smoke-fast",
-        deviation = { 0.15, 0.15 },
-        frequency = 1,
-        position = { 0, 1 },
-        slow_down_factor = 1,
-        starting_frame = 3,
-        starting_frame_deviation = 5,
-        starting_frame_speed = 0,
-        starting_frame_speed_deviation = 5,
-      },
-    },
+    animation = require("__base__.prototypes.entity.rocket-projectile-pictures").animation({ 1, 0.8, 0.3 }),
+    shadow = require("__base__.prototypes.entity.rocket-projectile-pictures").shadow,
+    smoke = require("__base__.prototypes.entity.rocket-projectile-pictures").smoke,
     light = { intensity = 0.5, size = 10, color = { r = 1.0, g = 1.0, b = 0.5 } },
   },
 
@@ -724,36 +697,10 @@ data:extend({
         },
       },
     },
-    animation = {
-      filename = "__base__/graphics/entity/rocket/rocket.png",
-      frame_count = 8,
-      line_length = 8,
-      width = 9,
-      height = 35,
-      shift = { 0, 0 },
-      priority = "high",
-    },
-    shadow = {
-      filename = "__base__/graphics/entity/rocket/rocket-shadow.png",
-      frame_count = 1,
-      width = 7,
-      height = 24,
-      priority = "high",
-      shift = { 0, 0 },
-    },
-    smoke = {
-      {
-        name = "smoke-fast",
-        deviation = { 0.15, 0.15 },
-        frequency = 1,
-        position = { 0, 1 },
-        slow_down_factor = 1,
-        starting_frame = 3,
-        starting_frame_deviation = 5,
-        starting_frame_speed = 0,
-        starting_frame_speed_deviation = 5,
-      },
-    },
+    -- TODO: Different tint
+    animation = require("__base__.prototypes.entity.rocket-projectile-pictures").animation({ 1, 0.8, 0.3 }),
+    shadow = require("__base__.prototypes.entity.rocket-projectile-pictures").shadow,
+    smoke = require("__base__.prototypes.entity.rocket-projectile-pictures").smoke,
     light = { intensity = 0.5, size = 10, color = { r = 0.9, g = 0.1, b = 1 } },
   },
 
@@ -1016,22 +963,8 @@ data:extend({
         },
       },
     },
-    animation = {
-      filename = kr_entities_path .. "empty.png",
-      frame_count = 1,
-      width = 1,
-      height = 1,
-      shift = { 0, 0 },
-      priority = "low",
-    },
-    shadow = {
-      filename = kr_entities_path .. "empty.png",
-      frame_count = 1,
-      width = 1,
-      height = 1,
-      shift = { 0, 0 },
-      priority = "low",
-    },
+    animation = util.empty_animation(),
+    shadow = util.empty_animation(),
     light = { intensity = 0.5, size = 10, color = { r = 0.9, g = 0.1, b = 1 } },
   },
 
@@ -1418,20 +1351,8 @@ data:extend({
         },
       },
     },
-    animation = {
-      filename = "__core__/graphics/empty.png",
-      frame_count = 1,
-      width = 1,
-      height = 1,
-      priority = "high",
-    },
-    shadow = {
-      filename = "__core__/graphics/empty.png",
-      frame_count = 1,
-      width = 1,
-      height = 1,
-      priority = "high",
-    },
+    animation = util.empty_animation(),
+    shadow = util.empty_animation(),
   },
 
   -----------------------------------------------------------------------------------------------------------------
@@ -1815,14 +1736,6 @@ data:extend({
       shift = { 0, 0 },
       priority = "high",
     },
-    shadow = {
-      filename = kr_entities_path .. "missiles/rocket-shadow.png",
-      frame_count = 1,
-      width = 12,
-      height = 40,
-      priority = "high",
-      shift = { 0, 0 },
-    },
     smoke = {
       {
         name = "smoke-fast",
@@ -2070,14 +1983,6 @@ data:extend({
       height = 100,
       shift = { 0, 0 },
       priority = "high",
-    },
-    shadow = {
-      filename = kr_entities_path .. "missiles/rocket-shadow.png",
-      frame_count = 1,
-      width = 12,
-      height = 40,
-      priority = "high",
-      shift = { 0, 0 },
     },
     smoke = {
       {
@@ -2391,14 +2296,6 @@ data:extend({
       height = 100,
       shift = { 0, 0 },
       priority = "high",
-    },
-    shadow = {
-      filename = kr_entities_path .. "missiles/rocket-shadow.png",
-      frame_count = 1,
-      width = 12,
-      height = 40,
-      priority = "high",
-      shift = { 0, 0 },
     },
     smoke = {
       {

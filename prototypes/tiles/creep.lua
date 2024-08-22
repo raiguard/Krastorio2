@@ -221,7 +221,7 @@ local creep_transitions = {
     to_tiles = water_tile_type_names,
     transition_group = water_transition_group_id,
 
-    spritesheet = "__base__/graphics/terrain/water-transitions/dry-creep.png",
+    spritesheet = "__base__/graphics/terrain/water-transitions/dry-dirt.png",
     layout = tile_spritesheet_layout.transition_8_8_8_2_4,
     background_enabled = false,
     effect_map_layout = {
@@ -249,7 +249,7 @@ local creep_transitions_between_transitions = {
     transition_group1 = default_transition_group_id,
     transition_group2 = water_transition_group_id,
 
-    spritesheet = "__base__/graphics/terrain/water-transitions/dry-creep-transition.png",
+    spritesheet = "__base__/graphics/terrain/water-transitions/dry-dirt-transition.png",
     layout = tile_spritesheet_layout.transition_3_3_3_1_0,
     background_enabled = false,
     effect_map_layout = {
@@ -268,10 +268,10 @@ local creep_transitions_between_transitions = {
     background_layer_group = "zero",
     offset_background_layer_by_tile_layer = true,
 
-    spritesheet = "__base__/graphics/terrain/out-of-map-transition/dry-creep-shore-out-of-map-transition.png",
+    spritesheet = "__base__/graphics/terrain/out-of-map-transition/dry-dirt-shore-out-of-map-transition.png",
     layout = tile_spritesheet_layout.transition_3_3_3_1_0,
     effect_map_layout = {
-      spritesheet = "__base__/graphics/terrain/effect-maps/water-creep-to-out-of-map-mask.png",
+      spritesheet = "__base__/graphics/terrain/effect-maps/water-dirt-to-out-of-map-mask.png",
       u_transition_count = 0,
       o_transition_count = 0,
     },

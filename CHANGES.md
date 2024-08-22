@@ -46,3 +46,4 @@
 - `advanced-electronics-2` -> `processing-unit`.
 - `advanced-electronics` -> `advanced-circuit`.
 - `optics` -> `lamp`.
+- `rocket-shadow.png` no longer exists - use utility functions instead.
