@@ -25,22 +25,13 @@ data:extend({
     },
     animations = {
       filename = kr_entities_path
-        .. "transport-belts/advanced-transport-belt/transport-belt/advanced-transport-belt.png",
+        .. "transport-belts/advanced-transport-belt/transport-belt/hr-advanced-transport-belt.png",
       priority = "extra-high",
-      width = 40,
-      height = 40,
+      width = 128,
+      height = 128,
       frame_count = 32,
       direction_count = 12,
-      hr_version = {
-        filename = kr_entities_path
-          .. "transport-belts/advanced-transport-belt/transport-belt/hr-advanced-transport-belt.png",
-        priority = "extra-high",
-        width = 128,
-        height = 128,
-        frame_count = 32,
-        direction_count = 12,
-        scale = 0.5,
-      },
+      scale = 0.5,
     },
     belt_animation_set = kr_advanced_transport_belt_animation_set,
     fast_replaceable_group = "transport-belt",

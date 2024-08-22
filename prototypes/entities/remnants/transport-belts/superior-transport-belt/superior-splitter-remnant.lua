@@ -16,28 +16,17 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = {
-      filename = kr_remnants_path .. "transport-belts/superior-transport-belt/splitter/superior-splitter-remnant.png",
+      filename = kr_remnants_path
+        .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-remnant.png",
       line_length = 1,
-      width = 86,
-      height = 78,
+      width = 172,
+      height = 156,
       frame_count = 1,
       variation_count = 1,
       axially_symmetrical = false,
       direction_count = 4,
       shift = util.by_pixel(1, 3),
-      hr_version = {
-        filename = kr_remnants_path
-          .. "transport-belts/superior-transport-belt/splitter/hr-superior-splitter-remnant.png",
-        line_length = 1,
-        width = 172,
-        height = 156,
-        frame_count = 1,
-        variation_count = 1,
-        axially_symmetrical = false,
-        direction_count = 4,
-        shift = util.by_pixel(1, 3),
-        scale = 0.5,
-      },
+      scale = 0.5,
     },
   },
 })

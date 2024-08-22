@@ -45,109 +45,64 @@ data:extend({
       direction_in = {
         sheet = {
           filename = kr_entities_path
-            .. "transport-belts/superior-transport-belt/underground-belt/superior-underground-belt-structure.png",
+            .. "transport-belts/superior-transport-belt/underground-belt/hr-superior-underground-belt-structure.png",
           priority = "extra-high",
-          width = 96,
-          height = 96,
-          y = 96,
-          hr_version = {
-            filename = kr_entities_path
-              .. "transport-belts/superior-transport-belt/underground-belt/hr-superior-underground-belt-structure.png",
-            priority = "extra-high",
-            width = 192,
-            height = 192,
-            y = 192,
-            scale = 0.5,
-          },
+          width = 192,
+          height = 192,
+          y = 192,
+          scale = 0.5,
         },
       },
       direction_out = {
         sheet = {
           filename = kr_entities_path
-            .. "transport-belts/superior-transport-belt/underground-belt/superior-underground-belt-structure.png",
+            .. "transport-belts/superior-transport-belt/underground-belt/hr-superior-underground-belt-structure.png",
           priority = "extra-high",
-          width = 96,
-          height = 96,
-          hr_version = {
-            filename = kr_entities_path
-              .. "transport-belts/superior-transport-belt/underground-belt/hr-superior-underground-belt-structure.png",
-            priority = "extra-high",
-            width = 192,
-            height = 192,
-            scale = 0.5,
-          },
+          width = 192,
+          height = 192,
+          scale = 0.5,
         },
       },
       direction_in_side_loading = {
         sheet = {
           filename = kr_entities_path
-            .. "transport-belts/superior-transport-belt/underground-belt/superior-underground-belt-structure.png",
+            .. "transport-belts/superior-transport-belt/underground-belt/hr-superior-underground-belt-structure.png",
           priority = "extra-high",
-          width = 96,
-          height = 96,
-          y = 96 * 3,
-          hr_version = {
-            filename = kr_entities_path
-              .. "transport-belts/superior-transport-belt/underground-belt/hr-superior-underground-belt-structure.png",
-            priority = "extra-high",
-            width = 192,
-            height = 192,
-            y = 192 * 3,
-            scale = 0.5,
-          },
+          width = 192,
+          height = 192,
+          y = 192 * 3,
+          scale = 0.5,
         },
       },
       direction_out_side_loading = {
         sheet = {
           filename = kr_entities_path
-            .. "transport-belts/superior-transport-belt/underground-belt/superior-underground-belt-structure.png",
+            .. "transport-belts/superior-transport-belt/underground-belt/hr-superior-underground-belt-structure.png",
           priority = "extra-high",
-          width = 96,
-          height = 96,
-          y = 96 * 2,
-          hr_version = {
-            filename = kr_entities_path
-              .. "transport-belts/superior-transport-belt/underground-belt/hr-superior-underground-belt-structure.png",
-            priority = "extra-high",
-            width = 192,
-            height = 192,
-            y = 192 * 2,
-            scale = 0.5,
-          },
+          width = 192,
+          height = 192,
+          y = 192 * 2,
+          scale = 0.5,
         },
       },
       back_patch = {
         sheet = {
           filename = kr_entities_path
-            .. "transport-belts/superior-transport-belt/underground-belt/superior-underground-belt-structure-back-patch.png",
+            .. "transport-belts/superior-transport-belt/underground-belt/hr-superior-underground-belt-structure-back-patch.png",
           priority = "extra-high",
-          width = 96,
-          height = 96,
-          hr_version = {
-            filename = kr_entities_path
-              .. "transport-belts/superior-transport-belt/underground-belt/hr-superior-underground-belt-structure-back-patch.png",
-            priority = "extra-high",
-            width = 192,
-            height = 192,
-            scale = 0.5,
-          },
+          width = 192,
+          height = 192,
+          scale = 0.5,
         },
       },
       front_patch = {
         sheet = {
           filename = kr_entities_path
-            .. "transport-belts/superior-transport-belt/underground-belt/superior-underground-belt-structure-front-patch.png",
+            .. "transport-belts/superior-transport-belt/underground-belt/hr-superior-underground-belt-structure-front-patch.png",
           priority = "extra-high",
-          width = 96,
-          height = 96,
-          hr_version = {
-            filename = kr_entities_path
-              .. "transport-belts/superior-transport-belt/underground-belt/hr-superior-underground-belt-structure-front-patch.png",
-            priority = "extra-high",
-            width = 192,
-            height = 192,
-            scale = 0.5,
-          },
+          width = 192,
+          height = 192,
+          scale = 0.5,
         },
       },
     },

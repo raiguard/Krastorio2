@@ -17,28 +17,16 @@ data:extend({
     remove_on_tile_placement = false,
     animation = {
       filename = kr_remnants_path
-        .. "transport-belts/superior-transport-belt/underground-belt/superior-underground-belt-remnant.png",
+        .. "transport-belts/superior-transport-belt/underground-belt/hr-superior-underground-belt-remnant.png",
       line_length = 1,
-      width = 60,
-      height = 50,
+      width = 116,
+      height = 100,
       frame_count = 1,
       variation_count = 1,
       axially_symmetrical = false,
       direction_count = 8,
-      shift = util.by_pixel(4, 3),
-      hr_version = {
-        filename = kr_remnants_path
-          .. "transport-belts/superior-transport-belt/underground-belt/hr-superior-underground-belt-remnant.png",
-        line_length = 1,
-        width = 116,
-        height = 100,
-        frame_count = 1,
-        variation_count = 1,
-        axially_symmetrical = false,
-        direction_count = 8,
-        shift = util.by_pixel(3.5, 3.5),
-        scale = 0.5,
-      },
+      shift = util.by_pixel(3.5, 3.5),
+      scale = 0.5,
     },
   },
 })

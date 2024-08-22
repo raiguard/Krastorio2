@@ -46,45 +46,26 @@ data:extend({
     stage_counts = { 0 },
     stages = {
       sheet = {
-        filename = kr_resources_sprites_path .. "imersite/imersite-rift.png",
+        filename = kr_resources_sprites_path .. "imersite/hr-imersite-rift.png",
         priority = "extra-high",
-        width = 250,
-        height = 250,
+        width = 500,
+        height = 500,
         frame_count = 6,
         variation_count = 1,
-        scale = 0.8,
-        hr_version = {
-          filename = kr_resources_sprites_path .. "imersite/hr-imersite-rift.png",
+        scale = 0.4,
+      },
+    },
+    stages_effect = {
+      sheets = {
+        {
+          filename = kr_resources_sprites_path .. "imersite/hr-imersite-rift-glow.png",
           priority = "extra-high",
           width = 500,
           height = 500,
           frame_count = 6,
           variation_count = 1,
           scale = 0.4,
-        },
-      },
-    },
-    stages_effect = {
-      sheets = {
-        {
-          filename = kr_resources_sprites_path .. "imersite/imersite-rift-glow.png",
-          priority = "extra-high",
-          width = 250,
-          height = 250,
-          frame_count = 6,
-          variation_count = 1,
           draw_as_glow = true,
-          scale = 0.8,
-          hr_version = {
-            filename = kr_resources_sprites_path .. "imersite/hr-imersite-rift-glow.png",
-            priority = "extra-high",
-            width = 500,
-            height = 500,
-            frame_count = 6,
-            variation_count = 1,
-            scale = 0.4,
-            draw_as_glow = true,
-          },
         },
       },
     },

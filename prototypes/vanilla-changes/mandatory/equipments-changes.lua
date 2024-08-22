@@ -54,17 +54,11 @@ function updateVanillaEquipmentGraphics(_objects_to_modify, icons_path, sprites_
         end
         if data.raw[category_name][item_name] then
           data.raw[category_name][item_name].sprite = {
-            filename = sprites_path .. item[1],
+            filename = sprites_path .. "hr-" .. item[1],
             priority = "medium",
-            width = item[3],
-            height = item[4],
-            hr_version = {
-              filename = sprites_path .. "hr-" .. item[1],
-              priority = "medium",
-              width = item[3] * 2,
-              height = item[4] * 2,
-              scale = 0.5,
-            },
+            width = item[3] * 2,
+            height = item[4] * 2,
+            scale = 0.5,
           }
         end
       end

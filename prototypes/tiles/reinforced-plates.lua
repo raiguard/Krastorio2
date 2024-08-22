@@ -1,14 +1,9 @@
 -- water_tile_type_names = { "water", "deepwater", "water-green", "deepwater-green", "water-shallow", "water-mud" }
 -- patch_for_inner_corner_of_transition_between_transition = {
---   filename = "__base__/graphics/terrain/water-transitions/water-patch.png",
---   width = 32,
---   height = 32,
---   hr_version = {
 --     filename = "__base__/graphics/terrain/water-transitions/hr-water-patch.png",
 --     scale = 0.5,
 --     width = 64,
 --     height = 64,
---   },
 -- }
 
 -- default_transition_group_id = 0
@@ -408,107 +403,63 @@ data:extend({
       transition = {
         overlay_layout = {
           inner_corner = {
-            spritesheet = kr_tiles_path .. "reinforced-plates/concrete-inner-corner.png",
+            spritesheet = kr_tiles_path .. "reinforced-plates/hr-concrete-inner-corner.png",
             count = 16,
-            hr_version = {
-              spritesheet = kr_tiles_path .. "reinforced-plates/hr-concrete-inner-corner.png",
-              count = 16,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
           outer_corner = {
-            spritesheet = kr_tiles_path .. "reinforced-plates/concrete-outer-corner.png",
+            spritesheet = kr_tiles_path .. "reinforced-plates/hr-concrete-outer-corner.png",
             count = 8,
-            hr_version = {
-              spritesheet = kr_tiles_path .. "reinforced-plates/hr-concrete-outer-corner.png",
-              count = 8,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
           side = {
-            spritesheet = kr_tiles_path .. "reinforced-plates/concrete-side.png",
+            spritesheet = kr_tiles_path .. "reinforced-plates/hr-concrete-side.png",
             count = 16,
-            hr_version = {
-              spritesheet = kr_tiles_path .. "reinforced-plates/hr-concrete-side.png",
-              count = 16,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
           u_transition = {
-            spritesheet = kr_tiles_path .. "reinforced-plates/concrete-u.png",
+            spritesheet = kr_tiles_path .. "reinforced-plates/hr-concrete-u.png",
             count = 8,
-            hr_version = {
-              spritesheet = kr_tiles_path .. "reinforced-plates/hr-concrete-u.png",
-              count = 8,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
           o_transition = {
-            spritesheet = kr_tiles_path .. "reinforced-plates/concrete-o.png",
+            spritesheet = kr_tiles_path .. "reinforced-plates/hr-concrete-o.png",
             count = 4,
-            hr_version = {
-              spritesheet = kr_tiles_path .. "reinforced-plates/hr-concrete-o.png",
-              count = 4,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
         },
         mask_layout = {
           inner_corner = {
-            spritesheet = "__base__/graphics/terrain/concrete/concrete-inner-corner-mask.png",
+            spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-inner-corner-mask.png",
             count = 16,
-            hr_version = {
-              spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-inner-corner-mask.png",
-              count = 16,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
           outer_corner = {
-            spritesheet = "__base__/graphics/terrain/concrete/concrete-outer-corner-mask.png",
+            spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-outer-corner-mask.png",
             count = 8,
-            hr_version = {
-              spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-outer-corner-mask.png",
-              count = 8,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
           side = {
-            spritesheet = "__base__/graphics/terrain/concrete/concrete-side-mask.png",
+            spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-side-mask.png",
             count = 16,
-            hr_version = {
-              spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-side-mask.png",
-              count = 16,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
           u_transition = {
-            spritesheet = "__base__/graphics/terrain/concrete/concrete-u-mask.png",
+            spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-u-mask.png",
             count = 8,
-            hr_version = {
-              spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-u-mask.png",
-              count = 8,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
           o_transition = {
-            spritesheet = "__base__/graphics/terrain/concrete/concrete-o-mask.png",
+            spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-o-mask.png",
             count = 4,
-            hr_version = {
-              spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-o-mask.png",
-              count = 4,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
         },
       },
       material_background = {
-        picture = kr_tiles_path .. "reinforced-plates/black-reinforced-plate.png",
+        picture = kr_tiles_path .. "reinforced-plates/hr-black-reinforced-plate.png",
         count = 16,
-        hr_version = {
-          picture = kr_tiles_path .. "reinforced-plates/hr-black-reinforced-plate.png",
-          count = 16,
-          scale = 0.5,
-        },
+        scale = 0.5,
       },
     },
 
@@ -556,107 +507,63 @@ data:extend({
       transition = {
         overlay_layout = {
           inner_corner = {
-            spritesheet = "__base__/graphics/terrain/concrete/concrete-inner-corner.png",
+            spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-inner-corner.png",
             count = 16,
-            hr_version = {
-              spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-inner-corner.png",
-              count = 16,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
           outer_corner = {
-            spritesheet = "__base__/graphics/terrain/concrete/concrete-outer-corner.png",
+            spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-outer-corner.png",
             count = 8,
-            hr_version = {
-              spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-outer-corner.png",
-              count = 8,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
           side = {
-            spritesheet = "__base__/graphics/terrain/concrete/concrete-side.png",
+            spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-side.png",
             count = 16,
-            hr_version = {
-              spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-side.png",
-              count = 16,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
           u_transition = {
-            spritesheet = "__base__/graphics/terrain/concrete/concrete-u.png",
+            spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-u.png",
             count = 8,
-            hr_version = {
-              spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-u.png",
-              count = 8,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
           o_transition = {
-            spritesheet = "__base__/graphics/terrain/concrete/concrete-o.png",
+            spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-o.png",
             count = 4,
-            hr_version = {
-              spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-o.png",
-              count = 4,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
         },
         mask_layout = {
           inner_corner = {
-            spritesheet = "__base__/graphics/terrain/concrete/concrete-inner-corner-mask.png",
+            spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-inner-corner-mask.png",
             count = 16,
-            hr_version = {
-              spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-inner-corner-mask.png",
-              count = 16,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
           outer_corner = {
-            spritesheet = "__base__/graphics/terrain/concrete/concrete-outer-corner-mask.png",
+            spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-outer-corner-mask.png",
             count = 8,
-            hr_version = {
-              spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-outer-corner-mask.png",
-              count = 8,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
           side = {
-            spritesheet = "__base__/graphics/terrain/concrete/concrete-side-mask.png",
+            spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-side-mask.png",
             count = 16,
-            hr_version = {
-              spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-side-mask.png",
-              count = 16,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
           u_transition = {
-            spritesheet = "__base__/graphics/terrain/concrete/concrete-u-mask.png",
+            spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-u-mask.png",
             count = 8,
-            hr_version = {
-              spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-u-mask.png",
-              count = 8,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
           o_transition = {
-            spritesheet = "__base__/graphics/terrain/concrete/concrete-o-mask.png",
+            spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-o-mask.png",
             count = 4,
-            hr_version = {
-              spritesheet = "__base__/graphics/terrain/concrete/hr-concrete-o-mask.png",
-              count = 4,
-              scale = 0.5,
-            },
+            scale = 0.5,
           },
         },
       },
       material_background = {
-        picture = kr_tiles_path .. "reinforced-plates/white-reinforced-plate.png",
+        picture = kr_tiles_path .. "reinforced-plates/hr-white-reinforced-plate.png",
         count = 16,
-        hr_version = {
-          picture = kr_tiles_path .. "reinforced-plates/hr-white-reinforced-plate.png",
-          count = 16,
-          scale = 0.5,
-        },
+        scale = 0.5,
       },
     },
 

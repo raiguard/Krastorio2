@@ -17,28 +17,16 @@ data:extend({
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(8, {
       filename = kr_remnants_path
-        .. "transport-belts/superior-transport-belt/transport-belt/superior-transport-belt-remnant.png",
+        .. "transport-belts/superior-transport-belt/transport-belt/hr-superior-transport-belt-remnant.png",
       line_length = 1,
-      width = 54,
-      height = 52,
+      width = 106,
+      height = 102,
       frame_count = 1,
       variation_count = 1,
       axially_symmetrical = false,
       direction_count = 1,
-      shift = util.by_pixel(1, 0),
-      hr_version = {
-        filename = kr_remnants_path
-          .. "transport-belts/superior-transport-belt/transport-belt/hr-superior-transport-belt-remnant.png",
-        line_length = 1,
-        width = 106,
-        height = 102,
-        frame_count = 1,
-        variation_count = 1,
-        axially_symmetrical = false,
-        direction_count = 1,
-        shift = util.by_pixel(1, -0.5),
-        scale = 0.5,
-      },
+      shift = util.by_pixel(1, -0.5),
+      scale = 0.5,
     }),
   },
 })

@@ -55,15 +55,10 @@ local creep_walking_sound = {
 -- water_transition_group_id = 1
 -- out_of_map_transition_group_id = 2
 -- patch_for_inner_corner_of_transition_between_transition = {
---   filename = "__base__/graphics/terrain/water-transitions/water-patch.png",
---   width = 32,
---   height = 32,
---   hr_version = {
 --     filename = "__base__/graphics/terrain/water-transitions/hr-water-patch.png",
 --     scale = 0.5,
 --     width = 64,
 --     height = 64,
---   },
 -- }
 
 -- local function create_transition_to_out_of_map_from_template(normal_res_template_path, high_res_template_path, options)
