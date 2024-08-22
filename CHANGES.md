@@ -37,4 +37,8 @@
 - Mandatory graphics set on turrets.
   - Change `base_picture` to `graphics_set` and wrap contents in `base_visualisations.animation` subtables.
 - `util.empty_sprite(frams)` -> `util.empty_animation(frames)`. Continue using `empty_sprite` when not an animation.
-- SLOPED SPRITES FOR ROLLING STOCK
+- SLOPED SPRITES FOR ROLLING STOCK.
+- Selection tool selection mode un-flattening.
+- Trigger techs don't have `unit`.
+- `finish-the-game-achievement` -> `complete-objective-achievement` with `objective_condition` field.
+- Achievement `until_second` -> `within`.

@@ -133,8 +133,8 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
           mipmap_count = 4,
         },
       },
+      ammo_category = "pistol-ammo",
       ammo_type = {
-        category = "pistol-ammo",
         cooldown_modifier = 0.8,
         target_type = k_target_type,
         action = {
@@ -235,8 +235,8 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
           mipmap_count = 4,
         },
       },
+      ammo_category = "pistol-ammo",
       ammo_type = {
-        category = "pistol-ammo",
         target_type = k_target_type,
         action = {
           {
@@ -348,8 +348,8 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
           mipmap_count = 4,
         },
       },
+      ammo_category = "bullet",
       ammo_type = {
-        category = "bullet",
         cooldown_modifier = 0.8,
         target_type = k_target_type,
         action = {
@@ -451,8 +451,8 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
           mipmap_count = 4,
         },
       },
+      ammo_category = "bullet",
       ammo_type = {
-        category = "bullet",
         target_type = k_target_type,
         action = {
           {
@@ -552,8 +552,8 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
           mipmap_count = 4,
         },
       },
+      ammo_category = "bullet",
       ammo_type = {
-        category = "bullet",
         target_type = k_target_type,
         action = {
           {
@@ -657,8 +657,8 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
           mipmap_count = 4,
         },
       },
+      ammo_category = "bullet",
       ammo_type = {
-        category = "bullet",
         target_type = k_target_type,
         action = {
           {
@@ -816,8 +816,8 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
           mipmap_count = 4,
         },
       },
+      ammo_category = "anti-material-rifle-ammo",
       ammo_type = {
-        category = "anti-material-rifle-ammo",
         cooldown_modifier = 0.8,
         target_type = k_target_type,
         action = {
@@ -933,8 +933,8 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
           mipmap_count = 4,
         },
       },
+      ammo_category = "anti-material-rifle-ammo",
       ammo_type = {
-        category = "anti-material-rifle-ammo",
         target_type = k_target_type,
         action = {
           {
@@ -1049,8 +1049,8 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
           mipmap_count = 4,
         },
       },
+      ammo_category = "anti-material-rifle-ammo",
       ammo_type = {
-        category = "anti-material-rifle-ammo",
         target_type = k_target_type,
         action = {
           {
@@ -1169,8 +1169,8 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
           mipmap_count = 4,
         },
       },
+      ammo_category = "anti-material-rifle-ammo",
       ammo_type = {
-        category = "anti-material-rifle-ammo",
         target_type = k_target_type,
         action = {
           {

@@ -26,8 +26,8 @@ data:extend({
         },
       },
     },
+    ammo_category = "bullet",
     ammo_type = {
-      category = "bullet",
       action = {
         type = "direct",
         action_delivery = {
@@ -79,8 +79,8 @@ data:extend({
         },
       },
     },
+    ammo_category = "artillery-shell",
     ammo_type = {
-      category = "artillery-shell",
       target_type = "position",
       action = {
         type = "direct",
@@ -127,8 +127,8 @@ data:extend({
         },
       },
     },
+    ammo_category = "impulse-rifle",
     ammo_type = {
-      category = "impulse-rifle",
       target_type = "direction",
       clamp_position = true,
       action = {
@@ -160,10 +160,10 @@ data:extend({
     icon = kr_ammo_icons_path .. "heavy-rocket.png",
     icon_size = 64,
     icon_mipmaps = 4,
+    ammo_category = "heavy-rocket",
     ammo_type = {
       cooldown_modifier = 0.75,
       target_type = "position",
-      category = "heavy-rocket",
       action = {
         type = "direct",
         action_delivery = {
@@ -209,11 +209,11 @@ data:extend({
         },
       },
     },
+    ammo_category = "heavy-rocket",
     ammo_type = {
       range_modifier = 3,
       cooldown_modifier = 3,
       target_type = "position",
-      category = "heavy-rocket",
       action = {
         type = "direct",
         action_delivery = {
@@ -241,8 +241,8 @@ data:extend({
     icon = kr_ammo_icons_path .. "basic-railgun-shell.png",
     icon_size = 64,
     icon_mipmaps = 4,
+    ammo_category = "railgun-shell",
     ammo_type = {
-      category = "railgun-shell",
       target_type = "entity",
       action = {
         type = "direct",
@@ -273,8 +273,8 @@ data:extend({
     icon = kr_ammo_icons_path .. "explosion-railgun-shell.png",
     icon_size = 64,
     icon_mipmaps = 4,
+    ammo_category = "railgun-shell",
     ammo_type = {
-      category = "railgun-shell",
       target_type = "position",
       action = {
         type = "direct",
@@ -323,8 +323,8 @@ data:extend({
         },
       },
     },
+    ammo_category = "railgun-shell",
     ammo_type = {
-      category = "railgun-shell",
       target_type = "position",
       action = {
         type = "direct",
@@ -355,8 +355,8 @@ data:extend({
     icon = kr_ammo_icons_path .. "explosion-rocket-for-turret.png",
     icon_size = 64,
     icon_mipmaps = 4,
+    ammo_category = "missiles-for-turrets",
     ammo_type = {
-      category = "missiles-for-turrets",
       target_type = "position",
       action = {
         type = "direct",
@@ -405,8 +405,8 @@ data:extend({
         },
       },
     },
+    ammo_category = "missiles-for-turrets",
     ammo_type = {
-      category = "missiles-for-turrets",
       target_type = "position",
       action = {
         type = "direct",
@@ -455,8 +455,8 @@ data:extend({
         },
       },
     },
+    ammo_category = "missiles-for-turrets",
     ammo_type = {
-      category = "missiles-for-turrets",
       target_type = "position",
       action = {
         type = "direct",
@@ -503,8 +503,8 @@ data:extend({
         },
       },
     },
+    ammo_category = "artillery-shell",
     ammo_type = {
-      category = "artillery-shell",
       target_type = "position",
       action = {
         type = "direct",

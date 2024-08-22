@@ -52,18 +52,6 @@ data:extend({
     amount = 10000,
   },
   {
-    type = "research-achievement",
-    name = "destroyer-of-worlds",
-    icons = {
-      { icon = kr_achievements_icons_path .. "backgrounds/epic.png", icon_size = 128 },
-      { icon = kr_achievements_icons_path .. "destroyer-of-worlds.png", icon_size = 128 },
-    },
-    icon_size = 128,
-    limited_to_one_game = false,
-    order = "kr-p-m4",
-    technology = "kr-antimatter-ammo",
-  },
-  {
     type = "build-entity-achievement",
     name = "dig-into-deep",
     icons = {
@@ -103,27 +91,29 @@ data:extend({
     amount = 100,
   },
   {
-    type = "finish-the-game-achievement",
+    type = "complete-objective-achievement",
     name = "faster-than-sound",
     icons = {
       { icon = kr_achievements_icons_path .. "speedy-win.png", icon_size = 128 },
       { icon = kr_achievements_icons_path .. "backgrounds/gold.png", icon_size = 128 },
     },
     icon_size = 128,
-    until_second = 60 * 60 * 30, -- 30 hours
+    objective_condition = "game-finished",
+    within = 60 * 60 * 30, -- 30 hours
     allowed_without_fight = false,
     limited_to_one_game = false,
     order = "kr-z-1",
   },
   {
-    type = "finish-the-game-achievement",
+    type = "complete-objective-achievement",
     name = "faster-than-light",
     icons = {
       { icon = kr_achievements_icons_path .. "speedy-win.png", icon_size = 128 },
       { icon = kr_achievements_icons_path .. "backgrounds/epic.png", icon_size = 128 },
     },
     icon_size = 128,
-    until_second = 60 * 60 * 20, -- 20 hours
+    objective_condition = "game-finished",
+    within = 60 * 60 * 20, -- 20 hours
     allowed_without_fight = false,
     limited_to_one_game = false,
     order = "kr-z-2",
@@ -139,6 +129,7 @@ data:extend({
     allowed_without_fight = false,
     limited_to_one_game = false,
     dont_build = "kr-antimatter-reactor",
+    objective_condition = "game-finished",
     order = "kr-c-1",
   },
 })

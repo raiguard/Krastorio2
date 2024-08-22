@@ -188,7 +188,6 @@ end
 --------------
 -- rocket
 
-krastorio.technologies.setResearchUnitCount(krastorio.optimization_tech_card_name, 1000)
 krastorio.technologies.setResearchUnitCount("rocket-control-unit", 500)
 
 --------------
@@ -222,6 +221,7 @@ data.raw.technology["stronger-explosives-7"].max_level = 10
 data.raw.technology["refined-flammables-7"].unit.count_formula = "((L-6)^2)*3000"
 data.raw.technology["refined-flammables-7"].max_level = 10
 
+data.raw.technology["laser-weapons-damage-5"].unit.count = nil
 data.raw.technology["laser-weapons-damage-5"].unit.count_formula = "((L-6)^2)*3000"
 data.raw.technology["laser-weapons-damage-5"].max_level = 10
 
@@ -258,7 +258,6 @@ end
 --------------
 -- nuclear
 
-krastorio.technologies.setResearchUnitCount("uranium-processing", 750)
 krastorio.technologies.setResearchUnitCount("nuclear-power", 500)
 krastorio.technologies.setResearchUnitCount("nuclear-fuel-reprocessing", 250)
 krastorio.technologies.removePrerequisite("atomic-bomb", "military-4")

@@ -1,7 +1,7 @@
 {
   "adapters": {
     "fmtk": {
-      "cmd": "fmtk debug /home/rai/dev/wube/factorio/bin/fetched/factorio --docs ../../../scripts/lua_doc/doc-files/runtime-api.json",
+      "cmd": "fmtk debug /home/rai/dev/wube/factorio/bin/Releasex64Clang/factorio --docs ../../../scripts/lua_doc/doc-files/runtime-api.json",
       "args": {
         "hookControl": true,
         "hookData": true,

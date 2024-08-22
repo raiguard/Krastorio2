@@ -159,6 +159,7 @@ data:extend({
       type = "full",
     },
     burner = {
+      type = "burner",
       fuel_categories = { "chemical", "vehicle-fuel" },
       effectivity = 2,
       fuel_inventory_size = 2,
@@ -204,6 +205,7 @@ data:extend({
       type = "full",
     },
     burner = {
+      type = "burner",
       fuel_categories = { "chemical", "vehicle-fuel" },
       effectivity = 2,
       fuel_inventory_size = 2,
@@ -249,6 +251,7 @@ data:extend({
       type = "full",
     },
     burner = {
+      type = "burner",
       fuel_category = "nuclear",
       effectivity = 2,
       fuel_inventory_size = 1,
@@ -284,6 +287,7 @@ data:extend({
       type = "full",
     },
     burner = {
+      type = "burner",
       fuel_category = "antimatter-fuel",
       effectivity = 2,
       fuel_inventory_size = 1,
@@ -463,8 +467,8 @@ data:extend({
       damage_modifier = 20,
       projectile_center = { 0, 0 },
       range = 32.5,
+      ammo_category = "laser",
       ammo_type = {
-        category = "laser",
         energy_consumption = "4MJ",
         action = {
           type = "direct",
@@ -528,8 +532,8 @@ data:extend({
       damage_modifier = 25,
       projectile_center = { 0, 0 },
       range = 35,
+      ammo_category = "laser",
       ammo_type = {
-        category = "laser",
         energy_consumption = "6MJ",
         action = {
           type = "direct",
@@ -593,8 +597,8 @@ data:extend({
       damage_modifier = 30,
       projectile_center = { 0, 0 },
       range = 37.5,
+      ammo_category = "laser",
       ammo_type = {
-        category = "laser",
         energy_consumption = "8MJ",
         action = {
           type = "direct",
@@ -685,8 +689,8 @@ data:extend({
         filename = "__base__/sound/fight/pulse.ogg",
         volume = 0.3,
       },
+      ammo_category = "laser",
       ammo_type = {
-        category = "laser",
         energy_consumption = "0.2MJ",
         action = {
           type = "direct",
@@ -749,8 +753,8 @@ data:extend({
       range = 18,
       projectile_center = { 0, 0.25 },
       projectile_creation_distance = 0.5,
+      ammo_category = "laser",
       ammo_type = {
-        category = "laser",
         energy_consumption = "0.35MJ",
         action = {
           type = "direct",
@@ -813,8 +817,8 @@ data:extend({
       range = 20,
       projectile_center = { 0, 0.25 },
       projectile_creation_distance = 0.5,
+      ammo_category = "laser",
       ammo_type = {
-        category = "laser",
         energy_consumption = "0.5MJ",
         action = {
           type = "direct",
@@ -877,8 +881,8 @@ data:extend({
       range = 22,
       projectile_center = { 0, 0.25 },
       projectile_creation_distance = 0.5,
+      ammo_category = "laser",
       ammo_type = {
-        category = "laser",
         energy_consumption = "0.75MJ",
         action = {
           type = "direct",

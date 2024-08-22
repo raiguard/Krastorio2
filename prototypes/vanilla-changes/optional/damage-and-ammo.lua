@@ -512,7 +512,7 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
   -----------------------------------------------------------------------------
   -- -- -- AMMO
 
-  data.raw.ammo["atomic-bomb"].ammo_type.category = "heavy-rocket"
+  data.raw.ammo["atomic-bomb"].ammo_category = "heavy-rocket"
   data.raw.ammo["atomic-bomb"].ammo_type.range_modifier = 1
   data.raw.ammo["atomic-bomb"].ammo_type.cooldown_modifier = 3
 

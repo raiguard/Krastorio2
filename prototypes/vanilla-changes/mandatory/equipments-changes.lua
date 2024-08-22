@@ -469,6 +469,7 @@ krastorio.icons.setTechnologyIcons("fission-reactor-equipment", {
 table.insert(data.raw["generator-equipment"]["fission-reactor-equipment"].categories, "universal-equipment")
 
 data.raw["generator-equipment"]["fission-reactor-equipment"].burner = {
+  type = "burner",
   fuel_category = "fusion-fuel",
   effectivity = 2,
   fuel_inventory_size = 1,
@@ -505,8 +506,8 @@ data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].attack_
   damage_modifier = 15,
   projectile_center = { 0, 0 },
   range = 30,
+  ammo_category = "laser",
   ammo_type = {
-    category = "laser",
     energy_consumption = "3MJ",
     action = {
       type = "direct",
