@@ -217,9 +217,10 @@ data.raw.technology["stronger-explosives-7"].max_level = 10
 data.raw.technology["refined-flammables-7"].unit.count_formula = "((L-6)^2)*3000"
 data.raw.technology["refined-flammables-7"].max_level = 10
 
-data.raw.technology["laser-weapons-damage-5"].unit.count = nil
-data.raw.technology["laser-weapons-damage-5"].unit.count_formula = "((L-6)^2)*3000"
-data.raw.technology["laser-weapons-damage-5"].max_level = 10
+-- TODO:
+-- data.raw.technology["laser-weapons-damage-5"].unit.count = nil
+-- data.raw.technology["laser-weapons-damage-5"].unit.count_formula = "((L-6)^2)*3000"
+-- data.raw.technology["laser-weapons-damage-5"].max_level = 10
 
 data.raw.technology["artillery-shell-range-1"].unit.count_formula = "L^2*3500"
 data.raw.technology["artillery-shell-range-1"].max_level = 2
@@ -865,89 +866,90 @@ data:extend({
 
   -- -- -- -- -- -- --
 
-  {
-    type = "technology",
-    name = "laser-weapons-damage-11",
-    icons = {
-      {
-        icon = "__base__/graphics/technology/laser-weapons-damage.png",
-        icon_size = 256,
-        icon_mipmaps = 4,
-      },
-      {
-        icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
-        icon_size = 128,
-        icon_mipmaps = 3,
-        shift = { 100, 100 },
-      },
-    },
-    icon_size = 256,
-    icon_mipmaps = 4,
-    effects = {
-      {
-        type = "ammo-damage",
-        ammo_category = "laser",
-        modifier = 0.1,
-      },
-    },
-    prerequisites = { "laser-weapons-damage-7", "kr-advanced-tech-card" },
-    unit = {
-      count_formula = "((L-10)^2)*3000",
-      ingredients = {
-        { "production-science-pack", 1 },
-        { "utility-science-pack", 1 },
-        { krastorio.optimization_tech_card_name, 1 },
-        { "matter-tech-card", 1 },
-        { "advanced-tech-card", 1 },
-      },
-      time = 60,
-    },
-    max_level = 15,
-    upgrade = true,
-    order = "c-k-f-w",
-  },
-  {
-    type = "technology",
-    name = "laser-weapons-damage-16",
-    icons = {
-      {
-        icon = "__base__/graphics/technology/laser-weapons-damage.png",
-        icon_size = 256,
-        icon_mipmaps = 4,
-      },
-      {
-        icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
-        icon_size = 128,
-        icon_mipmaps = 3,
-        shift = { 100, 100 },
-      },
-    },
-    icon_size = 256,
-    icon_mipmaps = 4,
-    effects = {
-      {
-        type = "ammo-damage",
-        ammo_category = "laser",
-        modifier = 0.1,
-      },
-    },
-    prerequisites = { "laser-weapons-damage-11", "kr-singularity-tech-card" },
-    unit = {
-      count_formula = "((L-15)^2)*3000",
-      ingredients = {
-        { "production-science-pack", 1 },
-        { "utility-science-pack", 1 },
-        { krastorio.optimization_tech_card_name, 1 },
-        { "matter-tech-card", 1 },
-        { "advanced-tech-card", 1 },
-        { "singularity-tech-card", 1 },
-      },
-      time = 60,
-    },
-    max_level = 18,
-    upgrade = true,
-    order = "c-k-f-z",
-  },
+  -- TODO:
+  -- {
+  --   type = "technology",
+  --   name = "laser-weapons-damage-11",
+  --   icons = {
+  --     {
+  --       icon = "__base__/graphics/technology/laser-weapons-damage.png",
+  --       icon_size = 256,
+  --       icon_mipmaps = 4,
+  --     },
+  --     {
+  --       icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
+  --       icon_size = 128,
+  --       icon_mipmaps = 3,
+  --       shift = { 100, 100 },
+  --     },
+  --   },
+  --   icon_size = 256,
+  --   icon_mipmaps = 4,
+  --   effects = {
+  --     {
+  --       type = "ammo-damage",
+  --       ammo_category = "laser",
+  --       modifier = 0.1,
+  --     },
+  --   },
+  --   prerequisites = { "laser-weapons-damage-7", "kr-advanced-tech-card" },
+  --   unit = {
+  --     count_formula = "((L-10)^2)*3000",
+  --     ingredients = {
+  --       { "production-science-pack", 1 },
+  --       { "utility-science-pack", 1 },
+  --       { krastorio.optimization_tech_card_name, 1 },
+  --       { "matter-tech-card", 1 },
+  --       { "advanced-tech-card", 1 },
+  --     },
+  --     time = 60,
+  --   },
+  --   max_level = 15,
+  --   upgrade = true,
+  --   order = "c-k-f-w",
+  -- },
+  -- {
+  --   type = "technology",
+  --   name = "laser-weapons-damage-16",
+  --   icons = {
+  --     {
+  --       icon = "__base__/graphics/technology/laser-weapons-damage.png",
+  --       icon_size = 256,
+  --       icon_mipmaps = 4,
+  --     },
+  --     {
+  --       icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
+  --       icon_size = 128,
+  --       icon_mipmaps = 3,
+  --       shift = { 100, 100 },
+  --     },
+  --   },
+  --   icon_size = 256,
+  --   icon_mipmaps = 4,
+  --   effects = {
+  --     {
+  --       type = "ammo-damage",
+  --       ammo_category = "laser",
+  --       modifier = 0.1,
+  --     },
+  --   },
+  --   prerequisites = { "laser-weapons-damage-11", "kr-singularity-tech-card" },
+  --   unit = {
+  --     count_formula = "((L-15)^2)*3000",
+  --     ingredients = {
+  --       { "production-science-pack", 1 },
+  --       { "utility-science-pack", 1 },
+  --       { krastorio.optimization_tech_card_name, 1 },
+  --       { "matter-tech-card", 1 },
+  --       { "advanced-tech-card", 1 },
+  --       { "singularity-tech-card", 1 },
+  --     },
+  --     time = 60,
+  --   },
+  --   max_level = 18,
+  --   upgrade = true,
+  --   order = "c-k-f-z",
+  -- },
 
   -- -- -- -- -- -- --
 

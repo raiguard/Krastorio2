@@ -158,19 +158,19 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
       },
       walking_sound = {
         {
-          filename = "__base__/sound/walking/concrete-01.ogg",
+          filename = "__base__/sound/walking/concrete-1.ogg",
           volume = 1.0,
         },
         {
-          filename = "__base__/sound/walking/concrete-02.ogg",
+          filename = "__base__/sound/walking/concrete-2.ogg",
           volume = 1.0,
         },
         {
-          filename = "__base__/sound/walking/concrete-03.ogg",
+          filename = "__base__/sound/walking/concrete-3.ogg",
           volume = 1.0,
         },
         {
-          filename = "__base__/sound/walking/concrete-04.ogg",
+          filename = "__base__/sound/walking/concrete-4.ogg",
           volume = 1.0,
         },
       },
@@ -274,19 +274,19 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
       },
       walking_sound = {
         {
-          filename = "__base__/sound/walking/concrete-01.ogg",
+          filename = "__base__/sound/walking/concrete-1.ogg",
           volume = 1.0,
         },
         {
-          filename = "__base__/sound/walking/concrete-02.ogg",
+          filename = "__base__/sound/walking/concrete-2.ogg",
           volume = 1.0,
         },
         {
-          filename = "__base__/sound/walking/concrete-03.ogg",
+          filename = "__base__/sound/walking/concrete-3.ogg",
           volume = 1.0,
         },
         {
-          filename = "__base__/sound/walking/concrete-04.ogg",
+          filename = "__base__/sound/walking/concrete-4.ogg",
           volume = 1.0,
         },
       },

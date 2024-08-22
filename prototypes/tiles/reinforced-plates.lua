@@ -263,39 +263,39 @@
 
 local refined_concrete_sounds = {
   {
-    filename = "__base__/sound/walking/refined-concrete-01.ogg",
+    filename = "__base__/sound/walking/refined-concrete-1.ogg",
     volume = 0.75,
   },
   {
-    filename = "__base__/sound/walking/refined-concrete-02.ogg",
+    filename = "__base__/sound/walking/refined-concrete-2.ogg",
     volume = 0.75,
   },
   {
-    filename = "__base__/sound/walking/refined-concrete-03.ogg",
+    filename = "__base__/sound/walking/refined-concrete-3.ogg",
     volume = 0.75,
   },
   {
-    filename = "__base__/sound/walking/refined-concrete-04.ogg",
+    filename = "__base__/sound/walking/refined-concrete-4.ogg",
     volume = 0.75,
   },
   {
-    filename = "__base__/sound/walking/refined-concrete-05.ogg",
+    filename = "__base__/sound/walking/refined-concrete-5.ogg",
     volume = 0.75,
   },
   {
-    filename = "__base__/sound/walking/refined-concrete-06.ogg",
+    filename = "__base__/sound/walking/refined-concrete-6.ogg",
     volume = 0.75,
   },
   {
-    filename = "__base__/sound/walking/refined-concrete-07.ogg",
+    filename = "__base__/sound/walking/refined-concrete-7.ogg",
     volume = 0.75,
   },
   {
-    filename = "__base__/sound/walking/refined-concrete-08.ogg",
+    filename = "__base__/sound/walking/refined-concrete-8.ogg",
     volume = 0.75,
   },
   {
-    filename = "__base__/sound/walking/refined-concrete-09.ogg",
+    filename = "__base__/sound/walking/refined-concrete-9.ogg",
     volume = 0.75,
   },
   {
