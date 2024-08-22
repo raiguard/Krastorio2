@@ -291,7 +291,7 @@ data:extend({
     needs_correction = false,
     can_be_part_of_blueprint = true,
     collision_mask = {
-      layers = { ["ghost-layer"] = true, ["ground-tile"] = true, ["floor-layer"] = true },
+      layers = { ghost = true, ground_tile = true, floor = true },
       not_colliding_with_itself = true,
     },
     minable = { mining_time = 15, result = "biomass", probability = 0.35, amount = 1 },

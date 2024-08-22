@@ -13,13 +13,13 @@ krastorio.technologies.addPrerequisite("stone-wall", "military")
 krastorio.technologies.addPrerequisite("gun-turret", "automation-science-pack")
 krastorio.technologies.addPrerequisite("fast-inserter", "electronics")
 krastorio.technologies.addPrerequisite("heavy-armor", "light-armor")
-krastorio.technologies.addPrerequisite("optics", "kr-stone-processing")
+krastorio.technologies.addPrerequisite("lamp", "kr-stone-processing")
 krastorio.technologies.addPrerequisite("logistics-2", "steel-processing")
 krastorio.technologies.addPrerequisite("nuclear-power", "kr-steam-engine")
 krastorio.technologies.addPrerequisite("oil-processing", "kr-fluids-chemistry")
 krastorio.technologies.addPrerequisite("fluid-handling", "kr-basic-fluid-handling")
-krastorio.technologies.addPrerequisite("advanced-electronics", "electronics")
-krastorio.technologies.addPrerequisite("advanced-electronics", "kr-silicon-processing")
+krastorio.technologies.addPrerequisite("advanced-circuit", "electronics")
+krastorio.technologies.addPrerequisite("advanced-circuit", "kr-silicon-processing")
 krastorio.technologies.addPrerequisite("battery-equipment", "modular-armor")
 krastorio.technologies.addPrerequisite("fusion-reactor-equipment", "kr-fusion-energy")
 krastorio.technologies.addPrerequisite("automobilism", "kr-fuel")
@@ -29,7 +29,7 @@ krastorio.technologies.addPrerequisite("modular-armor", "military-2")
 krastorio.technologies.addPrerequisite("spidertron", "kr-ai-core")
 
 -- Science
-krastorio.technologies.addPrerequisite("military-science-pack", "advanced-electronics")
+krastorio.technologies.addPrerequisite("military-science-pack", "advanced-circuit")
 krastorio.technologies.addPrerequisite("logistic-science-pack", "automation-science-pack")
 krastorio.technologies.addPrerequisite("logistic-science-pack", "electronics")
 krastorio.technologies.addPrerequisite("production-science-pack", "kr-research-server")
@@ -40,9 +40,9 @@ krastorio.technologies.addPrerequisite("utility-science-pack", "rocket-fuel")
 krastorio.technologies.addPrerequisite(krastorio.optimization_tech_card_name, "kr-singularity-lab")
 
 -- Modules
-krastorio.technologies.addPrerequisite("speed-module-3", "advanced-electronics-2")
-krastorio.technologies.addPrerequisite("productivity-module-3", "advanced-electronics-2")
-krastorio.technologies.addPrerequisite("effectivity-module-3", "advanced-electronics-2")
+krastorio.technologies.addPrerequisite("speed-module-3", "processing-unit")
+krastorio.technologies.addPrerequisite("productivity-module-3", "processing-unit")
+krastorio.technologies.addPrerequisite("effectivity-module-3", "processing-unit")
 
 -- Removing
 krastorio.technologies.removePrerequisite("heavy-armor", "military")
@@ -52,9 +52,9 @@ krastorio.technologies.removePrerequisite("battery-equipment", "solar-panel-equi
 krastorio.technologies.removePrerequisite("battery-mk2-equipment", "low-density-structure")
 
 -- Modules
-krastorio.technologies.removePrerequisite("speed-module-2", "advanced-electronics-2")
-krastorio.technologies.removePrerequisite("productivity-module-2", "advanced-electronics-2")
-krastorio.technologies.removePrerequisite("effectivity-module-2", "advanced-electronics-2")
+krastorio.technologies.removePrerequisite("speed-module-2", "processing-unit")
+krastorio.technologies.removePrerequisite("productivity-module-2", "processing-unit")
+krastorio.technologies.removePrerequisite("effectivity-module-2", "processing-unit")
 
 --------------------------------------------------------------------
 -- -- Research unit ingredients
@@ -100,7 +100,7 @@ krastorio.technologies.addPrerequisite("fast-inserter", "logistics")
 -- Electronics I
 krastorio.technologies.addUnlockRecipe("electronics", "electronic-circuit")
 -- Electronics 2
-krastorio.technologies.addUnlockRecipe("advanced-electronics", "electronic-components")
+krastorio.technologies.addUnlockRecipe("advanced-circuit", "electronic-components")
 
 -- -- EQUIPMENTS
 krastorio.technologies.addUnlockRecipe("solar-panel-equipment", "big-solar-panel-equipment")
@@ -185,10 +185,6 @@ end
 
 --------------------------------------------------------------------
 -- --  Stats
---------------
--- rocket
-
-krastorio.technologies.setResearchUnitCount("rocket-control-unit", 500)
 
 --------------
 -- science packs
@@ -456,87 +452,88 @@ data:extend({
 
   -- -- -- -- -- -- --
 
-  {
-    type = "technology",
-    name = "follower-robot-count-8",
-    icons = {
-      {
-        icon = "__base__/graphics/technology/follower-robots.png",
-        icon_size = 256,
-        icon_mipmaps = 4,
-      },
-      {
-        icon = "__core__/graphics/icons/technology/constants/constant-count.png",
-        icon_size = 128,
-        icon_mipmaps = 3,
-        shift = { 100, 100 },
-      },
-    },
-    icon_size = 256,
-    icon_mipmaps = 4,
-    effects = {
-      {
-        type = "maximum-following-robots-count",
-        modifier = 15,
-      },
-    },
-    prerequisites = { "follower-robot-count-7", "kr-advanced-tech-card" },
-    unit = {
-      count_formula = "((L-7)^2)*5000",
-      ingredients = {
-        { "production-science-pack", 1 },
-        { "utility-science-pack", 1 },
-        { krastorio.optimization_tech_card_name, 1 },
-        { "matter-tech-card", 1 },
-        { "advanced-tech-card", 1 },
-      },
-      time = 60,
-    },
-    upgrade = true,
-    order = "c-k-f-w",
-  },
+  -- TODO:
+  -- {
+  --   type = "technology",
+  --   name = "follower-robot-count-8",
+  --   icons = {
+  --     {
+  --       icon = "__base__/graphics/technology/follower-robots.png",
+  --       icon_size = 256,
+  --       icon_mipmaps = 4,
+  --     },
+  --     {
+  --       icon = "__core__/graphics/icons/technology/constants/constant-count.png",
+  --       icon_size = 128,
+  --       icon_mipmaps = 3,
+  --       shift = { 100, 100 },
+  --     },
+  --   },
+  --   icon_size = 256,
+  --   icon_mipmaps = 4,
+  --   effects = {
+  --     {
+  --       type = "maximum-following-robots-count",
+  --       modifier = 15,
+  --     },
+  --   },
+  --   prerequisites = { "follower-robot-count-7", "kr-advanced-tech-card" },
+  --   unit = {
+  --     count_formula = "((L-7)^2)*5000",
+  --     ingredients = {
+  --       { "production-science-pack", 1 },
+  --       { "utility-science-pack", 1 },
+  --       { krastorio.optimization_tech_card_name, 1 },
+  --       { "matter-tech-card", 1 },
+  --       { "advanced-tech-card", 1 },
+  --     },
+  --     time = 60,
+  --   },
+  --   upgrade = true,
+  --   order = "c-k-f-w",
+  -- },
 
-  {
-    type = "technology",
-    name = "follower-robot-count-9",
-    icons = {
-      {
-        icon = "__base__/graphics/technology/follower-robots.png",
-        icon_size = 256,
-        icon_mipmaps = 4,
-      },
-      {
-        icon = "__core__/graphics/icons/technology/constants/constant-count.png",
-        icon_size = 128,
-        icon_mipmaps = 3,
-        shift = { 100, 100 },
-      },
-    },
-    icon_size = 256,
-    icon_mipmaps = 4,
-    effects = {
-      {
-        type = "maximum-following-robots-count",
-        modifier = 15,
-      },
-    },
-    prerequisites = { "follower-robot-count-8", "kr-singularity-tech-card" },
-    unit = {
-      count_formula = "((L-8)^2)*5000",
-      ingredients = {
-        { "production-science-pack", 1 },
-        { "utility-science-pack", 1 },
-        { krastorio.optimization_tech_card_name, 1 },
-        { "matter-tech-card", 1 },
-        { "advanced-tech-card", 1 },
-        { "singularity-tech-card", 1 },
-      },
-      time = 60,
-    },
-    max_level = 10,
-    upgrade = true,
-    order = "c-k-f-z",
-  },
+  -- {
+  --   type = "technology",
+  --   name = "follower-robot-count-9",
+  --   icons = {
+  --     {
+  --       icon = "__base__/graphics/technology/follower-robots.png",
+  --       icon_size = 256,
+  --       icon_mipmaps = 4,
+  --     },
+  --     {
+  --       icon = "__core__/graphics/icons/technology/constants/constant-count.png",
+  --       icon_size = 128,
+  --       icon_mipmaps = 3,
+  --       shift = { 100, 100 },
+  --     },
+  --   },
+  --   icon_size = 256,
+  --   icon_mipmaps = 4,
+  --   effects = {
+  --     {
+  --       type = "maximum-following-robots-count",
+  --       modifier = 15,
+  --     },
+  --   },
+  --   prerequisites = { "follower-robot-count-8", "kr-singularity-tech-card" },
+  --   unit = {
+  --     count_formula = "((L-8)^2)*5000",
+  --     ingredients = {
+  --       { "production-science-pack", 1 },
+  --       { "utility-science-pack", 1 },
+  --       { krastorio.optimization_tech_card_name, 1 },
+  --       { "matter-tech-card", 1 },
+  --       { "advanced-tech-card", 1 },
+  --       { "singularity-tech-card", 1 },
+  --     },
+  --     time = 60,
+  --   },
+  --   max_level = 10,
+  --   upgrade = true,
+  --   order = "c-k-f-z",
+  -- },
 
   -- -- -- -- -- -- --
 
@@ -870,10 +867,10 @@ data:extend({
 
   {
     type = "technology",
-    name = "energy-weapons-damage-11",
+    name = "laser-weapons-damage-11",
     icons = {
       {
-        icon = "__base__/graphics/technology/energy-weapons-damage.png",
+        icon = "__base__/graphics/technology/laser-weapons-damage.png",
         icon_size = 256,
         icon_mipmaps = 4,
       },
@@ -893,7 +890,7 @@ data:extend({
         modifier = 0.1,
       },
     },
-    prerequisites = { "energy-weapons-damage-7", "kr-advanced-tech-card" },
+    prerequisites = { "laser-weapons-damage-7", "kr-advanced-tech-card" },
     unit = {
       count_formula = "((L-10)^2)*3000",
       ingredients = {
@@ -911,10 +908,10 @@ data:extend({
   },
   {
     type = "technology",
-    name = "energy-weapons-damage-16",
+    name = "laser-weapons-damage-16",
     icons = {
       {
-        icon = "__base__/graphics/technology/energy-weapons-damage.png",
+        icon = "__base__/graphics/technology/laser-weapons-damage.png",
         icon_size = 256,
         icon_mipmaps = 4,
       },
@@ -934,7 +931,7 @@ data:extend({
         modifier = 0.1,
       },
     },
-    prerequisites = { "energy-weapons-damage-11", "kr-singularity-tech-card" },
+    prerequisites = { "laser-weapons-damage-11", "kr-singularity-tech-card" },
     unit = {
       count_formula = "((L-15)^2)*3000",
       ingredients = {

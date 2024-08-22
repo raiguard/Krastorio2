@@ -42,3 +42,7 @@
 - Trigger techs don't have `unit`.
 - `finish-the-game-achievement` -> `complete-objective-achievement` with `objective_condition` field.
 - Achievement `until_second` -> `within`.
+- `noise-layer` prototype removed. Haven't figured out the replacement yet.
+- `advanced-electronics-2` -> `processing-unit`.
+- `advanced-electronics` -> `advanced-circuit`.
+- `optics` -> `lamp`.

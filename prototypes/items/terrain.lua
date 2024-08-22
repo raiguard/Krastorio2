@@ -45,7 +45,7 @@ data:extend({
     place_as_tile = {
       result = "kr-creep",
       condition_size = 1,
-      condition = { layers = { ["water-tile"] = true } },
+      condition = { layers = { water_tile = true } },
     },
     stack_size = 200,
   },
@@ -65,7 +65,7 @@ data:extend({
     place_as_tile = {
       result = "kr-black-reinforced-plate",
       condition_size = 1,
-      condition = { layers = { ["water-tile"] = true } },
+      condition = { layers = { water_tile = true } },
     },
     stack_size = 200,
   },
@@ -80,7 +80,7 @@ data:extend({
     place_as_tile = {
       result = "kr-white-reinforced-plate",
       condition_size = 1,
-      condition = { layers = { ["water-tile"] = true } },
+      condition = { layers = { water_tile = true } },
     },
     stack_size = 200,
   },

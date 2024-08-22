@@ -94,8 +94,4 @@ data:extend({
     richness = true,
     category = "resource",
   },
-  {
-    type = "noise-layer",
-    name = "rare-metals",
-  },
 })

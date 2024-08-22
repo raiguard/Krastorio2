@@ -1,7 +1,7 @@
 -- -- -- Vanilla entity next upgrade to Krastorio superior entity
 
 -- Inserters
--- data.raw.inserter["stack-inserter"].next_upgrade = "kr-superior-inserter"
+-- data.raw.inserter["bulk-inserter"].next_upgrade = "kr-superior-inserter"
 
 -- data.raw.inserter["long-handed-inserter"].next_upgrade = "kr-superior-long-inserter"
 -- data.raw.inserter["long-handed-inserter"].fast_replaceable_group = "inserter"
@@ -26,7 +26,7 @@ data.raw["pipe-to-ground"]["pipe-to-ground"].fast_replaceable_group = "pipe"
 data.raw["pipe-to-ground"]["pipe-to-ground"].next_upgrade = "kr-steel-pipe-to-ground"
 
 -- Speedy inserters
-data.raw["inserter"]["fast-inserter"].next_upgrade = "stack-inserter"
+data.raw["inserter"]["fast-inserter"].next_upgrade = "bulk-inserter"
 data.raw["inserter"]["bulk-inserter"].next_upgrade = "kr-superior-inserter"
 
 -- Long handed inserter

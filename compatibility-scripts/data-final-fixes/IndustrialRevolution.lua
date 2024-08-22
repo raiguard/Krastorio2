@@ -184,7 +184,7 @@ if mods["IndustrialRevolution"] then
   krastorio.recipes.replaceIngredient("filter-inserter", "steel-plate", { "sensor", 1 })
   krastorio.recipes.removeIngredient("filter-inserter", "electronic-circuit")
 
-  krastorio.recipes.replaceIngredient("stack-filter-inserter", "inserter-parts", { "stack-inserter", 1 })
+  krastorio.recipes.replaceIngredient("stack-filter-inserter", "inserter-parts", { "bulk-inserter", 1 })
   krastorio.recipes.replaceIngredient("stack-filter-inserter", "steel-plate", { "sensor", 1 })
   krastorio.recipes.removeIngredient("stack-filter-inserter", "advanced-circuit")
   krastorio.recipes.removeIngredient("stack-filter-inserter", "steel-gear-wheel")

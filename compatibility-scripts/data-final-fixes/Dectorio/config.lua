@@ -68,7 +68,7 @@ DECT.CONFIG.SIGNALS = {
   { type = "item", name = "long-handed-inserter", color = { r = 0.76, g = 0.20, b = 0.13, a = 0.92 } },
   { type = "item", name = "fast-inserter", color = { r = 0.27, g = 0.45, b = 0.58, a = 0.92 } },
   { type = "item", name = "filter-inserter", color = { r = 0.45, g = 0.27, b = 0.54, a = 0.92 } },
-  { type = "item", name = "stack-inserter", color = { r = 0.56, g = 0.63, b = 0.16, a = 0.92 } },
+  { type = "item", name = "bulk-inserter", color = { r = 0.56, g = 0.63, b = 0.16, a = 0.92 } },
   { type = "item", name = "stack-filter-inserter", color = { r = 0.70, g = 0.70, b = 0.69, a = 0.92 } },
   { type = "fluid", name = "water", color = { r = 0.00, g = 0.43, b = 0.75, a = 0.68 } },
   { type = "fluid", name = "crude-oil", color = { r = 0.10, g = 0.10, b = 0.10, a = 0.68 } },

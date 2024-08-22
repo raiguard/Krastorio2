@@ -2,7 +2,7 @@ krastorio.technologies = {}
 
 krastorio.technologies.research_types = {
   "inserter-stack-size-bonus",
-  "stack-inserter-capacity-bonus",
+  "bulk-inserter-capacity-bonus",
   "laboratory-speed",
   "character-logistic-slots",
   "character-logistic-trash-slots",

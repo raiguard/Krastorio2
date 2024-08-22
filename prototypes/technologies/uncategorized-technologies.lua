@@ -304,7 +304,7 @@ data:extend({
       },
     },
     prerequisites = {
-      "advanced-electronics-2",
+      "processing-unit",
       "kr-lithium-processing",
       "nuclear-power",
       "utility-science-pack",
@@ -584,7 +584,7 @@ data:extend({
         recipe = krastorio.recipes.changed_names["imersite-crystal"] or "imersite-crystal",
       },
     },
-    prerequisites = { "kr-advanced-chemistry", "advanced-electronics-2", "electric-engine" },
+    prerequisites = { "kr-advanced-chemistry", "processing-unit", "electric-engine" },
     order = "g-e-d",
     unit = {
       count = 350,

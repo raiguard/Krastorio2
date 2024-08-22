@@ -61,11 +61,11 @@ data:extend({
     corpse = "medium-remnants",
     collision_mask = {
       layers = {
-        ["item-layer"] = true,
-        ["object-layer"] = true,
-        ["player-layer"] = true,
-        ["water-tile"] = true,
-        ["kr-tesla-coil"] = true,
+        item = true,
+        object = true,
+        player = true,
+        water_tile = true,
+        kr_tesla_coil = true,
       },
     },
     resistances = {
@@ -484,9 +484,13 @@ data:extend({
     icon = kr_entities_icons_path .. "tesla-coil.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    collision_mask = { layers = { ["tesla-coil-collision"] = true } },
+    collision_mask = { layers = { kr_tesla_coil = true } },
     collision_box = { { -18, -18 }, { 18, 18 } },
     picture = { filename = data_util.empty_image, size = 1 },
     flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
+  },
+  {
+    type = "collision-layer",
+    name = "kr_tesla_coil",
   },
 })

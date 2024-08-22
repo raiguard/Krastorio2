@@ -34,7 +34,7 @@ local default_ended_in_water_trigger_effect = function()
       probability = 1,
       affects_target = false,
       show_in_tooltip = false,
-      particle_name = "deep-water-particle",
+      particle_name = "tintable-water-particle",
       offset_deviation = { { -0.05, -0.05 }, { 0.05, 0.05 } },
       tile_collision_mask = nil,
       initial_height = 0,
@@ -56,7 +56,7 @@ local default_ended_in_water_trigger_effect = function()
       probability = 0.03,
       affects_target = false,
       show_in_tooltip = false,
-      particle_name = "deep-water-particle",
+      particle_name = "tintable-water-particle",
       offsets = {
         { 0, 0 },
         { 0.01563, -0.09375 },
@@ -452,7 +452,7 @@ data:extend({
             tile_name = "nuclear-ground",
             radius = 13,
             apply_projection = true,
-            tile_collision_mask = { layers = {["water-tile"] = true} },
+            tile_collision_mask = { layers = { water_tile = true } },
           },
           {
             type = "destroy-cliffs",
@@ -715,7 +715,7 @@ data:extend({
                   {
                     type = "create-entity",
                     entity_name = "nuclear-smouldering-smoke-source",
-                    tile_collision_mask = { layers = {["water-tile"] = true} },
+                    tile_collision_mask = { layers = { water_tile = true } },
                   },
                 },
               },
@@ -965,7 +965,7 @@ data:extend({
                   {
                     type = "create-entity",
                     entity_name = "nuclear-smouldering-smoke-source",
-                    tile_collision_mask = { layers = {["water-tile"] = true} },
+                    tile_collision_mask = { layers = { water_tile = true } },
                   },
                 },
               },
@@ -986,7 +986,7 @@ data:extend({
                   {
                     type = "create-entity",
                     entity_name = "nuclear-smouldering-smoke-source",
-                    tile_collision_mask = { layers = {["water-tile"] = true} },
+                    tile_collision_mask = { layers = { water_tile = true } },
                   },
                 },
               },
@@ -1007,7 +1007,7 @@ data:extend({
                   {
                     type = "create-entity",
                     entity_name = "nuclear-smouldering-smoke-source",
-                    tile_collision_mask = { layers = {["water-tile"] = true} },
+                    tile_collision_mask = { layers = { water_tile = true } },
                   },
                 },
               },
@@ -1076,7 +1076,7 @@ data:extend({
             tile_name = "nuclear-ground",
             radius = 12,
             apply_projection = true,
-            tile_collision_mask = { layers = {["water-tile"] = true} },
+            tile_collision_mask = { layers = { water_tile = true } },
           },
           {
             type = "destroy-cliffs",
@@ -1339,7 +1339,7 @@ data:extend({
                   {
                     type = "create-entity",
                     entity_name = "nuclear-smouldering-smoke-source",
-                    tile_collision_mask = { layers = {["water-tile"] = true} },
+                    tile_collision_mask = { layers = { water_tile = true } },
                   },
                 },
               },
@@ -1858,7 +1858,7 @@ data:extend({
             tile_name = "nuclear-ground",
             radius = 12,
             apply_projection = true,
-            tile_collision_mask = { layers = {["water-tile"] = true} },
+            tile_collision_mask = { layers = { water_tile = true } },
           },
           {
             type = "destroy-cliffs",
@@ -2052,7 +2052,7 @@ data:extend({
                   {
                     type = "create-entity",
                     entity_name = "nuclear-smouldering-smoke-source",
-                    tile_collision_mask = { layers = {["water-tile"] = true} },
+                    tile_collision_mask = { layers = { water_tile = true } },
                   },
                 },
               },
@@ -2111,7 +2111,7 @@ data:extend({
             tile_name = "nuclear-ground",
             radius = 12,
             apply_projection = true,
-            tile_collision_mask = { layers = {["water-tile"] = true} },
+            tile_collision_mask = { layers = { water_tile = true } },
           },
           {
             type = "destroy-cliffs",
@@ -2374,7 +2374,7 @@ data:extend({
                   {
                     type = "create-entity",
                     entity_name = "nuclear-smouldering-smoke-source",
-                    tile_collision_mask = { layers = {["water-tile"] = true} },
+                    tile_collision_mask = { layers = { water_tile = true } },
                   },
                 },
               },
@@ -2435,7 +2435,7 @@ data:extend({
             tile_name = "nuclear-ground",
             radius = 12,
             apply_projection = true,
-            tile_collision_mask = { layers = {["water-tile"] = true} },
+            tile_collision_mask = { layers = { water_tile = true } },
           },
           {
             type = "destroy-cliffs",
@@ -2629,7 +2629,7 @@ data:extend({
                   {
                     type = "create-entity",
                     entity_name = "nuclear-smouldering-smoke-source",
-                    tile_collision_mask = { layers = {["water-tile"] = true} },
+                    tile_collision_mask = { layers = { water_tile = true } },
                   },
                 },
               },

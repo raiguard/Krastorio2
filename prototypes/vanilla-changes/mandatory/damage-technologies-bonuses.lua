@@ -407,49 +407,49 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 
   ------------------------------------------------
 
-  krastorio.technologies.update_ammo_effects(data.raw["technology"]["energy-weapons-damage-1"], {
+  krastorio.technologies.update_ammo_effects(data.raw["technology"]["laser-weapons-damage-1"], {
     {
       type = "ammo-damage",
       ammo_category = "laser",
       modifier = 0.25,
     },
   })
-  krastorio.technologies.update_ammo_effects(data.raw["technology"]["energy-weapons-damage-2"], {
+  krastorio.technologies.update_ammo_effects(data.raw["technology"]["laser-weapons-damage-2"], {
     {
       type = "ammo-damage",
       ammo_category = "laser",
       modifier = 0.25,
     },
   })
-  krastorio.technologies.update_ammo_effects(data.raw["technology"]["energy-weapons-damage-3"], {
+  krastorio.technologies.update_ammo_effects(data.raw["technology"]["laser-weapons-damage-3"], {
     {
       type = "ammo-damage",
       ammo_category = "laser",
       modifier = 0.25,
     },
   })
-  krastorio.technologies.update_ammo_effects(data.raw["technology"]["energy-weapons-damage-4"], {
+  krastorio.technologies.update_ammo_effects(data.raw["technology"]["laser-weapons-damage-4"], {
     {
       type = "ammo-damage",
       ammo_category = "laser",
       modifier = 0.35,
     },
   })
-  krastorio.technologies.update_ammo_effects(data.raw["technology"]["energy-weapons-damage-5"], {
+  krastorio.technologies.update_ammo_effects(data.raw["technology"]["laser-weapons-damage-5"], {
     {
       type = "ammo-damage",
       ammo_category = "laser",
       modifier = 0.35,
     },
   })
-  krastorio.technologies.update_ammo_effects(data.raw["technology"]["energy-weapons-damage-6"], {
+  krastorio.technologies.update_ammo_effects(data.raw["technology"]["laser-weapons-damage-6"], {
     {
       type = "ammo-damage",
       ammo_category = "laser",
       modifier = 0.35,
     },
   })
-  krastorio.technologies.update_ammo_effects(data.raw["technology"]["energy-weapons-damage-7"], {
+  krastorio.technologies.update_ammo_effects(data.raw["technology"]["laser-weapons-damage-7"], {
     {
       type = "ammo-damage",
       ammo_category = "laser",
@@ -840,37 +840,37 @@ if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
 
   -- Technology for impulse rifle
 
-  krastorio.technologies.addEffect("energy-weapons-damage-1", {
+  krastorio.technologies.addEffect("laser-weapons-damage-1", {
     type = "ammo-damage",
     ammo_category = "impulse-rifle",
     modifier = 0.25,
   })
-  krastorio.technologies.addEffect("energy-weapons-damage-2", {
+  krastorio.technologies.addEffect("laser-weapons-damage-2", {
     type = "ammo-damage",
     ammo_category = "impulse-rifle",
     modifier = 0.25,
   })
-  krastorio.technologies.addEffect("energy-weapons-damage-3", {
+  krastorio.technologies.addEffect("laser-weapons-damage-3", {
     type = "ammo-damage",
     ammo_category = "impulse-rifle",
     modifier = 0.25,
   })
-  krastorio.technologies.addEffect("energy-weapons-damage-4", {
+  krastorio.technologies.addEffect("laser-weapons-damage-4", {
     type = "ammo-damage",
     ammo_category = "impulse-rifle",
     modifier = 0.35,
   })
-  krastorio.technologies.addEffect("energy-weapons-damage-5", {
+  krastorio.technologies.addEffect("laser-weapons-damage-5", {
     type = "ammo-damage",
     ammo_category = "impulse-rifle",
     modifier = 0.35,
   })
-  krastorio.technologies.addEffect("energy-weapons-damage-6", {
+  krastorio.technologies.addEffect("laser-weapons-damage-6", {
     type = "ammo-damage",
     ammo_category = "impulse-rifle",
     modifier = 0.35,
   })
-  krastorio.technologies.addEffect("energy-weapons-damage-7", {
+  krastorio.technologies.addEffect("laser-weapons-damage-7", {
     type = "ammo-damage",
     ammo_category = "impulse-rifle",
     modifier = 0.1,

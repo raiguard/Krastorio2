@@ -380,7 +380,7 @@ data:extend({
     needs_correction = false,
     minable = not data.is_demo and { mining_time = 0.1, result = "kr-black-reinforced-plate" } or nil,
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
-    collision_mask = { layers = { ["ground-tile"] = true } },
+    collision_mask = { layers = { ground_tile = true } },
     walking_speed_modifier = 1.75,
     layer = 95,
     transition_overlay_layer_offset = 2, -- need to render border overlay on top of hazard-concrete
@@ -528,7 +528,7 @@ data:extend({
     needs_correction = false,
     minable = not data.is_demo and { mining_time = 0.1, result = "kr-white-reinforced-plate" } or nil,
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
-    collision_mask = { layers = { ["ground-tile"] = true } },
+    collision_mask = { layers = { ground_tile = true } },
     walking_speed_modifier = 1.75,
     layer = 90,
     transition_overlay_layer_offset = 2, -- need to render border overlay on top of hazard-concrete

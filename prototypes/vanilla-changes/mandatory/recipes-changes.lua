@@ -84,15 +84,9 @@ krastorio.recipes.overrideIngredients("filter-inserter", {
   { type = "item", name = "electronic-circuit", amount = 4 },
   { type = "item", name = "steel-plate", amount = 1 },
 })
-krastorio.recipes.overrideIngredients("stack-inserter", {
+krastorio.recipes.overrideIngredients("bulk-inserter", {
   { type = "item", name = "inserter-parts", amount = 1 },
   { type = "item", name = "advanced-circuit", amount = 2 },
-  { type = "item", name = "steel-plate", amount = 1 },
-  { type = "item", name = "steel-gear-wheel", amount = 2 },
-})
-krastorio.recipes.overrideIngredients("stack-filter-inserter", {
-  { type = "item", name = "inserter-parts", amount = 1 },
-  { type = "item", name = "advanced-circuit", amount = 4 },
   { type = "item", name = "steel-plate", amount = 1 },
   { type = "item", name = "steel-gear-wheel", amount = 2 },
 })

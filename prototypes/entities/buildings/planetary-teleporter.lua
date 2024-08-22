@@ -182,7 +182,7 @@ data:extend({
     collision_box = { { -2.65, -1.9 }, { 2.65, 3.2 } },
     selection_box = { { -3, -2 }, { 3, 3.4 } },
     drawing_box = { { -3, -3 }, { 3, 3 } },
-    collision_mask = { layers = { ["item-layer"] = true, ["object-layer"] = true, ["water-tile"] = true } },
+    collision_mask = { layers = { item = true, object = true, water_tile = true } },
     resistances = {
       { type = "physical", percent = 75 },
       { type = "fire", percent = 75 },
@@ -227,7 +227,7 @@ local function collision_entity(collision_box)
     flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
     collision_box = collision_box,
     picture = { filename = "__core__/graphics/empty.png", size = 1 },
-    collision_mask = { layers = { ["player-layer"] = true } },
+    collision_mask = { layers = { player = true } },
   }
 end
 

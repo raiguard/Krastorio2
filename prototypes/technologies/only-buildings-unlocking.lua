@@ -185,7 +185,7 @@ data:extend({
     icon = kr_technologies_icons_path .. "sentinel.png",
     icon_size = 256,
     icon_mipmaps = 4,
-    prerequisites = { "optics", "kr-stone-processing" },
+    prerequisites = { "lamp", "kr-stone-processing" },
     effects = {
       {
         type = "unlock-recipe",
@@ -319,7 +319,7 @@ data:extend({
     icon = kr_technologies_icons_path .. "biusart-lab.png",
     icon_size = 256,
     icon_mipmaps = 4,
-    prerequisites = { "advanced-electronics" },
+    prerequisites = { "advanced-circuit" },
     effects = {
       {
         type = "unlock-recipe",
@@ -344,7 +344,7 @@ data:extend({
     icon = kr_technologies_icons_path .. "research-server.png",
     icon_size = 256,
     icon_mipmaps = 4,
-    prerequisites = { "advanced-electronics" },
+    prerequisites = { "advanced-circuit" },
     effects = {
       {
         type = "unlock-recipe",
@@ -552,7 +552,7 @@ data:extend({
         recipe = "kr-superior-long-filter-inserter",
       },
     },
-    prerequisites = { "stack-inserter", "kr-imersium-processing", "kr-advanced-tech-card" },
+    prerequisites = { "bulk-inserter", "kr-imersium-processing", "kr-advanced-tech-card" },
     unit = {
       count = 500,
       ingredients = {

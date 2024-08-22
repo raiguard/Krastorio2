@@ -160,7 +160,7 @@ data:extend({
         recipe = "advanced-additional-engine",
       },
     },
-    prerequisites = { "electric-engine", "advanced-electronics-2", "utility-science-pack" },
+    prerequisites = { "electric-engine", "processing-unit", "utility-science-pack" },
     unit = {
       count = 250,
       ingredients = {
@@ -301,7 +301,7 @@ data:extend({
       "kr-quarry-minerals-extraction",
       "kr-lithium-sulfur-battery",
       "battery-mk2-equipment",
-      "advanced-electronics-2",
+      "processing-unit",
     },
     unit = {
       count = 500,

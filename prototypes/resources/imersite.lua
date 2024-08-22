@@ -105,8 +105,4 @@ data:extend({
     order = "b-k",
     category = "resource",
   },
-  {
-    type = "noise-layer",
-    name = "imersite",
-  },
 })

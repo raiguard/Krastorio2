@@ -369,7 +369,7 @@ return {
     energy_required = 20,
     ingredients = {
       { type = "item", name = "rocket-fuel", amount = 10 },
-      { type = "item", name = "rocket-control-unit", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 1 },
       { type = "item", name = "steel-plate", amount = 5 },
       { type = "item", name = "explosives", amount = 5 },
     },
@@ -384,7 +384,7 @@ return {
       { type = "item", name = "explosive-turret-rocket", amount = 1 },
       { type = "item", name = "steel-plate", amount = 5 },
       { type = "item", name = "uranium-235", amount = 10 },
-      { type = "item", name = "rocket-control-unit", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 1 },
     },
     results = { { type = "item", name = "nuclear-turret-rocket", amount = 1 } },
   },
@@ -446,21 +446,22 @@ return {
     enabled = false,
     energy_required = 15,
     ingredients = {
-      { type = "item", name = "rocket-control-unit", amount = 10 },
+      { type = "item", name = "processing-unit", amount = 10 },
       { type = "item", name = "steel-plate", amount = 10 },
       { type = "item", name = "artillery-shell", amount = 1 },
       { type = "item", name = "uranium-235", amount = 10 },
     },
     results = { { type = "item", name = "nuclear-artillery-shell", amount = 1 } },
   },
+  -- TODO: GPS rocket thingy?
   {
     type = "recipe",
     name = "gps-satellite",
     enabled = false,
     energy_required = 5,
     ingredients = {
-      { type = "item", name = "satellite", amount = 1 },
-      { type = "item", name = "rocket-control-unit", amount = 1 },
+      -- { type = "item", name = "satellite", amount = 1 },
+      { type = "item", name = "processing-unit", amount = 1 },
       { type = "item", name = "ai-core", amount = 4 },
     },
     results = { { type = "item", name = "gps-satellite", amount = 1 } },
