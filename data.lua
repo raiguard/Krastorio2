@@ -2,6 +2,7 @@ kr_optimization_tech_card_name = "space-science-pack"
 require("prototypes.compatibility.space-exploration-pre")
 
 require("prototypes.achievements")
+require("prototypes.damage-types")
 
 require("prototypes.categories.ammo-categories")
 require("prototypes.categories.equipment-categories")
@@ -32,7 +33,6 @@ require("lib.private.data-stages.technologies")
 ---------------------------------------------------------------------------
 -- -- Adding new categories
 -- -- Adding new damages
-require("prototypes.damages.damages-initialization")
 -- -- Adding new entities
 require("prototypes.entities.entities-initialization")
 -- -- Adding new equipments
