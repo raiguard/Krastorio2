@@ -4,6 +4,7 @@ require("prototypes.compatibility.space-exploration-pre")
 require("prototypes.achievements")
 require("prototypes.equipment-grids")
 require("prototypes.damage-types")
+require("prototypes.fluids")
 
 require("prototypes.armors.power-armor-mk3")
 require("prototypes.armors.power-armor-mk4")
@@ -70,7 +71,6 @@ require("lib.private.data-stages.technologies")
 require("prototypes.entities.entities-initialization")
 -- -- Adding new equipments
 -- -- Adding new fluids
-require("prototypes.fluids.fluids-initialization")
 -- -- GUI specifications
 require("prototypes.gui.gui-initialization")
 -- -- Adding new tips and tricks
