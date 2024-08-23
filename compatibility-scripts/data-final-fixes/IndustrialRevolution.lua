@@ -1,4 +1,4 @@
-local variations_util = require("__Krastorio2__/lib/public/data-stages/create-roboport-states")
+local variations_util = require("lib.public.data-stages.create-roboport-states")
 
 if mods["IndustrialRevolution"] then
   -----------------------------------------------------------------------------------------------------------------------

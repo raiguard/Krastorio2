@@ -1,5 +1,5 @@
-local hit_effects = require("__base__/prototypes/entity/hit-effects")
-local sounds = require("__base__/prototypes/entity/sounds")
+local hit_effects = require("__base__.prototypes.entity.hit-effects")
+local sounds = require("__base__.prototypes.entity.sounds")
 
 -- Labs do not support entity info icon scaling...
 -- local kr_icons_size = false

@@ -303,7 +303,7 @@ local refined_concrete_sounds = {
   },
 }
 
-local tile_graphics = require("__base__/prototypes/tile/tile-graphics")
+local tile_graphics = require("__base__.prototypes.tile.tile-graphics")
 local tile_spritesheet_layout = tile_graphics.tile_spritesheet_layout
 
 local concrete_transitions = {

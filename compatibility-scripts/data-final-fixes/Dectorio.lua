@@ -1,4 +1,4 @@
-local DECT = require("compatibility-scripts/data-final-fixes/Dectorio/config")
+local DECT = require("compatibility-scripts.data-final-fixes.Dectorio.config")
 
 if mods["Dectorio"] then
   local tile_filters = data.raw["selection-tool"]["kr-jackhammer"].tile_filters

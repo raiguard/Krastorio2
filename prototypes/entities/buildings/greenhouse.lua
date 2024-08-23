@@ -4,7 +4,7 @@ if krastorio.general.getSafeSettingValue("kr-large-icons") then
   kr_icons_size = true
 end
 
-local hit_effects = require("__base__/prototypes/entity/hit-effects")
+local hit_effects = require("__base__.prototypes.entity.hit-effects")
 
 local greenhouse_working_sound = {
   filename = "__Krastorio2Assets__/sounds/buildings/greenhouse.ogg",

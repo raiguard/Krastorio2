@@ -72,8 +72,8 @@ function furnacekpipepictures_b()
   }
 end
 
-local hit_effects = require("__base__/prototypes/entity/hit-effects")
-local sounds = require("__base__/prototypes/entity/sounds")
+local hit_effects = require("__base__.prototypes.entity.hit-effects")
+local sounds = require("__base__.prototypes.entity.sounds")
 
 local kr_icons_size = false
 

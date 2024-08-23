@@ -1941,7 +1941,7 @@ function krastorio.recipes.findNotUnlockableRecipes()
   -- if next(not_unlockable_recipe_names) == nil then
   --   krastorio_utils.log.write(1, string.format("All recipes are unlockable."))
   -- else
-  --   local inspect = require("__Krastorio2__/lib/private/data-stages//utils/inspect")
+  --   local inspect = require("lib.private.data-stages..utils.inspect")
   --   krastorio_utils.log.write(
   --     3,
   --     string.format(

@@ -1,5 +1,5 @@
-local hit_effects = require("__base__/prototypes/entity/hit-effects")
-local sounds = require("__base__/prototypes/entity/sounds")
+local hit_effects = require("__base__.prototypes.entity.hit-effects")
+local sounds = require("__base__.prototypes.entity.sounds")
 local kr_crash_site_assembling_machine_1_repaired_animation_speed = 4 / 5
 
 data:extend({

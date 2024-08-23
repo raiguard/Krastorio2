@@ -1,4 +1,4 @@
-local sounds = require("__base__/prototypes/entity/sounds")
+local sounds = require("__base__.prototypes.entity.sounds")
 
 -- -- Rebalance all damage done by player weapons (Turrets, ammo...)
 if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then

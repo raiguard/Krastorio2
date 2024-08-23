@@ -27,7 +27,7 @@ if not mods["boblogistics"] then
 end
 --------------------------------------
 
-local sounds = require("__base__/prototypes/entity/sounds")
+local sounds = require("__base__.prototypes.entity.sounds")
 
 -- -- Robot capsule
 --------------------------------------

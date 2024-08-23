@@ -200,7 +200,7 @@ local creep_walking_sound = {
 
 -- ~~~CREEP
 
-local tile_graphics = require("__base__/prototypes/tile/tile-graphics")
+local tile_graphics = require("__base__.prototypes.tile.tile-graphics")
 local tile_spritesheet_layout = tile_graphics.tile_spritesheet_layout
 
 local creep_out_of_map_transition = {

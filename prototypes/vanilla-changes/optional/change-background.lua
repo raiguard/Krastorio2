@@ -1,4 +1,4 @@
-local backgrounds_util = require("__Krastorio2__/lib/public/data-stages/main-menu-backgrounds-util")
+local backgrounds_util = require("lib.public.data-stages.main-menu-backgrounds-util")
 
 -- Add possible backgrounds
 backgrounds_util.addBackgroundImage("Krastorio Legacy", "__Krastorio2Assets__/backgrounds/krastorio-legacy.jpg")

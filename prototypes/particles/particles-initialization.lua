@@ -1,1 +1,1 @@
-require("__Krastorio2__/prototypes/particles/general-particles")
+require("prototypes.particles.general-particles")

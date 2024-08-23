@@ -1,6 +1,6 @@
 local nuclear_smoke_color = { r = 0.5, g = 0.55, b = 0.45, a = 0.25 }
-local hit_effects = require("__base__/prototypes/entity/hit-effects")
-local sounds = require("__base__/prototypes/entity/sounds")
+local hit_effects = require("__base__.prototypes.entity.hit-effects")
+local sounds = require("__base__.prototypes.entity.sounds")
 local meld = require("__core__.lualib.meld")
 
 data:extend({

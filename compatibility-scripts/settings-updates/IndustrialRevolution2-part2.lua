@@ -1,4 +1,4 @@
-local science_pack_recipe = require("__Krastorio2__/lib/public/data-stages/science-pack-recipe")
+local science_pack_recipe = require("lib.public.data-stages.science-pack-recipe")
 
 -- THIS RECIPES ARE ENFORCED TO BE COMPATIBLE
 if mods["IndustrialRevolution"] then

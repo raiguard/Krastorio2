@@ -1,6 +1,6 @@
-local hit_effects = require("__base__/prototypes/entity/hit-effects")
-local sounds = require("__base__/prototypes/entity/sounds")
-local variations_util = require("__Krastorio2__/lib/public/data-stages/create-roboport-states")
+local hit_effects = require("__base__.prototypes.entity.hit-effects")
+local sounds = require("__base__.prototypes.entity.sounds")
+local variations_util = require("lib.public.data-stages.create-roboport-states")
 local empty_sprite = {
   filename = "__Krastorio2Assets__/entities/empty.png",
   width = 1,

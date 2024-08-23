@@ -1,4 +1,4 @@
-local sounds = require("__base__/prototypes/entity/sounds")
+local sounds = require("__base__.prototypes.entity.sounds")
 
 data:extend({
   -----------------------------------------------------------------------------------------------------------------
