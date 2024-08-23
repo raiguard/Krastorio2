@@ -15,19 +15,19 @@ data:extend({
     type = "item",
     name = "antimatter-reactor-equipment",
     icons = {
-      { icon = "__Krastorio2Assets__/icons/equipments/universal/antimatter-reactor-equipment.png", icon_size = 64 },
-      { icon = "__Krastorio2Assets__/icons/equipments/tiers/3.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/antimatter-reactor-equipment.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/tier-3.png", icon_size = 64 },
     },
     pictures = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/icons/equipments/universal/antimatter-reactor-equipment.png",
+          filename = "__Krastorio2Assets__/icons/equipment/antimatter-reactor-equipment.png",
           size = 64,
           mipmap_count = 4,
           scale = 0.25,
         },
         {
-          filename = "__Krastorio2Assets__/icons/equipments/universal/antimatter-reactor-equipment-light.png",
+          filename = "__Krastorio2Assets__/icons/equipment/antimatter-reactor-equipment-light.png",
           size = 64,
           mipmap_count = 4,
           scale = 0.25,
@@ -45,7 +45,7 @@ data:extend({
     type = "generator-equipment",
     name = "antimatter-reactor-equipment",
     sprite = {
-      filename = "__Krastorio2Assets__/equipments/universal/antimatter-reactor-equipment.png",
+      filename = "__Krastorio2Assets__/equipment/antimatter-reactor-equipment.png",
       width = 256,
       height = 256,
       priority = "medium",

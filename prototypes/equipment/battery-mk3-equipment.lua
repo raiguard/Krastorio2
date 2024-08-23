@@ -15,19 +15,19 @@ data:extend({
     type = "item",
     name = "battery-mk3-equipment",
     icons = {
-      { icon = "__Krastorio2Assets__/icons/equipments/universal/battery-mk3-equipment.png", icon_size = 64 },
-      { icon = "__Krastorio2Assets__/icons/equipments/tiers/3.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/battery-mk3-equipment.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/tier-3.png", icon_size = 64 },
     },
     pictures = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/icons/equipments/universal/battery-mk3-equipment.png",
+          filename = "__Krastorio2Assets__/icons/equipment/battery-mk3-equipment.png",
           size = 64,
           mipmap_count = 4,
           scale = 0.25,
         },
         {
-          filename = "__Krastorio2Assets__/icons/equipments/universal/battery-equipment-light.png",
+          filename = "__Krastorio2Assets__/icons/equipment/battery-equipment-light.png",
           size = 64,
           mipmap_count = 4,
           scale = 0.25,
@@ -45,7 +45,7 @@ data:extend({
     type = "battery-equipment",
     name = "battery-mk3-equipment",
     sprite = {
-      filename = "__Krastorio2Assets__/equipments/universal/battery-mk3-equipment.png",
+      filename = "__Krastorio2Assets__/equipment/battery-mk3-equipment.png",
       width = 64,
       height = 128,
       priority = "medium",

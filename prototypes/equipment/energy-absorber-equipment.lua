@@ -1,10 +1,9 @@
 local constants = require("scripts.constants")
 
--- TODO: Rename to energy-absorber-equipment
 data:extend({
   {
     type = "recipe",
-    name = "energy-absorber",
+    name = "energy-absorber-equipment",
     energy_required = 3,
     enabled = false,
     ingredients = {
@@ -12,23 +11,23 @@ data:extend({
       { type = "item", name = "copper-cable", amount = 12 },
       { type = "item", name = "battery", amount = 6 },
     },
-    results = { { type = "item", name = "energy-absorber", amount = 1 } },
+    results = { { type = "item", name = "energy-absorber-equipment", amount = 1 } },
   },
   {
     type = "item",
-    name = "energy-absorber",
-    localised_description = { "equipment-description.energy-absorber" },
-    icon = "__Krastorio2Assets__/icons/equipments/universal/energy-absorber.png",
-    placed_as_equipment_result = "energy-absorber",
+    name = "energy-absorber-equipment",
+    localised_description = { "equipment-description.energy-absorber-equipment" },
+    icon = "__Krastorio2Assets__/icons/equipment/energy-absorber-equipment.png",
+    placed_as_equipment_result = "energy-absorber-equipment",
     subgroup = "equipment",
-    order = "a1[energy-source]-a1[energy-absorber]",
+    order = "a1[energy-source]-a1[energy-absorber-equipment]",
     stack_size = 10,
   },
   {
     type = "battery-equipment",
-    name = "energy-absorber",
+    name = "energy-absorber-equipment",
     sprite = {
-      filename = "__Krastorio2Assets__/equipments/universal/energy-absorber.png",
+      filename = "__Krastorio2Assets__/equipment/energy-absorber-equipment.png",
       width = 256,
       height = 256,
       scale = 0.275,

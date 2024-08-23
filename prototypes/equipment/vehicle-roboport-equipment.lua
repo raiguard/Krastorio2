@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "recipe",
-    name = "vehicle-roboport",
+    name = "vehicle-roboport-equipment",
     enabled = false,
     energy_required = 10,
     ingredients = {
@@ -9,23 +9,23 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 4 },
       { type = "item", name = "advanced-circuit", amount = 1 },
     },
-    results = { { type = "item", name = "vehicle-roboport", amount = 1 } },
+    results = { { type = "item", name = "vehicle-roboport-equipment", amount = 1 } },
   },
   {
     type = "item",
-    name = "vehicle-roboport",
-    icon = "__Krastorio2Assets__/icons/equipments/vehicle/vehicle-roboport.png",
-    placed_as_equipment_result = "vehicle-roboport",
+    name = "vehicle-roboport-equipment",
+    icon = "__Krastorio2Assets__/icons/equipment/vehicle-roboport-equipment.png",
+    placed_as_equipment_result = "vehicle-roboport-equipment",
     subgroup = "vehicle-motor",
-    order = "e[additional-engines]-f1[vehicle-roboport]",
+    order = "e[additional-engines]-f1[vehicle-roboport-equipment]",
     stack_size = 5,
   },
   {
     type = "roboport-equipment",
-    name = "vehicle-roboport",
-    take_result = "vehicle-roboport",
+    name = "vehicle-roboport-equipment",
+    take_result = "vehicle-roboport-equipment",
     sprite = {
-      filename = "__Krastorio2Assets__/equipments/vehicle/vehicle-roboport.png",
+      filename = "__Krastorio2Assets__/equipment/vehicle-roboport-equipment.png",
       width = 256,
       height = 256,
       scale = 0.5,

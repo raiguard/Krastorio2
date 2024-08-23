@@ -1,5 +1,47 @@
 {
   "mod-setting-name": [
     ["kr-rebalance-vehicles&fuels", "kr-rebalance-vehicles-fuels"]
+  ],
+  "equipment": [
+    ["additional-engine", "additional-engine-equipment"],
+    ["advanced-additional-engine", "advanced-additional-engine-equipment"],
+    ["big-additional-engine", "big-additional-engine-equipment"],
+    ["big-imersite-solar-panel-equipment", "big-superior-solar-panel-equipment"],
+    ["energy-absorber", "energy-absorber-equipment"],
+    ["imersite-night-vision-equipment", "superior-night-vision-equipment"],
+    ["imersite-solar-panel-equipment", "superior-solar-panel-equipment"],
+    ["portable-generator", "portable-generator-equipment"],
+    ["small-portable-generator", "small-portable-generator-equipment"],
+    ["vehicle-roboport", "vehicle-roboport-equipment"]
+  ],
+  "item": [
+    ["additional-engine", "additional-engine-equipment"],
+    ["advanced-additional-engine", "advanced-additional-engine-equipment"],
+    ["big-additional-engine", "big-additional-engine-equipment"],
+    ["big-imersite-solar-panel-equipment", "big-superior-solar-panel-equipment"],
+    ["energy-absorber", "energy-absorber-equipment"],
+    ["imersite-night-vision-equipment", "superior-night-vision-equipment"],
+    ["imersite-solar-panel-equipment", "superior-solar-panel-equipment"],
+    ["portable-generator", "portable-generator-equipment"],
+    ["small-portable-generator", "small-portable-generator-equipment"],
+    ["vehicle-roboport", "vehicle-roboport-equipment"]
+  ],
+  "recipe": [
+    ["additional-engine", "additional-engine-equipment"],
+    ["advanced-additional-engine", "advanced-additional-engine-equipment"],
+    ["big-additional-engine", "big-additional-engine-equipment"],
+    ["big-imersite-solar-panel-equipment", "big-superior-solar-panel-equipment"],
+    ["energy-absorber", "energy-absorber-equipment"],
+    ["imersite-night-vision-equipment", "superior-night-vision-equipment"],
+    ["imersite-solar-panel-equipment", "superior-solar-panel-equipment"],
+    ["portable-generator", "portable-generator-equipment"],
+    ["small-portable-generator", "small-portable-generator-equipment"],
+    ["vehicle-roboport", "vehicle-roboport-equipment"]
+  ],
+  "technology": [
+    ["kr-advanced-additional-engine", "kr-advanced-additional-engine-equipment"],
+    ["kr-imersite-night-vision-equipment", "kr-superior-night-vision-equipment"],
+    ["kr-imersite-solar-panel-equipment", "kr-superior-solar-panel-equipment"],
+    ["kr-portable-generator", "kr-portable-generator-equipment"]
   ]
 }

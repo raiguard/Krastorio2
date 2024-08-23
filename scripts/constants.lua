@@ -11,7 +11,7 @@ constants.bonus_items = {
   { name = "fuel", count = 200 },
   { name = "big-battery-equipment", count = 1 },
   { name = "personal-roboport-equipment", count = 1 },
-  { name = "small-portable-generator", count = 2 },
+  { name = "small-portable-generator-equipment", count = 2 },
   { name = "cliff-explosives", count = 50 },
   { name = "landfill", count = 50 },
 }

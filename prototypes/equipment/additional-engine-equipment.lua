@@ -1,8 +1,7 @@
--- TODO: Rename to additional-engine-equipment
 data:extend({
   {
     type = "recipe",
-    name = "additional-engine",
+    name = "additional-engine-equipment",
     energy_required = 20,
     enabled = false,
     ingredients = {
@@ -10,25 +9,25 @@ data:extend({
       { type = "item", name = "electronic-circuit", amount = 5 },
       { type = "item", name = "steel-plate", amount = 5 },
     },
-    results = { { type = "item", name = "additional-engine", amount = 1 } },
+    results = { { type = "item", name = "additional-engine-equipment", amount = 1 } },
   },
   {
     type = "item",
-    name = "additional-engine",
+    name = "additional-engine-equipment",
     icons = {
-      { icon = "__Krastorio2Assets__/icons/equipments/vehicle/additional-engine.png", icon_size = 64 },
-      { icon = "__Krastorio2Assets__/icons/equipments/tiers/1.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/additional-engine-equipment.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/tier-1.png", icon_size = 64 },
     },
-    placed_as_equipment_result = "additional-engine",
+    placed_as_equipment_result = "additional-engine-equipment",
     subgroup = "vehicle-motor",
-    order = "e[additional-engines]-e1[advanced-additional-engine]",
+    order = "e[additional-engines]-e1[advanced-additional-engine-equipment]",
     stack_size = 5,
   },
   {
     type = "movement-bonus-equipment",
-    name = "additional-engine",
+    name = "additional-engine-equipment",
     sprite = {
-      filename = "__Krastorio2Assets__/equipments/vehicle/additional-engine.png",
+      filename = "__Krastorio2Assets__/equipment/additional-engine-equipment.png",
       width = 256,
       height = 256,
       scale = 0.5,

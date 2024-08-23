@@ -4,7 +4,7 @@ data:extend({
     type = "item",
     name = "cyber-potato-equipment",
     localised_description = { "equipment-description.cyber-potato-equipment" },
-    icon = "__Krastorio2Assets__/icons/equipments/universal/cyber-potato-equipment.png",
+    icon = "__Krastorio2Assets__/icons/equipment/cyber-potato-equipment.png",
     placed_as_equipment_result = "cyber-potato-equipment",
     --- @diagnostic disable-next-line
     rocket_launch_product = { "spoiled-potato", 1 }, -- TODO: Rocket launch products are no more
@@ -16,7 +16,7 @@ data:extend({
     type = "generator-equipment",
     name = "cyber-potato-equipment",
     sprite = {
-      filename = "__Krastorio2Assets__/equipments/universal/cyber-potato-equipment.png",
+      filename = "__Krastorio2Assets__/equipment/cyber-potato-equipment.png",
       width = 256,
       height = 256,
       priority = "medium",

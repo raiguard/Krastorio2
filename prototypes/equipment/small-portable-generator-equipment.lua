@@ -1,33 +1,32 @@
--- TODO: Rename to `small-portable-generator-equipment`
 data:extend({
   {
     type = "recipe",
-    name = "small-portable-generator",
+    name = "small-portable-generator-equipment",
     energy_required = 10,
     enabled = false,
     ingredients = {
       { type = "item", name = "engine-unit", amount = 1 },
       { type = "item", name = "iron-beam", amount = 2 },
     },
-    results = { { type = "item", name = "small-portable-generator", amount = 1 } },
+    results = { { type = "item", name = "small-portable-generator-equipment", amount = 1 } },
   },
   {
     type = "item",
-    name = "small-portable-generator",
+    name = "small-portable-generator-equipment",
     icons = {
-      { icon = "__Krastorio2Assets__/icons/equipments/universal/small-portable-generator.png", icon_size = 64 },
-      { icon = "__Krastorio2Assets__/icons/equipments/tiers/1.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/small-portable-generator-equipment.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/tier-1.png", icon_size = 64 },
     },
-    placed_as_equipment_result = "small-portable-generator",
+    placed_as_equipment_result = "small-portable-generator-equipment",
     subgroup = "equipment",
-    order = "a2[energy-source]-a2[small-portable-generator]",
+    order = "a2[energy-source]-a2[small-portable-generator-equipment]",
     stack_size = 10,
   },
   {
     type = "generator-equipment",
-    name = "small-portable-generator",
+    name = "small-portable-generator-equipment",
     sprite = {
-      filename = "__Krastorio2Assets__/equipments/universal/small-portable-generator.png",
+      filename = "__Krastorio2Assets__/equipment/small-portable-generator-equipment.png",
       width = 128,
       height = 128,
       priority = "medium",

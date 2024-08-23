@@ -16,8 +16,8 @@ data:extend({
     type = "item",
     name = "personal-submachine-laser-defense-mk3-equipment",
     icons = {
-      { icon = "__Krastorio2Assets__/icons/equipments/universal/personal-submachine-laser-defense-mk3-equipment.png" },
-      { icon = "__Krastorio2Assets__/icons/equipments/tiers/3.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/personal-submachine-laser-defense-mk3-equipment.png" },
+      { icon = "__Krastorio2Assets__/icons/equipment/tier-3.png", icon_size = 64 },
     },
     placed_as_equipment_result = "personal-submachine-laser-defense-mk3-equipment",
     subgroup = "equipment",
@@ -28,7 +28,7 @@ data:extend({
     type = "active-defense-equipment",
     name = "personal-submachine-laser-defense-mk3-equipment",
     sprite = {
-      filename = "__Krastorio2Assets__/equipments/universal/personal-submachine-laser-defense-mk3-equipment.png",
+      filename = "__Krastorio2Assets__/equipment/personal-submachine-laser-defense-mk3-equipment.png",
       width = 128,
       height = 128,
       scale = 0.5,

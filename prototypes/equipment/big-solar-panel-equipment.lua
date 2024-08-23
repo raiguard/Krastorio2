@@ -14,8 +14,8 @@ data:extend({
     type = "item",
     name = "big-solar-panel-equipment",
     icons = {
-      { icon = "__Krastorio2Assets__/icons/equipments/universal/big-solar-panel-equipment.png", icon_size = 64 },
-      { icon = "__Krastorio2Assets__/icons/equipments/tiers/1.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/big-solar-panel-equipment.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/tier-1.png", icon_size = 64 },
     },
     placed_as_equipment_result = "big-solar-panel-equipment",
     subgroup = "equipment",
@@ -26,7 +26,7 @@ data:extend({
     type = "solar-panel-equipment",
     name = "big-solar-panel-equipment",
     sprite = {
-      filename = "__Krastorio2Assets__/equipments/universal/big-solar-panel-equipment.png",
+      filename = "__Krastorio2Assets__/equipment/big-solar-panel-equipment.png",
       width = 128,
       height = 128,
       priority = "medium",

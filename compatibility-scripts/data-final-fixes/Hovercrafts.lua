@@ -6,7 +6,7 @@ if mods["Hovercrafts"] then
     data:extend({ ecraft_grid })
 
     data.raw.item["ehvt-equipment"].subgroup = "vehicle-motor"
-    data.raw.item["ehvt-equipment"].order = "e[additional-engines]-e3[advanced-additional-engine]"
+    data.raw.item["ehvt-equipment"].order = "e[additional-engines]-e3[advanced-additional-engine-equipment]"
   end
 
   data.raw["car"]["hcraft-entity"].equipment_grid = "kr-car-grid"

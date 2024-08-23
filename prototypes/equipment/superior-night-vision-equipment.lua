@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "recipe",
-    name = "imersite-night-vision-equipment",
+    name = "superior-night-vision-equipment",
     enabled = false,
     energy_required = 10,
     category = "crafting-with-fluid",
@@ -12,25 +12,25 @@ data:extend({
       { type = "item", name = "imersite-crystal", amount = 5 },
       { type = "fluid", name = "nitric-acid", amount = 25 },
     },
-    results = { { type = "item", name = "imersite-night-vision-equipment", amount = 1 } },
+    results = { { type = "item", name = "superior-night-vision-equipment", amount = 1 } },
   },
   {
     type = "item",
-    name = "imersite-night-vision-equipment",
+    name = "superior-night-vision-equipment",
     icons = {
-      { icon = "__Krastorio2Assets__/icons/equipments/character/imersite-night-vision-equipment.png", icon_size = 64 },
-      { icon = "__Krastorio2Assets__/icons/equipments/tiers/2.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/superior-night-vision-equipment.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/tier-2.png", icon_size = 64 },
     },
-    placed_as_equipment_result = "imersite-night-vision-equipment",
+    placed_as_equipment_result = "superior-night-vision-equipment",
     subgroup = "character-equipment",
-    order = "f[night-vision]-b[imersite-night-vision-equipment]",
+    order = "f[night-vision]-b[superior-night-vision-equipment]",
     stack_size = 10,
   },
   {
     type = "night-vision-equipment",
-    name = "imersite-night-vision-equipment", -- TODO: Rename to `superior-night-vision-equipment`
+    name = "superior-night-vision-equipment",
     sprite = {
-      filename = "__Krastorio2Assets__/equipments/character/imersite-night-vision-equipment.png",
+      filename = "__Krastorio2Assets__/equipment/superior-night-vision-equipment.png",
       width = 128,
       height = 128,
       priority = "medium",

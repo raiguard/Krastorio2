@@ -137,7 +137,7 @@ data:extend({
   {
     type = "sprite",
     name = "kr-energy-absorber-preview",
-    filename = "__Krastorio2Assets__/equipments/universal/energy-absorber.png",
+    filename = "__Krastorio2Assets__/equipment/energy-absorber-equipment.png",
     width = 128,
     height = 128,
   },

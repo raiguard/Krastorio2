@@ -111,16 +111,15 @@ data:extend({
   -- -- Imersite night visor
   {
     type = "technology",
-    name = "kr-imersite-night-vision-equipment",
-    mod = "Krastorio2",
+    name = "kr-superior-night-vision-equipment",
     icon_size = 256,
     icon_mipmaps = 4,
-    icon = "__Krastorio2Assets__/technologies/imersite-night-vision-equipment.png",
+    icon = "__Krastorio2Assets__/technologies/superior-night-vision-equipment.png",
     upgrade = false,
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "imersite-night-vision-equipment",
+        recipe = "superior-night-vision-equipment",
       },
     },
     prerequisites = { "night-vision-equipment", "kr-quarry-minerals-extraction" },
@@ -140,10 +139,14 @@ data:extend({
   -----------------------------------------------------------------------------------------------------------------
   {
     type = "technology",
-    name = "kr-advanced-additional-engine",
+    name = "kr-advanced-additional-engine-equipment",
     mod = "Krastorio2",
     icons = {
-      { icon = "__Krastorio2Assets__/technologies/advanced-additional-engine.png", icon_size = 256, icon_mipmaps = 4 },
+      {
+        icon = "__Krastorio2Assets__/technologies/advanced-additional-engine-equipment.png",
+        icon_size = 256,
+        icon_mipmaps = 4,
+      },
       {
         icon = "__core__/graphics/icons/technology/constants/constant-equipment.png",
         icon_size = 128,
@@ -157,7 +160,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "advanced-additional-engine",
+        recipe = "advanced-additional-engine-equipment",
       },
     },
     prerequisites = { "electric-engine", "processing-unit", "utility-science-pack" },
@@ -178,10 +181,10 @@ data:extend({
   --GENERATORS
   {
     type = "technology",
-    name = "kr-portable-generator",
+    name = "kr-portable-generator-equipment",
     mod = "Krastorio2",
     icons = {
-      { icon = "__Krastorio2Assets__/technologies/portable-generator.png", icon_size = 256, icon_mipmaps = 4 },
+      { icon = "__Krastorio2Assets__/technologies/portable-generator-equipment.png", icon_size = 256, icon_mipmaps = 4 },
       {
         icon = "__core__/graphics/icons/technology/constants/constant-equipment.png",
         icon_size = 128,
@@ -195,7 +198,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "portable-generator",
+        recipe = "portable-generator-equipment",
       },
     },
     prerequisites = { "battery-equipment", "chemical-science-pack" },
@@ -321,20 +324,20 @@ data:extend({
   -- -- SOLAR PANELS
   {
     type = "technology",
-    name = "kr-imersite-solar-panel-equipment",
+    name = "kr-superior-solar-panel-equipment",
     mod = "Krastorio2",
     icon_size = 256,
     icon_mipmaps = 4,
-    icon = "__Krastorio2Assets__/technologies/imersite-solar-panel-equipment.png",
+    icon = "__Krastorio2Assets__/technologies/superior-solar-panel-equipment.png",
     upgrade = false,
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "imersite-solar-panel-equipment",
+        recipe = "superior-solar-panel-equipment",
       },
       {
         type = "unlock-recipe",
-        recipe = "big-imersite-solar-panel-equipment",
+        recipe = "big-superior-solar-panel-equipment",
       },
     },
     prerequisites = { "kr-quarry-minerals-extraction", "solar-panel-equipment" },

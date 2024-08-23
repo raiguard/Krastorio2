@@ -20,7 +20,7 @@ data:extend({
   {
     type = "armor",
     name = "power-armor-mk4",
-    icon = "__Krastorio2Assets__/icons/equipments/character/power-armor-mk4.png",
+    icon = "__Krastorio2Assets__/icons/armors/power-armor-mk4.png",
     resistances = {
       {
         type = "physical",

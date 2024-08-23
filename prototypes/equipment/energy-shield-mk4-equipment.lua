@@ -18,11 +18,11 @@ data:extend({
     localised_description = { "equipment-description.shield-generator-mk4" },
     icons = {
       {
-        icon = "__Krastorio2Assets__/icons/equipments/universal/energy-shield-mk4-equipment.png",
+        icon = "__Krastorio2Assets__/icons/equipment/energy-shield-mk4-equipment.png",
         icon_size = 64,
         mipmap_count = 4,
       },
-      { icon = "__Krastorio2Assets__/icons/equipments/tiers/4.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/tier-4.png", icon_size = 64 },
     },
     placed_as_equipment_result = "energy-shield-mk4-equipment",
     subgroup = "equipment",
@@ -35,7 +35,7 @@ data:extend({
     localised_name = { "equipment-name.shield-generator-mk4" },
     localised_description = { "equipment-description.shield-generator-mk4" },
     sprite = {
-      filename = "__Krastorio2Assets__/equipments/universal/energy-shield-mk4-equipment.png",
+      filename = "__Krastorio2Assets__/equipment/energy-shield-mk4-equipment.png",
       width = 128,
       height = 128,
       scale = 0.5,

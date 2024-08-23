@@ -16,19 +16,19 @@ data:extend({
     type = "item",
     name = "nuclear-reactor-equipment",
     icons = {
-      { icon = "__Krastorio2Assets__/icons/equipments/universal/nuclear-reactor-equipment.png", icon_size = 64 },
-      { icon = "__Krastorio2Assets__/icons/equipments/tiers/1.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/nuclear-reactor-equipment.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/tier-1.png", icon_size = 64 },
     },
     pictures = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/icons/equipments/universal/nuclear-reactor-equipment.png",
+          filename = "__Krastorio2Assets__/icons/equipment/nuclear-reactor-equipment.png",
           size = 64,
           mipmap_count = 4,
           scale = 0.25,
         },
         {
-          filename = "__Krastorio2Assets__/icons/equipments/universal/nuclear-reactor-equipment-light.png",
+          filename = "__Krastorio2Assets__/icons/equipment/nuclear-reactor-equipment-light.png",
           size = 64,
           mipmap_count = 4,
           scale = 0.25,
@@ -46,7 +46,7 @@ data:extend({
     type = "generator-equipment",
     name = "nuclear-reactor-equipment",
     sprite = {
-      filename = "__Krastorio2Assets__/equipments/universal/nuclear-reactor-equipment.png",
+      filename = "__Krastorio2Assets__/equipment/nuclear-reactor-equipment.png",
       width = 256,
       height = 256,
       priority = "medium",

@@ -89,7 +89,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "energy-absorber",
+        recipe = "energy-absorber-equipment",
       },
     },
     prerequisites = { "battery-equipment", "power-armor" },

@@ -106,17 +106,17 @@ krastorio.technologies.addUnlockRecipe("advanced-circuit", "electronic-component
 krastorio.technologies.addUnlockRecipe("solar-panel-equipment", "big-solar-panel-equipment")
 
 krastorio.technologies.addUnlockRecipe("battery-equipment", "big-battery-equipment")
-krastorio.technologies.addUnlockRecipe("battery-equipment", "small-portable-generator")
+krastorio.technologies.addUnlockRecipe("battery-equipment", "small-portable-generator-equipment")
 
 krastorio.technologies.addUnlockRecipe("battery-mk2-equipment", "big-battery-mk2-equipment")
 
 local personal_roboport_tech = krastorio.technologies.getTechnologyThatUnlockRecipe("personal-roboport-equipment")
 if personal_roboport_tech then
-  krastorio.technologies.addUnlockRecipe(personal_roboport_tech.name, "vehicle-roboport")
+  krastorio.technologies.addUnlockRecipe(personal_roboport_tech.name, "vehicle-roboport-equipment")
 end
 local electric_engine_unit_tech = krastorio.technologies.getTechnologyThatUnlockRecipe("personal-roboport-equipment")
 if electric_engine_unit_tech then
-  krastorio.technologies.addUnlockRecipe(electric_engine_unit_tech.name, "additional-engine")
+  krastorio.technologies.addUnlockRecipe(electric_engine_unit_tech.name, "additional-engine-equipment")
 end
 
 krastorio.technologies.addUnlockRecipe(

@@ -17,11 +17,11 @@ data:extend({
     name = "superior-exoskeleton-equipment",
     icons = {
       {
-        icon = "__Krastorio2Assets__/icons/equipments/character/superior-exoskeleton-equipment.png",
+        icon = "__Krastorio2Assets__/icons/equipment/superior-exoskeleton-equipment.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
-      { icon = "__Krastorio2Assets__/icons/equipments/tiers/3.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/tier-3.png", icon_size = 64 },
     },
     placed_as_equipment_result = "superior-exoskeleton-equipment",
     subgroup = "character-equipment",
@@ -44,7 +44,7 @@ data:extend({
       type = "full",
     },
     sprite = {
-      filename = "__Krastorio2Assets__/equipments/character/superior-exoskeleton-equipment.png",
+      filename = "__Krastorio2Assets__/equipment/superior-exoskeleton-equipment.png",
       width = 128,
       height = 256,
       priority = "medium",

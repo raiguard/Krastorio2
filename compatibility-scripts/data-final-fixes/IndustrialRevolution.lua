@@ -1012,7 +1012,7 @@ if mods["IndustrialRevolution"] then
   table.insert(data.raw["roboport-equipment"]["copper-roboport-equipment"].categories, "universal-equipment")
   table.insert(data.raw["generator-equipment"]["battery-discharge-equipment"].categories, "universal-equipment")
   -- Equipemnt adjustment
-  data.raw["generator-equipment"]["small-portable-generator"].power = "270kW"
+  data.raw["generator-equipment"]["small-portable-generator-equipment"].power = "270kW"
 
   -- Stack sizes
   local kr_stack_size_value = krastorio.general.getSafeSettingValue("kr-stack-size")

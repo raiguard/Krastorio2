@@ -3,7 +3,7 @@ local table = require("__flib__.table")
 
 local compatibility = require("scripts.compatibility")
 local creep = require("scripts.creep")
-local energy_absorber = require("scripts.energy-absorber")
+local energy_absorber = require("scripts.energy-absorber-equipment")
 local freeplay = require("scripts.freeplay")
 local inserter = require("scripts.inserter")
 local intergalactic_transceiver = require("scripts.intergalactic-transceiver")

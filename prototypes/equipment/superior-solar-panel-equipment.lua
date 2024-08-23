@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "recipe",
-    name = "imersite-solar-panel-equipment",
+    name = "superior-solar-panel-equipment",
     energy_required = 20,
     enabled = false,
     category = "crafting-with-fluid",
@@ -11,25 +11,25 @@ data:extend({
       { type = "fluid", name = "nitric-acid", amount = 25 },
       { type = "item", name = "processing-unit", amount = 1 },
     },
-    results = { { type = "item", name = "imersite-solar-panel-equipment", amount = 1 } },
+    results = { { type = "item", name = "superior-solar-panel-equipment", amount = 1 } },
   },
   {
     type = "item",
-    name = "imersite-solar-panel-equipment",
+    name = "superior-solar-panel-equipment",
     icons = {
-      { icon = "__Krastorio2Assets__/icons/equipments/universal/imersite-solar-panel-equipment.png", icon_size = 64 },
-      { icon = "__Krastorio2Assets__/icons/equipments/tiers/2.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/superior-solar-panel-equipment.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/tier-2.png", icon_size = 64 },
     },
-    placed_as_equipment_result = "imersite-solar-panel-equipment",
+    placed_as_equipment_result = "superior-solar-panel-equipment",
     subgroup = "equipment",
-    order = "a[energy-source]-a4[imersite-solar-panel-equipment]",
+    order = "a[energy-source]-a4[superior-solar-panel-equipment]",
     stack_size = 50,
   },
   {
     type = "solar-panel-equipment",
-    name = "imersite-solar-panel-equipment",
+    name = "superior-solar-panel-equipment",
     sprite = {
-      filename = "__Krastorio2Assets__/equipments/universal/imersite-solar-panel-equipment.png",
+      filename = "__Krastorio2Assets__/equipment/superior-solar-panel-equipment.png",
       width = 64,
       height = 64,
       priority = "medium",

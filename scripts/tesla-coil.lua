@@ -17,7 +17,7 @@ end
 
 function tesla_coil.get_absorber_buffer_capacity()
   global.tesla_coil.absorber_buffer_capacity =
-    game.equipment_prototypes["energy-absorber"].energy_source.buffer_capacity
+    game.equipment_prototypes["energy-absorber-equipment"].energy_source.buffer_capacity
 end
 
 -- TOWER
@@ -93,7 +93,7 @@ end
 local function find_absorber_in_grid(grid)
   -- Find the energy absorber
   for _, equipment in pairs(grid.equipment) do
-    if equipment.name == "energy-absorber" then
+    if equipment.name == "energy-absorber-equipment" then
       return equipment
     end
   end
@@ -379,7 +379,7 @@ return tesla_coil
     if armor_inventory and armor_inventory.valid then
       local armor = armor_inventory[1]
       if armor and armor.valid_for_read then
-        armor.grid.put({ name = "energy-absorber", position = { 5, 5 } })
+        armor.grid.put({ name = "energy-absorber-equipment", position = { 5, 5 } })
       end
     end
   end)

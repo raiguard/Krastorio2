@@ -15,14 +15,14 @@ data:extend({
     type = "item",
     name = "big-battery-equipment",
     icons = {
-      { icon = "__Krastorio2Assets__/icons/equipments/universal/big-battery-equipment.png", icon_size = 64 },
-      { icon = "__Krastorio2Assets__/icons/equipments/tiers/1.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/big-battery-equipment.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/tier-1.png", icon_size = 64 },
     },
     pictures = {
       layers = {
         {
           size = 64,
-          filename = "__Krastorio2Assets__/icons/equipments/universal/big-battery-equipment.png",
+          filename = "__Krastorio2Assets__/icons/equipment/big-battery-equipment.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -30,7 +30,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = "__Krastorio2Assets__/icons/equipments/universal/big-battery-equipment-light.png",
+          filename = "__Krastorio2Assets__/icons/equipment/big-battery-equipment-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -45,7 +45,7 @@ data:extend({
     type = "battery-equipment",
     name = "big-battery-equipment",
     sprite = {
-      filename = "__Krastorio2Assets__/equipments/universal/big-battery-equipment.png",
+      filename = "__Krastorio2Assets__/equipment/big-battery-equipment.png",
       width = 128,
       height = 128,
       priority = "medium",

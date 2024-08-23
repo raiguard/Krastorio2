@@ -49,7 +49,7 @@ function updateVanillaEquipmentGraphics(_objects_to_modify, icons_path, sprites_
           data.raw.item[item_name].icons = {
             { icon = icons_path .. item[1], icon_size = item[2], icon_mipmaps = item[6] },
             {
-              icon = "__Krastorio2Assets__/icons/equipments/tiers/" .. tostring(item[5]) .. ".png",
+              icon = "__Krastorio2Assets__/icons/equipment/tier-" .. tostring(item[5]) .. ".png",
               icon_size = 64,
             }, -- , scale = item[2]/64
           }
@@ -270,8 +270,8 @@ objects_to_modify = {
 -- iterating...
 updateVanillaEquipmentGraphics(
   objects_to_modify,
-  "__Krastorio2Assets__/icons/equipments/universal/",
-  "__Krastorio2Assets__/equipments/universal/"
+  "__Krastorio2Assets__/icons/equipment/",
+  "__Krastorio2Assets__/equipment/"
 )
 
 -- Personal roboports (both vanilla)
@@ -334,7 +334,7 @@ if data.raw.item["battery-equipment"] then
     layers = {
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/equipments/universal/battery-mk1-equipment.png",
+        filename = "__Krastorio2Assets__/icons/equipment/battery-mk1-equipment.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -342,7 +342,7 @@ if data.raw.item["battery-equipment"] then
         draw_as_light = true,
         flags = { "light" },
         size = 64,
-        filename = "__Krastorio2Assets__/icons/equipments/universal/battery-equipment-light.png",
+        filename = "__Krastorio2Assets__/icons/equipment/battery-equipment-light.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -354,7 +354,7 @@ if data.raw.item["battery-mk2-equipment"] then
     layers = {
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/equipments/universal/battery-mk2-equipment.png",
+        filename = "__Krastorio2Assets__/icons/equipment/battery-mk2-equipment.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -362,7 +362,7 @@ if data.raw.item["battery-mk2-equipment"] then
         draw_as_light = true,
         flags = { "light" },
         size = 64,
-        filename = "__Krastorio2Assets__/icons/equipments/universal/battery-equipment-light.png",
+        filename = "__Krastorio2Assets__/icons/equipment/battery-equipment-light.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -373,8 +373,8 @@ end
 -- iterating...
 updateVanillaEquipmentGraphics(
   objects_to_modify,
-  "__Krastorio2Assets__/icons/equipments/universal/",
-  "__Krastorio2Assets__/equipments/universal/"
+  "__Krastorio2Assets__/icons/equipment/",
+  "__Krastorio2Assets__/equipment/"
 )
 
 -- Equipments categories
@@ -446,7 +446,7 @@ if data.raw.item["fission-reactor-equipment"] then
     layers = {
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/equipments/universal/fission-reactor-equipment.png",
+        filename = "__Krastorio2Assets__/icons/equipment/fission-reactor-equipment.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -454,7 +454,7 @@ if data.raw.item["fission-reactor-equipment"] then
         draw_as_light = true,
         flags = { "light" },
         size = 64,
-        filename = "__Krastorio2Assets__/icons/equipments/universal/fission-reactor-equipment-light.png",
+        filename = "__Krastorio2Assets__/icons/equipment/fission-reactor-equipment-light.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -465,8 +465,8 @@ end
 -- iterating...
 updateVanillaEquipmentGraphics(
   objects_to_modify,
-  "__Krastorio2Assets__/icons/equipments/universal/",
-  "__Krastorio2Assets__/equipments/universal/"
+  "__Krastorio2Assets__/icons/equipment/",
+  "__Krastorio2Assets__/equipment/"
 )
 
 krastorio.icons.setTechnologyIcons("fission-reactor-equipment", {
@@ -572,8 +572,8 @@ objects_to_modify = {
 -- iterating...
 updateVanillaEquipmentGraphics(
   objects_to_modify,
-  "__Krastorio2Assets__/icons/equipments/universal/",
-  "__Krastorio2Assets__/equipments/universal/"
+  "__Krastorio2Assets__/icons/equipment/",
+  "__Krastorio2Assets__/equipment/"
 )
 
 -- Equipments categories
@@ -619,8 +619,8 @@ objects_to_modify = {
 -- iterating...
 updateVanillaEquipmentGraphics(
   objects_to_modify,
-  "__Krastorio2Assets__/icons/equipments/universal/",
-  "__Krastorio2Assets__/equipments/universal/"
+  "__Krastorio2Assets__/icons/equipment/",
+  "__Krastorio2Assets__/equipment/"
 )
 
 -- Equipments categories
@@ -658,8 +658,8 @@ data.raw["night-vision-equipment"]["night-vision-equipment"].color_lookup = {
 -- iterating...
 updateVanillaEquipmentGraphics(
   objects_to_modify,
-  "__Krastorio2Assets__/icons/equipments/character/",
-  "__Krastorio2Assets__/equipments/character/"
+  "__Krastorio2Assets__/icons/equipment/",
+  "__Krastorio2Assets__/equipment/"
 )
 
 data.raw["night-vision-equipment"]["night-vision-equipment"].tint = { r = 0.1, g = 0.255, b = 1, a = 0.255 }
@@ -709,8 +709,8 @@ objects_to_modify = {
 -- iterating...
 updateVanillaEquipmentGraphics(
   objects_to_modify,
-  "__Krastorio2Assets__/icons/equipments/character/",
-  "__Krastorio2Assets__/equipments/character/"
+  "__Krastorio2Assets__/icons/equipment/",
+  "__Krastorio2Assets__/equipment/"
 )
 
 data.raw.item["exoskeleton-equipment"].subgroup = "character-equipment"

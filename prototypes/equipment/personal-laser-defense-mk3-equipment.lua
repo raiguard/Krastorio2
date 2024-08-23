@@ -17,10 +17,10 @@ data:extend({
     name = "personal-laser-defense-mk3-equipment",
     icons = {
       {
-        icon = "__Krastorio2Assets__/icons/equipments/universal/personal-laser-defense-mk3-equipment.png",
+        icon = "__Krastorio2Assets__/icons/equipment/personal-laser-defense-mk3-equipment.png",
         icon_size = 64,
       },
-      { icon = "__Krastorio2Assets__/icons/equipments/tiers/3.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/tier-3.png", icon_size = 64 },
     },
     subgroup = "equipment",
     order = "d[active-defense]-b3[personal-laser-defense-mk3-equipment]",
@@ -38,7 +38,7 @@ data:extend({
       height = 2,
     },
     sprite = {
-      filename = "__Krastorio2Assets__/equipments/universal/personal-laser-defense-mk3-equipment.png",
+      filename = "__Krastorio2Assets__/equipment/personal-laser-defense-mk3-equipment.png",
       width = 128,
       height = 128,
       scale = 0.5,

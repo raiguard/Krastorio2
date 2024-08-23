@@ -183,12 +183,12 @@
 
 -- script.on_event(defines.events.on_player_placed_equipment, energy_absorber.on_placed)
 -- script.on_event(defines.events.on_equipment_inserted, function(e)
---   if e.equipment.valid and e.equipment.name == "energy-absorber" then
+--   if e.equipment.valid and e.equipment.name == "energy-absorber-equipment" then
 --     tesla_coil.update_target_grid(e.grid)
 --   end
 -- end)
 -- script.on_event(defines.events.on_equipment_removed, function(e)
---   if e.equipment == "energy-absorber" then
+--   if e.equipment == "energy-absorber-equipment" then
 --     tesla_coil.update_target_grid(e.grid)
 --   end
 -- end)
