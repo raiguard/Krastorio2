@@ -3,6 +3,13 @@ require("prototypes.compatibility.space-exploration-pre")
 
 require("prototypes.achievements")
 
+require("prototypes.categories.ammo-categories")
+require("prototypes.categories.equipment-categories")
+require("prototypes.categories.fuel-categories")
+require("prototypes.categories.item-subgroups")
+require("prototypes.categories.recipe-categories")
+require("prototypes.categories.resource-categories")
+
 ---------------------------------------------------------------------------
 -- -- -- PRE INITIALIZATION
 ---------------------------------------------------------------------------
@@ -24,7 +31,6 @@ require("lib.private.data-stages.technologies")
 -- -- -- CONTENTS INITIALIZATION (data stage)
 ---------------------------------------------------------------------------
 -- -- Adding new categories
-require("prototypes.categories.categories-initialization")
 -- -- Adding new damages
 require("prototypes.damages.damages-initialization")
 -- -- Adding new entities

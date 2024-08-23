@@ -1,6 +1,4 @@
 data:extend({
-
-  -- Radars and rocket
   {
     type = "item-subgroup",
     name = "vanilla-turrets",
@@ -25,8 +23,6 @@ data:extend({
     group = "combat",
     order = "g4",
   },
-
-  -- Containers and logistics containers
   {
     type = "item-subgroup",
     name = "kr-logistics-1",
@@ -51,9 +47,6 @@ data:extend({
     group = "logistics",
     order = "a4",
   },
-
-  -- Decorations
-
   {
     type = "item-subgroup",
     name = "kr-decorations-1",
@@ -66,48 +59,36 @@ data:extend({
     group = "environment",
     order = "d2",
   },
-
-  -- Crash site
-
   {
     type = "item-subgroup",
     name = "crash-site",
     group = "other",
     order = "zz",
   },
-
-  -- Nothing
   {
     type = "item-subgroup",
     name = "kr-void",
     group = "other",
     order = "zzz",
   },
-
-  -- Matter
-
   {
     type = "item-subgroup",
     name = "matter-conversion",
     group = "intermediate-products",
     order = "m1",
   },
-  -- From matter to items
   {
     type = "item-subgroup",
     name = "matter-deconversion",
     group = "intermediate-products",
     order = "m2",
   },
-  -- Items that in parts use matter
   {
     type = "item-subgroup",
     name = "matter-items",
     group = "intermediate-products",
     order = "m3",
   },
-
-  --
   {
     type = "item-group",
     name = "smelting-crafting",

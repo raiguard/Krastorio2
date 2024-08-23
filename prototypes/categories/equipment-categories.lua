@@ -1,33 +1,26 @@
--- -- -- New Equipments categories
 data:extend({
-  -- -- Subgroups
-  -- New character equipment category
   {
     type = "item-subgroup",
-    group = "combat",
     name = "character-equipment",
+    group = "combat",
     order = "e-e2",
   },
-  -- New vehicle equipment category
   {
     type = "item-subgroup",
-    group = "combat",
     name = "vehicle-equipment",
+    group = "combat",
     order = "e-e3",
   },
   {
     type = "item-subgroup",
-    group = "combat",
     name = "vehicle-motor",
+    group = "combat",
     order = "e-e4",
   },
-  -- -- Group
-  -- New universal equipment category (all grids can use this)
   {
     type = "equipment-category",
     name = "universal-equipment",
   },
-  -- New robot interaction equipment for roboport and similar only for entity with inventory
   {
     type = "equipment-category",
     name = "robot-interaction-equipment",
@@ -36,7 +29,6 @@ data:extend({
     type = "equipment-category",
     name = "vehicle-robot-interaction-equipment",
   },
-  -- New vehicle equipment category (only vehicles grids can use these)
   {
     type = "equipment-category",
     name = "vehicle-equipment",
