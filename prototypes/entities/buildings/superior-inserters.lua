@@ -141,16 +141,14 @@ data:extend({
       scale = 0.25,
     },
     hand_closed_picture = {
-      filename = kr_entities_path
-        .. "superior-inserters/superior-long-inserter/superior-long-inserter-hand-closed.png",
+      filename = kr_entities_path .. "superior-inserters/superior-long-inserter/superior-long-inserter-hand-closed.png",
       priority = "extra-high",
       width = 100,
       height = 164,
       scale = 0.25,
     },
     hand_open_picture = {
-      filename = kr_entities_path
-        .. "superior-inserters/superior-long-inserter/superior-long-inserter-hand-open.png",
+      filename = kr_entities_path .. "superior-inserters/superior-long-inserter/superior-long-inserter-hand-open.png",
       priority = "extra-high",
       width = 130,
       height = 164,

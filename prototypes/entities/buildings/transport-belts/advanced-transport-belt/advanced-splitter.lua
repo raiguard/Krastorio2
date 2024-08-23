@@ -26,8 +26,7 @@ data:extend({
     animation_speed_coefficient = 28,
     structure = {
       north = {
-        filename = kr_entities_path
-          .. "transport-belts/advanced-transport-belt/splitter/advanced-splitter-north.png",
+        filename = kr_entities_path .. "transport-belts/advanced-transport-belt/splitter/advanced-splitter-north.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",
@@ -37,8 +36,7 @@ data:extend({
         scale = 0.5,
       },
       east = {
-        filename = kr_entities_path
-          .. "transport-belts/advanced-transport-belt/splitter/advanced-splitter-east.png",
+        filename = kr_entities_path .. "transport-belts/advanced-transport-belt/splitter/advanced-splitter-east.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",
@@ -48,8 +46,7 @@ data:extend({
         scale = 0.5,
       },
       south = {
-        filename = kr_entities_path
-          .. "transport-belts/advanced-transport-belt/splitter/advanced-splitter-south.png",
+        filename = kr_entities_path .. "transport-belts/advanced-transport-belt/splitter/advanced-splitter-south.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",
@@ -59,8 +56,7 @@ data:extend({
         scale = 0.5,
       },
       west = {
-        filename = kr_entities_path
-          .. "transport-belts/advanced-transport-belt/splitter/advanced-splitter-west.png",
+        filename = kr_entities_path .. "transport-belts/advanced-transport-belt/splitter/advanced-splitter-west.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",

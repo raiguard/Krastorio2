@@ -51,8 +51,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_crash_site_sprites_path
-            .. "assembling-machine/crash-site-assembling-machine-1-repaired.png",
+          filename = kr_crash_site_sprites_path .. "assembling-machine/crash-site-assembling-machine-1-repaired.png",
           width = 282,
           height = 182,
           frame_count = 20,

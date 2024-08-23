@@ -1,21 +1,22 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
-circuit_connector_definitions["kr-quarry-drill"] = circuit_connector_definitions.create_vector(universal_connector_template, {
-  { variation = 0, main_offset = util.by_pixel(5, -118), shadow_offset = util.by_pixel(7, -118), show_shadow = true },
-  {
-    variation = 2,
-    main_offset = util.by_pixel(100, -22),
-    shadow_offset = util.by_pixel(102, -22),
-    show_shadow = true,
-  },
-  { variation = 4, main_offset = util.by_pixel(-4, 82), shadow_offset = util.by_pixel(-2, 82), show_shadow = true },
-  {
-    variation = 6,
-    main_offset = util.by_pixel(-100, -15),
-    shadow_offset = util.by_pixel(-98, -15),
-    show_shadow = true,
-  },
-})
+circuit_connector_definitions["kr-quarry-drill"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
+    { variation = 0, main_offset = util.by_pixel(5, -118), shadow_offset = util.by_pixel(7, -118), show_shadow = true },
+    {
+      variation = 2,
+      main_offset = util.by_pixel(100, -22),
+      shadow_offset = util.by_pixel(102, -22),
+      show_shadow = true,
+    },
+    { variation = 4, main_offset = util.by_pixel(-4, 82), shadow_offset = util.by_pixel(-2, 82), show_shadow = true },
+    {
+      variation = 6,
+      main_offset = util.by_pixel(-100, -15),
+      shadow_offset = util.by_pixel(-98, -15),
+      show_shadow = true,
+    },
+  })
 
 data:extend({
   {

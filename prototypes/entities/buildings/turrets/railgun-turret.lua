@@ -103,7 +103,6 @@ function cannon_turret_attack_sheet(inputs)
           },
         },
         scale = 0.5,
-
       },
     },
   }

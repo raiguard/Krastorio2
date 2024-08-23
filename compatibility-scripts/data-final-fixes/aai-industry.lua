@@ -54,7 +54,11 @@ if mods["aai-industry"] then
 
   krastorio.technologies.removeResearchUnitIngredient("basic-automation", "automation-science-pack")
   krastorio.technologies.removeResearchUnitIngredient("basic-automation", "electricity")
-  krastorio.recipes.replaceIngredient("assembling-machine-1", "iron-plate", { type = "item", name = "iron-beam", amount = 4 })
+  krastorio.recipes.replaceIngredient(
+    "assembling-machine-1",
+    "iron-plate",
+    { type = "item", name = "iron-beam", amount = 4 }
+  )
 
   krastorio.technologies.addPrerequisite("basic-automation", "kr-automation-core")
   krastorio.technologies.addPrerequisite("kr-basic-fluid-handling", "electricity")
