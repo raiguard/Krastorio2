@@ -783,8 +783,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-medium-active-provider-container",
-      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/"
-        .. "medium-active-provider-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/medium-active-provider-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -795,7 +794,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-medium-buffer-container",
-      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/" .. "medium-buffer-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/medium-buffer-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -806,7 +805,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-medium-container",
-      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/" .. "medium-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/medium-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -817,8 +816,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-medium-passive-provider-container",
-      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/"
-        .. "medium-passive-provider-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/medium-passive-provider-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -829,7 +827,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-medium-requester-container",
-      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/" .. "medium-requester-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/medium-requester-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -840,7 +838,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-medium-storage-container",
-      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/" .. "medium-storage-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/medium-storage-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -854,7 +852,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-big-active-provider-container",
-      icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/" .. "big-active-provider-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/big-active-provider-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -865,7 +863,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-big-buffer-container",
-      icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/" .. "big-buffer-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/big-buffer-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -876,7 +874,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-big-container",
-      icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/" .. "big-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/big-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -887,7 +885,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-big-passive-provider-container",
-      icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/" .. "big-passive-provider-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/big-passive-provider-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -898,7 +896,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-big-requester-container",
-      icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/" .. "big-requester-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/big-requester-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -909,7 +907,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-big-storage-container",
-      icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/" .. "big-storage-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/big-storage-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
