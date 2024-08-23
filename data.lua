@@ -1,5 +1,8 @@
 kr_optimization_tech_card_name = "space-science-pack"
 require("prototypes.compatibility.space-exploration-pre")
+
+require("prototypes.achievements")
+
 ---------------------------------------------------------------------------
 -- -- -- PRE INITIALIZATION
 ---------------------------------------------------------------------------
@@ -20,8 +23,6 @@ require("lib.private.data-stages.technologies")
 ---------------------------------------------------------------------------
 -- -- -- CONTENTS INITIALIZATION (data stage)
 ---------------------------------------------------------------------------
--- -- Adding new achievements
-require("prototypes.achievements.achievements-initialization")
 -- -- Adding new categories
 require("prototypes.categories.categories-initialization")
 -- -- Adding new damages
