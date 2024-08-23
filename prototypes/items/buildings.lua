@@ -783,7 +783,8 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-medium-active-provider-container",
-      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/" .. "medium-active-provider-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/"
+        .. "medium-active-provider-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -816,7 +817,8 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-medium-passive-provider-container",
-      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/" .. "medium-passive-provider-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/"
+        .. "medium-passive-provider-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,

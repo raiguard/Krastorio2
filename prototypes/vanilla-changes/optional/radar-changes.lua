@@ -31,7 +31,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
         filename = "__Krastorio2Assets__/entities/remnants/advanced-radar-remnant/radar-remnants.png",
         line_length = 1,
         width = 282,
-       height = 212,
+        height = 212,
         frame_count = 1,
         variation_count = 1,
         axially_symmetrical = false,

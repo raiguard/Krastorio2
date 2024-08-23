@@ -209,7 +209,10 @@ data:extend({
       apparent_volume = 0.75,
     },
     open_sound = { filename = "__Krastorio2Assets__/sounds/buildings/planetary-teleporter-open-sound.ogg", volume = 1 },
-    close_sound = { filename = "__Krastorio2Assets__/sounds/buildings/planetary-teleporter-close-sound.ogg", volume = 0.8 },
+    close_sound = {
+      filename = "__Krastorio2Assets__/sounds/buildings/planetary-teleporter-close-sound.ogg",
+      volume = 0.8,
+    },
     audible_distance_modifier = 30,
     circuit_wire_connection_point = nil, --circuit_connector_definitions["accumulator"].points,
     circuit_connector_sprites = nil, --circuit_connector_definitions["accumulator"].sprites,

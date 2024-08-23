@@ -247,7 +247,11 @@ data:extend({
     name = "kr-antimatter-reactor-equipment",
     mod = "Krastorio2",
     icons = {
-      { icon = "__Krastorio2Assets__/technologies/antimatter-reactor-equipment.png", icon_size = 256, icon_mipmaps = 4 },
+      {
+        icon = "__Krastorio2Assets__/technologies/antimatter-reactor-equipment.png",
+        icon_size = 256,
+        icon_mipmaps = 4,
+      },
       {
         icon = "__core__/graphics/icons/technology/constants/constant-equipment.png",
         icon_size = 128,
