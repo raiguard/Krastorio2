@@ -40,7 +40,7 @@ return {
   },
   {
     type = "recipe",
-    name = krastorio.optimization_tech_card_name,
+    name = kr_optimization_tech_card_name,
     category = "t3-tech-cards",
     energy_required = 20,
     enabled = false,
@@ -49,7 +49,7 @@ return {
       { type = "item", name = "blank-tech-card", amount = 10 },
       { type = "item", name = "space-research-data", amount = 5 },
     },
-    results = { { type = "item", name = krastorio.optimization_tech_card_name, amount = 5 } },
+    results = { { type = "item", name = kr_optimization_tech_card_name, amount = 5 } },
   },
   {
     type = "recipe",

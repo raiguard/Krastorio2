@@ -70,7 +70,7 @@ if mods["IndustrialRevolution"] then
   krastorio.technologies.convertPrerequisiteFromAllTechnologies("kr-singularity-lab", "kr-quantum-computer", true)
   data.raw.technology["kr-singularity-lab"].prerequisites = { "kr-imersium-processing" }
   data.raw.technology["kr-advanced-tech-card"].prerequisites = { "kr-singularity-lab" }
-  krastorio.technologies.addResearchUnitIngredient("kr-singularity-lab", krastorio.optimization_tech_card_name, 1, true)
+  krastorio.technologies.addResearchUnitIngredient("kr-singularity-lab", kr_optimization_tech_card_name, 1, true)
   krastorio.technologies.addResearchUnitIngredient("kr-singularity-lab", "matter-tech-card", 1, true)
 
   krastorio.technologies.addResearchUnitIngredient("military", "automation-science-pack", 1)
@@ -577,7 +577,7 @@ if mods["IndustrialRevolution"] then
   -- Add sciences to quantum lab
   table.insert(data.raw.lab["quantum-lab"].inputs, "production-science-pack")
   table.insert(data.raw.lab["quantum-lab"].inputs, "utility-science-pack")
-  table.insert(data.raw.lab["quantum-lab"].inputs, krastorio.optimization_tech_card_name)
+  table.insert(data.raw.lab["quantum-lab"].inputs, kr_optimization_tech_card_name)
   table.insert(data.raw.lab["quantum-lab"].inputs, "matter-tech-card")
 
   -- Solar panel rebalancing

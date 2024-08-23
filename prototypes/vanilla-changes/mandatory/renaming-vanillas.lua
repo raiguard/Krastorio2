@@ -24,9 +24,9 @@ data.raw.tool["utility-science-pack"].localised_name = { "item-name.utility-tech
 data.raw.technology["utility-science-pack"].localised_name = { "item-name.utility-tech-card" }
 
 -- Space science pack
-data.raw.tool[krastorio.optimization_tech_card_name].localised_name = { "item-name.optimization-tech-card" }
-data.raw.technology[krastorio.optimization_tech_card_name].localised_name = { "item-name.optimization-tech-card" }
-data.raw.technology[krastorio.optimization_tech_card_name].localised_description =
+data.raw.tool[kr_optimization_tech_card_name].localised_name = { "item-name.optimization-tech-card" }
+data.raw.technology[kr_optimization_tech_card_name].localised_name = { "item-name.optimization-tech-card" }
+data.raw.technology[kr_optimization_tech_card_name].localised_description =
   { "technology-description.optimization-tech-card" }
 
 -- RENAMING VANILLA BUILDINGS

@@ -48,7 +48,7 @@ if kr_stack_size_value and kr_stack_size_value ~= "No changes" then
   data.raw.item["uranium-fuel-cell"].stack_size = 10
   data.raw.item["used-up-uranium-fuel-cell"].stack_size = 10
 
-  data.raw.tool[krastorio.optimization_tech_card_name].stack_size = 200
+  data.raw.tool[kr_optimization_tech_card_name].stack_size = 200
   data.raw.capsule["raw-fish"].stack_size = 50
   data.raw.item["barrel"].stack_size = 10
   data.raw.item["nuclear-fuel"].stack_size = 10

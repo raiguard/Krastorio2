@@ -1,3 +1,5 @@
+kr_optimization_tech_card_name = "space-science-pack"
+require("prototypes.compatibility.space-exploration-pre")
 ---------------------------------------------------------------------------
 -- -- -- PRE INITIALIZATION
 ---------------------------------------------------------------------------
@@ -14,14 +16,6 @@ require("lib.private.data-stages.items")
 require("lib.private.data-stages.modules")
 require("lib.private.data-stages.recipes")
 require("lib.private.data-stages.technologies")
----------------------------------------------------------------------------
--- -- -- COMPATIBILITY PRE-INITIALIZATION (data stage)
----------------------------------------------------------------------------
--- -- Use vanilla Space Science Pack as the basis for the Optimization Tech Card
-krastorio.optimization_tech_card_name = "space-science-pack"
--- -- Define Compatibility Script Path
--- -- Pre-Init Compat for SE
-require("compatibility-scripts.data.space-exploration-pre-init")
 
 ---------------------------------------------------------------------------
 -- -- -- CONTENTS INITIALIZATION (data stage)

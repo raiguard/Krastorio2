@@ -16,7 +16,7 @@ if data.raw.lab["lab"] then
   -- Remove only (for compatibility) the vanilla know science pack that should not be here
   removeFromLab("production-science-pack", vanilla_lab_inputs)
   removeFromLab("utility-science-pack", vanilla_lab_inputs)
-  removeFromLab(krastorio.optimization_tech_card_name, vanilla_lab_inputs)
+  removeFromLab(kr_optimization_tech_card_name, vanilla_lab_inputs)
 
   -- Adding new science pack
   for key = #vanilla_lab_inputs, 1, -1 do -- make space at the begin for the new pack
@@ -49,7 +49,7 @@ if data.raw.lab["lab"] then
       removeFromLab("logistic-science-pack", singularity_lab_inputs)
       removeFromLab("military-science-pack", singularity_lab_inputs)
       removeFromLab("chemical-science-pack", singularity_lab_inputs)
-      table.insert(singularity_lab_inputs, krastorio.optimization_tech_card_name)
+      table.insert(singularity_lab_inputs, kr_optimization_tech_card_name)
       table.insert(singularity_lab_inputs, "matter-tech-card")
       table.insert(singularity_lab_inputs, "advanced-tech-card")
       table.insert(singularity_lab_inputs, "singularity-tech-card")

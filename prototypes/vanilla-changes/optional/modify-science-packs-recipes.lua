@@ -31,7 +31,7 @@ krastorio.recipes.removeIngredients("utility-science-pack", unlockable_items)
 -- If K2 category exist use them
 krastorio.recipes.setCategoryIfExist("production-science-pack", "t2-tech-cards")
 krastorio.recipes.setCategoryIfExist("utility-science-pack", "t2-tech-cards")
-krastorio.recipes.setCategoryIfExist(krastorio.optimization_tech_card_name, "t3-tech-cards")
+krastorio.recipes.setCategoryIfExist(kr_optimization_tech_card_name, "t3-tech-cards")
 
 -- Remove useless prerequisite
 if not krastorio.recipes.hasIngredient("production-science-pack", "electric-furnace") then

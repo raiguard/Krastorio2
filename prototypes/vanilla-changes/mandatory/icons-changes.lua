@@ -188,14 +188,14 @@ krastorio.icons.setTechnologyIcon(
 
 -- Space science pack
 krastorio.icons.setItemIcon(
-  krastorio.optimization_tech_card_name,
+  kr_optimization_tech_card_name,
   "__Krastorio2Assets__/icons/cards/optimization-tech-card.png",
   64,
   4
 )
-if data.raw.tool[krastorio.optimization_tech_card_name] then
-  data.raw.tool[krastorio.optimization_tech_card_name].order = "b08[optimization-tech-card]"
-  data.raw.tool[krastorio.optimization_tech_card_name].pictures = {
+if data.raw.tool[kr_optimization_tech_card_name] then
+  data.raw.tool[kr_optimization_tech_card_name].order = "b08[optimization-tech-card]"
+  data.raw.tool[kr_optimization_tech_card_name].pictures = {
     layers = {
       {
         size = 64,
@@ -215,7 +215,7 @@ if data.raw.tool[krastorio.optimization_tech_card_name] then
   }
 end
 krastorio.icons.setTechnologyIcon(
-  krastorio.optimization_tech_card_name,
+  kr_optimization_tech_card_name,
   "__Krastorio2Assets__/technologies/optimization-tech-card.png",
   256,
   4

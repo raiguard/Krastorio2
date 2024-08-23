@@ -4,7 +4,7 @@ data.raw["rocket-silo-rocket"]["rocket-silo-rocket"].research_products =
   { { type = "item", name = "space-research-data", amount = 1000 } }
 
 -- Space science pack description
-data.raw.tool[krastorio.optimization_tech_card_name].localised_description =
+data.raw.tool[kr_optimization_tech_card_name].localised_description =
   { "item-description.optimization-tech-card" }
 
 -----------------------------------------------------------------

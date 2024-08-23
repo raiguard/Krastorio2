@@ -775,7 +775,7 @@ data:extend({
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
-        { krastorio.optimization_tech_card_name, 1 },
+        { kr_optimization_tech_card_name, 1 },
         { "matter-tech-card", 1 },
         { "advanced-tech-card", 1 },
         { "singularity-tech-card", 1 },
@@ -827,7 +827,7 @@ data:extend({
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
-        { krastorio.optimization_tech_card_name, 1 },
+        { kr_optimization_tech_card_name, 1 },
         { "matter-tech-card", 1 },
       },
       time = 45,
@@ -856,7 +856,7 @@ data:extend({
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
-        { krastorio.optimization_tech_card_name, 1 },
+        { kr_optimization_tech_card_name, 1 },
         { "matter-tech-card", 1 },
         { "advanced-tech-card", 1 },
         { "singularity-tech-card", 1 },

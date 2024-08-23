@@ -50,7 +50,7 @@ DECT.CONFIG.SIGNALS = {
   { type = "item", name = "military-science-pack", color = { r = 0.23, g = 0.27, b = 0.31, a = 1.00 } },
   { type = "item", name = "production-science-pack", color = { r = 0.58, g = 0.11, b = 0.76, a = 1.00 } },
   { type = "item", name = "utility-science-pack", color = { r = 0.81, g = 0.69, b = 0.08, a = 1.00 } },
-  { type = "item", name = krastorio.optimization_tech_card_name, color = { r = 0.96, g = 0.96, b = 0.96, a = 1.00 } },
+  { type = "item", name = kr_optimization_tech_card_name, color = { r = 0.96, g = 0.96, b = 0.96, a = 1.00 } },
   { type = "item", name = "transport-belt", color = { r = 0.90, g = 0.75, b = 0.10, a = 0.92 } },
   { type = "item", name = "underground-belt", color = { r = 0.90, g = 0.75, b = 0.10, a = 0.92 } },
   { type = "item", name = "splitter", color = { r = 0.90, g = 0.75, b = 0.10, a = 0.92 } },

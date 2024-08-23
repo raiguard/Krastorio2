@@ -13,7 +13,7 @@ krastorio.technologies.addSciencePackCollection("Krastorio2", {
   "production-science-pack",
   "utility-science-pack",
   "matter-tech-card",
-  krastorio.optimization_tech_card_name,
+  kr_optimization_tech_card_name,
   "advanced-tech-card",
   "singularity-tech-card",
 })
@@ -34,7 +34,7 @@ local science_pack_incompatibilities = {
 krastorio.technologies.removeSciencePackIncompatibleWith("matter-tech-card", science_pack_incompatibilities)
 -- Sanitize space science pack from T1 packs
 krastorio.technologies.removeSciencePackIncompatibleWith(
-  krastorio.optimization_tech_card_name,
+  kr_optimization_tech_card_name,
   science_pack_incompatibilities
 )
 -- Sanitize advanced tech card from T1 packs
