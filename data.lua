@@ -3,10 +3,6 @@
 ---------------------------------------------------------------------------
 -- -- General Info
 krastorio = {}
-krastorio.internal_name = "Krastorio2"
-krastorio.title_name = "Krastorio 2"
-krastorio.version = mods[krastorio.internal_name]
-krastorio.stage = "data"
 -- -- Global Krastorio 2 library initialization, utilities library (support for main library)
 require("lib.private.data-stages.utils.krastorio_utils")
 -- -- Global Krastorio 2 library initialization, Krastorio 2 main library

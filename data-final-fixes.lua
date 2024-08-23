@@ -2,7 +2,6 @@ local table = require("__flib__.table")
 ---------------------------------------------------------------------------
 -- -- -- PRE FINAL FIXES
 ---------------------------------------------------------------------------
-krastorio.stage = "data-final-fixes"
 ---------------------------------------------------------------------------
 -- Apply module limitations
 for recipe_name, recipe in pairs(data.raw.recipe) do
