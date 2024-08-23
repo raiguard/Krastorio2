@@ -11,9 +11,6 @@ local krastorio_new_recipes = {
   -- -- New generic recipes for items (not associated to buildings)
   require("prototypes.recipes.items-crafting"),
 
-  -- -- New recipes for equipments items
-  require("prototypes.recipes.equipments"),
-
   -- -- New recipes for plants(wood) growing
   require("prototypes.recipes.growing"),
 

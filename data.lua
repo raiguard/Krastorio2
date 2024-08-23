@@ -2,7 +2,11 @@ kr_optimization_tech_card_name = "space-science-pack"
 require("prototypes.compatibility.space-exploration-pre")
 
 require("prototypes.achievements")
+require("prototypes.equipment-grids")
 require("prototypes.damage-types")
+
+require("prototypes.armors.power-armor-mk3")
+require("prototypes.armors.power-armor-mk4")
 
 require("prototypes.categories.ammo-categories")
 require("prototypes.categories.equipment-categories")
@@ -10,6 +14,35 @@ require("prototypes.categories.fuel-categories")
 require("prototypes.categories.item-subgroups")
 require("prototypes.categories.recipe-categories")
 require("prototypes.categories.resource-categories")
+
+require("prototypes.equipment.additional-engine-equipment")
+require("prototypes.equipment.advanced-additional-engine-equipment")
+require("prototypes.equipment.advanced-exoskeleton-equipment")
+require("prototypes.equipment.antimatter-reactor-equipment")
+require("prototypes.equipment.battery-mk3-equipment")
+require("prototypes.equipment.big-battery-equipment")
+require("prototypes.equipment.big-battery-mk2-equipment")
+require("prototypes.equipment.big-battery-mk3-equipment")
+require("prototypes.equipment.big-imersite-solar-panel-equipment")
+require("prototypes.equipment.big-solar-panel-equipment")
+require("prototypes.equipment.cyber-potato-equipment")
+require("prototypes.equipment.energy-absorber-equipment")
+require("prototypes.equipment.energy-shield-mk3-equipment")
+require("prototypes.equipment.energy-shield-mk4-equipment")
+require("prototypes.equipment.imersite-night-vision-equipment")
+require("prototypes.equipment.imersite-solar-panel-equipment")
+require("prototypes.equipment.nuclear-reactor-equipment")
+require("prototypes.equipment.personal-laser-defense-mk2-equipment")
+require("prototypes.equipment.personal-laser-defense-mk3-equipment")
+require("prototypes.equipment.personal-laser-defense-mk4-equipment")
+require("prototypes.equipment.personal-submachine-laser-defense-mk1-equipment")
+require("prototypes.equipment.personal-submachine-laser-defense-mk2-equipment")
+require("prototypes.equipment.personal-submachine-laser-defense-mk3-equipment")
+require("prototypes.equipment.personal-submachine-laser-defense-mk4-equipment")
+require("prototypes.equipment.portable-generator-equipment")
+require("prototypes.equipment.small-portable-generator-equipment")
+require("prototypes.equipment.superior-exoskelton-equipment")
+require("prototypes.equipment.vehicle-roboport-equipment")
 
 ---------------------------------------------------------------------------
 -- -- -- PRE INITIALIZATION
@@ -36,7 +69,6 @@ require("lib.private.data-stages.technologies")
 -- -- Adding new entities
 require("prototypes.entities.entities-initialization")
 -- -- Adding new equipments
-require("prototypes.equipments.equipments-initialization")
 -- -- Adding new fluids
 require("prototypes.fluids.fluids-initialization")
 -- -- GUI specifications

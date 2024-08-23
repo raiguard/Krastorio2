@@ -3,9 +3,6 @@
 -- -- Items for buildings and other entities
 require("prototypes.items.buildings")
 
--- -- Equipments
-require("prototypes.items.equipments")
-
 -- Loader (optional items)
 require("prototypes.items.loaders")
 
