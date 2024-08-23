@@ -11,7 +11,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "kr-matter-assembler",
-    icon = kr_entities_icons_path .. "matter-assembler.png",
+    icon = "__Krastorio2Assets__/icons/entities/matter-assembler.png",
     icon_size = 128,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -29,7 +29,7 @@ data:extend({
       -- Inputs
       {
         production_type = "input",
-        pipe_picture = kr_pipe_path,
+        pipe_picture = kr_pipe_picture,
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -3 } } },
@@ -37,21 +37,21 @@ data:extend({
       -- Outputs
       {
         production_type = "output",
-        pipe_picture = kr_pipe_path,
+        pipe_picture = kr_pipe_picture,
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = { { flow_direction = "output", direction = defines.direction.west, position = { -3, 0 } } },
       },
       {
         production_type = "output",
-        pipe_picture = kr_pipe_path,
+        pipe_picture = kr_pipe_picture,
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 3, 0 } } },
       },
       {
         production_type = "output",
-        pipe_picture = kr_pipe_path,
+        pipe_picture = kr_pipe_picture,
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = { { flow_direction = "output", direction = defines.direction.east, position = { 0, 3 } } },
@@ -65,7 +65,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "matter-assembler/matter-assembler.png",
+          filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler.png",
           priority = "high",
           width = 473,
           height = 489,
@@ -74,7 +74,7 @@ data:extend({
           shift = { 0, -0.15 },
         },
         {
-          filename = kr_entities_path .. "matter-assembler/matter-assembler-sh.png",
+          filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-sh.png",
           priority = "medium",
           width = 508,
           height = 446,
@@ -89,7 +89,7 @@ data:extend({
       {
         draw_as_light = true,
         animation = {
-          filename = kr_entities_path .. "matter-assembler/matter-assembler-working-glow-light.png",
+          filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working-glow-light.png",
           priority = "high",
           width = 144,
           height = 110,
@@ -105,7 +105,7 @@ data:extend({
         blend_mode = "additive",
         synced_fadeout = true,
         animation = {
-          filename = kr_entities_path .. "matter-assembler/matter-assembler-working-glow.png",
+          filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working-glow.png",
           priority = "high",
           width = 144,
           height = 110,
@@ -120,7 +120,7 @@ data:extend({
         animation = {
           layers = {
             {
-              filename = kr_entities_path .. "matter-assembler/matter-assembler-working-light.png",
+              filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working-light.png",
               priority = "high",
               width = 473,
               height = 489,
@@ -132,7 +132,7 @@ data:extend({
               draw_as_light = true,
             },
             {
-              filename = kr_entities_path .. "matter-assembler/matter-assembler-working.png",
+              filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working.png",
               priority = "high",
               width = 473,
               height = 489,
@@ -156,7 +156,7 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
-        filename = kr_buildings_sounds_path .. "matter-assembler.ogg",
+        filename = "__Krastorio2Assets__/sounds/buildings/matter-assembler.ogg",
         volume = 0.60,
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg" },
@@ -171,7 +171,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = kr_entities_path .. "matter-assembler/matter-assembler-reflection.png",
+        filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-reflection.png",
         priority = "extra-high",
         width = 46,
         height = 46,

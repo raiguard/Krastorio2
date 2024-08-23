@@ -27,7 +27,7 @@ for type_name in pairs(defines.prototypes.item) do
           {
             type = "recipe",
             name = void_crushing_recipes_prefix .. item_name,
-            icon = kr_recipes_icons_path .. "trash.png",
+            icon = "__Krastorio2Assets__/icons/recipes/trash.png",
             icon_size = 64,
             category = "void-crushing",
             hidden = true,

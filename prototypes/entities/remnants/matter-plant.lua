@@ -3,7 +3,7 @@ data:extend({
     type = "corpse",
     name = "matter-plant-remnant",
     localised_name = { "remnant-name", { "entity-name.kr-matter-plant" } },
-    icon = kr_entities_icons_path .. "matter-plant.png",
+    icon = "__Krastorio2Assets__/icons/entities/matter-plant.png",
     icon_size = 128,
     flags = { "placeable-neutral", "building-direction-8-way", "not-on-map" },
     selection_box = { { -4.5, -4.5 }, { 4.5, 4.5 } },
@@ -16,7 +16,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(1, {
-      filename = kr_entities_path .. "remnants/matter-plant/matter-plant-remnant.png",
+      filename = "__Krastorio2Assets__/entities/remnants/matter-plant/matter-plant-remnant.png",
       line_length = 1,
       width = 600,
       height = 600,

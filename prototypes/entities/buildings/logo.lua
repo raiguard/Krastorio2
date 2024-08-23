@@ -2,7 +2,7 @@ data:extend({
   {
     type = "electric-energy-interface",
     name = "kr-logo",
-    icon = kr_entities_icons_path .. "k-logo.png",
+    icon = "__Krastorio2Assets__/icons/entities/k-logo.png",
     icon_size = 64,
     icon_mipmaps = 4,
     allow_copy_paste = false,
@@ -23,7 +23,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "logo/logo.png",
+          filename = "__Krastorio2Assets__/entities/logo/logo.png",
           priority = "high",
           width = 1600,
           height = 300,
@@ -35,7 +35,7 @@ data:extend({
         },
 
         {
-          filename = kr_entities_path .. "logo/logo-ef.png",
+          filename = "__Krastorio2Assets__/entities/logo/logo-ef.png",
           priority = "high",
           width = 1600,
           height = 300,
@@ -47,7 +47,7 @@ data:extend({
           animation_speed = 0.5,
         },
         {
-          filename = kr_entities_path .. "logo/logo-efl.png",
+          filename = "__Krastorio2Assets__/entities/logo/logo-efl.png",
           priority = "high",
           width = 1600,
           height = 300,
@@ -59,7 +59,7 @@ data:extend({
           animation_speed = 0.5,
         },
         {
-          filename = kr_entities_path .. "logo/logo-efl.png",
+          filename = "__Krastorio2Assets__/entities/logo/logo-efl.png",
           priority = "high",
           width = 1600,
           height = 300,
@@ -72,7 +72,7 @@ data:extend({
         },
 
         {
-          filename = kr_entities_path .. "logo/logo-light.png",
+          filename = "__Krastorio2Assets__/entities/logo/logo-light.png",
           priority = "high",
           width = 1600,
           height = 300,
@@ -83,7 +83,7 @@ data:extend({
           animation_speed = 0.5,
         },
         {
-          filename = kr_entities_path .. "logo/logo-light.png",
+          filename = "__Krastorio2Assets__/entities/logo/logo-light.png",
           priority = "high",
           width = 1600,
           height = 300,
@@ -94,7 +94,7 @@ data:extend({
           animation_speed = 0.5,
         },
         {
-          filename = kr_entities_path .. "logo/logo-light.png",
+          filename = "__Krastorio2Assets__/entities/logo/logo-light.png",
           priority = "high",
           width = 1600,
           height = 300,
@@ -106,7 +106,7 @@ data:extend({
         },
 
         {
-          filename = kr_entities_path .. "logo/logo-sh.png",
+          filename = "__Krastorio2Assets__/entities/logo/logo-sh.png",
           priority = "high",
           width = 1600,
           height = 300,

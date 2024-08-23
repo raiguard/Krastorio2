@@ -11,7 +11,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "kr-electrolysis-plant",
-    icon = kr_entities_icons_path .. "electrolysis-plant.png",
+    icon = "__Krastorio2Assets__/icons/entities/electrolysis-plant.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -29,14 +29,14 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        pipe_picture = kr_pipe_path,
+        pipe_picture = kr_pipe_picture,
         volume = 1000,
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { -2, -1 } } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        pipe_picture = kr_pipe_path,
+        pipe_picture = kr_pipe_picture,
         volume = 1000,
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { -2, 1 } } },
       },
@@ -44,14 +44,14 @@ data:extend({
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        pipe_picture = kr_pipe_path,
+        pipe_picture = kr_pipe_picture,
         volume = 1000,
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 2, -1 } } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        pipe_picture = kr_pipe_path,
+        pipe_picture = kr_pipe_picture,
         volume = 1000,
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 2, 1 } } },
       },
@@ -65,7 +65,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant.png",
+          filename = "__Krastorio2Assets__/entities/electrolysis-plant/electrolysis-plant.png",
           width = 380,
           height = 380,
           scale = 0.5,
@@ -73,7 +73,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant-sh.png",
+          filename = "__Krastorio2Assets__/entities/electrolysis-plant/electrolysis-plant-sh.png",
           width = 380,
           height = 380,
           scale = 0.5,
@@ -87,7 +87,7 @@ data:extend({
       {
         apply_recipe_tint = "primary",
         animation = {
-          filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant-work.png",
+          filename = "__Krastorio2Assets__/entities/electrolysis-plant/electrolysis-plant-work.png",
           width = 380,
           height = 380,
           scale = 0.5,
@@ -102,7 +102,7 @@ data:extend({
       {
         apply_recipe_tint = "primary",
         animation = {
-          filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant-work-light.png",
+          filename = "__Krastorio2Assets__/entities/electrolysis-plant/electrolysis-plant-work-light.png",
           width = 380,
           height = 380,
           scale = 0.5,
@@ -118,7 +118,7 @@ data:extend({
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
       sound = {
-        filename = kr_buildings_sounds_path .. "electrolysis-plant.ogg",
+        filename = "__Krastorio2Assets__/sounds/buildings/electrolysis-plant.ogg",
         volume = 0.85,
       },
       idle_sound = {
@@ -137,7 +137,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = kr_entities_path .. "electrolysis-plant/electrolysis-plant-reflection.png",
+        filename = "__Krastorio2Assets__/entities/electrolysis-plant/electrolysis-plant-reflection.png",
         priority = "extra-high",
         width = 42,
         height = 38,

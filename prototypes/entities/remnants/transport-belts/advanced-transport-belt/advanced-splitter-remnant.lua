@@ -3,7 +3,7 @@ data:extend({
     type = "corpse",
     name = "kr-advanced-splitter-remnant",
     localised_name = { "remnant-name", { "entity-name.kr-advanced-splitter" } },
-    icon = kr_entities_icons_path .. "transport-belts/advanced-transport-belt/advanced-splitter.png",
+    icon = "__Krastorio2Assets__/icons/entities/transport-belts/advanced-transport-belt/advanced-splitter.png",
     icon_size = 64,
     flags = { "placeable-neutral", "not-on-map" },
     selection_box = { { -0.9, -0.5 }, { 0.9, 0.5 } },
@@ -16,7 +16,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = {
-      filename = kr_remnants_path .. "transport-belts/advanced-transport-belt/splitter/advanced-splitter-remnant.png",
+      filename = "__Krastorio2Assets__/entities/remnants/transport-belts/advanced-transport-belt/splitter/advanced-splitter-remnant.png",
       line_length = 1,
       width = 172,
       height = 156,

@@ -1,6 +1,6 @@
 -- Sounds
 local collect_creep_sound = {
-  filename = kr_tiles_sounds_path .. "creep-deconstruction.ogg",
+  filename = "__Krastorio2Assets__/sounds/tiles/creep-deconstruction.ogg",
   aggregation = {
     max_count = 1,
     remove = false,
@@ -10,35 +10,35 @@ local collect_creep_sound = {
 local creep_walking_sound = {
   variations = {
     {
-      filename = kr_tiles_sounds_path .. "creep-walk-1.ogg",
+      filename = "__Krastorio2Assets__/sounds/tiles/creep-walk-1.ogg",
       volume = 0.75,
     },
     {
-      filename = kr_tiles_sounds_path .. "creep-walk-2.ogg",
+      filename = "__Krastorio2Assets__/sounds/tiles/creep-walk-2.ogg",
       volume = 0.75,
     },
     {
-      filename = kr_tiles_sounds_path .. "creep-walk-3.ogg",
+      filename = "__Krastorio2Assets__/sounds/tiles/creep-walk-3.ogg",
       volume = 0.75,
     },
     {
-      filename = kr_tiles_sounds_path .. "creep-walk-4.ogg",
+      filename = "__Krastorio2Assets__/sounds/tiles/creep-walk-4.ogg",
       volume = 0.80,
     },
     {
-      filename = kr_tiles_sounds_path .. "creep-walk-5.ogg",
+      filename = "__Krastorio2Assets__/sounds/tiles/creep-walk-5.ogg",
       volume = 0.75,
     },
     {
-      filename = kr_tiles_sounds_path .. "creep-walk-6.ogg",
+      filename = "__Krastorio2Assets__/sounds/tiles/creep-walk-6.ogg",
       volume = 0.80,
     },
     {
-      filename = kr_tiles_sounds_path .. "creep-walk-7.ogg",
+      filename = "__Krastorio2Assets__/sounds/tiles/creep-walk-7.ogg",
       volume = 0.75,
     },
     {
-      filename = kr_tiles_sounds_path .. "creep-walk-8.ogg",
+      filename = "__Krastorio2Assets__/sounds/tiles/creep-walk-8.ogg",
       volume = 0.80,
     },
   },
@@ -295,7 +295,7 @@ data:extend({
     transition_overlay_layer_offset = 3,
     decorative_removal_probability = 0.35,
     variants = tile_variations_template(
-      kr_tiles_path .. "creep/creep.png",
+      "__Krastorio2Assets__/tiles/creep/creep.png",
       "__base__/graphics/terrain/masks/transition-1.png",
       {
         max_size = 4,

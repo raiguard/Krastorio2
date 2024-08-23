@@ -2,7 +2,7 @@ data:extend({
   {
     type = "corpse",
     name = "kr-big-random-pipes-remnant",
-    icon = kr_entities_icons_path .. "remnants-icon.png",
+    icon = "__Krastorio2Assets__/icons/entities/remnants-icon.png",
     icon_size = 64,
     flags = { "placeable-neutral", "building-direction-8-way", "not-on-map" },
     selection_box = { { -4, -4 }, { 4, 4 } },
@@ -15,7 +15,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(1, {
-      filename = kr_remnants_path .. "big-random-pipes-remnant/big-random-pipes-remnant.png",
+      filename = "__Krastorio2Assets__/entities/remnants/big-random-pipes-remnant/big-random-pipes-remnant.png",
       line_length = 1,
       width = 500,
       height = 500,

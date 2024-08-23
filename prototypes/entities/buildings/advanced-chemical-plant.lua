@@ -11,7 +11,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "kr-advanced-chemical-plant",
-    icon = kr_entities_icons_path .. "advanced-chemical-plant.png",
+    icon = "__Krastorio2Assets__/icons/entities/advanced-chemical-plant.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -29,42 +29,42 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        pipe_picture = kr_pipe_path,
+        pipe_picture = kr_pipe_picture,
         volume = 2000,
         pipe_connections = { { flow_direction = "input", direction = defines.direction.west, position = { 2, -3 } } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        pipe_picture = kr_pipe_path,
+        pipe_picture = kr_pipe_picture,
         volume = 2000,
         pipe_connections = { { flow_direction = "input", direction = defines.direction.west, position = { 0, -3 } } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        pipe_picture = kr_pipe_path,
+        pipe_picture = kr_pipe_picture,
         volume = 2000,
         pipe_connections = { { flow_direction = "input", direction = defines.direction.west, position = { -2, -3 } } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        pipe_picture = kr_pipe_path,
+        pipe_picture = kr_pipe_picture,
         volume = 1000,
         pipe_connections = { { flow_direction = "output", direction = defines.direction.east, position = { 2, 3 } } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        pipe_picture = kr_pipe_path,
+        pipe_picture = kr_pipe_picture,
         volume = 1000,
         pipe_connections = { { flow_direction = "output", direction = defines.direction.east, position = { 0, 3 } } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        pipe_picture = kr_pipe_path,
+        pipe_picture = kr_pipe_picture,
         volume = 1000,
         pipe_connections = { { flow_direction = "output", direction = defines.direction.east, position = { -2, 3 } } },
       },
@@ -78,7 +78,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "advanced-chemical-plant/advanced-chemical-plant.png",
+          filename = "__Krastorio2Assets__/entities/advanced-chemical-plant/advanced-chemical-plant.png",
           priority = "high",
           width = 451,
           height = 535,
@@ -89,7 +89,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "advanced-chemical-plant/advanced-chemical-plant-sh.png",
+          filename = "__Krastorio2Assets__/entities/advanced-chemical-plant/advanced-chemical-plant-sh.png",
           priority = "high",
           width = 516,
           height = 458,
@@ -105,7 +105,7 @@ data:extend({
     crafting_categories = { "chemistry" },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
-      sound = { filename = kr_buildings_sounds_path .. "advanced-chemical-plant.ogg", volume = 0.5 },
+      sound = { filename = "__Krastorio2Assets__/sounds/buildings/advanced-chemical-plant.ogg", volume = 0.5 },
       idle_sound = { filename = "__base__/sound/idle1.ogg" },
       apparent_volume = 1,
     },
@@ -118,7 +118,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = kr_entities_path .. "advanced-chemical-plant/advanced-chemical-plant-reflection.png",
+        filename = "__Krastorio2Assets__/entities/advanced-chemical-plant/advanced-chemical-plant-reflection.png",
         priority = "extra-high",
         width = 80,
         height = 60,

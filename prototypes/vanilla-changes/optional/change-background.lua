@@ -1,16 +1,16 @@
-local backgrounds_util = require(kr_public_lib .. "main-menu-backgrounds-util")
+local backgrounds_util = require("__Krastorio2__/lib/public/data-stages/main-menu-backgrounds-util")
 
 -- Add possible backgrounds
-backgrounds_util.addBackgroundImage("Krastorio Legacy", kr_backgrounds_icons_path .. "krastorio-legacy.jpg")
-backgrounds_util.addBackgroundImage("Krastorio 2", kr_backgrounds_icons_path .. "krastorio-2.jpg")
-backgrounds_util.addBackgroundImage("Krastorio CyberSkull", kr_backgrounds_icons_path .. "krastorio-cyberskull.jpg")
-backgrounds_util.addBackgroundImage("Krastorio Chan", kr_backgrounds_icons_path .. "krastorio-chan.jpg")
-backgrounds_util.addBackgroundImage("Krastorio THE FACTORY MUST GROW", kr_backgrounds_icons_path .. "krastorio-fmg.jpg")
-backgrounds_util.addBackgroundImage("Krastorio Explorer", kr_backgrounds_icons_path .. "krastorio-explorer.jpg")
-backgrounds_util.addBackgroundImage("Factorio Alternative 1", kr_backgrounds_icons_path .. "factorio-alternative-1.jpg")
-backgrounds_util.addBackgroundImage("Factorio Alternative 2", kr_backgrounds_icons_path .. "factorio-alternative-2.jpg")
-backgrounds_util.addBackgroundImage("Factorio Alternative 3", kr_backgrounds_icons_path .. "factorio-alternative-3.jpg")
-backgrounds_util.addBackgroundImage("Factorio Alternative 4", kr_backgrounds_icons_path .. "factorio-alternative-4.jpg")
+backgrounds_util.addBackgroundImage("Krastorio Legacy", "__Krastorio2Assets__/backgrounds/krastorio-legacy.jpg")
+backgrounds_util.addBackgroundImage("Krastorio 2", "__Krastorio2Assets__/backgrounds/krastorio-2.jpg")
+backgrounds_util.addBackgroundImage("Krastorio CyberSkull", "__Krastorio2Assets__/backgrounds/krastorio-cyberskull.jpg")
+backgrounds_util.addBackgroundImage("Krastorio Chan", "__Krastorio2Assets__/backgrounds/krastorio-chan.jpg")
+backgrounds_util.addBackgroundImage("Krastorio THE FACTORY MUST GROW", "__Krastorio2Assets__/backgrounds/krastorio-fmg.jpg")
+backgrounds_util.addBackgroundImage("Krastorio Explorer", "__Krastorio2Assets__/backgrounds/krastorio-explorer.jpg")
+backgrounds_util.addBackgroundImage("Factorio Alternative 1", "__Krastorio2Assets__/backgrounds/factorio-alternative-1.jpg")
+backgrounds_util.addBackgroundImage("Factorio Alternative 2", "__Krastorio2Assets__/backgrounds/factorio-alternative-2.jpg")
+backgrounds_util.addBackgroundImage("Factorio Alternative 3", "__Krastorio2Assets__/backgrounds/factorio-alternative-3.jpg")
+backgrounds_util.addBackgroundImage("Factorio Alternative 4", "__Krastorio2Assets__/backgrounds/factorio-alternative-4.jpg")
 
 -- Choose the background depending on the setting
 local path_name = krastorio.general.getSafeSettingValue("kr-main-menu-background")

@@ -1,9 +1,9 @@
 -- -- -- Apply the choosen science pack recipes
 
 -- Base
-require(kr_public_lib .. "science-pack-recipe")
+require("__Krastorio2__/lib/public/data-stages/science-pack-recipe")
 -- Variations
-require(kr_settings_updates_compatibility_path .. "science-pack-variations")
+require("__Krastorio2__/compatibility-scripts/settings-updates/science-pack-variations")
 
 -- Change Recipes
 data.raw.recipe["automation-science-pack"] =

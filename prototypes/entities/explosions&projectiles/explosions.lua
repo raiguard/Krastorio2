@@ -1,5 +1,3 @@
-local kr_explosions_sprites_path = kr_entities_path .. "explosions/"
-
 data:extend({
 
   -----------------------------------------------------------------------------------------------------------------
@@ -14,7 +12,7 @@ data:extend({
     beam = true,
     animations = {
       {
-        filename = kr_explosions_sprites_path .. "impulse-rifle-beam.png",
+        filename = "__Krastorio2Assets__/entities/explosions/impulse-rifle-beam.png",
         priority = "extra-high",
         draw_as_glow = true,
         width = 62,
@@ -36,7 +34,7 @@ data:extend({
     flags = { "not-on-map" },
     animations = {
       {
-        filename = kr_explosions_sprites_path .. "matter-shockwave-1.png",
+        filename = "__Krastorio2Assets__/entities/explosions/matter-shockwave-1.png",
         priority = "high",
         flags = { "smoke" },
         line_length = 8,
@@ -48,7 +46,7 @@ data:extend({
         scale = 1.5,
       },
       {
-        filename = kr_explosions_sprites_path .. "matter-shockwave-2.png",
+        filename = "__Krastorio2Assets__/entities/explosions/matter-shockwave-2.png",
         priority = "high",
         flags = { "smoke" },
         line_length = 8,
@@ -86,7 +84,7 @@ data:extend({
         priority = "high",
         animation_speed = 0.50,
         tint = { r = 0.15, g = 0.09, b = 0.12, a = 0.5 },
-        filename = kr_explosions_sprites_path .. "smoke.png",
+        filename = "__Krastorio2Assets__/entities/explosions/smoke.png",
         flags = { "smoke" },
       },
     },
@@ -111,22 +109,22 @@ data:extend({
       dice_y = 5,
       stripes = {
         {
-          filename = kr_explosions_sprites_path .. "matter-explosion-1.png",
+          filename = "__Krastorio2Assets__/entities/explosions/matter-explosion-1.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
         {
-          filename = kr_explosions_sprites_path .. "matter-explosion-2.png",
+          filename = "__Krastorio2Assets__/entities/explosions/matter-explosion-2.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
         {
-          filename = kr_explosions_sprites_path .. "matter-explosion-3.png",
+          filename = "__Krastorio2Assets__/entities/explosions/matter-explosion-3.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
         {
-          filename = kr_explosions_sprites_path .. "matter-explosion-4.png",
+          filename = "__Krastorio2Assets__/entities/explosions/matter-explosion-4.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
@@ -177,7 +175,7 @@ data:extend({
     flags = { "not-on-map" },
     animations = {
       {
-        filename = kr_explosions_sprites_path .. "beacon-explosion.png",
+        filename = "__Krastorio2Assets__/entities/explosions/beacon-explosion.png",
         animation_speed = 0.25,
         scale = 0.75,
         width = 932,
@@ -240,22 +238,22 @@ data:extend({
       dice_y = 5,
       stripes = {
         {
-          filename = kr_explosions_sprites_path .. "matter-explosion-1.png",
+          filename = "__Krastorio2Assets__/entities/explosions/matter-explosion-1.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
         {
-          filename = kr_explosions_sprites_path .. "matter-explosion-2.png",
+          filename = "__Krastorio2Assets__/entities/explosions/matter-explosion-2.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
         {
-          filename = kr_explosions_sprites_path .. "matter-explosion-3.png",
+          filename = "__Krastorio2Assets__/entities/explosions/matter-explosion-3.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
         {
-          filename = kr_explosions_sprites_path .. "matter-explosion-4.png",
+          filename = "__Krastorio2Assets__/entities/explosions/matter-explosion-4.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
@@ -306,7 +304,7 @@ data:extend({
     flags = { "not-on-map" },
     animations = {
       {
-        filename = kr_explosions_sprites_path .. "small-matter-explosion.png",
+        filename = "__Krastorio2Assets__/entities/explosions/small-matter-explosion.png",
         width = 400,
         height = 400,
         frame_count = 47,
@@ -361,7 +359,7 @@ data:extend({
     flags = { "not-on-map" },
     animations = {
       {
-        filename = kr_explosions_sprites_path .. "medium-matter-explosion.png",
+        filename = "__Krastorio2Assets__/entities/explosions/medium-matter-explosion.png",
         width = 800,
         height = 800,
         frame_count = 47,
@@ -416,7 +414,7 @@ data:extend({
     flags = { "not-on-map" },
     animations = {
       {
-        filename = kr_explosions_sprites_path .. "rail-matter-explosion.png",
+        filename = "__Krastorio2Assets__/entities/explosions/rail-matter-explosion.png",
         animation_speed = 0.5,
         width = 600,
         height = 800,
@@ -494,7 +492,7 @@ data:extend({
     subgroup = "explosions",
     animations = {
       {
-        filename = kr_explosions_sprites_path .. "laser_gunshot.png",
+        filename = "__Krastorio2Assets__/entities/explosions/laser_gunshot.png",
         priority = "extra-high",
         draw_as_glow = true,
         width = 51,
@@ -504,7 +502,7 @@ data:extend({
         shift = { 0, 0 },
       },
       {
-        filename = kr_explosions_sprites_path .. "laser_gunshot.png",
+        filename = "__Krastorio2Assets__/entities/explosions/laser_gunshot.png",
         priority = "high",
         draw_as_glow = true,
         blend_mode = "additive",
@@ -515,7 +513,7 @@ data:extend({
         shift = { 0, 0 },
       },
       {
-        filename = kr_explosions_sprites_path .. "laser_gunshot.png",
+        filename = "__Krastorio2Assets__/entities/explosions/laser_gunshot.png",
         priority = "medium",
         width = 51,
         height = 57,
@@ -538,7 +536,7 @@ data:extend({
     flags = { "not-on-map" },
     subgroup = "explosions",
     animations = {
-      filename = kr_explosions_sprites_path .. "laser-explosion.png",
+      filename = "__Krastorio2Assets__/entities/explosions/laser-explosion.png",
       flags = { "compressed" },
       width = 300,
       height = 300,

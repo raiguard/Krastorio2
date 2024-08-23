@@ -2,7 +2,7 @@ data:extend({
   {
     type = "underground-belt",
     name = "kr-advanced-underground-belt",
-    icon = kr_entities_icons_path .. "transport-belts/advanced-transport-belt/advanced-underground-belt.png",
+    icon = "__Krastorio2Assets__/icons/entities/transport-belts/advanced-transport-belt/advanced-underground-belt.png",
     icon_size = 64,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.2, result = "kr-advanced-underground-belt" },
@@ -45,8 +45,7 @@ data:extend({
     structure = {
       direction_in = {
         sheet = {
-          filename = kr_entities_path
-            .. "transport-belts/advanced-transport-belt/underground-belt/advanced-underground-belt-structure.png",
+          filename = "__Krastorio2Assets__/entities/transport-belts/advanced-transport-belt/underground-belt/advanced-underground-belt-structure.png",
           priority = "extra-high",
           width = 192,
           height = 192,
@@ -56,8 +55,7 @@ data:extend({
       },
       direction_out = {
         sheet = {
-          filename = kr_entities_path
-            .. "transport-belts/advanced-transport-belt/underground-belt/advanced-underground-belt-structure.png",
+          filename = "__Krastorio2Assets__/entities/transport-belts/advanced-transport-belt/underground-belt/advanced-underground-belt-structure.png",
           priority = "extra-high",
           width = 192,
           height = 192,
@@ -66,8 +64,7 @@ data:extend({
       },
       direction_in_side_loading = {
         sheet = {
-          filename = kr_entities_path
-            .. "transport-belts/advanced-transport-belt/underground-belt/advanced-underground-belt-structure.png",
+          filename = "__Krastorio2Assets__/entities/transport-belts/advanced-transport-belt/underground-belt/advanced-underground-belt-structure.png",
           priority = "extra-high",
           width = 192,
           height = 192,
@@ -77,8 +74,7 @@ data:extend({
       },
       direction_out_side_loading = {
         sheet = {
-          filename = kr_entities_path
-            .. "transport-belts/advanced-transport-belt/underground-belt/advanced-underground-belt-structure.png",
+          filename = "__Krastorio2Assets__/entities/transport-belts/advanced-transport-belt/underground-belt/advanced-underground-belt-structure.png",
           priority = "extra-high",
           width = 192,
           height = 192,
@@ -88,8 +84,7 @@ data:extend({
       },
       back_patch = {
         sheet = {
-          filename = kr_entities_path
-            .. "transport-belts/advanced-transport-belt/underground-belt/advanced-underground-belt-structure-back-patch.png",
+          filename = "__Krastorio2Assets__/entities/transport-belts/advanced-transport-belt/underground-belt/advanced-underground-belt-structure-back-patch.png",
           priority = "extra-high",
           width = 192,
           height = 192,
@@ -98,8 +93,7 @@ data:extend({
       },
       front_patch = {
         sheet = {
-          filename = kr_entities_path
-            .. "transport-belts/advanced-transport-belt/underground-belt/advanced-underground-belt-structure-front-patch.png",
+          filename = "__Krastorio2Assets__/entities/transport-belts/advanced-transport-belt/underground-belt/advanced-underground-belt-structure-front-patch.png",
           priority = "extra-high",
           width = 192,
           height = 192,

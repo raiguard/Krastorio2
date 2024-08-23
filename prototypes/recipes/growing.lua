@@ -15,7 +15,7 @@ return {
     type = "recipe",
     name = "kr-grow-wood-plus",
     category = "growing",
-    icon = kr_recipes_icons_path .. "wood-plus.png",
+    icon = "__Krastorio2Assets__/icons/recipes/wood-plus.png",
     icon_size = 64,
     energy_required = 60,
     enabled = false,

@@ -5,7 +5,7 @@ data:extend({
   {
     type = "resource",
     name = "mineral-water",
-    icon = kr_resources_icons_path .. "mineral-water.png",
+    icon = "__Krastorio2Assets__/icons/resources/mineral-water.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral" },
@@ -50,7 +50,7 @@ data:extend({
     stage_counts = { 0 },
     stages = {
       sheet = {
-        filename = kr_resources_sprites_path .. "mineral-water.png",
+        filename = "__Krastorio2Assets__/resources/mineral-water.png",
         priority = "extra-high",
         width = 128,
         height = 128,

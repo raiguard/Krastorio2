@@ -1,139 +1,143 @@
 ---------------------------------------------------------------------------------------
 -- -- -- PIPE PATCH AND COVERS
 ---------------------------------------------------------------------------------------
-require(kr_entities_prototypes_path .. "buildings/pipe-covers/pipe-patch")
-require(kr_entities_prototypes_path .. "buildings/pipe-covers/steel-pipecovers")
+require("__Krastorio2__/prototypes/entities/buildings/pipe-covers/pipe-patch")
+require("__Krastorio2__/prototypes/entities/buildings/pipe-covers/steel-pipecovers")
 ---------------------------------------------------------------------------------------
 -- -- -- BUILDINGS
 ---------------------------------------------------------------------------------------
 -- Crash site
-require(kr_entities_prototypes_path .. "buildings/crash-site/crash-site-assembling-machine-1")
-require(kr_entities_prototypes_path .. "buildings/crash-site/crash-site-assembling-machine-2")
-require(kr_entities_prototypes_path .. "buildings/crash-site/crash-site-chest-1")
-require(kr_entities_prototypes_path .. "buildings/crash-site/crash-site-chest-2")
-require(kr_entities_prototypes_path .. "buildings/crash-site/crash-site-generator")
-require(kr_entities_prototypes_path .. "buildings/crash-site/crash-site-lab")
-require(kr_entities_prototypes_path .. "buildings/crash-site/mineable-wreckage")
+require("__Krastorio2__/prototypes/entities/buildings/crash-site/crash-site-assembling-machine-1")
+require("__Krastorio2__/prototypes/entities/buildings/crash-site/crash-site-assembling-machine-2")
+require("__Krastorio2__/prototypes/entities/buildings/crash-site/crash-site-chest-1")
+require("__Krastorio2__/prototypes/entities/buildings/crash-site/crash-site-chest-2")
+require("__Krastorio2__/prototypes/entities/buildings/crash-site/crash-site-generator")
+require("__Krastorio2__/prototypes/entities/buildings/crash-site/crash-site-lab")
+require("__Krastorio2__/prototypes/entities/buildings/crash-site/mineable-wreckage")
 -- -- Generals
-require(kr_entities_prototypes_path .. "buildings/advanced-chemical-plant")
-require(kr_entities_prototypes_path .. "buildings/advanced-furnace")
-require(kr_entities_prototypes_path .. "buildings/advanced-solar-panel")
-require(kr_entities_prototypes_path .. "buildings/advanced-steam-turbine")
-require(kr_entities_prototypes_path .. "buildings/air-purifier")
-require(kr_entities_prototypes_path .. "buildings/antimatter-reactor")
-require(kr_entities_prototypes_path .. "buildings/atmospheric-condenser")
-require(kr_entities_prototypes_path .. "buildings/bio-lab")
-require(kr_entities_prototypes_path .. "buildings/crusher")
-require(kr_entities_prototypes_path .. "buildings/electrolysis-plant")
-require(kr_entities_prototypes_path .. "buildings/energy-storage")
-require(kr_entities_prototypes_path .. "buildings/filtration-plant")
-require(kr_entities_prototypes_path .. "buildings/fluid-burner")
-require(kr_entities_prototypes_path .. "buildings/fuel-refinery")
-require(kr_entities_prototypes_path .. "buildings/fusion-reactor")
-require(kr_entities_prototypes_path .. "buildings/gas-power-station")
-require(kr_entities_prototypes_path .. "buildings/greenhouse")
-require(kr_entities_prototypes_path .. "buildings/intergalactic-transceiver")
-require(kr_entities_prototypes_path .. "buildings/planetary-teleporter")
-require(kr_entities_prototypes_path .. "buildings/matter-assembler")
-require(kr_entities_prototypes_path .. "buildings/matter-plant")
-require(kr_entities_prototypes_path .. "buildings/mineral-water-pumpjack")
-require(kr_entities_prototypes_path .. "buildings/quantum-computer")
-require(kr_entities_prototypes_path .. "buildings/quarry-drill")
-require(kr_entities_prototypes_path .. "buildings/research-server")
-require(kr_entities_prototypes_path .. "buildings/sentinel")
-require(kr_entities_prototypes_path .. "buildings/shelter")
-require(kr_entities_prototypes_path .. "buildings/shelter-plus")
-require(kr_entities_prototypes_path .. "buildings/singularity-beacon")
-require(kr_entities_prototypes_path .. "buildings/stabilizer-charging-station")
-require(kr_entities_prototypes_path .. "buildings/iron-pipe")
-require(kr_entities_prototypes_path .. "buildings/steel-pipe")
-require(kr_entities_prototypes_path .. "buildings/steel-pipe-to-ground")
-require(kr_entities_prototypes_path .. "buildings/steel-pump")
-require(kr_entities_prototypes_path .. "buildings/substation-mk2")
-require(kr_entities_prototypes_path .. "buildings/superior-inserters")
-require(kr_entities_prototypes_path .. "buildings/wind-turbine")
-require(kr_entities_prototypes_path .. "buildings/advanced-assembling-machine")
-require(kr_entities_prototypes_path .. "buildings/electric-mining-drills")
-require(kr_entities_prototypes_path .. "buildings/tesla-coil")
-require(kr_entities_prototypes_path .. "buildings/logo")
+require("__Krastorio2__/prototypes/entities/buildings/advanced-chemical-plant")
+require("__Krastorio2__/prototypes/entities/buildings/advanced-furnace")
+require("__Krastorio2__/prototypes/entities/buildings/advanced-solar-panel")
+require("__Krastorio2__/prototypes/entities/buildings/advanced-steam-turbine")
+require("__Krastorio2__/prototypes/entities/buildings/air-purifier")
+require("__Krastorio2__/prototypes/entities/buildings/antimatter-reactor")
+require("__Krastorio2__/prototypes/entities/buildings/atmospheric-condenser")
+require("__Krastorio2__/prototypes/entities/buildings/bio-lab")
+require("__Krastorio2__/prototypes/entities/buildings/crusher")
+require("__Krastorio2__/prototypes/entities/buildings/electrolysis-plant")
+require("__Krastorio2__/prototypes/entities/buildings/energy-storage")
+require("__Krastorio2__/prototypes/entities/buildings/filtration-plant")
+require("__Krastorio2__/prototypes/entities/buildings/fluid-burner")
+require("__Krastorio2__/prototypes/entities/buildings/fuel-refinery")
+require("__Krastorio2__/prototypes/entities/buildings/fusion-reactor")
+require("__Krastorio2__/prototypes/entities/buildings/gas-power-station")
+require("__Krastorio2__/prototypes/entities/buildings/greenhouse")
+require("__Krastorio2__/prototypes/entities/buildings/intergalactic-transceiver")
+require("__Krastorio2__/prototypes/entities/buildings/planetary-teleporter")
+require("__Krastorio2__/prototypes/entities/buildings/matter-assembler")
+require("__Krastorio2__/prototypes/entities/buildings/matter-plant")
+require("__Krastorio2__/prototypes/entities/buildings/mineral-water-pumpjack")
+require("__Krastorio2__/prototypes/entities/buildings/quantum-computer")
+require("__Krastorio2__/prototypes/entities/buildings/quarry-drill")
+require("__Krastorio2__/prototypes/entities/buildings/research-server")
+require("__Krastorio2__/prototypes/entities/buildings/sentinel")
+require("__Krastorio2__/prototypes/entities/buildings/shelter")
+require("__Krastorio2__/prototypes/entities/buildings/shelter-plus")
+require("__Krastorio2__/prototypes/entities/buildings/singularity-beacon")
+require("__Krastorio2__/prototypes/entities/buildings/stabilizer-charging-station")
+require("__Krastorio2__/prototypes/entities/buildings/iron-pipe")
+require("__Krastorio2__/prototypes/entities/buildings/steel-pipe")
+require("__Krastorio2__/prototypes/entities/buildings/steel-pipe-to-ground")
+require("__Krastorio2__/prototypes/entities/buildings/steel-pump")
+require("__Krastorio2__/prototypes/entities/buildings/substation-mk2")
+require("__Krastorio2__/prototypes/entities/buildings/superior-inserters")
+require("__Krastorio2__/prototypes/entities/buildings/wind-turbine")
+require("__Krastorio2__/prototypes/entities/buildings/advanced-assembling-machine")
+require("__Krastorio2__/prototypes/entities/buildings/electric-mining-drills")
+require("__Krastorio2__/prototypes/entities/buildings/tesla-coil")
+require("__Krastorio2__/prototypes/entities/buildings/logo")
 -- -- Turrets
-require(kr_entities_prototypes_path .. "buildings/turrets/railgun-turret")
-require(kr_entities_prototypes_path .. "buildings/turrets/rocket-turret")
-require(kr_entities_prototypes_path .. "buildings/turrets/laser-artillery-turret")
+require("__Krastorio2__/prototypes/entities/buildings/turrets/railgun-turret")
+require("__Krastorio2__/prototypes/entities/buildings/turrets/rocket-turret")
+require("__Krastorio2__/prototypes/entities/buildings/turrets/laser-artillery-turret")
 -- -- Laboratories
-require(kr_entities_prototypes_path .. "buildings/biusart-lab")
-require(kr_entities_prototypes_path .. "buildings/singularity-lab")
+require("__Krastorio2__/prototypes/entities/buildings/biusart-lab")
+require("__Krastorio2__/prototypes/entities/buildings/singularity-lab")
 -- -- Roboports
-require(kr_entities_prototypes_path .. "buildings/small-roboport")
-require(kr_entities_prototypes_path .. "buildings/large-roboport")
+require("__Krastorio2__/prototypes/entities/buildings/small-roboport")
+require("__Krastorio2__/prototypes/entities/buildings/large-roboport")
 -- -- Conteiners
 -- Mediums
-require(kr_entities_prototypes_path .. "buildings/containers/medium-containers/medium-container")
-require(kr_entities_prototypes_path .. "buildings/containers/medium-containers/medium-active-provider-container")
-require(kr_entities_prototypes_path .. "buildings/containers/medium-containers/medium-buffer-container")
-require(kr_entities_prototypes_path .. "buildings/containers/medium-containers/medium-passive-provider-container")
-require(kr_entities_prototypes_path .. "buildings/containers/medium-containers/medium-requester-container")
-require(kr_entities_prototypes_path .. "buildings/containers/medium-containers/medium-storage-container")
+require("__Krastorio2__/prototypes/entities/buildings/containers/medium-containers/medium-container")
+require("__Krastorio2__/prototypes/entities/buildings/containers/medium-containers/medium-active-provider-container")
+require("__Krastorio2__/prototypes/entities/buildings/containers/medium-containers/medium-buffer-container")
+require("__Krastorio2__/prototypes/entities/buildings/containers/medium-containers/medium-passive-provider-container")
+require("__Krastorio2__/prototypes/entities/buildings/containers/medium-containers/medium-requester-container")
+require("__Krastorio2__/prototypes/entities/buildings/containers/medium-containers/medium-storage-container")
 -- Big
-require(kr_entities_prototypes_path .. "buildings/containers/big-containers/big-container")
-require(kr_entities_prototypes_path .. "buildings/containers/big-containers/big-active-provider-container")
-require(kr_entities_prototypes_path .. "buildings/containers/big-containers/big-buffer-container")
-require(kr_entities_prototypes_path .. "buildings/containers/big-containers/big-passive-provider-container")
-require(kr_entities_prototypes_path .. "buildings/containers/big-containers/big-requester-container")
-require(kr_entities_prototypes_path .. "buildings/containers/big-containers/big-storage-container")
+require("__Krastorio2__/prototypes/entities/buildings/containers/big-containers/big-container")
+require("__Krastorio2__/prototypes/entities/buildings/containers/big-containers/big-active-provider-container")
+require("__Krastorio2__/prototypes/entities/buildings/containers/big-containers/big-buffer-container")
+require("__Krastorio2__/prototypes/entities/buildings/containers/big-containers/big-passive-provider-container")
+require("__Krastorio2__/prototypes/entities/buildings/containers/big-containers/big-requester-container")
+require("__Krastorio2__/prototypes/entities/buildings/containers/big-containers/big-storage-container")
 -- -- Fluid storages
-require(kr_entities_prototypes_path .. "buildings/fluid-storages/fluid-storage-1")
-require(kr_entities_prototypes_path .. "buildings/fluid-storages/fluid-storage-2")
+require("__Krastorio2__/prototypes/entities/buildings/fluid-storages/fluid-storage-1")
+require("__Krastorio2__/prototypes/entities/buildings/fluid-storages/fluid-storage-2")
 -- -- Belts
 -- Advanced
-require(kr_entities_prototypes_path .. "buildings/transport-belts/advanced-transport-belt/animation-set") -- Must be loaded before the belts set
-require(kr_entities_prototypes_path .. "buildings/transport-belts/advanced-transport-belt/advanced-splitter")
-require(kr_entities_prototypes_path .. "buildings/transport-belts/advanced-transport-belt/advanced-transport-belt")
-require(kr_entities_prototypes_path .. "buildings/transport-belts/advanced-transport-belt/advanced-underground-belt")
+require("__Krastorio2__/prototypes/entities/buildings/transport-belts/advanced-transport-belt/animation-set") -- Must be loaded before the belts set
+require("__Krastorio2__/prototypes/entities/buildings/transport-belts/advanced-transport-belt/advanced-splitter")
+require("__Krastorio2__/prototypes/entities/buildings/transport-belts/advanced-transport-belt/advanced-transport-belt")
+require(
+  "__Krastorio2__/prototypes/entities/buildings/transport-belts/advanced-transport-belt/advanced-underground-belt"
+)
 -- Superior
-require(kr_entities_prototypes_path .. "buildings/transport-belts/superior-transport-belt/animation-set") -- Must be loaded before the belts set
-require(kr_entities_prototypes_path .. "buildings/transport-belts/superior-transport-belt/superior-splitter")
-require(kr_entities_prototypes_path .. "buildings/transport-belts/superior-transport-belt/superior-transport-belt")
-require(kr_entities_prototypes_path .. "buildings/transport-belts/superior-transport-belt/superior-underground-belt")
+require("__Krastorio2__/prototypes/entities/buildings/transport-belts/superior-transport-belt/animation-set") -- Must be loaded before the belts set
+require("__Krastorio2__/prototypes/entities/buildings/transport-belts/superior-transport-belt/superior-splitter")
+require("__Krastorio2__/prototypes/entities/buildings/transport-belts/superior-transport-belt/superior-transport-belt")
+require(
+  "__Krastorio2__/prototypes/entities/buildings/transport-belts/superior-transport-belt/superior-underground-belt"
+)
 -- Loaders
-require(kr_entities_prototypes_path .. "buildings/loaders") -- Must be required after belts
+require("__Krastorio2__/prototypes/entities/buildings/loaders") -- Must be required after belts
 ---------------------------------------------------------------------------------------
 -- -- -- REMNANTS
 ---------------------------------------------------------------------------------------
-require(kr_entities_prototypes_path .. "remnants/advanced-tank-remnant")
-require(kr_entities_prototypes_path .. "remnants/fusion-reactor-remnant")
-require(kr_entities_prototypes_path .. "remnants/antimatter-reactor-remnant")
-require(kr_entities_prototypes_path .. "remnants/kr-big-random-pipes-remnant")
-require(kr_entities_prototypes_path .. "remnants/kr-medium-random-pipes-remnant")
-require(kr_entities_prototypes_path .. "remnants/kr-mineral-water-pumpjack-remnant")
-require(kr_entities_prototypes_path .. "remnants/matter-plant")
-require(kr_entities_prototypes_path .. "remnants/superior-inserter-remnant")
-require(kr_entities_prototypes_path .. "remnants/turret")
+require("__Krastorio2__/prototypes/entities/remnants/advanced-tank-remnant")
+require("__Krastorio2__/prototypes/entities/remnants/fusion-reactor-remnant")
+require("__Krastorio2__/prototypes/entities/remnants/antimatter-reactor-remnant")
+require("__Krastorio2__/prototypes/entities/remnants/kr-big-random-pipes-remnant")
+require("__Krastorio2__/prototypes/entities/remnants/kr-medium-random-pipes-remnant")
+require("__Krastorio2__/prototypes/entities/remnants/kr-mineral-water-pumpjack-remnant")
+require("__Krastorio2__/prototypes/entities/remnants/matter-plant")
+require("__Krastorio2__/prototypes/entities/remnants/superior-inserter-remnant")
+require("__Krastorio2__/prototypes/entities/remnants/turret")
 -- -- Belts
 -- Advanced
-require(kr_entities_prototypes_path .. "remnants/transport-belts/advanced-transport-belt/advanced-splitter-remnant")
+require("__Krastorio2__/prototypes/entities/remnants/transport-belts/advanced-transport-belt/advanced-splitter-remnant")
 require(
-  kr_entities_prototypes_path .. "remnants/transport-belts/advanced-transport-belt/advanced-transport-belt-remnant"
+  "__Krastorio2__/prototypes/entities/remnants/transport-belts/advanced-transport-belt/advanced-transport-belt-remnant"
 )
 require(
-  kr_entities_prototypes_path .. "remnants/transport-belts/advanced-transport-belt/advanced-underground-belt-remnant"
+  "__Krastorio2__/prototypes/entities/remnants/transport-belts/advanced-transport-belt/advanced-underground-belt-remnant"
 )
 -- Superior
-require(kr_entities_prototypes_path .. "remnants/transport-belts/superior-transport-belt/superior-splitter-remnant")
+require("__Krastorio2__/prototypes/entities/remnants/transport-belts/superior-transport-belt/superior-splitter-remnant")
 require(
-  kr_entities_prototypes_path .. "remnants/transport-belts/superior-transport-belt/superior-transport-belt-remnant"
+  "__Krastorio2__/prototypes/entities/remnants/transport-belts/superior-transport-belt/superior-transport-belt-remnant"
 )
 require(
-  kr_entities_prototypes_path .. "remnants/transport-belts/superior-transport-belt/superior-underground-belt-remnant"
+  "__Krastorio2__/prototypes/entities/remnants/transport-belts/superior-transport-belt/superior-underground-belt-remnant"
 )
 ---------------------------------------------------------------------------------------
 -- -- -- VEHICLES
 ---------------------------------------------------------------------------------------
-require(kr_entities_prototypes_path .. "vehicles/advanced-tank")
-require(kr_entities_prototypes_path .. "vehicles/nuclear-locomotive")
+require("__Krastorio2__/prototypes/entities/vehicles/advanced-tank")
+require("__Krastorio2__/prototypes/entities/vehicles/nuclear-locomotive")
 ---------------------------------------------------------------------------------------
 -- -- -- Explosions&projectiles
 ---------------------------------------------------------------------------------------
-require(kr_entities_prototypes_path .. "explosions&projectiles/explosions")
-require(kr_entities_prototypes_path .. "explosions&projectiles/projectiles")
+require("__Krastorio2__/prototypes/entities/explosions&projectiles/explosions")
+require("__Krastorio2__/prototypes/entities/explosions&projectiles/projectiles")
 ---------------------------------------------------------------------------------------

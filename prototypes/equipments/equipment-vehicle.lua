@@ -6,7 +6,7 @@ data:extend({
     type = "movement-bonus-equipment",
     name = "additional-engine",
     sprite = {
-      filename = kr_vehicle_equipments_path .. "additional-engine.png",
+      filename = "__Krastorio2Assets__/equipments/vehicle/additional-engine.png",
       width = 256,
       height = 256,
       priority = "medium",
@@ -30,7 +30,7 @@ data:extend({
     type = "movement-bonus-equipment",
     name = "advanced-additional-engine",
     sprite = {
-      filename = kr_vehicle_equipments_path .. "advanced-additional-engine.png",
+      filename = "__Krastorio2Assets__/equipments/vehicle/advanced-additional-engine.png",
       width = 256,
       height = 256,
       priority = "medium",
@@ -56,7 +56,7 @@ data:extend({
     name = "vehicle-roboport",
     take_result = "vehicle-roboport",
     sprite = {
-      filename = kr_vehicle_equipments_path .. "vehicle-roboport.png",
+      filename = "__Krastorio2Assets__/equipments/vehicle/vehicle-roboport.png",
       width = 256,
       height = 256,
       priority = "medium",

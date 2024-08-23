@@ -12,7 +12,7 @@ if krastorio.general.getSafeSettingValue("kr-loaders") then
 
   function kr_loader_item(data)
     local name = data.name
-    local icon = data.icon or kr_entities_icons_path .. "loaders/" .. name .. ".png"
+    local icon = data.icon or "__Krastorio2Assets__/icons/entities/loaders/" .. name .. ".png"
     local icon_size = data.icon_size or 64
     local icon_mipmaps = data.icon_mipmaps or 4
     local subgroup = data.subgroup or "belt"

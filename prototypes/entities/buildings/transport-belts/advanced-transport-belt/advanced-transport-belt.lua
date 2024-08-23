@@ -2,7 +2,7 @@ data:extend({
   {
     type = "transport-belt",
     name = "kr-advanced-transport-belt",
-    icon = kr_entities_icons_path .. "transport-belts/advanced-transport-belt/advanced-transport-belt.png",
+    icon = "__Krastorio2Assets__/icons/entities/transport-belts/advanced-transport-belt/advanced-transport-belt.png",
     icon_size = 64,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.2, result = "kr-advanced-transport-belt" },
@@ -24,8 +24,7 @@ data:extend({
       persistent = true,
     },
     animations = {
-      filename = kr_entities_path
-        .. "transport-belts/advanced-transport-belt/transport-belt/advanced-transport-belt.png",
+      filename = "__Krastorio2Assets__/entities/transport-belts/advanced-transport-belt/transport-belt/advanced-transport-belt.png",
       priority = "extra-high",
       width = 128,
       height = 128,

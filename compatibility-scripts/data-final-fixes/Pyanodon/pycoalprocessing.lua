@@ -3,7 +3,7 @@ if mods["pycoalprocessing"] then
   krastorio.recipes.removeIngredient("big-electric-pole", "copper-cable")
 
   -- Re-apply Krastorio science icons
-  krastorio.icons.setItemIcon("automation-science-pack", kr_cards_icons_path .. "automation-tech-card.png")
-  krastorio.icons.setItemIcon("logistic-science-pack", kr_cards_icons_path .. "logistic-tech-card.png")
-  krastorio.icons.setItemIcon("chemical-science-pack", kr_cards_icons_path .. "chemical-tech-card.png")
+  krastorio.icons.setItemIcon("automation-science-pack", "__Krastorio2Assets__/icons/cards/automation-tech-card.png")
+  krastorio.icons.setItemIcon("logistic-science-pack", "__Krastorio2Assets__/icons/cards/logistic-tech-card.png")
+  krastorio.icons.setItemIcon("chemical-science-pack", "__Krastorio2Assets__/icons/cards/chemical-tech-card.png")
 end

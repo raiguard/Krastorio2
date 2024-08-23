@@ -5,7 +5,7 @@ function rocket_turret_sheet(inputs)
   return {
     layers = {
       {
-        filename = kr_entities_path .. "turrets/rocket-turret-sheet.png",
+        filename = "__Krastorio2Assets__/entities/turrets/rocket-turret-sheet.png",
         width = 440,
         height = 380,
         line_length = inputs.frame_count or 8,
@@ -18,7 +18,7 @@ function rocket_turret_sheet(inputs)
 
       {
         flags = { "mask" },
-        filename = kr_entities_path .. "turrets/rocket-turret-sheet-mask.png",
+        filename = "__Krastorio2Assets__/entities/turrets/rocket-turret-sheet-mask.png",
         width = 440,
         height = 380,
         line_length = inputs.frame_count or 8,
@@ -31,7 +31,7 @@ function rocket_turret_sheet(inputs)
       },
 
       {
-        filename = kr_entities_path .. "turrets/rocket-turret-sheet-shadow.png",
+        filename = "__Krastorio2Assets__/entities/turrets/rocket-turret-sheet-shadow.png",
         width = 440,
         height = 380,
         line_length = inputs.frame_count or 8,
@@ -50,7 +50,7 @@ data:extend({
   {
     type = "ammo-turret",
     name = "kr-rocket-turret",
-    icon = kr_entities_icons_path .. "rocket-turret.png",
+    icon = "__Krastorio2Assets__/icons/entities/rocket-turret.png",
     icon_size = 64,
     flags = { "placeable-player", "player-creation", "building-direction-8-way" },
     minable = { mining_time = 1, result = "kr-rocket-turret" },
@@ -81,7 +81,7 @@ data:extend({
         animation = {
           layers = {
             {
-              filename = kr_entities_path .. "turrets/kr-turret-base.png",
+              filename = "__Krastorio2Assets__/entities/turrets/kr-turret-base.png",
               priority = "high",
               width = 440,
               height = 380,
@@ -92,7 +92,7 @@ data:extend({
               scale = 0.5,
             },
             {
-              filename = kr_entities_path .. "turrets/kr-turret-base-mask.png",
+              filename = "__Krastorio2Assets__/entities/turrets/kr-turret-base-mask.png",
               flags = { "mask", "low-object" },
               line_length = 1,
               width = 440,
@@ -105,7 +105,7 @@ data:extend({
               scale = 0.5,
             },
             {
-              filename = kr_entities_path .. "turrets/kr-turret-base-shadow.png",
+              filename = "__Krastorio2Assets__/entities/turrets/kr-turret-base-shadow.png",
               line_length = 1,
               width = 440,
               height = 380,
@@ -134,7 +134,7 @@ data:extend({
       health_penalty = -100,
       sound = {
         {
-          filename = kr_weapons_sounds_path .. "rocket-launch.ogg",
+          filename = "__Krastorio2Assets__/sounds/weapons/rocket-launch.ogg",
           volume = 0.8,
         },
       },
@@ -142,7 +142,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = kr_entities_path .. "turrets/turrets-reflection.png",
+        filename = "__Krastorio2Assets__/entities/turrets/turrets-reflection.png",
         priority = "extra-high",
         width = 50,
         height = 50,

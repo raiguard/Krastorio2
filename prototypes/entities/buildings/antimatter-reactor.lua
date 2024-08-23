@@ -5,7 +5,7 @@ data:extend({
   {
     type = "burner-generator",
     name = "kr-antimatter-reactor",
-    icon = kr_entities_icons_path .. "antimatter-reactor.png",
+    icon = "__Krastorio2Assets__/icons/entities/antimatter-reactor.png",
     icon_size = 128,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "placeable-player", "player-creation", "not-rotatable" },
@@ -52,7 +52,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "antimatter-reactor/antimatter-reactor-light.png",
+          filename = "__Krastorio2Assets__/entities/antimatter-reactor/antimatter-reactor-light.png",
           priority = "high",
           width = 660,
           height = 706,
@@ -65,7 +65,7 @@ data:extend({
           blend_mode = "additive",
         },
         {
-          filename = kr_entities_path .. "antimatter-reactor/antimatter-reactor-glow.png",
+          filename = "__Krastorio2Assets__/entities/antimatter-reactor/antimatter-reactor-glow.png",
           priority = "high",
           width = 660,
           height = 706,
@@ -79,7 +79,7 @@ data:extend({
           fadeout = true,
         },
         {
-          filename = kr_entities_path .. "antimatter-reactor/antimatter-reactor.png",
+          filename = "__Krastorio2Assets__/entities/antimatter-reactor/antimatter-reactor.png",
           priority = "high",
           width = 660,
           height = 706,
@@ -90,7 +90,7 @@ data:extend({
           scale = 0.48,
         },
         {
-          filename = kr_entities_path .. "antimatter-reactor/antimatter-reactor-sh.png",
+          filename = "__Krastorio2Assets__/entities/antimatter-reactor/antimatter-reactor-sh.png",
           width = 724,
           height = 630,
           shift = { 0.57, 0.27 },
@@ -105,13 +105,13 @@ data:extend({
     working_sound = {
       sound = {
         {
-          filename = kr_buildings_sounds_path .. "antimatter-reactor.ogg",
+          filename = "__Krastorio2Assets__/sounds/buildings/antimatter-reactor.ogg",
           volume = 1.25,
         },
       },
     },
-    open_sound = { filename = kr_sounds_mod .. "buildings/open.ogg", volume = 1 },
-    close_sound = { filename = kr_sounds_mod .. "buildings/close.ogg", volume = 1 },
+    open_sound = { filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1 },
+    close_sound = { filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1 },
     audible_distance_modifier = 10,
     min_perceived_performance = 0.25,
     performance_to_sound_speedup = 0.5,

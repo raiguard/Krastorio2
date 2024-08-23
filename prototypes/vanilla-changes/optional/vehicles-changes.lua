@@ -64,7 +64,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles-fuels") then
       type = "technology",
       name = "kr-nuclear-locomotive",
       mod = "Krastorio2",
-      icon = kr_technologies_icons_path .. "nuclear-locomotive.png",
+      icon = "__Krastorio2Assets__/technologies/nuclear-locomotive.png",
       icon_size = 256,
       icon_mipmaps = 4,
       effects = {

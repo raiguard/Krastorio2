@@ -4,7 +4,7 @@ local sounds = require("__base__/prototypes/entity/sounds")
 function serverkpipepictures()
   return {
     north = {
-      filename = kr_entities_path .. "research-server/research-server-k-pipe-N.png",
+      filename = "__Krastorio2Assets__/entities/research-server/research-server-k-pipe-N.png",
       priority = "extra-high",
       width = 71,
       height = 38,
@@ -12,7 +12,7 @@ function serverkpipepictures()
       scale = 0.5,
     },
     east = {
-      filename = kr_entities_path .. "research-server/research-server-k-pipe-E.png",
+      filename = "__Krastorio2Assets__/entities/research-server/research-server-k-pipe-E.png",
       priority = "extra-high",
       width = 42,
       height = 76,
@@ -20,7 +20,7 @@ function serverkpipepictures()
       scale = 0.5,
     },
     south = {
-      filename = kr_entities_path .. "research-server/research-server-k-pipe-S.png",
+      filename = "__Krastorio2Assets__/entities/research-server/research-server-k-pipe-S.png",
       priority = "extra-high",
       width = 88,
       height = 61,
@@ -28,7 +28,7 @@ function serverkpipepictures()
       scale = 0.5,
     },
     west = {
-      filename = kr_entities_path .. "research-server/research-server-k-pipe-W.png",
+      filename = "__Krastorio2Assets__/entities/research-server/research-server-k-pipe-W.png",
       priority = "extra-high",
       width = 39,
       height = 73,
@@ -42,7 +42,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "kr-research-server",
-    icon = kr_entities_icons_path .. "research-server.png",
+    icon = "__Krastorio2Assets__/icons/entities/research-server.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -78,7 +78,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "research-server/research-server.png",
+          filename = "__Krastorio2Assets__/entities/research-server/research-server.png",
           priority = "high",
           width = 256,
           height = 256,
@@ -89,7 +89,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "research-server/research-server-shadow.png",
+          filename = "__Krastorio2Assets__/entities/research-server/research-server-shadow.png",
           priority = "high",
           width = 256,
           height = 256,
@@ -105,7 +105,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = kr_entities_path .. "research-server/research-server-light.png",
+          filename = "__Krastorio2Assets__/entities/research-server/research-server-light.png",
           priority = "extra-high",
           width = 256,
           height = 256,
@@ -130,7 +130,7 @@ data:extend({
     working_sound = {
       sound = {
         {
-          filename = kr_buildings_sounds_path .. "small-research-server.ogg",
+          filename = "__Krastorio2Assets__/sounds/buildings/small-research-server.ogg",
           volume = 0.75,
         },
       },
@@ -147,7 +147,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = kr_entities_path .. "research-server/research-server-reflection.png",
+        filename = "__Krastorio2Assets__/entities/research-server/research-server-reflection.png",
         priority = "extra-high",
         width = 40,
         height = 40,
@@ -163,7 +163,7 @@ data:extend({
     ingredient_count = 6,
     module_specification = { module_slots = 2 },
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
-    open_sound = { filename = kr_sounds_mod .. "buildings/open.ogg", volume = 1 },
-    close_sound = { filename = kr_sounds_mod .. "buildings/close.ogg", volume = 1 },
+    open_sound = { filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1 },
+    close_sound = { filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1 },
   },
 })

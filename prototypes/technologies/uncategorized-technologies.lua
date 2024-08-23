@@ -10,7 +10,7 @@ data:extend({
     icon_mipmaps = 4,
     icons = {
       {
-        icon = kr_technologies_icons_path .. "iron-pickaxe.png",
+        icon = "__Krastorio2Assets__/technologies/iron-pickaxe.png",
         icon_size = 256,
         icon_mipmaps = 4,
       },
@@ -45,7 +45,7 @@ data:extend({
     icon_mipmaps = 4,
     icons = {
       {
-        icon = kr_technologies_icons_path .. "imersium-pickaxe.png",
+        icon = "__Krastorio2Assets__/technologies/imersium-pickaxe.png",
         icon_size = 256,
         icon_mipmaps = 4,
       },
@@ -80,7 +80,7 @@ data:extend({
     mod = "Krastorio2",
     icon_size = 256,
     icon_mipmaps = 4,
-    icon = kr_technologies_icons_path .. "tesla-coil.png",
+    icon = "__Krastorio2Assets__/technologies/tesla-coil.png",
     upgrade = false,
     effects = {
       {
@@ -110,7 +110,7 @@ data:extend({
     type = "technology",
     name = "kr-greenhouse",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "greenhouse.png",
+    icon = "__Krastorio2Assets__/technologies/greenhouse.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -138,7 +138,7 @@ data:extend({
     type = "technology",
     name = "kr-fluids-chemistry",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "fluids-chemistry.png",
+    icon = "__Krastorio2Assets__/technologies/fluids-chemistry.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -173,7 +173,7 @@ data:extend({
     type = "technology",
     name = "kr-fluid-excess-handling",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "fluid-burner.png",
+    icon = "__Krastorio2Assets__/technologies/fluid-burner.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -197,7 +197,7 @@ data:extend({
     type = "technology",
     name = "kr-atmosphere-condensation",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "atmospheric-condenser.png",
+    icon = "__Krastorio2Assets__/technologies/atmospheric-condenser.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -237,7 +237,7 @@ data:extend({
     type = "technology",
     name = "kr-air-purification",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "air-purifier.png",
+    icon = "__Krastorio2Assets__/technologies/air-purifier.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -274,7 +274,7 @@ data:extend({
     type = "technology",
     name = "kr-fusion-energy",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "fusion-energy.png",
+    icon = "__Krastorio2Assets__/technologies/fusion-energy.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -330,7 +330,7 @@ data:extend({
     type = "technology",
     name = "kr-fuel",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "fuel-refinery.png",
+    icon = "__Krastorio2Assets__/technologies/fuel-refinery.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -365,7 +365,7 @@ data:extend({
     type = "technology",
     name = "kr-silicon-processing",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "silicon-processing.png",
+    icon = "__Krastorio2Assets__/technologies/silicon-processing.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -394,7 +394,7 @@ data:extend({
     type = "technology",
     name = "kr-advanced-chemistry",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "advanced-chemistry.png",
+    icon = "__Krastorio2Assets__/technologies/advanced-chemistry.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -439,7 +439,7 @@ data:extend({
     type = "technology",
     name = "kr-bio-processing",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "bio-lab.png",
+    icon = "__Krastorio2Assets__/technologies/bio-lab.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -483,7 +483,7 @@ data:extend({
     type = "technology",
     name = "kr-enriched-ores",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "enriched-ores.png",
+    icon = "__Krastorio2Assets__/technologies/enriched-ores.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -539,7 +539,7 @@ data:extend({
     type = "technology",
     name = "kr-lithium-processing",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "lithium-processing.png",
+    icon = "__Krastorio2Assets__/technologies/lithium-processing.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -567,7 +567,7 @@ data:extend({
     type = "technology",
     name = "kr-quarry-minerals-extraction",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "quarry-drill.png",
+    icon = "__Krastorio2Assets__/technologies/quarry-drill.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -601,7 +601,7 @@ data:extend({
     type = "technology",
     name = "kr-automation",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "advanced-assembling-machine.png",
+    icon = "__Krastorio2Assets__/technologies/advanced-assembling-machine.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -684,7 +684,7 @@ data:extend({
     type = "technology",
     name = "kr-railgun-turret",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "railgun-turret.png",
+    icon = "__Krastorio2Assets__/technologies/railgun-turret.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = { "military-4", "utility-science-pack" },
@@ -717,7 +717,7 @@ data:extend({
     type = "technology",
     name = "kr-rocket-turret",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "rocket-turret.png",
+    icon = "__Krastorio2Assets__/technologies/rocket-turret.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = { "kr-military-5", "kr-advanced-tech-card", "kr-railgun-turret", "atomic-bomb" },
@@ -751,7 +751,7 @@ data:extend({
     type = "technology",
     name = "kr-antimatter-reactor",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "antimatter-reactor.png",
+    icon = "__Krastorio2Assets__/technologies/antimatter-reactor.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = { "kr-fusion-energy", "kr-singularity-tech-card" },
@@ -789,7 +789,7 @@ data:extend({
   {
     type = "technology",
     name = "kr-robot-battery",
-    icon = kr_technologies_icons_path .. "robot-battery.png",
+    icon = "__Krastorio2Assets__/technologies/robot-battery.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -812,7 +812,7 @@ data:extend({
   {
     type = "technology",
     name = "kr-robot-battery-plus",
-    icon = kr_technologies_icons_path .. "robot-battery-plus.png",
+    icon = "__Krastorio2Assets__/technologies/robot-battery-plus.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -837,7 +837,7 @@ data:extend({
     type = "technology",
     name = "kr-planetary-teleporter",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "planetary-teleporter.png",
+    icon = "__Krastorio2Assets__/technologies/planetary-teleporter.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {

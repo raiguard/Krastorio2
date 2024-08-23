@@ -1,1 +1,1 @@
-require(kr_particles_prototypes_path .. "general-particles")
+require("__Krastorio2__/prototypes/particles/general-particles")

@@ -7,68 +7,65 @@ krastorio.internal_name = "Krastorio2"
 krastorio.title_name = "Krastorio 2"
 krastorio.version = mods[krastorio.internal_name]
 krastorio.stage = "data"
--- -- Global Krastorio 2 Paths
-require("__Krastorio2__/lib/public/data-stages/paths")
 -- -- Global Krastorio 2 library initialization, utilities library (support for main library)
-require(kr_path .. "lib/private/data-stages/utils/krastorio_utils")
+require("__Krastorio2__/lib/private/data-stages/utils/krastorio_utils")
 -- -- Global Krastorio 2 library initialization, Krastorio 2 main library
-require(kr_path .. "lib/private/data-stages/entities")
-require(kr_path .. "lib/private/data-stages/equipments")
-require(kr_path .. "lib/private/data-stages/general")
-require(kr_path .. "lib/private/data-stages/icons")
-require(kr_path .. "lib/private/data-stages/items")
-require(kr_path .. "lib/private/data-stages/modules")
-require(kr_path .. "lib/private/data-stages/recipes")
-require(kr_path .. "lib/private/data-stages/technologies")
+require("__Krastorio2__/lib/private/data-stages/entities")
+require("__Krastorio2__/lib/private/data-stages/equipments")
+require("__Krastorio2__/lib/private/data-stages/general")
+require("__Krastorio2__/lib/private/data-stages/icons")
+require("__Krastorio2__/lib/private/data-stages/items")
+require("__Krastorio2__/lib/private/data-stages/modules")
+require("__Krastorio2__/lib/private/data-stages/recipes")
+require("__Krastorio2__/lib/private/data-stages/technologies")
 ---------------------------------------------------------------------------
 -- -- -- COMPATIBILITY PRE-INITIALIZATION (data stage)
 ---------------------------------------------------------------------------
 -- -- Use vanilla Space Science Pack as the basis for the Optimization Tech Card
 krastorio.optimization_tech_card_name = "space-science-pack"
 -- -- Define Compatibility Script Path
-local scripts_path = "compatibility-scripts/data/"
 -- -- Pre-Init Compat for SE
-require(scripts_path .. "space-exploration-pre-init")
+require("compatibility-scripts/data/space-exploration-pre-init")
 
 ---------------------------------------------------------------------------
 -- -- -- CONTENTS INITIALIZATION (data stage)
 ---------------------------------------------------------------------------
 -- -- Adding new achievements
-require(kr_achievements_path .. "achievements-initialization")
+require("__Krastorio2__/prototypes/achievements/achievements-initialization")
 -- -- Adding new categories
-require(kr_categories_path .. "categories-initialization")
+require("__Krastorio2__/prototypes/categories/categories-initialization")
 -- -- Adding new damages
-require(kr_damages_path .. "damages-initialization")
+require("__Krastorio2__/prototypes/damages/damages-initialization")
 -- -- Adding new entities
-require(kr_entities_prototypes_path .. "entities-initialization")
+require("__Krastorio2__/prototypes/entities/entities-initialization")
 -- -- Adding new equipments
-require(kr_equipments_prototypes_path .. "equipments-initialization")
+require("__Krastorio2__/prototypes/equipments/equipments-initialization")
 -- -- Adding new fluids
-require(kr_fluids_prototypes_path .. "fluids-initialization")
+require("__Krastorio2__/prototypes/fluids/fluids-initialization")
 -- -- GUI specifications
-require(kr_gui_path .. "gui-initialization")
+require("__Krastorio2__/prototypes/gui/gui-initialization")
 -- -- Adding new tips and tricks
-require(kr_gui_path .. "tips-and-tricks-initialization")
+require("__Krastorio2__/prototypes/gui/tips-and-tricks-initialization")
 -- -- Adding new items
-require(kr_items_prototypes_path .. "items-initialization")
+require("__Krastorio2__/prototypes/items/items-initialization")
 -- -- Adding new particles
-require(kr_particles_prototypes_path .. "particles-initialization")
+require("__Krastorio2__/prototypes/particles/particles-initialization")
 -- -- Adding new recipes
-require(kr_recipes_prototypes_path .. "recipes-initialization")
+require("__Krastorio2__/prototypes/recipes/recipes-initialization")
 -- -- Adding new resources
-require(kr_resources_path .. "resources-initialization")
+require("__Krastorio2__/prototypes/resources/resources-initialization")
 -- -- Adding new sounds (prototypes)
-require(kr_prototypes_path .. "sounds/sounds")
+require("__Krastorio2__/prototypes/sounds/sounds")
 -- -- Adding new technologies
-require(kr_technologies_prototypes_path .. "technologies-initialization")
+require("__Krastorio2__/prototypes/technologies/technologies-initialization")
 -- -- Adding new tiles
-require(kr_tiles_prototypes_path .. "tiles-initialization")
+require("__Krastorio2__/prototypes/tiles/tiles-initialization")
 -- -- Adding new signals (virtual signals)
-require(kr_others_prototypes_path .. "virtual-signals-initialization")
+require("__Krastorio2__/prototypes/others/virtual-signals-initialization")
 -- -- Adding new key binds
-require(kr_others_prototypes_path .. "key-bind-initialization")
+require("__Krastorio2__/prototypes/others/key-bind-initialization")
 -- -- Adding new shortcuts
-require(kr_others_prototypes_path .. "shortcut")
+require("__Krastorio2__/prototypes/others/shortcut")
 ---------------------------------------------------------------------------
 -- -- -- OPTIONAL CONTENTS INITIALIZATION (data stage)
 ---------------------------------------------------------------------------
@@ -77,9 +74,9 @@ require(kr_others_prototypes_path .. "shortcut")
 -- -- -- COMPATIBILITY INITIALIZATION (data stage)
 ---------------------------------------------------------------------------
 -- -- Execute Compatilbility Scripts for the data stage
-require(scripts_path .. "aircraft")
-require(scripts_path .. "early-electric-furnaces")
-require(scripts_path .. "deadlock-beltboxes-loaders")
-require(scripts_path .. "IndustrialRevolution")
-require(scripts_path .. "Squeak_Through")
+require("compatibility-scripts/data/aircraft")
+require("compatibility-scripts/data/early-electric-furnaces")
+require("compatibility-scripts/data/deadlock-beltboxes-loaders")
+require("compatibility-scripts/data/IndustrialRevolution")
+require("compatibility-scripts/data/Squeak_Through")
 ---------------------------------------------------------------------------

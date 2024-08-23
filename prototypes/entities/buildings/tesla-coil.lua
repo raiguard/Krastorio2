@@ -7,7 +7,7 @@ local sounds = require("__base__/prototypes/entity/sounds")
 
 -- Entity sound
 local tesla_coil_sound = {
-  filename = kr_buildings_sounds_path .. "tesla-coil.ogg",
+  filename = "__Krastorio2Assets__/sounds/buildings/tesla-coil.ogg",
   volume = 0.5,
   aggregation = {
     max_count = 2,
@@ -20,15 +20,15 @@ local tesla_coil_sound = {
 local tesla_coil_electric_beam_sound = {
   variations = {
     {
-      filename = kr_others_sounds_path .. "zap-1.ogg",
+      filename = "__Krastorio2Assets__/sounds/others/zap-1.ogg",
       volume = 0.25,
     },
     {
-      filename = kr_others_sounds_path .. "zap-2.ogg",
+      filename = "__Krastorio2Assets__/sounds/others/zap-2.ogg",
       volume = 0.25,
     },
     {
-      filename = kr_others_sounds_path .. "zap-3.ogg",
+      filename = "__Krastorio2Assets__/sounds/others/zap-3.ogg",
       volume = 0.25,
     },
   },
@@ -52,7 +52,7 @@ data:extend({
   {
     type = "electric-energy-interface",
     name = "kr-tesla-coil",
-    icon = kr_entities_icons_path .. "tesla-coil.png",
+    icon = "__Krastorio2Assets__/icons/entities/tesla-coil.png",
     icon_size = 64,
     flags = { "placeable-neutral", "player-creation", "not-rotatable" },
     minable = { mining_time = 0.25, result = "kr-tesla-coil" },
@@ -101,7 +101,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "tesla-coil/tesla-coil-animation-light.png",
+          filename = "__Krastorio2Assets__/entities/tesla-coil/tesla-coil-animation-light.png",
           priority = "high",
           width = 194,
           height = 232,
@@ -115,7 +115,7 @@ data:extend({
           blend_mode = "additive-soft",
         },
         {
-          filename = kr_entities_path .. "tesla-coil/tesla-coil-animation.png",
+          filename = "__Krastorio2Assets__/entities/tesla-coil/tesla-coil-animation.png",
           priority = "high",
           width = 194,
           height = 232,
@@ -127,7 +127,7 @@ data:extend({
           shift = { 0, -0.75 },
         },
         {
-          filename = kr_entities_path .. "tesla-coil/tesla-coil-shadow.png",
+          filename = "__Krastorio2Assets__/entities/tesla-coil/tesla-coil-shadow.png",
           priority = "medium",
           width = 250,
           height = 150,
@@ -368,7 +368,7 @@ data:extend({
   {
     type = "turret",
     name = "kr-tesla-coil-turret",
-    icon = kr_entities_icons_path .. "tesla-coil.png",
+    icon = "__Krastorio2Assets__/icons/entities/tesla-coil.png",
     icon_size = 64,
     icon_mipmaps = 4,
     collision_mask = { layers = {} },
@@ -429,7 +429,7 @@ data:extend({
     type = "simple-entity",
     name = "kr-tesla-coil-collision",
     localised_name = { "entity-name.kr-tesla-coil" },
-    icon = kr_entities_icons_path .. "tesla-coil.png",
+    icon = "__Krastorio2Assets__/icons/entities/tesla-coil.png",
     icon_size = 64,
     icon_mipmaps = 4,
     collision_mask = { layers = { kr_tesla_coil = true } },

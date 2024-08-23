@@ -7,17 +7,12 @@ if krastorio.general.getSafeSettingValue("kr-large-icons") then
   kr_icons_size = true
 end
 
-local _medium_containers = "containers/medium-containers/"
-local _specific = "medium-container/"
-local _icon_path = kr_entities_icons_path .. _medium_containers
-local _sprites_path = kr_entities_path .. _medium_containers .. _specific
-
 if krastorio.general.getSafeSettingValue("kr-containers") then
   data:extend({
     {
       type = "container",
       name = "kr-medium-container",
-      icon = _icon_path .. "medium-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/medium-container.png",
       icon_size = 64,
       icon_mipmaps = 4,
       flags = { "placeable-player", "player-creation", "not-rotatable" },
@@ -38,7 +33,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
       vehicle_impact_sound = sounds.generic_impact,
       opened_duration = logistic_chest_opened_duration,
       picture = {
-        filename = _sprites_path .. "medium-container.png",
+        filename = "__Krastorio2Assets__/entities/containers/medium-containers/medium-container/medium-container.png",
         priority = "extra-high",
         width = 340,
         height = 340,

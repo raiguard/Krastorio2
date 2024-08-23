@@ -403,27 +403,27 @@ data:extend({
       transition = {
         overlay_layout = {
           inner_corner = {
-            spritesheet = kr_tiles_path .. "reinforced-plates/concrete-inner-corner.png",
+            spritesheet = "__Krastorio2Assets__/tiles/reinforced-plates/concrete-inner-corner.png",
             count = 16,
             scale = 0.5,
           },
           outer_corner = {
-            spritesheet = kr_tiles_path .. "reinforced-plates/concrete-outer-corner.png",
+            spritesheet = "__Krastorio2Assets__/tiles/reinforced-plates/concrete-outer-corner.png",
             count = 8,
             scale = 0.5,
           },
           side = {
-            spritesheet = kr_tiles_path .. "reinforced-plates/concrete-side.png",
+            spritesheet = "__Krastorio2Assets__/tiles/reinforced-plates/concrete-side.png",
             count = 16,
             scale = 0.5,
           },
           u_transition = {
-            spritesheet = kr_tiles_path .. "reinforced-plates/concrete-u.png",
+            spritesheet = "__Krastorio2Assets__/tiles/reinforced-plates/concrete-u.png",
             count = 8,
             scale = 0.5,
           },
           o_transition = {
-            spritesheet = kr_tiles_path .. "reinforced-plates/concrete-o.png",
+            spritesheet = "__Krastorio2Assets__/tiles/reinforced-plates/concrete-o.png",
             count = 4,
             scale = 0.5,
           },
@@ -457,7 +457,7 @@ data:extend({
         },
       },
       material_background = {
-        picture = kr_tiles_path .. "reinforced-plates/black-reinforced-plate.png",
+        picture = "__Krastorio2Assets__/tiles/reinforced-plates/black-reinforced-plate.png",
         count = 16,
         scale = 0.5,
       },
@@ -561,7 +561,7 @@ data:extend({
         },
       },
       material_background = {
-        picture = kr_tiles_path .. "reinforced-plates/white-reinforced-plate.png",
+        picture = "__Krastorio2Assets__/tiles/reinforced-plates/white-reinforced-plate.png",
         count = 16,
         scale = 0.5,
       },

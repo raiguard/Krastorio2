@@ -45,9 +45,9 @@ return {
     type = "recipe",
     name = "rare-metals",
     icons = {
-      { icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png", icon_size = 64 },
       {
-        icon = kr_items_with_variations_icons_path .. "raw-rare-metals/raw-rare-metals.png",
+        icon = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals.png",
         icon_size = 64,
         scale = 0.22,
         shift = { -8, -8 },
@@ -69,9 +69,9 @@ return {
     type = "recipe",
     name = "enriched-iron-plate",
     icons = {
-      { icon = kr_items_icons_path .. "iron-plate.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/items/iron-plate.png", icon_size = 64 },
       {
-        icon = kr_items_with_variations_icons_path .. "enriched-iron/enriched-iron.png",
+        icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron.png",
         icon_size = 64,
         scale = 0.22,
         shift = { -8, -8 },
@@ -93,9 +93,9 @@ return {
     type = "recipe",
     name = "enriched-copper-plate",
     icons = {
-      { icon = kr_items_icons_path .. "copper-plate.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/items/copper-plate.png", icon_size = 64 },
       {
-        icon = kr_items_with_variations_icons_path .. "enriched-copper/enriched-copper.png",
+        icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-copper/enriched-copper.png",
         icon_size = 64,
         scale = 0.22,
         shift = { -8, -8 },
@@ -117,9 +117,9 @@ return {
     type = "recipe",
     name = "rare-metals-2",
     icons = {
-      { icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png", icon_size = 64 },
       {
-        icon = kr_items_with_variations_icons_path .. "enriched-rare-metals/enriched-rare-metals.png",
+        icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals.png",
         icon_size = 64,
         scale = 0.22,
         shift = { -8, -8 },

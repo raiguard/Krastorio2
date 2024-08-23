@@ -3,7 +3,7 @@ data:extend({
     type = "corpse",
     name = "turret-remnant",
     localised_name = { "entity-name.turret-remnant" },
-    icon = kr_entities_icons_path .. "railgun-turret.png",
+    icon = "__Krastorio2Assets__/icons/entities/railgun-turret.png",
     icon_size = 64,
     flags = { "placeable-neutral", "building-direction-8-way", "not-on-map" },
     selection_box = { { -4.5, -4.5 }, { 4.5, 4.5 } },
@@ -16,7 +16,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(1, {
-      filename = kr_entities_path .. "remnants/turret/turret-remnant.png",
+      filename = "__Krastorio2Assets__/entities/remnants/turret/turret-remnant.png",
       line_length = 1,
       width = 373,
       height = 253,

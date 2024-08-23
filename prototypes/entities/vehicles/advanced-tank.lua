@@ -1783,7 +1783,7 @@ data:extend({
   {
     type = "car",
     name = "kr-advanced-tank",
-    icon = kr_vehicles_icons_path .. "advanced-tank.png",
+    icon = "__Krastorio2Assets__/icons/vehicles/advanced-tank.png",
     icon_size = 64,
     flags = { "placeable-neutral", "player-creation", "placeable-off-grid", "not-flammable" },
     minable = { mining_time = 10, result = "kr-advanced-tank" },
@@ -1904,7 +1904,7 @@ data:extend({
           scale = 0.525,
           stripes = {
             {
-              filename = kr_entities_path .. "advanced-tank/advanced-tank-base.png",
+              filename = "__Krastorio2Assets__/entities/advanced-tank/advanced-tank-base.png",
               width_in_frames = 16,
               height_in_frames = 8,
             },
@@ -1923,7 +1923,7 @@ data:extend({
           scale = 0.525,
           stripes = {
             {
-              filename = kr_entities_path .. "advanced-tank/advanced-tank-base-mask.png",
+              filename = "__Krastorio2Assets__/entities/advanced-tank/advanced-tank-base-mask.png",
               width_in_frames = 16,
               height_in_frames = 8,
             },
@@ -1941,7 +1941,7 @@ data:extend({
           max_advance = 0.2,
           stripes = {
             {
-              filename = kr_entities_path .. "advanced-tank/advanced-tank-base-shadow.png",
+              filename = "__Krastorio2Assets__/entities/advanced-tank/advanced-tank-base-shadow.png",
               width_in_frames = 16,
               height_in_frames = 8,
             },
@@ -1963,7 +1963,7 @@ data:extend({
           line_length = 16,
           stripes = {
             {
-              filename = kr_entities_path .. "advanced-tank/advanced-tank-turret.png",
+              filename = "__Krastorio2Assets__/entities/advanced-tank/advanced-tank-turret.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
@@ -1982,7 +1982,7 @@ data:extend({
           scale = 0.525,
           stripes = {
             {
-              filename = kr_entities_path .. "advanced-tank/advanced-tank-turret-mask.png",
+              filename = "__Krastorio2Assets__/entities/advanced-tank/advanced-tank-turret-mask.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
@@ -2001,7 +2001,7 @@ data:extend({
           scale = 0.525,
           stripes = {
             {
-              filename = kr_entities_path .. "advanced-tank/advanced-tank-turret-shadow.png",
+              filename = "__Krastorio2Assets__/entities/advanced-tank/advanced-tank-turret-shadow.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
@@ -2021,11 +2021,11 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
-        filename = kr_vehicles_sounds_path .. "advanced-tank-engine.ogg",
+        filename = "__Krastorio2Assets__/sounds/vehicles/advanced-tank-engine.ogg",
         volume = 1,
       },
       activate_sound = {
-        filename = kr_vehicles_sounds_path .. "advanced-tank-engine-start.ogg",
+        filename = "__Krastorio2Assets__/sounds/vehicles/advanced-tank-engine-start.ogg",
         volume = 1,
       },
       deactivate_sound = {
@@ -2036,8 +2036,8 @@ data:extend({
     },
     track_particle_triggers = movement_triggers.kr_advanced_tank,
     water_reflection = car_reflection(2.0),
-    open_sound = { filename = kr_sounds_mod .. "buildings/open.ogg", volume = 1 },
-    close_sound = { filename = kr_sounds_mod .. "buildings/close.ogg", volume = 1 },
+    open_sound = { filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1 },
+    close_sound = { filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1 },
     rotation_speed = 0.0035,
     tank_driving = true,
     weight = 150000,

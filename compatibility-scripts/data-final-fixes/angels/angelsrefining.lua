@@ -2,16 +2,16 @@ if mods["angelsrefining"] then
   -- -- Re-Chaning intermediate products icons
 
   -- Chaning iron plate
-  krastorio.icons.setItemIcon("iron-plate", kr_items_icons_path .. "iron-plate.png", 64, 4)
+  krastorio.icons.setItemIcon("iron-plate", "__Krastorio2Assets__/icons/items/iron-plate.png", 64, 4)
 
   -- Changing copper plate
-  krastorio.icons.setItemIcon("copper-plate", kr_items_icons_path .. "copper-plate.png", 64, 4)
+  krastorio.icons.setItemIcon("copper-plate", "__Krastorio2Assets__/icons/items/copper-plate.png", 64, 4)
 
   -- Chaning steel icon
-  krastorio.icons.setItemIcon("steel-plate", kr_items_icons_path .. "steel-plate.png", 64, 4)
+  krastorio.icons.setItemIcon("steel-plate", "__Krastorio2Assets__/icons/items/steel-plate.png", 64, 4)
 
   -- Changing iron gear wheel
-  krastorio.icons.setItemIcon("iron-gear-wheel", kr_items_icons_path .. "iron-gear-wheel.png", 64, 4)
+  krastorio.icons.setItemIcon("iron-gear-wheel", "__Krastorio2Assets__/icons/items/iron-gear-wheel.png", 64, 4)
 
   -- Other smelting icon recipes
   -- Irons
@@ -24,7 +24,7 @@ if mods["angelsrefining"] then
 
   for _, recipe_name in pairs(iron_recipes) do
     if data.raw.recipe[recipe_name] then
-      data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "iron-plate.png"
+      data.raw.recipe[recipe_name].icons[1].icon = "__Krastorio2Assets__/icons/items/iron-plate.png"
       data.raw.recipe[recipe_name].icons[1].icon_size = 64 -- override the base sprite size
       data.raw.recipe[recipe_name].icons[1].scale = 32 / 64
       data.raw.recipe[recipe_name].icons[2].icon_size = 32 -- override the 'exponent' sprite size
@@ -42,7 +42,7 @@ if mods["angelsrefining"] then
   -- Implement relative custom scaling
   for _, recipe_name in pairs(badly_scaled_recipes) do
     if data.raw.recipe[recipe_name] then
-      data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "iron-plate.png"
+      data.raw.recipe[recipe_name].icons[1].icon = "__Krastorio2Assets__/icons/items/iron-plate.png"
       data.raw.recipe[recipe_name].icons[1].icon_size = 64 -- override the base sprite size
       -- double the scale, because the background is double the size
       data.raw.recipe[recipe_name].icons[2].scale = data.raw.recipe[recipe_name].icons[2].scale * 2
@@ -53,9 +53,9 @@ if mods["angelsrefining"] then
   end
 
   data.raw.recipe["enriched-iron-plate"].icons = {
-    { icon = kr_items_icons_path .. "iron-plate.png", icon_size = 64 },
+    { icon = "__Krastorio2Assets__/icons/items/iron-plate.png", icon_size = 64 },
     {
-      icon = kr_items_with_variations_icons_path .. "enriched-iron/enriched-iron.png",
+      icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron.png",
       icon_size = 64,
       scale = 0.2,
       shift = { -10, -10 },

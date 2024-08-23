@@ -1,6 +1,6 @@
 kr_advanced_transport_belt_animation_set = {
   animation_set = {
-    filename = kr_entities_path .. "transport-belts/advanced-transport-belt/transport-belt/advanced-transport-belt.png",
+    filename = "__Krastorio2Assets__/entities/transport-belts/advanced-transport-belt/transport-belt/advanced-transport-belt.png",
     priority = "extra-high",
     width = 128,
     height = 128,

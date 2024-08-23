@@ -15,7 +15,7 @@ data:extend({
     type = "battery-equipment",
     name = "battery-mk3-equipment",
     sprite = {
-      filename = kr_universal_equipments_path .. "battery-mk3-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/universal/battery-mk3-equipment.png",
       width = 64,
       height = 128,
       priority = "medium",
@@ -40,7 +40,7 @@ data:extend({
     type = "battery-equipment",
     name = "big-battery-equipment",
     sprite = {
-      filename = kr_universal_equipments_path .. "big-battery-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/universal/big-battery-equipment.png",
       width = 128,
       height = 128,
       priority = "medium",
@@ -65,7 +65,7 @@ data:extend({
     type = "battery-equipment",
     name = "big-battery-mk2-equipment",
     sprite = {
-      filename = kr_universal_equipments_path .. "big-battery-mk2-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/universal/big-battery-mk2-equipment.png",
       width = 128,
       height = 128,
       priority = "medium",
@@ -90,7 +90,7 @@ data:extend({
     type = "battery-equipment",
     name = "big-battery-mk3-equipment",
     sprite = {
-      filename = kr_universal_equipments_path .. "big-battery-mk3-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/universal/big-battery-mk3-equipment.png",
       width = 128,
       height = 128,
       priority = "medium",
@@ -117,7 +117,7 @@ data:extend({
     type = "generator-equipment",
     name = "small-portable-generator",
     sprite = {
-      filename = kr_universal_equipments_path .. "small-portable-generator.png",
+      filename = "__Krastorio2Assets__/equipments/universal/small-portable-generator.png",
       width = 128,
       height = 128,
       priority = "medium",
@@ -157,7 +157,7 @@ data:extend({
     type = "generator-equipment",
     name = "portable-generator",
     sprite = {
-      filename = kr_universal_equipments_path .. "portable-generator.png",
+      filename = "__Krastorio2Assets__/equipments/universal/portable-generator.png",
       width = 256,
       height = 256,
       priority = "medium",
@@ -197,7 +197,7 @@ data:extend({
     type = "generator-equipment",
     name = "nuclear-reactor-equipment",
     sprite = {
-      filename = kr_universal_equipments_path .. "nuclear-reactor-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/universal/nuclear-reactor-equipment.png",
       width = 256,
       height = 256,
       priority = "medium",
@@ -227,7 +227,7 @@ data:extend({
     type = "generator-equipment",
     name = "antimatter-reactor-equipment",
     sprite = {
-      filename = kr_universal_equipments_path .. "antimatter-reactor-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/universal/antimatter-reactor-equipment.png",
       width = 256,
       height = 256,
       priority = "medium",
@@ -257,7 +257,7 @@ data:extend({
     type = "generator-equipment",
     name = "cyber-potato-equipment",
     sprite = {
-      filename = kr_universal_equipments_path .. "cyber-potato-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/universal/cyber-potato-equipment.png",
       width = 256,
       height = 256,
       priority = "medium",
@@ -280,7 +280,7 @@ data:extend({
     type = "battery-equipment",
     name = "energy-absorber",
     sprite = {
-      filename = kr_universal_equipments_path .. "energy-absorber.png",
+      filename = "__Krastorio2Assets__/equipments/universal/energy-absorber.png",
       width = 256,
       height = 256,
       priority = "medium",
@@ -310,7 +310,7 @@ data:extend({
     type = "solar-panel-equipment",
     name = "big-solar-panel-equipment",
     sprite = {
-      filename = kr_universal_equipments_path .. "big-solar-panel-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/universal/big-solar-panel-equipment.png",
       width = 128,
       height = 128,
       priority = "medium",
@@ -333,7 +333,7 @@ data:extend({
     type = "solar-panel-equipment",
     name = "imersite-solar-panel-equipment",
     sprite = {
-      filename = kr_universal_equipments_path .. "imersite-solar-panel-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/universal/imersite-solar-panel-equipment.png",
       width = 64,
       height = 64,
       priority = "medium",
@@ -356,7 +356,7 @@ data:extend({
     type = "solar-panel-equipment",
     name = "big-imersite-solar-panel-equipment",
     sprite = {
-      filename = kr_universal_equipments_path .. "big-imersite-solar-panel-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/universal/big-imersite-solar-panel-equipment.png",
       width = 128,
       height = 128,
       priority = "medium",
@@ -428,7 +428,7 @@ data:extend({
       type = "full",
     },
     sprite = {
-      filename = kr_universal_equipments_path .. "personal-laser-defense-mk2-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/universal/personal-laser-defense-mk2-equipment.png",
       width = 128,
       height = 128,
       priority = "medium",
@@ -487,7 +487,7 @@ data:extend({
       type = "full",
     },
     sprite = {
-      filename = kr_universal_equipments_path .. "personal-laser-defense-mk3-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/universal/personal-laser-defense-mk3-equipment.png",
       width = 128,
       height = 128,
       priority = "medium",
@@ -546,7 +546,7 @@ data:extend({
       type = "full",
     },
     sprite = {
-      filename = kr_universal_equipments_path .. "personal-laser-defense-mk4-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/universal/personal-laser-defense-mk4-equipment.png",
       width = 128,
       height = 128,
       priority = "medium",
@@ -558,7 +558,7 @@ data:extend({
     type = "active-defense-equipment",
     name = "personal-submachine-laser-defense-mk1-equipment",
     sprite = {
-      filename = kr_universal_equipments_path .. "personal-submachine-laser-defense-mk1-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/universal/personal-submachine-laser-defense-mk1-equipment.png",
       width = 128,
       height = 128,
       priority = "medium",
@@ -620,7 +620,7 @@ data:extend({
     type = "active-defense-equipment",
     name = "personal-submachine-laser-defense-mk2-equipment",
     sprite = {
-      filename = kr_universal_equipments_path .. "personal-submachine-laser-defense-mk2-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/universal/personal-submachine-laser-defense-mk2-equipment.png",
       width = 128,
       height = 128,
       priority = "medium",
@@ -678,7 +678,7 @@ data:extend({
     type = "active-defense-equipment",
     name = "personal-submachine-laser-defense-mk3-equipment",
     sprite = {
-      filename = kr_universal_equipments_path .. "personal-submachine-laser-defense-mk3-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/universal/personal-submachine-laser-defense-mk3-equipment.png",
       width = 128,
       height = 128,
       priority = "medium",
@@ -736,7 +736,7 @@ data:extend({
     type = "active-defense-equipment",
     name = "personal-submachine-laser-defense-mk4-equipment",
     sprite = {
-      filename = kr_universal_equipments_path .. "personal-submachine-laser-defense-mk4-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/universal/personal-submachine-laser-defense-mk4-equipment.png",
       width = 128,
       height = 128,
       priority = "medium",
@@ -789,7 +789,7 @@ data:extend({
     localised_name = { "equipment-name.shield-generator-mk3" },
     localised_description = { "equipment-description.shield-generator-mk3" },
     sprite = {
-      filename = kr_universal_equipments_path .. "energy-shield-mk3-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/universal/energy-shield-mk3-equipment.png",
       width = 128,
       height = 128,
       priority = "medium",
@@ -817,7 +817,7 @@ data:extend({
     localised_name = { "equipment-name.shield-generator-mk4" },
     localised_description = { "equipment-description.shield-generator-mk4" },
     sprite = {
-      filename = kr_universal_equipments_path .. "energy-shield-mk4-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/universal/energy-shield-mk4-equipment.png",
       width = 128,
       height = 128,
       priority = "medium",

@@ -3,7 +3,7 @@ data:extend({
     type = "corpse",
     name = "kr-fusion-reactor-remnant",
     localised_name = { "remnant-name", { "entity-name.kr-fusion-reactor" } },
-    icon = kr_entities_icons_path .. "fusion-reactor.png",
+    icon = "__Krastorio2Assets__/icons/entities/fusion-reactor.png",
     icon_size = 64,
     flags = { "placeable-neutral", "building-direction-8-way", "not-on-map" },
     selection_box = { { -7.5, -7.5 }, { 7.5, 7.5 } },
@@ -16,7 +16,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(1, {
-      filename = kr_remnants_path .. "fusion-reactor/fusion-reactor-remnant.png",
+      filename = "__Krastorio2Assets__/entities/remnants/fusion-reactor/fusion-reactor-remnant.png",
       line_length = 1,
       width = 1100,
       height = 1100,

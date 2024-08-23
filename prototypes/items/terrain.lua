@@ -10,32 +10,32 @@ data:extend({
   {
     type = "item",
     name = "kr-creep",
-    icon = kr_items_with_variations_icons_path .. "biomass/biomass.png",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass.png",
     icon_size = 64,
     icon_mipmaps = 4,
     hidden = true,
     pictures = {
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "biomass/biomass.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "biomass/biomass-1.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "biomass/biomass-2.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "biomass/biomass-3.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-3.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -57,7 +57,7 @@ data:extend({
   {
     type = "item",
     name = "kr-black-reinforced-plate",
-    icon = kr_items_icons_path .. "black-reinforced-plate.png",
+    icon = "__Krastorio2Assets__/icons/items/black-reinforced-plate.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "terrain",
@@ -72,7 +72,7 @@ data:extend({
   {
     type = "item",
     name = "kr-white-reinforced-plate",
-    icon = kr_items_icons_path .. "white-reinforced-plate.png",
+    icon = "__Krastorio2Assets__/icons/items/white-reinforced-plate.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "terrain",

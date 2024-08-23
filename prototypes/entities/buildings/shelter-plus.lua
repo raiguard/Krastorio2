@@ -28,7 +28,7 @@ elseif setting_color == "Gray" then
 end
 
 local empty_sprite = {
-  filename = kr_entities_path .. "empty.png",
+  filename = "__Krastorio2Assets__/entities/empty.png",
   priority = "high",
   width = 1,
   height = 1,
@@ -39,7 +39,7 @@ local empty_sprite = {
 local armored_shelter_animation = {
   layers = {
     {
-      filename = kr_entities_path .. "shelter-plus/shelter-plus-light.png",
+      filename = "__Krastorio2Assets__/entities/shelter-plus/shelter-plus-light.png",
       priority = "high",
       width = 450,
       height = 450,
@@ -51,7 +51,7 @@ local armored_shelter_animation = {
       animation_speed = 0.5,
     },
     {
-      filename = kr_entities_path .. "shelter-plus/shelter-plus.png",
+      filename = "__Krastorio2Assets__/entities/shelter-plus/shelter-plus.png",
       priority = "high",
       width = 450,
       height = 450,
@@ -62,7 +62,7 @@ local armored_shelter_animation = {
       animation_speed = 0.5,
     },
     {
-      filename = kr_entities_path .. "shelter-plus/shelter-plus-sh.png",
+      filename = "__Krastorio2Assets__/entities/shelter-plus/shelter-plus-sh.png",
       priority = "high",
       width = 520,
       height = 342,
@@ -74,7 +74,7 @@ local armored_shelter_animation = {
       draw_as_shadow = true,
     },
     {
-      filename = kr_entities_path .. "shelter-plus/shelter-plus-mask.png",
+      filename = "__Krastorio2Assets__/entities/shelter-plus/shelter-plus-mask.png",
       flags = { "mask" },
       priority = "extra-high",
       width = 450,
@@ -96,7 +96,7 @@ data:extend({
     type = "electric-energy-interface",
     name = "kr-shelter-plus",
     localised_description = { "entity-description.kr-shelter-plus" },
-    icon = kr_entities_icons_path .. "shelter-plus.png",
+    icon = "__Krastorio2Assets__/icons/entities/shelter-plus.png",
     icon_size = 64,
     icon_mipmaps = 4,
     allow_copy_paste = false,
@@ -123,7 +123,7 @@ data:extend({
     name = "kr-shelter-plus-container",
     localised_name = { "entity-name.kr-shelter-plus" },
     localised_description = { "entity-description.kr-shelter-plus" },
-    icon = kr_entities_icons_path .. "shelter-plus.png",
+    icon = "__Krastorio2Assets__/icons/entities/shelter-plus.png",
     icon_size = 64,
     icon_mipmaps = 4,
     allow_copy_paste = false,
@@ -145,7 +145,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = kr_entities_path .. "shelter/shelter-reflection.png",
+        filename = "__Krastorio2Assets__/entities/shelter/shelter-reflection.png",
         priority = "extra-high",
         width = 60,
         height = 50,
@@ -160,8 +160,8 @@ data:extend({
     picture = armored_shelter_animation,
     inventory_size = 200,
     scale_info_icons = kr_icons_size,
-    open_sound = { filename = kr_sounds_mod .. "buildings/open.ogg", volume = 1 },
-    close_sound = { filename = kr_sounds_mod .. "buildings/close.ogg", volume = 1 },
+    open_sound = { filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1 },
+    close_sound = { filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1 },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
   },
 
@@ -172,7 +172,7 @@ data:extend({
     name = "kr-shelter-plus-light",
     localised_name = { "entity-name.kr-shelter-plus" },
     localised_description = { "entity-description.kr-shelter-plus" },
-    icon = kr_entities_path .. "empty.png",
+    icon = "__Krastorio2Assets__/entities/empty.png",
     icon_size = 1,
     allow_copy_paste = false,
     flags = { "not-on-map" },
@@ -204,7 +204,7 @@ data:extend({
     name = "kr-inactive-shelter-plus",
     localised_name = { "entity-name.kr-shelter-plus" },
     localised_description = { "entity-description.kr-shelter-plus" },
-    icon = kr_entities_icons_path .. "shelter.png",
+    icon = "__Krastorio2Assets__/icons/entities/shelter.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {},

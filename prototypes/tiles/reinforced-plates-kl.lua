@@ -9,7 +9,7 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
     {
       type = "item",
       name = "kr-black-reinforced-plate-l",
-      icon = kr_items_icons_path .. "black-reinforced-plate-kl.png",
+      icon = "__Krastorio2Assets__/icons/items/black-reinforced-plate-kl.png",
       icon_size = 64,
       icon_mipmaps = 4,
       subgroup = "terrain",
@@ -24,7 +24,7 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
     {
       type = "item",
       name = "kr-white-reinforced-plate-l",
-      icon = kr_items_icons_path .. "white-reinforced-plate-kl.png",
+      icon = "__Krastorio2Assets__/icons/items/white-reinforced-plate-kl.png",
       icon_size = 64,
       icon_mipmaps = 4,
       subgroup = "terrain",
@@ -76,13 +76,13 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
       variants = {
         main = {
           {
-            picture = kr_tiles_path .. "reinforced-plates-kl/reinforced-plate.png",
+            picture = "__Krastorio2Assets__/tiles/reinforced-plates-kl/reinforced-plate.png",
             count = 16,
             scale = 0.5,
             size = 4,
           },
           {
-            picture = kr_tiles_path .. "reinforced-plates-kl/reinforced-plate.png",
+            picture = "__Krastorio2Assets__/tiles/reinforced-plates-kl/reinforced-plate.png",
             count = 16,
             scale = 0.5,
             size = 1,
@@ -91,31 +91,31 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
         transition = {
           overlay_layout = {
             inner_corner = {
-              spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-inner-corner.png",
+              spritesheet = "__Krastorio2Assets__/tiles/reinforced-plates-kl/plate-inner-corner.png",
               count = 4,
               tall = true,
               scale = 0.5,
             },
             outer_corner = {
-              spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-outer-corner.png",
+              spritesheet = "__Krastorio2Assets__/tiles/reinforced-plates-kl/plate-outer-corner.png",
               count = 4,
               tall = true,
               scale = 0.5,
             },
             side = {
-              spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-side.png",
+              spritesheet = "__Krastorio2Assets__/tiles/reinforced-plates-kl/plate-side.png",
               count = 16,
               tall = true,
               scale = 0.5,
             },
             u_transition = {
-              spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-u.png",
+              spritesheet = "__Krastorio2Assets__/tiles/reinforced-plates-kl/plate-u.png",
               count = 2,
               tall = true,
               scale = 0.5,
             },
             o_transition = {
-              spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-o.png",
+              spritesheet = "__Krastorio2Assets__/tiles/reinforced-plates-kl/plate-o.png",
               count = 2,
               scale = 0.5,
             },
@@ -160,13 +160,13 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
       variants = {
         main = {
           {
-            picture = kr_tiles_path .. "reinforced-plates-kl/black-reinforced-plate.png",
+            picture = "__Krastorio2Assets__/tiles/reinforced-plates-kl/black-reinforced-plate.png",
             count = 16,
             scale = 0.5,
             size = 4,
           },
           {
-            picture = kr_tiles_path .. "reinforced-plates-kl/black-reinforced-plate.png",
+            picture = "__Krastorio2Assets__/tiles/reinforced-plates-kl/black-reinforced-plate.png",
             count = 16,
             scale = 0.5,
             size = 1,
@@ -174,31 +174,31 @@ if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
         },
         overlay_layout = {
           inner_corner = {
-            spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-inner-corner.png",
+            spritesheet = "__Krastorio2Assets__/tiles/reinforced-plates-kl/plate-inner-corner.png",
             count = 4,
             tall = true,
             scale = 0.5,
           },
           outer_corner = {
-            spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-outer-corner.png",
+            spritesheet = "__Krastorio2Assets__/tiles/reinforced-plates-kl/plate-outer-corner.png",
             count = 4,
             tall = true,
             scale = 0.5,
           },
           side = {
-            spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-side.png",
+            spritesheet = "__Krastorio2Assets__/tiles/reinforced-plates-kl/plate-side.png",
             count = 16,
             tall = true,
             scale = 0.5,
           },
           u_transition = {
-            spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-u.png",
+            spritesheet = "__Krastorio2Assets__/tiles/reinforced-plates-kl/plate-u.png",
             count = 2,
             tall = true,
             scale = 0.5,
           },
           o_transition = {
-            spritesheet = kr_tiles_path .. "reinforced-plates-kl/plate-o.png",
+            spritesheet = "__Krastorio2Assets__/tiles/reinforced-plates-kl/plate-o.png",
             count = 2,
             scale = 0.5,
           },

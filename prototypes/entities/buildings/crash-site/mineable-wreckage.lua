@@ -5,7 +5,7 @@ data:extend({
     type = "simple-entity-with-owner",
     name = "kr-mineable-wreckage",
     localised_description = { "entity-description.mineable-wreckage" },
-    icon = kr_crash_site_icons_path .. "small-ship-wreck.png",
+    icon = "__Krastorio2Assets__/icons/entities/crash-site/small-ship-wreck.png",
     icon_size = 64,
     icon_mipmaps = 4,
     minable = {
@@ -34,48 +34,48 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     pictures = {
       {
-        filename = kr_crash_site_sprites_path .. "mineable-wreckage/small-ship-wreck-a.png",
+        filename = "__Krastorio2Assets__/entities/crash-site/mineable-wreckage/small-ship-wreck-a.png",
         width = 65,
         height = 68,
       },
       {
-        filename = kr_crash_site_sprites_path .. "mineable-wreckage/small-ship-wreck-b.png",
+        filename = "__Krastorio2Assets__/entities/crash-site/mineable-wreckage/small-ship-wreck-b.png",
         width = 109,
         height = 67,
       },
       {
-        filename = kr_crash_site_sprites_path .. "mineable-wreckage/small-ship-wreck-c.png",
+        filename = "__Krastorio2Assets__/entities/crash-site/mineable-wreckage/small-ship-wreck-c.png",
         width = 63,
         height = 54,
       },
       {
-        filename = kr_crash_site_sprites_path .. "mineable-wreckage/small-ship-wreck-d.png",
+        filename = "__Krastorio2Assets__/entities/crash-site/mineable-wreckage/small-ship-wreck-d.png",
         width = 82,
         height = 67,
       },
       {
-        filename = kr_crash_site_sprites_path .. "mineable-wreckage/small-ship-wreck-e.png",
+        filename = "__Krastorio2Assets__/entities/crash-site/mineable-wreckage/small-ship-wreck-e.png",
         width = 78,
         height = 75,
         shift = { 0.3, -0.2 },
       },
       {
-        filename = kr_crash_site_sprites_path .. "mineable-wreckage/small-ship-wreck-f.png",
+        filename = "__Krastorio2Assets__/entities/crash-site/mineable-wreckage/small-ship-wreck-f.png",
         width = 58,
         height = 35,
       },
       {
-        filename = kr_crash_site_sprites_path .. "mineable-wreckage/small-ship-wreck-g.png",
+        filename = "__Krastorio2Assets__/entities/crash-site/mineable-wreckage/small-ship-wreck-g.png",
         width = 80,
         height = 72,
       },
       {
-        filename = kr_crash_site_sprites_path .. "mineable-wreckage/small-ship-wreck-h.png",
+        filename = "__Krastorio2Assets__/entities/crash-site/mineable-wreckage/small-ship-wreck-h.png",
         width = 79,
         height = 54,
       },
       {
-        filename = kr_crash_site_sprites_path .. "mineable-wreckage/small-ship-wreck-i.png",
+        filename = "__Krastorio2Assets__/entities/crash-site/mineable-wreckage/small-ship-wreck-i.png",
         width = 56,
         height = 55,
       },

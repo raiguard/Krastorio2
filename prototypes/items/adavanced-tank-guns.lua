@@ -1,15 +1,15 @@
 local heavy_impulse_rifle_shot_sound = {
   variations = {
     {
-      filename = kr_weapons_sounds_path .. "heavy-impulse-shot-1.ogg",
+      filename = "__Krastorio2Assets__/sounds/weapons/heavy-impulse-shot-1.ogg",
       volume = 0.85,
     },
     {
-      filename = kr_weapons_sounds_path .. "heavy-impulse-shot-2.ogg",
+      filename = "__Krastorio2Assets__/sounds/weapons/heavy-impulse-shot-2.ogg",
       volume = 0.85,
     },
     {
-      filename = kr_weapons_sounds_path .. "heavy-impulse-shot-3.ogg",
+      filename = "__Krastorio2Assets__/sounds/weapons/heavy-impulse-shot-3.ogg",
       volume = 0.85,
     },
   },
@@ -23,11 +23,11 @@ local heavy_impulse_rifle_shot_sound = {
 local advanced_tank_anti_material_rifle_shot_sound = {
   variations = {
     {
-      filename = kr_weapons_sounds_path .. "advanced-tank-anti-material-rifle-1.ogg",
+      filename = "__Krastorio2Assets__/sounds/weapons/advanced-tank-anti-material-rifle-1.ogg",
       volume = 0.85,
     },
     {
-      filename = kr_weapons_sounds_path .. "advanced-tank-anti-material-rifle-2.ogg",
+      filename = "__Krastorio2Assets__/sounds/weapons/advanced-tank-anti-material-rifle-2.ogg",
       volume = 0.85,
     },
   },
@@ -45,7 +45,7 @@ data:extend({
   {
     type = "gun",
     name = "advanced-tank-machine-gun",
-    icon = kr_guns_icons_path .. "advanced-tank-machine-gun.png",
+    icon = "__Krastorio2Assets__/icons/guns/advanced-tank-machine-gun.png",
     icon_size = 64,
     hidden = true,
     subgroup = "gun",
@@ -77,7 +77,7 @@ data:extend({
   {
     type = "gun",
     name = "advanced-tank-laser-cannon",
-    icon = kr_guns_icons_path .. "advanced-tank-laser-cannon.png",
+    icon = "__Krastorio2Assets__/icons/guns/advanced-tank-laser-cannon.png",
     icon_size = 64,
     hidden = true,
     subgroup = "gun",
@@ -99,7 +99,7 @@ data:extend({
   {
     type = "gun",
     name = "advanced-tank-cannon-a",
-    icon = kr_guns_icons_path .. "advanced-tank-cannon-a.png",
+    icon = "__Krastorio2Assets__/icons/guns/advanced-tank-cannon-a.png",
     icon_size = 64,
     hidden = true,
     subgroup = "gun",
@@ -116,7 +116,7 @@ data:extend({
       range = 60,
       sound = {
         {
-          filename = kr_weapons_sounds_path .. "railgun.ogg",
+          filename = "__Krastorio2Assets__/sounds/weapons/railgun.ogg",
           volume = 1.0,
         },
       },
@@ -127,7 +127,7 @@ data:extend({
   {
     type = "gun",
     name = "advanced-tank-cannon-b",
-    icon = kr_guns_icons_path .. "advanced-tank-cannon-b.png",
+    icon = "__Krastorio2Assets__/icons/guns/advanced-tank-cannon-b.png",
     icon_size = 64,
     hidden = true,
     subgroup = "gun",
@@ -144,7 +144,7 @@ data:extend({
       range = 60,
       sound = {
         {
-          filename = kr_weapons_sounds_path .. "railgun.ogg",
+          filename = "__Krastorio2Assets__/sounds/weapons/railgun.ogg",
           volume = 1.0,
         },
       },
@@ -155,7 +155,7 @@ data:extend({
   {
     type = "gun",
     name = "advanced-tank-cannon-c",
-    icon = kr_guns_icons_path .. "advanced-tank-cannon-c.png",
+    icon = "__Krastorio2Assets__/icons/guns/advanced-tank-cannon-c.png",
     icon_size = 64,
     hidden = true,
     subgroup = "gun",
@@ -171,7 +171,7 @@ data:extend({
       range = 120,
       sound = {
         {
-          filename = kr_weapons_sounds_path .. "railgun.ogg",
+          filename = "__Krastorio2Assets__/sounds/weapons/railgun.ogg",
           volume = 1.5,
         },
       },

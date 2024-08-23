@@ -8,14 +8,14 @@ kr_pipepictures = function()
       scale = 0.5,
     },
     straight_vertical = {
-      filename = kr_entities_path .. "iron-pipe/pipe-straight-vertical.png",
+      filename = "__Krastorio2Assets__/entities/iron-pipe/pipe-straight-vertical.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     straight_vertical_window = {
-      filename = kr_entities_path .. "iron-pipe/pipe-straight-vertical-window.png",
+      filename = "__Krastorio2Assets__/entities/iron-pipe/pipe-straight-vertical-window.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -36,14 +36,14 @@ kr_pipepictures = function()
       scale = 0.5,
     },
     corner_up_right = {
-      filename = kr_entities_path .. "iron-pipe/pipe-corner-up-right.png",
+      filename = "__Krastorio2Assets__/entities/iron-pipe/pipe-corner-up-right.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     corner_up_left = {
-      filename = kr_entities_path .. "iron-pipe/pipe-corner-up-left.png",
+      filename = "__Krastorio2Assets__/entities/iron-pipe/pipe-corner-up-left.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -64,7 +64,7 @@ kr_pipepictures = function()
       scale = 0.5,
     },
     t_up = {
-      filename = kr_entities_path .. "iron-pipe/pipe-t-up.png",
+      filename = "__Krastorio2Assets__/entities/iron-pipe/pipe-t-up.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -78,28 +78,28 @@ kr_pipepictures = function()
       scale = 0.5,
     },
     t_right = {
-      filename = kr_entities_path .. "iron-pipe/pipe-t-right.png",
+      filename = "__Krastorio2Assets__/entities/iron-pipe/pipe-t-right.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     t_left = {
-      filename = kr_entities_path .. "iron-pipe/pipe-t-left.png",
+      filename = "__Krastorio2Assets__/entities/iron-pipe/pipe-t-left.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     cross = {
-      filename = kr_entities_path .. "iron-pipe/pipe-cross.png",
+      filename = "__Krastorio2Assets__/entities/iron-pipe/pipe-cross.png",
       priority = "extra-high",
       width = 128,
       height = 128,
       scale = 0.5,
     },
     ending_up = {
-      filename = kr_entities_path .. "iron-pipe/pipe-ending-up.png",
+      filename = "__Krastorio2Assets__/entities/iron-pipe/pipe-ending-up.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -181,7 +181,7 @@ end
 data.raw.pipe["pipe"].pictures = kr_pipepictures()
 data.raw["pipe-to-ground"]["pipe-to-ground"].pictures = {
   up = {
-    filename = kr_entities_path .. "iron-pipe/pipe-to-ground-up.png",
+    filename = "__Krastorio2Assets__/entities/iron-pipe/pipe-to-ground-up.png",
     priority = "extra-high",
     width = 128,
     height = 128,

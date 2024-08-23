@@ -5,7 +5,7 @@ data:extend({
   {
     type = "solar-panel",
     name = "kr-advanced-solar-panel",
-    icon = kr_entities_icons_path .. "advanced-solar-panel.png",
+    icon = "__Krastorio2Assets__/icons/entities/advanced-solar-panel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "player-creation" },
@@ -25,7 +25,7 @@ data:extend({
       layers = {
         {
 
-          filename = kr_entities_path .. "advanced-solar-panel/advanced-solar-panel-light.png",
+          filename = "__Krastorio2Assets__/entities/advanced-solar-panel/advanced-solar-panel-light.png",
           priority = "high",
           width = 280,
           height = 280,
@@ -34,7 +34,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "advanced-solar-panel/advanced-solar-panel.png",
+          filename = "__Krastorio2Assets__/entities/advanced-solar-panel/advanced-solar-panel.png",
           priority = "high",
           width = 280,
           height = 280,
@@ -42,7 +42,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "advanced-solar-panel/advanced-solar-panel-sh.png",
+          filename = "__Krastorio2Assets__/entities/advanced-solar-panel/advanced-solar-panel-sh.png",
           priority = "high",
           width = 280,
           height = 280,
@@ -55,7 +55,7 @@ data:extend({
     overlay = {
       layers = {
         {
-          filename = kr_entities_path .. "advanced-solar-panel/advanced-solar-panel-sh-ov.png",
+          filename = "__Krastorio2Assets__/entities/advanced-solar-panel/advanced-solar-panel-sh-ov.png",
           priority = "high",
           width = 280,
           height = 280,

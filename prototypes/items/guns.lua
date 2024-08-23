@@ -1,15 +1,15 @@
 local impulse_rifle_shot_sound = {
   variations = {
     {
-      filename = kr_weapons_sounds_path .. "impulse-shot-1.ogg",
+      filename = "__Krastorio2Assets__/sounds/weapons/impulse-shot-1.ogg",
       volume = 0.85,
     },
     {
-      filename = kr_weapons_sounds_path .. "impulse-shot-2.ogg",
+      filename = "__Krastorio2Assets__/sounds/weapons/impulse-shot-2.ogg",
       volume = 0.85,
     },
     {
-      filename = kr_weapons_sounds_path .. "impulse-shot-3.ogg",
+      filename = "__Krastorio2Assets__/sounds/weapons/impulse-shot-3.ogg",
       volume = 0.85,
     },
   },
@@ -27,7 +27,7 @@ data:extend({
   {
     type = "gun",
     name = "impulse-rifle",
-    icon = kr_guns_icons_path .. "impulse-rifle.png",
+    icon = "__Krastorio2Assets__/icons/guns/impulse-rifle.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "gun",
@@ -48,7 +48,7 @@ data:extend({
   {
     type = "gun",
     name = "heavy-rocket-launcher",
-    icon = kr_guns_icons_path .. "heavy-rocket-launcher.png",
+    icon = "__Krastorio2Assets__/icons/guns/heavy-rocket-launcher.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "gun",
@@ -63,7 +63,7 @@ data:extend({
       projectile_center = { -0.17, 0 },
       sound = {
         {
-          filename = kr_weapons_sounds_path .. "rocket-launch.ogg",
+          filename = "__Krastorio2Assets__/sounds/weapons/rocket-launch.ogg",
           volume = 1,
         },
       },
@@ -74,7 +74,7 @@ data:extend({
   {
     type = "gun",
     name = "dolphin-gun",
-    icon = kr_guns_icons_path .. "dolphin-gun.png",
+    icon = "__Krastorio2Assets__/icons/guns/dolphin-gun.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "other",
@@ -91,7 +91,7 @@ data:extend({
       projectile_center = { -0.17, 0 },
       sound = {
         {
-          filename = kr_weapons_sounds_path .. "dolphin-gun.ogg",
+          filename = "__Krastorio2Assets__/sounds/weapons/dolphin-gun.ogg",
           volume = 1,
         },
       },
@@ -102,7 +102,7 @@ data:extend({
   {
     type = "gun",
     name = "kr-accelerator",
-    icon = kr_guns_icons_path .. "accelerator.png",
+    icon = "__Krastorio2Assets__/icons/guns/accelerator.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "gun",
@@ -127,7 +127,7 @@ data:extend({
       range = 22,
       sound = {
         {
-          filename = kr_weapons_sounds_path .. "accelerator.ogg",
+          filename = "__Krastorio2Assets__/sounds/weapons/accelerator.ogg",
           volume = 0.3,
         },
       },

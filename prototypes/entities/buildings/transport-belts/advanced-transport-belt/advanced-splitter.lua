@@ -3,7 +3,7 @@ data:extend({
     type = "splitter",
     name = "kr-advanced-splitter",
     localised_description = { "entity-description.splitter" },
-    icon = kr_entities_icons_path .. "transport-belts/advanced-transport-belt/advanced-splitter.png",
+    icon = "__Krastorio2Assets__/icons/entities/transport-belts/advanced-transport-belt/advanced-splitter.png",
     icon_size = 64,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.2, result = "kr-advanced-splitter" },
@@ -26,7 +26,7 @@ data:extend({
     animation_speed_coefficient = 28,
     structure = {
       north = {
-        filename = kr_entities_path .. "transport-belts/advanced-transport-belt/splitter/advanced-splitter-north.png",
+        filename = "__Krastorio2Assets__/entities/transport-belts/advanced-transport-belt/splitter/advanced-splitter-north.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",
@@ -36,7 +36,7 @@ data:extend({
         scale = 0.5,
       },
       east = {
-        filename = kr_entities_path .. "transport-belts/advanced-transport-belt/splitter/advanced-splitter-east.png",
+        filename = "__Krastorio2Assets__/entities/transport-belts/advanced-transport-belt/splitter/advanced-splitter-east.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",
@@ -46,7 +46,7 @@ data:extend({
         scale = 0.5,
       },
       south = {
-        filename = kr_entities_path .. "transport-belts/advanced-transport-belt/splitter/advanced-splitter-south.png",
+        filename = "__Krastorio2Assets__/entities/transport-belts/advanced-transport-belt/splitter/advanced-splitter-south.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",
@@ -56,7 +56,7 @@ data:extend({
         scale = 0.5,
       },
       west = {
-        filename = kr_entities_path .. "transport-belts/advanced-transport-belt/splitter/advanced-splitter-west.png",
+        filename = "__Krastorio2Assets__/entities/transport-belts/advanced-transport-belt/splitter/advanced-splitter-west.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",
@@ -69,8 +69,7 @@ data:extend({
     structure_patch = {
       north = util.empty_sprite(),
       east = {
-        filename = kr_entities_path
-          .. "transport-belts/advanced-transport-belt/splitter/advanced-splitter-east-top_patch.png",
+        filename = "__Krastorio2Assets__/entities/transport-belts/advanced-transport-belt/splitter/advanced-splitter-east-top_patch.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",
@@ -81,8 +80,7 @@ data:extend({
       },
       south = util.empty_sprite(),
       west = {
-        filename = kr_entities_path
-          .. "transport-belts/advanced-transport-belt/splitter/advanced-splitter-west-top_patch.png",
+        filename = "__Krastorio2Assets__/entities/transport-belts/advanced-transport-belt/splitter/advanced-splitter-west-top_patch.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",

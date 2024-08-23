@@ -19,11 +19,11 @@ data:extend({
   {
     type = "selection-tool",
     name = "kr-creep-collector",
-    icon = kr_icons_path .. "items/creep-collector.png",
+    icon = "__Krastorio2Assets__/icons/items/creep-collector.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
-      { size = 64, filename = kr_icons_path .. "items/creep-collector.png", scale = 0.25, mipmap_count = 4 },
+      { size = 64, filename = "__Krastorio2Assets__/icons/items/creep-collector.png", scale = 0.25, mipmap_count = 4 },
     },
     flags = { "not-stackable", "spawnable", "only-in-cursor" },
     hidden = true,
@@ -66,7 +66,7 @@ data:extend({
   {
     type = "selection-tool",
     name = "kr-jackhammer",
-    icon = kr_icons_path .. "items/jackhammer.png",
+    icon = "__Krastorio2Assets__/icons/items/jackhammer.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "not-stackable", "spawnable", "only-in-cursor" },

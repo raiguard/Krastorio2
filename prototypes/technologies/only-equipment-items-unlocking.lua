@@ -10,7 +10,7 @@ data:extend({
     mod = "Krastorio2",
     icon_size = 256,
     icon_mipmaps = 4,
-    icon = kr_technologies_icons_path .. "power-armor-mk3.png",
+    icon = "__Krastorio2Assets__/technologies/power-armor-mk3.png",
     upgrade = false,
     effects = {
       {
@@ -36,7 +36,7 @@ data:extend({
     mod = "Krastorio2",
     icon_size = 256,
     icon_mipmaps = 4,
-    icon = kr_technologies_icons_path .. "power-armor-mk4.png",
+    icon = "__Krastorio2Assets__/technologies/power-armor-mk4.png",
     upgrade = false,
     effects = {
       {
@@ -63,7 +63,7 @@ data:extend({
     mod = "Krastorio2",
     icon_size = 256,
     icon_mipmaps = 4,
-    icon = kr_technologies_icons_path .. "advanced-exoskeleton-equipment.png",
+    icon = "__Krastorio2Assets__/technologies/advanced-exoskeleton-equipment.png",
     upgrade = false,
     effects = {
       {
@@ -89,7 +89,7 @@ data:extend({
     mod = "Krastorio2",
     icon_size = 256,
     icon_mipmaps = 4,
-    icon = kr_technologies_icons_path .. "superior-exoskeleton-equipment.png",
+    icon = "__Krastorio2Assets__/technologies/superior-exoskeleton-equipment.png",
     upgrade = false,
     effects = {
       {
@@ -115,7 +115,7 @@ data:extend({
     mod = "Krastorio2",
     icon_size = 256,
     icon_mipmaps = 4,
-    icon = kr_technologies_icons_path .. "imersite-night-vision-equipment.png",
+    icon = "__Krastorio2Assets__/technologies/imersite-night-vision-equipment.png",
     upgrade = false,
     effects = {
       {
@@ -143,7 +143,7 @@ data:extend({
     name = "kr-advanced-additional-engine",
     mod = "Krastorio2",
     icons = {
-      { icon = kr_technologies_icons_path .. "advanced-additional-engine.png", icon_size = 256, icon_mipmaps = 4 },
+      { icon = "__Krastorio2Assets__/technologies/advanced-additional-engine.png", icon_size = 256, icon_mipmaps = 4 },
       {
         icon = "__core__/graphics/icons/technology/constants/constant-equipment.png",
         icon_size = 128,
@@ -181,7 +181,7 @@ data:extend({
     name = "kr-portable-generator",
     mod = "Krastorio2",
     icons = {
-      { icon = kr_technologies_icons_path .. "portable-generator.png", icon_size = 256, icon_mipmaps = 4 },
+      { icon = "__Krastorio2Assets__/technologies/portable-generator.png", icon_size = 256, icon_mipmaps = 4 },
       {
         icon = "__core__/graphics/icons/technology/constants/constant-equipment.png",
         icon_size = 128,
@@ -214,7 +214,7 @@ data:extend({
     name = "kr-nuclear-reactor-equipment",
     mod = "Krastorio2",
     icons = {
-      { icon = kr_technologies_icons_path .. "nuclear-reactor-equipment.png", icon_size = 256, icon_mipmaps = 4 },
+      { icon = "__Krastorio2Assets__/technologies/nuclear-reactor-equipment.png", icon_size = 256, icon_mipmaps = 4 },
       {
         icon = "__core__/graphics/icons/technology/constants/constant-equipment.png",
         icon_size = 128,
@@ -247,7 +247,7 @@ data:extend({
     name = "kr-antimatter-reactor-equipment",
     mod = "Krastorio2",
     icons = {
-      { icon = kr_technologies_icons_path .. "antimatter-reactor-equipment.png", icon_size = 256, icon_mipmaps = 4 },
+      { icon = "__Krastorio2Assets__/technologies/antimatter-reactor-equipment.png", icon_size = 256, icon_mipmaps = 4 },
       {
         icon = "__core__/graphics/icons/technology/constants/constant-equipment.png",
         icon_size = 128,
@@ -285,7 +285,7 @@ data:extend({
     mod = "Krastorio2",
     icon_size = 256,
     icon_mipmaps = 4,
-    icon = kr_technologies_icons_path .. "battery-mk3-equipment.png",
+    icon = "__Krastorio2Assets__/technologies/battery-mk3-equipment.png",
     upgrade = false,
     effects = {
       {
@@ -321,7 +321,7 @@ data:extend({
     mod = "Krastorio2",
     icon_size = 256,
     icon_mipmaps = 4,
-    icon = kr_technologies_icons_path .. "imersite-solar-panel-equipment.png",
+    icon = "__Krastorio2Assets__/technologies/imersite-solar-panel-equipment.png",
     upgrade = false,
     effects = {
       {
@@ -351,7 +351,7 @@ data:extend({
     type = "technology",
     name = "kr-personal-laser-defense-mk2-equipment",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "personal-laser-defense-mk2-equipments.png",
+    icon = "__Krastorio2Assets__/technologies/personal-laser-defense-mk2-equipments.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -388,7 +388,7 @@ data:extend({
     type = "technology",
     name = "kr-personal-laser-defense-mk3-equipment",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "personal-laser-defense-mk3-equipments.png",
+    icon = "__Krastorio2Assets__/technologies/personal-laser-defense-mk3-equipments.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -423,7 +423,7 @@ data:extend({
     type = "technology",
     name = "kr-personal-laser-defense-mk4-equipment",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "personal-laser-defense-mk4-equipments.png",
+    icon = "__Krastorio2Assets__/technologies/personal-laser-defense-mk4-equipments.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -460,7 +460,7 @@ data:extend({
     mod = "Krastorio2",
     icon_size = 256,
     icon_mipmaps = 4,
-    icon = kr_technologies_icons_path .. "energy-shield-mk3-equipment.png",
+    icon = "__Krastorio2Assets__/technologies/energy-shield-mk3-equipment.png",
     upgrade = false,
     effects = {
       {
@@ -487,7 +487,7 @@ data:extend({
     mod = "Krastorio2",
     icon_size = 256,
     icon_mipmaps = 4,
-    icon = kr_technologies_icons_path .. "energy-shield-mk4-equipment.png",
+    icon = "__Krastorio2Assets__/technologies/energy-shield-mk4-equipment.png",
     upgrade = false,
     effects = {
       {

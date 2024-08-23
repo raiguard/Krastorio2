@@ -1,39 +1,39 @@
 -- -- -- New items
 
 -- -- Items for buildings and other entities
-require(kr_items_prototypes_path .. "buildings")
+require("__Krastorio2__/prototypes/items/buildings")
 
 -- -- Equipments
-require(kr_items_prototypes_path .. "equipments")
+require("__Krastorio2__/prototypes/items/equipments")
 
 -- Loader (optional items)
-require(kr_items_prototypes_path .. "loaders")
+require("__Krastorio2__/prototypes/items/loaders")
 
 -- -- Raw materials/Resources
-require(kr_items_prototypes_path .. "resources")
+require("__Krastorio2__/prototypes/items/resources")
 
 -- -- New science packs graphic
-require(kr_items_prototypes_path .. "techcards")
+require("__Krastorio2__/prototypes/items/techcards")
 
 -- -- Items for terrain
-require(kr_items_prototypes_path .. "terrain")
+require("__Krastorio2__/prototypes/items/terrain")
 
 -- -- Items for vehicles
-require(kr_items_prototypes_path .. "vehicles")
+require("__Krastorio2__/prototypes/items/vehicles")
 
 -- -- Selection tools
-require(kr_items_prototypes_path .. "selection-tools")
+require("__Krastorio2__/prototypes/items/selection-tools")
 
 -- -- Adding new capsules
-require(kr_items_prototypes_path .. "capsules")
+require("__Krastorio2__/prototypes/items/capsules")
 
 -- -- All other items
-require(kr_items_prototypes_path .. "uncategorized")
+require("__Krastorio2__/prototypes/items/uncategorized")
 
 -- -- Guns
 -- Character guns
-require(kr_items_prototypes_path .. "guns")
+require("__Krastorio2__/prototypes/items/guns")
 -- Adavanced tank guns
-require(kr_items_prototypes_path .. "adavanced-tank-guns")
+require("__Krastorio2__/prototypes/items/adavanced-tank-guns")
 -- Ammos
-require(kr_items_prototypes_path .. "ammo")
+require("__Krastorio2__/prototypes/items/ammo")

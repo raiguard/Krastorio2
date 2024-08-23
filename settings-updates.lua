@@ -1,7 +1,3 @@
--- -- -- Setting compatibility scripts for science pack
-local compatibility_scripts_su = "compatibility-scripts/settings-updates/"
-----------
-require(compatibility_scripts_su .. "science-pack-variations")
-require(compatibility_scripts_su .. "loaders-snap")
-require(compatibility_scripts_su .. "IndustrialRevolution2-part1")
-----------
+require("compatibility-scripts/settings-updates/science-pack-variations")
+require("compatibility-scripts/settings-updates/loaders-snap")
+require("compatibility-scripts/settings-updates/IndustrialRevolution2-part1")

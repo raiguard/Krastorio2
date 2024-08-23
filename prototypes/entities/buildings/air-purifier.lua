@@ -5,7 +5,7 @@ data:extend({
   {
     type = "furnace",
     name = "kr-air-purifier",
-    icon = kr_entities_icons_path .. "air-purifier.png",
+    icon = "__Krastorio2Assets__/icons/entities/air-purifier.png",
     icon_size = 64,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "kr-air-purifier" },
@@ -20,7 +20,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "air-purifier/air-purifier.png",
+          filename = "__Krastorio2Assets__/entities/air-purifier/air-purifier.png",
           priority = "high",
           width = 150,
           height = 150,
@@ -31,7 +31,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "air-purifier/air-purifier-sh.png",
+          filename = "__Krastorio2Assets__/entities/air-purifier/air-purifier-sh.png",
           priority = "high",
           width = 164,
           height = 102,
@@ -47,7 +47,7 @@ data:extend({
     show_recipe_icon = false,
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
-      sound = { filename = kr_buildings_sounds_path .. "air-purifier.ogg" },
+      sound = { filename = "__Krastorio2Assets__/sounds/buildings/air-purifier.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg" },
       apparent_volume = 1.2,
     },
@@ -60,7 +60,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = kr_entities_path .. "air-purifier/air-purifier-reflection.png",
+        filename = "__Krastorio2Assets__/entities/air-purifier/air-purifier-reflection.png",
         priority = "extra-high",
         width = 20,
         height = 25,

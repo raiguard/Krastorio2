@@ -7,14 +7,14 @@ data:extend({
   {
     type = "capsule",
     name = "kr-creep-virus",
-    icon = kr_capsules_icons_path .. "creep-virus.png",
+    icon = "__Krastorio2Assets__/icons/capsules/creep-virus.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_capsules_icons_path .. "creep-virus.png",
+          filename = "__Krastorio2Assets__/icons/capsules/creep-virus.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -22,7 +22,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_capsules_icons_path .. "creep-virus-light.png",
+          filename = "__Krastorio2Assets__/icons/capsules/creep-virus-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -72,14 +72,14 @@ data:extend({
   {
     type = "capsule",
     name = "kr-biter-virus",
-    icon = kr_capsules_icons_path .. "biter-virus.png",
+    icon = "__Krastorio2Assets__/icons/capsules/biter-virus.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_capsules_icons_path .. "biter-virus.png",
+          filename = "__Krastorio2Assets__/icons/capsules/biter-virus.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -87,7 +87,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_capsules_icons_path .. "biter-virus-light.png",
+          filename = "__Krastorio2Assets__/icons/capsules/biter-virus-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -137,7 +137,7 @@ data:extend({
   {
     type = "capsule",
     name = "spoiled-potato",
-    icon = kr_capsules_icons_path .. "spoiled-potato.png",
+    icon = "__Krastorio2Assets__/icons/capsules/spoiled-potato.png",
     rocket_launch_product = { "poop", 1 },
     icon_size = 64,
     icon_mipmaps = 4,
@@ -172,7 +172,7 @@ data:extend({
   {
     type = "capsule",
     name = "poop",
-    icon = kr_capsules_icons_path .. "poop.png",
+    icon = "__Krastorio2Assets__/icons/capsules/poop.png",
     rocket_launch_product = { "kr-note-1", 1 },
     icon_size = 64,
     icon_mipmaps = 4,
@@ -220,7 +220,7 @@ data:extend({
   {
     type = "capsule",
     name = "first-aid-kit",
-    icon = kr_icons_path .. "items/first-aid-kit.png",
+    icon = "__Krastorio2Assets__/icons/items/first-aid-kit.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "raw-resource",
@@ -253,7 +253,7 @@ data:extend({
   {
     type = "capsule",
     name = "potato",
-    icon = kr_icons_path .. "items/potato.png",
+    icon = "__Krastorio2Assets__/icons/items/potato.png",
     rocket_launch_product = { "cyber-potato-equipment", 1 },
     icon_size = 64,
     icon_mipmaps = 4,

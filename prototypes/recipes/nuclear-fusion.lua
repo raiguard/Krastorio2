@@ -4,7 +4,7 @@ return {
     type = "recipe",
     name = "kr-fusion",
     category = "nuclear-fusion",
-    icon = kr_recipes_icons_path .. "fusion-energy.png",
+    icon = "__Krastorio2Assets__/icons/recipes/fusion-energy.png",
     icon_size = 64,
     energy_required = 5,
     enabled = true,

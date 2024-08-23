@@ -3,14 +3,19 @@
 -- -- Adapting the vanilla science packs with the new icons style
 
 -- Automation science pack
-krastorio.icons.setItemIcon("automation-science-pack", kr_cards_icons_path .. "automation-tech-card.png", 64, 4)
+krastorio.icons.setItemIcon(
+  "automation-science-pack",
+  "__Krastorio2Assets__/icons/cards/automation-tech-card.png",
+  64,
+  4
+)
 if data.raw.tool["automation-science-pack"] then
   data.raw.tool["automation-science-pack"].order = "b02[automation-tech-card]"
   data.raw.tool["automation-science-pack"].pictures = {
     layers = {
       {
         size = 64,
-        filename = kr_cards_icons_path .. "automation-tech-card.png",
+        filename = "__Krastorio2Assets__/icons/cards/automation-tech-card.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -18,7 +23,7 @@ if data.raw.tool["automation-science-pack"] then
         draw_as_light = true,
         flags = { "light" },
         size = 64,
-        filename = kr_cards_icons_path .. "automation-tech-card-light.png",
+        filename = "__Krastorio2Assets__/icons/cards/automation-tech-card-light.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -27,14 +32,14 @@ if data.raw.tool["automation-science-pack"] then
 end
 
 -- Logistic science pack
-krastorio.icons.setItemIcon("logistic-science-pack", kr_cards_icons_path .. "logistic-tech-card.png", 64, 4)
+krastorio.icons.setItemIcon("logistic-science-pack", "__Krastorio2Assets__/icons/cards/logistic-tech-card.png", 64, 4)
 if data.raw.tool["automation-science-pack"] then
   data.raw.tool["logistic-science-pack"].order = "b03[logistic-tech-card]"
   data.raw.tool["logistic-science-pack"].pictures = {
     layers = {
       {
         size = 64,
-        filename = kr_cards_icons_path .. "logistic-tech-card.png",
+        filename = "__Krastorio2Assets__/icons/cards/logistic-tech-card.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -42,7 +47,7 @@ if data.raw.tool["automation-science-pack"] then
         draw_as_light = true,
         flags = { "light" },
         size = 64,
-        filename = kr_cards_icons_path .. "logistic-tech-card-light.png",
+        filename = "__Krastorio2Assets__/icons/cards/logistic-tech-card-light.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -51,20 +56,20 @@ if data.raw.tool["automation-science-pack"] then
 end
 krastorio.icons.setTechnologyIcon(
   "logistic-science-pack",
-  kr_technologies_icons_path .. "logistic-tech-card.png",
+  "__Krastorio2Assets__/technologies/logistic-tech-card.png",
   256,
   4
 )
 
 -- Military science pack
-krastorio.icons.setItemIcon("military-science-pack", kr_cards_icons_path .. "military-tech-card.png", 64, 4)
+krastorio.icons.setItemIcon("military-science-pack", "__Krastorio2Assets__/icons/cards/military-tech-card.png", 64, 4)
 if data.raw.tool["military-science-pack"] then
   data.raw.tool["military-science-pack"].order = "b04[military-tech-card]"
   data.raw.tool["military-science-pack"].pictures = {
     layers = {
       {
         size = 64,
-        filename = kr_cards_icons_path .. "military-tech-card.png",
+        filename = "__Krastorio2Assets__/icons/cards/military-tech-card.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -72,7 +77,7 @@ if data.raw.tool["military-science-pack"] then
         draw_as_light = true,
         flags = { "light" },
         size = 64,
-        filename = kr_cards_icons_path .. "military-tech-card-light.png",
+        filename = "__Krastorio2Assets__/icons/cards/military-tech-card-light.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -81,20 +86,20 @@ if data.raw.tool["military-science-pack"] then
 end
 krastorio.icons.setTechnologyIcon(
   "military-science-pack",
-  kr_technologies_icons_path .. "military-tech-card.png",
+  "__Krastorio2Assets__/technologies/military-tech-card.png",
   256,
   4
 )
 
 -- Chemical science pack
-krastorio.icons.setItemIcon("chemical-science-pack", kr_cards_icons_path .. "chemical-tech-card.png", 64, 4)
+krastorio.icons.setItemIcon("chemical-science-pack", "__Krastorio2Assets__/icons/cards/chemical-tech-card.png", 64, 4)
 if data.raw.tool["chemical-science-pack"] then
   data.raw.tool["chemical-science-pack"].order = "b05[chemical-tech-card]"
   data.raw.tool["chemical-science-pack"].pictures = {
     layers = {
       {
         size = 64,
-        filename = kr_cards_icons_path .. "chemical-tech-card.png",
+        filename = "__Krastorio2Assets__/icons/cards/chemical-tech-card.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -102,7 +107,7 @@ if data.raw.tool["chemical-science-pack"] then
         draw_as_light = true,
         flags = { "light" },
         size = 64,
-        filename = kr_cards_icons_path .. "chemical-tech-card-light.png",
+        filename = "__Krastorio2Assets__/icons/cards/chemical-tech-card-light.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -111,20 +116,25 @@ if data.raw.tool["chemical-science-pack"] then
 end
 krastorio.icons.setTechnologyIcon(
   "chemical-science-pack",
-  kr_technologies_icons_path .. "chemical-tech-card.png",
+  "__Krastorio2Assets__/technologies/chemical-tech-card.png",
   256,
   4
 )
 
 -- Production science pack
-krastorio.icons.setItemIcon("production-science-pack", kr_cards_icons_path .. "production-tech-card.png", 64, 4)
+krastorio.icons.setItemIcon(
+  "production-science-pack",
+  "__Krastorio2Assets__/icons/cards/production-tech-card.png",
+  64,
+  4
+)
 if data.raw.tool["production-science-pack"] then
   data.raw.tool["production-science-pack"].order = "b06[production-tech-card]"
   data.raw.tool["production-science-pack"].pictures = {
     layers = {
       {
         size = 64,
-        filename = kr_cards_icons_path .. "production-tech-card.png",
+        filename = "__Krastorio2Assets__/icons/cards/production-tech-card.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -132,7 +142,7 @@ if data.raw.tool["production-science-pack"] then
         draw_as_light = true,
         flags = { "light" },
         size = 64,
-        filename = kr_cards_icons_path .. "production-tech-card-light.png",
+        filename = "__Krastorio2Assets__/icons/cards/production-tech-card-light.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -141,20 +151,20 @@ if data.raw.tool["production-science-pack"] then
 end
 krastorio.icons.setTechnologyIcon(
   "production-science-pack",
-  kr_technologies_icons_path .. "production-tech-card.png",
+  "__Krastorio2Assets__/technologies/production-tech-card.png",
   256,
   4
 )
 
 -- Utility science pack
-krastorio.icons.setItemIcon("utility-science-pack", kr_cards_icons_path .. "utility-tech-card.png", 64, 4)
+krastorio.icons.setItemIcon("utility-science-pack", "__Krastorio2Assets__/icons/cards/utility-tech-card.png", 64, 4)
 if data.raw.tool["utility-science-pack"] then
   data.raw.tool["utility-science-pack"].order = "b07[utility-tech-card]"
   data.raw.tool["utility-science-pack"].pictures = {
     layers = {
       {
         size = 64,
-        filename = kr_cards_icons_path .. "utility-tech-card.png",
+        filename = "__Krastorio2Assets__/icons/cards/utility-tech-card.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -162,19 +172,24 @@ if data.raw.tool["utility-science-pack"] then
         draw_as_light = true,
         flags = { "light" },
         size = 64,
-        filename = kr_cards_icons_path .. "utility-tech-card-light.png",
+        filename = "__Krastorio2Assets__/icons/cards/utility-tech-card-light.png",
         scale = 0.25,
         mipmap_count = 4,
       },
     },
   }
 end
-krastorio.icons.setTechnologyIcon("utility-science-pack", kr_technologies_icons_path .. "utility-tech-card.png", 256, 4)
+krastorio.icons.setTechnologyIcon(
+  "utility-science-pack",
+  "__Krastorio2Assets__/technologies/utility-tech-card.png",
+  256,
+  4
+)
 
 -- Space science pack
 krastorio.icons.setItemIcon(
   krastorio.optimization_tech_card_name,
-  kr_cards_icons_path .. "optimization-tech-card.png",
+  "__Krastorio2Assets__/icons/cards/optimization-tech-card.png",
   64,
   4
 )
@@ -184,7 +199,7 @@ if data.raw.tool[krastorio.optimization_tech_card_name] then
     layers = {
       {
         size = 64,
-        filename = kr_cards_icons_path .. "optimization-tech-card.png",
+        filename = "__Krastorio2Assets__/icons/cards/optimization-tech-card.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -192,7 +207,7 @@ if data.raw.tool[krastorio.optimization_tech_card_name] then
         draw_as_light = true,
         flags = { "light" },
         size = 64,
-        filename = kr_cards_icons_path .. "optimization-tech-card-light.png",
+        filename = "__Krastorio2Assets__/icons/cards/optimization-tech-card-light.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -201,7 +216,7 @@ if data.raw.tool[krastorio.optimization_tech_card_name] then
 end
 krastorio.icons.setTechnologyIcon(
   krastorio.optimization_tech_card_name,
-  kr_technologies_icons_path .. "optimization-tech-card.png",
+  "__Krastorio2Assets__/technologies/optimization-tech-card.png",
   256,
   4
 )
@@ -212,25 +227,25 @@ krastorio.icons.setTechnologyIcon(
 -- -- Chaning intermediate products icons
 
 -- Chaning iron plate
-krastorio.icons.setItemIcon("iron-plate", kr_items_icons_path .. "iron-plate.png", 64, 4)
+krastorio.icons.setItemIcon("iron-plate", "__Krastorio2Assets__/icons/items/iron-plate.png", 64, 4)
 
 -- Changing copper plate
-krastorio.icons.setItemIcon("copper-plate", kr_items_icons_path .. "copper-plate.png", 64, 4)
+krastorio.icons.setItemIcon("copper-plate", "__Krastorio2Assets__/icons/items/copper-plate.png", 64, 4)
 
 -- Chaning steel icon
-krastorio.icons.setItemIcon("steel-plate", kr_items_icons_path .. "steel-plate.png", 64, 4)
+krastorio.icons.setItemIcon("steel-plate", "__Krastorio2Assets__/icons/items/steel-plate.png", 64, 4)
 
 -- Changing iron gear wheel
-krastorio.icons.setItemIcon("iron-gear-wheel", kr_items_icons_path .. "iron-gear-wheel.png", 64, 4)
+krastorio.icons.setItemIcon("iron-gear-wheel", "__Krastorio2Assets__/icons/items/iron-gear-wheel.png", 64, 4)
 
 local light_oil_icon = nil
 if data.raw.fluid["light-oil"].icon == "__base__/graphics/icons/fluid/light-oil.png" then
-  light_oil_icon = kr_fluids_icons_path .. "light-oil.png"
+  light_oil_icon = "__Krastorio2Assets__/icons/fluids/light-oil.png"
 else
   light_oil_icon = data.raw.fluid["light-oil"].icon
 end
 local rocket_fuel_icons = {
-  { icon = kr_recipes_icons_path .. "rocket-fuel.png", icon_size = 64 },
+  { icon = "__Krastorio2Assets__/icons/recipes/rocket-fuel.png", icon_size = 64 },
   { icon = light_oil_icon, icon_size = data.raw.fluid["light-oil"].icon_size or 64, scale = 0.26, shift = { 8, -8 } },
 }
 krastorio.icons.setRecipeIcons("rocket-fuel", rocket_fuel_icons)
@@ -240,7 +255,7 @@ for _, fluid in ipairs(fluids_for_solid_fuel) do
   local icons = {
     { icon = "__base__/graphics/icons/solid-fuel.png", icon_size = 64 },
     {
-      icon = kr_fluids_icons_path .. fluid .. ".png",
+      icon = "__Krastorio2Assets__/icons/fluids/" .. fluid .. ".png",
       icon_size = data.raw.fluid[fluid].icon_size or 64,
       scale = 0.26,
       shift = { -8, -8 },
@@ -249,16 +264,16 @@ for _, fluid in ipairs(fluids_for_solid_fuel) do
   krastorio.icons.setRecipeIcons("solid-fuel-from-" .. fluid, icons)
 end
 
-krastorio.icons.setItemIcon("electronic-circuit", kr_items_icons_path .. "electronic-circuit.png", 64, 4)
-krastorio.icons.setItemIcon("advanced-circuit", kr_items_icons_path .. "advanced-circuit.png", 64, 4)
-krastorio.icons.setItemIcon("processing-unit", kr_items_icons_path .. "processing-unit.png", 64, 4)
+krastorio.icons.setItemIcon("electronic-circuit", "__Krastorio2Assets__/icons/items/electronic-circuit.png", 64, 4)
+krastorio.icons.setItemIcon("advanced-circuit", "__Krastorio2Assets__/icons/items/advanced-circuit.png", 64, 4)
+krastorio.icons.setItemIcon("processing-unit", "__Krastorio2Assets__/icons/items/processing-unit.png", 64, 4)
 
 -----------------------------------------------------------------
 -- -- Recipes
 -----------------------------------------------------------------
-krastorio.icons.setRecipeIcon("heavy-oil-cracking", kr_recipes_icons_path .. "heavy-oil-cracking.png", 64, 4)
-krastorio.icons.setRecipeIcon("light-oil-cracking", kr_recipes_icons_path .. "light-oil-cracking.png", 64, 4)
-krastorio.icons.setRecipeIcon("coal-liquefaction", kr_recipes_icons_path .. "coal-liquefaction.png", 64, 4)
+krastorio.icons.setRecipeIcon("heavy-oil-cracking", "__Krastorio2Assets__/icons/recipes/heavy-oil-cracking.png", 64, 4)
+krastorio.icons.setRecipeIcon("light-oil-cracking", "__Krastorio2Assets__/icons/recipes/light-oil-cracking.png", 64, 4)
+krastorio.icons.setRecipeIcon("coal-liquefaction", "__Krastorio2Assets__/icons/recipes/coal-liquefaction.png", 64, 4)
 
 local vanilla_iron_plate_recipe = krastorio.recipes.getRecipeFromName("iron-plate")
 if vanilla_iron_plate_recipe then
@@ -267,7 +282,7 @@ if vanilla_iron_plate_recipe then
 
   local iron_ore = krastorio.items.getItem("iron-ore")
   vanilla_iron_plate_recipe.icons = {
-    { icon = kr_items_icons_path .. "iron-plate.png", icon_size = 64 },
+    { icon = "__Krastorio2Assets__/icons/items/iron-plate.png", icon_size = 64 },
     { icon = iron_ore.icon, icon_size = iron_ore.icon_size, scale = 0.22, shift = { -8, -8 } },
   }
 end
@@ -279,37 +294,42 @@ if vanilla_copper_plate_recipe then
 
   local copper_ore = krastorio.items.getItem("copper-ore")
   vanilla_copper_plate_recipe.icons = {
-    { icon = kr_items_icons_path .. "copper-plate.png", icon_size = 64 },
+    { icon = "__Krastorio2Assets__/icons/items/copper-plate.png", icon_size = 64 },
     { icon = copper_ore.icon, icon_size = copper_ore.icon_size, scale = 0.22, shift = { -8, -8 } },
   }
 end
 
 -----------------------------------------------------------------
 -- -- Fluids
-krastorio.icons.setItemIcon("water", kr_fluids_icons_path .. "water.png", 64, 4)
-krastorio.icons.setItemIcon("steam", kr_fluids_icons_path .. "steam.png", 64, 4)
-krastorio.icons.setItemIcon("sulfuric-acid", kr_fluids_icons_path .. "sulfuric-acid.png", 64, 4)
-krastorio.icons.setItemIcon("crude-oil", kr_fluids_icons_path .. "oil.png", 64, 4)
-krastorio.icons.setItemIcon("light-oil", kr_fluids_icons_path .. "light-oil.png", 64, 4)
-krastorio.icons.setItemIcon("heavy-oil", kr_fluids_icons_path .. "heavy-oil.png", 64, 4)
-krastorio.icons.setItemIcon("lubricant", kr_fluids_icons_path .. "lubricant.png", 64, 4)
-krastorio.icons.setItemIcon("petroleum-gas", kr_fluids_icons_path .. "petroleum-gas.png", 64, 4)
+krastorio.icons.setItemIcon("water", "__Krastorio2Assets__/icons/fluids/water.png", 64, 4)
+krastorio.icons.setItemIcon("steam", "__Krastorio2Assets__/icons/fluids/steam.png", 64, 4)
+krastorio.icons.setItemIcon("sulfuric-acid", "__Krastorio2Assets__/icons/fluids/sulfuric-acid.png", 64, 4)
+krastorio.icons.setItemIcon("crude-oil", "__Krastorio2Assets__/icons/fluids/oil.png", 64, 4)
+krastorio.icons.setItemIcon("light-oil", "__Krastorio2Assets__/icons/fluids/light-oil.png", 64, 4)
+krastorio.icons.setItemIcon("heavy-oil", "__Krastorio2Assets__/icons/fluids/heavy-oil.png", 64, 4)
+krastorio.icons.setItemIcon("lubricant", "__Krastorio2Assets__/icons/fluids/lubricant.png", 64, 4)
+krastorio.icons.setItemIcon("petroleum-gas", "__Krastorio2Assets__/icons/fluids/petroleum-gas.png", 64, 4)
 -----------------------------------------------------------------
 -- -- -- TECHNOLOGIES
 
-krastorio.icons.setTechnologyIcon("steel-processing", kr_technologies_icons_path .. "steel-processing.png", 256, 4)
-krastorio.icons.setTechnologyIcon("coal-liquefaction", kr_technologies_icons_path .. "coal-liquefaction.png", 256, 4)
+krastorio.icons.setTechnologyIcon("steel-processing", "__Krastorio2Assets__/technologies/steel-processing.png", 256, 4)
+krastorio.icons.setTechnologyIcon(
+  "coal-liquefaction",
+  "__Krastorio2Assets__/technologies/coal-liquefaction.png",
+  256,
+  4
+)
 
 -- Logistics
-krastorio.icons.setTechnologyIcon("logistics", kr_technologies_icons_path .. "logistics-1.png", 256, 4)
-krastorio.icons.setTechnologyIcon("logistics-2", kr_technologies_icons_path .. "logistics-2.png", 256, 4)
-krastorio.icons.setTechnologyIcon("logistics-3", kr_technologies_icons_path .. "logistics-3.png", 256, 4)
+krastorio.icons.setTechnologyIcon("logistics", "__Krastorio2Assets__/technologies/logistics-1.png", 256, 4)
+krastorio.icons.setTechnologyIcon("logistics-2", "__Krastorio2Assets__/technologies/logistics-2.png", 256, 4)
+krastorio.icons.setTechnologyIcon("logistics-3", "__Krastorio2Assets__/technologies/logistics-3.png", 256, 4)
 
-krastorio.icons.setTechnologyIcon("oil-processing", kr_technologies_icons_path .. "oil-gathering.png", 256, 4)
+krastorio.icons.setTechnologyIcon("oil-processing", "__Krastorio2Assets__/technologies/oil-gathering.png", 256, 4)
 
 krastorio.icons.setTechnologyIcons("steel-axe", {
   {
-    icon = kr_technologies_icons_path .. "steel-pickaxe.png",
+    icon = "__Krastorio2Assets__/technologies/steel-pickaxe.png",
     icon_size = 256,
     icon_mipmaps = 4,
   },
@@ -322,59 +342,59 @@ krastorio.icons.setTechnologyIcons("steel-axe", {
 }, 256, 4)
 
 -- Equipments
-krastorio.icons.setTechnologyIcon("heavy-armor", kr_technologies_icons_path .. "heavy-armor.png", 256, 4)
+krastorio.icons.setTechnologyIcon("heavy-armor", "__Krastorio2Assets__/technologies/heavy-armor.png", 256, 4)
 
 krastorio.icons.setTechnologyIcon(
   "night-vision-equipment",
-  kr_technologies_icons_path .. "night-vision-equipment.png",
+  "__Krastorio2Assets__/technologies/night-vision-equipment.png",
   256,
   4
 )
 krastorio.icons.setTechnologyIcon(
   "energy-shield-equipment",
-  kr_technologies_icons_path .. "energy-shield-mk1-equipment.png",
+  "__Krastorio2Assets__/technologies/energy-shield-mk1-equipment.png",
   256,
   4
 )
 krastorio.icons.setTechnologyIcon(
   "energy-shield-mk2-equipment",
-  kr_technologies_icons_path .. "energy-shield-mk2-equipment.png",
+  "__Krastorio2Assets__/technologies/energy-shield-mk2-equipment.png",
   256,
   4
 )
 
 krastorio.icons.setTechnologyIcon(
   "personal-laser-defense-equipment",
-  kr_technologies_icons_path .. "personal-laser-defense-mk1-equipments.png",
+  "__Krastorio2Assets__/technologies/personal-laser-defense-mk1-equipments.png",
   256,
   4
 )
 
 krastorio.icons.setTechnologyIcon(
   "battery-mk2-equipment",
-  kr_technologies_icons_path .. "battery-mk2-equipment.png",
+  "__Krastorio2Assets__/technologies/battery-mk2-equipment.png",
   256,
   4
 )
 
 -----------------------------------------------------------------
 -- -- -- BUILDINGS
-krastorio.icons.setItemIcon("pumpjack", kr_entities_icons_path .. "oil-pumpjack.png", 64, 4)
-krastorio.icons.setItemIcon("substation", kr_entities_icons_path .. "substation.png")
-krastorio.icons.setItemIcon("electric-mining-drill", kr_entities_icons_path .. "electric-mining-drill.png")
-data.raw["mining-drill"]["electric-mining-drill"].icon = kr_entities_icons_path .. "electric-mining-drill.png"
+krastorio.icons.setItemIcon("pumpjack", "__Krastorio2Assets__/icons/entities/oil-pumpjack.png", 64, 4)
+krastorio.icons.setItemIcon("substation", "__Krastorio2Assets__/icons/entities/substation.png")
+krastorio.icons.setItemIcon("electric-mining-drill", "__Krastorio2Assets__/icons/entities/electric-mining-drill.png")
+data.raw["mining-drill"]["electric-mining-drill"].icon = "__Krastorio2Assets__/icons/entities/electric-mining-drill.png"
 -----------------------------------------------------------------
 
 -----------------------------------------------------------------
 -- -- -- OTHER
 -----------------------------------------------------------------
-krastorio.icons.setItemIcon("atomic-bomb", kr_ammo_icons_path .. "atomic-bomb.png", 64, 4)
+krastorio.icons.setItemIcon("atomic-bomb", "__Krastorio2Assets__/icons/ammo/atomic-bomb.png", 64, 4)
 if data.raw.ammo["atomic-bomb"] then
   data.raw.ammo["atomic-bomb"].pictures = {
     layers = {
       {
         size = 64,
-        filename = kr_ammo_icons_path .. "atomic-bomb.png",
+        filename = "__Krastorio2Assets__/icons/ammo/atomic-bomb.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -382,14 +402,14 @@ if data.raw.ammo["atomic-bomb"] then
         draw_as_light = true,
         flags = { "light" },
         size = 64,
-        filename = kr_ammo_icons_path .. "atomic-bomb-light.png",
+        filename = "__Krastorio2Assets__/icons/ammo/atomic-bomb-light.png",
         scale = 0.25,
         mipmap_count = 4,
       },
     },
   }
 end
-krastorio.icons.setItemIcon("artillery-shell", kr_icons_path .. "ammo/artillery-shell.png", 64, 4)
+krastorio.icons.setItemIcon("artillery-shell", "__Krastorio2Assets__/icons/ammo/artillery-shell.png", 64, 4)
 -- Landfill
 local landfill = krastorio.recipes.getRecipeFromName("landfill") or false
 local stone = krastorio.items.getItem("stone")

@@ -62,7 +62,7 @@ function krastorio.matter_func.createMatterRecipe(args)
         subgroup = "matter-conversion",
         allow_as_intermediate = false,
         icons = {
-          { icon = kr_arrows_icons_path .. "arrow-m.png", icon_size = 64 },
+          { icon = "__Krastorio2Assets__/icons/arrows/arrow-m.png", icon_size = 64 },
         },
         energy_required = _energy_required,
         enabled = false,
@@ -84,7 +84,7 @@ function krastorio.matter_func.createMatterRecipe(args)
       krastorio.icons.addOverlayIcons(item_to_matter, krastorio.icons.getIconsForOverlay(_item), 64, 0.28, { -8, -6 })
 
       table.insert(item_to_matter.icons, {
-        icon = kr_fluids_icons_path .. "matter.png",
+        icon = "__Krastorio2Assets__/icons/fluids/matter.png",
         icon_size = 64,
         scale = 0.28,
         shift = { 4, 8 },
@@ -108,8 +108,8 @@ function krastorio.matter_func.createMatterRecipe(args)
         subgroup = "matter-deconversion",
         allow_as_intermediate = false,
         icons = {
-          { icon = kr_arrows_icons_path .. "arrow-i.png", icon_size = 64 },
-          { icon = kr_fluids_icons_path .. "matter.png", icon_size = 64, scale = 0.28, shift = { 8, -6 } },
+          { icon = "__Krastorio2Assets__/icons/arrows/arrow-i.png", icon_size = 64 },
+          { icon = "__Krastorio2Assets__/icons/fluids/matter.png", icon_size = 64, scale = 0.28, shift = { 8, -6 } },
         },
         energy_required = _energy_required,
         enabled = false,

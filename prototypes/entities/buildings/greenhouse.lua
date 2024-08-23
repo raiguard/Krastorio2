@@ -7,7 +7,7 @@ end
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 
 local greenhouse_working_sound = {
-  filename = kr_buildings_sounds_path .. "greenhouse.ogg",
+  filename = "__Krastorio2Assets__/sounds/buildings/greenhouse.ogg",
   volume = 0.75,
   idle_sound = { filename = "__base__/sound/idle1.ogg" },
   aggregation = {
@@ -23,7 +23,7 @@ data:extend({
     name = "kr-greenhouse",
     icon_size = 64,
     icon_mipmaps = 4,
-    icon = kr_entities_icons_path .. "greenhouse.png",
+    icon = "__Krastorio2Assets__/icons/entities/greenhouse.png",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { hardness = 1, mining_time = 1, result = "kr-greenhouse" },
     max_health = 500,
@@ -36,7 +36,7 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = kr_pipe_path,
+        pipe_picture = kr_pipe_picture,
         pipe_covers = pipecoverspictures(),
         volume = 2000,
         pipe_connections = {
@@ -58,7 +58,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "greenhouse/greenhouse.png",
+          filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse.png",
           priority = "high",
           width = 512,
           height = 512,
@@ -66,7 +66,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "greenhouse/greenhouse-sh.png",
+          filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse-sh.png",
           priority = "high",
           width = 512,
           height = 512,
@@ -81,7 +81,7 @@ data:extend({
       {
         draw_as_light = true,
         animation = {
-          filename = kr_entities_path .. "greenhouse/greenhouse-light.png",
+          filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse-light.png",
           width = 512,
           height = 512,
           frame_count = 1,
@@ -92,7 +92,7 @@ data:extend({
       },
       {
         animation = {
-          filename = kr_entities_path .. "greenhouse/greenhouse-working.png",
+          filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse-working.png",
           width = 512,
           height = 512,
           frame_count = 10,

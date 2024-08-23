@@ -7,7 +7,7 @@ data:extend({
     name = "kr-crash-site-generator",
     localised_name = { "entity-name.kr-damaged-ship-reactor" },
     localised_description = { "entity-description.kr-crash-site-building" },
-    icon = kr_crash_site_icons_path .. "crash-site-generator.png",
+    icon = "__Krastorio2Assets__/icons/entities/crash-site/crash-site-generator.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation", "not-rotatable" },
@@ -53,7 +53,7 @@ data:extend({
     continuous_animation = true,
     integration_patch_render_layer = "decals",
     integration_patch = {
-      filename = kr_crash_site_sprites_path .. "generator/crash-site-generator-ground.png",
+      filename = "__Krastorio2Assets__/entities/crash-site/generator/crash-site-generator-ground.png",
       width = 384,
       height = 360,
       shift = util.by_pixel(-28, -38),
@@ -64,7 +64,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_crash_site_sprites_path .. "generator/crash-site-generator.png",
+          filename = "__Krastorio2Assets__/entities/crash-site/generator/crash-site-generator.png",
           width = 286,
           height = 252,
           frame_count = 5,
@@ -74,7 +74,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_crash_site_sprites_path .. "generator/crash-site-generator-beams.png",
+          filename = "__Krastorio2Assets__/entities/crash-site/generator/crash-site-generator-beams.png",
           width = 224,
           height = 232,
           frame_count = 16,
@@ -85,7 +85,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_crash_site_sprites_path .. "generator/crash-site-generator-beams-light.png",
+          filename = "__Krastorio2Assets__/entities/crash-site/generator/crash-site-generator-beams-light.png",
           width = 224,
           height = 232,
           frame_count = 16,
@@ -96,7 +96,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_crash_site_sprites_path .. "generator/crash-site-generator-shadow.png",
+          filename = "__Krastorio2Assets__/entities/crash-site/generator/crash-site-generator-shadow.png",
           width = 474,
           height = 152,
           frame_count = 1,

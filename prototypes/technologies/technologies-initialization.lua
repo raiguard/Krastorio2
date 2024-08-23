@@ -1,6 +1,6 @@
 -- -- -- technologies
-require(kr_technologies_prototypes_path .. "only-items-unlocking")
-require(kr_technologies_prototypes_path .. "only-equipment-items-unlocking")
-require(kr_technologies_prototypes_path .. "only-buildings-unlocking")
-require(kr_technologies_prototypes_path .. "uncategorized-technologies")
-require(kr_technologies_prototypes_path .. "matter")
+require("__Krastorio2__/prototypes/technologies/only-items-unlocking")
+require("__Krastorio2__/prototypes/technologies/only-equipment-items-unlocking")
+require("__Krastorio2__/prototypes/technologies/only-buildings-unlocking")
+require("__Krastorio2__/prototypes/technologies/uncategorized-technologies")
+require("__Krastorio2__/prototypes/technologies/matter")

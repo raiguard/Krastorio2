@@ -1428,7 +1428,7 @@ data:extend({
       },
     },
     animation = {
-      filename = kr_entities_path .. "missiles/laser.png",
+      filename = "__Krastorio2Assets__/entities/missiles/laser.png",
       frame_count = 1,
       width = 6,
       height = 90,
@@ -1481,7 +1481,7 @@ data:extend({
       },
     },
     animation = {
-      filename = kr_entities_path .. "missiles/railbullet.png",
+      filename = "__Krastorio2Assets__/entities/missiles/railbullet.png",
       frame_count = 1,
       width = 5,
       height = 90,
@@ -1557,7 +1557,7 @@ data:extend({
       },
     },
     animation = {
-      filename = kr_entities_path .. "missiles/missile-e.png",
+      filename = "__Krastorio2Assets__/entities/missiles/missile-e.png",
       frame_count = 1,
       width = 5,
       height = 90,
@@ -1669,7 +1669,7 @@ data:extend({
       },
     },
     animation = {
-      filename = kr_entities_path .. "missiles/missile-m.png",
+      filename = "__Krastorio2Assets__/entities/missiles/missile-m.png",
       frame_count = 1,
       width = 10,
       height = 167,
@@ -1728,7 +1728,7 @@ data:extend({
       },
     },
     animation = {
-      filename = kr_entities_path .. "missiles/rocket.png",
+      filename = "__Krastorio2Assets__/entities/missiles/rocket.png",
       frame_count = 5,
       line_length = 5,
       width = 13,
@@ -1976,7 +1976,7 @@ data:extend({
       light = { intensity = 0.5, size = 10, color = { r = 0.5, g = 1.0, b = 0.75 } },
     },
     animation = {
-      filename = kr_entities_path .. "missiles/rocket-n.png",
+      filename = "__Krastorio2Assets__/entities/missiles/rocket-n.png",
       frame_count = 5,
       line_length = 5,
       width = 13,
@@ -2289,7 +2289,7 @@ data:extend({
       },
     },
     animation = {
-      filename = kr_entities_path .. "missiles/rocket-m.png",
+      filename = "__Krastorio2Assets__/entities/missiles/rocket-m.png",
       frame_count = 5,
       line_length = 5,
       width = 13,
@@ -2753,7 +2753,7 @@ data:extend({
     },
     light = { intensity = 0.5, size = 4 },
     animation = {
-      filename = kr_entities_path .. "bullets/poop.png",
+      filename = "__Krastorio2Assets__/entities/bullets/poop.png",
       frame_count = 12,
       animation_speed = 0.3,
       width = 64,
@@ -2763,7 +2763,7 @@ data:extend({
       scale = 0.35,
     },
     shadow = {
-      filename = kr_entities_path .. "bullets/poop.png",
+      filename = "__Krastorio2Assets__/entities/bullets/poop.png",
       frame_count = 12,
       animation_speed = 0.3,
       width = 64,
@@ -3005,7 +3005,7 @@ data:extend({
     },
     light = { intensity = 0.5, size = 4 },
     animation = {
-      filename = kr_entities_path .. "bullets/virus-capsule.png",
+      filename = "__Krastorio2Assets__/entities/bullets/virus-capsule.png",
       frame_count = 16,
       line_length = 8,
       animation_speed = 0.250,
@@ -3016,7 +3016,7 @@ data:extend({
       scale = 0.5,
     },
     shadow = {
-      filename = kr_entities_path .. "bullets/virus-capsule-sh.png",
+      filename = "__Krastorio2Assets__/entities/bullets/virus-capsule-sh.png",
       frame_count = 16,
       line_length = 8,
       animation_speed = 0.25,

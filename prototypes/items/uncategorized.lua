@@ -49,31 +49,31 @@ data:extend({
   {
     type = "item",
     name = "biomass",
-    icon = kr_items_with_variations_icons_path .. "biomass/biomass.png",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "biomass/biomass.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "biomass/biomass-1.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "biomass/biomass-2.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "biomass/biomass-3.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-3.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -91,7 +91,7 @@ data:extend({
   {
     type = "item",
     name = "fertilizer",
-    icon = kr_items_icons_path .. "fertilizer.png",
+    icon = "__Krastorio2Assets__/icons/items/fertilizer.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "raw-material",
@@ -101,7 +101,7 @@ data:extend({
   {
     type = "item",
     name = "kr-note-1",
-    icon = kr_items_icons_path .. "note.png",
+    icon = "__Krastorio2Assets__/icons/items/note.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "other",
@@ -111,7 +111,7 @@ data:extend({
   {
     type = "item",
     name = "automation-core",
-    icon = kr_items_icons_path .. "automation-core.png",
+    icon = "__Krastorio2Assets__/icons/items/automation-core.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "intermediate-product",
@@ -121,25 +121,25 @@ data:extend({
   {
     type = "item",
     name = "sand",
-    icon = kr_items_with_variations_icons_path .. "sand/sand.png",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/sand/sand.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "sand/sand.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/sand/sand.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "sand/sand-1.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/sand/sand-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "sand/sand-2.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/sand/sand-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -151,7 +151,7 @@ data:extend({
   {
     type = "item",
     name = "glass",
-    icon = kr_items_icons_path .. "glass.png",
+    icon = "__Krastorio2Assets__/icons/items/glass.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "raw-material",
@@ -161,31 +161,31 @@ data:extend({
   {
     type = "item",
     name = "quartz",
-    icon = kr_items_with_variations_icons_path .. "quartz/quartz.png",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "quartz/quartz.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "quartz/quartz-1.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "quartz/quartz-2.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "quartz/quartz-3.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz-3.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -197,25 +197,25 @@ data:extend({
   {
     type = "item",
     name = "silicon",
-    icon = kr_items_with_variations_icons_path .. "silicon/silicon.png",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/silicon/silicon.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "silicon/silicon.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/silicon/silicon.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "silicon/silicon-1.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/silicon/silicon-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "silicon/silicon-2.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/silicon/silicon-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -227,43 +227,43 @@ data:extend({
   {
     type = "item",
     name = "electronic-components",
-    icon = kr_items_with_variations_icons_path .. "electronic-components/electronic-components.png",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/electronic-components/electronic-components.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "electronic-components/electronic-components.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/electronic-components/electronic-components.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "electronic-components/electronic-components-1.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/electronic-components/electronic-components-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "electronic-components/electronic-components-2.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/electronic-components/electronic-components-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "electronic-components/electronic-components-3.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/electronic-components/electronic-components-3.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "electronic-components/electronic-components-4.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/electronic-components/electronic-components-4.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "electronic-components/electronic-components-5.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/electronic-components/electronic-components-5.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -278,25 +278,25 @@ data:extend({
   {
     type = "item",
     name = "coke",
-    icon = kr_items_with_variations_icons_path .. "coke/coke.png",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/coke/coke.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "coke/coke.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/coke/coke.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "coke/coke-1.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/coke/coke-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "coke/coke-2.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/coke/coke-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -313,7 +313,7 @@ data:extend({
   {
     type = "item",
     name = "fuel",
-    icon = kr_items_icons_path .. "fuel.png",
+    icon = "__Krastorio2Assets__/icons/items/fuel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     fuel_category = "vehicle-fuel",
@@ -328,7 +328,7 @@ data:extend({
   {
     type = "item",
     name = "bio-fuel",
-    icon = kr_items_icons_path .. "bio-fuel.png",
+    icon = "__Krastorio2Assets__/icons/items/bio-fuel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     fuel_category = "vehicle-fuel",
@@ -343,7 +343,7 @@ data:extend({
   {
     type = "item",
     name = "advanced-fuel",
-    icon = kr_items_icons_path .. "advanced-fuel.png",
+    icon = "__Krastorio2Assets__/icons/items/advanced-fuel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     fuel_category = "vehicle-fuel",
@@ -359,7 +359,7 @@ data:extend({
   {
     type = "item",
     name = "iron-beam",
-    icon = kr_items_icons_path .. "iron-beam.png",
+    icon = "__Krastorio2Assets__/icons/items/iron-beam.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "intermediate-product",
@@ -369,7 +369,7 @@ data:extend({
   {
     type = "item",
     name = "steel-gear-wheel",
-    icon = kr_items_icons_path .. "steel-gear-wheel.png",
+    icon = "__Krastorio2Assets__/icons/items/steel-gear-wheel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "intermediate-product",
@@ -379,7 +379,7 @@ data:extend({
   {
     type = "item",
     name = "steel-beam",
-    icon = kr_items_icons_path .. "steel-beam.png",
+    icon = "__Krastorio2Assets__/icons/items/steel-beam.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "intermediate-product",
@@ -389,14 +389,14 @@ data:extend({
   {
     type = "item",
     name = "imersium-plate",
-    icon = kr_items_icons_path .. "imersium-plate.png",
+    icon = "__Krastorio2Assets__/icons/items/imersium-plate.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_items_icons_path .. "imersium-plate.png",
+          filename = "__Krastorio2Assets__/icons/items/imersium-plate.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -404,7 +404,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_items_icons_path .. "imersium-plate-light.png",
+          filename = "__Krastorio2Assets__/icons/items/imersium-plate-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -417,14 +417,14 @@ data:extend({
   {
     type = "item",
     name = "imersium-gear-wheel",
-    icon = kr_items_icons_path .. "imersium-gear-wheel.png",
+    icon = "__Krastorio2Assets__/icons/items/imersium-gear-wheel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_items_icons_path .. "imersium-gear-wheel.png",
+          filename = "__Krastorio2Assets__/icons/items/imersium-gear-wheel.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -432,7 +432,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_items_icons_path .. "imersium-gear-wheel-light.png",
+          filename = "__Krastorio2Assets__/icons/items/imersium-gear-wheel-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -445,14 +445,14 @@ data:extend({
   {
     type = "item",
     name = "imersium-beam",
-    icon = kr_items_icons_path .. "imersium-beam.png",
+    icon = "__Krastorio2Assets__/icons/items/imersium-beam.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_items_icons_path .. "imersium-beam.png",
+          filename = "__Krastorio2Assets__/icons/items/imersium-beam.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -460,7 +460,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_items_icons_path .. "imersium-beam-light.png",
+          filename = "__Krastorio2Assets__/icons/items/imersium-beam-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -473,7 +473,7 @@ data:extend({
   {
     type = "item",
     name = "kr-void",
-    icon = kr_items_icons_path .. "void.png",
+    icon = "__Krastorio2Assets__/icons/items/void.png",
     hidden = true,
     icon_size = 64,
     icon_mipmaps = 4,
@@ -483,49 +483,49 @@ data:extend({
   {
     type = "item",
     name = "rare-metals",
-    icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "rare-metals/rare-metals-1.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "rare-metals/rare-metals-2.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "rare-metals/rare-metals-3.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-3.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "rare-metals/rare-metals-4.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-4.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "rare-metals/rare-metals-5.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-5.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "rare-metals/rare-metals-6.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-6.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -537,25 +537,25 @@ data:extend({
   {
     type = "item",
     name = "enriched-iron",
-    icon = kr_items_with_variations_icons_path .. "enriched-iron/enriched-iron.png",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "enriched-iron/enriched-iron.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "enriched-iron/enriched-iron-1.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "enriched-iron/enriched-iron-2.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -567,25 +567,25 @@ data:extend({
   {
     type = "item",
     name = "enriched-copper",
-    icon = kr_items_with_variations_icons_path .. "enriched-copper/enriched-copper.png",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-copper/enriched-copper.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "enriched-copper/enriched-copper.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-copper/enriched-copper.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "enriched-copper/enriched-copper-1.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-copper/enriched-copper-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "enriched-copper/enriched-copper-2.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-copper/enriched-copper-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -597,25 +597,25 @@ data:extend({
   {
     type = "item",
     name = "enriched-rare-metals",
-    icon = kr_items_with_variations_icons_path .. "enriched-rare-metals/enriched-rare-metals.png",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "enriched-rare-metals/enriched-rare-metals.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "enriched-rare-metals/enriched-rare-metals-1.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "enriched-rare-metals/enriched-rare-metals-2.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -627,25 +627,25 @@ data:extend({
   {
     type = "item",
     name = "lithium",
-    icon = kr_items_with_variations_icons_path .. "lithium/lithium.png",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/lithium/lithium.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "lithium/lithium.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/lithium/lithium.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "lithium/lithium-1.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/lithium/lithium-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "lithium/lithium-2.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/lithium/lithium-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -657,19 +657,19 @@ data:extend({
   {
     type = "item",
     name = "lithium-chloride",
-    icon = kr_items_with_variations_icons_path .. "lithium-chloride/lithium-chloride.png",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/lithium-chloride/lithium-chloride.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "lithium-chloride/lithium-chloride.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/lithium-chloride/lithium-chloride.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "lithium-chloride/lithium-chloride-1.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/lithium-chloride/lithium-chloride-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -681,7 +681,7 @@ data:extend({
   {
     type = "item",
     name = "imersite-powder",
-    icon = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder.png",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
@@ -689,7 +689,7 @@ data:extend({
         layers = {
           {
             size = 64,
-            filename = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder.png",
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -699,7 +699,7 @@ data:extend({
             blend_mode = "additive",
             tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
             size = 64,
-            filename = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder-light.png",
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder-light.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -709,7 +709,7 @@ data:extend({
         layers = {
           {
             size = 64,
-            filename = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder-1.png",
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder-1.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -719,7 +719,7 @@ data:extend({
             blend_mode = "additive",
             tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
             size = 64,
-            filename = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder-1-light.png",
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder-1-light.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -729,7 +729,7 @@ data:extend({
         layers = {
           {
             size = 64,
-            filename = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder-2.png",
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder-2.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -739,7 +739,7 @@ data:extend({
             blend_mode = "additive",
             tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
             size = 64,
-            filename = kr_items_with_variations_icons_path .. "imersite-powder/imersite-powder-2-light.png",
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder-2-light.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -753,7 +753,7 @@ data:extend({
   {
     type = "item",
     name = "imersite-crystal",
-    icon = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal.png",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
@@ -761,7 +761,7 @@ data:extend({
         layers = {
           {
             size = 64,
-            filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal.png",
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -771,7 +771,7 @@ data:extend({
             blend_mode = "additive",
             tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
             size = 64,
-            filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-light.png",
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-light.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -781,7 +781,7 @@ data:extend({
         layers = {
           {
             size = 64,
-            filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-1.png",
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-1.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -791,7 +791,7 @@ data:extend({
             blend_mode = "additive",
             tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
             size = 64,
-            filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-1-light.png",
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-1-light.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -801,7 +801,7 @@ data:extend({
         layers = {
           {
             size = 64,
-            filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-2.png",
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-2.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -811,7 +811,7 @@ data:extend({
             blend_mode = "additive",
             tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
             size = 64,
-            filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-2-light.png",
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-2-light.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -821,7 +821,7 @@ data:extend({
         layers = {
           {
             size = 64,
-            filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-3.png",
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-3.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -831,7 +831,7 @@ data:extend({
             blend_mode = "additive",
             tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
             size = 64,
-            filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-3-light.png",
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-3-light.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -841,7 +841,7 @@ data:extend({
         layers = {
           {
             size = 64,
-            filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-4.png",
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-4.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -851,7 +851,7 @@ data:extend({
             blend_mode = "additive",
             tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
             size = 64,
-            filename = kr_items_with_variations_icons_path .. "imersite-crystal/imersite-crystal-4-light.png",
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-4-light.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -865,14 +865,14 @@ data:extend({
   {
     type = "item",
     name = "lithium-sulfur-battery",
-    icon = kr_items_icons_path .. "lithium-sulfur-battery.png",
+    icon = "__Krastorio2Assets__/icons/items/lithium-sulfur-battery.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_items_icons_path .. "lithium-sulfur-battery.png",
+          filename = "__Krastorio2Assets__/icons/items/lithium-sulfur-battery.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -880,7 +880,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_items_icons_path .. "lithium-sulfur-battery-light.png",
+          filename = "__Krastorio2Assets__/icons/items/lithium-sulfur-battery-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -893,14 +893,14 @@ data:extend({
   {
     type = "item",
     name = "ai-core",
-    icon = kr_items_icons_path .. "ai-core.png",
+    icon = "__Krastorio2Assets__/icons/items/ai-core.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_items_icons_path .. "ai-core.png",
+          filename = "__Krastorio2Assets__/icons/items/ai-core.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -908,7 +908,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_items_icons_path .. "ai-core-light.png",
+          filename = "__Krastorio2Assets__/icons/items/ai-core-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -921,7 +921,7 @@ data:extend({
   {
     type = "item",
     name = "pollution-filter",
-    icon = kr_items_icons_path .. "pollution-filter.png",
+    icon = "__Krastorio2Assets__/icons/items/pollution-filter.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "intermediate-product",
@@ -931,7 +931,7 @@ data:extend({
   {
     type = "item",
     name = "used-pollution-filter",
-    icon = kr_items_icons_path .. "used-pollution-filter.png",
+    icon = "__Krastorio2Assets__/icons/items/used-pollution-filter.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "intermediate-product",
@@ -941,7 +941,7 @@ data:extend({
   {
     type = "item",
     name = "improved-pollution-filter",
-    icon = kr_items_icons_path .. "improved-pollution-filter.png",
+    icon = "__Krastorio2Assets__/icons/items/improved-pollution-filter.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "intermediate-product",
@@ -951,7 +951,7 @@ data:extend({
   {
     type = "item",
     name = "used-improved-pollution-filter",
-    icon = kr_items_icons_path .. "used-improved-pollution-filter.png",
+    icon = "__Krastorio2Assets__/icons/items/used-improved-pollution-filter.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "intermediate-product",
@@ -961,14 +961,14 @@ data:extend({
   {
     type = "item",
     name = "tritium",
-    icon = kr_items_icons_path .. "tritium.png",
+    icon = "__Krastorio2Assets__/icons/items/tritium.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_items_icons_path .. "tritium.png",
+          filename = "__Krastorio2Assets__/icons/items/tritium.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -976,7 +976,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_items_icons_path .. "tritium-light.png",
+          filename = "__Krastorio2Assets__/icons/items/tritium-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -989,7 +989,7 @@ data:extend({
   {
     type = "item",
     name = "empty-dt-fuel",
-    icon = kr_items_icons_path .. "empty-dt-fuel.png",
+    icon = "__Krastorio2Assets__/icons/items/empty-dt-fuel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "intermediate-product",
@@ -999,14 +999,14 @@ data:extend({
   {
     type = "item",
     name = "dt-fuel",
-    icon = kr_items_icons_path .. "dt-fuel.png",
+    icon = "__Krastorio2Assets__/icons/items/dt-fuel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_items_icons_path .. "dt-fuel.png",
+          filename = "__Krastorio2Assets__/icons/items/dt-fuel.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -1014,7 +1014,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_items_icons_path .. "dt-fuel-light.png",
+          filename = "__Krastorio2Assets__/icons/items/dt-fuel-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -1031,14 +1031,14 @@ data:extend({
   {
     type = "item",
     name = "energy-control-unit",
-    icon = kr_items_icons_path .. "energy-control-unit.png",
+    icon = "__Krastorio2Assets__/icons/items/energy-control-unit.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_items_icons_path .. "energy-control-unit.png",
+          filename = "__Krastorio2Assets__/icons/items/energy-control-unit.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -1046,7 +1046,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_items_icons_path .. "energy-control-unit-light.png",
+          filename = "__Krastorio2Assets__/icons/items/energy-control-unit-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -1060,7 +1060,7 @@ data:extend({
   {
     type = "item",
     name = "matter-stabilizer",
-    icon = kr_items_icons_path .. "matter-stabilizer.png",
+    icon = "__Krastorio2Assets__/icons/items/matter-stabilizer.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "intermediate-product",
@@ -1070,14 +1070,14 @@ data:extend({
   {
     type = "item",
     name = "charged-matter-stabilizer",
-    icon = kr_items_icons_path .. "charged-matter-stabilizer.png",
+    icon = "__Krastorio2Assets__/icons/items/charged-matter-stabilizer.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_items_icons_path .. "charged-matter-stabilizer.png",
+          filename = "__Krastorio2Assets__/icons/items/charged-matter-stabilizer.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -1085,7 +1085,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_items_icons_path .. "charged-matter-stabilizer-light.png",
+          filename = "__Krastorio2Assets__/icons/items/charged-matter-stabilizer-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -1098,7 +1098,7 @@ data:extend({
   {
     type = "item",
     name = "matter-cube",
-    icon = kr_items_icons_path .. "matter-cube.png",
+    icon = "__Krastorio2Assets__/icons/items/matter-cube.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "intermediate-product",
@@ -1108,7 +1108,7 @@ data:extend({
   {
     type = "item",
     name = "empty-antimatter-fuel-cell",
-    icon = kr_items_icons_path .. "empty-antimatter-fuel-cell.png",
+    icon = "__Krastorio2Assets__/icons/items/empty-antimatter-fuel-cell.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "intermediate-product",
@@ -1118,14 +1118,14 @@ data:extend({
   {
     type = "item",
     name = "charged-antimatter-fuel-cell",
-    icon = kr_items_icons_path .. "charged-antimatter-fuel-cell.png",
+    icon = "__Krastorio2Assets__/icons/items/charged-antimatter-fuel-cell.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_items_icons_path .. "charged-antimatter-fuel-cell.png",
+          filename = "__Krastorio2Assets__/icons/items/charged-antimatter-fuel-cell.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -1133,7 +1133,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_items_icons_path .. "charged-antimatter-fuel-cell-light.png",
+          filename = "__Krastorio2Assets__/icons/items/charged-antimatter-fuel-cell-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -1149,37 +1149,37 @@ data:extend({
   {
     type = "item",
     name = "inserter-parts",
-    icon = kr_items_with_variations_icons_path .. "inserter-parts/inserter-parts.png",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/inserter-parts/inserter-parts.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "inserter-parts/inserter-parts.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/inserter-parts/inserter-parts.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "inserter-parts/inserter-parts-1.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/inserter-parts/inserter-parts-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "inserter-parts/inserter-parts-2.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/inserter-parts/inserter-parts-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "inserter-parts/inserter-parts-3.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/inserter-parts/inserter-parts-3.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = kr_items_with_variations_icons_path .. "inserter-parts/inserter-parts-4.png",
+        filename = "__Krastorio2Assets__/icons/items-with-variations/inserter-parts/inserter-parts-4.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -1192,14 +1192,14 @@ data:extend({
     type = "item",
     name = "gps-satellite",
     rocket_launch_product = { "teleportation-gps-module", 1 },
-    icon = kr_items_icons_path .. "gps-satellite.png",
+    icon = "__Krastorio2Assets__/icons/items/gps-satellite.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_items_icons_path .. "gps-satellite.png",
+          filename = "__Krastorio2Assets__/icons/items/gps-satellite.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -1207,7 +1207,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_items_icons_path .. "gps-satellite-light.png",
+          filename = "__Krastorio2Assets__/icons/items/gps-satellite-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -1220,14 +1220,14 @@ data:extend({
   {
     type = "item",
     name = "teleportation-gps-module",
-    icon = kr_items_icons_path .. "teleportation-gps-module.png",
+    icon = "__Krastorio2Assets__/icons/items/teleportation-gps-module.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_items_icons_path .. "teleportation-gps-module.png",
+          filename = "__Krastorio2Assets__/icons/items/teleportation-gps-module.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -1235,7 +1235,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_items_icons_path .. "teleportation-gps-module-light.png",
+          filename = "__Krastorio2Assets__/icons/items/teleportation-gps-module-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },

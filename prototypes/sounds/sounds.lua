@@ -58,7 +58,7 @@ data:extend({
     type = "sound",
     name = "kr-collect-creep",
     category = "alert",
-    filename = kr_tiles_sounds_path .. "creep-deconstruction.ogg",
+    filename = "__Krastorio2Assets__/sounds/tiles/creep-deconstruction.ogg",
     volume = 0.75,
     audible_distance_modifier = 0.5,
     aggregation = {

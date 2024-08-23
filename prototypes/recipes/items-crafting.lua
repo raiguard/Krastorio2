@@ -69,7 +69,7 @@ return {
     icons = {
       { icon = "__base__/graphics/icons/landfill.png", icon_size = 64 },
       {
-        icon = kr_items_with_variations_icons_path .. "sand/sand.png",
+        icon = "__Krastorio2Assets__/icons/items-with-variations/sand/sand.png",
         icon_size = 64,
         scale = 0.26,
         shift = { 8, -8 },
@@ -150,7 +150,7 @@ return {
     type = "recipe",
     name = "restore-used-pollution-filter",
     category = "crafting-with-fluid",
-    icon = kr_recipes_icons_path .. "restore-used-pollution-filter.png",
+    icon = "__Krastorio2Assets__/icons/recipes/restore-used-pollution-filter.png",
     icon_size = 128,
     energy_required = 10,
     enabled = false,
@@ -182,7 +182,7 @@ return {
     type = "recipe",
     name = "restore-used-improved-pollution-filter",
     category = "crafting-with-fluid",
-    icon = kr_recipes_icons_path .. "restore-used-improved-pollution-filter.png",
+    icon = "__Krastorio2Assets__/icons/recipes/restore-used-improved-pollution-filter.png",
     icon_size = 128,
     energy_required = 10,
     enabled = false,

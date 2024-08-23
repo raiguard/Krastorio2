@@ -1,3 +1,3 @@
-require(kr_data_updates_compatibility_path .. "Pyanodon/pycoalprocessing")
-require(kr_data_updates_compatibility_path .. "Pyanodon/pyfusionenergy")
-require(kr_data_updates_compatibility_path .. "Pyanodon/pyhightech")
+require("__Krastorio2__/compatibility-scripts/data-updates/Pyanodon/pycoalprocessing")
+require("__Krastorio2__/compatibility-scripts/data-updates/Pyanodon/pyfusionenergy")
+require("__Krastorio2__/compatibility-scripts/data-updates/Pyanodon/pyhightech")

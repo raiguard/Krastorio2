@@ -3,7 +3,7 @@ data:extend({
     type = "corpse",
     name = "kr-mineral-water-pumpjack-remnant",
     localised_name = { "remnant-name", { "entity-name.kr-mineral-water-pumpjack" } },
-    icon = kr_entities_icons_path .. "mineral-water-pumpjack.png",
+    icon = "__Krastorio2Assets__/icons/entities/mineral-water-pumpjack.png",
     icon_size = 64,
     flags = { "placeable-neutral", "building-direction-8-way", "not-on-map" },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
@@ -16,7 +16,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(2, {
-      filename = kr_remnants_path .. "mineral-water-pumpjack/mineral-water-pumpjack-remnant.png",
+      filename = "__Krastorio2Assets__/entities/remnants/mineral-water-pumpjack/mineral-water-pumpjack-remnant.png",
       line_length = 1,
       width = 274,
       height = 284,

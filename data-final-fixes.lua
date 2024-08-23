@@ -76,45 +76,44 @@ krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
 -- OPTION FIXES
 ---------------------------------------------------------------------------
 -- Apply the choosen science pack recipes
-require(kr_prototypes_path .. "vanilla-changes/optional/modify-science-packs-recipes")
+require("__Krastorio2__/prototypes/vanilla-changes/optional/modify-science-packs-recipes")
 -- Apply fixes if in peaceful mode
-require(kr_prototypes_path .. "vanilla-changes/optional/peaceful-mode")
+require("__Krastorio2__/prototypes/vanilla-changes/optional/peaceful-mode")
 -- Final fuels fixes
-require(kr_prototypes_path .. "vanilla-changes/optional/rebalance-vehicles&fuels-final-fixes")
+require("__Krastorio2__/prototypes/vanilla-changes/optional/rebalance-vehicles&fuels-final-fixes")
 -- Change the background with the selected one
-require(kr_prototypes_path .. "vanilla-changes/optional/change-background")
+require("__Krastorio2__/prototypes/vanilla-changes/optional/change-background")
 -- Increase the difficult of hardmode
-require(kr_prototypes_path .. "vanilla-changes/optional/impossible-more-than-difficult")
+require("__Krastorio2__/prototypes/vanilla-changes/optional/impossible-more-than-difficult")
 ---------------------------------------------------------------------------
 -- -- -- COMPATIBILITY INITIALIZATION (data final fixes stage)
 ---------------------------------------------------------------------------
-local scripts_path = "compatibility-scripts/data-final-fixes/"
 -- Angels (multiple scripts)
-require(scripts_path .. "angels")
-require(scripts_path .. "aai-industry")
-require(scripts_path .. "aircraft")
-require(scripts_path .. "nco-SpaceShuttle")
-require(scripts_path .. "AsphaltRoads")
+require("compatibility-scripts/data-final-fixes/angels")
+require("compatibility-scripts/data-final-fixes/aai-industry")
+require("compatibility-scripts/data-final-fixes/aircraft")
+require("compatibility-scripts/data-final-fixes/nco-SpaceShuttle")
+require("compatibility-scripts/data-final-fixes/AsphaltRoads")
 -- Bobs (multiple scripts)
-require(scripts_path .. "bobs_mod")
-require(scripts_path .. "Clockwork")
-require(scripts_path .. "Dectorio")
-require(scripts_path .. "DeadlockLargerLamp")
-require(scripts_path .. "deadlock-beltboxes-loaders")
-require(scripts_path .. "ElectricTrain")
-require(scripts_path .. "FoodIndustry")
-require(scripts_path .. "Hovercrafts")
-require(scripts_path .. "IndustrialRevolution")
-require(scripts_path .. "LightedPolesPlus")
-require(scripts_path .. "Nuclear Fuel")
+require("compatibility-scripts/data-final-fixes/bobs_mod")
+require("compatibility-scripts/data-final-fixes/Clockwork")
+require("compatibility-scripts/data-final-fixes/Dectorio")
+require("compatibility-scripts/data-final-fixes/DeadlockLargerLamp")
+require("compatibility-scripts/data-final-fixes/deadlock-beltboxes-loaders")
+require("compatibility-scripts/data-final-fixes/ElectricTrain")
+require("compatibility-scripts/data-final-fixes/FoodIndustry")
+require("compatibility-scripts/data-final-fixes/Hovercrafts")
+require("compatibility-scripts/data-final-fixes/IndustrialRevolution")
+require("compatibility-scripts/data-final-fixes/LightedPolesPlus")
+require("compatibility-scripts/data-final-fixes/Nuclear Fuel")
 -- Pyanodons (multiple scripts)
-require(scripts_path .. "Pyanodon")
-require(scripts_path .. "realistic-electric-trains")
-require(scripts_path .. "Tral-robot-tree-farm")
-require(scripts_path .. "vtk-armor-plating")
-require(scripts_path .. "RealisticReactors")
+require("compatibility-scripts/data-final-fixes/Pyanodon")
+require("compatibility-scripts/data-final-fixes/realistic-electric-trains")
+require("compatibility-scripts/data-final-fixes/Tral-robot-tree-farm")
+require("compatibility-scripts/data-final-fixes/vtk-armor-plating")
+require("compatibility-scripts/data-final-fixes/RealisticReactors")
 -- Other
-require(scripts_path .. "spidertron-tiers")
+require("compatibility-scripts/data-final-fixes/spidertron-tiers")
 ---------------------------------------------------------------------------
 -- -- -- POST ALL FIXES
 ---------------------------------------------------------------------------

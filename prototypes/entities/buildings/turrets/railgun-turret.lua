@@ -14,22 +14,22 @@ function cannon_turret_attack_sheet(inputs)
         shift = { 0, -0.7 },
         stripes = {
           {
-            filename = kr_entities_path .. "turrets/railgun-turret-attack-sheet-1.png",
+            filename = "__Krastorio2Assets__/entities/turrets/railgun-turret-attack-sheet-1.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
           {
-            filename = kr_entities_path .. "turrets/railgun-turret-attack-sheet-2.png",
+            filename = "__Krastorio2Assets__/entities/turrets/railgun-turret-attack-sheet-2.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
           {
-            filename = kr_entities_path .. "turrets/railgun-turret-attack-sheet-3.png",
+            filename = "__Krastorio2Assets__/entities/turrets/railgun-turret-attack-sheet-3.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
           {
-            filename = kr_entities_path .. "turrets/railgun-turret-attack-sheet-4.png",
+            filename = "__Krastorio2Assets__/entities/turrets/railgun-turret-attack-sheet-4.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
@@ -49,22 +49,22 @@ function cannon_turret_attack_sheet(inputs)
         apply_runtime_tint = true,
         stripes = {
           {
-            filename = kr_entities_path .. "turrets/railgun-turret-attack-sheet-maks-1.png",
+            filename = "__Krastorio2Assets__/entities/turrets/railgun-turret-attack-sheet-maks-1.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
           {
-            filename = kr_entities_path .. "turrets/railgun-turret-attack-sheet-maks-2.png",
+            filename = "__Krastorio2Assets__/entities/turrets/railgun-turret-attack-sheet-maks-2.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
           {
-            filename = kr_entities_path .. "turrets/railgun-turret-attack-sheet-maks-3.png",
+            filename = "__Krastorio2Assets__/entities/turrets/railgun-turret-attack-sheet-maks-3.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
           {
-            filename = kr_entities_path .. "turrets/railgun-turret-attack-sheet-maks-4.png",
+            filename = "__Krastorio2Assets__/entities/turrets/railgun-turret-attack-sheet-maks-4.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
@@ -82,22 +82,22 @@ function cannon_turret_attack_sheet(inputs)
         draw_as_shadow = true,
         stripes = {
           {
-            filename = kr_entities_path .. "turrets/railgun-turret-attack-sheet-shadow-1.png",
+            filename = "__Krastorio2Assets__/entities/turrets/railgun-turret-attack-sheet-shadow-1.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
           {
-            filename = kr_entities_path .. "turrets/railgun-turret-attack-sheet-shadow-2.png",
+            filename = "__Krastorio2Assets__/entities/turrets/railgun-turret-attack-sheet-shadow-2.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
           {
-            filename = kr_entities_path .. "turrets/railgun-turret-attack-sheet-shadow-3.png",
+            filename = "__Krastorio2Assets__/entities/turrets/railgun-turret-attack-sheet-shadow-3.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
           {
-            filename = kr_entities_path .. "turrets/railgun-turret-attack-sheet-shadow-4.png",
+            filename = "__Krastorio2Assets__/entities/turrets/railgun-turret-attack-sheet-shadow-4.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
@@ -112,7 +112,7 @@ data:extend({
   {
     type = "ammo-turret",
     name = "kr-railgun-turret",
-    icon = kr_entities_icons_path .. "railgun-turret.png",
+    icon = "__Krastorio2Assets__/icons/entities/railgun-turret.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation" },
@@ -144,7 +144,7 @@ data:extend({
         animation = {
           layers = {
             {
-              filename = kr_entities_path .. "turrets/kr-turret-base.png",
+              filename = "__Krastorio2Assets__/entities/turrets/kr-turret-base.png",
               priority = "high",
               width = 440,
               height = 380,
@@ -155,7 +155,7 @@ data:extend({
               scale = 0.5,
             },
             {
-              filename = kr_entities_path .. "turrets/kr-turret-base-mask.png",
+              filename = "__Krastorio2Assets__/entities/turrets/kr-turret-base-mask.png",
               flags = { "mask", "low-object" },
               line_length = 1,
               width = 440,
@@ -168,7 +168,7 @@ data:extend({
               scale = 0.5,
             },
             {
-              filename = kr_entities_path .. "turrets/kr-turret-base-shadow.png",
+              filename = "__Krastorio2Assets__/entities/turrets/kr-turret-base-shadow.png",
               line_length = 1,
               width = 440,
               height = 380,
@@ -196,7 +196,7 @@ data:extend({
       health_penalty = -100,
       sound = {
         {
-          filename = kr_weapons_sounds_path .. "railgun.ogg",
+          filename = "__Krastorio2Assets__/sounds/weapons/railgun.ogg",
           volume = 1.5,
         },
       },
@@ -204,7 +204,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = kr_entities_path .. "turrets/turrets-reflection.png",
+        filename = "__Krastorio2Assets__/entities/turrets/turrets-reflection.png",
         priority = "extra-high",
         width = 50,
         height = 50,

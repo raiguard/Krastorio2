@@ -3,7 +3,7 @@ data:extend({
     type = "corpse",
     name = "kr-advanced-tank-remnant",
     localised_name = { "remnant-name", { "entity-name.kr-advanced-tank" } },
-    icon = kr_vehicles_icons_path .. "advanced-tank.png",
+    icon = "__Krastorio2Assets__/icons/vehicles/advanced-tank.png",
     icon_size = 64,
     flags = { "placeable-neutral", "building-direction-8-way", "not-on-map" },
     selection_box = { { -1.45, -2.35 }, { 1.45, 2.35 } },
@@ -16,7 +16,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(1, {
-      filename = kr_entities_path .. "remnants/advanced-tank/advanced-tank-remnant.png",
+      filename = "__Krastorio2Assets__/entities/remnants/advanced-tank/advanced-tank-remnant.png",
       line_length = 1,
       width = 400,
       height = 330,

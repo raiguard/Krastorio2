@@ -44,7 +44,7 @@ data:extend({
   {
     type = "armor",
     name = "power-armor-mk3",
-    icon = kr_character_equipments_icons_path .. "power-armor-mk3.png",
+    icon = "__Krastorio2Assets__/icons/equipments/character/power-armor-mk3.png",
     icon_size = 64,
     resistances = {
       {
@@ -85,7 +85,7 @@ data:extend({
   {
     type = "armor",
     name = "power-armor-mk4",
-    icon = kr_character_equipments_icons_path .. "power-armor-mk4.png",
+    icon = "__Krastorio2Assets__/icons/equipments/character/power-armor-mk4.png",
     icon_size = 64,
     resistances = {
       {
@@ -141,7 +141,7 @@ data:extend({
       type = "full",
     },
     sprite = {
-      filename = kr_character_equipments_path .. "advanced-exoskeleton-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/character/advanced-exoskeleton-equipment.png",
       width = 128,
       height = 256,
       priority = "medium",
@@ -165,7 +165,7 @@ data:extend({
       type = "full",
     },
     sprite = {
-      filename = kr_character_equipments_path .. "superior-exoskeleton-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/character/superior-exoskeleton-equipment.png",
       width = 128,
       height = 256,
       priority = "medium",
@@ -178,7 +178,7 @@ data:extend({
     type = "night-vision-equipment",
     name = "imersite-night-vision-equipment",
     sprite = {
-      filename = kr_character_equipments_path .. "imersite-night-vision-equipment.png",
+      filename = "__Krastorio2Assets__/equipments/character/imersite-night-vision-equipment.png",
       width = 128,
       height = 128,
       priority = "medium",

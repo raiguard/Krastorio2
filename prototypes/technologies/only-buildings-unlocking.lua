@@ -6,7 +6,7 @@ data:extend({
     type = "technology",
     name = "kr-basic-fluid-handling",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "basic-fluid-handling.png",
+    icon = "__Krastorio2Assets__/technologies/basic-fluid-handling.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -38,7 +38,7 @@ data:extend({
     type = "technology",
     name = "kr-steam-engine",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "steam-engine.png",
+    icon = "__Krastorio2Assets__/technologies/steam-engine.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -64,7 +64,7 @@ data:extend({
     type = "technology",
     name = "kr-decorations",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "decorations.png",
+    icon = "__Krastorio2Assets__/technologies/decorations.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {}, -- This is populated during data-updates by prototypes/others/greenhouse.lua
@@ -81,7 +81,7 @@ data:extend({
     type = "technology",
     name = "kr-crusher",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "crusher.png",
+    icon = "__Krastorio2Assets__/technologies/crusher.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -108,7 +108,7 @@ data:extend({
     type = "technology",
     name = "kr-shelter",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "shelter.png",
+    icon = "__Krastorio2Assets__/technologies/shelter.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -131,7 +131,7 @@ data:extend({
     type = "technology",
     name = "kr-electric-mining-drill",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "electric-mining-drill.png",
+    icon = "__Krastorio2Assets__/technologies/electric-mining-drill.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -154,7 +154,7 @@ data:extend({
     type = "technology",
     name = "kr-mineral-water-gathering",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "mineral-water-gathering.png",
+    icon = "__Krastorio2Assets__/technologies/mineral-water-gathering.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = { "fluid-handling", "kr-fluids-chemistry" },
@@ -182,7 +182,7 @@ data:extend({
     type = "technology",
     name = "kr-sentinel",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "sentinel.png",
+    icon = "__Krastorio2Assets__/technologies/sentinel.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = { "lamp", "kr-stone-processing" },
@@ -205,7 +205,7 @@ data:extend({
     type = "technology",
     name = "kr-radar",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "radar.png",
+    icon = "__Krastorio2Assets__/technologies/radar.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = { "kr-sentinel", "electronics", "steel-processing" },
@@ -229,7 +229,7 @@ data:extend({
     type = "technology",
     name = "kr-steel-fluid-handling",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "steel-fluid-handling.png",
+    icon = "__Krastorio2Assets__/technologies/steel-fluid-handling.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -261,7 +261,7 @@ data:extend({
     type = "technology",
     name = "kr-steel-fluid-tanks",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "steel-fluid-tanks.png",
+    icon = "__Krastorio2Assets__/technologies/steel-fluid-tanks.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -289,7 +289,7 @@ data:extend({
     type = "technology",
     name = "kr-gas-power-station",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "gas-power-station.png",
+    icon = "__Krastorio2Assets__/technologies/gas-power-station.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -316,7 +316,7 @@ data:extend({
     type = "technology",
     name = "kr-advanced-lab",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "biusart-lab.png",
+    icon = "__Krastorio2Assets__/technologies/biusart-lab.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = { "advanced-circuit" },
@@ -341,7 +341,7 @@ data:extend({
     type = "technology",
     name = "kr-research-server",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "research-server.png",
+    icon = "__Krastorio2Assets__/technologies/research-server.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = { "advanced-circuit" },
@@ -365,7 +365,7 @@ data:extend({
     type = "technology",
     name = "kr-electric-mining-drill-mk2",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "electric-mining-drill-mk2.png",
+    icon = "__Krastorio2Assets__/technologies/electric-mining-drill-mk2.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -392,7 +392,7 @@ data:extend({
     type = "technology",
     name = "kr-advanced-solar-panel",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "advanced-solar-panel.png",
+    icon = "__Krastorio2Assets__/technologies/advanced-solar-panel.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = { "solar-energy", "kr-quarry-minerals-extraction" },
@@ -420,7 +420,7 @@ data:extend({
     type = "technology",
     name = "kr-quantum-computer",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "quantum-computer.png",
+    icon = "__Krastorio2Assets__/technologies/quantum-computer.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -446,7 +446,7 @@ data:extend({
     type = "technology",
     name = "kr-singularity-lab",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "singularity-lab.png",
+    icon = "__Krastorio2Assets__/technologies/singularity-lab.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -473,7 +473,7 @@ data:extend({
     name = "kr-logistic-4",
     localised_description = { "technology-description.logistics" },
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "logistics-4.png",
+    icon = "__Krastorio2Assets__/technologies/logistics-4.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -507,7 +507,7 @@ data:extend({
     type = "technology",
     name = "kr-energy-storage",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "energy-storage.png",
+    icon = "__Krastorio2Assets__/technologies/energy-storage.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -531,7 +531,7 @@ data:extend({
     type = "technology",
     name = "kr-superior-inserters",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "superior-inserters.png",
+    icon = "__Krastorio2Assets__/technologies/superior-inserters.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -567,7 +567,7 @@ data:extend({
     type = "technology",
     name = "kr-electric-mining-drill-mk3",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "electric-mining-drill-mk3.png",
+    icon = "__Krastorio2Assets__/technologies/electric-mining-drill-mk3.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -592,7 +592,7 @@ data:extend({
     name = "kr-logistic-5",
     localised_description = { "technology-description.logistics" },
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "logistics-5.png",
+    icon = "__Krastorio2Assets__/technologies/logistics-5.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -624,7 +624,7 @@ data:extend({
     type = "technology",
     name = "kr-advanced-furnace",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "advanced-furnace.png",
+    icon = "__Krastorio2Assets__/technologies/advanced-furnace.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -653,7 +653,7 @@ data:extend({
     type = "technology",
     name = "kr-advanced-roboports",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "advanced-roboports.png",
+    icon = "__Krastorio2Assets__/technologies/advanced-roboports.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -681,7 +681,7 @@ data:extend({
     type = "technology",
     name = "kr-advanced-chemical-plant",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "advanced-chemical-plant.png",
+    icon = "__Krastorio2Assets__/technologies/advanced-chemical-plant.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -706,7 +706,7 @@ data:extend({
     type = "technology",
     name = "kr-laser-artillery-turret",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "laser-artillery-turret.png",
+    icon = "__Krastorio2Assets__/technologies/laser-artillery-turret.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = { "kr-military-5", "kr-advanced-tech-card", "kr-railgun-turret", "kr-energy-control-unit" },
@@ -732,7 +732,7 @@ data:extend({
     type = "technology",
     name = "kr-singularity-beacon",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "singularity-beacon.png",
+    icon = "__Krastorio2Assets__/technologies/singularity-beacon.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -759,7 +759,7 @@ data:extend({
     type = "technology",
     name = "kr-intergalactic-transceiver",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "intergalactic-transceiver.png",
+    icon = "__Krastorio2Assets__/technologies/intergalactic-transceiver.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -787,7 +787,7 @@ data:extend({
     name = "kr-logo",
     mod = "Krastorio2",
     enabled = false,
-    icon = kr_technologies_icons_path .. "k-logo.png",
+    icon = "__Krastorio2Assets__/technologies/k-logo.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -829,7 +829,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
       type = "technology",
       name = "kr-containers",
       mod = "Krastorio2",
-      icon = kr_technologies_icons_path .. "containers.png",
+      icon = "__Krastorio2Assets__/technologies/containers.png",
       icon_size = 256,
       icon_mipmaps = 4,
       effects = {
@@ -858,7 +858,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
       mod = "Krastorio2",
       localised_name = { "technology-name.kr-logistic-containers-1" },
       localised_description = { "technology-description.kr-logistic-containers-1" },
-      icon = kr_technologies_icons_path .. "logistic-containers-1.png",
+      icon = "__Krastorio2Assets__/technologies/logistic-containers-1.png",
       icon_size = 256,
       icon_mipmaps = 4,
       effects = {
@@ -896,7 +896,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
       mod = "Krastorio2",
       localised_name = { "technology-name.kr-logistic-containers-2" },
       localised_description = { "technology-description.kr-logistic-containers-2" },
-      icon = kr_technologies_icons_path .. "logistic-containers-2.png",
+      icon = "__Krastorio2Assets__/technologies/logistic-containers-2.png",
       icon_size = 256,
       icon_mipmaps = 4,
       effects = {

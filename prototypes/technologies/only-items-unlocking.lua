@@ -6,7 +6,7 @@ data:extend({
     type = "technology",
     name = "kr-automation-core",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "automation-core.png",
+    icon = "__Krastorio2Assets__/technologies/automation-core.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -30,7 +30,7 @@ data:extend({
     type = "technology",
     name = "light-armor",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "light-armor.png",
+    icon = "__Krastorio2Assets__/technologies/light-armor.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -52,7 +52,7 @@ data:extend({
     type = "technology",
     name = "automation-science-pack", -- DON'T CHANGE THIS NAME (is needed for the enforce algorithm)
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "automation-tech-card.png",
+    icon = "__Krastorio2Assets__/technologies/automation-tech-card.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -74,7 +74,7 @@ data:extend({
     type = "technology",
     name = "kr-stone-processing",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "stone-processing.png",
+    icon = "__Krastorio2Assets__/technologies/stone-processing.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -105,7 +105,7 @@ data:extend({
     type = "technology",
     name = "kr-bio-fuel",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "bio-fuel.png",
+    icon = "__Krastorio2Assets__/technologies/bio-fuel.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -129,7 +129,7 @@ data:extend({
     type = "technology",
     name = "kr-reinforced-plates",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "reinforced-plates.png",
+    icon = "__Krastorio2Assets__/technologies/reinforced-plates.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -157,7 +157,7 @@ data:extend({
     type = "technology",
     name = "kr-advanced-fuel",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "advanced-fuel.png",
+    icon = "__Krastorio2Assets__/technologies/advanced-fuel.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -183,7 +183,7 @@ data:extend({
     type = "technology",
     name = "kr-lithium-sulfur-battery",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "lithium-sulfur-battery.png",
+    icon = "__Krastorio2Assets__/technologies/lithium-sulfur-battery.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -208,7 +208,7 @@ data:extend({
     name = "kr-military-5",
     localised_description = { "technology-description.military" },
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "military-5.png",
+    icon = "__Krastorio2Assets__/technologies/military-5.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -256,7 +256,7 @@ data:extend({
     type = "technology",
     name = "kr-ai-core",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "ai-core.png",
+    icon = "__Krastorio2Assets__/technologies/ai-core.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -282,7 +282,7 @@ data:extend({
     type = "technology",
     name = "kr-matter-tech-card",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "matter-tech-card.png",
+    icon = "__Krastorio2Assets__/technologies/matter-tech-card.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -309,7 +309,7 @@ data:extend({
     type = "technology",
     name = "kr-improved-pollution-filter",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "improved-pollution-filter.png",
+    icon = "__Krastorio2Assets__/technologies/improved-pollution-filter.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -341,7 +341,7 @@ data:extend({
     type = "technology",
     name = "kr-energy-control-unit",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "energy-control-unit.png",
+    icon = "__Krastorio2Assets__/technologies/energy-control-unit.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -365,7 +365,7 @@ data:extend({
     type = "technology",
     name = "kr-imersium-processing",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "imersium-processing.png",
+    icon = "__Krastorio2Assets__/technologies/imersium-processing.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -397,7 +397,7 @@ data:extend({
     type = "technology",
     name = "kr-advanced-tech-card",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "advanced-tech-card.png",
+    icon = "__Krastorio2Assets__/technologies/advanced-tech-card.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -421,7 +421,7 @@ data:extend({
     type = "technology",
     name = "kr-creep-virus",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "creep-virus.png",
+    icon = "__Krastorio2Assets__/technologies/creep-virus.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -446,7 +446,7 @@ data:extend({
     type = "technology",
     name = "kr-biter-virus",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "biter-virus.png",
+    icon = "__Krastorio2Assets__/technologies/biter-virus.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -471,7 +471,7 @@ data:extend({
     type = "technology",
     name = "kr-singularity-tech-card",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "singularity-tech-card.png",
+    icon = "__Krastorio2Assets__/technologies/singularity-tech-card.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -497,7 +497,7 @@ data:extend({
     type = "technology",
     name = "kr-antimatter-ammo",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "antimatter-ammo.png",
+    icon = "__Krastorio2Assets__/technologies/antimatter-ammo.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -536,7 +536,7 @@ data:extend({
     type = "technology",
     name = "kr-advanced-tank",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "advanced-tank.png",
+    icon = "__Krastorio2Assets__/technologies/advanced-tank.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
@@ -561,7 +561,7 @@ data:extend({
     type = "technology",
     name = "kr-matter-cube",
     mod = "Krastorio2",
-    icon = kr_technologies_icons_path .. "matter-cube.png",
+    icon = "__Krastorio2Assets__/technologies/matter-cube.png",
     icon_size = 256,
     icon_mipmaps = 4,
     prerequisites = { "kr-singularity-tech-card" },

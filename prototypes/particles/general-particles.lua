@@ -47,7 +47,7 @@ data:extend({
     pictures = {
       layers = {
         {
-          filename = kr_particles_path .. "welding/welding.png",
+          filename = "__Krastorio2Assets__/particles/welding/welding.png",
           priority = "extra-high",
           width = 200,
           height = 200,
@@ -58,7 +58,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_particles_path .. "welding/welding.png",
+          filename = "__Krastorio2Assets__/particles/welding/welding.png",
           priority = "extra-high",
           width = 200,
           height = 200,
@@ -70,7 +70,7 @@ data:extend({
           blend_mode = "additive-soft",
         },
         {
-          filename = kr_particles_path .. "welding/welding.png",
+          filename = "__Krastorio2Assets__/particles/welding/welding.png",
           priority = "extra-high",
           width = 200,
           height = 200,

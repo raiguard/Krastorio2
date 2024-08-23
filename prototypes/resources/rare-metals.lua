@@ -5,7 +5,7 @@ data:extend({
   {
     type = "resource",
     name = "rare-metals",
-    icon = kr_resources_icons_path .. "rare-metals.png",
+    icon = "__Krastorio2Assets__/icons/resources/rare-metals.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral" },
@@ -38,7 +38,7 @@ data:extend({
     stage_counts = { 15000, 9500, 5500, 2900, 1300, 400, 150, 80 },
     stages = {
       sheet = {
-        filename = kr_resources_sprites_path .. "rare-metals/rare-metals.png",
+        filename = "__Krastorio2Assets__/resources/rare-metals/rare-metals.png",
         priority = "extra-high",
         width = 128,
         height = 128,
@@ -49,7 +49,7 @@ data:extend({
     },
     stages_effect = {
       sheet = {
-        filename = kr_resources_sprites_path .. "rare-metals/rare-metals-glow.png",
+        filename = "__Krastorio2Assets__/resources/rare-metals/rare-metals-glow.png",
         priority = "extra-high",
         width = 128,
         height = 128,

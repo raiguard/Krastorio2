@@ -7,7 +7,7 @@ data:extend({
     name = "kr-crash-site-chest-1",
     localised_name = { "entity-name.crash-site-chest-1" },
     localised_description = { "entity-description.kr-crash-site-building" },
-    icon = kr_crash_site_icons_path .. "crash-site-chest.png",
+    icon = "__Krastorio2Assets__/icons/entities/crash-site/crash-site-chest.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation", "not-rotatable" },
@@ -39,7 +39,7 @@ data:extend({
     inventory_size = 5,
     vehicle_impact_sound = sounds.generic_impact,
     integration_patch = {
-      filename = kr_crash_site_sprites_path .. "chests/crash-site-chest-1-ground.png",
+      filename = "__Krastorio2Assets__/entities/crash-site/chests/crash-site-chest-1-ground.png",
       width = 220,
       height = 148,
       shift = util.by_pixel(-6, 12),
@@ -50,7 +50,7 @@ data:extend({
     picture = {
       layers = {
         {
-          filename = kr_crash_site_sprites_path .. "chests/crash-site-chest-1.png",
+          filename = "__Krastorio2Assets__/entities/crash-site/chests/crash-site-chest-1.png",
           priority = "extra-high",
           width = 120,
           height = 76,
@@ -58,7 +58,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_crash_site_sprites_path .. "chests/crash-site-chest-1-shadow.png",
+          filename = "__Krastorio2Assets__/entities/crash-site/chests/crash-site-chest-1-shadow.png",
           priority = "extra-high",
           width = 210,
           height = 128,

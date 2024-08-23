@@ -112,7 +112,7 @@ data:extend({
     type = "item-group",
     name = "smelting-crafting",
     order = "m4",
-    icon = kr_others_path .. "smelting-crafting.png",
+    icon = "__Krastorio2Assets__/others/smelting-crafting.png",
     icon_size = 64,
   },
   {

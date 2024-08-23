@@ -22,7 +22,7 @@ data:extend({
   {
     type = "mining-drill",
     name = "kr-quarry-drill",
-    icon = kr_entities_icons_path .. "quarry-drill.png",
+    icon = "__Krastorio2Assets__/icons/entities/quarry-drill.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "player-creation" },
@@ -61,7 +61,7 @@ data:extend({
       layers = {
         {
           priority = "extra-high",
-          filename = kr_entities_path .. "quarry-drill/quarry-drill-light.png",
+          filename = "__Krastorio2Assets__/entities/quarry-drill/quarry-drill-light.png",
           width = 440,
           height = 464,
           frame_count = 90,
@@ -75,7 +75,7 @@ data:extend({
         },
         {
           priority = "high",
-          filename = kr_entities_path .. "quarry-drill/quarry-drill.png",
+          filename = "__Krastorio2Assets__/entities/quarry-drill/quarry-drill.png",
           width = 440,
           height = 464,
           frame_count = 90,
@@ -86,7 +86,7 @@ data:extend({
         },
         {
           priority = "medium",
-          filename = kr_entities_path .. "quarry-drill/quarry-drill-sh.png",
+          filename = "__Krastorio2Assets__/entities/quarry-drill/quarry-drill-sh.png",
           width = 500,
           height = 422,
           frame_count = 1,
@@ -101,7 +101,7 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
-        filename = kr_buildings_sounds_path .. "quarry-drill.ogg",
+        filename = "__Krastorio2Assets__/sounds/buildings/quarry-drill.ogg",
         volume = 0.5,
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg" },

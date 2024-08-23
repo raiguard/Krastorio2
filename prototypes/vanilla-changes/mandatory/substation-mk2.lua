@@ -21,7 +21,7 @@ data:extend({
     name = "electric-energy-distribution-3",
     icon_size = 256,
     icon_mipmaps = 4,
-    icon = kr_technologies_icons_path .. "electric-energy-distribution.png",
+    icon = "__Krastorio2Assets__/technologies/electric-energy-distribution.png",
     effects = {
       {
         type = "unlock-recipe",

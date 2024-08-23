@@ -3,7 +3,7 @@ data:extend({
     type = "corpse",
     name = "kr-superior-inserter-remnants",
     localised_name = { "remnant-name", { "entity-name.kr-superior-inserter" } },
-    icon = kr_entities_icons_path .. "inserters/superior-inserter.png",
+    icon = "__Krastorio2Assets__/icons/entities/inserters/superior-inserter.png",
     icon_size = 64,
     flags = { "placeable-neutral", "not-on-map" },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
@@ -16,7 +16,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(3, {
-      filename = kr_remnants_path .. "superior-inserter/superior-inserter-remnant.png",
+      filename = "__Krastorio2Assets__/entities/remnants/superior-inserter/superior-inserter-remnant.png",
       line_length = 1,
       width = 102,
       height = 80,

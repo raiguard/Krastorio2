@@ -1,7 +1,7 @@
 -- Getting right icons if other mods change vanilla one
 local main_fuel_ingredient_icon_1 = nil
 if data.raw.fluid["light-oil"].icon == "__base__/graphics/icons/fluid/light-oil.png" then
-  main_fuel_ingredient_icon_1 = kr_fluids_icons_path .. "light-oil.png"
+  main_fuel_ingredient_icon_1 = "__Krastorio2Assets__/icons/fluids/light-oil.png"
 else
   main_fuel_ingredient_icon_1 = data.raw.fluid["light-oil"].icon
 end
@@ -25,7 +25,7 @@ return {
     category = "fuel-refinery",
     icons = {
       {
-        icon = kr_items_icons_path .. "fuel.png",
+        icon = "__Krastorio2Assets__/icons/items/fuel.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -64,7 +64,7 @@ return {
     category = "fuel-refinery",
     icons = {
       {
-        icon = kr_items_icons_path .. "fuel.png",
+        icon = "__Krastorio2Assets__/icons/items/fuel.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -101,7 +101,7 @@ return {
     type = "recipe",
     name = "bio-fuel",
     category = "fuel-refinery",
-    icon = kr_items_icons_path .. "bio-fuel.png",
+    icon = "__Krastorio2Assets__/icons/items/bio-fuel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     energy_required = 10,
@@ -129,7 +129,7 @@ return {
     type = "recipe",
     name = "advanced-fuel",
     category = "fuel-refinery",
-    icon = kr_items_icons_path .. "advanced-fuel.png",
+    icon = "__Krastorio2Assets__/icons/items/advanced-fuel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     energy_required = 10,
@@ -158,7 +158,7 @@ return {
     type = "recipe",
     name = "biomethanol",
     category = "fuel-refinery",
-    icon = kr_fluids_icons_path .. "biomethanol.png",
+    icon = "__Krastorio2Assets__/icons/fluids/biomethanol.png",
     icon_size = 64,
     energy_required = 20,
     enabled = false,
@@ -186,8 +186,8 @@ return {
     name = "rocket-fuel-with-ammonia",
     localized_name = { "item-name.rocket-fuel" },
     icons = {
-      { icon = kr_recipes_icons_path .. "rocket-fuel.png", icon_size = 64 },
-      { icon = kr_fluids_icons_path .. "ammonia.png", icon_size = 64, scale = 0.26, shift = { 8, -8 } },
+      { icon = "__Krastorio2Assets__/icons/recipes/rocket-fuel.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/fluids/ammonia.png", icon_size = 64, scale = 0.26, shift = { 8, -8 } },
     },
     icon_size = 64,
     energy_required = 16,
@@ -213,8 +213,8 @@ return {
     name = "rocket-fuel-with-hydrogen-chloride",
     localized_name = { "item-name.rocket-fuel" },
     icons = {
-      { icon = kr_recipes_icons_path .. "rocket-fuel.png", icon_size = 64 },
-      { icon = kr_fluids_icons_path .. "hydrogen-chloride.png", icon_size = 64, scale = 0.26, shift = { 8, -8 } },
+      { icon = "__Krastorio2Assets__/icons/recipes/rocket-fuel.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/fluids/hydrogen-chloride.png", icon_size = 64, scale = 0.26, shift = { 8, -8 } },
     },
     icon_size = 64,
     energy_required = 16,

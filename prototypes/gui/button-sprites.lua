@@ -3,7 +3,7 @@ data:extend({
   {
     type = "sprite",
     name = "kr-open-gui",
-    filename = kr_graphic_mod_path .. "gui/buttons/open-wiki.png",
+    filename = "__Krastorio2Assets__/gui/buttons/open-wiki.png",
     width = 128,
     height = 128,
   },

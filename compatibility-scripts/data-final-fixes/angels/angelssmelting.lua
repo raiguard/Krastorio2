@@ -126,7 +126,7 @@ if mods["angelssmelting"] then
 
   for _, recipe_name in pairs(copper_recipes) do
     if data.raw.recipe[recipe_name] then
-      data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "copper-plate.png"
+      data.raw.recipe[recipe_name].icons[1].icon = "__Krastorio2Assets__/icons/items/copper-plate.png"
       data.raw.recipe[recipe_name].icons[1].icon_size = 64 -- override the base sprite size
       data.raw.recipe[recipe_name].icons[1].scale = 32 / 64
       data.raw.recipe[recipe_name].icons[2].icon_size = 32
@@ -144,7 +144,7 @@ if mods["angelssmelting"] then
   -- Implement relative custom scaling
   for _, recipe_name in pairs(badly_scaled_recipes) do
     if data.raw.recipe[recipe_name] then
-      data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "copper-plate.png"
+      data.raw.recipe[recipe_name].icons[1].icon = "__Krastorio2Assets__/icons/items/copper-plate.png"
       data.raw.recipe[recipe_name].icons[1].icon_size = 64 -- override the base sprite size
       -- double the scale, because the background is double the size
       data.raw.recipe[recipe_name].icons[2].scale = data.raw.recipe[recipe_name].icons[2].scale * 2
@@ -155,9 +155,9 @@ if mods["angelssmelting"] then
   end
 
   data.raw.recipe["enriched-copper-plate"].icons = {
-    { icon = kr_items_icons_path .. "copper-plate.png", icon_size = 64 },
+    { icon = "__Krastorio2Assets__/icons/items/copper-plate.png", icon_size = 64 },
     {
-      icon = kr_items_with_variations_icons_path .. "enriched-copper/enriched-copper.png",
+      icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-copper/enriched-copper.png",
       icon_size = 64,
       scale = 0.2,
       shift = { -10, -10 },
@@ -173,14 +173,14 @@ if mods["angelssmelting"] then
   -- Needs to be handled separately because it uses icon instead of icons
   if data.raw.recipe["steel-plate"] then
     print("steel-plate")
-    data.raw.recipe["steel-plate"].icon = kr_items_icons_path .. "steel-plate.png"
+    data.raw.recipe["steel-plate"].icon = "__Krastorio2Assets__/icons/items/steel-plate.png"
     data.raw.recipe["steel-plate"].icon_size = 64
   end
 
   for _, recipe_name in pairs(iron_recipes) do
     if data.raw.recipe[recipe_name] then
       print(recipe_name)
-      data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "steel-plate.png"
+      data.raw.recipe[recipe_name].icons[1].icon = "__Krastorio2Assets__/icons/items/steel-plate.png"
       --         data.raw.recipe[recipe_name].icons[2].icon_size = 32 -- Doing this actually removed (or made the icon appear VERY small)
       data.raw.recipe[recipe_name].icon_size = 64
     end

@@ -1,4 +1,4 @@
-require(kr_public_lib .. "fluid-burner-util")
+require("__Krastorio2__/lib/public/data-stages/fluid-burner-util")
 
 if mods["IndustrialRevolution"] then
   krastorio.fluid_burner_util.addBurnFluidEmissionsMultiplier("glass-molten", 10.0)

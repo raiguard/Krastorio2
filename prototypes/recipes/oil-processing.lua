@@ -3,7 +3,7 @@ return {
     type = "recipe",
     name = "coke-liquefaction",
     category = "oil-processing",
-    icon = kr_recipes_icons_path .. "coke-liquefaction.png",
+    icon = "__Krastorio2Assets__/icons/recipes/coke-liquefaction.png",
     icon_size = 64,
     enabled = false,
     energy_required = 5,

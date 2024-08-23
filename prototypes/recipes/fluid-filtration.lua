@@ -3,7 +3,7 @@ return {
   {
     type = "recipe",
     name = "quartz",
-    icon = kr_items_with_variations_icons_path .. "quartz/quartz.png",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz.png",
     icon_size = 64,
     category = "fluid-filtration",
     subgroup = "raw-material",
@@ -26,7 +26,7 @@ return {
   {
     type = "recipe",
     name = "coal-filtration",
-    icon = kr_recipes_icons_path .. "coal-filtration.png",
+    icon = "__Krastorio2Assets__/icons/recipes/coal-filtration.png",
     icon_size = 64,
     category = "fluid-filtration",
     subgroup = "raw-material",

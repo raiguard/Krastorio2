@@ -11,7 +11,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "kr-atmospheric-condenser",
-    icon = kr_entities_icons_path .. "atmospheric-condenser.png",
+    icon = "__Krastorio2Assets__/icons/entities/atmospheric-condenser.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -29,7 +29,7 @@ data:extend({
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        pipe_picture = kr_pipe_path,
+        pipe_picture = kr_pipe_picture,
         volume = 1000,
         pipe_connections = {
           { flow_direction = "output", direction = defines.direction.east, position = { 2, -1 } },
@@ -51,7 +51,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "atmospheric-condenser/atmospheric-condenser.png",
+          filename = "__Krastorio2Assets__/entities/atmospheric-condenser/atmospheric-condenser.png",
           width = 380,
           height = 380,
           scale = 0.5,
@@ -60,7 +60,7 @@ data:extend({
           shift = { 0, 0 },
         },
         {
-          filename = kr_entities_path .. "atmospheric-condenser/atmospheric-condenser-sh.png",
+          filename = "__Krastorio2Assets__/entities/atmospheric-condenser/atmospheric-condenser-sh.png",
           width = 380,
           height = 380,
           scale = 0.5,
@@ -76,7 +76,7 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
-        filename = kr_buildings_sounds_path .. "atmospheric-condenser.ogg",
+        filename = "__Krastorio2Assets__/sounds/buildings/atmospheric-condenser.ogg",
         volume = 0.8,
       },
       idle_sound = {
@@ -94,7 +94,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = kr_entities_path .. "atmospheric-condenser/atmospheric-condenser-reflection.png",
+        filename = "__Krastorio2Assets__/entities/atmospheric-condenser/atmospheric-condenser-reflection.png",
         priority = "extra-high",
         width = 42,
         height = 38,

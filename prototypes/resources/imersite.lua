@@ -6,7 +6,7 @@ data:extend({
     type = "resource",
     name = "imersite",
     category = "kr-quarry",
-    icon = kr_items_with_variations_icons_path .. "raw-imersite/raw-imersite.png",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/raw-imersite/raw-imersite.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral" },
@@ -46,7 +46,7 @@ data:extend({
     stage_counts = { 0 },
     stages = {
       sheet = {
-        filename = kr_resources_sprites_path .. "imersite/imersite-rift.png",
+        filename = "__Krastorio2Assets__/resources/imersite/imersite-rift.png",
         priority = "extra-high",
         width = 500,
         height = 500,
@@ -58,7 +58,7 @@ data:extend({
     stages_effect = {
       sheets = {
         {
-          filename = kr_resources_sprites_path .. "imersite/imersite-rift-glow.png",
+          filename = "__Krastorio2Assets__/resources/imersite/imersite-rift-glow.png",
           priority = "extra-high",
           width = 500,
           height = 500,

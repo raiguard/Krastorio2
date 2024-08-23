@@ -14,7 +14,7 @@ end
 -- Oil
 
 data.raw.resource["crude-oil"].category = "oil"
-data.raw.resource["crude-oil"].stages.sheet.filename = kr_resources_sprites_path .. "crude-oil.png"
+data.raw.resource["crude-oil"].stages.sheet.filename = "__Krastorio2Assets__/resources/crude-oil.png"
 data.raw.resource["crude-oil"].selection_box = { { -1, -1 }, { 1, 1 } }
 data.raw.resource["crude-oil"].stages.sheet.width = 128
 data.raw.resource["crude-oil"].stages.sheet.height = 128

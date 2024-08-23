@@ -5,7 +5,7 @@ data:extend({
   {
     type = "electric-pole",
     name = "kr-substation-mk2",
-    icon = kr_entities_icons_path .. "substation-mk2.png",
+    icon = "__Krastorio2Assets__/icons/entities/substation-mk2.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "player-creation" },
@@ -31,7 +31,7 @@ data:extend({
       layers = {
 
         {
-          filename = kr_entities_path .. "substation-mk2/substation-mk2.png",
+          filename = "__Krastorio2Assets__/entities/substation-mk2/substation-mk2.png",
           priority = "high",
           width = 138,
           height = 270,

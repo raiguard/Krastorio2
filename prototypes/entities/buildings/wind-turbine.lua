@@ -3,11 +3,11 @@ local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local wind_turbine_persistent_sound = {
   variations = {
     {
-      filename = kr_buildings_sounds_path .. "wind-turbine-rotating.ogg",
+      filename = "__Krastorio2Assets__/sounds/buildings/wind-turbine-rotating.ogg",
       volume = 0.55,
     },
     {
-      filename = kr_buildings_sounds_path .. "wind-turbine-rotating-2.ogg",
+      filename = "__Krastorio2Assets__/sounds/buildings/wind-turbine-rotating-2.ogg",
       volume = 0.38,
     },
   },
@@ -22,7 +22,7 @@ data:extend({
   {
     type = "electric-energy-interface",
     name = "kr-wind-turbine",
-    icon = kr_entities_icons_path .. "wind-turbine.png",
+    icon = "__Krastorio2Assets__/icons/entities/wind-turbine.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "player-creation", "not-rotatable" },
@@ -59,7 +59,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = kr_entities_path .. "wind-turbine/wind-turbine-reflection.png",
+        filename = "__Krastorio2Assets__/entities/wind-turbine/wind-turbine-reflection.png",
         priority = "extra-high",
         width = 20,
         height = 25,
@@ -76,7 +76,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "wind-turbine/wind-turbine.png",
+          filename = "__Krastorio2Assets__/entities/wind-turbine/wind-turbine.png",
           priority = "medium",
           width = 196,
           height = 286,
@@ -87,7 +87,7 @@ data:extend({
           shift = { 0, -1.2 },
         },
         {
-          filename = kr_entities_path .. "wind-turbine/wind-turbine-shadow.png",
+          filename = "__Krastorio2Assets__/entities/wind-turbine/wind-turbine-shadow.png",
           priority = "medium",
           width = 242,
           height = 100,

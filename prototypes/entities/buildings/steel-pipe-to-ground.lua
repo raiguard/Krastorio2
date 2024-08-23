@@ -4,7 +4,7 @@ data:extend({
   {
     type = "pipe-to-ground",
     name = "kr-steel-pipe-to-ground",
-    icon = kr_entities_icons_path .. "steel-pipe-to-ground.png",
+    icon = "__Krastorio2Assets__/icons/entities/steel-pipe-to-ground.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "player-creation" },
@@ -42,28 +42,28 @@ data:extend({
     working_sound = sounds.pipe,
     pictures = {
       up = {
-        filename = kr_entities_path .. "steel-pipe-to-ground/steel-pipe-to-ground-up.png",
+        filename = "__Krastorio2Assets__/entities/steel-pipe-to-ground/steel-pipe-to-ground-up.png",
         priority = "extra-high",
         width = 128,
         height = 128,
         scale = 0.5,
       },
       down = {
-        filename = kr_entities_path .. "steel-pipe-to-ground/steel-pipe-to-ground-down.png",
+        filename = "__Krastorio2Assets__/entities/steel-pipe-to-ground/steel-pipe-to-ground-down.png",
         priority = "extra-high",
         width = 128,
         height = 128,
         scale = 0.5,
       },
       left = {
-        filename = kr_entities_path .. "steel-pipe-to-ground/steel-pipe-to-ground-left.png",
+        filename = "__Krastorio2Assets__/entities/steel-pipe-to-ground/steel-pipe-to-ground-left.png",
         priority = "extra-high",
         width = 128,
         height = 128,
         scale = 0.5,
       },
       right = {
-        filename = kr_entities_path .. "steel-pipe-to-ground/steel-pipe-to-ground-right.png",
+        filename = "__Krastorio2Assets__/entities/steel-pipe-to-ground/steel-pipe-to-ground-right.png",
         priority = "extra-high",
         width = 128,
         height = 128,

@@ -8,7 +8,7 @@ data:extend({
     name = "kr-crash-site-lab-repaired",
     localised_name = { "entity-name.kr-damaged-ship-research-computer" },
     localised_description = { "entity-description.kr-crash-site-building" },
-    icon = kr_crash_site_icons_path .. "crash-site-lab-repaired.png",
+    icon = "__Krastorio2Assets__/icons/entities/crash-site/crash-site-lab-repaired.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "crash-site",
@@ -22,7 +22,7 @@ data:extend({
     name = "kr-crash-site-assembling-machine-1-repaired",
     localised_name = { "entity-name.kr-damaged-ship-assembler" },
     localised_description = { "entity-description.kr-crash-site-building" },
-    icon = kr_crash_site_icons_path .. "crash-site-assembling-machine-1-repaired.png",
+    icon = "__Krastorio2Assets__/icons/entities/crash-site/crash-site-assembling-machine-1-repaired.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "crash-site",
@@ -36,7 +36,7 @@ data:extend({
     name = "kr-crash-site-assembling-machine-2-repaired",
     localised_name = { "entity-name.kr-damaged-ship-assembler" },
     localised_description = { "entity-description.kr-crash-site-building" },
-    icon = kr_crash_site_icons_path .. "crash-site-assembling-machine-2-repaired.png",
+    icon = "__Krastorio2Assets__/icons/entities/crash-site/crash-site-assembling-machine-2-repaired.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "crash-site",
@@ -50,7 +50,7 @@ data:extend({
     name = "kr-crash-site-generator",
     localised_name = { "entity-name.kr-damaged-ship-reactor" },
     localised_description = { "entity-description.kr-crash-site-building" },
-    icon = kr_crash_site_icons_path .. "crash-site-generator.png",
+    icon = "__Krastorio2Assets__/icons/entities/crash-site/crash-site-generator.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "crash-site",
@@ -64,7 +64,7 @@ data:extend({
     name = "kr-crash-site-chest-1",
     localised_name = { "entity-name.crash-site-chest-1" },
     localised_description = { "entity-description.kr-crash-site-building" },
-    icon = kr_crash_site_icons_path .. "crash-site-chest.png",
+    icon = "__Krastorio2Assets__/icons/entities/crash-site/crash-site-chest.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "crash-site",
@@ -78,7 +78,7 @@ data:extend({
     name = "kr-crash-site-chest-2",
     localised_name = { "entity-name.crash-site-chest-2" },
     localised_description = { "entity-description.kr-crash-site-building" },
-    icon = kr_crash_site_icons_path .. "crash-site-chest.png",
+    icon = "__Krastorio2Assets__/icons/entities/crash-site/crash-site-chest.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "crash-site",
@@ -91,7 +91,7 @@ data:extend({
   {
     type = "item",
     name = "kr-wind-turbine",
-    icon = kr_entities_icons_path .. "wind-turbine.png",
+    icon = "__Krastorio2Assets__/icons/entities/wind-turbine.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "energy",
@@ -102,7 +102,7 @@ data:extend({
   {
     type = "item",
     name = "kr-gas-power-station",
-    icon = kr_entities_icons_path .. "gas-power-station.png",
+    icon = "__Krastorio2Assets__/icons/entities/gas-power-station.png",
     icon_size = 64,
     icon_mipmaps = 4,
     stack_size = 10,
@@ -113,7 +113,7 @@ data:extend({
   {
     type = "item",
     name = "kr-greenhouse",
-    icon = kr_entities_icons_path .. "greenhouse.png",
+    icon = "__Krastorio2Assets__/icons/entities/greenhouse.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "production-machine",
@@ -124,7 +124,7 @@ data:extend({
   {
     type = "item",
     name = "kr-bio-lab",
-    icon = kr_entities_icons_path .. "bio-lab.png",
+    icon = "__Krastorio2Assets__/icons/entities/bio-lab.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "production-machine",
@@ -135,7 +135,7 @@ data:extend({
   {
     type = "item",
     name = "kr-advanced-assembling-machine",
-    icon = kr_entities_icons_path .. "advanced-assembling-machine.png",
+    icon = "__Krastorio2Assets__/icons/entities/advanced-assembling-machine.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "production-machine",
@@ -146,7 +146,7 @@ data:extend({
   {
     type = "item",
     name = "kr-tesla-coil",
-    icon = kr_entities_icons_path .. "tesla-coil.png",
+    icon = "__Krastorio2Assets__/icons/entities/tesla-coil.png",
     icon_size = 64,
     subgroup = "energy-pipe-distribution",
     order = "z-a[energy]-f2[tesla-coil]",
@@ -159,7 +159,7 @@ data:extend({
   {
     type = "item",
     name = "kr-electric-mining-drill-mk2",
-    icon = kr_entities_icons_path .. "electric-mining-drill-mk2.png",
+    icon = "__Krastorio2Assets__/icons/entities/electric-mining-drill-mk2.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "extraction-machine",
@@ -170,7 +170,7 @@ data:extend({
   {
     type = "item",
     name = "kr-electric-mining-drill-mk3",
-    icon = kr_entities_icons_path .. "electric-mining-drill-mk3.png",
+    icon = "__Krastorio2Assets__/icons/entities/electric-mining-drill-mk3.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "extraction-machine",
@@ -184,7 +184,7 @@ data:extend({
   {
     type = "item",
     name = "kr-research-server",
-    icon = kr_entities_icons_path .. "research-server.png",
+    icon = "__Krastorio2Assets__/icons/entities/research-server.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "production-machine",
@@ -195,7 +195,7 @@ data:extend({
   {
     type = "item",
     name = "kr-quantum-computer",
-    icon = kr_entities_icons_path .. "quantum-computer.png",
+    icon = "__Krastorio2Assets__/icons/entities/quantum-computer.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "production-machine",
@@ -207,7 +207,7 @@ data:extend({
   {
     type = "item",
     name = "kr-crusher",
-    icon = kr_entities_icons_path .. "crusher.png",
+    icon = "__Krastorio2Assets__/icons/entities/crusher.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "production-machine",
@@ -218,7 +218,7 @@ data:extend({
   {
     type = "item",
     name = "kr-shelter",
-    icon = kr_entities_icons_path .. "shelter.png",
+    icon = "__Krastorio2Assets__/icons/entities/shelter.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "storage",
@@ -229,7 +229,7 @@ data:extend({
   {
     type = "item",
     name = "kr-shelter-plus",
-    icon = kr_entities_icons_path .. "shelter-plus.png",
+    icon = "__Krastorio2Assets__/icons/entities/shelter-plus.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "storage",
@@ -240,7 +240,7 @@ data:extend({
   {
     type = "item",
     name = "kr-mineral-water-pumpjack",
-    icon = kr_entities_icons_path .. "mineral-water-pumpjack.png",
+    icon = "__Krastorio2Assets__/icons/entities/mineral-water-pumpjack.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "extraction-machine",
@@ -251,7 +251,7 @@ data:extend({
   {
     type = "item",
     name = "kr-quarry-drill",
-    icon = kr_entities_icons_path .. "quarry-drill.png",
+    icon = "__Krastorio2Assets__/icons/entities/quarry-drill.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "extraction-machine",
@@ -262,7 +262,7 @@ data:extend({
   {
     type = "item",
     name = "kr-air-purifier",
-    icon = kr_entities_icons_path .. "air-purifier.png",
+    icon = "__Krastorio2Assets__/icons/entities/air-purifier.png",
     icon_size = 64,
     subgroup = "production-machine",
     order = "z[air-purifier]",
@@ -272,7 +272,7 @@ data:extend({
   {
     type = "item",
     name = "kr-sentinel",
-    icon = kr_entities_icons_path .. "sentinel.png",
+    icon = "__Krastorio2Assets__/icons/entities/sentinel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "radars-and-rockets",
@@ -283,7 +283,7 @@ data:extend({
   {
     type = "item",
     name = "kr-fuel-refinery",
-    icon = kr_entities_icons_path .. "fuel-refinery.png",
+    icon = "__Krastorio2Assets__/icons/entities/fuel-refinery.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "production-machine",
@@ -294,7 +294,7 @@ data:extend({
   {
     type = "item",
     name = "kr-substation-mk2",
-    icon = kr_entities_icons_path .. "substation-mk2.png",
+    icon = "__Krastorio2Assets__/icons/entities/substation-mk2.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "energy-pipe-distribution",
@@ -308,7 +308,7 @@ data:extend({
   {
     type = "item",
     name = "biusart-lab",
-    icon = kr_entities_icons_path .. "biusart-lab.png",
+    icon = "__Krastorio2Assets__/icons/entities/biusart-lab.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "production-machine",
@@ -319,7 +319,7 @@ data:extend({
   {
     type = "item",
     name = "kr-singularity-lab",
-    icon = kr_entities_icons_path .. "singularity-lab.png",
+    icon = "__Krastorio2Assets__/icons/entities/singularity-lab.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "production-machine",
@@ -333,7 +333,7 @@ data:extend({
   {
     type = "item",
     name = "kr-fluid-storage-1",
-    icon = kr_entities_icons_path .. "fluid-storages/fluid-storage-1.png",
+    icon = "__Krastorio2Assets__/icons/entities/fluid-storages/fluid-storage-1.png",
     stack_size = 50,
     icon_size = 64,
     icon_mipmaps = 4,
@@ -344,7 +344,7 @@ data:extend({
   {
     type = "item",
     name = "kr-fluid-storage-2",
-    icon = kr_entities_icons_path .. "fluid-storages/fluid-storage-2.png",
+    icon = "__Krastorio2Assets__/icons/entities/fluid-storages/fluid-storage-2.png",
     stack_size = 50,
     icon_size = 64,
     icon_mipmaps = 4,
@@ -358,7 +358,7 @@ data:extend({
   {
     type = "item",
     name = "kr-steel-pipe",
-    icon = kr_entities_icons_path .. "steel-pipe.png",
+    icon = "__Krastorio2Assets__/icons/entities/steel-pipe.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "energy-pipe-distribution",
@@ -369,7 +369,7 @@ data:extend({
   {
     type = "item",
     name = "kr-steel-pipe-to-ground",
-    icon = kr_entities_icons_path .. "steel-pipe-to-ground.png",
+    icon = "__Krastorio2Assets__/icons/entities/steel-pipe-to-ground.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "energy-pipe-distribution",
@@ -380,7 +380,7 @@ data:extend({
   {
     type = "item",
     name = "kr-steel-pump",
-    icon = kr_entities_icons_path .. "steel-pump.png",
+    icon = "__Krastorio2Assets__/icons/entities/steel-pump.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "energy-pipe-distribution",
@@ -392,7 +392,7 @@ data:extend({
   {
     type = "item",
     name = "kr-electrolysis-plant",
-    icon = kr_entities_icons_path .. "electrolysis-plant.png",
+    icon = "__Krastorio2Assets__/icons/entities/electrolysis-plant.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "production-machine",
@@ -403,7 +403,7 @@ data:extend({
   {
     type = "item",
     name = "kr-filtration-plant",
-    icon = kr_entities_icons_path .. "filtration-plant.png",
+    icon = "__Krastorio2Assets__/icons/entities/filtration-plant.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "production-machine",
@@ -414,7 +414,7 @@ data:extend({
   {
     type = "item",
     name = "kr-atmospheric-condenser",
-    icon = kr_entities_icons_path .. "atmospheric-condenser.png",
+    icon = "__Krastorio2Assets__/icons/entities/atmospheric-condenser.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "production-machine",
@@ -425,7 +425,7 @@ data:extend({
   {
     type = "item",
     name = "kr-fluid-burner",
-    icon = kr_entities_icons_path .. "fluid-burner.png",
+    icon = "__Krastorio2Assets__/icons/entities/fluid-burner.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "production-machine",
@@ -436,7 +436,7 @@ data:extend({
   {
     type = "item",
     name = "kr-fusion-reactor",
-    icon = kr_entities_icons_path .. "fusion-reactor.png",
+    icon = "__Krastorio2Assets__/icons/entities/fusion-reactor.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "energy",
@@ -447,7 +447,7 @@ data:extend({
   {
     type = "item",
     name = "kr-advanced-steam-turbine",
-    icon = kr_entities_icons_path .. "advanced-steam-turbine.png",
+    icon = "__Krastorio2Assets__/icons/entities/advanced-steam-turbine.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "energy",
@@ -458,7 +458,7 @@ data:extend({
   {
     type = "item",
     name = "kr-antimatter-reactor",
-    icon = kr_entities_icons_path .. "antimatter-reactor.png",
+    icon = "__Krastorio2Assets__/icons/entities/antimatter-reactor.png",
     icon_size = 128,
     icon_mipmaps = 4,
     subgroup = "energy",
@@ -469,7 +469,7 @@ data:extend({
   {
     type = "item",
     name = "kr-advanced-furnace",
-    icon = kr_entities_icons_path .. "advanced-furnace.png",
+    icon = "__Krastorio2Assets__/icons/entities/advanced-furnace.png",
     icon_size = 128,
     icon_mipmaps = 4,
     subgroup = "smelting-machine",
@@ -480,7 +480,7 @@ data:extend({
   {
     type = "item",
     name = "kr-advanced-chemical-plant",
-    icon = kr_entities_icons_path .. "advanced-chemical-plant.png",
+    icon = "__Krastorio2Assets__/icons/entities/advanced-chemical-plant.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "production-machine",
@@ -494,7 +494,7 @@ data:extend({
   {
     type = "item",
     name = "kr-railgun-turret",
-    icon = kr_entities_icons_path .. "railgun-turret.png",
+    icon = "__Krastorio2Assets__/icons/entities/railgun-turret.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "railgun-turret",
@@ -505,7 +505,7 @@ data:extend({
   {
     type = "item",
     name = "kr-rocket-turret",
-    icon = kr_entities_icons_path .. "rocket-turret.png",
+    icon = "__Krastorio2Assets__/icons/entities/rocket-turret.png",
     icon_size = 64,
     subgroup = "rocket-turret",
     order = "a02[rocket-turret]",
@@ -515,7 +515,7 @@ data:extend({
   {
     type = "item",
     name = "kr-laser-artillery-turret",
-    icon = kr_entities_icons_path .. "laser-artillery-turret.png",
+    icon = "__Krastorio2Assets__/icons/entities/laser-artillery-turret.png",
     icon_size = 64,
     subgroup = "vanilla-turrets",
     order = "b[turret]-e[artillery-turret]-a[laser-artillery-turret]",
@@ -526,7 +526,7 @@ data:extend({
   {
     type = "item",
     name = "kr-matter-plant",
-    icon = kr_entities_icons_path .. "matter-plant.png",
+    icon = "__Krastorio2Assets__/icons/entities/matter-plant.png",
     icon_size = 128,
     icon_mipmaps = 4,
     subgroup = "production-machine",
@@ -537,7 +537,7 @@ data:extend({
   {
     type = "item",
     name = "kr-matter-assembler",
-    icon = kr_entities_icons_path .. "matter-assembler.png",
+    icon = "__Krastorio2Assets__/icons/entities/matter-assembler.png",
     icon_size = 128,
     icon_mipmaps = 4,
     subgroup = "production-machine",
@@ -548,7 +548,7 @@ data:extend({
   {
     type = "item",
     name = "kr-stabilizer-charging-station",
-    icon = kr_entities_icons_path .. "stabilizer-charging-station.png",
+    icon = "__Krastorio2Assets__/icons/entities/stabilizer-charging-station.png",
     icon_size = 128,
     icon_mipmaps = 4,
     subgroup = "production-machine",
@@ -564,7 +564,7 @@ data:extend({
     type = "item",
     name = "kr-advanced-splitter",
     localised_description = { "entity-description.splitter" },
-    icon = kr_entities_icons_path .. "transport-belts/advanced-transport-belt/advanced-splitter.png",
+    icon = "__Krastorio2Assets__/icons/entities/transport-belts/advanced-transport-belt/advanced-splitter.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "belt",
@@ -575,7 +575,7 @@ data:extend({
   {
     type = "item",
     name = "kr-advanced-transport-belt",
-    icon = kr_entities_icons_path .. "transport-belts/advanced-transport-belt/advanced-transport-belt.png",
+    icon = "__Krastorio2Assets__/icons/entities/transport-belts/advanced-transport-belt/advanced-transport-belt.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "belt",
@@ -586,7 +586,7 @@ data:extend({
   {
     type = "item",
     name = "kr-advanced-underground-belt",
-    icon = kr_entities_icons_path .. "transport-belts/advanced-transport-belt/advanced-underground-belt.png",
+    icon = "__Krastorio2Assets__/icons/entities/transport-belts/advanced-transport-belt/advanced-underground-belt.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "belt",
@@ -599,7 +599,7 @@ data:extend({
     type = "item",
     name = "kr-superior-splitter",
     localised_description = { "entity-description.splitter" },
-    icon = kr_entities_icons_path .. "transport-belts/superior-transport-belt/superior-splitter.png",
+    icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-splitter.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "belt",
@@ -610,7 +610,7 @@ data:extend({
   {
     type = "item",
     name = "kr-superior-transport-belt",
-    icon = kr_entities_icons_path .. "transport-belts/superior-transport-belt/superior-transport-belt.png",
+    icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-transport-belt.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "belt",
@@ -621,7 +621,7 @@ data:extend({
   {
     type = "item",
     name = "kr-superior-underground-belt",
-    icon = kr_entities_icons_path .. "transport-belts/superior-transport-belt/superior-underground-belt.png",
+    icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-underground-belt.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "belt",
@@ -635,7 +635,7 @@ data:extend({
   {
     type = "item",
     name = "kr-small-roboport",
-    icon = kr_entities_icons_path .. "small-roboport.png",
+    icon = "__Krastorio2Assets__/icons/entities/small-roboport.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "logistic-network",
@@ -646,7 +646,7 @@ data:extend({
   {
     type = "item",
     name = "kr-large-roboport",
-    icon = kr_entities_icons_path .. "large-roboport.png",
+    icon = "__Krastorio2Assets__/icons/entities/large-roboport.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "logistic-network",
@@ -658,7 +658,7 @@ data:extend({
   {
     type = "item",
     name = "kr-energy-storage",
-    icon = kr_entities_icons_path .. "energy-storage.png",
+    icon = "__Krastorio2Assets__/icons/entities/energy-storage.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "energy",
@@ -669,7 +669,7 @@ data:extend({
   {
     type = "item",
     name = "kr-advanced-solar-panel",
-    icon = kr_entities_icons_path .. "advanced-solar-panel.png",
+    icon = "__Krastorio2Assets__/icons/entities/advanced-solar-panel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "energy",
@@ -681,7 +681,7 @@ data:extend({
   {
     type = "item",
     name = "kr-singularity-beacon",
-    icon = kr_entities_icons_path .. "singularity-beacon.png",
+    icon = "__Krastorio2Assets__/icons/entities/singularity-beacon.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "module",
@@ -692,7 +692,7 @@ data:extend({
   {
     type = "item",
     name = "kr-intergalactic-transceiver",
-    icon = kr_entities_icons_path .. "intergalactic-transceiver.png",
+    icon = "__Krastorio2Assets__/icons/entities/intergalactic-transceiver.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "radars-and-rockets",
@@ -706,7 +706,7 @@ data:extend({
   {
     type = "item",
     name = "kr-superior-inserter",
-    icon = kr_entities_icons_path .. "inserters/superior-inserter.png",
+    icon = "__Krastorio2Assets__/icons/entities/inserters/superior-inserter.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "inserter",
@@ -717,7 +717,7 @@ data:extend({
   {
     type = "item",
     name = "kr-superior-long-inserter",
-    icon = kr_entities_icons_path .. "inserters/superior-long-inserter.png",
+    icon = "__Krastorio2Assets__/icons/entities/inserters/superior-long-inserter.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "inserter",
@@ -728,7 +728,7 @@ data:extend({
   {
     type = "item",
     name = "kr-superior-filter-inserter",
-    icon = kr_entities_icons_path .. "inserters/superior-filter-inserter.png",
+    icon = "__Krastorio2Assets__/icons/entities/inserters/superior-filter-inserter.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "inserter",
@@ -739,7 +739,7 @@ data:extend({
   {
     type = "item",
     name = "kr-superior-long-filter-inserter",
-    icon = kr_entities_icons_path .. "inserters/superior-long-filter-inserter.png",
+    icon = "__Krastorio2Assets__/icons/entities/inserters/superior-long-filter-inserter.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "inserter",
@@ -751,7 +751,7 @@ data:extend({
   {
     type = "item",
     name = "kr-planetary-teleporter",
-    icon = kr_entities_icons_path .. "planetary-teleporter.png",
+    icon = "__Krastorio2Assets__/icons/entities/planetary-teleporter.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "energy-pipe-distribution",
@@ -762,7 +762,7 @@ data:extend({
   {
     type = "item",
     name = "kr-logo",
-    icon = kr_entities_icons_path .. "k-logo.png",
+    icon = "__Krastorio2Assets__/icons/entities/k-logo.png",
     stack_size = 50,
     icon_size = 64,
     icon_mipmaps = 4,
@@ -783,7 +783,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-medium-active-provider-container",
-      icon = kr_entities_icons_path .. "containers/medium-containers/" .. "medium-active-provider-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/" .. "medium-active-provider-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -794,7 +794,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-medium-buffer-container",
-      icon = kr_entities_icons_path .. "containers/medium-containers/" .. "medium-buffer-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/" .. "medium-buffer-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -805,7 +805,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-medium-container",
-      icon = kr_entities_icons_path .. "containers/medium-containers/" .. "medium-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/" .. "medium-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -816,7 +816,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-medium-passive-provider-container",
-      icon = kr_entities_icons_path .. "containers/medium-containers/" .. "medium-passive-provider-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/" .. "medium-passive-provider-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -827,7 +827,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-medium-requester-container",
-      icon = kr_entities_icons_path .. "containers/medium-containers/" .. "medium-requester-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/" .. "medium-requester-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -838,7 +838,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-medium-storage-container",
-      icon = kr_entities_icons_path .. "containers/medium-containers/" .. "medium-storage-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/" .. "medium-storage-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -852,7 +852,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-big-active-provider-container",
-      icon = kr_entities_icons_path .. "containers/big-containers/" .. "big-active-provider-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/" .. "big-active-provider-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -863,7 +863,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-big-buffer-container",
-      icon = kr_entities_icons_path .. "containers/big-containers/" .. "big-buffer-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/" .. "big-buffer-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -874,7 +874,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-big-container",
-      icon = kr_entities_icons_path .. "containers/big-containers/" .. "big-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/" .. "big-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -885,7 +885,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-big-passive-provider-container",
-      icon = kr_entities_icons_path .. "containers/big-containers/" .. "big-passive-provider-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/" .. "big-passive-provider-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -896,7 +896,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-big-requester-container",
-      icon = kr_entities_icons_path .. "containers/big-containers/" .. "big-requester-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/" .. "big-requester-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,
@@ -907,7 +907,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
     {
       type = "item",
       name = "kr-big-storage-container",
-      icon = kr_entities_icons_path .. "containers/big-containers/" .. "big-storage-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/" .. "big-storage-container.png",
       stack_size = 50,
       icon_size = 64,
       icon_mipmaps = 4,

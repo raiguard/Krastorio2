@@ -10,7 +10,7 @@ data:extend({
     name = "kr-crusher",
     icon_size = 64,
     icon_mipmaps = 4,
-    icon = kr_entities_icons_path .. "crusher.png",
+    icon = "__Krastorio2Assets__/icons/entities/crusher.png",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { hardness = 1, mining_time = 1, result = "kr-crusher" },
     max_health = 750,
@@ -28,7 +28,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "crusher/crusher.png",
+          filename = "__Krastorio2Assets__/entities/crusher/crusher.png",
           priority = "high",
           width = 512,
           height = 512,
@@ -38,7 +38,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "crusher/crusher-shadow.png",
+          filename = "__Krastorio2Assets__/entities/crusher/crusher-shadow.png",
           priority = "high",
           width = 512,
           height = 512,
@@ -53,7 +53,7 @@ data:extend({
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
       sound = {
-        filename = kr_buildings_sounds_path .. "crusher.ogg",
+        filename = "__Krastorio2Assets__/sounds/buildings/crusher.ogg",
         volume = 1.25,
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg" },
@@ -71,7 +71,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = kr_entities_path .. "crusher/crusher-reflection.png",
+        filename = "__Krastorio2Assets__/entities/crusher/crusher-reflection.png",
         priority = "extra-high",
         width = 80,
         height = 60,

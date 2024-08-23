@@ -5,14 +5,14 @@ data:extend({
   {
     type = "ammo",
     name = "imersite-rounds-magazine",
-    icon = kr_ammo_icons_path .. "imersite-rounds-magazine.png",
+    icon = "__Krastorio2Assets__/icons/ammo/imersite-rounds-magazine.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_ammo_icons_path .. "imersite-rounds-magazine.png",
+          filename = "__Krastorio2Assets__/icons/ammo/imersite-rounds-magazine.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -20,7 +20,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_ammo_icons_path .. "imersite-rounds-magazine-light.png",
+          filename = "__Krastorio2Assets__/icons/ammo/imersite-rounds-magazine-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -58,14 +58,14 @@ data:extend({
   {
     type = "ammo",
     name = "antimatter-artillery-shell",
-    icon = kr_ammo_icons_path .. "antimatter-artillery-shell.png",
+    icon = "__Krastorio2Assets__/icons/ammo/antimatter-artillery-shell.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_ammo_icons_path .. "antimatter-artillery-shell.png",
+          filename = "__Krastorio2Assets__/icons/ammo/antimatter-artillery-shell.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -73,7 +73,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_ammo_icons_path .. "antimatter-artillery-shell-light.png",
+          filename = "__Krastorio2Assets__/icons/ammo/antimatter-artillery-shell-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -106,14 +106,14 @@ data:extend({
     type = "ammo",
     name = "impulse-rifle-ammo",
     description = "impulse-rifle-ammo",
-    icon = kr_ammo_icons_path .. "impulse-rifle-ammo.png",
+    icon = "__Krastorio2Assets__/icons/ammo/impulse-rifle-ammo.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_ammo_icons_path .. "impulse-rifle-ammo.png",
+          filename = "__Krastorio2Assets__/icons/ammo/impulse-rifle-ammo.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -121,7 +121,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_ammo_icons_path .. "impulse-rifle-ammo-light.png",
+          filename = "__Krastorio2Assets__/icons/ammo/impulse-rifle-ammo-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -157,7 +157,7 @@ data:extend({
   {
     type = "ammo",
     name = "heavy-rocket",
-    icon = kr_ammo_icons_path .. "heavy-rocket.png",
+    icon = "__Krastorio2Assets__/icons/ammo/heavy-rocket.png",
     icon_size = 64,
     icon_mipmaps = 4,
     ammo_category = "heavy-rocket",
@@ -188,14 +188,14 @@ data:extend({
   {
     type = "ammo",
     name = "antimatter-rocket",
-    icon = kr_ammo_icons_path .. "antimatter-rocket.png",
+    icon = "__Krastorio2Assets__/icons/ammo/antimatter-rocket.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_ammo_icons_path .. "antimatter-rocket.png",
+          filename = "__Krastorio2Assets__/icons/ammo/antimatter-rocket.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -203,7 +203,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_ammo_icons_path .. "antimatter-rocket-light.png",
+          filename = "__Krastorio2Assets__/icons/ammo/antimatter-rocket-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -238,7 +238,7 @@ data:extend({
   {
     type = "ammo",
     name = "basic-railgun-shell",
-    icon = kr_ammo_icons_path .. "basic-railgun-shell.png",
+    icon = "__Krastorio2Assets__/icons/ammo/basic-railgun-shell.png",
     icon_size = 64,
     icon_mipmaps = 4,
     ammo_category = "railgun-shell",
@@ -270,7 +270,7 @@ data:extend({
     type = "ammo",
     name = "explosion-railgun-shell",
     description = "explosion-railgun-shell",
-    icon = kr_ammo_icons_path .. "explosion-railgun-shell.png",
+    icon = "__Krastorio2Assets__/icons/ammo/explosion-railgun-shell.png",
     icon_size = 64,
     icon_mipmaps = 4,
     ammo_category = "railgun-shell",
@@ -302,14 +302,14 @@ data:extend({
     type = "ammo",
     name = "antimatter-railgun-shell",
     description = "antimatter-railgun-shell",
-    icon = kr_ammo_icons_path .. "antimatter-railgun-shell.png",
+    icon = "__Krastorio2Assets__/icons/ammo/antimatter-railgun-shell.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_ammo_icons_path .. "antimatter-railgun-shell.png",
+          filename = "__Krastorio2Assets__/icons/ammo/antimatter-railgun-shell.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -317,7 +317,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_ammo_icons_path .. "antimatter-railgun-shell-light.png",
+          filename = "__Krastorio2Assets__/icons/ammo/antimatter-railgun-shell-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -352,7 +352,7 @@ data:extend({
     type = "ammo",
     name = "explosive-turret-rocket",
     description = "explosion-rocket-for-turret",
-    icon = kr_ammo_icons_path .. "explosion-rocket-for-turret.png",
+    icon = "__Krastorio2Assets__/icons/ammo/explosion-rocket-for-turret.png",
     icon_size = 64,
     icon_mipmaps = 4,
     ammo_category = "missiles-for-turrets",
@@ -384,14 +384,14 @@ data:extend({
     type = "ammo",
     name = "nuclear-turret-rocket",
     description = "nuclear-rocket-for-turret",
-    icon = kr_ammo_icons_path .. "nuclear-rocket-for-turret.png",
+    icon = "__Krastorio2Assets__/icons/ammo/nuclear-rocket-for-turret.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_ammo_icons_path .. "nuclear-rocket-for-turret.png",
+          filename = "__Krastorio2Assets__/icons/ammo/nuclear-rocket-for-turret.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -399,7 +399,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_ammo_icons_path .. "nuclear-rocket-for-turret-light.png",
+          filename = "__Krastorio2Assets__/icons/ammo/nuclear-rocket-for-turret-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -434,14 +434,14 @@ data:extend({
     type = "ammo",
     name = "antimatter-turret-rocket",
     description = "antimatter-rocket-for-turret",
-    icon = kr_ammo_icons_path .. "antimatter-rocket-for-turret.png",
+    icon = "__Krastorio2Assets__/icons/ammo/antimatter-rocket-for-turret.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_ammo_icons_path .. "antimatter-rocket-for-turret.png",
+          filename = "__Krastorio2Assets__/icons/ammo/antimatter-rocket-for-turret.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -449,7 +449,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_ammo_icons_path .. "antimatter-rocket-for-turret-light.png",
+          filename = "__Krastorio2Assets__/icons/ammo/antimatter-rocket-for-turret-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -482,14 +482,14 @@ data:extend({
   {
     type = "ammo",
     name = "nuclear-artillery-shell",
-    icon = kr_ammo_icons_path .. "nuclear-artillery-shell.png",
+    icon = "__Krastorio2Assets__/icons/ammo/nuclear-artillery-shell.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = kr_ammo_icons_path .. "nuclear-artillery-shell.png",
+          filename = "__Krastorio2Assets__/icons/ammo/nuclear-artillery-shell.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -497,7 +497,7 @@ data:extend({
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = kr_ammo_icons_path .. "nuclear-artillery-shell-light.png",
+          filename = "__Krastorio2Assets__/icons/ammo/nuclear-artillery-shell-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },

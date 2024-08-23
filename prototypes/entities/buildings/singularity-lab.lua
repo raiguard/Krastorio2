@@ -12,7 +12,7 @@ data:extend({
   {
     type = "lab",
     name = "kr-singularity-lab",
-    icon = kr_entities_icons_path .. "singularity-lab.png",
+    icon = "__Krastorio2Assets__/icons/entities/singularity-lab.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation" },
@@ -33,7 +33,7 @@ data:extend({
     off_animation = {
       layers = {
         {
-          filename = kr_entities_path .. "singularity-lab/singularity-lab.png",
+          filename = "__Krastorio2Assets__/entities/singularity-lab/singularity-lab.png",
           priority = "high",
           width = 520,
           height = 500,
@@ -42,7 +42,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "singularity-lab/singularity-lab-sh.png",
+          filename = "__Krastorio2Assets__/entities/singularity-lab/singularity-lab-sh.png",
           priority = "high",
           width = 548,
           height = 482,
@@ -56,7 +56,7 @@ data:extend({
     on_animation = {
       layers = {
         {
-          filename = kr_entities_path .. "singularity-lab/singularity-lab-glow-light.png",
+          filename = "__Krastorio2Assets__/entities/singularity-lab/singularity-lab-glow-light.png",
           priority = "high",
           width = 153,
           height = 117,
@@ -68,7 +68,7 @@ data:extend({
           draw_as_light = true,
         },
         {
-          filename = kr_entities_path .. "singularity-lab/singularity-lab-glow.png",
+          filename = "__Krastorio2Assets__/entities/singularity-lab/singularity-lab-glow.png",
           priority = "high",
           width = 153,
           height = 117,
@@ -80,7 +80,7 @@ data:extend({
           blend_mode = "additive",
         },
         {
-          filename = kr_entities_path .. "singularity-lab/singularity-lab-light.png",
+          filename = "__Krastorio2Assets__/entities/singularity-lab/singularity-lab-light.png",
           priority = "high",
           width = 520,
           height = 500,
@@ -91,7 +91,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "singularity-lab/singularity-lab-working.png",
+          filename = "__Krastorio2Assets__/entities/singularity-lab/singularity-lab-working.png",
           width = 520,
           height = 500,
           shift = { 0.0, -0.1 },
@@ -101,7 +101,7 @@ data:extend({
           animation_speed = 0.85,
         },
         {
-          filename = kr_entities_path .. "singularity-lab/singularity-lab-sh.png",
+          filename = "__Krastorio2Assets__/entities/singularity-lab/singularity-lab-sh.png",
           priority = "medium",
           width = 548,
           height = 482,
@@ -126,7 +126,7 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
-        filename = kr_buildings_sounds_path .. "singularity-lab.ogg",
+        filename = "__Krastorio2Assets__/sounds/buildings/singularity-lab.ogg",
         volume = 0.5,
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 1 },
@@ -141,7 +141,7 @@ data:extend({
     },
     energy_usage = "10MW",
     module_specification = { module_slots = 4, module_info_icon_shift = { 0, 2.1 }, module_info_icon_scale = 0.6 },
-    open_sound = { filename = kr_sounds_mod .. "buildings/open.ogg", volume = 1 },
-    close_sound = { filename = kr_sounds_mod .. "buildings/close.ogg", volume = 1 },
+    open_sound = { filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1 },
+    close_sound = { filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1 },
   },
 })

@@ -2,7 +2,7 @@ local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 
 local bio_lab_working_sound = {
-  filename = kr_buildings_sounds_path .. "bio-lab.ogg",
+  filename = "__Krastorio2Assets__/sounds/buildings/bio-lab.ogg",
   volume = 0.75,
   idle_sound = { filename = "__base__/sound/idle1.ogg" },
   aggregation = {
@@ -18,7 +18,7 @@ data:extend({
     name = "kr-bio-lab",
     icon_size = 64,
     icon_mipmaps = 4,
-    icon = kr_entities_icons_path .. "bio-lab.png",
+    icon = "__Krastorio2Assets__/icons/entities/bio-lab.png",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { hardness = 1, mining_time = 1, result = "kr-bio-lab" },
     max_health = 500,
@@ -31,7 +31,7 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = kr_pipe_path,
+        pipe_picture = kr_pipe_picture,
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         height = 2,
@@ -43,7 +43,7 @@ data:extend({
       },
       {
         production_type = "input",
-        pipe_picture = kr_pipe_path,
+        pipe_picture = kr_pipe_picture,
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         height = 2,
@@ -65,7 +65,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "bio-lab/bio-lab.png",
+          filename = "__Krastorio2Assets__/entities/bio-lab/bio-lab.png",
           priority = "high",
           width = 512,
           height = 512,
@@ -73,7 +73,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = kr_entities_path .. "bio-lab/bio-lab-sh.png",
+          filename = "__Krastorio2Assets__/entities/bio-lab/bio-lab-sh.png",
           priority = "high",
           width = 512,
           height = 512,
@@ -87,7 +87,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = kr_entities_path .. "bio-lab/bio-lab-working.png",
+          filename = "__Krastorio2Assets__/entities/bio-lab/bio-lab-working.png",
           width = 387,
           height = 342,
           shift = { 0.05, -0.31 },

@@ -5,7 +5,7 @@ data:extend({
   {
     type = "furnace",
     name = "kr-stabilizer-charging-station",
-    icon = kr_entities_icons_path .. "stabilizer-charging-station.png",
+    icon = "__Krastorio2Assets__/icons/entities/stabilizer-charging-station.png",
     icon_size = 128,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -23,7 +23,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "stabilizer-charging-station/stabilizer-charging-station.png",
+          filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/stabilizer-charging-station.png",
           priority = "high",
           width = 170,
           height = 170,
@@ -33,7 +33,7 @@ data:extend({
           scale = 0.4,
         },
         {
-          filename = kr_entities_path .. "stabilizer-charging-station/stabilizer-charging-station-sh.png",
+          filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/stabilizer-charging-station-sh.png",
           priority = "high",
           width = 170,
           height = 144,
@@ -49,7 +49,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = kr_entities_path .. "stabilizer-charging-station/stabilizer-charging-station-light.png",
+          filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/stabilizer-charging-station-light.png",
           priority = "high",
           width = 170,
           height = 170,
@@ -65,7 +65,7 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
-        filename = kr_buildings_sounds_path .. "stabilizer-charging-station.ogg",
+        filename = "__Krastorio2Assets__/sounds/buildings/stabilizer-charging-station.ogg",
         volume = 0.5,
       },
       idle_sound = {
@@ -82,7 +82,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = kr_entities_path .. "stabilizer-charging-station/stabilizer-charging-station-reflection.png",
+        filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/stabilizer-charging-station-reflection.png",
         priority = "extra-high",
         width = 20,
         height = 25,

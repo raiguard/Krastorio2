@@ -1,4 +1,4 @@
-require(kr_data_final_fixes_compatibility_path .. "Pyanodon/pycoalprocessing")
-require(kr_data_final_fixes_compatibility_path .. "Pyanodon/pyrawores")
-require(kr_data_final_fixes_compatibility_path .. "Pyanodon/pyfusionenergy")
-require(kr_data_final_fixes_compatibility_path .. "Pyanodon/pyhightech")
+require("__Krastorio2__/compatibility-scripts/data-final-fixes/Pyanodon/pycoalprocessing")
+require("__Krastorio2__/compatibility-scripts/data-final-fixes/Pyanodon/pyrawores")
+require("__Krastorio2__/compatibility-scripts/data-final-fixes/Pyanodon/pyfusionenergy")
+require("__Krastorio2__/compatibility-scripts/data-final-fixes/Pyanodon/pyhightech")
