@@ -1,3 +1,8 @@
+local freeplay = require("scripts.freeplay")
+script.on_init(function()
+  freeplay.add_to_crash_site()
+end)
+
 -- local gui = require("__flib__.gui")
 -- local migration = require("__flib__.migration")
 -- local on_tick_n = require("__flib__.on-tick-n")

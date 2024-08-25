@@ -1,3 +1,4 @@
+-- TODO: Disable the ability to mine crash site entities until automation is researched
 local constants = require("scripts.constants")
 
 local freeplay = {}

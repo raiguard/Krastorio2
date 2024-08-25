@@ -25,7 +25,7 @@ constants.creep_max_reach = 10
 
 constants.freeplay_crash_site_parts = {
   {
-    name = "kr-crash-site-generator",
+    name = "crash-site-generator",
     angle_deviation = 0.2,
     max_distance = 25,
     min_separation = 10,
@@ -34,7 +34,7 @@ constants.freeplay_crash_site_parts = {
     force = "player",
   },
   {
-    name = "kr-crash-site-lab-repaired",
+    name = "crash-site-lab",
     angle_deviation = 0.05,
     max_distance = 30,
     min_separation = 10,
@@ -43,7 +43,7 @@ constants.freeplay_crash_site_parts = {
     force = "player",
   },
   {
-    name = "kr-crash-site-assembling-machine-1-repaired",
+    name = "crash-site-assembling-machine-1",
     repeat_count = 2,
     angle_deviation = 0.3,
     max_distance = 20,
@@ -52,7 +52,7 @@ constants.freeplay_crash_site_parts = {
     force = "player",
   },
   {
-    name = "kr-crash-site-assembling-machine-2-repaired",
+    name = "crash-site-assembling-machine-2",
     repeat_count = 2,
     angle_deviation = 0.3,
     max_distance = 20,
@@ -61,7 +61,7 @@ constants.freeplay_crash_site_parts = {
     force = "player",
   },
   {
-    name = "kr-crash-site-chest-1",
+    name = "crash-site-chest-1",
     repeat_count = 3,
     angle_deviation = 0.1,
     max_distance = 20,
@@ -69,19 +69,19 @@ constants.freeplay_crash_site_parts = {
     fire_count = 1,
   },
   {
-    name = "kr-crash-site-chest-2",
+    name = "crash-site-chest-2",
     repeat_count = 3,
     angle_deviation = 0.1,
     max_distance = 20,
     min_separation = 2,
     fire_count = 1,
   },
-  {
-    name = "kr-mineable-wreckage",
-    repeat_count = 9,
-    angle_deviation = 0.8,
-    max_distance = 10,
-  },
+  -- TODO: Update spaceship wreck entities with new mining results:
+  -- { type = "item", name = "iron-plate", amount_min = 1, amount_max = 2, probability = 0.70 },
+  -- { type = "item", name = "copper-cable", amount_min = 0, amount_max = 2, probability = 0.40 },
+  -- { type = "item", name = "iron-gear-wheel", amount_min = 0, amount_max = 2, probability = 0.40 },
+  -- { type = "item", name = "electronic-circuit", amount_min = 0, amount_max = 2, probability = 0.20 },
+  -- { type = "item", name = "kr-sentinel", amount_min = 0, amount_max = 2, probability = 0.10 },
 }
 
 constants.high_patrons = {

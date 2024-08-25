@@ -4,12 +4,8 @@ local sounds = require("__base__.prototypes.entity.sounds")
 data:extend({
   {
     type = "electric-energy-interface",
-    name = "kr-crash-site-generator",
-    localised_name = { "entity-name.kr-damaged-ship-reactor" },
-    localised_description = { "entity-description.kr-crash-site-building" },
-    icon = "__Krastorio2Assets__/icons/entities/crash-site/crash-site-generator.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    name = "crash-site-generator",
+    icon = "__Krastorio2Assets__/icons/entities/crash-site-generator.png",
     flags = { "placeable-player", "player-creation", "not-rotatable" },
     hidden = true,
     map_color = { r = 0, g = 0.365, b = 0.58, a = 1 },
@@ -51,20 +47,11 @@ data:extend({
       shift = { 64 / 64, -140 / 64 },
     },
     continuous_animation = true,
-    integration_patch_render_layer = "decals",
-    integration_patch = {
-      filename = "__Krastorio2Assets__/entities/crash-site/generator/crash-site-generator-ground.png",
-      width = 384,
-      height = 360,
-      shift = util.by_pixel(-28, -38),
-      frame_count = 1,
-      line_length = 1,
-      scale = 0.5,
-    },
+    vehicle_impact_sound = sounds.generic_impact,
     animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/crash-site/generator/crash-site-generator.png",
+          filename = "__Krastorio2Assets__/entities/crash-site-generator/crash-site-generator.png",
           width = 286,
           height = 252,
           frame_count = 5,
@@ -74,7 +61,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/crash-site/generator/crash-site-generator-beams.png",
+          filename = "__Krastorio2Assets__/entities/crash-site-generator/crash-site-generator-beams.png",
           width = 224,
           height = 232,
           frame_count = 16,
@@ -85,7 +72,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/crash-site/generator/crash-site-generator-beams-light.png",
+          filename = "__Krastorio2Assets__/entities/crash-site-generator/crash-site-generator-beams-light.png",
           width = 224,
           height = 232,
           frame_count = 16,
@@ -96,7 +83,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/crash-site/generator/crash-site-generator-shadow.png",
+          filename = "__Krastorio2Assets__/entities/crash-site-generator/crash-site-generator-shadow.png",
           width = 474,
           height = 152,
           frame_count = 1,
@@ -108,6 +95,15 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = sounds.generic_impact,
+    integration_patch = {
+      filename = "__Krastorio2Assets__/entities/crash-site-generator/crash-site-generator-ground.png",
+      width = 384,
+      height = 360,
+      shift = util.by_pixel(-28, -38),
+      frame_count = 1,
+      line_length = 1,
+      scale = 0.5,
+    },
+    integration_patch_render_layer = "decals",
   },
 })

@@ -4,13 +4,8 @@ local sounds = require("__base__.prototypes.entity.sounds")
 data:extend({
   {
     type = "lab",
-    name = "kr-crash-site-lab-repaired",
-    localised_name = { "entity-name.kr-damaged-ship-research-computer" },
-    localised_description = { "entity-description.kr-crash-site-building" },
-    has_backer_name = false,
-    icon = "__Krastorio2Assets__/icons/entities/crash-site/crash-site-lab-repaired.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    name = "crash-site-lab",
+    icon = "__Krastorio2Assets__/icons/entities/crash-site-lab.png",
     flags = { "placeable-player", "player-creation", "not-rotatable" },
     hidden = true,
     map_color = { r = 0, g = 0.365, b = 0.58, a = 1 },
@@ -36,27 +31,30 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     collision_box = { { -2.2, -1.2 }, { 2.2, 1.2 } },
     selection_box = { { -2.5, -1.5 }, { 2.5, 1.5 } },
-    entity_info_icon_shift = util.by_pixel(32, 0),
-    light = {
-      intensity = 0.34,
-      size = 3,
-      color = { r = 0.196, g = 0.658, b = 0.650 },
-      shift = { 1.5, 0.5 },
+    energy_source = {
+      type = "electric",
+      usage_priority = "secondary-input",
+      emissions_per_minute = { pollution = 4 },
     },
-    integration_patch_render_layer = "decals",
-    integration_patch = {
-      filename = "__Krastorio2Assets__/entities/crash-site/lab/crash-site-lab-ground.png",
-      width = 700,
-      height = 344,
-      shift = util.by_pixel(-49, 11),
-      frame_count = 1,
-      line_length = 1,
-      scale = 0.5,
+    energy_usage = "60kW",
+    researching_speed = 1,
+    inputs = { "basic-tech-card" },
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
+    vehicle_impact_sound = sounds.generic_impact,
+    working_sound = {
+      sound = {
+        filename = "__base__/sound/lab.ogg",
+        volume = 0.7,
+      },
+      audible_distance_modifier = 0.7,
+      fade_in_ticks = 4,
+      fade_out_ticks = 20,
     },
     on_animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/crash-site/lab/crash-site-lab-repaired.png",
+          filename = "__Krastorio2Assets__/entities/crash-site-lab/crash-site-lab.png",
           width = 488,
           height = 252,
           frame_count = 1,
@@ -67,7 +65,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/crash-site/lab/crash-site-lab-repaired-beams.png",
+          filename = "__Krastorio2Assets__/entities/crash-site-lab/crash-site-lab-beams.png",
           width = 130,
           height = 100,
           frame_count = 24,
@@ -79,7 +77,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/crash-site/lab/crash-site-lab-repaired-beams-light.png",
+          filename = "__Krastorio2Assets__/entities/crash-site-lab/crash-site-lab-beams-light.png",
           width = 130,
           height = 100,
           frame_count = 24,
@@ -91,7 +89,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/crash-site/lab/crash-site-lab-repaired-shadow.png",
+          filename = "__Krastorio2Assets__/entities/crash-site-lab/crash-site-lab-shadow.png",
           width = 696,
           height = 302,
           frame_count = 1,
@@ -107,7 +105,7 @@ data:extend({
     off_animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/crash-site/lab/crash-site-lab-repaired.png",
+          filename = "__Krastorio2Assets__/entities/crash-site-lab/crash-site-lab.png",
           width = 488,
           height = 252,
           frame_count = 1,
@@ -118,7 +116,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/crash-site/lab/crash-site-lab-repaired-shadow.png",
+          filename = "__Krastorio2Assets__/entities/crash-site-lab/crash-site-lab-shadow.png",
           width = 696,
           height = 302,
           frame_count = 1,
@@ -131,25 +129,22 @@ data:extend({
         },
       },
     },
-    working_sound = {
-      sound = {
-        filename = "__base__/sound/lab.ogg",
-        volume = 0.7,
-      },
-      audible_distance_modifier = 0.7,
-      fade_in_ticks = 4,
-      fade_out_ticks = 20,
+    entity_info_icon_shift = util.by_pixel(32, 0),
+    light = {
+      intensity = 0.34,
+      size = 3,
+      color = { r = 0.196, g = 0.658, b = 0.650 },
+      shift = { 1.5, 0.5 },
     },
-    vehicle_impact_sound = sounds.generic_impact,
-    open_sound = sounds.machine_open,
-    close_sound = sounds.machine_close,
-    energy_source = {
-      type = "electric",
-      usage_priority = "secondary-input",
-      emissions_per_minute = { pollution = 4 },
+    integration_patch_render_layer = "decals",
+    integration_patch = {
+      filename = "__Krastorio2Assets__/entities/crash-site-lab/crash-site-lab-ground.png",
+      width = 700,
+      height = 344,
+      shift = util.by_pixel(-49, 11),
+      frame_count = 1,
+      line_length = 1,
+      scale = 0.5,
     },
-    energy_usage = "60kW",
-    researching_speed = 1,
-    inputs = { "basic-tech-card" },
   },
 })

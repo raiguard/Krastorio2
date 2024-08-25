@@ -2,6 +2,13 @@
   "mod-setting-name": [
     ["kr-rebalance-vehicles&fuels", "kr-rebalance-vehicles-fuels"]
   ],
+  "entity": [
+    ["kr-crash-site-assembling-machine-1-repaired", "crash-site-assembling-machine-1"],
+    ["kr-crash-site-assembling-machine-2-repaired", "crash-site-assembling-machine-2"],
+    ["kr-crash-site-chest-1", "crash-site-chest-1"],
+    ["kr-crash-site-chest-2", "crash-site-chest-2"],
+    ["kr-crash-site-lab-repaired", "crash-site-lab"]
+  ],
   "equipment": [
     ["additional-engine", "additional-engine-equipment"],
     ["advanced-additional-engine", "advanced-additional-engine-equipment"],

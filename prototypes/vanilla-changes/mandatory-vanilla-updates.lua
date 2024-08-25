@@ -24,3 +24,19 @@ require("mandatory.electrify-offshore-pump") -- Add energy source to offshore-pu
 require("mandatory.removing-impossible-achievements") -- Remove impossible vanilla achievements
 require("mandatory.roboport-variations") -- Generate roboport variations for roboport states
 require("mandatory.substation-mk2") -- Adds Substation-mk2
+
+-- TODO: Reorganize these
+--- @type data.MinableProperties
+local minable = {
+  mining_time = 2,
+  results = {
+    { type = "item", name = "iron-plate", amount_min = 1, amount_max = 2, probability = 0.70 },
+    { type = "item", name = "copper-cable", amount_min = 0, amount_max = 2, probability = 0.40 },
+    { type = "item", name = "iron-gear-wheel", amount_min = 0, amount_max = 2, probability = 0.40 },
+    { type = "item", name = "electronic-circuit", amount_min = 0, amount_max = 2, probability = 0.20 },
+    { type = "item", name = "kr-sentinel", amount_min = 0, amount_max = 2, probability = 0.10 },
+  },
+  mining = "shell-particle",
+}
+data.raw.container["crash-site-chest-1"].minable = minable
+data.raw.container["crash-site-chest-2"].minable = minable

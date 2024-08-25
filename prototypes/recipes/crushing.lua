@@ -58,6 +58,7 @@ return {
       { type = "item", name = "inserter", amount = 1 },
     },
     results = { { type = "item", name = "inserter-parts", amount = 1 } },
+    factoriopedia_alternative = "inserter-parts",
   },
   {
     type = "recipe",

@@ -9,11 +9,8 @@ require("prototypes.entities.buildings.pipe-covers.steel-pipecovers")
 -- Crash site
 require("prototypes.entities.buildings.crash-site.crash-site-assembling-machine-1")
 require("prototypes.entities.buildings.crash-site.crash-site-assembling-machine-2")
-require("prototypes.entities.buildings.crash-site.crash-site-chest-1")
-require("prototypes.entities.buildings.crash-site.crash-site-chest-2")
 require("prototypes.entities.buildings.crash-site.crash-site-generator")
 require("prototypes.entities.buildings.crash-site.crash-site-lab")
-require("prototypes.entities.buildings.crash-site.mineable-wreckage")
 -- -- Generals
 require("prototypes.entities.buildings.advanced-chemical-plant")
 require("prototypes.entities.buildings.advanced-furnace")
