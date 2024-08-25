@@ -29,14 +29,14 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        pipe_picture = assembler3pipepictures(),
+        pipe_picture = require("prototypes.entities.pipe-picture"),
         volume = 1000,
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { -2, -1 } } },
       },
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        pipe_picture = assembler3pipepictures(),
+        pipe_picture = require("prototypes.entities.pipe-picture"),
         volume = 1000,
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { -2, 1 } } },
       },
@@ -44,14 +44,14 @@ data:extend({
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        pipe_picture = assembler3pipepictures(),
+        pipe_picture = require("prototypes.entities.pipe-picture"),
         volume = 1000,
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 2, -1 } } },
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        pipe_picture = assembler3pipepictures(),
+        pipe_picture = require("prototypes.entities.pipe-picture"),
         volume = 1000,
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 2, 1 } } },
       },

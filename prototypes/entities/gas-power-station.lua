@@ -88,7 +88,7 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     fluid_box = {
       pipe_covers = pipecoverspictures(),
-      pipe_picture = assembler3pipepictures(),
+      pipe_picture = require("prototypes.entities.pipe-picture"),
       off_when_no_fluid_recipe = false,
       volume = 200,
       pipe_connections = {

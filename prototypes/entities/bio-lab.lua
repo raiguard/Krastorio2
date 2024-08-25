@@ -31,7 +31,7 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = assembler3pipepictures(),
+        pipe_picture = require("prototypes.entities.pipe-picture"),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         height = 2,
@@ -43,7 +43,7 @@ data:extend({
       },
       {
         production_type = "input",
-        pipe_picture = assembler3pipepictures(),
+        pipe_picture = require("prototypes.entities.pipe-picture"),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         height = 2,
