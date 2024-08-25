@@ -1,4 +1,4 @@
-local particle_animations = require("prototypes.entities.explosions&projectiles.particle-animations")
+local particle_animations = require("prototypes.entities.particle-animations")
 
 local smoke_animations = require("__base__.prototypes.entity.smoke-animations")
 local sounds = require("__base__.prototypes.entity.sounds")
