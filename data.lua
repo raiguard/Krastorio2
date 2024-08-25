@@ -45,6 +45,7 @@ require("prototypes.equipment.superior-night-vision-equipment")
 require("prototypes.equipment.superior-solar-panel-equipment")
 require("prototypes.equipment.vehicle-roboport-equipment")
 
+require("prototypes.entities.advanced-chemical-plant")
 require("prototypes.entities.crash-site-assembling-machine-1")
 require("prototypes.entities.crash-site-assembling-machine-2")
 require("prototypes.entities.crash-site-generator")

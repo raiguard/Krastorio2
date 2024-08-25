@@ -617,21 +617,6 @@ return {
   },
   {
     type = "recipe",
-    name = "kr-advanced-chemical-plant",
-    energy_required = 30,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "processing-unit", amount = 20 },
-      { type = "item", name = "imersium-beam", amount = 20 },
-      { type = "item", name = "rare-metals", amount = 80 },
-      { type = "item", name = "electronic-components", amount = 40 },
-      { type = "item", name = "imersium-gear-wheel", amount = 20 },
-      { type = "item", name = "kr-steel-pipe", amount = 10 },
-    },
-    results = { { type = "item", name = "kr-advanced-chemical-plant", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-large-roboport",
     energy_required = 30,
     enabled = false,
