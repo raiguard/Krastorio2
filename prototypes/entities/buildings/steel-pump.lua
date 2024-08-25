@@ -28,14 +28,14 @@ data:extend({
     },
     input_fluid_box = {
       volume = 500,
-      pipe_covers = steel_pipecoverspictures,
+      pipe_covers = require("prototypes.entities.steel-pipe-covers"),
       pipe_connections = {
         { flow_direction = "input", direction = defines.direction.south, position = { 0, 0.5 } },
       },
     },
     output_fluid_box = {
       volume = 500,
-      pipe_covers = steel_pipecoverspictures,
+      pipe_covers = require("prototypes.entities.steel-pipe-covers"),
       pipe_connections = {
         { flow_direction = "output", direction = defines.direction.north, position = { 0, -0.5 } },
       },

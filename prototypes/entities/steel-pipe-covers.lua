@@ -1,4 +1,4 @@
-steel_pipecoverspictures = {
+return {
   north = {
     layers = {
       {

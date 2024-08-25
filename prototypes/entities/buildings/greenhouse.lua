@@ -36,7 +36,7 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = kr_pipe_picture,
+        pipe_picture = assembler3pipepictures(),
         pipe_covers = pipecoverspictures(),
         volume = 2000,
         pipe_connections = {

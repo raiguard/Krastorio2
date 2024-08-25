@@ -11,6 +11,7 @@ local animation = {
       animation_speed = 1.2,
       shift = { 0, 0 },
     },
+    -- TODO: Remove this
     {
       filename = "__Krastorio2Assets__/entities/pipe-patch/pipe-patch.png",
       width = 55,
@@ -87,7 +88,7 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     fluid_box = {
       pipe_covers = pipecoverspictures(),
-      pipe_picture = kr_pipe_picture,
+      pipe_picture = assembler3pipepictures(),
       off_when_no_fluid_recipe = false,
       volume = 200,
       pipe_connections = {

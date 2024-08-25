@@ -26,7 +26,7 @@ data:extend({
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     fluid_box = {
       volume = 125,
-      pipe_covers = steel_pipecoverspictures,
+      pipe_covers = require("prototypes.entities.steel-pipe-covers"),
       pipe_connections = {
         { flow_direction = "input-output", direction = defines.direction.north, position = { 0, 0 } },
         {

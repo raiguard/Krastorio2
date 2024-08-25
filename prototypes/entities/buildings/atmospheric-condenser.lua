@@ -29,7 +29,7 @@ data:extend({
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        pipe_picture = kr_pipe_picture,
+        pipe_picture = assembler3pipepictures(),
         volume = 1000,
         pipe_connections = {
           { flow_direction = "output", direction = defines.direction.east, position = { 2, -1 } },
