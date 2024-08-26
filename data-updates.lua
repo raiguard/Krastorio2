@@ -8,7 +8,7 @@
 require("prototypes.vanilla-changes.mandatory-vanilla-updates")
 require("prototypes.vanilla-changes.optional-vanilla-updates")
 -- Generate tree and rock recipes
-require("prototypes.others.greenhouse")
+require("prototypes.recipes.greenhouse")
 -- Generating buring recipes for fluids
 local fluid_burner_util = require("lib.public.data-stages.fluid-burner-util")
 fluid_burner_util.generateBurnFluidsRecipes()
@@ -42,4 +42,4 @@ require("compatibility-scripts.data-updates.Tral-robot-tree-farm")
 ---------------------------------------------------------------------------
 
 -- Map generation presets
-require("prototypes.others.map-gen-preset-updates")
+require("prototypes.vanilla-changes.mandatory.map-gen-preset-updates")

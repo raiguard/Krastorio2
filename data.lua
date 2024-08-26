@@ -2,10 +2,12 @@ kr_optimization_tech_card_name = "space-science-pack"
 require("prototypes.compatibility.space-exploration-pre")
 
 require("prototypes.achievements")
+require("prototypes.custom-inputs")
 require("prototypes.damage-types")
 require("prototypes.equipment-grids")
 require("prototypes.fluids")
 require("prototypes.gui-styles")
+require("prototypes.shortcuts")
 require("prototypes.tips-and-tricks")
 require("prototypes.virtual-signals")
 
@@ -96,9 +98,6 @@ require("prototypes.technologies.technologies-initialization")
 require("prototypes.tiles.tiles-initialization")
 -- -- Adding new signals (virtual signals)
 -- -- Adding new key binds
-require("prototypes.others.key-bind-initialization")
--- -- Adding new shortcuts
-require("prototypes.others.shortcut")
 ---------------------------------------------------------------------------
 -- -- -- OPTIONAL CONTENTS INITIALIZATION (data stage)
 ---------------------------------------------------------------------------
