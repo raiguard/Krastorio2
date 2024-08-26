@@ -2,9 +2,11 @@ kr_optimization_tech_card_name = "space-science-pack"
 require("prototypes.compatibility.space-exploration-pre")
 
 require("prototypes.achievements")
-require("prototypes.equipment-grids")
 require("prototypes.damage-types")
+require("prototypes.equipment-grids")
 require("prototypes.fluids")
+require("prototypes.gui-styles")
+require("prototypes.tips-and-tricks")
 require("prototypes.virtual-signals")
 
 require("prototypes.armors.power-armor-mk3")
@@ -76,16 +78,8 @@ require("lib.private.data-stages.technologies")
 ---------------------------------------------------------------------------
 -- -- -- CONTENTS INITIALIZATION (data stage)
 ---------------------------------------------------------------------------
--- -- Adding new categories
--- -- Adding new damages
 -- -- Adding new entities
 require("prototypes.entities.entities-initialization")
--- -- Adding new equipments
--- -- Adding new fluids
--- -- GUI specifications
-require("prototypes.gui.gui-initialization")
--- -- Adding new tips and tricks
-require("prototypes.gui.tips-and-tricks-initialization")
 -- -- Adding new items
 require("prototypes.items.items-initialization")
 -- -- Adding new particles

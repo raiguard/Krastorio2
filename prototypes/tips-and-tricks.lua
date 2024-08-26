@@ -11,7 +11,7 @@ data:extend({
     order = "a",
     starting_status = "unlocked",
     is_title = true,
-    image = "__Krastorio2Assets__/gui/tip&tricks/about-k2-tip&tricks.png",
+    image = "__Krastorio2Assets__/tips-and-tricks/about-k2.png",
   },
   {
     type = "tips-and-tricks-item",
@@ -34,7 +34,7 @@ data:extend({
     },
     category = "kr-about-k2",
     indent = 1,
-    image = "__Krastorio2Assets__/gui/tip&tricks/shelter-tip&tricks.png",
+    image = "__Krastorio2Assets__/tips-and-tricks/shelter.png",
   },
   {
     type = "tips-and-tricks-item",
@@ -54,7 +54,7 @@ data:extend({
     },
     category = "kr-about-k2",
     indent = 1,
-    image = "__Krastorio2Assets__/gui/tip&tricks/new-gun-play-tip&tricks.png",
+    image = "__Krastorio2Assets__/tips-and-tricks/new-gun-play.png",
   },
   {
     type = "tips-and-tricks-item",
@@ -63,7 +63,7 @@ data:extend({
     starting_status = "unlocked",
     category = "kr-about-k2",
     indent = 1,
-    image = "__Krastorio2Assets__/gui/tip&tricks/new-metals-tip&tricks.png",
+    image = "__Krastorio2Assets__/tips-and-tricks/new-metals.png",
   },
   {
     type = "tips-and-tricks-item",
@@ -75,7 +75,7 @@ data:extend({
     },
     category = "kr-about-k2",
     indent = 1,
-    image = "__Krastorio2Assets__/gui/tip&tricks/creep-tip&tricks.png",
+    image = "__Krastorio2Assets__/tips-and-tricks/creep.png",
   },
   {
     type = "tips-and-tricks-item",
@@ -87,7 +87,7 @@ data:extend({
     },
     category = "kr-about-k2",
     indent = 1,
-    image = "__Krastorio2Assets__/gui/tip&tricks/fuels-tip&tricks.png",
+    image = "__Krastorio2Assets__/tips-and-tricks/fuels.png",
   },
   {
     type = "tips-and-tricks-item",
@@ -99,7 +99,7 @@ data:extend({
     },
     category = "kr-about-k2",
     indent = 1,
-    image = "__Krastorio2Assets__/gui/tip&tricks/air-purifier-tip&tricks.png",
+    image = "__Krastorio2Assets__/tips-and-tricks/air-purifier.png",
   },
   {
     type = "tips-and-tricks-item",
@@ -122,7 +122,7 @@ data:extend({
     },
     category = "kr-about-k2",
     indent = 1,
-    image = "__Krastorio2Assets__/gui/tip&tricks/inserters-hotkey-tip&tricks.png",
+    image = "__Krastorio2Assets__/tips-and-tricks/inserters-hotkey.png",
   },
   {
     type = "tips-and-tricks-item",
@@ -150,7 +150,7 @@ data:extend({
     },
     category = "kr-about-k2",
     indent = 1,
-    image = "__Krastorio2Assets__/gui/tip&tricks/roboports-hotkey-tip&tricks.png",
+    image = "__Krastorio2Assets__/tips-and-tricks/roboports-hotkey.png",
   },
   {
     type = "tips-and-tricks-item",
@@ -162,7 +162,7 @@ data:extend({
     },
     category = "kr-about-k2",
     indent = 1,
-    image = "__Krastorio2Assets__/gui/tip&tricks/fusion-reactor-tip&tricks.png",
+    image = "__Krastorio2Assets__/tips-and-tricks/fusion-reactor.png",
   },
   {
     type = "tips-and-tricks-item",
@@ -174,7 +174,7 @@ data:extend({
     },
     category = "kr-about-k2",
     indent = 1,
-    image = "__Krastorio2Assets__/gui/tip&tricks/matter-tip&tricks.png",
+    image = "__Krastorio2Assets__/tips-and-tricks/matter.png",
   },
   {
     type = "tips-and-tricks-item",
@@ -186,7 +186,7 @@ data:extend({
     },
     category = "kr-about-k2",
     indent = 1,
-    image = "__Krastorio2Assets__/gui/tip&tricks/intergalactic-transceiver-tip&tricks.png",
+    image = "__Krastorio2Assets__/tips-and-tricks/intergalactic-transceiver.png",
   },
   {
     type = "tips-and-tricks-item",
@@ -206,7 +206,7 @@ data:extend({
     },
     category = "kr-about-k2",
     indent = 1,
-    image = "__Krastorio2Assets__/gui/tip&tricks/crusher-tip&tricks.png",
+    image = "__Krastorio2Assets__/tips-and-tricks/crusher.png",
   },
   {
     type = "tips-and-tricks-item",
@@ -218,7 +218,7 @@ data:extend({
     },
     category = "kr-about-k2",
     indent = 1,
-    image = "__Krastorio2Assets__/gui/tip&tricks/tesla-coil-tip&tricks.png",
+    image = "__Krastorio2Assets__/tips-and-tricks/tesla-coil.png",
   },
   {
     type = "tips-and-tricks-item",
@@ -230,7 +230,7 @@ data:extend({
     },
     category = "kr-about-k2",
     indent = 1,
-    image = "__Krastorio2Assets__/gui/tip&tricks/planetary-teleporter-tip&tricks.png",
+    image = "__Krastorio2Assets__/tips-and-tricks/planetary-teleporter.png",
   },
   {
     type = "tips-and-tricks-item",
