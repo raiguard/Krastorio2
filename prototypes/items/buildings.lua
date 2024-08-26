@@ -559,17 +559,6 @@ data:extend({
     place_result = "kr-energy-storage",
     stack_size = 50,
   },
-  {
-    type = "item",
-    name = "kr-advanced-solar-panel",
-    icon = "__Krastorio2Assets__/icons/entities/advanced-solar-panel.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "energy",
-    order = "d[solar-panel]-b[advanced-solar-panel]",
-    place_result = "kr-advanced-solar-panel",
-    stack_size = 50,
-  },
   -- -- --
   {
     type = "item",

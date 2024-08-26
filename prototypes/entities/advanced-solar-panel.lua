@@ -3,11 +3,32 @@ local sounds = require("__base__.prototypes.entity.sounds")
 
 data:extend({
   {
+    type = "recipe",
+    name = "kr-advanced-solar-panel",
+    category = "crafting-with-fluid",
+    energy_required = 10,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "solar-panel", amount = 1 },
+      { type = "item", name = "imersite-crystal", amount = 5 },
+      { type = "item", name = "electronic-components", amount = 5 },
+      { type = "fluid", name = "nitric-acid", amount = 25 },
+    },
+    results = { { type = "item", name = "kr-advanced-solar-panel", amount = 1 } },
+  },
+  {
+    type = "item",
+    name = "kr-advanced-solar-panel",
+    icon = "__Krastorio2Assets__/icons/entities/advanced-solar-panel.png",
+    subgroup = "energy",
+    order = "d[solar-panel]-b[advanced-solar-panel]",
+    place_result = "kr-advanced-solar-panel",
+    stack_size = 50,
+  },
+  {
     type = "solar-panel",
     name = "kr-advanced-solar-panel",
     icon = "__Krastorio2Assets__/icons/entities/advanced-solar-panel.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.5, result = "kr-advanced-solar-panel" },
     max_health = 300,
@@ -21,6 +42,8 @@ data:extend({
       type = "electric",
       usage_priority = "solar",
     },
+    production = "250kW",
+    vehicle_impact_sound = sounds.generic_impact,
     picture = {
       layers = {
         {
@@ -64,7 +87,5 @@ data:extend({
         },
       },
     },
-    vehicle_impact_sound = sounds.generic_impact,
-    production = "250kW",
   },
 })

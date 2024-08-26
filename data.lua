@@ -47,6 +47,7 @@ require("prototypes.equipment.vehicle-roboport-equipment")
 
 require("prototypes.entities.advanced-chemical-plant")
 require("prototypes.entities.advanced-furnace")
+require("prototypes.entities.advanced-solar-panel")
 require("prototypes.entities.crash-site-assembling-machine-1")
 require("prototypes.entities.crash-site-assembling-machine-2")
 require("prototypes.entities.crash-site-generator")

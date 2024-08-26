@@ -343,20 +343,6 @@ return {
   },
   {
     type = "recipe",
-    name = "kr-advanced-solar-panel",
-    category = "crafting-with-fluid",
-    energy_required = 10,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "solar-panel", amount = 1 },
-      { type = "item", name = "imersite-crystal", amount = 5 },
-      { type = "item", name = "electronic-components", amount = 5 },
-      { type = "fluid", name = "nitric-acid", amount = 25 },
-    },
-    results = { { type = "item", name = "kr-advanced-solar-panel", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-fusion-reactor",
     energy_required = 200,
     enabled = false,

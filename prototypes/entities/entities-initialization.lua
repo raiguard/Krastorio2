@@ -2,7 +2,6 @@
 -- -- -- BUILDINGS
 ---------------------------------------------------------------------------------------
 -- -- Generals
-require("prototypes.entities.advanced-solar-panel")
 require("prototypes.entities.advanced-steam-turbine")
 require("prototypes.entities.air-purifier")
 require("prototypes.entities.antimatter-reactor")
