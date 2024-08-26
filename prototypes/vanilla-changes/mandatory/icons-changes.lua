@@ -380,7 +380,6 @@ krastorio.icons.setTechnologyIcon(
 -----------------------------------------------------------------
 -- -- -- BUILDINGS
 krastorio.icons.setItemIcon("pumpjack", "__Krastorio2Assets__/icons/entities/oil-pumpjack.png", 64, 4)
-krastorio.icons.setItemIcon("substation", "__Krastorio2Assets__/icons/entities/substation.png")
 krastorio.icons.setItemIcon("electric-mining-drill", "__Krastorio2Assets__/icons/entities/electric-mining-drill.png")
 data.raw["mining-drill"]["electric-mining-drill"].icon = "__Krastorio2Assets__/icons/entities/electric-mining-drill.png"
 -----------------------------------------------------------------

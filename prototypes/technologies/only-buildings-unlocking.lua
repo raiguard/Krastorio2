@@ -4,6 +4,24 @@ data:extend({
   -----------------------------------------------------------------------------------------------------------------
   {
     type = "technology",
+    name = "electric-energy-distribution-3",
+    icon_size = 256,
+    icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/electric-energy-distribution.png",
+    effects = { { type = "unlock-recipe", recipe = "kr-superior-substation" } },
+    prerequisites = { "electric-energy-distribution-2", "kr-advanced-tech-card" },
+    unit = {
+      count = 300,
+      ingredients = {
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
+        { "advanced-tech-card", 1 },
+      },
+      time = 45,
+    },
+  },
+  {
+    type = "technology",
     name = "kr-basic-fluid-handling",
     mod = "Krastorio2",
     icon = "__Krastorio2Assets__/technologies/basic-fluid-handling.png",

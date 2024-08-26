@@ -206,17 +206,6 @@ data:extend({
     place_result = "kr-fuel-refinery",
     stack_size = 50,
   },
-  {
-    type = "item",
-    name = "kr-substation-mk2",
-    icon = "__Krastorio2Assets__/icons/entities/substation-mk2.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "energy-pipe-distribution",
-    order = "a[energy]-e[substation-mk2]",
-    place_result = "kr-substation-mk2",
-    stack_size = 50,
-  },
   -- -- --
   -- NEW LABORATORIES
   -- -- --

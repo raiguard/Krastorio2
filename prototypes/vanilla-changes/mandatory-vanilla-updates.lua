@@ -23,7 +23,6 @@ require("mandatory.vanilla-robots-changes") -- Rebalance vanilla drones
 require("mandatory.electrify-offshore-pump") -- Add energy source to offshore-pump
 require("mandatory.removing-impossible-achievements") -- Remove impossible vanilla achievements
 require("mandatory.roboport-variations") -- Generate roboport variations for roboport states
-require("mandatory.substation-mk2") -- Adds Substation-mk2
 
 -- TODO: Reorganize these
 --- @type data.MinableProperties

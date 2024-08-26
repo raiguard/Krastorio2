@@ -10,7 +10,7 @@ if mods["LightedPolesPlus"] and krastorio.general.getSafeSettingValue("kr-electr
   data.raw["electric-pole"]["lighted-big-electric-pole"].maximum_wire_distance = 32.25
 
   -- Unhide lighted mk2
-  data.raw.item["lighted-kr-substation-mk2"].flags = nil
+  data.raw.item["lighted-kr-superior-substation"].flags = nil
   -- Fix fast_replaceable_group
   data.raw["electric-pole"]["lighted-substation"].fast_replaceable_group = "substation"
   -- Remove specific upgrade path
