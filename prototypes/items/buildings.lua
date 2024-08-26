@@ -381,17 +381,6 @@ data:extend({
     place_result = "kr-antimatter-reactor",
     stack_size = 1,
   },
-  {
-    type = "item",
-    name = "kr-advanced-furnace",
-    icon = "__Krastorio2Assets__/icons/entities/advanced-furnace.png",
-    icon_size = 128,
-    icon_mipmaps = 4,
-    subgroup = "smelting-machine",
-    order = "c[electric-furnace]-f[advanced-furnace]",
-    place_result = "kr-advanced-furnace",
-    stack_size = 50,
-  },
   -- -- --
   -- Turrets
   -- -- --

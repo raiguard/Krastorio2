@@ -589,21 +589,6 @@ return {
   -- -- --
   {
     type = "recipe",
-    name = "kr-advanced-furnace",
-    energy_required = 30,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "imersium-beam", amount = 20 },
-      { type = "item", name = "steel-beam", amount = 80 },
-      { type = "item", name = "rare-metals", amount = 80 },
-      { type = "item", name = "copper-plate", amount = 60 },
-      { type = "item", name = "electronic-components", amount = 20 },
-      { type = "item", name = "energy-control-unit", amount = 10 },
-    },
-    results = { { type = "item", name = "kr-advanced-furnace", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-advanced-assembling-machine",
     energy_required = 10,
     enabled = false,
