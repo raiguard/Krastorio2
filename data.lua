@@ -22,6 +22,16 @@ require("prototypes.categories.item-subgroups")
 require("prototypes.categories.recipe-categories")
 require("prototypes.categories.resource-categories")
 
+require("prototypes.entities.advanced-chemical-plant")
+require("prototypes.entities.advanced-furnace")
+require("prototypes.entities.advanced-solar-panel")
+require("prototypes.entities.advanced-steam-turbine")
+require("prototypes.entities.crash-site-assembling-machine-1")
+require("prototypes.entities.crash-site-assembling-machine-2")
+require("prototypes.entities.crash-site-generator")
+require("prototypes.entities.crash-site-lab")
+require("prototypes.entities.superior-substation")
+
 require("prototypes.equipment.additional-engine-equipment")
 require("prototypes.equipment.advanced-additional-engine-equipment")
 require("prototypes.equipment.advanced-exoskeleton-equipment")
@@ -50,16 +60,6 @@ require("prototypes.equipment.superior-exoskelton-equipment")
 require("prototypes.equipment.superior-night-vision-equipment")
 require("prototypes.equipment.superior-solar-panel-equipment")
 require("prototypes.equipment.vehicle-roboport-equipment")
-
-require("prototypes.entities.advanced-chemical-plant")
-require("prototypes.entities.advanced-furnace")
-require("prototypes.entities.advanced-solar-panel")
-require("prototypes.entities.advanced-steam-turbine")
-require("prototypes.entities.crash-site-assembling-machine-1")
-require("prototypes.entities.crash-site-assembling-machine-2")
-require("prototypes.entities.crash-site-generator")
-require("prototypes.entities.crash-site-lab")
-require("prototypes.entities.superior-substation")
 
 ---------------------------------------------------------------------------
 -- -- -- PRE INITIALIZATION
