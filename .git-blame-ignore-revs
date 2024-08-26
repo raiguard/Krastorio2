@@ -1,1 +1,7 @@
+# This file contains commits ignored by `git blame`
+# To make use of it, run this command in the repo:
+# $ git config --local blame.ignoreRevsFile .git-blame-ignore-revs
+
+# Stylua
+0fad21e7bf98d21bbaec10dbbf119836b5c5c9b5
 c62bdcb7209ecc35878828e821e7c4dc2a8ab987
