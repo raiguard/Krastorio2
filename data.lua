@@ -8,6 +8,7 @@ require("prototypes.equipment-grids")
 require("prototypes.fluids")
 require("prototypes.gui-styles")
 require("prototypes.shortcuts")
+require("prototypes.sounds")
 require("prototypes.tips-and-tricks")
 require("prototypes.virtual-signals")
 
@@ -91,7 +92,6 @@ require("prototypes.recipes.recipes-initialization")
 -- -- Adding new resources
 require("prototypes.resources.resources-initialization")
 -- -- Adding new sounds (prototypes)
-require("prototypes.sounds.sounds")
 -- -- Adding new technologies
 require("prototypes.technologies.technologies-initialization")
 -- -- Adding new tiles
