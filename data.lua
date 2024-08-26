@@ -5,6 +5,7 @@ require("prototypes.achievements")
 require("prototypes.equipment-grids")
 require("prototypes.damage-types")
 require("prototypes.fluids")
+require("prototypes.virtual-signals")
 
 require("prototypes.armors.power-armor-mk3")
 require("prototypes.armors.power-armor-mk4")
@@ -99,7 +100,6 @@ require("prototypes.technologies.technologies-initialization")
 -- -- Adding new tiles
 require("prototypes.tiles.tiles-initialization")
 -- -- Adding new signals (virtual signals)
-require("prototypes.others.virtual-signals-initialization")
 -- -- Adding new key binds
 require("prototypes.others.key-bind-initialization")
 -- -- Adding new shortcuts
