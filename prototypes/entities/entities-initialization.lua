@@ -2,7 +2,6 @@
 -- -- -- BUILDINGS
 ---------------------------------------------------------------------------------------
 -- -- Generals
-require("prototypes.entities.air-purifier")
 require("prototypes.entities.antimatter-reactor")
 require("prototypes.entities.atmospheric-condenser")
 require("prototypes.entities.bio-lab")

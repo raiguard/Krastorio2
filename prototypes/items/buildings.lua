@@ -176,16 +176,6 @@ data:extend({
   },
   {
     type = "item",
-    name = "kr-air-purifier",
-    icon = "__Krastorio2Assets__/icons/entities/air-purifier.png",
-    icon_size = 64,
-    subgroup = "production-machine",
-    order = "z[air-purifier]",
-    place_result = "kr-air-purifier",
-    stack_size = 50,
-  },
-  {
-    type = "item",
     name = "kr-sentinel",
     icon = "__Krastorio2Assets__/icons/entities/sentinel.png",
     icon_size = 64,
