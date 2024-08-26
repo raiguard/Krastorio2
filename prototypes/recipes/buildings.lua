@@ -358,20 +358,6 @@ return {
   },
   {
     type = "recipe",
-    name = "kr-advanced-steam-turbine",
-    energy_required = 30,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "steam-turbine", amount = 2 },
-      { type = "item", name = "steel-gear-wheel", amount = 10 },
-      { type = "item", name = "steel-beam", amount = 10 },
-      { type = "item", name = "rare-metals", amount = 60 },
-      { type = "item", name = "electric-engine-unit", amount = 10 },
-    },
-    results = { { type = "item", name = "kr-advanced-steam-turbine", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-energy-storage",
     energy_required = 30,
     enabled = false,

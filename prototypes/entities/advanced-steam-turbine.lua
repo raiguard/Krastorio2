@@ -1,10 +1,31 @@
 data:extend({
   {
+    type = "recipe",
+    name = "kr-advanced-steam-turbine",
+    energy_required = 30,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "steam-turbine", amount = 2 },
+      { type = "item", name = "steel-gear-wheel", amount = 10 },
+      { type = "item", name = "steel-beam", amount = 10 },
+      { type = "item", name = "rare-metals", amount = 60 },
+      { type = "item", name = "electric-engine-unit", amount = 10 },
+    },
+    results = { { type = "item", name = "kr-advanced-steam-turbine", amount = 1 } },
+  },
+  {
+    type = "item",
+    name = "kr-advanced-steam-turbine",
+    icon = "__Krastorio2Assets__/icons/entities/advanced-steam-turbine.png",
+    subgroup = "energy",
+    order = "f[nuclear-energy]-e2[advanced-steam-turbine]",
+    place_result = "kr-advanced-steam-turbine",
+    stack_size = 25,
+  },
+  {
     type = "generator",
     name = "kr-advanced-steam-turbine",
     icon = "__Krastorio2Assets__/icons/entities/advanced-steam-turbine.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 1, result = "kr-advanced-steam-turbine" },
     max_health = 900,
@@ -36,6 +57,18 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-output",
+    },
+    max_power_output = "100MW",
+    working_sound = {
+      sound = {
+        filename = "__Krastorio2Assets__/sounds/buildings/advanced-steam-turbine.ogg",
+        volume = 1.2,
+      },
+      match_speed_to_activity = true,
+    },
+    vehicle_impact_sound = {
+      filename = "__base__/sound/car-metal-impact.ogg",
+      volume = 0.65,
     },
     horizontal_animation = {
       layers = {
@@ -94,19 +127,6 @@ data:extend({
         starting_frame_deviation = 60,
       },
     },
-    vehicle_impact_sound = {
-      filename = "__base__/sound/car-metal-impact.ogg",
-      volume = 0.65,
-    },
-    working_sound = {
-      sound = {
-        filename = "__Krastorio2Assets__/sounds/buildings/advanced-steam-turbine.ogg",
-        volume = 1.2,
-      },
-      match_speed_to_activity = true,
-    },
-    min_perceived_performance = 0.5,
-    performance_to_sound_speedup = 0.75,
-    max_power_output = "100MW",
+    perceived_performance = { minimum = 0.5, performance_to_activity_rate = 0.75 },
   },
 })

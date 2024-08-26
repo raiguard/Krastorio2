@@ -361,17 +361,6 @@ data:extend({
   },
   {
     type = "item",
-    name = "kr-advanced-steam-turbine",
-    icon = "__Krastorio2Assets__/icons/entities/advanced-steam-turbine.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "energy",
-    order = "f[nuclear-energy]-e2[advanced-steam-turbine]",
-    place_result = "kr-advanced-steam-turbine",
-    stack_size = 25,
-  },
-  {
-    type = "item",
     name = "kr-antimatter-reactor",
     icon = "__Krastorio2Assets__/icons/entities/antimatter-reactor.png",
     icon_size = 128,
