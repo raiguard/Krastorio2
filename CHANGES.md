@@ -47,3 +47,4 @@
 - `advanced-electronics` -> `advanced-circuit`.
 - `optics` -> `lamp`.
 - `rocket-shadow.png` no longer exists - use utility functions instead.
+- `effectivity-module` -> `efficiency-module`

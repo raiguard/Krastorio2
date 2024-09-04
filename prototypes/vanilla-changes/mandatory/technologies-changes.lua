@@ -42,7 +42,7 @@ krastorio.technologies.addPrerequisite(kr_optimization_tech_card_name, "kr-singu
 -- Modules
 krastorio.technologies.addPrerequisite("speed-module-3", "processing-unit")
 krastorio.technologies.addPrerequisite("productivity-module-3", "processing-unit")
-krastorio.technologies.addPrerequisite("effectivity-module-3", "processing-unit")
+krastorio.technologies.addPrerequisite("efficiency-module-3", "processing-unit")
 
 -- Removing
 krastorio.technologies.removePrerequisite("heavy-armor", "military")
@@ -54,7 +54,7 @@ krastorio.technologies.removePrerequisite("battery-mk2-equipment", "low-density-
 -- Modules
 krastorio.technologies.removePrerequisite("speed-module-2", "processing-unit")
 krastorio.technologies.removePrerequisite("productivity-module-2", "processing-unit")
-krastorio.technologies.removePrerequisite("effectivity-module-2", "processing-unit")
+krastorio.technologies.removePrerequisite("efficiency-module-2", "processing-unit")
 
 --------------------------------------------------------------------
 -- -- Research unit ingredients

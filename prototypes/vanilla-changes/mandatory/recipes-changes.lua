@@ -281,26 +281,26 @@ krastorio.recipes.overrideIngredients("productivity-module-3", {
 -- -- Effectivity modules
 
 -- Effectivity module 1
-krastorio.recipes.setEnergyCost("effectivity-module", 15)
-krastorio.recipes.overrideIngredients("effectivity-module", {
+krastorio.recipes.setEnergyCost("efficiency-module", 15)
+krastorio.recipes.overrideIngredients("efficiency-module", {
   { type = "item", name = "electronic-circuit", amount = 5 },
   { type = "item", name = "electronic-components", amount = 10 },
 })
 
 -- Effectivity module 2
-krastorio.recipes.setEnergyCost("effectivity-module-2", 15)
-krastorio.recipes.overrideIngredients("effectivity-module-2", {
+krastorio.recipes.setEnergyCost("efficiency-module-2", 15)
+krastorio.recipes.overrideIngredients("efficiency-module-2", {
   { type = "item", name = "advanced-circuit", amount = 5 },
   { type = "item", name = "electronic-circuit", amount = 5 },
-  { type = "item", name = "effectivity-module", amount = 5 },
+  { type = "item", name = "efficiency-module", amount = 5 },
 })
 
 -- Effectivity module 3
-krastorio.recipes.setEnergyCost("effectivity-module-3", 15)
-krastorio.recipes.overrideIngredients("effectivity-module-3", {
+krastorio.recipes.setEnergyCost("efficiency-module-3", 15)
+krastorio.recipes.overrideIngredients("efficiency-module-3", {
   { type = "item", name = "processing-unit", amount = 5 },
   { type = "item", name = "advanced-circuit", amount = 5 },
-  { type = "item", name = "effectivity-module-2", amount = 5 },
+  { type = "item", name = "efficiency-module-2", amount = 5 },
 })
 
 --------------------------------------------------------------------

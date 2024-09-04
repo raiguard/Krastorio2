@@ -9,7 +9,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "power-armor-mk2", amount = 1 },
       { type = "item", name = "speed-module-3", amount = 25 },
-      { type = "item", name = "effectivity-module-3", amount = 25 },
+      { type = "item", name = "efficiency-module-3", amount = 25 },
       { type = "item", name = "energy-control-unit", amount = 25 },
     },
     results = { { type = "item", name = "power-armor-mk3", amount = 1 } },

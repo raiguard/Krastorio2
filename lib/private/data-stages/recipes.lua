@@ -1917,7 +1917,7 @@ function krastorio.recipes.findNotUnlockableRecipes()
     "creative-mod_alien-attractor-large",
     "creative-mod_super-beacon",
     "creative-mod_super-speed-module",
-    "creative-mod_super-effectivity-module",
+    "creative-mod_super-efficiency-module",
     "creative-mod_super-productivity-module",
     "creative-mod_super-clean-module",
     "creative-mod_super-slow-module",
