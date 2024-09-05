@@ -2,7 +2,6 @@
 -- -- -- BUILDINGS
 ---------------------------------------------------------------------------------------
 -- -- Generals
-require("prototypes.entities.crusher")
 require("prototypes.entities.electrolysis-plant")
 require("prototypes.entities.energy-storage")
 require("prototypes.entities.filtration-plant")

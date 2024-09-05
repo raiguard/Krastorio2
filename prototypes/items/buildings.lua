@@ -110,17 +110,6 @@ data:extend({
   -- -- --
   {
     type = "item",
-    name = "kr-crusher",
-    icon = "__Krastorio2Assets__/icons/entities/crusher.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "production-machine",
-    order = "d-h1[crusher]",
-    place_result = "kr-crusher",
-    stack_size = 50,
-  },
-  {
-    type = "item",
     name = "kr-shelter",
     icon = "__Krastorio2Assets__/icons/entities/shelter.png",
     icon_size = 64,

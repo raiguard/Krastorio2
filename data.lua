@@ -34,6 +34,7 @@ require("prototypes.entities.crash-site-assembling-machine-1")
 require("prototypes.entities.crash-site-assembling-machine-2")
 require("prototypes.entities.crash-site-generator")
 require("prototypes.entities.crash-site-lab")
+require("prototypes.entities.crusher")
 require("prototypes.entities.superior-substation")
 
 require("prototypes.equipment.additional-engine-equipment")
