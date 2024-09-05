@@ -461,17 +461,6 @@ data:extend({
     stack_size = 50,
   },
   -- -- --
-  {
-    type = "item",
-    name = "kr-energy-storage",
-    icon = "__Krastorio2Assets__/icons/entities/energy-storage.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "energy",
-    order = "e[accumulator]-b[energy-storage]",
-    place_result = "kr-energy-storage",
-    stack_size = 50,
-  },
   -- -- --
   {
     type = "item",

@@ -293,19 +293,6 @@ return {
   },
   {
     type = "recipe",
-    name = "kr-energy-storage",
-    energy_required = 30,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "steel-beam", amount = 10 },
-      { type = "item", name = "processing-unit", amount = 10 },
-      { type = "item", name = "rare-metals", amount = 50 },
-      { type = "item", name = "energy-control-unit", amount = 50 },
-    },
-    results = { { type = "item", name = "kr-energy-storage", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-matter-plant",
     energy_required = 30,
     enabled = false,

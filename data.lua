@@ -36,6 +36,7 @@ require("prototypes.entities.crash-site-generator")
 require("prototypes.entities.crash-site-lab")
 require("prototypes.entities.crusher")
 require("prototypes.entities.electrolysis-plant")
+require("prototypes.entities.energy-storage")
 require("prototypes.entities.superior-substation")
 
 require("prototypes.equipment.additional-engine-equipment")
