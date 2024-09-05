@@ -291,19 +291,6 @@ return {
   },
   {
     type = "recipe",
-    name = "kr-atmospheric-condenser",
-    energy_required = 10,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "steel-beam", amount = 10 },
-      { type = "item", name = "steel-gear-wheel", amount = 10 },
-      { type = "item", name = "electronic-circuit", amount = 4 },
-      { type = "item", name = "engine-unit", amount = 2 },
-    },
-    results = { { type = "item", name = "kr-atmospheric-condenser", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-fluid-burner",
     energy_required = 5,
     enabled = false,

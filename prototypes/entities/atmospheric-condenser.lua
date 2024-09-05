@@ -1,19 +1,33 @@
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
 
-local kr_icons_size = false
-
-if krastorio.general.getSafeSettingValue("kr-large-icons") then
-  kr_icons_size = true
-end
-
 data:extend({
+  {
+    type = "recipe",
+    name = "kr-atmospheric-condenser",
+    energy_required = 10,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "steel-beam", amount = 10 },
+      { type = "item", name = "steel-gear-wheel", amount = 10 },
+      { type = "item", name = "electronic-circuit", amount = 4 },
+      { type = "item", name = "engine-unit", amount = 2 },
+    },
+    results = { { type = "item", name = "kr-atmospheric-condenser", amount = 1 } },
+  },
+  {
+    type = "item",
+    name = "kr-atmospheric-condenser",
+    icon = "__Krastorio2Assets__/icons/entities/atmospheric-condenser.png",
+    subgroup = "production-machine",
+    order = "e-c1[atmospheric-condenser]",
+    place_result = "kr-atmospheric-condenser",
+    stack_size = 50,
+  },
   {
     type = "assembling-machine",
     name = "kr-atmospheric-condenser",
     icon = "__Krastorio2Assets__/icons/entities/atmospheric-condenser.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "kr-atmospheric-condenser" },
     max_health = 500,
@@ -25,7 +39,6 @@ data:extend({
       { type = "impact", percent = 50 },
     },
     fluid_boxes = {
-      -- Output
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
@@ -46,33 +59,19 @@ data:extend({
     },
     collision_box = { { -2.3, -2.3 }, { 2.3, 2.3 } },
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
+    crafting_speed = 1.5,
+    energy_source = {
+      type = "electric",
+      usage_priority = "secondary-input",
+      emissions_per_second_per_watt = 2 / 10000000,
+    },
+    energy_usage = "0.25MW",
+    ingredient_count = 1,
     damaged_trigger_effect = hit_effects.entity(),
     fast_replaceable_group = "assembling-machine",
-    animation = {
-      layers = {
-        {
-          filename = "__Krastorio2Assets__/entities/atmospheric-condenser/atmospheric-condenser.png",
-          width = 380,
-          height = 380,
-          scale = 0.5,
-          frame_count = 20,
-          line_length = 5,
-          shift = { 0, 0 },
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/atmospheric-condenser/atmospheric-condenser-sh.png",
-          width = 380,
-          height = 380,
-          scale = 0.5,
-          frame_count = 1,
-          repeat_count = 20,
-          draw_as_shadow = true,
-          shift = { 0, 0 },
-        },
-      },
-    },
     crafting_categories = { "atmosphere-condensation" },
-    scale_entity_info_icon = kr_icons_size,
+    module_slots = 2,
+    allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
@@ -85,32 +84,47 @@ data:extend({
       },
       apparent_volume = 1.5,
     },
-    crafting_speed = 1.5,
-    energy_source = {
-      type = "electric",
-      usage_priority = "secondary-input",
-      emissions_per_second_per_watt = 2 / 10000000,
-    },
-
-    water_reflection = {
-      pictures = {
-        filename = "__Krastorio2Assets__/entities/atmospheric-condenser/atmospheric-condenser-reflection.png",
-        priority = "extra-high",
-        width = 42,
-        height = 38,
-        shift = util.by_pixel(0, 40),
-        variation_count = 1,
-        scale = 5,
-      },
-      rotate = false,
-      orientation_to_variation = false,
-    },
-
-    energy_usage = "0.25MW",
-    ingredient_count = 1,
-    module_specification = { module_slots = 2, module_info_icon_shift = { 0, 1.2 }, module_info_icon_scale = 1 },
-    allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
+    graphics_set = {
+      animation = {
+        layers = {
+          {
+            filename = "__Krastorio2Assets__/entities/atmospheric-condenser/atmospheric-condenser.png",
+            width = 380,
+            height = 380,
+            scale = 0.5,
+            frame_count = 20,
+            line_length = 5,
+            shift = { 0, 0 },
+          },
+          {
+            filename = "__Krastorio2Assets__/entities/atmospheric-condenser/atmospheric-condenser-sh.png",
+            width = 380,
+            height = 380,
+            scale = 0.5,
+            frame_count = 1,
+            repeat_count = 20,
+            draw_as_shadow = true,
+            shift = { 0, 0 },
+          },
+        },
+      },
+      water_reflection = {
+        pictures = {
+          filename = "__Krastorio2Assets__/entities/atmospheric-condenser/atmospheric-condenser-reflection.png",
+          priority = "extra-high",
+          width = 42,
+          height = 38,
+          shift = util.by_pixel(0, 40),
+          variation_count = 1,
+          scale = 5,
+        },
+        rotate = false,
+        orientation_to_variation = false,
+      },
+    },
+    icon_draw_specification = { scale = 2, shift = { 0, -0.3 } },
+    icons_positioning = { { inventory_index = defines.inventory.assembling_machine_modules, shift = { 0, 1.25 } } },
   },
 })

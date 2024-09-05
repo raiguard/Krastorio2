@@ -307,17 +307,6 @@ data:extend({
   },
   {
     type = "item",
-    name = "kr-atmospheric-condenser",
-    icon = "__Krastorio2Assets__/icons/entities/atmospheric-condenser.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "production-machine",
-    order = "e-c1[atmospheric-condenser]",
-    place_result = "kr-atmospheric-condenser",
-    stack_size = 50,
-  },
-  {
-    type = "item",
     name = "kr-fluid-burner",
     icon = "__Krastorio2Assets__/icons/entities/fluid-burner.png",
     icon_size = 64,
