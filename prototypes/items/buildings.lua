@@ -38,17 +38,6 @@ data:extend({
   },
   {
     type = "item",
-    name = "kr-bio-lab",
-    icon = "__Krastorio2Assets__/icons/entities/bio-lab.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "production-machine",
-    order = "d-g2[bio-lab]",
-    place_result = "kr-bio-lab",
-    stack_size = 50,
-  },
-  {
-    type = "item",
     name = "kr-advanced-assembling-machine",
     icon = "__Krastorio2Assets__/icons/entities/advanced-assembling-machine.png",
     icon_size = 64,

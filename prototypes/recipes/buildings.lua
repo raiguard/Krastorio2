@@ -17,19 +17,6 @@ return {
   },
   {
     type = "recipe",
-    name = "kr-bio-lab",
-    energy_required = 10,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "biomass", amount = 200 },
-      { type = "item", name = "iron-beam", amount = 10 },
-      { type = "item", name = "glass", amount = 20 },
-      { type = "item", name = "electronic-circuit", amount = 2 },
-    },
-    results = { { type = "item", name = "kr-bio-lab", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-crusher",
     energy_required = 10,
     enabled = false,
