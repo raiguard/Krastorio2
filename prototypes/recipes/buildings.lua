@@ -239,18 +239,6 @@ return {
   },
   {
     type = "recipe",
-    name = "kr-fluid-burner",
-    energy_required = 5,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "steel-beam", amount = 10 },
-      { type = "item", name = "steel-plate", amount = 20 },
-      { type = "item", name = "electronic-circuit", amount = 3 },
-    },
-    results = { { type = "item", name = "kr-fluid-burner", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-quarry-drill",
     energy_required = 60,
     enabled = false,

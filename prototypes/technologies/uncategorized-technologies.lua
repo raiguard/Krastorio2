@@ -173,13 +173,13 @@ data:extend({
     type = "technology",
     name = "kr-fluid-excess-handling",
     mod = "Krastorio2",
-    icon = "__Krastorio2Assets__/technologies/fluid-burner.png",
+    icon = "__Krastorio2Assets__/technologies/flare-stack.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "kr-fluid-burner",
+        recipe = "kr-flare-stack",
       },
     },
     prerequisites = { "kr-fluids-chemistry", "electronics" },

@@ -124,7 +124,7 @@ end
 --
 function krastorio.fluid_burner_util.generateBurnFluidsRecipe(fluid_name)
   if data.raw.fluid[fluid_name] then
-    local tech = krastorio.technologies.getTechnologyThatUnlockRecipe("kr-fluid-burner")
+    local tech = krastorio.technologies.getTechnologyThatUnlockRecipe("kr-flare-stack")
     local tech_name = tech and tech.name or nil
     local accepted = false
     if not krastorio.fluid_burner_util.blacklist[fluid_name] and not data.raw.fluid[fluid_name].hidden then
@@ -213,7 +213,7 @@ function krastorio.fluid_burner_util.removeBurnFluidsRecipe(fluid_name)
   if recipe then
     recipe.enabled = false
     krastorio.technologies.removeUnlockRecipe(
-      krastorio.technologies.getTechnologyThatUnlockRecipe("kr-fluid-burner").name,
+      krastorio.technologies.getTechnologyThatUnlockRecipe("kr-flare-stack").name,
       recipe.name
     )
   end

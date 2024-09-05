@@ -2,7 +2,6 @@
 -- -- -- BUILDINGS
 ---------------------------------------------------------------------------------------
 -- -- Generals
-require("prototypes.entities.fluid-burner")
 require("prototypes.entities.fuel-refinery")
 require("prototypes.entities.fusion-reactor")
 require("prototypes.entities.gas-power-station")

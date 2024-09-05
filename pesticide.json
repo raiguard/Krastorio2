@@ -1,9 +1,10 @@
 {
   "adapters": {
     "all": {
-      "cmd": "fmtk debug --workspace /home/rai/dev/factorio-mods/Krastorio2 -- /home/rai/games/factorio/bin/x64/factorio",
+      "cmd": "fmtk debug --docs ../../../scripts/lua_doc/doc-files/runtime-api.json --workspace /home/rai/dev/factorio-mods/Krastorio2 -- /home/rai/dev/wube/factorio/bin/Releasex64Clang/factorio-run",
       "args": {
         "hookControl": ["Krastorio2"],
+        "hookData": true,
         "modsPath": "/home/rai/games/factorio/mods"
       }
     }

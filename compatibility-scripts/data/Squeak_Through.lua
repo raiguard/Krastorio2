@@ -61,7 +61,7 @@ local exclusions_to_add = {
   },
   ["furnace"] = {
     "kr-crusher",
-    "kr-fluid-burner",
+    "kr-flare-stack",
     "kr-crusher",
     "kr-air-purifier",
     "kr-fusion-reactor",

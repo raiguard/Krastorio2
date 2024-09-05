@@ -267,7 +267,7 @@ if mods["IndustrialRevolution"] then
   )
 
   -- Fluid burner
-  krastorio.recipes.addIngredient("kr-fluid-burner", { "iron-motor", 1 })
+  krastorio.recipes.addIngredient("kr-flare-stack", { "iron-motor", 1 })
 
   -- Fuel refinery
   krastorio.recipes.replaceIngredient("kr-fuel-refinery", "steel-beam", { "iron-frame-large", 1 })
