@@ -338,17 +338,6 @@ data:extend({
     place_result = "kr-fusion-reactor",
     stack_size = 1,
   },
-  {
-    type = "item",
-    name = "kr-antimatter-reactor",
-    icon = "__Krastorio2Assets__/icons/entities/antimatter-reactor.png",
-    icon_size = 128,
-    icon_mipmaps = 4,
-    subgroup = "energy",
-    order = "z-h[antimatter-reactor]-c[antimatter-reactor]",
-    place_result = "kr-antimatter-reactor",
-    stack_size = 1,
-  },
   -- -- --
   -- Turrets
   -- -- --

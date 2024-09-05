@@ -394,21 +394,6 @@ return {
     },
     results = { { type = "item", name = "kr-stabilizer-charging-station", amount = 1 } },
   },
-  {
-    type = "recipe",
-    name = "kr-antimatter-reactor",
-    energy_required = 300,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "ai-core", amount = 50 },
-      { type = "item", name = "energy-control-unit", amount = 50 },
-      { type = "item", name = "imersium-beam", amount = 100 },
-      { type = "item", name = "imersium-plate", amount = 350 },
-      { type = "item", name = "rare-metals", amount = 350 },
-      { type = "item", name = "steel-plate", amount = 350 },
-    },
-    results = { { type = "item", name = "kr-antimatter-reactor", amount = 1 } },
-  },
   ---
   -- Belts
   ---

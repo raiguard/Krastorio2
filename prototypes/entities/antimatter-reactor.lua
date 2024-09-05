@@ -3,18 +3,41 @@ local sounds = require("__base__.prototypes.entity.sounds")
 
 data:extend({
   {
+    type = "recipe",
+    name = "kr-antimatter-reactor",
+    energy_required = 300,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "ai-core", amount = 50 },
+      { type = "item", name = "energy-control-unit", amount = 50 },
+      { type = "item", name = "imersium-beam", amount = 100 },
+      { type = "item", name = "imersium-plate", amount = 350 },
+      { type = "item", name = "rare-metals", amount = 350 },
+      { type = "item", name = "steel-plate", amount = 350 },
+    },
+    results = { { type = "item", name = "kr-antimatter-reactor", amount = 1 } },
+  },
+  {
+    type = "item",
+    name = "kr-antimatter-reactor",
+    icon = "__Krastorio2Assets__/icons/entities/antimatter-reactor.png",
+    icon_size = 128,
+    subgroup = "energy",
+    order = "z-h[antimatter-reactor]-c[antimatter-reactor]",
+    place_result = "kr-antimatter-reactor",
+    stack_size = 1,
+  },
+  {
     type = "burner-generator",
     name = "kr-antimatter-reactor",
     icon = "__Krastorio2Assets__/icons/entities/antimatter-reactor.png",
     icon_size = 128,
-    icon_mipmaps = 4,
     flags = { "placeable-neutral", "placeable-player", "player-creation", "not-rotatable" },
     minable = { mining_time = 2, result = "kr-antimatter-reactor" },
     max_health = 5000,
     damaged_trigger_effect = hit_effects.entity(),
     corpse = "kr-antimatter-reactor-remnant",
     dying_explosion = "matter-explosion-s",
-    effectivity = 5,
     resistances = {
       { type = "physical", percent = 60 },
       { type = "fire", percent = 90 },
@@ -48,7 +71,15 @@ data:extend({
         color = { r = 0.459, g = 0.031, b = 0.447 },
       },
     },
+    max_power_output = "3000MW",
     vehicle_impact_sound = sounds.generic_impact,
+    working_sound = {
+      sound = { { filename = "__Krastorio2Assets__/sounds/buildings/antimatter-reactor.ogg", volume = 1.25 } },
+    },
+    open_sound = { filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1 },
+    close_sound = { filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1 },
+    min_perceived_performance = 0.25,
+    performance_to_sound_speedup = 0.5,
     animation = {
       layers = {
         {
@@ -102,19 +133,5 @@ data:extend({
         },
       },
     },
-    working_sound = {
-      sound = {
-        {
-          filename = "__Krastorio2Assets__/sounds/buildings/antimatter-reactor.ogg",
-          volume = 1.25,
-        },
-      },
-    },
-    open_sound = { filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1 },
-    close_sound = { filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1 },
-    audible_distance_modifier = 10,
-    min_perceived_performance = 0.25,
-    performance_to_sound_speedup = 0.5,
-    max_power_output = "3000MW",
   },
 })
