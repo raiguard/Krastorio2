@@ -263,17 +263,6 @@ data:extend({
   -- -- --
   {
     type = "item",
-    name = "kr-filtration-plant",
-    icon = "__Krastorio2Assets__/icons/entities/filtration-plant.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "production-machine",
-    order = "e-b1[filtration-plant]",
-    place_result = "kr-filtration-plant",
-    stack_size = 50,
-  },
-  {
-    type = "item",
     name = "kr-fluid-burner",
     icon = "__Krastorio2Assets__/icons/entities/fluid-burner.png",
     icon_size = 64,
