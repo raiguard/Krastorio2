@@ -263,17 +263,6 @@ data:extend({
   -- -- --
   {
     type = "item",
-    name = "kr-electrolysis-plant",
-    icon = "__Krastorio2Assets__/icons/entities/electrolysis-plant.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "production-machine",
-    order = "e-a1[electrolysis-plant]",
-    place_result = "kr-electrolysis-plant",
-    stack_size = 50,
-  },
-  {
-    type = "item",
     name = "kr-filtration-plant",
     icon = "__Krastorio2Assets__/icons/entities/filtration-plant.png",
     icon_size = 64,

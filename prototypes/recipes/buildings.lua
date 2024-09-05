@@ -239,19 +239,6 @@ return {
   },
   {
     type = "recipe",
-    name = "kr-electrolysis-plant",
-    energy_required = 10,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "steel-beam", amount = 10 },
-      { type = "item", name = "automation-core", amount = 3 },
-      { type = "item", name = "copper-plate", amount = 10 },
-      { type = "item", name = "glass", amount = 10 },
-    },
-    results = { { type = "item", name = "kr-electrolysis-plant", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-filtration-plant",
     energy_required = 10,
     enabled = false,
