@@ -163,17 +163,6 @@ data:extend({
     place_result = "kr-sentinel",
     stack_size = 50,
   },
-  {
-    type = "item",
-    name = "kr-fuel-refinery",
-    icon = "__Krastorio2Assets__/icons/entities/fuel-refinery.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "production-machine",
-    order = "e[fuel-refinery]",
-    place_result = "kr-fuel-refinery",
-    stack_size = 50,
-  },
   -- -- --
   -- NEW LABORATORIES
   -- -- --

@@ -80,19 +80,6 @@ return {
   },
   {
     type = "recipe",
-    name = "kr-fuel-refinery",
-    energy_required = 5,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "steel-plate", amount = 5 },
-      { type = "item", name = "iron-gear-wheel", amount = 5 },
-      { type = "item", name = "electronic-circuit", amount = 5 },
-      { type = "item", name = "pipe", amount = 5 },
-    },
-    results = { { type = "item", name = "kr-fuel-refinery", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-gas-power-station",
     energy_required = 10,
     enabled = false,
