@@ -16,17 +16,6 @@ data:extend({
   },
   {
     type = "item",
-    name = "kr-gas-power-station",
-    icon = "__Krastorio2Assets__/icons/entities/gas-power-station.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    stack_size = 10,
-    subgroup = "energy",
-    order = "c[solar-panel]-b[gas-power-station]",
-    place_result = "kr-gas-power-station",
-  },
-  {
-    type = "item",
     name = "kr-greenhouse",
     icon = "__Krastorio2Assets__/icons/entities/greenhouse.png",
     icon_size = 64,

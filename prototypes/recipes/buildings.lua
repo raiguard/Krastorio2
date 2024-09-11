@@ -80,19 +80,6 @@ return {
   },
   {
     type = "recipe",
-    name = "kr-gas-power-station",
-    energy_required = 10,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "steel-beam", amount = 10 },
-      { type = "item", name = "engine-unit", amount = 20 },
-      { type = "item", name = "electronic-circuit", amount = 4 },
-      { type = "item", name = "pipe", amount = 4 },
-    },
-    results = { { type = "item", name = "kr-gas-power-station", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-tesla-coil",
     energy_required = 20,
     enabled = false,
