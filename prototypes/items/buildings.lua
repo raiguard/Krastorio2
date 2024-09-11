@@ -16,17 +16,6 @@ data:extend({
   },
   {
     type = "item",
-    name = "kr-greenhouse",
-    icon = "__Krastorio2Assets__/icons/entities/greenhouse.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "production-machine",
-    order = "d-g1[greenhouse]",
-    place_result = "kr-greenhouse",
-    stack_size = 50,
-  },
-  {
-    type = "item",
     name = "kr-advanced-assembling-machine",
     icon = "__Krastorio2Assets__/icons/entities/advanced-assembling-machine.png",
     icon_size = 64,

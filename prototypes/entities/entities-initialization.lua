@@ -2,7 +2,6 @@
 -- -- -- BUILDINGS
 ---------------------------------------------------------------------------------------
 -- -- Generals
-require("prototypes.entities.greenhouse")
 require("prototypes.entities.intergalactic-transceiver")
 require("prototypes.entities.planetary-teleporter")
 require("prototypes.entities.matter-assembler")

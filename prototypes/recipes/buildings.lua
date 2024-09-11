@@ -4,19 +4,6 @@ return {
   -----------------------------------------------------------------------------------------------------------------
   {
     type = "recipe",
-    name = "kr-greenhouse",
-    energy_required = 10,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "wood", amount = 20 },
-      { type = "item", name = "iron-beam", amount = 10 },
-      { type = "item", name = "glass", amount = 20 },
-      { type = "item", name = "automation-core", amount = 2 },
-    },
-    results = { { type = "item", name = "kr-greenhouse", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-electric-mining-drill-mk2",
     energy_required = 5,
     enabled = false,
