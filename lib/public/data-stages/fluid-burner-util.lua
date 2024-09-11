@@ -165,12 +165,7 @@ function krastorio.fluid_burner_util.generateBurnFluidsRecipe(fluid_name)
         hide_from_player_crafting = true,
         always_show_products = false,
         show_amount_in_title = false,
-        ingredients = {
-          { type = "fluid", name = fluid.name, amount = 100 },
-        },
-        results = {
-          { type = "item", name = "kr-void", amount = 0 },
-        },
+        ingredients = { { type = "fluid", name = fluid.name, amount = 100 } },
         subgroup = "kr-void",
         order = fluid.order,
       }

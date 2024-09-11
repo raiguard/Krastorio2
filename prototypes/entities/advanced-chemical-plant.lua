@@ -30,8 +30,6 @@ data:extend({
     type = "assembling-machine",
     name = "kr-advanced-chemical-plant",
     icon = "__Krastorio2Assets__/icons/entities/advanced-chemical-plant.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "kr-advanced-chemical-plant" },
     max_health = 1500,

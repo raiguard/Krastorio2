@@ -472,16 +472,6 @@ data:extend({
   },
   {
     type = "item",
-    name = "kr-void",
-    icon = "__Krastorio2Assets__/icons/items/void.png",
-    hidden = true,
-    icon_size = 64,
-    icon_mipmaps = 4,
-    order = "zzz[kr-void]",
-    stack_size = 999,
-  },
-  {
-    type = "item",
     name = "rare-metals",
     icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png",
     icon_size = 64,
