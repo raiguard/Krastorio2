@@ -250,17 +250,6 @@ data:extend({
     stack_size = 50,
   },
   -- -- --
-  {
-    type = "item",
-    name = "kr-fusion-reactor",
-    icon = "__Krastorio2Assets__/icons/entities/fusion-reactor.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "energy",
-    order = "f[nuclear-energy]-b2[fusion-reactor]",
-    place_result = "kr-fusion-reactor",
-    stack_size = 1,
-  },
   -- -- --
   -- Turrets
   -- -- --

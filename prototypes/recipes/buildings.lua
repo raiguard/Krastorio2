@@ -240,21 +240,6 @@ return {
   },
   {
     type = "recipe",
-    name = "kr-fusion-reactor",
-    energy_required = 200,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "concrete", amount = 500 },
-      { type = "item", name = "copper-plate", amount = 500 },
-      { type = "item", name = "steel-plate", amount = 500 },
-      { type = "item", name = "steel-beam", amount = 350 },
-      { type = "item", name = "rare-metals", amount = 350 },
-      { type = "item", name = "processing-unit", amount = 100 },
-    },
-    results = { { type = "item", name = "kr-fusion-reactor", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-matter-plant",
     energy_required = 30,
     enabled = false,
