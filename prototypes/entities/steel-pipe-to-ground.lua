@@ -41,28 +41,28 @@ data:extend({
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = sounds.pipe,
     pictures = {
-      up = {
+      north = {
         filename = "__Krastorio2Assets__/entities/steel-pipe-to-ground/steel-pipe-to-ground-up.png",
         priority = "extra-high",
         width = 128,
         height = 128,
         scale = 0.5,
       },
-      down = {
+      south = {
         filename = "__Krastorio2Assets__/entities/steel-pipe-to-ground/steel-pipe-to-ground-down.png",
         priority = "extra-high",
         width = 128,
         height = 128,
         scale = 0.5,
       },
-      left = {
+      west = {
         filename = "__Krastorio2Assets__/entities/steel-pipe-to-ground/steel-pipe-to-ground-left.png",
         priority = "extra-high",
         width = 128,
         height = 128,
         scale = 0.5,
       },
-      right = {
+      east = {
         filename = "__Krastorio2Assets__/entities/steel-pipe-to-ground/steel-pipe-to-ground-right.png",
         priority = "extra-high",
         width = 128,

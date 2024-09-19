@@ -59,7 +59,7 @@ data:extend({
     },
     burner = {
       type = "burner",
-      fuel_category = "nuclear",
+      fuel_categories = { "nuclear" },
       effectivity = 2,
       fuel_inventory_size = 1,
       burnt_inventory_size = 1,

@@ -6,7 +6,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles-fuels") then
   --data.raw["item-with-entity-data"]["car"].order = "1[car]"
 
   data.raw.car["car"].minable = { mining_time = 3, result = "car" }
-  data.raw.car["car"].energy_source.fuel_category = "vehicle-fuel"
+  data.raw.car["car"].energy_source.fuel_categories = { "vehicle-fuel" }
   data.raw.car["car"].energy_source.emissions_per_minute = { pollution = 5 }
   krastorio.recipes.setEnergyCost("car", 30)
   ---------------------
@@ -18,7 +18,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles-fuels") then
 
   data.raw.car["tank"].max_health = 3000
   data.raw.car["tank"].minable = { mining_time = 5, result = "tank" }
-  data.raw.car["tank"].energy_source.fuel_category = "vehicle-fuel"
+  data.raw.car["tank"].energy_source.fuel_categories = { "vehicle-fuel" }
   data.raw.car["tank"].energy_source.emissions_per_minute = { pollution = 15 }
   data.raw.car["tank"].inventory_size = 100
   data.raw.car["tank"].weight = 30000
@@ -36,8 +36,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles-fuels") then
   -- -- Fuels
   for _, car in pairs(data.raw.car) do
     if car.energy_source then
-      car.energy_source.fuel_category = "vehicle-fuel"
-      car.energy_source.fuel_categories = nil
+      car.energy_source.fuel_categories = { "vehicle-fuel" }
     end
   end
 

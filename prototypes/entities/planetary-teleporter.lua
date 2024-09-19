@@ -225,40 +225,6 @@ data:extend({
       discharge_cooldown = 10,
     },
   },
-})
-
-local collision_index = 0
-local function collision_entity(collision_box)
-  collision_index = collision_index + 1
-  return {
-    type = "simple-entity",
-    name = "kr-planetary-teleporter-collision-" .. collision_index,
-    flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
-    collision_box = collision_box,
-    picture = { filename = "__core__/graphics/empty.png", size = 1 },
-    collision_mask = { layers = { player = true } },
-  }
-end
-
-local function empty_animation()
-  return {
-    filename = "__core__/graphics/empty.png",
-    width = 1,
-    height = 1,
-    line_length = 1,
-    frame_count = 1,
-    shift = { 0, 0 },
-    animation_speed = 1,
-    direction_count = 1,
-  }
-end
-
-data:extend({
-  -- dummy collision entities
-  collision_entity({ { -1.5, -1 }, { 1.5, 0.4 } }),
-  collision_entity({ { -0.8, -1 }, { 1.4, 1.2 } }),
-  collision_entity({ { -1.4, -1 }, { 0.8, 1.2 } }),
-  -- overlay
   {
     type = "simple-entity",
     name = "kr-planetary-teleporter-front-layer",
@@ -266,34 +232,44 @@ data:extend({
     collision_mask = { layers = {} },
     render_layer = "higher-object-above",
     picture = {
-      layers = {
-        {
-          filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-forward-towers.png",
-          width = 400,
-          height = 475,
-          scale = 0.5,
-        },
-      },
+      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-forward-towers.png",
+      width = 400,
+      height = 475,
+      scale = 0.5,
     },
   },
-  -- collision detection
   {
-    type = "trigger-target-type",
-    name = "character",
+    type = "simple-entity",
+    name = "kr-planetary-teleporter-collision-1",
+    flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
+    collision_box = { { -1.5, -1 }, { 1.5, 0.4 } },
+    collision_mask = { layers = { player = true } },
+  },
+  {
+    type = "simple-entity",
+    name = "kr-planetary-teleporter-collision-2",
+    flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
+    collision_box = { { -0.8, -1 }, { 1.4, 1.2 } },
+    collision_mask = { layers = { player = true } },
+  },
+  {
+    type = "simple-entity",
+    name = "kr-planetary-teleporter-collision-3",
+    flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
+    collision_box = { { -1.4, -1 }, { 0.8, 1.2 } },
+    collision_mask = { layers = { player = true } },
   },
   {
     type = "turret",
     name = "kr-planetary-teleporter-turret",
     icon = "__Krastorio2Assets__/icons/entities/planetary-teleporter.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     collision_mask = { layers = {} },
     call_for_help_radius = 0,
     folded_animation = {
-      north = empty_animation(),
-      east = empty_animation(),
-      south = empty_animation(),
-      west = empty_animation(),
+      north = util.empty_animation(),
+      east = util.empty_animation(),
+      south = util.empty_animation(),
+      west = util.empty_animation(),
     },
     flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
     attack_parameters = {
@@ -335,5 +311,9 @@ data:extend({
       },
     },
     graphics_set = {},
+  },
+  {
+    type = "trigger-target-type",
+    name = "character",
   },
 })

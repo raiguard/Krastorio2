@@ -6,7 +6,6 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles-fuels") then
   data.raw.locomotive["locomotive"].max_health = 1000
   data.raw.locomotive["locomotive"].braking_force = 30
   data.raw.locomotive["locomotive"].energy_source.fuel_inventory_size = 3
-  data.raw.locomotive["locomotive"].energy_source.fuel_category = nil
   data.raw.locomotive["locomotive"].energy_source.fuel_categories = { "chemical", "vehicle-fuel" }
   data.raw.locomotive["locomotive"].energy_source.emissions_per_minute = { pollution = 20 }
   data.raw.locomotive["locomotive"].minable = { mining_time = 1, result = "locomotive" }

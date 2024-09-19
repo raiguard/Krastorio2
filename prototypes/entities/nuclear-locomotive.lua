@@ -63,7 +63,7 @@ meld(loco, {
   braking_force = 40,
   color = { r = 0.92, g = 0.07, b = 0, a = 0.5 },
   burner = {
-    fuel_category = "nuclear",
+    fuel_categories = { "nuclear" },
     effectivity = 0.1,
     fuel_inventory_size = 1,
     burnt_inventory_size = 1,
@@ -146,7 +146,7 @@ data:extend({ loco })
 --       },
 --     },
 --     burner = {
---       fuel_category = "nuclear",
+--       fuel_categories = {"nuclear"},
 --       effectivity = 0.1,
 --       fuel_inventory_size = 1,
 --       burnt_inventory_size = 1,

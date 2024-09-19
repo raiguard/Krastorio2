@@ -479,7 +479,7 @@ table.insert(data.raw["generator-equipment"]["fission-reactor-equipment"].catego
 
 data.raw["generator-equipment"]["fission-reactor-equipment"].burner = {
   type = "burner",
-  fuel_category = "fusion-fuel",
+  fuel_categories = { "fusion-fuel" },
   effectivity = 2,
   fuel_inventory_size = 1,
   burnt_inventory_size = 1,

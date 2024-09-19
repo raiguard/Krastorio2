@@ -537,7 +537,6 @@ data:extend({
     subgroup = "explosions",
     animations = {
       filename = "__Krastorio2Assets__/entities/explosions/laser-explosion.png",
-      flags = { "compressed" },
       width = 300,
       height = 300,
       frame_count = 47,

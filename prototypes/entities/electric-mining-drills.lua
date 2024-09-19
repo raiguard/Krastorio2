@@ -627,7 +627,7 @@ data:extend({
       { type = "fire", percent = 20 },
       { type = "impact", percent = 20 },
     },
-    collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
+    collision_box = { { -1.35, -1.35 }, { 1.35, 1.35 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     input_fluid_box = {
       production_type = "input-output",
@@ -2000,7 +2000,7 @@ data:extend({
       { type = "fire", percent = 35 },
       { type = "impact", percent = 35 },
     },
-    collision_box = { { -1.4, -1.4 }, { 1.4, 1.4 } },
+    collision_box = { { -1.35, -1.35 }, { 1.35, 1.35 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     input_fluid_box = {
       production_type = "input-output",

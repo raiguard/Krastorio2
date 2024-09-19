@@ -58,7 +58,7 @@ data:extend({
     },
     burner = {
       type = "burner",
-      fuel_category = "antimatter-fuel",
+      fuel_categories = { "antimatter-fuel" },
       effectivity = 2,
       fuel_inventory_size = 1,
       burnt_inventory_size = 1,

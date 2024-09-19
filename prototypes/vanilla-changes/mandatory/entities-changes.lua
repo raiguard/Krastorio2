@@ -256,7 +256,7 @@ data.raw["spider-vehicle"]["spidertron"].energy_source = {
   render_no_network_icon = false,
   fuel_inventory_size = 1,
   burnt_inventory_size = 1,
-  fuel_category = "fusion-fuel",
+  fuel_categories = { "fusion-fuel" },
 }
 data.raw["spider-vehicle"]["spidertron"].movement_energy_consumption = "3MW"
 data.raw["corpse"]["spidertron-remnants"].animation = make_rotated_animation_variations_from_sheet(1, {
