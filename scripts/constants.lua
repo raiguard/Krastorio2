@@ -2,8 +2,6 @@ local math = require("__flib__.math")
 
 local constants = {}
 
-constants.biter_virus_evolution_multiplier = 0.67
-
 constants.bonus_items = {
   { name = "construction-robot", count = 50 },
   { name = "modular-armor", count = 1 },
@@ -11,21 +9,14 @@ constants.bonus_items = {
   { name = "fuel", count = 200 },
   { name = "big-battery-equipment", count = 1 },
   { name = "personal-roboport-equipment", count = 1 },
-  { name = "small-portable-generator-equipment", count = 2 },
+  { name = "small-portable-generator", count = 2 },
   { name = "cliff-explosives", count = 50 },
   { name = "landfill", count = 50 },
 }
 
-constants.creep_collection_rate = {
-  min = 30,
-  max = 80,
-}
-
-constants.creep_max_reach = 10
-
 constants.freeplay_crash_site_parts = {
   {
-    name = "crash-site-generator",
+    name = "kr-crash-site-generator",
     angle_deviation = 0.2,
     max_distance = 25,
     min_separation = 10,
@@ -34,7 +25,7 @@ constants.freeplay_crash_site_parts = {
     force = "player",
   },
   {
-    name = "crash-site-lab",
+    name = "kr-crash-site-lab-repaired",
     angle_deviation = 0.05,
     max_distance = 30,
     min_separation = 10,
@@ -43,7 +34,7 @@ constants.freeplay_crash_site_parts = {
     force = "player",
   },
   {
-    name = "crash-site-assembling-machine-1",
+    name = "kr-crash-site-assembling-machine-1-repaired",
     repeat_count = 2,
     angle_deviation = 0.3,
     max_distance = 20,
@@ -52,7 +43,7 @@ constants.freeplay_crash_site_parts = {
     force = "player",
   },
   {
-    name = "crash-site-assembling-machine-2",
+    name = "kr-crash-site-assembling-machine-2-repaired",
     repeat_count = 2,
     angle_deviation = 0.3,
     max_distance = 20,
@@ -61,7 +52,7 @@ constants.freeplay_crash_site_parts = {
     force = "player",
   },
   {
-    name = "crash-site-chest-1",
+    name = "kr-crash-site-chest-1",
     repeat_count = 3,
     angle_deviation = 0.1,
     max_distance = 20,
@@ -69,198 +60,25 @@ constants.freeplay_crash_site_parts = {
     fire_count = 1,
   },
   {
-    name = "crash-site-chest-2",
+    name = "kr-crash-site-chest-2",
     repeat_count = 3,
     angle_deviation = 0.1,
     max_distance = 20,
     min_separation = 2,
     fire_count = 1,
   },
-  -- TODO: Update spaceship wreck entities with new mining results:
-  -- { type = "item", name = "iron-plate", amount_min = 1, amount_max = 2, probability = 0.70 },
-  -- { type = "item", name = "copper-cable", amount_min = 0, amount_max = 2, probability = 0.40 },
-  -- { type = "item", name = "iron-gear-wheel", amount_min = 0, amount_max = 2, probability = 0.40 },
-  -- { type = "item", name = "electronic-circuit", amount_min = 0, amount_max = 2, probability = 0.20 },
-  -- { type = "item", name = "kr-sentinel", amount_min = 0, amount_max = 2, probability = 0.10 },
-}
-
-constants.high_patrons = {
-  -- Mod Developers
-  ["krastor"] = true,
-  ["linver"] = true,
-  ["raiguard"] = true,
-  -- Factorio Developers
-  ["bilka"] = true,
-  ["glex"] = true,
-  ["klonan"] = true,
-  ["kovarex"] = true,
-  ["oxyd"] = true,
-  ["posila"] = true,
-  ["rseding"] = true,
-  ["slpwnd"] = true,
-  ["twinsen"] = true,
-  ["v453000"] = true,
-  ["wheybags"] = true,
-  ["zopa"] = true,
-  -- High patrons
-  ["andrewskier"] = true,
-  ["andromedafallen"] = true,
-  ["antt1995"] = true,
-  ["aski_raven"] = true,
-  ["astazora"] = true,
-  ["biusart"] = true,
-  ["circk"] = true,
-  ["cvamp"] = true,
-  ["darkstroker"] = true,
-  ["djnaphthalin"] = true,
-  ["dmitrii"] = true,
-  ["dr.feelgood999"] = true,
-  ["dusk88"] = true,
-  ["egdod"] = true,
-  ["gbs5009"] = true,
-  ["generaltank"] = true,
-  ["grumblesxl"] = true,
-  ["jkkelley86"] = true,
-  ["jonasrejman"] = true,
-  ["lordfish"] = true,
-  ["max.perry"] = true,
-  ["melphin"] = true,
-  ["mkaito"] = true,
-  ["moonded"] = true,
-  ["nukeufo"] = true,
-  ["pandabeezy"] = true,
-  ["quezler"] = true,
-  ["reysdad"] = true,
-  ["rivsung"] = true,
-  ["rougefallout365"] = true,
-  ["senard"] = true,
-  ["sollevix"] = true,
-  ["therightmark"] = true,
-  ["tobi"] = true,
-  ["tobivollebregt"] = true,
-  ["vladhc"] = true,
-  ["wassabee"] = true,
-  ["zippyit"] = true,
-  -- High supporters
-  ["alright"] = true,
-  ["andrew deren"] = true,
-  ["andromeda fallen"] = true,
-  ["arun bhat"] = true,
-  ["aski raven"] = true,
-  ["austin"] = true,
-  ["bob"] = true,
-  ["brayden mclean"] = true,
-  ["chris hazen"] = true,
-  ["donut7163"] = true,
-  ["george elliott-hunter"] = true,
-  ["george simpson"] = true,
-  ["ivan devyatko"] = true,
-  ["james kelley"] = true,
-  ["jan dragsbæk"] = true,
-  ["jan šipr"] = true,
-  ["john wrangle"] = true,
-  ["jonas rejman"] = true,
-  ["josh strunk"] = true,
-  ["konstantin popichev"] = true,
-  ["koshirun treebone"] = true,
-  ["mark harrison"] = true,
-  ["matt tyler"] = true,
-  ["maximilian bork"] = true,
-  ["rcobbe"] = true,
-  ["russell obets"] = true,
-  ["saulius zilis"] = true,
-  ["vladimir kravtsov"] = true,
-  ["windsinger"] = true,
-  ["zoey oliva"] = true,
-  ["сергій руденко"] = true,
-  -- Low supporters (< 9 dollars)
-  -- These don't get perks, but are here for posterity
-  -- ["adrian leonhard"] = true,
-  -- ["andrew spade"] = true,
-  -- ["billbo99"] = true,
-  -- ["chanz"] = true,
-  -- ["charles paquin"] = true,
-  -- ["chosen"] = true,
-  -- ["craig a"] = true,
-  -- ["dang quang"] = true,
-  -- ["daniel vollmer"] = true,
-  -- ["deterlo"] = true,
-  -- ["dirk m"] = true,
-  -- ["donny"] = true,
-  -- ["gareth knowles"] = true,
-  -- ["hackerman"] = true,
-  -- ["igor borisov"] = true,
-  -- ["jmsantos94"] = true,
-  -- ["justsoul"] = true,
-  -- ["kai-chi huang"] = true,
-  -- ["kartikay bagla"] = true,
-  -- ["loïc gremaud"] = true,
-  -- ["marco montemarani"] = true,
-  -- ["mopolo"] = true,
-  -- ["niv"] = true,
-  -- ["nozoki"] = true,
-  -- ["pavlo bulanchuk"] = true,
-  -- ["paweł g."] = true,
-  -- ["peter50216"] = true,
-  -- ["peter zelenay"] = true,
-  -- ["raymond"] = true,
-  -- ["raymond lau"] = true,
-  -- ["ryan"] = true,
-  -- ["ryan barker"] = true,
-  -- ["seleck"] = true,
-  -- ["shafnir"] = true,
-  -- ["showwin"] = true,
-  -- ["simon harvey"] = true,
-  -- ["srdis"] = true,
-  -- ["webchip"] = true,
-  -- ["wolfgang weber"] = true,
-  -- ["влад"] = true,
-  -- ["сергей ложкин"] = true,
+  {
+    name = "kr-mineable-wreckage",
+    repeat_count = 9,
+    angle_deviation = 0.8,
+    max_distance = 10,
+  },
 }
 
 constants.inserter_drop_vectors = {
   [true] = { [0] = { 0.01, -0.2 }, [2] = { 0.2, 0.01 }, [4] = { -0.01, 0.2 }, [6] = { -0.2, -0.01 } }, -- Near lane
   [false] = { [0] = { 0.0, 0.2 }, [2] = { -0.2, 0.0 }, [4] = { 0.0, -0.2 }, [6] = { 0.2, 0.0 } }, -- Far lane
 }
-
-constants.intergalactic_transceiver = {
-  cutscene = {
-    player_radius = 100,
-    final_transition_time = 60,
-  },
-  delta = 2.5e8, -- Requires charge rate of 15 GW
-  drain = 50e9,
-  max_delta = 2e9,
-  statuses = {
-    charging = {
-      label = { "entity-status.charging" },
-      sprite = "utility/status_working",
-    },
-    discharging = {
-      alert_label = { "gui.kr-intergalactic-transceiver-alert-discharging" },
-      label = { "entity-status.discharging" },
-      sprite = "utility/status_not_working",
-    },
-    not_enough_input = {
-      alert_label = { "gui.kr-intergalactic-transceiver-alert-not-enough-input" },
-      label = { "entity-status.kr-not-enough-input" },
-      sprite = "utility/status_not_working",
-      tooltip = { "entity-status-tooltip.kr-not-enough-input" },
-    },
-    no_power = {
-      alert_label = { "gui.kr-intergalactic-transceiver-alert-no-power" },
-      label = { "entity-status.no-power" },
-      sprite = "utility/status_not_working",
-    },
-    ready = {
-      alert_label = { "gui.kr-intergalactic-transceiver-alert-ready" },
-      label = { "entity-status.kr-ready" },
-      sprite = "utility/status_working",
-    },
-  },
-}
-
-constants.jackhammer_max_reach = 15
 
 constants.mode_change_flying_text_color = { r = 1, g = 0.5, b = 0.25 }
 
@@ -269,31 +87,6 @@ constants.next_roboport_mode = {
   ["-construction-mode"] = "logistic",
   ["-logistic-mode"] = "normal",
 }
-
-constants.patreon_items = {
-  { name = "kr-shelter-plus", count = 1 },
-  { name = "kr-accelerator", count = 1 },
-  { name = "firearm-magazine", count = 190 },
-  { name = "potato", count = 6 },
-}
-
-constants.radioactivity_defaults = {
-  { type = "entity", tbl = "entities", objects = { "uranium-ore" } },
-  {
-    type = "item",
-    tbl = "items",
-    objects = {
-      "nuclear-fuel",
-      "uranium-235",
-      "uranium-238",
-      "uranium-fuel-cell",
-      "uranium-ore",
-      "used-up-uranium-fuel-cell",
-    },
-  },
-}
-
-constants.radioactivity_range = 7
 
 constants.roboport_modes = {
   normal = { suffix = "", text = "normal" },
@@ -318,17 +111,6 @@ constants.transport_belt_connectable_types = {
   ["loader"] = true,
   ["loader-1x1"] = true,
   ["linked-belt"] = true,
-}
-
-constants.virus_iteration_counts = {
-  [1000] = 20,
-  [5000] = 40,
-  [10000] = 80,
-  [20000] = 160,
-  [30000] = 280,
-  [40000] = 300,
-  [50000] = 400,
-  [math.max_int53] = 800,
 }
 
 return constants

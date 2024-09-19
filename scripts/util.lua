@@ -77,4 +77,34 @@ function util.add_commands(commands_list)
   end
 end
 
+--- @param e EventData.on_player_setup_blueprint
+--- @return LuaItemStack?
+function util.get_blueprint(e)
+  local player = game.get_player(e.player_index)
+  if not player then
+    return
+  end
+
+  local bp = player.blueprint_to_setup
+  if bp and bp.valid_for_read then
+    return bp
+  end
+
+  bp = player.cursor_stack
+  if not bp or not bp.valid_for_read then
+    return
+  end
+
+  if bp.type == "blueprint-book" then
+    local item_inventory = bp.get_inventory(defines.inventory.item_main)
+    if item_inventory then
+      bp = item_inventory[bp.active_index]
+    else
+      return
+    end
+  end
+
+  return bp
+end
+
 return util

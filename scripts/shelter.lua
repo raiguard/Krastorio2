@@ -6,28 +6,31 @@ local util = require("scripts.util")
 --- @field light LuaEntity
 --- @field former_spawn_point MapPosition
 
-local shelter = {}
-
-function shelter.init()
-  global.shelter = {
-    --- @type table<uint, table<uint, ShelterData>>
-    forces = {},
-    --- @type table<uint, LuaEntity>
-    inactive = {},
-  }
-
-  for _, force in pairs(game.forces) do
-    shelter.force_init(force)
-  end
-end
-
 --- @param force LuaForce
-function shelter.force_init(force)
+local function init_force(force)
   global.shelter.forces[force.index] = {}
 end
 
---- @param entity LuaEntity
-function shelter.build(entity)
+local function spawn_flying_texts()
+  for unit_number, entity in pairs(global.shelter.inactive) do
+    if entity.valid then
+      util.entity_flying_text(entity, { "message.kr-shelter-is-inactive" }, { r = 1 })
+    else
+      global.shelter.inactive[unit_number] = nil
+    end
+  end
+end
+
+--- @param e EntityBuiltEvent
+local function on_entity_built(e)
+  local entity = e.entity or e.created_entity or e.destination
+  if not entity.valid then
+    return
+  end
+  if entity.name ~= "kr-shelter-container" and entity.name ~= "kr-shelter-plus-container" then
+    return
+  end
+
   local force = entity.force
   local surface = entity.surface
   local force_shelters = global.shelter.forces[force.index]
@@ -51,35 +54,43 @@ function shelter.build(entity)
     if new_entity and new_entity.valid then
       global.shelter.inactive[new_entity.unit_number] = new_entity
     end
-  else
-    -- Build entities
-    local _, _, base_name = string.find(entity.name, "^(.*)%-container")
-    local shelter_data = {
-      container = entity,
-    }
-
-    for key, suffix in pairs({ electric = "", light = "-light" }) do
-      local name = base_name .. suffix
-      shelter_data[key] = surface.create_entity({
-        name = name,
-        position = entity.position,
-        force = force,
-        player = entity.last_user,
-        create_build_effect_smoke = false,
-        raise_built = true,
-      })
-    end
-
-    -- Set spawn point
-    shelter_data.former_spawn_point = force.get_spawn_position(surface)
-    force.set_spawn_position({ x = entity.position.x, y = entity.position.y + 3.5 }, surface)
-
-    force_shelters[surface.index] = shelter_data
+    return
   end
+
+  -- Build entities
+  local _, _, base_name = string.find(entity.name, "^(.*)%-container")
+  --- @type ShelterData
+  local shelter_data = { container = entity }
+
+  for key, suffix in pairs({ electric = "", light = "-light" }) do
+    local name = base_name .. suffix
+    shelter_data[key] = surface.create_entity({
+      name = name,
+      position = entity.position,
+      force = force,
+      player = entity.last_user,
+      create_build_effect_smoke = false,
+      raise_built = true,
+    })
+  end
+
+  -- Set spawn point
+  shelter_data.former_spawn_point = force.get_spawn_position(surface)
+  force.set_spawn_position({ x = entity.position.x, y = entity.position.y + 3.5 }, surface)
+
+  force_shelters[surface.index] = shelter_data
 end
 
---- @param entity LuaEntity
-function shelter.destroy(entity)
+--- @param e EntityDestroyedEvent
+local function on_entity_destroyed(e)
+  local entity = e.entity
+  if not entity or not entity.valid then
+    return
+  end
+  if entity.name ~= "kr-shelter-container" and entity.name ~= "kr-shelter-plus-container" then
+    return
+  end
+
   local inactive = global.shelter.inactive[entity.unit_number]
   if inactive then
     global.shelter.inactive[entity.unit_number] = nil
@@ -107,14 +118,43 @@ function shelter.destroy(entity)
   end
 end
 
-function shelter.spawn_flying_texts()
-  for unit_number, entity in pairs(global.shelter.inactive) do
-    if entity.valid then
-      util.entity_flying_text(entity, { "message.kr-shelter-is-inactive" }, { r = 1 })
-    else
-      global.shelter.inactive[unit_number] = nil
-    end
+--- @param e EventData.on_force_created
+local function on_force_created(e)
+  if e.force.valid then
+    init_force(e.force)
   end
 end
+
+local shelter = {}
+
+function shelter.on_init()
+  global.shelter = {
+    --- @type table<uint, table<uint, ShelterData>>
+    forces = {},
+    --- @type table<uint, LuaEntity>
+    inactive = {},
+  }
+
+  for _, force in pairs(game.forces) do
+    init_force(force)
+  end
+end
+
+shelter.events = {
+  [defines.events.on_built_entity] = on_entity_built,
+  [defines.events.on_entity_cloned] = on_entity_built,
+  [defines.events.on_entity_died] = on_entity_destroyed,
+  [defines.events.on_force_created] = on_force_created,
+  [defines.events.on_player_mined_entity] = on_entity_destroyed,
+  [defines.events.on_robot_built_entity] = on_entity_built,
+  [defines.events.on_robot_mined_entity] = on_entity_destroyed,
+  [defines.events.script_raised_built] = on_entity_built,
+  [defines.events.script_raised_destroy] = on_entity_destroyed,
+  [defines.events.script_raised_revive] = on_entity_built,
+}
+
+shelter.on_nth_tick = {
+  [180] = spawn_flying_texts,
+}
 
 return shelter

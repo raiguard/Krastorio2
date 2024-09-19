@@ -1,11 +1,22 @@
-local constants = require("scripts.constants")
+local flib_math = require("__flib__.math")
 
-local virus = {}
+local biter_virus_evolution_multiplier = 0.67
+
+local virus_iteration_counts = {
+  [1000] = 20,
+  [5000] = 40,
+  [10000] = 80,
+  [20000] = 160,
+  [30000] = 280,
+  [40000] = 300,
+  [50000] = 400,
+  [flib_math.max_int53] = 800,
+}
 
 --- Modifier to change the quantity of objects iterated for each round of the function, based on the total
 --- @param count number
 local function get_removal_count(count)
-  for limit, per in pairs(constants.virus_iteration_counts) do
+  for limit, per in pairs(virus_iteration_counts) do
     if count <= limit then
       return per
     end
@@ -59,7 +70,7 @@ local function init_biter_virus(player, surface)
   if not biter_viruses[surface.index] then
     -- Reduce evolution factor
     local enemy = game.forces.enemy
-    enemy.evolution_factor = enemy.evolution_factor * constants.biter_virus_evolution_multiplier
+    enemy.evolution_factor = enemy.evolution_factor * biter_virus_evolution_multiplier
 
     -- Begin gradual enemy killoff
     local enemy_entities = surface.find_entities_filtered({ force = "enemy" })
@@ -115,10 +126,11 @@ local function init_creep_virus(surface)
   local creep_viruses = global.virus.creep
   if not creep_viruses[surface.index] then
     -- Disable creep generation on this surface
-    global.creep.surfaces[surface.index] = nil
+    -- FIXME:
+    -- global.creep.surfaces[surface.index] = nil
 
     -- Begin creep removal
-    -- FIXME: This causes insane amounts of lag with lots of creep tiles
+    -- XXX: This causes insane amounts of lag with lots of creep tiles
     local creep_tiles = surface.find_tiles_filtered({ name = "kr-creep" })
     local num_creeps = #creep_tiles
     --- @class CreepVirusData
@@ -131,17 +143,8 @@ local function init_creep_virus(surface)
   end
 end
 
-function virus.init()
-  global.virus = {
-    --- @type table<uint, BiterVirusData>
-    biter = {},
-    --- @type table<uint, CreepVirusData>
-    creep = {},
-  }
-end
-
 --- @param e EventData.on_player_used_capsule
-function virus.on_player_used_capsule(e)
+local function on_player_used_capsule(e)
   local item = e.item
   if not item or not item.valid then
     return
@@ -157,7 +160,7 @@ function virus.on_player_used_capsule(e)
   end
 end
 
-function virus.iterate()
+local function on_tick()
   for _, biter_virus in pairs(global.virus.biter) do
     iterate_biter_virus(biter_virus)
   end
@@ -165,5 +168,21 @@ function virus.iterate()
     iterate_creep_virus(creep_virus)
   end
 end
+
+local virus = {}
+
+function virus.on_init()
+  global.virus = {
+    --- @type table<uint, BiterVirusData>
+    biter = {},
+    --- @type table<uint, CreepVirusData>
+    creep = {},
+  }
+end
+
+virus.events = {
+  [defines.events.on_player_used_capsule] = on_player_used_capsule,
+  [defines.events.on_tick] = on_tick,
+}
 
 return virus

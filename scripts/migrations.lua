@@ -2,19 +2,11 @@ local on_tick_n = require("__flib__.on-tick-n")
 local table = require("__flib__.table")
 
 local compatibility = require("scripts.compatibility")
-local creep = require("scripts.creep")
-local energy_absorber = require("scripts.energy-absorber-equipment")
 local freeplay = require("scripts.freeplay")
-local inserter = require("scripts.inserter")
-local intergalactic_transceiver = require("scripts.intergalactic-transceiver")
-local patreon = require("scripts.patreon")
 local planetary_teleporter = require("scripts.planetary-teleporter")
-local radioactivity = require("scripts.radioactivity")
-local roboport = require("scripts.roboport")
 local shelter = require("scripts.shelter")
 local tesla_coil = require("scripts.tesla-coil")
 local util = require("scripts.util")
-local virus = require("scripts.virus")
 
 local migrations = {}
 
@@ -26,23 +18,12 @@ function migrations.generic()
   freeplay.disable_rocket_victory()
   util.ensure_turret_force()
 
-  energy_absorber.init()
-  inserter.find_droplanes()
-  intergalactic_transceiver.get_max_energy()
-  radioactivity.refresh_players()
-  radioactivity.reset_entities_items()
-  roboport.find_variants()
   tesla_coil.get_absorber_buffer_capacity()
 
   compatibility.aai_industry()
   compatibility.disco_science()
   compatibility.nuclear_fuel()
   compatibility.schall_uranium()
-
-  for _, player in pairs(game.players) do
-    inserter.refresh_gui(player)
-    roboport.refresh_gui(player)
-  end
 end
 
 --- @param filters EntityPrototypeFilter[]
@@ -96,50 +77,44 @@ migrations.versions = {
 
     on_tick_n.init()
 
-    creep.init()
-    inserter.init()
-    intergalactic_transceiver.init()
-    patreon.init()
+    -- creep.init()
     planetary_teleporter.init()
-    radioactivity.init()
     roboport.init()
-    shelter.init()
     tesla_coil.init()
-    virus.init()
 
-    -- MIGRATE
+    -- -- MIGRATE
 
-    -- Creep
-    global.creep.on_biter_base_built = old_global.creep_on_biter_base_built
-    global.creep.on_chunk_generated = old_global.creep_on_chunk_generated
-    if not old_global.creep_on_chunk_generated then
-      global.creep.surfaces[game.get_surface("nauvis").index] = nil
-    end
+    -- -- Creep
+    -- global.creep.on_biter_base_built = old_global.creep_on_biter_base_built
+    -- global.creep.on_chunk_generated = old_global.creep_on_chunk_generated
+    -- if not old_global.creep_on_chunk_generated then
+    --   global.creep.surfaces[game.get_surface("nauvis").index] = nil
+    -- end
 
-    -- Intergalactic Transceiver
-    -- There should only be one of each, so this one is easy
-    for _, transceiver in pairs(find_on_all_surfaces({ name = "kr-intergalactic-transceiver" })) do
-      intergalactic_transceiver.build(transceiver)
-    end
-    for _, transceiver in pairs(find_on_all_surfaces({ name = "kr-activated-intergalactic-transceiver" })) do
-      global.intergalactic_transceiver.forces[transceiver.force.index] = { entity = transceiver }
-    end
+    -- -- Intergalactic Transceiver
+    -- -- There should only be one of each, so this one is easy
+    -- for _, transceiver in pairs(find_on_all_surfaces({ name = "kr-intergalactic-transceiver" })) do
+    --   intergalactic_transceiver.build(transceiver)
+    -- end
+    -- for _, transceiver in pairs(find_on_all_surfaces({ name = "kr-activated-intergalactic-transceiver" })) do
+    --   global.intergalactic_transceiver.forces[transceiver.force.index] = { entity = transceiver }
+    -- end
 
-    -- Patreon items
-    for player_name in pairs(old_global.patreon_item_given) do
-      local player = game.get_player(player_name)
-      if player then
-        global.patreon_items_given[player.index] = true
-      end
-    end
+    -- -- Patreon items
+    -- for player_name in pairs(old_global.patreon_item_given) do
+    --   local player = game.get_player(player_name)
+    --   if player then
+    --     global.patreon_items_given[player.index] = true
+    --   end
+    -- end
 
-    -- Planetary teleporter
-    global.planetary_teleporter = {
-      data = old_global.planetary_teleporters or {},
-      guis = old_global.planetary_teleporter_guis or {},
-      players = old_global.planetary_teleporter_players or {},
-      unnamed_translations = old_global.planetary_teleporter_unnamed_translations or {},
-    }
+    -- -- Planetary teleporter
+    -- global.planetary_teleporter = {
+    --   data = old_global.planetary_teleporters or {},
+    --   guis = old_global.planetary_teleporter_guis or {},
+    --   players = old_global.planetary_teleporter_players or {},
+    --   unnamed_translations = old_global.planetary_teleporter_unnamed_translations or {},
+    -- }
 
     -- Radioactivity
     local old_enabled = old_global.radioactivity_enabled
@@ -243,7 +218,6 @@ migrations.versions = {
     end
   end,
   ["1.3.0"] = function()
-    energy_absorber.init()
     if game.finished or game.finished_but_continuing then
       for _, force in pairs(game.forces) do
         force.technologies["kr-logo"].enabled = true
@@ -256,18 +230,8 @@ migrations.versions = {
       force.reset_technology_effects()
     end
   end,
-  ["1.3.7"] = function()
-    global.inserter_has_droplane_gui = nil
-  end,
   ["1.3.8"] = function()
-    -- Clean up any invalid inserter and roboport GUIs
-    local new = {}
-    for player_index, player_gui in pairs(global.inserter_guis) do
-      if player_gui.valid then
-        new[player_index] = player_gui
-      end
-    end
-    global.inserter_guis = new
+    -- Clean up any invalid roboport GUIs
     local new = {}
     for player_index, player_gui in pairs(global.roboport_guis) do
       if player_gui.valid then

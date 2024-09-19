@@ -1,128 +1,32 @@
-local gui = require("__flib__.gui")
+local flib_gui = require("__flib__.gui-lite")
 
 local constants = require("scripts.constants")
 local util = require("scripts.util")
 
-local roboport = {}
-
 -- GUI
-
---- @param name string
---- @param caption LocalisedString
---- @param gui_name string
---- @param mode string
-local function radio_button(name, caption, gui_name, mode)
-  return {
-    type = "radiobutton",
-    name = name,
-    caption = caption,
-    state = false,
-    actions = {
-      on_checked_state_changed = { gui = gui_name, action = "change_mode", mode = mode },
-    },
-  }
-end
-
---- @param player LuaPlayer
-function roboport.refresh_gui(player)
-  roboport.destroy_gui(player.index)
-
-  global.roboport_guis[player.index] = gui.add(player.gui.relative, {
-    type = "frame",
-    caption = { "gui.kr-change-mode" },
-    anchor = {
-      gui = defines.relative_gui_type.roboport_gui,
-      position = defines.relative_gui_position.right,
-      names = global.roboport_has_variants_gui,
-    },
-    {
-      type = "frame",
-      name = "inner_frame",
-      style = "inside_shallow_frame_with_padding",
-      direction = "vertical",
-      radio_button("normal", { "message.kr-normal-mode" }, "roboport", "normal"),
-      radio_button("construction", { "message.kr-construction-mode" }, "roboport", "construction"),
-      radio_button("logistic", { "message.kr-logistic-mode" }, "roboport", "logistic"),
-    },
-  })
-end
-
---- @param player_index uint
-function roboport.destroy_gui(player_index)
-  local player_gui = global.roboport_guis[player_index]
-  if player_gui then
-    if player_gui.valid then
-      player_gui.destroy()
-    end
-    global.roboport_guis[player_index] = nil
-  end
-end
 
 --- @param player LuaPlayer
 --- @param entity LuaEntity
-function roboport.update_gui(player, entity)
+local function update_gui(player, entity)
   local player_gui = global.roboport_guis[player.index]
-  if player_gui and player_gui.valid then
-    local _, _, mode = string.find(entity.name, "^.*%-(%w*)%-mode")
-    mode = mode or "normal"
+  if not player_gui or not player_gui.valid then
+    return
+  end
+  local mode = string.match(entity.name, "^.*%-(%w*)%-mode") or "normal"
 
-    for _, button in pairs(player_gui.inner_frame.children) do
-      if button.name == mode then
-        button.state = true
-      else
-        button.state = false
-      end
+  for _, button in pairs(player_gui.inner_frame.children) do
+    if button.name == mode then
+      button.state = true
+    else
+      button.state = false
     end
   end
-end
-
-function roboport.handle_gui_action(msg, e)
-  if msg.action == "change_mode" then
-    local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
-    if player.opened_gui_type ~= defines.gui_type.entity then
-      return
-    end
-    local entity = player.opened --[[@as LuaEntity]]
-    if not entity.valid or entity.type ~= "roboport" then
-      return
-    end
-    roboport.change_mode(entity, player, msg.mode)
-  end
-end
-
--- GENERAL
-
-function roboport.init()
-  --- @type table<uint, LuaGuiElement>
-  global.roboport_guis = {}
-end
-
-function roboport.find_variants()
-  -- Find all compatible roboports
-  local has_variants_gui = {}
-  for _, entity in pairs(game.get_filtered_entity_prototypes({ { filter = "type", type = "roboport" } })) do
-    local matched, _, base_name = string.find(entity.name, "^(.-)%-%w*%-mode")
-    if matched then
-      has_variants_gui[base_name] = true
-      has_variants_gui[entity.name] = true
-    end
-  end
-
-  -- Convert to a format usable by GuiAnchor
-  local output = {}
-  local i = 0
-  for entity in pairs(has_variants_gui) do
-    i = i + 1
-    output[i] = entity
-  end
-
-  global.roboport_has_variants_gui = output
 end
 
 --- @param entity LuaEntity
 --- @param player LuaPlayer
 --- @param to_mode string?
-function roboport.change_mode(entity, player, to_mode)
+local function change_mode(entity, player, to_mode)
   local matched, _, base_name, suffix = string.find(entity.name, "^(.-)(%-%w-%-mode)$")
   if not matched then
     base_name = entity.name
@@ -180,9 +84,159 @@ function roboport.change_mode(entity, player, to_mode)
     -- Re-open GUI for all players who had it open and update the radio buttons
     for _, player in pairs(guis_to_update) do
       player.opened = new_entity
-      roboport.update_gui(player, new_entity)
+      update_gui(player, new_entity)
     end
   end
 end
+
+--- @param e EventData.on_gui_checked_state_changed
+local function on_mode_radio_button_checked(e)
+  local player = game.get_player(e.player_index)
+  if not player or player.opened_gui_type ~= defines.gui_type.entity then
+    return
+  end
+  local entity = player.opened --[[@as LuaEntity]]
+  if not entity.valid or entity.type ~= "roboport" then
+    return
+  end
+  change_mode(entity, player, e.element.name)
+end
+
+--- @param mode string
+local function radio_button(mode)
+  return {
+    type = "radiobutton",
+    name = mode,
+    caption = { "message.kr-" .. mode .. "-mode" },
+    state = false,
+    handler = { [defines.events.on_gui_checked_state_changed] = on_mode_radio_button_checked },
+  }
+end
+
+--- @param player_index uint
+local function destroy_gui(player_index)
+  local player_gui = global.roboport_guis[player_index]
+  if not player_gui then
+    return
+  end
+  if player_gui.valid then
+    player_gui.destroy()
+  end
+  global.roboport_guis[player_index] = nil
+end
+
+--- @param player LuaPlayer
+local function refresh_gui(player)
+  destroy_gui(player.index)
+
+  _, global.roboport_guis[player.index] = flib_gui.add(player.gui.relative, {
+    type = "frame",
+    name = "kr_roboport_mode_window",
+    caption = { "gui.kr-change-mode" },
+    anchor = {
+      gui = defines.relative_gui_type.roboport_gui,
+      position = defines.relative_gui_position.right,
+      names = global.roboport_has_variants_gui,
+    },
+    {
+      type = "frame",
+      name = "inner_frame",
+      style = "inside_shallow_frame_with_padding",
+      direction = "vertical",
+      radio_button("normal"),
+      radio_button("construction"),
+      radio_button("logistic"),
+    },
+  })
+end
+
+local function find_variants()
+  -- Find all compatible roboports
+  local has_variants_gui = {}
+  for _, entity in pairs(game.get_filtered_entity_prototypes({ { filter = "type", type = "roboport" } })) do
+    local matched, _, base_name = string.find(entity.name, "^(.-)%-%w*%-mode")
+    if matched then
+      has_variants_gui[base_name] = true
+      has_variants_gui[entity.name] = true
+    end
+  end
+
+  -- Convert to a format usable by GuiAnchor
+  local output = {}
+  local i = 0
+  for entity in pairs(has_variants_gui) do
+    i = i + 1
+    output[i] = entity
+  end
+
+  global.roboport_has_variants_gui = output
+end
+
+--- @param e EventData.on_gui_opened
+local function on_gui_opened(e)
+  local entity = e.entity
+  if not entity or not entity.valid then
+    return
+  end
+  local player = game.get_player(e.player_index)
+  if not player then
+    return
+  end
+  if entity.type == "roboport" then
+    update_gui(player, entity)
+  end
+end
+
+--- @param e EventData.on_player_created
+local function on_player_created(e)
+  local player = game.get_player(e.player_index)
+  if player then
+    refresh_gui(player)
+  end
+end
+
+--- @param e EventData.on_player_removed
+local function on_player_removed(e)
+  destroy_gui(e.player_index)
+end
+
+--- @param e EventData.CustomInputEvent
+local function on_change_roboport_mode_hotkey(e)
+  local player = game.get_player(e.player_index)
+  if not player then
+    return
+  end
+  local selected = player.selected
+  if selected and selected.valid and selected.type == "roboport" then
+    change_mode(selected, player)
+  end
+end
+
+local function on_configuration_changed()
+  find_variants()
+  for _, player in pairs(game.players) do
+    refresh_gui(player)
+  end
+end
+
+local function on_init()
+  --- @type table<uint, LuaGuiElement>
+  global.roboport_guis = {}
+  on_configuration_changed()
+end
+
+local roboport = {}
+
+roboport.on_init = on_init
+roboport.on_configuration_changed = on_configuration_changed
+
+roboport.events = {
+  [defines.events.on_gui_opened] = on_gui_opened,
+  [defines.events.on_player_created] = on_player_created,
+  [defines.events.on_player_removed] = on_player_removed,
+  ["kr-change-roboport-state"] = on_change_roboport_mode_hotkey,
+}
+
+flib_gui.add_handlers({ roboport_on_mode_radio_button_checked = on_mode_radio_button_checked })
 
 return roboport

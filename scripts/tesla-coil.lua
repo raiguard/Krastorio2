@@ -4,20 +4,20 @@ local tesla_coil = {}
 
 function tesla_coil.init()
   global.tesla_coil = {
-    --- @type table<uint, BeamData>
+    --- @type table<number, BeamData>
     beams = {},
-    --- @type table<uint, TowerData>
+    --- @type table<number, TowerData>
     turrets = {},
-    --- @type table<uint, TowerData>
+    --- @type table<number, TowerData>
     towers = {},
-    --- @type table<uint, TargetData>
+    --- @type table<number, TargetData>
     targets = {},
   }
 end
 
 function tesla_coil.get_absorber_buffer_capacity()
   global.tesla_coil.absorber_buffer_capacity =
-    game.equipment_prototypes["energy-absorber-equipment"].energy_source.buffer_capacity
+    game.equipment_prototypes["energy-absorber"].energy_source.buffer_capacity
 end
 
 -- TOWER
@@ -47,7 +47,7 @@ function tesla_coil.build(source_entity)
   local collision_entity = surface.create_entity({
     name = "kr-tesla-coil-collision",
     position = source_entity.position,
-    force = "neutral",
+    force = source_entity.force,
     create_build_effect_smoke = false,
     raise_built = true,
   })
@@ -93,7 +93,7 @@ end
 local function find_absorber_in_grid(grid)
   -- Find the energy absorber
   for _, equipment in pairs(grid.equipment) do
-    if equipment.name == "energy-absorber-equipment" then
+    if equipment.name == "energy-absorber" then
       return equipment
     end
   end
@@ -152,13 +152,13 @@ function tesla_coil.add_target(target, tower_data)
     --- @class TargetData
     local target_data = {
       connections = {
-        --- @type table<uint, ConnectionData>
+        --- @type table<number, ConnectionData>
         by_beam = {},
-        --- @type table<uint, ConnectionData>
+        --- @type table<number, ConnectionData>
         by_tower = {},
       },
       entity = target,
-      --- @type uint?
+      --- @type number?
       full_tick = nil,
       grid_data = grid_data,
       unit_number = target_unit_number,
@@ -169,7 +169,7 @@ function tesla_coil.add_target(target, tower_data)
   end
 end
 
---- @param target_unit_number uint
+--- @param target_unit_number number
 function tesla_coil.remove_target(target_unit_number)
   global.tesla_coil.targets[target_unit_number] = nil
 end
@@ -316,26 +316,6 @@ function tesla_coil.process_turret_fire(target, turret)
   end
 end
 
---- @param e EventData.on_player_armor_inventory_changed
-function tesla_coil.on_player_armor_inventory_changed(e)
-  local player = game.get_player(e.player_index)
-  if not player then
-    return
-  end
-  local character = player.character
-  if not character then
-    return
-  end
-  --- @type TargetData
-  local target_data = global.tesla_coil.targets[character.unit_number]
-  if target_data then
-    for _, connection_data in pairs(target_data.connections.by_tower) do
-      tesla_coil.remove_connection(target_data, connection_data.tower_data)
-    end
-  end
-  tesla_coil.remove_target(character.unit_number)
-end
-
 return tesla_coil
 
 --[[
@@ -379,7 +359,7 @@ return tesla_coil
     if armor_inventory and armor_inventory.valid then
       local armor = armor_inventory[1]
       if armor and armor.valid_for_read then
-        armor.grid.put({ name = "energy-absorber-equipment", position = { 5, 5 } })
+        armor.grid.put({ name = "energy-absorber", position = { 5, 5 } })
       end
     end
   end)

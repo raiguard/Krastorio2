@@ -1,90 +1,26 @@
-local table = require("__flib__.table")
+local flib_position = require("__flib__.position")
 
-local constants = require("scripts.constants")
+local util = require("scripts.util")
 
-local radioactivity = {}
+--- @class RadioactivityPlayerData
+--- @field entity boolean
+--- @field inventory boolean
+--- @field last_position MapPosition
 
-function radioactivity.init()
-  global.radioactivity = {
-    enabled = true,
-    --- @type table<uint, RadioactivityPlayerData>
-    players = {},
-  }
-end
-
-function radioactivity.reset_entities_items()
-  for _, data in pairs(constants.radioactivity_defaults) do
-    global.radioactivity[data.tbl] = {}
-    for _, name in pairs(data.objects) do
-      if game[data.type .. "_prototypes"][name] then
-        radioactivity.remote_interface["add_" .. data.type](name)
-      end
-    end
-  end
-end
-
-function radioactivity.add_player(player)
-  global.radioactivity.players[player.index] = {
-    entity = false,
-    inventory = false,
-    last_position = { x = 0, y = 0 },
-  }
-end
-
-function radioactivity.remove_player(player_index)
-  global.radioactivity.players[player_index] = nil
-end
-
-function radioactivity.refresh_players()
-  local existing = global.radioactivity.players
-  local new = {}
-  for player_index in pairs(game.players) do
-    new[player_index] = existing[player_index]
-      --- @class RadioactivityPlayerData
-      or {
-        entity = false,
-        inventory = false,
-        last_position = { x = 0, y = 0 },
-      }
-  end
-  global.radioactivity.players = new
-end
+local default_entities = { "uranium-ore" }
+local default_items = {
+  "nuclear-fuel",
+  "uranium-235",
+  "uranium-238",
+  "uranium-fuel-cell",
+  "uranium-ore",
+  "used-up-uranium-fuel-cell",
+}
+local range = 7
 
 --- @param player LuaPlayer
-function radioactivity.check_around_player(player)
-  if not global.radioactivity.enabled or #global.radioactivity.entities == 0 then
-    return
-  end
-
-  local player_data = global.radioactivity.players[player.index]
-  if not player_data then
-    return
-  end
-
-  if not player.character or not player.character.valid then
-    player_data.entity = false
-    return
-  end
-
-  local position = player.position
-  local last_position = player_data.last_position
-  if math.floor(position.x) ~= math.floor(last_position.x) or math.floor(position.y) ~= math.floor(last_position.y) then
-    player_data.last_position = position
-
-    local in_range = player.character
-        and player.surface.count_entities_filtered({
-          name = global.radioactivity.entities,
-          radius = constants.radioactivity_range,
-          position = player.position,
-        }) > 0
-      or false
-    player_data.entity = in_range
-  end
-end
-
---- @param player LuaPlayer
-function radioactivity.check_inventory(player)
-  if not global.radioactivity.enabled then
+local function check_inventory(player)
+  if not global.radioactivity.enabled or not next(global.radioactivity.entities) then
     return
   end
 
@@ -98,75 +34,174 @@ function radioactivity.check_inventory(player)
     return
   end
 
-  local inventories = { player.get_main_inventory(), player.get_inventory(defines.inventory.character_trash) }
-
-  for _, inventory in pairs(inventories) do
-    for _, item_name in pairs(global.radioactivity.items) do
-      if inventory.get_item_count(item_name) > 0 then
-        player_data.inventory = true
-        return
-      end
+  for _, item_name in pairs(global.radioactivity.items) do
+    -- FIXME: This does not check trash inventory
+    if player.get_item_count(item_name) > 0 then
+      player_data.inventory = true
+      return
     end
   end
 
   player_data.inventory = false
 end
 
-function radioactivity.update_sounds()
+--- @param player LuaPlayer
+local function check_around_player(player)
+  if not global.radioactivity.enabled or not next(global.radioactivity.items) then
+    return
+  end
+
+  local player_data = global.radioactivity.players[player.index]
+  if not player_data then
+    return
+  end
+
+  if not player.character or not player.character.valid then
+    player_data.entity = false
+    return
+  end
+
+  local position = flib_position.floor(player.position)
+  local last_position = player_data.last_position
+  if flib_position.eq(position, last_position) then
+    return
+  end
+  player_data.last_position = position
+
+  player_data.entity = player.surface.count_entities_filtered({
+    name = global.radioactivity.entities,
+    radius = range,
+    position = position,
+  }) > 0
+end
+
+--- @param player LuaPlayer
+local function add_player(player)
+  global.radioactivity.players[player.index] = {
+    entity = false,
+    inventory = false,
+    last_position = { x = 0, y = 0 },
+  }
+end
+
+--- @param player_index uint
+local function remove_player(player_index)
+  global.radioactivity.players[player_index] = nil
+end
+
+local function update_and_damage()
   if not global.radioactivity.enabled then
     return
   end
 
   for player_index, player_data in pairs(global.radioactivity.players) do
-    if table.find(player_data, true) then
-      local player = game.get_player(player_index) --[[@as LuaPlayer]]
-      if player.connected then
-        player.play_sound({
-          path = "kr-radioactive",
-          volume_modifier = 0.5,
-        })
-      end
+    if not player_data.entity and not player_data.inventory then
+      goto continue
     end
+
+    local player = game.get_player(player_index)
+    if not player or not player.connected or not player.character then
+      goto continue
+    end
+
+    player.add_custom_alert(
+      player.character,
+      { type = "virtual", name = "kr-nuclear-2" },
+      { "other.kr-taking-radioactive-damage" },
+      false
+    )
+
+    -- Damage the player
+    -- TODO: Account for armor and energy shields
+    local base_damage = 7.25
+    player.character.damage(base_damage, "enemy", "radioactive")
+
+    ::continue::
   end
 end
 
-function radioactivity.update_and_damage()
+local function update_sounds()
   if not global.radioactivity.enabled then
     return
   end
 
   for player_index, player_data in pairs(global.radioactivity.players) do
-    if table.find(player_data, true) then
-      local player = game.get_player(player_index) --[[@as LuaPlayer]]
-      if player.connected and player.character then
-        player.add_custom_alert(
-          player.character,
-          { type = "virtual", name = "kr-nuclear-2" },
-          { "other.kr-taking-radioactive-damage" },
-          false
-        )
+    if not player_data.entity and not player_data.inventory then
+      goto continue
+    end
 
-        -- Damage the player
-        -- TODO: Account for armor and energy shields
-        local base_damage = 7.25
-        player.character.damage(base_damage, "enemy", "radioactive")
-      end
+    local player = game.get_player(player_index)
+    if not player or not player.connected then
+      goto continue
+    end
+
+    player.play_sound({
+      path = "kr-radioactive",
+      volume_modifier = 0.5,
+    })
+
+    ::continue::
+  end
+end
+
+--- @param e EventData.on_player_changed_position|EventData.on_player_changed_surface
+local function on_player_moved(e)
+  local player = game.get_player(e.player_index)
+  if player then
+    check_around_player(player)
+  end
+end
+
+--- @param e EventData.on_player_main_inventory_changed|EventData.on_player_trash_inventory_changed
+local function on_player_inventory_changed(e)
+  local player = game.get_player(e.player_index)
+  if player then
+    check_inventory(player)
+  end
+end
+
+--- @param e EventData.on_player_created
+local function on_player_created(e)
+  local player = game.get_player(e.player_index)
+  if not player then
+    return
+  end
+
+  add_player(player)
+end
+
+--- @param e EventData.on_player_removed
+local function on_player_removed(e)
+  remove_player(e.player_index)
+end
+
+local radioactivity = {}
+
+function radioactivity.on_init()
+  global.radioactivity = {
+    enabled = true,
+    --- @type table<uint, RadioactivityPlayerData>
+    players = {},
+  }
+  radioactivity.on_configuration_changed()
+end
+
+function radioactivity.on_configuration_changed()
+  global.radioactivity.entities = {}
+  for _, entity_name in pairs(default_entities) do
+    if game.entity_prototypes[entity_name] then
+      table.insert(global.radioactivity.entities, entity_name)
+    end
+  end
+  global.radioactivity.items = {}
+  for _, item_name in pairs(default_items) do
+    if game.item_prototypes[item_name] then
+      table.insert(global.radioactivity.items, item_name)
     end
   end
 end
 
-radioactivity.commands = {
-  ["kr-disable-radioactivity"] = function()
-    global.radioactivity.enabled = false
-    game.print({ "message.kr-radioactivity-disabled" })
-  end,
-  ["kr-enable-radioactivity"] = function()
-    global.radioactivity.enabled = true
-    game.print({ "message.kr-radioactivity-enabled" })
-  end,
-}
-
-radioactivity.remote_interface = {
+remote.add_interface("kr-radioactivity", {
   add_entity = function(name)
     if not global.radioactivity then
       return
@@ -205,6 +240,35 @@ radioactivity.remote_interface = {
 
     global.radioactivity.enabled = to_state
   end,
+})
+
+util.add_commands({
+  ["kr-disable-radioactivity"] = function()
+    global.radioactivity.enabled = false
+    game.print({ "message.kr-radioactivity-disabled" })
+  end,
+  ["kr-enable-radioactivity"] = function()
+    global.radioactivity.enabled = true
+    game.print({ "message.kr-radioactivity-enabled" })
+  end,
+})
+
+radioactivity.events = {
+  [defines.events.on_player_changed_position] = on_player_moved,
+  [defines.events.on_player_changed_surface] = on_player_moved,
+  [defines.events.on_player_created] = on_player_created,
+  [defines.events.on_player_cursor_stack_changed] = on_player_inventory_changed,
+  [defines.events.on_player_died] = on_player_moved,
+  [defines.events.on_player_main_inventory_changed] = on_player_inventory_changed,
+  [defines.events.on_player_removed] = on_player_removed,
+  [defines.events.on_player_respawned] = on_player_moved,
+  [defines.events.on_player_toggled_map_editor] = on_player_moved,
+  [defines.events.on_player_trash_inventory_changed] = on_player_inventory_changed,
+  [defines.events.on_tick] = update_sounds,
+}
+
+radioactivity.on_nth_tick = {
+  [20] = update_and_damage,
 }
 
 return radioactivity

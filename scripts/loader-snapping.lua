@@ -65,27 +65,6 @@ local function find_entities(surface, position, force, types)
   return entities
 end
 
---- Find entities and entity ghosts of the corresponding types.
---- @param surface LuaSurface
---- @param position MapPosition
---- @param force ForceIdentification
---- @param types string[]
---- @return uint
-local function count_entities(surface, position, force, types)
-  local count = surface.count_entities_filtered({
-    force = force,
-    position = position,
-    type = types,
-  })
-  count = count
-    + surface.count_entities_filtered({
-      force = force,
-      ghost_type = types,
-      position = position,
-    })
-  return count
-end
-
 --- Ensure that the loader has the belt on the correct side.
 --- @param entity LuaEntity
 local function snap_direction(entity)
@@ -93,21 +72,15 @@ local function snap_direction(entity)
   if entity.loader_type == "input" then
     offset_direction = flib_direction.opposite(offset_direction)
   end
-  local front_position = flib_position.add(entity.position, offsets[offset_direction])
-  local back_position = flib_position.add(entity.position, offsets[flib_direction.opposite(offset_direction)])
+  local container_position = flib_position.add(entity.position, offsets[offset_direction])
 
   -- Case 1: If a container is in front, then flip the loader
-  -- Extra check: Don't do anything if there are containers on both sides
-  local front_containers = find_entities(entity.surface, front_position, entity.force, container_types)
-  local back_containers = count_entities(entity.surface, back_position, entity.force, container_types)
-  if #front_containers > 0 and back_containers > 0 then
-    return
-  end
-  if #front_containers > 0 then
+  local containers = find_entities(entity.surface, container_position, entity.force, container_types)
+  if #containers > 0 then
     -- Check that it's not a composite loader entity
     local is_composite = entity.surface.count_entities_filtered({
       force = entity.force,
-      position = front_position,
+      position = container_position,
       type = { "loader", "loader-1x1" },
     }) > 0
     if not is_composite then
@@ -117,21 +90,21 @@ local function snap_direction(entity)
   end
 
   -- Case 2: If a belt is behind, then flip the loader
-  -- Extra check: Don't do anything if there are belts on both sides
-  local front_belt_exists = count_entities(entity.surface, front_position, entity.force, belt_types) > 0
-  local back_belt = find_entities(entity.surface, back_position, entity.force, belt_types)[1]
-  if front_belt_exists and back_belt or not back_belt then
+  local offset_direction = flib_direction.opposite(offset_direction)
+  local belt_position = flib_position.add(entity.position, offsets[offset_direction])
+  local belt = find_entities(entity.surface, belt_position, entity.force, belt_types)[1]
+  if not belt then
     return
   end
 
-  local belt_type = back_belt.type
+  local belt_type = belt.type
   if belt_type == "entity-ghost" then
-    belt_type = back_belt.ghost_type
+    belt_type = belt.ghost_type
   end
   if
     belt_type == "transport-belt"
     or belt_type == "underground-belt"
-    or math.abs(offset_direction - back_belt.direction) % 4 == 0
+    or math.abs(offset_direction - belt.direction) % 4 == 0
   then
     flip_loader(entity)
   end
@@ -165,8 +138,13 @@ local function snap_to_belt(entity)
   end
 end
 
---- @param entity LuaEntity
-return function(entity)
+--- @param e EntityBuiltEvent
+local function on_entity_built(e)
+  local entity = e.entity or e.created_entity or e.destination
+  if not entity.valid or not string.match(entity.name, "^kr.*%-loader$") then
+    return
+  end
+
   entity.update_connections()
   if not entity.loader_container then
     snap_direction(entity)
@@ -174,3 +152,15 @@ return function(entity)
 
   snap_to_belt(entity)
 end
+
+local snap_loader = {}
+
+snap_loader.events = {
+  [defines.events.on_built_entity] = on_entity_built,
+  [defines.events.on_entity_cloned] = on_entity_built,
+  [defines.events.on_robot_built_entity] = on_entity_built,
+  [defines.events.script_raised_built] = on_entity_built,
+  [defines.events.script_raised_revive] = on_entity_built,
+}
+
+return snap_loader

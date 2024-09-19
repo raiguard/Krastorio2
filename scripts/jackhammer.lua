@@ -1,44 +1,52 @@
-local bounding_box = require("__flib__.bounding-box")
-local math = require("__flib__.math")
-local position = require("__flib__.position")
+local flib_bounding_box = require("__flib__.bounding-box")
+local flib_position = require("__flib__.position")
 
-local constants = require("scripts.constants")
 local util = require("scripts.util")
 
-local jackhammer = {}
+local max_reach = 15
 
---- @param player LuaPlayer
---- @param surface LuaSurface
---- @param tiles LuaTile[]
---- @param sel_area BoundingBox
-function jackhammer.collect(player, surface, tiles, sel_area)
+--- @param e EventData.on_player_selected_area
+local function on_player_selected_area(e)
+  if e.item ~= "kr-jackhammer" then
+    return
+  end
+
+  local player = game.get_player(e.player_index)
+  if not player then
+    return
+  end
+
   local player_pos = player.position
 
   local items_to_give = {}
   local tiles_to_set = {}
   local i = 0
-  for _, tile in pairs(tiles) do
-    if
-      position.distance(tile.position --[[@as MapPosition]], player_pos) <= constants.jackhammer_max_reach
-    then
-      i = i + 1
-      tiles_to_set[i] = { name = tile.hidden_tile or "landfill", position = tile.position }
-      local mineable = tile.prototype.mineable_properties
-      local products = mineable.products
-      if mineable and mineable.minable and products then
-        for _, product_ident in pairs(products) do
-          local probability = product_ident.probability
-          if product_ident.type == "item" and not probability or math.random() <= probability then
-            local amount = product_ident.amount
-            if not amount then
-              amount = math.random(product_ident.amount_min, product_ident.amount_max)
-            end
-            local name = product_ident.name
-            items_to_give[name] = (items_to_give[name] or 0) + amount
-          end
+  for _, tile in pairs(e.tiles) do
+    if flib_position.distance(tile.position, player_pos) > max_reach then
+      goto continue
+    end
+
+    local mineable = tile.prototype.mineable_properties
+    local products = mineable.products
+    if not mineable or not products or not mineable.minable then
+      goto continue
+    end
+
+    i = i + 1
+    tiles_to_set[i] = { name = tile.hidden_tile or "landfill", position = tile.position }
+    for _, product_ident in pairs(products) do
+      local probability = product_ident.probability
+      if product_ident.type == "item" and not probability or math.random() <= probability then
+        local amount = product_ident.amount
+        if not amount then
+          amount = math.random(product_ident.amount_min, product_ident.amount_max)
         end
+        local name = product_ident.name
+        items_to_give[name] = (items_to_give[name] or 0) + amount
       end
     end
+
+    ::continue::
   end
 
   if i > 0 then
@@ -53,7 +61,7 @@ function jackhammer.collect(player, surface, tiles, sel_area)
         util.flying_text_with_sound(
           player,
           { "message.kr-inventory-is-full" },
-          { position = bounding_box.center(sel_area) }
+          { position = flib_bounding_box.center(e.area) }
         )
         return
       end
@@ -67,7 +75,7 @@ function jackhammer.collect(player, surface, tiles, sel_area)
     end
 
     -- Set the tiles
-    surface.set_tiles(tiles_to_set)
+    e.surface.set_tiles(tiles_to_set)
 
     -- FX
     player.play_sound({ path = "kr-jackhammer", volume_modifier = 1 })
@@ -75,9 +83,16 @@ function jackhammer.collect(player, surface, tiles, sel_area)
     util.flying_text_with_sound(
       player,
       { "message.kr-no-tiles-in-selection" },
-      { position = bounding_box.center(sel_area) }
+      { position = flib_bounding_box.center(e.area) }
     )
   end
 end
+
+local jackhammer = {}
+
+jackhammer.events = {
+  [defines.events.on_player_selected_area] = on_player_selected_area,
+  [defines.events.on_player_alt_selected_area] = on_player_selected_area,
+}
 
 return jackhammer

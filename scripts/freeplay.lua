@@ -1,4 +1,3 @@
--- TODO: Disable the ability to mine crash site entities until automation is researched
 local constants = require("scripts.constants")
 
 local freeplay = {}
@@ -25,10 +24,7 @@ function freeplay.add_starting_items()
   -- Shelter
   items["kr-shelter"] = 1
   -- Electric poles
-  if
-    (game.active_mods["IndustrialRevolution"] or game.active_mods["aai-industry"])
-    and game.item_prototypes["medium-electric-pole"]
-  then
+  if game.active_mods["aai-industry"] and game.item_prototypes["medium-electric-pole"] then
     items["medium-electric-pole"] = 10
   end
   remote.call("freeplay", "set_created_items", items)
@@ -70,10 +66,8 @@ function freeplay.set_custom_intro()
 end
 
 function freeplay.disable_rocket_victory()
-  for _, interface in pairs({ "silo_script", "better-victory-screen" }) do
-    if remote.interfaces[interface] and remote.interfaces[interface]["set_no_victory"] then
-      remote.call(interface, "set_no_victory", true)
-    end
+  if remote.interfaces["silo_script"] then
+    remote.call("silo_script", "set_no_victory", true)
   end
 end
 
