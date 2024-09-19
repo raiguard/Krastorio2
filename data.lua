@@ -43,6 +43,7 @@ require("prototypes.entities.fuel-refinery")
 require("prototypes.entities.fusion-reactor")
 require("prototypes.entities.gas-power-station")
 require("prototypes.entities.greenhouse")
+require("prototypes.entities.intergalactic-transceiver")
 require("prototypes.entities.superior-substation")
 
 require("prototypes.equipment.additional-engine-equipment")

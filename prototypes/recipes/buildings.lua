@@ -499,21 +499,6 @@ return {
   },
   {
     type = "recipe",
-    name = "kr-intergalactic-transceiver",
-    energy_required = 600,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "imersium-beam", amount = 500 },
-      { type = "item", name = "imersium-plate", amount = 500 },
-      { type = "item", name = "rare-metals", amount = 1000 },
-      { type = "item", name = "energy-control-unit", amount = 500 },
-      { type = "item", name = "ai-core", amount = 300 },
-      { type = "item", name = "concrete", amount = 750 },
-    },
-    results = { { type = "item", name = "kr-intergalactic-transceiver", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-logo",
     energy_required = 666,
     enabled = false,

@@ -1,4 +1,3 @@
-require("prototypes.entities.intergalactic-transceiver")
 require("prototypes.entities.planetary-teleporter")
 require("prototypes.entities.matter-assembler")
 require("prototypes.entities.matter-plant")
