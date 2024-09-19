@@ -486,19 +486,6 @@ return {
   },
   {
     type = "recipe",
-    name = "kr-planetary-teleporter",
-    energy_required = 20,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "imersium-beam", amount = 10 },
-      { type = "item", name = "imersite-crystal", amount = 4 },
-      { type = "item", name = "energy-control-unit", amount = 8 },
-      { type = "item", name = "teleportation-gps-module", amount = 1 },
-    },
-    results = { { type = "item", name = "kr-planetary-teleporter", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-logo",
     energy_required = 666,
     enabled = false,

@@ -457,17 +457,6 @@ data:extend({
   -- -- --
   {
     type = "item",
-    name = "kr-planetary-teleporter",
-    icon = "__Krastorio2Assets__/icons/entities/planetary-teleporter.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "energy-pipe-distribution",
-    order = "z-z-b[kr-planetary-teleporter]",
-    place_result = "kr-planetary-teleporter",
-    stack_size = 50,
-  },
-  {
-    type = "item",
     name = "kr-logo",
     icon = "__Krastorio2Assets__/icons/entities/k-logo.png",
     stack_size = 50,
