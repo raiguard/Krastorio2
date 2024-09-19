@@ -17,7 +17,7 @@ end
 
 function tesla_coil.get_absorber_buffer_capacity()
   storage.tesla_coil.absorber_buffer_capacity =
-    game.equipment_prototypes["energy-absorber"].energy_source.buffer_capacity
+    game.equipment_prototypes["energy-absorber-equipment"].energy_source.buffer_capacity
 end
 
 -- TOWER
@@ -215,7 +215,7 @@ function tesla_coil.add_connection(target_data, tower_data)
   if not beam then
     return false
   end
-  local beam_number = script.register_on_entity_destroyed(beam)
+  local beam_number = script.register_on_object_destroyed(beam)
 
   --- @class BeamData
   storage.tesla_coil.beams[beam_number] = {

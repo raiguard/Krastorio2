@@ -16,7 +16,6 @@ handler.add_libraries({
   require("scripts.virus"),
 })
 
-local gui = require("__flib__.gui")
 local migration = require("__flib__.migration")
 
 -- local creep = require("scripts.creep")
@@ -114,7 +113,7 @@ legacy_lib.events[defines.events.on_robot_mined_entity] = on_entity_destroyed
 legacy_lib.events[defines.events.on_entity_died] = on_entity_destroyed
 legacy_lib.events[defines.events.script_raised_destroy] = on_entity_destroyed
 
-legacy_lib.events[defines.events.on_entity_destroyed] = function(e)
+legacy_lib.events[defines.events.on_object_destroyed] = function(e)
   local beam_data = storage.tesla_coil.beams[e.registration_number]
   if beam_data then
     tesla_coil.remove_connection(beam_data.target_data, beam_data.tower_data)
@@ -148,34 +147,33 @@ end
 
 -- GUI
 
-local function handle_gui_event(e)
-  local msg = gui.read_action(e)
-  if msg then
-    if msg.gui == "planetary_teleporter" then
-      planetary_teleporter.handle_gui_action(msg, e)
-    end
-    return true
-  end
-  return false
-end
+-- FIXME:
+-- local function handle_gui_event(e)
+--   local msg = gui.read_action(e)
+--   if msg then
+--     if msg.gui == "planetary_teleporter" then
+--       planetary_teleporter.handle_gui_action(msg, e)
+--     end
+--     return true
+--   end
+--   return false
+-- end
 
-gui.hook_events(handle_gui_event) -- FIXME:
-
-legacy_lib.events[defines.events.on_gui_opened] = function(e)
-  if not handle_gui_event(e) then
-    local entity = e.entity
-    if entity and entity.valid then
-      local player = game.get_player(e.player_index)
-      if not player then
-        return
-      end
-      local name = entity.name
-      if name == "kr-planetary-teleporter" then
-        planetary_teleporter.create_gui(player, entity)
-      end
-    end
-  end
-end
+-- legacy_lib.events[defines.events.on_gui_opened] = function(e)
+--   if not handle_gui_event(e) then
+--     local entity = e.entity
+--     if entity and entity.valid then
+--       local player = game.get_player(e.player_index)
+--       if not player then
+--         return
+--       end
+--       local name = entity.name
+--       if name == "kr-planetary-teleporter" then
+--         planetary_teleporter.create_gui(player, entity)
+--       end
+--     end
+--   end
+-- end
 
 legacy_lib.events["kr-linked-focus-search"] = planetary_teleporter.on_focus_search
 
