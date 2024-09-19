@@ -20,11 +20,11 @@ local range = 7
 
 --- @param player LuaPlayer
 local function check_inventory(player)
-  if not global.radioactivity.enabled or not next(global.radioactivity.entities) then
+  if not storage.radioactivity.enabled or not next(storage.radioactivity.entities) then
     return
   end
 
-  local player_data = global.radioactivity.players[player.index]
+  local player_data = storage.radioactivity.players[player.index]
   if not player_data then
     return
   end
@@ -34,7 +34,7 @@ local function check_inventory(player)
     return
   end
 
-  for _, item_name in pairs(global.radioactivity.items) do
+  for _, item_name in pairs(storage.radioactivity.items) do
     -- FIXME: This does not check trash inventory
     if player.get_item_count(item_name) > 0 then
       player_data.inventory = true
@@ -47,11 +47,11 @@ end
 
 --- @param player LuaPlayer
 local function check_around_player(player)
-  if not global.radioactivity.enabled or not next(global.radioactivity.items) then
+  if not storage.radioactivity.enabled or not next(storage.radioactivity.items) then
     return
   end
 
-  local player_data = global.radioactivity.players[player.index]
+  local player_data = storage.radioactivity.players[player.index]
   if not player_data then
     return
   end
@@ -69,7 +69,7 @@ local function check_around_player(player)
   player_data.last_position = position
 
   player_data.entity = player.surface.count_entities_filtered({
-    name = global.radioactivity.entities,
+    name = storage.radioactivity.entities,
     radius = range,
     position = position,
   }) > 0
@@ -77,7 +77,7 @@ end
 
 --- @param player LuaPlayer
 local function add_player(player)
-  global.radioactivity.players[player.index] = {
+  storage.radioactivity.players[player.index] = {
     entity = false,
     inventory = false,
     last_position = { x = 0, y = 0 },
@@ -86,15 +86,15 @@ end
 
 --- @param player_index uint
 local function remove_player(player_index)
-  global.radioactivity.players[player_index] = nil
+  storage.radioactivity.players[player_index] = nil
 end
 
 local function update_and_damage()
-  if not global.radioactivity.enabled then
+  if not storage.radioactivity.enabled then
     return
   end
 
-  for player_index, player_data in pairs(global.radioactivity.players) do
+  for player_index, player_data in pairs(storage.radioactivity.players) do
     if not player_data.entity and not player_data.inventory then
       goto continue
     end
@@ -121,11 +121,11 @@ local function update_and_damage()
 end
 
 local function update_sounds()
-  if not global.radioactivity.enabled then
+  if not storage.radioactivity.enabled then
     return
   end
 
-  for player_index, player_data in pairs(global.radioactivity.players) do
+  for player_index, player_data in pairs(storage.radioactivity.players) do
     if not player_data.entity and not player_data.inventory then
       goto continue
     end
@@ -178,7 +178,7 @@ end
 local radioactivity = {}
 
 function radioactivity.on_init()
-  global.radioactivity = {
+  storage.radioactivity = {
     enabled = true,
     --- @type table<uint, RadioactivityPlayerData>
     players = {},
@@ -187,23 +187,23 @@ function radioactivity.on_init()
 end
 
 function radioactivity.on_configuration_changed()
-  global.radioactivity.entities = {}
+  storage.radioactivity.entities = {}
   for _, entity_name in pairs(default_entities) do
     if game.entity_prototypes[entity_name] then
-      table.insert(global.radioactivity.entities, entity_name)
+      table.insert(storage.radioactivity.entities, entity_name)
     end
   end
-  global.radioactivity.items = {}
+  storage.radioactivity.items = {}
   for _, item_name in pairs(default_items) do
     if game.item_prototypes[item_name] then
-      table.insert(global.radioactivity.items, item_name)
+      table.insert(storage.radioactivity.items, item_name)
     end
   end
 end
 
 remote.add_interface("kr-radioactivity", {
   add_entity = function(name)
-    if not global.radioactivity then
+    if not storage.radioactivity then
       return
     end
     if not name or type(name) ~= "string" then
@@ -214,10 +214,10 @@ remote.add_interface("kr-radioactivity", {
       error("Entity `" .. name .. "` does not exist.")
     end
 
-    table.insert(global.radioactivity.entities, name)
+    table.insert(storage.radioactivity.entities, name)
   end,
   add_item = function(name)
-    if not global.radioactivity then
+    if not storage.radioactivity then
       return
     end
     if not name or type(name) ~= "string" then
@@ -228,27 +228,27 @@ remote.add_interface("kr-radioactivity", {
       error("Item `" .. name .. "` does not exist.")
     end
 
-    table.insert(global.radioactivity.items, name)
+    table.insert(storage.radioactivity.items, name)
   end,
   set_enabled = function(to_state)
-    if not global.radioactivity then
+    if not storage.radioactivity then
       return
     end
     if to_state == nil or type(to_state) ~= "boolean" then
       error("`to_state` must be a boolean.")
     end
 
-    global.radioactivity.enabled = to_state
+    storage.radioactivity.enabled = to_state
   end,
 })
 
 util.add_commands({
   ["kr-disable-radioactivity"] = function()
-    global.radioactivity.enabled = false
+    storage.radioactivity.enabled = false
     game.print({ "message.kr-radioactivity-disabled" })
   end,
   ["kr-enable-radioactivity"] = function()
-    global.radioactivity.enabled = true
+    storage.radioactivity.enabled = true
     game.print({ "message.kr-radioactivity-enabled" })
   end,
 })

@@ -115,7 +115,7 @@ legacy_lib.events[defines.events.on_entity_died] = on_entity_destroyed
 legacy_lib.events[defines.events.script_raised_destroy] = on_entity_destroyed
 
 legacy_lib.events[defines.events.on_entity_destroyed] = function(e)
-  local beam_data = global.tesla_coil.beams[e.registration_number]
+  local beam_data = storage.tesla_coil.beams[e.registration_number]
   if beam_data then
     tesla_coil.remove_connection(beam_data.target_data, beam_data.tower_data)
   end

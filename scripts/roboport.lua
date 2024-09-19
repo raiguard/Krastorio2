@@ -8,7 +8,7 @@ local util = require("scripts.util")
 --- @param player LuaPlayer
 --- @param entity LuaEntity
 local function update_gui(player, entity)
-  local player_gui = global.roboport_guis[player.index]
+  local player_gui = storage.roboport_guis[player.index]
   if not player_gui or not player_gui.valid then
     return
   end
@@ -53,7 +53,7 @@ local function change_mode(entity, player, to_mode)
   -- Find all players that have this roboport open
   -- This must be done before the roboport is swapped
   local guis_to_update = {}
-  for player_index in pairs(global.roboport_guis) do
+  for player_index in pairs(storage.roboport_guis) do
     local player = game.get_player(player_index) --[[@as LuaPlayer]]
     if player.opened_gui_type == defines.gui_type.entity then
       local opened = player.opened
@@ -115,28 +115,28 @@ end
 
 --- @param player_index uint
 local function destroy_gui(player_index)
-  local player_gui = global.roboport_guis[player_index]
+  local player_gui = storage.roboport_guis[player_index]
   if not player_gui then
     return
   end
   if player_gui.valid then
     player_gui.destroy()
   end
-  global.roboport_guis[player_index] = nil
+  storage.roboport_guis[player_index] = nil
 end
 
 --- @param player LuaPlayer
 local function refresh_gui(player)
   destroy_gui(player.index)
 
-  _, global.roboport_guis[player.index] = flib_gui.add(player.gui.relative, {
+  _, storage.roboport_guis[player.index] = flib_gui.add(player.gui.relative, {
     type = "frame",
     name = "kr_roboport_mode_window",
     caption = { "gui.kr-change-mode" },
     anchor = {
       gui = defines.relative_gui_type.roboport_gui,
       position = defines.relative_gui_position.right,
-      names = global.roboport_has_variants_gui,
+      names = storage.roboport_has_variants_gui,
     },
     {
       type = "frame",
@@ -169,7 +169,7 @@ local function find_variants()
     output[i] = entity
   end
 
-  global.roboport_has_variants_gui = output
+  storage.roboport_has_variants_gui = output
 end
 
 --- @param e EventData.on_gui_opened
@@ -221,7 +221,7 @@ end
 
 local function on_init()
   --- @type table<uint, LuaGuiElement>
-  global.roboport_guis = {}
+  storage.roboport_guis = {}
   on_configuration_changed()
 end
 

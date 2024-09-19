@@ -7,7 +7,7 @@ local function generate_creep(entities)
   -- We can safely assume that all of the entities will be on the same surface
   -- Check if this surface is allowed to generate creep
   local surface = entities[1].surface
-  if not global.creep.surfaces[surface.index] then
+  if not storage.creep.surfaces[surface.index] then
     return
   end
 
@@ -27,7 +27,7 @@ local function generate_creep(entities)
 end
 
 function creep.init()
-  global.creep = {
+  storage.creep = {
     on_biter_base_built = true,
     on_chunk_generated = true,
     surfaces = { [game.get_surface("nauvis").index] = true },
@@ -36,12 +36,12 @@ end
 
 --- @param surface_index number
 function creep.add_surface(surface_index)
-  global.creep.surfaces[surface_index] = true
+  storage.creep.surfaces[surface_index] = true
 end
 
 --- @param entity LuaEntity
 function creep.on_biter_base_built(entity)
-  if entity.type == "unit-spawner" and global.creep.surfaces[entity.surface.index] then
+  if entity.type == "unit-spawner" and storage.creep.surfaces[entity.surface.index] then
     generate_creep({ entity })
   end
 end
@@ -50,7 +50,7 @@ end
 --- @param surface LuaSurface
 function creep.on_chunk_generated(chunk_area, surface)
   -- Mods can cause chunk generations before we migrate from pre-1.2.0
-  if not global.creep or not global.creep.surfaces[surface.index] then
+  if not storage.creep or not storage.creep.surfaces[surface.index] then
     return
   end
 
@@ -90,9 +90,9 @@ creep.commands = {
 
     local surface_index = tonumber(surface_ident)
     if surface_index then
-      global.creep.surfaces[surface_index] = value
+      storage.creep.surfaces[surface_index] = value
     elseif game.surfaces[surface_ident] then
-      global.creep.surfaces[game.surfaces[surface_ident].index] = value
+      storage.creep.surfaces[game.surfaces[surface_ident].index] = value
     else
       player.print({ "message.kr-could-not-find-surface", surface_ident })
     end
@@ -104,35 +104,35 @@ creep.remote_interface = {
   --- @param surface_index number
   --- @param value boolean
   set_creep_on_surface = function(surface_index, value)
-    if not global.creep then
+    if not storage.creep then
       return
     end
     if type(surface_index) ~= "number" or type(value) ~= "boolean" then
       error("Invalid parameter types for `set_creep_on_surface`")
     end
-    global.creep.surfaces[surface_index] = value
+    storage.creep.surfaces[surface_index] = value
   end,
   --- Spawn some creep at the given position
   --- @param surface LuaSurface
   --- @param position MapPosition
   --- @param override boolean
   spawn_creep_at_position = function(surface, position, override)
-    if not global.creep then
+    if not storage.creep then
       return
     end
     if type(surface) ~= "table" or type(position) ~= "table" or not surface.valid then
       error("The surface or the position are invalid.")
     end
     -- The code here is duplicated from `generate_creep()` because that function is specifically optimized for multiple
-    -- if not global.creep then return end
+    -- if not storage.creep then return end
     -- entities, while this function only needs to do it once.
-    -- if not global.creep then return end
-    if not global.creep.surfaces[surface.index] and not override then
+    -- if not storage.creep then return end
+    if not storage.creep.surfaces[surface.index] and not override then
       return
     end
     local radius = math.random(3, 5)
     surface.set_tiles(table.map(surface.find_tiles_filtered({ position = position, radius = radius }), function(tile)
-      if not global.creep then
+      if not storage.creep then
         return
       end
       if not tile.collides_with("player-layer") then

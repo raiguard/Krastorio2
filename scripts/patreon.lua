@@ -151,7 +151,7 @@ local function give_items(player, used_console)
 
   if high_patrons[string.lower(player.name)] then
     -- Check if we've already given them the items
-    if global.patreon_items_given[player.index] then
+    if storage.patreon_items_given[player.index] then
       player.print({ "message.kr-already-got-patreon-items" })
       return
     end
@@ -163,7 +163,7 @@ local function give_items(player, used_console)
       end
     end
 
-    global.patreon_items_given[player.index] = true
+    storage.patreon_items_given[player.index] = true
     player.print({ "message.kr-received-patreon-items" })
   elseif used_console then
     player.print({ "message.kr-not-a-patron" })
@@ -186,7 +186,7 @@ local patreon = {}
 
 function patreon.on_init()
   --- @type table<uint, boolean>
-  global.patreon_items_given = {}
+  storage.patreon_items_given = {}
 end
 
 patreon.events = {

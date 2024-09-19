@@ -3,7 +3,7 @@ local constants = require("scripts.constants")
 local tesla_coil = {}
 
 function tesla_coil.init()
-  global.tesla_coil = {
+  storage.tesla_coil = {
     --- @type table<number, BeamData>
     beams = {},
     --- @type table<number, TowerData>
@@ -16,7 +16,7 @@ function tesla_coil.init()
 end
 
 function tesla_coil.get_absorber_buffer_capacity()
-  global.tesla_coil.absorber_buffer_capacity =
+  storage.tesla_coil.absorber_buffer_capacity =
     game.equipment_prototypes["energy-absorber"].energy_source.buffer_capacity
 end
 
@@ -64,18 +64,18 @@ function tesla_coil.build(source_entity)
     turret_unit_number = turret.unit_number,
   }
 
-  global.tesla_coil.turrets[data.turret_unit_number] = data
-  global.tesla_coil.towers[unit_number] = data
+  storage.tesla_coil.turrets[data.turret_unit_number] = data
+  storage.tesla_coil.towers[unit_number] = data
 end
 
 --- @param entity LuaEntity
 function tesla_coil.destroy(entity)
   -- Beams will automatically get destroyed
   local unit_number = entity.unit_number --[[@as uint]]
-  local tower_data = global.tesla_coil.towers[unit_number]
+  local tower_data = storage.tesla_coil.towers[unit_number]
   if tower_data then
-    global.tesla_coil.turrets[tower_data.turret_unit_number] = nil
-    global.tesla_coil.towers[unit_number] = nil
+    storage.tesla_coil.turrets[tower_data.turret_unit_number] = nil
+    storage.tesla_coil.towers[unit_number] = nil
 
     for _, entity in pairs(tower_data.entities) do
       if entity and entity.valid and entity.type ~= "electric-energy-interface" then
@@ -130,7 +130,7 @@ end
 --- Updates the absorber object in a target's equipment grid
 --- @param grid LuaEquipmentGrid
 function tesla_coil.update_target_grid(grid)
-  for _, target_data in pairs(global.tesla_coil.targets) do
+  for _, target_data in pairs(storage.tesla_coil.targets) do
     local grid_data = target_data.grid_data
     if grid_data.grid.valid and grid_data.grid == grid then
       grid_data.absorber = find_absorber_in_grid(grid)
@@ -163,7 +163,7 @@ function tesla_coil.add_target(target, tower_data)
       grid_data = grid_data,
       unit_number = target_unit_number,
     }
-    global.tesla_coil.targets[target_unit_number] = target_data
+    storage.tesla_coil.targets[target_unit_number] = target_data
 
     return target_data
   end
@@ -171,7 +171,7 @@ end
 
 --- @param target_unit_number number
 function tesla_coil.remove_target(target_unit_number)
-  global.tesla_coil.targets[target_unit_number] = nil
+  storage.tesla_coil.targets[target_unit_number] = nil
 end
 
 -- CONNECTION
@@ -183,7 +183,7 @@ end
 --- @return boolean
 function tesla_coil.add_connection(target_data, tower_data)
   -- Check if the absorber has space
-  local capacity = global.tesla_coil.absorber_buffer_capacity
+  local capacity = storage.tesla_coil.absorber_buffer_capacity
   local absorber = target_data.grid_data.absorber
   if not absorber or not absorber.valid then
     tesla_coil.remove_target(target_data.unit_number)
@@ -218,7 +218,7 @@ function tesla_coil.add_connection(target_data, tower_data)
   local beam_number = script.register_on_entity_destroyed(beam)
 
   --- @class BeamData
-  global.tesla_coil.beams[beam_number] = {
+  storage.tesla_coil.beams[beam_number] = {
     beam = beam,
     beam_number = beam_number,
     target_data = target_data,
@@ -248,7 +248,7 @@ function tesla_coil.update_connection(target_data, tower_data)
     return
   end
 
-  local capacity = global.tesla_coil.absorber_buffer_capacity
+  local capacity = storage.tesla_coil.absorber_buffer_capacity
   local energy = absorber.energy
   if energy < capacity then
     -- Calculate how much to add
@@ -281,7 +281,7 @@ function tesla_coil.remove_connection(target_data, tower_data)
   end
 
   local beam_number = connection_data.beam_number
-  global.tesla_coil.beams[beam_number] = nil
+  storage.tesla_coil.beams[beam_number] = nil
 
   target_data.connections.by_beam[beam_number] = nil
   target_data.connections.by_tower[tower_data.tower_unit_number] = nil
@@ -294,12 +294,12 @@ end
 --- @param target LuaEntity
 --- @param turret LuaEntity
 function tesla_coil.process_turret_fire(target, turret)
-  local tower_data = global.tesla_coil.turrets[turret.unit_number]
+  local tower_data = storage.tesla_coil.turrets[turret.unit_number]
   if not tower_data then
     return
   end
 
-  local target_data = global.tesla_coil.targets[target.unit_number]
+  local target_data = storage.tesla_coil.targets[target.unit_number]
   if not target_data then
     target_data = tesla_coil.add_target(target, tower_data)
   end

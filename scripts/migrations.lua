@@ -40,7 +40,7 @@ end
 
 migrations.versions = {
   ["1.1.2"] = function()
-    local shelters = global.spawn_points
+    local shelters = storage.spawn_points
     local filters = { name = { "kr-shelter-light", "kr-shelter-plus-light" } }
     if shelters then
       for _, surface in pairs(game.surfaces) do
@@ -85,10 +85,10 @@ migrations.versions = {
     -- -- MIGRATE
 
     -- -- Creep
-    -- global.creep.on_biter_base_built = old_global.creep_on_biter_base_built
-    -- global.creep.on_chunk_generated = old_global.creep_on_chunk_generated
-    -- if not old_global.creep_on_chunk_generated then
-    --   global.creep.surfaces[game.get_surface("nauvis").index] = nil
+    -- storage.creep.on_biter_base_built = storage.creep_on_biter_base_built
+    -- storage.creep.on_chunk_generated = storage.creep_on_chunk_generated
+    -- if not storage.creep_on_chunk_generated then
+    --   storage.creep.surfaces[game.get_surface("nauvis").index] = nil
     -- end
 
     -- -- Intergalactic Transceiver
@@ -97,32 +97,32 @@ migrations.versions = {
     --   intergalactic_transceiver.build(transceiver)
     -- end
     -- for _, transceiver in pairs(find_on_all_surfaces({ name = "kr-activated-intergalactic-transceiver" })) do
-    --   global.intergalactic_transceiver.forces[transceiver.force.index] = { entity = transceiver }
+    --   storage.intergalactic_transceiver.forces[transceiver.force.index] = { entity = transceiver }
     -- end
 
     -- -- Patreon items
-    -- for player_name in pairs(old_global.patreon_item_given) do
+    -- for player_name in pairs(storage.patreon_item_given) do
     --   local player = game.get_player(player_name)
     --   if player then
-    --     global.patreon_items_given[player.index] = true
+    --     storage.patreon_items_given[player.index] = true
     --   end
     -- end
 
     -- -- Planetary teleporter
-    -- global.planetary_teleporter = {
-    --   data = old_global.planetary_teleporters or {},
-    --   guis = old_global.planetary_teleporter_guis or {},
-    --   players = old_global.planetary_teleporter_players or {},
-    --   unnamed_translations = old_global.planetary_teleporter_unnamed_translations or {},
+    -- storage.planetary_teleporter = {
+    --   data = storage.planetary_teleporters or {},
+    --   guis = storage.planetary_teleporter_guis or {},
+    --   players = storage.planetary_teleporter_players or {},
+    --   unnamed_translations = storage.planetary_teleporter_unnamed_translations or {},
     -- }
 
     -- Radioactivity
-    local old_enabled = old_global.radioactivity_enabled
+    local old_enabled = storage.radioactivity_enabled
     -- The old `global` didn't store the variable until it was needed
     if old_enabled == nil then
       old_enabled = true
     end
-    global.radioactivity.enabled = old_enabled
+    storage.radioactivity.enabled = old_enabled
 
     -- Shelter
     for _, entity in
@@ -143,13 +143,13 @@ migrations.versions = {
   end,
   ["1.2.17"] = function()
     -- If we migrated from pre-1.2.0, we don't need to do this
-    if global.tesla_coil.beams and global.tesla_coil.turrets then
+    if storage.tesla_coil.beams and storage.tesla_coil.turrets then
       return
     end
 
     -- Destroy all extra entities
     local towers = {}
-    for _, tower_data in pairs(global.tesla_coil.by_tower or global.tesla_coil.towers) do
+    for _, tower_data in pairs(storage.tesla_coil.by_tower or storage.tesla_coil.towers) do
       local tower = tower_data.entities.tower
       if tower and tower.valid then
         table.insert(towers, tower)
@@ -173,14 +173,14 @@ migrations.versions = {
       --- @diagnostic enable
     end
 
-    for _, beam_data in pairs(global.tesla_coil.beams or {}) do
+    for _, beam_data in pairs(storage.tesla_coil.beams or {}) do
       if beam_data.beam and beam_data.beam.valid then
         beam_data.beam.destroy()
       end
     end
 
     -- Restart from scratch
-    global.tesla_coil = nil
+    storage.tesla_coil = nil
     tesla_coil.init()
 
     for _, tower in pairs(towers) do
@@ -189,7 +189,7 @@ migrations.versions = {
   end,
   ["1.2.20"] = function()
     -- Remove invalid entity references
-    global.tesla_coil.targets = table.map(global.tesla_coil.targets, function(target_data)
+    storage.tesla_coil.targets = table.map(storage.tesla_coil.targets, function(target_data)
       if target_data.entity and target_data.entity.valid then
         return target_data
       end
@@ -233,24 +233,24 @@ migrations.versions = {
   ["1.3.8"] = function()
     -- Clean up any invalid roboport GUIs
     local new = {}
-    for player_index, player_gui in pairs(global.roboport_guis) do
+    for player_index, player_gui in pairs(storage.roboport_guis) do
       if player_gui.valid then
         new[player_index] = player_gui
       end
     end
-    global.roboport_guis = new
+    storage.roboport_guis = new
   end,
   ["1.3.10"] = function()
     -- Clean up any orphaned internal entities
     local valid_unit_numbers = {}
-    for _, data in pairs(global.tesla_coil.towers) do
+    for _, data in pairs(storage.tesla_coil.towers) do
       for _, entity in pairs(data.entities) do
         if entity.valid then
           valid_unit_numbers[entity.unit_number or 0] = true
         end
       end
     end
-    for _, data in pairs(global.planetary_teleporter.data) do
+    for _, data in pairs(storage.planetary_teleporter.data) do
       for _, entity in pairs(data.entities) do
         if entity.valid then
           valid_unit_numbers[entity.unit_number or 0] = true

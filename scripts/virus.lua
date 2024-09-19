@@ -27,7 +27,7 @@ end
 local function iterate_biter_virus(virus_data)
   local surface = virus_data.surface
   if not surface or not surface.valid then
-    global.virus.biter[surface.index] = nil
+    storage.virus.biter[surface.index] = nil
     return
   end
 
@@ -40,7 +40,7 @@ local function iterate_biter_virus(virus_data)
   -- Kill some entities
   for _ = 1, virus_data.amount_per_iteration do
     if entities_killed >= entities_to_kill then
-      global.virus.biter[surface.index] = nil
+      storage.virus.biter[surface.index] = nil
       break
     end
 
@@ -66,7 +66,7 @@ end
 --- @param player LuaPlayer
 --- @param surface LuaSurface
 local function init_biter_virus(player, surface)
-  local biter_viruses = global.virus.biter
+  local biter_viruses = storage.virus.biter
   if not biter_viruses[surface.index] then
     -- Reduce evolution factor
     local enemy = game.forces.enemy
@@ -94,7 +94,7 @@ end
 local function iterate_creep_virus(virus_data)
   local surface = virus_data.surface
   if not surface or not surface.valid then
-    global.virus.creep[surface.index] = nil
+    storage.virus.creep[surface.index] = nil
     return
   end
 
@@ -103,7 +103,7 @@ local function iterate_creep_virus(virus_data)
   local tiles_to_replace = {}
   for i = 1, virus_data.amount_per_iteration do
     if len == 0 then
-      global.virus.creep[surface.index] = nil
+      storage.virus.creep[surface.index] = nil
       break
     end
     local j = math.random(1, len)
@@ -123,11 +123,11 @@ end
 
 --- @param surface LuaSurface
 local function init_creep_virus(surface)
-  local creep_viruses = global.virus.creep
+  local creep_viruses = storage.virus.creep
   if not creep_viruses[surface.index] then
     -- Disable creep generation on this surface
     -- FIXME:
-    -- global.creep.surfaces[surface.index] = nil
+    -- storage.creep.surfaces[surface.index] = nil
 
     -- Begin creep removal
     -- XXX: This causes insane amounts of lag with lots of creep tiles
@@ -161,10 +161,10 @@ local function on_player_used_capsule(e)
 end
 
 local function on_tick()
-  for _, biter_virus in pairs(global.virus.biter) do
+  for _, biter_virus in pairs(storage.virus.biter) do
     iterate_biter_virus(biter_virus)
   end
-  for _, creep_virus in pairs(global.virus.creep) do
+  for _, creep_virus in pairs(storage.virus.creep) do
     iterate_creep_virus(creep_virus)
   end
 end
@@ -172,7 +172,7 @@ end
 local virus = {}
 
 function virus.on_init()
-  global.virus = {
+  storage.virus = {
     --- @type table<uint, BiterVirusData>
     biter = {},
     --- @type table<uint, CreepVirusData>

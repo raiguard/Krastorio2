@@ -34,10 +34,10 @@ local function on_player_placed_equipment(e)
   end
 
   -- Show the error
-  if (global.error_message_tick[e.player_index] or 0) + 30 < game.ticks_played then
+  if (storage.error_message_tick[e.player_index] or 0) + 30 < game.ticks_played then
     util.flying_text_with_sound(player, { "message.kr-already-one-energy-absorber" })
   end
-  global.error_message_tick[e.player_index] = game.ticks_played
+  storage.error_message_tick[e.player_index] = game.ticks_played
 end
 
 local energy_absorber = {}
@@ -45,7 +45,7 @@ local energy_absorber = {}
 function energy_absorber.on_init()
   --- Holds the last tick that an energy absorber error message was displayed for each player
   --- @type table<number, number>
-  global.error_message_tick = {}
+  storage.error_message_tick = {}
 end
 
 energy_absorber.events = {

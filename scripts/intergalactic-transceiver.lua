@@ -87,7 +87,7 @@ local function activate_transceiver(transceiver_data)
       })
     end
   end
-  global.intergalactic_transceiver.in_cutscene[entity.force_index] = true
+  storage.intergalactic_transceiver.in_cutscene[entity.force_index] = true
 end
 
 --- @param e EventData.on_cutscene_finished
@@ -97,12 +97,12 @@ local function on_cutscene_finished(e)
     return
   end
   -- FIXME: What if the character dies while in the cutscene?
-  if not global.intergalactic_transceiver or not global.intergalactic_transceiver.in_cutscene[player.force_index] then
+  if not storage.intergalactic_transceiver or not storage.intergalactic_transceiver.in_cutscene[player.force_index] then
     return
   end
-  global.intergalactic_transceiver.in_cutscene[player.force_index] = nil
+  storage.intergalactic_transceiver.in_cutscene[player.force_index] = nil
   player.force.technologies["kr-logo"].enabled = true
-  if not global.intergalactic_transceiver.is_victory then
+  if not storage.intergalactic_transceiver.is_victory then
     return
   end
   game.set_game_state({
@@ -116,15 +116,15 @@ end
 
 --- @param e EventData.on_cutscene_waypoint_reached
 local function on_cutscene_waypoint_reached(e)
-  if not global.intergalactic_transceiver then
+  if not storage.intergalactic_transceiver then
     return
   end
   local player = game.get_player(e.player_index)
-  if not player or not global.intergalactic_transceiver.in_cutscene[player.force_index] then
+  if not player or not storage.intergalactic_transceiver.in_cutscene[player.force_index] then
     return
   end
 
-  local transceiver_data = global.intergalactic_transceiver.forces[player.force_index]
+  local transceiver_data = storage.intergalactic_transceiver.forces[player.force_index]
   if not transceiver_data then
     return
   end
@@ -164,25 +164,25 @@ local function on_cutscene_waypoint_reached(e)
     if not new_entity or not new_entity.valid then
       return
     end
-    global.intergalactic_transceiver.forces[force.index] = { entity = new_entity }
+    storage.intergalactic_transceiver.forces[force.index] = { entity = new_entity }
   end
 end
 
 --- @param e EventData.on_gui_click
 local function on_gui_window_closed(e)
-  local self = global.intergalactic_transceiver.guis[e.player_index]
+  local self = storage.intergalactic_transceiver.guis[e.player_index]
   if not self then
     return
   end
   self.elems.kr_intergalactic_transceiver_window.destroy()
   self.player.opened = nil
   self.player.play_sound({ path = "entity-close/kr-intergalactic-transceiver" })
-  global.intergalactic_transceiver.guis[e.player_index] = nil
+  storage.intergalactic_transceiver.guis[e.player_index] = nil
 end
 
 --- @param entity LuaEntity
 local function close_open_guis(entity)
-  for player_index, self in pairs(global.intergalactic_transceiver.guis) do
+  for player_index, self in pairs(storage.intergalactic_transceiver.guis) do
     if self.entity == entity or not self.entity.valid then
       on_gui_window_closed({ player_index = player_index })
     end
@@ -195,15 +195,15 @@ local function on_gui_activate_button_clicked(e)
   if not player then
     return
   end
-  local transceiver_data = global.intergalactic_transceiver.forces[player.force_index]
+  local transceiver_data = storage.intergalactic_transceiver.forces[player.force_index]
   close_open_guis(transceiver_data.entity)
   activate_transceiver(transceiver_data)
 end
 
 --- @param self IntergalacticTransceiverGuiData
 local function update_gui(self)
-  local charged = flib_math.round(self.entity.energy / global.intergalactic_transceiver.max_energy, 0.01)
-  local transceiver_data = global.intergalactic_transceiver.forces[self.player.force_index]
+  local charged = flib_math.round(self.entity.energy / storage.intergalactic_transceiver.max_energy, 0.01)
+  local transceiver_data = storage.intergalactic_transceiver.forces[self.player.force_index]
   local status_properties = status_properties[transceiver_data.status]
   self.elems.status_icon.sprite = status_properties.icon
   self.elems.status_label.caption = status_properties.label
@@ -276,7 +276,7 @@ local function create_gui(player, entity)
   })
 
   --- @class IntergalacticTransceiverGuiData
-  global.intergalactic_transceiver.guis[player.index] = {
+  storage.intergalactic_transceiver.guis[player.index] = {
     elems = elems,
     entity = entity,
     player = player,
@@ -291,13 +291,13 @@ end
 --- @param entity LuaEntity
 local function on_transceiver_destroyed(entity)
   local force_index = entity.force.index
-  global.intergalactic_transceiver.forces[force_index] = nil
+  storage.intergalactic_transceiver.forces[force_index] = nil
   close_open_guis(entity)
 end
 
 --- @param entity LuaEntity
 local function on_inactive_transceiver_destroyed(entity)
-  global.intergalactic_transceiver.inactive[entity.unit_number] = nil
+  storage.intergalactic_transceiver.inactive[entity.unit_number] = nil
 end
 
 --- @param e EntityDestroyedEvent
@@ -316,7 +316,7 @@ end
 
 --- @param entity LuaEntity
 local function on_transceiver_built(entity)
-  local existing = global.intergalactic_transceiver.forces[entity.force.index]
+  local existing = storage.intergalactic_transceiver.forces[entity.force.index]
   if existing then
     local position = entity.position
     local force = entity.force
@@ -333,14 +333,14 @@ local function on_transceiver_built(entity)
       raise_built = true,
     })
     if new_entity and new_entity.valid then
-      global.intergalactic_transceiver.inactive[new_entity.unit_number] = new_entity
+      storage.intergalactic_transceiver.inactive[new_entity.unit_number] = new_entity
     end
 
     return
   end
 
   --- @class IntergalacticTransceiverForceData
-  global.intergalactic_transceiver.forces[entity.force.index] = {
+  storage.intergalactic_transceiver.forces[entity.force.index] = {
     activating = false,
     entity = entity,
     last_alert_tick = game.tick,
@@ -351,7 +351,7 @@ end
 
 --- @param entity LuaEntity
 local function on_active_transceiver_built(entity)
-  local existing = global.intergalactic_transceiver.forces[entity.force.index]
+  local existing = storage.intergalactic_transceiver.forces[entity.force.index]
   if not existing or not existing.activating then
     local position = entity.position
     local force = entity.force
@@ -410,7 +410,7 @@ local function update_transceiver(data, entity)
       status = "not_enough_input"
     end
   else
-    local max_energy = global.intergalactic_transceiver.max_energy
+    local max_energy = storage.intergalactic_transceiver.max_energy
     if current_energy > max_energy then
       -- XXX: If the energy remains constant, the entity status will change to "normal", so give it a random offset.
       new_energy = max_energy + math.random(0, 20) * 1000000
@@ -451,7 +451,7 @@ end
 
 --- @param e EventData.on_gui_opened
 local function on_gui_opened(e)
-  if global.intergalactic_transceiver.guis[e.player_index] then
+  if storage.intergalactic_transceiver.guis[e.player_index] then
     return
   end
   if e.gui_type ~= defines.gui_type.entity then
@@ -469,11 +469,11 @@ local function on_gui_opened(e)
 end
 
 local function on_tick()
-  if not global.intergalactic_transceiver then
+  if not storage.intergalactic_transceiver then
     return
   end
 
-  local transceivers = global.intergalactic_transceiver.forces
+  local transceivers = storage.intergalactic_transceiver.forces
   for force_index, data in pairs(transceivers) do
     local entity = data.entity
     if entity and entity.valid then
@@ -483,20 +483,20 @@ local function on_tick()
     end
   end
 
-  for _, self in pairs(global.intergalactic_transceiver.guis) do
+  for _, self in pairs(storage.intergalactic_transceiver.guis) do
     update_gui(self)
   end
 end
 
 local function on_180th_tick()
-  if not global.intergalactic_transceiver then
+  if not storage.intergalactic_transceiver then
     return
   end
-  for unit_number, entity in pairs(global.intergalactic_transceiver.inactive) do
+  for unit_number, entity in pairs(storage.intergalactic_transceiver.inactive) do
     if entity.valid then
       util.entity_flying_text(entity, { "message.kr-transceiver-is-inactive" }, { r = 1 })
     else
-      global.intergalactic_transceiver.inactive[unit_number] = nil
+      storage.intergalactic_transceiver.inactive[unit_number] = nil
     end
   end
 end
@@ -505,7 +505,7 @@ local function get_max_energy()
   local buffer_capacity =
     game.entity_prototypes["kr-intergalactic-transceiver"].electric_energy_source_prototype.buffer_capacity
 
-  global.intergalactic_transceiver.max_energy = buffer_capacity - max_charge_delta
+  storage.intergalactic_transceiver.max_energy = buffer_capacity - max_charge_delta
 end
 
 --- @class intergalactic_transceiver
@@ -513,10 +513,10 @@ local intergalactic_transceiver = {}
 
 function intergalactic_transceiver.on_init()
   -- Can be already initialised through remote interface
-  if global.intergalactic_transceiver then
+  if storage.intergalactic_transceiver then
     return
   end
-  global.intergalactic_transceiver = {
+  storage.intergalactic_transceiver = {
     --- @type table<uint, IntergalacticTransceiverForceData>
     forces = {},
     --- @type table<uint, IntergalacticTransceiverGuiData>
@@ -559,19 +559,19 @@ intergalactic_transceiver.on_nth_tick = {
 
 remote.add_interface("kr-intergalactic-transceiver", {
   get_is_victory = function()
-    if global.intergalactic_transceiver then
+    if storage.intergalactic_transceiver then
       intergalactic_transceiver.on_init()
     end
-    return global.intergalactic_transceiver.is_victory
+    return storage.intergalactic_transceiver.is_victory
   end,
   set_is_victory = function(to_state)
     if to_state == nil or type(to_state) ~= "boolean" then
       error("`to_state` must be a boolean")
     end
-    if not global.intergalactic_transceiver then
+    if not storage.intergalactic_transceiver then
       intergalactic_transceiver.on_init()
     end
-    global.intergalactic_transceiver.is_victory = to_state
+    storage.intergalactic_transceiver.is_victory = to_state
   end,
 })
 

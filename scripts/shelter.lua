@@ -8,15 +8,15 @@ local util = require("scripts.util")
 
 --- @param force LuaForce
 local function init_force(force)
-  global.shelter.forces[force.index] = {}
+  storage.shelter.forces[force.index] = {}
 end
 
 local function spawn_flying_texts()
-  for unit_number, entity in pairs(global.shelter.inactive) do
+  for unit_number, entity in pairs(storage.shelter.inactive) do
     if entity.valid then
       util.entity_flying_text(entity, { "message.kr-shelter-is-inactive" }, { r = 1 })
     else
-      global.shelter.inactive[unit_number] = nil
+      storage.shelter.inactive[unit_number] = nil
     end
   end
 end
@@ -33,7 +33,7 @@ local function on_entity_built(e)
 
   local force = entity.force
   local surface = entity.surface
-  local force_shelters = global.shelter.forces[force.index]
+  local force_shelters = storage.shelter.forces[force.index]
 
   if force_shelters[surface.index] then
     local name = entity.name:gsub("kr%-", "kr-inactive-"):gsub("%-container", "")
@@ -52,7 +52,7 @@ local function on_entity_built(e)
       raise_built = true,
     })
     if new_entity and new_entity.valid then
-      global.shelter.inactive[new_entity.unit_number] = new_entity
+      storage.shelter.inactive[new_entity.unit_number] = new_entity
     end
     return
   end
@@ -91,13 +91,13 @@ local function on_entity_destroyed(e)
     return
   end
 
-  local inactive = global.shelter.inactive[entity.unit_number]
+  local inactive = storage.shelter.inactive[entity.unit_number]
   if inactive then
-    global.shelter.inactive[entity.unit_number] = nil
+    storage.shelter.inactive[entity.unit_number] = nil
   else
     local force = entity.force
 
-    local force_shelters = global.shelter.forces[force.index]
+    local force_shelters = storage.shelter.forces[force.index]
     if not force_shelters then
       return
     end
@@ -128,7 +128,7 @@ end
 local shelter = {}
 
 function shelter.on_init()
-  global.shelter = {
+  storage.shelter = {
     --- @type table<uint, table<uint, ShelterData>>
     forces = {},
     --- @type table<uint, LuaEntity>
