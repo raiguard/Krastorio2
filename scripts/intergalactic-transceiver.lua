@@ -1,4 +1,4 @@
-local flib_gui = require("__flib__.gui-lite")
+local flib_gui = require("__flib__.gui")
 local flib_math = require("__flib__.math")
 local flib_position = require("__flib__.position")
 
