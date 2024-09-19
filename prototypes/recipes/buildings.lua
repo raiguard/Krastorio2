@@ -227,19 +227,6 @@ return {
   },
   {
     type = "recipe",
-    name = "kr-matter-assembler",
-    energy_required = 30,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "imersium-beam", amount = 4 },
-      { type = "item", name = "kr-steel-pipe", amount = 4 },
-      { type = "item", name = "energy-control-unit", amount = 10 },
-      { type = "item", name = "ai-core", amount = 3 },
-    },
-    results = { { type = "item", name = "kr-matter-assembler", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-stabilizer-charging-station",
     energy_required = 5,
     enabled = false,

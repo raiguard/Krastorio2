@@ -276,17 +276,6 @@ data:extend({
   },
   {
     type = "item",
-    name = "kr-matter-assembler",
-    icon = "__Krastorio2Assets__/icons/entities/matter-assembler.png",
-    icon_size = 128,
-    icon_mipmaps = 4,
-    subgroup = "production-machine",
-    order = "i[matter]-b[matter-assembler]",
-    place_result = "kr-matter-assembler",
-    stack_size = 25,
-  },
-  {
-    type = "item",
     name = "kr-stabilizer-charging-station",
     icon = "__Krastorio2Assets__/icons/entities/stabilizer-charging-station.png",
     icon_size = 128,
