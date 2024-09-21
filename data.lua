@@ -49,6 +49,7 @@ require("prototypes.entities.matter-plant")
 require("prototypes.entities.mineral-water-pumpjack")
 require("prototypes.entities.planetary-teleporter")
 require("prototypes.entities.quantum-computer")
+require("prototypes.entities.quarry-drill")
 require("prototypes.entities.superior-substation")
 
 require("prototypes.equipment.additional-engine-equipment")

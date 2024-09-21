@@ -99,17 +99,6 @@ data:extend({
   },
   {
     type = "item",
-    name = "kr-quarry-drill",
-    icon = "__Krastorio2Assets__/icons/entities/quarry-drill.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "extraction-machine",
-    order = "a[items]-e[quarry-drill]",
-    place_result = "kr-quarry-drill",
-    stack_size = 50,
-  },
-  {
-    type = "item",
     name = "kr-sentinel",
     icon = "__Krastorio2Assets__/icons/entities/sentinel.png",
     icon_size = 64,

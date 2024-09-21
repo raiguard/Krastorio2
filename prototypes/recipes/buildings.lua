@@ -172,20 +172,6 @@ return {
   },
   {
     type = "recipe",
-    name = "kr-quarry-drill",
-    energy_required = 60,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "steel-beam", amount = 50 },
-      { type = "item", name = "steel-plate", amount = 50 },
-      { type = "item", name = "rare-metals", amount = 50 },
-      { type = "item", name = "electric-engine-unit", amount = 100 },
-      { type = "item", name = "processing-unit", amount = 20 },
-    },
-    results = { { type = "item", name = "kr-quarry-drill", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-stabilizer-charging-station",
     energy_required = 5,
     enabled = false,
