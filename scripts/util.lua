@@ -24,12 +24,10 @@ end
 --- @param text LocalisedString
 --- @param color Color?
 function util.entity_flying_text(entity, text, color)
-  entity.surface.create_entity({
-    type = "flying-text",
-    name = "flying-text",
+  player.create_local_flying_text({
+    color = color,
     position = entity.position,
     text = text,
-    color = color,
   })
 end
 
