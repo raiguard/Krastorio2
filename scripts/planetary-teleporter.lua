@@ -1,3 +1,13 @@
+local flib_table = require("__flib__.table")
+
+--- @class PlanetaryTeleporterData
+--- @field entities PlanetaryTeleporterEntities
+--- @field force LuaForce
+--- @field name string?
+--- @field position MapPosition
+--- @field surface LuaSurface
+--- @field turret_unit_number UnitNumber
+
 --- @class PlanetaryTeleporterEntities
 --- @field base LuaEntity
 --- @field turret LuaEntity
@@ -88,18 +98,18 @@ local function on_entity_built(e)
   -- If revived from a blueprint and it has a name, get it from the tags
   local name = e.tags and e.tags.kr_planetary_teleporter_name or nil --[[@as string?]]
   local entities = create_entities(entity)
-  if entities then
-    --- @class PlanetaryTeleporterData
-    local data = {
-      entities = entities,
-      force = entity.force,
-      name = name,
-      position = entity.position,
-      surface = entity.surface,
-      turret_unit_number = entities.turret.unit_number,
-    }
-    storage.planetary_teleporter[entity.unit_number] = data
+  if not entities then
+    return
   end
+
+  storage.planetary_teleporter[entity.unit_number] = {
+    entities = entities,
+    force = entity.force --[[@as LuaForce]],
+    name = name,
+    position = entity.position,
+    surface = entity.surface,
+    turret_unit_number = entities.turret.unit_number,
+  }
 end
 
 --- @param e EntityDestroyedEvent
@@ -182,7 +192,16 @@ local function on_script_trigger_effect(e)
   if not player or not player.valid then
     return
   end
-  player.create_local_flying_text({ text = "In range!", position = player.position })
+
+  table.insert(
+    flib_table.get_or_insert(storage.planetary_teleporter_players, e.source_entity.unit_number, {}),
+    player.index
+  )
+end
+
+-- on_tick is executed before on_script_trigger_effect
+local function on_tick()
+  storage.planetary_teleporter_players = {}
 end
 
 local planetary_teleporter = {}
@@ -190,6 +209,8 @@ local planetary_teleporter = {}
 function planetary_teleporter.on_init()
   --- @type table<uint, PlanetaryTeleporterData>
   storage.planetary_teleporter = {}
+  --- @type table<UnitNumber, PlayerIndex[]>
+  storage.planetary_teleporter_players = {}
 end
 
 planetary_teleporter.events = {
@@ -201,6 +222,7 @@ planetary_teleporter.events = {
   [defines.events.on_robot_built_entity] = on_entity_built,
   [defines.events.on_robot_mined_entity] = on_entity_destroyed,
   [defines.events.on_script_trigger_effect] = on_script_trigger_effect,
+  [defines.events.on_tick] = on_tick,
   [defines.events.script_raised_built] = on_entity_built,
   [defines.events.script_raised_destroy] = on_entity_destroyed,
   [defines.events.script_raised_revive] = on_entity_built,

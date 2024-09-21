@@ -1,10 +1,5 @@
 local styles = data.raw["gui-style"]["default"]
 
-styles.kr_planetary_teleporter_destinations_frame = {
-  type = "frame_style",
-  parent = "deep_frame_in_shallow_frame",
-}
-
 styles.kr_planetary_teleporter_destinations_scroll_pane = {
   type = "scroll_pane_style",
   parent = "flib_naked_scroll_pane_no_padding",
@@ -83,10 +78,4 @@ styles.kr_planetary_teleporter_destination_label = {
   vertical_align = "bottom",
   padding = 4,
   left_padding = 8,
-}
-
-styles.kr_subheader_bold_label = {
-  type = "label_style",
-  parent = "subheader_caption_label",
-  font_color = default_font_color,
 }

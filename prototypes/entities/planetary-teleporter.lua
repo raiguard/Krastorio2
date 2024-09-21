@@ -33,7 +33,7 @@ data:extend({
     minable = { mining_time = 10, result = "kr-planetary-teleporter" },
     collision_box = { { -2.65, -1.9 }, { 2.65, 3.2 } },
     selection_box = { { -3, -2 }, { 3, 3.4 } },
-    drawing_box = { { -3, -3 }, { 3, 3 } },
+    drawing_box_vertical_extension = 1,
     collision_mask = { layers = { item = true, object = true, water_tile = true } },
     max_health = 20000,
     corpse = "big-remnants",

@@ -1,9 +1,13 @@
 local flib_gui = require("__flib__.gui")
 local flib_math = require("__flib__.math")
+local flib_table = require("__flib__.table")
+
+local util = require("scripts.util")
 
 --- @class PlanetaryTeleporterGui
 --- @field elems table<string, LuaGuiElement>
 --- @field entity LuaEntity
+--- @field data PlanetaryTeleporterData
 --- @field player LuaPlayer
 --- @field search_open boolean
 --- @field search_query string
@@ -73,6 +77,18 @@ local function toggle_search(self, by_click)
   filter_destinations(self)
 end
 
+--- @param self PlanetaryTeleporterGui
+local function destroy_gui(self)
+  local window = self.elems.kr_planetary_teleporter_window
+  if window.valid then
+    window.destroy()
+    if self.player.opened == window then
+      self.player.opened = nil
+    end
+  end
+  storage.planetary_teleporter_gui[self.player.index] = nil
+end
+
 --- @param e EventData.on_gui_closed|EventData.on_gui_click
 local function on_window_closed(e)
   local self = storage.planetary_teleporter_gui[e.player_index]
@@ -84,14 +100,7 @@ local function on_window_closed(e)
     self.player.opened = self.elems.kr_planetary_teleporter_window
     return
   end
-  local window = self.elems.kr_planetary_teleporter_window
-  if window.valid then
-    window.destroy()
-    if self.player.opened == window then
-      self.player.opened = nil
-    end
-  end
-  storage.planetary_teleporter_gui[e.player_index] = nil
+  destroy_gui(self)
 end
 
 --- @param e EventData.on_gui_text_changed
@@ -119,7 +128,6 @@ local function on_rename_button_clicked(e)
   if not self or not self.elems.kr_planetary_teleporter_window.valid then
     return
   end
-  local data = storage.planetary_teleporter[self.entity.unit_number]
   local textfield = self.elems.name_textfield
   local label = self.elems.name_label
   if textfield.visible then
@@ -127,7 +135,7 @@ local function on_rename_button_clicked(e)
     textfield.visible = false
   else
     label.visible = false
-    textfield.text = data.name or ""
+    textfield.text = self.data.name or ""
     textfield.visible = true
     textfield.select_all()
     textfield.focus()
@@ -140,16 +148,37 @@ local function on_name_textfield_confirmed(e)
   if not self or not self.elems.kr_planetary_teleporter_window.valid then
     return
   end
-  local data = storage.planetary_teleporter[
-    self.entity.unit_number --[[@as uint]]
-  ]
   local text = e.element.text
   if #text > 0 then
-    data.name = e.element.text
+    self.data.name = e.element.text
   else
-    data.name = nil
+    self.data.name = nil
   end
   on_rename_button_clicked(e --[[@as EventData.on_gui_click]])
+end
+
+--- @param e EventData.on_gui_click
+local function on_teleport_button_clicked(e)
+  local self = storage.planetary_teleporter_gui[e.player_index]
+  if not self or not self.elems.kr_planetary_teleporter_window.valid then
+    return
+  end
+  local target_unit_number = e.element.tags.unit_number --[[@as UnitNumber]]
+  assert(target_unit_number, "target_unit_number is nil")
+  local target_data = storage.planetary_teleporter[target_unit_number]
+  assert(target_data, "target_data is nil")
+  local players = storage.planetary_teleporter_players[
+    target_data.entities.turret.unit_number --[[@as uint]]
+  ]
+  if players then
+    util.flying_text_with_sound(self.player, { "gui.kr-planetary-teleporter-destination-blocked" })
+    return
+  end
+  local source_unit_number = self.entity.unit_number
+  assert(source_unit_number, "source_unit_number is nil")
+  local source_data = storage.planetary_teleporter[source_unit_number]
+  teleport_player(self.player, source_data.entities.base, target_data.entities.base)
+  destroy_gui(self)
 end
 
 --- @type table<defines.entity_status, { sprite: SpritePath, label: LocalisedString }>
@@ -175,24 +204,48 @@ local function update_gui(self)
   self.elems.charge_progressbar.value = charge
   self.elems.charge_progressbar.caption = { "format-percent", flib_math.round(charge * 100) }
 
-  local data = storage.planetary_teleporter[self.entity.unit_number]
-  self.elems.name_label.caption = data.name or { "gui.kr-planetary-teleporter-unnamed" }
+  local players = storage.planetary_teleporter_players[self.data.entities.turret.unit_number]
+  local standing_on_teleporter = players and flib_table.find(players, self.player.index) or false
+  local too_many_players = players and #players > 1 or false
+  local source_fully_charged = flib_math.round(charge, 0.1) >= 1
+  local fully_operational = standing_on_teleporter and source_fully_charged and not too_many_players
+
+  if fully_operational then
+    self.elems.destinations_status_icon.sprite = "flib_indicator_green"
+    self.elems.destinations_status_label.caption = { "gui.kr-planetary-teleporter-ready" }
+  else
+    self.elems.destinations_status_icon.sprite = "flib_indicator_red"
+    if not standing_on_teleporter then
+      self.elems.destinations_status_label.caption = { "gui.kr-planetary-teleporter-not-on-teleporter" }
+    elseif too_many_players then
+      self.elems.destinations_status_label.caption = { "gui.kr-planetary-teleporter-too-many-players" }
+    else
+      self.elems.destinations_status_label.caption = { "gui.kr-planetary-teleporter-not-fully-charged" }
+    end
+  end
+
+  self.elems.name_label.caption = self.data.name or { "gui.kr-planetary-teleporter-unnamed" }
 
   for _, frame in pairs(self.elems.destinations_table.children) do
     local unit_number = tonumber(frame.name) --[[@as uint]]
-    local data = storage.planetary_teleporter[unit_number]
-    if not data then
+    local dest_data = storage.planetary_teleporter[unit_number]
+    if not dest_data then
       goto continue
     end
-    local entity = data.entities.base
-    local charge = entity.energy / buffer_capacity
-    local fully_charged = flib_math.round(charge, 0.1) == 1
+    local dest_entity = dest_data.entities.base
+    local dest_charge = dest_entity.energy / buffer_capacity
+    local dest_fully_charged = flib_math.round(dest_charge, 0.1) == 1
     local minimap = frame.minimap_frame.minimap --[[@as LuaGuiElement]]
-    minimap.progressbar.value = charge
-    minimap.progressbar.visible = not fully_charged
-    minimap.minimap_button.enabled = fully_charged
-    minimap.minimap_button.tooltip = fully_charged and { "gui.kr-planetary-teleporter-teleport" }
-      or { "format-percent", flib_math.round(charge * 100) }
+    minimap.progressbar.value = dest_charge
+    minimap.progressbar.visible = not dest_fully_charged
+    minimap.minimap_button.enabled = fully_operational and dest_fully_charged
+    if not dest_fully_charged then
+      minimap.minimap_button.tooltip = { "format-percent", flib_math.round(dest_charge * 100) }
+    elseif fully_operational then
+      minimap.minimap_button.tooltip = { "gui.kr-planetary-teleporter-teleport" }
+    else
+      minimap.minimap_button.tooltip = nil
+    end
     ::continue::
   end
 end
@@ -234,7 +287,13 @@ local function on_gui_opened(e)
           name = "minimap",
           style = "kr_planetary_teleporter_destination_minimap",
           position = data.entities.base.position,
-          { type = "button", name = "minimap_button", style = "kr_planetary_teleporter_destination_minimap_button" },
+          {
+            type = "button",
+            name = "minimap_button",
+            style = "kr_planetary_teleporter_destination_minimap_button",
+            tags = { unit_number = unit_number },
+            handler = { [defines.events.on_gui_click] = on_teleport_button_clicked },
+          },
           {
             type = "progressbar",
             name = "progressbar",
@@ -364,6 +423,22 @@ local function on_gui_opened(e)
             caption = { "gui.kr-planetary-teleporter-destinations" },
           },
           { type = "empty-widget", style = "flib_horizontal_pusher" },
+          {
+            type = "flow",
+            name = "destinations_status_flow",
+            style_mods = { vertical_align = "center", right_margin = 8 },
+            {
+              type = "sprite",
+              name = "destinations_status_icon",
+              style = "flib_indicator",
+              sprite = "flib_indicator_red",
+            },
+            {
+              type = "label",
+              name = "destinations_status_label",
+              caption = { "gui.kr-planetary-teleporter-not-on-teleporter" },
+            },
+          },
         },
         {
           type = "scroll-pane",
@@ -386,6 +461,7 @@ local function on_gui_opened(e)
   --- @type PlanetaryTeleporterGui
   storage.planetary_teleporter_gui[e.player_index] = {
     elems = elems,
+    data = storage.planetary_teleporter[entity.unit_number],
     entity = entity,
     player = player,
     search_open = false,
@@ -408,6 +484,15 @@ function planetary_teleporter_gui.on_init()
   storage.planetary_teleporter_gui = {}
 end
 
+function planetary_teleporter_gui.on_configuration_changed()
+  for _, gui in pairs(storage.planetary_teleporter_gui or {}) do
+    if gui.elems.window.valid then
+      gui.elems.window.destroy()
+    end
+  end
+  storage.planetary_teleporter_gui = {}
+end
+
 planetary_teleporter_gui.events = {
   [defines.events.on_gui_opened] = on_gui_opened,
   [defines.events.on_tick] = on_tick,
@@ -419,6 +504,7 @@ flib_gui.add_handlers({
   planetary_teleporter_on_rename_button_clicked = on_rename_button_clicked,
   planetary_teleporter_on_search_button_clicked = on_search_button_clicked,
   planetary_teleporter_on_search_textfield_text_changed = on_search_textfield_text_changed,
+  planetary_teleporter_on_teleport_button_clicked = on_teleport_button_clicked,
   planetary_teleporter_on_window_closed = on_window_closed,
 })
 
