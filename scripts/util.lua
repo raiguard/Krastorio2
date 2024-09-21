@@ -1,11 +1,5 @@
 local util = {}
 
-function util.ensure_turret_force()
-  if not game.forces["kr-internal-turrets"] then
-    game.create_force("kr-internal-turrets")
-  end
-end
-
 --- @class FlyingTextOptions
 --- @field color Color?
 --- @field position MapPosition?

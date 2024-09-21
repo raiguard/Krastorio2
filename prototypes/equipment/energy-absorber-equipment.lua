@@ -1,5 +1,3 @@
-local constants = require("scripts.constants")
-
 data:extend({
   {
     type = "recipe",
@@ -42,10 +40,7 @@ data:extend({
       type = "electric",
       buffer_capacity = "5MJ",
       input_flow_limit = "12MW",
-      output_flow_limit = util.format_number(
-        constants.tesla_coil.charging_rate * constants.tesla_coil.simultaneous_allowed,
-        true
-      ) .. "W",
+      output_flow_limit = "12MW",
       usage_priority = "primary-output",
     },
     categories = { "universal-equipment" },
