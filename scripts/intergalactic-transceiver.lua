@@ -500,7 +500,7 @@ end
 
 local function get_max_energy()
   local buffer_capacity =
-    game.entity_prototypes["kr-intergalactic-transceiver"].electric_energy_source_prototype.buffer_capacity
+    prototypes.entity["kr-intergalactic-transceiver"].electric_energy_source_prototype.buffer_capacity
 
   storage.intergalactic_transceiver.max_energy = buffer_capacity - max_charge_delta
 end

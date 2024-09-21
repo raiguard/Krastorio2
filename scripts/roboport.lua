@@ -42,7 +42,7 @@ local function change_mode(entity, player, to_mode)
 
   local new_name = base_name .. new_mode_data.suffix
 
-  if not game.entity_prototypes[new_name] then
+  if not prototypes.entity[new_name] then
     util.flying_text_with_sound(player, { "message.kr-roboport-modes-not-supported" }, { position = entity.position })
     return
   end
@@ -153,7 +153,7 @@ end
 local function find_variants()
   -- Find all compatible roboports
   local has_variants_gui = {}
-  for _, entity in pairs(game.get_filtered_entity_prototypes({ { filter = "type", type = "roboport" } })) do
+  for _, entity in pairs(prototypes.get_entity_filtered({ { filter = "type", type = "roboport" } })) do
     local matched, _, base_name = string.find(entity.name, "^(.-)%-%w*%-mode")
     if matched then
       has_variants_gui[base_name] = true

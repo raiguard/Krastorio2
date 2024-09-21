@@ -37,7 +37,7 @@ function compatibility.schall_uranium()
 end
 
 function compatibility.should_build_pump()
-  if game.entity_prototypes["kr-electric-offshore-pump"] then
+  if prototypes.entity["kr-electric-offshore-pump"] then
     return true
   end
   return false

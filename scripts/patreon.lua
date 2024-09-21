@@ -158,7 +158,7 @@ local function give_items(player, used_console)
 
     -- Give items
     for _, item in pairs(patreon_items) do
-      if game.item_prototypes[item.name] then
+      if prototypes.item[item.name] then
         inventory.insert(item)
       end
     end
@@ -167,7 +167,7 @@ local function give_items(player, used_console)
     player.print({ "message.kr-received-patreon-items" })
   elseif used_console then
     player.print({ "message.kr-not-a-patron" })
-    if game.item_prototypes["spoiled-potato"] then
+    if prototypes.item["spoiled-potato"] then
       inventory.insert({ name = "spoiled-potato", count = 1 })
     end
   end

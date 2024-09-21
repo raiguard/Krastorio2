@@ -17,7 +17,7 @@ end
 
 function tesla_coil.get_absorber_buffer_capacity()
   storage.tesla_coil.absorber_buffer_capacity =
-    game.equipment_prototypes["energy-absorber-equipment"].energy_source.buffer_capacity
+    prototypes.equipment["energy-absorber-equipment"].energy_source.buffer_capacity
 end
 
 -- TOWER

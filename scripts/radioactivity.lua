@@ -189,13 +189,13 @@ end
 function radioactivity.on_configuration_changed()
   storage.radioactivity.entities = {}
   for _, entity_name in pairs(default_entities) do
-    if game.entity_prototypes[entity_name] then
+    if prototypes.entity[entity_name] then
       table.insert(storage.radioactivity.entities, entity_name)
     end
   end
   storage.radioactivity.items = {}
   for _, item_name in pairs(default_items) do
-    if game.item_prototypes[item_name] then
+    if prototypes.item[item_name] then
       table.insert(storage.radioactivity.items, item_name)
     end
   end
@@ -210,7 +210,7 @@ remote.add_interface("kr-radioactivity", {
       error("`name` must be a string.")
     end
 
-    if not game.entity_prototypes[name] then
+    if not prototypes.entity[name] then
       error("Entity `" .. name .. "` does not exist.")
     end
 
@@ -224,7 +224,7 @@ remote.add_interface("kr-radioactivity", {
       error("`name` must be a string.")
     end
 
-    if not game.item_prototypes[name] then
+    if not prototypes.item[name] then
       error("Item `" .. name .. "` does not exist.")
     end
 

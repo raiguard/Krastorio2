@@ -72,7 +72,7 @@ data.raw["utility-constants"]["default"].main_menu_simulations.kr_menu_simulatio
   save = "__Krastorio2__/menu-simulations/menu-simulation-kr-mixed-crafting.zip",
   length = 60 * (settings.startup["kr-main-menu-override-simulations"].value and 60 or 10),
   init = [[
-    game.camera_zoom = 1
+    game.simulation.camera_zoom = 1
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 0.5
   ]],

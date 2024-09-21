@@ -8,7 +8,7 @@ function freeplay.add_bonus_items()
   end
   local items = remote.call("freeplay", "get_created_items")
   for _, item in pairs(constants.bonus_items) do
-    if game.item_prototypes[item.name] then
+    if prototypes.item[item.name] then
       items[item.name] = item.count
     end
   end
@@ -24,7 +24,7 @@ function freeplay.add_starting_items()
   -- Shelter
   items["kr-shelter"] = 1
   -- Electric poles
-  if game.active_mods["aai-industry"] and game.item_prototypes["medium-electric-pole"] then
+  if script.active_mods["aai-industry"] and prototypes.item["medium-electric-pole"] then
     items["medium-electric-pole"] = 10
   end
   remote.call("freeplay", "set_created_items", items)

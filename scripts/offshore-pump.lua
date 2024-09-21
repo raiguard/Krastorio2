@@ -2,7 +2,7 @@ local util = require("scripts.util")
 
 --- @param e EntityBuiltEvent
 local function on_entity_built(e)
-  if not game.entity_prototypes["kr-electric-offshore-pump"] then
+  if not prototypes.entity["kr-electric-offshore-pump"] then
     return
   end
 
