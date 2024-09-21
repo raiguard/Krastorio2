@@ -20,12 +20,6 @@ migrations.versions = {
       end
     end
   end,
-  ["1.3.4"] = function()
-    -- Unlock new recipes
-    for _, force in pairs(game.forces) do
-      force.reset_technology_effects()
-    end
-  end,
   ["1.3.8"] = function()
     -- Clean up any invalid roboport GUIs
     local new = {}
