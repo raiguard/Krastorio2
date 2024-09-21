@@ -1,4 +1,3 @@
-require("prototypes.entities.quantum-computer")
 require("prototypes.entities.quarry-drill")
 require("prototypes.entities.research-server")
 require("prototypes.entities.sentinel")

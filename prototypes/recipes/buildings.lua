@@ -110,21 +110,6 @@ return {
     },
     results = { { type = "item", name = "kr-research-server", amount = 1 } },
   },
-  {
-    type = "recipe",
-    name = "kr-quantum-computer",
-    energy_required = 120,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "steel-beam", amount = 20 },
-      { type = "item", name = "copper-plate", amount = 20 },
-      { type = "item", name = "rare-metals", amount = 50 },
-      { type = "item", name = "ai-core", amount = 50 },
-      { type = "item", name = "electronic-components", amount = 100 },
-      { type = "item", name = "processing-unit", amount = 100 },
-    },
-    results = { { type = "item", name = "kr-quantum-computer", amount = 1 } },
-  },
   -- -- --
   -- FLUID STORAGES
   -- -- --
