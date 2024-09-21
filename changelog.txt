@@ -4,6 +4,7 @@ Date: ????
   Changes:
     - Renamed substation MK2 to superior substation.
     - The superior substation now has built-in lighting and takes two lamps in its recipe.
+    - Removed migrations for versions prior to 1.3.0.
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.24
 Date: 2024-05-09
