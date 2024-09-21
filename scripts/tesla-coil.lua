@@ -1,36 +1,41 @@
-local constants = require("scripts.constants")
+local charging_rate = 3000000 -- 3 MW
+local cooldown = 10
+local loss_multiplier = 1.8
+local range = 20
+local required_energy = 10000000 -- 10 MW
 
-local tesla_coil = {}
-
-function tesla_coil.init()
-  storage.tesla_coil = {
-    --- @type table<number, BeamData>
-    beams = {},
-    --- @type table<number, TowerData>
-    turrets = {},
-    --- @type table<number, TowerData>
-    towers = {},
-    --- @type table<number, TargetData>
-    targets = {},
-  }
-end
-
-function tesla_coil.get_absorber_buffer_capacity()
-  storage.tesla_coil.absorber_buffer_capacity =
-    prototypes.equipment["energy-absorber-equipment"].energy_source.buffer_capacity
-end
+local absorber_buffer_capacity = prototypes.equipment["energy-absorber-equipment"].energy_source.buffer_capacity
 
 -- TOWER
 -- The entity that is interacted with
 
---- @param source_entity LuaEntity
-function tesla_coil.build(source_entity)
-  local surface = source_entity.surface
-  local unit_number = source_entity.unit_number --[[@as uint]]
+--- @param e EntityBuiltEvent
+local function on_entity_built(e)
+  local entity = e.entity or e.created_entity or e.destination
+  if not entity or not entity.valid then
+    return
+  end
+  local entity_name = entity.name
+
+  -- Internal entities should not be cloned
+  if
+    e.name == defines.events.on_entity_cloned
+    and (entity_name == "kr-tesla-coil-turret" or entity_name == "kr-tesla-coil-collision")
+  then
+    entity.destroy()
+    return
+  end
+
+  if entity_name ~= "kr-tesla-coil" then
+    return
+  end
+
+  local surface = entity.surface
+  local unit_number = entity.unit_number --[[@as uint]]
 
   local turret = surface.create_entity({
     name = "kr-tesla-coil-turret",
-    position = source_entity.position,
+    position = entity.position,
     force = game.forces["kr-internal-turrets"],
     create_build_effect_smoke = false,
     raise_built = true,
@@ -39,15 +44,15 @@ function tesla_coil.build(source_entity)
     game.print(
       "Building tesla failed due to AAI Programmable Vehicles; This tesla coil will not function. To fix this, change the 'Deadzone construction denial range' map setting to zero."
     )
-    source_entity.active = false
+    entity.active = false
     return
   end
   turret.destructible = false
 
   local collision_entity = surface.create_entity({
     name = "kr-tesla-coil-collision",
-    position = source_entity.position,
-    force = source_entity.force,
+    position = entity.position,
+    force = entity.force,
     create_build_effect_smoke = false,
     raise_built = true,
   })
@@ -57,7 +62,7 @@ function tesla_coil.build(source_entity)
   local data = {
     entities = {
       collision = collision_entity,
-      tower = source_entity,
+      tower = entity,
       turret = turret,
     },
     tower_unit_number = unit_number,
@@ -69,35 +74,35 @@ function tesla_coil.build(source_entity)
 end
 
 --- @param entity LuaEntity
-function tesla_coil.destroy(entity)
-  -- Beams will automatically get destroyed
-  local unit_number = entity.unit_number --[[@as uint]]
-  local tower_data = storage.tesla_coil.towers[unit_number]
-  if tower_data then
-    storage.tesla_coil.turrets[tower_data.turret_unit_number] = nil
-    storage.tesla_coil.towers[unit_number] = nil
-
-    for _, entity in pairs(tower_data.entities) do
-      if entity and entity.valid and entity.type ~= "electric-energy-interface" then
-        entity.destroy()
-      end
-    end
+local function destroy_if_valid(entity)
+  if entity.valid then
+    entity.destroy()
   end
+end
+
+--- @param e EntityDestroyedEvent
+local function on_entity_destroyed(e)
+  local entity = e.entity
+  if not entity or not entity.valid or entity.name ~= "kr-tesla-coil" then
+    return
+  end
+
+  local unit_number = entity.unit_number
+  assert(unit_number)
+  local tower_data = storage.tesla_coil.towers[unit_number]
+  if not tower_data then
+    return
+  end
+
+  destroy_if_valid(tower_data.entities.collision)
+  destroy_if_valid(tower_data.entities.turret)
+
+  storage.tesla_coil.turrets[tower_data.turret_unit_number] = nil
+  storage.tesla_coil.towers[unit_number] = nil
 end
 
 -- TARGET
 -- An entity that will receive energy from a tesla coil
-
---- @param grid LuaEquipmentGrid
---- @return LuaEquipment|nil
-local function find_absorber_in_grid(grid)
-  -- Find the energy absorber
-  for _, equipment in pairs(grid.equipment) do
-    if equipment.name == "energy-absorber" then
-      return equipment
-    end
-  end
-end
 
 --- @param target LuaEntity
 --- @return GridData?
@@ -119,7 +124,7 @@ local function get_grid_data(target)
   if grid then
     --- @class GridData
     local data = {
-      absorber = find_absorber_in_grid(grid),
+      absorber = grid.find("energy-absorber-equipment"),
       grid = grid,
     }
 
@@ -129,21 +134,21 @@ end
 
 --- Updates the absorber object in a target's equipment grid
 --- @param grid LuaEquipmentGrid
-function tesla_coil.update_target_grid(grid)
+local function update_target_grid(grid)
   for _, target_data in pairs(storage.tesla_coil.targets) do
     local grid_data = target_data.grid_data
     if grid_data.grid.valid and grid_data.grid == grid then
-      grid_data.absorber = find_absorber_in_grid(grid)
+      grid_data.absorber = grid.find("energy-absorber-equipment")
     end
   end
 end
 
 --- @param target LuaEntity
 --- @param tower_data TowerData
-function tesla_coil.add_target(target, tower_data)
+local function add_target(target, tower_data)
   local target_unit_number = target.unit_number --[[@as uint]]
   local tower = tower_data.entities.tower
-  if not tower.valid or tower.energy < constants.tesla_coil.required_energy then
+  if not tower.valid or tower.energy < required_energy then
     return
   end
   -- Check the target's equipment grid for an energy absorber
@@ -170,7 +175,7 @@ function tesla_coil.add_target(target, tower_data)
 end
 
 --- @param target_unit_number number
-function tesla_coil.remove_target(target_unit_number)
+local function remove_target(target_unit_number)
   storage.tesla_coil.targets[target_unit_number] = nil
 end
 
@@ -181,22 +186,21 @@ end
 --- @param target_data TargetData
 --- @param tower_data TowerData
 --- @return boolean
-function tesla_coil.add_connection(target_data, tower_data)
+local function add_connection(target_data, tower_data)
   -- Check if the absorber has space
-  local capacity = storage.tesla_coil.absorber_buffer_capacity
   local absorber = target_data.grid_data.absorber
   if not absorber or not absorber.valid then
-    tesla_coil.remove_target(target_data.unit_number)
+    remove_target(target_data.unit_number)
     return false
   end
 
   local tower = tower_data.entities.tower
   if not tower.valid then
-    tesla_coil.remove_target(target_data.unit_number)
+    remove_target(target_data.unit_number)
     return false
   end
 
-  if absorber.energy >= capacity then
+  if absorber.energy >= absorber_buffer_capacity then
     return false
   end
 
@@ -208,7 +212,7 @@ function tesla_coil.add_connection(target_data, tower_data)
     position = tower_data.entities.tower.position,
     target = target_data.entity,
     duration = 0,
-    max_length = constants.tesla_coil.range,
+    max_length = range,
     force = tower_data.entities.tower.force,
     raise_built = true,
   })
@@ -239,40 +243,7 @@ end
 
 --- @param target_data TargetData
 --- @param tower_data TowerData
-function tesla_coil.update_connection(target_data, tower_data)
-  local absorber = target_data.grid_data.absorber
-
-  -- Check if the tower is powered
-  if not absorber or not absorber.valid or tower_data.entities.tower.energy < constants.tesla_coil.required_energy then
-    tesla_coil.remove_connection(target_data, tower_data)
-    return
-  end
-
-  local capacity = storage.tesla_coil.absorber_buffer_capacity
-  local energy = absorber.energy
-  if energy < capacity then
-    -- Calculate how much to add
-    local to_add = constants.tesla_coil.charging_rate / 60 * constants.tesla_coil.cooldown
-    local result = energy + to_add
-    local tower = tower_data.entities.tower
-
-    if result >= capacity then
-      absorber.energy = capacity
-      target_data.full_tick = game.tick
-    else
-      absorber.energy = result
-      target_data.full_tick = nil
-    end
-
-    tower.energy = tower.energy - (to_add * constants.tesla_coil.loss_multiplier)
-  elseif target_data.full_tick and target_data.full_tick + constants.tesla_coil.cooldown <= game.tick then
-    tesla_coil.remove_connection(target_data, tower_data)
-  end
-end
-
---- @param target_data TargetData
---- @param tower_data TowerData
-function tesla_coil.remove_connection(target_data, tower_data)
+local function remove_connection(target_data, tower_data)
   local connection_data = target_data.connections.by_tower[tower_data.tower_unit_number]
 
   -- Destroy beam if it still exists
@@ -287,13 +258,45 @@ function tesla_coil.remove_connection(target_data, tower_data)
   target_data.connections.by_tower[tower_data.tower_unit_number] = nil
 
   if table_size(target_data.connections.by_beam) == 0 then
-    tesla_coil.remove_target(target_data.unit_number)
+    remove_target(target_data.unit_number)
+  end
+end
+
+--- @param target_data TargetData
+--- @param tower_data TowerData
+local function update_connection(target_data, tower_data)
+  local absorber = target_data.grid_data.absorber
+
+  -- Check if the tower is powered
+  if not absorber or not absorber.valid or tower_data.entities.tower.energy < required_energy then
+    remove_connection(target_data, tower_data)
+    return
+  end
+
+  local energy = absorber.energy
+  if energy < absorber_buffer_capacity then
+    -- Calculate how much to add
+    local to_add = charging_rate / 60 * cooldown
+    local result = energy + to_add
+    local tower = tower_data.entities.tower
+
+    if result >= absorber_buffer_capacity then
+      absorber.energy = absorber_buffer_capacity
+      target_data.full_tick = game.tick
+    else
+      absorber.energy = result
+      target_data.full_tick = nil
+    end
+
+    tower.energy = tower.energy - (to_add * loss_multiplier)
+  elseif target_data.full_tick and target_data.full_tick + cooldown <= game.tick then
+    remove_connection(target_data, tower_data)
   end
 end
 
 --- @param target LuaEntity
 --- @param turret LuaEntity
-function tesla_coil.process_turret_fire(target, turret)
+local function process_turret_fire(target, turret)
   local tower_data = storage.tesla_coil.turrets[turret.unit_number]
   if not tower_data then
     return
@@ -301,7 +304,7 @@ function tesla_coil.process_turret_fire(target, turret)
 
   local target_data = storage.tesla_coil.targets[target.unit_number]
   if not target_data then
-    target_data = tesla_coil.add_target(target, tower_data)
+    target_data = add_target(target, tower_data)
   end
 
   if target_data then
@@ -310,11 +313,74 @@ function tesla_coil.process_turret_fire(target, turret)
       target_data.entity = target
     end
     local connection = target_data.connections.by_tower[tower_data.tower_unit_number]
-    if connection or tesla_coil.add_connection(target_data, tower_data) then
-      tesla_coil.update_connection(target_data, tower_data)
+    if connection or add_connection(target_data, tower_data) then
+      update_connection(target_data, tower_data)
     end
   end
 end
+
+-- EVENTS
+
+--- @param e EventData.on_object_destroyed
+local function on_object_destroyed(e)
+  local beam_data = storage.tesla_coil.beams[e.registration_number]
+  if beam_data then
+    remove_connection(beam_data.target_data, beam_data.tower_data)
+  end
+end
+
+--- @param e EventData.on_equipment_inserted
+local function on_equipment_inserted(e)
+  if not e.equipment.valid or e.equipment.name ~= "energy-absorber-equipment" then
+    return
+  end
+  update_target_grid(e.grid)
+end
+
+--- @param e EventData.on_equipment_removed
+local function on_equipment_removed(e)
+  if e.equipment == "energy-absorber-equipment" then
+    update_target_grid(e.grid)
+  end
+end
+
+--- @param e EventData.on_script_trigger_effect
+local function on_script_trigger_effect(e)
+  if e.effect_id == "kr-tesla-coil-trigger" then
+    process_turret_fire(e.target_entity, e.source_entity)
+  end
+end
+
+local tesla_coil = {}
+
+function tesla_coil.on_init()
+  storage.tesla_coil = {
+    --- @type table<number, BeamData>
+    beams = {},
+    --- @type table<number, TowerData>
+    turrets = {},
+    --- @type table<number, TowerData>
+    towers = {},
+    --- @type table<number, TargetData>
+    targets = {},
+  }
+end
+
+tesla_coil.events = {
+  [defines.events.on_built_entity] = on_entity_built,
+  [defines.events.on_entity_cloned] = on_entity_built,
+  [defines.events.on_entity_died] = on_entity_destroyed,
+  [defines.events.on_equipment_inserted] = on_equipment_inserted,
+  [defines.events.on_equipment_removed] = on_equipment_removed,
+  [defines.events.on_object_destroyed] = on_object_destroyed,
+  [defines.events.on_player_mined_entity] = on_entity_destroyed,
+  [defines.events.on_robot_built_entity] = on_entity_built,
+  [defines.events.on_robot_mined_entity] = on_entity_destroyed,
+  [defines.events.on_script_trigger_effect] = on_script_trigger_effect,
+  [defines.events.script_raised_built] = on_entity_built,
+  [defines.events.script_raised_destroy] = on_entity_destroyed,
+  [defines.events.script_raised_revive] = on_entity_built,
+}
 
 return tesla_coil
 
@@ -359,7 +425,7 @@ return tesla_coil
     if armor_inventory and armor_inventory.valid then
       local armor = armor_inventory[1]
       if armor and armor.valid_for_read then
-        armor.grid.put({ name = "energy-absorber", position = { 5, 5 } })
+        armor.grid.put({ name = "energy-absorber-equipment", position = { 5, 5 } })
       end
     end
   end)

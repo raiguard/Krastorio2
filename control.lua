@@ -14,6 +14,7 @@ handler.add_libraries({
   require("scripts.radioactivity"),
   require("scripts.roboport"),
   require("scripts.shelter"),
+  require("scripts.tesla-coil"),
   require("scripts.virus"),
 })
 
@@ -22,7 +23,6 @@ local migration = require("__flib__.migration")
 -- local creep = require("scripts.creep")
 local migrations = require("scripts.migrations")
 local planetary_teleporter = require("scripts.planetary-teleporter")
-local tesla_coil = require("scripts.tesla-coil")
 
 -- COMMANDS
 
@@ -42,7 +42,6 @@ function legacy_lib.on_init()
   -- Initialize `global` table
   -- creep.init()
   planetary_teleporter.init()
-  tesla_coil.init()
 
   -- Initialize mod
   migrations.generic()
@@ -67,14 +66,10 @@ local function on_entity_created(e)
     return
   end
   local entity_name = entity.name
-
-  -- Clean up cloned internal entities
   if
     e.name == defines.events.on_entity_cloned
     and (
-      entity_name == "kr-tesla-coil-turret"
-      or entity_name == "kr-tesla-coil-collision"
-      or entity_name == "kr-planetary-teleporter-front-layer"
+      entity_name == "kr-planetary-teleporter-front-layer"
       or entity_name == "kr-planetary-teleporter-turret"
       or string.find(entity_name, "kr-planetary-teleporter-collision", nil, true)
     )
@@ -83,10 +78,9 @@ local function on_entity_created(e)
     return
   end
 
+  -- Clean up cloned internal entities
   if entity_name == "kr-planetary-teleporter" then
     planetary_teleporter.build(entity, e.tags)
-  elseif entity_name == "kr-tesla-coil" then
-    tesla_coil.build(entity)
   end
 end
 
@@ -104,8 +98,6 @@ local function on_entity_destroyed(e)
   local entity_name = entity.name
   if entity_name == "kr-planetary-teleporter" then
     planetary_teleporter.destroy(entity)
-  elseif entity_name == "kr-tesla-coil" then
-    tesla_coil.destroy(entity)
   end
 end
 
@@ -114,29 +106,11 @@ legacy_lib.events[defines.events.on_robot_mined_entity] = on_entity_destroyed
 legacy_lib.events[defines.events.on_entity_died] = on_entity_destroyed
 legacy_lib.events[defines.events.script_raised_destroy] = on_entity_destroyed
 
-legacy_lib.events[defines.events.on_object_destroyed] = function(e)
-  local beam_data = storage.tesla_coil.beams[e.registration_number]
-  if beam_data then
-    tesla_coil.remove_connection(beam_data.target_data, beam_data.tower_data)
-  end
-end
-
 -- legacy_lib.events[defines.events.on_biter_base_built] = function(e)
 --   creep.on_biter_base_built(e.entity)
 -- end
 
 -- EQUIPMENT
-
-legacy_lib.events[defines.events.on_equipment_inserted] = function(e)
-  if e.equipment.valid and e.equipment.name == "energy-absorber" then
-    tesla_coil.update_target_grid(e.grid)
-  end
-end
-legacy_lib.events[defines.events.on_equipment_removed] = function(e)
-  if e.equipment == "energy-absorber" then
-    tesla_coil.update_target_grid(e.grid)
-  end
-end
 
 -- FORCE
 
@@ -239,8 +213,6 @@ legacy_lib.events[defines.events.on_player_setup_blueprint] = function(e)
   end
 end
 
-legacy_lib.events[defines.events.on_player_armor_inventory_changed] = tesla_coil.on_player_armor_inventory_changed
-
 legacy_lib.events[defines.events.on_string_translated] = planetary_teleporter.on_string_translated
 
 -- SURFACES
@@ -259,9 +231,7 @@ legacy_lib.events[defines.events.on_string_translated] = planetary_teleporter.on
 -- TICKS AND TRIGGERS
 
 legacy_lib.events[defines.events.on_script_trigger_effect] = function(e)
-  if e.effect_id == "kr-tesla-coil-trigger" then
-    tesla_coil.process_turret_fire(e.target_entity, e.source_entity)
-  elseif e.effect_id == "kr-planetary-teleporter-character-trigger" then
+  if e.effect_id == "kr-planetary-teleporter-character-trigger" then
     planetary_teleporter.update_players_in_range(e.source_entity, e.target_entity)
   end
 end

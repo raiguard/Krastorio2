@@ -1,13 +1,10 @@
 local compatibility = require("scripts.compatibility")
-local tesla_coil = require("scripts.tesla-coil")
 local util = require("scripts.util")
 
 local migrations = {}
 
 function migrations.generic()
   util.ensure_turret_force()
-
-  tesla_coil.get_absorber_buffer_capacity()
 
   compatibility.aai_industry()
   compatibility.disco_science()
