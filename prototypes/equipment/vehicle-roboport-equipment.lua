@@ -15,7 +15,7 @@ data:extend({
     type = "item",
     name = "vehicle-roboport-equipment",
     icon = "__Krastorio2Assets__/icons/equipment/vehicle-roboport-equipment.png",
-    placed_as_equipment_result = "vehicle-roboport-equipment",
+    place_as_equipment_result = "vehicle-roboport-equipment",
     subgroup = "vehicle-motor",
     order = "e[additional-engines]-f1[vehicle-roboport-equipment]",
     stack_size = 5,

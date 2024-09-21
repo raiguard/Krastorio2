@@ -5,7 +5,7 @@ data:extend({
     name = "cyber-potato-equipment",
     localised_description = { "equipment-description.cyber-potato-equipment" },
     icon = "__Krastorio2Assets__/icons/equipment/cyber-potato-equipment.png",
-    placed_as_equipment_result = "cyber-potato-equipment",
+    place_as_equipment_result = "cyber-potato-equipment",
     --- @diagnostic disable-next-line
     rocket_launch_product = { "spoiled-potato", 1 }, -- TODO: Rocket launch products are no more
     subgroup = "other",

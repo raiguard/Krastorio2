@@ -21,7 +21,7 @@ data:extend({
       { icon = "__Krastorio2Assets__/icons/equipment/superior-night-vision-equipment.png", icon_size = 64 },
       { icon = "__Krastorio2Assets__/icons/equipment/tier-2.png", icon_size = 64 },
     },
-    placed_as_equipment_result = "superior-night-vision-equipment",
+    place_as_equipment_result = "superior-night-vision-equipment",
     subgroup = "character-equipment",
     order = "f[night-vision]-b[superior-night-vision-equipment]",
     stack_size = 10,

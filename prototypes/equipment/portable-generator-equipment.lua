@@ -18,7 +18,7 @@ data:extend({
       { icon = "__Krastorio2Assets__/icons/equipment/portable-generator-equipment.png", icon_size = 64 },
       { icon = "__Krastorio2Assets__/icons/equipment/tier-2.png", icon_size = 64 },
     },
-    placed_as_equipment_result = "portable-generator-equipment",
+    place_as_equipment_result = "portable-generator-equipment",
     subgroup = "equipment",
     order = "a2[energy-source]-a3[k-generator]",
     stack_size = 10,

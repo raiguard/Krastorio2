@@ -24,7 +24,7 @@ data:extend({
     },
     subgroup = "equipment",
     order = "d[active-defense]-b3[personal-laser-defense-mk3-equipment]",
-    placed_as_equipment_result = "personal-laser-defense-mk3-equipment",
+    place_as_equipment_result = "personal-laser-defense-mk3-equipment",
     stack_size = 20,
   },
   {

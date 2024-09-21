@@ -37,7 +37,7 @@ data:extend({
         },
       },
     },
-    placed_as_equipment_result = "nuclear-reactor-equipment",
+    place_as_equipment_result = "nuclear-reactor-equipment",
     subgroup = "equipment",
     order = "a2[energy-source]-a4[nuclear-reactor-equipment]",
     stack_size = 10,

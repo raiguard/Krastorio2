@@ -23,7 +23,7 @@ data:extend({
       { icon = "__Krastorio2Assets__/icons/equipment/tier-4.png", icon_size = 64 },
     },
     order = "d[active-defense]-b4[personal-laser-defense-mk4-equipment]",
-    placed_as_equipment_result = "personal-laser-defense-mk4-equipment",
+    place_as_equipment_result = "personal-laser-defense-mk4-equipment",
     stack_size = 20,
     subgroup = "equipment",
   },

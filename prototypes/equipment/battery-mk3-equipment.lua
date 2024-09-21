@@ -36,7 +36,7 @@ data:extend({
         },
       },
     },
-    placed_as_equipment_result = "battery-mk3-equipment",
+    place_as_equipment_result = "battery-mk3-equipment",
     subgroup = "equipment",
     order = "b3[battery]-b5[battery-equipment]",
     stack_size = 20,

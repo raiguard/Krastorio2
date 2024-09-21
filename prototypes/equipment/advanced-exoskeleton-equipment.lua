@@ -23,7 +23,7 @@ data:extend({
       },
       { icon = "__Krastorio2Assets__/icons/equipment/tier-2.png", icon_size = 64 },
     },
-    placed_as_equipment_result = "advanced-exoskeleton-equipment",
+    place_as_equipment_result = "advanced-exoskeleton-equipment",
     subgroup = "character-equipment",
     order = "e[exoskeleton]-a2[advanced-exoskeleton-equipment]",
     stack_size = 20,

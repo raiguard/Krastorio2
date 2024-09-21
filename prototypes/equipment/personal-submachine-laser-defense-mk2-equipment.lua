@@ -19,7 +19,7 @@ data:extend({
       { icon = "__Krastorio2Assets__/icons/equipment/personal-submachine-laser-defense-mk2-equipment.png" },
       { icon = "__Krastorio2Assets__/icons/equipment/tier-2.png", icon_size = 64 },
     },
-    placed_as_equipment_result = "personal-submachine-laser-defense-mk2-equipment",
+    place_as_equipment_result = "personal-submachine-laser-defense-mk2-equipment",
     subgroup = "equipment",
     order = "d[active-defense]-a3[personal-laser-defense-mk2-equipment]",
     stack_size = 10,

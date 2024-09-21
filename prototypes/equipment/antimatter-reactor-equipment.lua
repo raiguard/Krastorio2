@@ -36,7 +36,7 @@ data:extend({
         },
       },
     },
-    placed_as_equipment_result = "antimatter-reactor-equipment",
+    place_as_equipment_result = "antimatter-reactor-equipment",
     subgroup = "equipment",
     order = "a2[energy-source]-a6[antimatter-reactor-equipment]",
     stack_size = 10,

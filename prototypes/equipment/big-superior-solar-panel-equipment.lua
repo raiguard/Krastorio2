@@ -20,7 +20,7 @@ data:extend({
       },
       { icon = "__Krastorio2Assets__/icons/equipment/tier-2.png", icon_size = 64 },
     },
-    placed_as_equipment_result = "big-superior-solar-panel-equipment",
+    place_as_equipment_result = "big-superior-solar-panel-equipment",
     subgroup = "equipment",
     order = "a[energy-source]-a5[superior-solar-panel-equipment]",
     stack_size = 50,

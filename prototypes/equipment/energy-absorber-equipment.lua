@@ -18,7 +18,7 @@ data:extend({
     name = "energy-absorber-equipment",
     localised_description = { "equipment-description.energy-absorber-equipment" },
     icon = "__Krastorio2Assets__/icons/equipment/energy-absorber-equipment.png",
-    placed_as_equipment_result = "energy-absorber-equipment",
+    place_as_equipment_result = "energy-absorber-equipment",
     subgroup = "equipment",
     order = "a1[energy-source]-a1[energy-absorber-equipment]",
     stack_size = 10,

@@ -24,7 +24,7 @@ data:extend({
       },
       { icon = "__Krastorio2Assets__/icons/equipment/tier-4.png", icon_size = 64 },
     },
-    placed_as_equipment_result = "energy-shield-mk4-equipment",
+    place_as_equipment_result = "energy-shield-mk4-equipment",
     subgroup = "equipment",
     order = "b[shield]-c[energy-shield-equipment-mk4]",
     stack_size = 50,

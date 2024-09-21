@@ -18,7 +18,7 @@ data:extend({
       { icon = "__Krastorio2Assets__/icons/equipment/additional-engine-equipment.png", icon_size = 64 },
       { icon = "__Krastorio2Assets__/icons/equipment/tier-1.png", icon_size = 64 },
     },
-    placed_as_equipment_result = "additional-engine-equipment",
+    place_as_equipment_result = "additional-engine-equipment",
     subgroup = "vehicle-motor",
     order = "e[additional-engines]-e1[advanced-additional-engine-equipment]",
     stack_size = 5,
