@@ -2,7 +2,6 @@ local on_tick_n = require("__flib__.on-tick-n")
 local table = require("__flib__.table")
 
 local compatibility = require("scripts.compatibility")
-local freeplay = require("scripts.freeplay")
 local planetary_teleporter = require("scripts.planetary-teleporter")
 local shelter = require("scripts.shelter")
 local tesla_coil = require("scripts.tesla-coil")
@@ -11,11 +10,6 @@ local util = require("scripts.util")
 local migrations = {}
 
 function migrations.generic()
-  freeplay.add_bonus_items()
-  freeplay.add_to_crash_site()
-  freeplay.add_starting_items()
-  freeplay.set_custom_intro()
-  freeplay.disable_rocket_victory()
   util.ensure_turret_force()
 
   tesla_coil.get_absorber_buffer_capacity()

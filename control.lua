@@ -5,6 +5,7 @@ handler.add_libraries({
 
   require("scripts.creep-collector"),
   require("scripts.energy-absorber"),
+  require("scripts.freeplay"),
   require("scripts.intergalactic-transceiver"),
   require("scripts.jackhammer"),
   require("scripts.loader-snapping"),
