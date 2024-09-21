@@ -110,17 +110,6 @@ data:extend({
   },
   {
     type = "item",
-    name = "kr-mineral-water-pumpjack",
-    icon = "__Krastorio2Assets__/icons/entities/mineral-water-pumpjack.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "extraction-machine",
-    order = "b[fluids]-b2[mineral-water-pumpjack]",
-    place_result = "kr-mineral-water-pumpjack",
-    stack_size = 50,
-  },
-  {
-    type = "item",
     name = "kr-quarry-drill",
     icon = "__Krastorio2Assets__/icons/entities/quarry-drill.png",
     icon_size = 64,

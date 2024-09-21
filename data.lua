@@ -46,6 +46,7 @@ require("prototypes.entities.greenhouse")
 require("prototypes.entities.intergalactic-transceiver")
 require("prototypes.entities.matter-assembler")
 require("prototypes.entities.matter-plant")
+require("prototypes.entities.mineral-water-pumpjack")
 require("prototypes.entities.planetary-teleporter")
 require("prototypes.entities.superior-substation")
 

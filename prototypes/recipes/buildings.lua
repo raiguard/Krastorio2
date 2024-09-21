@@ -41,19 +41,6 @@ return {
   },
   {
     type = "recipe",
-    name = "kr-mineral-water-pumpjack",
-    energy_required = 5,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "automation-core", amount = 2 },
-      { type = "item", name = "steel-gear-wheel", amount = 5 },
-      { type = "item", name = "steel-beam", amount = 5 },
-      { type = "item", name = "pipe", amount = 5 },
-    },
-    results = { { type = "item", name = "kr-mineral-water-pumpjack", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-sentinel",
     energy_required = 5,
     enabled = false,
