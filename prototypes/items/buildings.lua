@@ -265,17 +265,6 @@ data:extend({
   -- -- --
   {
     type = "item",
-    name = "kr-matter-plant",
-    icon = "__Krastorio2Assets__/icons/entities/matter-plant.png",
-    icon_size = 128,
-    icon_mipmaps = 4,
-    subgroup = "production-machine",
-    order = "i[matter]-a[matter-plant]",
-    place_result = "kr-matter-plant",
-    stack_size = 10,
-  },
-  {
-    type = "item",
     name = "kr-stabilizer-charging-station",
     icon = "__Krastorio2Assets__/icons/entities/stabilizer-charging-station.png",
     icon_size = 128,
