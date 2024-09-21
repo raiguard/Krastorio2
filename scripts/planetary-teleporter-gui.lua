@@ -401,14 +401,12 @@ local function on_focus_search(e)
   end
 end
 
-local function on_init()
+local planetary_teleporter_gui = {}
+
+function planetary_teleporter_gui.on_init()
   --- @type table<uint, PlanetaryTeleporterGui>
   storage.planetary_teleporter_gui = {}
 end
-
-local planetary_teleporter_gui = {}
-
-planetary_teleporter_gui.on_init = on_init
 
 planetary_teleporter_gui.events = {
   [defines.events.on_gui_opened] = on_gui_opened,
