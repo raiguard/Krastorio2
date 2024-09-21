@@ -234,9 +234,7 @@ local function create_gui(player, entity)
       {
         type = "sprite-button",
         style = "frame_action_button",
-        sprite = "utility/close_white",
-        hovered_sprite = "utility/close_black",
-        clicked_sprite = "utility/close_black",
+        sprite = "utility/close",
         mouse_button_filter = { "left" },
         handler = { [defines.events.on_gui_click] = on_gui_window_closed },
       },
@@ -247,7 +245,6 @@ local function create_gui(player, entity)
       direction = "vertical",
       {
         type = "flow",
-        style = "status_flow",
         style_mods = { vertical_align = "center" },
         { type = "sprite", name = "status_icon", style = "flib_indicator" },
         { type = "label", name = "status_label" },
