@@ -1,18 +1,3 @@
-local kr_icons_size = false
-
-if krastorio.general.getSafeSettingValue("kr-large-icons") then
-  kr_icons_size = true
-end
-
-local empty_sprite = {
-  filename = "__Krastorio2Assets__/entities/empty.png",
-  priority = "high",
-  width = 1,
-  height = 1,
-  scale = 0.5,
-  shift = { 0, 0 },
-}
-
 local shelter_animation = {
   layers = {
     {
@@ -53,21 +38,38 @@ local shelter_animation = {
   },
 }
 
--- Shelter
 data:extend({
+  {
+    type = "recipe",
+    name = "kr-shelter",
+    energy_required = 10,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "iron-beam", amount = 25 },
+      { type = "item", name = "iron-plate", amount = 25 },
+      { type = "item", name = "copper-cable", amount = 10 },
+      { type = "item", name = "coal", amount = 50 },
+    },
+    results = { { type = "item", name = "kr-shelter", amount = 1 } },
+  },
+  {
+    type = "item",
+    name = "kr-shelter",
+    icon = "__Krastorio2Assets__/icons/entities/shelter.png",
+    subgroup = "storage",
+    order = "aaa",
+    place_result = "kr-shelter-container",
+    stack_size = 1,
+  },
   {
     type = "electric-energy-interface",
     name = "kr-shelter",
     icon = "__Krastorio2Assets__/icons/entities/shelter.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    allow_copy_paste = false,
     flags = { "not-on-map" },
     hidden = true,
     fast_replaceable_group = "kr-shelter",
+    allow_copy_paste = false,
     minable = { mining_time = 0.5, result = "kr-shelter" },
-    animation = shelter_animation,
-    continuous_animation = true,
     energy_source = {
       type = "electric",
       buffer_capacity = "120kJ",
@@ -78,33 +80,32 @@ data:extend({
       render_no_network_icon = false,
     },
     energy_production = "120kW",
+    animation = shelter_animation,
+    continuous_animation = true,
   },
-  -- Shelter
   {
     type = "container",
     name = "kr-shelter-container",
     localised_name = { "entity-name.kr-shelter" },
     localised_description = { "entity-description.kr-shelter" },
     icon = "__Krastorio2Assets__/icons/entities/shelter.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    allow_copy_paste = false,
-    flags = {
-      "not-blueprintable",
-      "not-rotatable",
-      "player-creation",
-    },
-    minable = { mining_time = 0.5, result = "kr-shelter" },
-    max_health = 1500,
-    corpse = "kr-medium-random-pipes-remnant",
+    flags = { "not-blueprintable", "not-rotatable", "player-creation" },
     collision_box = { { -2.75, -2.75 }, { 2.75, 2.75 } },
     selection_box = { { -3, -3 }, { 3, 3.20 } },
+    allow_copy_paste = false,
+    minable = { mining_time = 0.5, result = "kr-shelter" },
+    inventory_size = 200,
+    max_health = 1500,
+    corpse = "kr-medium-random-pipes-remnant",
     resistances = {
       { type = "physical", percent = 50 },
       { type = "fire", percent = 75 },
       { type = "impact", percent = 75 },
     },
-
+    open_sound = { filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1 },
+    close_sound = { filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1 },
+    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    picture = shelter_animation,
     water_reflection = {
       pictures = {
         filename = "__Krastorio2Assets__/entities/shelter/shelter-reflection.png",
@@ -118,27 +119,17 @@ data:extend({
       rotate = false,
       orientation_to_variation = false,
     },
-
-    picture = shelter_animation,
-    inventory_size = 200,
-    scale_info_icons = kr_icons_size,
-    open_sound = { filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1 },
-    close_sound = { filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1 },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    icon_draw_specification = { scale = 1.5, scale_for_many = 1.5 },
   },
-
-  -- Shelter light
-
   {
     type = "lamp",
     name = "kr-shelter-light",
     localised_name = { "entity-name.kr-shelter" },
     localised_description = { "entity-description.kr-shelter" },
-    icon = "__Krastorio2Assets__/entities/empty.png",
-    icon_size = 1,
-    allow_copy_paste = false,
+    icon = "__Krastorio2Assets__/icons/entities/shelter.png",
     flags = { "not-on-map" },
     hidden = true,
+    allow_copy_paste = false,
     energy_source = { type = "void" },
     energy_usage_per_tick = "1W",
     darkness_for_all_lamps_on = 0.2,
@@ -156,8 +147,8 @@ data:extend({
     },
     glow_size = 6,
     glow_color_intensity = 0.25,
-    picture_off = empty_sprite,
-    picture_on = empty_sprite,
+    picture_off = util.empty_sprite(),
+    picture_on = util.empty_sprite(),
   },
   {
     type = "simple-entity-with-owner",
@@ -165,15 +156,13 @@ data:extend({
     localised_name = { "entity-name.kr-shelter" },
     localised_description = { "entity-description.kr-shelter" },
     icon = "__Krastorio2Assets__/icons/entities/shelter.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     flags = {},
     hidden = true,
+    collision_box = { { -2.75, -2.75 }, { 2.75, 2.75 } },
+    selection_box = { { -3, -3 }, { 3, 3.20 } },
     minable = { mining_time = 10, result = "kr-shelter" },
     placeable_by = { item = "kr-shelter", count = 1 },
     picture = shelter_animation,
-    collision_box = { { -2.75, -2.75 }, { 2.75, 2.75 } },
-    selection_box = { { -3, -3 }, { 3, 3.20 } },
     resistances = {
       { type = "physical", percent = 50 },
       { type = "fire", percent = 75 },

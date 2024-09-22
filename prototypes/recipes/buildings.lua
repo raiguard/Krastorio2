@@ -28,19 +28,6 @@ return {
   },
   {
     type = "recipe",
-    name = "kr-shelter",
-    energy_required = 10,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "iron-beam", amount = 25 },
-      { type = "item", name = "iron-plate", amount = 25 },
-      { type = "item", name = "copper-cable", amount = 10 },
-      { type = "item", name = "coal", amount = 50 },
-    },
-    results = { { type = "item", name = "kr-shelter", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-tesla-coil",
     energy_required = 20,
     enabled = false,

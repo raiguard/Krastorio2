@@ -66,17 +66,6 @@ data:extend({
   -- -- --
   {
     type = "item",
-    name = "kr-shelter",
-    icon = "__Krastorio2Assets__/icons/entities/shelter.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "storage",
-    order = "aaa",
-    place_result = "kr-shelter-container",
-    stack_size = 1,
-  },
-  {
-    type = "item",
     name = "kr-shelter-plus",
     icon = "__Krastorio2Assets__/icons/entities/shelter-plus.png",
     icon_size = 64,

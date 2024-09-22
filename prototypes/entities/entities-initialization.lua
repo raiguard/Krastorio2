@@ -1,4 +1,3 @@
-require("prototypes.entities.shelter")
 require("prototypes.entities.shelter-plus")
 require("prototypes.entities.singularity-beacon")
 require("prototypes.entities.stabilizer-charging-station")
