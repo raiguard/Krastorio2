@@ -63,17 +63,6 @@ data:extend({
   -- -- --
   -- Research servers
   -- -- --
-  {
-    type = "item",
-    name = "kr-research-server",
-    icon = "__Krastorio2Assets__/icons/entities/research-server.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "production-machine",
-    order = "f3[research-servers]-a1[research-server]",
-    place_result = "kr-research-server",
-    stack_size = 50,
-  },
   -- -- --
   {
     type = "item",
