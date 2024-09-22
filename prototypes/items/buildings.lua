@@ -86,17 +86,6 @@ data:extend({
     place_result = "kr-shelter-plus-container",
     stack_size = 1,
   },
-  {
-    type = "item",
-    name = "kr-sentinel",
-    icon = "__Krastorio2Assets__/icons/entities/sentinel.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "radars-and-rockets",
-    order = "01[sentinel]",
-    place_result = "kr-sentinel",
-    stack_size = 50,
-  },
   -- -- --
   -- NEW LABORATORIES
   -- -- --

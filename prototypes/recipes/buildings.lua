@@ -41,19 +41,6 @@ return {
   },
   {
     type = "recipe",
-    name = "kr-sentinel",
-    energy_required = 5,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "glass", amount = 1 },
-      { type = "item", name = "iron-plate", amount = 2 },
-      { type = "item", name = "copper-cable", amount = 1 },
-      { type = "item", name = "automation-core", amount = 1 },
-    },
-    results = { { type = "item", name = "kr-sentinel", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-tesla-coil",
     energy_required = 20,
     enabled = false,

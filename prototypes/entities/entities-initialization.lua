@@ -1,4 +1,3 @@
-require("prototypes.entities.sentinel")
 require("prototypes.entities.shelter")
 require("prototypes.entities.shelter-plus")
 require("prototypes.entities.singularity-beacon")

@@ -3,26 +3,33 @@ local sounds = require("__base__.prototypes.entity.sounds")
 
 data:extend({
   {
+    type = "recipe",
+    name = "kr-sentinel",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "glass", amount = 1 },
+      { type = "item", name = "iron-plate", amount = 2 },
+      { type = "item", name = "copper-cable", amount = 1 },
+      { type = "item", name = "automation-core", amount = 1 },
+    },
+    results = { { type = "item", name = "kr-sentinel", amount = 1 } },
+  },
+  {
+    type = "item",
+    name = "kr-sentinel",
+    icon = "__Krastorio2Assets__/icons/entities/sentinel.png",
+    subgroup = "radars-and-rockets",
+    order = "01[sentinel]",
+    place_result = "kr-sentinel",
+    stack_size = 50,
+  },
+  {
     type = "radar",
     name = "kr-sentinel",
     icon = "__Krastorio2Assets__/icons/entities/sentinel.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.1, result = "kr-sentinel" },
-    damaged_trigger_effect = hit_effects.entity(),
-    max_health = 75,
-    corpse = "small-remnants",
-    resistances = {
-      {
-        type = "fire",
-        percent = 50,
-      },
-      {
-        type = "impact",
-        percent = 10,
-      },
-    },
     collision_box = { { -0.25, -0.25 }, { 0.25, 0.25 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     energy_per_sector = "1YJ",
@@ -34,6 +41,24 @@ data:extend({
       usage_priority = "secondary-input",
     },
     energy_usage = "40kW",
+    max_health = 75,
+    corpse = "small-remnants",
+    damaged_trigger_effect = hit_effects.entity(),
+    resistances = {
+      {
+        type = "fire",
+        percent = 50,
+      },
+      {
+        type = "impact",
+        percent = 10,
+      },
+    },
+    vehicle_impact_sound = sounds.generic_impact,
+    working_sound = {
+      sound = { filename = "__Krastorio2Assets__/sounds/buildings/sentinel.ogg" },
+      apparent_volume = 1,
+    },
     pictures = {
       layers = {
         {
@@ -48,11 +73,6 @@ data:extend({
           scale = 0.35,
         },
       },
-    },
-    vehicle_impact_sound = sounds.generic_impact,
-    working_sound = {
-      sound = { filename = "__Krastorio2Assets__/sounds/buildings/sentinel.ogg" },
-      apparent_volume = 1,
     },
     radius_minimap_visualisation_color = { r = 0.059, g = 0.092, b = 0.235, a = 0.275 },
     rotation_speed = 0.0015,
