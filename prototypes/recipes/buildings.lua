@@ -325,19 +325,6 @@ return {
   },
   {
     type = "recipe",
-    name = "kr-singularity-beacon",
-    energy_required = 10,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "beacon", amount = 1 },
-      { type = "item", name = "ai-core", amount = 10 },
-      { type = "item", name = "processing-unit", amount = 20 },
-      { type = "item", name = "energy-control-unit", amount = 10 },
-    },
-    results = { { type = "item", name = "kr-singularity-beacon", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-railgun-turret",
     enabled = false,
     energy_required = 20,

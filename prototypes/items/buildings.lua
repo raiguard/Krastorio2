@@ -297,17 +297,6 @@ data:extend({
   },
   -- -- --
   -- -- --
-  {
-    type = "item",
-    name = "kr-singularity-beacon",
-    icon = "__Krastorio2Assets__/icons/entities/singularity-beacon.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "module",
-    order = "8[singularity-beacon]",
-    place_result = "kr-singularity-beacon",
-    stack_size = 50,
-  },
   -- -- --
   -- Superior inserters
   -- -- --
