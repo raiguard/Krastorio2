@@ -186,17 +186,6 @@ data:extend({
     stack_size = 50,
   },
   -- -- --
-  {
-    type = "item",
-    name = "kr-stabilizer-charging-station",
-    icon = "__Krastorio2Assets__/icons/entities/stabilizer-charging-station.png",
-    icon_size = 128,
-    icon_mipmaps = 4,
-    subgroup = "production-machine",
-    order = "i[matter]-c[stabilizer-charging-station]",
-    place_result = "kr-stabilizer-charging-station",
-    stack_size = 50,
-  },
   -- -- --
   -- Belts
   -- -- --

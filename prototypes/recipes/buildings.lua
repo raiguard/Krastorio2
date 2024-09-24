@@ -132,18 +132,6 @@ return {
     },
     results = { { type = "item", name = "kr-steel-pump", amount = 1 } },
   },
-  {
-    type = "recipe",
-    name = "kr-stabilizer-charging-station",
-    energy_required = 5,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "imersium-beam", amount = 4 },
-      { type = "item", name = "energy-control-unit", amount = 20 },
-      { type = "item", name = "processing-unit", amount = 1 },
-    },
-    results = { { type = "item", name = "kr-stabilizer-charging-station", amount = 1 } },
-  },
   ---
   -- Belts
   ---

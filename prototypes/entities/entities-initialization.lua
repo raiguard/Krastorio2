@@ -1,4 +1,3 @@
-require("prototypes.entities.stabilizer-charging-station")
 require("prototypes.entities.steel-pipe")
 require("prototypes.entities.steel-pipe-to-ground")
 require("prototypes.entities.steel-pump")
