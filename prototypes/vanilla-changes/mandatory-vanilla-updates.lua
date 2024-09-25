@@ -12,7 +12,6 @@ require("mandatory.rebalance-nuclear-power") -- Rebalance nuclear power
 require("mandatory.recipes-changes") -- All modification to vanilla recipes
 require("mandatory.renaming-vanillas") -- Localization changes to vanilla objects
 require("mandatory.resources-changes") -- Resources changes
-require("mandatory.overmodule-fix") -- Multiply smelting recipes stat for fix overmodule bug
 require("mandatory.spawner-changes") -- Modify spawners sprite
 require("mandatory.vanilla-lab-changes") -- Modify stat and accepted science packs of vanilla lab
 require("mandatory.fluids-changes") -- Add some new properties to vanilla fluids

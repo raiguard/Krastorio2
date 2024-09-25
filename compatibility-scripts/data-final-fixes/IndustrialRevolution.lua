@@ -837,22 +837,6 @@ if mods["IndustrialRevolution"] then
     krastorio.matter_func.createMatterRecipe(new_ingot_conversion)
   end
 
-  -- -- Re-do the overmodule fix
-  -- For each recipe that is in smelting
-  -- multiply by 5 the recipe stat for avoid overmodule bug effect
-  for name, recipe in pairs(data.raw.recipe) do
-    if
-      recipe.category
-      and (recipe.category == "smelting" or recipe.category == "smelting-1" or recipe.category == "smelting-2" or recipe.category == "smelting-3")
-      and krastorio.recipes.normalEnergyRequired(name) < 6.4
-    then
-      if not recipe.energy_required then
-        krastorio.recipes.setEnergyCost(name, 3.2)
-      end
-      krastorio.recipes.multiplyRecipeStat(name, 5)
-    end
-  end
-
   -- Crushed rare metals
   data:extend({
     {
