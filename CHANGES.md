@@ -14,7 +14,7 @@
 - Vehicle `burner` -> `energy_source`.
 - Rocket control units removed.
 - `empty-barrel` -> `barrel`.
-- `item-with-inventory` doesn't exist!? Causing crashes when iterating `defines.prototypes.item`. (TODO: Look into this)
+- Some prototype types, such as `item-with-inventory`, no longer require at least one prototype for the game to load. `defines.prototypes["item-with-inventory"]` is `nil` in this case.
 
 # Prototype errors
 
