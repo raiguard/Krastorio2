@@ -1,10 +1,28 @@
 data:extend({
   {
+    type = "recipe",
+    name = "kr-logo",
+    energy_required = 666,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "iron-stick", amount = 5000 },
+      { type = "item", name = "poop", amount = 1 },
+    },
+    results = { { type = "item", name = "kr-logo", amount = 1 } },
+  },
+  {
+    type = "item",
+    name = "kr-logo",
+    icon = "__Krastorio2Assets__/icons/entities/k-logo.png",
+    stack_size = 50,
+    subgroup = "energy",
+    order = "d[solar-panel]-e[kr-logo]",
+    place_result = "kr-logo",
+  },
+  {
     type = "electric-energy-interface",
     name = "kr-logo",
     icon = "__Krastorio2Assets__/icons/entities/k-logo.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     allow_copy_paste = false,
     flags = {
       "placeable-player",
@@ -15,11 +33,20 @@ data:extend({
       "not-repairable",
       "not-on-map",
     },
-    fast_replaceable_group = "kr-logo",
     minable = { mining_time = 0.5, result = "kr-logo" },
     collision_box = { { -10.75, -1.25 }, { 10.75, 1.25 } },
     selection_box = { { -11.0, -1.5 }, { 11.0, 1.5 } },
-
+    fast_replaceable_group = "kr-logo",
+    energy_source = {
+      type = "electric",
+      buffer_capacity = "666J",
+      usage_priority = "primary-output",
+      input_flow_limit = "0kW",
+      output_flow_limit = "666W",
+      render_no_power_icon = false,
+      render_no_network_icon = false,
+    },
+    energy_production = "666W",
     animation = {
       layers = {
         {
@@ -118,17 +145,6 @@ data:extend({
         },
       },
     },
-
     continuous_animation = true,
-    energy_source = {
-      type = "electric",
-      buffer_capacity = "666J",
-      usage_priority = "primary-output",
-      input_flow_limit = "0kW",
-      output_flow_limit = "666W",
-      render_no_power_icon = false,
-      render_no_network_icon = false,
-    },
-    energy_production = "666W",
   },
 })
