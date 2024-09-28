@@ -62,6 +62,7 @@ require("prototypes.entities.steel-pump")
 require("prototypes.entities.superior-inserter")
 require("prototypes.entities.superior-long-inserter")
 require("prototypes.entities.superior-substation")
+require("prototypes.entities.wind-turbine")
 
 require("prototypes.equipment.additional-engine-equipment")
 require("prototypes.equipment.advanced-additional-engine-equipment")

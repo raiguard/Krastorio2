@@ -5,17 +5,6 @@ data:extend({
   -- K2
   {
     type = "item",
-    name = "kr-wind-turbine",
-    icon = "__Krastorio2Assets__/icons/entities/wind-turbine.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "energy",
-    order = "00[solar-panel]-a[wind-turbine]",
-    place_result = "kr-wind-turbine",
-    stack_size = 50,
-  },
-  {
-    type = "item",
     name = "kr-advanced-assembling-machine",
     icon = "__Krastorio2Assets__/icons/entities/advanced-assembling-machine.png",
     icon_size = 64,
