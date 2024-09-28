@@ -561,14 +561,6 @@ data:extend({
         type = "unlock-recipe",
         recipe = "kr-superior-long-inserter",
       },
-      {
-        type = "unlock-recipe",
-        recipe = "kr-superior-filter-inserter",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "kr-superior-long-filter-inserter",
-      },
     },
     prerequisites = { "bulk-inserter", "kr-imersium-processing", "kr-advanced-tech-card" },
     unit = {

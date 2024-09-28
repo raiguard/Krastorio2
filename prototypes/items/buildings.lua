@@ -256,28 +256,6 @@ data:extend({
   -- -- --
   -- Superior inserters
   -- -- --
-  {
-    type = "item",
-    name = "kr-superior-filter-inserter",
-    icon = "__Krastorio2Assets__/icons/entities/inserters/superior-filter-inserter.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "inserter",
-    order = "h3[superior-filter-inserter]",
-    place_result = "kr-superior-filter-inserter",
-    stack_size = 50,
-  },
-  {
-    type = "item",
-    name = "kr-superior-long-filter-inserter",
-    icon = "__Krastorio2Assets__/icons/entities/inserters/superior-long-filter-inserter.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "inserter",
-    order = "h4[superior-long-filter-inserter]",
-    place_result = "kr-superior-long-filter-inserter",
-    stack_size = 50,
-  },
   -- -- --
   {
     type = "item",

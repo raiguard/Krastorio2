@@ -38,6 +38,7 @@ data:extend({
     extension_speed = 0.105,
     rotation_speed = 0.06,
     bulk = true,
+    filter_count = 4,
     energy_per_movement = "12kJ",
     energy_per_rotation = "12kJ",
     energy_source = {

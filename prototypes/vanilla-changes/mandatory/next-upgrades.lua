@@ -6,8 +6,6 @@
 -- data.raw.inserter["long-handed-inserter"].next_upgrade = "kr-superior-long-inserter"
 -- data.raw.inserter["long-handed-inserter"].fast_replaceable_group = "inserter"
 
--- data.raw.inserter["stack-filter-inserter"].next_upgrade = "kr-superior-filter-inserter"
-
 -- Belts
 data.raw["transport-belt"]["express-transport-belt"].next_upgrade = "kr-advanced-transport-belt"
 data.raw["splitter"]["express-splitter"].next_upgrade = "kr-advanced-splitter"
