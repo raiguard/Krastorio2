@@ -1,5 +1,3 @@
-require("prototypes.entities.steel-pipe")
-require("prototypes.entities.steel-pipe-to-ground")
 require("prototypes.entities.steel-pump")
 require("prototypes.entities.superior-inserters")
 require("prototypes.entities.wind-turbine")

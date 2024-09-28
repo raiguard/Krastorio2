@@ -119,28 +119,6 @@ data:extend({
   -- -- --
   {
     type = "item",
-    name = "kr-steel-pipe",
-    icon = "__Krastorio2Assets__/icons/entities/steel-pipe.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "energy-pipe-distribution",
-    order = "a[pipe]-aa[steel-pipe]",
-    place_result = "kr-steel-pipe",
-    stack_size = 50,
-  },
-  {
-    type = "item",
-    name = "kr-steel-pipe-to-ground",
-    icon = "__Krastorio2Assets__/icons/entities/steel-pipe-to-ground.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "energy-pipe-distribution",
-    order = "a[pipe]-ba[steel-pipe-to-ground]",
-    place_result = "kr-steel-pipe-to-ground",
-    stack_size = 50,
-  },
-  {
-    type = "item",
     name = "kr-steel-pump",
     icon = "__Krastorio2Assets__/icons/entities/steel-pump.png",
     icon_size = 64,

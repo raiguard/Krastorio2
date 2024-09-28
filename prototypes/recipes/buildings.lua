@@ -102,25 +102,6 @@ return {
   -- -- --
   {
     type = "recipe",
-    name = "kr-steel-pipe",
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "steel-plate", amount = 1 },
-    },
-    results = { { type = "item", name = "kr-steel-pipe", amount = 1 } },
-  },
-  {
-    type = "recipe",
-    name = "kr-steel-pipe-to-ground",
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "kr-steel-pipe", amount = 15 },
-      { type = "item", name = "steel-plate", amount = 5 },
-    },
-    results = { { type = "item", name = "kr-steel-pipe-to-ground", amount = 2 } },
-  },
-  {
-    type = "recipe",
     name = "kr-steel-pump",
     energy_required = 2,
     enabled = false,
