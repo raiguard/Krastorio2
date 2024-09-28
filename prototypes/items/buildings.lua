@@ -5,17 +5,6 @@ data:extend({
   -- K2
   {
     type = "item",
-    name = "kr-advanced-assembling-machine",
-    icon = "__Krastorio2Assets__/icons/entities/advanced-assembling-machine.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "production-machine",
-    order = "c2[advanced-assembling-machine]",
-    place_result = "kr-advanced-assembling-machine",
-    stack_size = 50,
-  },
-  {
-    type = "item",
     name = "kr-tesla-coil",
     icon = "__Krastorio2Assets__/icons/entities/tesla-coil.png",
     icon_size = 64,

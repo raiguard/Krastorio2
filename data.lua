@@ -22,6 +22,7 @@ require("prototypes.categories.item-subgroups")
 require("prototypes.categories.recipe-categories")
 require("prototypes.categories.resource-categories")
 
+require("prototypes.entities.advanced-assembling-machine")
 require("prototypes.entities.advanced-chemical-plant")
 require("prototypes.entities.advanced-furnace")
 require("prototypes.entities.advanced-solar-panel")

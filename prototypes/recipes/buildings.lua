@@ -187,19 +187,6 @@ return {
   -- -- --
   {
     type = "recipe",
-    name = "kr-advanced-assembling-machine",
-    energy_required = 10,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "imersium-beam", amount = 4 },
-      { type = "item", name = "assembling-machine-3", amount = 2 },
-      { type = "item", name = "electric-furnace", amount = 2 },
-      { type = "item", name = "ai-core", amount = 2 },
-    },
-    results = { { type = "item", name = "kr-advanced-assembling-machine", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-large-roboport",
     energy_required = 30,
     enabled = false,
