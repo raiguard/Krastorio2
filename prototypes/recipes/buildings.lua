@@ -100,19 +100,6 @@ return {
     results = { { type = "item", name = "kr-fluid-storage-2", amount = 1 } },
   },
   -- -- --
-  {
-    type = "recipe",
-    name = "kr-steel-pump",
-    energy_required = 2,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "steel-gear-wheel", amount = 4 },
-      { type = "item", name = "engine-unit", amount = 1 },
-      { type = "item", name = "steel-beam", amount = 1 },
-      { type = "item", name = "kr-steel-pipe", amount = 1 },
-    },
-    results = { { type = "item", name = "kr-steel-pump", amount = 1 } },
-  },
   ---
   -- Belts
   ---

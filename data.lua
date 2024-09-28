@@ -58,6 +58,7 @@ require("prototypes.entities.singularity-beacon")
 require("prototypes.entities.stabilizer-charging-station")
 require("prototypes.entities.steel-pipe")
 require("prototypes.entities.steel-pipe-to-ground")
+require("prototypes.entities.steel-pump")
 require("prototypes.entities.superior-substation")
 
 require("prototypes.equipment.additional-engine-equipment")

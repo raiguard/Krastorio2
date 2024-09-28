@@ -2,30 +2,37 @@ local sounds = require("__base__.prototypes.entity.sounds")
 
 data:extend({
   {
+    type = "recipe",
+    name = "kr-steel-pump",
+    energy_required = 2,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "steel-gear-wheel", amount = 4 },
+      { type = "item", name = "engine-unit", amount = 1 },
+      { type = "item", name = "steel-beam", amount = 1 },
+      { type = "item", name = "kr-steel-pipe", amount = 1 },
+    },
+    results = { { type = "item", name = "kr-steel-pump", amount = 1 } },
+  },
+  {
+    type = "item",
+    name = "kr-steel-pump",
+    icon = "__Krastorio2Assets__/icons/entities/steel-pump.png",
+    subgroup = "energy-pipe-distribution",
+    order = "b[pipe]-ca[steel-pump]",
+    place_result = "kr-steel-pump",
+    stack_size = 50,
+  },
+  {
     type = "pump",
     name = "kr-steel-pump",
     icon = "__Krastorio2Assets__/icons/entities/steel-pump.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.2, result = "kr-steel-pump" },
-    max_health = 180,
     fast_replaceable_group = "pump",
-    corpse = "1x2-remnants",
     collision_box = { { -0.29, -0.9 }, { 0.29, 0.9 } },
     selection_box = { { -0.5, -1 }, { 0.5, 1 } },
-    open_sound = sounds.machine_open,
-    close_sound = sounds.machine_close,
-    resistances = {
-      {
-        type = "fire",
-        percent = 80,
-      },
-      {
-        type = "impact",
-        percent = 30,
-      },
-    },
+    pumping_speed = 300,
     input_fluid_box = {
       volume = 500,
       pipe_covers = require("prototypes.entities.steel-pipe-covers"),
@@ -45,7 +52,21 @@ data:extend({
       usage_priority = "secondary-input",
     },
     energy_usage = "50kW",
-    pumping_speed = 300,
+    max_health = 180,
+    resistances = {
+      {
+        type = "fire",
+        percent = 80,
+      },
+      {
+        type = "impact",
+        percent = 30,
+      },
+    },
+    corpse = "1x2-remnants",
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
+    working_sound = data.raw.pump.pump.working_sound,
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     animations = {
       north = {

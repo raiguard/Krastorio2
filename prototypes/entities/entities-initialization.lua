@@ -1,4 +1,3 @@
-require("prototypes.entities.steel-pump")
 require("prototypes.entities.superior-inserters")
 require("prototypes.entities.wind-turbine")
 require("prototypes.entities.advanced-assembling-machine")
