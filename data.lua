@@ -63,6 +63,7 @@ require("prototypes.entities.steel-pump")
 require("prototypes.entities.superior-inserter")
 require("prototypes.entities.superior-long-inserter")
 require("prototypes.entities.superior-substation")
+require("prototypes.entities.tesla-coil")
 require("prototypes.entities.wind-turbine")
 
 require("prototypes.equipment.additional-engine-equipment")

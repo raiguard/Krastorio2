@@ -3,87 +3,41 @@ local data_util = require("__flib__.data-util")
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
 
--- Entity sound
-local tesla_coil_sound = {
-  filename = "__Krastorio2Assets__/sounds/buildings/tesla-coil.ogg",
-  volume = 0.5,
-  aggregation = {
-    max_count = 2,
-    remove = false,
-    count_already_playing = true,
-  },
-}
-
--- Beam sound
-local tesla_coil_electric_beam_sound = {
-  variations = {
-    {
-      filename = "__Krastorio2Assets__/sounds/others/zap-1.ogg",
-      volume = 0.25,
-    },
-    {
-      filename = "__Krastorio2Assets__/sounds/others/zap-2.ogg",
-      volume = 0.25,
-    },
-    {
-      filename = "__Krastorio2Assets__/sounds/others/zap-3.ogg",
-      volume = 0.25,
-    },
-  },
-  audible_distance_modifier = 2.0,
-  aggregation = {
-    max_count = 2,
-    remove = true,
-    count_already_playing = true,
-  },
-}
-
--- Beam config vars
--- local light_tint = { r = 0, g = 0.917, b = 1 }
-local beam_blend_mode = "additive-soft"
-local beam_non_light_flags = { "trilinear-filtering" }
-
-local tesla_coil_collision_box = { { -1.25, -1.25 }, { 1.25, 1.25 } }
-
 data:extend({
-  -- Tesla coil tower
+  {
+    type = "recipe",
+    name = "kr-tesla-coil",
+    energy_required = 20,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "steel-beam", amount = 20 },
+      { type = "item", name = "electronic-circuit", amount = 20 },
+      { type = "item", name = "copper-cable", amount = 100 },
+    },
+    results = { { type = "item", name = "kr-tesla-coil", amount = 1 } },
+  },
+  {
+    type = "item",
+    name = "kr-tesla-coil",
+    icon = "__Krastorio2Assets__/icons/entities/tesla-coil.png",
+    subgroup = "energy-pipe-distribution",
+    order = "z-a[energy]-f2[tesla-coil]",
+    place_result = "kr-tesla-coil",
+    stack_size = 50,
+  },
   {
     type = "electric-energy-interface",
     name = "kr-tesla-coil",
     icon = "__Krastorio2Assets__/icons/entities/tesla-coil.png",
-    icon_size = 64,
+    collision_box = { { -1.25, -1.25 }, { 1.25, 1.25 } },
+    selection_box = { { -1.45, -1.45 }, { 1.45, 1.45 } },
+    collision_mask = {
+      layers = { item = true, object = true, player = true, water_tile = true, kr_tesla_coil = true },
+    },
     flags = { "placeable-neutral", "player-creation", "not-rotatable" },
     minable = { mining_time = 0.25, result = "kr-tesla-coil" },
-    max_health = 200,
-    gui_mode = "none",
-    corpse = "medium-remnants",
-    collision_mask = {
-      layers = {
-        item = true,
-        object = true,
-        player = true,
-        water_tile = true,
-        kr_tesla_coil = true,
-      },
-    },
-    resistances = {
-      {
-        type = "fire",
-        percent = 30,
-      },
-      {
-        type = "physical",
-        percent = 60,
-      },
-      {
-        type = "impact",
-        percent = 30,
-      },
-    },
     fast_replaceable_group = "tesla-coil",
-    damaged_trigger_effect = hit_effects.entity(),
-    collision_box = tesla_coil_collision_box,
-    selection_box = { { -1.45, -1.45 }, { 1.45, 1.45 } },
+    gui_mode = "none",
     drawing_box = { { -0.5, -2 }, { 0.5, 1 } },
     energy_source = {
       type = "electric",
@@ -93,9 +47,28 @@ data:extend({
       input_flow_limit = "8MW",
       output_flow_limit = "0W",
     },
-
     energy_usage = "60kW",
-
+    max_health = 200,
+    corpse = "medium-remnants",
+    damaged_trigger_effect = hit_effects.entity(),
+    resistances = {
+      { type = "fire", percent = 30 },
+      { type = "physical", percent = 60 },
+      { type = "impact", percent = 30 },
+    },
+    vehicle_impact_sound = sounds.generic_impact,
+    working_sound = {
+      sound = {
+        filename = "__Krastorio2Assets__/sounds/buildings/tesla-coil.ogg",
+        volume = 0.5,
+        aggregation = {
+          max_count = 2,
+          remove = false,
+          count_already_playing = true,
+        },
+      },
+      persistent = false,
+    },
     animation = {
       layers = {
         {
@@ -138,14 +111,7 @@ data:extend({
         },
       },
     },
-
-    vehicle_impact_sound = sounds.generic_impact,
-    working_sound = {
-      sound = tesla_coil_sound,
-      persistent = false,
-    },
   },
-  -- Beam
   {
     type = "beam",
     name = "kr-tesla-coil-electric-beam",
@@ -153,15 +119,26 @@ data:extend({
     width = 0.5,
     damage_interval = 20,
     target_offset = { 0, -0.5 },
-    -- random_target_offset = true,
     action_triggered_automatically = false,
-    working_sound = tesla_coil_electric_beam_sound,
-
+    working_sound = {
+      variations = {
+        { filename = "__Krastorio2Assets__/sounds/others/zap-1.ogg", volume = 0.25 },
+        { filename = "__Krastorio2Assets__/sounds/others/zap-2.ogg", volume = 0.25 },
+        { filename = "__Krastorio2Assets__/sounds/others/zap-3.ogg", volume = 0.25 },
+      },
+      audible_distance_modifier = 2.0,
+      aggregation = {
+        max_count = 2,
+        remove = true,
+        count_already_playing = true,
+      },
+    },
     graphics_set = {
       beam = {
         start = {
           filename = "__base__/graphics/entity/beam/tileable-beam-START.png",
-          flags = beam_non_light_flags,
+          flags = { "trilinear-filtering" },
+          draw_as_glow = true,
           line_length = 4,
           width = 94,
           height = 66,
@@ -170,10 +147,10 @@ data:extend({
           shift = { 0.53125, 0 },
           scale = 0.5,
         },
-
         ending = {
           filename = "__base__/graphics/entity/beam/tileable-beam-END.png",
-          flags = beam_non_light_flags,
+          flags = { "trilinear-filtering" },
+          draw_as_glow = true,
           line_length = 4,
           width = 91,
           height = 93,
@@ -182,193 +159,97 @@ data:extend({
           shift = { -0.078125, -0.046875 },
           scale = 0.5,
         },
-
         head = {
           filename = "__base__/graphics/entity/beam/beam-head.png",
-          flags = beam_non_light_flags,
+          flags = { "trilinear-filtering" },
+          draw_as_glow = true,
           line_length = 16,
           width = 45 - 7,
           height = 39,
           frame_count = 16,
           shift = util.by_pixel(-7 / 2, 0),
-          blend_mode = beam_blend_mode,
+          blend_mode = "additive-soft",
         },
-
         tail = {
           filename = "__base__/graphics/entity/beam/beam-tail.png",
-          flags = beam_non_light_flags,
+          flags = { "trilinear-filtering" },
+          draw_as_glow = true,
           line_length = 16,
           width = 45 - 6,
           height = 39,
           frame_count = 16,
           shift = util.by_pixel(6 / 2, 0),
-          blend_mode = beam_blend_mode,
+          blend_mode = "additive-soft",
         },
-
         body = {
           {
             filename = "__base__/graphics/entity/beam/beam-body-1.png",
-            flags = beam_non_light_flags,
+            flags = { "trilinear-filtering" },
+            draw_as_glow = true,
             line_length = 16,
             width = 32,
             height = 39,
             frame_count = 16,
-            blend_mode = beam_blend_mode,
+            blend_mode = "additive-soft",
           },
           {
             filename = "__base__/graphics/entity/beam/beam-body-2.png",
-            flags = beam_non_light_flags,
+            flags = { "trilinear-filtering" },
+            draw_as_glow = true,
             line_length = 16,
             width = 32,
             height = 39,
             frame_count = 16,
-            blend_mode = beam_blend_mode,
+            blend_mode = "additive-soft",
           },
           {
             filename = "__base__/graphics/entity/beam/beam-body-3.png",
-            flags = beam_non_light_flags,
+            flags = { "trilinear-filtering" },
+            draw_as_glow = true,
             line_length = 16,
             width = 32,
             height = 39,
             frame_count = 16,
-            blend_mode = beam_blend_mode,
+            blend_mode = "additive-soft",
           },
           {
             filename = "__base__/graphics/entity/beam/beam-body-4.png",
-            flags = beam_non_light_flags,
+            flags = { "trilinear-filtering" },
+            draw_as_glow = true,
             line_length = 16,
             width = 32,
             height = 39,
             frame_count = 16,
-            blend_mode = beam_blend_mode,
+            blend_mode = "additive-soft",
           },
           {
             filename = "__base__/graphics/entity/beam/beam-body-5.png",
-            flags = beam_non_light_flags,
+            flags = { "trilinear-filtering" },
+            draw_as_glow = true,
             line_length = 16,
             width = 32,
             height = 39,
             frame_count = 16,
-            blend_mode = beam_blend_mode,
+            blend_mode = "additive-soft",
           },
           {
             filename = "__base__/graphics/entity/beam/beam-body-6.png",
-            flags = beam_non_light_flags,
+            flags = { "trilinear-filtering" },
+            draw_as_glow = true,
             line_length = 16,
             width = 32,
             height = 39,
             frame_count = 16,
-            blend_mode = beam_blend_mode,
+            blend_mode = "additive-soft",
           },
         },
-
-        -- TODO: Where does this go now?
-        -- light_animations = {
-        --   start = {
-        --     filename = "__base__/graphics/entity/beam/tileable-beam-START-light.png",
-        --     line_length = 4,
-        --     width = 94,
-        --     height = 66,
-        --     frame_count = 16,
-        --     direction_count = 1,
-        --     shift = { 0.53125, 0 },
-        --     scale = 0.5,
-        --     tint = light_tint,
-        --   },
-
-        --   ending = {
-        --     filename = "__base__/graphics/entity/beam/tileable-beam-END-light.png",
-        --     line_length = 4,
-        --     width = 91,
-        --     height = 93,
-        --     frame_count = 16,
-        --     direction_count = 1,
-        --     shift = { -0.078125, -0.046875 },
-        --     scale = 0.5,
-        --     tint = light_tint,
-        --   },
-
-        --   head = {
-        --     filename = "__base__/graphics/entity/beam/beam-head-light.png",
-        --     line_length = 16,
-        --     width = 45 - 7,
-        --     height = 39,
-        --     frame_count = 16,
-        --     shift = util.by_pixel(-7 / 2, 0),
-        --     tint = light_tint,
-        --   },
-
-        --   tail = {
-        --     filename = "__base__/graphics/entity/beam/beam-tail-light.png",
-        --     line_length = 16,
-        --     width = 45 - 6,
-        --     height = 39,
-        --     shift = util.by_pixel(6 / 2, 0),
-        --     frame_count = 16,
-        --     tint = light_tint,
-        --   },
-
-        --   body = {
-        --     {
-        --       filename = "__base__/graphics/entity/beam/beam-body-1-light.png",
-        --       line_length = 16,
-        --       width = 32,
-        --       height = 39,
-        --       frame_count = 16,
-        --       tint = light_tint,
-        --     },
-        --     {
-        --       filename = "__base__/graphics/entity/beam/beam-body-2-light.png",
-        --       line_length = 16,
-        --       width = 32,
-        --       height = 39,
-        --       frame_count = 16,
-        --       tint = light_tint,
-        --     },
-        --     {
-        --       filename = "__base__/graphics/entity/beam/beam-body-3-light.png",
-        --       line_length = 16,
-        --       width = 32,
-        --       height = 39,
-        --       frame_count = 16,
-        --       tint = light_tint,
-        --     },
-        --     {
-        --       filename = "__base__/graphics/entity/beam/beam-body-4-light.png",
-        --       line_length = 16,
-        --       width = 32,
-        --       height = 39,
-        --       frame_count = 16,
-        --       tint = light_tint,
-        --     },
-        --     {
-        --       filename = "__base__/graphics/entity/beam/beam-body-5-light.png",
-        --       line_length = 16,
-        --       width = 32,
-        --       height = 39,
-        --       frame_count = 16,
-        --       tint = light_tint,
-        --     },
-        --     {
-        --       filename = "__base__/graphics/entity/beam/beam-body-6-light.png",
-        --       line_length = 16,
-        --       width = 32,
-        --       height = 39,
-        --       frame_count = 16,
-        --       tint = light_tint,
-        --     },
-        --   },
-        -- },
       },
     },
   },
-  -- Range detection
   {
     type = "turret",
     name = "kr-tesla-coil-turret",
     icon = "__Krastorio2Assets__/icons/entities/tesla-coil.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     collision_mask = { layers = {} },
     call_for_help_radius = 0,
     folded_animation = {
@@ -422,7 +303,6 @@ data:extend({
     type = "trigger-target-type",
     name = "kr-tesla-coil-trigger",
   },
-  -- Collision detection
   {
     type = "simple-entity",
     name = "kr-tesla-coil-collision",

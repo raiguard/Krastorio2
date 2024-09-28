@@ -26,18 +26,6 @@ return {
     },
     results = { { type = "item", name = "kr-electric-mining-drill-mk3", amount = 1 } },
   },
-  {
-    type = "recipe",
-    name = "kr-tesla-coil",
-    energy_required = 20,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "steel-beam", amount = 20 },
-      { type = "item", name = "electronic-circuit", amount = 20 },
-      { type = "item", name = "copper-cable", amount = 100 },
-    },
-    results = { { type = "item", name = "kr-tesla-coil", amount = 1 } },
-  },
   -- -- --
   -- NEW LABORATORIES
   -- -- --
