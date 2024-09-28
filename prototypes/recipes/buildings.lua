@@ -186,19 +186,6 @@ return {
   -- -- --
   {
     type = "recipe",
-    name = "kr-superior-long-inserter",
-    energy_required = 1,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "inserter-parts", amount = 2 },
-      { type = "item", name = "imersium-plate", amount = 2 },
-      { type = "item", name = "imersium-gear-wheel", amount = 4 },
-      { type = "item", name = "processing-unit", amount = 1 },
-    },
-    results = { { type = "item", name = "kr-superior-long-inserter", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-superior-filter-inserter",
     energy_required = 1,
     enabled = false,
