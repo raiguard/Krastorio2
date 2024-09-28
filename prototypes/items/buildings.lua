@@ -258,17 +258,6 @@ data:extend({
   -- -- --
   {
     type = "item",
-    name = "kr-superior-inserter",
-    icon = "__Krastorio2Assets__/icons/entities/inserters/superior-inserter.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "inserter",
-    order = "h1[superior-inserter]",
-    place_result = "kr-superior-inserter",
-    stack_size = 50,
-  },
-  {
-    type = "item",
     name = "kr-superior-long-inserter",
     icon = "__Krastorio2Assets__/icons/entities/inserters/superior-long-inserter.png",
     icon_size = 64,
