@@ -1,7 +1,3 @@
-require("prototypes.entities.advanced-belt-animation-set") -- Must be loaded before the belts set
-require("prototypes.entities.advanced-splitter")
-require("prototypes.entities.advanced-transport-belt")
-require("prototypes.entities.advanced-underground-belt")
 require("prototypes.entities.superior-belt-animation-set") -- Must be loaded before the belts set
 require("prototypes.entities.superior-splitter")
 require("prototypes.entities.superior-transport-belt")

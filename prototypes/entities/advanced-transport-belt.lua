@@ -1,11 +1,43 @@
 data:extend({
   {
+    type = "recipe",
+    name = "kr-advanced-transport-belt",
+    energy_required = 0.5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "express-transport-belt", amount = 1 },
+      { type = "item", name = "steel-gear-wheel", amount = 4 },
+      { type = "item", name = "rare-metals", amount = 1 },
+    },
+    results = { { type = "item", name = "kr-advanced-transport-belt", amount = 1 } },
+  },
+  {
+    type = "item",
+    name = "kr-advanced-transport-belt",
+    icon = "__Krastorio2Assets__/icons/entities/transport-belts/advanced-transport-belt/advanced-transport-belt.png",
+    subgroup = "belt",
+    order = "a[transport-belt]-d[advanced-transport-belt]",
+    place_result = "kr-advanced-transport-belt",
+    stack_size = 100,
+  },
+  {
     type = "transport-belt",
     name = "kr-advanced-transport-belt",
     icon = "__Krastorio2Assets__/icons/entities/transport-belts/advanced-transport-belt/advanced-transport-belt.png",
-    icon_size = 64,
     flags = { "placeable-neutral", "player-creation" },
+    fast_replaceable_group = "transport-belt",
+    next_upgrade = "kr-superior-transport-belt",
     minable = { mining_time = 0.2, result = "kr-advanced-transport-belt" },
+    collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
+    selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+    speed = 0.125,
+    working_sound = {
+      sound = {
+        filename = "__base__/sound/transport-belt.ogg",
+        volume = 0.4,
+      },
+      persistent = true,
+    },
     max_health = 200,
     corpse = "kr-advanced-transport-belt-remnant",
     resistances = {
@@ -13,15 +45,6 @@ data:extend({
         type = "fire",
         percent = 50,
       },
-    },
-    collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
-    selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-    working_sound = {
-      sound = {
-        filename = "__base__/sound/transport-belt.ogg",
-        volume = 0.4,
-      },
-      persistent = true,
     },
     animations = {
       filename = "__Krastorio2Assets__/entities/transport-belts/advanced-transport-belt/transport-belt/advanced-transport-belt.png",
@@ -32,15 +55,11 @@ data:extend({
       direction_count = 12,
       scale = 0.5,
     },
-    belt_animation_set = kr_advanced_transport_belt_animation_set,
-    fast_replaceable_group = "transport-belt",
-    next_upgrade = "kr-superior-transport-belt",
+    belt_animation_set = require("prototypes.entities.advanced-belt-animation-set"),
     related_underground_belt = "kr-advanced-underground-belt",
-    speed = 0.125,
     animation_speed_coefficient = 32,
     connector_frame_sprites = transport_belt_connector_frame_sprites,
-    circuit_wire_connection_points = circuit_connector_definitions["belt"].points,
-    circuit_connector_sprites = circuit_connector_definitions["belt"].sprites,
+    circuit_connector = circuit_connector_definitions["belt"],
     circuit_wire_max_distance = transport_belt_circuit_wire_max_distance,
   },
 })
