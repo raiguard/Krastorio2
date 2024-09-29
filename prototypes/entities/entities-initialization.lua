@@ -1,4 +1,3 @@
-require("prototypes.entities.railgun-turret")
 require("prototypes.entities.rocket-turret")
 require("prototypes.entities.laser-artillery-turret")
 require("prototypes.entities.biusart-lab")

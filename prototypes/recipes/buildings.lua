@@ -180,20 +180,6 @@ return {
   },
   {
     type = "recipe",
-    name = "kr-railgun-turret",
-    enabled = false,
-    energy_required = 20,
-    ingredients = {
-      { type = "item", name = "gun-turret", amount = 4 },
-      { type = "item", name = "steel-beam", amount = 10 },
-      { type = "item", name = "processing-unit", amount = 10 },
-      { type = "item", name = "rare-metals", amount = 20 },
-      { type = "item", name = "low-density-structure", amount = 10 },
-    },
-    results = { { type = "item", name = "kr-railgun-turret", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-rocket-turret",
     enabled = false,
     energy_required = 20,
