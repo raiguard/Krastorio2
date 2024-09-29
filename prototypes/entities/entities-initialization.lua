@@ -1,4 +1,3 @@
-require("prototypes.entities.large-roboport")
 require("prototypes.entities.medium-container")
 require("prototypes.entities.medium-active-provider-container")
 require("prototypes.entities.medium-buffer-container")
