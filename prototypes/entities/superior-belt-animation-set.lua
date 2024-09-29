@@ -1,4 +1,4 @@
-kr_superior_transport_belt_animation_set = {
+return {
   animation_set = {
     filename = "__Krastorio2Assets__/entities/transport-belts/superior-transport-belt/transport-belt/superior-transport-belt.png",
     priority = "extra-high",

@@ -1,12 +1,37 @@
 data:extend({
   {
+    type = "recipe",
+    name = "kr-superior-splitter",
+    energy_required = 2,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "kr-advanced-splitter", amount = 1 },
+      { type = "item", name = "imersium-gear-wheel", amount = 4 },
+      { type = "item", name = "processing-unit", amount = 1 },
+    },
+    results = { { type = "item", name = "kr-superior-splitter", amount = 1 } },
+  },
+  {
+    type = "item",
+    name = "kr-superior-splitter",
+    localised_description = { "entity-description.splitter" },
+    icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-splitter.png",
+    subgroup = "belt",
+    order = "c[splitter]-e[superior-splitter]",
+    place_result = "kr-superior-splitter",
+    stack_size = 50,
+  },
+  {
     type = "splitter",
     name = "kr-superior-splitter",
     localised_description = { "entity-description.splitter" },
     icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-splitter.png",
-    icon_size = 64,
+    fast_replaceable_group = "transport-belt",
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.2, result = "kr-superior-splitter" },
+    collision_box = { { -0.9, -0.4 }, { 0.9, 0.4 } },
+    selection_box = { { -0.9, -0.5 }, { 0.9, 0.5 } },
+    speed = 0.1875,
     max_health = 250,
     corpse = "kr-superior-splitter-remnant",
     resistances = {
@@ -15,14 +40,7 @@ data:extend({
         percent = 50,
       },
     },
-    collision_box = { { -0.9, -0.4 }, { 0.9, 0.4 } },
-    selection_box = { { -0.9, -0.5 }, { 0.9, 0.5 } },
-    structure_animation_speed_coefficient = 1.2,
-    structure_animation_movement_cooldown = 10,
-    belt_animation_set = kr_superior_transport_belt_animation_set,
-    fast_replaceable_group = "transport-belt",
-    speed = 0.1875,
-    animation_speed_coefficient = 30,
+    belt_animation_set = require("prototypes.entities.superior-belt-animation-set"),
     structure = {
       north = {
         filename = "__Krastorio2Assets__/entities/transport-belts/superior-transport-belt/splitter/superior-splitter-north.png",
@@ -89,5 +107,8 @@ data:extend({
         scale = 0.5,
       },
     },
+    animation_speed_coefficient = 30,
+    structure_animation_speed_coefficient = 1.2,
+    structure_animation_movement_cooldown = 10,
   },
 })

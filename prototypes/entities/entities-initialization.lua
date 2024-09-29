@@ -1,7 +1,3 @@
-require("prototypes.entities.superior-belt-animation-set") -- Must be loaded before the belts set
-require("prototypes.entities.superior-splitter")
-require("prototypes.entities.superior-transport-belt")
-require("prototypes.entities.superior-underground-belt")
 require("prototypes.entities.loaders") -- Must be required after belts
 require("prototypes.entities.remnants.advanced-tank-remnant")
 require("prototypes.entities.remnants.fusion-reactor-remnant")

@@ -2,9 +2,6 @@ local krastorio_new_recipes = {
   -- -- New recipes new available from start
   require("prototypes.recipes.new-available-from-start"),
 
-  -- -- Recipes for buildings and other entities (not associated non-buildings-items)
-  require("prototypes.recipes.buildings"),
-
   -- -- New science packs recipes (tech card) (tools)
   require("prototypes.recipes.tech-cards"),
 

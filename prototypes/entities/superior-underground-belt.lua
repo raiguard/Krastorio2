@@ -1,30 +1,37 @@
 data:extend({
   {
+    type = "recipe",
+    name = "kr-superior-underground-belt",
+    energy_required = 2,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "kr-advanced-underground-belt", amount = 2 },
+      { type = "item", name = "kr-superior-transport-belt", amount = 40 },
+    },
+    results = { { type = "item", name = "kr-superior-underground-belt", amount = 2 } },
+  },
+  {
+    type = "item",
+    name = "kr-superior-underground-belt",
+    icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-underground-belt.png",
+    subgroup = "belt",
+    order = "b[underground-belt]-e[superior-underground-belt]",
+    place_result = "kr-superior-underground-belt",
+    stack_size = 50,
+  },
+  {
     type = "underground-belt",
     name = "kr-superior-underground-belt",
     icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-underground-belt.png",
-    icon_size = 64,
     flags = { "placeable-neutral", "player-creation" },
+    fast_replaceable_group = "transport-belt",
     minable = { mining_time = 0.2, result = "kr-superior-underground-belt" },
+    collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
+    selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+    speed = 0.1875,
+    max_distance = 40,
     max_health = 200,
     corpse = "kr-superior-underground-belt-remnant",
-    max_distance = 40,
-    underground_sprite = {
-      filename = "__core__/graphics/arrows/underground-lines.png",
-      priority = "high",
-      width = 64,
-      height = 64,
-      x = 64,
-      scale = 0.5,
-    },
-    underground_remove_belts_sprite = {
-      filename = "__core__/graphics/arrows/underground-lines-remove.png",
-      priority = "high",
-      width = 64,
-      height = 64,
-      x = 64,
-      scale = 0.5,
-    },
     resistances = {
       {
         type = "fire",
@@ -35,12 +42,7 @@ data:extend({
         percent = 30,
       },
     },
-    collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
-    selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-    belt_animation_set = kr_superior_transport_belt_animation_set,
-    fast_replaceable_group = "transport-belt",
-    speed = 0.1875,
-    animation_speed_coefficient = 30,
+    belt_animation_set = require("prototypes.entities.superior-belt-animation-set"),
     structure = {
       direction_in = {
         sheet = {
@@ -100,5 +102,22 @@ data:extend({
         },
       },
     },
+    underground_sprite = {
+      filename = "__core__/graphics/arrows/underground-lines.png",
+      priority = "high",
+      width = 64,
+      height = 64,
+      x = 64,
+      scale = 0.5,
+    },
+    underground_remove_belts_sprite = {
+      filename = "__core__/graphics/arrows/underground-lines-remove.png",
+      priority = "high",
+      width = 64,
+      height = 64,
+      x = 64,
+      scale = 0.5,
+    },
+    animation_speed_coefficient = 30,
   },
 })

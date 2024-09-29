@@ -1,8 +1,5 @@
 -- -- -- New items
 
--- -- Items for buildings and other entities
-require("prototypes.items.buildings")
-
 -- Loader (optional items)
 require("prototypes.items.loaders")
 
