@@ -7,19 +7,6 @@ return {
   -- -- --
   {
     type = "recipe",
-    name = "biusart-lab",
-    energy_required = 10,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "advanced-circuit", amount = 10 },
-      { type = "item", name = "steel-beam", amount = 5 },
-      { type = "item", name = "lab", amount = 1 },
-      { type = "item", name = "copper-cable", amount = 10 },
-    },
-    results = { { type = "item", name = "biusart-lab", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-singularity-lab",
     energy_required = 120,
     enabled = false,

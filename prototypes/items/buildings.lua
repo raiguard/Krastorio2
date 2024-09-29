@@ -15,17 +15,6 @@ data:extend({
   -- -- --
   {
     type = "item",
-    name = "biusart-lab",
-    icon = "__Krastorio2Assets__/icons/entities/biusart-lab.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "production-machine",
-    order = "g[lab]-g2[advanced-lab]",
-    place_result = "biusart-lab",
-    stack_size = 50,
-  },
-  {
-    type = "item",
     name = "kr-singularity-lab",
     icon = "__Krastorio2Assets__/icons/entities/singularity-lab.png",
     icon_size = 64,

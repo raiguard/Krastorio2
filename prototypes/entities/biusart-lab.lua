@@ -1,22 +1,59 @@
+local sounds = require("__base__.prototypes.entity.sounds")
+
 data:extend({
+  {
+    type = "recipe",
+    name = "biusart-lab",
+    energy_required = 10,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "advanced-circuit", amount = 10 },
+      { type = "item", name = "steel-beam", amount = 5 },
+      { type = "item", name = "lab", amount = 1 },
+      { type = "item", name = "copper-cable", amount = 10 },
+    },
+    results = { { type = "item", name = "biusart-lab", amount = 1 } },
+  },
+  {
+    type = "item",
+    name = "biusart-lab",
+    icon = "__Krastorio2Assets__/icons/entities/biusart-lab.png",
+    subgroup = "production-machine",
+    order = "g[lab]-g2[advanced-lab]",
+    place_result = "biusart-lab",
+    stack_size = 50,
+  },
   {
     type = "lab",
     name = "biusart-lab",
     icon = "__Krastorio2Assets__/icons/entities/biusart-lab.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.2, result = "biusart-lab" },
-    max_health = 150,
     fast_replaceable_group = "lab",
-    corpse = "lab-remnants",
-    dying_explosion = "medium-explosion",
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
+    researching_speed = 1,
+    inputs = {},
+    module_slots = 2,
+    energy_source = {
+      type = "electric",
+      usage_priority = "secondary-input",
+    },
+    energy_usage = "250kW",
+    max_health = 150,
+    corpse = "lab-remnants",
+    dying_explosion = "medium-explosion",
     light = {
       intensity = 0.8,
       size = 4,
       color = { r = 255, g = 255, b = 255 },
+    },
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
+    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    working_sound = {
+      sound = { filename = "__Krastorio2Assets__/sounds/buildings/biusart-lab.ogg", volume = 0.7 },
+      apparent_volume = 1,
     },
     on_animation = {
       layers = {
@@ -139,28 +176,6 @@ data:extend({
           scale = 0.5,
         },
       },
-    },
-    working_sound = {
-      sound = {
-        filename = "__Krastorio2Assets__/sounds/buildings/biusart-lab.ogg",
-        volume = 0.7,
-      },
-      apparent_volume = 1,
-    },
-    vehicle_impact_sound = {
-      filename = "__base__/sound/car-metal-impact.ogg",
-      volume = 0.65,
-    },
-    energy_source = {
-      type = "electric",
-      usage_priority = "secondary-input",
-    },
-    energy_usage = "250kW",
-    researching_speed = 1,
-    inputs = {},
-    module_specification = {
-      module_slots = 2,
-      module_info_icon_shift = { 0, 0.9 },
     },
   },
 })
