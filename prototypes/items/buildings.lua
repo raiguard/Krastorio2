@@ -69,16 +69,6 @@ data:extend({
   -- -- --
   {
     type = "item",
-    name = "kr-rocket-turret",
-    icon = "__Krastorio2Assets__/icons/entities/rocket-turret.png",
-    icon_size = 64,
-    subgroup = "rocket-turret",
-    order = "a02[rocket-turret]",
-    place_result = "kr-rocket-turret",
-    stack_size = 50,
-  },
-  {
-    type = "item",
     name = "kr-laser-artillery-turret",
     icon = "__Krastorio2Assets__/icons/entities/laser-artillery-turret.png",
     icon_size = 64,

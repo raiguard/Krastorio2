@@ -1,7 +1,7 @@
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
 
-function rocket_turret_sheet(inputs)
+local function rocket_turret_sheet(inputs)
   return {
     layers = {
       {
@@ -48,34 +48,73 @@ end
 
 data:extend({
   {
+    type = "recipe",
+    name = "kr-rocket-turret",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+      { type = "item", name = "rocket-launcher", amount = 6 },
+      { type = "item", name = "steel-beam", amount = 10 },
+      { type = "item", name = "rare-metals", amount = 20 },
+      { type = "item", name = "processing-unit", amount = 20 },
+      { type = "item", name = "low-density-structure", amount = 10 },
+    },
+    results = { { type = "item", name = "kr-rocket-turret", amount = 1 } },
+  },
+  {
+    type = "item",
+    name = "kr-rocket-turret",
+    icon = "__Krastorio2Assets__/icons/entities/rocket-turret.png",
+    subgroup = "rocket-turret",
+    order = "a02[rocket-turret]",
+    place_result = "kr-rocket-turret",
+    stack_size = 50,
+  },
+  {
     type = "ammo-turret",
     name = "kr-rocket-turret",
     icon = "__Krastorio2Assets__/icons/entities/rocket-turret.png",
-    icon_size = 64,
     flags = { "placeable-player", "player-creation", "building-direction-8-way" },
     minable = { mining_time = 1, result = "kr-rocket-turret" },
+    collision_box = { { -1.75, -1.75 }, { 1.75, 1.75 } },
+    selection_box = { { -2, -2 }, { 2, 2 } },
+    inventory_size = 1,
+    automated_ammo_count = 10,
+    rotation_speed = 0.002,
+    shoot_in_prepare_state = false,
+    turret_base_has_direction = true,
+    call_for_help_radius = 90,
+    attack_parameters = {
+      type = "projectile",
+      ammo_category = "missiles-for-turrets",
+      cooldown = 120,
+      turn_range = 1 / 7,
+      projectile_creation_distance = 3.35,
+      projectile_center = { 0, 0.1 },
+      range = 80,
+      min_range = 35,
+      rotate_penalty = 20,
+      health_penalty = -100,
+      sound = {
+        {
+          filename = "__Krastorio2Assets__/sounds/weapons/rocket-launch.ogg",
+          volume = 0.8,
+        },
+      },
+    },
     max_health = 1000,
     corpse = "turret-remnant",
     damaged_trigger_effect = hit_effects.entity(),
+    dying_explosion = "big-explosion",
     resistances = {
       { type = "physical", percent = 50 },
       { type = "fire", percent = 75 },
       { type = "impact", percent = 75 },
     },
-    collision_box = { { -1.75, -1.75 }, { 1.75, 1.75 } },
-    selection_box = { { -2, -2 }, { 2, 2 } },
-    rotation_speed = 0.002,
-    --preparing_speed = 0.04,
-    --folding_speed = 0.04,
-    dying_explosion = "big-explosion",
-    inventory_size = 1,
-    automated_ammo_count = 10,
-    --attacking_speed = 0.5,
     folded_animation = rocket_turret_sheet({ direction_count = 8, line_length = 1 }),
-    --preparing_animation = rocket_turret_sheet{direction_count = 8, line_length = 1},
-    --prepared_animation = rocket_turret_sheet{},
-    --attacking_animation = rocket_turret_sheet{direction_count = 8, line_length = 1},
-    --folding_animation = rocket_turret_sheet{direction_count = 8, line_length = 1, run_mode = "backward"},
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
+    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     graphics_set = {
       base_visualisation = {
         animation = {
@@ -119,45 +158,19 @@ data:extend({
           },
         },
       },
-    },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters = {
-      type = "projectile",
-      ammo_category = "missiles-for-turrets",
-      cooldown = 120,
-      turn_range = 1 / 7,
-      projectile_creation_distance = 3.35,
-      projectile_center = { 0, 0.1 },
-      range = 80,
-      min_range = 35,
-      rotate_penalty = 20,
-      health_penalty = -100,
-      sound = {
-        {
-          filename = "__Krastorio2Assets__/sounds/weapons/rocket-launch.ogg",
-          volume = 0.8,
+      water_reflection = {
+        pictures = {
+          filename = "__Krastorio2Assets__/entities/turrets/turrets-reflection.png",
+          priority = "extra-high",
+          width = 50,
+          height = 50,
+          shift = util.by_pixel(0, 40),
+          variation_count = 1,
+          scale = 5,
         },
+        rotate = false,
+        orientation_to_variation = false,
       },
     },
-
-    water_reflection = {
-      pictures = {
-        filename = "__Krastorio2Assets__/entities/turrets/turrets-reflection.png",
-        priority = "extra-high",
-        width = 50,
-        height = 50,
-        shift = util.by_pixel(0, 40),
-        variation_count = 1,
-        scale = 5,
-      },
-      rotate = false,
-      orientation_to_variation = false,
-    },
-
-    shoot_in_prepare_state = false,
-    turret_base_has_direction = true,
-    open_sound = sounds.machine_open,
-    close_sound = sounds.machine_close,
-    call_for_help_radius = 90,
   },
 })
