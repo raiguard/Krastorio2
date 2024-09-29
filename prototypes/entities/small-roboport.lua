@@ -1,42 +1,39 @@
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
-local variations_util = require("lib.public.data-stages.create-roboport-states")
-local empty_sprite = {
-  filename = "__Krastorio2Assets__/entities/empty.png",
-  width = 1,
-  height = 1,
-  frame_count = 1,
-}
 
 data:extend({
+  {
+    type = "recipe",
+    name = "kr-small-roboport",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "imersium-beam", amount = 3 },
+      { type = "item", name = "steel-plate", amount = 10 },
+      { type = "item", name = "rare-metals", amount = 20 },
+      { type = "item", name = "ai-core", amount = 1 },
+      { type = "item", name = "electronic-components", amount = 5 },
+    },
+    results = { { type = "item", name = "kr-small-roboport", amount = 2 } },
+  },
+  {
+    type = "item",
+    name = "kr-small-roboport",
+    icon = "__Krastorio2Assets__/icons/entities/small-roboport.png",
+    subgroup = "logistic-network",
+    order = "c[signal]-b[small-roboport]",
+    place_result = "kr-small-roboport",
+    stack_size = 50,
+  },
   {
     type = "roboport",
     name = "kr-small-roboport",
     icon = "__Krastorio2Assets__/icons/entities/small-roboport.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "kr-small-roboport" },
-    max_health = 350,
-    corpse = "medium-remnants",
-    damaged_trigger_effect = hit_effects.entity(),
     collision_box = { { -0.8, -0.8 }, { 0.8, 0.8 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
-    resistances = {
-      { type = "physical", percent = 50 },
-      { type = "fire", percent = 75 },
-      { type = "impact", percent = 75 },
-    },
-    dying_explosion = "medium-explosion",
-    energy_source = {
-      type = "electric",
-      usage_priority = "secondary-input",
-      input_flow_limit = "12MW",
-      buffer_capacity = "300MJ",
-    },
     recharge_minimum = "50MJ",
-    energy_usage = "50kW",
-    -- per one charge slot
     charging_energy = "3MW",
     logistics_radius = 18,
     construction_radius = 34,
@@ -54,6 +51,27 @@ data:extend({
       { 1, -0.5 },
       { 0.5, -1 },
     },
+    request_to_open_door_timeout = 15,
+    spawn_and_station_height = 0.33,
+    energy_source = {
+      type = "electric",
+      usage_priority = "secondary-input",
+      input_flow_limit = "12MW",
+      buffer_capacity = "300MJ",
+    },
+    energy_usage = "50kW",
+    max_health = 350,
+    corpse = "medium-remnants",
+    damaged_trigger_effect = hit_effects.entity(),
+    dying_explosion = "medium-explosion",
+    resistances = {
+      { type = "physical", percent = 50 },
+      { type = "fire", percent = 75 },
+      { type = "impact", percent = 75 },
+    },
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
+    vehicle_impact_sound = sounds.generic_impact,
     base = {
       layers = {
         {
@@ -73,7 +91,7 @@ data:extend({
         },
       },
     },
-    base_patch = empty_sprite,
+    base_patch = util.empty_sprite(),
     base_animation = {
       layers = {
         {
@@ -100,8 +118,8 @@ data:extend({
         },
       },
     },
-    door_animation_up = empty_sprite,
-    door_animation_down = empty_sprite,
+    door_animation_up = util.empty_sprite(),
+    door_animation_down = util.empty_sprite(),
     recharging_animation = {
       layers = {
         {
@@ -131,7 +149,6 @@ data:extend({
       size = 1,
       color = { r = 0.196, g = 0.658, b = 0.650 },
     },
-
     water_reflection = {
       pictures = {
         filename = "__Krastorio2Assets__/entities/small-roboport/small-roboport-reflection.png",
@@ -145,11 +162,5 @@ data:extend({
       rotate = false,
       orientation_to_variation = false,
     },
-
-    vehicle_impact_sound = sounds.generic_impact,
-    request_to_open_door_timeout = 15,
-    spawn_and_station_height = 0.33,
   },
 })
-
-variations_util.createRoboportVariations("kr-small-roboport")

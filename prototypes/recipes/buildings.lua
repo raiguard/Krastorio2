@@ -136,20 +136,6 @@ return {
     },
     results = { { type = "item", name = "kr-large-roboport", amount = 1 } },
   },
-  {
-    type = "recipe",
-    name = "kr-small-roboport",
-    energy_required = 5,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "imersium-beam", amount = 3 },
-      { type = "item", name = "steel-plate", amount = 10 },
-      { type = "item", name = "rare-metals", amount = 20 },
-      { type = "item", name = "ai-core", amount = 1 },
-      { type = "item", name = "electronic-components", amount = 5 },
-    },
-    results = { { type = "item", name = "kr-small-roboport", amount = 2 } },
-  },
   -----------------------------------------------------------------------------------------------------------------
   -----------------------------------------------------------------------------------------------------------------
   -----------------------------------------------------------------------------------------------------------------

@@ -24,11 +24,11 @@ end
 --- @param text LocalisedString
 --- @param color Color?
 function util.entity_flying_text(entity, text, color)
-  player.create_local_flying_text({
-    color = color,
-    position = entity.position,
-    text = text,
-  })
+  -- player.create_local_flying_text({
+  --   color = color,
+  --   position = entity.position,
+  --   text = text,
+  -- })
 end
 
 --- @param entity LuaEntity

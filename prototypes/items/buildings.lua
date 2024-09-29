@@ -124,17 +124,6 @@ data:extend({
   -- -- --
   {
     type = "item",
-    name = "kr-small-roboport",
-    icon = "__Krastorio2Assets__/icons/entities/small-roboport.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "logistic-network",
-    order = "c[signal]-b[small-roboport]",
-    place_result = "kr-small-roboport",
-    stack_size = 50,
-  },
-  {
-    type = "item",
     name = "kr-large-roboport",
     icon = "__Krastorio2Assets__/icons/entities/large-roboport.png",
     icon_size = 64,

@@ -21,7 +21,6 @@ require("mandatory.vanilla-energy-changes") -- Rebalance accumulators ans panels
 require("mandatory.vanilla-robots-changes") -- Rebalance vanilla drones
 require("mandatory.electrify-offshore-pump") -- Add energy source to offshore-pump
 require("mandatory.removing-impossible-achievements") -- Remove impossible vanilla achievements
-require("mandatory.roboport-variations") -- Generate roboport variations for roboport states
 
 -- TODO: Reorganize these
 --- @type data.MinableProperties
