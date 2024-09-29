@@ -178,20 +178,6 @@ return {
     },
     results = { { type = "item", name = "kr-small-roboport", amount = 2 } },
   },
-  {
-    type = "recipe",
-    name = "kr-laser-artillery-turret",
-    enabled = false,
-    energy_required = 20,
-    ingredients = {
-      { type = "item", name = "energy-control-unit", amount = 6 },
-      { type = "item", name = "steel-beam", amount = 10 },
-      { type = "item", name = "rare-metals", amount = 20 },
-      { type = "item", name = "ai-core", amount = 10 },
-      { type = "item", name = "low-density-structure", amount = 10 },
-    },
-    results = { { type = "item", name = "kr-laser-artillery-turret", amount = 1 } },
-  },
   -----------------------------------------------------------------------------------------------------------------
   -----------------------------------------------------------------------------------------------------------------
   -----------------------------------------------------------------------------------------------------------------
