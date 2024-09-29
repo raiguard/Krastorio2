@@ -1,21 +1,34 @@
 data:extend({
   {
+    type = "recipe",
+    name = "kr-fluid-storage-1",
+    energy_required = 5,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "steel-beam", amount = 10 },
+      { type = "item", name = "steel-plate", amount = 20 },
+      { type = "item", name = "kr-steel-pipe", amount = 4 },
+    },
+    results = { { type = "item", name = "kr-fluid-storage-1", amount = 1 } },
+  },
+  {
+    type = "item",
+    name = "kr-fluid-storage-1",
+    icon = "__Krastorio2Assets__/icons/entities/fluid-storage-1.png",
+    subgroup = "storage",
+    order = "b[fluid]-bb2[storage-tank-2]",
+    place_result = "kr-fluid-storage-1",
+    stack_size = 50,
+  },
+  {
     type = "storage-tank",
     name = "kr-fluid-storage-1",
-    icon = "__Krastorio2Assets__/icons/entities/fluid-storages/fluid-storage-1.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/icons/entities/fluid-storage-1.png",
     flags = { "placeable-player", "player-creation", "not-rotatable" },
     minable = { mining_time = 0.5, result = "kr-fluid-storage-1" },
-    max_health = 750,
-    corpse = "big-remnants",
-    resistances = {
-      { type = "physical", percent = 35 },
-      { type = "fire", percent = 75 },
-      { type = "impact", percent = 50 },
-    },
     collision_box = { { -1.25, -1.25 }, { 1.25, 1.25 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
+    flow_length_in_ticks = 360,
     fluid_box = {
       volume = 50000,
       pipe_covers = pipecoverspictures(),
@@ -26,12 +39,27 @@ data:extend({
         { flow_direction = "input-output", direction = defines.direction.south, position = { 0, 1 } },
       },
     },
-    window_bounding_box = { { -0.125, 0.6875 }, { 0.1875, 1.1875 } },
+    max_health = 750,
+    corpse = "big-remnants",
+    resistances = {
+      { type = "physical", percent = 35 },
+      { type = "fire", percent = 75 },
+      { type = "impact", percent = 50 },
+    },
+    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    working_sound = {
+      sound = {
+        filename = "__base__/sound/storage-tank.ogg",
+        volume = 0.5,
+      },
+      apparent_volume = 1.5,
+      max_sounds_per_type = 3,
+    },
     pictures = {
       picture = {
         sheets = {
           {
-            filename = "__Krastorio2Assets__/entities/fluid-storages/fluid-storage-1/fluid-storage-1.png",
+            filename = "__Krastorio2Assets__/entities/fluid-storage-1/fluid-storage-1.png",
             priority = "extra-high",
             frames = 1,
             scale = 0.5,
@@ -39,7 +67,7 @@ data:extend({
             height = 256,
           },
           {
-            filename = "__Krastorio2Assets__/entities/fluid-storages/fluid-storage-1/fluid-storage-1-sh.png",
+            filename = "__Krastorio2Assets__/entities/fluid-storage-1/fluid-storage-1-sh.png",
             priority = "extra-high",
             frames = 1,
             scale = 0.5,
@@ -80,20 +108,10 @@ data:extend({
         direction_count = 1,
       },
     },
-    flow_length_in_ticks = 360,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    working_sound = {
-      sound = {
-        filename = "__base__/sound/storage-tank.ogg",
-        volume = 0.5,
-      },
-      apparent_volume = 1.5,
-      max_sounds_per_type = 3,
-    },
-
+    window_bounding_box = { { -0.125, 0.6875 }, { 0.1875, 1.1875 } },
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/entities/fluid-storages/fluid-storage-1/fluid-storage-1-reflection.png",
+        filename = "__Krastorio2Assets__/entities/fluid-storage-1/fluid-storage-1-reflection.png",
         priority = "extra-high",
         width = 40,
         height = 35,
@@ -104,9 +122,7 @@ data:extend({
       rotate = false,
       orientation_to_variation = false,
     },
-
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["storage-tank"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
 })

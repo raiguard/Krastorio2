@@ -1,5 +1,3 @@
-require("prototypes.entities.fluid-storage-1")
-require("prototypes.entities.fluid-storage-2")
 require("prototypes.entities.advanced-belt-animation-set") -- Must be loaded before the belts set
 require("prototypes.entities.advanced-splitter")
 require("prototypes.entities.advanced-transport-belt")
