@@ -49,7 +49,6 @@ data:extend({
           { flow_direction = "input-output", direction = defines.direction.south, position = { 0, 3 } },
         },
       },
-      off_when_no_fluid_recipe = false,
     },
     crafting_speed = 1,
     crafting_categories = { "growing" },

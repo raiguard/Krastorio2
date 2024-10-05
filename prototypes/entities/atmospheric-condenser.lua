@@ -55,7 +55,6 @@ data:extend({
           { flow_direction = "output", direction = defines.direction.south, position = { -1, 2 } },
         },
       },
-      off_when_no_fluid_recipe = false,
     },
     collision_box = { { -2.3, -2.3 }, { 2.3, 2.3 } },
     selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },

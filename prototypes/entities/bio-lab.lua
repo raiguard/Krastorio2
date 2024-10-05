@@ -62,7 +62,6 @@ data:extend({
           { flow_direction = "input-output", direction = defines.direction.west, position = { -3, 0 } },
         },
       },
-      off_when_no_fluid_recipe = false,
     },
     collision_box = { { -3.25, -3.25 }, { 3.25, 3.25 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },

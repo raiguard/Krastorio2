@@ -54,7 +54,6 @@ data:extend({
         volume = 1000,
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 3 } } },
       },
-      off_when_no_fluid_recipe = false,
     },
     collision_box = { { -3.25, -3.25 }, { 3.25, 3.25 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },

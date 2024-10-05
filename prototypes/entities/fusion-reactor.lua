@@ -60,7 +60,6 @@ data:extend({
         volume = 100000,
         pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0, -7 } } },
       },
-      off_when_no_fluid_recipe = false,
     },
     audible_distance_modifier = 25,
     energy_source = {

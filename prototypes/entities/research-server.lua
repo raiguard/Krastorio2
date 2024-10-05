@@ -88,8 +88,8 @@ data:extend({
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 1 } } },
         secondary_draw_orders = { north = -1 },
       },
-      off_when_no_fluid_recipe = true,
     },
+    fluid_boxes_off_when_no_fluid_recipe = true,
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
