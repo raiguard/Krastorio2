@@ -11,7 +11,6 @@ handler.add_libraries({
   require("scripts.intergalactic-transceiver"),
   require("scripts.jackhammer"),
   require("scripts.loader-snapping"),
-  require("scripts.offshore-pump"),
   require("scripts.patreon"),
   require("scripts.planetary-teleporter-gui"), -- Must be before planetary-teleporter
   require("scripts.planetary-teleporter"),

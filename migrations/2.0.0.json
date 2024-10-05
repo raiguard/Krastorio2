@@ -9,7 +9,8 @@
     ["kr-crash-site-chest-2", "crash-site-chest-2"],
     ["kr-crash-site-lab-repaired", "crash-site-lab"],
     ["kr-fluid-burner", "kr-flare-stack"],
-    ["kr-substation-mk2", "kr-superior-substation"]
+    ["kr-substation-mk2", "kr-superior-substation"],
+    ["kr-electric-offshore-pump", "offshore-pump"]
   ],
   "equipment": [
     ["additional-engine", "additional-engine-equipment"],
