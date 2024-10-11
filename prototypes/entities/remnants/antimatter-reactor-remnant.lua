@@ -6,13 +6,13 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/entities/antimatter-reactor.png",
     icon_size = 128,
     flags = { "placeable-neutral", "building-direction-8-way", "not-on-map" },
+    subgroup = "remnants",
+    order = "z[remnants]-a[generic]-b[medium]",
     selection_box = { { -4.5, -4.5 }, { 4.5, 4.5 } },
     tile_width = 9,
     tile_height = 9,
     selectable_in_game = false,
-    subgroup = "remnants",
-    order = "z[remnants]-a[generic]-b[medium]",
-    time_before_removed = 60 * 60 * 20, -- 20 minutes
+    time_before_removed = 20 * minute,
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(1, {
