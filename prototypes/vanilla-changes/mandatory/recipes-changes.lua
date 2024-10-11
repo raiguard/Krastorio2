@@ -694,8 +694,8 @@ krastorio.recipes.replaceProduct(
 
 krastorio.recipes.replaceIngredient(
   "nuclear-fuel-reprocessing",
-  "used-up-uranium-fuel-cell",
-  { name = "used-up-uranium-fuel-cell", amount = 1 }
+  "depleted-uranium-fuel-cell",
+  { name = "depleted-uranium-fuel-cell", amount = 1 }
 )
 krastorio.recipes.replaceProduct(
   "nuclear-fuel-reprocessing",

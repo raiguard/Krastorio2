@@ -46,7 +46,7 @@ if kr_stack_size_value and kr_stack_size_value ~= "No changes" then
 
   data.raw.ammo["artillery-shell"].stack_size = 25
   data.raw.item["uranium-fuel-cell"].stack_size = 10
-  data.raw.item["used-up-uranium-fuel-cell"].stack_size = 10
+  data.raw.item["depleted-uranium-fuel-cell"].stack_size = 10
 
   data.raw.tool[kr_optimization_tech_card_name].stack_size = 200
   data.raw.capsule["raw-fish"].stack_size = 50

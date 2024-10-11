@@ -21,7 +21,7 @@ if mods["Nuclear Fuel"] then
   -- the end result is the K2 recipe multiplied by NF"s multiplier with the Pu added by NF.
   krastorio.recipes.multiplyIngredient(
     "nuclear-fuel-reprocessing",
-    "used-up-uranium-fuel-cell",
+    "depleted-uranium-fuel-cell",
     nuclear_fuel_cycle_ingredient_multiplier
   )
   krastorio.recipes.multiplyProduct("nuclear-fuel-reprocessing", "uranium-238", nuclear_fuel_cycle_product_multiplier)

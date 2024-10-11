@@ -14,7 +14,7 @@ local default_items = {
   "uranium-238",
   "uranium-fuel-cell",
   "uranium-ore",
-  "used-up-uranium-fuel-cell",
+  "depleted-uranium-fuel-cell",
 }
 local range = 7
 

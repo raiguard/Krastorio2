@@ -33,18 +33,12 @@ data:extend({
     collision_box = { { -0.29, -0.9 }, { 0.29, 0.9 } },
     selection_box = { { -0.5, -1 }, { 0.5, 1 } },
     pumping_speed = 300,
-    input_fluid_box = {
-      volume = 500,
-      pipe_covers = require("prototypes.entities.steel-pipe-covers"),
-      pipe_connections = {
-        { flow_direction = "input", direction = defines.direction.south, position = { 0, 0.5 } },
-      },
-    },
-    output_fluid_box = {
+    fluid_box = {
       volume = 500,
       pipe_covers = require("prototypes.entities.steel-pipe-covers"),
       pipe_connections = {
         { flow_direction = "output", direction = defines.direction.north, position = { 0, -0.5 } },
+        { flow_direction = "input", direction = defines.direction.south, position = { 0, 0.5 } },
       },
     },
     energy_source = {
