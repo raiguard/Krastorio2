@@ -6,9 +6,9 @@
   "author": "Linver, Krastor, raiguard",
   "contact": "https://github.com/raiguard/Krastorio2/issues",
   "homepage": "https://discord.gg/ECBzaXu",
-  "factorio_version": "1.2",
+  "factorio_version": "2.0",
   "dependencies": [
-    "base >= 1.2.0",
+    "base >= 2.0.0",
     "Krastorio2Assets >= 2.0.0",
     "flib >= 0.15.0",
     "(?) aai-industry >= 0.3.17",
