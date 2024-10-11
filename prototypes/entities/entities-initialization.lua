@@ -1,4 +1,3 @@
-require("prototypes.entities.loaders") -- Must be required after belts
 require("prototypes.entities.remnants.advanced-tank-remnant")
 require("prototypes.entities.remnants.fusion-reactor-remnant")
 require("prototypes.entities.remnants.antimatter-reactor-remnant")

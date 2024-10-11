@@ -66,6 +66,3 @@ for _, recipe_section in pairs(krastorio_new_recipes) do
     krastorio.recipes.addWithOverrideSafeNewRecipe(recipe)
   end
 end
-
--- Optional recipes
-require("prototypes.recipes.loaders")

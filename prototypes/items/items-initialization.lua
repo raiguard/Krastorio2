@@ -1,8 +1,5 @@
 -- -- -- New items
 
--- Loader (optional items)
-require("prototypes.items.loaders")
-
 -- -- Raw materials/Resources
 require("prototypes.items.resources")
 
