@@ -47,9 +47,6 @@ local krastorio_new_recipes = {
   -- -- Recipe for charge stabilizers
   require("prototypes.recipes.stabilizer-charging"),
 
-  -- -- Vehicle recipes
-  require("prototypes.recipes.vehicles"),
-
   -- -- Recipes for refinery
   require("prototypes.recipes.oil-processing"),
 
