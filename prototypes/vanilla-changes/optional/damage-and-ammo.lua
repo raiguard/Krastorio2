@@ -6,8 +6,6 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
 
   local max_nuke_shockwave_movement_distance = 19 + max_nuke_shockwave_movement_distance_deviation / 6
 
-  local nuke_shockwave_starting_speed_deviation = 0.075
-
   -----------------------------------------------------------------------------
   -- -- -- Turrets
   -----------------------------------------------------------------------------
@@ -360,7 +358,7 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
           type = "projectile",
           projectile = "atomic-bomb-ground-zero-projectile",
           starting_speed = 0.6 * 0.8,
-          starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+          starting_speed_deviation = 0.075,
         },
       },
     },
@@ -376,7 +374,7 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
           type = "projectile",
           projectile = "atomic-bomb-wave",
           starting_speed = 0.5 * 0.7,
-          starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+          starting_speed_deviation = 0.075,
         },
       },
     },
@@ -393,7 +391,7 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
           type = "projectile",
           projectile = "atomic-bomb-wave-spawns-cluster-nuke-explosion",
           starting_speed = 0.5 * 0.7,
-          starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+          starting_speed_deviation = 0.075,
         },
       },
     },
@@ -410,7 +408,7 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
           type = "projectile",
           projectile = "atomic-bomb-wave-spawns-fire-smoke-explosion",
           starting_speed = 0.5 * 0.65,
-          starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+          starting_speed_deviation = 0.075,
         },
       },
     },
@@ -427,7 +425,7 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
           type = "projectile",
           projectile = "atomic-bomb-wave-spawns-nuke-shockwave-explosion",
           starting_speed = 0.5 * 0.65,
-          starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+          starting_speed_deviation = 0.075,
         },
       },
     },
@@ -444,7 +442,7 @@ if krastorio.general.getSafeSettingValue("kr-damage-and-ammo") then
           type = "projectile",
           projectile = "atomic-bomb-wave-spawns-nuclear-smoke",
           starting_speed = 0.55 * 0.65,
-          starting_speed_deviation = nuke_shockwave_starting_speed_deviation,
+          starting_speed_deviation = 0.075,
         },
       },
     },
