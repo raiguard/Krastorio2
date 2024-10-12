@@ -42,7 +42,7 @@ data:extend({
         percent = 30,
       },
     },
-    belt_animation_set = require("prototypes.entities.superior-belt-animation-set"),
+    belt_animation_set = require("prototypes.buildings.superior-belt-animation-set"),
     structure = {
       direction_in = {
         sheet = {

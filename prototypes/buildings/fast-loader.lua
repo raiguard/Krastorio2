@@ -2,7 +2,7 @@ if not settings.startup["kr-loaders"].value then
   return
 end
 
-local graphics = require("prototypes.entities.loader-graphics")
+local graphics = require("prototypes.buildings.loader-graphics")
 local sounds = require("__base__.prototypes.entity.sounds")
 
 data:extend({

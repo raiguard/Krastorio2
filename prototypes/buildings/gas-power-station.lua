@@ -77,7 +77,7 @@ data:extend({
     },
     fluid_box = {
       pipe_covers = pipecoverspictures(),
-      pipe_picture = require("prototypes.entities.pipe-picture"),
+      pipe_picture = require("prototypes.buildings.pipe-picture"),
       volume = 200,
       pipe_connections = {
         { flow_direction = "input-output", direction = defines.direction.east, position = { 2, 0 } },

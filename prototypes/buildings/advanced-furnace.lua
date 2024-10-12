@@ -1,5 +1,5 @@
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
-local pipe_pictures = require("prototypes.entities.advanced-furnace-pipe-pictures")
+local pipe_pictures = require("prototypes.buildings.advanced-furnace-pipe-pictures")
 local sounds = require("__base__.prototypes.entity.sounds")
 
 data:extend({

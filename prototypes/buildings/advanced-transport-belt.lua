@@ -55,7 +55,7 @@ data:extend({
       direction_count = 12,
       scale = 0.5,
     },
-    belt_animation_set = require("prototypes.entities.advanced-belt-animation-set"),
+    belt_animation_set = require("prototypes.buildings.advanced-belt-animation-set"),
     related_underground_belt = "kr-advanced-underground-belt",
     animation_speed_coefficient = 32,
     connector_frame_sprites = transport_belt_connector_frame_sprites,

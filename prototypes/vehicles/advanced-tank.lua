@@ -252,7 +252,7 @@ data:extend({
     },
     turret_rotation_speed = 0.3 / 60,
     turret_return_timeout = 300,
-    track_particle_triggers = require("prototypes.entities.advanced-tank-movement-triggers"),
+    track_particle_triggers = require("prototypes.buildings.advanced-tank-movement-triggers"),
     water_reflection = car_reflection(2.0),
     alert_icon_shift = util.by_pixel(-4, -13),
   },

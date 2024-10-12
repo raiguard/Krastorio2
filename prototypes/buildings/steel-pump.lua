@@ -35,7 +35,7 @@ data:extend({
     pumping_speed = 300,
     fluid_box = {
       volume = 500,
-      pipe_covers = require("prototypes.entities.steel-pipe-covers"),
+      pipe_covers = require("prototypes.buildings.steel-pipe-covers"),
       pipe_connections = {
         { flow_direction = "output", direction = defines.direction.north, position = { 0, -0.5 } },
         { flow_direction = "input", direction = defines.direction.south, position = { 0, 0.5 } },

@@ -42,7 +42,7 @@ data:extend({
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        pipe_picture = require("prototypes.entities.pipe-picture"),
+        pipe_picture = require("prototypes.buildings.pipe-picture"),
         volume = 1000,
         pipe_connections = {
           { flow_direction = "output", direction = defines.direction.east, position = { 2, -1 } },

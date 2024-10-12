@@ -1,7 +1,7 @@
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
 
-local graphics = require("prototypes.entities.electric-mining-drill-graphics")
+local graphics = require("prototypes.buildings.electric-mining-drill-graphics")
 
 data:extend({
   {

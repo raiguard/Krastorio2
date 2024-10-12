@@ -2,7 +2,7 @@ if not settings.startup["kr-loaders"].value then
   return
 end
 
-local graphics = require("prototypes.entities.loader-graphics")
+local graphics = require("prototypes.buildings.loader-graphics")
 local sounds = require("__base__.prototypes.entity.sounds")
 
 data:extend({
@@ -52,7 +52,7 @@ data:extend({
     resistances = { { type = "fire", percent = 90 } },
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
-    belt_animation_set = require("prototypes.entities.advanced-belt-animation-set"),
+    belt_animation_set = require("prototypes.buildings.advanced-belt-animation-set"),
     animation_speed_coefficient = 32,
     structure = graphics.structure({ 76, 232, 48 }),
     structure_render_layer = graphics.structure_render_layer,

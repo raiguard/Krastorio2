@@ -52,28 +52,28 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = require("prototypes.entities.pipe-picture"),
+        pipe_picture = require("prototypes.buildings.pipe-picture"),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = { { flow_direction = "input", direction = defines.direction.north, position = { 0, -3 } } },
       },
       {
         production_type = "output",
-        pipe_picture = require("prototypes.entities.pipe-picture"),
+        pipe_picture = require("prototypes.buildings.pipe-picture"),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = { { flow_direction = "output", direction = defines.direction.west, position = { -3, 0 } } },
       },
       {
         production_type = "output",
-        pipe_picture = require("prototypes.entities.pipe-picture"),
+        pipe_picture = require("prototypes.buildings.pipe-picture"),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = { { flow_direction = "output", direction = defines.direction.east, position = { 3, 0 } } },
       },
       {
         production_type = "output",
-        pipe_picture = require("prototypes.entities.pipe-picture"),
+        pipe_picture = require("prototypes.buildings.pipe-picture"),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = { { flow_direction = "output", direction = defines.direction.south, position = { 0, 3 } } },

@@ -59,7 +59,7 @@ data:extend({
       direction_count = 12,
       scale = 0.5,
     },
-    belt_animation_set = require("prototypes.entities.superior-belt-animation-set"),
+    belt_animation_set = require("prototypes.buildings.superior-belt-animation-set"),
     animation_speed_coefficient = 32,
     connector_frame_sprites = transport_belt_connector_frame_sprites,
     circuit_connector = circuit_connector_definitions["belt"],

@@ -1,4 +1,4 @@
-local particle_animations = require("prototypes.entities.particle-animations")
+local particle_animations = require("prototypes.buildings.particle-animations")
 local sounds = require("__base__.prototypes.entity.sounds")
 
 data:extend({

@@ -39,7 +39,7 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = require("prototypes.entities.pipe-picture"),
+        pipe_picture = require("prototypes.buildings.pipe-picture"),
         pipe_covers = pipecoverspictures(),
         volume = 2000,
         pipe_connections = {
