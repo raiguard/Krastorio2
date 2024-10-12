@@ -9,9 +9,6 @@ require("prototypes.items.techcards")
 -- -- Items for terrain
 require("prototypes.items.terrain")
 
--- -- Items for vehicles
-require("prototypes.items.vehicles")
-
 -- -- Selection tools
 require("prototypes.items.selection-tools")
 

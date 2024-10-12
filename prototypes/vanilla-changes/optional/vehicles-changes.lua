@@ -45,21 +45,6 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles-fuels") then
 
   data:extend({
     {
-      type = "recipe",
-      name = "kr-nuclear-locomotive",
-      energy_required = 60,
-      enabled = false,
-      allow_productivity = true,
-      ingredients = {
-        { type = "item", name = "locomotive", amount = 1 },
-        { type = "item", name = "electronic-components", amount = 20 },
-        { type = "item", name = "steel-gear-wheel", amount = 20 },
-        { type = "item", name = "processing-unit", amount = 20 },
-        { type = "item", name = "rare-metals", amount = 80 },
-      },
-      results = { { type = "item", name = "kr-nuclear-locomotive", amount = 1 } },
-    },
-    {
       type = "technology",
       name = "kr-nuclear-locomotive",
       mod = "Krastorio2",

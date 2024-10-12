@@ -29,7 +29,6 @@ require("prototypes.entities.advanced-loader")
 require("prototypes.entities.advanced-solar-panel")
 require("prototypes.entities.advanced-splitter")
 require("prototypes.entities.advanced-steam-turbine")
-require("prototypes.entities.advanced-tank")
 require("prototypes.entities.advanced-transport-belt")
 require("prototypes.entities.advanced-underground-belt")
 require("prototypes.entities.air-purifier")
@@ -146,6 +145,9 @@ require("prototypes.remnants.superior-splitter-remnant")
 require("prototypes.remnants.superior-transport-belt-remnant")
 require("prototypes.remnants.superior-underground-belt-remnant")
 require("prototypes.remnants.turret-remnant")
+
+require("prototypes.entities.advanced-tank")
+require("prototypes.entities.nuclear-locomotive")
 
 ---------------------------------------------------------------------------
 -- -- -- PRE INITIALIZATION
