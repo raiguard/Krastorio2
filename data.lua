@@ -101,9 +101,6 @@ require("prototypes.entities.superior-underground-belt")
 require("prototypes.entities.tesla-coil")
 require("prototypes.entities.wind-turbine")
 
-require("prototypes.entities.advanced-tank")
-require("prototypes.entities.nuclear-locomotive")
-
 require("prototypes.equipment.additional-engine-equipment")
 require("prototypes.equipment.advanced-additional-engine-equipment")
 require("prototypes.equipment.advanced-exoskeleton-equipment")
@@ -161,6 +158,9 @@ require("prototypes.remnants.superior-splitter-remnant")
 require("prototypes.remnants.superior-transport-belt-remnant")
 require("prototypes.remnants.superior-underground-belt-remnant")
 require("prototypes.remnants.turret-remnant")
+
+require("prototypes.vehicles.advanced-tank")
+require("prototypes.vehicles.nuclear-locomotive")
 
 ---------------------------------------------------------------------------
 -- -- -- PRE INITIALIZATION
