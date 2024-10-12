@@ -101,6 +101,9 @@ require("prototypes.entities.superior-underground-belt")
 require("prototypes.entities.tesla-coil")
 require("prototypes.entities.wind-turbine")
 
+require("prototypes.entities.advanced-tank")
+require("prototypes.entities.nuclear-locomotive")
+
 require("prototypes.equipment.additional-engine-equipment")
 require("prototypes.equipment.advanced-additional-engine-equipment")
 require("prototypes.equipment.advanced-exoskeleton-equipment")
@@ -130,6 +133,19 @@ require("prototypes.equipment.superior-night-vision-equipment")
 require("prototypes.equipment.superior-solar-panel-equipment")
 require("prototypes.equipment.vehicle-roboport-equipment")
 
+require("prototypes.explosions.beacon-matter-explosion")
+require("prototypes.explosions.impulse-rifle-beam")
+require("prototypes.explosions.kr-laser-explosion")
+require("prototypes.explosions.kr-laser-explosion-gunshot")
+require("prototypes.explosions.kr-laser-explosion-gunshot-smoke-fast")
+require("prototypes.explosions.matter-explosion")
+require("prototypes.explosions.matter-explosion-s")
+require("prototypes.explosions.matter-fire-smoke")
+require("prototypes.explosions.matter-shockwave")
+require("prototypes.explosions.medium-matter-explosion")
+require("prototypes.explosions.rail-matter-explosion")
+require("prototypes.explosions.small-matter-explosion")
+
 require("prototypes.remnants.advanced-splitter-remnant")
 require("prototypes.remnants.advanced-tank-remnant")
 require("prototypes.remnants.advanced-transport-belt-remnant")
@@ -145,9 +161,6 @@ require("prototypes.remnants.superior-splitter-remnant")
 require("prototypes.remnants.superior-transport-belt-remnant")
 require("prototypes.remnants.superior-underground-belt-remnant")
 require("prototypes.remnants.turret-remnant")
-
-require("prototypes.entities.advanced-tank")
-require("prototypes.entities.nuclear-locomotive")
 
 ---------------------------------------------------------------------------
 -- -- -- PRE INITIALIZATION
