@@ -143,6 +143,9 @@ require("prototypes.explosions.medium-matter-explosion")
 require("prototypes.explosions.rail-matter-explosion")
 require("prototypes.explosions.small-matter-explosion")
 
+require("prototypes.particles.kr-welding-particle")
+require("prototypes.particles.virus-capsule-metal-particle")
+
 require("prototypes.projectiles.antimatter-artillery-projectile")
 require("prototypes.projectiles.antimatter-bomb-wave")
 require("prototypes.projectiles.antimatter-bomb-wave-spawns-fire-smoke-explosion")
@@ -163,7 +166,6 @@ require("prototypes.projectiles.matter-wave")
 require("prototypes.projectiles.nuclear-turret-rocket-projectile")
 require("prototypes.projectiles.poop-projectile")
 require("prototypes.projectiles.virus-capsule")
-require("prototypes.projectiles.virus-capsule-metal-particle")
 
 require("prototypes.remnants.advanced-splitter-remnant")
 require("prototypes.remnants.advanced-tank-remnant")
@@ -215,8 +217,6 @@ require("lib.private.data-stages.technologies")
 ---------------------------------------------------------------------------
 -- -- Adding new items
 require("prototypes.items.items-initialization")
--- -- Adding new particles
-require("prototypes.particles.particles-initialization")
 -- -- Adding new recipes
 require("prototypes.recipes.recipes-initialization")
 -- -- Adding new resources

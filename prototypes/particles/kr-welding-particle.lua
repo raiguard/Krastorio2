@@ -1,0 +1,53 @@
+data:extend({
+  {
+    type = "optimized-particle",
+    name = "kr-welding-particle",
+    life_time = 30,
+    render_layer = "projectile",
+    render_layer_when_on_ground = "corpse",
+    regular_trigger_effect_frequency = 2,
+    ended_in_water_trigger_effect = {
+      type = "create-entity",
+      entity_name = "water-splash",
+    },
+    pictures = {
+      layers = {
+        {
+          filename = "__Krastorio2Assets__/particles/welding/welding.png",
+          priority = "extra-high",
+          width = 200,
+          height = 200,
+          frame_count = 30,
+          line_length = 6,
+          animation_speed = 0.75,
+          variation_count = 1,
+          scale = 0.5,
+        },
+        {
+          filename = "__Krastorio2Assets__/particles/welding/welding.png",
+          priority = "extra-high",
+          width = 200,
+          height = 200,
+          frame_count = 30,
+          line_length = 6,
+          animation_speed = 0.75,
+          variation_count = 1,
+          scale = 0.5,
+          blend_mode = "additive-soft",
+        },
+        {
+          filename = "__Krastorio2Assets__/particles/welding/welding.png",
+          priority = "extra-high",
+          width = 200,
+          height = 200,
+          frame_count = 30,
+          line_length = 6,
+          animation_speed = 0.75,
+          variation_count = 1,
+          scale = 0.5,
+          blend_mode = "additive-soft",
+        },
+      },
+    },
+  },
+})
