@@ -9,7 +9,6 @@ for _, roboport in pairs(data.raw.roboport) do
   local logistic_roboport = table.deepcopy(roboport)
   logistic_roboport.name = logistic_roboport.name .. "-logistic-mode"
   logistic_roboport.localised_name = { "entity-name.kr-logistic-roboport", { "entity-name." .. roboport.name } }
-  logistic_roboport.has_backer_name = false
   logistic_roboport.localised_description = { "entity-description." .. roboport.name }
   logistic_roboport.placeable_by = { item = roboport.name, count = 1 }
   logistic_roboport.logistics_radius =
@@ -24,7 +23,6 @@ for _, roboport in pairs(data.raw.roboport) do
     "entity-name.kr-construction-roboport",
     { "entity-name." .. roboport.name },
   }
-  construction_roboport.has_backer_name = false
   construction_roboport.localised_description = { "entity-description." .. roboport.name }
   construction_roboport.placeable_by = { item = roboport.name, count = 1 }
   construction_roboport.construction_radius =
@@ -41,5 +39,3 @@ end
 for _, roboport in pairs(roboports) do
   data:extend({ roboport })
 end
-
-return create_roboport_states
