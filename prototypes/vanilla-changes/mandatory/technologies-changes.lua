@@ -36,6 +36,7 @@ krastorio.technologies.addPrerequisite("production-science-pack", "kr-research-s
 krastorio.technologies.addPrerequisite("production-science-pack", "kr-advanced-lab")
 krastorio.technologies.addPrerequisite("production-science-pack", "uranium-processing")
 krastorio.technologies.addPrerequisite("utility-science-pack", "kr-research-server")
+krastorio.technologies.addPrerequisite("utility-science-pack", "kr-advanced-lab")
 krastorio.technologies.addPrerequisite("utility-science-pack", "rocket-fuel")
 krastorio.technologies.addPrerequisite(kr_optimization_tech_card_name, "kr-singularity-lab")
 
