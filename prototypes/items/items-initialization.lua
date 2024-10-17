@@ -1,8 +1,5 @@
 -- -- -- New items
 
--- -- Raw materials/Resources
-require("prototypes.items.resources")
-
 -- -- New science packs graphic
 require("prototypes.items.techcards")
 

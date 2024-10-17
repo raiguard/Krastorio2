@@ -1,17 +1,106 @@
 local resource_autoplace = require("__core__.lualib.resource-autoplace")
 
--- Adding imersite
 data:extend({
+  {
+    type = "item",
+    name = "raw-imersite",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/raw-imersite/raw-imersite.png",
+    subgroup = "raw-resource",
+    order = "ga[raw-imersite]",
+    stack_size = 200,
+    pictures = {
+      {
+        layers = {
+          {
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/raw-imersite/raw-imersite.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+          {
+            draw_as_light = true,
+            flags = { "light" },
+            blend_mode = "additive",
+            tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/raw-imersite/raw-imersite-light.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+        },
+      },
+      {
+        layers = {
+          {
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/raw-imersite/raw-imersite-1.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+          {
+            draw_as_light = true,
+            flags = { "light" },
+            blend_mode = "additive",
+            tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/raw-imersite/raw-imersite-1-light.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+        },
+      },
+      {
+        layers = {
+          {
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/raw-imersite/raw-imersite-2.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+          {
+            draw_as_light = true,
+            flags = { "light" },
+            blend_mode = "additive",
+            tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/raw-imersite/raw-imersite-2-light.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+        },
+      },
+      {
+        layers = {
+          {
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/raw-imersite/raw-imersite-3.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+          {
+            draw_as_light = true,
+            flags = { "light" },
+            blend_mode = "additive",
+            tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/raw-imersite/raw-imersite-3-light.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+        },
+      },
+    },
+  },
   {
     type = "resource",
     name = "imersite",
     category = "kr-quarry",
     icon = "__Krastorio2Assets__/icons/items-with-variations/raw-imersite/raw-imersite.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     flags = { "placeable-neutral" },
     order = "a-b-a",
     subgroup = "raw-resource",
+    collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
+    selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     infinite = false,
     highlight = true,
     minimum = 50,
@@ -25,8 +114,6 @@ data:extend({
       mining_time = 2,
       result = "raw-imersite",
     },
-    collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
-    selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     autoplace = resource_autoplace.resource_autoplace_settings({
       name = "imersite",
       order = "f",

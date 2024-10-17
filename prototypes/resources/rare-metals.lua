@@ -3,14 +3,48 @@ local resource_autoplace = require("__core__.lualib.resource-autoplace")
 -- Adding rare metals
 data:extend({
   {
+    type = "item",
+    name = "raw-rare-metals",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals.png",
+    subgroup = "raw-resource",
+    order = "ga[raw-rare-metals]",
+    stack_size = 200,
+    pictures = {
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals-1.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals-2.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals-3.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+    },
+  },
+  {
     type = "resource",
     name = "rare-metals",
     icon = "__Krastorio2Assets__/icons/resources/rare-metals.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     flags = { "placeable-neutral" },
     order = "a-b-a",
     subgroup = "raw-resource",
+    collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } },
+    selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     tree_removal_probability = 0,
     tree_removal_max_distance = 0,
     minable = {
@@ -21,8 +55,6 @@ data:extend({
       fluid_amount = 25,
       required_fluid = "chlorine",
     },
-    collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } },
-    selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     autoplace = resource_autoplace.resource_autoplace_settings({
       name = "rare-metals",
       order = "d",
