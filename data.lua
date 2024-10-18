@@ -143,6 +143,8 @@ require("prototypes.explosions.medium-matter-explosion")
 require("prototypes.explosions.rail-matter-explosion")
 require("prototypes.explosions.small-matter-explosion")
 
+require("prototypes.items.techcards")
+
 require("prototypes.particles.kr-welding-particle")
 require("prototypes.particles.virus-capsule-metal-particle")
 
@@ -223,6 +225,8 @@ require("lib.private.data-stages.technologies")
 require("prototypes.items.items-initialization")
 -- -- Adding new recipes
 require("prototypes.recipes.recipes-initialization")
+-- -- Adding new resources
+require("prototypes.resources.resources-initialization")
 -- -- Adding new sounds (prototypes)
 -- -- Adding new technologies
 require("prototypes.technologies.technologies-initialization")

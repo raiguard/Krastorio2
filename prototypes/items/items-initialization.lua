@@ -1,7 +1,6 @@
 -- -- -- New items
 
 -- -- New science packs graphic
-require("prototypes.items.techcards")
 
 -- -- Items for terrain
 require("prototypes.items.terrain")
