@@ -143,7 +143,7 @@ require("prototypes.explosions.medium-matter-explosion")
 require("prototypes.explosions.rail-matter-explosion")
 require("prototypes.explosions.small-matter-explosion")
 
-require("prototypes.items.techcards")
+require("prototypes.items.tech-cards")
 
 require("prototypes.particles.kr-welding-particle")
 require("prototypes.particles.virus-capsule-metal-particle")
