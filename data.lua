@@ -167,6 +167,10 @@ require("prototypes.projectiles.nuclear-turret-rocket-projectile")
 require("prototypes.projectiles.poop-projectile")
 require("prototypes.projectiles.virus-capsule")
 
+require("prototypes.resources.imersite")
+require("prototypes.resources.mineral-water")
+require("prototypes.resources.rare-metals")
+
 require("prototypes.remnants.advanced-splitter-remnant")
 require("prototypes.remnants.advanced-tank-remnant")
 require("prototypes.remnants.advanced-transport-belt-remnant")
@@ -219,8 +223,6 @@ require("lib.private.data-stages.technologies")
 require("prototypes.items.items-initialization")
 -- -- Adding new recipes
 require("prototypes.recipes.recipes-initialization")
--- -- Adding new resources
-require("prototypes.resources.resources-initialization")
 -- -- Adding new sounds (prototypes)
 -- -- Adding new technologies
 require("prototypes.technologies.technologies-initialization")
