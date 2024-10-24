@@ -7,7 +7,6 @@
 -- -- Selection tools
 
 -- -- Adding new capsules
-require("prototypes.items.capsules")
 
 -- -- All other items
 require("prototypes.items.uncategorized")

@@ -1,30 +1,28 @@
 local sounds = require("__base__.prototypes.entity.sounds")
 
 data:extend({
-  -----------------------------------------------------------------------------------------------------------------
-  -----------------------------------------------------------------------------------------------------------------
-  -----------------------------------------------------------------------------------------------------------------
   {
     type = "capsule",
     name = "kr-creep-virus",
     icon = "__Krastorio2Assets__/icons/capsules/creep-virus.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    subgroup = "capsule",
+    order = "c[poison-capsule]",
+    stack_size = 100,
     pictures = {
       layers = {
         {
-          size = 64,
           filename = "__Krastorio2Assets__/icons/capsules/creep-virus.png",
+          size = 64,
           scale = 0.25,
           mipmap_count = 4,
         },
         {
-          draw_as_light = true,
-          flags = { "light" },
-          size = 64,
           filename = "__Krastorio2Assets__/icons/capsules/creep-virus-light.png",
+          size = 64,
           scale = 0.25,
           mipmap_count = 4,
+          flags = { "light" },
+          draw_as_light = true,
         },
       },
     },
@@ -65,31 +63,29 @@ data:extend({
         },
       },
     },
-    subgroup = "capsule",
-    order = "c[poison-capsule]",
-    stack_size = 100,
   },
   {
     type = "capsule",
     name = "kr-biter-virus",
     icon = "__Krastorio2Assets__/icons/capsules/biter-virus.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    subgroup = "capsule",
+    order = "c[poison-capsule]",
+    stack_size = 100,
     pictures = {
       layers = {
         {
-          size = 64,
           filename = "__Krastorio2Assets__/icons/capsules/biter-virus.png",
+          size = 64,
           scale = 0.25,
           mipmap_count = 4,
         },
         {
-          draw_as_light = true,
-          flags = { "light" },
-          size = 64,
           filename = "__Krastorio2Assets__/icons/capsules/biter-virus-light.png",
+          size = 64,
           scale = 0.25,
           mipmap_count = 4,
+          flags = { "light" },
+          draw_as_light = true,
         },
       },
     },
@@ -130,19 +126,15 @@ data:extend({
         },
       },
     },
-    subgroup = "capsule",
-    order = "c[poison-capsule]",
-    stack_size = 100,
   },
   {
     type = "capsule",
     name = "spoiled-potato",
     icon = "__Krastorio2Assets__/icons/capsules/spoiled-potato.png",
-    rocket_launch_product = { "poop", 1 },
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "other",
     hidden = true,
+    subgroup = "other",
+    stack_size = 50,
+    rocket_launch_products = { { type = "item", name = "poop", amount = 1 } },
     capsule_action = {
       type = "use-on-self",
       attack_parameters = {
@@ -167,17 +159,15 @@ data:extend({
         },
       },
     },
-    stack_size = 50,
   },
   {
     type = "capsule",
     name = "poop",
     icon = "__Krastorio2Assets__/icons/capsules/poop.png",
-    rocket_launch_product = { "kr-note-1", 1 },
-    icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "other",
     hidden = true,
+    stack_size = 50,
+    rocket_launch_product = { "kr-note-1", 1 },
     capsule_action = {
       type = "throw",
       attack_parameters = {
@@ -215,15 +205,14 @@ data:extend({
         },
       },
     },
-    stack_size = 50,
   },
   {
     type = "capsule",
     name = "first-aid-kit",
     icon = "__Krastorio2Assets__/icons/items/first-aid-kit.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "raw-resource",
+    order = "h[first-aid-kit]",
+    stack_size = 50,
     capsule_action = {
       type = "use-on-self",
       attack_parameters = {
@@ -247,18 +236,15 @@ data:extend({
         },
       },
     },
-    order = "h[first-aid-kit]",
-    stack_size = 50,
   },
   {
     type = "capsule",
     name = "potato",
     icon = "__Krastorio2Assets__/icons/items/potato.png",
-    rocket_launch_product = { "cyber-potato-equipment", 1 },
-    icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "other",
     hidden = true,
+    stack_size = 50,
+    rocket_launch_products = { { type = "item", name = "cyber-potato-equipment", amount = 1 } },
     capsule_action = {
       type = "use-on-self",
       attack_parameters = {
@@ -282,9 +268,5 @@ data:extend({
         },
       },
     },
-    stack_size = 50,
   },
-  -----------------------------------------------------------------------------------------------------------------
-  -----------------------------------------------------------------------------------------------------------------
-  -----------------------------------------------------------------------------------------------------------------
 })
