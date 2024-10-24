@@ -227,8 +227,6 @@ require("lib.private.data-stages.technologies")
 ---------------------------------------------------------------------------
 -- -- -- CONTENTS INITIALIZATION (data stage)
 ---------------------------------------------------------------------------
--- -- Adding new items
-require("prototypes.items.items-initialization")
 -- -- Adding new recipes
 require("prototypes.recipes.recipes-initialization")
 -- -- Adding new resources
