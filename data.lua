@@ -229,8 +229,6 @@ require("lib.private.data-stages.technologies")
 ---------------------------------------------------------------------------
 -- -- Adding new recipes
 require("prototypes.recipes.recipes-initialization")
--- -- Adding new resources
-require("prototypes.resources.resources-initialization")
 -- -- Adding new sounds (prototypes)
 -- -- Adding new technologies
 require("prototypes.technologies.technologies-initialization")
