@@ -144,6 +144,7 @@ require("prototypes.explosions.rail-matter-explosion")
 require("prototypes.explosions.small-matter-explosion")
 
 require("prototypes.items.capsules")
+require("prototypes.items.items")
 require("prototypes.items.jackhammer")
 require("prototypes.items.tech-cards")
 require("prototypes.items.tiles")

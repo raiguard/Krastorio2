@@ -9,7 +9,6 @@
 -- -- Adding new capsules
 
 -- -- All other items
-require("prototypes.items.uncategorized")
 
 -- -- Guns
 -- Character guns

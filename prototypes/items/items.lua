@@ -1,57 +1,8 @@
-local coke_value, coke_acceleration_multiplier, coke_top_speed_multiplier = nil, nil, nil
-local fuel_value, fuel_acceleration_multiplier, fuel_top_speed_multiplier = nil, nil, nil
-local bio_fuel_value, bio_fuel_acceleration_multiplier, bio_fuel_top_speed_multiplier = nil, nil, nil
-local advanced_fuel_value, advanced_fuel_acceleration_multiplier, advanced_fuel_top_speed_multiplier = nil, nil, nil
-
-if krastorio.general.getSafeSettingValue("kr-rebalance-fuels") then
-  -- Coke
-  coke_value = "10MJ"
-  coke_acceleration_multiplier = 0.9
-  coke_top_speed_multiplier = 0.9
-
-  -- Fuel
-  fuel_value = "15MJ"
-  fuel_acceleration_multiplier = 1.0
-  fuel_top_speed_multiplier = 1.0
-
-  -- Bio fuel
-  bio_fuel_value = "15MJ"
-  bio_fuel_acceleration_multiplier = 0.8
-  bio_fuel_top_speed_multiplier = 0.9
-
-  -- Advanced fuel
-  advanced_fuel_value = "15MJ"
-  advanced_fuel_acceleration_multiplier = 1.25
-  advanced_fuel_top_speed_multiplier = 1.25
-else
-  -- Coke
-  coke_value = "10MJ"
-  coke_acceleration_multiplier = 1.1
-  coke_top_speed_multiplier = 1.1
-
-  -- Fuel
-  fuel_value = "15MJ"
-  fuel_acceleration_multiplier = 1.3
-  fuel_top_speed_multiplier = 1.1
-
-  -- Bio fuel
-  bio_fuel_value = "15MJ"
-  bio_fuel_acceleration_multiplier = 1.2
-  bio_fuel_top_speed_multiplier = 1.1
-
-  -- Advanced fuel
-  advanced_fuel_value = "15MJ"
-  advanced_fuel_acceleration_multiplier = 1.5
-  advanced_fuel_top_speed_multiplier = 1.5
-end
-
 data:extend({
   {
     type = "item",
     name = "biomass",
     icon = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
@@ -92,8 +43,6 @@ data:extend({
     type = "item",
     name = "fertilizer",
     icon = "__Krastorio2Assets__/icons/items/fertilizer.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "raw-material",
     order = "a2[fertilizer]",
     stack_size = 200,
@@ -102,8 +51,6 @@ data:extend({
     type = "item",
     name = "kr-note-1",
     icon = "__Krastorio2Assets__/icons/items/note.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "other",
     hidden = true,
     stack_size = 50,
@@ -112,8 +59,6 @@ data:extend({
     type = "item",
     name = "automation-core",
     icon = "__Krastorio2Assets__/icons/items/automation-core.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "intermediate-product",
     order = "e1[automation-core]",
     stack_size = 200,
@@ -122,8 +67,6 @@ data:extend({
     type = "item",
     name = "sand",
     icon = "__Krastorio2Assets__/icons/items-with-variations/sand/sand.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
@@ -152,8 +95,6 @@ data:extend({
     type = "item",
     name = "glass",
     icon = "__Krastorio2Assets__/icons/items/glass.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "raw-material",
     order = "a1[glass]",
     stack_size = 200,
@@ -162,8 +103,6 @@ data:extend({
     type = "item",
     name = "quartz",
     icon = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
@@ -198,8 +137,6 @@ data:extend({
     type = "item",
     name = "silicon",
     icon = "__Krastorio2Assets__/icons/items-with-variations/silicon/silicon.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
@@ -228,8 +165,6 @@ data:extend({
     type = "item",
     name = "electronic-components",
     icon = "__Krastorio2Assets__/icons/items-with-variations/electronic-components/electronic-components.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
@@ -279,8 +214,6 @@ data:extend({
     type = "item",
     name = "coke",
     icon = "__Krastorio2Assets__/icons/items-with-variations/coke/coke.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
@@ -302,10 +235,10 @@ data:extend({
       },
     },
     fuel_category = "chemical",
-    fuel_value = coke_value,
+    fuel_value = "10MJ",
     fuel_emissions_multiplier = 1.25,
-    fuel_acceleration_multiplier = coke_acceleration_multiplier,
-    fuel_top_speed_multiplier = coke_top_speed_multiplier,
+    fuel_acceleration_multiplier = 0.9,
+    fuel_top_speed_multiplier = 0.9,
     subgroup = "raw-material",
     order = "a1[coke]",
     stack_size = 200,
@@ -314,13 +247,11 @@ data:extend({
     type = "item",
     name = "fuel",
     icon = "__Krastorio2Assets__/icons/items/fuel.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     fuel_category = "vehicle-fuel",
-    fuel_value = fuel_value,
+    fuel_value = "15MJ",
     fuel_emissions_multiplier = 1,
-    fuel_acceleration_multiplier = fuel_acceleration_multiplier,
-    fuel_top_speed_multiplier = fuel_top_speed_multiplier,
+    fuel_acceleration_multiplier = 1,
+    fuel_top_speed_multiplier = 1,
     subgroup = "raw-material",
     order = "w01[fuel]",
     stack_size = 200,
@@ -329,13 +260,11 @@ data:extend({
     type = "item",
     name = "bio-fuel",
     icon = "__Krastorio2Assets__/icons/items/bio-fuel.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     fuel_category = "vehicle-fuel",
-    fuel_value = bio_fuel_value,
+    fuel_value = "15MJ",
     fuel_emissions_multiplier = 0.5,
-    fuel_acceleration_multiplier = bio_fuel_acceleration_multiplier,
-    fuel_top_speed_multiplier = bio_fuel_top_speed_multiplier,
+    fuel_acceleration_multiplier = 0.8,
+    fuel_top_speed_multiplier = 0.9,
     subgroup = "raw-material",
     order = "w02[bio-fuel]",
     stack_size = 200,
@@ -344,13 +273,11 @@ data:extend({
     type = "item",
     name = "advanced-fuel",
     icon = "__Krastorio2Assets__/icons/items/advanced-fuel.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     fuel_category = "vehicle-fuel",
-    fuel_value = advanced_fuel_value,
+    fuel_value = "15MJ",
     fuel_emissions_multiplier = 1.75,
-    fuel_acceleration_multiplier = advanced_fuel_acceleration_multiplier,
-    fuel_top_speed_multiplier = advanced_fuel_top_speed_multiplier,
+    fuel_acceleration_multiplier = 1.25,
+    fuel_top_speed_multiplier = 1.25,
     subgroup = "raw-material",
     order = "w03[advanced-fuel]",
     stack_size = 200,
@@ -360,8 +287,6 @@ data:extend({
     type = "item",
     name = "iron-beam",
     icon = "__Krastorio2Assets__/icons/items/iron-beam.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "intermediate-product",
     order = "c-a2[iron-beam]",
     stack_size = 200,
@@ -370,8 +295,6 @@ data:extend({
     type = "item",
     name = "steel-gear-wheel",
     icon = "__Krastorio2Assets__/icons/items/steel-gear-wheel.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "intermediate-product",
     order = "d-a2[steel-gear-wheel]",
     stack_size = 200,
@@ -380,8 +303,6 @@ data:extend({
     type = "item",
     name = "steel-beam",
     icon = "__Krastorio2Assets__/icons/items/steel-beam.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "intermediate-product",
     order = "c-a2[steel-beam]",
     stack_size = 200,
@@ -390,8 +311,6 @@ data:extend({
     type = "item",
     name = "imersium-plate",
     icon = "__Krastorio2Assets__/icons/items/imersium-plate.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       layers = {
         {
@@ -418,8 +337,6 @@ data:extend({
     type = "item",
     name = "imersium-gear-wheel",
     icon = "__Krastorio2Assets__/icons/items/imersium-gear-wheel.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       layers = {
         {
@@ -446,8 +363,6 @@ data:extend({
     type = "item",
     name = "imersium-beam",
     icon = "__Krastorio2Assets__/icons/items/imersium-beam.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       layers = {
         {
@@ -474,8 +389,6 @@ data:extend({
     type = "item",
     name = "rare-metals",
     icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
@@ -528,8 +441,6 @@ data:extend({
     type = "item",
     name = "enriched-iron",
     icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
@@ -558,8 +469,6 @@ data:extend({
     type = "item",
     name = "enriched-copper",
     icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-copper/enriched-copper.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
@@ -588,8 +497,6 @@ data:extend({
     type = "item",
     name = "enriched-rare-metals",
     icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
@@ -618,8 +525,6 @@ data:extend({
     type = "item",
     name = "lithium",
     icon = "__Krastorio2Assets__/icons/items-with-variations/lithium/lithium.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
@@ -648,8 +553,6 @@ data:extend({
     type = "item",
     name = "lithium-chloride",
     icon = "__Krastorio2Assets__/icons/items-with-variations/lithium-chloride/lithium-chloride.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
@@ -672,8 +575,6 @@ data:extend({
     type = "item",
     name = "imersite-powder",
     icon = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       {
         layers = {
@@ -744,8 +645,6 @@ data:extend({
     type = "item",
     name = "imersite-crystal",
     icon = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       {
         layers = {
@@ -856,8 +755,6 @@ data:extend({
     type = "item",
     name = "lithium-sulfur-battery",
     icon = "__Krastorio2Assets__/icons/items/lithium-sulfur-battery.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       layers = {
         {
@@ -884,8 +781,6 @@ data:extend({
     type = "item",
     name = "ai-core",
     icon = "__Krastorio2Assets__/icons/items/ai-core.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       layers = {
         {
@@ -912,8 +807,6 @@ data:extend({
     type = "item",
     name = "pollution-filter",
     icon = "__Krastorio2Assets__/icons/items/pollution-filter.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "intermediate-product",
     order = "w2-a1[pollution-filter]",
     stack_size = 50,
@@ -922,8 +815,6 @@ data:extend({
     type = "item",
     name = "used-pollution-filter",
     icon = "__Krastorio2Assets__/icons/items/used-pollution-filter.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "intermediate-product",
     order = "w2-a2[used-pollution-filter]",
     stack_size = 50,
@@ -932,8 +823,6 @@ data:extend({
     type = "item",
     name = "improved-pollution-filter",
     icon = "__Krastorio2Assets__/icons/items/improved-pollution-filter.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "intermediate-product",
     order = "w2-b1[improved-pollution-filter]",
     stack_size = 50,
@@ -942,8 +831,6 @@ data:extend({
     type = "item",
     name = "used-improved-pollution-filter",
     icon = "__Krastorio2Assets__/icons/items/used-improved-pollution-filter.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "intermediate-product",
     order = "w2-b2[used-improved-pollution-filter]",
     stack_size = 50,
@@ -952,8 +839,6 @@ data:extend({
     type = "item",
     name = "tritium",
     icon = "__Krastorio2Assets__/icons/items/tritium.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       layers = {
         {
@@ -980,8 +865,6 @@ data:extend({
     type = "item",
     name = "empty-dt-fuel",
     icon = "__Krastorio2Assets__/icons/items/empty-dt-fuel.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "intermediate-product",
     order = "r[uranium-processing]-b1[dt-fuel]-a1[empty-dt-fuel]",
     stack_size = 10,
@@ -990,8 +873,6 @@ data:extend({
     type = "item",
     name = "dt-fuel",
     icon = "__Krastorio2Assets__/icons/items/dt-fuel.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       layers = {
         {
@@ -1022,8 +903,6 @@ data:extend({
     type = "item",
     name = "energy-control-unit",
     icon = "__Krastorio2Assets__/icons/items/energy-control-unit.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       layers = {
         {
@@ -1051,8 +930,6 @@ data:extend({
     type = "item",
     name = "matter-stabilizer",
     icon = "__Krastorio2Assets__/icons/items/matter-stabilizer.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "intermediate-product",
     order = "w1[matter-stabilizers]-a1[matter-stabilizer]",
     stack_size = 100,
@@ -1061,8 +938,6 @@ data:extend({
     type = "item",
     name = "charged-matter-stabilizer",
     icon = "__Krastorio2Assets__/icons/items/charged-matter-stabilizer.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       layers = {
         {
@@ -1089,8 +964,6 @@ data:extend({
     type = "item",
     name = "matter-cube",
     icon = "__Krastorio2Assets__/icons/items/matter-cube.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "intermediate-product",
     order = "000[matter]-000[matter-cube]",
     stack_size = 200,
@@ -1099,8 +972,6 @@ data:extend({
     type = "item",
     name = "empty-antimatter-fuel-cell",
     icon = "__Krastorio2Assets__/icons/items/empty-antimatter-fuel-cell.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "intermediate-product",
     order = "r[uranium-processing]-b2[antimatter-fuel-cell]-a1[empty-antimatter-fuel-cell]",
     stack_size = 10,
@@ -1109,8 +980,6 @@ data:extend({
     type = "item",
     name = "charged-antimatter-fuel-cell",
     icon = "__Krastorio2Assets__/icons/items/charged-antimatter-fuel-cell.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       layers = {
         {
@@ -1140,8 +1009,6 @@ data:extend({
     type = "item",
     name = "inserter-parts",
     icon = "__Krastorio2Assets__/icons/items-with-variations/inserter-parts/inserter-parts.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
@@ -1183,8 +1050,6 @@ data:extend({
     name = "gps-satellite",
     rocket_launch_product = { "teleportation-gps-module", 1 },
     icon = "__Krastorio2Assets__/icons/items/gps-satellite.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       layers = {
         {
@@ -1211,8 +1076,6 @@ data:extend({
     type = "item",
     name = "teleportation-gps-module",
     icon = "__Krastorio2Assets__/icons/items/teleportation-gps-module.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     pictures = {
       layers = {
         {

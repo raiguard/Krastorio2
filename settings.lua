@@ -184,13 +184,6 @@ data:extend({
   },
   {
     type = "bool-setting",
-    name = "kr-rebalance-fuels",
-    setting_type = "startup",
-    default_value = true,
-    order = "b03",
-  },
-  {
-    type = "bool-setting",
     name = "kr-electric-poles-changes",
     setting_type = "startup",
     default_value = true,
