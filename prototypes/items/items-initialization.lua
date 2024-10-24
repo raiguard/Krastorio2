@@ -3,7 +3,6 @@
 -- -- New science packs graphic
 
 -- -- Items for terrain
-require("prototypes.items.terrain")
 
 -- -- Selection tools
 require("prototypes.items.selection-tools")
