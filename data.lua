@@ -143,6 +143,7 @@ require("prototypes.explosions.medium-matter-explosion")
 require("prototypes.explosions.rail-matter-explosion")
 require("prototypes.explosions.small-matter-explosion")
 
+require("prototypes.items.ammo")
 require("prototypes.items.capsules")
 require("prototypes.items.guns")
 require("prototypes.items.items")

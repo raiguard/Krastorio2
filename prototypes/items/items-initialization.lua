@@ -14,4 +14,3 @@
 -- Character guns
 -- Adavanced tank guns
 -- Ammos
-require("prototypes.items.ammo")
