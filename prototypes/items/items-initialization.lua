@@ -5,7 +5,6 @@
 -- -- Items for terrain
 
 -- -- Selection tools
-require("prototypes.items.selection-tools")
 
 -- -- Adding new capsules
 require("prototypes.items.capsules")

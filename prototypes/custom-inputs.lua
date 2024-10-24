@@ -17,13 +17,6 @@ data:extend({
   },
   {
     type = "custom-input",
-    name = "kr-creep-collector",
-    key_sequence = "ALT + C",
-    action = "spawn-item",
-    item_to_spawn = "kr-creep-collector",
-  },
-  {
-    type = "custom-input",
     name = "kr-jackhammer",
     key_sequence = "ALT + J",
     action = "spawn-item",
