@@ -25,7 +25,7 @@ function data_util.furnace_to_assembler(furnace_name)
 
   local assembler = table.deepcopy(furnace) --[[@as data.AssemblingMachinePrototype]]
   assembler.type = "assembling-machine"
-  assembler.source_inventory_size = nil
+  assembler.source_inventory_size = nil --- @diagnostic disable-line
   assembler.energy_source.emissions_per_minute = { pollution = 2 }
   assembler.energy_usage = "0.2MW"
   data.raw.furnace[furnace_name] = nil
