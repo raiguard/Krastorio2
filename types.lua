@@ -5,3 +5,5 @@
 
 --- @alias PlayerIndex uint
 --- @alias UnitNumber uint
+
+--- @alias k2.PrototypeWithIcons data.AchievementPrototype|data.AmmoCategory|data.AsteroidChunkPrototype|data.EntityPrototype|data.FluidPrototype|data.ItemGroup|data.ItemPrototype|data.QualityPrototype|data.RecipePrototype|data.ShortcutPrototype|data.SpaceConnectionPrototype|data.SpaceLocationPrototype|data.TechnologyPrototype|data.TilePrototype|data.TipsAndTricksItem|data.VirtualSignalPrototype

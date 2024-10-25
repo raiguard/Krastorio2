@@ -1,26 +1,30 @@
+local flib_position = require("__flib__.position")
+
 local data_util = {}
 
 --- Adds the given recipe as an unlock of the given technology.
---- @param technology_name string
---- @param recipe_name string
+--- @param technology_name data.TechnologyID
+--- @param recipe_name data.RecipeID
 function data_util.add_recipe_unlock(technology_name, recipe_name)
   local technology = data.raw.technology[technology_name]
   if not technology then
-    error("data_util.add_recipe_unlock(): Technology " .. technology_name .. " does not exist.")
+    error("Technology " .. technology_name .. " does not exist.")
   end
-  if technology.research_trigger then
-    error("data_util.add_recipe_unlock(): Technology " .. technology_name .. " is a trigger technology.")
+  for _, effect in pairs(technology.effects) do
+    if effect.type == "unlock-recipe" and effect.recipe == recipe_name then
+      error("Technology " .. technology_name .. " already unlocks recipe " .. recipe_name .. ".")
+    end
   end
   table.insert(technology.effects, { type = "unlock-recipe", recipe = recipe_name })
 end
 
 --- Converts a furnace prototype into an assembling machine prototype.
---- @param furnace_name string
+--- @param furnace_name data.EntityID
 --- @return data.AssemblingMachinePrototype
 function data_util.furnace_to_assembler(furnace_name)
   local furnace = data.raw.furnace[furnace_name]
   if not furnace then
-    error("data_util.furnace_to_assembler(): Furnace " .. furnace_name .. " does not exist.")
+    error("Furnace " .. furnace_name .. " does not exist.")
   end
 
   local assembler = table.deepcopy(furnace) --[[@as data.AssemblingMachinePrototype]]
@@ -31,6 +35,38 @@ function data_util.furnace_to_assembler(furnace_name)
   data.raw.furnace[furnace_name] = nil
   data:extend({ assembler })
   return assembler
+end
+
+--- Returns a copy of the given prototype's icons in the standard format.
+--- @param prototype k2.PrototypeWithIcons
+--- @return data.IconData[]
+function data_util.get_icons(prototype)
+  local icons = prototype.icons -- LuaLS isn't inferring the dropped optional unless we assign it to a local first.
+  if icons then
+    return table.deepcopy(icons)
+  end
+  return { { icon = prototype.icon, icon_size = prototype.icon_size } }
+end
+
+--- Fields are analagous to `data.IconData`.
+--- @class k2.IconTransformOptions
+--- @field shift Vector?
+--- @field scale double?
+
+--- Applies the given transformations to each layer in the icons array in-place and returns the array.
+--- @param icons data.IconData[]
+--- @param transforms k2.IconTransformOptions
+--- @return data.IconData[]
+function data_util.transform_icons(icons, transforms)
+  for _, icon in pairs(icons) do
+    if transforms.shift then
+      icon.shift = flib_position.add((icon.shift or { 0, 0 }), transforms.shift)
+    end
+    if transforms.scale then
+      icon.scale = (icon.scale or 1) * transforms.scale
+    end
+  end
+  return icons
 end
 
 return data_util

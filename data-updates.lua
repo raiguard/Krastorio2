@@ -1,4 +1,5 @@
 require("prototypes.updates.create-roboport-variations")
+require("prototypes.updates.generate-flare-stack-recipes")
 require("prototypes.updates.generate-greenhouse-recipes")
 require("prototypes.updates.generate-void-crushing-recipes")
 ---------------------------------------------------------------------------
@@ -20,10 +21,6 @@ require("lib.private.data-stages.technologies")
 -- -- Modifing vanilla game objects
 require("prototypes.vanilla-changes.mandatory-vanilla-updates")
 require("prototypes.vanilla-changes.optional-vanilla-updates")
--- Generate tree and rock recipes
--- Generating buring recipes for fluids
-local fluid_burner_util = require("lib.public.data-stages.fluid-burner-util")
-fluid_burner_util.generateBurnFluidsRecipes()
 -- Generate for each item that can't be processed from the crusher
 -- a void recipe for destroy it
 -- (This must be done after adding other recipes)
