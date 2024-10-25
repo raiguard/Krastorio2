@@ -285,7 +285,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "kr-large-storage-tank",
+        recipe = "kr-big-storage-tank",
       },
       {
         type = "unlock-recipe",

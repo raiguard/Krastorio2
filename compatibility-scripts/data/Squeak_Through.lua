@@ -90,7 +90,7 @@ local exclusions_to_add = {
     "kr-storage-warehouse",
   },
   ["storage-tank"] = {
-    "large-storage-tank",
+    "big-storage-tank",
     "huge-storage-tank",
   },
   ["generator"] = {

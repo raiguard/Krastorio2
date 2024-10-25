@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "recipe",
-    name = "kr-large-storage-tank",
+    name = "kr-big-storage-tank",
     energy_required = 5,
     enabled = false,
     ingredients = {
@@ -9,23 +9,23 @@ data:extend({
       { type = "item", name = "steel-plate", amount = 20 },
       { type = "item", name = "kr-steel-pipe", amount = 4 },
     },
-    results = { { type = "item", name = "kr-large-storage-tank", amount = 1 } },
+    results = { { type = "item", name = "kr-big-storage-tank", amount = 1 } },
   },
   {
     type = "item",
-    name = "kr-large-storage-tank",
-    icon = "__Krastorio2Assets__/icons/entities/large-storage-tank.png",
+    name = "kr-big-storage-tank",
+    icon = "__Krastorio2Assets__/icons/entities/big-storage-tank.png",
     subgroup = "storage",
     order = "b[fluid]-bb2[storage-tank-2]",
-    place_result = "kr-large-storage-tank",
+    place_result = "kr-big-storage-tank",
     stack_size = 50,
   },
   {
     type = "storage-tank",
-    name = "kr-large-storage-tank",
-    icon = "__Krastorio2Assets__/icons/entities/large-storage-tank.png",
+    name = "kr-big-storage-tank",
+    icon = "__Krastorio2Assets__/icons/entities/big-storage-tank.png",
     flags = { "placeable-player", "player-creation", "not-rotatable" },
-    minable = { mining_time = 0.5, result = "kr-large-storage-tank" },
+    minable = { mining_time = 0.5, result = "kr-big-storage-tank" },
     collision_box = { { -1.25, -1.25 }, { 1.25, 1.25 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     flow_length_in_ticks = 360,
@@ -59,7 +59,7 @@ data:extend({
       picture = {
         sheets = {
           {
-            filename = "__Krastorio2Assets__/entities/large-storage-tank/large-storage-tank.png",
+            filename = "__Krastorio2Assets__/entities/big-storage-tank/big-storage-tank.png",
             priority = "extra-high",
             frames = 1,
             scale = 0.5,
@@ -67,7 +67,7 @@ data:extend({
             height = 256,
           },
           {
-            filename = "__Krastorio2Assets__/entities/large-storage-tank/large-storage-tank-sh.png",
+            filename = "__Krastorio2Assets__/entities/big-storage-tank/big-storage-tank-sh.png",
             priority = "extra-high",
             frames = 1,
             scale = 0.5,
@@ -111,7 +111,7 @@ data:extend({
     window_bounding_box = { { -0.125, 0.6875 }, { 0.1875, 1.1875 } },
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/entities/large-storage-tank/large-storage-tank-reflection.png",
+        filename = "__Krastorio2Assets__/entities/big-storage-tank/big-storage-tank-reflection.png",
         priority = "extra-high",
         width = 40,
         height = 35,
