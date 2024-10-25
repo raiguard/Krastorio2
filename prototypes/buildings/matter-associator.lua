@@ -4,7 +4,7 @@ local sounds = require("__base__.prototypes.entity.sounds")
 data:extend({
   {
     type = "recipe",
-    name = "kr-matter-assembler",
+    name = "kr-matter-associator",
     energy_required = 30,
     enabled = false,
     ingredients = {
@@ -13,25 +13,25 @@ data:extend({
       { type = "item", name = "energy-control-unit", amount = 10 },
       { type = "item", name = "ai-core", amount = 3 },
     },
-    results = { { type = "item", name = "kr-matter-assembler", amount = 1 } },
+    results = { { type = "item", name = "kr-matter-associator", amount = 1 } },
   },
   {
     type = "item",
-    name = "kr-matter-assembler",
-    icon = "__Krastorio2Assets__/icons/entities/matter-assembler.png",
+    name = "kr-matter-associator",
+    icon = "__Krastorio2Assets__/icons/entities/matter-associator.png",
     icon_size = 128,
     subgroup = "production-machine",
-    order = "i[matter]-b[matter-assembler]",
-    place_result = "kr-matter-assembler",
+    order = "i[matter]-b[matter-associator]",
+    place_result = "kr-matter-associator",
     stack_size = 25,
   },
   {
     type = "assembling-machine",
-    name = "kr-matter-assembler",
-    icon = "__Krastorio2Assets__/icons/entities/matter-assembler.png",
+    name = "kr-matter-associator",
+    icon = "__Krastorio2Assets__/icons/entities/matter-associator.png",
     icon_size = 128,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
-    minable = { mining_time = 1, result = "kr-matter-assembler" },
+    minable = { mining_time = 1, result = "kr-matter-associator" },
     collision_box = { { -3.25, -3.25 }, { 3.25, 3.25 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     fast_replaceable_group = "assembling-machine",
@@ -90,7 +90,7 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
-        filename = "__Krastorio2Assets__/sounds/buildings/matter-assembler.ogg",
+        filename = "__Krastorio2Assets__/sounds/buildings/matter-associator.ogg",
         volume = 0.60,
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg" },
@@ -100,7 +100,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler.png",
+            filename = "__Krastorio2Assets__/entities/matter-associator/matter-associator.png",
             priority = "high",
             width = 473,
             height = 489,
@@ -109,7 +109,7 @@ data:extend({
             shift = { 0, -0.15 },
           },
           {
-            filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-sh.png",
+            filename = "__Krastorio2Assets__/entities/matter-associator/matter-associator-sh.png",
             priority = "medium",
             width = 508,
             height = 446,
@@ -122,7 +122,7 @@ data:extend({
       },
       water_reflection = {
         pictures = {
-          filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-reflection.png",
+          filename = "__Krastorio2Assets__/entities/matter-associator/matter-associator-reflection.png",
           priority = "extra-high",
           width = 46,
           height = 46,
@@ -137,7 +137,7 @@ data:extend({
         {
           draw_as_light = true,
           animation = {
-            filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working-glow-light.png",
+            filename = "__Krastorio2Assets__/entities/matter-associator/matter-associator-working-glow-light.png",
             priority = "high",
             width = 144,
             height = 110,
@@ -153,7 +153,7 @@ data:extend({
           blend_mode = "additive",
           synced_fadeout = true,
           animation = {
-            filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working-glow.png",
+            filename = "__Krastorio2Assets__/entities/matter-associator/matter-associator-working-glow.png",
             priority = "high",
             width = 144,
             height = 110,
@@ -168,7 +168,7 @@ data:extend({
           animation = {
             layers = {
               {
-                filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working-light.png",
+                filename = "__Krastorio2Assets__/entities/matter-associator/matter-associator-working-light.png",
                 priority = "high",
                 width = 473,
                 height = 489,
@@ -180,7 +180,7 @@ data:extend({
                 draw_as_light = true,
               },
               {
-                filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working.png",
+                filename = "__Krastorio2Assets__/entities/matter-associator/matter-associator-working.png",
                 priority = "high",
                 width = 473,
                 height = 489,

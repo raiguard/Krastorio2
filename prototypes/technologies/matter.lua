@@ -13,7 +13,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "kr-matter-assembler",
+        recipe = "kr-matter-associator",
       },
       {
         type = "unlock-recipe",

@@ -39,7 +39,7 @@ local exclusions_to_add = {
     "kr-bio-lab",
     "kr-fuel-refinery",
     "kr-advanced-chemical-plant",
-    "kr-matter-assembler",
+    "kr-matter-associator",
     "kr-matter-plant",
     "kr-quantum-computer",
   },
