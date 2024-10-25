@@ -280,6 +280,5 @@ require("lib.private.data-stages.technologies")
 require("compatibility-scripts.data.aircraft")
 require("compatibility-scripts.data.early-electric-furnaces")
 require("compatibility-scripts.data.deadlock-beltboxes-loaders")
-require("compatibility-scripts.data.IndustrialRevolution")
 require("compatibility-scripts.data.Squeak_Through")
 ---------------------------------------------------------------------------

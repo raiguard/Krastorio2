@@ -116,10 +116,7 @@ Krastorio 2 has rudimentary compatibility with the AngelBob's suite of mods.
 This compatibility is not well-balanced and you will encounter issues in
 gameplay, but it shouldn't crash.
 
-Krastorio 2 has compatibility with [Industrial Revolution
-2](https://mods.factorio.com/mod/IndustrialRevolution). However, it is not
-compatible with IR3, and never will be. Because IR2 has been deprecated,
-support for it will be removed in the near future.
+Krastorio 2 it **NOT** compatible with [Industrial Revolution](https://mods.factorio.com/mod/IndustrialRevolution3).
 
 ### Recommended companion mods
 

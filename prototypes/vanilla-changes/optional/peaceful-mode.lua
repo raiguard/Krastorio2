@@ -14,7 +14,7 @@ if krastorio.general.getSafeSettingValue("kr-peaceful-mode") then
   })
 
   -- Science recipe fix
-  if settings.startup["kr-military-science-pack-recipe"].value == "Krastorio 2" or mods["IndustrialRevolution"] then
+  if settings.startup["kr-military-science-pack-recipe"].value == "Krastorio 2" then
     data.raw.item["biters-research-data"].localised_name = { "item-name.military-research-data" }
     krastorio.recipes.overrideIngredients("biters-research-data", {
       { "submachine-gun", 3 },

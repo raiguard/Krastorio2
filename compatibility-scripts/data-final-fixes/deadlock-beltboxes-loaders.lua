@@ -1,6 +1,5 @@
--- -- Inter/Cross compatibility with deadlock beltboxes loaders with IndustrialRevolution
 -- -- And Krastorio renaming
-if mods["deadlock-beltboxes-loaders"] and not mods["IndustrialRevolution"] then
+if mods["deadlock-beltboxes-loaders"] then
   local function krCreateStacks(_stackable_krastorio_items)
     for i, items in pairs(_stackable_krastorio_items) do
       for _, item_name in pairs(items) do

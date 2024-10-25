@@ -15,11 +15,7 @@ if mods["angelsaddons-crawlertrain"] or mods["angelsaddons-mobility"] then
       and data.raw.locomotive[locomotive_name].burner
     then
       data.raw.locomotive[locomotive_name].burner.fuel_category = nil
-      if mods["IndustrialRevolution"] then
-        data.raw.locomotive[locomotive_name].burner.fuel_categories = { "chemical", "vehicle-fuel", "battery" }
-      else
-        data.raw.locomotive[locomotive_name].burner.fuel_categories = { "chemical", "vehicle-fuel" }
-      end
+      data.raw.locomotive[locomotive_name].burner.fuel_categories = { "chemical", "vehicle-fuel" }
     end
   end
 

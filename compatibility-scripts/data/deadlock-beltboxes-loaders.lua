@@ -86,7 +86,7 @@ if mods["deadlock-beltboxes-loaders"] then
   krastorio.recipes.removeIngredient("express-transport-belt-beltbox", "iron-plate")
   krastorio.recipes.convertIngredient("express-transport-belt-beltbox", "iron-gear-wheel", "steel-gear-wheel")
 
-  local stackable_krastorio_items = {
+  krCreateStacks({
     [1] = { -- Tier 1
       "blank-tech-card",
       "automation-core",
@@ -136,23 +136,16 @@ if mods["deadlock-beltboxes-loaders"] then
       "empty-antimatter-fuel-cell",
       "charged-antimatter-fuel-cell",
     },
-  }
+  })
 
-  krCreateStacks(stackable_krastorio_items)
-
-  -- -- Inter/Cross compatibility with deadlock beltboxes loaders with IndustrialRevolution
-  if not mods["IndustrialRevolution"] then
-    stackable_krastorio_items = {
-      [1] = { -- Tier 1
-        "sand",
-        "glass",
-      },
-      [2] = { -- Tier 2
-        "steel-gear-wheel",
-        "steel-beam",
-      },
-    }
-
-    krCreateStacks(stackable_krastorio_items)
-  end
+  krCreateStacks({
+    [1] = { -- Tier 1
+      "sand",
+      "glass",
+    },
+    [2] = { -- Tier 2
+      "steel-gear-wheel",
+      "steel-beam",
+    },
+  })
 end
