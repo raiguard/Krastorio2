@@ -673,7 +673,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "kr-large-roboport",
+        recipe = "kr-big-roboport",
       },
     },
     prerequisites = { "kr-imersium-processing", "kr-advanced-tech-card" },

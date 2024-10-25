@@ -143,7 +143,7 @@ data:extend({
         },
         {
           type = "build-entity",
-          entity = "kr-large-roboport",
+          entity = "kr-big-roboport",
           count = 1,
         },
       },

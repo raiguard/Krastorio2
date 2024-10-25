@@ -111,7 +111,7 @@ local exclusions_to_add = {
   },
   ["roboport"] = {
     "kr-small-roboport",
-    "kr-large-roboport",
+    "kr-big-roboport",
   },
 }
 
