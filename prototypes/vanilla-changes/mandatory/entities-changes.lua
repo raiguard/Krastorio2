@@ -262,7 +262,7 @@ data.raw["spider-vehicle"]["spidertron"].movement_energy_consumption = "3MW"
 data.raw["corpse"]["spidertron-remnants"].animation = make_rotated_animation_variations_from_sheet(1, {
   layers = {
     {
-      filename = "__Krastorio2Assets__/entities/remnants/spidertron/spidertron-remnants.png",
+      filename = "__Krastorio2Assets__/entities/spidertron-remnant/spidertron-remnants.png",
       line_length = 1,
       width = 448,
       height = 448,

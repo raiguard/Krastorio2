@@ -15,7 +15,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(1, {
-      filename = "__Krastorio2Assets__/entities/remnants/fusion-reactor/fusion-reactor-remnant.png",
+      filename = "__Krastorio2Assets__/entities/fusion-reactor-remnant/fusion-reactor-remnant.png",
       line_length = 1,
       width = 1100,
       height = 1100,

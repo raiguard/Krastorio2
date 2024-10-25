@@ -28,7 +28,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
       final_render_layer = "remnants",
       remove_on_tile_placement = false,
       animation = make_rotated_animation_variations_from_sheet(1, {
-        filename = "__Krastorio2Assets__/entities/remnants/advanced-radar-remnant/radar-remnants.png",
+        filename = "__Krastorio2Assets__/entities/advanced-radar-remnant/radar-remnants.png",
         line_length = 1,
         width = 282,
         height = 212,

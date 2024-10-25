@@ -15,7 +15,7 @@ data:extend({
     time_before_removed = 20 * minute,
     final_render_layer = "remnants",
     animation = make_rotated_animation_variations_from_sheet(1, {
-      filename = "__Krastorio2Assets__/entities/remnants/advanced-tank/advanced-tank-remnant.png",
+      filename = "__Krastorio2Assets__/entities/advanced-tank-remnant/advanced-tank-remnant.png",
       line_length = 1,
       width = 400,
       height = 330,
