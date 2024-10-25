@@ -94,7 +94,7 @@ data:extend({
     icons = {
       { icon = "__Krastorio2Assets__/icons/fluids/dirty-water.png" },
       {
-        icon = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals.png",
+        icon = "__Krastorio2Assets__/icons/items/raw-rare-metals.png",
         scale = 0.20,
         shift = { 0, 4 },
       },
@@ -122,7 +122,7 @@ data:extend({
   {
     type = "recipe",
     name = "quartz",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz.png",
+    icon = "__Krastorio2Assets__/icons/items/quartz.png",
     subgroup = "raw-material",
     enabled = false,
     category = "fluid-filtration",

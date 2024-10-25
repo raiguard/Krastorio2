@@ -157,7 +157,7 @@ if mods["angelssmelting"] then
   data.raw.recipe["enriched-copper-plate"].icons = {
     { icon = "__Krastorio2Assets__/icons/items/copper-plate.png", icon_size = 64 },
     {
-      icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-copper/enriched-copper.png",
+      icon = "__Krastorio2Assets__/icons/items/enriched-copper.png",
       icon_size = 64,
       scale = 0.2,
       shift = { -10, -10 },

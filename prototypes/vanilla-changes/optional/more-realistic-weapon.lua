@@ -122,13 +122,13 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       type = "ammo",
       name = "firearm-magazine",
-      icon = "__Krastorio2Assets__/icons/items-with-variations/ammo/pistol-ammo-1.png",
+      icon = "__Krastorio2Assets__/icons/items/pistol-ammo-1.png",
       icon_size = 64,
       icon_mipmaps = 4,
       pictures = {
         {
           size = 64,
-          filename = "__Krastorio2Assets__/icons/items-with-variations/ammo/pistol-ammo-1.png",
+          filename = "__Krastorio2Assets__/icons/items/pistol-ammo-1.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -224,13 +224,13 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       type = "ammo",
       name = "piercing-rounds-magazine",
-      icon = "__Krastorio2Assets__/icons/items-with-variations/ammo/pistol-ammo-2.png",
+      icon = "__Krastorio2Assets__/icons/items/pistol-ammo-2.png",
       icon_size = 64,
       icon_mipmaps = 4,
       pictures = {
         {
           size = 64,
-          filename = "__Krastorio2Assets__/icons/items-with-variations/ammo/pistol-ammo-2.png",
+          filename = "__Krastorio2Assets__/icons/items/pistol-ammo-2.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -337,13 +337,13 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       type = "ammo",
       name = "rifle-magazine",
-      icon = "__Krastorio2Assets__/icons/items-with-variations/ammo/rifle-ammo-1.png",
+      icon = "__Krastorio2Assets__/icons/items/rifle-ammo-1.png",
       icon_size = 64,
       icon_mipmaps = 4,
       pictures = {
         {
           size = 64,
-          filename = "__Krastorio2Assets__/icons/items-with-variations/ammo/rifle-ammo-1.png",
+          filename = "__Krastorio2Assets__/icons/items/rifle-ammo-1.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -440,13 +440,13 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       type = "ammo",
       name = "armor-piercing-rifle-magazine",
-      icon = "__Krastorio2Assets__/icons/items-with-variations/ammo/rifle-ammo-2.png",
+      icon = "__Krastorio2Assets__/icons/items/rifle-ammo-2.png",
       icon_size = 64,
       icon_mipmaps = 4,
       pictures = {
         {
           size = 64,
-          filename = "__Krastorio2Assets__/icons/items-with-variations/ammo/rifle-ammo-2.png",
+          filename = "__Krastorio2Assets__/icons/items/rifle-ammo-2.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -541,13 +541,13 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       type = "ammo",
       name = "uranium-rifle-magazine",
-      icon = "__Krastorio2Assets__/icons/items-with-variations/ammo/rifle-ammo-3.png",
+      icon = "__Krastorio2Assets__/icons/items/rifle-ammo-3.png",
       icon_size = 64,
       icon_mipmaps = 4,
       pictures = {
         {
           size = 64,
-          filename = "__Krastorio2Assets__/icons/items-with-variations/ammo/rifle-ammo-3.png",
+          filename = "__Krastorio2Assets__/icons/items/rifle-ammo-3.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -646,13 +646,13 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       type = "ammo",
       name = "imersite-rifle-magazine",
-      icon = "__Krastorio2Assets__/icons/items-with-variations/ammo/rifle-ammo-4.png",
+      icon = "__Krastorio2Assets__/icons/items/rifle-ammo-4.png",
       icon_size = 64,
       icon_mipmaps = 4,
       pictures = {
         {
           size = 64,
-          filename = "__Krastorio2Assets__/icons/items-with-variations/ammo/rifle-ammo-4.png",
+          filename = "__Krastorio2Assets__/icons/items/rifle-ammo-4.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -805,13 +805,13 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       type = "ammo",
       name = "anti-material-rifle-magazine",
-      icon = "__Krastorio2Assets__/icons/items-with-variations/ammo/anti-material-rifle-ammo-1.png",
+      icon = "__Krastorio2Assets__/icons/items/anti-material-rifle-ammo-1.png",
       icon_size = 64,
       icon_mipmaps = 4,
       pictures = {
         {
           size = 64,
-          filename = "__Krastorio2Assets__/icons/items-with-variations/ammo/anti-material-rifle-ammo-1.png",
+          filename = "__Krastorio2Assets__/icons/items/anti-material-rifle-ammo-1.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -922,13 +922,13 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       type = "ammo",
       name = "armor-piercing-anti-material-rifle-magazine",
-      icon = "__Krastorio2Assets__/icons/items-with-variations/ammo/anti-material-rifle-ammo-2.png",
+      icon = "__Krastorio2Assets__/icons/items/anti-material-rifle-ammo-2.png",
       icon_size = 64,
       icon_mipmaps = 4,
       pictures = {
         {
           size = 64,
-          filename = "__Krastorio2Assets__/icons/items-with-variations/ammo/anti-material-rifle-ammo-2.png",
+          filename = "__Krastorio2Assets__/icons/items/anti-material-rifle-ammo-2.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -1038,13 +1038,13 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       type = "ammo",
       name = "uranium-anti-material-rifle-magazine",
-      icon = "__Krastorio2Assets__/icons/items-with-variations/ammo/anti-material-rifle-ammo-3.png",
+      icon = "__Krastorio2Assets__/icons/items/anti-material-rifle-ammo-3.png",
       icon_size = 64,
       icon_mipmaps = 4,
       pictures = {
         {
           size = 64,
-          filename = "__Krastorio2Assets__/icons/items-with-variations/ammo/anti-material-rifle-ammo-3.png",
+          filename = "__Krastorio2Assets__/icons/items/anti-material-rifle-ammo-3.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -1158,13 +1158,13 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
     {
       type = "ammo",
       name = "imersite-anti-material-rifle-magazine",
-      icon = "__Krastorio2Assets__/icons/items-with-variations/ammo/anti-material-rifle-ammo-4.png",
+      icon = "__Krastorio2Assets__/icons/items/anti-material-rifle-ammo-4.png",
       icon_size = 64,
       icon_mipmaps = 4,
       pictures = {
         {
           size = 64,
-          filename = "__Krastorio2Assets__/icons/items-with-variations/ammo/anti-material-rifle-ammo-4.png",
+          filename = "__Krastorio2Assets__/icons/items/anti-material-rifle-ammo-4.png",
           scale = 0.25,
           mipmap_count = 4,
         },

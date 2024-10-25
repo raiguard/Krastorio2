@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "kr-creep",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass.png",
+    icon = "__Krastorio2Assets__/icons/items/biomass.png",
     subgroup = "terrain",
     order = "z[creep]-z[creep]",
     hidden = true,
@@ -14,22 +14,22 @@ data:extend({
     },
     pictures = {
       {
-        filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass.png",
+        filename = "__Krastorio2Assets__/icons/items/biomass.png",
         size = 64,
         scale = 0.25,
       },
       {
-        filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-1.png",
+        filename = "__Krastorio2Assets__/icons/items/biomass-1.png",
         size = 64,
         scale = 0.25,
       },
       {
-        filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-2.png",
+        filename = "__Krastorio2Assets__/icons/items/biomass-2.png",
         size = 64,
         scale = 0.25,
       },
       {
-        filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-3.png",
+        filename = "__Krastorio2Assets__/icons/items/biomass-3.png",
         size = 64,
         scale = 0.25,
       },

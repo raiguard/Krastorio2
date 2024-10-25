@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "blank-tech-card",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/blank-tech-card/blank-tech-card-1.png",
+    icon = "__Krastorio2Assets__/icons/items/blank-tech-card-1.png",
     subgroup = "science-pack",
     order = "a00[blank-tech-card]",
     stack_size = 200,

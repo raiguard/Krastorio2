@@ -55,7 +55,7 @@ if mods["angelsrefining"] then
   data.raw.recipe["enriched-iron-plate"].icons = {
     { icon = "__Krastorio2Assets__/icons/items/iron-plate.png", icon_size = 64 },
     {
-      icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron.png",
+      icon = "__Krastorio2Assets__/icons/items/enriched-iron.png",
       icon_size = 64,
       scale = 0.2,
       shift = { -10, -10 },

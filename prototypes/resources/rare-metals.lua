@@ -5,32 +5,32 @@ data:extend({
   {
     type = "item",
     name = "raw-rare-metals",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals.png",
+    icon = "__Krastorio2Assets__/icons/items/raw-rare-metals.png",
     subgroup = "raw-resource",
     order = "ga[raw-rare-metals]",
     stack_size = 200,
     pictures = {
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals.png",
+        filename = "__Krastorio2Assets__/icons/items/raw-rare-metals.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals-1.png",
+        filename = "__Krastorio2Assets__/icons/items/raw-rare-metals-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals-2.png",
+        filename = "__Krastorio2Assets__/icons/items/raw-rare-metals-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals-3.png",
+        filename = "__Krastorio2Assets__/icons/items/raw-rare-metals-3.png",
         scale = 0.25,
         mipmap_count = 4,
       },

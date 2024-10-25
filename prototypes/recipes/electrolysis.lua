@@ -72,7 +72,7 @@ data:extend({
   {
     type = "recipe",
     name = "lithium",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/lithium/lithium.png",
+    icon = "__Krastorio2Assets__/icons/items/lithium.png",
     subgroup = "raw-material",
     order = "h2[lithium]",
     enabled = false,

@@ -2,29 +2,29 @@ data:extend({
   {
     type = "item",
     name = "biomass",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass.png",
+    icon = "__Krastorio2Assets__/icons/items/biomass.png",
     pictures = {
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass.png",
+        filename = "__Krastorio2Assets__/icons/items/biomass.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-1.png",
+        filename = "__Krastorio2Assets__/icons/items/biomass-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-2.png",
+        filename = "__Krastorio2Assets__/icons/items/biomass-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-3.png",
+        filename = "__Krastorio2Assets__/icons/items/biomass-3.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -66,23 +66,23 @@ data:extend({
   {
     type = "item",
     name = "sand",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/sand/sand.png",
+    icon = "__Krastorio2Assets__/icons/items/sand.png",
     pictures = {
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/sand/sand.png",
+        filename = "__Krastorio2Assets__/icons/items/sand.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/sand/sand-1.png",
+        filename = "__Krastorio2Assets__/icons/items/sand-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/sand/sand-2.png",
+        filename = "__Krastorio2Assets__/icons/items/sand-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -102,29 +102,29 @@ data:extend({
   {
     type = "item",
     name = "quartz",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz.png",
+    icon = "__Krastorio2Assets__/icons/items/quartz.png",
     pictures = {
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz.png",
+        filename = "__Krastorio2Assets__/icons/items/quartz.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz-1.png",
+        filename = "__Krastorio2Assets__/icons/items/quartz-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz-2.png",
+        filename = "__Krastorio2Assets__/icons/items/quartz-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz-3.png",
+        filename = "__Krastorio2Assets__/icons/items/quartz-3.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -136,23 +136,23 @@ data:extend({
   {
     type = "item",
     name = "silicon",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/silicon/silicon.png",
+    icon = "__Krastorio2Assets__/icons/items/silicon.png",
     pictures = {
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/silicon/silicon.png",
+        filename = "__Krastorio2Assets__/icons/items/silicon.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/silicon/silicon-1.png",
+        filename = "__Krastorio2Assets__/icons/items/silicon-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/silicon/silicon-2.png",
+        filename = "__Krastorio2Assets__/icons/items/silicon-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -164,41 +164,41 @@ data:extend({
   {
     type = "item",
     name = "electronic-components",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/electronic-components/electronic-components.png",
+    icon = "__Krastorio2Assets__/icons/items/electronic-components.png",
     pictures = {
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/electronic-components/electronic-components.png",
+        filename = "__Krastorio2Assets__/icons/items/electronic-components.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/electronic-components/electronic-components-1.png",
+        filename = "__Krastorio2Assets__/icons/items/electronic-components-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/electronic-components/electronic-components-2.png",
+        filename = "__Krastorio2Assets__/icons/items/electronic-components-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/electronic-components/electronic-components-3.png",
+        filename = "__Krastorio2Assets__/icons/items/electronic-components-3.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/electronic-components/electronic-components-4.png",
+        filename = "__Krastorio2Assets__/icons/items/electronic-components-4.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/electronic-components/electronic-components-5.png",
+        filename = "__Krastorio2Assets__/icons/items/electronic-components-5.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -213,23 +213,23 @@ data:extend({
   {
     type = "item",
     name = "coke",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/coke/coke.png",
+    icon = "__Krastorio2Assets__/icons/items/coke.png",
     pictures = {
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/coke/coke.png",
+        filename = "__Krastorio2Assets__/icons/items/coke.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/coke/coke-1.png",
+        filename = "__Krastorio2Assets__/icons/items/coke-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/coke/coke-2.png",
+        filename = "__Krastorio2Assets__/icons/items/coke-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -388,47 +388,47 @@ data:extend({
   {
     type = "item",
     name = "rare-metals",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png",
+    icon = "__Krastorio2Assets__/icons/items/rare-metals.png",
     pictures = {
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png",
+        filename = "__Krastorio2Assets__/icons/items/rare-metals.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-1.png",
+        filename = "__Krastorio2Assets__/icons/items/rare-metals-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-2.png",
+        filename = "__Krastorio2Assets__/icons/items/rare-metals-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-3.png",
+        filename = "__Krastorio2Assets__/icons/items/rare-metals-3.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-4.png",
+        filename = "__Krastorio2Assets__/icons/items/rare-metals-4.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-5.png",
+        filename = "__Krastorio2Assets__/icons/items/rare-metals-5.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-6.png",
+        filename = "__Krastorio2Assets__/icons/items/rare-metals-6.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -440,23 +440,23 @@ data:extend({
   {
     type = "item",
     name = "enriched-iron",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron.png",
+    icon = "__Krastorio2Assets__/icons/items/enriched-iron.png",
     pictures = {
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron.png",
+        filename = "__Krastorio2Assets__/icons/items/enriched-iron.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron-1.png",
+        filename = "__Krastorio2Assets__/icons/items/enriched-iron-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron-2.png",
+        filename = "__Krastorio2Assets__/icons/items/enriched-iron-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -468,23 +468,23 @@ data:extend({
   {
     type = "item",
     name = "enriched-copper",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-copper/enriched-copper.png",
+    icon = "__Krastorio2Assets__/icons/items/enriched-copper.png",
     pictures = {
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-copper/enriched-copper.png",
+        filename = "__Krastorio2Assets__/icons/items/enriched-copper.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-copper/enriched-copper-1.png",
+        filename = "__Krastorio2Assets__/icons/items/enriched-copper-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-copper/enriched-copper-2.png",
+        filename = "__Krastorio2Assets__/icons/items/enriched-copper-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -496,23 +496,23 @@ data:extend({
   {
     type = "item",
     name = "enriched-rare-metals",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals.png",
+    icon = "__Krastorio2Assets__/icons/items/enriched-rare-metals.png",
     pictures = {
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals.png",
+        filename = "__Krastorio2Assets__/icons/items/enriched-rare-metals.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals-1.png",
+        filename = "__Krastorio2Assets__/icons/items/enriched-rare-metals-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals-2.png",
+        filename = "__Krastorio2Assets__/icons/items/enriched-rare-metals-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -524,23 +524,23 @@ data:extend({
   {
     type = "item",
     name = "lithium",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/lithium/lithium.png",
+    icon = "__Krastorio2Assets__/icons/items/lithium.png",
     pictures = {
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/lithium/lithium.png",
+        filename = "__Krastorio2Assets__/icons/items/lithium.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/lithium/lithium-1.png",
+        filename = "__Krastorio2Assets__/icons/items/lithium-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/lithium/lithium-2.png",
+        filename = "__Krastorio2Assets__/icons/items/lithium-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -552,17 +552,17 @@ data:extend({
   {
     type = "item",
     name = "lithium-chloride",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/lithium-chloride/lithium-chloride.png",
+    icon = "__Krastorio2Assets__/icons/items/lithium-chloride.png",
     pictures = {
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/lithium-chloride/lithium-chloride.png",
+        filename = "__Krastorio2Assets__/icons/items/lithium-chloride.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/lithium-chloride/lithium-chloride-1.png",
+        filename = "__Krastorio2Assets__/icons/items/lithium-chloride-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -574,13 +574,13 @@ data:extend({
   {
     type = "item",
     name = "imersite-powder",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder.png",
+    icon = "__Krastorio2Assets__/icons/items/imersite-powder.png",
     pictures = {
       {
         layers = {
           {
             size = 64,
-            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder.png",
+            filename = "__Krastorio2Assets__/icons/items/imersite-powder.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -590,7 +590,7 @@ data:extend({
             blend_mode = "additive",
             tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
             size = 64,
-            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder-light.png",
+            filename = "__Krastorio2Assets__/icons/items/imersite-powder-light.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -600,7 +600,7 @@ data:extend({
         layers = {
           {
             size = 64,
-            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder-1.png",
+            filename = "__Krastorio2Assets__/icons/items/imersite-powder-1.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -610,7 +610,7 @@ data:extend({
             blend_mode = "additive",
             tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
             size = 64,
-            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder-1-light.png",
+            filename = "__Krastorio2Assets__/icons/items/imersite-powder-1-light.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -620,7 +620,7 @@ data:extend({
         layers = {
           {
             size = 64,
-            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder-2.png",
+            filename = "__Krastorio2Assets__/icons/items/imersite-powder-2.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -630,7 +630,7 @@ data:extend({
             blend_mode = "additive",
             tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
             size = 64,
-            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder-2-light.png",
+            filename = "__Krastorio2Assets__/icons/items/imersite-powder-2-light.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -644,13 +644,13 @@ data:extend({
   {
     type = "item",
     name = "imersite-crystal",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal.png",
+    icon = "__Krastorio2Assets__/icons/items/imersite-crystal.png",
     pictures = {
       {
         layers = {
           {
             size = 64,
-            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal.png",
+            filename = "__Krastorio2Assets__/icons/items/imersite-crystal.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -660,7 +660,7 @@ data:extend({
             blend_mode = "additive",
             tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
             size = 64,
-            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-light.png",
+            filename = "__Krastorio2Assets__/icons/items/imersite-crystal-light.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -670,7 +670,7 @@ data:extend({
         layers = {
           {
             size = 64,
-            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-1.png",
+            filename = "__Krastorio2Assets__/icons/items/imersite-crystal-1.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -680,7 +680,7 @@ data:extend({
             blend_mode = "additive",
             tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
             size = 64,
-            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-1-light.png",
+            filename = "__Krastorio2Assets__/icons/items/imersite-crystal-1-light.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -690,7 +690,7 @@ data:extend({
         layers = {
           {
             size = 64,
-            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-2.png",
+            filename = "__Krastorio2Assets__/icons/items/imersite-crystal-2.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -700,7 +700,7 @@ data:extend({
             blend_mode = "additive",
             tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
             size = 64,
-            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-2-light.png",
+            filename = "__Krastorio2Assets__/icons/items/imersite-crystal-2-light.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -710,7 +710,7 @@ data:extend({
         layers = {
           {
             size = 64,
-            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-3.png",
+            filename = "__Krastorio2Assets__/icons/items/imersite-crystal-3.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -720,7 +720,7 @@ data:extend({
             blend_mode = "additive",
             tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
             size = 64,
-            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-3-light.png",
+            filename = "__Krastorio2Assets__/icons/items/imersite-crystal-3-light.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -730,7 +730,7 @@ data:extend({
         layers = {
           {
             size = 64,
-            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-4.png",
+            filename = "__Krastorio2Assets__/icons/items/imersite-crystal-4.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -740,7 +740,7 @@ data:extend({
             blend_mode = "additive",
             tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
             size = 64,
-            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-4-light.png",
+            filename = "__Krastorio2Assets__/icons/items/imersite-crystal-4-light.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -1008,35 +1008,35 @@ data:extend({
   {
     type = "item",
     name = "inserter-parts",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/inserter-parts/inserter-parts.png",
+    icon = "__Krastorio2Assets__/icons/items/inserter-parts.png",
     pictures = {
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/inserter-parts/inserter-parts.png",
+        filename = "__Krastorio2Assets__/icons/items/inserter-parts.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/inserter-parts/inserter-parts-1.png",
+        filename = "__Krastorio2Assets__/icons/items/inserter-parts-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/inserter-parts/inserter-parts-2.png",
+        filename = "__Krastorio2Assets__/icons/items/inserter-parts-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/inserter-parts/inserter-parts-3.png",
+        filename = "__Krastorio2Assets__/icons/items/inserter-parts-3.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/inserter-parts/inserter-parts-4.png",
+        filename = "__Krastorio2Assets__/icons/items/inserter-parts-4.png",
         scale = 0.25,
         mipmap_count = 4,
       },

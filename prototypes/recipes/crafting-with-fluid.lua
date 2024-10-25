@@ -37,7 +37,7 @@ data:extend({
     icons = {
       { icon = "__base__/graphics/icons/landfill.png" },
       {
-        icon = "__Krastorio2Assets__/icons/items-with-variations/sand/sand.png",
+        icon = "__Krastorio2Assets__/icons/items/sand.png",
         scale = 0.26,
         shift = { 8, -8 },
       },

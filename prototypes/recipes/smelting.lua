@@ -20,7 +20,7 @@ data:extend({
     icons = {
       { icon = "__Krastorio2Assets__/icons/items/copper-plate.png" },
       {
-        icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-copper/enriched-copper.png",
+        icon = "__Krastorio2Assets__/icons/items/enriched-copper.png",
         scale = 0.22,
         shift = { -8, -8 },
       },
@@ -45,7 +45,7 @@ data:extend({
     icons = {
       { icon = "__Krastorio2Assets__/icons/items/iron-plate.png" },
       {
-        icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron.png",
+        icon = "__Krastorio2Assets__/icons/items/enriched-iron.png",
         scale = 0.22,
         shift = { -8, -8 },
       },
@@ -101,9 +101,9 @@ data:extend({
     type = "recipe",
     name = "rare-metals",
     icons = {
-      { icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png" },
+      { icon = "__Krastorio2Assets__/icons/items/rare-metals.png" },
       {
-        icon = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals.png",
+        icon = "__Krastorio2Assets__/icons/items/raw-rare-metals.png",
         scale = 0.22,
         shift = { -8, -8 },
       },
@@ -126,9 +126,9 @@ data:extend({
     type = "recipe",
     name = "rare-metals-2",
     icons = {
-      { icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png" },
+      { icon = "__Krastorio2Assets__/icons/items/rare-metals.png" },
       {
-        icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals.png",
+        icon = "__Krastorio2Assets__/icons/items/enriched-rare-metals.png",
         scale = 0.22,
         shift = { -8, -8 },
       },

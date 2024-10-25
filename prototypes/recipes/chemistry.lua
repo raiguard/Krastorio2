@@ -49,7 +49,7 @@ data:extend({
   {
     type = "recipe",
     name = "enriched-copper",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-copper/enriched-copper.png",
+    icon = "__Krastorio2Assets__/icons/items/enriched-copper.png",
     enabled = false,
     category = "chemistry",
     energy_required = 3,
@@ -77,7 +77,7 @@ data:extend({
   {
     type = "recipe",
     name = "enriched-iron",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron.png",
+    icon = "__Krastorio2Assets__/icons/items/enriched-iron.png",
     subgroup = "raw-material",
     order = "e01[enriched-iron]",
     enabled = false,
@@ -105,7 +105,7 @@ data:extend({
   {
     type = "recipe",
     name = "enriched-rare-metals",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals.png",
+    icon = "__Krastorio2Assets__/icons/items/enriched-rare-metals.png",
     subgroup = "raw-material",
     order = "e03[enriched-rare-metals]",
     enabled = false,
@@ -183,7 +183,7 @@ data:extend({
     category = "chemistry",
     subgroup = "intermediate-product",
     order = "o6[imersite-crystal]",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal.png",
+    icon = "__Krastorio2Assets__/icons/items/imersite-crystal.png",
     enabled = false,
     energy_required = 30,
     ingredients = {
@@ -234,7 +234,7 @@ data:extend({
     name = "lithium-chloride",
     subgroup = "raw-material",
     order = "h1[lithium-chloride]",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/lithium-chloride/lithium-chloride.png",
+    icon = "__Krastorio2Assets__/icons/items/lithium-chloride.png",
     enabled = false,
     category = "chemistry",
     energy_required = 5,
