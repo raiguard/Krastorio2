@@ -3,8 +3,8 @@ data:extend({
     type = "recipe",
     name = "kr-biomass-growing",
     category = "bioprocessing",
-    energy_required = 60,
     enabled = false,
+    energy_required = 60,
     ingredients = {
       { type = "fluid", name = "petroleum-gas", amount = 50 },
       { type = "fluid", name = "oxygen", amount = 50 },

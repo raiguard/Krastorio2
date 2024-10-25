@@ -2,10 +2,11 @@ data:extend({
   {
     type = "recipe",
     name = "coke-liquefaction",
-    category = "oil-processing",
     icon = "__Krastorio2Assets__/icons/recipes/coke-liquefaction.png",
-    icon_size = 64,
+    subgroup = "fluid-recipes",
+    order = "a[oil-processing]-d[coke-liquefaction]",
     enabled = false,
+    category = "oil-processing",
     energy_required = 5,
     ingredients = {
       { type = "item", name = "coke", amount = 10 },
@@ -17,12 +18,9 @@ data:extend({
       { type = "fluid", name = "light-oil", amount = 90 },
       { type = "fluid", name = "petroleum-gas", amount = 10 },
     },
-
-    subgroup = "fluid-recipes",
-    order = "a[oil-processing]-d[coke-liquefaction]",
+    allow_decomposition = false,
     allow_productivity = true,
     always_show_made_in = true,
     always_show_products = true,
-    allow_decomposition = false,
   },
 })

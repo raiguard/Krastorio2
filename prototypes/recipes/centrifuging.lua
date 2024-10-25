@@ -3,10 +3,10 @@ data:extend({
     type = "recipe",
     name = "tritium",
     category = "centrifuging",
-    energy_required = 30,
     enabled = false,
-    always_show_made_in = true,
     allow_productivity = true,
+    always_show_made_in = true,
+    energy_required = 30,
     ingredients = {
       { type = "item", name = "lithium", amount = 30 },
       { type = "item", name = "rare-metals", amount = 5 },
