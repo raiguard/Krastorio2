@@ -845,7 +845,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "kr-medium-container",
+          recipe = "kr-storehouse",
         },
         {
           type = "unlock-recipe",
@@ -874,11 +874,11 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "kr-medium-passive-provider-container",
+          recipe = "kr-passive-provider-storehouse",
         },
         {
           type = "unlock-recipe",
-          recipe = "kr-medium-storage-container",
+          recipe = "kr-storage-storehouse",
         },
         {
           type = "unlock-recipe",
@@ -912,15 +912,15 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "kr-medium-active-provider-container",
+          recipe = "kr-active-provider-storehouse",
         },
         {
           type = "unlock-recipe",
-          recipe = "kr-medium-buffer-container",
+          recipe = "kr-buffer-storehouse",
         },
         {
           type = "unlock-recipe",
-          recipe = "kr-medium-requester-container",
+          recipe = "kr-requester-storehouse",
         },
         {
           type = "unlock-recipe",
