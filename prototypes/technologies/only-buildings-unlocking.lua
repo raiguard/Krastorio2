@@ -285,11 +285,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "kr-fluid-storage-1",
+        recipe = "kr-large-storage-tank",
       },
       {
         type = "unlock-recipe",
-        recipe = "kr-fluid-storage-2",
+        recipe = "kr-huge-storage-tank",
       },
     },
     prerequisites = { "kr-steel-fluid-handling" },

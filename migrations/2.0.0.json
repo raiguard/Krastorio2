@@ -8,9 +8,11 @@
     ["kr-crash-site-chest-1", "crash-site-chest-1"],
     ["kr-crash-site-chest-2", "crash-site-chest-2"],
     ["kr-crash-site-lab-repaired", "crash-site-lab"],
+    ["kr-electric-offshore-pump", "offshore-pump"],
     ["kr-fluid-burner", "kr-flare-stack"],
-    ["kr-substation-mk2", "kr-superior-substation"],
-    ["kr-electric-offshore-pump", "offshore-pump"]
+    ["kr-fluid-storage-1", "kr-large-storage-tank"],
+    ["kr-fluid-storage-2", "kr-huge-storage-tank"],
+    ["kr-substation-mk2", "kr-superior-substation"]
   ],
   "equipment": [
     ["additional-engine", "additional-engine-equipment"],
@@ -33,6 +35,8 @@
     ["imersite-night-vision-equipment", "superior-night-vision-equipment"],
     ["imersite-solar-panel-equipment", "superior-solar-panel-equipment"],
     ["kr-fluid-burner", "kr-flare-stack"],
+    ["kr-fluid-storage-1", "kr-large-storage-tank"],
+    ["kr-fluid-storage-2", "kr-huge-storage-tank"],
     ["kr-substation-mk2", "kr-superior-substation"],
     ["portable-generator", "portable-generator-equipment"],
     ["small-portable-generator", "small-portable-generator-equipment"],
@@ -47,6 +51,8 @@
     ["imersite-night-vision-equipment", "superior-night-vision-equipment"],
     ["imersite-solar-panel-equipment", "superior-solar-panel-equipment"],
     ["kr-fluid-burner", "kr-flare-stack"],
+    ["kr-fluid-storage-1", "kr-large-storage-tank"],
+    ["kr-fluid-storage-2", "kr-huge-storage-tank"],
     ["kr-substation-mk2", "kr-superior-substation"],
     ["portable-generator", "portable-generator-equipment"],
     ["small-portable-generator", "small-portable-generator-equipment"],

@@ -90,8 +90,8 @@ local exclusions_to_add = {
     "kr-big-storage-container",
   },
   ["storage-tank"] = {
-    "fluid-storage-1",
-    "fluid-storage-2",
+    "large-storage-tank",
+    "huge-storage-tank",
   },
   ["generator"] = {
     "kr-advanced-steam-turbine",
