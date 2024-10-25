@@ -15,7 +15,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(8, {
-      filename = "__Krastorio2Assets__/entities/transport-belts-remnant/superior-transport-belt/transport-belt/superior-transport-belt-remnant.png",
+      filename = "__Krastorio2Assets__/entities/superior-transport-belt-remnant/superior-transport-belt-remnant.png",
       line_length = 1,
       width = 106,
       height = 102,
