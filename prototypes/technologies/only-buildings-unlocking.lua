@@ -849,7 +849,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
         },
         {
           type = "unlock-recipe",
-          recipe = "kr-big-container",
+          recipe = "kr-warehouse",
         },
       },
       prerequisites = { "steel-processing" },
@@ -882,11 +882,11 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
         },
         {
           type = "unlock-recipe",
-          recipe = "kr-big-passive-provider-container",
+          recipe = "kr-passive-provider-warehouse",
         },
         {
           type = "unlock-recipe",
-          recipe = "kr-big-storage-container",
+          recipe = "kr-storage-warehouse",
         },
       },
       prerequisites = { "kr-containers", "logistic-robotics" },
@@ -924,15 +924,15 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
         },
         {
           type = "unlock-recipe",
-          recipe = "kr-big-active-provider-container",
+          recipe = "kr-active-provider-warehouse",
         },
         {
           type = "unlock-recipe",
-          recipe = "kr-big-buffer-container",
+          recipe = "kr-buffer-warehouse",
         },
         {
           type = "unlock-recipe",
-          recipe = "kr-big-requester-container",
+          recipe = "kr-requester-warehouse",
         },
       },
       prerequisites = { "kr-containers", "logistic-system" },
