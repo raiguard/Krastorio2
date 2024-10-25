@@ -236,6 +236,10 @@ require("prototypes.technologies.utility-science-pack")
 
 require("prototypes.technologies.optional")
 
+require("prototypes.tiles.creep")
+require("prototypes.tiles.reinforced-plates")
+require("prototypes.tiles.reinforced-plates-kl")
+
 require("prototypes.vehicles.advanced-tank")
 require("prototypes.vehicles.nuclear-locomotive")
 
@@ -263,7 +267,6 @@ require("lib.private.data-stages.technologies")
 -- -- Adding new sounds (prototypes)
 -- -- Adding new technologies
 -- -- Adding new tiles
-require("prototypes.tiles.tiles-initialization")
 -- -- Adding new signals (virtual signals)
 -- -- Adding new key binds
 ---------------------------------------------------------------------------
