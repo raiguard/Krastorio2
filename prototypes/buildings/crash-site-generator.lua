@@ -51,7 +51,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/crash-site-generator/crash-site-generator.png",
+          filename = "__Krastorio2Assets__/buildings/crash-site-generator/crash-site-generator.png",
           width = 286,
           height = 252,
           frame_count = 5,
@@ -61,7 +61,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/crash-site-generator/crash-site-generator-beams.png",
+          filename = "__Krastorio2Assets__/buildings/crash-site-generator/crash-site-generator-beams.png",
           width = 224,
           height = 232,
           frame_count = 16,
@@ -72,7 +72,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/crash-site-generator/crash-site-generator-beams-light.png",
+          filename = "__Krastorio2Assets__/buildings/crash-site-generator/crash-site-generator-beams-light.png",
           width = 224,
           height = 232,
           frame_count = 16,
@@ -83,7 +83,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/crash-site-generator/crash-site-generator-shadow.png",
+          filename = "__Krastorio2Assets__/buildings/crash-site-generator/crash-site-generator-shadow.png",
           width = 474,
           height = 152,
           frame_count = 1,
@@ -96,7 +96,7 @@ data:extend({
       },
     },
     integration_patch = {
-      filename = "__Krastorio2Assets__/entities/crash-site-generator/crash-site-generator-ground.png",
+      filename = "__Krastorio2Assets__/buildings/crash-site-generator/crash-site-generator-ground.png",
       width = 384,
       height = 360,
       shift = util.by_pixel(-28, -38),

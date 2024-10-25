@@ -3,7 +3,7 @@ return {
   north = util.empty_sprite(),
   east = util.empty_sprite(),
   south = {
-    filename = "__Krastorio2Assets__/entities/pipe-patch/pipe-patch.png",
+    filename = "__Krastorio2Assets__/buildings/pipe-patch/pipe-patch.png",
     priority = "high",
     width = 55,
     height = 50,

@@ -111,7 +111,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/entities/advanced-chemical-plant/advanced-chemical-plant.png",
+            filename = "__Krastorio2Assets__/buildings/advanced-chemical-plant/advanced-chemical-plant.png",
             priority = "high",
             width = 451,
             height = 535,
@@ -122,7 +122,7 @@ data:extend({
             scale = 0.5,
           },
           {
-            filename = "__Krastorio2Assets__/entities/advanced-chemical-plant/advanced-chemical-plant-sh.png",
+            filename = "__Krastorio2Assets__/buildings/advanced-chemical-plant/advanced-chemical-plant-sh.png",
             priority = "high",
             width = 516,
             height = 458,
@@ -137,7 +137,7 @@ data:extend({
       },
       water_reflection = {
         pictures = {
-          filename = "__Krastorio2Assets__/entities/advanced-chemical-plant/advanced-chemical-plant-reflection.png",
+          filename = "__Krastorio2Assets__/buildings/advanced-chemical-plant/advanced-chemical-plant-reflection.png",
           priority = "extra-high",
           width = 80,
           height = 60,

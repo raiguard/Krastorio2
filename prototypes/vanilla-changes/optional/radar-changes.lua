@@ -28,7 +28,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
       final_render_layer = "remnants",
       remove_on_tile_placement = false,
       animation = make_rotated_animation_variations_from_sheet(1, {
-        filename = "__Krastorio2Assets__/entities/advanced-radar-remnant/radar-remnants.png",
+        filename = "__Krastorio2Assets__/remnants/advanced-radar-remnant/radar-remnants.png",
         line_length = 1,
         width = 282,
         height = 212,
@@ -90,7 +90,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
       },
       energy_usage = "2MW",
       integration_patch = {
-        filename = "__Krastorio2Assets__/entities/advanced-radar/radar-integration.png",
+        filename = "__Krastorio2Assets__/buildings/advanced-radar/radar-integration.png",
         priority = "low",
         width = 238,
         height = 216,
@@ -101,7 +101,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
       pictures = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/entities/advanced-radar/radar.png",
+            filename = "__Krastorio2Assets__/buildings/advanced-radar/radar.png",
             priority = "low",
             width = 196,
             height = 254,
@@ -112,7 +112,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
             scale = 0.5,
           },
           {
-            filename = "__Krastorio2Assets__/entities/advanced-radar/radar-shadow.png",
+            filename = "__Krastorio2Assets__/buildings/advanced-radar/radar-shadow.png",
             priority = "low",
             width = 343,
             height = 186,

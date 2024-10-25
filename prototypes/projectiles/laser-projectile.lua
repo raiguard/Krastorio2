@@ -70,7 +70,7 @@ data:extend({
       },
     },
     animation = {
-      filename = "__Krastorio2Assets__/entities/missiles/laser.png",
+      filename = "__Krastorio2Assets__/buildings/missiles/laser.png",
       frame_count = 1,
       width = 6,
       height = 90,

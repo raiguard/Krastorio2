@@ -57,7 +57,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/entities/crash-site-assembling-machine-1/crash-site-assembling-machine-1.png",
+            filename = "__Krastorio2Assets__/buildings/crash-site-assembling-machine-1/crash-site-assembling-machine-1.png",
             width = 282,
             height = 182,
             frame_count = 20,
@@ -67,7 +67,7 @@ data:extend({
             scale = 0.5,
           },
           {
-            filename = "__Krastorio2Assets__/entities/crash-site-assembling-machine-1/crash-site-assembling-machine-1-shadow.png",
+            filename = "__Krastorio2Assets__/buildings/crash-site-assembling-machine-1/crash-site-assembling-machine-1-shadow.png",
             width = 278,
             height = 168,
             frame_count = 20,
@@ -82,7 +82,7 @@ data:extend({
       working_visualisations = {
         {
           animation = {
-            filename = "__Krastorio2Assets__/entities/crash-site-assembling-machine-1/crash-site-assembling-machine-1-light.png",
+            filename = "__Krastorio2Assets__/buildings/crash-site-assembling-machine-1/crash-site-assembling-machine-1-light.png",
             width = 162,
             height = 120,
             frame_count = 20,
@@ -98,7 +98,7 @@ data:extend({
     },
     integration_patch_render_layer = "decals",
     integration_patch = {
-      filename = "__Krastorio2Assets__/entities/crash-site-assembling-machine-1/crash-site-assembling-machine-1-ground.png",
+      filename = "__Krastorio2Assets__/buildings/crash-site-assembling-machine-1/crash-site-assembling-machine-1-ground.png",
       width = 446,
       height = 234,
       shift = util.by_pixel(-31, 12),

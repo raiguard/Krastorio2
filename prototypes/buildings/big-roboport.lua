@@ -116,14 +116,14 @@ data:extend({
     base = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/big-roboport/big-roboport.png",
+          filename = "__Krastorio2Assets__/buildings/big-roboport/big-roboport.png",
           width = 560,
           height = 560,
           shift = { 0, 0.08 },
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/big-roboport/big-roboport-sh.png",
+          filename = "__Krastorio2Assets__/buildings/big-roboport/big-roboport-sh.png",
           width = 626,
           height = 426,
           shift = { 1.1, 1.19 },
@@ -133,7 +133,7 @@ data:extend({
       },
     },
     base_patch = {
-      filename = "__Krastorio2Assets__/entities/big-roboport/big-roboport-patch.png",
+      filename = "__Krastorio2Assets__/buildings/big-roboport/big-roboport-patch.png",
       width = 138,
       height = 112,
       shift = { 0, 0.28 },
@@ -142,7 +142,7 @@ data:extend({
     base_animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/big-roboport/big-roboport-animation.png",
+          filename = "__Krastorio2Assets__/buildings/big-roboport/big-roboport-animation.png",
           priority = "medium",
           width = 350,
           height = 286,
@@ -154,7 +154,7 @@ data:extend({
           animation_speed = 0.1,
         },
         {
-          filename = "__Krastorio2Assets__/entities/big-roboport/big-roboport-animation-light.png",
+          filename = "__Krastorio2Assets__/buildings/big-roboport/big-roboport-animation-light.png",
           priority = "high",
           width = 350,
           height = 286,
@@ -168,7 +168,7 @@ data:extend({
       },
     },
     door_animation_up = {
-      filename = "__Krastorio2Assets__/entities/big-roboport/big-roboport-door-up.png",
+      filename = "__Krastorio2Assets__/buildings/big-roboport/big-roboport-door-up.png",
       priority = "medium",
       width = 98,
       height = 38,
@@ -177,7 +177,7 @@ data:extend({
       shift = { 0, -0.86 },
     },
     door_animation_down = {
-      filename = "__Krastorio2Assets__/entities/big-roboport/big-roboport-door-down.png",
+      filename = "__Krastorio2Assets__/buildings/big-roboport/big-roboport-door-down.png",
       priority = "medium",
       width = 98,
       height = 36,
@@ -188,7 +188,7 @@ data:extend({
     recharging_animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/big-roboport/big-roboport-recharging.png",
+          filename = "__Krastorio2Assets__/buildings/big-roboport/big-roboport-recharging.png",
           priority = "high",
           width = 37,
           height = 35,
@@ -198,7 +198,7 @@ data:extend({
           animation_speed = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/big-roboport/big-roboport-recharging-light.png",
+          filename = "__Krastorio2Assets__/buildings/big-roboport/big-roboport-recharging-light.png",
           priority = "high",
           width = 37,
           height = 35,
@@ -218,7 +218,7 @@ data:extend({
     draw_construction_radius_visualization = true,
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/entities/big-roboport/big-roboport-reflection.png",
+        filename = "__Krastorio2Assets__/buildings/big-roboport/big-roboport-reflection.png",
         priority = "extra-high",
         width = 60,
         height = 60,

@@ -6,7 +6,7 @@ data:extend({
     subgroup = "explosions",
     animations = {
       {
-        filename = "__Krastorio2Assets__/entities/explosions/laser_gunshot.png",
+        filename = "__Krastorio2Assets__/explosions/laser_gunshot.png",
         priority = "extra-high",
         draw_as_glow = true,
         width = 51,
@@ -16,7 +16,7 @@ data:extend({
         shift = { 0, 0 },
       },
       {
-        filename = "__Krastorio2Assets__/entities/explosions/laser_gunshot.png",
+        filename = "__Krastorio2Assets__/explosions/laser_gunshot.png",
         priority = "high",
         draw_as_glow = true,
         blend_mode = "additive",
@@ -27,7 +27,7 @@ data:extend({
         shift = { 0, 0 },
       },
       {
-        filename = "__Krastorio2Assets__/entities/explosions/laser_gunshot.png",
+        filename = "__Krastorio2Assets__/explosions/laser_gunshot.png",
         priority = "medium",
         width = 51,
         height = 57,

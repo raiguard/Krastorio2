@@ -70,7 +70,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/stabilizer-charging-station.png",
+            filename = "__Krastorio2Assets__/buildings/stabilizer-charging-station/stabilizer-charging-station.png",
             priority = "high",
             width = 170,
             height = 170,
@@ -80,7 +80,7 @@ data:extend({
             scale = 0.4,
           },
           {
-            filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/stabilizer-charging-station-sh.png",
+            filename = "__Krastorio2Assets__/buildings/stabilizer-charging-station/stabilizer-charging-station-sh.png",
             priority = "high",
             width = 170,
             height = 144,
@@ -95,7 +95,7 @@ data:extend({
       },
       water_reflection = {
         pictures = {
-          filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/stabilizer-charging-station-reflection.png",
+          filename = "__Krastorio2Assets__/buildings/stabilizer-charging-station/stabilizer-charging-station-reflection.png",
           priority = "extra-high",
           width = 20,
           height = 25,
@@ -109,7 +109,7 @@ data:extend({
       working_visualisations = {
         {
           animation = {
-            filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/stabilizer-charging-station-light.png",
+            filename = "__Krastorio2Assets__/buildings/stabilizer-charging-station/stabilizer-charging-station-light.png",
             priority = "high",
             width = 170,
             height = 170,

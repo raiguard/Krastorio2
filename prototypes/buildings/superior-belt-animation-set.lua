@@ -1,6 +1,6 @@
 return {
   animation_set = {
-    filename = "__Krastorio2Assets__/entities/superior-transport-belt/superior-transport-belt.png",
+    filename = "__Krastorio2Assets__/buildings/superior-transport-belt/superior-transport-belt.png",
     priority = "extra-high",
     width = 128,
     height = 128,

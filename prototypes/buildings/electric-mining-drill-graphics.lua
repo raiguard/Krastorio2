@@ -3,7 +3,7 @@ local graphics = {}
 function graphics.smoke()
   return {
     priority = "high",
-    filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill-smoke.png",
+    filename = "__Krastorio2Assets__/buildings/electric-mining-drill-mk2/electric-mining-drill-smoke.png",
     line_length = 6,
     width = 48,
     height = 72,
@@ -18,7 +18,7 @@ end
 function graphics.smoke_front()
   return {
     priority = "high",
-    filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill-smoke-front.png",
+    filename = "__Krastorio2Assets__/buildings/electric-mining-drill-mk2/electric-mining-drill-smoke-front.png",
     line_length = 6,
     width = 148,
     height = 132,
@@ -33,7 +33,7 @@ end
 function graphics.shadow_animation()
   return {
     priority = "high",
-    filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill-shadow.png",
+    filename = "__Krastorio2Assets__/buildings/electric-mining-drill-mk2/electric-mining-drill-shadow.png",
     line_length = 7,
     width = 232,
     height = 50,
@@ -49,7 +49,7 @@ end
 function graphics.horizontal_shadow_animation()
   return {
     priority = "high",
-    filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill-horizontal-shadow.png",
+    filename = "__Krastorio2Assets__/buildings/electric-mining-drill-mk2/electric-mining-drill-horizontal-shadow.png",
     line_length = 7,
     width = 236,
     height = 138,
@@ -65,7 +65,7 @@ end
 function graphics.mk2_animation()
   return {
     priority = "high",
-    filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill.png",
+    filename = "__Krastorio2Assets__/buildings/electric-mining-drill-mk2/electric-mining-drill.png",
     line_length = 6,
     width = 194,
     height = 154,
@@ -81,7 +81,7 @@ end
 function graphics.mk2_horizontal_animation()
   return {
     priority = "high",
-    filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill-horizontal.png",
+    filename = "__Krastorio2Assets__/buildings/electric-mining-drill-mk2/electric-mining-drill-horizontal.png",
     line_length = 6,
     width = 104,
     height = 178,
@@ -97,7 +97,7 @@ end
 function graphics.horizontal_front_animation()
   return {
     priority = "high",
-    filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill-horizontal-front.png",
+    filename = "__Krastorio2Assets__/buildings/electric-mining-drill-mk2/electric-mining-drill-horizontal-front.png",
     line_length = 6,
     width = 54,
     height = 136,
@@ -113,7 +113,7 @@ end
 function graphics.mk3_animation()
   return {
     priority = "high",
-    filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk3/electric-mining-drill.png",
+    filename = "__Krastorio2Assets__/buildings/electric-mining-drill-mk3/electric-mining-drill.png",
     line_length = 6,
     width = 194,
     height = 154,
@@ -129,7 +129,7 @@ end
 function graphics.mk3_horizontal_animation()
   return {
     priority = "high",
-    filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk3/electric-mining-drill-horizontal.png",
+    filename = "__Krastorio2Assets__/buildings/electric-mining-drill-mk3/electric-mining-drill-horizontal.png",
     line_length = 6,
     width = 104,
     height = 178,
@@ -151,7 +151,7 @@ function graphics.status_leds_working_visualisation()
     draw_as_sprite = true,
     draw_as_light = true,
     north_animation = {
-      filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill-N-light.png",
+      filename = "__Krastorio2Assets__/buildings/electric-mining-drill-mk2/electric-mining-drill-N-light.png",
       width = 30,
       height = 32,
       blend_mode = led_blend_mode,
@@ -160,7 +160,7 @@ function graphics.status_leds_working_visualisation()
       scale = 0.5,
     },
     east_animation = {
-      filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill-E-light.png",
+      filename = "__Krastorio2Assets__/buildings/electric-mining-drill-mk2/electric-mining-drill-E-light.png",
       width = 32,
       height = 34,
       blend_mode = led_blend_mode,
@@ -169,7 +169,7 @@ function graphics.status_leds_working_visualisation()
       scale = 0.5,
     },
     south_animation = {
-      filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill-S-light.png",
+      filename = "__Krastorio2Assets__/buildings/electric-mining-drill-mk2/electric-mining-drill-S-light.png",
       width = 32,
       height = 30,
       blend_mode = led_blend_mode,
@@ -178,7 +178,7 @@ function graphics.status_leds_working_visualisation()
       scale = 0.5,
     },
     west_animation = {
-      filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill-W-light.png",
+      filename = "__Krastorio2Assets__/buildings/electric-mining-drill-mk2/electric-mining-drill-W-light.png",
       width = 32,
       height = 34,
       blend_mode = led_blend_mode,

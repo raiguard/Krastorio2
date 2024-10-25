@@ -51,7 +51,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/logo/logo.png",
+          filename = "__Krastorio2Assets__/buildings/logo/logo.png",
           priority = "high",
           width = 1600,
           height = 300,
@@ -63,7 +63,7 @@ data:extend({
         },
 
         {
-          filename = "__Krastorio2Assets__/entities/logo/logo-ef.png",
+          filename = "__Krastorio2Assets__/buildings/logo/logo-ef.png",
           priority = "high",
           width = 1600,
           height = 300,
@@ -75,7 +75,7 @@ data:extend({
           animation_speed = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/logo/logo-efl.png",
+          filename = "__Krastorio2Assets__/buildings/logo/logo-efl.png",
           priority = "high",
           width = 1600,
           height = 300,
@@ -87,7 +87,7 @@ data:extend({
           animation_speed = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/logo/logo-efl.png",
+          filename = "__Krastorio2Assets__/buildings/logo/logo-efl.png",
           priority = "high",
           width = 1600,
           height = 300,
@@ -100,7 +100,7 @@ data:extend({
         },
 
         {
-          filename = "__Krastorio2Assets__/entities/logo/logo-light.png",
+          filename = "__Krastorio2Assets__/buildings/logo/logo-light.png",
           priority = "high",
           width = 1600,
           height = 300,
@@ -111,7 +111,7 @@ data:extend({
           animation_speed = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/logo/logo-light.png",
+          filename = "__Krastorio2Assets__/buildings/logo/logo-light.png",
           priority = "high",
           width = 1600,
           height = 300,
@@ -122,7 +122,7 @@ data:extend({
           animation_speed = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/logo/logo-light.png",
+          filename = "__Krastorio2Assets__/buildings/logo/logo-light.png",
           priority = "high",
           width = 1600,
           height = 300,
@@ -134,7 +134,7 @@ data:extend({
         },
 
         {
-          filename = "__Krastorio2Assets__/entities/logo/logo-sh.png",
+          filename = "__Krastorio2Assets__/buildings/logo/logo-sh.png",
           priority = "high",
           width = 1600,
           height = 300,

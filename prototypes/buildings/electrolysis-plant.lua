@@ -96,7 +96,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/entities/electrolysis-plant/electrolysis-plant.png",
+            filename = "__Krastorio2Assets__/buildings/electrolysis-plant/electrolysis-plant.png",
             width = 380,
             height = 380,
             scale = 0.5,
@@ -104,7 +104,7 @@ data:extend({
             shift = { 0, 0 },
           },
           {
-            filename = "__Krastorio2Assets__/entities/electrolysis-plant/electrolysis-plant-sh.png",
+            filename = "__Krastorio2Assets__/buildings/electrolysis-plant/electrolysis-plant-sh.png",
             width = 380,
             height = 380,
             scale = 0.5,
@@ -118,7 +118,7 @@ data:extend({
         {
           apply_recipe_tint = "primary",
           animation = {
-            filename = "__Krastorio2Assets__/entities/electrolysis-plant/electrolysis-plant-work.png",
+            filename = "__Krastorio2Assets__/buildings/electrolysis-plant/electrolysis-plant-work.png",
             width = 380,
             height = 380,
             scale = 0.5,
@@ -133,7 +133,7 @@ data:extend({
         {
           apply_recipe_tint = "primary",
           animation = {
-            filename = "__Krastorio2Assets__/entities/electrolysis-plant/electrolysis-plant-work-light.png",
+            filename = "__Krastorio2Assets__/buildings/electrolysis-plant/electrolysis-plant-work-light.png",
             width = 380,
             height = 380,
             scale = 0.5,
@@ -147,7 +147,7 @@ data:extend({
       },
       water_reflection = {
         pictures = {
-          filename = "__Krastorio2Assets__/entities/electrolysis-plant/electrolysis-plant-reflection.png",
+          filename = "__Krastorio2Assets__/buildings/electrolysis-plant/electrolysis-plant-reflection.png",
           priority = "extra-high",
           width = 42,
           height = 38,

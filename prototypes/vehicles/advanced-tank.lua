@@ -145,7 +145,7 @@ data:extend({
           scale = 0.525,
           stripes = {
             {
-              filename = "__Krastorio2Assets__/entities/advanced-tank/advanced-tank-base.png",
+              filename = "__Krastorio2Assets__/buildings/advanced-tank/advanced-tank-base.png",
               width_in_frames = 16,
               height_in_frames = 8,
             },
@@ -164,7 +164,7 @@ data:extend({
           scale = 0.525,
           stripes = {
             {
-              filename = "__Krastorio2Assets__/entities/advanced-tank/advanced-tank-base-mask.png",
+              filename = "__Krastorio2Assets__/buildings/advanced-tank/advanced-tank-base-mask.png",
               width_in_frames = 16,
               height_in_frames = 8,
             },
@@ -182,7 +182,7 @@ data:extend({
           max_advance = 0.2,
           stripes = {
             {
-              filename = "__Krastorio2Assets__/entities/advanced-tank/advanced-tank-base-shadow.png",
+              filename = "__Krastorio2Assets__/buildings/advanced-tank/advanced-tank-base-shadow.png",
               width_in_frames = 16,
               height_in_frames = 8,
             },
@@ -204,7 +204,7 @@ data:extend({
           line_length = 16,
           stripes = {
             {
-              filename = "__Krastorio2Assets__/entities/advanced-tank/advanced-tank-turret.png",
+              filename = "__Krastorio2Assets__/buildings/advanced-tank/advanced-tank-turret.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
@@ -223,7 +223,7 @@ data:extend({
           scale = 0.525,
           stripes = {
             {
-              filename = "__Krastorio2Assets__/entities/advanced-tank/advanced-tank-turret-mask.png",
+              filename = "__Krastorio2Assets__/buildings/advanced-tank/advanced-tank-turret-mask.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },
@@ -242,7 +242,7 @@ data:extend({
           scale = 0.525,
           stripes = {
             {
-              filename = "__Krastorio2Assets__/entities/advanced-tank/advanced-tank-turret-shadow.png",
+              filename = "__Krastorio2Assets__/buildings/advanced-tank/advanced-tank-turret-shadow.png",
               width_in_frames = 8,
               height_in_frames = 8,
             },

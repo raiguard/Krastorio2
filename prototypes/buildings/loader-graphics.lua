@@ -7,7 +7,7 @@ function loader_graphics.structure(tint)
     direction_in = {
       sheets = {
         {
-          filename = "__Krastorio2Assets__/entities/loader/kr-loader.png",
+          filename = "__Krastorio2Assets__/buildings/loader/kr-loader.png",
           priority = "extra-high",
           shift = { 0.15625, 0.0703125 },
           width = 106,
@@ -16,7 +16,7 @@ function loader_graphics.structure(tint)
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/loader/kr-loader-mask.png",
+          filename = "__Krastorio2Assets__/buildings/loader/kr-loader-mask.png",
           priority = "extra-high",
           shift = { 0.15625, 0.0703125 },
           width = 106,
@@ -26,7 +26,7 @@ function loader_graphics.structure(tint)
           tint = tint,
         },
         {
-          filename = "__Krastorio2Assets__/entities/loader/kr-loader-rust.png",
+          filename = "__Krastorio2Assets__/buildings/loader/kr-loader-rust.png",
           priority = "extra-high",
           shift = { 0.15625, 0.0703125 },
           width = 106,
@@ -39,7 +39,7 @@ function loader_graphics.structure(tint)
     direction_out = {
       sheets = {
         {
-          filename = "__Krastorio2Assets__/entities/loader/kr-loader.png",
+          filename = "__Krastorio2Assets__/buildings/loader/kr-loader.png",
           priority = "extra-high",
           shift = { 0.15625, 0.0703125 },
           width = 106,
@@ -47,7 +47,7 @@ function loader_graphics.structure(tint)
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/loader/kr-loader-mask.png",
+          filename = "__Krastorio2Assets__/buildings/loader/kr-loader-mask.png",
           priority = "extra-high",
           shift = { 0.15625, 0.0703125 },
           width = 106,
@@ -56,7 +56,7 @@ function loader_graphics.structure(tint)
           tint = tint,
         },
         {
-          filename = "__Krastorio2Assets__/entities/loader/kr-loader-rust.png",
+          filename = "__Krastorio2Assets__/buildings/loader/kr-loader-rust.png",
           priority = "extra-high",
           shift = { 0.15625, 0.0703125 },
           width = 106,

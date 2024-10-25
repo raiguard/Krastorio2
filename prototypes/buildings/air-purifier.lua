@@ -59,7 +59,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/entities/air-purifier/air-purifier.png",
+            filename = "__Krastorio2Assets__/buildings/air-purifier/air-purifier.png",
             priority = "high",
             width = 150,
             height = 150,
@@ -70,7 +70,7 @@ data:extend({
             scale = 0.5,
           },
           {
-            filename = "__Krastorio2Assets__/entities/air-purifier/air-purifier-sh.png",
+            filename = "__Krastorio2Assets__/buildings/air-purifier/air-purifier-sh.png",
             priority = "high",
             width = 164,
             height = 102,
@@ -84,7 +84,7 @@ data:extend({
       },
       water_reflection = {
         pictures = {
-          filename = "__Krastorio2Assets__/entities/air-purifier/air-purifier-reflection.png",
+          filename = "__Krastorio2Assets__/buildings/air-purifier/air-purifier-reflection.png",
           priority = "extra-high",
           width = 20,
           height = 25,

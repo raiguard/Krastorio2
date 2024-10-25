@@ -49,7 +49,7 @@ data:extend({
     close_sound = sounds.machine_close,
     vehicle_impact_sound = sounds.generic_impact,
     animation = {
-      filename = "__Krastorio2Assets__/entities/requester-warehouse/requester-warehouse.png",
+      filename = "__Krastorio2Assets__/buildings/requester-warehouse/requester-warehouse.png",
       priority = "extra-high",
       width = 512,
       height = 512,
@@ -59,7 +59,7 @@ data:extend({
     },
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/entities/warehouse/warehouse-reflection.png",
+        filename = "__Krastorio2Assets__/buildings/warehouse/warehouse-reflection.png",
         priority = "extra-high",
         width = 60,
         height = 50,

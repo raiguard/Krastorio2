@@ -84,14 +84,14 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor.png",
+            filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor.png",
             width = 1100,
             height = 1100,
             scale = 0.5,
             shift = { 1.01, 0 },
           },
           {
-            filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-shadow.png",
+            filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-shadow.png",
             priority = "medium",
             width = 1100,
             height = 1100,
@@ -104,7 +104,7 @@ data:extend({
       working_visualisations = {
         {
           animation = {
-            filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-steam.png",
+            filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-steam.png",
             priority = "extra-high",
             line_length = 10,
             width = 40,
@@ -120,7 +120,7 @@ data:extend({
         },
         {
           animation = {
-            filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-steam.png",
+            filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-steam.png",
             priority = "extra-high",
             line_length = 10,
             width = 40,
@@ -136,7 +136,7 @@ data:extend({
         },
         {
           animation = {
-            filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-animation-glow.png",
+            filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-animation-glow.png",
             priority = "high",
             line_length = 6,
             width = 626,
@@ -152,7 +152,7 @@ data:extend({
         {
           draw_as_light = true,
           animation = {
-            filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-animation-light.png",
+            filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-animation-light.png",
             line_length = 6,
             width = 626,
             height = 688,
@@ -164,7 +164,7 @@ data:extend({
         },
         {
           animation = {
-            filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-light.png",
+            filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-light.png",
             priority = "high",
             width = 1100,
             height = 1100,
@@ -179,7 +179,7 @@ data:extend({
         },
         {
           animation = {
-            filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-animation.png",
+            filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-animation.png",
             line_length = 6,
             width = 626,
             height = 688,
@@ -200,7 +200,7 @@ data:extend({
       },
       water_reflection = {
         pictures = {
-          filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-reflection.png",
+          filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-reflection.png",
           priority = "extra-high",
           width = 110,
           height = 110,

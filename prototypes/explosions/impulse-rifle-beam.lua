@@ -9,7 +9,7 @@ data:extend({
     beam = true,
     animations = {
       {
-        filename = "__Krastorio2Assets__/entities/explosions/impulse-rifle-beam.png",
+        filename = "__Krastorio2Assets__/explosions/impulse-rifle-beam.png",
         priority = "extra-high",
         draw_as_glow = true,
         width = 62,

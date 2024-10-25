@@ -18,7 +18,7 @@ assert(shelter_tint, "invalid shelter tint: " .. color_name)
 local animation = {
   layers = {
     {
-      filename = "__Krastorio2Assets__/entities/shelter-plus/shelter-plus-light.png",
+      filename = "__Krastorio2Assets__/buildings/shelter-plus/shelter-plus-light.png",
       priority = "high",
       width = 450,
       height = 450,
@@ -30,7 +30,7 @@ local animation = {
       animation_speed = 0.5,
     },
     {
-      filename = "__Krastorio2Assets__/entities/shelter-plus/shelter-plus.png",
+      filename = "__Krastorio2Assets__/buildings/shelter-plus/shelter-plus.png",
       priority = "high",
       width = 450,
       height = 450,
@@ -41,7 +41,7 @@ local animation = {
       animation_speed = 0.5,
     },
     {
-      filename = "__Krastorio2Assets__/entities/shelter-plus/shelter-plus-sh.png",
+      filename = "__Krastorio2Assets__/buildings/shelter-plus/shelter-plus-sh.png",
       priority = "high",
       width = 520,
       height = 342,
@@ -53,7 +53,7 @@ local animation = {
       draw_as_shadow = true,
     },
     {
-      filename = "__Krastorio2Assets__/entities/shelter-plus/shelter-plus-mask.png",
+      filename = "__Krastorio2Assets__/buildings/shelter-plus/shelter-plus-mask.png",
       flags = { "mask" },
       priority = "extra-high",
       width = 450,
@@ -127,7 +127,7 @@ data:extend({
     picture = animation,
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/entities/shelter/shelter-reflection.png",
+        filename = "__Krastorio2Assets__/buildings/shelter/shelter-reflection.png",
         priority = "extra-high",
         width = 60,
         height = 50,

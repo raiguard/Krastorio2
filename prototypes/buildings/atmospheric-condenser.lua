@@ -89,7 +89,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/entities/atmospheric-condenser/atmospheric-condenser.png",
+            filename = "__Krastorio2Assets__/buildings/atmospheric-condenser/atmospheric-condenser.png",
             width = 380,
             height = 380,
             scale = 0.5,
@@ -98,7 +98,7 @@ data:extend({
             shift = { 0, 0 },
           },
           {
-            filename = "__Krastorio2Assets__/entities/atmospheric-condenser/atmospheric-condenser-sh.png",
+            filename = "__Krastorio2Assets__/buildings/atmospheric-condenser/atmospheric-condenser-sh.png",
             width = 380,
             height = 380,
             scale = 0.5,
@@ -111,7 +111,7 @@ data:extend({
       },
       water_reflection = {
         pictures = {
-          filename = "__Krastorio2Assets__/entities/atmospheric-condenser/atmospheric-condenser-reflection.png",
+          filename = "__Krastorio2Assets__/buildings/atmospheric-condenser/atmospheric-condenser-reflection.png",
           priority = "extra-high",
           width = 42,
           height = 38,

@@ -88,7 +88,7 @@ data:extend({
       animation = make_4way_animation_from_spritesheet({
         layers = {
           {
-            filename = "__Krastorio2Assets__/entities/fuel-refinery/fuel-refinery.png",
+            filename = "__Krastorio2Assets__/buildings/fuel-refinery/fuel-refinery.png",
             width = 244,
             height = 268,
             frame_count = 1,
@@ -96,7 +96,7 @@ data:extend({
             scale = 0.5,
           },
           {
-            filename = "__Krastorio2Assets__/entities/fuel-refinery/fuel-refinery-shadow.png",
+            filename = "__Krastorio2Assets__/buildings/fuel-refinery/fuel-refinery-shadow.png",
             width = 350,
             height = 219,
             frame_count = 1,
@@ -114,7 +114,7 @@ data:extend({
           east_position = util.by_pixel(-11, -1),
           apply_recipe_tint = "primary",
           animation = {
-            filename = "__Krastorio2Assets__/entities/fuel-refinery/boiling-green-patch.png",
+            filename = "__Krastorio2Assets__/buildings/fuel-refinery/boiling-green-patch.png",
             frame_count = 32,
             width = 30,
             height = 20,
@@ -129,7 +129,7 @@ data:extend({
           east_position = util.by_pixel(-11, -1),
           apply_recipe_tint = "secondary",
           animation = {
-            filename = "__Krastorio2Assets__/entities/fuel-refinery/boiling-green-patch-mask.png",
+            filename = "__Krastorio2Assets__/buildings/fuel-refinery/boiling-green-patch-mask.png",
             frame_count = 32,
             width = 30,
             height = 20,
@@ -144,7 +144,7 @@ data:extend({
           south_position = { 0, 0 },
           east_position = { 0, 0 },
           north_animation = {
-            filename = "__Krastorio2Assets__/entities/fuel-refinery/boiling-window-green-patch.png",
+            filename = "__Krastorio2Assets__/buildings/fuel-refinery/boiling-window-green-patch.png",
             x = 0,
             frame_count = 1,
             width = 174,
@@ -153,7 +153,7 @@ data:extend({
             scale = 0.5,
           },
           east_animation = {
-            filename = "__Krastorio2Assets__/entities/fuel-refinery/boiling-window-green-patch.png",
+            filename = "__Krastorio2Assets__/buildings/fuel-refinery/boiling-window-green-patch.png",
             x = 174,
             frame_count = 1,
             width = 174,
@@ -162,7 +162,7 @@ data:extend({
             scale = 0.5,
           },
           south_animation = {
-            filename = "__Krastorio2Assets__/entities/fuel-refinery/boiling-window-green-patch.png",
+            filename = "__Krastorio2Assets__/buildings/fuel-refinery/boiling-window-green-patch.png",
             x = 348,
             frame_count = 1,
             width = 174,
@@ -174,7 +174,7 @@ data:extend({
       },
       water_reflection = {
         pictures = {
-          filename = "__Krastorio2Assets__/entities/fuel-refinery/fuel-refinery-reflection.png",
+          filename = "__Krastorio2Assets__/buildings/fuel-refinery/fuel-refinery-reflection.png",
           priority = "extra-high",
           width = 44,
           height = 44,

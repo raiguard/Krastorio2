@@ -33,7 +33,7 @@ data:extend({
     },
     light = { intensity = 0.5, size = 4 },
     animation = {
-      filename = "__Krastorio2Assets__/entities/bullets/virus-capsule.png",
+      filename = "__Krastorio2Assets__/projectiles/virus-capsule.png",
       frame_count = 16,
       line_length = 8,
       animation_speed = 0.250,
@@ -44,7 +44,7 @@ data:extend({
       scale = 0.5,
     },
     shadow = {
-      filename = "__Krastorio2Assets__/entities/bullets/virus-capsule-sh.png",
+      filename = "__Krastorio2Assets__/projectiles/virus-capsule-sh.png",
       frame_count = 16,
       line_length = 8,
       animation_speed = 0.25,

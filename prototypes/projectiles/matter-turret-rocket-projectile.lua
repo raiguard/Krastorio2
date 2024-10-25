@@ -289,7 +289,7 @@ data:extend({
       },
     },
     animation = {
-      filename = "__Krastorio2Assets__/entities/missiles/rocket-m.png",
+      filename = "__Krastorio2Assets__/buildings/missiles/rocket-m.png",
       frame_count = 5,
       line_length = 5,
       width = 13,

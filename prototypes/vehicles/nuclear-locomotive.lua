@@ -75,7 +75,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__base__/graphics/entity/smoke/smoke.png", --"__Krastorio2Assets__/entities/nuclear-locomotive/smoke.png",
+          filename = "__base__/graphics/entity/smoke/smoke.png", --"__Krastorio2Assets__/buildings/nuclear-locomotive/smoke.png",
           width = 152,
           height = 120,
           line_length = 5,
@@ -89,7 +89,7 @@ data:extend({
           flags = { "smoke" },
         },
         {
-          filename = "__base__/graphics/entity/smoke/smoke.png", --"__Krastorio2Assets__/entities/nuclear-locomotive/smoke.png",
+          filename = "__base__/graphics/entity/smoke/smoke.png", --"__Krastorio2Assets__/buildings/nuclear-locomotive/smoke.png",
           width = 152,
           height = 120,
           line_length = 5,

@@ -15,7 +15,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = {
-      filename = "__Krastorio2Assets__/entities/advanced-underground-belt-remnant/advanced-underground-belt-remnant.png",
+      filename = "__Krastorio2Assets__/remnants/advanced-underground-belt-remnant/advanced-underground-belt-remnant.png",
       line_length = 1,
       width = 116,
       height = 100,

@@ -70,7 +70,7 @@ data:extend({
       picture = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage.png",
+            filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage.png",
             width = 380,
             height = 380,
             scale = 0.55,
@@ -78,7 +78,7 @@ data:extend({
             shift = { 0, -0.4 },
           },
           {
-            filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-sh.png",
+            filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage-sh.png",
             width = 414,
             height = 270,
             scale = 0.55,
@@ -91,7 +91,7 @@ data:extend({
       charge_animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage.png",
+            filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage.png",
             width = 380,
             height = 380,
             scale = 0.55,
@@ -101,7 +101,7 @@ data:extend({
             shift = { 0, -0.4 },
           },
           {
-            filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-sh.png",
+            filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage-sh.png",
             width = 414,
             height = 270,
             scale = 0.55,
@@ -112,7 +112,7 @@ data:extend({
             shift = { 0.72, 0.56 },
           },
           {
-            filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-charge.png",
+            filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage-charge.png",
             width = 380,
             height = 380,
             scale = 0.55,
@@ -123,7 +123,7 @@ data:extend({
             draw_as_glow = true,
           },
           {
-            filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-light.png",
+            filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage-light.png",
             width = 380,
             height = 380,
             scale = 0.55,
@@ -138,7 +138,7 @@ data:extend({
       discharge_animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage.png",
+            filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage.png",
             width = 380,
             height = 380,
             scale = 0.55,
@@ -148,7 +148,7 @@ data:extend({
             shift = { 0, -0.4 },
           },
           {
-            filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-sh.png",
+            filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage-sh.png",
             width = 414,
             height = 270,
             scale = 0.55,
@@ -159,7 +159,7 @@ data:extend({
             shift = { 0.72, 0.56 },
           },
           {
-            filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-discharge.png",
+            filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage-discharge.png",
             width = 380,
             height = 380,
             scale = 0.55,
@@ -170,7 +170,7 @@ data:extend({
             draw_as_glow = true,
           },
           {
-            filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-light.png",
+            filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage-light.png",
             width = 380,
             height = 380,
             scale = 0.55,
@@ -185,7 +185,7 @@ data:extend({
     },
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-reflection.png",
+        filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage-reflection.png",
         priority = "extra-high",
         width = 44,
         height = 44,

@@ -4,7 +4,7 @@ local sounds = require("__base__.prototypes.entity.sounds")
 local picture = {
   layers = {
     {
-      filename = "__Krastorio2Assets__/entities/intergalactic-transceiver/intergalactic-transceiver-light.png",
+      filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-light.png",
       width = 800,
       height = 800,
       scale = 0.5,
@@ -13,7 +13,7 @@ local picture = {
       draw_as_light = true,
     },
     {
-      filename = "__Krastorio2Assets__/entities/intergalactic-transceiver/intergalactic-transceiver.png",
+      filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver.png",
       width = 800,
       height = 800,
       scale = 0.5,
@@ -21,7 +21,7 @@ local picture = {
       shift = { 0, -0.8 },
     },
     {
-      filename = "__Krastorio2Assets__/entities/intergalactic-transceiver/intergalactic-transceiver-sh.png",
+      filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-sh.png",
       width = 867,
       height = 626,
       scale = 0.5,
@@ -35,7 +35,7 @@ local picture = {
 local animation = {
   layers = {
     {
-      filename = "__Krastorio2Assets__/entities/intergalactic-transceiver/intergalactic-transceiver.png",
+      filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver.png",
       width = 800,
       height = 800,
       scale = 0.5,
@@ -45,7 +45,7 @@ local animation = {
       shift = { 0, -0.8 },
     },
     {
-      filename = "__Krastorio2Assets__/entities/intergalactic-transceiver/intergalactic-transceiver-sh.png",
+      filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-sh.png",
       priority = "low",
       width = 867,
       height = 626,
@@ -57,7 +57,7 @@ local animation = {
       shift = { 0.52, 0.5 },
     },
     {
-      filename = "__Krastorio2Assets__/entities/intergalactic-transceiver/intergalactic-transceiver-charging.png",
+      filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-charging.png",
       priority = "high",
       width = 800,
       height = 800,
@@ -69,7 +69,7 @@ local animation = {
       draw_as_glow = true,
     },
     {
-      filename = "__Krastorio2Assets__/entities/intergalactic-transceiver/intergalactic-transceiver-light.png",
+      filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-light.png",
       priority = "high",
       width = 800,
       height = 800,
@@ -81,7 +81,7 @@ local animation = {
       draw_as_light = true,
     },
     {
-      filename = "__Krastorio2Assets__/entities/intergalactic-transceiver/intergalactic-transceiver-charging-light.png",
+      filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-charging-light.png",
       priority = "high",
       width = 800,
       height = 800,
@@ -233,7 +233,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/intergalactic-transceiver/intergalactic-transceiver.png",
+          filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver.png",
           width = 800,
           height = 800,
           scale = 0.5,
@@ -243,7 +243,7 @@ data:extend({
           shift = { 0, -0.8 },
         },
         {
-          filename = "__Krastorio2Assets__/entities/intergalactic-transceiver/intergalactic-transceiver-sh.png",
+          filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-sh.png",
           priority = "low",
           width = 867,
           height = 626,
@@ -255,7 +255,7 @@ data:extend({
           shift = { 0.52, 0.5 },
         },
         {
-          filename = "__Krastorio2Assets__/entities/intergalactic-transceiver/intergalactic-transceiver-charge.png",
+          filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-charge.png",
           priority = "high",
           width = 800,
           height = 800,
@@ -267,7 +267,7 @@ data:extend({
           draw_as_glow = true,
         },
         {
-          filename = "__Krastorio2Assets__/entities/intergalactic-transceiver/intergalactic-transceiver-light.png",
+          filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-light.png",
           priority = "high",
           width = 800,
           height = 800,
@@ -279,7 +279,7 @@ data:extend({
           draw_as_light = true,
         },
         {
-          filename = "__Krastorio2Assets__/entities/intergalactic-transceiver/intergalactic-transceiver-charge-light.png",
+          filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-charge-light.png",
           priority = "high",
           width = 800,
           height = 800,

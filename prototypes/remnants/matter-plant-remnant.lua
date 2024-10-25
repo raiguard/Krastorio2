@@ -15,7 +15,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(1, {
-      filename = "__Krastorio2Assets__/entities/matter-plant-remnant/matter-plant-remnant.png",
+      filename = "__Krastorio2Assets__/remnants/matter-plant-remnant/matter-plant-remnant.png",
       line_length = 1,
       width = 600,
       height = 600,

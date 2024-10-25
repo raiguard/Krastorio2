@@ -83,7 +83,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/antimatter-reactor/antimatter-reactor-light.png",
+          filename = "__Krastorio2Assets__/buildings/antimatter-reactor/antimatter-reactor-light.png",
           priority = "high",
           width = 660,
           height = 706,
@@ -96,7 +96,7 @@ data:extend({
           blend_mode = "additive",
         },
         {
-          filename = "__Krastorio2Assets__/entities/antimatter-reactor/antimatter-reactor-glow.png",
+          filename = "__Krastorio2Assets__/buildings/antimatter-reactor/antimatter-reactor-glow.png",
           priority = "high",
           width = 660,
           height = 706,
@@ -110,7 +110,7 @@ data:extend({
           fadeout = true,
         },
         {
-          filename = "__Krastorio2Assets__/entities/antimatter-reactor/antimatter-reactor.png",
+          filename = "__Krastorio2Assets__/buildings/antimatter-reactor/antimatter-reactor.png",
           priority = "high",
           width = 660,
           height = 706,
@@ -121,7 +121,7 @@ data:extend({
           scale = 0.48,
         },
         {
-          filename = "__Krastorio2Assets__/entities/antimatter-reactor/antimatter-reactor-sh.png",
+          filename = "__Krastorio2Assets__/buildings/antimatter-reactor/antimatter-reactor-sh.png",
           width = 724,
           height = 630,
           shift = { 0.57, 0.27 },

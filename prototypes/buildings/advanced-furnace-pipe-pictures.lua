@@ -2,7 +2,7 @@ return {
   --- @type data.Sprite4Way
   a = {
     north = {
-      filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-k-pipe-N.png",
+      filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace-k-pipe-N.png",
       priority = "extra-high",
       width = 71,
       height = 38,
@@ -10,7 +10,7 @@ return {
       scale = 0.5,
     },
     east = {
-      filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-k-pipe-E-top.png",
+      filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace-k-pipe-E-top.png",
       priority = "extra-high",
       width = 59, --42,
       height = 76,
@@ -18,7 +18,7 @@ return {
       scale = 0.5,
     },
     south = {
-      filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-k-pipe-S-right.png",
+      filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace-k-pipe-S-right.png",
       priority = "extra-high",
       width = 88,
       height = 61,
@@ -26,7 +26,7 @@ return {
       scale = 0.5,
     },
     west = {
-      filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-k-pipe-W-bottom.png",
+      filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace-k-pipe-W-bottom.png",
       priority = "extra-high",
       width = 39,
       height = 73,
@@ -37,7 +37,7 @@ return {
   --- @type data.Sprite4Way
   b = {
     north = {
-      filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-k-pipe-N.png",
+      filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace-k-pipe-N.png",
       priority = "extra-high",
       width = 71,
       height = 38,
@@ -45,7 +45,7 @@ return {
       scale = 0.5,
     },
     east = {
-      filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-k-pipe-E-bottom.png",
+      filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace-k-pipe-E-bottom.png",
       priority = "extra-high",
       width = 76, --42,
       height = 76,
@@ -53,7 +53,7 @@ return {
       scale = 0.5,
     },
     south = {
-      filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-k-pipe-S-left.png",
+      filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace-k-pipe-S-left.png",
       priority = "extra-high",
       width = 88,
       height = 61,
@@ -61,7 +61,7 @@ return {
       scale = 0.5,
     },
     west = {
-      filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-k-pipe-W-top.png",
+      filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace-k-pipe-W-top.png",
       priority = "extra-high",
       width = 39,
       height = 87, --73,

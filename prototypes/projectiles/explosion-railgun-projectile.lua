@@ -66,7 +66,7 @@ data:extend({
       },
     },
     animation = {
-      filename = "__Krastorio2Assets__/entities/missiles/missile-e.png",
+      filename = "__Krastorio2Assets__/buildings/missiles/missile-e.png",
       frame_count = 1,
       width = 5,
       height = 90,

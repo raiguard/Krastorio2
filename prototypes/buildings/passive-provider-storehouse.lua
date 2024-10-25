@@ -49,7 +49,7 @@ data:extend({
     close_sound = sounds.machine_close,
     vehicle_impact_sound = sounds.generic_impact,
     picture = {
-      filename = "__Krastorio2Assets__/entities/passive-provider-storehouse/passive-provider-storehouse.png",
+      filename = "__Krastorio2Assets__/buildings/passive-provider-storehouse/passive-provider-storehouse.png",
       priority = "extra-high",
       width = 340,
       height = 340,

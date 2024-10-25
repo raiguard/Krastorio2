@@ -46,7 +46,7 @@ data:extend({
     dying_explosion = "matter-explosion",
     damaged_trigger_effect = hit_effects.entity(),
     base_picture = {
-      filename = "__Krastorio2Assets__/entities/singularity-beacon/singularity-beacon.png",
+      filename = "__Krastorio2Assets__/buildings/singularity-beacon/singularity-beacon.png",
       width = 360,
       height = 360,
       shift = util.by_pixel(0, -5),
@@ -57,7 +57,7 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/entities/singularity-beacon/singularity-beacon-reflection.png",
+        filename = "__Krastorio2Assets__/buildings/singularity-beacon/singularity-beacon-reflection.png",
         priority = "extra-high",
         width = 20,
         height = 25,
@@ -71,7 +71,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/singularity-beacon/singularity-beacon-w-light.png",
+          filename = "__Krastorio2Assets__/buildings/singularity-beacon/singularity-beacon-w-light.png",
           width = 190,
           height = 214,
           frame_count = 10,
@@ -83,7 +83,7 @@ data:extend({
           animation_speed = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/singularity-beacon/singularity-beacon-w.png",
+          filename = "__Krastorio2Assets__/buildings/singularity-beacon/singularity-beacon-w.png",
           width = 190,
           height = 214,
           frame_count = 10,

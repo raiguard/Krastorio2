@@ -48,7 +48,7 @@ data:extend({
     close_sound = sounds.machine_close,
     vehicle_impact_sound = sounds.generic_impact,
     picture = {
-      filename = "__Krastorio2Assets__/entities/storehouse/storehouse.png",
+      filename = "__Krastorio2Assets__/buildings/storehouse/storehouse.png",
       priority = "extra-high",
       width = 340,
       height = 340,

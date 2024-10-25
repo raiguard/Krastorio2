@@ -62,7 +62,7 @@ data:extend({
     pictures = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/sentinel/sentinel.png",
+          filename = "__Krastorio2Assets__/buildings/sentinel/sentinel.png",
           priority = "low",
           width = 128,
           height = 128,

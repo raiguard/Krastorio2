@@ -59,7 +59,7 @@ data:extend({
       picture = {
         sheets = {
           {
-            filename = "__Krastorio2Assets__/entities/big-storage-tank/big-storage-tank.png",
+            filename = "__Krastorio2Assets__/buildings/big-storage-tank/big-storage-tank.png",
             priority = "extra-high",
             frames = 1,
             scale = 0.5,
@@ -67,7 +67,7 @@ data:extend({
             height = 256,
           },
           {
-            filename = "__Krastorio2Assets__/entities/big-storage-tank/big-storage-tank-sh.png",
+            filename = "__Krastorio2Assets__/buildings/big-storage-tank/big-storage-tank-sh.png",
             priority = "extra-high",
             frames = 1,
             scale = 0.5,
@@ -111,7 +111,7 @@ data:extend({
     window_bounding_box = { { -0.125, 0.6875 }, { 0.1875, 1.1875 } },
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/entities/big-storage-tank/big-storage-tank-reflection.png",
+        filename = "__Krastorio2Assets__/buildings/big-storage-tank/big-storage-tank-reflection.png",
         priority = "extra-high",
         width = 40,
         height = 35,

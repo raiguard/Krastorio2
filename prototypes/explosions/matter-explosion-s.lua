@@ -16,22 +16,22 @@ data:extend({
       dice_y = 5,
       stripes = {
         {
-          filename = "__Krastorio2Assets__/entities/explosions/matter-explosion-1.png",
+          filename = "__Krastorio2Assets__/explosions/matter-explosion-1.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/explosions/matter-explosion-2.png",
+          filename = "__Krastorio2Assets__/explosions/matter-explosion-2.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/explosions/matter-explosion-3.png",
+          filename = "__Krastorio2Assets__/explosions/matter-explosion-3.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/explosions/matter-explosion-4.png",
+          filename = "__Krastorio2Assets__/explosions/matter-explosion-4.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },

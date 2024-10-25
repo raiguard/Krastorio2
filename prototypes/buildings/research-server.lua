@@ -3,7 +3,7 @@ local sounds = require("__base__.prototypes.entity.sounds")
 
 local pipe_pictures = {
   north = {
-    filename = "__Krastorio2Assets__/entities/research-server/research-server-k-pipe-N.png",
+    filename = "__Krastorio2Assets__/buildings/research-server/research-server-k-pipe-N.png",
     priority = "extra-high",
     width = 71,
     height = 38,
@@ -11,7 +11,7 @@ local pipe_pictures = {
     scale = 0.5,
   },
   east = {
-    filename = "__Krastorio2Assets__/entities/research-server/research-server-k-pipe-E.png",
+    filename = "__Krastorio2Assets__/buildings/research-server/research-server-k-pipe-E.png",
     priority = "extra-high",
     width = 42,
     height = 76,
@@ -19,7 +19,7 @@ local pipe_pictures = {
     scale = 0.5,
   },
   south = {
-    filename = "__Krastorio2Assets__/entities/research-server/research-server-k-pipe-S.png",
+    filename = "__Krastorio2Assets__/buildings/research-server/research-server-k-pipe-S.png",
     priority = "extra-high",
     width = 88,
     height = 61,
@@ -27,7 +27,7 @@ local pipe_pictures = {
     scale = 0.5,
   },
   west = {
-    filename = "__Krastorio2Assets__/entities/research-server/research-server-k-pipe-W.png",
+    filename = "__Krastorio2Assets__/buildings/research-server/research-server-k-pipe-W.png",
     priority = "extra-high",
     width = 39,
     height = 73,
@@ -120,7 +120,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/entities/research-server/research-server.png",
+            filename = "__Krastorio2Assets__/buildings/research-server/research-server.png",
             priority = "high",
             width = 256,
             height = 256,
@@ -131,7 +131,7 @@ data:extend({
             scale = 0.5,
           },
           {
-            filename = "__Krastorio2Assets__/entities/research-server/research-server-shadow.png",
+            filename = "__Krastorio2Assets__/buildings/research-server/research-server-shadow.png",
             priority = "high",
             width = 256,
             height = 256,
@@ -147,7 +147,7 @@ data:extend({
       working_visualisations = {
         {
           animation = {
-            filename = "__Krastorio2Assets__/entities/research-server/research-server-light.png",
+            filename = "__Krastorio2Assets__/buildings/research-server/research-server-light.png",
             priority = "extra-high",
             width = 256,
             height = 256,
@@ -170,7 +170,7 @@ data:extend({
       },
       water_reflection = {
         pictures = {
-          filename = "__Krastorio2Assets__/entities/research-server/research-server-reflection.png",
+          filename = "__Krastorio2Assets__/buildings/research-server/research-server-reflection.png",
           priority = "extra-high",
           width = 40,
           height = 40,

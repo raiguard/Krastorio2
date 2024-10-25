@@ -5,7 +5,7 @@ data:extend({
     flags = { "not-on-map" },
     animations = {
       {
-        filename = "__Krastorio2Assets__/entities/explosions/rail-matter-explosion.png",
+        filename = "__Krastorio2Assets__/explosions/rail-matter-explosion.png",
         animation_speed = 0.5,
         width = 600,
         height = 800,

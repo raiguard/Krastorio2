@@ -54,7 +54,7 @@ data:extend({
     on_animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/crash-site-lab/crash-site-lab.png",
+          filename = "__Krastorio2Assets__/buildings/crash-site-lab/crash-site-lab.png",
           width = 488,
           height = 252,
           frame_count = 1,
@@ -65,7 +65,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/crash-site-lab/crash-site-lab-beams.png",
+          filename = "__Krastorio2Assets__/buildings/crash-site-lab/crash-site-lab-beams.png",
           width = 130,
           height = 100,
           frame_count = 24,
@@ -77,7 +77,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/crash-site-lab/crash-site-lab-beams-light.png",
+          filename = "__Krastorio2Assets__/buildings/crash-site-lab/crash-site-lab-beams-light.png",
           width = 130,
           height = 100,
           frame_count = 24,
@@ -89,7 +89,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/crash-site-lab/crash-site-lab-shadow.png",
+          filename = "__Krastorio2Assets__/buildings/crash-site-lab/crash-site-lab-shadow.png",
           width = 696,
           height = 302,
           frame_count = 1,
@@ -105,7 +105,7 @@ data:extend({
     off_animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/crash-site-lab/crash-site-lab.png",
+          filename = "__Krastorio2Assets__/buildings/crash-site-lab/crash-site-lab.png",
           width = 488,
           height = 252,
           frame_count = 1,
@@ -116,7 +116,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/crash-site-lab/crash-site-lab-shadow.png",
+          filename = "__Krastorio2Assets__/buildings/crash-site-lab/crash-site-lab-shadow.png",
           width = 696,
           height = 302,
           frame_count = 1,
@@ -138,7 +138,7 @@ data:extend({
     },
     integration_patch_render_layer = "decals",
     integration_patch = {
-      filename = "__Krastorio2Assets__/entities/crash-site-lab/crash-site-lab-ground.png",
+      filename = "__Krastorio2Assets__/buildings/crash-site-lab/crash-site-lab-ground.png",
       width = 700,
       height = 344,
       shift = util.by_pixel(-49, 11),

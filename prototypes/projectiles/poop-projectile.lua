@@ -22,7 +22,7 @@ data:extend({
     },
     light = { intensity = 0.5, size = 4 },
     animation = {
-      filename = "__Krastorio2Assets__/entities/bullets/poop.png",
+      filename = "__Krastorio2Assets__/projectiles/poop.png",
       frame_count = 12,
       animation_speed = 0.3,
       width = 64,
@@ -32,7 +32,7 @@ data:extend({
       scale = 0.35,
     },
     shadow = {
-      filename = "__Krastorio2Assets__/entities/bullets/poop.png",
+      filename = "__Krastorio2Assets__/projectiles/poop.png",
       frame_count = 12,
       animation_speed = 0.3,
       width = 64,

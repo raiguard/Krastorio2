@@ -64,7 +64,7 @@ data:extend({
     base_picture = {
       sheets = {
         {
-          filename = "__Krastorio2Assets__/entities/mineral-water-pumpjack/mineral-water-pumpjack-base.png",
+          filename = "__Krastorio2Assets__/buildings/mineral-water-pumpjack/mineral-water-pumpjack-base.png",
           priority = "extra-high",
           width = 261,
           height = 273,
@@ -72,7 +72,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/mineral-water-pumpjack/mineral-water-pumpjack-base-shadow.png",
+          filename = "__Krastorio2Assets__/buildings/mineral-water-pumpjack/mineral-water-pumpjack-base-shadow.png",
           width = 220,
           height = 220,
           scale = 0.5,
@@ -86,7 +86,7 @@ data:extend({
         layers = {
           {
             priority = "high",
-            filename = "__Krastorio2Assets__/entities/mineral-water-pumpjack/mineral-water-pumpjack-horsehead.png",
+            filename = "__Krastorio2Assets__/buildings/mineral-water-pumpjack/mineral-water-pumpjack-horsehead.png",
             animation_speed = 0.5,
             scale = 0.5,
             line_length = 8,
@@ -97,7 +97,7 @@ data:extend({
           },
           {
             priority = "high",
-            filename = "__Krastorio2Assets__/entities/mineral-water-pumpjack/mineral-water-pumpjack-horsehead-shadow.png",
+            filename = "__Krastorio2Assets__/buildings/mineral-water-pumpjack/mineral-water-pumpjack-horsehead-shadow.png",
             animation_speed = 0.5,
             draw_as_shadow = true,
             line_length = 8,
@@ -112,7 +112,7 @@ data:extend({
     },
     base_render_layer = "lower-object-above-shadow",
     radius_visualisation_picture = {
-      filename = "__Krastorio2Assets__/entities/mineral-water-pumpjack/mineral-water-pumpjack-radius-visualization.png",
+      filename = "__Krastorio2Assets__/buildings/mineral-water-pumpjack/mineral-water-pumpjack-radius-visualization.png",
       width = 12,
       height = 12,
     },

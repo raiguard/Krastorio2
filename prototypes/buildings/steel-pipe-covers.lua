@@ -2,7 +2,7 @@ return {
   north = {
     layers = {
       {
-        filename = "__Krastorio2Assets__/entities/steel-pipe-covers/steel-pipe-cover-north.png",
+        filename = "__Krastorio2Assets__/buildings/steel-pipe-covers/steel-pipe-cover-north.png",
         priority = "extra-high",
         width = 128,
         height = 128,
@@ -21,7 +21,7 @@ return {
   east = {
     layers = {
       {
-        filename = "__Krastorio2Assets__/entities/steel-pipe-covers/steel-pipe-cover-east.png",
+        filename = "__Krastorio2Assets__/buildings/steel-pipe-covers/steel-pipe-cover-east.png",
         priority = "extra-high",
         width = 128,
         height = 128,
@@ -40,7 +40,7 @@ return {
   south = {
     layers = {
       {
-        filename = "__Krastorio2Assets__/entities/steel-pipe-covers/steel-pipe-cover-south.png",
+        filename = "__Krastorio2Assets__/buildings/steel-pipe-covers/steel-pipe-cover-south.png",
         priority = "extra-high",
         width = 128,
         height = 128,
@@ -59,7 +59,7 @@ return {
   west = {
     layers = {
       {
-        filename = "__Krastorio2Assets__/entities/steel-pipe-covers/steel-pipe-cover-west.png",
+        filename = "__Krastorio2Assets__/buildings/steel-pipe-covers/steel-pipe-cover-west.png",
         priority = "extra-high",
         width = 128,
         height = 128,

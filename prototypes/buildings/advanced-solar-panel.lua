@@ -48,7 +48,7 @@ data:extend({
       layers = {
         {
 
-          filename = "__Krastorio2Assets__/entities/advanced-solar-panel/advanced-solar-panel-light.png",
+          filename = "__Krastorio2Assets__/buildings/advanced-solar-panel/advanced-solar-panel-light.png",
           priority = "high",
           width = 280,
           height = 280,
@@ -57,7 +57,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/advanced-solar-panel/advanced-solar-panel.png",
+          filename = "__Krastorio2Assets__/buildings/advanced-solar-panel/advanced-solar-panel.png",
           priority = "high",
           width = 280,
           height = 280,
@@ -65,7 +65,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/advanced-solar-panel/advanced-solar-panel-sh.png",
+          filename = "__Krastorio2Assets__/buildings/advanced-solar-panel/advanced-solar-panel-sh.png",
           priority = "high",
           width = 280,
           height = 280,
@@ -78,7 +78,7 @@ data:extend({
     overlay = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/advanced-solar-panel/advanced-solar-panel-sh-ov.png",
+          filename = "__Krastorio2Assets__/buildings/advanced-solar-panel/advanced-solar-panel-sh-ov.png",
           priority = "high",
           width = 280,
           height = 280,

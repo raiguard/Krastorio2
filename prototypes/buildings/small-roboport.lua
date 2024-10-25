@@ -75,14 +75,14 @@ data:extend({
     base = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/small-roboport/small-roboport.png",
+          filename = "__Krastorio2Assets__/buildings/small-roboport/small-roboport.png",
           width = 240,
           height = 300,
           shift = { 0, -0.1 },
           scale = 0.25,
         },
         {
-          filename = "__Krastorio2Assets__/entities/small-roboport/small-roboport-sh.png",
+          filename = "__Krastorio2Assets__/buildings/small-roboport/small-roboport-sh.png",
           width = 322,
           height = 166,
           shift = { 0.48, 0.43 },
@@ -95,7 +95,7 @@ data:extend({
     base_animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/small-roboport/small-roboport-animation.png",
+          filename = "__Krastorio2Assets__/buildings/small-roboport/small-roboport-animation.png",
           priority = "high",
           width = 110,
           height = 80,
@@ -106,7 +106,7 @@ data:extend({
           animation_speed = 0.1,
         },
         {
-          filename = "__Krastorio2Assets__/entities/small-roboport/small-roboport-animation-light.png",
+          filename = "__Krastorio2Assets__/buildings/small-roboport/small-roboport-animation-light.png",
           priority = "high",
           width = 110,
           height = 80,
@@ -123,7 +123,7 @@ data:extend({
     recharging_animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/small-roboport/small-roboport-recharging.png",
+          filename = "__Krastorio2Assets__/buildings/small-roboport/small-roboport-recharging.png",
           priority = "high",
           width = 37,
           height = 35,
@@ -133,7 +133,7 @@ data:extend({
           animation_speed = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/small-roboport/small-roboport-recharging-light.png",
+          filename = "__Krastorio2Assets__/buildings/small-roboport/small-roboport-recharging-light.png",
           priority = "high",
           width = 37,
           height = 35,
@@ -151,7 +151,7 @@ data:extend({
     },
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/entities/small-roboport/small-roboport-reflection.png",
+        filename = "__Krastorio2Assets__/buildings/small-roboport/small-roboport-reflection.png",
         priority = "extra-high",
         width = 16,
         height = 22,

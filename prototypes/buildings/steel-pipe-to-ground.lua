@@ -60,28 +60,28 @@ data:extend({
     working_sound = sounds.pipe,
     pictures = {
       north = {
-        filename = "__Krastorio2Assets__/entities/steel-pipe-to-ground/steel-pipe-to-ground-up.png",
+        filename = "__Krastorio2Assets__/buildings/steel-pipe-to-ground/steel-pipe-to-ground-up.png",
         priority = "extra-high",
         width = 128,
         height = 128,
         scale = 0.5,
       },
       south = {
-        filename = "__Krastorio2Assets__/entities/steel-pipe-to-ground/steel-pipe-to-ground-down.png",
+        filename = "__Krastorio2Assets__/buildings/steel-pipe-to-ground/steel-pipe-to-ground-down.png",
         priority = "extra-high",
         width = 128,
         height = 128,
         scale = 0.5,
       },
       west = {
-        filename = "__Krastorio2Assets__/entities/steel-pipe-to-ground/steel-pipe-to-ground-left.png",
+        filename = "__Krastorio2Assets__/buildings/steel-pipe-to-ground/steel-pipe-to-ground-left.png",
         priority = "extra-high",
         width = 128,
         height = 128,
         scale = 0.5,
       },
       east = {
-        filename = "__Krastorio2Assets__/entities/steel-pipe-to-ground/steel-pipe-to-ground-right.png",
+        filename = "__Krastorio2Assets__/buildings/steel-pipe-to-ground/steel-pipe-to-ground-right.png",
         priority = "extra-high",
         width = 128,
         height = 128,

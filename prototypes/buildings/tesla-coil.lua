@@ -72,7 +72,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/tesla-coil/tesla-coil-animation-light.png",
+          filename = "__Krastorio2Assets__/buildings/tesla-coil/tesla-coil-animation-light.png",
           priority = "high",
           width = 194,
           height = 232,
@@ -86,7 +86,7 @@ data:extend({
           blend_mode = "additive-soft",
         },
         {
-          filename = "__Krastorio2Assets__/entities/tesla-coil/tesla-coil-animation.png",
+          filename = "__Krastorio2Assets__/buildings/tesla-coil/tesla-coil-animation.png",
           priority = "high",
           width = 194,
           height = 232,
@@ -98,7 +98,7 @@ data:extend({
           shift = { 0, -0.75 },
         },
         {
-          filename = "__Krastorio2Assets__/entities/tesla-coil/tesla-coil-shadow.png",
+          filename = "__Krastorio2Assets__/buildings/tesla-coil/tesla-coil-shadow.png",
           priority = "medium",
           width = 250,
           height = 150,

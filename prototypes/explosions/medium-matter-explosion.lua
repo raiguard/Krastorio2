@@ -5,7 +5,7 @@ data:extend({
     flags = { "not-on-map" },
     animations = {
       {
-        filename = "__Krastorio2Assets__/entities/explosions/medium-matter-explosion.png",
+        filename = "__Krastorio2Assets__/explosions/medium-matter-explosion.png",
         width = 800,
         height = 800,
         frame_count = 47,

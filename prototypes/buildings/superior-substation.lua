@@ -74,7 +74,7 @@ data:extend({
       layers = {
 
         {
-          filename = "__Krastorio2Assets__/entities/superior-substation/superior-substation.png",
+          filename = "__Krastorio2Assets__/buildings/superior-substation/superior-substation.png",
           priority = "high",
           width = 138,
           height = 270,
@@ -96,7 +96,7 @@ data:extend({
     },
     -- TODO: Make this a separate lamp entity so it will consume power and turn on/off
     active_picture = {
-      filename = "__Krastorio2Assets__/entities/superior-substation/superior-substation-light.png",
+      filename = "__Krastorio2Assets__/buildings/superior-substation/superior-substation-light.png",
       priority = "high",
       width = 92,
       height = 156,

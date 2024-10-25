@@ -100,7 +100,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/entities/matter-associator/matter-associator.png",
+            filename = "__Krastorio2Assets__/buildings/matter-associator/matter-associator.png",
             priority = "high",
             width = 473,
             height = 489,
@@ -109,7 +109,7 @@ data:extend({
             shift = { 0, -0.15 },
           },
           {
-            filename = "__Krastorio2Assets__/entities/matter-associator/matter-associator-sh.png",
+            filename = "__Krastorio2Assets__/buildings/matter-associator/matter-associator-sh.png",
             priority = "medium",
             width = 508,
             height = 446,
@@ -122,7 +122,7 @@ data:extend({
       },
       water_reflection = {
         pictures = {
-          filename = "__Krastorio2Assets__/entities/matter-associator/matter-associator-reflection.png",
+          filename = "__Krastorio2Assets__/buildings/matter-associator/matter-associator-reflection.png",
           priority = "extra-high",
           width = 46,
           height = 46,
@@ -137,7 +137,7 @@ data:extend({
         {
           draw_as_light = true,
           animation = {
-            filename = "__Krastorio2Assets__/entities/matter-associator/matter-associator-working-glow-light.png",
+            filename = "__Krastorio2Assets__/buildings/matter-associator/matter-associator-working-glow-light.png",
             priority = "high",
             width = 144,
             height = 110,
@@ -153,7 +153,7 @@ data:extend({
           blend_mode = "additive",
           synced_fadeout = true,
           animation = {
-            filename = "__Krastorio2Assets__/entities/matter-associator/matter-associator-working-glow.png",
+            filename = "__Krastorio2Assets__/buildings/matter-associator/matter-associator-working-glow.png",
             priority = "high",
             width = 144,
             height = 110,
@@ -168,7 +168,7 @@ data:extend({
           animation = {
             layers = {
               {
-                filename = "__Krastorio2Assets__/entities/matter-associator/matter-associator-working-light.png",
+                filename = "__Krastorio2Assets__/buildings/matter-associator/matter-associator-working-light.png",
                 priority = "high",
                 width = 473,
                 height = 489,
@@ -180,7 +180,7 @@ data:extend({
                 draw_as_light = true,
               },
               {
-                filename = "__Krastorio2Assets__/entities/matter-associator/matter-associator-working.png",
+                filename = "__Krastorio2Assets__/buildings/matter-associator/matter-associator-working.png",
                 priority = "high",
                 width = 473,
                 height = 489,

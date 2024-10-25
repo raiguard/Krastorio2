@@ -15,7 +15,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = {
-      filename = "__Krastorio2Assets__/entities/superior-splitter-remnant/superior-splitter-remnant.png",
+      filename = "__Krastorio2Assets__/remnants/superior-splitter-remnant/superior-splitter-remnant.png",
       line_length = 1,
       width = 172,
       height = 156,

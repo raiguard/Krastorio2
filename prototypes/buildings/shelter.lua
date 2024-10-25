@@ -1,7 +1,7 @@
 local shelter_animation = {
   layers = {
     {
-      filename = "__Krastorio2Assets__/entities/shelter/shelter-light.png",
+      filename = "__Krastorio2Assets__/buildings/shelter/shelter-light.png",
       priority = "high",
       width = 512,
       height = 512,
@@ -13,7 +13,7 @@ local shelter_animation = {
       animation_speed = 0.5,
     },
     {
-      filename = "__Krastorio2Assets__/entities/shelter/shelter.png",
+      filename = "__Krastorio2Assets__/buildings/shelter/shelter.png",
       priority = "high",
       width = 512,
       height = 512,
@@ -24,7 +24,7 @@ local shelter_animation = {
       animation_speed = 0.5,
     },
     {
-      filename = "__Krastorio2Assets__/entities/shelter/shelter-shadow.png",
+      filename = "__Krastorio2Assets__/buildings/shelter/shelter-shadow.png",
       priority = "high",
       width = 512,
       height = 512,
@@ -108,7 +108,7 @@ data:extend({
     picture = shelter_animation,
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/entities/shelter/shelter-reflection.png",
+        filename = "__Krastorio2Assets__/buildings/shelter/shelter-reflection.png",
         priority = "extra-high",
         width = 60,
         height = 50,
