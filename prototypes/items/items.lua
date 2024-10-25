@@ -1048,7 +1048,7 @@ data:extend({
   {
     type = "item",
     name = "gps-satellite",
-    rocket_launch_product = { "teleportation-gps-module", 1 },
+    rocket_launch_products = { { type = "item", name = "teleportation-gps-module", amount = 1 } },
     icon = "__Krastorio2Assets__/icons/items/gps-satellite.png",
     pictures = {
       layers = {

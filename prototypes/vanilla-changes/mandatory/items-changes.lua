@@ -4,13 +4,12 @@ data.raw["rocket-silo-rocket"]["rocket-silo-rocket"].research_products =
   { { type = "item", name = "space-research-data", amount = 1000 } }
 
 -- Space science pack description
-data.raw.tool[kr_optimization_tech_card_name].localised_description =
-  { "item-description.optimization-tech-card" }
+data.raw.tool[kr_optimization_tech_card_name].localised_description = { "item-description.optimization-tech-card" }
 
 -----------------------------------------------------------------
 
 -- Fish
-data.raw.capsule["raw-fish"].rocket_launch_product = { "dolphin-gun", 1 }
+data.raw.capsule["raw-fish"].rocket_launch_products = { { type = "item", name = "dolphin-gun", amount = 1 } }
 data.raw.capsule["raw-fish"].capsule_action.attack_parameters.cooldown = 30
 data.raw.capsule["raw-fish"].capsule_action.attack_parameters.ammo_type.action.action_delivery.target_effects = {
   type = "damage",

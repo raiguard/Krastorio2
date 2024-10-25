@@ -167,7 +167,7 @@ data:extend({
     subgroup = "other",
     hidden = true,
     stack_size = 50,
-    rocket_launch_product = { "kr-note-1", 1 },
+    rocket_launch_products = { { type = "item", name = "kr-note-1", amount = 1 } },
     capsule_action = {
       type = "throw",
       attack_parameters = {
