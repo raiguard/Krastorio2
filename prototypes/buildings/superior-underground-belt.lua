@@ -13,7 +13,7 @@ data:extend({
   {
     type = "item",
     name = "kr-superior-underground-belt",
-    icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-underground-belt.png",
+    icon = "__Krastorio2Assets__/icons/entities/superior-underground-belt.png",
     subgroup = "belt",
     order = "b[underground-belt]-e[superior-underground-belt]",
     place_result = "kr-superior-underground-belt",
@@ -22,7 +22,7 @@ data:extend({
   {
     type = "underground-belt",
     name = "kr-superior-underground-belt",
-    icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-underground-belt.png",
+    icon = "__Krastorio2Assets__/icons/entities/superior-underground-belt.png",
     flags = { "placeable-neutral", "player-creation" },
     fast_replaceable_group = "transport-belt",
     minable = { mining_time = 0.2, result = "kr-superior-underground-belt" },

@@ -14,7 +14,7 @@ data:extend({
   {
     type = "item",
     name = "kr-advanced-transport-belt",
-    icon = "__Krastorio2Assets__/icons/entities/transport-belts/advanced-transport-belt/advanced-transport-belt.png",
+    icon = "__Krastorio2Assets__/icons/entities/advanced-transport-belt.png",
     subgroup = "belt",
     order = "a[transport-belt]-d[advanced-transport-belt]",
     place_result = "kr-advanced-transport-belt",
@@ -23,7 +23,7 @@ data:extend({
   {
     type = "transport-belt",
     name = "kr-advanced-transport-belt",
-    icon = "__Krastorio2Assets__/icons/entities/transport-belts/advanced-transport-belt/advanced-transport-belt.png",
+    icon = "__Krastorio2Assets__/icons/entities/advanced-transport-belt.png",
     flags = { "placeable-neutral", "player-creation" },
     fast_replaceable_group = "transport-belt",
     next_upgrade = "kr-superior-transport-belt",

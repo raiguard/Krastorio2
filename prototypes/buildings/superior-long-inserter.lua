@@ -18,7 +18,7 @@ data:extend({
   {
     type = "item",
     name = "kr-superior-long-inserter",
-    icon = "__Krastorio2Assets__/icons/entities/inserters/superior-long-inserter.png",
+    icon = "__Krastorio2Assets__/icons/entities/superior-long-inserter.png",
     subgroup = "inserter",
     order = "h2[superior-long-inserter]",
     place_result = "kr-superior-long-inserter",
@@ -27,7 +27,7 @@ data:extend({
   {
     type = "inserter",
     name = "kr-superior-long-inserter",
-    icon = "__Krastorio2Assets__/icons/entities/inserters/superior-long-inserter.png",
+    icon = "__Krastorio2Assets__/icons/entities/superior-long-inserter.png",
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 0.1, result = "kr-superior-long-inserter" },
     fast_replaceable_group = "long-handed-inserter",

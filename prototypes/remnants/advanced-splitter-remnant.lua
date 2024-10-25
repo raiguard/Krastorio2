@@ -3,7 +3,7 @@ data:extend({
     type = "corpse",
     name = "kr-advanced-splitter-remnant",
     localised_name = { "remnant-name", { "entity-name.kr-advanced-splitter" } },
-    icon = "__Krastorio2Assets__/icons/entities/transport-belts/advanced-transport-belt/advanced-splitter.png",
+    icon = "__Krastorio2Assets__/icons/entities/advanced-splitter.png",
     flags = { "placeable-neutral", "not-on-map" },
     subgroup = "remnants",
     order = "d[remnants]-a[generic]-a[small]",

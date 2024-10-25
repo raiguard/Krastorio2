@@ -3,7 +3,7 @@ data:extend({
     type = "corpse",
     name = "kr-advanced-underground-belt-remnant",
     localised_name = { "remnant-name", { "entity-name.kr-advanced-underground-belt" } },
-    icon = "__Krastorio2Assets__/icons/entities/transport-belts/advanced-transport-belt/advanced-underground-belt.png",
+    icon = "__Krastorio2Assets__/icons/entities/advanced-underground-belt.png",
     flags = { "placeable-neutral", "not-on-map", "building-direction-8-way" },
     subgroup = "remnants",
     order = "d[remnants]-a[generic]-a[small]",

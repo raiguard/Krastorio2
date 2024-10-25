@@ -3,7 +3,7 @@ data:extend({
     type = "corpse",
     name = "kr-superior-inserter-remnants",
     localised_name = { "remnant-name", { "entity-name.kr-superior-inserter" } },
-    icon = "__Krastorio2Assets__/icons/entities/inserters/superior-inserter.png",
+    icon = "__Krastorio2Assets__/icons/entities/superior-inserter.png",
     flags = { "placeable-neutral", "not-on-map" },
     subgroup = "remnants",
     order = "d[remnants]-a[generic]-a[small]",
