@@ -247,39 +247,3 @@ require("prototypes.compatibility.aircraft")
 require("prototypes.compatibility.deadlock-beltboxes-loaders")
 require("prototypes.compatibility.early-electric-furnaces")
 require("prototypes.compatibility.squeak-through-2")
-
----------------------------------------------------------------------------
--- -- -- PRE INITIALIZATION
----------------------------------------------------------------------------
--- -- General Info
-krastorio = {}
--- -- Global Krastorio 2 library initialization, utilities library (support for main library)
-require("lib.private.data-stages.utils.krastorio_utils")
--- -- Global Krastorio 2 library initialization, Krastorio 2 main library
-require("lib.private.data-stages.entities")
-require("lib.private.data-stages.equipments")
-require("lib.private.data-stages.general")
-require("lib.private.data-stages.icons")
-require("lib.private.data-stages.items")
-require("lib.private.data-stages.modules")
-require("lib.private.data-stages.recipes")
-require("lib.private.data-stages.technologies")
-
----------------------------------------------------------------------------
--- -- -- CONTENTS INITIALIZATION (data stage)
----------------------------------------------------------------------------
--- -- Adding new recipes
--- -- Adding new sounds (prototypes)
--- -- Adding new technologies
--- -- Adding new tiles
--- -- Adding new signals (virtual signals)
--- -- Adding new key binds
----------------------------------------------------------------------------
--- -- -- OPTIONAL CONTENTS INITIALIZATION (data stage)
----------------------------------------------------------------------------
-
----------------------------------------------------------------------------
--- -- -- COMPATIBILITY INITIALIZATION (data stage)
----------------------------------------------------------------------------
--- -- Execute Compatilbility Scripts for the data stage
----------------------------------------------------------------------------
