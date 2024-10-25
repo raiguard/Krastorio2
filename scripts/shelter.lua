@@ -8,6 +8,9 @@ local util = require("scripts.util")
 
 --- @param force LuaForce
 local function init_force(force)
+  if not storage.shelter then
+    return
+  end
   storage.shelter.forces[force.index] = {}
 end
 

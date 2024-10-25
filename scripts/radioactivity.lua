@@ -187,6 +187,7 @@ function radioactivity.on_init()
 end
 
 function radioactivity.on_configuration_changed()
+  -- TODO: Migration
   storage.radioactivity.entities = {}
   for _, entity_name in pairs(default_entities) do
     if prototypes.entity[entity_name] then

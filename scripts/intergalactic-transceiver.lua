@@ -46,6 +46,8 @@ local status_properties = {
 
 local min_charge_delta = 2.5e8 -- Requires charge rate of 15 GW
 local max_charge_delta = 2e9
+local max_energy = prototypes.entity["kr-intergalactic-transceiver"].electric_energy_source_prototype.buffer_capacity
+  - max_charge_delta
 local energy_drain = 50e9
 
 --- @param transceiver_data IntergalacticTransceiverForceData
@@ -202,7 +204,7 @@ end
 
 --- @param self IntergalacticTransceiverGuiData
 local function update_gui(self)
-  local charged = flib_math.round(self.entity.energy / storage.intergalactic_transceiver.max_energy, 0.01)
+  local charged = flib_math.round(self.entity.energy / max_energy, 0.01)
   local transceiver_data = storage.intergalactic_transceiver.forces[self.player.force_index]
   local status_properties = status_properties[transceiver_data.status]
   self.elems.status_icon.sprite = status_properties.icon
@@ -407,7 +409,6 @@ local function update_transceiver(data, entity)
       status = "not_enough_input"
     end
   else
-    local max_energy = storage.intergalactic_transceiver.max_energy
     if current_energy > max_energy then
       -- XXX: If the energy remains constant, the entity status will change to "normal", so give it a random offset.
       new_energy = max_energy + math.random(0, 20) * 1000000
@@ -498,13 +499,6 @@ local function on_180th_tick()
   end
 end
 
-local function get_max_energy()
-  local buffer_capacity =
-    prototypes.entity["kr-intergalactic-transceiver"].electric_energy_source_prototype.buffer_capacity
-
-  storage.intergalactic_transceiver.max_energy = buffer_capacity - max_charge_delta
-end
-
 --- @class intergalactic_transceiver
 local intergalactic_transceiver = {}
 
@@ -524,11 +518,6 @@ function intergalactic_transceiver.on_init()
     inactive = {},
     is_victory = true,
   }
-  get_max_energy()
-end
-
-function intergalactic_transceiver.on_configuration_changed()
-  get_max_energy()
 end
 
 intergalactic_transceiver.events = {
