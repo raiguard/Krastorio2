@@ -7,7 +7,7 @@ if mods["Tral_robot_tree_farm"] then
   -- base recipes to copy properties from
   m_tral.base_recipes = {}
   m_tral.base_recipes.seed = table.deepcopy(data.raw["recipe"]["tree-01"])
-  m_tral.base_recipes.crushing = table.deepcopy(data.raw["recipe"]["kr-vc-tree-01"])
+  m_tral.base_recipes.crushing = table.deepcopy(data.raw["recipe"]["kr-crush-tree-01"])
 
   -- cycle through all effects of the technology
   for i, element in pairs(m_tral.deco_tech_effects) do
@@ -20,7 +20,7 @@ if mods["Tral_robot_tree_farm"] then
       -- remove the tree item from the game
       data.raw["item"][element.recipe] = nil
       -- remove the crushing recipe from the game
-      data.raw["recipe"]["kr-vc-" .. element.recipe] = nil
+      data.raw["recipe"]["kr-crush-" .. element.recipe] = nil
     end
   end
 end

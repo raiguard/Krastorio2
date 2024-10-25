@@ -1,4 +1,5 @@
 require("prototypes.updates.create-roboport-variations")
+require("prototypes.updates.generate-void-crushing-recipes")
 ---------------------------------------------------------------------------
 -- -- -- PRE UPDATES
 ---------------------------------------------------------------------------
@@ -16,7 +17,6 @@ fluid_burner_util.generateBurnFluidsRecipes()
 -- Generate for each item that can't be processed from the crusher
 -- a void recipe for destroy it
 -- (This must be done after adding other recipes)
-require("prototypes.recipes.generate-void-crushing-recipes")
 local matter_util = require("lib.public.data-stages.matter-util")
 matter_util.createStandardKrastorioMatterRecipes()
 ---------------------------------------------------------------------------

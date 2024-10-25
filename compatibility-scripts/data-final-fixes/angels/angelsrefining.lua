@@ -93,7 +93,7 @@ if mods["angelsrefining"] then
     },
   })
   krastorio.technologies.addUnlockRecipe("kr-stone-processing", "sand-2")
-  data.raw.recipe["kr-vc-stone-crushed"] = nil
+  data.raw.recipe["kr-crush-stone-crushed"] = nil
 
   if data.raw.recipe["sand"] then
     data.raw.recipe["sand"].icon = nil

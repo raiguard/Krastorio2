@@ -18,7 +18,7 @@ if mods["Tral_robot_tree_farm"] then
 
     -- create the crushing recipe
     local crushing_recipe = table.deepcopy(m_tral.base_recipes.crushing)
-    crushing_recipe.name = "kr-vc-" .. seed.name
+    crushing_recipe.name = "kr-crush-" .. seed.name
     crushing_recipe.ingredients = { { type = "item", name = seed.name, amount = 1 } }
 
     -- add it to the game
