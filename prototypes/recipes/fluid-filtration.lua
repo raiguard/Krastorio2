@@ -1,28 +1,6 @@
 data:extend({
   {
     type = "recipe",
-    name = "quartz",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz.png",
-    subgroup = "raw-material",
-    enabled = false,
-    category = "fluid-filtration",
-    energy_required = 2.1,
-    ingredients = {
-      { type = "item", name = "sand", amount = 10 },
-      { type = "fluid", name = "water", amount = 10 },
-    },
-    results = {
-      { type = "item", name = "quartz", amount = 6 },
-    },
-    always_show_made_in = true,
-    always_show_products = true,
-    crafting_machine_tint = {
-      primary = { r = 0.96, g = 0.64, b = 0.38, a = 0.6 }, -- Dirty
-      secondary = { r = 0.55, g = 0.55, b = 0.51, a = 0.5 }, -- Clear
-    },
-  },
-  {
-    type = "recipe",
     name = "coal-filtration",
     icon = "__Krastorio2Assets__/icons/recipes/coal-filtration.png",
     subgroup = "raw-material",
@@ -139,6 +117,28 @@ data:extend({
     crafting_machine_tint = {
       primary = { r = 0.60, g = 0.20, b = 0, a = 0.6 }, -- Dirty
       secondary = { r = 1.0, g = 0.843, b = 0.0, a = 0.9 }, -- Clear
+    },
+  },
+  {
+    type = "recipe",
+    name = "quartz",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz.png",
+    subgroup = "raw-material",
+    enabled = false,
+    category = "fluid-filtration",
+    energy_required = 2.1,
+    ingredients = {
+      { type = "item", name = "sand", amount = 10 },
+      { type = "fluid", name = "water", amount = 10 },
+    },
+    results = {
+      { type = "item", name = "quartz", amount = 6 },
+    },
+    always_show_made_in = true,
+    always_show_products = true,
+    crafting_machine_tint = {
+      primary = { r = 0.96, g = 0.64, b = 0.38, a = 0.6 }, -- Dirty
+      secondary = { r = 0.55, g = 0.55, b = 0.51, a = 0.5 }, -- Clear
     },
   },
 })

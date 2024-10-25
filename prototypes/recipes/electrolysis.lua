@@ -1,6 +1,30 @@
 data:extend({
   {
     type = "recipe",
+    name = "heavy-water",
+    subgroup = "fluid-recipes",
+    order = "y06[heavy-water]",
+    enabled = false,
+    energy_required = 120,
+    category = "electrolysis",
+    ingredients = {
+      { type = "fluid", name = "water", amount = 500 },
+    },
+    results = {
+      { type = "fluid", name = "heavy-water", amount = 20 },
+    },
+    allow_productivity = true,
+    always_show_made_in = true,
+    always_show_products = true,
+    crafting_machine_tint = {
+      primary = { r = 0.405, g = 0.402, b = 1.000, a = 1.000 },
+      secondary = { r = 0.391, g = 0.720, b = 1.000, a = 0.900 },
+      tertiary = { r = 1.000, g = 1.000, b = 1.000, a = 0.500 },
+      quaternary = { r = 1.000, g = 1.000, b = 1.000, a = 0.300 },
+    },
+  },
+  {
+    type = "recipe",
     name = "kr-water-electrolysis",
     icon = "__Krastorio2Assets__/icons/recipes/water-electrolysis.png",
     subgroup = "fluid-recipes",
@@ -67,30 +91,6 @@ data:extend({
     always_show_products = true,
     crafting_machine_tint = {
       primary = { r = 0.70, g = 0.50, b = 0.05, a = 0.10 },
-    },
-  },
-  {
-    type = "recipe",
-    name = "heavy-water",
-    subgroup = "fluid-recipes",
-    order = "y06[heavy-water]",
-    enabled = false,
-    energy_required = 120,
-    category = "electrolysis",
-    ingredients = {
-      { type = "fluid", name = "water", amount = 500 },
-    },
-    results = {
-      { type = "fluid", name = "heavy-water", amount = 20 },
-    },
-    allow_productivity = true,
-    always_show_made_in = true,
-    always_show_products = true,
-    crafting_machine_tint = {
-      primary = { r = 0.405, g = 0.402, b = 1.000, a = 1.000 },
-      secondary = { r = 0.391, g = 0.720, b = 1.000, a = 0.900 },
-      tertiary = { r = 1.000, g = 1.000, b = 1.000, a = 0.500 },
-      quaternary = { r = 1.000, g = 1.000, b = 1.000, a = 0.300 },
     },
   },
 })

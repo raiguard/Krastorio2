@@ -1,19 +1,6 @@
 data:extend({
   {
     type = "recipe",
-    name = "kr-grow-wood-with-water",
-    enabled = false,
-    category = "growing",
-    energy_required = 60,
-    ingredients = {
-      { type = "fluid", name = "water", amount = 200 },
-    },
-    results = {
-      { type = "item", name = "wood", amount = 40 },
-    },
-  },
-  {
-    type = "recipe",
     name = "kr-grow-wood-plus",
     icon = "__Krastorio2Assets__/icons/recipes/wood-plus.png",
     enabled = false,
@@ -25,6 +12,19 @@ data:extend({
     },
     results = {
       { type = "item", name = "wood", amount = 80 },
+    },
+  },
+  {
+    type = "recipe",
+    name = "kr-grow-wood-with-water",
+    enabled = false,
+    category = "growing",
+    energy_required = 60,
+    ingredients = {
+      { type = "fluid", name = "water", amount = 200 },
+    },
+    results = {
+      { type = "item", name = "wood", amount = 40 },
     },
   },
 })

@@ -18,23 +18,6 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "oxygen",
-    category = "atmosphere-condensation",
-    icon = "__Krastorio2Assets__/icons/fluids/oxygen.png",
-    subgroup = "raw-material",
-    order = "a[atmosphere-condensation]-a2[oxygen]",
-    enabled = false,
-    always_show_made_in = true,
-    always_show_products = true,
-    hide_from_player_crafting = true,
-    energy_required = 5,
-    ingredients = {},
-    results = {
-      { type = "fluid", name = "oxygen", amount = 30 },
-    },
-  },
-  {
-    type = "recipe",
     name = "nitrogen",
     category = "atmosphere-condensation",
     icon = "__Krastorio2Assets__/icons/fluids/nitrogen.png",
@@ -48,6 +31,23 @@ data:extend({
     ingredients = {},
     results = {
       { type = "fluid", name = "nitrogen", amount = 30 },
+    },
+  },
+  {
+    type = "recipe",
+    name = "oxygen",
+    category = "atmosphere-condensation",
+    icon = "__Krastorio2Assets__/icons/fluids/oxygen.png",
+    subgroup = "raw-material",
+    order = "a[atmosphere-condensation]-a2[oxygen]",
+    enabled = false,
+    always_show_made_in = true,
+    always_show_products = true,
+    hide_from_player_crafting = true,
+    energy_required = 5,
+    ingredients = {},
+    results = {
+      { type = "fluid", name = "oxygen", amount = 30 },
     },
   },
   {

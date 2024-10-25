@@ -15,20 +15,6 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "kr-creep-virus",
-    category = "bioprocessing",
-    enabled = false,
-    energy_required = 600,
-    ingredients = {
-      { type = "item", name = "poison-capsule", amount = 1 },
-      { type = "item", name = "imersite-powder", amount = 5 },
-      { type = "fluid", name = "hydrogen-chloride", amount = 50 },
-      { type = "fluid", name = "sulfuric-acid", amount = 50 },
-    },
-    results = { { type = "item", name = "kr-creep-virus", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "kr-biter-virus",
     category = "bioprocessing",
     enabled = false,
@@ -40,5 +26,19 @@ data:extend({
       { type = "fluid", name = "biomethanol", amount = 50 },
     },
     results = { { type = "item", name = "kr-biter-virus", amount = 1 } },
+  },
+  {
+    type = "recipe",
+    name = "kr-creep-virus",
+    category = "bioprocessing",
+    enabled = false,
+    energy_required = 600,
+    ingredients = {
+      { type = "item", name = "poison-capsule", amount = 1 },
+      { type = "item", name = "imersite-powder", amount = 5 },
+      { type = "fluid", name = "hydrogen-chloride", amount = 50 },
+      { type = "fluid", name = "sulfuric-acid", amount = 50 },
+    },
+    results = { { type = "item", name = "kr-creep-virus", amount = 1 } },
   },
 })
