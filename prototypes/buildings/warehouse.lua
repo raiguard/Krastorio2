@@ -47,7 +47,7 @@ data:extend({
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
     vehicle_impact_sound = sounds.generic_impact,
-    animation = {
+    picture = {
       filename = "__Krastorio2Assets__/entities/warehouse/warehouse.png",
       priority = "extra-high",
       width = 512,
