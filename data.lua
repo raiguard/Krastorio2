@@ -243,6 +243,11 @@ require("prototypes.tiles.reinforced-plates-kl")
 require("prototypes.vehicles.advanced-tank")
 require("prototypes.vehicles.nuclear-locomotive")
 
+require("prototypes.compatibility.aircraft")
+require("prototypes.compatibility.deadlock-beltboxes-loaders")
+require("prototypes.compatibility.early-electric-furnaces")
+require("prototypes.compatibility.squeak-through-2")
+
 ---------------------------------------------------------------------------
 -- -- -- PRE INITIALIZATION
 ---------------------------------------------------------------------------
@@ -277,8 +282,4 @@ require("lib.private.data-stages.technologies")
 -- -- -- COMPATIBILITY INITIALIZATION (data stage)
 ---------------------------------------------------------------------------
 -- -- Execute Compatilbility Scripts for the data stage
-require("compatibility-scripts.data.aircraft")
-require("compatibility-scripts.data.early-electric-furnaces")
-require("compatibility-scripts.data.deadlock-beltboxes-loaders")
-require("compatibility-scripts.data.Squeak_Through")
 ---------------------------------------------------------------------------
