@@ -1,4 +1,5 @@
 require("prototypes.updates.create-roboport-variations")
+require("prototypes.updates.generate-greenhouse-recipes")
 require("prototypes.updates.generate-void-crushing-recipes")
 ---------------------------------------------------------------------------
 -- -- -- PRE UPDATES
@@ -10,7 +11,6 @@ require("prototypes.updates.generate-void-crushing-recipes")
 require("prototypes.vanilla-changes.mandatory-vanilla-updates")
 require("prototypes.vanilla-changes.optional-vanilla-updates")
 -- Generate tree and rock recipes
-require("prototypes.recipes.greenhouse")
 -- Generating buring recipes for fluids
 local fluid_burner_util = require("lib.public.data-stages.fluid-burner-util")
 fluid_burner_util.generateBurnFluidsRecipes()
