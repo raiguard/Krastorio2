@@ -1,0 +1,311 @@
+data:extend({
+  {
+    type = "technology",
+    name = "kr-antimatter-ammo",
+    mod = "Krastorio2",
+    icon = "__Krastorio2Assets__/technologies/antimatter-ammo.png",
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "antimatter-turret-rocket",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "antimatter-artillery-shell",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "antimatter-rocket",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "antimatter-railgun-shell",
+      },
+    },
+    prerequisites = { "kr-antimatter-reactor", "kr-laser-artillery-turret", "kr-rocket-turret" },
+    unit = {
+      count = 2500,
+      ingredients = {
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
+        { kr_optimization_tech_card_name, 1 },
+        { "matter-tech-card", 1 },
+        { "advanced-tech-card", 1 },
+        { "singularity-tech-card", 1 },
+      },
+      time = 60,
+    },
+  },
+  {
+    type = "technology",
+    name = "kr-antimatter-reactor",
+    mod = "Krastorio2",
+    icon = "__Krastorio2Assets__/technologies/antimatter-reactor.png",
+    icon_size = 256,
+    icon_mipmaps = 4,
+    prerequisites = { "kr-fusion-energy", "kr-singularity-tech-card" },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "kr-antimatter-reactor",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "empty-antimatter-fuel-cell",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "charged-antimatter-fuel-cell",
+      },
+    },
+    order = "g-f-z",
+    unit = {
+      count = 2000,
+      ingredients = {
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
+        { kr_optimization_tech_card_name, 1 },
+        { "matter-tech-card", 1 },
+        { "advanced-tech-card", 1 },
+        { "singularity-tech-card", 1 },
+      },
+      time = 60,
+    },
+  },
+  {
+    type = "technology",
+    name = "kr-antimatter-reactor-equipment",
+    mod = "Krastorio2",
+    icons = {
+      {
+        icon = "__Krastorio2Assets__/technologies/antimatter-reactor-equipment.png",
+        icon_size = 256,
+        icon_mipmaps = 4,
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-equipment.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = { 100, 100 },
+      },
+    },
+    icon_size = 256,
+    icon_mipmaps = 4,
+    upgrade = false,
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "antimatter-reactor-equipment",
+      },
+    },
+    prerequisites = { "kr-nuclear-reactor-equipment", "kr-antimatter-reactor" },
+    unit = {
+      count = 500,
+      ingredients = {
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
+        { kr_optimization_tech_card_name, 1 },
+        { "matter-tech-card", 1 },
+        { "advanced-tech-card", 1 },
+        { "singularity-tech-card", 1 },
+      },
+      time = 45,
+    },
+  },
+  {
+    type = "technology",
+    name = "kr-intergalactic-transceiver",
+    mod = "Krastorio2",
+    icon = "__Krastorio2Assets__/technologies/intergalactic-transceiver.png",
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "kr-intergalactic-transceiver",
+      },
+    },
+    prerequisites = { "kr-singularity-tech-card" },
+    unit = {
+      count = 3000,
+      ingredients = {
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
+        { kr_optimization_tech_card_name, 1 },
+        { "matter-tech-card", 1 },
+        { "advanced-tech-card", 1 },
+        { "singularity-tech-card", 1 },
+      },
+      time = 60,
+    },
+  },
+  {
+    type = "technology",
+    name = "kr-logo",
+    mod = "Krastorio2",
+    enabled = false,
+    icon = "__Krastorio2Assets__/technologies/k-logo.png",
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "kr-logo",
+      },
+    },
+    prerequisites = { "kr-intergalactic-transceiver" },
+    unit = {
+      count = 666000,
+      ingredients = {
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
+        { kr_optimization_tech_card_name, 1 },
+        { "matter-tech-card", 1 },
+        { "advanced-tech-card", 1 },
+        { "singularity-tech-card", 1 },
+      },
+      time = 60,
+    },
+  },
+  {
+    type = "technology",
+    name = "kr-matter-cube",
+    mod = "Krastorio2",
+    icon = "__Krastorio2Assets__/technologies/matter-cube.png",
+    icon_size = 256,
+    icon_mipmaps = 4,
+    prerequisites = { "kr-singularity-tech-card" },
+    order = "g-f-z",
+    unit = {
+      count = 500,
+      ingredients = {
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
+        { kr_optimization_tech_card_name, 1 },
+        { "matter-tech-card", 1 },
+        { "advanced-tech-card", 1 },
+        { "singularity-tech-card", 1 },
+      },
+      time = 60,
+    },
+  },
+  {
+    type = "technology",
+    name = "kr-personal-laser-defense-mk4-equipment",
+    mod = "Krastorio2",
+    icon = "__Krastorio2Assets__/technologies/personal-laser-defense-mk4-equipments.png",
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects = {
+      {
+        recipe = "personal-submachine-laser-defense-mk4-equipment",
+        type = "unlock-recipe",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "personal-laser-defense-mk4-equipment",
+      },
+    },
+    order = "g-m",
+    prerequisites = {
+      "kr-personal-laser-defense-mk3-equipment",
+      "kr-singularity-tech-card",
+    },
+    unit = {
+      count = 500,
+      ingredients = {
+        { "utility-science-pack", 1 },
+        { kr_optimization_tech_card_name, 1 },
+        { "advanced-tech-card", 1 },
+        { "singularity-tech-card", 1 },
+      },
+      time = 90,
+    },
+  },
+  {
+    type = "technology",
+    name = "kr-planetary-teleporter",
+    mod = "Krastorio2",
+    icon = "__Krastorio2Assets__/technologies/planetary-teleporter.png",
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "kr-planetary-teleporter",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "gps-satellite",
+      },
+    },
+    prerequisites = { "effect-transmission", "kr-singularity-tech-card" },
+    unit = {
+      count = 500,
+      ingredients = {
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
+        { kr_optimization_tech_card_name, 1 },
+        { "matter-tech-card", 1 },
+        { "advanced-tech-card", 1 },
+        { "singularity-tech-card", 1 },
+      },
+      time = 60,
+    },
+  },
+  {
+    type = "technology",
+    name = "kr-power-armor-mk4",
+    mod = "Krastorio2",
+    icon_size = 256,
+    icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/power-armor-mk4.png",
+    upgrade = false,
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "power-armor-mk4",
+      },
+    },
+    prerequisites = { "kr-power-armor-mk3", "kr-singularity-tech-card" },
+    unit = {
+      count = 750,
+      ingredients = {
+        { "utility-science-pack", 1 },
+        { kr_optimization_tech_card_name, 1 },
+        { "advanced-tech-card", 1 },
+        { "singularity-tech-card", 1 },
+      },
+      time = 90,
+    },
+  },
+  {
+    type = "technology",
+    name = "kr-singularity-beacon",
+    mod = "Krastorio2",
+    icon = "__Krastorio2Assets__/technologies/singularity-beacon.png",
+    icon_size = 256,
+    icon_mipmaps = 4,
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "kr-singularity-beacon",
+      },
+    },
+    prerequisites = { "effect-transmission", "kr-singularity-tech-card" },
+    unit = {
+      count = 1000,
+      ingredients = {
+        { "production-science-pack", 1 },
+        { "utility-science-pack", 1 },
+        { kr_optimization_tech_card_name, 1 },
+        { "matter-tech-card", 1 },
+        { "advanced-tech-card", 1 },
+        { "singularity-tech-card", 1 },
+      },
+      time = 60,
+    },
+  },
+})

@@ -224,6 +224,18 @@ require("prototypes.smokes.virus-cloud")
 require("prototypes.smokes.virus-cloud-visual-dummy")
 require("prototypes.smokes.virus-particle-smoke")
 
+require("prototypes.technologies.advanced-tech-card")
+require("prototypes.technologies.automation-science-pack")
+require("prototypes.technologies.basic-tech-card")
+require("prototypes.technologies.chemical-science-pack")
+require("prototypes.technologies.logistic-science-pack")
+require("prototypes.technologies.matter-tech-card")
+require("prototypes.technologies.production-science-pack")
+require("prototypes.technologies.singularity-tech-card")
+require("prototypes.technologies.utility-science-pack")
+
+require("prototypes.technologies.optional")
+
 require("prototypes.vehicles.advanced-tank")
 require("prototypes.vehicles.nuclear-locomotive")
 
@@ -250,7 +262,6 @@ require("lib.private.data-stages.technologies")
 -- -- Adding new recipes
 -- -- Adding new sounds (prototypes)
 -- -- Adding new technologies
-require("prototypes.technologies.technologies-initialization")
 -- -- Adding new tiles
 require("prototypes.tiles.tiles-initialization")
 -- -- Adding new signals (virtual signals)
