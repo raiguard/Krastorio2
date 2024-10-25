@@ -1,5 +1,4 @@
--- A RECIPE FOR STAY IN THIS FILE SHOULD HAVE THE ATTRIBUTE category = "stabilizer-charging"
-return {
+data:extend({
   {
     type = "recipe",
     name = "charge-stabilizer",
@@ -13,4 +12,4 @@ return {
     },
     results = { { type = "item", name = "charged-matter-stabilizer", amount = 1 } },
   },
-}
+})

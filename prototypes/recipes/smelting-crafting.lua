@@ -9,7 +9,7 @@ local function sc_icon(product, ingredient)
   return table.array_merge({ product_icon, ingredient_icon })
 end
 
-return {
+data:extend({
   {
     type = "recipe",
     name = "kr-s-c-copper-cable",
@@ -227,4 +227,4 @@ return {
     },
     results = { { type = "item", name = "electronic-components", amount = 6 } },
   },
-}
+})

@@ -1,5 +1,4 @@
--- A RECIPE FOR STAY IN THIS FILE SHOULD HAVE THE ATTRIBUTE category = "chemistry"
-return {
+data:extend({
   {
     type = "recipe",
     name = "fertilizer",
@@ -317,4 +316,4 @@ return {
       quaternary = { r = 0.800, g = 0.776, b = 0.313, a = 0.900 },
     },
   },
-}
+})

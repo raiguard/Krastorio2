@@ -1,5 +1,4 @@
--- A RECIPE FOR STAY IN THIS FILE SHOULD !!NOT!! HAVE THE ATTRIBUTE category
-return {
+data:extend({
   {
     type = "recipe",
     name = "automation-core",
@@ -63,30 +62,6 @@ return {
   },
   {
     type = "recipe",
-    name = "landfill-2",
-    localized_name = { "item-name.landfill" },
-    localized_description = { "item-description.landfill" },
-    icons = {
-      { icon = "__base__/graphics/icons/landfill.png", icon_size = 64 },
-      {
-        icon = "__Krastorio2Assets__/icons/items-with-variations/sand/sand.png",
-        icon_size = 64,
-        scale = 0.26,
-        shift = { 8, -8 },
-      },
-    },
-    category = "crafting-with-fluid",
-    enabled = false,
-    allow_as_intermediate = false,
-    energy_required = 0.5,
-    ingredients = {
-      { type = "item", name = "sand", amount = 50 },
-      { type = "fluid", name = "water", amount = 50 },
-    },
-    results = { { type = "item", name = "landfill", amount = 1 } },
-  },
-  {
-    type = "recipe",
     name = "empty-dt-fuel",
     energy_required = 10,
     enabled = false,
@@ -121,20 +96,6 @@ return {
   },
   {
     type = "recipe",
-    name = "ai-core",
-    category = "crafting-with-fluid",
-    energy_required = 16,
-    enabled = false,
-    allow_productivity = true,
-    ingredients = {
-      { type = "item", name = "processing-unit", amount = 2 },
-      { type = "item", name = "imersite-crystal", amount = 2 },
-      { type = "fluid", name = "nitric-acid", amount = 10 },
-    },
-    results = { { type = "item", name = "ai-core", amount = 2 } },
-  },
-  {
-    type = "recipe",
     name = "pollution-filter",
     energy_required = 10,
     enabled = false,
@@ -148,25 +109,6 @@ return {
   },
   {
     type = "recipe",
-    name = "restore-used-pollution-filter",
-    category = "crafting-with-fluid",
-    icon = "__Krastorio2Assets__/icons/recipes/restore-used-pollution-filter.png",
-    icon_size = 128,
-    energy_required = 10,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "used-pollution-filter", amount = 1 },
-      { type = "fluid", name = "water", amount = 50 },
-    },
-    results = {
-      { type = "item", name = "pollution-filter", amount = 1 },
-      { type = "fluid", name = "dirty-water", amount = 50 },
-    },
-    subgroup = "intermediate-product",
-    order = "w3-a[restore-used-pollution-filter]",
-  },
-  {
-    type = "recipe",
     name = "improved-pollution-filter",
     energy_required = 10,
     enabled = false,
@@ -177,25 +119,6 @@ return {
       { type = "item", name = "imersite-powder", amount = 1 },
     },
     results = { { type = "item", name = "improved-pollution-filter", amount = 1 } },
-  },
-  {
-    type = "recipe",
-    name = "restore-used-improved-pollution-filter",
-    category = "crafting-with-fluid",
-    icon = "__Krastorio2Assets__/icons/recipes/restore-used-improved-pollution-filter.png",
-    icon_size = 128,
-    energy_required = 10,
-    enabled = false,
-    ingredients = {
-      { type = "item", name = "used-improved-pollution-filter", amount = 1 },
-      { type = "fluid", name = "water", amount = 50 },
-    },
-    results = {
-      { type = "item", name = "improved-pollution-filter", amount = 1 },
-      { type = "fluid", name = "dirty-water", amount = 50 },
-    },
-    subgroup = "intermediate-product",
-    order = "w3-b[restore-used-pollution-filter]",
   },
   ---
   {
@@ -310,35 +233,6 @@ return {
       { type = "item", name = "processing-unit", amount = 3 },
     },
     results = { { type = "item", name = "matter-stabilizer", amount = 1 } },
-  },
-  {
-    type = "recipe",
-    name = "empty-antimatter-fuel-cell",
-    category = "crafting-with-fluid",
-    enabled = false,
-    allow_as_intermediate = false,
-    allow_productivity = true,
-    energy_required = 10,
-    ingredients = {
-      { type = "fluid", name = "nitric-acid", amount = 50 },
-      { type = "item", name = "energy-control-unit", amount = 10 },
-      { type = "item", name = "imersium-plate", amount = 8 },
-      { type = "item", name = "matter-stabilizer", amount = 2 },
-    },
-    results = { { type = "item", name = "empty-antimatter-fuel-cell", amount = 1 } },
-  },
-  {
-    type = "recipe",
-    name = "charged-antimatter-fuel-cell",
-    category = "matter-deconversion",
-    enabled = false,
-    allow_as_intermediate = false,
-    energy_required = 5,
-    ingredients = {
-      { type = "fluid", name = "matter", amount = 1000 },
-      { type = "item", name = "empty-antimatter-fuel-cell", amount = 1 },
-    },
-    results = { { type = "item", name = "charged-antimatter-fuel-cell", amount = 1 } },
   },
   {
     type = "recipe",
@@ -466,4 +360,65 @@ return {
     },
     results = { { type = "item", name = "gps-satellite", amount = 1 } },
   },
-}
+  {
+    type = "recipe",
+    name = "iron-beam",
+    energy_required = 2,
+    enabled = true,
+    allow_productivity = true,
+    ingredients = {
+      { type = "item", name = "iron-plate", amount = 2 },
+    },
+    results = { { type = "item", name = "iron-beam", amount = 1 } },
+  },
+  {
+    type = "recipe",
+    name = "inserter-parts",
+    energy_required = 1,
+    enabled = true,
+    allow_productivity = true,
+    ingredients = {
+      { type = "item", name = "iron-stick", amount = 2 },
+      { type = "item", name = "iron-gear-wheel", amount = 2 },
+    },
+    results = { { type = "item", name = "inserter-parts", amount = 1 } },
+  },
+
+  {
+    type = "recipe",
+    name = "blank-tech-card",
+    energy_required = 2,
+    enabled = false,
+    allow_productivity = true,
+    ingredients = {
+      { type = "item", name = "iron-plate", amount = 2 },
+      { type = "item", name = "copper-cable", amount = 2 },
+    },
+    results = { { type = "item", name = "blank-tech-card", amount = 5 } },
+  },
+  {
+    type = "recipe",
+    name = "biters-research-data",
+    energy_required = 40,
+    enabled = false,
+    allow_productivity = true,
+    ingredients = {
+      { type = "item", name = "biomass", amount = 10 },
+      { type = "item", name = "coke", amount = 5 },
+      { type = "item", name = "steel-plate", amount = 5 },
+    },
+    results = { { type = "item", name = "biters-research-data", amount = 5 } },
+  },
+  {
+    type = "recipe",
+    name = "basic-tech-card",
+    energy_required = 20,
+    enabled = true,
+    allow_productivity = true,
+    ingredients = {
+      { type = "item", name = "wood", amount = 5 },
+      { type = "item", name = "copper-cable", amount = 5 },
+    },
+    results = { { type = "item", name = "basic-tech-card", amount = 5 } },
+  },
+})

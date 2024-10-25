@@ -1,5 +1,4 @@
--- A RECIPE FOR STAY IN THIS FILE SHOULD HAVE THE ATTRIBUTE category = "crushing"
-return {
+data:extend({
   {
     type = "recipe",
     name = "sand",
@@ -208,4 +207,4 @@ return {
       { type = "item", name = "imersite-powder", amount = 3 },
     },
   },
-}
+})

@@ -1,5 +1,4 @@
--- A RECIPE FOR STAY IN THIS FILE SHOULD HAVE THE ATTRIBUTE category = "air-purification"
-return {
+data:extend({
   {
     type = "recipe",
     name = "kr-air-cleaning",
@@ -39,4 +38,4 @@ return {
     subgroup = "raw-material",
     order = "zz[air-cleaning]",
   },
-}
+})

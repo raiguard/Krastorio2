@@ -1,5 +1,4 @@
--- A RECIPE FOR STAY IN THIS FILE SHOULD HAVE THE ATTRIBUTE category = "smelting"
-return {
+data:extend({
   {
     type = "recipe",
     name = "coke",
@@ -153,4 +152,4 @@ return {
     },
     results = { { type = "item", name = "imersium-plate", amount = 3 } },
   },
-}
+})

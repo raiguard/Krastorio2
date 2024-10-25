@@ -1,5 +1,4 @@
--- A RECIPE FOR STAY IN THIS FILE SHOULD HAVE THE ATTRIBUTE category = "growing"
-return {
+data:extend({
   {
     type = "recipe",
     name = "kr-grow-wood-with-water",
@@ -25,4 +24,4 @@ return {
     },
     results = { { type = "item", name = "wood", amount = 80 } },
   },
-}
+})

@@ -1,43 +1,4 @@
--- A RECIPE FOR STAY IN THIS FILE SHOULD HAVE PRODUCTS THAT IS ONLY TOOLS
-
-return {
-  {
-    type = "recipe",
-    name = "blank-tech-card",
-    energy_required = 2,
-    enabled = false,
-    allow_productivity = true,
-    ingredients = {
-      { type = "item", name = "iron-plate", amount = 2 },
-      { type = "item", name = "copper-cable", amount = 2 },
-    },
-    results = { { type = "item", name = "blank-tech-card", amount = 5 } },
-  },
-  {
-    type = "recipe",
-    name = "biters-research-data",
-    energy_required = 40,
-    enabled = false,
-    allow_productivity = true,
-    ingredients = {
-      { type = "item", name = "biomass", amount = 10 },
-      { type = "item", name = "coke", amount = 5 },
-      { type = "item", name = "steel-plate", amount = 5 },
-    },
-    results = { { type = "item", name = "biters-research-data", amount = 5 } },
-  },
-  {
-    type = "recipe",
-    name = "basic-tech-card",
-    energy_required = 20,
-    enabled = true,
-    allow_productivity = true,
-    ingredients = {
-      { type = "item", name = "wood", amount = 5 },
-      { type = "item", name = "copper-cable", amount = 5 },
-    },
-    results = { { type = "item", name = "basic-tech-card", amount = 5 } },
-  },
+data:extend({
   {
     type = "recipe",
     name = kr_optimization_tech_card_name,
@@ -109,4 +70,4 @@ return {
     },
     results = { { type = "item", name = "singularity-tech-card", amount = 5 } },
   },
-}
+})

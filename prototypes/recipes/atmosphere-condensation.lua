@@ -1,5 +1,4 @@
--- A RECIPE FOR STAY IN THIS FILE SHOULD HAVE THE ATTRIBUTE category = "atmosphere-condensation"
-return {
+data:extend({
   {
     type = "recipe",
     name = "hydrogen",
@@ -72,4 +71,4 @@ return {
     subgroup = "raw-material",
     order = "a[atmosphere-condensation]-a0[water]",
   },
-}
+})

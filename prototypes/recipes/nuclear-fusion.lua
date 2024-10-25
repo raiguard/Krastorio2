@@ -1,5 +1,4 @@
--- Recipe used by fusion reactor to create steam
-return {
+data:extend({
   {
     type = "recipe",
     name = "kr-fusion",
@@ -21,4 +20,4 @@ return {
     subgroup = "intermediate-product",
     order = "z[fusion]",
   },
-}
+})

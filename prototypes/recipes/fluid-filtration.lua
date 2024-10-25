@@ -1,5 +1,4 @@
--- A RECIPE FOR STAY IN THIS FILE SHOULD HAVE THE ATTRIBUTE category = "fluid-filtration"
-return {
+data:extend({
   {
     type = "recipe",
     name = "quartz",
@@ -46,10 +45,6 @@ return {
       secondary = { r = 0.64, g = 0.83, b = 0.93, a = 0.9 }, --clear
     },
   },
-  ---
-  -- DIRTY WATER FILTRATION RECIPES
-  ---
-  -- TODO: Make this less fragile
   {
     type = "recipe",
     name = "dirty-water-filtration-1",
@@ -130,19 +125,15 @@ return {
     name = "dirty-water-filtration-3",
     category = "fluid-filtration",
     icons = {
+      { icon = "__Krastorio2Assets__/icons/fluids/dirty-water.png" },
       {
-        icon = data.raw.fluid["dirty-water"].icon,
-        icon_size = data.raw.fluid["dirty-water"].icon_size or 64,
-      },
-      {
-        icon = data.raw.item["raw-rare-metals"].icon,
-        icon_size = data.raw.item["raw-rare-metals"].icon_size or 64,
-        scale = 0.20
-          * ((data.raw.fluid["dirty-water"].icon_size or 64) / (data.raw.item["raw-rare-metals"].icon_size or 64)),
+        icon = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals.png",
+        scale = 0.20,
         shift = { 0, 4 },
       },
     },
-    icon_size = data.raw.fluid["dirty-water"].icon_size or 64,
+    subgroup = "raw-material",
+    order = "w013[dirty-water-filtration-3]",
     energy_required = 2,
     enabled = false,
     allow_as_intermediate = false,
@@ -157,11 +148,8 @@ return {
       { type = "item", name = "raw-rare-metals", probability = 0.05, amount = 1 },
     },
     crafting_machine_tint = {
-      primary = { r = 0.60, g = 0.20, b = 0, a = 0.6 }, --dirty
-      secondary = { r = 1.0, g = 0.843, b = 0.0, a = 0.9 }, --clear
+      primary = { r = 0.60, g = 0.20, b = 0, a = 0.6 }, -- Dirty
+      secondary = { r = 1.0, g = 0.843, b = 0.0, a = 0.9 }, -- Clear
     },
-    subgroup = "raw-material",
-    order = "w013[dirty-water-filtration-3]",
   },
-  ---
-}
+})

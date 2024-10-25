@@ -1,5 +1,4 @@
--- A RECIPE FOR STAY IN THIS FILE SHOULD HAVE THE ATTRIBUTE category = "electrolysis"
-return {
+data:extend({
   {
     type = "recipe",
     name = "kr-water-electrolysis",
@@ -96,4 +95,4 @@ return {
     subgroup = "fluid-recipes",
     order = "y06[heavy-water]",
   },
-}
+})

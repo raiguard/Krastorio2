@@ -1,5 +1,4 @@
--- A RECIPE FOR STAY IN THIS FILE SHOULD HAVE THE ATTRIBUTE category = "growing"
-return {
+data:extend({
   {
     type = "recipe",
     name = "kr-biomass-growing",
@@ -42,4 +41,4 @@ return {
     },
     results = { { type = "item", name = "kr-biter-virus", amount = 1 } },
   },
-}
+})

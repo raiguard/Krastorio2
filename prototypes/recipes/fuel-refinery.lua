@@ -14,7 +14,7 @@ else
 end
 
 -- A RECIPE FOR STAY IN THIS FILE SHOULD HAVE THE ATTRIBUTE category = "fuel-refinery"
-return {
+data:extend({
   ---
   -- Fuels
   ---
@@ -240,4 +240,4 @@ return {
       quaternary = { r = 0.362, g = 0.617, b = 0.439, a = 0.900 },
     },
   },
-}
+})

@@ -1,5 +1,4 @@
--- A RECIPE FOR STAY IN THIS FILE SHOULD HAVE THE ATTRIBUTE category = "centrifuging"
-return {
+data:extend({
   {
     type = "recipe",
     name = "tritium",
@@ -15,4 +14,4 @@ return {
     },
     results = { { type = "item", name = "tritium", amount = 5 } },
   },
-}
+})

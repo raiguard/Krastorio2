@@ -1,4 +1,4 @@
-return {
+data:extend({
   {
     type = "recipe",
     name = "coke-liquefaction",
@@ -25,4 +25,4 @@ return {
     always_show_products = true,
     allow_decomposition = false,
   },
-}
+})
