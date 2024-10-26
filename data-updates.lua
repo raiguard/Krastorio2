@@ -1,6 +1,6 @@
-require("prototypes.updates.create-roboport-variations")
 require("prototypes.updates.generate-flare-stack-recipes")
 require("prototypes.updates.generate-greenhouse-recipes")
+require("prototypes.updates.generate-roboport-variations")
 require("prototypes.updates.generate-void-crushing-recipes")
 ---------------------------------------------------------------------------
 -- -- -- PRE UPDATES
