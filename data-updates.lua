@@ -1,5 +1,6 @@
 require("prototypes.updates.generate-flare-stack-recipes")
 require("prototypes.updates.generate-greenhouse-recipes")
+require("prototypes.updates.generate-matter-recipes")
 require("prototypes.updates.generate-roboport-variations")
 require("prototypes.updates.generate-void-crushing-recipes")
 ---------------------------------------------------------------------------
@@ -21,11 +22,6 @@ require("lib.private.data-stages.technologies")
 -- -- Modifing vanilla game objects
 require("prototypes.vanilla-changes.mandatory-vanilla-updates")
 require("prototypes.vanilla-changes.optional-vanilla-updates")
--- Generate for each item that can't be processed from the crusher
--- a void recipe for destroy it
--- (This must be done after adding other recipes)
-local matter_util = require("lib.public.data-stages.matter-util")
-matter_util.createStandardKrastorioMatterRecipes()
 ---------------------------------------------------------------------------
 -- -- -- COMPATIBILITY INITIALIZATION (data update stage)
 ---------------------------------------------------------------------------
