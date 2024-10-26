@@ -100,6 +100,7 @@ function matter_lib.make_deconversion_recipe(def)
   data_util.add_recipe_unlock(def.unlocked_by or "kr-matter-processing", recipe_name)
 end
 
+--- Adds a matter conversion and deconversion recipe with the given data.
 --- @param def k2.MatterRecipeDefinition
 function matter_lib.make_recipes(def)
   matter_lib.make_conversion_recipe(def)
