@@ -41,7 +41,7 @@ data:extend({
       },
     },
     animation = {
-      filename = "__Krastorio2Assets__/buildings/missiles/railbullet.png",
+      filename = "__Krastorio2Assets__/projectiles/railbullet.png",
       frame_count = 1,
       width = 5,
       height = 90,

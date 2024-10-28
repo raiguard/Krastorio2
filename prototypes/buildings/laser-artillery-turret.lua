@@ -5,7 +5,7 @@ local function laser_artillery_turret_sheet(inputs)
   return {
     layers = {
       {
-        filename = "__Krastorio2Assets__/buildings/turrets/laser-artillery-turret-sheet.png",
+        filename = "__Krastorio2Assets__/buildings/laser-artillery-turret/laser-artillery-turret.png",
         width = 440,
         height = 380,
         line_length = inputs.frame_count or 8,
@@ -17,7 +17,7 @@ local function laser_artillery_turret_sheet(inputs)
       },
       {
         flags = { "mask" },
-        filename = "__Krastorio2Assets__/buildings/turrets/laser-artillery-turret-sheet-mask.png",
+        filename = "__Krastorio2Assets__/buildings/laser-artillery-turret/laser-artillery-turret-mask.png",
         width = 440,
         height = 380,
         line_length = inputs.frame_count or 8,
@@ -29,7 +29,7 @@ local function laser_artillery_turret_sheet(inputs)
         scale = 0.5,
       },
       {
-        filename = "__Krastorio2Assets__/buildings/turrets/laser-artillery-turret-sheet-shadow.png",
+        filename = "__Krastorio2Assets__/buildings/laser-artillery-turret/laser-artillery-turret-shadow.png",
         width = 460,
         height = 380,
         line_length = inputs.frame_count or 8,
@@ -154,7 +154,7 @@ data:extend({
         animation = {
           layers = {
             {
-              filename = "__Krastorio2Assets__/buildings/turrets/kr-turret-base.png",
+              filename = "__Krastorio2Assets__/buildings/turret-common/turret-base.png",
               priority = "high",
               width = 440,
               height = 380,
@@ -165,7 +165,7 @@ data:extend({
               scale = 0.5,
             },
             {
-              filename = "__Krastorio2Assets__/buildings/turrets/kr-turret-base-mask.png",
+              filename = "__Krastorio2Assets__/buildings/turret-common/turret-base-mask.png",
               flags = { "mask", "low-object" },
               line_length = 1,
               width = 440,
@@ -178,7 +178,7 @@ data:extend({
               scale = 0.5,
             },
             {
-              filename = "__Krastorio2Assets__/buildings/turrets/kr-turret-base-shadow.png",
+              filename = "__Krastorio2Assets__/buildings/turret-common/turret-base-shadow.png",
               line_length = 1,
               width = 440,
               height = 380,
@@ -194,7 +194,7 @@ data:extend({
       },
       water_reflection = {
         pictures = {
-          filename = "__Krastorio2Assets__/buildings/turrets/turrets-reflection.png",
+          filename = "__Krastorio2Assets__/buildings/turret-common/turret-reflection.png",
           priority = "extra-high",
           width = 50,
           height = 50,

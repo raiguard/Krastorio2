@@ -14,22 +14,22 @@ local function railgun_turret_attack_sheet(inputs)
         shift = { 0, -0.7 },
         stripes = {
           {
-            filename = "__Krastorio2Assets__/buildings/turrets/railgun-turret-attack-sheet-1.png",
+            filename = "__Krastorio2Assets__/buildings/railgun-turret/railgun-turret-attack-1.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/turrets/railgun-turret-attack-sheet-2.png",
+            filename = "__Krastorio2Assets__/buildings/railgun-turret/railgun-turret-attack-2.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/turrets/railgun-turret-attack-sheet-3.png",
+            filename = "__Krastorio2Assets__/buildings/railgun-turret/railgun-turret-attack-3.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/turrets/railgun-turret-attack-sheet-4.png",
+            filename = "__Krastorio2Assets__/buildings/railgun-turret/railgun-turret-attack-4.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
@@ -49,22 +49,22 @@ local function railgun_turret_attack_sheet(inputs)
         apply_runtime_tint = true,
         stripes = {
           {
-            filename = "__Krastorio2Assets__/buildings/turrets/railgun-turret-attack-sheet-maks-1.png",
+            filename = "__Krastorio2Assets__/buildings/railgun-turret/railgun-turret-attack-maks-1.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/turrets/railgun-turret-attack-sheet-maks-2.png",
+            filename = "__Krastorio2Assets__/buildings/railgun-turret/railgun-turret-attack-maks-2.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/turrets/railgun-turret-attack-sheet-maks-3.png",
+            filename = "__Krastorio2Assets__/buildings/railgun-turret/railgun-turret-attack-maks-3.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/turrets/railgun-turret-attack-sheet-maks-4.png",
+            filename = "__Krastorio2Assets__/buildings/railgun-turret/railgun-turret-attack-maks-4.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
@@ -82,22 +82,22 @@ local function railgun_turret_attack_sheet(inputs)
         draw_as_shadow = true,
         stripes = {
           {
-            filename = "__Krastorio2Assets__/buildings/turrets/railgun-turret-attack-sheet-shadow-1.png",
+            filename = "__Krastorio2Assets__/buildings/railgun-turret/railgun-turret-attack-shadow-1.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/turrets/railgun-turret-attack-sheet-shadow-2.png",
+            filename = "__Krastorio2Assets__/buildings/railgun-turret/railgun-turret-attack-shadow-2.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/turrets/railgun-turret-attack-sheet-shadow-3.png",
+            filename = "__Krastorio2Assets__/buildings/railgun-turret/railgun-turret-attack-shadow-3.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/turrets/railgun-turret-attack-sheet-shadow-4.png",
+            filename = "__Krastorio2Assets__/buildings/railgun-turret/railgun-turret-attack-shadow-4.png",
             width_in_frames = inputs.frame_count or 4,
             height_in_frames = 16,
           },
@@ -181,7 +181,7 @@ data:extend({
         animation = {
           layers = {
             {
-              filename = "__Krastorio2Assets__/buildings/turrets/kr-turret-base.png",
+              filename = "__Krastorio2Assets__/buildings/turret-common/turret-base.png",
               priority = "high",
               width = 440,
               height = 380,
@@ -192,7 +192,7 @@ data:extend({
               scale = 0.5,
             },
             {
-              filename = "__Krastorio2Assets__/buildings/turrets/kr-turret-base-mask.png",
+              filename = "__Krastorio2Assets__/buildings/turret-common/turret-base-mask.png",
               flags = { "mask", "low-object" },
               line_length = 1,
               width = 440,
@@ -205,7 +205,7 @@ data:extend({
               scale = 0.5,
             },
             {
-              filename = "__Krastorio2Assets__/buildings/turrets/kr-turret-base-shadow.png",
+              filename = "__Krastorio2Assets__/buildings/turret-common/turret-base-shadow.png",
               line_length = 1,
               width = 440,
               height = 380,
@@ -221,7 +221,7 @@ data:extend({
       },
       water_reflection = {
         pictures = {
-          filename = "__Krastorio2Assets__/buildings/turrets/turrets-reflection.png",
+          filename = "__Krastorio2Assets__/buildings/turret-common/turret-reflection.png",
           priority = "extra-high",
           width = 50,
           height = 50,
