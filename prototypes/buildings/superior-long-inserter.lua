@@ -58,21 +58,21 @@ data:extend({
       },
     },
     hand_base_picture = {
-      filename = "__Krastorio2Assets__/buildings/superior-inserters/superior-inserter-hand-base.png",
+      filename = "__Krastorio2Assets__/buildings/superior-inserter/superior-inserter-hand-base.png",
       priority = "extra-high",
       width = 32,
       height = 136,
       scale = 0.25,
     },
     hand_closed_picture = {
-      filename = "__Krastorio2Assets__/buildings/superior-inserters/superior-long-inserter/superior-long-inserter-hand-closed.png",
+      filename = "__Krastorio2Assets__/buildings/superior-long-inserter/superior-long-inserter-hand-closed.png",
       priority = "extra-high",
       width = 100,
       height = 164,
       scale = 0.25,
     },
     hand_open_picture = {
-      filename = "__Krastorio2Assets__/buildings/superior-inserters/superior-long-inserter/superior-long-inserter-hand-open.png",
+      filename = "__Krastorio2Assets__/buildings/superior-long-inserter/superior-long-inserter-hand-open.png",
       priority = "extra-high",
       width = 130,
       height = 164,
@@ -86,14 +86,14 @@ data:extend({
       scale = 0.25,
     },
     hand_closed_shadow = {
-      filename = "__Krastorio2Assets__/buildings/superior-inserters/superior-inserter-hand-closed-shadow.png",
+      filename = "__Krastorio2Assets__/buildings/superior-inserter/superior-inserter-hand-closed-shadow.png",
       priority = "extra-high",
       width = 100,
       height = 164,
       scale = 0.25,
     },
     hand_open_shadow = {
-      filename = "__Krastorio2Assets__/buildings/superior-inserters/superior-inserter-hand-open-shadow.png",
+      filename = "__Krastorio2Assets__/buildings/superior-inserter/superior-inserter-hand-open-shadow.png",
       priority = "extra-high",
       width = 130,
       height = 164,
@@ -101,7 +101,7 @@ data:extend({
     },
     platform_picture = {
       sheet = {
-        filename = "__Krastorio2Assets__/buildings/superior-inserters/superior-inserter-platform.png",
+        filename = "__Krastorio2Assets__/buildings/superior-inserter/superior-inserter-platform.png",
         priority = "extra-high",
         width = 105,
         height = 79,
