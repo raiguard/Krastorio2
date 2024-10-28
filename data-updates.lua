@@ -3,6 +3,9 @@ require("prototypes.updates.generate-greenhouse-recipes")
 require("prototypes.updates.generate-matter-recipes")
 require("prototypes.updates.generate-roboport-variations")
 require("prototypes.updates.generate-void-crushing-recipes")
+
+-- TODO: Put into its own file
+data.raw["autoplace-control"]["enemy-base"].can_be_disabled = false
 ---------------------------------------------------------------------------
 -- -- -- PRE UPDATES
 ---------------------------------------------------------------------------
