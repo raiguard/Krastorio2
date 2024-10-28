@@ -1,4 +1,5 @@
 local flib_position = require("__flib__.position")
+local flib_table = require("__flib__.table")
 
 local data_util = {}
 
@@ -16,6 +17,47 @@ function data_util.add_recipe_unlock(technology_name, recipe_name)
     end
   end
   table.insert(technology.effects, { type = "unlock-recipe", recipe = recipe_name })
+end
+
+--- Adds the given prerequisite to the technology.
+--- @param technology_id data.TechnologyID
+--- @param prerequisite_id data.TechnologyID
+function data_util.add_prerequisite(technology_id, prerequisite_id)
+  local technology = data.raw.technology[technology_id]
+  if not technology then
+    error("Technology " .. technology_id .. " does not exist.")
+  end
+  local prerequisite = data.raw.technology[prerequisite_id]
+  if not prerequisite then
+    error("Technology prerequisite " .. technology_id .. " does not exist.")
+  end
+  if not technology.prerequisites then
+    technology.prerequisites = { prerequisite_id }
+    return
+  end
+  if flib_table.find(technology.prerequisites, prerequisite_id) then
+    error("Technology " .. technology_id .. " already has prerequisite " .. prerequisite_id)
+  end
+  table.insert(technology.prerequisites, prerequisite_id)
+end
+
+--- Removes the given prerequisite from the technology.
+--- @param technology_id data.TechnologyID
+--- @param prerequisite_id data.TechnologyID
+function data_util.remove_prerequisite(technology_id, prerequisite_id)
+  local technology = data.raw.technology[technology_id]
+  if not technology then
+    error("Technology " .. technology_id .. " does not exist.")
+  end
+  local prerequisite = data.raw.technology[prerequisite_id]
+  if not prerequisite then
+    error("Technology prerequisite " .. technology_id .. " does not exist.")
+  end
+  local i = flib_table.find(technology.prerequisites or {}, prerequisite_id)
+  if not i then
+    error("Technology " .. technology_id .. " does not have prerequisite " .. prerequisite_id)
+  end
+  table.remove(technology.prerequisites, i)
 end
 
 --- Converts a furnace prototype into an assembling machine prototype.
