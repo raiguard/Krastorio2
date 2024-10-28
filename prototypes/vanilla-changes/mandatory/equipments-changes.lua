@@ -652,7 +652,7 @@ objects_to_modify = {
 }
 
 data.raw["night-vision-equipment"]["night-vision-equipment"].color_lookup = {
-  { 0.75, "__Krastorio2Assets__/others/nightvision-1.png" },
+  { 0.75, "__Krastorio2Assets__/luts/nightvision-equipment.png" },
 }
 
 -- iterating...

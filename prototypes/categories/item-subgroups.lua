@@ -3,7 +3,7 @@ data:extend({
     type = "item-group",
     name = "smelting-crafting",
     order = "m4",
-    icon = "__Krastorio2Assets__/others/smelting-crafting.png",
+    icon = "__Krastorio2Assets__/icons/item-groups/smelting-crafting.png",
     icon_size = 64,
   },
   {

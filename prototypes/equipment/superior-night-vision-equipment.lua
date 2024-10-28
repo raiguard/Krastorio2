@@ -50,6 +50,6 @@ data:extend({
     categories = { "armor" },
     energy_input = "15kW",
     darkness_to_turn_on = 0.45,
-    color_lookup = { { 0.75, "__Krastorio2Assets__/others/nightvision-2.png" } },
+    color_lookup = { { 0.75, "__Krastorio2Assets__/luts/superior-nightvision-equipment.png" } },
   },
 })
