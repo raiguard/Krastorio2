@@ -1,3 +1,5 @@
+require("prototypes.updates.base.technologies")
+
 require("prototypes.updates.generate-flare-stack-recipes")
 require("prototypes.updates.generate-greenhouse-recipes")
 require("prototypes.updates.generate-matter-recipes")
