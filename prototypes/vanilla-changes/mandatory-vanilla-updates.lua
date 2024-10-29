@@ -1,5 +1,3 @@
--- Low priority
-require("mandatory.entities-changes") -- Entities/prototypes definition modifications
 require("mandatory.equipments-changes") -- Add properties or modify stat of equipments and armors
 require("mandatory.icons-changes") -- Modify aspect of vanilla items (like science pack icons..)
 require("mandatory.improve-inserters") -- Improve inserters, new functions
@@ -18,19 +16,3 @@ require("mandatory.vanilla-energy-changes") -- Rebalance accumulators ans panels
 require("mandatory.vanilla-robots-changes") -- Rebalance vanilla drones
 require("mandatory.electrify-offshore-pump") -- Add energy source to offshore-pump
 require("mandatory.removing-impossible-achievements") -- Remove impossible vanilla achievements
-
--- TODO: Reorganize these
---- @type data.MinableProperties
-local minable = {
-  mining_time = 2,
-  results = {
-    { type = "item", name = "iron-plate", amount_min = 1, amount_max = 2, probability = 0.70 },
-    { type = "item", name = "copper-cable", amount_min = 0, amount_max = 2, probability = 0.40 },
-    { type = "item", name = "iron-gear-wheel", amount_min = 0, amount_max = 2, probability = 0.40 },
-    { type = "item", name = "electronic-circuit", amount_min = 0, amount_max = 2, probability = 0.20 },
-    { type = "item", name = "kr-sentinel", amount_min = 0, amount_max = 2, probability = 0.10 },
-  },
-  mining = "shell-particle",
-}
-data.raw.container["crash-site-chest-1"].minable = minable
-data.raw.container["crash-site-chest-2"].minable = minable
