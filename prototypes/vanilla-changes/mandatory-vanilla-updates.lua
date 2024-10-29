@@ -1,5 +1,3 @@
--- High priority
-require("mandatory.apply-vanilla-technologies-tag") -- Apply a special tag to all vanilla technologies to recognize them
 -- Low priority
 require("mandatory.entities-changes") -- Entities/prototypes definition modifications
 require("mandatory.equipments-changes") -- Add properties or modify stat of equipments and armors
