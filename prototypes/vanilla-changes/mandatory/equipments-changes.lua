@@ -1,29 +1,3 @@
--- -- -- VANILLA EQUIPMENTS MODIFICATION
-
------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------
-
--- -- Utils Function
-
--- Add radioactive damage resistance to armors
--- @armor_name, armor name
--- @decrease, decrease value
--- @percent, percent value
-function addRadioactiveResistance(armor_name, decrease, percent)
-  local armor = data.raw["armor"][armor_name]
-  if armor then
-    if not armor.resistances then
-      armor.resistances = {}
-    end
-    table.insert(armor.resistances, {
-      ["type"] = "radioactive",
-      ["decrease"] = decrease,
-      ["percent"] = percent,
-    })
-  end
-end
-
 -- Update a icon and sprites a given table (dictionary),
 -- formatted with: { categories{ items-->[path,icon_size,sprite.width,sprite.height]... }... }
 -- Possible property:
@@ -103,27 +77,10 @@ end
 -----------------------------------------------------------------------------------------------------------------
 
 -- -- -- ARMORS
-addRadioactiveResistance("modular-armor", 2, 15)
-addRadioactiveResistance("power-armor", 3, 30)
-addRadioactiveResistance("power-armor-mk2", 4, 45)
 
 -- Armors:
-table.insert(data.raw["equipment-grid"]["small-equipment-grid"].equipment_categories, "universal-equipment")
-table.insert(data.raw["equipment-grid"]["small-equipment-grid"].equipment_categories, "robot-interaction-equipment")
-table.insert(data.raw["equipment-grid"]["medium-equipment-grid"].equipment_categories, "universal-equipment")
-table.insert(data.raw["equipment-grid"]["medium-equipment-grid"].equipment_categories, "robot-interaction-equipment")
-table.insert(data.raw["equipment-grid"]["large-equipment-grid"].equipment_categories, "universal-equipment")
-table.insert(data.raw["equipment-grid"]["large-equipment-grid"].equipment_categories, "robot-interaction-equipment")
 
 -- Armor grids rebalance
-data.raw["equipment-grid"]["small-equipment-grid"].width = 4
-data.raw["equipment-grid"]["small-equipment-grid"].height = 4
-
-data.raw["equipment-grid"]["medium-equipment-grid"].width = 6
-data.raw["equipment-grid"]["medium-equipment-grid"].height = 6
-
-data.raw["equipment-grid"]["large-equipment-grid"].width = 8
-data.raw["equipment-grid"]["large-equipment-grid"].height = 8
 
 -- -- Vanilla armors recipes changing
 
