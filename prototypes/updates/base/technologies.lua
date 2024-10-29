@@ -2,6 +2,7 @@ local data_util = require("data-util")
 
 data_util.add_prerequisite("advanced-circuit", "electronics")
 data_util.add_prerequisite("advanced-circuit", "kr-silicon-processing")
+data_util.add_prerequisite("atomic-bomb", "kr-military-5")
 data_util.add_prerequisite("automation", "kr-automation-core")
 data_util.add_prerequisite("automobilism", "kr-fuel")
 data_util.add_prerequisite("battery-equipment", "modular-armor")
@@ -34,6 +35,7 @@ data_util.add_prerequisite("tank", "kr-fuel")
 data_util.add_prerequisite("utility-science-pack", "kr-research-server")
 data_util.add_prerequisite("utility-science-pack", "rocket-fuel")
 
+data_util.remove_prerequisite("atomic-bomb", "military-4")
 data_util.remove_prerequisite("battery-equipment", "solar-panel-equipment")
 data_util.remove_prerequisite("battery-mk2-equipment", "low-density-structure")
 data_util.remove_prerequisite("efficiency-module-2", "processing-unit")
@@ -57,6 +59,7 @@ data_util.remove_research_unit_ingredient("gate", "logistic-science-pack")
 data_util.remove_research_unit_ingredient("plastics", "logistic-science-pack")
 
 data_util.add_recipe_unlock("advanced-circuit", "electronic-components")
+data_util.add_recipe_unlock("atomic-bomb", "nuclear-artillery-shell")
 data_util.add_recipe_unlock("automation-science-pack", "blank-tech-card")
 data_util.add_recipe_unlock("battery-equipment", "big-battery-equipment")
 data_util.add_recipe_unlock("battery-equipment", "small-portable-generator-equipment")
@@ -91,16 +94,21 @@ data_util.remove_recipe_unlock("military-3", "slowdown-capsule")
 data_util.remove_recipe_unlock("oil-processing", "chemical-plant")
 
 data.raw.technology["artillery"].unit.count = 1000
+data.raw.technology["atomic-bomb"].unit.count = 1500
 data.raw.technology["automation-3"].unit.count = 350
 data.raw.technology["coal-liquefaction"].unit.count = 150
 data.raw.technology["destroyer"].unit.count = 350
 data.raw.technology["discharge-defense-equipment"].unit.count = 300
 data.raw.technology["effect-transmission"].unit.count = 500
+data.raw.technology["fission-reactor-equipment"].unit.count = 350
 data.raw.technology["kovarex-enrichment-process"].unit.count = 500
 data.raw.technology["laser"].unit.count = 200
 data.raw.technology["logistic-system"].unit.count = 250
 data.raw.technology["low-density-structure"].unit.count = 500
 data.raw.technology["military-4"].unit.count = 350
+data.raw.technology["mining-productivity-3"].unit.count = 500
+data.raw.technology["nuclear-fuel-reprocessing"].unit.count = 250
+data.raw.technology["nuclear-power"].unit.count = 500
 data.raw.technology["production-science-pack"].unit.count = 250
 data.raw.technology["uranium-ammo"].unit.count = 300
 data.raw.technology["utility-science-pack"].unit.count = 250
@@ -110,9 +118,15 @@ data.raw.technology["artillery-shell-range-1"].unit.count_formula = "L^2*3500"
 data.raw.technology["artillery-shell-speed-1"].max_level = 2
 data.raw.technology["artillery-shell-speed-1"].unit.count_formula = "L^2*3500"
 
+data.raw.technology["follower-robot-count-5"].unit.count_formula = "((L-6)^2)*5000"
+data.raw.technology["follower-robot-count-5"].max_level = nil
+
 data.raw.technology["laser-weapons-damage-7"].max_level = 10
 data.raw.technology["laser-weapons-damage-7"].unit.count_formula = "((L-6)^2)*3000"
 data.raw.technology["laser-weapons-damage-7"].unit.count = nil
+
+data.raw.technology["mining-productivity-4"].unit.count_formula = "(L^2)*200"
+data.raw.technology["mining-productivity-4"].max_level = 10
 
 data.raw.technology["physical-projectile-damage-7"].max_level = 10
 data.raw.technology["physical-projectile-damage-7"].unit.count_formula = "((L-6)^2)*3000"
@@ -122,6 +136,9 @@ data.raw.technology["refined-flammables-7"].unit.count_formula = "((L-6)^2)*3000
 
 data.raw.technology["stronger-explosives-7"].max_level = 10
 data.raw.technology["stronger-explosives-7"].unit.count_formula = "((L-6)^2)*3000"
+
+data.raw.technology["worker-robots-speed-6"].unit.count_formula = "((L-5)^2)*5000"
+data.raw.technology["worker-robots-speed-6"].max_level = nil
 
 for _, technology in pairs(data.raw.technology) do
   local unit = technology.unit
