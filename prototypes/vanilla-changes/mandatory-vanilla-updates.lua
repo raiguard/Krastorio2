@@ -1,5 +1,4 @@
 -- High priority
-require("mandatory.technologies-changes") -- Modifications to vanilla technologies
 require("mandatory.apply-vanilla-technologies-tag") -- Apply a special tag to all vanilla technologies to recognize them
 -- Low priority
 require("mandatory.entities-changes") -- Entities/prototypes definition modifications
