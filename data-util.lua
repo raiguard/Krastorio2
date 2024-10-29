@@ -19,6 +19,23 @@ function data_util.add_recipe_unlock(technology_name, recipe_name)
   table.insert(technology.effects, { type = "unlock-recipe", recipe = recipe_name })
 end
 
+--- Removes the given recipe from the unlocks of the given technology.
+--- @param technology_name data.TechnologyID
+--- @param recipe_name data.RecipeID
+function data_util.remove_recipe_unlock(technology_name, recipe_name)
+  local technology = data.raw.technology[technology_name]
+  if not technology then
+    error("Technology " .. technology_name .. " does not exist.")
+  end
+  for i, effect in pairs(technology.effects) do
+    if effect.type == "unlock-recipe" and effect.recipe == recipe_name then
+      table.remove(technology.effects, i)
+      return
+    end
+  end
+  error("Technology " .. technology_name .. " does not unlock recipe " .. recipe_name .. ".")
+end
+
 --- Adds the given prerequisite to the technology.
 --- @param technology_id data.TechnologyID
 --- @param prerequisite_id data.TechnologyID
