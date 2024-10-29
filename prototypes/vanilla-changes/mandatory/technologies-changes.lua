@@ -4,22 +4,9 @@
 -- -- Research unit ingredients
 --------------------------------------------------------------------
 
--- Conversions
-krastorio.technologies.convertResearchUnitIngredient("stone-wall", "automation-science-pack", "basic-tech-card")
-krastorio.technologies.convertResearchUnitIngredient("military", "automation-science-pack", "basic-tech-card")
-
 -- Addings
-krastorio.technologies.addResearchUnitIngredient("automation", "basic-tech-card")
-krastorio.technologies.addResearchUnitIngredient("character-logistic-trash-slots-1", "basic-tech-card")
-krastorio.technologies.addResearchUnitIngredient("auto-character-logistic-trash-slots", "basic-tech-card")
 
 -- Removing
-krastorio.technologies.removeResearchUnitIngredient("automation", "automation-science-pack")
-krastorio.technologies.removeResearchUnitIngredient("fluid-handling", "logistic-science-pack")
-krastorio.technologies.removeResearchUnitIngredient("oil-processing", "logistic-science-pack")
-krastorio.technologies.removeResearchUnitIngredient("engine", "logistic-science-pack")
-krastorio.technologies.removeResearchUnitIngredient("plastics", "logistic-science-pack")
-krastorio.technologies.removeResearchUnitIngredient("fusion-reactor-equipment", "military-science-pack")
 
 --------------------------------------------------------------------
 -- -- Recipes Unlocking

@@ -39,3 +39,14 @@ data_util.remove_prerequisite("fluid-handling", "automation-2")
 data_util.remove_prerequisite("heavy-armor", "military")
 data_util.remove_prerequisite("productivity-module-2", "processing-unit")
 data_util.remove_prerequisite("speed-module-2", "processing-unit")
+
+data_util.convert_research_unit_ingredient("military", "automation-science-pack", "basic-tech-card")
+data_util.convert_research_unit_ingredient("stone-wall", "automation-science-pack", "basic-tech-card")
+
+data_util.add_research_unit_ingredient("automation", "basic-tech-card")
+
+data_util.remove_research_unit_ingredient("automation", "automation-science-pack")
+data_util.remove_research_unit_ingredient("fluid-handling", "logistic-science-pack")
+data_util.remove_research_unit_ingredient("engine", "logistic-science-pack")
+data_util.remove_research_unit_ingredient("plastics", "logistic-science-pack")
+data_util.remove_research_unit_ingredient("fission-reactor-equipment", "military-science-pack")
