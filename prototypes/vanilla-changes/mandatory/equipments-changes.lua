@@ -1,48 +1,3 @@
--- Update a icon and sprites a given table (dictionary),
--- formatted with: { categories{ items-->[path,icon_size,sprite.width,sprite.height]... }... }
--- Possible property:
--- [1] -> icon name
--- [2] -> icon size
--- [3] -> sprite width
--- [4] -> sprite height
--- [5] -> tier of overlay
--- [6] -> icon_mipmaps
--- @_objects_to_modify, list of graphics to modify with the format over described
--- @icons_path, path where is the new icons of this objects
--- @sprites_path, path where is the new sprites of this objects
-function updateVanillaEquipmentGraphics(_objects_to_modify, icons_path, sprites_path)
-  for category_name, items in pairs(_objects_to_modify) do
-    for item_name, item in pairs(items) do
-      if data.raw.item[item_name] then
-        if not item[5] then -- tier
-          data.raw.item[item_name].icon = icons_path .. item[1] -- icon name
-          data.raw.item[item_name].icon_size = item[2] -- icon size
-          data.raw.item[item_name].icon_mipmaps = item[6]
-        else
-          data.raw.item[item_name].icon = nil
-          data.raw.item[item_name].icons = {
-            { icon = icons_path .. item[1], icon_size = item[2], icon_mipmaps = item[6] },
-            {
-              icon = "__Krastorio2Assets__/icons/equipment/tier-" .. tostring(item[5]) .. ".png",
-              icon_size = 64,
-            }, -- , scale = item[2]/64
-          }
-          data.raw.item[item_name].icon_size = item[2] -- icon size
-        end
-        if data.raw[category_name][item_name] then
-          data.raw[category_name][item_name].sprite = {
-            filename = sprites_path .. "" .. item[1],
-            priority = "medium",
-            width = item[3] * 2,
-            height = item[4] * 2,
-            scale = 0.5,
-          }
-        end
-      end
-    end
-  end
-end
-
 -- Update grid of specified vehicle, will integrate with the grid the equipment categories of old grid
 -- that is different from "armor" that is dedicated to character equipment
 -- @vehicle_type, prototype type of vehicle
@@ -216,21 +171,6 @@ local objects_to_modify = nil
 -- -- Personal roboports
 -----------------------------------------------------------------------------------------------------------------
 
--- -- Items visual(icon, sprites)/modifcation
-objects_to_modify = {
-  ["roboport-equipment"] = {
-    ["personal-roboport-equipment"] = { "personal-roboport-equipment.png", 64, 64, 64, 1, 4 },
-    ["personal-roboport-mk2-equipment"] = { "personal-roboport-mk2-equipment.png", 64, 64, 64, 2, 4 },
-  },
-}
-
--- iterating...
-updateVanillaEquipmentGraphics(
-  objects_to_modify,
-  "__Krastorio2Assets__/icons/equipment/",
-  "__Krastorio2Assets__/equipment/"
-)
-
 -- Personal roboports (both vanilla)
 if data.raw["roboport-equipment"]["personal-roboport-equipment"] then
   data.raw["roboport-equipment"]["personal-roboport-equipment"].robot_limit = 20
@@ -277,15 +217,6 @@ krastorio.recipes.replaceIngredient("personal-roboport-mk2-equipment", "processi
 -----------------------------------------------------------------------------------------------------------------
 
 -- -- Items visual(icon, sprites)/modifcation
-objects_to_modify = {
-  ["battery-equipment"] = {
-    ["battery-equipment"] = { "battery-mk1-equipment.png", 64, 32, 64, 1 },
-    ["battery-mk2-equipment"] = { "battery-mk2-equipment.png", 64, 32, 64, 2 },
-  },
-  ["active-defense-equipment"] = {
-    ["personal-laser-defense-equipment"] = { "personal-laser-defense-mk1-equipment.png", 64, 64, 64, 1 },
-  },
-}
 if data.raw.item["battery-equipment"] then
   data.raw.item["battery-equipment"].pictures = {
     layers = {
@@ -326,13 +257,6 @@ if data.raw.item["battery-mk2-equipment"] then
     },
   }
 end
-
--- iterating...
-updateVanillaEquipmentGraphics(
-  objects_to_modify,
-  "__Krastorio2Assets__/icons/equipment/",
-  "__Krastorio2Assets__/equipment/"
-)
 
 -- Equipments categories
 table.insert(data.raw["battery-equipment"]["battery-equipment"].categories, "universal-equipment")
@@ -392,12 +316,6 @@ data.raw.capsule["discharge-defense-remote"].order = "f[active-defense-equipment
 -- -- Fusion reactor
 -----------------------------------------------------------------------------------------------------------------
 
--- -- Items visual(icon, sprites)/modifcation
-objects_to_modify = {
-  ["generator-equipment"] = {
-    ["fission-reactor-equipment"] = { "fission-reactor-equipment.png", 64, 128, 128, 2 },
-  },
-}
 if data.raw.item["fission-reactor-equipment"] then
   data.raw.item["fission-reactor-equipment"].pictures = {
     layers = {
@@ -418,13 +336,6 @@ if data.raw.item["fission-reactor-equipment"] then
     },
   }
 end
-
--- iterating...
-updateVanillaEquipmentGraphics(
-  objects_to_modify,
-  "__Krastorio2Assets__/icons/equipment/",
-  "__Krastorio2Assets__/equipment/"
-)
 
 krastorio.icons.setTechnologyIcons("fission-reactor-equipment", {
   { icon = "__Krastorio2Assets__/technologies/fission-reactor-equipment.png", icon_size = 256, icon_mipmaps = 4 },
@@ -519,20 +430,6 @@ data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].localis
 -- -- Shields
 -----------------------------------------------------------------------------------------------------------------
 
--- -- Items visual(icon, sprites)/modifcation
-objects_to_modify = {
-  ["energy-shield-equipment"] = {
-    ["energy-shield-equipment"] = { "energy-shield-mk1-equipment.png", 64, 64, 64, 1, 4 },
-    ["energy-shield-mk2-equipment"] = { "energy-shield-mk2-equipment.png", 64, 64, 64, 2, 4 },
-  },
-}
--- iterating...
-updateVanillaEquipmentGraphics(
-  objects_to_modify,
-  "__Krastorio2Assets__/icons/equipment/",
-  "__Krastorio2Assets__/equipment/"
-)
-
 -- Equipments categories
 table.insert(data.raw["energy-shield-equipment"]["energy-shield-equipment"].categories, "universal-equipment")
 table.insert(data.raw["energy-shield-equipment"]["energy-shield-mk2-equipment"].categories, "universal-equipment")
@@ -566,20 +463,6 @@ data.raw.item["energy-shield-mk2-equipment"].order = "b[shield]-b[energy-shield-
 -- -- Solar pannel
 -----------------------------------------------------------------------------------------------------------------
 
--- -- Items visual(icon, sprites)/modifcation
-objects_to_modify = {
-  ["solar-panel-equipment"] = {
-    ["solar-panel-equipment"] = { "solar-panel-equipment.png", 64, 32, 32, 1, 4 },
-  },
-}
-
--- iterating...
-updateVanillaEquipmentGraphics(
-  objects_to_modify,
-  "__Krastorio2Assets__/icons/equipment/",
-  "__Krastorio2Assets__/equipment/"
-)
-
 -- Equipments categories
 table.insert(data.raw["solar-panel-equipment"]["solar-panel-equipment"].categories, "universal-equipment")
 
@@ -601,23 +484,9 @@ table.insert(data.raw["belt-immunity-equipment"]["belt-immunity-equipment"].cate
 -- Night visor
 -----------------------------------------------------------------------------------------------------------------
 
--- -- Items visual(icon, sprites)/modifcation
-objects_to_modify = {
-  ["night-vision-equipment"] = {
-    ["night-vision-equipment"] = { "night-vision-equipment.png", 64, 64, 64, 1 },
-  },
-}
-
 data.raw["night-vision-equipment"]["night-vision-equipment"].color_lookup = {
   { 0.75, "__Krastorio2Assets__/luts/nightvision-equipment.png" },
 }
-
--- iterating...
-updateVanillaEquipmentGraphics(
-  objects_to_modify,
-  "__Krastorio2Assets__/icons/equipment/",
-  "__Krastorio2Assets__/equipment/"
-)
 
 data.raw["night-vision-equipment"]["night-vision-equipment"].tint = { r = 0.1, g = 0.255, b = 1, a = 0.255 }
 data.raw["night-vision-equipment"]["night-vision-equipment"].desaturation_params = {
@@ -655,20 +524,6 @@ data.raw.item["night-vision-equipment"].order = "f[night-vision]-a1[night-vision
 
 data.raw["movement-bonus-equipment"]["exoskeleton-equipment"].movement_bonus = 0.2
 data.raw["movement-bonus-equipment"]["exoskeleton-equipment"].categories = { "armor", "spidertron-only" }
-
--- -- Items visual(icon, sprites)/modifcation
-objects_to_modify = {
-  ["movement-bonus-equipment"] = {
-    ["exoskeleton-equipment"] = { "exoskeleton-equipment.png", 64, 64, 128, 1 },
-  },
-}
-
--- iterating...
-updateVanillaEquipmentGraphics(
-  objects_to_modify,
-  "__Krastorio2Assets__/icons/equipment/",
-  "__Krastorio2Assets__/equipment/"
-)
 
 data.raw.item["exoskeleton-equipment"].subgroup = "character-equipment"
 data.raw.item["exoskeleton-equipment"].order = "e[exoskeleton]-a1[exoskeleton-equipment]"

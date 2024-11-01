@@ -211,6 +211,23 @@ function data_util.get_icons(prototype)
   return { { icon = prototype.icon, icon_size = prototype.icon_size } }
 end
 
+--- Converts the given prototype's icons to the standard format and returns a reference to them.
+--- The game will throw an error if you provide an empty icons array, so if using the function, care must be taken to
+--- ensure that at least one icon layer exists at tne end of loading.
+--- @param prototype k2.PrototypeWithIcons
+--- @return data.IconData[]
+function data_util.standardize_icons(prototype)
+  if not prototype.icons then
+    prototype.icons = {}
+    if prototype.icon then
+      table.insert(prototype.icons, { icon = prototype.icon, icon_size = prototype.icon_size })
+      prototype.icon = nil
+      prototype.icon_size = nil
+    end
+  end
+  return prototype.icons
+end
+
 --- Fields are analagous to `data.IconData`.
 --- @class k2.IconTransformOptions
 --- @field shift Vector?
