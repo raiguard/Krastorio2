@@ -1,5 +1,6 @@
 require("prototypes.updates.base.entities")
 require("prototypes.updates.base.equipment")
+require("prototypes.updates.base.recipes")
 require("prototypes.updates.base.technologies")
 
 require("prototypes.updates.convert-furnaces-to-assemblers")

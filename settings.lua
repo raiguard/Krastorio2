@@ -259,11 +259,4 @@ data:extend({
     default_value = false,
     order = "b15",
   },
-  {
-    type = "bool-setting",
-    name = "kr-spidertron-exoskeleton",
-    setting_type = "startup",
-    default_value = false,
-    order = "b16",
-  },
 })
