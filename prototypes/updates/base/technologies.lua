@@ -140,6 +140,12 @@ data.raw.technology["stronger-explosives-7"].unit.count_formula = "((L-6)^2)*300
 data.raw.technology["worker-robots-speed-6"].unit.count_formula = "((L-5)^2)*5000"
 data.raw.technology["worker-robots-speed-6"].max_level = nil
 
+data_util.standardize_icons(data.raw.technology["fission-reactor-equipment"])
+data.raw.technology["fission-reactor-equipment"].icons = {
+  { icon = "__Krastorio2Assets__/technologies/fission-reactor-equipment.png", icon_size = 256 },
+  { icon = "__Krastorio2Assets__/technologies/overlays/equipment-overlay.png", icon_size = 256 },
+}
+
 for _, technology in pairs(data.raw.technology) do
   local unit = technology.unit
   if unit and #unit.ingredients == 1 and unit.ingredients[1][1] == "automation-science-pack" then

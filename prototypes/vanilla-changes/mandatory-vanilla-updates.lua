@@ -1,4 +1,3 @@
-require("mandatory.equipments-changes") -- Add properties or modify stat of equipments and armors
 require("mandatory.icons-changes") -- Modify aspect of vanilla items (like science pack icons..)
 require("mandatory.improve-inserters") -- Improve inserters, new functions
 require("mandatory.items-changes") -- Modify vanilla items

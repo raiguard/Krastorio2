@@ -1,3 +1,5 @@
+data.raw["cargo-wagon"]["cargo-wagon"].allow_robot_dispatch_in_automatic_mode = true
+
 data.raw.boiler["boiler"].energy_source.emissions_per_minute = { pollution = 20 }
 
 data.raw.lab["lab"].fast_replaceable_group = "lab"
@@ -102,3 +104,46 @@ data.raw["corpse"]["spidertron-remnants"].animation = make_rotated_animation_var
     },
   },
 })
+
+--- Change the vehicle to the given grid and update the equipment grid with the categories of the vehicle's former grid.
+--- @param vehicle_type string
+--- @param vehicle_name data.EntityID
+--- @param new_equipment_grid_id data.EquipmentGridID
+local function convert_equipment_grid(vehicle_type, vehicle_name, new_equipment_grid_id)
+  local vehicle = data.raw[vehicle_type][vehicle_name]
+  if not vehicle then
+    error("Vehicle " .. vehicle_type .. "/" .. vehicle_name .. " does not exist.")
+  end
+  local old_equipment_grid_id = vehicle.equipment_grid
+  if not old_equipment_grid_id then
+    return
+  end
+  local old_equipment_grid = data.raw["equipment-grid"][old_equipment_grid_id]
+  if not old_equipment_grid then
+    error("Equipment grid " .. old_equipment_grid_id .. " does not exist.")
+  end
+  local new_equipment_grid = data.raw["equipment-grid"][new_equipment_grid_id]
+  if not new_equipment_grid then
+    error("Equipment grid " .. new_equipment_grid_id .. " does not exist.")
+  end
+
+  local equipment_categories_set = {}
+  for _, equipment_category in pairs(new_equipment_grid.equipment_categories) do
+    equipment_categories_set[equipment_category] = true
+  end
+
+  for _, equipment_category in pairs(old_equipment_grid.equipment_categories) do
+    if equipment_category ~= "armor" and not equipment_categories_set[equipment_category] then
+      table.insert(new_equipment_grid.equipment_categories, equipment_category)
+    end
+  end
+
+  data.raw[vehicle_type][vehicle_name].equipment_grid = new_equipment_grid_id
+end
+convert_equipment_grid("car", "car", "kr-car-grid")
+convert_equipment_grid("car", "tank", "kr-tank-grid")
+convert_equipment_grid("locomotive", "locomotive", "kr-locomotive-grid")
+convert_equipment_grid("cargo-wagon", "cargo-wagon", "kr-wagons-grid")
+convert_equipment_grid("spider-vehicle", "spidertron", "kr-spidertron-equipment-grid")
+convert_equipment_grid("fluid-wagon", "fluid-wagon", "kr-wagons-grid")
+convert_equipment_grid("artillery-wagon", "artillery-wagon", "kr-wagons-grid")
