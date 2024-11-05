@@ -1,3 +1,4 @@
+local data_util = require("data-util")
 local flib_table = require("__flib__.table")
 
 table.insert(
@@ -38,18 +39,18 @@ data.raw.item["fission-reactor-equipment"].subgroup = "equipment"
 data.raw.item["fission-reactor-equipment"].pictures = {
   layers = {
     {
-      size = 64,
       filename = "__Krastorio2Assets__/icons/equipment/fission-reactor-equipment.png",
+      size = 64,
       scale = 0.25,
       mipmap_count = 4,
     },
     {
-      draw_as_light = true,
-      flags = { "light" },
-      size = 64,
       filename = "__Krastorio2Assets__/icons/equipment/fission-reactor-equipment-light.png",
+      size = 64,
       scale = 0.25,
       mipmap_count = 4,
+      draw_as_light = true,
+      flags = { "light" },
     },
   },
 }
@@ -69,3 +70,192 @@ data.raw.item["personal-laser-defense-equipment"].subgroup = "equipment"
 
 data.raw.item["solar-panel-equipment"].order = "a[energy-source]-a1[solar-panel]"
 data.raw.item["solar-panel-equipment"].subgroup = "equipment"
+
+-- stylua: ignore start
+data_util.set_icon(data.raw.ammo["artillery-shell"], "__Krastorio2Assets__/icons/ammo/artillery-shell.png")
+data_util.set_icon(data.raw.item["advanced-circuit"], "__Krastorio2Assets__/icons/items/advanced-circuit.png")
+data_util.set_icon(data.raw.item["copper-plate"], "__Krastorio2Assets__/icons/items/copper-plate.png")
+data_util.set_icon(data.raw.item["electric-mining-drill"], "__Krastorio2Assets__/icons/entities/electric-mining-drill.png")
+data_util.set_icon(data.raw.item["electronic-circuit"], "__Krastorio2Assets__/icons/items/electronic-circuit.png")
+data_util.set_icon(data.raw.item["iron-gear-wheel"], "__Krastorio2Assets__/icons/items/iron-gear-wheel.png")
+data_util.set_icon(data.raw.item["iron-plate"], "__Krastorio2Assets__/icons/items/iron-plate.png")
+data_util.set_icon(data.raw.item["processing-unit"], "__Krastorio2Assets__/icons/items/processing-unit.png")
+data_util.set_icon(data.raw.item["pumpjack"], "__Krastorio2Assets__/icons/entities/oil-pumpjack.png")
+data_util.set_icon(data.raw.item["steel-plate"], "__Krastorio2Assets__/icons/items/steel-plate.png")
+-- stylua: ignore end
+
+data_util.set_icon(data.raw.ammo["atomic-bomb"], "__Krastorio2Assets__/icons/ammo/atomic-bomb.png")
+data.raw.ammo["atomic-bomb"].pictures = {
+  layers = {
+    {
+      filename = "__Krastorio2Assets__/icons/ammo/atomic-bomb.png",
+      size = 64,
+      scale = 0.25,
+      mipmap_count = 4,
+    },
+    {
+      filename = "__Krastorio2Assets__/icons/ammo/atomic-bomb-light.png",
+      size = 64,
+      scale = 0.25,
+      mipmap_count = 4,
+      draw_as_light = true,
+      flags = { "light" },
+    },
+  },
+}
+
+data_util.set_icon(
+  data.raw.tool["automation-science-pack"],
+  "__Krastorio2Assets__/icons/cards/automation-tech-card.png"
+)
+data.raw.tool["automation-science-pack"].order = "b02[automation-tech-card]"
+data.raw.tool["automation-science-pack"].pictures = {
+  layers = {
+    {
+      filename = "__Krastorio2Assets__/icons/cards/automation-tech-card.png",
+      size = 64,
+      scale = 0.25,
+      mipmap_count = 4,
+    },
+    {
+      filename = "__Krastorio2Assets__/icons/cards/automation-tech-card-light.png",
+      size = 64,
+      scale = 0.25,
+      mipmap_count = 4,
+      draw_as_light = true,
+      flags = { "light" },
+    },
+  },
+}
+
+data_util.set_icon(data.raw.tool["logistic-science-pack"], "__Krastorio2Assets__/icons/cards/logistic-tech-card.png")
+data.raw.tool["logistic-science-pack"].order = "b03[logistic-tech-card]"
+data.raw.tool["logistic-science-pack"].pictures = {
+  layers = {
+    {
+      filename = "__Krastorio2Assets__/icons/cards/logistic-tech-card.png",
+      size = 64,
+      scale = 0.25,
+      mipmap_count = 4,
+    },
+    {
+      filename = "__Krastorio2Assets__/icons/cards/logistic-tech-card-light.png",
+      size = 64,
+      scale = 0.25,
+      mipmap_count = 4,
+      draw_as_light = true,
+      flags = { "light" },
+    },
+  },
+}
+
+data_util.set_icon(data.raw.tool["military-science-pack"], "__Krastorio2Assets__/icons/cards/military-tech-card.png")
+data.raw.tool["military-science-pack"].order = "b04[military-tech-card]"
+data.raw.tool["military-science-pack"].pictures = {
+  layers = {
+    {
+      filename = "__Krastorio2Assets__/icons/cards/military-tech-card.png",
+      size = 64,
+      scale = 0.25,
+      mipmap_count = 4,
+    },
+    {
+      filename = "__Krastorio2Assets__/icons/cards/military-tech-card-light.png",
+      size = 64,
+      scale = 0.25,
+      mipmap_count = 4,
+      draw_as_light = true,
+      flags = { "light" },
+    },
+  },
+}
+
+data_util.set_icon(data.raw.tool["chemical-science-pack"], "__Krastorio2Assets__/icons/cards/chemical-tech-card.png")
+data.raw.tool["chemical-science-pack"].order = "b05[chemical-tech-card]"
+data.raw.tool["chemical-science-pack"].pictures = {
+  layers = {
+    {
+      filename = "__Krastorio2Assets__/icons/cards/chemical-tech-card.png",
+      size = 64,
+      scale = 0.25,
+      mipmap_count = 4,
+    },
+    {
+      filename = "__Krastorio2Assets__/icons/cards/chemical-tech-card-light.png",
+      size = 64,
+      scale = 0.25,
+      mipmap_count = 4,
+      draw_as_light = true,
+      flags = { "light" },
+    },
+  },
+}
+
+data_util.set_icon(
+  data.raw.tool["production-science-pack"],
+  "__Krastorio2Assets__/icons/cards/production-tech-card.png"
+)
+data.raw.tool["production-science-pack"].order = "b06[production-tech-card]"
+data.raw.tool["production-science-pack"].pictures = {
+  layers = {
+    {
+      filename = "__Krastorio2Assets__/icons/cards/production-tech-card.png",
+      size = 64,
+      scale = 0.25,
+      mipmap_count = 4,
+    },
+    {
+      filename = "__Krastorio2Assets__/icons/cards/production-tech-card-light.png",
+      size = 64,
+      scale = 0.25,
+      mipmap_count = 4,
+      draw_as_light = true,
+      flags = { "light" },
+    },
+  },
+}
+
+data_util.set_icon(data.raw.tool["utility-science-pack"], "__Krastorio2Assets__/icons/cards/utility-tech-card.png")
+data.raw.tool["utility-science-pack"].order = "b07[utility-tech-card]"
+data.raw.tool["utility-science-pack"].pictures = {
+  layers = {
+    {
+      filename = "__Krastorio2Assets__/icons/cards/utility-tech-card.png",
+      size = 64,
+      scale = 0.25,
+      mipmap_count = 4,
+    },
+    {
+      filename = "__Krastorio2Assets__/icons/cards/utility-tech-card-light.png",
+      size = 64,
+      scale = 0.25,
+      mipmap_count = 4,
+      draw_as_light = true,
+      flags = { "light" },
+    },
+  },
+}
+
+data_util.set_icon(
+  data.raw.tool[kr_optimization_tech_card_name],
+  "__Krastorio2Assets__/icons/cards/optimization-tech-card.png"
+)
+data.raw.tool[kr_optimization_tech_card_name].order = "b08[optimization-tech-card]"
+data.raw.tool[kr_optimization_tech_card_name].pictures = {
+  layers = {
+    {
+      filename = "__Krastorio2Assets__/icons/cards/optimization-tech-card.png",
+      size = 64,
+      scale = 0.25,
+      mipmap_count = 4,
+    },
+    {
+      filename = "__Krastorio2Assets__/icons/cards/optimization-tech-card-light.png",
+      size = 64,
+      scale = 0.25,
+      mipmap_count = 4,
+      draw_as_light = true,
+      flags = { "light" },
+    },
+  },
+}

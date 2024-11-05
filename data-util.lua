@@ -228,6 +228,29 @@ function data_util.standardize_icons(prototype)
   return prototype.icons
 end
 
+--- Overrides the prototype's icon.
+--- @param prototype k2.PrototypeWithIcons
+--- @param icon data.FileName
+--- @param icon_size double?
+function data_util.set_icon(prototype, icon, icon_size)
+  assert(prototype, "Provided prototype was nil.")
+  if prototype.icons then
+    prototype.icons = nil
+  end
+  prototype.icon = icon
+  prototype.icon_size = icon_size
+end
+
+--- Overrides the prototype's icons array.
+--- @param prototype k2.PrototypeWithIcons
+--- @param icons data.IconData[]
+function data_util.set_icons(prototype, icons)
+  assert(prototype, "Provided prototype was nil.")
+  prototype.icons = icons
+  prototype.icon = nil
+  prototype.icon_size = nil
+end
+
 --- Fields are analagous to `data.IconData`.
 --- @class k2.IconTransformOptions
 --- @field shift Vector?

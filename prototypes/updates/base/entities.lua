@@ -1,3 +1,5 @@
+local data_util = require("data-util")
+
 data.raw["cargo-wagon"]["cargo-wagon"].allow_robot_dispatch_in_automatic_mode = true
 
 data.raw.boiler["boiler"].energy_source.emissions_per_minute = { pollution = 20 }
@@ -147,3 +149,8 @@ convert_equipment_grid("cargo-wagon", "cargo-wagon", "kr-wagons-grid")
 convert_equipment_grid("spider-vehicle", "spidertron", "kr-spidertron-equipment-grid")
 convert_equipment_grid("fluid-wagon", "fluid-wagon", "kr-wagons-grid")
 convert_equipment_grid("artillery-wagon", "artillery-wagon", "kr-wagons-grid")
+
+data_util.set_icon(
+  data.raw["mining-drill"]["electric-mining-drill"],
+  "__Krastorio2Assets__/icons/entities/electric-mining-drill.png"
+)

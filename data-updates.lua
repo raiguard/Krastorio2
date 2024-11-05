@@ -1,6 +1,7 @@
 require("prototypes.updates.base.entities")
 require("prototypes.updates.base.equipment")
 require("prototypes.updates.base.equipment-grids")
+require("prototypes.updates.base.fluids")
 require("prototypes.updates.base.items")
 require("prototypes.updates.base.recipes")
 require("prototypes.updates.base.technologies")

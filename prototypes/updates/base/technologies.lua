@@ -140,11 +140,31 @@ data.raw.technology["stronger-explosives-7"].unit.count_formula = "((L-6)^2)*300
 data.raw.technology["worker-robots-speed-6"].unit.count_formula = "((L-5)^2)*5000"
 data.raw.technology["worker-robots-speed-6"].max_level = nil
 
-data_util.standardize_icons(data.raw.technology["fission-reactor-equipment"])
-data.raw.technology["fission-reactor-equipment"].icons = {
+data_util.set_icons(data.raw.technology["fission-reactor-equipment"], {
   { icon = "__Krastorio2Assets__/technologies/fission-reactor-equipment.png", icon_size = 256 },
   { icon = "__Krastorio2Assets__/technologies/overlays/equipment-overlay.png", icon_size = 256 },
-}
+})
+
+-- stylua: ignore start
+data_util.set_icon(data.raw.technology["battery-mk2-equipment"], "__Krastorio2Assets__/technologies/battery-mk2-equipment.png", 256)
+data_util.set_icon(data.raw.technology["chemical-science-pack"], "__Krastorio2Assets__/technologies/chemical-tech-card.png", 256)
+data_util.set_icon(data.raw.technology["coal-liquefaction"], "__Krastorio2Assets__/technologies/coal-liquefaction.png", 256)
+data_util.set_icon(data.raw.technology["energy-shield-equipment"], "__Krastorio2Assets__/technologies/energy-shield-mk1-equipment.png", 256)
+data_util.set_icon(data.raw.technology["energy-shield-mk2-equipment"], "__Krastorio2Assets__/technologies/energy-shield-mk2-equipment.png", 256)
+data_util.set_icon(data.raw.technology["heavy-armor"], "__Krastorio2Assets__/technologies/heavy-armor.png", 25)
+data_util.set_icon(data.raw.technology[kr_optimization_tech_card_name], "__Krastorio2Assets__/technologies/optimization-tech-card.png", 256)
+data_util.set_icon(data.raw.technology["logistics-2"], "__Krastorio2Assets__/technologies/logistics-2.png", 25)
+data_util.set_icon(data.raw.technology["logistics-3"], "__Krastorio2Assets__/technologies/logistics-3.png", 25)
+data_util.set_icon(data.raw.technology["logistic-science-pack"], "__Krastorio2Assets__/technologies/logistic-tech-card.png", 256)
+data_util.set_icon(data.raw.technology["logistics"], "__Krastorio2Assets__/technologies/logistics-1.png", 25)
+data_util.set_icon(data.raw.technology["military-science-pack"], "__Krastorio2Assets__/technologies/military-tech-card.png", 256)
+data_util.set_icon(data.raw.technology["night-vision-equipment"], "__Krastorio2Assets__/technologies/night-vision-equipment.png", 256)
+data_util.set_icon(data.raw.technology["oil-processing"], "__Krastorio2Assets__/technologies/oil-gathering.png", 25)
+data_util.set_icon(data.raw.technology["personal-laser-defense-equipment"], "__Krastorio2Assets__/technologies/personal-laser-defense-mk1-equipments.png", 256)
+data_util.set_icon(data.raw.technology["production-science-pack"], "__Krastorio2Assets__/technologies/production-tech-card.png", 256)
+data_util.set_icon(data.raw.technology["steel-processing"], "__Krastorio2Assets__/technologies/steel-processing.png", 256)
+data_util.set_icon(data.raw.technology["utility-science-pack"], "__Krastorio2Assets__/technologies/utility-tech-card.png", 256)
+-- stylua: ignore end
 
 for _, technology in pairs(data.raw.technology) do
   local unit = technology.unit
