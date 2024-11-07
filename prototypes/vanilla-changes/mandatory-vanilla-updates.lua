@@ -1,4 +1,3 @@
-require("mandatory.items-sorting") -- Change some items sorting for match new items
 require("mandatory.rebalance-nuclear-power") -- Rebalance nuclear power
 require("mandatory.recipes-changes") -- All modification to vanilla recipes
 require("mandatory.renaming-vanillas") -- Localization changes to vanilla objects

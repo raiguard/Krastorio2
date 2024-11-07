@@ -26,6 +26,11 @@ data.raw.capsule["raw-fish"].capsule_action.attack_parameters.ammo_type.action.a
 }
 data.raw.capsule["raw-fish"].rocket_launch_products = { { type = "item", name = "dolphin-gun", amount = 1 } }
 
+data.raw.item["artillery-turret"].subgroup = "vanilla-turrets"
+data.raw.item["artillery-turret"].order = "04[artillery-turret]"
+
+data.raw.item["assembling-machine-3"].order = "c1[assembling-machine-3]"
+
 data.raw.item["battery-equipment"].order = "b1[battery]-b1[battery-equipment]"
 data.raw.item["battery-equipment"].subgroup = "equipment"
 
@@ -40,6 +45,9 @@ data.raw.item["energy-shield-equipment"].order = "b[shield]-a[energy-shield-equi
 
 data.raw.item["energy-shield-mk2-equipment"].subgroup = "equipment"
 data.raw.item["energy-shield-mk2-equipment"].order = "b[shield]-b[energy-shield-equipment-mk2]"
+
+data.raw.item["exoskeleton-equipment"].subgroup = "character-equipment"
+data.raw.item["exoskeleton-equipment"].order = "e[exoskeleton]-a1[exoskeleton-equipment]"
 
 data.raw.item["fission-reactor-equipment"].order = "a2[energy-source]-a5[portable-nuclear-core]"
 data.raw.item["fission-reactor-equipment"].subgroup = "equipment"
@@ -62,10 +70,19 @@ data.raw.item["fission-reactor-equipment"].pictures = {
   },
 }
 
-data.raw.item["exoskeleton-equipment"].subgroup = "character-equipment"
-data.raw.item["exoskeleton-equipment"].order = "e[exoskeleton]-a1[exoskeleton-equipment]"
+data.raw.item["flamethrower-turret"].subgroup = "vanilla-turrets"
+data.raw.item["flamethrower-turret"].order = "02[flamethrower-turret]"
+
+data.raw.item["gate"].subgroup = "vanilla-turrets"
+data.raw.item["gate"].order = "002[gate]"
+
+data.raw.item["gun-turret"].subgroup = "vanilla-turrets"
+data.raw.item["gun-turret"].order = "01[gun-turret]"
 
 data.raw.tool[kr_optimization_tech_card_name].localised_description = { "item-description.optimization-tech-card" }
+
+data.raw.item["laser-turret"].subgroup = "vanilla-turrets"
+data.raw.item["laser-turret"].order = "03a[laser-turret]"
 
 data.raw.item["night-vision-equipment"].subgroup = "character-equipment"
 data.raw.item["night-vision-equipment"].order = "f[night-vision]-a1[night-vision-equipment]"
@@ -77,10 +94,32 @@ data.raw.item["personal-laser-defense-equipment"].localised_name =
 data.raw.item["personal-laser-defense-equipment"].order = "d[active-defense]-b1[personal-laser-defense-mk1-equipment]"
 data.raw.item["personal-laser-defense-equipment"].subgroup = "equipment"
 
+data.raw.item["radar"].subgroup = "radars-and-rockets"
+data.raw.item["radar"].order = "02[radar]"
+
+data.raw.item["rocket-silo"].subgroup = "radars-and-rockets"
+data.raw.item["rocket-silo"].order = "zzz[rocket-silo]"
+
 data.raw.item["satellite"].research_products = { { type = "item", name = "space-research-data", amount = 1000 } }
 
 data.raw.item["solar-panel-equipment"].order = "a[energy-source]-a1[solar-panel]"
 data.raw.item["solar-panel-equipment"].subgroup = "equipment"
+
+data.raw.item["stone-wall"].subgroup = "vanilla-turrets"
+data.raw.item["stone-wall"].order = "001[stone-wall]"
+
+if not mods["aai-containers"] then
+  data.raw.item["active-provider-chest"].subgroup = "kr-logistics-1"
+  data.raw.item["active-provider-chest"].order = "a[chest-active-provider]"
+  data.raw.item["buffer-chest"].subgroup = "kr-logistics-1"
+  data.raw.item["buffer-chest"].order = "b[chest-buffer]"
+  data.raw.item["passive-provider-chest"].subgroup = "kr-logistics-1"
+  data.raw.item["passive-provider-chest"].order = "c[chest-passive-provider]"
+  data.raw.item["requester-chest"].subgroup = "kr-logistics-1"
+  data.raw.item["requester-chest"].order = "d[chest-requester]"
+  data.raw.item["storage-chest"].subgroup = "kr-logistics-1"
+  data.raw.item["storage-chest"].order = "e[chest-storage]"
+end
 
 -- stylua: ignore start
 data_util.set_icon(data.raw.ammo["artillery-shell"], "__Krastorio2Assets__/icons/ammo/artillery-shell.png")
