@@ -1,4 +1,3 @@
-require("mandatory.improve-inserters") -- Improve inserters, new functions
 require("mandatory.items-changes") -- Modify vanilla items
 require("mandatory.items-sorting") -- Change some items sorting for match new items
 require("mandatory.rebalance-nuclear-power") -- Rebalance nuclear power
