@@ -4,7 +4,6 @@ require("mandatory.renaming-vanillas") -- Localization changes to vanilla object
 require("mandatory.resources-changes") -- Resources changes
 require("mandatory.spawner-changes") -- Modify spawners sprite
 require("mandatory.vanilla-lab-changes") -- Modify stat and accepted science packs of vanilla lab
-require("mandatory.fluids-changes") -- Add some new properties to vanilla fluids
 require("mandatory.next-upgrades") -- Setup entity upgrates
 require("mandatory.damage-technologies-bonuses") -- Rebalance the damage donus from technologies
 require("mandatory.vanilla-energy-changes") -- Rebalance accumulators ans panels
