@@ -10,6 +10,7 @@
   "dependencies": [
     "base >= 2.0.2",
     "Krastorio2Assets >= 2.0.0",
+    "ChangeInserterDropLane >= 1.1.0",
     "flib >= 0.15.0",
     "(?) aai-industry >= 0.3.17",
     "(?) aai-vehicles-chaingunner >= 0.5.2",
