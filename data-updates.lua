@@ -1,3 +1,4 @@
+require("prototypes.updates.base.achievements")
 require("prototypes.updates.base.entities")
 require("prototypes.updates.base.equipment")
 require("prototypes.updates.base.equipment-grids")
