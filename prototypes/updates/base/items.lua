@@ -19,6 +19,13 @@ table.insert(
 data.raw.capsule["discharge-defense-remote"].order = "f[active-defense-equipment]-b[discharge-defense-remote]"
 data.raw.capsule["discharge-defense-remote"].subgroup = "equipment"
 
+data.raw.capsule["raw-fish"].capsule_action.attack_parameters.cooldown = 30
+data.raw.capsule["raw-fish"].capsule_action.attack_parameters.ammo_type.action.action_delivery.target_effects = {
+  type = "damage",
+  damage = { type = "physical", amount = -50 },
+}
+data.raw.capsule["raw-fish"].rocket_launch_products = { { type = "item", name = "dolphin-gun", amount = 1 } }
+
 data.raw.item["battery-equipment"].order = "b1[battery]-b1[battery-equipment]"
 data.raw.item["battery-equipment"].subgroup = "equipment"
 
@@ -58,6 +65,8 @@ data.raw.item["fission-reactor-equipment"].pictures = {
 data.raw.item["exoskeleton-equipment"].subgroup = "character-equipment"
 data.raw.item["exoskeleton-equipment"].order = "e[exoskeleton]-a1[exoskeleton-equipment]"
 
+data.raw.tool[kr_optimization_tech_card_name].localised_description = { "item-description.optimization-tech-card" }
+
 data.raw.item["night-vision-equipment"].subgroup = "character-equipment"
 data.raw.item["night-vision-equipment"].order = "f[night-vision]-a1[night-vision-equipment]"
 
@@ -67,6 +76,8 @@ data.raw.item["personal-laser-defense-equipment"].localised_name =
   { "equipment-name.personal-sniper-laser-defense-mk1-equipment" }
 data.raw.item["personal-laser-defense-equipment"].order = "d[active-defense]-b1[personal-laser-defense-mk1-equipment]"
 data.raw.item["personal-laser-defense-equipment"].subgroup = "equipment"
+
+data.raw.item["satellite"].research_products = { { type = "item", name = "space-research-data", amount = 1000 } }
 
 data.raw.item["solar-panel-equipment"].order = "a[energy-source]-a1[solar-panel]"
 data.raw.item["solar-panel-equipment"].subgroup = "equipment"

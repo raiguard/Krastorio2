@@ -134,6 +134,7 @@ data:extend({
     results = {
       { type = "item", name = "quartz", amount = 6 },
     },
+    allow_productivity = true,
     always_show_made_in = true,
     always_show_products = true,
     crafting_machine_tint = {
