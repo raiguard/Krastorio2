@@ -19,8 +19,8 @@ local function on_entity_built(e)
 
   -- Internal entities should not be cloned
   if
-    e.name == defines.events.on_entity_cloned
-    and (entity_name == "kr-tesla-coil-turret" or entity_name == "kr-tesla-coil-collision")
+      e.name == defines.events.on_entity_cloned
+      and (entity_name == "kr-tesla-coil-turret" or entity_name == "kr-tesla-coil-collision")
   then
     entity.destroy()
     return
@@ -380,6 +380,8 @@ tesla_coil.events = {
   [defines.events.script_raised_built] = on_entity_built,
   [defines.events.script_raised_destroy] = on_entity_destroyed,
   [defines.events.script_raised_revive] = on_entity_built,
+  [defines.events.on_space_platform_built_entity] = on_entity_built,
+  [defines.events.on_space_platform_mined_entity] = on_entity_destroyed,
 }
 
 return tesla_coil

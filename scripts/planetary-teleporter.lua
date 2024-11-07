@@ -17,9 +17,9 @@ local flib_table = require("__flib__.table")
 --- @field front_layer LuaEntity
 
 local collision_entity_offsets = {
-  { x = 0, y = 0 },
+  { x = 0,  y = 0 },
   { x = -2, y = 2 },
-  { x = 2, y = 2 },
+  { x = 2,  y = 2 },
 }
 
 --- @param base_entity LuaEntity
@@ -80,12 +80,12 @@ local function on_entity_built(e)
 
   -- Don't keep cloned internal entities.
   if
-    e.name == defines.events.on_entity_cloned
-    and (
-      entity_name == "kr-planetary-teleporter-front-layer"
-      or entity_name == "kr-planetary-teleporter-turret"
-      or string.find(entity_name, "kr-planetary-teleporter-collision", nil, true)
-    )
+      e.name == defines.events.on_entity_cloned
+      and (
+        entity_name == "kr-planetary-teleporter-front-layer"
+        or entity_name == "kr-planetary-teleporter-turret"
+        or string.find(entity_name, "kr-planetary-teleporter-collision", nil, true)
+      )
   then
     entity.destroy()
     return
@@ -226,6 +226,8 @@ planetary_teleporter.events = {
   [defines.events.script_raised_built] = on_entity_built,
   [defines.events.script_raised_destroy] = on_entity_destroyed,
   [defines.events.script_raised_revive] = on_entity_built,
+  [defines.events.on_space_platform_built_entity] = on_entity_built,
+  [defines.events.on_space_platform_mined_entity] = on_entity_destroyed,
 }
 
 return planetary_teleporter

@@ -102,9 +102,9 @@ local function snap_direction(entity)
     belt_type = belt.ghost_type
   end
   if
-    belt_type == "transport-belt"
-    or belt_type == "underground-belt"
-    or math.abs(offset_direction - belt.direction) % 4 == 0
+      belt_type == "transport-belt"
+      or belt_type == "underground-belt"
+      or math.abs(offset_direction - belt.direction) % 4 == 0
   then
     flip_loader(entity)
   end
@@ -161,6 +161,7 @@ snap_loader.events = {
   [defines.events.on_robot_built_entity] = on_entity_built,
   [defines.events.script_raised_built] = on_entity_built,
   [defines.events.script_raised_revive] = on_entity_built,
+  [defines.events.on_space_platform_built_entity] = on_entity_built,
 }
 
 return snap_loader
