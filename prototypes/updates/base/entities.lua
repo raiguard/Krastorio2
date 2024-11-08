@@ -4,9 +4,59 @@ data.raw["cargo-wagon"]["cargo-wagon"].allow_robot_dispatch_in_automatic_mode = 
 
 data.raw.boiler["boiler"].energy_source.emissions_per_minute = { pollution = 20 }
 
+data.raw.boiler["heat-exchanger"].energy_consumption = "50MW"
+data.raw.boiler["heat-exchanger"].energy_source.max_transfer = "10GW"
+data.raw.boiler["heat-exchanger"].energy_source.min_working_temperature = 415
+data.raw.boiler["heat-exchanger"].energy_source.specific_heat = "5MJ"
+data.raw.boiler["heat-exchanger"].max_health = 250
+data.raw.boiler["heat-exchanger"].target_temperature = 415
+
 data.raw.lab["lab"].fast_replaceable_group = "lab"
 data.raw.radar["radar"].fast_replaceable_group = "radar"
 data.raw["solar-panel"]["solar-panel"].fast_replaceable_group = "solar-panel"
+
+data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_transfer = "6GW"
+data.raw["heat-pipe"]["heat-pipe"].heat_buffer.specific_heat = "6MJ"
+data.raw["heat-pipe"]["heat-pipe"].max_health = 100
+
+data.raw.reactor["nuclear-reactor"].consumption = "250MW"
+data.raw.reactor["nuclear-reactor"].energy_source.effectivity = 1
+data.raw.reactor["nuclear-reactor"].heat_buffer.max_transfer = "50GW"
+data.raw.reactor["nuclear-reactor"].heat_buffer.specific_heat = "50MJ"
+data.raw.reactor["nuclear-reactor"].max_health = 1000
+data.raw.reactor["nuclear-reactor"].minable = { hardness = 1, mining_time = 1, result = "nuclear-reactor" }
+data.raw.reactor["nuclear-reactor"].neighbour_bonus = 0.25
+data.raw.reactor["nuclear-reactor"].meltdown_action.action_delivery.target_effects = {
+  {
+    type = "create-trivial-smoke",
+    smoke_name = "nuclear-smoke",
+    repeat_count = 200,
+    offset_deviation = { { -1, -1 }, { 1, 1 } },
+    starting_frame = 3,
+    starting_frame_deviation = 5,
+    starting_frame_speed = 0,
+    starting_frame_speed_deviation = 5,
+    speed_from_center = 0.5,
+  },
+  { type = "create-entity", entity_name = "big-explosion" },
+  { type = "damage", damage = { amount = 500, type = "explosion" } },
+  { type = "create-entity", entity_name = "small-scorchmark", check_buildability = true },
+  {
+    type = "nested-result",
+    action = {
+      type = "area",
+      target_entities = false,
+      trigger_from_target = true,
+      repeat_count = 3000,
+      radius = 128,
+      action_delivery = {
+        type = "projectile",
+        projectile = "atomic-bomb-wave",
+        starting_speed = 0.35,
+      },
+    },
+  },
+}
 
 data.raw["rocket-silo"]["rocket-silo"].localised_description = { "entity-description.kr-rocket-silo" }
 

@@ -87,6 +87,10 @@ data.raw.item["laser-turret"].order = "03a[laser-turret]"
 data.raw.item["night-vision-equipment"].subgroup = "character-equipment"
 data.raw.item["night-vision-equipment"].order = "f[night-vision]-a1[night-vision-equipment]"
 
+data.raw.item["uranium-fuel-cell"].fuel_value = "50GJ" --  = 200s in reactor
+
+data.raw.item["nuclear-reactor"].stack_size = 1
+
 data.raw.item["personal-laser-defense-equipment"].localised_description =
   { "equipment-description.personal-sniper-laser-defense-mk1-equipment" }
 data.raw.item["personal-laser-defense-equipment"].localised_name =
