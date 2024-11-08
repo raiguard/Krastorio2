@@ -85,7 +85,7 @@ data.raw.item["laser-turret"].order = "03a[laser-turret]"
 data.raw.item["night-vision-equipment"].subgroup = "character-equipment"
 data.raw.item["night-vision-equipment"].order = "f[night-vision]-a1[night-vision-equipment]"
 
-data.raw.item["uranium-fuel-cell"].fuel_value = "50GJ" --  = 200s in reactor
+data.raw.item["pumpjack"].localised_name = { "entity-name.kr-oil-pumpjack" }
 
 data.raw.item["nuclear-reactor"].stack_size = 1
 
@@ -109,6 +109,8 @@ data.raw.item["solar-panel-equipment"].subgroup = "equipment"
 
 data.raw.item["stone-wall"].subgroup = "vanilla-turrets"
 data.raw.item["stone-wall"].order = "001[stone-wall]"
+
+data.raw.item["uranium-fuel-cell"].fuel_value = "50GJ" --  = 200s in reactor
 
 if not mods["aai-containers"] then
   data.raw.item["active-provider-chest"].subgroup = "kr-logistics-1"
@@ -160,6 +162,7 @@ data_util.set_icon(
   data.raw.tool["automation-science-pack"],
   "__Krastorio2Assets__/icons/cards/automation-tech-card.png"
 )
+data.raw.tool["automation-science-pack"].localised_name = { "item-name.automation-tech-card" }
 data.raw.tool["automation-science-pack"].order = "b02[automation-tech-card]"
 data.raw.tool["automation-science-pack"].pictures = {
   layers = {
@@ -181,6 +184,7 @@ data.raw.tool["automation-science-pack"].pictures = {
 }
 
 data_util.set_icon(data.raw.tool["logistic-science-pack"], "__Krastorio2Assets__/icons/cards/logistic-tech-card.png")
+data.raw.tool["logistic-science-pack"].localised_name = { "item-name.logistic-tech-card" }
 data.raw.tool["logistic-science-pack"].order = "b03[logistic-tech-card]"
 data.raw.tool["logistic-science-pack"].pictures = {
   layers = {
@@ -202,6 +206,7 @@ data.raw.tool["logistic-science-pack"].pictures = {
 }
 
 data_util.set_icon(data.raw.tool["military-science-pack"], "__Krastorio2Assets__/icons/cards/military-tech-card.png")
+data.raw.tool["military-science-pack"].localised_name = { "item-name.military-tech-card" }
 data.raw.tool["military-science-pack"].order = "b04[military-tech-card]"
 data.raw.tool["military-science-pack"].pictures = {
   layers = {
@@ -223,6 +228,7 @@ data.raw.tool["military-science-pack"].pictures = {
 }
 
 data_util.set_icon(data.raw.tool["chemical-science-pack"], "__Krastorio2Assets__/icons/cards/chemical-tech-card.png")
+data.raw.tool["chemical-science-pack"].localised_name = { "item-name.chemical-tech-card" }
 data.raw.tool["chemical-science-pack"].order = "b05[chemical-tech-card]"
 data.raw.tool["chemical-science-pack"].pictures = {
   layers = {
@@ -247,6 +253,7 @@ data_util.set_icon(
   data.raw.tool["production-science-pack"],
   "__Krastorio2Assets__/icons/cards/production-tech-card.png"
 )
+data.raw.tool["production-science-pack"].localised_name = { "item-name.production-tech-card" }
 data.raw.tool["production-science-pack"].order = "b06[production-tech-card]"
 data.raw.tool["production-science-pack"].pictures = {
   layers = {
@@ -268,6 +275,7 @@ data.raw.tool["production-science-pack"].pictures = {
 }
 
 data_util.set_icon(data.raw.tool["utility-science-pack"], "__Krastorio2Assets__/icons/cards/utility-tech-card.png")
+data.raw.tool["utility-science-pack"].localised_name = { "item-name.utility-tech-card" }
 data.raw.tool["utility-science-pack"].order = "b07[utility-tech-card]"
 data.raw.tool["utility-science-pack"].pictures = {
   layers = {
@@ -292,6 +300,7 @@ data_util.set_icon(
   data.raw.tool[kr_optimization_tech_card_name],
   "__Krastorio2Assets__/icons/cards/optimization-tech-card.png"
 )
+data.raw.tool[kr_optimization_tech_card_name].localised_name = { "item-name.optimization-tech-card" }
 data.raw.tool[kr_optimization_tech_card_name].localised_description = { "item-description.optimization-tech-card" }
 data.raw.tool[kr_optimization_tech_card_name].order = "b08[optimization-tech-card]"
 data.raw.tool[kr_optimization_tech_card_name].pictures = {

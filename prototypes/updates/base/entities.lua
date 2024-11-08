@@ -62,6 +62,7 @@ data.raw.boiler["heat-exchanger"].target_temperature = 415
 convert_equipment_grid("car", "car", "kr-car-grid")
 
 convert_equipment_grid("car", "tank", "kr-tank-grid")
+data.raw.car["tank"].localised_name = { "entity-name.kr-armored-vehicle" }
 
 convert_equipment_grid("cargo-wagon", "cargo-wagon", "kr-wagons-grid")
 data.raw["cargo-wagon"]["cargo-wagon"].allow_robot_dispatch_in_automatic_mode = true
@@ -139,6 +140,8 @@ data_util.set_icon(
   data.raw["mining-drill"]["electric-mining-drill"],
   "__Krastorio2Assets__/icons/entities/electric-mining-drill.png"
 )
+
+data.raw["mining-drill"]["pumpjack"].localised_name = { "entity-name.kr-oil-pumpjack" }
 
 data.raw.reactor["nuclear-reactor"].consumption = "250MW"
 data.raw.reactor["nuclear-reactor"].energy_source.effectivity = 1

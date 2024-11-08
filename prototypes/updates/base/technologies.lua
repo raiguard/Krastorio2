@@ -145,6 +145,19 @@ data_util.set_icons(data.raw.technology["fission-reactor-equipment"], {
   { icon = "__Krastorio2Assets__/technologies/overlays/equipment-overlay.png", icon_size = 256 },
 })
 
+data.raw.technology["personal-laser-defense-equipment"].localised_name = {
+  "technology-name.kr-personal-laser-defense-mk1-equipment",
+}
+
+data.raw.technology["logistic-science-pack"].localised_name = { "item-name.logistic-tech-card" }
+data.raw.technology["military-science-pack"].localised_name = { "item-name.military-tech-card" }
+data.raw.technology["chemical-science-pack"].localised_name = { "item-name.chemical-tech-card" }
+data.raw.technology["production-science-pack"].localised_name = { "item-name.production-tech-card" }
+data.raw.technology["utility-science-pack"].localised_name = { "item-name.utility-tech-card" }
+data.raw.technology[kr_optimization_tech_card_name].localised_name = { "item-name.optimization-tech-card" }
+data.raw.technology[kr_optimization_tech_card_name].localised_description =
+  { "technology-description.optimization-tech-card" }
+
 -- stylua: ignore start
 data_util.set_icon(data.raw.technology["battery-mk2-equipment"], "__Krastorio2Assets__/technologies/battery-mk2-equipment.png", 256)
 data_util.set_icon(data.raw.technology["chemical-science-pack"], "__Krastorio2Assets__/technologies/chemical-tech-card.png", 256)

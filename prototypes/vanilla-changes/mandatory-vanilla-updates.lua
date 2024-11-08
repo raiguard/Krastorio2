@@ -1,5 +1,4 @@
 require("mandatory.recipes-changes") -- All modification to vanilla recipes
-require("mandatory.renaming-vanillas") -- Localization changes to vanilla objects
 require("mandatory.resources-changes") -- Resources changes
 require("mandatory.spawner-changes") -- Modify spawners sprite
 require("mandatory.vanilla-lab-changes") -- Modify stat and accepted science packs of vanilla lab
