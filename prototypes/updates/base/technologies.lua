@@ -166,13 +166,6 @@ data_util.set_icon(data.raw.technology["steel-processing"], "__Krastorio2Assets_
 data_util.set_icon(data.raw.technology["utility-science-pack"], "__Krastorio2Assets__/technologies/utility-tech-card.png", 256)
 -- stylua: ignore end
 
-for _, technology in pairs(data.raw.technology) do
-  local unit = technology.unit
-  if unit and #unit.ingredients == 1 and unit.ingredients[1][1] == "automation-science-pack" then
-    table.insert(unit.ingredients, 1, { "basic-tech-card", 1 })
-  end
-end
-
 data:extend({
   {
     type = "technology",

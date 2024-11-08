@@ -79,8 +79,6 @@ data.raw.item["gate"].order = "002[gate]"
 data.raw.item["gun-turret"].subgroup = "vanilla-turrets"
 data.raw.item["gun-turret"].order = "01[gun-turret]"
 
-data.raw.tool[kr_optimization_tech_card_name].localised_description = { "item-description.optimization-tech-card" }
-
 data.raw.item["laser-turret"].subgroup = "vanilla-turrets"
 data.raw.item["laser-turret"].order = "03a[laser-turret]"
 
@@ -294,6 +292,7 @@ data_util.set_icon(
   data.raw.tool[kr_optimization_tech_card_name],
   "__Krastorio2Assets__/icons/cards/optimization-tech-card.png"
 )
+data.raw.tool[kr_optimization_tech_card_name].localised_description = { "item-description.optimization-tech-card" }
 data.raw.tool[kr_optimization_tech_card_name].order = "b08[optimization-tech-card]"
 data.raw.tool[kr_optimization_tech_card_name].pictures = {
   layers = {

@@ -7,6 +7,7 @@ require("prototypes.updates.base.items")
 require("prototypes.updates.base.recipes")
 require("prototypes.updates.base.technologies")
 
+require("prototypes.updates.add-basic-tech-card")
 require("prototypes.updates.convert-furnaces-to-assemblers")
 require("prototypes.updates.enable-burner-leech")
 require("prototypes.updates.generate-flare-stack-recipes")
