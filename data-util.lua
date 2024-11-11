@@ -294,6 +294,27 @@ function data_util.add_or_replace_ingredient(recipe_name, old_ingredient_name, n
   table.insert(recipe.ingredients, new_ingredient)
 end
 
+--- Converts the given ingredient to the new ingredient, carrying over other properties.
+--- @param recipe_name data.RecipeID
+--- @param old_ingredient_name data.FluidID|data.ItemID
+--- @param new_ingredient_name data.FluidID|data.ItemID
+function data_util.convert_ingredient(recipe_name, old_ingredient_name, new_ingredient_name)
+  local recipe = data.raw.recipe[recipe_name]
+  if not recipe then
+    error("Recipe " .. recipe_name .. " does not exist.")
+  end
+  if not recipe.ingredients then
+    error("Recipe " .. recipe_name .. " has no ingredients.")
+    return
+  end
+  for i, ingredient in pairs(recipe.ingredients) do
+    if ingredient.name == old_ingredient_name then
+      ingredient.name = new_ingredient_name
+      break
+    end
+  end
+end
+
 --- Remove the given ingredient from the recipe.
 --- @param recipe_name data.RecipeID
 --- @param ingredient_name data.FluidID|data.ItemID
@@ -313,6 +334,28 @@ function data_util.remove_ingredient(recipe_name, ingredient_name)
     end
   end
   error("Recipe " .. recipe_name .. " does not have ingredient " .. ingredient_name .. ".")
+end
+
+--- Adds or replaces the recipe's product matching the given name.
+--- @param recipe_name data.RecipeID
+--- @param old_product_name data.FluidID|data.ItemID
+--- @param new_product data.IngredientPrototype
+function data_util.add_or_replace_product(recipe_name, old_product_name, new_product)
+  local recipe = data.raw.recipe[recipe_name]
+  if not recipe then
+    error("Recipe " .. recipe_name .. " does not exist.")
+  end
+  if not recipe.results then
+    recipe.results = { new_product }
+    return
+  end
+  for i, product in pairs(recipe.results) do
+    if product.name == old_product_name then
+      recipe.results[i] = new_product
+      return
+    end
+  end
+  table.insert(recipe.results, new_product)
 end
 
 return data_util
