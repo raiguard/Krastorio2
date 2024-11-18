@@ -224,3 +224,22 @@ data.raw.wall["stone-wall"].resistances = {
   { type = "acid", percent = 80 },
   { type = "laser", percent = 70 },
 }
+
+data.raw["turret"]["behemoth-worm-turret"].max_health = 5000
+data.raw["turret"]["big-worm-turret"].max_health = 2500
+data.raw["turret"]["medium-worm-turret"].max_health = 950
+
+data.raw["unit"]["behemoth-biter"].max_health = 3500
+data.raw["unit"]["big-biter"].max_health = 500
+data.raw["unit"]["medium-biter"].max_health = 100
+
+data.raw["unit"]["behemoth-biter"].absorptions_to_join_attack.pollution = 500
+
+data.raw["unit"]["behemoth-spitter"].max_health = 2500
+data.raw["unit"]["big-spitter"].max_health = 350
+data.raw["unit"]["medium-spitter"].max_health = 75
+
+data.raw["unit"]["behemoth-spitter"].absorptions_to_join_attack.pollution = 500
+
+data.raw["unit-spawner"]["biter-spawner"].max_health = 750
+data.raw["unit-spawner"]["spitter-spawner"].max_health = 750

@@ -10,6 +10,7 @@ require("prototypes.updates.base.technologies")
 
 require("prototypes.updates.add-automation-core-recipes")
 require("prototypes.updates.add-basic-tech-card")
+require("prototypes.updates.adjust-spawn-rates")
 require("prototypes.updates.convert-furnaces-to-assemblers")
 require("prototypes.updates.enable-burner-leech")
 require("prototypes.updates.generate-flare-stack-recipes")
