@@ -1,4 +1,3 @@
-require("mandatory.resources-changes") -- Resources changes
 require("mandatory.spawner-changes") -- Modify spawners sprite
 require("mandatory.vanilla-lab-changes") -- Modify stat and accepted science packs of vanilla lab
 require("mandatory.next-upgrades") -- Setup entity upgrates
