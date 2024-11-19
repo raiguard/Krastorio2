@@ -205,6 +205,15 @@ data.raw.reactor["nuclear-reactor"].meltdown_action.action_delivery.target_effec
   },
 }
 
+if not mods["aai-industry"] then
+  data.raw["offshore-pump"]["offshore-pump"].energy_usage = "19kW"
+  data.raw["offshore-pump"]["offshore-pump"].energy_source = {
+    type = "electric",
+    usage_priority = "secondary-input",
+    drain = "1kW",
+  }
+end
+
 data.raw.radar["radar"].fast_replaceable_group = "radar"
 
 data.raw["rocket-silo"]["rocket-silo"].localised_description = { "entity-description.kr-rocket-silo" }
