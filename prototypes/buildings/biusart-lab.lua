@@ -33,7 +33,15 @@ data:extend({
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     researching_speed = 1,
-    inputs = {},
+    inputs = {
+      "automation-science-pack",
+      "logistic-science-pack",
+      "military-science-pack",
+      "chemical-science-pack",
+      "production-science-pack",
+      "utility-science-pack",
+      kr_optimization_tech_card_name,
+    },
     module_slots = 2,
     energy_source = {
       type = "electric",

@@ -133,6 +133,10 @@ data.raw["heat-pipe"]["heat-pipe"].max_health = 100
 
 data.raw.lab["lab"].fast_replaceable_group = "lab"
 data.raw.lab["lab"].next_upgrade = "biusart-lab"
+table.insert(data.raw.lab["lab"].inputs, 1, "basic-tech-card")
+data_util.remove_lab_input("lab", "production-science-pack")
+data_util.remove_lab_input("lab", "utility-science-pack")
+data_util.remove_lab_input("lab", kr_optimization_tech_card_name)
 
 convert_equipment_grid("locomotive", "locomotive", "kr-locomotive-grid")
 

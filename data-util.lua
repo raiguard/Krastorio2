@@ -358,4 +358,20 @@ function data_util.add_or_replace_product(recipe_name, old_product_name, new_pro
   table.insert(recipe.results, new_product)
 end
 
+--- @param lab_name data.EntityID
+--- @param input_name data.ItemID
+function data_util.remove_lab_input(lab_name, input_name)
+  local lab = data.raw.lab[lab_name]
+  assert(lab, "Lab " .. lab_name .. " does not exist.")
+  local inputs = lab.inputs
+  assert(inputs, "Lab inputs are nil.")
+  for i = 1, #inputs do
+    if inputs[i] == input_name then
+      table.remove(inputs, i)
+      return
+    end
+  end
+  error("Lab " .. lab_name .. " does not contain input " .. input_name .. ".")
+end
+
 return data_util
