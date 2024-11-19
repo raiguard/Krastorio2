@@ -131,6 +131,14 @@ data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_transfer = "6GW"
 data.raw["heat-pipe"]["heat-pipe"].heat_buffer.specific_heat = "6MJ"
 data.raw["heat-pipe"]["heat-pipe"].max_health = 100
 
+data.raw["inserter"]["bulk-inserter"].next_upgrade = "kr-superior-inserter"
+
+data.raw["inserter"]["fast-inserter"].next_upgrade = "bulk-inserter"
+
+data.raw["inserter"]["long-handed-inserter"].fast_replaceable_group = "long-handed-inserter"
+
+data.raw["inserter"]["long-handed-inserter"].next_upgrade = "kr-superior-long-inserter"
+
 data.raw.lab["lab"].fast_replaceable_group = "lab"
 data.raw.lab["lab"].next_upgrade = "biusart-lab"
 table.insert(data.raw.lab["lab"].inputs, 1, "basic-tech-card")
@@ -144,8 +152,19 @@ data_util.set_icon(
   data.raw["mining-drill"]["electric-mining-drill"],
   "__Krastorio2Assets__/icons/entities/electric-mining-drill.png"
 )
+data.raw["mining-drill"]["electric-mining-drill"].fast_replaceable_group = "electric-mining-drill"
+data.raw["mining-drill"]["electric-mining-drill"].next_upgrade = "kr-electric-mining-drill-mk2"
 
 data.raw["mining-drill"]["pumpjack"].localised_name = { "entity-name.kr-oil-pumpjack" }
+
+data.raw.pipe["pipe"].fast_replaceable_group = "pipe"
+data.raw.pipe["pipe"].next_upgrade = "kr-steel-pipe"
+
+data.raw["pipe-to-ground"]["pipe-to-ground"].fast_replaceable_group = "pipe"
+data.raw["pipe-to-ground"]["pipe-to-ground"].next_upgrade = "kr-steel-pipe-to-ground"
+
+data.raw.pump["pump"].fast_replaceable_group = "pump"
+data.raw.pump["pump"].next_upgrade = "kr-steel-pump"
 
 data.raw.reactor["nuclear-reactor"].consumption = "250MW"
 data.raw.reactor["nuclear-reactor"].energy_source.effectivity = 1
@@ -218,6 +237,8 @@ data.raw["spider-vehicle"]["spidertron"].energy_source = {
 }
 data.raw["spider-vehicle"]["spidertron"].movement_energy_consumption = "3MW"
 
+data.raw["splitter"]["express-splitter"].next_upgrade = "kr-advanced-splitter"
+
 data.raw.wall["stone-wall"].resistances = {
   { type = "physical", decrease = 3, percent = 20 },
   { type = "impact", decrease = 45, percent = 60 },
@@ -229,9 +250,13 @@ data.raw.wall["stone-wall"].resistances = {
   { type = "laser", percent = 70 },
 }
 
+data.raw["transport-belt"]["express-transport-belt"].next_upgrade = "kr-advanced-transport-belt"
+
 data.raw["turret"]["behemoth-worm-turret"].max_health = 5000
 data.raw["turret"]["big-worm-turret"].max_health = 2500
 data.raw["turret"]["medium-worm-turret"].max_health = 950
+
+data.raw["underground-belt"]["express-underground-belt"].next_upgrade = "kr-advanced-underground-belt"
 
 data.raw["unit"]["behemoth-biter"].max_health = 3500
 data.raw["unit"]["big-biter"].max_health = 500
