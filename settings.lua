@@ -5,151 +5,37 @@ data:extend({
     name = "kr-realistic-weapons",
     setting_type = "startup",
     default_value = true,
-    order = "aa1",
+    order = "a1",
   },
   {
     type = "bool-setting",
     name = "kr-realistic-weapons-auto-aim",
     setting_type = "startup",
     default_value = false,
-    order = "aa2",
-  },
-
-  -- OLD:
-
-  -- Mod config (Setting order "aNUMBER")
-  {
-    type = "string-setting",
-    name = "kr-stack-size",
-    setting_type = "startup",
-    default_value = "200",
-    allowed_values = { "No changes", "50", "100", "200", "400" },
-    order = "a1",
-  },
-  {
-    type = "int-setting",
-    name = "kr-long-hands",
-    setting_type = "startup",
-    default_value = 1,
-    allowed_values = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 },
     order = "a2",
-  },
-  {
-    type = "int-setting",
-    name = "kr-bonus-inventory",
-    setting_type = "startup",
-    default_value = 0,
-    allowed_values = { -30, -20, -10, 0, 10, 20, 30, 40, 50, 60 },
-    order = "a3",
-  },
-  {
-    type = "int-setting",
-    name = "kr-cargo-wagon-bonus",
-    setting_type = "startup",
-    default_value = 0,
-    allowed_values = { -30, -20, -10, 0, 10, 20, 30, 40, 50, 60 },
-    order = "a4",
-  },
-  {
-    type = "bool-setting",
-    name = "kr-bonus-items",
-    setting_type = "startup",
-    default_value = false,
-    order = "a5",
   },
   {
     type = "bool-setting",
     name = "kr-loaders",
     setting_type = "startup",
     default_value = true,
-    order = "a7",
+    order = "a3",
   },
   {
     type = "bool-setting",
     name = "kr-containers",
     setting_type = "startup",
     default_value = true,
-    order = "a8",
+    order = "a4",
   },
-  {
-    type = "bool-setting",
-    name = "kr-impossible-more-than-difficult",
-    setting_type = "startup",
-    default_value = false,
-    order = "a9",
-  },
-  {
-    type = "bool-setting",
-    name = "kr-tech-multiplier-everywhere",
-    setting_type = "startup",
-    default_value = false,
-    order = "aa",
-  },
-
-  -- S - Science (Setting order "sNUMBER")
-  {
-    type = "string-setting",
-    name = "kr-automation-science-pack-recipe",
-    setting_type = "startup",
-    default_value = "Krastorio 2",
-    allowed_values = { "Factorio", "Krastorio 2" },
-    order = "s1",
-  },
-  {
-    type = "string-setting",
-    name = "kr-logistic-science-pack-recipe",
-    setting_type = "startup",
-    default_value = "Krastorio 2",
-    allowed_values = { "Factorio", "Krastorio 2" },
-    order = "s2",
-  },
-  {
-    type = "string-setting",
-    name = "kr-military-science-pack-recipe",
-    setting_type = "startup",
-    default_value = "Krastorio 2",
-    allowed_values = { "Factorio", "Krastorio 2" },
-    order = "s3",
-  },
-  {
-    type = "string-setting",
-    name = "kr-chemical-science-pack-recipe",
-    setting_type = "startup",
-    default_value = "Krastorio 2",
-    allowed_values = { "Factorio", "Krastorio 2" },
-    order = "s4",
-  },
-  {
-    type = "string-setting",
-    name = "kr-production-science-pack-recipe",
-    setting_type = "startup",
-    default_value = "Krastorio 2",
-    allowed_values = { "Factorio", "Krastorio 2" },
-    order = "s5",
-  },
-  {
-    type = "string-setting",
-    name = "kr-utility-science-pack-recipe",
-    setting_type = "startup",
-    default_value = "Krastorio 2",
-    allowed_values = { "Factorio", "Krastorio 2" },
-    order = "s6",
-  },
-  -- Skin content (Setting order "uNUMBER")
+  -- TODO: Make this react to player color
   {
     type = "string-setting",
     name = "kr-shelter-tint",
     setting_type = "startup",
     default_value = "white",
     allowed_values = { "white", "gray", "yellow", "pink", "olive", "red", "blue", "green", "cyan", "purple" },
-    order = "u01",
-  },
-  {
-    type = "bool-setting",
-    name = "kr-main-menu-override-simulations",
-    setting_type = "startup",
-    default_value = true,
-    order = "u02",
+    order = "b1",
   },
   {
     type = "string-setting",
@@ -169,21 +55,25 @@ data:extend({
       "Factorio Alternative 3",
       "Factorio Alternative 4",
     },
-    order = "u03",
+    order = "b2",
   },
   {
     type = "bool-setting",
     name = "kr-main-menu-song",
     setting_type = "startup",
     default_value = true,
-    order = "u03",
+    order = "b3",
+  },
+  {
+    type = "bool-setting",
+    name = "kr-kl-stuff",
+    setting_type = "startup",
+    default_value = false,
+    order = "c1",
   },
 })
 
--- -- VANILLA CHANGES SETTINGS
--- Setting order "bNUMBER"
 data:extend({
-  -- B - Config
   {
     type = "bool-setting",
     name = "kr-rebalance-vehicles-fuels",
@@ -228,37 +118,9 @@ data:extend({
   },
   {
     type = "bool-setting",
-    name = "kr-peaceful-mode",
-    setting_type = "startup",
-    default_value = false,
-    order = "b10",
-  },
-  {
-    type = "bool-setting",
     name = "kr-infinite-technology",
     setting_type = "startup",
     default_value = true,
     order = "b11",
-  },
-  {
-    type = "bool-setting",
-    name = "kr-vehicles-minable-changes",
-    setting_type = "startup",
-    default_value = false,
-    order = "b13",
-  },
-  {
-    type = "bool-setting",
-    name = "kr-large-icons",
-    setting_type = "startup",
-    default_value = false,
-    order = "b14",
-  },
-  {
-    type = "bool-setting",
-    name = "kr-kl-stuff",
-    setting_type = "startup",
-    default_value = false,
-    order = "b15",
   },
 })

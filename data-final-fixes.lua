@@ -55,15 +55,8 @@ krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
 -- OPTION FIXES
 ---------------------------------------------------------------------------
 -- Apply the choosen science pack recipes
-require("prototypes.vanilla-changes.optional.modify-science-packs-recipes")
--- Apply fixes if in peaceful mode
-require("prototypes.vanilla-changes.optional.peaceful-mode")
 -- Final fuels fixes
 require("prototypes.vanilla-changes.optional.rebalance-vehicles&fuels-final-fixes")
--- Change the background with the selected one
-require("prototypes.vanilla-changes.optional.change-background")
--- Increase the difficult of hardmode
-require("prototypes.vanilla-changes.optional.impossible-more-than-difficult")
 ---------------------------------------------------------------------------
 -- -- -- COMPATIBILITY INITIALIZATION (data final fixes stage)
 ---------------------------------------------------------------------------

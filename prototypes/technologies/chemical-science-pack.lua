@@ -133,7 +133,7 @@ data:extend({
       { type = "unlock-recipe", recipe = "kr-grow-wood-plus" },
     },
     -- Disable cost multiplier to avoid manually harvesting unreasonable amount of Bio matter.
-    ignore_tech_cost_multiplier = not settings.startup["kr-tech-multiplier-everywhere"].value,
+    ignore_tech_cost_multiplier = true,
   },
   {
     type = "technology",

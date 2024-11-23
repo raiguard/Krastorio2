@@ -33,7 +33,7 @@ data:extend({
       { type = "unlock-recipe", recipe = "automation-core" },
     },
     -- Disable cost multiplier to avoid manually harvesting unreasonable amount of wood.
-    ignore_tech_cost_multiplier = not settings.startup["kr-tech-multiplier-everywhere"].value,
+    ignore_tech_cost_multiplier = true,
   },
   {
     type = "technology",
@@ -54,7 +54,7 @@ data:extend({
       { type = "unlock-recipe", recipe = "offshore-pump" },
     },
     -- Disable cost multiplier to avoid manually harvesting unreasonable amount of wood.
-    ignore_tech_cost_multiplier = not settings.startup["kr-tech-multiplier-everywhere"].value,
+    ignore_tech_cost_multiplier = true,
   },
   {
     type = "technology",
@@ -73,7 +73,7 @@ data:extend({
       { type = "unlock-recipe", recipe = "kr-crusher" },
     },
     -- Disable cost multiplier to avoid manually harvesting unreasonable amount of wood.
-    ignore_tech_cost_multiplier = not settings.startup["kr-tech-multiplier-everywhere"].value,
+    ignore_tech_cost_multiplier = true,
   },
   {
     type = "technology",
@@ -108,7 +108,7 @@ data:extend({
       { type = "unlock-recipe", recipe = "kr-grow-wood-with-water" },
     },
     -- Disable cost multiplier to avoid manually harvesting unreasonable amount of wood.
-    ignore_tech_cost_multiplier = not settings.startup["kr-tech-multiplier-everywhere"].value,
+    ignore_tech_cost_multiplier = true,
   },
   {
     type = "technology",
@@ -170,7 +170,7 @@ data:extend({
       { type = "unlock-recipe", recipe = "glass" },
     },
     -- Disable cost multiplier to avoid manually harvesting unreasonable amount of wood.
-    ignore_tech_cost_multiplier = not settings.startup["kr-tech-multiplier-everywhere"].value,
+    ignore_tech_cost_multiplier = true,
   },
   {
     type = "technology",
