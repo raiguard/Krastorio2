@@ -50,6 +50,12 @@ local small_crash_site_minable = {
 }
 convert_equipment_grid("artillery-wagon", "artillery-wagon", "kr-wagons-grid")
 
+data.raw["assembling-machine"]["assembling-machine-1"].energy_usage = "75kW"
+
+data.raw["assembling-machine"]["assembling-machine-2"].energy_usage = "125kW"
+
+data.raw["assembling-machine"]["assembling-machine-3"].energy_usage = "200kW"
+
 data.raw.boiler["boiler"].energy_source.emissions_per_minute = { pollution = 20 }
 
 data.raw.boiler["heat-exchanger"].energy_consumption = "50MW"
@@ -117,6 +123,9 @@ data.raw.corpse["spidertron-remnants"].animation = make_rotated_animation_variat
 
 convert_equipment_grid("fluid-wagon", "fluid-wagon", "kr-wagons-grid")
 
+data.raw.furnace["electric-furnace"].energy_source.emissions_per_minute = { pollution = 1 }
+data.raw.furnace["electric-furnace"].energy_usage = "350kW"
+
 data.raw.gate["gate"].resistances = {
   { type = "physical", decrease = 3, percent = 20 },
   { type = "impact", decrease = 45, percent = 60 },
@@ -127,11 +136,18 @@ data.raw.gate["gate"].resistances = {
   { type = "laser", percent = 70 },
 }
 
+data.raw["generator"]["steam-engine"].effectivity = 1
+data.raw["generator"]["steam-engine"].fluid_usage_per_tick = 1 / 6
+data.raw["generator"]["steam-engine"].maximum_temperature = 165
+data.raw["generator"]["steam-engine"].max_power_output = "0.75MW"
+
 data.raw["heat-pipe"]["heat-pipe"].heat_buffer.max_transfer = "6GW"
 data.raw["heat-pipe"]["heat-pipe"].heat_buffer.specific_heat = "6MJ"
 data.raw["heat-pipe"]["heat-pipe"].max_health = 100
 
 data.raw["inserter"]["bulk-inserter"].next_upgrade = "kr-superior-inserter"
+data.raw.inserter["bulk-inserter"].energy_per_movement = "12kJ"
+data.raw.inserter["bulk-inserter"].energy_per_movement = "12kJ"
 
 data.raw["inserter"]["fast-inserter"].next_upgrade = "bulk-inserter"
 
@@ -139,6 +155,7 @@ data.raw["inserter"]["long-handed-inserter"].fast_replaceable_group = "long-hand
 
 data.raw["inserter"]["long-handed-inserter"].next_upgrade = "kr-superior-long-inserter"
 
+data.raw.lab["lab"].energy_usage = "200kW"
 data.raw.lab["lab"].fast_replaceable_group = "lab"
 data.raw.lab["lab"].next_upgrade = "biusart-lab"
 table.insert(data.raw.lab["lab"].inputs, 1, "basic-tech-card")
@@ -146,7 +163,12 @@ data_util.remove_lab_input("lab", "production-science-pack")
 data_util.remove_lab_input("lab", "utility-science-pack")
 data_util.remove_lab_input("lab", kr_optimization_tech_card_name)
 
+data.raw.lamp["small-lamp"].glow_size = 8 --6
+
 convert_equipment_grid("locomotive", "locomotive", "kr-locomotive-grid")
+
+data.raw["mining-drill"]["burner-mining-drill"].energy_source.emissions_per_minute = { pollution = 5 }
+data.raw["mining-drill"]["burner-mining-drill"].energy_usage = "100kW"
 
 data_util.set_icon(
   data.raw["mining-drill"]["electric-mining-drill"],
@@ -154,6 +176,9 @@ data_util.set_icon(
 )
 data.raw["mining-drill"]["electric-mining-drill"].fast_replaceable_group = "electric-mining-drill"
 data.raw["mining-drill"]["electric-mining-drill"].next_upgrade = "kr-electric-mining-drill-mk2"
+data.raw["mining-drill"]["electric-mining-drill"].energy_source.emissions_per_minute = { pollution = 7.5 }
+data.raw["mining-drill"]["electric-mining-drill"].energy_usage = "100kW"
+data.raw["mining-drill"]["electric-mining-drill"].module_slots = 2
 
 data.raw["mining-drill"]["pumpjack"].localised_name = { "entity-name.kr-oil-pumpjack" }
 
