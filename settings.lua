@@ -1,6 +1,22 @@
--- -- KRASTORIO SETTINGS
--- Setting order "[a-z]NUMBER"
 data:extend({
+  -- NEW
+  {
+    type = "bool-setting",
+    name = "kr-realistic-weapons",
+    setting_type = "startup",
+    default_value = true,
+    order = "aa1",
+  },
+  {
+    type = "bool-setting",
+    name = "kr-realistic-weapons-auto-aim",
+    setting_type = "startup",
+    default_value = false,
+    order = "aa2",
+  },
+
+  -- OLD:
+
   -- Mod config (Setting order "aNUMBER")
   {
     type = "string-setting",
@@ -202,20 +218,6 @@ data:extend({
     setting_type = "startup",
     default_value = true,
     order = "b06",
-  },
-  {
-    type = "bool-setting",
-    name = "kr-more-realistic-weapon",
-    setting_type = "startup",
-    default_value = true,
-    order = "b07",
-  },
-  {
-    type = "bool-setting",
-    name = "kr-more-realistic-weapon-auto-aim",
-    setting_type = "startup",
-    default_value = false,
-    order = "b08",
   },
   {
     type = "bool-setting",

@@ -3,6 +3,99 @@ local flib_table = require("__flib__.table")
 
 local data_util = {}
 
+--- Overwrites or adds ammo effects for the given technology.
+--- @param tech data.TechnologyPrototype
+--- @param effects data.Modifier[]
+function data_util.update_ammo_effects(tech, effects)
+  if not tech.effects then
+    tech.effects = {}
+  end
+
+  for _, updated_effect in pairs(effects) do
+    local exists = false
+    for _, effect in pairs(tech.effects) do
+      if
+        effect.type == updated_effect.type
+        and (
+          (effect.ammo_category ~= nil and effect.ammo_category == updated_effect.ammo_category)
+          or (effect.turret_id ~= nil and effect.turret_id == updated_effect.turret_id)
+        )
+      then
+        effect.modifier = updated_effect.modifier
+        exists = true
+        break
+      end
+    end
+    if not exists then
+      table.insert(
+        tech.effects,
+        { type = updated_effect.type, ammo_category = updated_effect.ammo_category, modifier = updated_effect.modifier }
+      )
+    end
+  end
+end
+
+--- @param technology_name data.TechnologyID
+--- @param new_effect data.Modifier
+function data_util.add_effect(technology_name, new_effect)
+  local technology = data.raw.technology[technology_name]
+  if not technology then
+    error("Technology " .. technology_name .. " does not exist.")
+  end
+  local effects = technology.effects
+  if not effects or not next(effects) then
+    technology.effects = { new_effect }
+    return
+  end
+
+  local found = false
+  for _, effect in pairs(effects) do
+    if effect.type == new_effect.type then
+      -- TODO: Update for new effect types.
+      if effect.type == "gun-speed" then
+        if effect.ammo_category == new_effect.ammo_category and effect.modifier == new_effect.modifier then
+          found = true
+          break
+        end
+      elseif effect.type == "ammo-damage" then
+        if effect.ammo_category == new_effect.ammo_category and effect.modifier == new_effect.modifier then
+          found = true
+          break
+        end
+      elseif effect.type == "give-item" then
+        if effect.item == new_effect.item and effect.count == new_effect.count then
+          found = true
+          break
+        end
+      elseif effect.type == "turret-attack" then
+        if effect.turret_id == new_effect.turret_id and effect.modifier == new_effect.modifier then
+          found = true
+          break
+        end
+      elseif effect.type == "unlock-recipe" then
+        if effect.recipe == new_effect.recipe then
+          found = true
+          break
+        end
+      elseif effect.type == "nothing" then
+        if effect.effect_description == new_effect.effect_description then
+          found = true
+          break
+        end
+      else
+        if effect.modifier == new_effect.modifier then
+          found = true
+          break
+        end
+      end
+    end
+  end
+
+  if not found then
+    table.insert(effects, new_effect)
+  end
+end
+
 --- Adds the given recipe as an unlock of the given technology.
 --- @param technology_name data.TechnologyID
 --- @param recipe_name data.RecipeID

@@ -1,5 +1,7 @@
 {
   "mod-setting-name": [
+    ["kr-more-realistic-weapon-auto-aim", "kr-realistic-weapons-auto-aim"],
+    ["kr-more-realistic-weapon", "kr-realistic-weapons"],
     ["kr-rebalance-vehicles&fuels", "kr-rebalance-vehicles-fuels"]
   ],
   "entity": [

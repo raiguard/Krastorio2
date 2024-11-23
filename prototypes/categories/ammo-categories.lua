@@ -21,7 +21,7 @@ data:extend({
   },
 })
 
-if not settings.startup["kr-more-realistic-weapon"].value then
+if not settings.startup["kr-realistic-weapons"].value then
   return
 end
 

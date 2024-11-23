@@ -1,4 +1,4 @@
-if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
+if krastorio.general.getSafeSettingValue("kr-realistic-weapons") then
   -- -- --
 
   local pistol_range = 22
@@ -15,7 +15,7 @@ if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
   local k_s_rifle_min_range = 1
   local turret_range = 0
 
-  if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon-auto-aim") then
+  if krastorio.general.getSafeSettingValue("kr-realistic-weapons-auto-aim") then
     pistol_range = 20
     rifle_range = 25
     sniper_range = 50
