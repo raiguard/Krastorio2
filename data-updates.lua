@@ -1,4 +1,5 @@
 require("prototypes.updates.base.achievements")
+require("prototypes.updates.base.autoplace-controls")
 require("prototypes.updates.base.entities")
 require("prototypes.updates.base.equipment")
 require("prototypes.updates.base.equipment-grids")
@@ -21,9 +22,8 @@ require("prototypes.updates.generate-matter-recipes")
 require("prototypes.updates.generate-roboport-variations")
 require("prototypes.updates.generate-void-crushing-recipes")
 require("prototypes.updates.remove-nuclear-fuel")
+require("prototypes.updates.set-new-resource-autoplace")
 
--- TODO: Put into its own file
-data.raw["autoplace-control"]["enemy-base"].can_be_disabled = false
 ---------------------------------------------------------------------------
 -- -- -- PRE UPDATES
 ---------------------------------------------------------------------------
@@ -41,7 +41,6 @@ require("lib.private.data-stages.technologies")
 -- -- -- CONTENTS UPDATES (data updates)
 ---------------------------------------------------------------------------
 -- -- Modifing vanilla game objects
-require("prototypes.vanilla-changes.mandatory-vanilla-updates")
 require("prototypes.vanilla-changes.optional-vanilla-updates")
 ---------------------------------------------------------------------------
 -- -- -- COMPATIBILITY INITIALIZATION (data update stage)
@@ -62,9 +61,3 @@ require("compatibility-scripts.data-updates.Pyanodon")
 -- Schall Uranium Processing
 require("compatibility-scripts.data-updates.SchallUranium")
 require("compatibility-scripts.data-updates.Tral-robot-tree-farm")
----------------------------------------------------------------------------
--- -- -- OTHER
----------------------------------------------------------------------------
-
--- Map generation presets
-require("prototypes.vanilla-changes.mandatory.map-gen-preset-updates")
