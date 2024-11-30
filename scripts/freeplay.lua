@@ -1,9 +1,6 @@
 local constants = require("scripts.constants")
 
 local function add_bonus_items()
-  if not settings.startup["kr-bonus-items"].value then
-    return
-  end
   local items = remote.call("freeplay", "get_created_items")
   for _, item in pairs(constants.bonus_items) do
     if prototypes.item[item.name] then
