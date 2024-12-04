@@ -5,7 +5,7 @@ data_util.remove_research_trigger('steel-axe')
 data_util.remove_research_trigger('electronics')
 data_util.remove_research_trigger('oil-processing')
 
-data_util.add_research_unit('steel-axe', 30, 30)
+data_util.add_research_unit('steel-axe', 50, 30)
 data_util.add_research_unit_ingredient('steel-axe', 'automation-science-pack', 50)
 data_util.add_research_unit('electronics', 30, 15)
 data_util.add_research_unit_ingredient('electronics', 'automation-science-pack', 30)
