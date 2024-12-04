@@ -260,6 +260,8 @@ data.raw.recipe["inserter"].ingredients = {
 
 data_util.add_or_replace_ingredient("iron-plate", "iron-ore", { type = "item", name = "iron-ore", amount = 2 })
 
+data.raw.recipe["iron-stick"].enabled = true
+
 data_util.add_or_replace_ingredient("iron-gear-wheel", "iron-plate", { type = "item", name = "iron-plate", amount = 1 })
 data.raw.recipe["iron-gear-wheel"].results = { { type = "item", name = "iron-gear-wheel", amount = 1 } }
 
@@ -522,6 +524,8 @@ data_util.add_or_replace_ingredient(
 )
 
 data_util.remove_ingredient("slowdown-capsule", "electronic-circuit")
+
+data.raw.recipe["small-electric-pole"].enabled = true
 
 data_util.add_or_replace_ingredient(
   "small-electric-pole",
