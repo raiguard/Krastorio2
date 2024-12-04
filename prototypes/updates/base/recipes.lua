@@ -590,6 +590,8 @@ data_util.add_or_replace_ingredient(
 )
 data_util.convert_ingredient("spidertron", "raw-fish", "ai-core")
 
+data_util.remove_ingredient("splitter", "electronic-circuit")
+
 data_util.add_or_replace_ingredient("splitter", "iron-plate", { type = "item", name = "iron-gear-wheel", amount = 5 })
 data_util.add_or_replace_ingredient(
   "splitter",
