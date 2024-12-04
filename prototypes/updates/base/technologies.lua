@@ -88,7 +88,6 @@ if settings.startup["kr-loaders"].value then
   data_util.add_recipe_unlock("logistics-3", "kr-express-loader")
 end
 
-data.raw.recipe["iron-stick"].enabled = true
 data_util.remove_recipe_unlock("electric-energy-distribution-1", "iron-stick")
 data_util.remove_recipe_unlock("concrete", "iron-stick")
 data_util.remove_recipe_unlock("railway", "iron-stick")
