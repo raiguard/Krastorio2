@@ -106,7 +106,6 @@ data_util.remove_recipe_unlock("electronics", "lab")
 data_util.remove_recipe_unlock("electronics", "copper-cable")
 data_util.remove_recipe_unlock("electronics", "inserter")
 data_util.remove_recipe_unlock("electronics", "small-electric-pole")
-data_util.remove_recipe_unlock("electronics", "electronic-circuit")
 
 data_util.remove_recipe_unlock("electric-energy-distribution-1", "iron-stick")
 data_util.remove_recipe_unlock("concrete", "iron-stick")
