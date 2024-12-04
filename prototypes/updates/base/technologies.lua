@@ -169,7 +169,7 @@ data_util.set_icon(data.raw.technology[kr_optimization_tech_card_name], "__Krast
 data_util.set_icon(data.raw.technology["logistics-2"], "__Krastorio2Assets__/technologies/logistics-2.png", 256)
 data_util.set_icon(data.raw.technology["logistics-3"], "__Krastorio2Assets__/technologies/logistics-3.png", 256)
 data_util.set_icon(data.raw.technology["logistic-science-pack"], "__Krastorio2Assets__/technologies/logistic-tech-card.png", 256)
-data_util.set_icon(data.raw.technology["logistics"], "__Krastorio2Assets__/technologies/logistics-1.png", 25)
+data_util.set_icon(data.raw.technology["logistics"], "__Krastorio2Assets__/technologies/logistics-1.png", 256)
 data_util.set_icon(data.raw.technology["military-science-pack"], "__Krastorio2Assets__/technologies/military-tech-card.png", 256)
 data_util.set_icon(data.raw.technology["night-vision-equipment"], "__Krastorio2Assets__/technologies/night-vision-equipment.png", 256)
 data_util.set_icon(data.raw.technology["oil-processing"], "__Krastorio2Assets__/technologies/oil-gathering.png", 256)
