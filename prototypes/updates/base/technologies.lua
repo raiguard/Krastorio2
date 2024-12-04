@@ -1,5 +1,21 @@
 local data_util = require("data-util")
 
+data_util.remove_technology("steam-power")
+data_util.remove_technology("repair-pack")
+data_util.remove_technology("electric-mining-drill")
+
+data_util.remove_research_trigger("steel-axe")
+data_util.remove_research_trigger("electronics")
+data_util.remove_research_trigger("oil-processing")
+
+data_util.add_research_unit("steel-axe", 50, 30)
+data_util.add_research_unit_ingredient("steel-axe", "automation-science-pack")
+data_util.add_research_unit("electronics", 30, 15)
+data_util.add_research_unit_ingredient("electronics", "automation-science-pack")
+data_util.add_research_unit("oil-processing", 100, 30)
+data_util.add_research_unit_ingredient("oil-processing", "automation-science-pack")
+data_util.add_research_unit_ingredient("oil-processing", "logistic-science-pack")
+
 data_util.add_prerequisite("advanced-circuit", "electronics")
 data_util.add_prerequisite("advanced-circuit", "kr-silicon-processing")
 data_util.add_prerequisite("atomic-bomb", "kr-military-5")
@@ -87,6 +103,16 @@ if settings.startup["kr-loaders"].value then
   data_util.add_recipe_unlock("logistics-2", "kr-fast-loader")
   data_util.add_recipe_unlock("logistics-3", "kr-express-loader")
 end
+
+data_util.remove_recipe_unlock("electronics", "lab")
+data_util.remove_recipe_unlock("electronics", "copper-cable")
+data_util.remove_recipe_unlock("electronics", "inserter")
+data_util.remove_recipe_unlock("electronics", "small-electric-pole")
+
+data_util.remove_recipe_unlock("electric-energy-distribution-1", "iron-stick")
+data_util.remove_recipe_unlock("concrete", "iron-stick")
+data_util.remove_recipe_unlock("railway", "iron-stick")
+data_util.remove_recipe_unlock("circuit-network", "iron-stick")
 
 data_util.remove_recipe_unlock("automation", "long-handed-inserter")
 data_util.remove_recipe_unlock("kovarex-enrichment-process", "nuclear-fuel")

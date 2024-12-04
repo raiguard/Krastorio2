@@ -26,6 +26,11 @@ data_util.add_or_replace_ingredient(
   "iron-plate",
   { type = "item", name = "iron-beam", amount = 4 }
 )
+data_util.add_or_replace_ingredient(
+  "assembling-machine-1",
+  "electronic-circuit",
+  { type = "item", name = "automation-core", amount = 2 }
+)
 
 data.raw.recipe["assembling-machine-2"].energy_required = 2
 
@@ -136,6 +141,14 @@ data_util.add_or_replace_ingredient(
   "iron-plate",
   { type = "item", name = "iron-beam", amount = 2 }
 )
+
+data_util.add_or_replace_ingredient(
+  "electric-mining-drill",
+  "electronic-circuit",
+  { type = "item", name = "automation-core", amount = 2 }
+)
+
+data.raw.recipe["copper-cable"].enabled = true
 
 data.raw.recipe["electronic-circuit"].enabled = false
 data.raw.recipe["electronic-circuit"].energy_required = 2
@@ -257,6 +270,8 @@ data.raw.recipe["inserter"].ingredients = {
 
 data_util.add_or_replace_ingredient("iron-plate", "iron-ore", { type = "item", name = "iron-ore", amount = 2 })
 
+data.raw.recipe["iron-stick"].enabled = true
+
 data_util.add_or_replace_ingredient("iron-gear-wheel", "iron-plate", { type = "item", name = "iron-plate", amount = 1 })
 data.raw.recipe["iron-gear-wheel"].results = { { type = "item", name = "iron-gear-wheel", amount = 1 } }
 
@@ -281,6 +296,8 @@ data_util.add_or_replace_product(
   "uranium-238",
   { type = "item", name = "stone", amount = 2 }
 )
+
+data.raw.recipe["lab"].enabled = true
 
 data_util.add_or_replace_ingredient("lab", "electronic-circuit", { type = "item", name = "iron-beam", amount = 10 })
 data_util.add_or_replace_ingredient("lab", "iron-gear-wheel", { type = "item", name = "copper-plate", amount = 10 })
@@ -392,6 +409,9 @@ data.raw.recipe["pipe"].enabled = false
 
 data.raw.recipe["pipe-to-ground"].enabled = false
 
+data.raw.recipe["pistol"].enabled = true
+data.raw.recipe["pistol"].hidden = false
+
 data_util.add_or_replace_ingredient("pistol", "iron-plate", { type = "item", name = "iron-plate", amount = 2 })
 data_util.add_or_replace_ingredient("pistol", "copper-plate", { type = "item", name = "copper-plate", amount = 1 })
 
@@ -481,6 +501,8 @@ data_util.add_or_replace_ingredient(
 )
 data_util.remove_ingredient("refined-concrete", "iron-stick")
 
+data.raw.recipe["repair-pack"].enabled = true
+
 data_util.add_or_replace_ingredient(
   "repair-pack",
   "iron-gear-wheel",
@@ -517,6 +539,8 @@ data_util.add_or_replace_ingredient(
 )
 
 data_util.remove_ingredient("slowdown-capsule", "electronic-circuit")
+
+data.raw.recipe["small-electric-pole"].enabled = true
 
 data_util.add_or_replace_ingredient(
   "small-electric-pole",
@@ -570,6 +594,8 @@ data_util.add_or_replace_ingredient(
   { type = "item", name = "fission-reactor-equipment", amount = 1 }
 )
 data_util.convert_ingredient("spidertron", "raw-fish", "ai-core")
+
+data_util.remove_ingredient("splitter", "electronic-circuit")
 
 data_util.add_or_replace_ingredient("splitter", "iron-plate", { type = "item", name = "iron-gear-wheel", amount = 5 })
 data_util.add_or_replace_ingredient(
