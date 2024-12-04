@@ -11,7 +11,7 @@ local migrations = {}
 migrations.on_init = ensure_turret_force
 
 function migrations.on_configuration_changed(e)
-  if flib_migration.on_config_changed(e, migrations.version) then
+  if flib_migration.on_config_changed(e, migrations.versions) then
     ensure_turret_force()
   end
 end
