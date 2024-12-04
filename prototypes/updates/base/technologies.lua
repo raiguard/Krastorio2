@@ -2,6 +2,8 @@ local data_util = require("data-util")
 
 data_util.remove_technology("steam-power")
 data_util.remove_technology("repair-pack")
+data_util.remove_technology("electric-mining-drill")
+
 data_util.remove_research_trigger("steel-axe")
 data_util.remove_research_trigger("electronics")
 data_util.remove_research_trigger("oil-processing")
