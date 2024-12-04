@@ -1,17 +1,5 @@
 local constants = {}
 
-constants.bonus_items = {
-  { name = "construction-robot", count = 50 },
-  { name = "modular-armor", count = 1 },
-  { name = "car", count = 1 },
-  { name = "fuel", count = 200 },
-  { name = "big-battery-equipment", count = 1 },
-  { name = "personal-roboport-equipment", count = 1 },
-  { name = "small-portable-generator", count = 2 },
-  { name = "cliff-explosives", count = 50 },
-  { name = "landfill", count = 50 },
-}
-
 constants.inserter_drop_vectors = {
   [true] = { [0] = { 0.01, -0.2 }, [2] = { 0.2, 0.01 }, [4] = { -0.01, 0.2 }, [6] = { -0.2, -0.01 } }, -- Near lane
   [false] = { [0] = { 0.0, 0.2 }, [2] = { -0.2, 0.0 }, [4] = { 0.0, -0.2 }, [6] = { 0.2, 0.0 } }, -- Far lane

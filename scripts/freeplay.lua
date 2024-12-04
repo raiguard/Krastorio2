@@ -1,18 +1,3 @@
-local constants = require("scripts.constants")
-
-local function add_bonus_items()
-  if not settings.startup["kr-bonus-items"].value then
-    return
-  end
-  local items = remote.call("freeplay", "get_created_items")
-  for _, item in pairs(constants.bonus_items) do
-    if prototypes.item[item.name] then
-      items[item.name] = item.count
-    end
-  end
-  remote.call("freeplay", "set_created_items", items)
-end
-
 local function add_starting_items()
   local items = remote.call("freeplay", "get_created_items")
   -- Shelter
@@ -126,7 +111,6 @@ local function run()
     return
   end
   add_starting_items()
-  add_bonus_items()
   add_to_crash_site()
   set_custom_intro()
   disable_rocket_victory()
