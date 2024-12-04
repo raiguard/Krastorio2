@@ -47,7 +47,7 @@ local status_properties = {
 local min_charge_delta = 2.5e8 -- Requires charge rate of 15 GW
 local max_charge_delta = 2e9
 local max_energy = prototypes.entity["kr-intergalactic-transceiver"].electric_energy_source_prototype.buffer_capacity
-    - max_charge_delta
+  - max_charge_delta
 local energy_drain = 50e9
 
 --- @param transceiver_data IntergalacticTransceiverForceData
@@ -249,7 +249,7 @@ local function create_gui(player, entity)
         type = "flow",
         style_mods = { vertical_align = "center" },
         { type = "sprite", name = "status_icon", style = "flib_indicator" },
-        { type = "label",  name = "status_label" },
+        { type = "label", name = "status_label" },
       },
       {
         type = "frame",

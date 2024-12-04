@@ -102,9 +102,9 @@ local function snap_direction(entity)
     belt_type = belt.ghost_type
   end
   if
-      belt_type == "transport-belt"
-      or belt_type == "underground-belt"
-      or math.abs(offset_direction - belt.direction) % 4 == 0
+    belt_type == "transport-belt"
+    or belt_type == "underground-belt"
+    or math.abs(offset_direction - belt.direction) % 4 == 0
   then
     flip_loader(entity)
   end

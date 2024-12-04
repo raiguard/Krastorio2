@@ -19,8 +19,8 @@ local function on_entity_built(e)
 
   -- Internal entities should not be cloned
   if
-      e.name == defines.events.on_entity_cloned
-      and (entity_name == "kr-tesla-coil-turret" or entity_name == "kr-tesla-coil-collision")
+    e.name == defines.events.on_entity_cloned
+    and (entity_name == "kr-tesla-coil-turret" or entity_name == "kr-tesla-coil-collision")
   then
     entity.destroy()
     return
