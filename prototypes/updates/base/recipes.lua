@@ -142,6 +142,11 @@ data_util.add_or_replace_ingredient(
   { type = "item", name = "iron-beam", amount = 2 }
 )
 
+data_util.add_or_replace_ingredient(
+  "electric-mining-drill",
+  "electronic-circuit",
+  { type = "item", name = "automation-core", amount = 2 }
+)
 
 data.raw.recipe["copper-cable"].enabled = true
 
