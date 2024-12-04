@@ -1,5 +1,18 @@
 local data_util = require("data-util")
 
+data_util.remove_technology('steam-power')
+data_util.remove_research_trigger('steel-axe')
+data_util.remove_research_trigger('electronics')
+data_util.remove_research_trigger('oil-processing')
+
+data_util.add_research_unit('steel-axe', 30, 30)
+data_util.add_research_unit_ingredient('steel-axe', 'automation-science-pack', 50)
+data_util.add_research_unit('electronics', 30, 15)
+data_util.add_research_unit_ingredient('electronics', 'automation-science-pack', 30)
+data_util.add_research_unit('oil-processing', 100, 30)
+data_util.add_research_unit_ingredient('oil-processing', 'automation-science-pack', 100)
+data_util.add_research_unit_ingredient('oil-processing', 'logistic-science-pack', 100)
+
 data_util.add_prerequisite("advanced-circuit", "electronics")
 data_util.add_prerequisite("advanced-circuit", "kr-silicon-processing")
 data_util.add_prerequisite("atomic-bomb", "kr-military-5")
@@ -91,7 +104,7 @@ end
 data_util.remove_recipe_unlock("automation", "long-handed-inserter")
 data_util.remove_recipe_unlock("kovarex-enrichment-process", "nuclear-fuel")
 data_util.remove_recipe_unlock("military-3", "slowdown-capsule")
-data_util.remove_recipe_unlock("oil-processing", "chemical-plant")
+-- data_util.remove_recipe_unlock("oil-processing", "chemical-plant")
 
 data.raw.technology["artillery"].unit.count = 1000
 data.raw.technology["atomic-bomb"].unit.count = 1500

@@ -96,6 +96,20 @@ function data_util.add_effect(technology_name, new_effect)
   end
 end
 
+-- Remove the technology entirely
+function data_util.remove_technology(technology_name)
+  data.raw.technology[technology_name] = nil
+end
+
+-- Remove research trigger from technology
+function data_util.remove_research_trigger(technology_name)
+  local technology = data.raw.technology[technology_name]
+  if not technology then
+    error("Technology " .. technology_name .. " does not exist.")
+  end
+  technology.research_trigger = nil
+end
+
 --- Adds the given recipe as an unlock of the given technology.
 --- @param technology_name data.TechnologyID
 --- @param recipe_name data.RecipeID
@@ -212,6 +226,27 @@ function data_util.convert_research_unit_ingredient(technology_id, from_id, to_i
     log("Adding prerequisite " .. to_id)
     table.insert(technology.prerequisites, to_id)
   end
+end
+
+--- Adds research unit to the technology.
+--- @param technology_id data.TechnologyID
+--- @param count integer
+--- @param time number
+function data_util.add_research_unit(technology_id, count, time)
+  local technology = data.raw.technology[technology_id]
+  if not technology then
+    error("Technology " .. technology_id .. " does not exist.")
+  end
+
+  if technology.unit then
+    error("Technology " .. technology_id .. "already has a research unit")
+  end
+
+  technology.unit = {
+    count = count,
+    time = time,
+    ingredients = {}
+  }
 end
 
 --- Adds the given research ingredient to the technology.
@@ -407,6 +442,7 @@ function data_util.convert_ingredient(recipe_name, old_ingredient_name, new_ingr
     end
   end
 end
+
 
 --- Remove the given ingredient from the recipe.
 --- @param recipe_name data.RecipeID
