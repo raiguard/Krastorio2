@@ -137,6 +137,9 @@ data_util.add_or_replace_ingredient(
   { type = "item", name = "iron-beam", amount = 2 }
 )
 
+
+data.raw.recipe["copper-cable"].enabled = true
+
 data.raw.recipe["electronic-circuit"].enabled = false
 data.raw.recipe["electronic-circuit"].energy_required = 2
 table.insert(data.raw.recipe["electronic-circuit"].ingredients, { type = "item", name = "wood", amount = 1 })
