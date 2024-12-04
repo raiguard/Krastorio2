@@ -104,7 +104,7 @@ end
 data_util.remove_recipe_unlock("automation", "long-handed-inserter")
 data_util.remove_recipe_unlock("kovarex-enrichment-process", "nuclear-fuel")
 data_util.remove_recipe_unlock("military-3", "slowdown-capsule")
--- data_util.remove_recipe_unlock("oil-processing", "chemical-plant")
+data_util.remove_recipe_unlock("oil-processing", "chemical-plant")
 
 data.raw.technology["artillery"].unit.count = 1000
 data.raw.technology["atomic-bomb"].unit.count = 1500
