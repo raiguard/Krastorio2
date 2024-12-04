@@ -399,6 +399,9 @@ data.raw.recipe["pipe"].enabled = false
 
 data.raw.recipe["pipe-to-ground"].enabled = false
 
+data.raw.recipe["pistol"].enabled = true
+data.raw.recipe["pistol"].hidden = false
+
 data_util.add_or_replace_ingredient("pistol", "iron-plate", { type = "item", name = "iron-plate", amount = 2 })
 data_util.add_or_replace_ingredient("pistol", "copper-plate", { type = "item", name = "copper-plate", amount = 1 })
 
@@ -487,6 +490,8 @@ data_util.add_or_replace_ingredient(
   { type = "item", name = "iron-beam", amount = 5 }
 )
 data_util.remove_ingredient("refined-concrete", "iron-stick")
+
+data.raw.recipe["repair-pack"].enabled = true
 
 data_util.add_or_replace_ingredient(
   "repair-pack",
