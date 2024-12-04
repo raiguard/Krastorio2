@@ -285,6 +285,8 @@ data_util.add_or_replace_product(
   { type = "item", name = "stone", amount = 2 }
 )
 
+data.raw.recipe["lab"].enabled = true
+
 data_util.add_or_replace_ingredient("lab", "electronic-circuit", { type = "item", name = "iron-beam", amount = 10 })
 data_util.add_or_replace_ingredient("lab", "iron-gear-wheel", { type = "item", name = "copper-plate", amount = 10 })
 data_util.add_or_replace_ingredient("lab", "transport-belt", { type = "item", name = "copper-cable", amount = 10 })
