@@ -54,7 +54,7 @@ krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
 ---------------------------------------------------------------------------
 -- OPTION FIXES
 ---------------------------------------------------------------------------
--- Apply the choosen science pack recipes
+-- Apply K2 science pack recipes
 require("prototypes.vanilla-changes.optional.modify-science-packs-recipes")
 -- Final fuels fixes
 require("prototypes.vanilla-changes.optional.rebalance-vehicles&fuels-final-fixes")
