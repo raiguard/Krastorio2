@@ -1011,7 +1011,7 @@ end
 function krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
   -- calculate existance of science pack technologies
   local science_techs = {}
-  for _, science_pack in pairs(krastorio.items.getAllItemsOfType("tool")) do
+  for _, science_pack in pairs(data.raw.tool) do
     local science_pack_tech = krastorio.technologies.getTechnologyFromName(science_pack.name)
       or krastorio.technologies.getTechnologyThatUnlockRecipe(science_pack.name)
     if science_pack_tech then

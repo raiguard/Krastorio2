@@ -18,23 +18,6 @@ function krastorio.items.getItem(item_name)
   return nil
 end
 
-function krastorio.items.getAllItemsOfType(item_type)
-  local exist = false
-  local items = {}
-  for _, _type in pairs(defines.prototypes.item) do
-    if _type == item_type then
-      exist = true
-      break
-    end
-  end
-  if exist then
-    for name, item in pairs(data.raw[item_type]) do
-      table.insert(items, item)
-    end
-  end
-  return items
-end
-
 function krastorio.items.getItemType(item_name)
   local item = krastorio.items.getItem(item_name)
   if item and item.type then
