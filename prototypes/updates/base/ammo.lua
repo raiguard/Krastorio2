@@ -2,7 +2,6 @@ data.raw.ammo["atomic-bomb"].ammo_category = "heavy-rocket"
 data.raw.ammo["atomic-bomb"].ammo_type.range_modifier = 1
 data.raw.ammo["atomic-bomb"].ammo_type.cooldown_modifier = 3
 
--- Firearm magazine (normal ammo)
 data.raw["ammo"]["firearm-magazine"].ammo_type.action = {
   type = "direct",
   action_delivery = {
@@ -30,7 +29,6 @@ data.raw["ammo"]["firearm-magazine"].ammo_type.action = {
   },
 }
 
--- Piercing rounds magazine
 data.raw["ammo"]["piercing-rounds-magazine"].ammo_type.action.type = "direct"
 data.raw["ammo"]["piercing-rounds-magazine"].ammo_type.action.action_delivery = {
   type = "instant",
@@ -52,7 +50,6 @@ data.raw["ammo"]["piercing-rounds-magazine"].ammo_type.action.action_delivery = 
   },
 }
 
--- Uranium rounds magazine
 data.raw["ammo"]["uranium-rounds-magazine"].ammo_type.action.type = "direct"
 data.raw["ammo"]["uranium-rounds-magazine"].ammo_type.action.action_delivery = {
   type = "instant",
