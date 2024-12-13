@@ -467,4 +467,16 @@ function data_util.remove_lab_input(lab_name, input_name)
   error("Lab " .. lab_name .. " does not contain input " .. input_name .. ".")
 end
 
+--- @param energy_source data.EnergySource
+--- @param category_name data.FuelCategoryID
+function data_util.add_fuel_category(energy_source, category_name)
+  if energy_source.type ~= "burner" then
+    error("Energy source must be a burner to add a fuel category.")
+  end
+  if not energy_source.fuel_categories then
+    energy_source.fuel_categories = {}
+  end
+  table.insert(energy_source.fuel_categories, category_name)
+end
+
 return data_util

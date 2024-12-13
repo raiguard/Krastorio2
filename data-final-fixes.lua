@@ -12,21 +12,6 @@ require("lib.private.data-stages.modules")
 require("lib.private.data-stages.recipes")
 require("lib.private.data-stages.technologies")
 
-local flib_table = require("__flib__.table")
----------------------------------------------------------------------------
--- -- -- PRE FINAL FIXES
--- -- -- SCIENCE PACK SANITIZING
-
----------------------------------------------------------------------------
--- -- -- POST ALL FIXES
----------------------------------------------------------------------------
--- Add new fuels to entities
-krastorio.entities.addFuelCategory("assembling-machine", "stone-furnace", "vehicle-fuel")
-krastorio.entities.addFuelCategory("assembling-machine", "steel-furnace", "vehicle-fuel")
-krastorio.entities.addFuelCategory("boiler", "boiler", "vehicle-fuel")
-krastorio.entities.addFuelCategory("inserter", "burner-inserter", "vehicle-fuel")
-krastorio.entities.addFuelCategory("mining-drill", "burner-mining-drill", "vehicle-fuel")
-
 -- Make characters be targeted by the teleporter turrets
 for _, character in pairs(data.raw["character"]) do
   local mask = character.trigger_target_mask or { "common", "ground-unit" }
@@ -35,6 +20,8 @@ for _, character in pairs(data.raw["character"]) do
   -- FIXME: Use a proper name
   table.insert(mask, "character")
 end
+
+local flib_table = require("__flib__.table")
 
 -- Make anything with an equipment grid of the correct category be targetable by tesla coils
 local types_have_grid = {

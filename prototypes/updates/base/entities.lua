@@ -61,6 +61,7 @@ data.raw["assembling-machine"]["assembling-machine-2"].energy_usage = "125kW"
 data.raw["assembling-machine"]["assembling-machine-3"].energy_usage = "200kW"
 
 data.raw.boiler["boiler"].energy_source.emissions_per_minute = { pollution = 20 }
+data_util.add_fuel_category(data.raw.boiler["boiler"].energy_source, "vehicle-fuel")
 
 data.raw.boiler["heat-exchanger"].energy_consumption = "50MW"
 data.raw.boiler["heat-exchanger"].energy_source.max_transfer = "10GW"
@@ -244,6 +245,10 @@ data.raw["fluid-wagon"]["fluid-wagon"].weight = 2000
 data.raw.furnace["electric-furnace"].energy_source.emissions_per_minute = { pollution = 1 }
 data.raw.furnace["electric-furnace"].energy_usage = "350kW"
 
+data_util.add_fuel_category(data.raw.furnace["steel-furnace"].energy_source, "vehicle-fuel")
+
+data_util.add_fuel_category(data.raw.furnace["stone-furnace"].energy_source, "vehicle-fuel")
+
 data.raw.gate["gate"].resistances = {
   { type = "physical", decrease = 3, percent = 20 },
   { type = "impact", decrease = 45, percent = 60 },
@@ -266,6 +271,8 @@ data.raw["heat-pipe"]["heat-pipe"].max_health = 100
 data.raw["inserter"]["bulk-inserter"].next_upgrade = "kr-superior-inserter"
 data.raw.inserter["bulk-inserter"].energy_per_movement = "12kJ"
 data.raw.inserter["bulk-inserter"].energy_per_movement = "12kJ"
+
+data_util.add_fuel_category(data.raw.inserter["burner-inserter"].energy_source, "vehicle-fuel")
 
 data.raw["inserter"]["fast-inserter"].next_upgrade = "bulk-inserter"
 
@@ -305,6 +312,7 @@ convert_equipment_grid("locomotive", "locomotive", "kr-locomotive-grid")
 
 data.raw["mining-drill"]["burner-mining-drill"].energy_source.emissions_per_minute = { pollution = 5 }
 data.raw["mining-drill"]["burner-mining-drill"].energy_usage = "100kW"
+data_util.add_fuel_category(data.raw["mining-drill"]["burner-mining-drill"].energy_source, "vehicle-fuel")
 
 data_util.set_icon(
   data.raw["mining-drill"]["electric-mining-drill"],
