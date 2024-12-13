@@ -20,6 +20,15 @@ data.raw.recipe["advanced-circuit"].results = {
   { type = "item", name = "advanced-circuit", amount = 2 },
 }
 
+data.raw.recipe["artillery-wagon"].energy_required = 40
+data.raw.recipe["artillery-wagon"].ingredients = {
+  { type = "item", name = "artillery-turret", amount = 1 },
+  { type = "item", name = "cargo-wagon", amount = 1 },
+  { type = "item", name = "rare-metals", amount = 20 },
+  { type = "item", name = "steel-plate", amount = 20 },
+  { type = "item", name = "steel-gear-wheel", amount = 20 },
+}
+
 data.raw.recipe["assembling-machine-1"].energy_required = 1
 data_util.add_or_replace_ingredient(
   "assembling-machine-1",
@@ -90,6 +99,7 @@ data.raw.recipe["burner-inserter"].ingredients = {
   { type = "item", name = "iron-plate", amount = 1 },
 }
 
+data.raw.recipe["cargo-wagon"].energy_required = 20
 data_util.add_or_replace_ingredient("cargo-wagon", "steel-plate", { type = "item", name = "steel-beam", amount = 10 })
 
 data_util.add_or_replace_ingredient("combat-shotgun", "wood", { type = "item", name = "wood", amount = 3 })
@@ -232,6 +242,8 @@ data_util.add_or_replace_ingredient(
   { type = "item", name = "electronic-components", amount = 10 }
 )
 
+data.raw.recipe["fluid-wagon"].energy_required = 20
+
 data_util.add_or_replace_ingredient("gun-turret", "iron-plate", { type = "item", name = "iron-beam", amount = 5 })
 data_util.add_or_replace_ingredient(
   "gun-turret",
@@ -288,6 +300,9 @@ data_util.add_or_replace_ingredient("lab", "transport-belt", { type = "item", na
 
 table.insert(data.raw.recipe["laser-turret"].ingredients, { type = "item", name = "quartz", amount = 5 })
 data_util.add_or_replace_ingredient("laser-turret", "steel-plate", { type = "item", name = "steel-plate", amount = 15 })
+
+data.raw.recipe["locomotive"].energy_required = 60
+data_util.add_or_replace_ingredient("locomotive", "steel-plate", { type = "item", name = "steel-plate", amount = 80 })
 
 data.raw.recipe["light-armor"].enabled = false
 

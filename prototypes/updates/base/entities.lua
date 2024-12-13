@@ -50,6 +50,9 @@ local small_crash_site_minable = {
   mining_particle = "shell-particle",
 }
 convert_equipment_grid("artillery-wagon", "artillery-wagon", "kr-wagons-grid")
+data.raw["artillery-wagon"]["artillery-wagon"].max_health = 1000
+data.raw["artillery-wagon"]["artillery-wagon"].minable = { mining_time = 0.5, result = "artillery-wagon" }
+data.raw["artillery-wagon"]["artillery-wagon"].weight = 3000
 
 data.raw["assembling-machine"]["assembling-machine-1"].energy_usage = "75kW"
 
@@ -73,6 +76,9 @@ data.raw.car["tank"].localised_name = { "entity-name.kr-armored-vehicle" }
 
 convert_equipment_grid("cargo-wagon", "cargo-wagon", "kr-wagons-grid")
 data.raw["cargo-wagon"]["cargo-wagon"].allow_robot_dispatch_in_automatic_mode = true
+data.raw["cargo-wagon"]["cargo-wagon"].max_health = 750
+data.raw["cargo-wagon"]["cargo-wagon"].minable = { mining_time = 0.5, result = "cargo-wagon" }
+data.raw["cargo-wagon"]["cargo-wagon"].weight = 2000
 
 data.raw["combat-robot"]["defender"].time_to_live = 60 * 120
 data.raw["combat-robot"]["defender"].attack_parameters = {
@@ -220,6 +226,9 @@ data.raw["electric-pole"]["substation"].maximum_wire_distance = 20.25
 data.raw["electric-pole"]["substation"].supply_area_distance = 10
 
 convert_equipment_grid("fluid-wagon", "fluid-wagon", "kr-wagons-grid")
+data.raw["fluid-wagon"]["fluid-wagon"].max_health = 150
+data.raw["fluid-wagon"]["fluid-wagon"].minable = { mining_time = 0.5, result = "fluid-wagon" }
+data.raw["fluid-wagon"]["fluid-wagon"].weight = 2000
 
 data.raw.furnace["electric-furnace"].energy_source.emissions_per_minute = { pollution = 1 }
 data.raw.furnace["electric-furnace"].energy_usage = "350kW"
@@ -262,6 +271,17 @@ data_util.remove_lab_input("lab", "utility-science-pack")
 data_util.remove_lab_input("lab", kr_optimization_tech_card_name)
 
 data.raw.lamp["small-lamp"].glow_size = 8 --6
+
+data.raw.locomotive["locomotive"].max_health = 1000
+data.raw.locomotive["locomotive"].braking_force = 30
+data.raw.locomotive["locomotive"].energy_source.fuel_inventory_size = 3
+data.raw.locomotive["locomotive"].energy_source.fuel_categories = { "chemical", "vehicle-fuel" }
+data.raw.locomotive["locomotive"].energy_source.emissions_per_minute = { pollution = 20 }
+data.raw.locomotive["locomotive"].minable = { mining_time = 1, result = "locomotive" }
+data.raw.locomotive["locomotive"].weight = 10000
+data.raw.locomotive["locomotive"].max_speed = 1.0185
+data.raw.locomotive["locomotive"].max_power = "2MW"
+data.raw.locomotive["locomotive"].energy_source.effectivity = 1
 
 if not mods["boblogistics"] then
   data.raw["logistic-robot"]["logistic-robot"].speed = 0.0694
