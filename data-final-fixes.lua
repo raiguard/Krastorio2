@@ -1,4 +1,6 @@
-local table = require("__flib__.table")
+require("prototypes.final-fixes.enforce-science-pack-prerequisites")
+
+local flib_table = require("__flib__.table")
 ---------------------------------------------------------------------------
 -- -- -- PRE FINAL FIXES
 -- -- -- SCIENCE PACK SANITIZING
@@ -49,8 +51,6 @@ krastorio.technologies.removeSciencePackIncompatibleWith("production-science-pac
 -- Sanitize utility science pack from T0 packs
 krastorio.technologies.removeSciencePackIncompatibleWith("utility-science-pack", science_pack_incompatibilities)
 
--- -- -- ENFORCE SCIENCE PACK PREREQUISITE COHERENCE
-krastorio.technologies.enforceUsedSciencePacksInPrerequisites()
 ---------------------------------------------------------------------------
 -- OPTION FIXES
 ---------------------------------------------------------------------------
@@ -120,7 +120,7 @@ for _, type in pairs(types_have_grid) do
   for _, prototype in pairs(data.raw[type]) do
     if type ~= "character" then
       local grid = grids[prototype.equipment_grid]
-      if not grid or not table.find(grid.equipment_categories, "universal-equipment") then
+      if not grid or not flib_table.find(grid.equipment_categories, "universal-equipment") then
         goto continue
       end
     end

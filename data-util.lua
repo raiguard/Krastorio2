@@ -266,7 +266,7 @@ end
 --- @return data.TechnologyPrototype?
 function data_util.get_technology_for_recipe(recipe_id)
   for _, technology in pairs(data.raw.technology) do
-    for _, effect in pairs(technology.effects) do
+    for _, effect in pairs(technology.effects or {}) do
       if effect.type == "unlock-recipe" and effect.recipe == recipe_id then
         return technology
       end
