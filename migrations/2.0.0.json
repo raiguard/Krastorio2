@@ -92,6 +92,8 @@
     ["kr-fluid-burner", "kr-flare-stack"],
     ["kr-fluid-storage-1", "kr-big-storage-tank"],
     ["kr-fluid-storage-2", "kr-huge-storage-tank"],
+    ["kr-grow-wood-plus", "wood-with-fertilizer"],
+    ["kr-grow-wood-with-water", "wood"],
     ["kr-large-roboport", "kr-big-roboport"],
     ["kr-matter-assembler", "kr-matter-associator"],
     ["kr-medium-active-provider-container", "kr-active-provider-storehouse"],

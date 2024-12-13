@@ -130,7 +130,7 @@ data:extend({
       { type = "unlock-recipe", recipe = "kr-biomass-growing" },
       { type = "unlock-recipe", recipe = "first-aid-kit" },
       { type = "unlock-recipe", recipe = "fertilizer" },
-      { type = "unlock-recipe", recipe = "kr-grow-wood-plus" },
+      { type = "unlock-recipe", recipe = "wood-with-fertilizer" },
     },
     -- Disable cost multiplier to avoid manually harvesting unreasonable amount of Bio matter.
     ignore_tech_cost_multiplier = true,

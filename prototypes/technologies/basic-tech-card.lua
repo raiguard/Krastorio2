@@ -105,7 +105,7 @@ data:extend({
     prerequisites = { "kr-automation-core", "kr-stone-processing", "kr-basic-fluid-handling" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-greenhouse" },
-      { type = "unlock-recipe", recipe = "kr-grow-wood-with-water" },
+      { type = "unlock-recipe", recipe = "wood" },
     },
     -- Disable cost multiplier to avoid manually harvesting unreasonable amount of wood.
     ignore_tech_cost_multiplier = true,
