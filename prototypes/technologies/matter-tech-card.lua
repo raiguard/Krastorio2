@@ -239,7 +239,7 @@ data:extend({
       { type = "unlock-recipe", recipe = "kr-matter-associator" },
       { type = "unlock-recipe", recipe = "kr-stabilizer-charging-station" },
       { type = "unlock-recipe", recipe = "matter-stabilizer" },
-      { type = "unlock-recipe", recipe = "charge-stabilizer" },
+      { type = "unlock-recipe", recipe = "charged-matter-stabilizer" },
     },
   },
   {

@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "recipe",
-    name = "charge-stabilizer",
+    name = "charged-matter-stabilizer",
     subgroup = "intermediate-product",
     enabled = false,
     category = "stabilizer-charging",
