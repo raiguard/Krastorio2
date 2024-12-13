@@ -209,6 +209,16 @@ data.raw.corpse["spidertron-remnants"].animation = make_rotated_animation_variat
   },
 })
 
+data.raw["electric-pole"]["big-electric-pole"].maximum_wire_distance = 32.25
+
+data.raw["electric-pole"]["medium-electric-pole"].maximum_wire_distance = 9.75
+data.raw["electric-pole"]["medium-electric-pole"].supply_area_distance = 4.5
+
+data.raw["electric-pole"]["small-electric-pole"].maximum_wire_distance = 7.75
+
+data.raw["electric-pole"]["substation"].maximum_wire_distance = 20.25
+data.raw["electric-pole"]["substation"].supply_area_distance = 10
+
 convert_equipment_grid("fluid-wagon", "fluid-wagon", "kr-wagons-grid")
 
 data.raw.furnace["electric-furnace"].energy_source.emissions_per_minute = { pollution = 1 }

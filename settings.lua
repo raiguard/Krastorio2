@@ -83,13 +83,6 @@ data:extend({
   },
   {
     type = "bool-setting",
-    name = "kr-electric-poles-changes",
-    setting_type = "startup",
-    default_value = true,
-    order = "b04",
-  },
-  {
-    type = "bool-setting",
     name = "kr-damage-and-ammo",
     setting_type = "startup",
     default_value = true,

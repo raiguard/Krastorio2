@@ -1,4 +1,3 @@
-require("optional.electric-poles-changes") -- Slightly modify electric poles
 require("optional.train-changes") -- Modify trains
 require("optional.vehicles-changes") -- Modify vehicles
 require("optional.fuels-changes") -- Modify vanilla fuels
