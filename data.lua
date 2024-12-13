@@ -1,3 +1,4 @@
+kr_adjust_stack_sizes = true
 kr_optimization_tech_card_name = "space-science-pack"
 require("prototypes.compatibility.space-exploration-pre")
 
