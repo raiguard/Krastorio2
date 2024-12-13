@@ -99,6 +99,8 @@ data.raw.recipe["burner-inserter"].ingredients = {
   { type = "item", name = "iron-plate", amount = 1 },
 }
 
+data.raw.recipe["car"].energy_required = 30
+
 data.raw.recipe["cargo-wagon"].energy_required = 20
 data_util.add_or_replace_ingredient("cargo-wagon", "steel-plate", { type = "item", name = "steel-beam", amount = 10 })
 
@@ -632,6 +634,15 @@ data_util.add_or_replace_ingredient(
 
 data_util.add_or_replace_ingredient("substation", "copper-cable", { type = "item", name = "copper-cable", amount = 16 })
 data_util.add_or_replace_ingredient("substation", "steel-plate", { type = "item", name = "steel-beam", amount = 8 })
+
+data.raw.recipe["tank"].energy_required = 60
+data_util.add_or_replace_ingredient("tank", "engine-unit", { type = "item", name = "engine-unit", amount = 20 })
+data_util.add_or_replace_ingredient("tank", "steel-plate", { type = "item", name = "steel-plate", amount = 60 })
+data_util.add_or_replace_ingredient(
+  "tank",
+  "iron-gear-wheel",
+  { type = "item", name = "steel-gear-wheel", amount = 30 }
+)
 
 data_util.add_or_replace_ingredient("underground-belt", "iron-plate", { type = "item", name = "iron-beam", amount = 2 })
 

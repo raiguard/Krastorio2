@@ -70,9 +70,20 @@ data.raw.boiler["heat-exchanger"].max_health = 250
 data.raw.boiler["heat-exchanger"].target_temperature = 415
 
 convert_equipment_grid("car", "car", "kr-car-grid")
+data.raw.car["car"].minable = { mining_time = 3, result = "car" }
+data.raw.car["car"].energy_source.fuel_categories = { "vehicle-fuel" }
+data.raw.car["car"].energy_source.emissions_per_minute = { pollution = 5 }
 
 convert_equipment_grid("car", "tank", "kr-tank-grid")
 data.raw.car["tank"].localised_name = { "entity-name.kr-armored-vehicle" }
+data.raw.car["tank"].max_health = 3000
+data.raw.car["tank"].minable = { mining_time = 5, result = "tank" }
+data.raw.car["tank"].energy_source.fuel_categories = { "vehicle-fuel" }
+data.raw.car["tank"].energy_source.emissions_per_minute = { pollution = 15 }
+data.raw.car["tank"].inventory_size = 100
+data.raw.car["tank"].weight = 30000
+data.raw.car["tank"].consumption = "1MW"
+data.raw.car["tank"].braking_power = "1.75MW"
 
 convert_equipment_grid("cargo-wagon", "cargo-wagon", "kr-wagons-grid")
 data.raw["cargo-wagon"]["cargo-wagon"].allow_robot_dispatch_in_automatic_mode = true

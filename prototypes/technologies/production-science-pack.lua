@@ -68,6 +68,26 @@ data:extend({
   },
   {
     type = "technology",
+    name = "kr-nuclear-locomotive",
+    icon = "__Krastorio2Assets__/technologies/nuclear-locomotive.png",
+    icon_size = 256,
+    unit = {
+      time = 60,
+      count = 500,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+      },
+    },
+    prerequisites = { "railway", "nuclear-power", "production-science-pack" },
+    effects = {
+      { type = "unlock-recipe", recipe = "kr-nuclear-locomotive" },
+    },
+  },
+  {
+    type = "technology",
     name = "kr-quarry-minerals-extraction",
     icon = "__Krastorio2Assets__/technologies/quarry-drill.png",
     icon_size = 256,
