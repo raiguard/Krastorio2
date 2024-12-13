@@ -83,13 +83,6 @@ data:extend({
 data:extend({
   {
     type = "bool-setting",
-    name = "kr-rebalance-vehicles-fuels",
-    setting_type = "startup",
-    default_value = true,
-    order = "b01",
-  },
-  {
-    type = "bool-setting",
     name = "kr-damage-and-ammo",
     setting_type = "startup",
     default_value = true,

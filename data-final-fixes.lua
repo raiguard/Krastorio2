@@ -1,5 +1,16 @@
 require("prototypes.final-fixes.enforce-science-pack-prerequisites")
 
+krastorio = {}
+require("lib.private.data-stages.utils.krastorio_utils")
+require("lib.private.data-stages.entities")
+require("lib.private.data-stages.equipments")
+require("lib.private.data-stages.general")
+require("lib.private.data-stages.icons")
+require("lib.private.data-stages.items")
+require("lib.private.data-stages.modules")
+require("lib.private.data-stages.recipes")
+require("lib.private.data-stages.technologies")
+
 local flib_table = require("__flib__.table")
 ---------------------------------------------------------------------------
 -- -- -- PRE FINAL FIXES
@@ -51,34 +62,6 @@ krastorio.technologies.removeSciencePackIncompatibleWith("production-science-pac
 -- Sanitize utility science pack from T0 packs
 krastorio.technologies.removeSciencePackIncompatibleWith("utility-science-pack", science_pack_incompatibilities)
 
----------------------------------------------------------------------------
--- -- -- COMPATIBILITY INITIALIZATION (data final fixes stage)
----------------------------------------------------------------------------
--- Angels (multiple scripts)
-require("compatibility-scripts.data-final-fixes.angels")
-require("compatibility-scripts.data-final-fixes.aai-industry")
-require("compatibility-scripts.data-final-fixes.aircraft")
-require("compatibility-scripts.data-final-fixes.nco-SpaceShuttle")
-require("compatibility-scripts.data-final-fixes.AsphaltRoads")
--- Bobs (multiple scripts)
-require("compatibility-scripts.data-final-fixes.bobs_mod")
-require("compatibility-scripts.data-final-fixes.Clockwork")
-require("compatibility-scripts.data-final-fixes.Dectorio")
-require("compatibility-scripts.data-final-fixes.DeadlockLargerLamp")
-require("compatibility-scripts.data-final-fixes.deadlock-beltboxes-loaders")
-require("compatibility-scripts.data-final-fixes.ElectricTrain")
-require("compatibility-scripts.data-final-fixes.FoodIndustry")
-require("compatibility-scripts.data-final-fixes.Hovercrafts")
-require("compatibility-scripts.data-final-fixes.LightedPolesPlus")
-require("compatibility-scripts.data-final-fixes.Nuclear Fuel")
--- Pyanodons (multiple scripts)
-require("compatibility-scripts.data-final-fixes.Pyanodon")
-require("compatibility-scripts.data-final-fixes.realistic-electric-trains")
-require("compatibility-scripts.data-final-fixes.Tral-robot-tree-farm")
-require("compatibility-scripts.data-final-fixes.vtk-armor-plating")
-require("compatibility-scripts.data-final-fixes.RealisticReactors")
--- Other
-require("compatibility-scripts.data-final-fixes.spidertron-tiers")
 ---------------------------------------------------------------------------
 -- -- -- POST ALL FIXES
 ---------------------------------------------------------------------------

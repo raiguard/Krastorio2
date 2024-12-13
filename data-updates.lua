@@ -16,14 +16,13 @@ require("prototypes.updates.base.turrets")
 require("prototypes.updates.base.weapons-realistic")
 require("prototypes.updates.base.weapons-standard")
 
-require("prototypes.updates.optional.finite-oil")
-
 require("prototypes.updates.add-automation-core-recipes")
 require("prototypes.updates.add-basic-tech-card")
 require("prototypes.updates.adjust-spawn-rates")
 require("prototypes.updates.adjust-stack-sizes")
 require("prototypes.updates.convert-furnaces-to-assemblers")
 require("prototypes.updates.enable-burner-leech")
+require("prototypes.updates.finite-oil")
 require("prototypes.updates.generate-flare-stack-recipes")
 require("prototypes.updates.generate-greenhouse-recipes")
 require("prototypes.updates.generate-matter-recipes")
@@ -31,36 +30,3 @@ require("prototypes.updates.generate-roboport-variations")
 require("prototypes.updates.generate-void-crushing-recipes")
 require("prototypes.updates.remove-nuclear-fuel")
 require("prototypes.updates.set-new-resource-autoplace")
-
----------------------------------------------------------------------------
--- -- -- PRE UPDATES
----------------------------------------------------------------------------
-krastorio = {}
-require("lib.private.data-stages.utils.krastorio_utils")
-require("lib.private.data-stages.entities")
-require("lib.private.data-stages.equipments")
-require("lib.private.data-stages.general")
-require("lib.private.data-stages.icons")
-require("lib.private.data-stages.items")
-require("lib.private.data-stages.modules")
-require("lib.private.data-stages.recipes")
-require("lib.private.data-stages.technologies")
----------------------------------------------------------------------------
--- -- -- COMPATIBILITY INITIALIZATION (data update stage)
----------------------------------------------------------------------------
-require("compatibility-scripts.data-updates.angelsaddons-mobility")
-require("compatibility-scripts.data-updates.angelsaddons-smeltingtrain")
-require("compatibility-scripts.data-updates.Construction_Drones")
-require("compatibility-scripts.data-updates.ElectricTrain")
-require("compatibility-scripts.data-updates.Flow_Control")
-require("compatibility-scripts.data-updates.Load-Furn")
-require("compatibility-scripts.data-updates.MineLiquidOres")
-require("compatibility-scripts.data-updates.RealisticReactors")
--- AAI (Programmable) Vehicles
-require("compatibility-scripts.data-updates.aai-vehicles")
-require("compatibility-scripts.data-updates.aai-programmable-vehicles")
--- Pyanodons
-require("compatibility-scripts.data-updates.Pyanodon")
--- Schall Uranium Processing
-require("compatibility-scripts.data-updates.SchallUranium")
-require("compatibility-scripts.data-updates.Tral-robot-tree-farm")
