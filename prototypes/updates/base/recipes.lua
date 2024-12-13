@@ -19,6 +19,7 @@ data_util.add_or_replace_ingredient(
 data.raw.recipe["advanced-circuit"].results = {
   { type = "item", name = "advanced-circuit", amount = 2 },
 }
+data.raw.recipe["artillery-turret"].energy_required = 60
 
 data.raw.recipe["artillery-wagon"].energy_required = 40
 data.raw.recipe["artillery-wagon"].ingredients = {
@@ -232,6 +233,7 @@ data_util.add_or_replace_ingredient(
 
 data_util.convert_ingredient("flamethrower-ammo", "steel-plate", "iron-plate")
 
+data.raw.recipe["flamethrower-turret"].energy_required = 20
 data_util.add_or_replace_ingredient(
   "flamethrower-turret",
   "steel-plate",
@@ -246,6 +248,7 @@ data_util.add_or_replace_ingredient(
 
 data.raw.recipe["fluid-wagon"].energy_required = 20
 
+data.raw.recipe["gun-turret"].energy_required = 10
 data_util.add_or_replace_ingredient("gun-turret", "iron-plate", { type = "item", name = "iron-beam", amount = 5 })
 data_util.add_or_replace_ingredient(
   "gun-turret",
@@ -300,6 +303,7 @@ data_util.add_or_replace_ingredient("lab", "electronic-circuit", { type = "item"
 data_util.add_or_replace_ingredient("lab", "iron-gear-wheel", { type = "item", name = "copper-plate", amount = 10 })
 data_util.add_or_replace_ingredient("lab", "transport-belt", { type = "item", name = "copper-cable", amount = 10 })
 
+data.raw.recipe["laser-turret"].energy_required = 30
 table.insert(data.raw.recipe["laser-turret"].ingredients, { type = "item", name = "quartz", amount = 5 })
 data_util.add_or_replace_ingredient("laser-turret", "steel-plate", { type = "item", name = "steel-plate", amount = 15 })
 

@@ -1,14 +1,18 @@
 require("prototypes.updates.base.achievements")
+require("prototypes.updates.base.ammo")
 require("prototypes.updates.base.autoplace-controls")
 require("prototypes.updates.base.entities")
-require("prototypes.updates.base.equipment")
 require("prototypes.updates.base.equipment-grids")
+require("prototypes.updates.base.equipment")
 require("prototypes.updates.base.fluids")
+require("prototypes.updates.base.guns")
 require("prototypes.updates.base.items")
 require("prototypes.updates.base.main-menu")
+require("prototypes.updates.base.projectiles")
 require("prototypes.updates.base.recipes")
 require("prototypes.updates.base.resources")
 require("prototypes.updates.base.technologies")
+require("prototypes.updates.base.turrets")
 require("prototypes.updates.base.weapons-realistic")
 require("prototypes.updates.base.weapons-standard")
 
@@ -41,11 +45,6 @@ require("lib.private.data-stages.items")
 require("lib.private.data-stages.modules")
 require("lib.private.data-stages.recipes")
 require("lib.private.data-stages.technologies")
----------------------------------------------------------------------------
--- -- -- CONTENTS UPDATES (data updates)
----------------------------------------------------------------------------
--- -- Modifing vanilla game objects
-require("prototypes.vanilla-changes.optional-vanilla-updates")
 ---------------------------------------------------------------------------
 -- -- -- COMPATIBILITY INITIALIZATION (data update stage)
 ---------------------------------------------------------------------------
