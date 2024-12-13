@@ -79,13 +79,3 @@ data:extend({
     order = "c1",
   },
 })
-
-data:extend({
-  {
-    type = "bool-setting",
-    name = "kr-damage-and-ammo",
-    setting_type = "startup",
-    default_value = true,
-    order = "b05",
-  },
-})
