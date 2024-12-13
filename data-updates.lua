@@ -12,6 +12,8 @@ require("prototypes.updates.base.technologies")
 require("prototypes.updates.base.weapons-realistic")
 require("prototypes.updates.base.weapons-standard")
 
+require("prototypes.updates.optional.finite-oil")
+
 require("prototypes.updates.add-automation-core-recipes")
 require("prototypes.updates.add-basic-tech-card")
 require("prototypes.updates.adjust-spawn-rates")

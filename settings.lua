@@ -28,6 +28,13 @@ data:extend({
     default_value = true,
     order = "a4",
   },
+  {
+    type = "bool-setting",
+    name = "kr-finite-oil",
+    setting_type = "startup",
+    default_value = true,
+    order = "a5",
+  },
   -- TODO: Make this react to player color
   {
     type = "string-setting",
@@ -87,12 +94,5 @@ data:extend({
     setting_type = "startup",
     default_value = true,
     order = "b05",
-  },
-  {
-    type = "bool-setting",
-    name = "kr-finite-oil",
-    setting_type = "startup",
-    default_value = true,
-    order = "b09",
   },
 })
