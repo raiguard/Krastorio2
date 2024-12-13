@@ -90,13 +90,6 @@ data:extend({
   },
   {
     type = "bool-setting",
-    name = "kr-pipes-and-belts-changes",
-    setting_type = "startup",
-    default_value = true,
-    order = "b06",
-  },
-  {
-    type = "bool-setting",
     name = "kr-finite-oil",
     setting_type = "startup",
     default_value = true,

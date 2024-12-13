@@ -375,6 +375,8 @@ if not mods["aai-industry"] then
   }
 end
 
+data.raw["pipe-to-ground"]["pipe-to-ground"].fluid_box.pipe_connections[2].max_underground_distance = 20
+
 data.raw["radar"]["radar"].energy_per_nearby_scan = "250kJ"
 data.raw["radar"]["radar"].energy_per_sector = "2MJ"
 data.raw["radar"]["radar"].energy_usage = "1MW"
@@ -438,7 +440,10 @@ data.raw["turret"]["behemoth-worm-turret"].max_health = 5000
 data.raw["turret"]["big-worm-turret"].max_health = 2500
 data.raw["turret"]["medium-worm-turret"].max_health = 950
 
+data.raw["underground-belt"]["fast-underground-belt"].max_distance = 10
+
 data.raw["underground-belt"]["express-underground-belt"].next_upgrade = "kr-advanced-underground-belt"
+data.raw["underground-belt"]["express-underground-belt"].max_distance = 20
 
 data.raw["unit"]["behemoth-biter"].max_health = 3500
 data.raw["unit"]["big-biter"].max_health = 500
