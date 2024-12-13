@@ -47,9 +47,13 @@ data.raw.item["battery-mk2-equipment"].subgroup = "equipment"
 
 data.raw.item["coal"].fuel_category = "chemical"
 data.raw.item["coal"].fuel_value = "6MJ"
-data.raw.item["coal"].fuel_acceleration_multiplier = 1
-data.raw.item["coal"].fuel_top_speed_multiplier = 1
-data.raw.item["coal"].fuel_emissions_multiplier = 1.25
+data.raw.item["coal"].fuel_acceleration_multiplier = 0.5
+data.raw.item["coal"].fuel_top_speed_multiplier = 0.6
+data.raw.item["coal"].fuel_emissions_multiplier = 2.5
+
+data.raw.item["coke"].fuel_acceleration_multiplier = 0.6
+data.raw.item["coke"].fuel_top_speed_multiplier = 0.7
+data.raw.item["coke"].fuel_emissions_multiplier = 2.25
 
 data.raw.item["discharge-defense-equipment"].order = "f[active-defense-equipment]-a[discharge-defense-equipment]"
 data.raw.item["discharge-defense-equipment"].subgroup = "equipment"
@@ -117,7 +121,7 @@ data.raw.item["rocket-fuel"].fuel_category = "chemical"
 data.raw.item["rocket-fuel"].fuel_value = "20MJ"
 data.raw.item["rocket-fuel"].fuel_acceleration_multiplier = 1
 data.raw.item["rocket-fuel"].fuel_top_speed_multiplier = 1
-data.raw.item["rocket-fuel"].fuel_emissions_multiplier = 1
+data.raw.item["rocket-fuel"].fuel_emissions_multiplier = 1.25
 
 data.raw.item["rocket-silo"].subgroup = "radars-and-rockets"
 data.raw.item["rocket-silo"].order = "zzz[rocket-silo]"
@@ -126,15 +130,18 @@ data.raw.item["satellite"].research_products = { { type = "item", name = "space-
 
 data.raw.item["small-electric-pole"].fuel_value = "1.5MJ" --nil
 data.raw.item["small-electric-pole"].fuel_category = "chemical"
+data.raw.item["small-electric-pole"].fuel_acceleration_multiplier = 0.35
+data.raw.item["small-electric-pole"].fuel_top_speed_multiplier = 0.5
+data.raw.item["small-electric-pole"].fuel_emissions_multiplier = 1.25
 
 data.raw.item["solar-panel-equipment"].order = "a[energy-source]-a1[solar-panel]"
 data.raw.item["solar-panel-equipment"].subgroup = "equipment"
 
 data.raw.item["solid-fuel"].fuel_category = "chemical"
 data.raw.item["solid-fuel"].fuel_value = "20MJ" --12
-data.raw.item["solid-fuel"].fuel_acceleration_multiplier = 1 --1.2
-data.raw.item["solid-fuel"].fuel_top_speed_multiplier = 1 --1.05
-data.raw.item["solid-fuel"].fuel_emissions_multiplier = 1.1 --empty
+data.raw.item["solid-fuel"].fuel_acceleration_multiplier = 0.75
+data.raw.item["solid-fuel"].fuel_top_speed_multiplier = 0.75
+data.raw.item["solid-fuel"].fuel_emissions_multiplier = 1.5
 
 data.raw.item["stone-wall"].subgroup = "vanilla-turrets"
 data.raw.item["stone-wall"].order = "001[stone-wall]"
@@ -143,11 +150,14 @@ data.raw.item["uranium-fuel-cell"].fuel_value = "50GJ" --  = 200s in reactor
 
 data.raw.item["wooden-chest"].fuel_category = "chemical"
 data.raw.item["wooden-chest"].fuel_value = "3MJ"
+data.raw.item["wooden-chest"].fuel_acceleration_multiplier = 0.35
+data.raw.item["wooden-chest"].fuel_top_speed_multiplier = 0.5
+data.raw.item["wooden-chest"].fuel_emissions_multiplier = 1.25
 
 data.raw.item["wood"].fuel_value = "1.25MJ"
 data.raw.item["wood"].fuel_category = "chemical"
-data.raw.item["wood"].fuel_acceleration_multiplier = 0.5
-data.raw.item["wood"].fuel_top_speed_multiplier = 0.75
+data.raw.item["wood"].fuel_acceleration_multiplier = 0.35
+data.raw.item["wood"].fuel_top_speed_multiplier = 0.5
 data.raw.item["wood"].fuel_emissions_multiplier = 1
 
 if not mods["aai-containers"] then

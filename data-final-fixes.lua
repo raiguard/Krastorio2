@@ -52,13 +52,6 @@ krastorio.technologies.removeSciencePackIncompatibleWith("production-science-pac
 krastorio.technologies.removeSciencePackIncompatibleWith("utility-science-pack", science_pack_incompatibilities)
 
 ---------------------------------------------------------------------------
--- OPTION FIXES
----------------------------------------------------------------------------
--- Apply K2 science pack recipes
-require("prototypes.vanilla-changes.optional.modify-science-packs-recipes")
--- Final fuels fixes
-require("prototypes.vanilla-changes.optional.rebalance-vehicles&fuels-final-fixes")
----------------------------------------------------------------------------
 -- -- -- COMPATIBILITY INITIALIZATION (data final fixes stage)
 ---------------------------------------------------------------------------
 -- Angels (multiple scripts)
