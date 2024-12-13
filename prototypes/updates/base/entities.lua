@@ -334,7 +334,14 @@ if not mods["aai-industry"] then
   }
 end
 
+data.raw["radar"]["radar"].energy_per_nearby_scan = "250kJ"
+data.raw["radar"]["radar"].energy_per_sector = "2MJ"
+data.raw["radar"]["radar"].energy_usage = "1MW"
 data.raw.radar["radar"].fast_replaceable_group = "radar"
+data.raw["radar"]["radar"].max_distance_of_nearby_sector_revealed = 5
+data.raw["radar"]["radar"].max_distance_of_sector_revealed = 16
+data.raw["radar"]["radar"].max_health = 300
+data.raw["radar"]["radar"].next_upgrade = "kr-advanced-radar"
 
 data.raw["rocket-silo"]["rocket-silo"].localised_description = { "entity-description.kr-rocket-silo" }
 

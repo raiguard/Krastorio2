@@ -5,6 +5,8 @@
     ["kr-rebalance-vehicles&fuels", "kr-rebalance-vehicles-fuels"]
   ],
   "entity": [
+    ["advanced-radar", "kr-advanced-radar"],
+    ["advanced-radar-remnants", "advanced-radar-remnant"],
     ["kr-big-active-provider-container", "kr-active-provider-warehouse"],
     ["kr-big-buffer-container", "kr-buffer-warehouse"],
     ["kr-big-container", "kr-warehouse"],
@@ -45,6 +47,7 @@
   "item": [
     ["additional-engine", "additional-engine-equipment"],
     ["advanced-additional-engine", "advanced-additional-engine-equipment"],
+    ["advanced-radar", "kr-advanced-radar"],
     ["big-additional-engine", "big-additional-engine-equipment"],
     ["big-imersite-solar-panel-equipment", "big-superior-solar-panel-equipment"],
     ["energy-absorber", "energy-absorber-equipment"],

@@ -74,6 +74,26 @@ data:extend({
   },
   {
     type = "technology",
+    name = "kr-advanced-radar",
+    icon = "__Krastorio2Assets__/technologies/advanced-radar.png",
+    icon_size = 256,
+    unit = {
+      time = 60,
+      count = 200,
+      ingredients = {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "utility-science-pack", 1 },
+      },
+    },
+    prerequisites = { "kr-radar", "advanced-circuit" },
+    effects = {
+      { type = "unlock-recipe", recipe = "kr-advanced-radar" },
+    },
+  },
+  {
+    type = "technology",
     name = "kr-energy-shield-mk3-equipment",
     icon = "__Krastorio2Assets__/technologies/energy-shield-mk3-equipment.png",
     icon_size = 256,

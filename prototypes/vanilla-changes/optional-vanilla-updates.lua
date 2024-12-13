@@ -1,7 +1,6 @@
 require("optional.electric-poles-changes") -- Slightly modify electric poles
 require("optional.train-changes") -- Modify trains
 require("optional.vehicles-changes") -- Modify vehicles
-require("optional.radar-changes") -- Modify vanilla radar
 require("optional.fuels-changes") -- Modify vanilla fuels
 require("optional.stack-size-changes") -- Increase stacks size
 require("optional.damage-and-ammo") -- Damage and ammo rebalance
