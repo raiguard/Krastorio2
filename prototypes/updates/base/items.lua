@@ -45,6 +45,12 @@ data.raw.item["battery-equipment"].subgroup = "equipment"
 data.raw.item["battery-mk2-equipment"].order = "b2[battery]-b3[battery-equipment]"
 data.raw.item["battery-mk2-equipment"].subgroup = "equipment"
 
+data.raw.item["coal"].fuel_category = "chemical"
+data.raw.item["coal"].fuel_value = "6MJ"
+data.raw.item["coal"].fuel_acceleration_multiplier = 1
+data.raw.item["coal"].fuel_top_speed_multiplier = 1
+data.raw.item["coal"].fuel_emissions_multiplier = 1.25
+
 data.raw.item["discharge-defense-equipment"].order = "f[active-defense-equipment]-a[discharge-defense-equipment]"
 data.raw.item["discharge-defense-equipment"].subgroup = "equipment"
 
@@ -107,6 +113,12 @@ data.raw.item["personal-laser-defense-equipment"].subgroup = "equipment"
 data.raw.item["radar"].subgroup = "radars-and-rockets"
 data.raw.item["radar"].order = "02[radar]"
 
+data.raw.item["rocket-fuel"].fuel_category = "chemical"
+data.raw.item["rocket-fuel"].fuel_value = "20MJ"
+data.raw.item["rocket-fuel"].fuel_acceleration_multiplier = 1
+data.raw.item["rocket-fuel"].fuel_top_speed_multiplier = 1
+data.raw.item["rocket-fuel"].fuel_emissions_multiplier = 1
+
 data.raw.item["rocket-silo"].subgroup = "radars-and-rockets"
 data.raw.item["rocket-silo"].order = "zzz[rocket-silo]"
 
@@ -118,6 +130,12 @@ data.raw.item["small-electric-pole"].fuel_category = "chemical"
 data.raw.item["solar-panel-equipment"].order = "a[energy-source]-a1[solar-panel]"
 data.raw.item["solar-panel-equipment"].subgroup = "equipment"
 
+data.raw.item["solid-fuel"].fuel_category = "chemical"
+data.raw.item["solid-fuel"].fuel_value = "20MJ" --12
+data.raw.item["solid-fuel"].fuel_acceleration_multiplier = 1 --1.2
+data.raw.item["solid-fuel"].fuel_top_speed_multiplier = 1 --1.05
+data.raw.item["solid-fuel"].fuel_emissions_multiplier = 1.1 --empty
+
 data.raw.item["stone-wall"].subgroup = "vanilla-turrets"
 data.raw.item["stone-wall"].order = "001[stone-wall]"
 
@@ -126,7 +144,11 @@ data.raw.item["uranium-fuel-cell"].fuel_value = "50GJ" --  = 200s in reactor
 data.raw.item["wooden-chest"].fuel_category = "chemical"
 data.raw.item["wooden-chest"].fuel_value = "3MJ"
 
-data.raw.item["wood"].fuel_value = "2MJ"
+data.raw.item["wood"].fuel_value = "1.25MJ"
+data.raw.item["wood"].fuel_category = "chemical"
+data.raw.item["wood"].fuel_acceleration_multiplier = 0.5
+data.raw.item["wood"].fuel_top_speed_multiplier = 0.75
+data.raw.item["wood"].fuel_emissions_multiplier = 1
 
 if not mods["aai-containers"] then
   data.raw.item["active-provider-chest"].subgroup = "kr-logistics-1"

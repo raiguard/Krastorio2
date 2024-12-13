@@ -1,4 +1,3 @@
-require("optional.fuels-changes") -- Modify vanilla fuels
 require("optional.stack-size-changes") -- Increase stacks size
 require("optional.damage-and-ammo") -- Damage and ammo rebalance
 require("optional.pipes-and-belts-changes") -- Vanilla pipes and belts modification
