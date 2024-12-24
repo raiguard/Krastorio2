@@ -20,7 +20,6 @@ data_util.add_prerequisite("logistics-2", "steel-processing")
 data_util.add_prerequisite("logistic-science-pack", "electronics")
 data_util.add_prerequisite("military-science-pack", "advanced-circuit")
 data_util.add_prerequisite("modular-armor", "military-2")
-data_util.add_prerequisite("nuclear-power", "kr-steam-engine")
 data_util.add_prerequisite("oil-processing", "kr-fluids-chemistry")
 data_util.add_prerequisite("production-science-pack", "kr-advanced-lab")
 data_util.add_prerequisite("production-science-pack", "kr-research-server")
@@ -92,6 +91,15 @@ data_util.remove_recipe_unlock("automation", "long-handed-inserter")
 data_util.remove_recipe_unlock("kovarex-enrichment-process", "nuclear-fuel")
 data_util.remove_recipe_unlock("military-3", "slowdown-capsule")
 data_util.remove_recipe_unlock("oil-processing", "chemical-plant")
+
+data.raw.technology["steam-power"].research_trigger = nil
+data.raw.technology["steam-power"].unit = {
+  time = 10,
+  count = 10,
+  ingredients = {
+    { "basic-tech-card", 1 },
+  },
+}
 
 data.raw.technology["artillery"].unit.count = 1000
 data.raw.technology["atomic-bomb"].unit.count = 1500

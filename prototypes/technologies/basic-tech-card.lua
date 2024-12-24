@@ -136,24 +136,6 @@ data:extend({
   },
   {
     type = "technology",
-    name = "kr-steam-engine",
-    icon = "__Krastorio2Assets__/technologies/steam-engine.png",
-    icon_size = 256,
-    unit = {
-      time = 30,
-      count = 20,
-      ingredients = {
-        { "basic-tech-card", 1 },
-      },
-    },
-    prerequisites = { "kr-basic-fluid-handling" },
-    effects = {
-      { type = "unlock-recipe", recipe = "boiler" },
-      { type = "unlock-recipe", recipe = "steam-engine" },
-    },
-  },
-  {
-    type = "technology",
     name = "kr-stone-processing",
     icon = "__Krastorio2Assets__/technologies/stone-processing.png",
     icon_size = 256,
