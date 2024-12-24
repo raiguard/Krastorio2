@@ -90,59 +90,6 @@ local function init_biter_virus(player, surface)
   end
 end
 
---- @param virus_data CreepVirusData
-local function iterate_creep_virus(virus_data)
-  local surface = virus_data.surface
-  if not surface or not surface.valid then
-    storage.virus.creep[surface.index] = nil
-    return
-  end
-
-  local creeps = virus_data.tiles
-  local len = virus_data.tiles_len
-  local tiles_to_replace = {}
-  for i = 1, virus_data.amount_per_iteration do
-    if len == 0 then
-      storage.virus.creep[surface.index] = nil
-      break
-    end
-    local j = math.random(1, len)
-    local tile = creeps[j]
-    if tile and tile.valid then
-      tiles_to_replace[i] = { name = tile.hidden_tile or "landfill", position = tile.position }
-      -- Move the element at the end to the gap
-      -- This removes the element at `i` while achieving O(1) performance
-      creeps[j] = creeps[len]
-      creeps[len] = nil
-      len = len - 1
-    end
-  end
-  virus_data.tiles_len = len
-  surface.set_tiles(tiles_to_replace)
-end
-
---- @param surface LuaSurface
-local function init_creep_virus(surface)
-  local creep_viruses = storage.virus.creep
-  if not creep_viruses[surface.index] then
-    -- Disable creep generation on this surface
-    -- FIXME:
-    -- storage.creep.surfaces[surface.index] = nil
-
-    -- Begin creep removal
-    -- XXX: This causes insane amounts of lag with lots of creep tiles
-    local creep_tiles = surface.find_tiles_filtered({ name = "kr-creep" })
-    local num_creeps = #creep_tiles
-    --- @class CreepVirusData
-    creep_viruses[surface.index] = {
-      amount_per_iteration = math.ceil(num_creeps / get_removal_count(num_creeps)),
-      surface = surface,
-      tiles = creep_tiles,
-      tiles_len = num_creeps,
-    }
-  end
-end
-
 --- @param e EventData.on_player_used_capsule
 local function on_player_used_capsule(e)
   local item = e.item
@@ -155,17 +102,12 @@ local function on_player_used_capsule(e)
 
   if item.name == "kr-biter-virus" then
     init_biter_virus(player, surface)
-  elseif item.name == "kr-creep-virus" then
-    init_creep_virus(surface)
   end
 end
 
 local function on_tick()
   for _, biter_virus in pairs(storage.virus.biter) do
     iterate_biter_virus(biter_virus)
-  end
-  for _, creep_virus in pairs(storage.virus.creep) do
-    iterate_creep_virus(creep_virus)
   end
 end
 
@@ -175,8 +117,6 @@ function virus.on_init()
   storage.virus = {
     --- @type table<uint, BiterVirusData>
     biter = {},
-    --- @type table<uint, CreepVirusData>
-    creep = {},
   }
 end
 

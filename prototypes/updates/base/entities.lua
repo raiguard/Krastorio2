@@ -467,3 +467,19 @@ data.raw["unit"]["behemoth-spitter"].absorptions_to_join_attack.pollution = 500
 
 data.raw["unit-spawner"]["biter-spawner"].max_health = 750
 data.raw["unit-spawner"]["spitter-spawner"].max_health = 750
+
+data.raw.corpse["biter-spawner-corpse"].flags = { "placeable-neutral", "placeable-off-grid" }
+data.raw.corpse["biter-spawner-corpse"].minable = {
+  mining_time = 1,
+  results = { { type = "item", name = "biomass", amount_min = 1, amount_max = 5 } },
+}
+data.raw.corpse["biter-spawner-corpse"].selectable_in_game = true
+data.raw.corpse["biter-spawner-corpse"].time_before_removed = 300
+
+data.raw.corpse["spitter-spawner-corpse"].flags = { "placeable-neutral", "placeable-off-grid" }
+data.raw.corpse["spitter-spawner-corpse"].minable = {
+  mining_time = 1,
+  results = { { type = "item", name = "biomass", amount_min = 2, amount_max = 3 } },
+}
+data.raw.corpse["spitter-spawner-corpse"].selectable_in_game = true
+data.raw.corpse["spitter-spawner-corpse"].time_before_removed = 300
