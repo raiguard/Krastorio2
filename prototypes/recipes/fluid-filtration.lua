@@ -29,7 +29,7 @@ data:extend({
       {
         icon = data.raw.item["iron-ore"].icon,
         icon_size = data.raw.item["iron-ore"].icon_size or 64,
-        0.2 * 64 / (data.raw.item["iron-ore"].icon_size or 64),
+        scale = 0.2 * 64 / (data.raw.item["iron-ore"].icon_size or 64),
         shift = { 0, 4 },
       },
     },
