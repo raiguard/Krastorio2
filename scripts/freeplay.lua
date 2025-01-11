@@ -116,9 +116,60 @@ local function run()
   disable_rocket_victory()
 end
 
+--- @param entity_name EntityID
+--- @param value boolean
+local function set_minable(entity_name, value)
+  for _, entity in pairs(game.surfaces.nauvis.find_entities_filtered({ name = entity_name })) do
+    entity.minable = value
+    entity.destructible = value
+  end
+end
+
+--- @param e EventData.on_research_finished
+local function on_research_finished(e)
+  for _, effect in pairs(e.research.prototype.effects) do
+    if effect.type ~= "unlock-recipe" then
+      goto continue
+    end
+
+    local recipe_name = effect.recipe
+    if recipe_name == "assembling-machine-1" then
+      set_minable("crash-site-assembling-machine-1", true)
+      set_minable("crash-site-assembling-machine-2", true)
+    elseif recipe_name == "lab" then
+      set_minable("crash-site-lab", true)
+    elseif recipe_name == "steam-engine" then
+      set_minable("crash-site-generator", true)
+    end
+
+    ::continue::
+  end
+end
+
+local function on_player_created()
+  if not remote.interfaces.freeplay then
+    return
+  end
+  if storage.crash_site_init_ran then
+    return
+  end
+  storage.crash_site_init_ran = true
+
+  local recipes = game.forces.player.recipes
+  set_minable("crash-site-assembling-machine-1", recipes["assembling-machine-1"].enabled)
+  set_minable("crash-site-assembling-machine-2", recipes["assembling-machine-1"].enabled)
+  set_minable("crash-site-lab", recipes["lab"].enabled)
+  set_minable("crash-site-generator", recipes["steam-engine"].enabled)
+end
+
 local freeplay = {}
 
 freeplay.on_init = run
 freeplay.on_configuration_changed = run
+
+freeplay.events = {
+  [defines.events.on_research_finished] = on_research_finished,
+  [defines.events.on_player_created] = on_player_created,
+}
 
 return freeplay
