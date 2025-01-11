@@ -88,6 +88,7 @@ if settings.startup["kr-loaders"].value then
 end
 
 data_util.remove_recipe_unlock("automation", "long-handed-inserter")
+data_util.remove_recipe_unlock("electronics", "lab")
 data_util.remove_recipe_unlock("kovarex-enrichment-process", "nuclear-fuel")
 data_util.remove_recipe_unlock("military-3", "slowdown-capsule")
 data_util.remove_recipe_unlock("oil-processing", "chemical-plant")

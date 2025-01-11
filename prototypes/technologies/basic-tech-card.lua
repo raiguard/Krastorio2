@@ -92,6 +92,23 @@ data:extend({
   },
   {
     type = "technology",
+    name = "kr-laboratory",
+    icon = "__base__/graphics/technology/research-speed.png",
+    icon_size = 256,
+    unit = {
+      time = 30,
+      count = 30,
+      ingredients = {
+        { "basic-tech-card", 1 },
+      },
+    },
+    prerequisites = { "electronics" },
+    effects = {
+      { type = "unlock-recipe", recipe = "lab" },
+    },
+  },
+  {
+    type = "technology",
     name = "kr-greenhouse",
     icon = "__Krastorio2Assets__/technologies/greenhouse.png",
     icon_size = 256,
