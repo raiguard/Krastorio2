@@ -8,10 +8,10 @@
   "homepage": "https://discord.gg/ECBzaXu",
   "factorio_version": "2.0",
   "dependencies": [
-    "base >= 2.0.2",
+    "base >= 2.0.28",
     "Krastorio2Assets >= 2.0.0",
     "ChangeInserterDropLane >= 1.1.0",
-    "flib >= 0.15.0",
+    "flib >= 0.16.0",
     "(?) aai-industry >= 0.3.17",
     "(?) aai-vehicles-chaingunner >= 0.5.2",
     "(?) Aircraft >= 1.6.6",
