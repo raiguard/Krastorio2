@@ -37,7 +37,7 @@ local function convert_equipment_grid(vehicle_type, vehicle_name, new_equipment_
   data.raw[vehicle_type][vehicle_name].equipment_grid = new_equipment_grid_id
 end
 
---- @type data.MineableProperties
+--- @type data.MinableProperties
 local small_crash_site_minable = {
   mining_time = 2,
   results = {
@@ -48,6 +48,7 @@ local small_crash_site_minable = {
     { type = "item", name = "kr-sentinel", amount_min = 0, amount_max = 3, probability = 0.10 },
   },
   mining_particle = "shell-particle",
+  transfer_entity_health_to_products = false,
 }
 convert_equipment_grid("artillery-wagon", "artillery-wagon", "kr-wagons-grid")
 data.raw["artillery-wagon"]["artillery-wagon"].max_health = 1000

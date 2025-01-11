@@ -22,6 +22,7 @@ data:extend({
         { type = "item", name = "kr-sentinel", amount_min = 1, amount_max = 2, probability = 0.50 },
       },
       mining_particle = "shell-particle",
+      transfer_entity_health_to_products = false,
     },
     dying_explosion = "medium-explosion",
     damaged_trigger_effect = hit_effects.entity(),
