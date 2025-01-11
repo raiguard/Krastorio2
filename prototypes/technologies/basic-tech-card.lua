@@ -22,8 +22,8 @@ data:extend({
     icon = "__Krastorio2Assets__/technologies/automation-core.png",
     icon_size = 256,
     unit = {
-      time = 20,
-      count = 20,
+      time = 10,
+      count = 10,
       ingredients = {
         { "basic-tech-card", 1 },
       },
@@ -96,8 +96,8 @@ data:extend({
     icon = "__base__/graphics/technology/research-speed.png",
     icon_size = 256,
     unit = {
-      time = 30,
-      count = 30,
+      time = 10,
+      count = 15,
       ingredients = {
         { "basic-tech-card", 1 },
       },

@@ -139,7 +139,7 @@ function data_util.add_prerequisite(technology_id, prerequisite_id)
   end
   local prerequisite = data.raw.technology[prerequisite_id]
   if not prerequisite then
-    error("Technology prerequisite " .. technology_id .. " does not exist.")
+    error("Technology prerequisite " .. prerequisite_id .. " does not exist.")
   end
   if not technology.prerequisites then
     technology.prerequisites = { prerequisite_id }
@@ -161,7 +161,7 @@ function data_util.remove_prerequisite(technology_id, prerequisite_id)
   end
   local prerequisite = data.raw.technology[prerequisite_id]
   if not prerequisite then
-    error("Technology prerequisite " .. technology_id .. " does not exist.")
+    error("Technology prerequisite " .. prerequisite_id .. " does not exist.")
   end
   local i = flib_table.find(technology.prerequisites or {}, prerequisite_id)
   if not i then

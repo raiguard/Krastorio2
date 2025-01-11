@@ -122,6 +122,7 @@ data_util.add_or_replace_ingredient(
   { type = "item", name = "iron-gear-wheel", amount = 3 }
 )
 
+data.raw.recipe["copper-cable"].enabled = true
 data_util.add_or_replace_ingredient("copper-plate", "copper-ore", { type = "item", name = "copper-ore", amount = 2 })
 
 data.raw.recipe["efficiency-module"].energy_required = 15
@@ -270,12 +271,15 @@ data.raw.recipe["inserter"].enabled = false
 data.raw.recipe["inserter"].ingredients = {
   { type = "item", name = "inserter-parts", amount = 1 },
   { type = "item", name = "automation-core", amount = 1 },
+  { type = "item", name = "electronic-circuit", amount = 1 },
 }
 
 data_util.add_or_replace_ingredient("iron-plate", "iron-ore", { type = "item", name = "iron-ore", amount = 2 })
 
 data_util.add_or_replace_ingredient("iron-gear-wheel", "iron-plate", { type = "item", name = "iron-plate", amount = 1 })
 data.raw.recipe["iron-gear-wheel"].results = { { type = "item", name = "iron-gear-wheel", amount = 1 } }
+
+data.raw.recipe["iron-stick"].enabled = true
 
 data.raw.recipe["kovarex-enrichment-process"].energy_required = 60
 data_util.add_or_replace_ingredient(
@@ -549,6 +553,7 @@ data_util.add_or_replace_product(
   "small-electric-pole",
   { type = "item", name = "small-electric-pole", amount = 1 }
 )
+data.raw.recipe["small-electric-pole"].enabled = true
 
 -- data_util.add_or_replace_ingredient("small-lamp", { type = "item", name = "glass", amount = 1 })
 data_util.convert_ingredient("small-lamp", "electronic-circuit", "glass")
