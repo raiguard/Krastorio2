@@ -695,6 +695,7 @@ data.raw.recipe["automation-science-pack"] = {
     { type = "item", name = "automation-core", amount = 1 },
   },
   results = { { type = "item", name = "automation-science-pack", amount = 5 } },
+  allow_productivity = true,
 }
 
 data.raw.recipe["logistic-science-pack"] = {
@@ -708,6 +709,7 @@ data.raw.recipe["logistic-science-pack"] = {
     { type = "item", name = "iron-gear-wheel", amount = 5 },
   },
   results = { { type = "item", name = "logistic-science-pack", amount = 5 } },
+  allow_productivity = true,
 }
 
 data.raw.recipe["military-science-pack"] = {
@@ -721,6 +723,7 @@ data.raw.recipe["military-science-pack"] = {
     { type = "item", name = "electronic-components", amount = 5 },
   },
   results = { { type = "item", name = "military-science-pack", amount = 5 } },
+  allow_productivity = true,
 }
 
 data.raw.recipe["chemical-science-pack"] = {
@@ -736,11 +739,13 @@ data.raw.recipe["chemical-science-pack"] = {
     { type = "fluid", name = "sulfuric-acid", amount = 50 },
   },
   results = { { type = "item", name = "chemical-science-pack", amount = 5 } },
+  allow_productivity = true,
 }
 
 data.raw.recipe["production-science-pack"] = {
   type = "recipe",
   name = "production-science-pack",
+  category = "t2-tech-cards",
   enabled = false,
   energy_required = 20,
   ingredients = {
@@ -750,11 +755,13 @@ data.raw.recipe["production-science-pack"] = {
     { type = "item", name = "uranium-238", amount = 5 },
   },
   results = { { type = "item", name = "production-science-pack", amount = 5 } },
+  allow_productivity = true,
 }
 
 data.raw.recipe["utility-science-pack"] = {
   type = "recipe",
   name = "utility-science-pack",
+  category = "t2-tech-cards",
   enabled = false,
   energy_required = 20,
   ingredients = {
@@ -764,6 +771,7 @@ data.raw.recipe["utility-science-pack"] = {
     { type = "item", name = "low-density-structure", amount = 5 },
   },
   results = { { type = "item", name = "utility-science-pack", amount = 5 } },
+  allow_productivity = true,
 }
 
 -- TODO: Do we want the custom heavy/light oil icons?

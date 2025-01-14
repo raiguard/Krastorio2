@@ -40,7 +40,6 @@ data:extend({
       "chemical-science-pack",
       "production-science-pack",
       "utility-science-pack",
-      kr_optimization_tech_card_name,
     },
     module_slots = 2,
     energy_source = {
