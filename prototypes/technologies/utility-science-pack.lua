@@ -2,17 +2,7 @@ data:extend({
   {
     type = "technology",
     name = "kr-advanced-additional-engine-equipment",
-    icons = {
-      {
-        icon = "__Krastorio2Assets__/technologies/advanced-additional-engine-equipment.png",
-        icon_size = 256,
-      },
-      {
-        icon = "__core__/graphics/icons/technology/constants/constant-equipment.png",
-        icon_size = 128,
-        shift = { 100, 100 },
-      },
-    },
+    icons = util.technology_icon_constant_equipment("__Krastorio2Assets__/technologies/advanced-additional-engine-equipment.png"),
     icon_size = 256,
     upgrade = false,
     unit = {

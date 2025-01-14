@@ -223,13 +223,7 @@ data:extend({
   {
     type = "technology",
     name = "kr-nuclear-reactor-equipment",
-    icons = {
-      {
-        icon = "__core__/graphics/icons/technology/constants/constant-equipment.png",
-        icon_size = 128,
-        shift = { 100, 100 },
-      },
-    },
+    icons = util.technology_icon_constant_equipment("__Krastorio2Assets__/technologies/nuclear-reactor-equipment.png"),
     upgrade = false,
     unit = {
       time = 60,
@@ -248,17 +242,7 @@ data:extend({
   {
     type = "technology",
     name = "kr-portable-generator-equipment",
-    icons = {
-      {
-        icon = "__Krastorio2Assets__/technologies/portable-generator-equipment.png",
-        icon_size = 256,
-      },
-      {
-        icon = "__core__/graphics/icons/technology/constants/constant-equipment.png",
-        icon_size = 128,
-        shift = { 100, 100 },
-      },
-    },
+    icons = util.technology_icon_constant_equipment("__Krastorio2Assets__/technologies/portable-generator-equipment.png"),
     upgrade = false,
     unit = {
       time = 60,

@@ -121,6 +121,16 @@ data.raw.technology["steam-power"].unit = {
   },
 }
 
+data.raw.technology["steel-axe"].research_trigger = nil
+data.raw.technology["steel-axe"].unit = {
+  time = 30,
+  count = 50,
+  ingredients = {
+    { "basic-tech-card", 1 },
+    { "automation-science-pack", 1 },
+  },
+}
+
 data.raw.technology["artillery"].unit.count = 1000
 data.raw.technology["atomic-bomb"].unit.count = 1500
 data.raw.technology["automation-3"].unit.count = 350
@@ -172,6 +182,8 @@ data_util.set_icons(data.raw.technology["fission-reactor-equipment"], {
   { icon = "__Krastorio2Assets__/technologies/fission-reactor-equipment.png", icon_size = 256 },
   { icon = "__Krastorio2Assets__/technologies/overlays/equipment-overlay.png", icon_size = 256 },
 })
+
+data_util.set_icons(data.raw.technology["steel-axe"], util.technology_icon_constant_mining("__Krastorio2Assets__/technologies/steel-pickaxe.png"))
 
 data.raw.technology["personal-laser-defense-equipment"].localised_name = {
   "technology-name.kr-personal-laser-defense-mk1-equipment",
