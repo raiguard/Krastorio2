@@ -10,9 +10,9 @@ data:extend({
     energy_required = 5,
     enabled = false,
     ingredients = {
-      { type = "item", name = "electric-mining-drill", amount = 1 },
-      { type = "item", name = "steel-gear-wheel", amount = 5 },
-      { type = "item", name = "rare-metals", amount = 4 },
+      { type = "item", name = "kr-electric-mining-drill-mk2", amount = 1 },
+      { type = "item", name = "imersium-gear-wheel", amount = 5 },
+      { type = "item", name = "imersite-crystal", amount = 4 },
     },
     results = { { type = "item", name = "kr-electric-mining-drill-mk3", amount = 1 } },
   },
