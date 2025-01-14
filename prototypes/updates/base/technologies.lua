@@ -183,8 +183,9 @@ data.raw.technology["chemical-science-pack"].localised_name = { "item-name.chemi
 data.raw.technology["production-science-pack"].localised_name = { "item-name.production-tech-card" }
 data.raw.technology["utility-science-pack"].localised_name = { "item-name.utility-tech-card" }
 data.raw.technology[kr_optimization_tech_card_name].localised_name = { "item-name.optimization-tech-card" }
-data.raw.technology[kr_optimization_tech_card_name].localised_description =
-  { "technology-description.optimization-tech-card" }
+data.raw.technology[kr_optimization_tech_card_name].localised_description = { "technology-description.optimization-tech-card" }
+
+data.raw.technology["electric-mining-drill"].hidden = true
 
 -- stylua: ignore start
 data_util.set_icon(data.raw.technology["battery-mk2-equipment"], "__Krastorio2Assets__/technologies/battery-mk2-equipment.png", 256)
