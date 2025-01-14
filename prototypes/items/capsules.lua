@@ -13,13 +13,13 @@ data:extend({
         {
           filename = "__Krastorio2Assets__/icons/capsules/creep-virus.png",
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
           filename = "__Krastorio2Assets__/icons/capsules/creep-virus-light.png",
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
           flags = { "light" },
           draw_as_light = true,
@@ -76,13 +76,13 @@ data:extend({
         {
           filename = "__Krastorio2Assets__/icons/capsules/biter-virus.png",
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
           filename = "__Krastorio2Assets__/icons/capsules/biter-virus-light.png",
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
           flags = { "light" },
           draw_as_light = true,

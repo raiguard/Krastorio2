@@ -14,7 +14,7 @@ data:extend({
           {
             size = 64,
             filename = "__Krastorio2Assets__/icons/items/raw-imersite.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
           {
@@ -24,7 +24,7 @@ data:extend({
             tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
             size = 64,
             filename = "__Krastorio2Assets__/icons/items/raw-imersite-light.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
         },
@@ -34,7 +34,7 @@ data:extend({
           {
             size = 64,
             filename = "__Krastorio2Assets__/icons/items/raw-imersite-1.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
           {
@@ -44,7 +44,7 @@ data:extend({
             tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
             size = 64,
             filename = "__Krastorio2Assets__/icons/items/raw-imersite-1-light.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
         },
@@ -54,7 +54,7 @@ data:extend({
           {
             size = 64,
             filename = "__Krastorio2Assets__/icons/items/raw-imersite-2.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
           {
@@ -64,7 +64,7 @@ data:extend({
             tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
             size = 64,
             filename = "__Krastorio2Assets__/icons/items/raw-imersite-2-light.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
         },
@@ -74,7 +74,7 @@ data:extend({
           {
             size = 64,
             filename = "__Krastorio2Assets__/icons/items/raw-imersite-3.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
           {
@@ -84,7 +84,7 @@ data:extend({
             tint = { r = 0.3, g = 0.3, b = 0.3, a = 0.3 },
             size = 64,
             filename = "__Krastorio2Assets__/icons/items/raw-imersite-3-light.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
         },
