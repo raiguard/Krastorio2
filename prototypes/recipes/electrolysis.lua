@@ -27,6 +27,7 @@ data:extend({
     type = "recipe",
     name = "kr-water-electrolysis",
     icon = "__Krastorio2Assets__/icons/recipes/water-electrolysis.png",
+    icon_size = 128,
     subgroup = "fluid-recipes",
     order = "y01[water-electrolysis]",
     enabled = false,
