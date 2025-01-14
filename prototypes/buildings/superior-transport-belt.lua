@@ -41,8 +41,8 @@ data:extend({
         percent = 50,
       },
     },
-    open_sound = sounds.machine_open,
-    close_sound = sounds.machine_close,
+    open_sound = sounds.transport_belt_open,
+    close_sound = sounds.transport_belt_close,
     working_sound = {
       sound = {
         filename = "__base__/sound/transport-belt.ogg",

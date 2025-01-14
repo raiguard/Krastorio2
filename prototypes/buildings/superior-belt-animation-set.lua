@@ -1,4 +1,6 @@
-return {
+local meld = require("meld")
+
+return meld({
   animation_set = {
     filename = "__Krastorio2Assets__/buildings/superior-transport-belt/superior-transport-belt.png",
     priority = "extra-high",
@@ -37,4 +39,4 @@ return {
 
   starting_east_index = 19,
   ending_east_index = 20,
-}
+}, belt_reader_gfx)
