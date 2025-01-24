@@ -1,3 +1,5 @@
+local sounds = require("__base__.prototypes.entity.sounds")
+
 data:extend({
   {
     type = "recipe",
@@ -31,6 +33,8 @@ data:extend({
     collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     speed = 0.125,
+    open_sound = sounds.transport_belt_open,
+    close_sound = sounds.transport_belt_close,
     working_sound = {
       sound = {
         filename = "__base__/sound/transport-belt.ogg",
