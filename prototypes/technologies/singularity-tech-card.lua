@@ -52,17 +52,7 @@ data:extend({
   {
     type = "technology",
     name = "kr-antimatter-reactor-equipment",
-    icons = {
-      {
-        icon = "__Krastorio2Assets__/technologies/antimatter-reactor-equipment.png",
-        icon_size = 256,
-      },
-      {
-        icon = "__core__/graphics/icons/technology/constants/constant-equipment.png",
-        icon_size = 128,
-        shift = { 100, 100 },
-      },
-    },
+    icons = util.technology_icon_constant_equipment("__Krastorio2Assets__/technologies/antimatter-reactor-equipment.png"),
     upgrade = false,
     unit = {
       time = 45,

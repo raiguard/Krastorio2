@@ -130,14 +130,7 @@ data:extend({
   {
     type = "technology",
     name = "kr-iron-pickaxe",
-    icons = {
-      { icon = "__Krastorio2Assets__/technologies/iron-pickaxe.png", icon_size = 256 },
-      {
-        icon = "__core__/graphics/icons/technology/constants/constant-mining.png",
-        icon_size = 128,
-        shift = { 100, 100 },
-      },
-    },
+    icons = util.technology_icon_constant_mining("__Krastorio2Assets__/technologies/iron-pickaxe.png"),
     order = "b-c-a",
     unit = {
       time = 30,

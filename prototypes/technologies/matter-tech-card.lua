@@ -3,17 +3,7 @@ data:extend({
     type = "technology",
     name = "kr-advanced-pickaxe",
     icon_size = 256,
-    icons = {
-      {
-        icon = "__Krastorio2Assets__/technologies/imersium-pickaxe.png",
-        icon_size = 256,
-      },
-      {
-        icon = "__core__/graphics/icons/technology/constants/constant-mining.png",
-        icon_size = 128,
-        shift = { 100, 100 },
-      },
-    },
+    icons = util.technology_icon_constant_mining("__Krastorio2Assets__/technologies/imersium-pickaxe.png"),
     unit = {
       time = 60,
       count = 200,
