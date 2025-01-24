@@ -89,7 +89,10 @@ function matter_lib.make_deconversion_recipe(def)
         { type = "fluid", name = "matter", amount = def.matter_count },
         def.needs_stabilizer and { type = "item", name = "charged-matter-stabilizer", amount = 1 } or nil,
       },
-      results = { material },
+      results = {
+        material,
+        def.needs_stabilizer and { type = "item", name = "matter-stabilizer", amount = 1, probability = 0.99 } or nil,
+      },
       main_product = "",
       allow_as_intermediate = false,
       allow_productivity = def.allow_productivity,
