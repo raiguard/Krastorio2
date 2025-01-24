@@ -149,7 +149,7 @@ data:extend({
         { "chemical-science-pack", 1 },
       },
     },
-    prerequisites = { "kr-electric-mining-drill", "engine" },
+    prerequisites = { "electric-mining-drill", "engine" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-electric-mining-drill-mk2" },
     },
@@ -242,7 +242,9 @@ data:extend({
   {
     type = "technology",
     name = "kr-portable-generator-equipment",
-    icons = util.technology_icon_constant_equipment("__Krastorio2Assets__/technologies/portable-generator-equipment.png"),
+    icons = util.technology_icon_constant_equipment(
+      "__Krastorio2Assets__/technologies/portable-generator-equipment.png"
+    ),
     upgrade = false,
     unit = {
       time = 60,

@@ -152,6 +152,9 @@ data.raw.technology["production-science-pack"].unit.count = 250
 data.raw.technology["uranium-ammo"].unit.count = 300
 data.raw.technology["utility-science-pack"].unit.count = 250
 
+data.raw.technology["electric-mining-drill"].unit.count = 20
+data.raw.technology["electric-mining-drill"].unit.time = 30
+
 data.raw.technology["artillery-shell-range-1"].max_level = 2
 data.raw.technology["artillery-shell-range-1"].unit.count_formula = "L^2*3500"
 data.raw.technology["artillery-shell-speed-1"].max_level = 2
@@ -184,7 +187,10 @@ data_util.set_icons(data.raw.technology["fission-reactor-equipment"], {
   { icon = "__Krastorio2Assets__/technologies/overlays/equipment-overlay.png", icon_size = 256 },
 })
 
-data_util.set_icons(data.raw.technology["steel-axe"], util.technology_icon_constant_mining("__Krastorio2Assets__/technologies/steel-pickaxe.png"))
+data_util.set_icons(
+  data.raw.technology["steel-axe"],
+  util.technology_icon_constant_mining("__Krastorio2Assets__/technologies/steel-pickaxe.png")
+)
 
 data.raw.technology["personal-laser-defense-equipment"].localised_name = {
   "technology-name.kr-personal-laser-defense-mk1-equipment",

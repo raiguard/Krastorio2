@@ -1,24 +1,6 @@
 data:extend({
   {
     type = "technology",
-    name = "kr-electric-mining-drill",
-    icon = "__Krastorio2Assets__/technologies/electric-mining-drill.png",
-    icon_size = 256,
-    unit = {
-      time = 30,
-      count = 20,
-      ingredients = {
-        { "basic-tech-card", 1 },
-        { "automation-science-pack", 1 },
-      },
-    },
-    prerequisites = { "automation-science-pack" },
-    effects = {
-      { type = "unlock-recipe", recipe = "electric-mining-drill" },
-    },
-  },
-  {
-    type = "technology",
     name = "kr-fluids-chemistry",
     icon = "__Krastorio2Assets__/technologies/fluids-chemistry.png",
     icon_size = 256,
