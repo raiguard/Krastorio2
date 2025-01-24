@@ -23,7 +23,7 @@ data:extend({
         {
           size = 64,
           filename = "__Krastorio2Assets__/icons/equipment/big-battery-equipment.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
@@ -31,7 +31,7 @@ data:extend({
           flags = { "light" },
           size = 64,
           filename = "__Krastorio2Assets__/icons/equipment/big-battery-equipment-light.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
       },

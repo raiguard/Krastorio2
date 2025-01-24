@@ -59,13 +59,13 @@ data:extend({
         {
           filename = "__Krastorio2Assets__/icons/cards/matter-tech-card.png",
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
           filename = "__Krastorio2Assets__/icons/cards/matter-tech-card-light.png",
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           draw_as_light = true,
           flags = { "light" },
           mipmap_count = 4,
@@ -89,13 +89,13 @@ data:extend({
         {
           filename = "__Krastorio2Assets__/icons/cards/advanced-tech-card.png",
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
           filename = "__Krastorio2Assets__/icons/cards/advanced-tech-card-light.png",
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           draw_as_light = true,
           flags = { "light" },
           mipmap_count = 4,
@@ -119,13 +119,13 @@ data:extend({
         {
           filename = "__Krastorio2Assets__/icons/cards/singularity-tech-card.png",
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
           filename = "__Krastorio2Assets__/icons/cards/singularity-tech-card-light.png",
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           draw_as_light = true,
           flags = { "light" },
           mipmap_count = 4,

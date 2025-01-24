@@ -680,7 +680,7 @@ data:extend({
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items/pistol-ammo-1.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
     },
@@ -775,7 +775,7 @@ data:extend({
       {
         filename = "__Krastorio2Assets__/icons/items/pistol-ammo-2.png",
         size = 64,
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
     },
@@ -887,7 +887,7 @@ data:extend({
       {
         filename = "__Krastorio2Assets__/icons/items/rifle-ammo-1.png",
         size = 64,
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
     },
@@ -987,7 +987,7 @@ data:extend({
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items/rifle-ammo-2.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
     },
@@ -1086,7 +1086,7 @@ data:extend({
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items/rifle-ammo-3.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
     },
@@ -1190,7 +1190,7 @@ data:extend({
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items/rifle-ammo-4.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
     },
@@ -1348,7 +1348,7 @@ data:extend({
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items/anti-material-rifle-ammo-1.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
     },
@@ -1464,7 +1464,7 @@ data:extend({
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items/anti-material-rifle-ammo-2.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
     },
@@ -1579,7 +1579,7 @@ data:extend({
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items/anti-material-rifle-ammo-3.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
     },
@@ -1697,7 +1697,7 @@ data:extend({
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items/anti-material-rifle-ammo-4.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
     },

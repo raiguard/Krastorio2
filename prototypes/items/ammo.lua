@@ -35,13 +35,13 @@ data:extend({
         {
           filename = "__Krastorio2Assets__/icons/ammo/imersite-rounds-magazine.png",
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
           filename = "__Krastorio2Assets__/icons/ammo/imersite-rounds-magazine-light.png",
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
           flags = { "light" },
           draw_as_light = true,
@@ -79,13 +79,13 @@ data:extend({
         {
           filename = "__Krastorio2Assets__/icons/ammo/antimatter-artillery-shell.png",
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
           filename = "__Krastorio2Assets__/icons/ammo/antimatter-artillery-shell-light.png",
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
           flags = { "light" },
           draw_as_light = true,
@@ -127,13 +127,13 @@ data:extend({
         {
           filename = "__Krastorio2Assets__/icons/ammo/impulse-rifle-ammo.png",
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
           filename = "__Krastorio2Assets__/icons/ammo/impulse-rifle-ammo-light.png",
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
           flags = { "light" },
           draw_as_light = true,
@@ -202,13 +202,13 @@ data:extend({
         {
           filename = "__Krastorio2Assets__/icons/ammo/antimatter-rocket.png",
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
           filename = "__Krastorio2Assets__/icons/ammo/antimatter-rocket-light.png",
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
           flags = { "light" },
           draw_as_light = true,
@@ -304,7 +304,7 @@ data:extend({
         {
           size = 64,
           filename = "__Krastorio2Assets__/icons/ammo/antimatter-railgun-shell.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
@@ -312,7 +312,7 @@ data:extend({
           flags = { "light" },
           size = 64,
           filename = "__Krastorio2Assets__/icons/ammo/antimatter-railgun-shell-light.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
       },
@@ -378,7 +378,7 @@ data:extend({
         {
           size = 64,
           filename = "__Krastorio2Assets__/icons/ammo/nuclear-rocket-for-turret.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
@@ -386,7 +386,7 @@ data:extend({
           flags = { "light" },
           size = 64,
           filename = "__Krastorio2Assets__/icons/ammo/nuclear-rocket-for-turret-light.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
       },
@@ -424,7 +424,7 @@ data:extend({
         {
           size = 64,
           filename = "__Krastorio2Assets__/icons/ammo/antimatter-rocket-for-turret.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
@@ -432,7 +432,7 @@ data:extend({
           flags = { "light" },
           size = 64,
           filename = "__Krastorio2Assets__/icons/ammo/antimatter-rocket-for-turret-light.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
       },
@@ -468,7 +468,7 @@ data:extend({
         {
           size = 64,
           filename = "__Krastorio2Assets__/icons/ammo/nuclear-artillery-shell.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
@@ -476,7 +476,7 @@ data:extend({
           flags = { "light" },
           size = 64,
           filename = "__Krastorio2Assets__/icons/ammo/nuclear-artillery-shell-light.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
       },
