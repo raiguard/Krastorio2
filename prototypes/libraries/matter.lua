@@ -68,35 +68,44 @@ function matter_lib.make_deconversion_recipe(def)
     error("research-progress is not supported in matter recipes.")
   end
   local prototype = flib_prototypes.get(def.material.type --[[@as string]], def.material.name) --[[@as data.FluidPrototype|data.ItemPrototype]]
-  data:extend({
-    {
-      type = "recipe",
-      name = recipe_name,
-      localised_name = { "recipe-name.matter-to", flib_locale.of(prototype) },
-      icons = flib_table.array_merge({
-        {
-          { icon = "__Krastorio2Assets__/icons/arrows/arrow-i.png" },
-          { icon = "__Krastorio2Assets__/icons/fluids/matter.png", scale = 0.28, shift = { 8, -6 } },
-        },
-        data_util.transform_icons(data_util.get_icons(prototype), { scale = 0.28, shift = { -4, 8 } }),
-      }),
-      category = "matter-deconversion",
-      subgroup = "matter-deconversion",
-      hide_from_player_crafting = true,
-      enabled = false,
-      energy_required = def.energy_required or 2,
-      ingredients = {
-        { type = "fluid", name = "matter", amount = def.matter_count },
-        def.needs_stabilizer and { type = "item", name = "charged-matter-stabilizer", amount = 1 } or nil,
+  local deconversion_recipe = {
+    type = "recipe",
+    name = recipe_name,
+    localised_name = { "recipe-name.matter-to", flib_locale.of(prototype) },
+    icons = flib_table.array_merge({
+      {
+        { icon = "__Krastorio2Assets__/icons/arrows/arrow-i.png" },
+        { icon = "__Krastorio2Assets__/icons/fluids/matter.png", scale = 0.28, shift = { 8, -6 } },
       },
-      results = { material },
-      main_product = "",
-      allow_as_intermediate = false,
-      allow_productivity = def.allow_productivity,
-      always_show_made_in = true,
-      always_show_products = true,
+      data_util.transform_icons(data_util.get_icons(prototype), { scale = 0.28, shift = { -4, 8 } }),
+    }),
+    category = "matter-deconversion",
+    subgroup = "matter-deconversion",
+    hide_from_player_crafting = true,
+    enabled = false,
+    energy_required = def.energy_required or 2,
+    ingredients = {
+      { type = "fluid", name = "matter", amount = def.matter_count },
+      def.needs_stabilizer and { type = "item", name = "charged-matter-stabilizer", amount = 1 } or nil,
     },
-  })
+    results = { material },
+    main_product = "",
+    allow_as_intermediate = false,
+    allow_productivity = def.allow_productivity,
+    always_show_made_in = true,
+    always_show_products = true,
+  }
+
+  if def.needs_stabilizer then
+    table.insert(deconversion_recipe.results, {
+      type = "item",
+      name = "matter-stabilizer",
+      probability = 0.99,
+      amount = 1,
+    })
+  end
+
+  data:extend({ deconversion_recipe })
   data_util.add_recipe_unlock(def.unlocked_by or "kr-matter-processing", recipe_name)
 end
 
