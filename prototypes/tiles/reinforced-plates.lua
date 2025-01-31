@@ -378,6 +378,7 @@ data:extend({
     collision_mask = { layers = { ground_tile = true } },
     walking_speed_modifier = 1.75,
     layer = 95,
+    layer_group = "ground-artificial",
     transition_overlay_layer_offset = 2, -- need to render border overlay on top of hazard-concrete
     decorative_removal_probability = 0.95,
     variants = {
@@ -482,6 +483,7 @@ data:extend({
     collision_mask = { layers = { ground_tile = true } },
     walking_speed_modifier = 1.75,
     layer = 90,
+    layer_group = "ground-artificial",
     transition_overlay_layer_offset = 2, -- need to render border overlay on top of hazard-concrete
     decorative_removal_probability = 0.95,
     variants = {
