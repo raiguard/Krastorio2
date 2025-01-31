@@ -381,25 +381,6 @@ data:extend({
     transition_overlay_layer_offset = 2, -- need to render border overlay on top of hazard-concrete
     decorative_removal_probability = 0.95,
     variants = {
-      main = {
-        {
-          picture = "__base__/graphics/terrain/concrete/concrete-dummy.png",
-          count = 1,
-          size = 1,
-        },
-        {
-          picture = "__base__/graphics/terrain/concrete/concrete-dummy.png",
-          count = 1,
-          size = 2,
-          probability = 0.39,
-        },
-        {
-          picture = "__base__/graphics/terrain/concrete/concrete-dummy.png",
-          count = 1,
-          size = 4,
-          probability = 1,
-        },
-      },
       transition = {
         overlay_layout = {
           inner_corner = {
@@ -485,25 +466,6 @@ data:extend({
     transition_overlay_layer_offset = 2, -- need to render border overlay on top of hazard-concrete
     decorative_removal_probability = 0.95,
     variants = {
-      main = {
-        {
-          picture = "__base__/graphics/terrain/concrete/concrete-dummy.png",
-          count = 1,
-          size = 1,
-        },
-        {
-          picture = "__base__/graphics/terrain/concrete/concrete-dummy.png",
-          count = 1,
-          size = 2,
-          probability = 0.39,
-        },
-        {
-          picture = "__base__/graphics/terrain/concrete/concrete-dummy.png",
-          count = 1,
-          size = 4,
-          probability = 1,
-        },
-      },
       transition = {
         overlay_layout = {
           inner_corner = {
