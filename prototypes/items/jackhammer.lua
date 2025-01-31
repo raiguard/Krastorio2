@@ -10,11 +10,6 @@ local factory_tiles = {
   "kr-black-reinforced-plate",
 }
 
-if settings.startup["kr-kl-stuff"].value then
-  table.insert(factory_tiles, "kr-white-reinforced-plate-l")
-  table.insert(factory_tiles, "kr-black-reinforced-plate-l")
-end
-
 data:extend({
   {
     type = "selection-tool",
