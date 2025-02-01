@@ -62,7 +62,7 @@ data:extend({
         filename = "__base__/sound/accumulator-idle.ogg",
         volume = 0.8,
       },
-      max_sounds_per_type = 2,
+      max_sounds_per_prototype = 2,
       fade_in_ticks = 10,
       fade_out_ticks = 30,
     },

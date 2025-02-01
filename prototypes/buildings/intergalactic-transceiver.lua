@@ -116,7 +116,7 @@ local working_sound = {
     filename = "__Krastorio2Assets__/sounds/buildings/intergalactic-transceiver.ogg",
     volume = 1,
   },
-  max_sounds_per_type = 3,
+  max_sounds_per_prototype = 3,
   fade_in_ticks = 10,
   fade_out_ticks = 30,
 }

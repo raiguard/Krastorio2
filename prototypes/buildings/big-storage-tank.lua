@@ -53,7 +53,7 @@ data:extend({
         volume = 0.5,
       },
       apparent_volume = 1.5,
-      max_sounds_per_type = 3,
+      max_sounds_per_prototype = 3,
     },
     pictures = {
       picture = {

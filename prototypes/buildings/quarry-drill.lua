@@ -62,7 +62,7 @@ data:extend({
         volume = 0.5,
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg" },
-      max_sounds_per_type = 2,
+      max_sounds_per_prototype = 2,
     },
     graphics_set = {
       animation = {
