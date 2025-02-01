@@ -1899,8 +1899,10 @@ data.raw.turret["behemoth-worm-turret"].call_for_help_radius = 65
 
 -- -- Krastorio
 
-data.raw.ammo["uranium-rounds-magazine"].hidden = true
-data.raw.ammo["imersite-rounds-magazine"].hidden = true
+data.raw.ammo["uranium-rounds-magazine"] = nil
+data.raw.recipe["uranium-rounds-magazine"] = nil
+data.raw.ammo["imersite-rounds-magazine"] = nil
+data.raw.recipe["imersite-rounds-magazine"] = nil
 
 data.raw.gun["advanced-tank-machine-gun"].attack_parameters.ammo_category = "anti-material-rifle-ammo"
 data.raw.gun["advanced-tank-machine-gun"].attack_parameters.range = sniper_range
