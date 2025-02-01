@@ -92,7 +92,7 @@ data:extend({
       ammo_category = "laser",
       ammo_type = {
         target_type = "entity",
-        energy_consumption = "100MJ",
+        energy_consumption = "99.9MJ",
         action = {
           type = "direct",
           action_delivery = {
@@ -141,11 +141,6 @@ data:extend({
       {
         filename = "__Krastorio2Assets__/sounds/weapons/laser-artillery-turret-starting_attack_sound.ogg",
         volume = 0.40,
-        audible_distance_modifier = 0.5,
-        aggregation = {
-          count_already_playing = true,
-          max_count = 3,
-        },
       },
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
