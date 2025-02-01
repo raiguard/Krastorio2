@@ -135,7 +135,7 @@ local function on_cutscene_waypoint_reached(e)
     return
   end
 
-  if e.waypoint_index == 0 then
+  if e.waypoint_index == 1 then
     entity.surface.create_entity({
       type = "projectile",
       name = "intergalactic-transceiver-wave",
@@ -147,7 +147,7 @@ local function on_cutscene_waypoint_reached(e)
       create_build_effect_smoke = false,
       raise_built = true,
     })
-  elseif e.waypoint_index == 1 then
+  elseif e.waypoint_index == 2 then
     local force = entity.force
     local player = entity.last_user
     local position = entity.position
