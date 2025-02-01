@@ -61,7 +61,6 @@ data:extend({
         pipe_connections = { { flow_direction = "output", direction = defines.direction.north, position = { 0, -7 } } },
       },
     },
-    audible_distance_modifier = 25,
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",

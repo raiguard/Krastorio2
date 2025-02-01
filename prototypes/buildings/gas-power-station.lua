@@ -127,7 +127,6 @@ data:extend({
       fade_in_ticks = 10,
       fade_out_ticks = 30,
     },
-    audible_distance_modifier = 5,
     min_perceived_performance = 0.25,
     performance_to_sound_speedup = 0.5,
     horizontal_animation = animation,

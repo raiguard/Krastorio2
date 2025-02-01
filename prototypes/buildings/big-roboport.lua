@@ -86,9 +86,12 @@ data:extend({
     close_sound = sounds.machine_close,
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
-      sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.6 },
+      sound = {
+        audible_distance_modifier = 0.5,
+        filename = "__base__/sound/roboport-working.ogg",
+        volume = 0.6,
+      },
       max_sounds_per_prototype = 3,
-      audible_distance_modifier = 0.5,
       probability = 1 / (5 * 60), -- average pause between the sound is 5 seconds
     },
     open_door_trigger_effect = {
