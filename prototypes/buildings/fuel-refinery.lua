@@ -82,7 +82,6 @@ data:extend({
         filename = "__base__/sound/idle1.ogg",
         volume = 0.5,
       },
-      apparent_volume = 0.5,
     },
     graphics_set = {
       animation = make_4way_animation_from_spritesheet({

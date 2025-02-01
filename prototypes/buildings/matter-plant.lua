@@ -91,7 +91,6 @@ data:extend({
     working_sound = {
       sound = { filename = "__Krastorio2Assets__/sounds/buildings/matter-plant.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg" },
-      apparent_volume = 1.5,
     },
     graphics_set = {
       animation = {

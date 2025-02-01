@@ -105,7 +105,6 @@ data:extend({
     working_sound = {
       sound = { filename = "__Krastorio2Assets__/sounds/buildings/advanced-chemical-plant.ogg", volume = 0.5 },
       idle_sound = { filename = "__base__/sound/idle1.ogg" },
-      apparent_volume = 1,
     },
     graphics_set = {
       animation = {

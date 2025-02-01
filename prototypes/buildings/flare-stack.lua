@@ -72,7 +72,6 @@ data:extend({
         filename = "__base__/sound/idle1.ogg",
         volume = 1,
       },
-      apparent_volume = 1,
     },
     graphics_set = {
       animation = {

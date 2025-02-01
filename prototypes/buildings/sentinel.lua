@@ -57,7 +57,6 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = { filename = "__Krastorio2Assets__/sounds/buildings/sentinel.ogg" },
-      apparent_volume = 1,
     },
     pictures = {
       layers = {

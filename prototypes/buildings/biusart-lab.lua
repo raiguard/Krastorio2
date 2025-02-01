@@ -60,7 +60,6 @@ data:extend({
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
       sound = { filename = "__Krastorio2Assets__/sounds/buildings/biusart-lab.ogg", volume = 0.7 },
-      apparent_volume = 1,
     },
     on_animation = {
       layers = {

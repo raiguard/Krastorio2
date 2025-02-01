@@ -123,7 +123,6 @@ data:extend({
         },
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.3 },
-      apparent_volume = 1.5,
       max_sounds_per_prototype = 3,
       fade_in_ticks = 10,
       fade_out_ticks = 30,

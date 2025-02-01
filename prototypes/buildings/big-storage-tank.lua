@@ -52,7 +52,6 @@ data:extend({
         filename = "__base__/sound/storage-tank.ogg",
         volume = 0.5,
       },
-      apparent_volume = 1.5,
       max_sounds_per_prototype = 3,
     },
     pictures = {

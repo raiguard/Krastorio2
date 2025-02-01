@@ -66,7 +66,6 @@ data:extend({
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 1 },
       max_sounds_per_prototype = 6,
-      apparent_volume = 1.25,
     },
     on_animation = {
       layers = {

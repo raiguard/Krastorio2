@@ -59,7 +59,6 @@ data:extend({
     working_sound = {
       sound = { filename = "__Krastorio2Assets__/sounds/buildings/crusher.ogg", volume = 1.25 },
       idle_sound = { filename = "__base__/sound/idle1.ogg" },
-      apparent_volume = 1.5,
     },
     graphics_set = {
       animation = {

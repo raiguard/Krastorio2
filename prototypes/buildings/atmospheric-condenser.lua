@@ -81,7 +81,6 @@ data:extend({
         filename = "__base__/sound/idle1.ogg",
         volume = 0.5,
       },
-      apparent_volume = 1.5,
     },
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
