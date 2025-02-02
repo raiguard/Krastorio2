@@ -20,7 +20,7 @@ end
 data.raw["utility-constants"]["default"].main_menu_simulations = {
   kr_menu_simulation = {
     checkboard = false,
-    save = "__Krastorio2__/menu-simulations/menu-simulation-kr-mixed-crafting.zip",
+    save = "__Krastorio2__/menu-simulations/sim.zip",
     length = minute,
     init = [[
       game.simulation.camera_zoom = 1
