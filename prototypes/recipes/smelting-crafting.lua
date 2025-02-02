@@ -131,7 +131,7 @@ data:extend({
     category = "smelting-crafting",
     energy_required = 4.0,
     ingredients = {
-      { type = "item", name = "enriched-iron", amount = 4 },
+      { type = "item", name = "enriched-iron", amount = 2 },
     },
     results = {
       { type = "item", name = "iron-beam", amount = 1 },
