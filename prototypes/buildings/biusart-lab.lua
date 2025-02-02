@@ -183,5 +183,15 @@ data:extend({
         },
       },
     },
+    icons_positioning = {
+        {
+            inventory_index = defines.inventory.lab_input,
+            shift = { 0, -0.3 },
+        },
+        {
+            inventory_index = defines.inventory.lab_modules,
+            shift = { 0, 0.9 },
+        },
+    },
   },
 })
