@@ -53,7 +53,6 @@ data:extend({
     working_sound = {
       sound = { filename = "__Krastorio2Assets__/sounds/buildings/air-purifier.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg" },
-      apparent_volume = 1.2,
     },
     graphics_set = {
       animation = {

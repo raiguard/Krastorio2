@@ -42,8 +42,6 @@ data:extend({
             play_on_target_position = false,
             -- min_distance = 200,
             max_distance = 50000,
-            -- volume_modifier = 1,
-            audible_distance_modifier = 1000,
           },
           {
             type = "show-explosion-on-chart",

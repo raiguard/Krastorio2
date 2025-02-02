@@ -45,10 +45,10 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
+        audible_distance_modifier = 0.7,
         filename = "__base__/sound/lab.ogg",
         volume = 0.7,
       },
-      audible_distance_modifier = 0.7,
       fade_in_ticks = 4,
       fade_out_ticks = 20,
     },

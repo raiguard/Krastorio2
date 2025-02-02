@@ -94,7 +94,6 @@ data:extend({
         volume = 0.60,
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg" },
-      apparent_volume = 0.75,
     },
     graphics_set = {
       animation = {
