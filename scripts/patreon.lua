@@ -182,6 +182,7 @@ local function on_give_items(e)
   give_items(player, false)
 end
 
+--- @class Patreon
 local patreon = {}
 
 function patreon.on_init()
@@ -197,7 +198,7 @@ patreon.events = {
 util.add_commands({
   ["kr-give-patreon-items"] = function(e)
     local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
-    patreon.give_items(player, true)
+    give_items(player, true)
   end,
 })
 
