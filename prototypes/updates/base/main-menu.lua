@@ -11,7 +11,10 @@ local backgrounds = {
   ["Krastorio THE FACTORY MUST GROW"] = "__Krastorio2Assets__/backgrounds/krastorio-fmg.jpg",
 }
 local path_name = settings.startup["kr-main-menu-background"].value --[[@as string]]
-data.raw["utility-constants"]["default"].main_menu_background_image_location = backgrounds[path_name]
+local background = backgrounds[path_name]
+if background then
+  data.raw["utility-constants"]["default"].main_menu_background_image_location = background
+end
 
 -- Add new Krastorio 2 menu simulation
 data.raw["utility-constants"]["default"].main_menu_simulations = {
