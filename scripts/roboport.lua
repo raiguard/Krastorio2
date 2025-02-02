@@ -54,11 +54,11 @@ local function change_mode(entity, player, to_mode)
   -- This must be done before the roboport is swapped
   local guis_to_update = {}
   for player_index in pairs(storage.roboport_guis) do
-    local player = game.get_player(player_index) --[[@as LuaPlayer]]
-    if player.opened_gui_type == defines.gui_type.entity then
-      local opened = player.opened
+    local gui_player = game.get_player(player_index)
+    if gui_player and gui_player.opened_gui_type == defines.gui_type.entity then
+      local opened = gui_player.opened
       if opened and opened == entity then
-        table.insert(guis_to_update, player)
+        table.insert(guis_to_update, gui_player)
       end
     end
   end
@@ -82,9 +82,9 @@ local function change_mode(entity, player, to_mode)
     util.change_mode_fx(new_entity, { "message.kr-" .. new_mode_data.text .. "-mode" }, new_mode_data.color)
 
     -- Re-open GUI for all players who had it open and update the radio buttons
-    for _, player in pairs(guis_to_update) do
-      player.opened = new_entity
-      update_gui(player, new_entity)
+    for _, gui_player in pairs(guis_to_update) do
+      gui_player.opened = new_entity
+      update_gui(gui_player, new_entity)
     end
   end
 end
