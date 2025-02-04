@@ -11,7 +11,7 @@ local absorber_buffer_capacity = prototypes.equipment["energy-absorber-equipment
 
 --- @param e EntityBuiltEvent
 local function on_entity_built(e)
-  local entity = e.entity or e.created_entity or e.destination
+  local entity = e.entity or e.destination
   if not entity or not entity.valid then
     return
   end
