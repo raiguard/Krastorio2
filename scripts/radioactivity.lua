@@ -61,7 +61,7 @@ local function check_around_player(player)
     return
   end
 
-  local position = flib_position.floor(player.position)
+  local position = flib_position.floor(player.physical_position)
   local last_position = player_data.last_position
   if flib_position.eq(position, last_position) then
     return
