@@ -86,6 +86,7 @@ data:extend({
       max_count = 1,
       remove = true,
       count_already_playing = true,
+      priority = "oldest",
     },
   },
   {

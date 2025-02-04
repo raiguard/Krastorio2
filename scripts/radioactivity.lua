@@ -137,6 +137,7 @@ local function update_sounds()
 
     player.play_sound({
       path = "kr-radioactive",
+      position = player.physical_position,
       volume_modifier = 0.5,
     })
 
