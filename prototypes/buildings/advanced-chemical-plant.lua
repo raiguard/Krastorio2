@@ -88,7 +88,7 @@ data:extend({
     collision_box = { { -3.25, -3.25 }, { 3.25, 3.25 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     fast_replaceable_group = "assembling-machine",
-    crafting_categories = { "chemistry" },
+    crafting_categories = { "chemistry", "advanced-chemistry" },
     crafting_speed = 8,
     ingredient_count = 6,
     module_slots = 4,

@@ -34,6 +34,7 @@ data:extend({
     prerequisites = { "kr-imersium-processing", "kr-advanced-tech-card" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-advanced-chemical-plant" },
+      { type = "unlock-recipe", recipe = "electronic-components-with-lithium" },
     },
   },
   {

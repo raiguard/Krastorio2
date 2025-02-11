@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: ????
+  Features:
+    - Re-introduced the electronic components with lithium recipe, but with the addition of nitric acid.
   Changes:
     - Renamed substation MK2 to superior substation.
     - The superior substation now has built-in lighting and takes two lamps in its recipe.

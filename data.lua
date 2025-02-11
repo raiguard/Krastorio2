@@ -177,6 +177,7 @@ require("prototypes.projectiles.nuclear-turret-rocket-projectile")
 require("prototypes.projectiles.poop-projectile")
 require("prototypes.projectiles.virus-capsule")
 
+require("prototypes.recipes.advanced-chemistry")
 require("prototypes.recipes.air-purification")
 require("prototypes.recipes.atmosphere-condensation")
 require("prototypes.recipes.bioprocessing")

@@ -1,6 +1,10 @@
 data:extend({
   {
     type = "recipe-category",
+    name = "advanced-chemistry",
+  },
+  {
+    type = "recipe-category",
     name = "advanced-smelting",
   },
   {
