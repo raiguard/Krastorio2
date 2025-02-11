@@ -1,13 +1,10 @@
 local resource_autoplace = require("__core__.lualib.resource-autoplace")
 
--- Adding mineral water
 data:extend({
   {
     type = "resource",
     name = "mineral-water",
     icon = "__Krastorio2Assets__/icons/resources/mineral-water.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     flags = { "placeable-neutral" },
     category = "basic-fluid",
     subgroup = "mineable-fluids",
