@@ -42,7 +42,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/resources/rare-metals.png",
     flags = { "placeable-neutral" },
     order = "a-b-a",
-    subgroup = "raw-resource",
+    subgroup = "mineable-fluids",
     collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     tree_removal_probability = 0,

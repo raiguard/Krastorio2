@@ -10,7 +10,7 @@ data:extend({
     icon_mipmaps = 4,
     flags = { "placeable-neutral" },
     category = "basic-fluid",
-    subgroup = "raw-resource",
+    subgroup = "mineable-fluids",
     order = "a-b-a",
     infinite = false,
     map_grid = false,

@@ -98,7 +98,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/items/raw-imersite.png",
     flags = { "placeable-neutral" },
     order = "a-b-a",
-    subgroup = "raw-resource",
+    subgroup = "mineable-fluids",
     collision_box = { { -3.4, -3.4 }, { 3.4, 3.4 } },
     selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
     infinite = false,
