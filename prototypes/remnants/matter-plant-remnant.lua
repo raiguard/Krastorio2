@@ -4,6 +4,7 @@ data:extend({
     name = "matter-plant-remnant",
     localised_name = { "remnant-name", { "entity-name.kr-matter-plant" } },
     icon = "__Krastorio2Assets__/icons/entities/matter-plant.png",
+    icon_size = 64,
     flags = { "placeable-neutral", "building-direction-8-way", "not-on-map" },
     subgroup = "remnants",
     order = "z[remnants]-a[generic]-b[medium]",
