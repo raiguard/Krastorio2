@@ -203,7 +203,7 @@ data:extend({
     type = "technology",
     name = "kr-energy-shield-mk4-equipment",
     icon_size = 256,
-    icon = "__Krastorio2Assets__/technologies/energy-shield-mk4-equipment.png",
+    icons = util.technology_icon_constant_equipment("__Krastorio2Assets__/technologies/energy-shield-mk4-equipment.png"),
     upgrade = false,
     unit = {
       time = 90,
@@ -265,7 +265,7 @@ data:extend({
   {
     type = "technology",
     name = "kr-personal-laser-defense-mk3-equipment",
-    icon = "__Krastorio2Assets__/technologies/personal-laser-defense-mk3-equipments.png",
+    icons = util.technology_icon_constant_equipment("__Krastorio2Assets__/technologies/personal-laser-defense-mk3-equipments.png"),
     icon_size = 256,
     order = "g-m",
     unit = {
@@ -358,7 +358,7 @@ data:extend({
   {
     type = "technology",
     name = "kr-superior-exoskeleton-equipment",
-    icon = "__Krastorio2Assets__/technologies/superior-exoskeleton-equipment.png",
+    icons = util.technology_icon_constant_equipment("__Krastorio2Assets__/technologies/superior-exoskeleton-equipment.png"),
     icon_size = 256,
     upgrade = false,
     unit = {

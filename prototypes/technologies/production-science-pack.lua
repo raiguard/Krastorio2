@@ -43,7 +43,7 @@ data:extend({
     type = "technology",
     name = "kr-battery-mk3-equipment",
     icon_size = 256,
-    icon = "__Krastorio2Assets__/technologies/battery-mk3-equipment.png",
+    icons = util.technology_icon_constant_equipment("__Krastorio2Assets__/technologies/battery-mk3-equipment.png"),
     upgrade = false,
     unit = {
       count = 500,

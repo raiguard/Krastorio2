@@ -140,7 +140,7 @@ data:extend({
   {
     type = "technology",
     name = "kr-personal-laser-defense-mk4-equipment",
-    icon = "__Krastorio2Assets__/technologies/personal-laser-defense-mk4-equipments.png",
+    icons = util.technology_icon_constant_equipment("__Krastorio2Assets__/technologies/personal-laser-defense-mk4-equipments.png"),
     icon_size = 256,
     order = "g-m",
     unit = {
