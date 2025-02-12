@@ -13,6 +13,9 @@ for _, technology in pairs(data.raw.technology) do
   if not science_pack_tech or science_pack_tech.name == technology.name then
     goto continue
   end
+  if not technology.prerequisites then
+    technology.prerequisites = {}
+  end
   if not flib_table.find(technology.prerequisites, science_pack_tech.name) then
     table.insert(technology.prerequisites, science_pack_tech.name)
   end
