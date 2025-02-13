@@ -86,6 +86,17 @@ data:extend({
           blend_mode = "additive-soft",
         },
         {
+          filename = "__Krastorio2Assets__/buildings/tesla-coil/tesla-coil-base.png",
+          priority = "high",
+          width = 194,
+          height = 232,
+          scale = 0.5,
+          repeat_count = 60,
+          animation_speed = 0.000003,
+          run_mode = "forward",
+          shift = { 0, -0.75 },
+        },
+        {
           filename = "__Krastorio2Assets__/buildings/tesla-coil/tesla-coil-animation.png",
           priority = "high",
           width = 194,
