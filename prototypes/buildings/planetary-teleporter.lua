@@ -82,7 +82,7 @@ data:extend({
             shift = { 1.9, 1.2 },
           },
           {
-            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-base-combined.png",
+            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/teleporter-base-combined.png",
             priority = "medium",
             width = 400,
             height = 475,
@@ -92,7 +92,7 @@ data:extend({
             animation_speed = 0.5,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-under-forward-towers.png",
+            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/teleporter-under-forward-towers.png",
             priority = "medium",
             width = 400,
             height = 475,
@@ -101,7 +101,7 @@ data:extend({
             animation_speed = 0.5,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-base-combined-glow.png",
+            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/teleporter-base-combined-glow.png",
             priority = "high",
             width = 400,
             height = 475,
@@ -114,7 +114,7 @@ data:extend({
             blend_mode = "additive-soft",
           },
           {
-            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-base-combined-glow.png",
+            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/teleporter-base-combined-glow.png",
             priority = "extra-high",
             width = 400,
             height = 475,
@@ -126,7 +126,7 @@ data:extend({
             blend_mode = "additive-soft",
           },
           {
-            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-forward-towers-light.png",
+            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/teleporter-forward-towers-light.png",
             priority = "extra-high",
             width = 400,
             height = 475,
@@ -152,7 +152,7 @@ data:extend({
             shift = { 1.9, 1.2 },
           },
           {
-            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-base-combined.png",
+            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/teleporter-base-combined.png",
             priority = "medium",
             width = 400,
             height = 475,
@@ -162,7 +162,7 @@ data:extend({
             animation_speed = 0.5,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-under-forward-towers.png",
+            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/teleporter-under-forward-towers.png",
             priority = "medium",
             width = 400,
             height = 475,
@@ -171,7 +171,7 @@ data:extend({
             animation_speed = 0.5,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-base-combined-glow-red.png",
+            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/teleporter-base-combined-glow-red.png",
             flags = { "mask" },
             priority = "extra-high",
             width = 400,
@@ -184,7 +184,7 @@ data:extend({
             tint = { r = 1, g = 0, b = 0, a = 1 },
           },
           {
-            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-base-combined-glow-red.png",
+            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/teleporter-base-combined-glow-red.png",
             priority = "high",
             width = 400,
             height = 475,
@@ -197,7 +197,7 @@ data:extend({
             blend_mode = "additive-soft",
           },
           {
-            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-base-combined-glow-red.png",
+            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/teleporter-base-combined-glow-red.png",
             priority = "extra-high",
             width = 400,
             height = 475,
@@ -209,7 +209,7 @@ data:extend({
             blend_mode = "additive-soft",
           },
           {
-            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-forward-towers-light.png",
+            filename = "__Krastorio2Assets__/buildings/planetary-teleporter/teleporter-forward-towers-light.png",
             priority = "extra-high",
             width = 400,
             height = 475,
@@ -231,7 +231,7 @@ data:extend({
     collision_mask = { layers = {} },
     render_layer = "higher-object-above",
     picture = {
-      filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-forward-towers.png",
+      filename = "__Krastorio2Assets__/buildings/planetary-teleporter/teleporter-forward-towers.png",
       width = 400,
       height = 475,
       scale = 0.5,
