@@ -5,6 +5,7 @@ data:extend({
     localised_name = { "entity-name.turret-remnant" },
     icon = "__Krastorio2Assets__/icons/entities/railgun-turret.png",
     flags = { "placeable-neutral", "building-direction-8-way", "not-on-map" },
+    hidden_in_factoriopedia = true,
     subgroup = "remnants",
     order = "z[remnants]-a[generic]-b[medium]",
     selection_box = { { -4.5, -4.5 }, { 4.5, 4.5 } },

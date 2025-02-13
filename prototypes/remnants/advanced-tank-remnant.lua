@@ -5,6 +5,7 @@ data:extend({
     localised_name = { "remnant-name", { "entity-name.kr-advanced-tank" } },
     icon = "__Krastorio2Assets__/icons/vehicles/advanced-tank.png",
     flags = { "placeable-neutral", "building-direction-8-way", "not-on-map" },
+    hidden_in_factoriopedia = true,
     subgroup = "remnants",
     order = "z[remnants]-a[generic]-b[medium]",
     selection_box = { { -1.45, -2.35 }, { 1.45, 2.35 } },

@@ -5,6 +5,7 @@ data:extend({
     localised_name = { "remnant-name", { "entity-name.kr-mineral-water-pumpjack" } },
     icon = "__Krastorio2Assets__/icons/entities/mineral-water-pumpjack.png",
     flags = { "placeable-neutral", "building-direction-8-way", "not-on-map" },
+    hidden_in_factoriopedia = true,
     subgroup = "remnants",
     order = "d[remnants]-a[generic]-b[medium]",
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },

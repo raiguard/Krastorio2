@@ -5,6 +5,7 @@ data:extend({
     localised_name = { "remnant-name", { "entity-name.kr-fusion-reactor" } },
     icon = "__Krastorio2Assets__/icons/entities/fusion-reactor.png",
     flags = { "placeable-neutral", "building-direction-8-way", "not-on-map" },
+    hidden_in_factoriopedia = true,
     subgroup = "remnants",
     order = "z[remnants]-a[generic]-b[fusion-reactor-remnant]",
     selection_box = { { -7.5, -7.5 }, { 7.5, 7.5 } },

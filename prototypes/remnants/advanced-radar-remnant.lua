@@ -6,6 +6,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/entities/remnants-icon.png",
     icon_size = 32,
     flags = { "placeable-neutral", "building-direction-8-way", "not-on-map" },
+    hidden_in_factoriopedia = true,
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     tile_width = 3,
     tile_height = 3,

@@ -5,6 +5,7 @@ data:extend({
     localised_name = { "remnant-name", { "entity-name.kr-superior-transport-belt" } },
     icon = "__Krastorio2Assets__/icons/entities/superior-transport-belt.png",
     flags = { "placeable-neutral", "not-on-map" },
+    hidden_in_factoriopedia = true,
     subgroup = "remnants",
     order = "d[remnants]-a[generic]-a[small]",
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },

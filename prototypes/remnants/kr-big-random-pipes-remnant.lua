@@ -4,6 +4,7 @@ data:extend({
     name = "kr-big-random-pipes-remnant",
     icon = "__Krastorio2Assets__/icons/entities/remnants-icon.png",
     flags = { "placeable-neutral", "building-direction-8-way", "not-on-map" },
+    hidden_in_factoriopedia = true,
     subgroup = "remnants",
     order = "z[remnants]-a[generic]-b[big]",
     selection_box = { { -4, -4 }, { 4, 4 } },
