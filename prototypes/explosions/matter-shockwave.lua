@@ -3,6 +3,7 @@ data:extend({
     type = "explosion",
     name = "matter-shockwave",
     flags = { "not-on-map" },
+    hidden = true,
     animations = {
       {
         filename = "__Krastorio2Assets__/explosions/matter-shockwave-1.png",

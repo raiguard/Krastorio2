@@ -5,6 +5,7 @@ data:extend({
     type = "artillery-projectile",
     name = "antimatter-artillery-projectile",
     flags = { "not-on-map" },
+    hidden = true,
     acceleration = 0,
     direction_only = true,
     reveal_map = true,

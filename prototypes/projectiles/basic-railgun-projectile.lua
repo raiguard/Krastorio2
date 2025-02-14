@@ -3,6 +3,7 @@ data:extend({
     type = "projectile",
     name = "basic-railgun-projectile",
     flags = { "not-on-map" },
+    hidden = true,
     -- collision_box = {{-0.3, -1.1}, {0.3, 1.1}},
     acceleration = 0.25,
     -- direction_only = true,

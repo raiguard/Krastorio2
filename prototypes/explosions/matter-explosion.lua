@@ -3,6 +3,7 @@ data:extend({
     type = "explosion",
     name = "matter-explosion",
     flags = { "not-on-map" },
+    hidden = true,
     animations = {
       width = 628,
       height = 720,

@@ -4,6 +4,7 @@ data:extend({
   {
     type = "trivial-smoke",
     name = "matter-smoke",
+    hidden = true,
     spread_duration = 100,
     duration = 30,
     fade_in_duration = 10,

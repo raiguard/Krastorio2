@@ -2,6 +2,7 @@ data:extend({
   {
     type = "explosion",
     name = "matter-fire-smoke",
+    hidden = true,
     fade_out_duration = 40,
     scale_out_duration = 50,
     scale_in_duration = 10,

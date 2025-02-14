@@ -2,6 +2,7 @@ data:extend({
   {
     type = "trivial-smoke",
     name = "poison-capsule-particle-smoke",
+    hidden = true,
     animation = {
       filename = "__base__/graphics/entity/smoke-fast/smoke-fast.png",
       priority = "high",

@@ -2,6 +2,7 @@ data:extend({
   {
     type = "trivial-smoke",
     name = "kr-laser-explosion-gunshot-smoke-fast",
+    hidden = true,
     animation = {
       filename = "__base__/graphics/entity/smoke-fast/smoke-fast.png",
       priority = "high",

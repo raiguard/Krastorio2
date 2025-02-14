@@ -5,6 +5,7 @@ data:extend({
     icon = "__base__/graphics/item-group/effects.png",
     icon_size = 64,
     flags = { "not-on-map" },
+    hidden = true,
     subgroup = "explosions",
     animations = {
       filename = "__Krastorio2Assets__/explosions/laser-explosion.png",

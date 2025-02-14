@@ -228,6 +228,7 @@ data:extend({
     type = "simple-entity",
     name = "kr-planetary-teleporter-front-layer",
     flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
+    hidden = true,
     collision_mask = { layers = {} },
     render_layer = "higher-object-above",
     picture = {
@@ -241,6 +242,7 @@ data:extend({
     type = "simple-entity",
     name = "kr-planetary-teleporter-collision-1",
     flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
+    hidden = true,
     collision_box = { { -1.5, -1 }, { 1.5, 0.4 } },
     collision_mask = { layers = { player = true } },
   },
@@ -248,6 +250,7 @@ data:extend({
     type = "simple-entity",
     name = "kr-planetary-teleporter-collision-2",
     flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
+    hidden = true,
     collision_box = { { -0.8, -1 }, { 1.4, 1.2 } },
     collision_mask = { layers = { player = true } },
   },
@@ -255,6 +258,7 @@ data:extend({
     type = "simple-entity",
     name = "kr-planetary-teleporter-collision-3",
     flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
+    hidden = true,
     collision_box = { { -1.4, -1 }, { 0.8, 1.2 } },
     collision_mask = { layers = { player = true } },
   },
@@ -262,6 +266,8 @@ data:extend({
     type = "turret",
     name = "kr-planetary-teleporter-turret",
     icon = "__Krastorio2Assets__/icons/entities/planetary-teleporter.png",
+    flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
+    hidden = true,
     collision_mask = { layers = {} },
     call_for_help_radius = 0,
     folded_animation = {
@@ -270,7 +276,6 @@ data:extend({
       south = util.empty_animation(),
       west = util.empty_animation(),
     },
-    flags = { "not-on-map", "not-selectable-in-game", "placeable-off-grid" },
     attack_parameters = {
       type = "projectile",
       range = 0.75,

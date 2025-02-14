@@ -3,6 +3,7 @@ data:extend({
     type = "projectile",
     name = "matter-wave",
     flags = { "not-on-map" },
+    hidden = true,
     acceleration = 0,
     action = {
       {

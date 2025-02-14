@@ -592,6 +592,7 @@ data:extend({
     type = "explosion",
     name = "explosion-hit-p",
     flags = { "not-on-map" },
+    hidden = true,
     subgroup = "explosions",
     animations = {
       {
@@ -613,6 +614,7 @@ data:extend({
     type = "explosion",
     name = "explosion-hit-u",
     flags = { "not-on-map" },
+    hidden = true,
     subgroup = "explosions",
     animations = {
       {
@@ -634,6 +636,7 @@ data:extend({
     type = "explosion",
     name = "explosion-hit-i",
     flags = { "not-on-map" },
+    hidden = true,
     subgroup = "explosions",
     animations = {
       {
@@ -719,6 +722,7 @@ data:extend({
     type = "projectile",
     name = "pistol-ammo-1",
     flags = { "not-on-map" },
+    hidden = true,
     collision_box = bullets_collision_box,
     acceleration = -0.015,
     action = {
@@ -813,6 +817,7 @@ data:extend({
     type = "projectile",
     name = "pistol-ammo-2",
     flags = { "not-on-map" },
+    hidden = true,
     collision_box = bullets_collision_box,
     acceleration = -0.015,
     action = {
@@ -926,6 +931,7 @@ data:extend({
     type = "projectile",
     name = "rifle-ammo-1",
     flags = { "not-on-map" },
+    hidden = true,
     collision_box = bullets_collision_box,
     acceleration = -0.018,
     action = {
@@ -1025,6 +1031,7 @@ data:extend({
     type = "projectile",
     name = "rifle-ammo-2",
     flags = { "not-on-map" },
+    hidden = true,
     collision_box = bullets_collision_box,
     acceleration = -0.02,
     action = {
@@ -1125,6 +1132,7 @@ data:extend({
     type = "projectile",
     name = "rifle-ammo-3",
     flags = { "not-on-map" },
+    hidden = true,
     collision_box = bullets_collision_box,
     acceleration = -0.02,
     action = {
@@ -1229,6 +1237,7 @@ data:extend({
     type = "projectile",
     name = "rifle-ammo-4",
     flags = { "not-on-map" },
+    hidden = true,
     collision_box = bullets_collision_box,
     acceleration = -0.02,
     action = {
@@ -1389,6 +1398,7 @@ data:extend({
     type = "projectile",
     name = "anti-material-rifle-ammo-1",
     flags = { "not-on-map" },
+    hidden = true,
     collision_box = bullets_collision_box,
     acceleration = -0.025,
     action = {
@@ -1504,6 +1514,7 @@ data:extend({
     type = "projectile",
     name = "anti-material-rifle-ammo-2",
     flags = { "not-on-map" },
+    hidden = true,
     collision_box = bullets_collision_box,
     acceleration = -0.025,
     action = {
@@ -1619,6 +1630,7 @@ data:extend({
     type = "projectile",
     name = "anti-material-rifle-ammo-3",
     flags = { "not-on-map" },
+    hidden = true,
     collision_box = bullets_collision_box,
     acceleration = -0.025,
     action = {
@@ -1737,6 +1749,7 @@ data:extend({
     type = "projectile",
     name = "anti-material-rifle-ammo-4",
     flags = { "not-on-map" },
+    hidden = true,
     collision_box = bullets_collision_box,
     acceleration = -0.02,
     action = {

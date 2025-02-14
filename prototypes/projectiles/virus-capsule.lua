@@ -3,6 +3,7 @@ data:extend({
     type = "projectile",
     name = "virus-capsule",
     flags = { "not-on-map" },
+    hidden = true,
     acceleration = 0.005,
     action = {
       {

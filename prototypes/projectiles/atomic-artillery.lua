@@ -5,6 +5,7 @@ data:extend({
     type = "artillery-projectile",
     name = "atomic-artillery",
     flags = { "not-on-map" },
+    hidden = true,
     reveal_map = true,
     map_color = { r = 1, g = 1, b = 0 },
     acceleration = 0.005,

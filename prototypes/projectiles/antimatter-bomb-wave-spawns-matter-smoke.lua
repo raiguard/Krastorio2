@@ -3,6 +3,7 @@ data:extend({
     type = "projectile",
     name = "antimatter-bomb-wave-spawns-matter-smoke",
     flags = { "not-on-map" },
+    hidden = true,
     acceleration = 0,
     speed_modifier = { 1.000, 0.707 },
     action = {

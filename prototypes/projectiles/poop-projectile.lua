@@ -3,6 +3,7 @@ data:extend({
     type = "projectile",
     name = "poop-projectile",
     flags = { "not-on-map" },
+    hidden = true,
     acceleration = 0.005,
     action = {
       {

@@ -3,6 +3,7 @@ data:extend({
     type = "projectile",
     name = "heavy-explosive-rocket-projectile",
     --flags = {"not-on-map"},
+    hidden = true,
     reveal_map = true,
     map_color = { r = 1, g = 0, b = 0 },
     acceleration = 0.075,

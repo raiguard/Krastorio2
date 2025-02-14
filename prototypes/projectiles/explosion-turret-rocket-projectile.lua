@@ -3,6 +3,7 @@ data:extend({
     type = "projectile",
     name = "explosion-turret-rocket-projectile",
     flags = { "not-on-map" },
+    hidden = true,
     acceleration = 0.1,
     action = {
       type = "direct",

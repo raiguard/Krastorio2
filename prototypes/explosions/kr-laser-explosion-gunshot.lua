@@ -3,6 +3,7 @@ data:extend({
     type = "explosion",
     name = "kr-laser-explosion-gunshot",
     flags = { "not-on-map" },
+    hidden = true,
     subgroup = "explosions",
     animations = {
       {

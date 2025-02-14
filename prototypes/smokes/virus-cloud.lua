@@ -3,6 +3,7 @@ data:extend({
     type = "smoke-with-trigger",
     name = "virus-cloud",
     flags = { "not-on-map" },
+    hidden = true,
     show_when_smoke_off = true,
     particle_count = 20,
     particle_spread = { 3.6 * 1.05, 3.6 * 0.6 * 1.05 },

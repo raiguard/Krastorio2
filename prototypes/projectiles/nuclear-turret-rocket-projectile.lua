@@ -5,6 +5,7 @@ data:extend({
     type = "projectile",
     name = "nuclear-turret-rocket-projectile",
     flags = { "not-on-map" },
+    hidden = true,
     --collision_box = {{-0.3, -1.1}, {0.3, 1.1}},
     acceleration = 0.1,
     --direction_only = true,

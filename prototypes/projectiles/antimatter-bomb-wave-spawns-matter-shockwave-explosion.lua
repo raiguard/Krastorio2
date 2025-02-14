@@ -3,6 +3,7 @@ data:extend({
     type = "projectile",
     name = "antimatter-bomb-wave-spawns-matter-shockwave-explosion",
     flags = { "not-on-map" },
+    hidden = true,
     acceleration = 0,
     speed_modifier = { 1, 0.707 },
     action = {

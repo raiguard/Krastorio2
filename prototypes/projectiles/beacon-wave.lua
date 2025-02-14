@@ -3,6 +3,7 @@ data:extend({
     type = "projectile",
     name = "beacon-wave",
     flags = { "not-on-map" },
+    hidden = true,
     acceleration = 0,
     speed_modifier = { 1.0, 0.707 },
     action = {
