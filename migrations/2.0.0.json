@@ -90,6 +90,7 @@
     ["kr-big-passive-provider-container", "kr-passive-provider-warehouse"],
     ["kr-big-requester-container", "kr-requester-warehouse"],
     ["kr-big-storage-container", "kr-storage-warehouse"],
+    ["kr-biomass-growing", "biomass"],
     ["kr-fluid-burner", "kr-flare-stack"],
     ["kr-fluid-storage-1", "kr-big-storage-tank"],
     ["kr-fluid-storage-2", "kr-huge-storage-tank"],

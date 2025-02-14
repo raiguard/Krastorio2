@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "recipe",
-    name = "kr-biomass-growing",
+    name = "biomass",
     category = "bioprocessing",
     enabled = false,
     energy_required = 60,

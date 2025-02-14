@@ -127,7 +127,7 @@ data:extend({
     prerequisites = { "kr-greenhouse", "kr-advanced-chemistry", "electronics" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-bio-lab" },
-      { type = "unlock-recipe", recipe = "kr-biomass-growing" },
+      { type = "unlock-recipe", recipe = "biomass" },
       { type = "unlock-recipe", recipe = "first-aid-kit" },
       { type = "unlock-recipe", recipe = "fertilizer" },
       { type = "unlock-recipe", recipe = "wood-with-fertilizer" },
