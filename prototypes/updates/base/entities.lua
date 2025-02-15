@@ -186,6 +186,9 @@ if not mods["boblogistics"] then
   data.raw["construction-robot"]["construction-robot"].max_payload_size = 2
 end
 
+data.raw["container"]["steel-chest"].subgroup = "kr-logistics-1"
+data.raw.item["steel-chest"].order = "a[asteel-chest]"
+
 data.raw.container["crash-site-chest-1"].minable = small_crash_site_minable
 
 data.raw.container["crash-site-chest-2"].minable = small_crash_site_minable

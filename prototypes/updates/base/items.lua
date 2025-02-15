@@ -135,6 +135,9 @@ data.raw.item["solid-fuel"].fuel_acceleration_multiplier = 0.75
 data.raw.item["solid-fuel"].fuel_top_speed_multiplier = 0.75
 data.raw.item["solid-fuel"].fuel_emissions_multiplier = 1.5
 
+data.raw.item["steel-chest"].subgroup = "kr-logistics-1"
+data.raw.item["steel-chest"].order = "a[asteel-chest]"
+
 data.raw.item["stone-wall"].subgroup = "vanilla-turrets"
 data.raw.item["stone-wall"].order = "001[stone-wall]"
 
