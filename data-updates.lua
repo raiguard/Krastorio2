@@ -30,3 +30,6 @@ require("prototypes.updates.generate-roboport-variations")
 require("prototypes.updates.generate-void-crushing-recipes")
 require("prototypes.updates.remove-nuclear-fuel")
 require("prototypes.updates.set-new-resource-autoplace")
+
+-- Has to be after base updates so it can use the updated icons
+require("prototypes.recipes.smelting-crafting")

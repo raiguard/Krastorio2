@@ -194,7 +194,6 @@ require("prototypes.recipes.matter-deconversion")
 require("prototypes.recipes.nuclear-fusion")
 require("prototypes.recipes.oil-processing")
 require("prototypes.recipes.smelting")
-require("prototypes.recipes.smelting-crafting")
 require("prototypes.recipes.stabilizer-charging")
 require("prototypes.recipes.t3-tech-cards")
 
