@@ -37,6 +37,10 @@ local function convert_equipment_grid(vehicle_type, vehicle_name, new_equipment_
   data.raw[vehicle_type][vehicle_name].equipment_grid = new_equipment_grid_id
 end
 
+data.raw["accumulator"]["accumulator"].energy_source.buffer_capacity = "10MJ" --5
+data.raw["accumulator"]["accumulator"].energy_source.input_flow_limit = "600kW" --300
+data.raw["accumulator"]["accumulator"].energy_source.output_flow_limit = "600kW" --300
+
 --- @type data.MinableProperties
 local small_crash_site_minable = {
   mining_time = 2,
@@ -61,6 +65,8 @@ data.raw["assembling-machine"]["assembling-machine-2"].energy_usage = "125kW"
 
 data.raw["assembling-machine"]["assembling-machine-3"].energy_usage = "200kW"
 
+data.raw["boiler"]["boiler"].energy_consumption = "1.5MW"
+data.raw["boiler"]["boiler"].target_temperature = 165
 data.raw.boiler["boiler"].energy_source.emissions_per_minute = { pollution = 20 }
 data_util.add_fuel_category(data.raw.boiler["boiler"].energy_source, "vehicle-fuel")
 

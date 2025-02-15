@@ -1,10 +1,6 @@
 local data_util = require("data-util")
 local flib_table = require("__flib__.table")
 
-data.raw["accumulator"]["accumulator"].energy_source.buffer_capacity = "10MJ" --5
-data.raw["accumulator"]["accumulator"].energy_source.input_flow_limit = "600kW" --300
-data.raw["accumulator"]["accumulator"].energy_source.output_flow_limit = "600kW" --300
-
 table.insert(
   flib_table.get_or_insert(data.raw.armor["modular-armor"], "resistances", {}),
   { type = "radioactive", decrease = 2, percent = 15 }
@@ -19,10 +15,6 @@ table.insert(
 )
 
 -- TODO: Redo equipment subgrouping
-
-data.raw["boiler"]["boiler"].energy_consumption = "1.5MW"
-data.raw["boiler"]["boiler"].target_temperature = 165
-data.raw["boiler"]["boiler"].energy_source.emissions_per_minute = { pollution = 20 }
 
 data.raw.capsule["discharge-defense-remote"].order = "f[active-defense-equipment]-b[discharge-defense-remote]"
 data.raw.capsule["discharge-defense-remote"].subgroup = "equipment"
