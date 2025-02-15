@@ -15,8 +15,6 @@ data:extend({
     type = "item",
     name = "kr-black-reinforced-plate-l",
     icon = "__Krastorio2Assets__/icons/items/black-reinforced-plate-kl.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "terrain",
     order = "z[black-reinforced-plate]-a1[black-reinforced-plate]",
     place_as_tile = {
@@ -30,8 +28,6 @@ data:extend({
     type = "item",
     name = "kr-white-reinforced-plate-l",
     icon = "__Krastorio2Assets__/icons/items/white-reinforced-plate-kl.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "terrain",
     order = "z[white-reinforced-plate]-a2[white-reinforced-plate]",
     place_as_tile = {

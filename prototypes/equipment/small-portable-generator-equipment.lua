@@ -14,8 +14,8 @@ data:extend({
     type = "item",
     name = "small-portable-generator-equipment",
     icons = {
-      { icon = "__Krastorio2Assets__/icons/equipment/small-portable-generator-equipment.png", icon_size = 64 },
-      { icon = "__Krastorio2Assets__/icons/equipment/tier-1.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/small-portable-generator-equipment.png" },
+      { icon = "__Krastorio2Assets__/icons/equipment/tier-1.png" },
     },
     place_as_equipment_result = "small-portable-generator-equipment",
     subgroup = "equipment",

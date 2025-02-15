@@ -16,8 +16,8 @@ data:extend({
     type = "item",
     name = "nuclear-reactor-equipment",
     icons = {
-      { icon = "__Krastorio2Assets__/icons/equipment/nuclear-reactor-equipment.png", icon_size = 64 },
-      { icon = "__Krastorio2Assets__/icons/equipment/tier-1.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/nuclear-reactor-equipment.png" },
+      { icon = "__Krastorio2Assets__/icons/equipment/tier-1.png" },
     },
     pictures = {
       layers = {

@@ -156,8 +156,8 @@ data:extend({
     name = "rocket-fuel-with-ammonia",
     localised_name = { "item-name.rocket-fuel" },
     icons = {
-      { icon = "__Krastorio2Assets__/icons/recipes/rocket-fuel.png", icon_size = 64 },
-      { icon = "__Krastorio2Assets__/icons/fluids/ammonia.png", icon_size = 64, scale = 0.26, shift = { 8, -8 } },
+      { icon = "__Krastorio2Assets__/icons/recipes/rocket-fuel.png" },
+      { icon = "__Krastorio2Assets__/icons/fluids/ammonia.png", scale = 0.26, shift = { 8, -8 } },
     },
     enabled = false,
     energy_required = 16,

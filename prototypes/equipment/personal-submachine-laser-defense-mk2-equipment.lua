@@ -17,7 +17,7 @@ data:extend({
     name = "personal-submachine-laser-defense-mk2-equipment",
     icons = {
       { icon = "__Krastorio2Assets__/icons/equipment/personal-submachine-laser-defense-mk2-equipment.png" },
-      { icon = "__Krastorio2Assets__/icons/equipment/tier-2.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/tier-2.png" },
     },
     place_as_equipment_result = "personal-submachine-laser-defense-mk2-equipment",
     subgroup = "equipment",

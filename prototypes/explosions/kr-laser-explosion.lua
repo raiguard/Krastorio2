@@ -3,7 +3,6 @@ data:extend({
     type = "explosion",
     name = "kr-laser-explosion",
     icon = "__base__/graphics/item-group/effects.png",
-    icon_size = 64,
     flags = { "not-on-map" },
     hidden = true,
     subgroup = "explosions",

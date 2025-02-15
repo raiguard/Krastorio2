@@ -56,8 +56,6 @@ data:extend({
     type = "item",
     name = "kr-quantum-computer",
     icon = "__Krastorio2Assets__/icons/entities/quantum-computer.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
     subgroup = "production-machine",
     order = "f3[research-servers]-b1[quantum-computer]",
     place_result = "kr-quantum-computer",

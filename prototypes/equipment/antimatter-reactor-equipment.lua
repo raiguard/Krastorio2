@@ -15,8 +15,8 @@ data:extend({
     type = "item",
     name = "antimatter-reactor-equipment",
     icons = {
-      { icon = "__Krastorio2Assets__/icons/equipment/antimatter-reactor-equipment.png", icon_size = 64 },
-      { icon = "__Krastorio2Assets__/icons/equipment/tier-3.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/antimatter-reactor-equipment.png" },
+      { icon = "__Krastorio2Assets__/icons/equipment/tier-3.png" },
     },
     pictures = {
       layers = {

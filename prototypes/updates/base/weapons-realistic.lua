@@ -678,7 +678,6 @@ data:extend({
     type = "ammo",
     name = "firearm-magazine",
     icon = "__Krastorio2Assets__/icons/items/pistol-ammo-1.png",
-    icon_size = 64,
     pictures = {
       {
         size = 64,
@@ -774,7 +773,6 @@ data:extend({
     type = "ammo",
     name = "piercing-rounds-magazine",
     icon = "__Krastorio2Assets__/icons/items/pistol-ammo-2.png",
-    icon_size = 64,
     pictures = {
       {
         filename = "__Krastorio2Assets__/icons/items/pistol-ammo-2.png",
@@ -887,7 +885,6 @@ data:extend({
     type = "ammo",
     name = "rifle-magazine",
     icon = "__Krastorio2Assets__/icons/items/rifle-ammo-1.png",
-    icon_size = 64,
     pictures = {
       {
         filename = "__Krastorio2Assets__/icons/items/rifle-ammo-1.png",
@@ -988,7 +985,6 @@ data:extend({
     type = "ammo",
     name = "armor-piercing-rifle-magazine",
     icon = "__Krastorio2Assets__/icons/items/rifle-ammo-2.png",
-    icon_size = 64,
     pictures = {
       {
         size = 64,
@@ -1088,7 +1084,6 @@ data:extend({
     type = "ammo",
     name = "uranium-rifle-magazine",
     icon = "__Krastorio2Assets__/icons/items/rifle-ammo-3.png",
-    icon_size = 64,
     pictures = {
       {
         size = 64,
@@ -1193,7 +1188,6 @@ data:extend({
     type = "ammo",
     name = "imersite-rifle-magazine",
     icon = "__Krastorio2Assets__/icons/items/rifle-ammo-4.png",
-    icon_size = 64,
     pictures = {
       {
         size = 64,
@@ -1303,7 +1297,6 @@ data:extend({
     type = "gun",
     name = "anti-material-rifle",
     icon = "__Krastorio2Assets__/icons/guns/anti-material-rifle.png",
-    icon_size = 64,
     subgroup = "gun",
     order = "c1[anti-material-rifle]",
     attack_parameters = {
@@ -1352,7 +1345,6 @@ data:extend({
     type = "ammo",
     name = "anti-material-rifle-magazine",
     icon = "__Krastorio2Assets__/icons/items/anti-material-rifle-ammo-1.png",
-    icon_size = 64,
     pictures = {
       {
         size = 64,
@@ -1469,7 +1461,6 @@ data:extend({
     type = "ammo",
     name = "armor-piercing-anti-material-rifle-magazine",
     icon = "__Krastorio2Assets__/icons/items/anti-material-rifle-ammo-2.png",
-    icon_size = 64,
     pictures = {
       {
         size = 64,
@@ -1585,7 +1576,6 @@ data:extend({
     type = "ammo",
     name = "uranium-anti-material-rifle-magazine",
     icon = "__Krastorio2Assets__/icons/items/anti-material-rifle-ammo-3.png",
-    icon_size = 64,
     pictures = {
       {
         size = 64,
@@ -1704,7 +1694,6 @@ data:extend({
     type = "ammo",
     name = "imersite-anti-material-rifle-magazine",
     icon = "__Krastorio2Assets__/icons/items/anti-material-rifle-ammo-4.png",
-    icon_size = 64,
     pictures = {
       {
         size = 64,

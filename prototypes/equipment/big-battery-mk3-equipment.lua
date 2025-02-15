@@ -15,8 +15,8 @@ data:extend({
     type = "item",
     name = "big-battery-mk3-equipment",
     icons = {
-      { icon = "__Krastorio2Assets__/icons/equipment/big-battery-mk3-equipment.png", icon_size = 64 },
-      { icon = "__Krastorio2Assets__/icons/equipment/tier-3.png", icon_size = 64 },
+      { icon = "__Krastorio2Assets__/icons/equipment/big-battery-mk3-equipment.png" },
+      { icon = "__Krastorio2Assets__/icons/equipment/tier-3.png" },
     },
     pictures = {
       layers = {
