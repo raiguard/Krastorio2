@@ -45,7 +45,7 @@ end
 --- Find entities and entity ghosts of the corresponding types.
 --- @param surface LuaSurface
 --- @param position MapPosition
---- @param force ForceIdentification
+--- @param force ForceID
 --- @param types string[]
 --- @return LuaEntity[]
 local function find_entities(surface, position, force, types)
@@ -90,7 +90,7 @@ local function snap_direction(entity)
   end
 
   -- Case 2: If a belt is behind, then flip the loader
-  local offset_direction = flib_direction.opposite(offset_direction)
+  offset_direction = flib_direction.opposite(offset_direction)
   local belt_position = flib_position.add(entity.position, offsets[offset_direction])
   local belt = find_entities(entity.surface, belt_position, entity.force, belt_types)[1]
   if not belt then
