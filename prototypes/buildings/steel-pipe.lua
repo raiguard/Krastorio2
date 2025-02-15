@@ -41,14 +41,8 @@ data:extend({
     max_health = 200,
     corpse = "pipe-remnants",
     resistances = {
-      {
-        type = "fire",
-        percent = 90,
-      },
-      {
-        type = "impact",
-        percent = 50,
-      },
+      { type = "fire", percent = 90 },
+      { type = "impact", percent = 50 },
     },
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = sounds.pipe,
