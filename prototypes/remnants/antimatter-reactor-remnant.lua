@@ -4,7 +4,7 @@ data:extend({
     name = "kr-antimatter-reactor-remnant",
     localised_name = { "remnant-name", { "entity-name.kr-antimatter-reactor" } },
     icon = "__Krastorio2Assets__/icons/entities/antimatter-reactor.png",
-    icon_size = 128,
+    icon_size = 64,
     flags = { "placeable-neutral", "building-direction-8-way", "not-on-map" },
     hidden_in_factoriopedia = true,
     subgroup = "remnants",
