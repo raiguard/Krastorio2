@@ -476,6 +476,8 @@ data.raw.corpse["biter-spawner-corpse"].minable = {
 data.raw.corpse["biter-spawner-corpse"].selectable_in_game = true
 data.raw.corpse["biter-spawner-corpse"].time_before_removed = 5 * minute
 data.raw.corpse["biter-spawner-corpse"].hidden_in_factoriopedia = false
+data.raw.corpse["biter-spawner-corpse"].mined_sound =
+  { filename = "__Krastorio2Assets__/sounds/tiles/creep-deconstruction.ogg" }
 
 data.raw.corpse["spitter-spawner-corpse"].minable = {
   mining_time = 1,
@@ -484,3 +486,5 @@ data.raw.corpse["spitter-spawner-corpse"].minable = {
 data.raw.corpse["spitter-spawner-corpse"].selectable_in_game = true
 data.raw.corpse["spitter-spawner-corpse"].time_before_removed = 5 * minute
 data.raw.corpse["spitter-spawner-corpse"].hidden_in_factoriopedia = false
+data.raw.corpse["biter-spawner-corpse"].mined_sound =
+  { filename = "__Krastorio2Assets__/sounds/tiles/creep-deconstruction.ogg" }
