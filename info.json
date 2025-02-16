@@ -11,7 +11,7 @@
     "base >= 2.0.33",
     "Krastorio2Assets >= 2.0.0",
     "ChangeInserterDropLane >= 1.1.0",
-    "flib >= 0.16.0",
+    "flib >= 0.16.2",
     "(?) aai-industry >= 0.3.17",
     "(?) aai-vehicles-chaingunner >= 0.5.2",
     "(?) Aircraft >= 1.6.6",
