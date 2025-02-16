@@ -135,9 +135,6 @@ data.raw.item["solid-fuel"].fuel_acceleration_multiplier = 0.75
 data.raw.item["solid-fuel"].fuel_top_speed_multiplier = 0.75
 data.raw.item["solid-fuel"].fuel_emissions_multiplier = 1.5
 
-data.raw.item["steel-chest"].subgroup = "kr-logistics-1"
-data.raw.item["steel-chest"].order = "a[asteel-chest]"
-
 data.raw.item["stone-wall"].subgroup = "vanilla-turrets"
 data.raw.item["stone-wall"].order = "001[stone-wall]"
 
@@ -155,7 +152,9 @@ data.raw.item["wood"].fuel_acceleration_multiplier = 0.35
 data.raw.item["wood"].fuel_top_speed_multiplier = 0.5
 data.raw.item["wood"].fuel_emissions_multiplier = 1
 
-if not mods["aai-containers"] then
+if settings.startup["kr-containers"].value and not mods["aai-containers"] then
+  data.raw.item["steel-chest"].subgroup = "kr-logistics-1"
+  data.raw.item["steel-chest"].order = "a[asteel-chest]"
   data.raw.item["active-provider-chest"].subgroup = "kr-logistics-1"
   data.raw.item["active-provider-chest"].order = "a[chest-active-provider]"
   data.raw.item["buffer-chest"].subgroup = "kr-logistics-1"
