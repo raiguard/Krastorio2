@@ -389,6 +389,7 @@ data.raw.recipe["offshore-pump"].enabled = false
 
 data_util.add_or_replace_ingredient("oil-refinery", "steel-plate", { type = "item", name = "steel-beam", amount = 4 })
 data_util.convert_ingredient("oil-refinery", "iron-gear-wheel", "steel-gear-wheel")
+data_util.convert_ingredient("oil-refinery", "pipe", "kr-steel-pipe")
 
 data_util.add_or_replace_ingredient(
   "personal-laser-defense-equipment",
@@ -490,6 +491,7 @@ data.raw.recipe["productivity-module-3"].ingredients = {
 }
 
 data_util.convert_ingredient("pumpjack", "iron-gear-wheel", "steel-gear-wheel")
+data_util.convert_ingredient("pumpjack", "pipe", "kr-steel-pipe")
 data_util.add_or_replace_ingredient("pumpjack", "iron-plate", { type = "item", name = "steel-beam", amount = 4 })
 
 data.raw.recipe["radar"].enabled = false

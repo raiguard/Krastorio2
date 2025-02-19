@@ -8,7 +8,7 @@ data:extend({
       { type = "item", name = "automation-core", amount = 2 },
       { type = "item", name = "steel-gear-wheel", amount = 5 },
       { type = "item", name = "steel-beam", amount = 5 },
-      { type = "item", name = "pipe", amount = 5 },
+      { type = "item", name = "kr-steel-pipe", amount = 5 },
     },
     results = { { type = "item", name = "kr-mineral-water-pumpjack", amount = 1 } },
   },
