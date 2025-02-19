@@ -176,6 +176,12 @@ data_util.add_or_replace_ingredient(
 
 data_util.convert_ingredient("engine-unit", "steel-plate", "iron-plate")
 
+data.raw.recipe["exoskeleton-equipment"].ingredients = {
+  { type = "item", name = "electric-engine", amount = 10 },
+  { type = "item", name = "advanced-circuit", amount = 10 },
+  { type = "item", name = "steel-plate", amount = 10 },
+}
+
 data_util.add_or_replace_ingredient(
   "express-splitter",
   "iron-gear-wheel",
