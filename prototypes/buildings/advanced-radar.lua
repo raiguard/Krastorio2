@@ -16,7 +16,7 @@ data:extend({
     type = "item",
     name = "kr-advanced-radar",
     icon = "__Krastorio2Assets__/icons/entities/advanced-radar.png",
-    subgroup = "radars-and-rockets",
+    subgroup = "radars",
     order = "03[advanced-radar]",
     place_result = "kr-advanced-radar",
     stack_size = 50,
