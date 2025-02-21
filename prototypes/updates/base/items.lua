@@ -106,7 +106,7 @@ data.raw.item["personal-laser-defense-equipment"].localised_name =
 data.raw.item["personal-laser-defense-equipment"].order = "d[active-defense]-b1[personal-laser-defense-mk1-equipment]"
 data.raw.item["personal-laser-defense-equipment"].subgroup = "equipment"
 
-data.raw.item["radar"].subgroup = "radars-and-rockets"
+data.raw.item["radar"].subgroup = "radars"
 data.raw.item["radar"].order = "02[radar]"
 
 data.raw.item["rocket-fuel"].fuel_category = "chemical"
