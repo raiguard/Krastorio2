@@ -19,7 +19,7 @@ data:extend({
     type = "item",
     name = "kr-sentinel",
     icon = "__Krastorio2Assets__/icons/entities/sentinel.png",
-    subgroup = "radars-and-rockets",
+    subgroup = "radars",
     order = "01[sentinel]",
     place_result = "kr-sentinel",
     stack_size = 50,

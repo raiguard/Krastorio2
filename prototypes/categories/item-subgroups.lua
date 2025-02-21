@@ -86,7 +86,7 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "radars-and-rockets",
+    name = "radars",
     group = "combat",
     order = "g4",
   },
