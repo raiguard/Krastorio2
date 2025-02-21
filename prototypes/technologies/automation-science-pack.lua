@@ -14,7 +14,6 @@ data:extend({
     },
     prerequisites = { "kr-basic-fluid-handling", "steel-processing", "kr-stone-processing", "engine" },
     effects = {
-      { type = "unlock-recipe", recipe = "kr-filtration-plant" },
       { type = "unlock-recipe", recipe = "kr-electrolysis-plant" },
       { type = "unlock-recipe", recipe = "chemical-plant" },
       { type = "unlock-recipe", recipe = "kr-water-electrolysis" },
