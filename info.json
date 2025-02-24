@@ -30,8 +30,6 @@
     "(?) vtk-armor-plating >= 0.8.0",
     "(?) WaterAsAResource >= 0.7.8",
     "(?) better-victory-screen >= 0.2.10",
-    "! quality",
-    "! space-age",
     "! Annotorio",
     "! brave-new-world",
     "! Clowns-Nuclear",
