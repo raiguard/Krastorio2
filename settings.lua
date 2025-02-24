@@ -78,4 +78,22 @@ data:extend({
     default_value = false,
     order = "c1",
   },
+  {
+    type = "bool-setting",
+    name = "kr-incompatible-with-quality",
+    setting_type = "startup",
+    default_value = true,
+    forced_value = true,
+    hidden = true,
+    order = "d1",
+  },
+  {
+    type = "bool-setting",
+    name = "kr-incompatible-with-space-age",
+    setting_type = "startup",
+    default_value = true,
+    forced_value = true,
+    hidden = true,
+    order = "d2",
+  },
 })
