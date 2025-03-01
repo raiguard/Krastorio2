@@ -1176,7 +1176,7 @@ data:extend({
     energy_required = 3,
     enabled = false,
     ingredients = {
-      { type = "item", name = "rifle-magazine", amount = 1 },
+      { type = "item", name = "armor-piercing-rifle-magazine", amount = 1 },
       { type = "item", name = "uranium-238", amount = 2 },
     },
     results = { { type = "item", name = "uranium-rifle-magazine", amount = 1 } },
@@ -1280,7 +1280,7 @@ data:extend({
     energy_required = 4,
     enabled = false,
     ingredients = {
-      { type = "item", name = "rifle-magazine", amount = 1 },
+      { type = "item", name = "uranium-rifle-magazine", amount = 1 },
       { type = "item", name = "imersite-crystal", amount = 2 },
     },
     results = { { type = "item", name = "imersite-rifle-magazine", amount = 1 } },
