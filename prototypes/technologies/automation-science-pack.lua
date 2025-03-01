@@ -12,7 +12,7 @@ data:extend({
         { "automation-science-pack", 1 },
       },
     },
-    prerequisites = { "kr-basic-fluid-handling", "steel-processing", "kr-stone-processing", "engine" },
+    prerequisites = { "steam-power", "steel-processing", "kr-stone-processing", "engine" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-filtration-plant" },
       { type = "unlock-recipe", recipe = "kr-electrolysis-plant" },
