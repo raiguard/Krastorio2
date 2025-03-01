@@ -10,7 +10,6 @@ data:extend({
     max_temperature = 100,
     base_color = { r = 0.25, g = 0.25, b = 0.45 },
     flow_color = { r = 0.25, g = 0.25, b = 0.45 },
-    base_flow_rate = 100,
     auto_barrel = true,
   },
   {
@@ -26,7 +25,6 @@ data:extend({
     flow_color = { r = 0.27, g = 0.53, b = 0.12 },
     fuel_value = "750kJ",
     emissions_multiplier = 0.8,
-    base_flow_rate = 100,
     auto_barrel = true,
   },
   {
@@ -40,7 +38,6 @@ data:extend({
     max_temperature = 100,
     base_color = { r = 0.30, g = 0.60, b = 0.1 },
     flow_color = { r = 0.30, g = 0.60, b = 0.1 },
-    base_flow_rate = 100,
     auto_barrel = true,
   },
   {
@@ -53,7 +50,6 @@ data:extend({
     max_temperature = 100,
     base_color = { r = 0.65, g = 0.50, b = 0.20 },
     flow_color = { r = 0.65, g = 0.50, b = 0.20 },
-    base_flow_rate = 100,
     auto_barrel = true,
   },
   {
@@ -66,7 +62,6 @@ data:extend({
     max_temperature = 100,
     base_color = { r = 0.2, g = 0.3, b = 0.32 },
     flow_color = { r = 0.5, g = 0.9, b = 0.6 },
-    base_flow_rate = 100,
     auto_barrel = true,
   },
   {
@@ -80,7 +75,6 @@ data:extend({
     max_temperature = 100,
     base_color = { r = 0.50, g = 0.50, b = 0.50 },
     flow_color = { r = 0.50, g = 0.50, b = 0.50 },
-    base_flow_rate = 100,
     auto_barrel = true,
   },
   {
@@ -94,7 +88,6 @@ data:extend({
     max_temperature = 100,
     base_color = { r = 0.50, g = 0.75, b = 0.30 },
     flow_color = { r = 0.50, g = 0.75, b = 0.30 },
-    base_flow_rate = 100,
     auto_barrel = true,
   },
   {
@@ -107,7 +100,6 @@ data:extend({
     max_temperature = 1000000,
     base_color = { r = 0.1, g = 0.9, b = 0.8 },
     flow_color = { r = 1, g = 1, b = 1 },
-    base_flow_rate = 100,
     auto_barrel = false,
   },
   {
@@ -120,7 +112,6 @@ data:extend({
     max_temperature = 100,
     base_color = { r = 0.15, g = 0.1, b = 0.4 },
     flow_color = { r = 0.5, g = 0.5, b = 0.75 },
-    base_flow_rate = 100,
     auto_barrel = true,
   },
   {
@@ -134,7 +125,6 @@ data:extend({
     max_temperature = 100,
     base_color = { r = 0.752, g = 0.215, b = 0.337, a = 1.0 },
     flow_color = { r = 0.752, g = 0.215, b = 0.337, a = 0.8 },
-    base_flow_rate = 100,
     auto_barrel = true,
   },
   {
@@ -148,7 +138,6 @@ data:extend({
     max_temperature = 100,
     base_color = { r = 0.05, g = 0.10, b = 0.50 },
     flow_color = { r = 0.05, g = 0.10, b = 0.50 },
-    base_flow_rate = 100,
     auto_barrel = true,
   },
   {
@@ -162,7 +151,6 @@ data:extend({
     max_temperature = 100,
     base_color = { r = 0.75, g = 0.40, b = 0.40 },
     flow_color = { r = 0.80, g = 0.60, b = 0.60 },
-    base_flow_rate = 100,
     auto_barrel = true,
   },
 })
