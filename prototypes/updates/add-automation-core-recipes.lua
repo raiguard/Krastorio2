@@ -1,8 +1,6 @@
-local data_util = require("data-util")
+-- Convert all early-game recipes that use electronic circuit to use automation core
 
--- TODO: Rewrite this
--- Convert all electronic-circuit of early game in automation-core
-local function hasEarlyGameIngredients(ingredients)
+local function should_convert(ingredients)
   local basic, automation = false, false
   for _, ingredient in pairs(ingredients) do
     local ingredient_name = ingredient.name
@@ -21,17 +19,14 @@ local function hasEarlyGameIngredients(ingredients)
       end
     end
   end
-  if #ingredients == 2 and basic and automation then
-    return true
-  else
-    return false
-  end
+  return #ingredients == 2 and basic and automation
 end
-for name, technology in pairs(data.raw.technology) do
+
+for _, technology in pairs(data.raw.technology) do
   if technology.enabled == false or not technology.effects then -- nil is not the same as false in this case.
     goto continue
   end
-  if not technology.unit or not hasEarlyGameIngredients(technology.unit.ingredients) then
+  if not technology.unit or not should_convert(technology.unit.ingredients) then
     goto continue
   end
   for _, effect in pairs(technology.effects) do
@@ -42,7 +37,6 @@ for name, technology in pairs(data.raw.technology) do
       end
       for _, ingredient in pairs(recipe.ingredients or {}) do
         if ingredient.name == "electronic-circuit" then
-          log(recipe.name)
           ingredient.name = "automation-core"
           ingredient.amount = math.ceil(ingredient.amount / 2)
           break
