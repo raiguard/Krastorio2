@@ -240,7 +240,6 @@ require("prototypes.technologies.utility-science-pack")
 require("prototypes.technologies.optional")
 
 require("prototypes.tiles.reinforced-plates")
-require("prototypes.tiles.reinforced-plates-kl")
 
 require("prototypes.vehicles.advanced-tank")
 require("prototypes.vehicles.nuclear-locomotive")

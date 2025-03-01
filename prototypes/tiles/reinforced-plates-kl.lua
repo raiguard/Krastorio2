@@ -1,3 +1,7 @@
+-- This file exists for legacy purposes only.
+-- TODO: Make this a separate mod?
+--- @diagnostic disable
+
 if not settings.startup["kr-kl-stuff"].value then
   return
 end
