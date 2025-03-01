@@ -194,7 +194,7 @@ function data_util.convert_research_unit_ingredient(technology_id, from_id, to_i
   if not converted then
     error("Technology " .. technology_id .. " does not have research unit ingredient " .. from_id)
   end
-  -- TODO: Hardcoding the science pack name like this feels bad, but it's what the old code did...
+  -- XXX: Hardcoding the science pack name like this feels bad, but it's what the old code did...
   local from_index = flib_table.find(technology.prerequisites, from_id)
   if from_index then
     table.remove(technology.prerequisites, from_index)
@@ -224,7 +224,6 @@ function data_util.add_research_unit_ingredient(technology_id, ingredient_id, in
   if not technology then
     error("Technology " .. technology_id .. " does not exist.")
   end
-  -- TODO: Make this a base game error.
   if technology.research_trigger then
     error("Technology " .. technology_id .. " has a research trigger, so cannot have ingredients.")
   end
@@ -238,7 +237,6 @@ function data_util.add_research_unit_ingredient(technology_id, ingredient_id, in
     end
   end
   table.insert(technology.unit.ingredients, { ingredient_id, ingredient_count })
-  -- TODO: Automatically add science pack prereq?
 end
 
 --- Removes the given research ingredient from the technology.
