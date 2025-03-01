@@ -3,8 +3,10 @@ local data_util = require("data-util")
 data_util.add_prerequisite("advanced-circuit", "electronics")
 data_util.add_prerequisite("advanced-circuit", "kr-silicon-processing")
 data_util.add_prerequisite("atomic-bomb", "kr-military-5")
+data_util.add_prerequisite("automation", "electronics")
 data_util.add_prerequisite("automation", "kr-automation-core")
-data_util.add_prerequisite("automation-science-pack", "electronics")
+data_util.add_prerequisite("automation-science-pack", "automation")
+data_util.add_prerequisite("automation-science-pack", "kr-laboratory")
 data_util.add_prerequisite("automobilism", "kr-fuel")
 data_util.add_prerequisite("battery-equipment", "modular-armor")
 data_util.add_prerequisite("efficiency-module-3", "processing-unit")
@@ -64,11 +66,7 @@ data_util.convert_research_unit_ingredient("stone-wall", "automation-science-pac
 data_util.add_research_unit_ingredient("automation", "basic-tech-card")
 
 data_util.remove_research_unit_ingredient("automation", "automation-science-pack")
-data_util.remove_research_unit_ingredient("engine", "logistic-science-pack")
 data_util.remove_research_unit_ingredient("fission-reactor-equipment", "military-science-pack")
-data_util.remove_research_unit_ingredient("fluid-handling", "logistic-science-pack")
-data_util.remove_research_unit_ingredient("gate", "logistic-science-pack")
-data_util.remove_research_unit_ingredient("plastics", "logistic-science-pack")
 
 data_util.add_recipe_unlock("advanced-circuit", "electronic-components")
 data_util.add_recipe_unlock("atomic-bomb", "nuclear-artillery-shell")
@@ -186,7 +184,10 @@ data.raw.technology["stronger-explosives-7"].unit.count_formula = "((L-6)^2)*300
 data.raw.technology["worker-robots-speed-6"].unit.count_formula = "((L-5)^2)*5000"
 data.raw.technology["worker-robots-speed-6"].max_level = nil
 
-data_util.set_icons(data.raw.technology["fission-reactor-equipment"], util.technology_icon_constant_equipment("__Krastorio2Assets__/technologies/fission-reactor-equipment.png", 256))
+data_util.set_icons(
+  data.raw.technology["fission-reactor-equipment"],
+  util.technology_icon_constant_equipment("__Krastorio2Assets__/technologies/fission-reactor-equipment.png", 256)
+)
 
 data_util.set_icons(
   data.raw.technology["steel-axe"],
