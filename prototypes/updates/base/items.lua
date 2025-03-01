@@ -106,7 +106,7 @@ data.raw.item["personal-laser-defense-equipment"].localised_name =
 data.raw.item["personal-laser-defense-equipment"].order = "d[active-defense]-b1[personal-laser-defense-mk1-equipment]"
 data.raw.item["personal-laser-defense-equipment"].subgroup = "equipment"
 
-data.raw.item["radar"].subgroup = "radars-and-rockets"
+data.raw.item["radar"].subgroup = "radars"
 data.raw.item["radar"].order = "02[radar]"
 
 data.raw.item["rocket-fuel"].fuel_category = "chemical"
@@ -114,9 +114,6 @@ data.raw.item["rocket-fuel"].fuel_value = "20MJ"
 data.raw.item["rocket-fuel"].fuel_acceleration_multiplier = 1
 data.raw.item["rocket-fuel"].fuel_top_speed_multiplier = 1
 data.raw.item["rocket-fuel"].fuel_emissions_multiplier = 1.25
-
-data.raw.item["rocket-silo"].subgroup = "radars-and-rockets"
-data.raw.item["rocket-silo"].order = "zzz[rocket-silo]"
 
 data.raw.item["satellite"].rocket_launch_products = { { type = "item", name = "space-research-data", amount = 1000 } }
 
