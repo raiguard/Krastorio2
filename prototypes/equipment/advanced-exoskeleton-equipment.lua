@@ -7,7 +7,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "exoskeleton-equipment", amount = 1 },
       { type = "item", name = "low-density-structure", amount = 10 },
-      { type = "item", name = "advanced-circuit", amount = 10 },
+      { type = "item", name = "processing-unit", amount = 10 },
       { type = "item", name = "speed-module-2", amount = 10 },
     },
     results = { { type = "item", name = "advanced-exoskeleton-equipment", amount = 1 } },
