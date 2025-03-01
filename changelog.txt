@@ -10,6 +10,8 @@ Date: ????
     - Removed biter creep tiles; biomass is now harvested directly from the corpses of spawners.
   Balancing:
     - Loaders require electricity.
+  Bugfixes:
+    - Fixed that it was possible to die during the victory cutscene, causing you to be stranded as a ghost forever.
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.24
 Date: 2024-05-09

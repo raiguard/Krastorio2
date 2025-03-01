@@ -57,6 +57,9 @@ local function activate_transceiver(transceiver_data)
   local entity_position = entity.position
   for _, player in pairs(entity.force.connected_players) do
     if player.surface == entity_surface and flib_position.distance(entity_position, player.position) <= 100 then
+      if player.controller_type == defines.controllers.character then
+        player.character.destructible = false
+      end
       player.set_controller({
         type = defines.controllers.cutscene,
         waypoints = {
@@ -98,12 +101,14 @@ local function on_cutscene_finished(e)
   if not player then
     return
   end
-  -- FIXME: What if the character dies while in the cutscene?
   if not storage.intergalactic_transceiver or not storage.intergalactic_transceiver.in_cutscene[player.force_index] then
     return
   end
   storage.intergalactic_transceiver.in_cutscene[player.force_index] = nil
   player.force.technologies["kr-logo"].enabled = true
+  if player.character then
+    player.character.destructible = true
+  end
   if not storage.intergalactic_transceiver.is_victory then
     return
   end
