@@ -14,7 +14,7 @@ data:extend({
       { type = "item", name = "pollution-filter", amount = 1 },
     },
     results = {
-      { type = "item", name = "used-pollution-filter", probability = 0.90, amount = 1 },
+      { type = "item", name = "used-pollution-filter", probability = 0.9, amount = 1 },
     },
   },
   {
@@ -32,7 +32,7 @@ data:extend({
       { type = "item", name = "improved-pollution-filter", amount = 1 },
     },
     results = {
-      { type = "item", name = "used-improved-pollution-filter", probability = 0.90, amount = 1 },
+      { type = "item", name = "used-improved-pollution-filter", probability = 0.9, amount = 1 },
     },
     emissions_multiplier = 2.0,
   },
