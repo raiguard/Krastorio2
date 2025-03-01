@@ -37,27 +37,6 @@ data:extend({
   },
   {
     type = "technology",
-    name = "kr-basic-fluid-handling",
-    icon = "__Krastorio2Assets__/technologies/basic-fluid-handling.png",
-    icon_size = 256,
-    unit = {
-      time = 20,
-      count = 10,
-      ingredients = {
-        { "basic-tech-card", 1 },
-      },
-    },
-    prerequisites = { "kr-automation-core" },
-    effects = {
-      { type = "unlock-recipe", recipe = "pipe" },
-      { type = "unlock-recipe", recipe = "pipe-to-ground" },
-      { type = "unlock-recipe", recipe = "offshore-pump" },
-    },
-    -- Disable cost multiplier to avoid manually harvesting unreasonable amount of wood.
-    ignore_tech_cost_multiplier = true,
-  },
-  {
-    type = "technology",
     name = "kr-crusher",
     icon = "__Krastorio2Assets__/technologies/crusher.png",
     icon_size = 256,
@@ -119,7 +98,7 @@ data:extend({
         { "basic-tech-card", 1 },
       },
     },
-    prerequisites = { "kr-automation-core", "kr-stone-processing", "kr-basic-fluid-handling" },
+    prerequisites = { "kr-automation-core", "kr-stone-processing", "steam-power" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-greenhouse" },
       { type = "unlock-recipe", recipe = "wood" },
