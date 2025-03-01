@@ -35,7 +35,6 @@ data:extend({
             size = 64,
             filename = "__Krastorio2Assets__/icons/items/raw-imersite-1.png",
             scale = 0.5,
-            mipmap_count = 4,
           },
           {
             draw_as_light = true,
@@ -55,7 +54,6 @@ data:extend({
             size = 64,
             filename = "__Krastorio2Assets__/icons/items/raw-imersite-2.png",
             scale = 0.5,
-            mipmap_count = 4,
           },
           {
             draw_as_light = true,
@@ -75,7 +73,6 @@ data:extend({
             size = 64,
             filename = "__Krastorio2Assets__/icons/items/raw-imersite-3.png",
             scale = 0.5,
-            mipmap_count = 4,
           },
           {
             draw_as_light = true,
