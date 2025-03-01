@@ -1,9 +1,19 @@
 local flib_gui = require("__flib__.gui")
 
-local constants = require("scripts.constants")
 local util = require("scripts.util")
 
--- GUI
+--- @type table<string, {color: Color?, suffix: string, text: string}
+local roboport_modes = {
+  normal = { suffix = "", text = "normal" },
+  construction = { color = { r = 0.5, g = 1, b = 0.4 }, suffix = "-construction-mode", text = "construction" },
+  logistic = { color = { r = 1, g = 0.5, b = 0.25 }, suffix = "-logistic-mode", text = "logistic" },
+}
+
+local next_roboport_mode = {
+  [""] = "construction",
+  ["-construction-mode"] = "logistic",
+  ["-logistic-mode"] = "normal",
+}
 
 --- @param player LuaPlayer
 --- @param entity LuaEntity
@@ -35,9 +45,9 @@ local function change_mode(entity, player, to_mode)
 
   local new_mode_data
   if to_mode then
-    new_mode_data = constants.roboport_modes[to_mode]
+    new_mode_data = roboport_modes[to_mode]
   else
-    new_mode_data = constants.roboport_modes[constants.next_roboport_mode[suffix]]
+    new_mode_data = roboport_modes[next_roboport_mode[suffix]]
   end
 
   local new_name = base_name .. new_mode_data.suffix
@@ -74,18 +84,32 @@ local function change_mode(entity, player, to_mode)
     create_build_effect_smoke = false,
   })
 
-  if new_entity then
-    new_entity.energy = energy
-    new_entity.health = health
-    new_entity.last_user = player
+  if not new_entity then
+    return
+  end
+  new_entity.energy = energy
+  new_entity.health = health
+  new_entity.last_user = player
 
-    util.change_mode_fx(new_entity, { "message.kr-" .. new_mode_data.text .. "-mode" }, new_mode_data.color)
+  util.entity_flying_text(new_entity, { "message.kr-" .. new_mode_data.text .. "-mode" }, new_mode_data.color)
+  game.play_sound({
+    path = "kr-welding",
+    position = new_entity.position,
+    volume_modifier = 1.0,
+  })
+  new_entity.surface.create_particle({
+    name = "kr-welding-particle",
+    position = { new_entity.position.x, new_entity.position.y + 1 },
+    movement = { 0.0, -0.05 },
+    height = 1.0,
+    vertical_speed = 0.015,
+    frame_speed = 1,
+  })
 
-    -- Re-open GUI for all players who had it open and update the radio buttons
-    for _, gui_player in pairs(guis_to_update) do
-      gui_player.opened = new_entity
-      update_gui(gui_player, new_entity)
-    end
+  -- Swapping the entity will close any open GUIs, so we must re-open them.
+  for _, gui_player in pairs(guis_to_update) do
+    gui_player.opened = new_entity
+    update_gui(gui_player, new_entity)
   end
 end
 
