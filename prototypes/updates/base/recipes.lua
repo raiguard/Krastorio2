@@ -781,33 +781,3 @@ data.raw.recipe["utility-science-pack"] = {
   results = { { type = "item", name = "utility-science-pack", amount = 5 } },
   allow_productivity = true,
 }
-
--- TODO: Do we want the custom heavy/light oil icons?
--- data_util.set_icon(data.raw.recipe["coal-liquefaction"], "__Krastorio2Assets__/icons/recipes/coal-liquefaction.png")
--- data_util.set_icon(data.raw.recipe["heavy-oil-cracking"], "__Krastorio2Assets__/icons/recipes/heavy-oil-cracking.png")
--- data_util.set_icon(data.raw.recipe["light-oil-cracking"], "__Krastorio2Assets__/icons/recipes/light-oil-cracking.png")
--- local light_oil_icon = nil
--- if data.raw.fluid["light-oil"].icon == "__base__/graphics/icons/fluid/light-oil.png" then
---   light_oil_icon = "__Krastorio2Assets__/icons/fluids/light-oil.png"
--- else
---   light_oil_icon = data.raw.fluid["light-oil"].icon
--- end
--- local rocket_fuel_icons = {
---   { icon = "__Krastorio2Assets__/icons/recipes/rocket-fuel.png", icon_size = 64 },
---   { icon = light_oil_icon, icon_size = data.raw.fluid["light-oil"].icon_size or 64, scale = 0.26, shift = { 8, -8 } },
--- }
--- krastorio.icons.setRecipeIcons("rocket-fuel", rocket_fuel_icons)
-
--- local fluids_for_solid_fuel = { "petroleum-gas", "light-oil", "heavy-oil" }
--- for _, fluid in ipairs(fluids_for_solid_fuel) do
---   local icons = {
---     { icon = "__base__/graphics/icons/solid-fuel.png", icon_size = 64 },
---     {
---       icon = "__Krastorio2Assets__/icons/fluids/" .. fluid .. ".png",
---       icon_size = data.raw.fluid[fluid].icon_size or 64,
---       scale = 0.26,
---       shift = { -8, -8 },
---     },
---   }
---   krastorio.icons.setRecipeIcons("solid-fuel-from-" .. fluid, icons)
--- end

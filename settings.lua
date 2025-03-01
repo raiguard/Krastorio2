@@ -35,7 +35,7 @@ data:extend({
     default_value = true,
     order = "a5",
   },
-  -- TODO: Make this react to player color
+  -- TODO: Make this react to player color / be adjustable at runtime
   {
     type = "string-setting",
     name = "kr-shelter-tint",

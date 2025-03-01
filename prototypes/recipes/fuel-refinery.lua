@@ -1,10 +1,3 @@
-local light_oil_icon = data.raw.fluid["light-oil"].icon
-if light_oil_icon == "__base__/graphics/icons/fluid/light-oil.png" then
-  light_oil_icon = "__Krastorio2Assets__/icons/fluids/light-oil.png"
-end
-
--- TODO: Handle icons array
-
 data:extend({
   {
     type = "recipe",
@@ -92,7 +85,7 @@ data:extend({
     icons = {
       { icon = "__Krastorio2Assets__/icons/items/fuel.png" },
       {
-        icon = light_oil_icon,
+        icon = "__base__/graphics/icons/fluid/light-oil.png",
         scale = 0.26,
         shift = { 8, -8 },
       },

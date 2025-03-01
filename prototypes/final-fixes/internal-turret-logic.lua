@@ -5,7 +5,6 @@ for _, character in pairs(data.raw["character"]) do
   local mask = character.trigger_target_mask or { "common", "ground-unit" }
   character.trigger_target_mask = mask
 
-  -- FIXME: Use a proper name
   table.insert(mask, "character")
 end
 

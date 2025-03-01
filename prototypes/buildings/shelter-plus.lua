@@ -1,4 +1,3 @@
--- TODO: Remove this entirely and make it runtime-adjustable (player color or custom?)
 local color_mapping = {
   white = { r = 1, g = 1, b = 1, a = 1 },
   yellow = { r = 0.9, g = 0.7, b = 0, a = 0.75 },
@@ -11,7 +10,7 @@ local color_mapping = {
   purple = { r = 0.45, g = 0.25, b = 0.7, a = 0.72 },
   gray = { r = 0.2, g = 0.2, b = 0.2, a = 0.8 },
 }
-local color_name = settings.startup["kr-shelter-tint"].value
+local color_name = settings.startup["kr-shelter-tint"].value --[[@as string]]
 local shelter_tint = color_mapping[color_name]
 assert(shelter_tint, "invalid shelter tint: " .. color_name)
 

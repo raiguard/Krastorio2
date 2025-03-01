@@ -232,7 +232,7 @@ local creep_transitions = {
       o_transition_count = 1,
     },
   },
-  -- TODO: This is ground_to_out_of_map_transition (data/base/prototypes/tile/tiles.lua)
+  -- This is ground_to_out_of_map_transition (data/base/prototypes/tile/tiles.lua)
   {
     to_tiles = out_of_map_tile_type_names,
     transition_group = out_of_map_transition_group_id,

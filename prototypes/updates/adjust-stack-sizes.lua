@@ -2,7 +2,6 @@ if not kr_adjust_stack_sizes then
   return
 end
 
--- TODO: Make this adjustable?
 local kr_stack_size_value = 200
 
 -- Vanilla

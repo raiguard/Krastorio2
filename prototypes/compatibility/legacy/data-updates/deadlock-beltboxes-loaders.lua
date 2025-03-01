@@ -1,3 +1,4 @@
+-- TODO: Fix this
 -- if mods["deadlock-beltboxes-loaders"] then
 --   local function krCreateStacks(_stackable_krastorio_items)
 --     for i, items in pairs(_stackable_krastorio_items) do
