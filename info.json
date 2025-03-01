@@ -9,7 +9,7 @@
   "factorio_version": "2.0",
   "dependencies": [
     "base >= 2.0.33",
-    "Krastorio2Assets >= 2.0.0",
+    "Krastorio2Assets >= 2.0.1",
     "ChangeInserterDropLane >= 1.1.0",
     "flib >= 0.16.2",
     "(?) aai-industry >= 0.3.17",
