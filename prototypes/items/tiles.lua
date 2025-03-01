@@ -1,42 +1,6 @@
 data:extend({
   {
     type = "item",
-    name = "kr-creep",
-    icon = "__Krastorio2Assets__/icons/items/biomass.png",
-    subgroup = "terrain",
-    order = "z[creep]-z[creep]",
-    hidden = true,
-    stack_size = 200,
-    place_as_tile = {
-      result = "kr-creep",
-      condition_size = 1,
-      condition = { layers = { water_tile = true } },
-    },
-    pictures = {
-      {
-        filename = "__Krastorio2Assets__/icons/items/biomass.png",
-        size = 64,
-        scale = 0.25,
-      },
-      {
-        filename = "__Krastorio2Assets__/icons/items/biomass-1.png",
-        size = 64,
-        scale = 0.25,
-      },
-      {
-        filename = "__Krastorio2Assets__/icons/items/biomass-2.png",
-        size = 64,
-        scale = 0.25,
-      },
-      {
-        filename = "__Krastorio2Assets__/icons/items/biomass-3.png",
-        size = 64,
-        scale = 0.25,
-      },
-    },
-  },
-  {
-    type = "item",
     name = "kr-black-reinforced-plate",
     icon = "__Krastorio2Assets__/icons/items/black-reinforced-plate.png",
     subgroup = "terrain",

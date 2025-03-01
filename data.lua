@@ -239,7 +239,6 @@ require("prototypes.technologies.utility-science-pack")
 
 require("prototypes.technologies.optional")
 
-require("prototypes.tiles.creep")
 require("prototypes.tiles.reinforced-plates")
 require("prototypes.tiles.reinforced-plates-kl")
 

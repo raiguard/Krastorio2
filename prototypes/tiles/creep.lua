@@ -1,3 +1,6 @@
+-- This file exists purely for legacy purposes - the creep tile is no longer present in the mod.
+--- @diagnostic disable
+
 -- Sounds
 local collect_creep_sound = {
   filename = "__Krastorio2Assets__/sounds/tiles/creep-deconstruction.ogg",
