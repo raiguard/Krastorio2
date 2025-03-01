@@ -70,7 +70,6 @@ data.raw.item["imersium-plate"].stack_size = kr_stack_size_value
 data.raw.item["inserter-parts"].stack_size = kr_stack_size_value
 data.raw.item["iron-beam"].stack_size = kr_stack_size_value
 data.raw.item["kr-black-reinforced-plate"].stack_size = kr_stack_size_value
-data.raw.item["kr-creep"].stack_size = kr_stack_size_value
 data.raw.item["kr-white-reinforced-plate"].stack_size = kr_stack_size_value
 data.raw.item["lithium-chloride"].stack_size = kr_stack_size_value
 data.raw.item["lithium"].stack_size = kr_stack_size_value
