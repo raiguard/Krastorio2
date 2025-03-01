@@ -1,4 +1,10 @@
+local flib_bounding_box = require("__flib__.bounding-box")
 local flib_math = require("__flib__.math")
+
+-- Plan:
+-- Create a spiral chunk iterator from the point at which the virus was thrown.
+-- Destroy a certain number of enemy units and unit spawners in that chunk.
+-- If new chunks are created during iteration... oh well. By design, you need to use a bunch of viruses to totally remove the biters.
 
 local biter_virus_evolution_multiplier = 0.67
 
@@ -70,7 +76,7 @@ local function init_biter_virus(player, surface)
   if not biter_viruses[surface.index] then
     -- Reduce evolution factor
     local enemy = game.forces.enemy
-    enemy.evolution_factor = enemy.evolution_factor * biter_virus_evolution_multiplier
+    enemy.set_evolution_factor(enemy.get_evolution_factor(surface) * biter_virus_evolution_multiplier, surface)
 
     -- Begin gradual enemy killoff
     local enemy_entities = surface.find_entities_filtered({ force = "enemy" })
@@ -93,16 +99,22 @@ end
 --- @param e EventData.on_player_used_capsule
 local function on_player_used_capsule(e)
   local item = e.item
-  if not item or not item.valid then
+  if not item or not item.valid or item.name ~= "kr-biter-virus" then
     return
   end
 
-  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
-  local surface = player.surface
+  local player = game.get_player(e.player_index)
+  --- @cast player -?
 
-  if item.name == "kr-biter-virus" then
-    init_biter_virus(player, surface)
+  --- @type BoundingBox
+  local surface_box = { left_top = { x = 0, y = 0 }, right_bottom = { x = 0, y = 0 } }
+  for chunk in player.surface.get_chunks() do
+    surface_box = flib_bounding_box.expand_to_contain_position(surface_box, { chunk.x, chunk.y })
   end
+
+  game.print(serpent.line(surface_box))
+
+  init_biter_virus(player, player.surface)
 end
 
 local function on_tick()
