@@ -94,6 +94,7 @@ data:extend({
     },
     prerequisites = { "kr-fluids-chemistry", "automation-2" },
     effects = {
+      { type = "unlock-recipe", recipe = "kr-filtration-plant" },
       { type = "unlock-recipe", recipe = "silicon" },
       { type = "unlock-recipe", recipe = "quartz" },
     },
