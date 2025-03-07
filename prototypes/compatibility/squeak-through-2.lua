@@ -30,7 +30,7 @@ data.raw["burner-generator"]["kr-antimatter-reactor"].squeak_behavior = false
 
 data.raw["container"]["kr-shelter-container"].squeak_behavior = false
 data.raw["container"]["kr-shelter-plus-container"].squeak_behavior = false
-data.raw["container"]["kr-storehouse"].squeak_behavior = false
+data.raw["container"]["kr-strongbox"].squeak_behavior = false
 data.raw["container"]["kr-warehouse"].squeak_behavior = false
 
 data.raw["electric-energy-interface"]["kr-activated-intergalactic-transceiver"].squeak_behavior = false
@@ -57,15 +57,15 @@ data.raw["loader-1x1"]["kr-loader"].squeak_behavior = false
 data.raw["loader-1x1"]["kr-se-loader"].squeak_behavior = false
 data.raw["loader-1x1"]["kr-superior-loader"].squeak_behavior = false
 
-data.raw["logistic-container"]["kr-active-provider-storehouse"].squeak_behavior = false
+data.raw["logistic-container"]["kr-active-provider-strongbox"].squeak_behavior = false
 data.raw["logistic-container"]["kr-active-provider-warehouse"].squeak_behavior = false
-data.raw["logistic-container"]["kr-buffer-storehouse"].squeak_behavior = false
+data.raw["logistic-container"]["kr-buffer-strongbox"].squeak_behavior = false
 data.raw["logistic-container"]["kr-buffer-warehouse"].squeak_behavior = false
-data.raw["logistic-container"]["kr-passive-provider-storehouse"].squeak_behavior = false
+data.raw["logistic-container"]["kr-passive-provider-strongbox"].squeak_behavior = false
 data.raw["logistic-container"]["kr-passive-provider-warehouse"].squeak_behavior = false
-data.raw["logistic-container"]["kr-requester-storehouse"].squeak_behavior = false
+data.raw["logistic-container"]["kr-requester-strongbox"].squeak_behavior = false
 data.raw["logistic-container"]["kr-requester-warehouse"].squeak_behavior = false
-data.raw["logistic-container"]["kr-storage-storehouse"].squeak_behavior = false
+data.raw["logistic-container"]["kr-storage-strongbox"].squeak_behavior = false
 data.raw["logistic-container"]["kr-storage-warehouse"].squeak_behavior = false
 
 data.raw["mining-drill"]["kr-mineral-water-pumpjack"].squeak_behavior = false

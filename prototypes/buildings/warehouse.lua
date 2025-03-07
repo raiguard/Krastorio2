@@ -12,7 +12,7 @@ data:extend({
     energy_required = 1,
     enabled = false,
     ingredients = {
-      { type = "item", name = "kr-storehouse", amount = 4 },
+      { type = "item", name = "kr-strongbox", amount = 4 },
       { type = "item", name = "steel-beam", amount = 10 },
     },
     results = { { type = "item", name = "kr-warehouse", amount = 1 } },

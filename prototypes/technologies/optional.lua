@@ -25,7 +25,7 @@ data:extend({
     },
     prerequisites = { "steel-processing" },
     effects = {
-      { type = "unlock-recipe", recipe = "kr-storehouse" },
+      { type = "unlock-recipe", recipe = "kr-strongbox" },
       { type = "unlock-recipe", recipe = "kr-warehouse" },
     },
   },
@@ -47,8 +47,8 @@ data:extend({
     },
     prerequisites = { "kr-containers", "logistic-robotics" },
     effects = {
-      { type = "unlock-recipe", recipe = "kr-passive-provider-storehouse" },
-      { type = "unlock-recipe", recipe = "kr-storage-storehouse" },
+      { type = "unlock-recipe", recipe = "kr-passive-provider-strongbox" },
+      { type = "unlock-recipe", recipe = "kr-storage-strongbox" },
       { type = "unlock-recipe", recipe = "kr-passive-provider-warehouse" },
       { type = "unlock-recipe", recipe = "kr-storage-warehouse" },
     },
@@ -73,9 +73,9 @@ data:extend({
     },
     prerequisites = { "kr-containers", "logistic-system" },
     effects = {
-      { type = "unlock-recipe", recipe = "kr-active-provider-storehouse" },
-      { type = "unlock-recipe", recipe = "kr-buffer-storehouse" },
-      { type = "unlock-recipe", recipe = "kr-requester-storehouse" },
+      { type = "unlock-recipe", recipe = "kr-active-provider-strongbox" },
+      { type = "unlock-recipe", recipe = "kr-buffer-strongbox" },
+      { type = "unlock-recipe", recipe = "kr-requester-strongbox" },
       { type = "unlock-recipe", recipe = "kr-active-provider-warehouse" },
       { type = "unlock-recipe", recipe = "kr-buffer-warehouse" },
       { type = "unlock-recipe", recipe = "kr-requester-warehouse" },
