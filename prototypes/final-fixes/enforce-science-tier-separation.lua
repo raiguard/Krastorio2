@@ -34,6 +34,13 @@ local function remove_incompatible_packs(base_pack, incompatible_packs)
   end
 end
 
+local tier_1_incompatibilities = {
+  ["basic-tech-card"] = true,
+}
+
+remove_incompatible_packs("production-science-pack", tier_1_incompatibilities)
+remove_incompatible_packs("utility-science-pack", tier_1_incompatibilities)
+
 local tier_2_incompatibilities = {
   ["basic-tech-card"] = true,
   ["automation-science-pack"] = true,
@@ -46,6 +53,3 @@ remove_incompatible_packs("advanced-tech-card", tier_2_incompatibilities)
 remove_incompatible_packs(kr_optimization_tech_card_name, tier_2_incompatibilities)
 remove_incompatible_packs("matter-tech-card", tier_2_incompatibilities)
 remove_incompatible_packs("singularity-tech-card", tier_2_incompatibilities)
-
-remove_incompatible_packs("production-science-pack", { ["basic-tech-card"] = true })
-remove_incompatible_packs("utility-science-pack", { ["basic-tech-card"] = true })
