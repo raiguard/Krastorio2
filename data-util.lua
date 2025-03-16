@@ -21,7 +21,7 @@ function data_util.update_ammo_effects(tech, effects)
           or (effect.turret_id ~= nil and effect.turret_id == updated_effect.turret_id)
         )
       then
-        effect.modifier = updated_effect.modifier
+        effect.modifier = updated_effect.modifier --- @diagnostic disable-line:assign-type-mismatch
         exists = true
         break
       end
@@ -29,7 +29,7 @@ function data_util.update_ammo_effects(tech, effects)
     if not exists then
       table.insert(
         tech.effects,
-        { type = updated_effect.type, ammo_category = updated_effect.ammo_category, modifier = updated_effect.modifier }
+        { type = updated_effect.type, ammo_category = updated_effect.ammo_category, modifier = updated_effect.modifier } --- @diagnostic disable-line:assign-type-mismatch
       )
     end
   end
@@ -398,7 +398,7 @@ function data_util.convert_ingredient(recipe_name, old_ingredient_name, new_ingr
     error("Recipe " .. recipe_name .. " has no ingredients.")
     return
   end
-  for i, ingredient in pairs(recipe.ingredients) do
+  for _, ingredient in pairs(recipe.ingredients) do
     if ingredient.name == old_ingredient_name then
       ingredient.name = new_ingredient_name
       break
@@ -430,7 +430,7 @@ end
 --- Adds or replaces the recipe's product matching the given name.
 --- @param recipe_name data.RecipeID
 --- @param old_product_name data.FluidID|data.ItemID
---- @param new_product data.IngredientPrototype
+--- @param new_product data.ProductPrototype
 function data_util.add_or_replace_product(recipe_name, old_product_name, new_product)
   local recipe = data.raw.recipe[recipe_name]
   if not recipe then
