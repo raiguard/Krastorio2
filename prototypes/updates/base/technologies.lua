@@ -118,6 +118,8 @@ data.raw.technology["electronics"].unit = {
 }
 
 data.raw.technology["steam-power"].research_trigger = nil
+-- Disable cost multiplier to avoid manually crafting unreasonable amount of wind turbines.
+data.raw.technology["steam-power"].ignore_tech_cost_multiplier = true
 data.raw.technology["steam-power"].unit = {
   time = 10,
   count = 10,
