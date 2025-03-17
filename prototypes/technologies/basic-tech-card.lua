@@ -85,6 +85,8 @@ data:extend({
     effects = {
       { type = "unlock-recipe", recipe = "lab" },
     },
+    -- Disable cost multiplier to avoid waiting for an unreasonable amount of time due to lab being inaccessible.
+    ignore_tech_cost_multiplier = true,
   },
   {
     type = "technology",
