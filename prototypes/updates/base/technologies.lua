@@ -107,6 +107,8 @@ data_util.remove_recipe_unlock("military-3", "slowdown-capsule")
 data_util.remove_recipe_unlock("oil-processing", "chemical-plant")
 
 data.raw.technology["electronics"].research_trigger = nil
+-- Disable cost multiplier to avoid manually crafting unreasonable amount of basic tech cards due to assembly machines not being available.
+data.raw.technology["electronics"].ignore_tech_cost_multiplier = true
 data.raw.technology["electronics"].unit = {
   time = 10,
   count = 10,
@@ -116,6 +118,8 @@ data.raw.technology["electronics"].unit = {
 }
 
 data.raw.technology["steam-power"].research_trigger = nil
+-- Disable cost multiplier to avoid manually crafting unreasonable amount of wind turbines.
+data.raw.technology["steam-power"].ignore_tech_cost_multiplier = true
 data.raw.technology["steam-power"].unit = {
   time = 10,
   count = 10,
