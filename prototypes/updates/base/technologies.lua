@@ -280,6 +280,7 @@ data:extend({
     icon_size = 256,
     order = "c-k-f-z",
     upgrade = true,
+    max_level = "infinite",
     unit = {
       time = 60,
       count_formula = "(L^2)*200",
@@ -345,7 +346,7 @@ data:extend({
     icon_size = 256,
     order = "c-k-f-z",
     upgrade = true,
-    max_level = 10,
+    max_level = "infinite",
     unit = {
       time = 60,
       count_formula = "((L-8)^2)*5000",
@@ -408,7 +409,7 @@ data:extend({
     icon_size = 256,
     order = "c-k-f-z",
     upgrade = true,
-    max_level = 10,
+    max_level = "infinite",
     unit = {
       time = 60,
       count_formula = "((L-8)^2)*5000",
@@ -476,7 +477,7 @@ data:extend({
     icon_size = 256,
     order = "c-k-f-z",
     upgrade = true,
-    max_level = 18,
+    max_level = "infinite",
     unit = {
       time = 60,
       count_formula = "((L-15)^2)*3000",
@@ -616,7 +617,7 @@ data:extend({
     icon_size = 256,
     order = "c-k-f-z",
     upgrade = true,
-    max_level = 18,
+    max_level = "infinite",
     unit = {
       time = 60,
       count_formula = "((L-15)^2)*3000",
@@ -680,7 +681,7 @@ data:extend({
     icon_size = 256,
     order = "c-k-f-z",
     upgrade = true,
-    max_level = 18,
+    max_level = "infinite",
     unit = {
       time = 60,
       count_formula = "((L-15)^2)*3000",
@@ -745,7 +746,7 @@ data:extend({
     icon_size = 256,
     order = "c-k-f-z",
     upgrade = true,
-    max_level = 7,
+    max_level = "infinite",
     unit = {
       time = 60,
       count_formula = "((L-4)^2)*3500",
@@ -810,7 +811,7 @@ data:extend({
     icon_size = 256,
     order = "c-k-f-z",
     upgrade = true,
-    max_level = 7,
+    max_level = "infinite",
     unit = {
       time = 60,
       count_formula = "((L-4)^2)*3500",
