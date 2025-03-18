@@ -280,7 +280,6 @@ data:extend({
     icon_size = 256,
     order = "c-k-f-z",
     upgrade = true,
-    max_level = 100,
     unit = {
       time = 60,
       count_formula = "(L^2)*200",
