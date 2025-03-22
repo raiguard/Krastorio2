@@ -91,61 +91,24 @@ local flib_position = require("__flib__.position")
 --   end
 -- end
 
+--- @class BiterVirusData
+--- @field active BiterVirusKillData[]
+--- @field to_iterate ChunkPositionAndDistance[]
+--- @field surface LuaSurface
+
+--- @class BiterVirusKillData
+--- @field box BoundingBox
+--- @field entities LuaEntity[]
+--- @field to_kill integer
+
+--- @class ChunkPositionAndDistance
+--- @field distance number
+--- @field position ChunkPosition
+
 -- Plan:
--- Create a spiral chunk iterator from the point at which the virus was thrown.
+-- Iterate chunks starting from the origin and progressively getting further away.
 -- Destroy a certain % of the enemy units and buildings on each chunk, which gives diminishing returns as the number grows smaller.
 -- If new chunks are created during iteration... oh well. By design, you need to use a bunch of viruses to totally remove the biters.
-
---- @class SpiralChunkIterator
---- @field delta ChunkPosition
---- @field origin ChunkPosition
---- @field position ChunkPosition
---- @field iteration integer
---- @field max_iterations integer
---- @field radius_x integer
---- @field radius_y integer
-
---- Based on https://stackoverflow.com/questions/398299/looping-in-a-spiral
---- @param it SpiralChunkIterator
---- @return ChunkPosition?
-local function spiral(it)
-  it.iteration = it.iteration + 1
-  if it.iteration >= it.max_iterations then
-    return
-  end
-  --- @type ChunkPosition?
-  local to_return
-  if
-    (-it.radius_x <= it.position.x and it.position.x < it.radius_x)
-    and (-it.radius_y <= it.position.y and it.position.y < it.radius_y)
-  then
-    to_return = flib_position.add(it.position, it.origin)
-  end
-  if
-    it.position.x == it.position.y
-    or (it.position.x < 0 and it.position.x == -it.position.y)
-    or (it.position.x > 0 and it.position.x == 1 - it.position.y)
-  then
-    it.delta.x, it.delta.y = -it.delta.y, it.delta.x
-  end
-  it.position = flib_position.add(it.position, it.delta)
-  return to_return
-end
-
---- @param origin ChunkPosition
---- @param radii ChunkPosition
---- @return SpiralChunkIterator
-local function new_spiral(origin, radii)
-  return {
-    delta = { x = 0, y = -1 },
-    origin = origin,
-    position = { x = 0, y = 0 },
-    iteration = 0,
-    max_iterations = math.max(radii.x * 2 + 1, radii.y * 2 + 1) ^ 2,
-    radius_x = radii.x,
-    radius_y = radii.y,
-  }
-end
 
 --- @param e EventData.on_player_used_capsule
 local function on_player_used_capsule(e)
@@ -161,72 +124,54 @@ local function on_player_used_capsule(e)
 
   rendering.clear("Krastorio2")
 
-  --- @type BoundingBox
-  local surface_box = { left_top = { x = 0, y = 0 }, right_bottom = { x = 0, y = 0 } }
-  for chunk in player.surface.get_chunks() do
-    if player.surface.is_chunk_generated({ chunk.x, chunk.y }) then
-      surface_box = flib_bounding_box.expand_to_contain_position(surface_box, { chunk.x + 0.5, chunk.y + 0.5 })
-      rendering.draw_rectangle({
-        color = { r = 0.5, a = 0.5 },
-        filled = true,
-        left_top = { chunk.x, chunk.y },
-        right_bottom = { chunk.x + 1, chunk.y + 1 },
-        surface = player.surface_index,
-      })
-    end
-  end
-  surface_box = flib_bounding_box.ceil(surface_box)
-  rendering.draw_rectangle({
-    color = { r = 1, g = 1, b = 1 },
-    width = 3,
-    left_top = surface_box.left_top,
-    right_bottom = surface_box.right_bottom,
-    surface = player.surface,
-  })
+  local profiler = helpers.create_profiler()
   local origin = flib_position.to_chunk(e.position)
-  local radii = {
-    x = (math.max(math.abs(surface_box.left_top.x), math.abs(surface_box.right_bottom.x)) + math.abs(origin.x)),
-    y = (math.max(math.abs(surface_box.left_top.y), math.abs(surface_box.right_bottom.y)) + math.abs(origin.y)),
-  }
-  local extents_box = flib_bounding_box.from_dimensions(origin, radii.x * 2, radii.y * 2)
-  rendering.draw_rectangle({
-    color = { g = 1, b = 1 },
-    width = 3,
-    left_top = extents_box.left_top,
-    right_bottom = extents_box.right_bottom,
-    surface = player.surface,
-  })
-
-  local color = { r = 0, g = 255 }
-  local prev_x, prev_y
-  local it = new_spiral(origin, radii)
-  while it.iteration < it.max_iterations do
-    local chunk_pos = spiral(it)
-    if chunk_pos then
-      if player.surface.is_chunk_generated(chunk_pos) then
-        if prev_x and prev_y then
-          rendering.draw_line({
-            color = color,
-            width = 3,
-            from = { prev_x + 0.5, prev_y + 0.5 },
-            to = { chunk_pos.x + 0.5, chunk_pos.y + 0.5 },
-            surface = player.surface,
-          })
-          color.r = math.min(color.r + 1, 255)
-        end
-        prev_x = chunk_pos.x
-        prev_y = chunk_pos.y
-      else
-        rendering.draw_circle({
-          color = { b = 1 },
-          radius = 0.2,
-          filled = true,
-          target = { chunk_pos.x + 0.5, chunk_pos.y + 0.5 },
-          surface = player.surface,
-        })
-      end
-    end
+  --- @type ChunkPositionAndDistance[]
+  local chunks = {}
+  for chunk in player.surface.get_chunks() do
+    --- @type ChunkPosition
+    local chunk_position = { x = chunk.x, y = chunk.y }
+    chunks[#chunks + 1] = { distance = flib_position.distance(chunk_position, origin), position = chunk_position }
   end
+  table.sort(chunks, function(pos_a, pos_b)
+    -- Sort backwards so that we can remove items from the end.
+    return pos_a.distance > pos_b.distance
+  end)
+  profiler.stop()
+  game.print(profiler)
+
+  local step = 1 / #chunks
+  local color = { r = 0, g = 1, b = 1 }
+  for i = #chunks, 1, -1 do
+    local pos = chunks[i].position
+    rendering.draw_rectangle({
+      color = color,
+      filled = true,
+      left_top = { pos.x, pos.y },
+      right_bottom = { pos.x + 1, pos.y + 1 },
+      surface = player.surface_index,
+    })
+    color.g = color.g - step
+    color.r = color.r + step
+    chunks[i] = nil
+  end
+end
+
+local function on_tick()
+  -- if not storage.biter_viruses then
+  --   return
+  -- end
+  -- --- @type uint[]
+  -- local to_remove = {}
+  -- for surface_index, virus_data in pairs(storage.biter_viruses) do
+  --   if not virus_data.surface.valid then
+  --     to_remove[#to_remove + 1] = surface_index
+  --     goto continue
+  --   end
+  --   for _, active_data in pairs(virus_data.active) do
+  --   end
+  --   ::continue::
+  -- end
 end
 
 local virus = {}
@@ -238,6 +183,7 @@ end
 
 virus.events = {
   [defines.events.on_player_used_capsule] = on_player_used_capsule,
+  [defines.events.on_tick] = on_tick,
 }
 
 return virus
