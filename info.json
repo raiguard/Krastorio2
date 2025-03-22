@@ -8,7 +8,7 @@
   "homepage": "https://discord.gg/ECBzaXu",
   "factorio_version": "2.0",
   "dependencies": [
-    "base >= 2.0.33",
+    "base >= 2.0.42",
     "Krastorio2Assets >= 2.0.1",
     "ChangeInserterDropLane >= 1.1.0",
     "flib >= 0.16.2",
