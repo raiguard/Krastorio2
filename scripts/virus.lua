@@ -96,6 +96,12 @@ local flib_position = require("__flib__.position")
 -- Destroy a certain % of the enemy units and buildings on each chunk, which gives diminishing returns as the number grows smaller.
 -- If new chunks are created during iteration... oh well. By design, you need to use a bunch of viruses to totally remove the biters.
 
+--- @class SpiralChunkIterator
+--- @field delta ChunkPosition
+--- @field extents ChunkPosition
+--- @field origin ChunkPosition
+--- @field position ChunkPosition
+
 -- TODO: Convert to iterative
 --- Based on https://stackoverflow.com/questions/398299/looping-in-a-spiral
 --- @param origin ChunkPosition
