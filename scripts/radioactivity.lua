@@ -211,6 +211,7 @@ function radioactivity.on_configuration_changed()
 end
 
 remote.add_interface("kr-radioactivity", {
+  --- @param name string
   add_entity = function(name)
     if not storage.radioactivity then
       return
@@ -225,6 +226,7 @@ remote.add_interface("kr-radioactivity", {
 
     table.insert(storage.radioactivity.entities, name)
   end,
+  --- @param name string
   add_item = function(name)
     if not storage.radioactivity then
       return
