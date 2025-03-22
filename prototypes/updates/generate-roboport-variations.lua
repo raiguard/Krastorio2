@@ -42,7 +42,7 @@ for roboport_name, roboport in pairs(data.raw.roboport) do
   construction_roboport.logistics_radius = 0
   construction_roboport.fast_replaceable_group = fast_replaceable_group
 
-  -- Directly extending data her would cause an infinite loop, so we add to an array before extending the array all at once.
+  -- Directly extending data here would cause an infinite loop, so we add to an array before extending the array all at once.
   roboports[#roboports + 1] = logistic_roboport
   roboports[#roboports + 1] = construction_roboport
 end
