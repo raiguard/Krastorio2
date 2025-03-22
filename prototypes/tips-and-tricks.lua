@@ -234,14 +234,6 @@ data:extend({
   },
   {
     type = "tips-and-tricks-item",
-    name = "kr-commands",
-    order = "o",
-    starting_status = "unlocked",
-    category = "kr-about-k2",
-    indent = 1,
-  },
-  {
-    type = "tips-and-tricks-item",
     name = "kr-achievements",
     order = "p",
     starting_status = "unlocked",
