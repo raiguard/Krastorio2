@@ -2,7 +2,6 @@
 local roboports = {}
 
 for roboport_name, roboport in pairs(data.raw.roboport) do
-  -- Fast replaceable group (for ease of variation switching)
   local fr_group = roboport.fast_replaceable_group or roboport_name
   roboport.fast_replaceable_group = fr_group
 
@@ -12,9 +11,9 @@ for roboport_name, roboport in pairs(data.raw.roboport) do
   logistic_roboport.localised_name = { "entity-name.kr-logistic-roboport", { "entity-name." .. roboport_name } }
   logistic_roboport.localised_description = { "entity-description." .. roboport_name }
   logistic_roboport.factoriopedia_alternative = roboport_name
-  logistic_roboport.placeable_by = { item = roboport_name, count = 1 }
   logistic_roboport.logistics_radius =
     math.ceil(logistic_roboport.logistics_radius + logistic_roboport.logistics_radius * 0.275) -- Standard roboport has 64x64 radius
+  logistic_roboport.logistics_connection_distance = logistic_roboport.logistics_radius
   logistic_roboport.construction_radius = 0
   logistic_roboport.fast_replaceable_group = fr_group
 
@@ -27,7 +26,6 @@ for roboport_name, roboport in pairs(data.raw.roboport) do
   }
   construction_roboport.localised_description = { "entity-description." .. roboport_name }
   construction_roboport.factoriopedia_alternative = roboport_name
-  construction_roboport.placeable_by = { item = roboport_name, count = 1 }
   construction_roboport.construction_radius =
     math.ceil(construction_roboport.construction_radius + construction_roboport.construction_radius * 0.25)
   construction_roboport.logistics_connection_distance =
