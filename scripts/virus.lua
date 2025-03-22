@@ -98,32 +98,53 @@ local flib_position = require("__flib__.position")
 
 --- @class SpiralChunkIterator
 --- @field delta ChunkPosition
---- @field extents ChunkPosition
 --- @field origin ChunkPosition
 --- @field position ChunkPosition
+--- @field iteration integer
+--- @field max_iterations integer
+--- @field radius_x integer
+--- @field radius_y integer
 
--- TODO: Convert to iterative
 --- Based on https://stackoverflow.com/questions/398299/looping-in-a-spiral
---- @param origin ChunkPosition
---- @param extents ChunkPosition
---- @return ChunkPosition[]
-local function spiral(origin, extents)
-  --- @type ChunkPosition[]
-  local positions = {}
-  local x, y = 0, 0
-  local dx, dy = 0, -1
-  local radius_x = math.ceil(extents.x / 2)
-  local radius_y = math.ceil(extents.y / 2)
-  for _ = 1, math.max(extents.x, extents.y) ^ 2 do
-    if (-radius_x <= x and x < radius_x) and (-radius_y <= y and y < radius_y) then
-      positions[#positions + 1] = { x = x + origin.x, y = y + origin.y }
-    end
-    if x == y or (x < 0 and x == -y) or (x > 0 and x == 1 - y) then
-      dx, dy = -dy, dx
-    end
-    x, y = x + dx, y + dy
+--- @param it SpiralChunkIterator
+--- @return ChunkPosition?
+local function spiral(it)
+  it.iteration = it.iteration + 1
+  if it.iteration >= it.max_iterations then
+    return
   end
-  return positions
+  --- @type ChunkPosition?
+  local to_return
+  if
+    (-it.radius_x <= it.position.x and it.position.x < it.radius_x)
+    and (-it.radius_y <= it.position.y and it.position.y < it.radius_y)
+  then
+    to_return = flib_position.add(it.position, it.origin)
+  end
+  if
+    it.position.x == it.position.y
+    or (it.position.x < 0 and it.position.x == -it.position.y)
+    or (it.position.x > 0 and it.position.x == 1 - it.position.y)
+  then
+    it.delta.x, it.delta.y = -it.delta.y, it.delta.x
+  end
+  it.position = flib_position.add(it.position, it.delta)
+  return to_return
+end
+
+--- @param origin ChunkPosition
+--- @param radii ChunkPosition
+--- @return SpiralChunkIterator
+local function new_spiral(origin, radii)
+  return {
+    delta = { x = 0, y = -1 },
+    origin = origin,
+    position = { x = 0, y = 0 },
+    iteration = 0,
+    max_iterations = math.max(radii.x * 2 + 1, radii.y * 2 + 1) ^ 2,
+    radius_x = radii.x,
+    radius_y = radii.y,
+  }
 end
 
 --- @param e EventData.on_player_used_capsule
@@ -163,11 +184,11 @@ local function on_player_used_capsule(e)
     surface = player.surface,
   })
   local origin = flib_position.to_chunk(e.position)
-  local max_extents = {
-    x = (math.max(math.abs(surface_box.left_top.x), math.abs(surface_box.right_bottom.x)) + math.abs(origin.x)) * 2 + 1,
-    y = (math.max(math.abs(surface_box.left_top.y), math.abs(surface_box.right_bottom.y)) + math.abs(origin.y)) * 2 + 1,
+  local radii = {
+    x = (math.max(math.abs(surface_box.left_top.x), math.abs(surface_box.right_bottom.x)) + math.abs(origin.x)),
+    y = (math.max(math.abs(surface_box.left_top.y), math.abs(surface_box.right_bottom.y)) + math.abs(origin.y)),
   }
-  local extents_box = flib_bounding_box.from_dimensions(origin, max_extents.x, max_extents.y)
+  local extents_box = flib_bounding_box.from_dimensions(origin, radii.x * 2, radii.y * 2)
   rendering.draw_rectangle({
     color = { g = 1, b = 1 },
     width = 3,
@@ -178,28 +199,32 @@ local function on_player_used_capsule(e)
 
   local color = { r = 0, g = 255 }
   local prev_x, prev_y
-  for _, chunk_pos in pairs(spiral(origin, max_extents)) do
-    if player.surface.is_chunk_generated(chunk_pos) then
-      if prev_x and prev_y then
-        rendering.draw_line({
-          color = color,
-          width = 3,
-          from = { prev_x + 0.5, prev_y + 0.5 },
-          to = { chunk_pos.x + 0.5, chunk_pos.y + 0.5 },
+  local it = new_spiral(origin, radii)
+  while it.iteration < it.max_iterations do
+    local chunk_pos = spiral(it)
+    if chunk_pos then
+      if player.surface.is_chunk_generated(chunk_pos) then
+        if prev_x and prev_y then
+          rendering.draw_line({
+            color = color,
+            width = 3,
+            from = { prev_x + 0.5, prev_y + 0.5 },
+            to = { chunk_pos.x + 0.5, chunk_pos.y + 0.5 },
+            surface = player.surface,
+          })
+          color.r = math.min(color.r + 1, 255)
+        end
+        prev_x = chunk_pos.x
+        prev_y = chunk_pos.y
+      else
+        rendering.draw_circle({
+          color = { b = 1 },
+          radius = 0.2,
+          filled = true,
+          target = { chunk_pos.x + 0.5, chunk_pos.y + 0.5 },
           surface = player.surface,
         })
-        color.r = math.min(color.r + 1, 255)
       end
-      prev_x = chunk_pos.x
-      prev_y = chunk_pos.y
-    else
-      rendering.draw_circle({
-        color = { b = 1 },
-        radius = 0.2,
-        filled = true,
-        target = { chunk_pos.x + 0.5, chunk_pos.y + 0.5 },
-        surface = player.surface,
-      })
     end
   end
 end
