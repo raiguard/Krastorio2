@@ -29,8 +29,6 @@ data.raw["burner-generator"]["kr-antimatter-reactor"].squeak_behavior = false
 
 data.raw["container"]["kr-shelter-container"].squeak_behavior = false
 data.raw["container"]["kr-shelter-plus-container"].squeak_behavior = false
-data.raw["container"]["kr-strongbox"].squeak_behavior = false
-data.raw["container"]["kr-warehouse"].squeak_behavior = false
 
 data.raw["electric-energy-interface"]["kr-activated-intergalactic-transceiver"].squeak_behavior = false
 data.raw["electric-energy-interface"]["kr-shelter"].squeak_behavior = false
@@ -49,23 +47,6 @@ data.raw["generator"]["kr-gas-power-station"].squeak_behavior = false
 data.raw["lab"]["biusart-lab"].squeak_behavior = false
 data.raw["lab"]["kr-singularity-lab"].squeak_behavior = false
 
-data.raw["loader-1x1"]["kr-advanced-loader"].squeak_behavior = false
-data.raw["loader-1x1"]["kr-express-loader"].squeak_behavior = false
-data.raw["loader-1x1"]["kr-fast-loader"].squeak_behavior = false
-data.raw["loader-1x1"]["kr-loader"].squeak_behavior = false
-data.raw["loader-1x1"]["kr-superior-loader"].squeak_behavior = false
-
-data.raw["logistic-container"]["kr-active-provider-strongbox"].squeak_behavior = false
-data.raw["logistic-container"]["kr-active-provider-warehouse"].squeak_behavior = false
-data.raw["logistic-container"]["kr-buffer-strongbox"].squeak_behavior = false
-data.raw["logistic-container"]["kr-buffer-warehouse"].squeak_behavior = false
-data.raw["logistic-container"]["kr-passive-provider-strongbox"].squeak_behavior = false
-data.raw["logistic-container"]["kr-passive-provider-warehouse"].squeak_behavior = false
-data.raw["logistic-container"]["kr-requester-strongbox"].squeak_behavior = false
-data.raw["logistic-container"]["kr-requester-warehouse"].squeak_behavior = false
-data.raw["logistic-container"]["kr-storage-strongbox"].squeak_behavior = false
-data.raw["logistic-container"]["kr-storage-warehouse"].squeak_behavior = false
-
 data.raw["mining-drill"]["kr-mineral-water-pumpjack"].squeak_behavior = false
 data.raw["mining-drill"]["kr-quarry-drill"].squeak_behavior = false
 
@@ -83,3 +64,26 @@ data.raw["solar-panel"]["kr-advanced-solar-panel"].squeak_behavior = false
 
 data.raw["storage-tank"]["kr-big-storage-tank"].squeak_behavior = false
 data.raw["storage-tank"]["kr-huge-storage-tank"].squeak_behavior = false
+
+if settings.startup["kr-containers"].value then
+  data.raw["container"]["kr-strongbox"].squeak_behavior = false
+  data.raw["container"]["kr-warehouse"].squeak_behavior = false
+  data.raw["logistic-container"]["kr-active-provider-strongbox"].squeak_behavior = false
+  data.raw["logistic-container"]["kr-active-provider-warehouse"].squeak_behavior = false
+  data.raw["logistic-container"]["kr-buffer-strongbox"].squeak_behavior = false
+  data.raw["logistic-container"]["kr-buffer-warehouse"].squeak_behavior = false
+  data.raw["logistic-container"]["kr-passive-provider-strongbox"].squeak_behavior = false
+  data.raw["logistic-container"]["kr-passive-provider-warehouse"].squeak_behavior = false
+  data.raw["logistic-container"]["kr-requester-strongbox"].squeak_behavior = false
+  data.raw["logistic-container"]["kr-requester-warehouse"].squeak_behavior = false
+  data.raw["logistic-container"]["kr-storage-strongbox"].squeak_behavior = false
+  data.raw["logistic-container"]["kr-storage-warehouse"].squeak_behavior = false
+end
+
+if settings.startup["kr-loaders"].value then
+  data.raw["loader-1x1"]["kr-advanced-loader"].squeak_behavior = false
+  data.raw["loader-1x1"]["kr-express-loader"].squeak_behavior = false
+  data.raw["loader-1x1"]["kr-fast-loader"].squeak_behavior = false
+  data.raw["loader-1x1"]["kr-loader"].squeak_behavior = false
+  data.raw["loader-1x1"]["kr-superior-loader"].squeak_behavior = false
+end
