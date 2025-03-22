@@ -3,7 +3,7 @@ local sounds = require("__base__.prototypes.entity.sounds")
 data:extend({
   {
     type = "recipe",
-    name = "biusart-lab",
+    name = "kr-advanced-lab",
     energy_required = 10,
     enabled = false,
     ingredients = {
@@ -12,23 +12,23 @@ data:extend({
       { type = "item", name = "lab", amount = 1 },
       { type = "item", name = "copper-cable", amount = 10 },
     },
-    results = { { type = "item", name = "biusart-lab", amount = 1 } },
+    results = { { type = "item", name = "kr-advanced-lab", amount = 1 } },
   },
   {
     type = "item",
-    name = "biusart-lab",
-    icon = "__Krastorio2Assets__/icons/entities/biusart-lab.png",
+    name = "kr-advanced-lab",
+    icon = "__Krastorio2Assets__/icons/entities/advanced-lab.png",
     subgroup = "production-machine",
     order = "g[lab]-g2[advanced-lab]",
-    place_result = "biusart-lab",
+    place_result = "kr-advanced-lab",
     stack_size = 50,
   },
   {
     type = "lab",
-    name = "biusart-lab",
-    icon = "__Krastorio2Assets__/icons/entities/biusart-lab.png",
+    name = "kr-advanced-lab",
+    icon = "__Krastorio2Assets__/icons/entities/advanced-lab.png",
     flags = { "placeable-player", "player-creation" },
-    minable = { mining_time = 0.2, result = "biusart-lab" },
+    minable = { mining_time = 0.2, result = "kr-advanced-lab" },
     fast_replaceable_group = "lab",
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
@@ -59,12 +59,12 @@ data:extend({
     close_sound = sounds.machine_close,
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound = {
-      sound = { filename = "__Krastorio2Assets__/sounds/buildings/biusart-lab.ogg", volume = 0.7 },
+      sound = { filename = "__Krastorio2Assets__/sounds/buildings/advanced-lab.ogg", volume = 0.7 },
     },
     on_animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab-anim-light.png",
+          filename = "__Krastorio2Assets__/buildings/advanced-lab/advanced-lab-anim-light.png",
           width = 150,
           height = 150,
           frame_count = 29,
@@ -75,7 +75,7 @@ data:extend({
           scale = 0.64,
         },
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab-anim.png",
+          filename = "__Krastorio2Assets__/buildings/advanced-lab/advanced-lab-anim.png",
           width = 150,
           height = 150,
           frame_count = 29,
@@ -85,7 +85,7 @@ data:extend({
           scale = 0.64,
         },
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab-anim.png",
+          filename = "__Krastorio2Assets__/buildings/advanced-lab/advanced-lab-anim.png",
           width = 150,
           height = 150,
           frame_count = 29,
@@ -95,7 +95,7 @@ data:extend({
           scale = 0.64,
         },
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab-anim.png",
+          filename = "__Krastorio2Assets__/buildings/advanced-lab/advanced-lab-anim.png",
           width = 150,
           height = 150,
           frame_count = 29,
@@ -105,7 +105,7 @@ data:extend({
           scale = 0.64,
         },
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab-light-anim.png",
+          filename = "__Krastorio2Assets__/buildings/advanced-lab/advanced-lab-light-anim.png",
           width = 150,
           height = 150,
           frame_count = 29,
@@ -116,7 +116,7 @@ data:extend({
           blend_mode = "additive-soft",
         },
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab-light-anim.png",
+          filename = "__Krastorio2Assets__/buildings/advanced-lab/advanced-lab-light-anim.png",
           width = 150,
           height = 150,
           frame_count = 29,
@@ -128,7 +128,7 @@ data:extend({
           blend_mode = "additive-soft",
         },
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab-shadow.png",
+          filename = "__Krastorio2Assets__/buildings/advanced-lab/advanced-lab-shadow.png",
           width = 240,
           height = 240,
           frame_count = 1,
@@ -140,7 +140,7 @@ data:extend({
           draw_as_shadow = true,
         },
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab-ao.png",
+          filename = "__Krastorio2Assets__/buildings/advanced-lab/advanced-lab-ao.png",
           width = 220,
           height = 220,
           frame_count = 1,
@@ -154,7 +154,7 @@ data:extend({
     off_animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab.png",
+          filename = "__Krastorio2Assets__/buildings/advanced-lab/advanced-lab.png",
           width = 150,
           height = 150,
           frame_count = 1,
@@ -162,7 +162,7 @@ data:extend({
           scale = 0.64,
         },
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab-shadow.png",
+          filename = "__Krastorio2Assets__/buildings/advanced-lab/advanced-lab-shadow.png",
           width = 240,
           height = 240,
           frame_count = 1,
@@ -172,7 +172,7 @@ data:extend({
           draw_as_shadow = true,
         },
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab-ao.png",
+          filename = "__Krastorio2Assets__/buildings/advanced-lab/advanced-lab-ao.png",
           width = 220,
           height = 220,
           frame_count = 1,

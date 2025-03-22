@@ -44,7 +44,7 @@ data.raw["furnace"]["kr-stabilizer-charging-station"].squeak_behavior = false
 data.raw["generator"]["kr-advanced-steam-turbine"].squeak_behavior = false
 data.raw["generator"]["kr-gas-power-station"].squeak_behavior = false
 
-data.raw["lab"]["biusart-lab"].squeak_behavior = false
+data.raw["lab"]["kr-advanced-lab"].squeak_behavior = false
 data.raw["lab"]["kr-singularity-lab"].squeak_behavior = false
 
 data.raw["mining-drill"]["kr-mineral-water-pumpjack"].squeak_behavior = false

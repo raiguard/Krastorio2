@@ -27,7 +27,7 @@ data:extend({
   {
     type = "technology",
     name = "kr-advanced-lab",
-    icon = "__Krastorio2Assets__/technologies/biusart-lab.png",
+    icon = "__Krastorio2Assets__/technologies/advanced-lab.png",
     icon_size = 256,
     unit = {
       time = 30,
@@ -41,7 +41,7 @@ data:extend({
     },
     prerequisites = { "advanced-circuit" },
     effects = {
-      { type = "unlock-recipe", recipe = "biusart-lab" },
+      { type = "unlock-recipe", recipe = "kr-advanced-lab" },
     },
   },
   {

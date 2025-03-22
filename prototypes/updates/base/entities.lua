@@ -289,7 +289,7 @@ data.raw["inserter"]["long-handed-inserter"].next_upgrade = "kr-superior-long-in
 
 data.raw.lab["lab"].energy_usage = "200kW"
 data.raw.lab["lab"].fast_replaceable_group = "lab"
-data.raw.lab["lab"].next_upgrade = "biusart-lab"
+data.raw.lab["lab"].next_upgrade = "kr-advanced-lab"
 table.insert(data.raw.lab["lab"].inputs, 1, "basic-tech-card")
 data_util.remove_lab_input("lab", "production-science-pack")
 data_util.remove_lab_input("lab", "utility-science-pack")

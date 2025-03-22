@@ -8,7 +8,7 @@ if mods["angelsbioprocessing"] then
       end
     end
   end
-  removeFromLab("token-bio", data.raw.lab["biusart-lab"].inputs)
+  removeFromLab("token-bio", data.raw.lab["kr-advanced-lab"].inputs)
   removeFromLab("token-bio", data.raw.lab["kr-singularity-lab"].inputs)
 
   krastorio.technologies.addResearchUnitIngredient("bio-farm-alien", "token-bio", 1, true)

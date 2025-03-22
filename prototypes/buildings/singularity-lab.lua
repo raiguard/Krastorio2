@@ -9,7 +9,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "item", name = "ai-core", amount = 20 },
-      { type = "item", name = "biusart-lab", amount = 5 },
+      { type = "item", name = "kr-advanced-lab", amount = 5 },
       { type = "item", name = "steel-plate", amount = 40 },
       { type = "item", name = "electric-engine-unit", amount = 30 },
       { type = "item", name = "rare-metals", amount = 60 },

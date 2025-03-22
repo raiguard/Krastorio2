@@ -7,6 +7,7 @@
   "entity": [
     ["advanced-radar", "kr-advanced-radar"],
     ["advanced-radar-remnants", "advanced-radar-remnant"],
+    ["biusart-lab", "kr-advanced-lab"],
     ["kr-active-provider-storehouse", "kr-active-provider-strongbox"],
     ["kr-big-active-provider-container", "kr-active-provider-warehouse"],
     ["kr-big-buffer-container", "kr-buffer-warehouse"],
@@ -56,6 +57,7 @@
     ["advanced-radar", "kr-advanced-radar"],
     ["big-additional-engine", "big-additional-engine-equipment"],
     ["big-imersite-solar-panel-equipment", "big-superior-solar-panel-equipment"],
+    ["biusart-lab", "kr-advanced-lab"],
     ["energy-absorber", "energy-absorber-equipment"],
     ["imersite-night-vision-equipment", "superior-night-vision-equipment"],
     ["imersite-solar-panel-equipment", "superior-solar-panel-equipment"],
@@ -92,6 +94,7 @@
     ["advanced-additional-engine", "advanced-additional-engine-equipment"],
     ["big-additional-engine", "big-additional-engine-equipment"],
     ["big-imersite-solar-panel-equipment", "big-superior-solar-panel-equipment"],
+    ["biusart-lab", "kr-advanced-lab"],
     ["charge-stabilizer", "charged-matter-stabilizer"],
     ["energy-absorber", "energy-absorber-equipment"],
     ["imersite-night-vision-equipment", "superior-night-vision-equipment"],
