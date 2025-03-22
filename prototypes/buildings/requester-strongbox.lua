@@ -27,7 +27,7 @@ data:extend({
     stack_size = 50,
   },
   {
-    type = "container",
+    type = "logistic-container",
     name = "kr-requester-strongbox",
     icon = "__Krastorio2Assets__/icons/entities/requester-strongbox.png",
     flags = { "placeable-player", "player-creation", "not-rotatable" },

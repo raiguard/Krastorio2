@@ -27,7 +27,7 @@ data:extend({
     stack_size = 50,
   },
   {
-    type = "container",
+    type = "logistic-container",
     name = "kr-passive-provider-strongbox",
     icon = "__Krastorio2Assets__/icons/entities/passive-provider-strongbox.png",
     flags = { "placeable-player", "player-creation", "not-rotatable" },

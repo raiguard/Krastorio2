@@ -27,7 +27,7 @@ data:extend({
     stack_size = 50,
   },
   {
-    type = "container",
+    type = "logistic-container",
     name = "kr-storage-strongbox",
     icon = "__Krastorio2Assets__/icons/entities/storage-strongbox.png",
     flags = { "placeable-player", "player-creation", "not-rotatable" },
@@ -37,6 +37,7 @@ data:extend({
     selection_box = { { -1, -1 }, { 1, 1 } },
     inventory_size = 120,
     logistic_mode = "storage",
+    max_logistic_slots = 1,
     max_health = 500,
     corpse = "big-remnants",
     damaged_trigger_effect = hit_effects.entity(),
