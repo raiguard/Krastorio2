@@ -1,114 +1,18 @@
-local flib_bounding_box = require("__flib__.bounding-box")
-local flib_math = require("__flib__.math")
 local flib_position = require("__flib__.position")
 
--- local biter_virus_evolution_multiplier = 0.67
-
--- local virus_iteration_counts = {
---   [1000] = 20,
---   [5000] = 40,
---   [10000] = 80,
---   [20000] = 160,
---   [30000] = 280,
---   [40000] = 300,
---   [50000] = 400,
---   [flib_math.max_int53] = 800,
--- }
-
--- --- Modifier to change the quantity of objects iterated for each round of the function, based on the total
--- --- @param count number
--- local function get_removal_count(count)
---   for limit, per in pairs(virus_iteration_counts) do
---     if count <= limit then
---       return per
---     end
---   end
--- end
-
--- --- @param virus_data BiterVirusData
--- local function iterate_biter_virus(virus_data)
---   local surface = virus_data.surface
---   if not surface or not surface.valid then
---     storage.virus.biter[surface.index] = nil
---     return
---   end
-
---   local entities = virus_data.entities
---   local entities_killed = virus_data.entities_killed
---   local entities_to_kill = virus_data.entities_to_kill
---   local force = virus_data.force
---   local len = virus_data.entities_len
-
---   -- Kill some entities
---   for _ = 1, virus_data.amount_per_iteration do
---     if entities_killed >= entities_to_kill then
---       storage.virus.biter[surface.index] = nil
---       break
---     end
-
---     local i = math.random(1, len)
---     local entity = entities[i]
---     if entity and entity.valid then
---       entity.die(force)
-
---       -- Move the element at the end to the gap
---       -- This removes the element at `i` while achieving O(1) performance
---       entities[i] = entities[len]
---       entities[len] = nil
-
---       entities_killed = entities_killed + 1
---       len = len - 1
---     end
---   end
-
---   virus_data.entities_killed = entities_killed
---   virus_data.tiles_len = len
--- end
-
--- --- @param player LuaPlayer
--- --- @param surface LuaSurface
--- local function init_biter_virus(player, surface)
---   local biter_viruses = storage.virus.biter
---   if not biter_viruses[surface.index] then
---     -- Reduce evolution factor
---     local enemy = game.forces.enemy
---     enemy.set_evolution_factor(enemy.get_evolution_factor(surface) * biter_virus_evolution_multiplier, surface)
-
---     -- Begin gradual enemy killoff
---     local enemy_entities = surface.find_entities_filtered({ force = "enemy" })
---     local len = #enemy_entities
---     if len > 0 then
---       biter_viruses[surface.index] = {
---         amount_per_iteration = math.ceil(len / get_removal_count(len)),
---         entities = enemy_entities,
---         entities_killed = 0,
---         entities_len = len,
---         entities_to_kill = len / 2.5,
---         force = player.force,
---         surface = surface,
---       }
---     end
---   end
--- end
-
 --- @class BiterVirusData
---- @field active BiterVirusKillData[]
---- @field to_iterate ChunkPositionAndDistance[]
+--- @field active BiterVirusActiveData[]
+--- @field active_len integer
+--- @field to_iterate ChunkPositionAndAreaAndDistance[]
+--- @field to_iterate_len integer
 --- @field surface LuaSurface
 
---- @class BiterVirusKillData
---- @field box BoundingBox
+--- @class BiterVirusActiveData
 --- @field entities LuaEntity[]
 --- @field to_kill integer
 
---- @class ChunkPositionAndDistance
+--- @class ChunkPositionAndAreaAndDistance : ChunkPositionAndArea
 --- @field distance number
---- @field position ChunkPosition
-
--- Plan:
--- Iterate chunks starting from the origin and progressively getting further away.
--- Destroy a certain % of the enemy units and buildings on each chunk, which gives diminishing returns as the number grows smaller.
--- If new chunks are created during iteration... oh well. By design, you need to use a bunch of viruses to totally remove the biters.
 
 --- @param e EventData.on_player_used_capsule
 local function on_player_used_capsule(e)
@@ -122,28 +26,32 @@ local function on_player_used_capsule(e)
     return
   end
 
-  rendering.clear("Krastorio2")
+  local surface = player.surface
+  if storage.biter_viruses[surface.index] then
+    return
+  end
 
   local profiler = helpers.create_profiler()
   local origin = flib_position.to_chunk(e.position)
-  --- @type ChunkPositionAndDistance[]
+  --- @type ChunkPositionAndAreaAndDistance[]
   local chunks = {}
-  for chunk in player.surface.get_chunks() do
-    --- @type ChunkPosition
-    local chunk_position = { x = chunk.x, y = chunk.y }
-    chunks[#chunks + 1] = { distance = flib_position.distance(chunk_position, origin), position = chunk_position }
+  for chunk in surface.get_chunks() do
+    --- @cast chunk ChunkPositionAndAreaAndDistance
+    chunk.distance = flib_position.distance(chunk --[[@as ChunkPosition]], origin)
+    chunks[#chunks + 1] = chunk
   end
   table.sort(chunks, function(pos_a, pos_b)
     -- Sort backwards so that we can remove items from the end.
     return pos_a.distance > pos_b.distance
   end)
   profiler.stop()
-  game.print(profiler)
+  log({ "", "Biter virus init ", profiler })
 
+  rendering.clear("Krastorio2")
   local step = 1 / #chunks
   local color = { r = 0, g = 1, b = 1 }
   for i = #chunks, 1, -1 do
-    local pos = chunks[i].position
+    local pos = chunks[i]
     rendering.draw_rectangle({
       color = color,
       filled = true,
@@ -153,25 +61,78 @@ local function on_player_used_capsule(e)
     })
     color.g = color.g - step
     color.r = color.r + step
-    chunks[i] = nil
   end
+
+  storage.biter_viruses[surface.index] = {
+    active = {},
+    active_len = 0,
+    to_iterate = chunks,
+    to_iterate_len = #chunks,
+    surface = surface,
+  }
 end
 
 local function on_tick()
-  -- if not storage.biter_viruses then
-  --   return
-  -- end
-  -- --- @type uint[]
-  -- local to_remove = {}
-  -- for surface_index, virus_data in pairs(storage.biter_viruses) do
-  --   if not virus_data.surface.valid then
-  --     to_remove[#to_remove + 1] = surface_index
-  --     goto continue
-  --   end
-  --   for _, active_data in pairs(virus_data.active) do
-  --   end
-  --   ::continue::
-  -- end
+  if not storage.biter_viruses then
+    return
+  end
+  --- @type uint[]
+  local to_remove = {}
+  for surface_index, virus in pairs(storage.biter_viruses) do
+    if not virus.surface.valid or (virus.active_len == 0 and virus.to_iterate_len == 0) then
+      to_remove[#to_remove + 1] = surface_index
+      goto continue
+    end
+
+    if virus.to_iterate_len > 0 then
+      for _ = 1, 5 - virus.active_len do
+        if virus.to_iterate_len > 0 then
+          local chunk = table.remove(virus.to_iterate, virus.to_iterate_len)
+          virus.to_iterate_len = virus.to_iterate_len - 1
+
+          local entities = virus.surface.find_entities_filtered({
+            area = chunk.area,
+            force = "enemy",
+            type = { "unit", "unit-spawner" },
+          })
+          local entities_len = #entities
+          if entities_len > 0 then
+            virus.active_len = virus.active_len + 1
+            virus.active[virus.active_len] = {
+              entities = entities,
+              to_kill = math.ceil(entities_len / 5),
+            }
+          end
+        end
+      end
+    end
+
+    local active_to_remove = {}
+    for i = 1, virus.active_len do
+      local active = virus.active[i]
+      if active then
+        for _ = 1, math.min(active.to_kill, 1) do
+          local entity = table.remove(active.entities, #active.entities)
+          if entity and entity.valid then
+            entity.die()
+            active.to_kill = active.to_kill - 1
+          end
+        end
+        if active.to_kill == 0 then
+          active_to_remove[#active_to_remove + 1] = i
+        end
+      end
+    end
+    for i = #active_to_remove, 1, -1 do
+      table.remove(virus.active, active_to_remove[i])
+      virus.active_len = virus.active_len - 1
+    end
+    ::continue::
+  end
+
+  for i = 1, #to_remove do
+    storage.biter_viruses[to_remove[i]] = nil
+  end
 end
 
 local virus = {}
