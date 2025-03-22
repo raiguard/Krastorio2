@@ -47,21 +47,21 @@ local function on_player_used_capsule(e)
   profiler.stop()
   log({ "", "Biter virus init ", profiler })
 
-  rendering.clear("Krastorio2")
-  local step = 1 / #chunks
-  local color = { r = 0, g = 1, b = 1 }
-  for i = #chunks, 1, -1 do
-    local pos = chunks[i]
-    rendering.draw_rectangle({
-      color = color,
-      filled = true,
-      left_top = { pos.x, pos.y },
-      right_bottom = { pos.x + 1, pos.y + 1 },
-      surface = player.surface_index,
-    })
-    color.g = color.g - step
-    color.r = color.r + step
-  end
+  -- rendering.clear("Krastorio2")
+  -- local step = 1 / #chunks
+  -- local color = { r = 0, g = 1, b = 1 }
+  -- for i = #chunks, 1, -1 do
+  --   local pos = chunks[i]
+  --   rendering.draw_rectangle({
+  --     color = color,
+  --     filled = true,
+  --     left_top = { pos.x, pos.y },
+  --     right_bottom = { pos.x + 1, pos.y + 1 },
+  --     surface = player.surface_index,
+  --   })
+  --   color.g = color.g - step
+  --   color.r = color.r + step
+  -- end
 
   storage.biter_viruses[surface.index] = {
     active = {},
