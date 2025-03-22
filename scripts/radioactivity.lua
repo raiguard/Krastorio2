@@ -1,7 +1,5 @@
 local flib_position = require("__flib__.position")
 
-local util = require("scripts.util")
-
 --- @class RadioactivityPlayerData
 --- @field entity boolean
 --- @field inventory boolean
@@ -176,11 +174,20 @@ local function on_player_removed(e)
   remove_player(e.player_index)
 end
 
+--- @param e EventData.on_runtime_mod_setting_changed
+local function on_runtime_mod_setting_changed(e)
+  if e.setting ~= "kr-enable-radioactivity" or not storage.radioactivity then
+    return
+  end
+
+  storage.radioactivity.enabled = settings.global["kr-enable-radioactivity"].value --[[@as boolean]]
+end
+
 local radioactivity = {}
 
 function radioactivity.on_init()
   storage.radioactivity = {
-    enabled = true,
+    enabled = settings.global["kr-enable-radioactivity"].value --[[@as boolean]],
     --- @type table<uint, RadioactivityPlayerData>
     players = {},
   }
@@ -232,27 +239,6 @@ remote.add_interface("kr-radioactivity", {
 
     table.insert(storage.radioactivity.items, name)
   end,
-  set_enabled = function(to_state)
-    if not storage.radioactivity then
-      return
-    end
-    if to_state == nil or type(to_state) ~= "boolean" then
-      error("`to_state` must be a boolean.")
-    end
-
-    storage.radioactivity.enabled = to_state
-  end,
-})
-
-util.add_commands({
-  ["kr-disable-radioactivity"] = function()
-    storage.radioactivity.enabled = false
-    game.print({ "message.kr-radioactivity-disabled" })
-  end,
-  ["kr-enable-radioactivity"] = function()
-    storage.radioactivity.enabled = true
-    game.print({ "message.kr-radioactivity-enabled" })
-  end,
 })
 
 radioactivity.events = {
@@ -266,6 +252,7 @@ radioactivity.events = {
   [defines.events.on_player_respawned] = on_player_moved,
   [defines.events.on_player_toggled_map_editor] = on_player_moved,
   [defines.events.on_player_trash_inventory_changed] = on_player_inventory_changed,
+  [defines.events.on_runtime_mod_setting_changed] = on_runtime_mod_setting_changed,
   [defines.events.on_tick] = update_sounds,
 }
 

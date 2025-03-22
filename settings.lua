@@ -1,5 +1,4 @@
 data:extend({
-  -- NEW
   {
     type = "bool-setting",
     name = "kr-realistic-weapons",
@@ -70,5 +69,11 @@ data:extend({
     setting_type = "startup",
     default_value = true,
     order = "b3",
+  },
+  {
+    type = "bool-setting",
+    name = "kr-enable-radioactivity",
+    setting_type = "runtime-global",
+    default_value = true,
   },
 })
