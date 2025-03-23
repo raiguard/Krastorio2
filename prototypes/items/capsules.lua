@@ -32,7 +32,7 @@ data:extend({
         type = "projectile",
         activation_type = "throw",
         ammo_category = "capsule",
-        cooldown = 60,
+        cooldown = 5 * minute,
         projectile_creation_distance = 0.6,
         range = 25,
         ammo_type = {

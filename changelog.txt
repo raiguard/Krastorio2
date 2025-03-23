@@ -12,6 +12,7 @@ Date: ????
   Balancing:
     - Loaders require electricity.
     - Biter virus no longer decreases evolution factor and only kills 1/3rd of the biter population (has dimishing returns).
+    - Biter virus has a five-minute cooldown.
   Bugfixes:
     - Fixed that it was possible to die during the victory cutscene, causing you to be stranded as a ghost forever.
     - Fixed that throwing the biter virus could lead to out-of-memory scenarios. (#379)
