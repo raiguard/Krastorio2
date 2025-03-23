@@ -68,26 +68,24 @@ local function on_tick()
       goto continue
     end
 
-    if virus.to_iterate_len > 0 then
-      for _ = 1, 5 - virus.active_len do
-        if virus.to_iterate_len > 0 then
-          local chunk = table.remove(virus.to_iterate, virus.to_iterate_len)
-          virus.to_iterate_len = virus.to_iterate_len - 1
+    for _ = 1, 5 - virus.active_len do
+      if virus.to_iterate_len > 0 then
+        local chunk = table.remove(virus.to_iterate, virus.to_iterate_len)
+        virus.to_iterate_len = virus.to_iterate_len - 1
 
-          local entities = virus.surface.find_entities_filtered({
-            area = chunk.area,
-            force = "enemy",
-            type = { "unit", "unit-spawner" },
-          })
-          local entities_len = #entities
-          if entities_len > 0 then
-            virus.active_len = virus.active_len + 1
-            virus.active[virus.active_len] = {
-              entities = entities,
-              entities_len = entities_len,
-              to_kill = math.ceil(entities_len / 3),
-            }
-          end
+        local entities = virus.surface.find_entities_filtered({
+          area = chunk.area,
+          force = "enemy",
+          type = { "unit", "unit-spawner" },
+        })
+        local entities_len = #entities
+        if entities_len > 0 then
+          virus.active_len = virus.active_len + 1
+          virus.active[virus.active_len] = {
+            entities = entities,
+            entities_len = entities_len,
+            to_kill = math.ceil(entities_len / 3),
+          }
         end
       end
     end
