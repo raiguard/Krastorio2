@@ -9,6 +9,7 @@ local flib_position = require("__flib__.position")
 
 --- @class BiterVirusActiveData
 --- @field entities LuaEntity[]
+--- @field entities_len integer
 --- @field to_kill integer
 
 --- @class ChunkPositionAndAreaAndDistance : ChunkPositionAndArea
@@ -36,9 +37,11 @@ local function on_player_used_capsule(e)
   --- @type ChunkPositionAndAreaAndDistance[]
   local chunks = {}
   for chunk in surface.get_chunks() do
-    --- @cast chunk ChunkPositionAndAreaAndDistance
-    chunk.distance = flib_position.distance(chunk --[[@as ChunkPosition]], origin)
-    chunks[#chunks + 1] = chunk
+    if surface.is_chunk_generated(chunk) then
+      --- @cast chunk ChunkPositionAndAreaAndDistance
+      chunk.distance = flib_position.distance(chunk --[[@as ChunkPosition]], origin)
+      chunks[#chunks + 1] = chunk
+    end
   end
   table.sort(chunks, function(pos_a, pos_b)
     -- Sort backwards so that we can remove items from the end.
@@ -49,17 +52,18 @@ local function on_player_used_capsule(e)
 
   -- rendering.clear("Krastorio2")
   -- local step = 1 / #chunks
-  -- local color = { r = 0, g = 1, b = 1 }
+  -- local color = { r = 0, b = 1 }
+  -- local player_pos = flib_position.floor(player.position)
   -- for i = #chunks, 1, -1 do
   --   local pos = chunks[i]
-  --   rendering.draw_rectangle({
+  --   pos.obj = rendering.draw_rectangle({
   --     color = color,
   --     filled = true,
-  --     left_top = { pos.x, pos.y },
-  --     right_bottom = { pos.x + 1, pos.y + 1 },
+  --     left_top = flib_position.add({ pos.x, pos.y }, player_pos),
+  --     right_bottom = flib_position.add({ pos.x + 1, pos.y + 1 }, player_pos),
   --     surface = player.surface_index,
   --   })
-  --   color.g = color.g - step
+  --   color.b = color.b - step
   --   color.r = color.r + step
   -- end
 
@@ -100,8 +104,13 @@ local function on_tick()
             virus.active_len = virus.active_len + 1
             virus.active[virus.active_len] = {
               entities = entities,
-              to_kill = math.ceil(entities_len / 5),
+              entities_len = entities_len,
+              to_kill = math.ceil(entities_len / 3),
+              obj = chunk.obj,
             }
+            --   chunk.obj.color = { r = 1 }
+            -- else
+            --   chunk.obj.color = { g = 1 }
           end
         end
       end
@@ -111,15 +120,15 @@ local function on_tick()
     for i = 1, virus.active_len do
       local active = virus.active[i]
       if active then
-        for _ = 1, math.min(active.to_kill, 1) do
-          local entity = table.remove(active.entities, #active.entities)
-          if entity and entity.valid then
-            entity.die()
-            active.to_kill = active.to_kill - 1
-          end
+        local entity = table.remove(active.entities, active.entities_len)
+        active.entities_len = active.entities_len - 1
+        if entity and entity.valid then
+          entity.die()
+          active.to_kill = active.to_kill - 1
         end
         if active.to_kill == 0 then
           active_to_remove[#active_to_remove + 1] = i
+          -- active.obj.color = { g = 1 }
         end
       end
     end
@@ -127,6 +136,7 @@ local function on_tick()
       table.remove(virus.active, active_to_remove[i])
       virus.active_len = virus.active_len - 1
     end
+
     ::continue::
   end
 
