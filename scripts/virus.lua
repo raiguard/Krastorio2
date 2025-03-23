@@ -106,7 +106,7 @@ local function on_tick()
               entities = entities,
               entities_len = entities_len,
               to_kill = math.ceil(entities_len / 3),
-              obj = chunk.obj,
+              -- obj = chunk.obj,
             }
             --   chunk.obj.color = { r = 1 }
             -- else
