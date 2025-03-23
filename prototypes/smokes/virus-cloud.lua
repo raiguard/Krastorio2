@@ -69,27 +69,5 @@ data:extend({
         volume = 0.7,
       },
     },
-    action = {
-      type = "direct",
-      action_delivery = {
-        type = "instant",
-        target_effects = {
-          type = "nested-result",
-          action = {
-            type = "area",
-            radius = 60,
-            entity_flags = { "breaths-air" },
-            action_delivery = {
-              type = "instant",
-              target_effects = {
-                type = "damage",
-                damage = { amount = 30, type = "poison" },
-              },
-            },
-          },
-        },
-      },
-    },
-    action_cooldown = 30,
   },
 })

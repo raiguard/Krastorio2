@@ -155,29 +155,9 @@ data:extend({
         { "advanced-tech-card", 1 },
       },
     },
-    prerequisites = { "kr-creep-virus" },
-    effects = {
-      { type = "unlock-recipe", recipe = "kr-biter-virus" },
-    },
-  },
-  {
-    type = "technology",
-    name = "kr-creep-virus",
-    icon = "__Krastorio2Assets__/technologies/creep-virus.png",
-    icon_size = 256,
-    unit = {
-      time = 45,
-      count = 2000,
-      ingredients = {
-        { "production-science-pack", 1 },
-        { "utility-science-pack", 1 },
-        { "matter-tech-card", 1 },
-        { "advanced-tech-card", 1 },
-      },
-    },
     prerequisites = { "kr-advanced-tech-card", "kr-military-5" },
     effects = {
-      { type = "unlock-recipe", recipe = "kr-creep-virus" },
+      { type = "unlock-recipe", recipe = "kr-biter-virus" },
     },
   },
   {
@@ -203,7 +183,9 @@ data:extend({
     type = "technology",
     name = "kr-energy-shield-mk4-equipment",
     icon_size = 256,
-    icons = util.technology_icon_constant_equipment("__Krastorio2Assets__/technologies/energy-shield-mk4-equipment.png"),
+    icons = util.technology_icon_constant_equipment(
+      "__Krastorio2Assets__/technologies/energy-shield-mk4-equipment.png"
+    ),
     upgrade = false,
     unit = {
       time = 90,
@@ -265,7 +247,9 @@ data:extend({
   {
     type = "technology",
     name = "kr-personal-laser-defense-mk3-equipment",
-    icons = util.technology_icon_constant_equipment("__Krastorio2Assets__/technologies/personal-laser-defense-mk3-equipments.png"),
+    icons = util.technology_icon_constant_equipment(
+      "__Krastorio2Assets__/technologies/personal-laser-defense-mk3-equipments.png"
+    ),
     icon_size = 256,
     order = "g-m",
     unit = {
@@ -358,7 +342,9 @@ data:extend({
   {
     type = "technology",
     name = "kr-superior-exoskeleton-equipment",
-    icons = util.technology_icon_constant_equipment("__Krastorio2Assets__/technologies/superior-exoskeleton-equipment.png"),
+    icons = util.technology_icon_constant_equipment(
+      "__Krastorio2Assets__/technologies/superior-exoskeleton-equipment.png"
+    ),
     icon_size = 256,
     upgrade = false,
     unit = {
