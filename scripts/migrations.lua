@@ -1,5 +1,5 @@
 local flib_migration = require("__flib__.migration")
-local virus = require("scripts.virus")
+local biter_virus = require("scripts.biter-virus")
 
 local function ensure_turret_force()
   if not game.forces["kr-internal-turrets"] then
@@ -83,7 +83,7 @@ migrations.versions = {
   end,
   ["2.0.0"] = function()
     storage.virus = nil
-    virus.on_init()
+    biter_virus.on_init()
   end,
 }
 

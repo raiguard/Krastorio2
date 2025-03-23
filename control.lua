@@ -5,6 +5,7 @@ handler.add_libraries({
 
   require("scripts.migrations"),
 
+  require("scripts.biter-virus"),
   require("scripts.energy-absorber"),
   require("scripts.freeplay"),
   require("scripts.intergalactic-transceiver"),
@@ -17,5 +18,4 @@ handler.add_libraries({
   require("scripts.roboport"),
   require("scripts.shelter"),
   require("scripts.tesla-coil"),
-  require("scripts.virus"),
 })
