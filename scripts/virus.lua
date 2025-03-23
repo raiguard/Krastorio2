@@ -13,7 +13,7 @@ local flib_position = require("__flib__.position")
 --- @field to_kill integer
 
 --- @class ChunkPositionAndAreaAndDistance : ChunkPositionAndArea
---- @field distance number
+--- @field distance_squared number
 
 --- @param e EventData.on_player_used_capsule
 local function on_player_used_capsule(e)
@@ -39,13 +39,13 @@ local function on_player_used_capsule(e)
   for chunk in surface.get_chunks() do
     if surface.is_chunk_generated(chunk) then
       --- @cast chunk ChunkPositionAndAreaAndDistance
-      chunk.distance = flib_position.distance(chunk --[[@as ChunkPosition]], origin)
+      chunk.distance_squared = flib_position.distance_squared(chunk --[[@as ChunkPosition]], origin)
       chunks[#chunks + 1] = chunk
     end
   end
   table.sort(chunks, function(pos_a, pos_b)
     -- Sort backwards so that we can remove items from the end.
-    return pos_a.distance > pos_b.distance
+    return pos_a.distance_squared > pos_b.distance_squared
   end)
   profiler.stop()
   log({ "", "Biter virus init ", profiler })
