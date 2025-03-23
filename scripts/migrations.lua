@@ -26,6 +26,9 @@ migrations.events = {
 }
 
 migrations.versions = {
+  ["1.2.26"] = function()
+    error("Loading Krastorio 2 saves from versions prior to 1.3.0 is no longer supported.")
+  end,
   ["1.3.0"] = function()
     if game.finished or game.finished_but_continuing then
       for _, force in pairs(game.forces) do
