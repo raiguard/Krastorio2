@@ -32,7 +32,6 @@ local function on_player_used_capsule(e)
     return
   end
 
-  local profiler = helpers.create_profiler()
   local origin = flib_position.to_chunk(e.position)
   --- @type ChunkPositionAndAreaAndDistance[]
   local chunks = {}
@@ -47,25 +46,6 @@ local function on_player_used_capsule(e)
     -- Sort backwards so that we can remove items from the end.
     return pos_a.distance_squared > pos_b.distance_squared
   end)
-  profiler.stop()
-  log({ "", "Biter virus init ", profiler })
-
-  -- rendering.clear("Krastorio2")
-  -- local step = 1 / #chunks
-  -- local color = { r = 0, b = 1 }
-  -- local player_pos = flib_position.floor(player.position)
-  -- for i = #chunks, 1, -1 do
-  --   local pos = chunks[i]
-  --   pos.obj = rendering.draw_rectangle({
-  --     color = color,
-  --     filled = true,
-  --     left_top = flib_position.add({ pos.x, pos.y }, player_pos),
-  --     right_bottom = flib_position.add({ pos.x + 1, pos.y + 1 }, player_pos),
-  --     surface = player.surface_index,
-  --   })
-  --   color.b = color.b - step
-  --   color.r = color.r + step
-  -- end
 
   storage.biter_viruses[surface.index] = {
     active = {},
@@ -106,11 +86,7 @@ local function on_tick()
               entities = entities,
               entities_len = entities_len,
               to_kill = math.ceil(entities_len / 3),
-              -- obj = chunk.obj,
             }
-            --   chunk.obj.color = { r = 1 }
-            -- else
-            --   chunk.obj.color = { g = 1 }
           end
         end
       end
@@ -128,7 +104,6 @@ local function on_tick()
         end
         if active.to_kill == 0 then
           active_to_remove[#active_to_remove + 1] = i
-          -- active.obj.color = { g = 1 }
         end
       end
     end
