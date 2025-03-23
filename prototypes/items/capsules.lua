@@ -3,69 +3,6 @@ local sounds = require("__base__.prototypes.entity.sounds")
 data:extend({
   {
     type = "capsule",
-    name = "kr-creep-virus",
-    icon = "__Krastorio2Assets__/icons/capsules/creep-virus.png",
-    subgroup = "capsule",
-    order = "c[poison-capsule]",
-    stack_size = 100,
-    pictures = {
-      layers = {
-        {
-          filename = "__Krastorio2Assets__/icons/capsules/creep-virus.png",
-          size = 64,
-          scale = 0.5,
-          mipmap_count = 4,
-        },
-        {
-          filename = "__Krastorio2Assets__/icons/capsules/creep-virus-light.png",
-          size = 64,
-          scale = 0.5,
-          mipmap_count = 4,
-          flags = { "light" },
-          draw_as_light = true,
-        },
-      },
-    },
-    capsule_action = {
-      type = "throw",
-      attack_parameters = {
-        type = "projectile",
-        activation_type = "throw",
-        ammo_category = "capsule",
-        cooldown = 60,
-        projectile_creation_distance = 0.6,
-        range = 25,
-        ammo_type = {
-          category = "capsule",
-          target_type = "position",
-          action = {
-            {
-              type = "direct",
-              action_delivery = {
-                type = "projectile",
-                projectile = "virus-capsule",
-                starting_speed = 0.3,
-              },
-            },
-            {
-              type = "direct",
-              action_delivery = {
-                type = "instant",
-                target_effects = {
-                  {
-                    type = "play-sound",
-                    sound = sounds.throw_projectile,
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-  },
-  {
-    type = "capsule",
     name = "kr-biter-virus",
     icon = "__Krastorio2Assets__/icons/capsules/biter-virus.png",
     subgroup = "capsule",
