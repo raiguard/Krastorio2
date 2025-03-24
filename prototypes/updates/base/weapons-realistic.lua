@@ -1,3 +1,4 @@
+local flib_table = require("__flib__.table")
 local data_util = require("data-util")
 
 if not settings.startup["kr-realistic-weapons"].value then
@@ -548,6 +549,9 @@ data_util.add_effect("laser-shooting-speed-4", { type = "gun-speed", ammo_catego
 data_util.add_effect("laser-shooting-speed-5", { type = "gun-speed", ammo_category = "impulse-rifle", modifier = 0.1 })
 data_util.add_effect("laser-shooting-speed-6", { type = "gun-speed", ammo_category = "impulse-rifle", modifier = 0.1 })
 data_util.add_effect("laser-shooting-speed-7", { type = "gun-speed", ammo_category = "impulse-rifle", modifier = 0.1 })
+
+table.insert(flib_table.get_or_insert(data.raw.ammo["uranium-rounds-magazine"], "flags", {}), "hide-from-bonus-gui")
+table.insert(flib_table.get_or_insert(data.raw.ammo["imersite-rounds-magazine"], "flags", {}), "hide-from-bonus-gui")
 
 -- ------------------------------------------------------------------------------------------------------
 -- Everything below this point has been moved verbatim, I really don't feel like going through any of it.
