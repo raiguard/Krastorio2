@@ -9,6 +9,7 @@ Date: ????
     - Removed migrations for versions prior to 1.3.0.
     - Removed biter creep tiles; biomass is now harvested directly from the corpses of spawners.
     - Removed radioactivity commands and replaced them with a map setting.
+    - Radioactivity geiger counter sound will only play if you are getting damaged. (#413)
   Balancing:
     - Loaders require electricity.
     - Biter virus no longer decreases evolution factor and only kills 1/3rd of the biter population (has diminishing returns).
