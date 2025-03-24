@@ -2,7 +2,9 @@ data:extend({
   {
     type = "technology",
     name = "kr-advanced-additional-engine-equipment",
-    icons = util.technology_icon_constant_equipment("__Krastorio2Assets__/technologies/advanced-additional-engine-equipment.png"),
+    icons = util.technology_icon_constant_equipment(
+      "__Krastorio2Assets__/technologies/advanced-additional-engine-equipment.png"
+    ),
     icon_size = 256,
     upgrade = false,
     unit = {
@@ -15,7 +17,7 @@ data:extend({
         { "utility-science-pack", 1 },
       },
     },
-    prerequisites = { "electric-engine", "processing-unit", "utility-science-pack" },
+    prerequisites = { "utility-science-pack" },
     effects = {
       { type = "unlock-recipe", recipe = "advanced-additional-engine-equipment" },
     },
@@ -23,7 +25,9 @@ data:extend({
   {
     type = "technology",
     name = "kr-advanced-exoskeleton-equipment",
-    icons = util.technology_icon_constant_equipment("__Krastorio2Assets__/technologies/advanced-exoskeleton-equipment.png"),
+    icons = util.technology_icon_constant_equipment(
+      "__Krastorio2Assets__/technologies/advanced-exoskeleton-equipment.png"
+    ),
     icon_size = 256,
     upgrade = false,
     unit = {
@@ -85,7 +89,9 @@ data:extend({
   {
     type = "technology",
     name = "kr-energy-shield-mk3-equipment",
-    icons = util.technology_icon_constant_equipment("__Krastorio2Assets__/technologies/energy-shield-mk3-equipment.png"),
+    icons = util.technology_icon_constant_equipment(
+      "__Krastorio2Assets__/technologies/energy-shield-mk3-equipment.png"
+    ),
     icon_size = 256,
     upgrade = false,
     unit = {
@@ -119,14 +125,7 @@ data:extend({
         { "utility-science-pack", 1 },
       },
     },
-    prerequisites = {
-      "processing-unit",
-      "kr-lithium-processing",
-      "nuclear-power",
-      "utility-science-pack",
-      "low-density-structure",
-      "kovarex-enrichment-process",
-    },
+    prerequisites = { "kovarex-enrichment-process", "kr-lithium-processing", "nuclear-power", "utility-science-pack" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-fusion-reactor" },
       { type = "unlock-recipe", recipe = "kr-advanced-steam-turbine" },
@@ -214,7 +213,9 @@ data:extend({
   {
     type = "technology",
     name = "kr-personal-laser-defense-mk2-equipment",
-    icons = util.technology_icon_constant_equipment("__Krastorio2Assets__/technologies/personal-laser-defense-mk2-equipments.png"),
+    icons = util.technology_icon_constant_equipment(
+      "__Krastorio2Assets__/technologies/personal-laser-defense-mk2-equipments.png"
+    ),
     icon_size = 256,
     order = "g-m",
     unit = {
@@ -228,12 +229,7 @@ data:extend({
       },
       time = 60,
     },
-    prerequisites = {
-      "personal-laser-defense-equipment",
-      "military-4",
-      "low-density-structure",
-      "power-armor-mk2",
-    },
+    prerequisites = { "personal-laser-defense-equipment", "power-armor-mk2" },
     effects = {
       {
         recipe = "personal-submachine-laser-defense-mk2-equipment",
@@ -268,7 +264,7 @@ data:extend({
     name = "kr-railgun-turret",
     icon = "__Krastorio2Assets__/technologies/railgun-turret.png",
     icon_size = 256,
-    prerequisites = { "military-4", "utility-science-pack" },
+    prerequisites = { "military-4" },
     unit = {
       time = 60,
       count = 500,
@@ -309,7 +305,9 @@ data:extend({
   {
     type = "technology",
     name = "kr-superior-night-vision-equipment",
-    icons = util.technology_icon_constant_equipment("__Krastorio2Assets__/technologies/superior-night-vision-equipment.png"),
+    icons = util.technology_icon_constant_equipment(
+      "__Krastorio2Assets__/technologies/superior-night-vision-equipment.png"
+    ),
     icon_size = 256,
     upgrade = false,
     unit = {
@@ -330,7 +328,9 @@ data:extend({
   {
     type = "technology",
     name = "kr-superior-solar-panel-equipment",
-    icons = util.technology_icon_constant_equipment("__Krastorio2Assets__/technologies/superior-solar-panel-equipment.png"),
+    icons = util.technology_icon_constant_equipment(
+      "__Krastorio2Assets__/technologies/superior-solar-panel-equipment.png"
+    ),
     icon_size = 256,
     upgrade = false,
     unit = {

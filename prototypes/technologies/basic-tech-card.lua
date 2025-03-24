@@ -100,7 +100,7 @@ data:extend({
         { "basic-tech-card", 1 },
       },
     },
-    prerequisites = { "kr-automation-core", "kr-stone-processing", "steam-power" },
+    prerequisites = { "kr-stone-processing", "steam-power" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-greenhouse" },
       { type = "unlock-recipe", recipe = "wood" },

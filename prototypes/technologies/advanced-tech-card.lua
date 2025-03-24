@@ -31,7 +31,7 @@ data:extend({
         { "advanced-tech-card", 1 },
       },
     },
-    prerequisites = { "kr-imersium-processing", "kr-advanced-tech-card" },
+    prerequisites = { "kr-advanced-tech-card" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-advanced-chemical-plant" },
       { type = "unlock-recipe", recipe = "electronic-components-with-lithium" },
@@ -52,11 +52,7 @@ data:extend({
         { "advanced-tech-card", 1 },
       },
     },
-    prerequisites = {
-      "kr-imersium-processing",
-      "kr-energy-control-unit",
-      "kr-advanced-tech-card",
-    },
+    prerequisites = { "kr-energy-control-unit", "kr-advanced-tech-card" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-advanced-furnace" },
     },
@@ -75,7 +71,7 @@ data:extend({
         { "advanced-tech-card", 1 },
       },
     },
-    prerequisites = { "kr-imersium-processing", "kr-advanced-tech-card" },
+    prerequisites = { "kr-advanced-tech-card" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-small-roboport" },
       { type = "unlock-recipe", recipe = "kr-big-roboport" },
@@ -96,7 +92,7 @@ data:extend({
         { "advanced-tech-card", 1 },
       },
     },
-    prerequisites = { "tank", "kr-imersium-processing", "kr-advanced-tech-card", "kr-railgun-turret" },
+    prerequisites = { "tank", "kr-advanced-tech-card", "kr-railgun-turret" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-advanced-tank" },
     },
@@ -116,13 +112,7 @@ data:extend({
         { "advanced-tech-card", 1 },
       },
     },
-    prerequisites = {
-      "automation-3",
-      "kr-imersium-processing",
-      "kr-energy-control-unit",
-      "kr-advanced-tech-card",
-      "kr-enriched-ores",
-    },
+    prerequisites = { "automation-3", "kr-energy-control-unit", "kr-advanced-tech-card", "kr-enriched-ores" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-advanced-assembling-machine" },
       { type = "unlock-recipe", recipe = "kr-s-c-copper-cable" },
@@ -237,7 +227,7 @@ data:extend({
         { "advanced-tech-card", 1 },
       },
     },
-    prerequisites = { "kr-logistic-4", "kr-imersium-processing", "kr-advanced-tech-card" },
+    prerequisites = { "kr-logistic-4", "kr-advanced-tech-card" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-superior-splitter" },
       { type = "unlock-recipe", recipe = "kr-superior-transport-belt" },
@@ -261,12 +251,7 @@ data:extend({
         { "advanced-tech-card", 1 },
       },
     },
-    prerequisites = {
-      "kr-personal-laser-defense-mk2-equipment",
-      "kr-military-5",
-      "kr-lithium-sulfur-battery",
-      "kr-imersium-processing",
-    },
+    prerequisites = { "kr-personal-laser-defense-mk2-equipment", "kr-military-5", "kr-imersium-processing" },
     effects = {
       {
         recipe = "personal-submachine-laser-defense-mk3-equipment",
@@ -311,7 +296,7 @@ data:extend({
         { "advanced-tech-card", 1 },
       },
     },
-    prerequisites = { "kr-military-5", "kr-advanced-tech-card", "kr-railgun-turret", "atomic-bomb" },
+    prerequisites = { "kr-advanced-tech-card", "kr-railgun-turret", "atomic-bomb" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-rocket-turret" },
       { type = "unlock-recipe", recipe = "explosive-turret-rocket" },
@@ -375,7 +360,7 @@ data:extend({
         { "advanced-tech-card", 1 },
       },
     },
-    prerequisites = { "bulk-inserter", "kr-imersium-processing", "kr-advanced-tech-card" },
+    prerequisites = { "bulk-inserter", "kr-advanced-tech-card" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-superior-inserter" },
       { type = "unlock-recipe", recipe = "kr-superior-long-inserter" },

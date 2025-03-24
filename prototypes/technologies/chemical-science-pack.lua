@@ -59,7 +59,7 @@ data:extend({
         { "chemical-science-pack", 1 },
       },
     },
-    prerequisites = { "kr-advanced-chemistry", "engine" },
+    prerequisites = { "kr-advanced-chemistry" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-air-purifier" },
       { type = "unlock-recipe", recipe = "pollution-filter" },
@@ -81,7 +81,7 @@ data:extend({
         { "chemical-science-pack", 1 },
       },
     },
-    prerequisites = { "kr-fluids-chemistry", "electronics" },
+    prerequisites = { "kr-fluids-chemistry" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-atmospheric-condenser" },
       { type = "unlock-recipe", recipe = "hydrogen" },
@@ -124,7 +124,7 @@ data:extend({
         { "chemical-science-pack", 1 },
       },
     },
-    prerequisites = { "kr-greenhouse", "kr-advanced-chemistry", "electronics" },
+    prerequisites = { "kr-greenhouse", "kr-advanced-chemistry" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-bio-lab" },
       { type = "unlock-recipe", recipe = "biomass" },
@@ -274,7 +274,7 @@ data:extend({
         { "chemical-science-pack", 1 },
       },
     },
-    prerequisites = { "kr-sentinel", "electronics", "steel-processing" },
+    prerequisites = { "kr-sentinel", "steel-processing" },
     effects = {
       { type = "unlock-recipe", recipe = "radar" },
     },
@@ -293,7 +293,7 @@ data:extend({
         { "chemical-science-pack", 1 },
       },
     },
-    prerequisites = { "concrete", "steel-processing" },
+    prerequisites = { "concrete" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-black-reinforced-plate" },
       { type = "unlock-recipe", recipe = "kr-white-reinforced-plate" },

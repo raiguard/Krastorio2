@@ -52,7 +52,7 @@ data:extend({
         { "matter-tech-card", 1 },
       },
     },
-    prerequisites = { "kr-singularity-lab", "kr-lithium-sulfur-battery", "kr-matter-tech-card" },
+    prerequisites = { "kr-lithium-sulfur-battery", "kr-matter-tech-card" },
     effects = {
       { type = "unlock-recipe", recipe = "energy-control-unit" },
     },
@@ -71,7 +71,7 @@ data:extend({
         { "matter-tech-card", 1 },
       },
     },
-    prerequisites = { "electric-energy-accumulators", "kr-matter-tech-card", "kr-energy-control-unit" },
+    prerequisites = { "kr-energy-control-unit" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-energy-storage" },
     },
@@ -223,7 +223,7 @@ data:extend({
         { "matter-tech-card", 1 },
       },
     },
-    prerequisites = { "kr-matter-tech-card", "kr-imersium-processing", "kr-energy-control-unit" },
+    prerequisites = { "kr-imersium-processing", "kr-energy-control-unit" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-matter-plant" },
       { type = "unlock-recipe", recipe = "kr-matter-associator" },

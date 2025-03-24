@@ -14,7 +14,7 @@ data:extend({
         { "production-science-pack", 1 },
       },
     },
-    prerequisites = { "kr-quarry-minerals-extraction", "kr-fuel", "kr-advanced-chemistry" },
+    prerequisites = { "kr-quarry-minerals-extraction", "kr-fuel" },
     effects = {
       { type = "unlock-recipe", recipe = "advanced-fuel" },
     },
@@ -55,12 +55,7 @@ data:extend({
       },
       time = 60,
     },
-    prerequisites = {
-      "kr-quarry-minerals-extraction",
-      "kr-lithium-sulfur-battery",
-      "battery-mk2-equipment",
-      "processing-unit",
-    },
+    prerequisites = { "kr-quarry-minerals-extraction", "kr-lithium-sulfur-battery", "battery-mk2-equipment" },
     effects = {
       { type = "unlock-recipe", recipe = "battery-mk3-equipment" },
       { type = "unlock-recipe", recipe = "big-battery-mk3-equipment" },
@@ -81,7 +76,7 @@ data:extend({
         { "production-science-pack", 1 },
       },
     },
-    prerequisites = { "railway", "nuclear-power", "production-science-pack" },
+    prerequisites = { "nuclear-power", "production-science-pack" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-nuclear-locomotive" },
     },

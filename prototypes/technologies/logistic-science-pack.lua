@@ -13,7 +13,7 @@ data:extend({
         { "logistic-science-pack", 1 },
       },
     },
-    prerequisites = { "kr-fluids-chemistry", "electronics" },
+    prerequisites = { "kr-fluids-chemistry" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-flare-stack" },
     },
@@ -53,7 +53,7 @@ data:extend({
         { "logistic-science-pack", 1 },
       },
     },
-    prerequisites = { "oil-processing", "engine" },
+    prerequisites = { "oil-processing" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-gas-power-station" },
     },

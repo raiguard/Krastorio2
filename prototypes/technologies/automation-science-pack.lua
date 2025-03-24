@@ -32,7 +32,7 @@ data:extend({
         { "automation-science-pack", 1 },
       },
     },
-    prerequisites = { "lamp", "kr-stone-processing" },
+    prerequisites = { "lamp" },
     effects = {
       { type = "unlock-recipe", recipe = "kr-sentinel" },
     },
