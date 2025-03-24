@@ -109,9 +109,12 @@ end
 --- @param color data.Color
 --- @param alpha double
 local function with_alpha(color, alpha)
-  local color = table.deepcopy(color)
-  color.a = alpha
-  return color
+  return {
+    r = color.r or color[1],
+    g = color.g or color[2],
+    b = color.b or color[3],
+    a = alpha,
+  }
 end
 
 --- Generates a burning recipe for the given fluid.
