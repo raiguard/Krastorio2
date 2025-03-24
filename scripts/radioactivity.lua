@@ -2,6 +2,7 @@ local flib_position = require("__flib__.position")
 
 --- @class RadioactivityPlayerData
 --- @field entity boolean
+--- @field damaged boolean
 --- @field inventory boolean
 --- @field last_position MapPosition
 
@@ -112,7 +113,7 @@ local function update_and_damage()
     -- Damage the player
     -- TODO: Account for armor and energy shields
     local base_damage = 7.25
-    player.character.damage(base_damage, "enemy", "radioactive")
+    player_data.damaged = player.character.damage(base_damage, "enemy", "radioactive") > 0
 
     ::continue::
   end
@@ -125,6 +126,10 @@ local function update_sounds()
 
   for player_index, player_data in pairs(storage.radioactivity.players) do
     if not player_data.entity and not player_data.inventory then
+      goto continue
+    end
+
+    if not player_data.damaged then
       goto continue
     end
 
