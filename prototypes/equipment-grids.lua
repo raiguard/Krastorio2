@@ -6,7 +6,6 @@ data:extend({
     height = 6,
     equipment_categories = {
       "universal-equipment",
-      "robot-interaction-equipment",
       "vehicle-robot-interaction-equipment",
       "vehicle-equipment",
       "vehicle-motor",
@@ -26,7 +25,6 @@ data:extend({
     height = 6,
     equipment_categories = {
       "universal-equipment",
-      "robot-interaction-equipment",
       "vehicle-robot-interaction-equipment",
       "vehicle-equipment",
       "vehicle-motor",
@@ -39,7 +37,6 @@ data:extend({
     height = 11,
     equipment_categories = {
       "universal-equipment",
-      "robot-interaction-equipment",
       "vehicle-robot-interaction-equipment",
       "vehicle-equipment",
       "vehicle-motor",
@@ -52,7 +49,6 @@ data:extend({
     height = 15,
     equipment_categories = {
       "universal-equipment",
-      "robot-interaction-equipment",
       "vehicle-robot-interaction-equipment",
       "vehicle-equipment",
       "vehicle-motor",
@@ -66,7 +62,6 @@ data:extend({
     equipment_categories = {
       "universal-equipment",
       "vehicle-equipment",
-      "robot-interaction-equipment",
       "vehicle-robot-interaction-equipment",
     },
   },
@@ -75,13 +70,13 @@ data:extend({
     name = "mk3-armor-grid",
     width = 10,
     height = 10,
-    equipment_categories = { "armor", "universal-equipment", "robot-interaction-equipment" },
+    equipment_categories = { "armor", "universal-equipment" },
   },
   {
     type = "equipment-grid",
     name = "mk4-armor-grid",
     width = 12,
     height = 12,
-    equipment_categories = { "armor", "universal-equipment", "robot-interaction-equipment" },
+    equipment_categories = { "armor", "universal-equipment" },
   },
 })

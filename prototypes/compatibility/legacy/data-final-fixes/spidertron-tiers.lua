@@ -22,7 +22,6 @@ if mods["spidertrontiers"] or mods["spidertrontiers-circulardependency"] then
         local grid = data.raw["equipment-grid"][grid_name]
         if grid then
           table.insert(grid.equipment_categories, "universal-equipment")
-          table.insert(grid.equipment_categories, "robot-interaction-equipment")
           table.insert(grid.equipment_categories, "vehicle-robot-interaction-equipment")
           table.insert(grid.equipment_categories, "vehicle-equipment")
           table.insert(grid.equipment_categories, "vehicle-motor")

@@ -23,10 +23,6 @@ data:extend({
   },
   {
     type = "equipment-category",
-    name = "robot-interaction-equipment",
-  },
-  {
-    type = "equipment-category",
     name = "vehicle-robot-interaction-equipment",
   },
   {

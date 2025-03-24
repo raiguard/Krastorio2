@@ -1,8 +1,5 @@
-table.insert(data.raw["equipment-grid"]["large-equipment-grid"].equipment_categories, "robot-interaction-equipment")
 table.insert(data.raw["equipment-grid"]["large-equipment-grid"].equipment_categories, "universal-equipment")
-table.insert(data.raw["equipment-grid"]["medium-equipment-grid"].equipment_categories, "robot-interaction-equipment")
 table.insert(data.raw["equipment-grid"]["medium-equipment-grid"].equipment_categories, "universal-equipment")
-table.insert(data.raw["equipment-grid"]["small-equipment-grid"].equipment_categories, "robot-interaction-equipment")
 table.insert(data.raw["equipment-grid"]["small-equipment-grid"].equipment_categories, "universal-equipment")
 
 data.raw["equipment-grid"]["large-equipment-grid"].height = 8
