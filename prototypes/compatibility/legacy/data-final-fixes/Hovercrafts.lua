@@ -5,7 +5,7 @@ if mods["Hovercrafts"] then
     table.insert(ecraft_grid.equipment_categories, "electric-hovercraft-equipment")
     data:extend({ ecraft_grid })
 
-    data.raw.item["ehvt-equipment"].subgroup = "vehicle-motor"
+    data.raw.item["ehvt-equipment"].subgroup = "vehicle-locomotion"
     data.raw.item["ehvt-equipment"].order = "e[additional-engines]-e3[advanced-additional-engine-equipment]"
   end
 

@@ -42,6 +42,6 @@ data:extend({
       usage_priority = "primary-output",
     },
     power = "192kW", -- 40kW * 4 * 1 * 1.2
-    categories = { "universal-equipment" },
+    categories = { "armor", "vehicle" },
   },
 })

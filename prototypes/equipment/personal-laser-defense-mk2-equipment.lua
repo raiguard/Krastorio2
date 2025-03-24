@@ -46,7 +46,7 @@ data:extend({
       buffer_capacity = "24MJ",
       input_flow_limit = "3MW",
     },
-    categories = { "universal-equipment" },
+    categories = { "armor", "vehicle" },
     automatic = true,
     attack_parameters = {
       type = "beam",

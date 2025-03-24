@@ -1,6 +1,6 @@
 local flib_prototypes = require("__flib__.prototypes")
 
-table.insert(data.raw["active-defense-equipment"]["discharge-defense-equipment"].categories, "universal-equipment")
+table.insert(data.raw["active-defense-equipment"]["discharge-defense-equipment"].categories, "vehicle")
 
 data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].attack_parameters = {
   type = "beam",
@@ -39,11 +39,11 @@ data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].localis
 data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].localised_description =
   { "equipment-description.personal-sniper-laser-defense-mk1-equipment" }
 
-table.insert(data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].categories, "universal-equipment")
+table.insert(data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].categories, "vehicle")
 data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].energy_source.buffer_capacity = "18MJ"
 data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].energy_source.input_flow_limit = "2MW"
 
-table.insert(data.raw["battery-equipment"]["battery-equipment"].categories, "universal-equipment")
+table.insert(data.raw["battery-equipment"]["battery-equipment"].categories, "vehicle")
 data.raw["battery-equipment"]["battery-equipment"].energy_source = {
   type = "electric",
   buffer_capacity = "10MJ",
@@ -70,7 +70,7 @@ data.raw.item["battery-equipment"].pictures = {
   },
 }
 
-table.insert(data.raw["battery-equipment"]["battery-mk2-equipment"].categories, "universal-equipment")
+table.insert(data.raw["battery-equipment"]["battery-mk2-equipment"].categories, "vehicle")
 data.raw["battery-equipment"]["battery-mk2-equipment"].energy_source = {
   type = "electric",
   buffer_capacity = "25MJ",
@@ -97,15 +97,15 @@ data.raw.item["battery-mk2-equipment"].pictures = {
   },
 }
 
-table.insert(data.raw["belt-immunity-equipment"]["belt-immunity-equipment"].categories, "universal-equipment")
+table.insert(data.raw["belt-immunity-equipment"]["belt-immunity-equipment"].categories, "vehicle")
 
-table.insert(data.raw["energy-shield-equipment"]["energy-shield-equipment"].categories, "universal-equipment")
+table.insert(data.raw["energy-shield-equipment"]["energy-shield-equipment"].categories, "vehicle")
 data.raw["energy-shield-equipment"]["energy-shield-equipment"].localised_name =
   { "equipment-name.shield-generator-mk1" }
 data.raw["energy-shield-equipment"]["energy-shield-equipment"].localised_description =
   { "equipment-description.shield-generator-mk1" }
 
-table.insert(data.raw["energy-shield-equipment"]["energy-shield-mk2-equipment"].categories, "universal-equipment")
+table.insert(data.raw["energy-shield-equipment"]["energy-shield-mk2-equipment"].categories, "vehicle")
 data.raw["energy-shield-equipment"]["energy-shield-mk2-equipment"].localised_name =
   { "equipment-name.shield-generator-mk2" }
 data.raw["energy-shield-equipment"]["energy-shield-mk2-equipment"].localised_description =
@@ -118,11 +118,10 @@ data.raw["generator-equipment"]["fission-reactor-equipment"].burner = {
   fuel_inventory_size = 1,
   burnt_inventory_size = 1,
 }
-table.insert(data.raw["generator-equipment"]["fission-reactor-equipment"].categories, "universal-equipment")
+table.insert(data.raw["generator-equipment"]["fission-reactor-equipment"].categories, "vehicle")
 data.raw["generator-equipment"]["fission-reactor-equipment"].power = "3.2MW"
 
 data.raw["movement-bonus-equipment"]["exoskeleton-equipment"].movement_bonus = 0.2
-data.raw["movement-bonus-equipment"]["exoskeleton-equipment"].categories = { "armor", "spidertron-only" }
 
 data.raw["night-vision-equipment"]["night-vision-equipment"].color_lookup = {
   { 0.75, "__Krastorio2Assets__/luts/nightvision-equipment.png" },
@@ -137,7 +136,7 @@ data.raw["night-vision-equipment"]["night-vision-equipment"].shape = {
 data.raw["roboport-equipment"]["personal-roboport-equipment"].construction_radius = 15
 data.raw["roboport-equipment"]["personal-roboport-equipment"].robot_limit = 20
 
-table.insert(data.raw["solar-panel-equipment"]["solar-panel-equipment"].categories, "universal-equipment")
+table.insert(data.raw["solar-panel-equipment"]["solar-panel-equipment"].categories, "vehicle")
 data.raw["solar-panel-equipment"]["solar-panel-equipment"].power = "40kW"
 
 --- @param item_name data.ItemID
@@ -177,7 +176,13 @@ update_equipment_graphics("energy-shield-mk2-equipment", "energy-shield-mk2-equi
 update_equipment_graphics("exoskeleton-equipment", "exoskeleton-equipment", 64, { 128, 256 }, 1)
 update_equipment_graphics("fission-reactor-equipment", "fission-reactor-equipment", 64, { 128, 128 }, 2)
 update_equipment_graphics("night-vision-equipment", "night-vision-equipment", 64, { 128, 128 }, 1)
-update_equipment_graphics("personal-laser-defense-equipment", "personal-laser-defense-mk1-equipment", 64, { 128, 128 }, 1)
+update_equipment_graphics(
+  "personal-laser-defense-equipment",
+  "personal-laser-defense-mk1-equipment",
+  64,
+  { 128, 128 },
+  1
+)
 update_equipment_graphics("personal-roboport-equipment", "personal-roboport-equipment", 64, { 128, 128 }, 1)
 update_equipment_graphics("personal-roboport-mk2-equipment", "personal-roboport-mk2-equipment", 64, { 128, 128 }, 2)
 update_equipment_graphics("solar-panel-equipment", "solar-panel-equipment", 64, { 64, 64 }, 1)

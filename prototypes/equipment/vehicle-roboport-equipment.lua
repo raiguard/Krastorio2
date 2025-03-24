@@ -16,7 +16,7 @@ data:extend({
     name = "vehicle-roboport-equipment",
     icon = "__Krastorio2Assets__/icons/equipment/vehicle-roboport-equipment.png",
     place_as_equipment_result = "vehicle-roboport-equipment",
-    subgroup = "vehicle-motor",
+    subgroup = "vehicle-locomotion",
     order = "e[additional-engines]-f1[vehicle-roboport-equipment]",
     stack_size = 5,
   },
@@ -62,6 +62,6 @@ data:extend({
     charging_station_count = 12,
     charging_distance = 2,
     charging_threshold_distance = 6,
-    categories = { "vehicle-robot-interaction-equipment" },
+    categories = { "vehicle-robots" },
   },
 })

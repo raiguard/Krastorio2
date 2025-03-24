@@ -8,6 +8,12 @@ data:extend({
   },
   {
     type = "item-subgroup",
+    name = "character-equipment",
+    group = "combat",
+    order = "e-e2",
+  },
+  {
+    type = "item-subgroup",
     name = "crash-site",
     group = "other",
     order = "zz",
@@ -113,5 +119,17 @@ data:extend({
     name = "vanilla-turrets",
     group = "combat",
     order = "g1",
+  },
+  {
+    type = "item-subgroup",
+    name = "vehicle-equipment",
+    group = "combat",
+    order = "e-e3",
+  },
+  {
+    type = "item-subgroup",
+    name = "vehicle-locomotion",
+    group = "combat",
+    order = "e-e4",
   },
 })

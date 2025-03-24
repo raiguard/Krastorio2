@@ -19,7 +19,7 @@ data:extend({
       { icon = "__Krastorio2Assets__/icons/equipment/tier-1.png" },
     },
     place_as_equipment_result = "additional-engine-equipment",
-    subgroup = "vehicle-motor",
+    subgroup = "vehicle-locomotion",
     order = "e[additional-engines]-e1[advanced-additional-engine-equipment]",
     stack_size = 5,
   },
@@ -44,6 +44,6 @@ data:extend({
     },
     energy_consumption = "100kW",
     movement_bonus = 0.3,
-    categories = { "vehicle-motor" },
+    categories = { "vehicle-locomotion" },
   },
 })

@@ -27,7 +27,7 @@ data:extend({
   {
     type = "movement-bonus-equipment",
     name = "superior-exoskeleton-equipment",
-    categories = { "armor", "spidertron-only" },
+    categories = { "armor" },
     energy_consumption = "400kW",
     energy_source = {
       type = "electric",

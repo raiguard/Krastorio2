@@ -50,6 +50,6 @@ data:extend({
       buffer_capacity = "405kJ",
       input_flow_limit = "810kW",
     },
-    categories = { "universal-equipment" },
+    categories = { "armor", "vehicle" },
   },
 })

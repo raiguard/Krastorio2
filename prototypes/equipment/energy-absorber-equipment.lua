@@ -43,6 +43,6 @@ data:extend({
       output_flow_limit = "12MW",
       usage_priority = "primary-output",
     },
-    categories = { "universal-equipment" },
+    categories = { "armor", "vehicle" },
   },
 })

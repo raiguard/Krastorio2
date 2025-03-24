@@ -23,7 +23,7 @@ for _, type in pairs(types_have_grid) do
   for _, prototype in pairs(data.raw[type]) do
     if type ~= "character" then
       local grid = grids[prototype.equipment_grid]
-      if not grid or not flib_table.find(grid.equipment_categories, "universal-equipment") then
+      if not grid or not flib_table.find(grid.equipment_categories, "vehicle") then
         goto continue
       end
     end

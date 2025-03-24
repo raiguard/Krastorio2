@@ -48,7 +48,7 @@ data:extend({
       input_flow_limit = "10MW",
     },
     automatic = true,
-    categories = { "universal-equipment" },
+    categories = { "armor", "vehicle" },
     attack_parameters = {
       type = "beam",
       cooldown = 100,

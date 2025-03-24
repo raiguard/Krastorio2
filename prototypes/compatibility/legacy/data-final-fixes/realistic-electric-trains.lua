@@ -6,7 +6,7 @@ if mods["Realistic_Electric_Trains"] then
       name = "ret-electric-locomotive-grid",
       width = 12,
       height = 12,
-      equipment_categories = { "universal-equipment", "vehicle-equipment", "vehicle-motor", "electric-loco-modules" },
+      equipment_categories = { "universal-equipment", "vehicle-equipment", "vehicle-locomotion", "electric-loco-modules" },
     },
   })
 
@@ -16,15 +16,15 @@ if mods["Realistic_Electric_Trains"] then
   data.raw["locomotive"]["ret-modular-locomotive"].equipment_grid = "ret-electric-locomotive-grid"
 
   -- -- Place equipment in right category
-  data.raw.item["ret-train-speed-module"].subgroup = "vehicle-motor"
+  data.raw.item["ret-train-speed-module"].subgroup = "vehicle-locomotion"
   data.raw.item["ret-train-speed-module"].order = "f[electric-loco-modules]-f1[ret-train-speed-module]"
 
-  data.raw.item["ret-train-productivity-module"].subgroup = "vehicle-motor"
+  data.raw.item["ret-train-productivity-module"].subgroup = "vehicle-locomotion"
   data.raw.item["ret-train-productivity-module"].order = "f[electric-loco-modules]-f2[ret-train-productivity-module]"
 
-  data.raw.item["ret-train-efficiency-module"].subgroup = "vehicle-motor"
+  data.raw.item["ret-train-efficiency-module"].subgroup = "vehicle-locomotion"
   data.raw.item["ret-train-efficiency-module"].order = "f[electric-loco-modules]-f4[ret-train-efficiency-module]"
 
-  data.raw.item["ret-train-battery-module"].subgroup = "vehicle-motor"
+  data.raw.item["ret-train-battery-module"].subgroup = "vehicle-locomotion"
   data.raw.item["ret-train-battery-module"].order = "f[electric-loco-modules]-f3[ret-train-speed-module]"
 end

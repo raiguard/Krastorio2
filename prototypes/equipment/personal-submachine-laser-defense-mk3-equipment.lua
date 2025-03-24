@@ -46,7 +46,7 @@ data:extend({
       input_flow_limit = "6MW",
     },
     automatic = true,
-    categories = { "universal-equipment" },
+    categories = { "armor", "vehicle" },
     attack_parameters = {
       type = "beam",
       damage_modifier = 3,

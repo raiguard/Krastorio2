@@ -16,7 +16,7 @@ if mods["Aircraft"] then
       name = "kr-gunship-grid",
       width = 4,
       height = 6,
-      equipment_categories = { "universal-equipment", "vehicle-equipment", "vehicle-motor", "aircraft-equipment" },
+      equipment_categories = { "universal-equipment", "vehicle-equipment", "vehicle-locomotion", "aircraft-equipment" },
     },
     -----------------------------------------------------------------------------------------------------------------
     -- cargo-plane
@@ -25,7 +25,7 @@ if mods["Aircraft"] then
       name = "kr-cargo-plane-grid",
       width = 4,
       height = 4,
-      equipment_categories = { "universal-equipment", "vehicle-equipment", "vehicle-motor", "aircraft-equipment" },
+      equipment_categories = { "universal-equipment", "vehicle-equipment", "vehicle-locomotion", "aircraft-equipment" },
     },
     -----------------------------------------------------------------------------------------------------------------
     -- jet
@@ -34,7 +34,7 @@ if mods["Aircraft"] then
       name = "kr-jet-grid",
       width = 2,
       height = 4,
-      equipment_categories = { "universal-equipment", "vehicle-equipment", "vehicle-motor", "aircraft-equipment" },
+      equipment_categories = { "universal-equipment", "vehicle-equipment", "vehicle-locomotion", "aircraft-equipment" },
     },
     -----------------------------------------------------------------------------------------------------------------
     -- flying-fortress
@@ -43,7 +43,7 @@ if mods["Aircraft"] then
       name = "kr-flying-fortress-grid",
       width = 6,
       height = 6,
-      equipment_categories = { "universal-equipment", "vehicle-equipment", "vehicle-motor", "aircraft-equipment" },
+      equipment_categories = { "universal-equipment", "vehicle-equipment", "vehicle-locomotion", "aircraft-equipment" },
     },
     -----------------------------------------------------------------------------------------------------------------
     -----------------------------------------------------------------------------------------------------------------
@@ -58,7 +58,7 @@ if mods["Aircraft"] then
   -- Adapting equip-items
   if data.raw.item["aircraft-afterburner"] then
     data.raw["movement-bonus-equipment"]["aircraft-afterburner"].categories = { "aircraft-equipment" }
-    data.raw.item["aircraft-afterburner"].subgroup = "vehicle-motor"
+    data.raw.item["aircraft-afterburner"].subgroup = "vehicle-locomotion"
   end
 
   --Change ammo if the option is active (DEPRECATED)

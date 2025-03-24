@@ -20,8 +20,8 @@ if mods["nco-SpaceShuttle"] then
       equipment_categories = {
         "universal-equipment",
         "vehicle-equipment",
-        "vehicle-robot-interaction-equipment",
-        "vehicle-motor",
+        "vehicle-robots",
+        "vehicle-locomotion",
         "aircraft-equipment",
       },
     },

@@ -7,7 +7,7 @@ local patterns = {
 if mods["angelsaddons-mobility"] then
   for name, grid in pairs(data.raw["equipment-grid"]) do
     if patterns[name] then
-      table.insert(grid.equipment_categories, "vehicle-motor")
+      table.insert(grid.equipment_categories, "vehicle-locomotion")
     end
   end
 end

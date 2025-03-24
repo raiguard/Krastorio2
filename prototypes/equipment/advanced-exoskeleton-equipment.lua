@@ -44,7 +44,7 @@ data:extend({
       type = "electric",
       usage_priority = "secondary-input",
     },
-    categories = { "armor", "spidertron-only" },
+    categories = { "armor" },
     movement_bonus = 0.4,
   },
 })
