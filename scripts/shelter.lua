@@ -33,6 +33,7 @@ local function on_entity_built(e)
   if entity.name ~= "kr-shelter-container" and entity.name ~= "kr-shelter-plus-container" then
     return
   end
+  --- @cast entity LuaEntity
 
   local force = entity.force
   local surface = entity.surface

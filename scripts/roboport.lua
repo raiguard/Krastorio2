@@ -3,7 +3,7 @@ local flib_gui = require("__flib__.gui")
 local util = require("scripts.util")
 
 --- @type table<string, {color: Color?, suffix: string, text: string}
-local roboport_modes = {
+local mode_data = {
   normal = { suffix = "", text = "normal" },
   construction = { color = { r = 0.5, g = 1, b = 0.4 }, suffix = "-construction-mode", text = "construction" },
   logistic = { color = { r = 1, g = 0.5, b = 0.25 }, suffix = "-logistic-mode", text = "logistic" },
@@ -45,9 +45,9 @@ local function change_mode(entity, player, to_mode)
 
   local new_mode_data
   if to_mode then
-    new_mode_data = roboport_modes[to_mode]
+    new_mode_data = mode_data[to_mode]
   else
-    new_mode_data = roboport_modes[next_roboport_mode[suffix]]
+    new_mode_data = mode_data[next_roboport_mode[suffix]]
   end
 
   local new_name = base_name .. new_mode_data.suffix
