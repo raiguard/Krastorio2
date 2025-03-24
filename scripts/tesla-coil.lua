@@ -1,3 +1,34 @@
+--- @class BeamData
+--- @field beam LuaEntity
+--- @field beam_number uint64
+--- @field target_data TargetData
+--- @field tower_data TowerData
+
+--- @class GridData
+--- @field absorber LuaEquipment?
+--- @field grid LuaEquipmentGrid
+
+--- @class TargetData
+--- @field connections TargetConnections
+--- @field entity LuaEntity
+--- @field full_tick uint64?
+--- @field grid_data GridData
+--- @field unit_number uint64
+
+--- @class TargetConnections
+--- @field by_beam table<number, ConnectionData>
+--- @field by_tower table<number, ConnectionData>
+
+--- @class TowerData
+--- @field entities TowerEntities
+--- @field tower_unit_number uint64
+--- @field turret_unit_number uint64
+
+--- @class TowerEntities
+--- @field collision LuaEntity
+--- @field tower LuaEntity
+--- @field turret LuaEntity
+
 local charging_rate = 3000000 -- 3 MW
 local cooldown = 10
 local loss_multiplier = 1.8
@@ -56,9 +87,10 @@ local function on_entity_built(e)
     create_build_effect_smoke = false,
     raise_built = true,
   })
+  assert(collision_entity, "Tesla coil collision entity was destroyed")
   collision_entity.destructible = false
 
-  --- @class TowerData
+  --- @type TowerData
   local data = {
     entities = {
       collision = collision_entity,
@@ -122,13 +154,10 @@ local function get_grid_data(target)
   end
 
   if grid then
-    --- @class GridData
-    local data = {
+    return {
       absorber = grid.find("energy-absorber-equipment"),
       grid = grid,
     }
-
-    return data
   end
 end
 
@@ -146,7 +175,8 @@ end
 --- @param target LuaEntity
 --- @param tower_data TowerData
 local function add_target(target, tower_data)
-  local target_unit_number = target.unit_number --[[@as uint]]
+  local target_unit_number = target.unit_number
+  --- @cast target_unit_number -?
   local tower = tower_data.entities.tower
   if not tower.valid or tower.energy < required_energy then
     return
@@ -154,7 +184,7 @@ local function add_target(target, tower_data)
   -- Check the target's equipment grid for an energy absorber
   local grid_data = get_grid_data(target)
   if grid_data and grid_data.absorber and grid_data.absorber.valid then
-    --- @class TargetData
+    --- @type TargetData
     local target_data = {
       connections = {
         --- @type table<number, ConnectionData>
@@ -169,7 +199,6 @@ local function add_target(target, tower_data)
       unit_number = target_unit_number,
     }
     storage.tesla_coil.targets[target_unit_number] = target_data
-
     return target_data
   end
 end
@@ -221,7 +250,6 @@ local function add_connection(target_data, tower_data)
   end
   local beam_number = script.register_on_object_destroyed(beam)
 
-  --- @class BeamData
   storage.tesla_coil.beams[beam_number] = {
     beam = beam,
     beam_number = beam_number,
