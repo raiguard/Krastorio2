@@ -14,7 +14,6 @@ data:extend({
         size = 64,
         filename = "__Krastorio2Assets__/icons/items/raw-rare-metals.png",
         scale = 0.5,
-        mipmap_count = 4,
       },
       {
         size = 64,

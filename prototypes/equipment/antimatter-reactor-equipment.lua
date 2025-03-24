@@ -23,13 +23,11 @@ data:extend({
         {
           filename = "__Krastorio2Assets__/icons/equipment/antimatter-reactor-equipment.png",
           size = 64,
-          mipmap_count = 4,
           scale = 0.5,
         },
         {
           filename = "__Krastorio2Assets__/icons/equipment/antimatter-reactor-equipment-light.png",
           size = 64,
-          mipmap_count = 4,
           scale = 0.5,
           draw_as_light = true,
           flags = { "light" },
