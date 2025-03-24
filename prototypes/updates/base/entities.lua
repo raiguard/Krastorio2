@@ -10,27 +10,26 @@ local function convert_equipment_grid(vehicle_type, vehicle_name, new_equipment_
   if not vehicle then
     error("Vehicle " .. vehicle_type .. "/" .. vehicle_name .. " does not exist.")
   end
-  local old_equipment_grid_id = vehicle.equipment_grid
-  if not old_equipment_grid_id then
-    return
-  end
-  local old_equipment_grid = data.raw["equipment-grid"][old_equipment_grid_id]
-  if not old_equipment_grid then
-    error("Equipment grid " .. old_equipment_grid_id .. " does not exist.")
-  end
+
   local new_equipment_grid = data.raw["equipment-grid"][new_equipment_grid_id]
   if not new_equipment_grid then
     error("Equipment grid " .. new_equipment_grid_id .. " does not exist.")
   end
 
-  local equipment_categories_set = {}
-  for _, equipment_category in pairs(new_equipment_grid.equipment_categories) do
-    equipment_categories_set[equipment_category] = true
-  end
+  local old_equipment_grid_id = vehicle.equipment_grid
+  if old_equipment_grid_id then
+    local old_equipment_grid = data.raw["equipment-grid"][old_equipment_grid_id]
+    if old_equipment_grid then
+      local equipment_categories_set = {}
+      for _, equipment_category in pairs(new_equipment_grid.equipment_categories) do
+        equipment_categories_set[equipment_category] = true
+      end
 
-  for _, equipment_category in pairs(old_equipment_grid.equipment_categories) do
-    if equipment_category ~= "armor" and not equipment_categories_set[equipment_category] then
-      table.insert(new_equipment_grid.equipment_categories, equipment_category)
+      for _, equipment_category in pairs(old_equipment_grid.equipment_categories) do
+        if equipment_category ~= "armor" and not equipment_categories_set[equipment_category] then
+          table.insert(new_equipment_grid.equipment_categories, equipment_category)
+        end
+      end
     end
   end
 
