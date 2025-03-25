@@ -175,7 +175,7 @@ data.raw.technology["artillery-shell-range-1"].unit.count_formula = "L^2*3500"
 data.raw.technology["artillery-shell-speed-1"].max_level = 2
 data.raw.technology["artillery-shell-speed-1"].unit.count_formula = "L^2*3500"
 
-data.raw.technology["follower-robot-count-5"].unit.count_formula = "((L-6)^2)*5000"
+data.raw.technology["follower-robot-count-5"].unit.count_formula = "((L-4)^2)*5000"
 data.raw.technology["follower-robot-count-5"].max_level = nil
 
 data.raw.technology["laser-weapons-damage-7"].max_level = 10
@@ -325,7 +325,7 @@ data:extend({
     max_level = 8,
     unit = {
       time = 60,
-      count_formula = "((L-6)^2)*5000",
+      count_formula = "((L-5)^2)*5000",
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
@@ -358,7 +358,7 @@ data:extend({
     max_level = "infinite",
     unit = {
       time = 60,
-      count_formula = "((L-8)^2)*5000",
+      count_formula = "((L-5)^2)*5000",
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
@@ -390,7 +390,7 @@ data:extend({
     max_level = 8,
     unit = {
       time = 60,
-      count_formula = "((L-7)^2)*5000",
+      count_formula = "((L-4)^2)*5000",
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
@@ -421,7 +421,7 @@ data:extend({
     max_level = "infinite",
     unit = {
       time = 60,
-      count_formula = "((L-8)^2)*5000",
+      count_formula = "((L-4)^2)*5000",
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
@@ -454,7 +454,7 @@ data:extend({
     max_level = 15,
     unit = {
       time = 60,
-      count_formula = "((L-10)^2)*3000",
+      count_formula = "((L-6)^2)*3000",
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
@@ -489,7 +489,7 @@ data:extend({
     max_level = "infinite",
     unit = {
       time = 60,
-      count_formula = "((L-15)^2)*3000",
+      count_formula = "((L-6)^2)*3000",
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
@@ -525,7 +525,7 @@ data:extend({
     max_level = 15,
     unit = {
       time = 60,
-      count_formula = "((L-10)^2)*3000",
+      count_formula = "((L-6)^2)*3000",
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
@@ -560,7 +560,7 @@ data:extend({
     max_level = 18,
     unit = {
       time = 60,
-      count_formula = "((L-15)^2)*3000",
+      count_formula = "((L-6)^2)*3000",
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
@@ -596,7 +596,7 @@ data:extend({
     max_level = 15,
     unit = {
       time = 60,
-      count_formula = "((L-10)^2)*3000",
+      count_formula = "((L-6)^2)*3000",
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
@@ -629,7 +629,7 @@ data:extend({
     max_level = "infinite",
     unit = {
       time = 60,
-      count_formula = "((L-15)^2)*3000",
+      count_formula = "((L-6)^2)*3000",
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
@@ -662,7 +662,7 @@ data:extend({
     max_level = 15,
     unit = {
       time = 60,
-      count_formula = "((L-10)^2)*3000",
+      count_formula = "((L-6)^2)*3000",
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
@@ -693,7 +693,7 @@ data:extend({
     max_level = "infinite",
     unit = {
       time = 60,
-      count_formula = "((L-15)^2)*3000",
+      count_formula = "((L-6)^2)*3000",
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
@@ -758,7 +758,7 @@ data:extend({
     max_level = "infinite",
     unit = {
       time = 60,
-      count_formula = "((L-4)^2)*3500",
+      count_formula = "((L-3)^2)*3500",
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
@@ -823,7 +823,7 @@ data:extend({
     max_level = "infinite",
     unit = {
       time = 60,
-      count_formula = "((L-4)^2)*3500",
+      count_formula = "((L-2)^2)*3500",
       ingredients = {
         { "production-science-pack", 1 },
         { "utility-science-pack", 1 },
